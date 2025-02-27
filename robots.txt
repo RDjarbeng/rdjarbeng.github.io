@@ -1,0 +1,4 @@
+Sitemap: https://rdjarbeng.github.io/RDjarbeng/sitemap.xml
+
+User-agent: *
+Allow: /

@@ -1,0 +1,22 @@
+// _sass/_personal.scss
+
+.personal-posts-list {
+    .post-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+  
+      .post-link {
+        font-weight: bold;
+      }
+  
+      .post-excerpt {
+        color: #666;
+      }
+  
+      .post-meta {
+        color: #999;
+      }
+    }
+  }
+  

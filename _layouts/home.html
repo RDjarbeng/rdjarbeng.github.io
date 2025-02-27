@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW73L4TE58"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TW73L4TE58');
+</script>
+<div class="home">
+  <h1>Welcome to Richard Djarbeng's Website</h1>
+  <p>Non-technical posts are in the personal section. {{ site.description }}</p>
+
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="post-list">
+    {% for post in site.posts limit:4 %}
+    {% include post-card.html post=post %}
+    {% endfor %}
+
+  </div>
+  <a href="{{ '/posts' | relative_url }}" class="about-link">View all posts➡️</a>
+
+
+
+  <h2 class="section-title">Personal posts</h2>
+  <div class="post-list">
+    {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
+    {% for personal in sorted_posts limit:3 %}
+
+      {% include post-card.html post=personal %}
+
+    {% endfor %}
+  </div>
+
+  <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts➡️</a>
+</div>

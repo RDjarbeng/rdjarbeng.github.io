@@ -1,0 +1,15 @@
+---
+layout: null
+---
+[
+{% for post in site.posts %}
+  {
+    "old_url": "/RDjarbeng/{{ post.categories | join: '/' }}/{{ post.date | date: '%Y/%m/%d' }}/{{ post.slug }}",
+    "new_url": "{{ post.url | relative_url }}"
+  },
+  {
+    "old_url": "/RDjarbeng/{{ post.date | date: '%Y/%m/%d' }}/{{ post.slug }}",
+    "new_url": "{{ post.url | relative_url }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

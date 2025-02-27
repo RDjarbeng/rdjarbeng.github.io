@@ -1,0 +1,60 @@
+---
+layout: default
+title: Blog
+---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TW73L4TE58"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-TW73L4TE58');
+</script>
+<div class="header-container">
+  <h1>{{ site.posts | size }} Posts</h1>
+
+  <!-- Search box aligned to the right -->
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
+  </div>
+</div>
+<!-- Categories and Tags Section -->
+<div class="categories-tags-container">
+  <a href="/RDjarbeng/categories/">Categories</a>
+  <a href="/RDjarbeng/tags/">Tags</a>
+</div>
+<!-- Results container -->
+<ul id="results-container"></ul>
+
+<div class="post-list">
+  {% for post in site.posts %}
+  {% include post-card.html post=post %}
+  {% endfor %}
+</div>
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+
+<!-- Include Simple Jekyll Search script -->
+<script>
+  function highlightTerm(text, term) {
+    var regex = new RegExp('(' + term + ')', 'gi');
+    return text.replace(regex, '<span class="highlighted">$1</span>');
+  }
+
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}">{title}</a><br><span>{date}</span></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    success: function (results) {
+      var term = document.getElementById('search-input').value;
+      var resultItems = document.querySelectorAll('#results-container li');
+      resultItems.forEach(function (item) {
+        item.innerHTML = highlightTerm(item.innerHTML, term);
+      });
+    }
+  });
+
+</script>

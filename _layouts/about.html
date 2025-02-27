@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<article class="post {% if page.custom_css_class %}{{ page.custom_css_class }}{% endif %}">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "VMNzpaX75utVJ3RFH",
+            });
+        })();
+    </script>
+    <script type="text/javascript">document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            const formMessage = document.getElementById("form-message");
+            const loadingIndicator = document.getElementById("loading-indicator");
+    
+            // Show the loading indicator
+            loadingIndicator.style.display = "block";
+            formMessage.style.display = "none"; // Hide previous messages
+    
+            emailjs
+                .sendForm("contact_service", "contact_form", this)
+                .then(() => {
+                    // Hide loading indicator
+                    loadingIndicator.style.display = "none";
+    
+                    // Display success message
+                    formMessage.textContent = "Your message has been sent successfully!";
+                    formMessage.className = "success";
+                    formMessage.style.display = "block";
+    
+                    // Clear the form
+                    this.reset();
+                })
+                .catch((error) => {
+                    // Hide loading indicator
+                    loadingIndicator.style.display = "none";
+    
+                    // Display error message
+                    formMessage.textContent = "Failed to send your message. Please try again.";
+                    formMessage.className = "error";
+                    formMessage.style.display = "block";
+    
+                    console.error("EmailJS Error:", error);
+                });
+        });
+    });
+    
+    </script>
+    <form id="contact-form">
+        <div>Send a message to Richard Djarbeng</div>
+        <input type="hidden" name="contact_number" value="16333">
+        
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="user_name" required placeholder="Enter your name">
+    
+        <label for="email">Email* <small>(Responses to the message will be sent here)</small></label>
+        <input type="email" id="email" name="user_email" required placeholder="Enter your email">
+    
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+    
+        <input type="submit" value="Send">
+        
+        <!-- Success and error message containers -->
+        <p id="form-message" style="display: none;"></p>
+
+        <div id="loading-indicator" style="display: none;">
+            <p>Sending your message...</p>
+        </div>
+    </form>
+    

@@ -1,0 +1,15 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<h1>Categories</h1>
+<ul class="categories-list">
+  {% for category in site.categories %}
+    <li>
+      <a href="{{ '/categories/' | relative_url }}{{ category[0] | slugify }}">{{ category[0] }}</a>
+      ({{ category[1].size }})
+    </li>
+  {% endfor %}
+</ul>

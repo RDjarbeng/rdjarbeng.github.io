@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<h1>Posts Tagged with: {{ page.title }}</h1>
+
+<div class="post-list">
+  {% for post in site.posts %}
+    {% if post.tags contains page.title %}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <div class="post-card">
+          <h3>{{ post.title | escape }}</h3>
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image posts">
+          {% endif %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        </div>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

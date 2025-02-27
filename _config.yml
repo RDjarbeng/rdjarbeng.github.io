@@ -1,0 +1,95 @@
+title: Richard Djarbeng
+description: >- 
+  Explore the journey and insights of a Computer Engineer & Tech leader specializing in AI, 
+  web development, machine learning, and IoT. Occasionally I write personal reflections on the personal section.
+keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
+author: Richard Djarbeng
+baseurl: "/RDjarbeng" # the subpath of your site, e.g. /blog
+url: "https://RDjarbeng.github.io" # the base hostname & protocol for your site
+github_username: RDjarbeng
+twitter_username: DjarbengRichard
+linkedin_username: richarddjarbeng
+rss: "RSS Feed"  
+# Build settings
+markdown: kramdown
+kramdown:
+  math_engine: katex
+  input: GFM # Ensure GitHub Flavored Markdown is supported
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+    span:
+      line_numbers: false
+theme: minima
+future: true
+plugins:
+  - jekyll-last-modified-at
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-redirect-from
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+timezone: Africa/Harare
+
+seo:
+  title: "Richard Djarbeng's website- Web, Internet of things and Data -"
+  description: >-
+    Learning journey and reflections of Richard Djarbeng, computer engineer specializing in web development, 
+    machine learning, and IoT devices.
+  url: "https://rdjarbeng.github.io/RDjarbeng/"
+  twitter: DjarbengRichard
+  logo: "/RDjarbeng/favicon.ico"
+  theme_color: "#999"
+slugify: default #to deal with spaces
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+include:
+  - redirects.json
+# Collections
+collections:
+  projects:
+    output: true
+  authors:
+    output: true
+  personal:
+    output: true
+    permalink: /personal/:path/
+sass:
+  sass_dir: _sass
+  quiet_deps: true
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:title/ # Set permalink for posts globally to /title/
+  - scope:
+      path: ""
+    values:
+      layout: "default"
