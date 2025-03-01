@@ -10,7 +10,7 @@ tags:
   - Africa
   - CMU-Africa
 title: Discover Graduate Programs at Carnegie Mellon University Africa
-image: /RDjarbeng/assets/images/CMU_africa_brochure.png
+image: /assets/images/CMU_africa_brochure.png
 video: ""
 layout: post
 ---

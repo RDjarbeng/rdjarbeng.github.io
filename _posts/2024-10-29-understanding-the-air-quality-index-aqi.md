@@ -2,7 +2,7 @@
 title: Understanding the Air Quality Index (AQI)
 date: 2024-10-29T10:11:00
 author: Richard
-image: /RDjarbeng/assets/images/air_quality/aqi.png
+image: /assets/images/air_quality/aqi.png
 video: ""
 layout: post
 categories: ["Environment"]

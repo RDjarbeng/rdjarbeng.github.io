@@ -9,7 +9,7 @@ tags:
   - AI
   - competition
 title: "Kaggle competitions: Gateway to Data Science Success"
-image: /RDjarbeng/assets/images/kaggle_competitions.png
+image: /assets/images/kaggle_competitions.png
 video: ""
 layout: post
 ---

@@ -2,7 +2,7 @@
 title: Understanding Gradients with loss.backward() in PyTorch
 date: 2024-10-21T13:00:00
 author: Richard
-image: /RDjarbeng/assets/images/math_science.jpeg
+image: /assets/images/math_science.jpeg
 video: ""
 layout: post
 categories: ["AI"]

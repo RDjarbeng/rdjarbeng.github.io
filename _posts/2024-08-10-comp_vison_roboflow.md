@@ -2,7 +2,7 @@
 title: "Learn to Build Computer Vision Models with Roboflow"
 author: Richard
 date: 2024-08-10
-image: /RDjarbeng/assets/images/comp_vision_roboflow.jpeg
+ image :/assets/images/comp_vision_roboflow.jpeg
 categories: ["Computer Vision"]
 tags: [Computer Vision, Roboflow, Artificial Intelligence, Machine Learning, ]
 ---

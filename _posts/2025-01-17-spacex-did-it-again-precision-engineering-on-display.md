@@ -9,7 +9,7 @@ tags:
   - Innovation
   - SpaceTravel
 title: SpaceX Did It Again-Precision Engineering on Display
-image: /RDjarbeng/assets/images/booster_catch.png
+image: /assets/images/booster_catch.png
 video: ''
 layout: post
 ---

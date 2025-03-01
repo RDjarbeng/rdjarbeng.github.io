@@ -2,7 +2,7 @@
 title: Hello World -Skynet is Self aware
 date: 2024-07-21T00:00:00
 author: Richard
-image: /RDjarbeng/assets/images/servers.jpeg
+ image :/assets/images/servers.jpeg
 layout: post
 categories: ["Software Engineering"]
 tags: [Software engineering]

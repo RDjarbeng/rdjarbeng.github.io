@@ -1,7 +1,7 @@
 ---
 layout: personal
 title: "Why is There a Giant Basket on This Building?"
-image: /RDjarbeng/assets/images/gasabo_cropped.jpg
+image: /assets/images/gasabo_cropped.jpg
 date: 2024-08-05
 ---
 

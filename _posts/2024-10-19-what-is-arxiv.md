@@ -2,7 +2,7 @@
 title: What is arXiv?
 date: 2024-10-19T22:41:00
 author: Richard
-image: /RDjarbeng/assets/images/arxiv_snap.png
+image: /assets/images/arxiv_snap.png
 video: ""
 layout: post
 categories: ["Research"]

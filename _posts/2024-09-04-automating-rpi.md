@@ -2,7 +2,7 @@
 title: "Automating Script Execution on a Raspberry Pi"
 author: Richard
 date: 2024-08-26
-image: /RDjarbeng/assets/images/raspberrypi.png
+image: /assets/images/raspberrypi.png
 categories: ["IoT"]
 tags: [shell scripting, bash, automation, raspberry pi, raspberry pi 4B, linux]
 ---

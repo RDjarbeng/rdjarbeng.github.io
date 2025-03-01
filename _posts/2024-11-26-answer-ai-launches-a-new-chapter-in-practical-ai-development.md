@@ -11,7 +11,7 @@ tags:
   - Eric Ries
   - startups
 title: "Answer.AI Launches: A New Chapter in Practical AI Development"
-image: /RDjarbeng/assets/images/answer_ai.jpg
+image: /assets/images/answer_ai.jpg
 video: ""
 layout: post
 ---

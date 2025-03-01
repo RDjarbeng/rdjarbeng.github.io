@@ -2,7 +2,7 @@
 title: "Comparison of Static Site Hosting Options"
 date: 2024-08-01
 author: Richard
-image: /RDjarbeng/assets/images/static_site.jpeg
+image: /assets/images/static_site.jpeg
 categories: ["Software development"]
 tags: [Software engineering, dev ops, cloud hosting, hosting providers, comparison]
 ---

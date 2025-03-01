@@ -10,7 +10,7 @@ tags:
   - West Africa
   - Africa
 title: 'Ambient Air Quality Standards in West Africa: The Current State (2025)'
-image: /RDjarbeng/assets/images/brightglobe_in_africa.jpg
+image: /assets/images/brightglobe_in_africa.jpg
 video: ''
 layout: post
 ---

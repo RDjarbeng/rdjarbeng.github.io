@@ -3,7 +3,7 @@ title: "Spotlight on Peter Kimanzi"
 date: 2022-10-10
 layout: post
 author: Richard
-image: /RDjarbeng/assets/images/peterKimanziPortfolio.png
+image: /assets/images/peterKimanziPortfolio.png
 categories: ["Software Engineering"]
 tags: [Software engineering, Peter Kimanzi, web developer, Kenya, html, css, js]
 ---
@@ -11,11 +11,11 @@ tags: [Software engineering, Peter Kimanzi, web developer, Kenya, html, css, js]
 _Developer from Nairobi, Kenya._
 
 I found a repository of web development projects on GitHub which belongs to Peter Kimanzi, a web developer from Nairobi. The site that really caught my eye was a kind of animation that follows the mouse cursor as it moves on the screen and was inspired by the TV series Stranger Things.
-![Screenshot of Kimanzi's stranger things site](/RDjarbeng/assets/images/stranger_things.png)
+![Screenshot of Kimanzi's stranger things site](/assets/images/stranger_things.png)
 
 
 I admire his work and I am also surprised to see he built some of his websites, including his portfolio website, with just HTML, CSS, and JavaScript.
-![screenshot peter Kimanzi Portfolio ](/RDjarbeng/assets/images/peterKimanziPortfolio.png)
+![screenshot peter Kimanzi Portfolio ](/assets/images/peterKimanziPortfolio.png)
 
 Beautiful! In my opinion, for one man’s work.
 

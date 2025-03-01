@@ -2,7 +2,7 @@
 title: How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG Errors in Google Chrome due to DNS
 date: 2024-11-20T14:10:00
 author: Richard
-image: /RDjarbeng/assets/images/dns_post/dns_error.webp
+image: /assets/images/dns_post/dns_error.webp
 video: ""
 layout: post
 categories: ["Help"]

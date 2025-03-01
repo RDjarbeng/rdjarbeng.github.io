@@ -10,7 +10,7 @@ tags:
   - Price
   - Environmental sensing
 title: Is the Davis Solar Radiation Sensor Overpriced?
-image: /RDjarbeng/assets/images/solar_radiation_senosr.png
+image: /assets/images/solar_radiation_senosr.png
 video: ''
 layout: post
 ---

@@ -10,7 +10,7 @@ tags:
   - Jason Brownlee
   - beginners
 title: 'Exploring Machine Learning: The Best Resources for Beginners'
-image: /RDjarbeng/assets/images/jason_brownlee_start_ml.png
+image: /assets/images/jason_brownlee_start_ml.png
 video: ''
 layout: post
 ---

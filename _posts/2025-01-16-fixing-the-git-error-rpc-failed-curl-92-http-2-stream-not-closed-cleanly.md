@@ -9,7 +9,7 @@ tags:
   - stackoverflow
   - git error
 title: 'Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream Not Closed Cleanly'
-image: /RDjarbeng/assets/images/git_stream_error_screenshot.png
+image: /assets/images/git_stream_error_screenshot.png
 video: ''
 layout: post
 ---

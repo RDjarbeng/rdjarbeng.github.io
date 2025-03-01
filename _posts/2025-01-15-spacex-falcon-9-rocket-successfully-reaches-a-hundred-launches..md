@@ -8,7 +8,7 @@ tags:
   - Falcon 9
   - Satellite
 title: SpaceX Falcon 9 rocket  successfully reaches a hundred launches.
-image: /RDjarbeng/assets/images/falcon9_launch.jpeg
+image: /assets/images/falcon9_launch.jpeg
 video: ''
 layout: post
 ---

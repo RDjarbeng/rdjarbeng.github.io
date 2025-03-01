@@ -2,7 +2,7 @@
 title: Escaping CMS hell-DecapCMS, Netlify and Sveltia
 date: 2024-10-08T23:01:00
 author: Richard
-image: /RDjarbeng/assets/images/static_site.jpeg
+image: /assets/images/static_site.jpeg
 video: ""
 layout: post
 categories: ["Software Engineering"]

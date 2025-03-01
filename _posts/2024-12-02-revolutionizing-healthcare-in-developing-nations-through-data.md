@@ -10,7 +10,7 @@ tags:
   - Leapfrogging
   - data
 title: Revolutionizing Healthcare in Developing Nations Through Data
-image: /RDjarbeng/assets/images/hr_constraints_africa.png
+image: /assets/images/hr_constraints_africa.png
 video: ""
 layout: post
 ---

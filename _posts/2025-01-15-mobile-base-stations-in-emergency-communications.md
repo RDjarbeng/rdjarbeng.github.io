@@ -11,7 +11,7 @@ tags:
   - Los Angeles
   - Wildfires
 title: Cybertrucks as mobile Base Stations in Emergency Communications
-image: /RDjarbeng/assets/images/cybertruck.jpeg
+image: /assets/images/cybertruck.jpeg
 video: ''
 layout: post
 ---

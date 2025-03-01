@@ -2,7 +2,7 @@
 title: Is There a Process to Build an Application?
 date: 2024-11-20T16:28:00
 author: Richard
-image: /RDjarbeng/assets/images/light bulb.jpg
+image: /assets/images/light bulb.jpg
 video: ""
 layout: post
 categories: ["Software Engineering"]

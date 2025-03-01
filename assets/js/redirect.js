@@ -1,4 +1,4 @@
-fetch('/RDjarbeng/redirects.json')
+fetch('/redirects.json')
   .then(response => response.json())
   .then(redirects => {
     const currentPath = window.location.pathname;

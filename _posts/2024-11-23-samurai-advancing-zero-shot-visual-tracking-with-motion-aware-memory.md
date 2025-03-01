@@ -16,7 +16,7 @@ tags:
   - Research
   - Object Detection
 title: 'SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory'
-image: /RDjarbeng/assets/images/Samurai_paper_logo.png
+image: /assets/images/Samurai_paper_logo.png
 video: ''
 layout: post
 ---

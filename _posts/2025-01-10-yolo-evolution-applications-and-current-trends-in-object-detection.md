@@ -9,7 +9,7 @@ tags:
   - yolo
   - Machine Learning
 title: 'YOLO: Evolution, Applications, and Current Trends in Object Detection'
-image: /RDjarbeng/assets/images/ultralytics_yolo.png
+image: /assets/images/ultralytics_yolo.png
 video: ''
 layout: post
 ---

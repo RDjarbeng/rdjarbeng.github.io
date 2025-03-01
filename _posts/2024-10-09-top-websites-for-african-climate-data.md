@@ -2,7 +2,7 @@
 title: Top Websites for African Climate Data
 date: 2024-10-09 12:12:00
 author: Richard
-image: /RDjarbeng/assets/images/weather_post/wunderground.png
+image: /assets/images/weather_post/wunderground.png
 video: ""
 layout: post
 categories: ["Environment"]

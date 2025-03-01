@@ -2,7 +2,7 @@
 title: "How AI Could Empower Any Business - Andrew Ng"
 date: 2024-08-02
 author: Richard
-image: /RDjarbeng/assets/images/andrew_ng_ai_talk.png
+ image :/assets/images/andrew_ng_ai_talk.png
 categories: ["AI"]
 tags: [Artificial Intelligence, Machine Learning, Business, Andrew Ng]
 ---

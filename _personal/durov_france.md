@@ -1,14 +1,14 @@
 ---
 layout: personal
 title: "Is this where Durov's French journey began "
-image: /RDjarbeng/assets/images/durov_mountains.jpg
+image: /assets/images/durov_mountains.jpg
 author: Richard
 date: 2024-08-26
 ---
 
 Could this update from the CEO of Telegram have been the start of his decision to visit France?
 
-![Screenshot of Durov's update](/RDjarbeng/assets/images/pavel_update_france.png)
+![Screenshot of Durov's update](/assets/images/pavel_update_france.png)
 
 This screenshot is from his telegram channel where he regularly posts updates. This was one of the times he had suggested going to France stating that the Middle East was pretty warm. Here he called France the best Holiday destination.
 

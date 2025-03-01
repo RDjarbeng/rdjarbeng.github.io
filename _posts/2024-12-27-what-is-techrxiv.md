@@ -8,7 +8,7 @@ tags:
   - academics
   - papers
 title: What is TechRxiv?
-image: /RDjarbeng/assets/images/techrxiv/techrxiv_screenshot_good.png
+image: /assets/images/techrxiv/techrxiv_screenshot_good.png
 video: ''
 layout: post
 ---

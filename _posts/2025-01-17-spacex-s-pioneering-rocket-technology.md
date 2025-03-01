@@ -9,7 +9,7 @@ tags:
   - Innovation
   - SpaceTravel
 title: SpaceX Pioneering Rocket Technology
-image: /RDjarbeng/assets/images/space_x_gallery.avif
+image: /assets/images/space_x_gallery.avif
 video: ''
 layout: post
 ---

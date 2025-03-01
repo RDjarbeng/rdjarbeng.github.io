@@ -2,7 +2,7 @@
 title: Why You Should Consider Publishing in arXiv
 date: 2024-10-14T12:19:00
 author: Richard
-image: /RDjarbeng/assets/images/academic_paper.jpeg
+image: /assets/images/academic_paper.jpeg
 video: ""
 layout: post
 categories: ["Research"]

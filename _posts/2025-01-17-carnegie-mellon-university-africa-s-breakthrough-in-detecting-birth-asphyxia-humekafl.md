@@ -9,7 +9,7 @@ tags:
   - Pamely Zantou
   - HumekaFL
 title: Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL
-image: /RDjarbeng/assets/images/pamely_cmu_website.png
+image: /assets/images/pamely_cmu_website.png
 video: ''
 layout: post
 ---

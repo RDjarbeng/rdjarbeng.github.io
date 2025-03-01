@@ -9,7 +9,7 @@ tags:
   - Deep learning
   - Andrew Ng
 title: Machine Learning Specialization by Andrew Ng and DeepLearning.AI
-image: /RDjarbeng/assets/images/andrew_ng_coursera.png
+image: /assets/images/andrew_ng_coursera.png
 video: ""
 layout: post
 ---

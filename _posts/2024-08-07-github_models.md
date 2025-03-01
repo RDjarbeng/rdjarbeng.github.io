@@ -2,7 +2,7 @@
 title: "Introducing GitHub Models"
 author: Richard
 date: 2024-08-05
-image: /RDjarbeng/assets/images/github_models_pic.png
+ image :/assets/images/github_models_pic.png
 categories: ["AI"]
 tags: [Artificial Intelligence, Github,AI engineer]
 ---

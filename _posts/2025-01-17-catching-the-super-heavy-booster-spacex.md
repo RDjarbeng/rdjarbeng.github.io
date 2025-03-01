@@ -9,7 +9,7 @@ tags:
   - SpaceExploration
   - Elon Musk
 title: Catching the super heavy booster -SpaceX
-image: /RDjarbeng/assets/images/Starship_spacex_website.jpg
+image: /assets/images/Starship_spacex_website.jpg
 video: ''
 layout: post
 ---

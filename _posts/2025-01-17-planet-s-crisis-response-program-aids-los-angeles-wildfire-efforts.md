@@ -9,7 +9,7 @@ tags:
   - wildfires
   - California
 title: Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts
-image: /RDjarbeng/assets/images/planet_california_wildfires.jpeg
+image: /assets/images/planet_california_wildfires.jpeg
 video: ''
 layout: post
 ---

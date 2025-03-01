@@ -8,7 +8,7 @@ tags:
   - Machine Learning
   - ML5
 title: The Imperfections of Machine Learning
-image: /RDjarbeng/assets/images/ml_false positive_cropped_charger_rd.jpg
+image: /assets/images/ml_false positive_cropped_charger_rd.jpg
 video: ''
 layout: post
 ---

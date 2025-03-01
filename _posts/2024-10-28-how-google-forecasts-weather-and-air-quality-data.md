@@ -2,7 +2,7 @@
 title: How Google forecasts Weather and Air Quality Data
 date: 2024-10-28T10:38:00
 author: Richard
-image: /RDjarbeng/assets/images/google_weather.png
+image: /assets/images/google_weather.png
 video: ""
 layout: post
 categories: ["AI"]

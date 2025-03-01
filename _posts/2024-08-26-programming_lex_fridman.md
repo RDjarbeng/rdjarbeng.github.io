@@ -2,7 +2,7 @@
 title: "Why Not Stick to One Programming Language for Everything?"
 author: Richard
 date: 2024-08-26
-image: /RDjarbeng/assets/images/programming_language.png
+image: /assets/images/programming_language.png
 categories: ["Software Engineering"]
 tags: [programming languages,Software engineering, comparison]
 ---

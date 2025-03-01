@@ -2,7 +2,7 @@
 title: Zindi -Ghana Crop Disease Detection Challenge
 date: 2024-10-19T22:19:00
 author: Richard
-image: /RDjarbeng/assets/images/zindi_crop_disease.png
+image: /assets/images/zindi_crop_disease.png
 video: ""
 layout: post
 categories: ["News"]
