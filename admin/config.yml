@@ -3,7 +3,7 @@
 #   branch: main  # Ensure you're using your default branch, usually 'main' or 'master'
 backend:
   name: github
-  repo: rdjarbeng.github.io
+  repo: RDjarbeng/rdjarbeng.github.io
   branch: main
   base_url: https://sveltia-cms-auth.richarddjarbeng.workers.dev/
   
