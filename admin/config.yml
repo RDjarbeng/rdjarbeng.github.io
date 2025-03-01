@@ -3,13 +3,13 @@
 #   branch: main  # Ensure you're using your default branch, usually 'main' or 'master'
 backend:
   name: github
-  repo: RDjarbeng/RDjarbeng
+  repo: rdjarbeng.github.io
   branch: main
   base_url: https://sveltia-cms-auth.richarddjarbeng.workers.dev/
   
-site_url: https://rdjarbeng.github.io/RDjarbeng/
+site_url: https://rdjarbeng.github.io/
 media_folder: "assets/images"  # Media files (images) will be stored here
-public_folder: "/RDjarbeng/assets/images"  # URL for media files
+public_folder: "/assets/images"  # URL for media files
 
 collections:
   # Blog posts
