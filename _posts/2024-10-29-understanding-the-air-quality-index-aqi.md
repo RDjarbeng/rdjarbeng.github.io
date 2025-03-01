@@ -29,7 +29,7 @@ Here's a breakdown of the AQI categories for the United States:
 | Very Unhealthy                    | 201-300     | Health alert for everyone              | Purple     |
 | Hazardous                         | 301+        | Emergency conditions                   | Maroon     |
 
-![AQI table with colors ](/RDjarbeng/assets/images/air_quality/aqi.png)
+![AQI table with colors ](/assets/images/air_quality/aqi.png)
 
 _[Image source](https://www.airnow.gov/aqi/aqi-basics/)_
 

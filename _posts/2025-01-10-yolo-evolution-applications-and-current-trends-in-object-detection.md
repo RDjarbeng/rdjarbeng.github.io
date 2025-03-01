@@ -32,7 +32,7 @@ The evolution timeline showcases significant improvements:
 
 YOLO  was originally created in 2015. Ultralytics, led by Glenn Jocher, later became involved with YOLO development, creating YOLOv5 and subsequent versions including the recent YOLOv8 through YOLO11.
 
-![Screenshot of ultralytics yolo page](/RDjarbeng/assets/images/ultralytics_yolo.png "Screenshot of ultralytics yolo page")
+![Screenshot of ultralytics yolo page](/assets/images/ultralytics_yolo.png "Screenshot of ultralytics yolo page")
 
 ## Current Status
 

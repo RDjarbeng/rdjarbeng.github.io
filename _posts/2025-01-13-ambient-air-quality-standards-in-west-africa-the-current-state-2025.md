@@ -22,7 +22,7 @@ In the First Global Assessment of Air Pollution Legislation by the United Nation
 
 > "While ambient air quality is monitored in many countries, this is not a legal requirement in at least 37 per cent of countries. In countries where monitoring is framed in legislation, important questions arise about the rigour of monitoring, as well as issues of capacity"
 
-![Screenshot of Regulating Air Quality The first global assessment of air pollution legislation](/RDjarbeng/assets/images/global_assessment_air_pollution.png "Regulating Air Quality The first global assessment of air pollution legislation")
+![Screenshot of Regulating Air Quality The first global assessment of air pollution legislation](/assets/images/global_assessment_air_pollution.png "Regulating Air Quality The first global assessment of air pollution legislation")
 
 The global Ambient Air Quality Standards are needed for context before the assessment of air pollution in West Africa.
 
@@ -74,7 +74,7 @@ The health implications of poor air quality in West Africa are severe, with high
 
 ## Air quality data platforms
 For real-time air quality data in West Africa an honorable mention is the [AirNow website](https://www.airnow.gov/international/us-embassies-and-consulates/), via U.S. Embassies, offers a useful snapshot. This is one of the websites that has the data across multiple countries in one place for easy access.
-![Airnow page showing map of the world with AIr quality indicators](/RDjarbeng/assets/images/airnow_africa.png "Map of the world with AIr quality indicators across different US embassises")
+![Airnow page showing map of the world with AIr quality indicators](/assets/images/airnow_africa.png "Map of the world with AIr quality indicators across different US embassises")
 
 
 ## Future Directions

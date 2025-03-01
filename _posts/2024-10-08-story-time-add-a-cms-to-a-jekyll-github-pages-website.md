@@ -21,13 +21,13 @@ I made an extensive search (quick google query) for a suitable CMS with Jekyll s
 
 Alright, let's get DecapCMS up and running. Hold on, I can't complete some of the steps without a Netlify account. I should have guessed using DecapCMS would be a pain when the documentation kept on referencing Netlify even though they claimed to be completely independent. After an eternity trying to comprehend the documentation and trying my best to avoid hosting the site on Netlify I got something working:
 
-![DecapCMS admin page ](/RDjarbeng/assets/images/cms_post/decap_failure.png)
+![DecapCMS admin page ](/assets/images/cms_post/decap_failure.png)
 
 Or so I thought.
 
 ### DecapCMS - the pain 
 
-![DecapCMS admin page failure ](/RDjarbeng/assets/images/cms_post/decap_failure_white.png)
+![DecapCMS admin page failure ](/assets/images/cms_post/decap_failure_white.png)
 
 Turns out something was broken. And it wasn't my fault. A little searching on the DecapCMS site (*about 7 browser tabs open now*) showed some integration with Netlify hosting, namely Netlify identity which just wasn't going to work without a Netlify site. At this point I had spent a lot of time getting this CMS to work and probably should have given up here. This is where I fell victim to the Sunk-Cost fallacy and kept on trying to get DecapCMS to work. After many hours I created an issue on the [Decap CMS GitHub](https://github.com/decaporg/decap-cms/issues/7280).
 
@@ -37,17 +37,17 @@ Then after a considerable time-one or two days later- when I didn't get a respon
 
 One contributor for DecapCMS noticed my issue. Finally. Whew. Left a comment then closed my issue on GitHub-DecapCMS a week after opening and basically left it unsolved. How rude!
 
-![DecapCMS github discussion failure ](/RDjarbeng/assets/images/cms_post/decap_cms_github1.png)
+![DecapCMS github discussion failure ](/assets/images/cms_post/decap_cms_github1.png)
 
 Of course I wasn't going to let this go unchallenged. So I replied with my valid reasons why this was an important issue.
 
-![DecapCMS github discussion failure ](/RDjarbeng/assets/images/cms_post/decap_cms_github2.png)
+![DecapCMS github discussion failure ](/assets/images/cms_post/decap_cms_github2.png)
 
 So I got no response to that and the issue remained closed. Or so I thought.
 
 A 'Member' at DecapCMS saw my issue and reeopened it. Then he transferred it over to the DecapCMS repository as a documentation issue. Even better he asked for suggested improvements. Chef's kiss
 
-![DecapCMS github discussion success ](/RDjarbeng/assets/images/cms_post/decap_cms_github3.png)
+![DecapCMS github discussion success ](/assets/images/cms_post/decap_cms_github3.png)
 
 So I gave my comments specifying how the DecapCMS documentation should be improved -'Suggested Improvements for Decap CMS Documentation'. Basically stating that the authentication workflow and the steps part that Netlify played was not very clear in the documentation.  After I posted that, I got... nothing. And so I waited. 
 
@@ -77,7 +77,7 @@ Now the moment of truth. Will this work... so I push the changes, and go to the 
 
 It works! 
 
-![goku super saiyan ](/RDjarbeng/assets/images/cms_post/goku_yellow_super.gif)
+![goku super saiyan ](/assets/images/cms_post/goku_yellow_super.gif)
 
 #### Finally
 
@@ -85,7 +85,7 @@ No more Netlify!. Yes! Ha! Thank you [Kohei Yoshino](https://github.com/kyoshino
 
 Finally after more than 2 weeks of *painful* debugging I finally got halfway there with a CMS that deploys on GitHub pages and I don't have to be managing file names or keeping track of dates anymore.
 
-![before_after_cms ](/RDjarbeng/assets/images/cms_post/before_after_CMS.png)
+![before_after_cms ](/assets/images/cms_post/before_after_CMS.png)
 
 Unfortunately SveltiaCMS is not a full solution. It doesn't allow me to add images within posts by just dragging or selecting. So I still have to type the file paths to images to add them to this post. Hopefully [Kohei Yoshino](https://github.com/kyoshino) will work on this soon. **End story.**
 

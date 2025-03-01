@@ -26,7 +26,7 @@ Offending ECDSA key in /path/to/.ssh/known_hosts:11
 
 This warning appears because the SSH client has detected a change in the host key of the remote server, which could be due to a legitimate change in the server's configuration or it could indicate a potential security risk like a man-in-the-middle attack. If you are certain that the change is legitimate, you can resolve this issue by removing the old key from the `known_hosts` file.
 
-![error image red ](/RDjarbeng/assets/images/error_image.webp)
+![error image red ](/assets/images/error_image.webp)
 
 Here’s how you can do it:
 

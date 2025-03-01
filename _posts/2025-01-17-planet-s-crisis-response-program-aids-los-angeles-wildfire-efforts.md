@@ -15,7 +15,7 @@ layout: post
 ---
 In the wake of the devastating wildfires sweeping through the Los Angeles area, **Planet Labs**, known for their satellite imagery services, has stepped up to offer crucial support. On January 9, 2025, Planet announced through a [tweet](https://x.com/planet/status/1877395904820555919) that their Crisis Response Program has made available select non-commercial data for those directly involved in or supporting the response efforts.
 
-![SkySat \(false-color\) Eaton Fire, Los Angeles, California, USA , January 8, 2025](/RDjarbeng/assets/images/planet_california_wildfires.jpeg "SkySat \(false-color\) Eaton Fire, Los Angeles, California, USA , January 8, 2025")
+![SkySat \(false-color\) Eaton Fire, Los Angeles, California, USA , January 8, 2025](/assets/images/planet_california_wildfires.jpeg "SkySat \(false-color\) Eaton Fire, Los Angeles, California, USA , January 8, 2025")
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As devastating wildfires spread through the Los Angeles area, Planet’s Crisis Response Program has made available select non-commercial data for qualified users affiliated with organizations directly involved in or supporting response efforts.<br><br>This dataset is made available… <a href="https://t.co/tNHXlvdtKr">pic.twitter.com/tNHXlvdtKr</a></p>&mdash; Planet (@planet) <a href="https://twitter.com/planet/status/1877395904820555919?ref_src=twsrc%5Etfw">January 9, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

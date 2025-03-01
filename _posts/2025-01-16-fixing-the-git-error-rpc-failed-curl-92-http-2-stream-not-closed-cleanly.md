@@ -29,7 +29,7 @@ fatal: unpack-objects failed
 
 ```
 
-![Screenshot of git stream error](/RDjarbeng/assets/images/git_stream_error_screenshot.png "Screenshot of git stream error")
+![Screenshot of git stream error](/assets/images/git_stream_error_screenshot.png "Screenshot of git stream error")
 
 Here's how I resolved this issue.
 
@@ -57,7 +57,7 @@ git config --global http.postBuffer 524288000
 
 This solution was inspired by a helpful answer from [Juhikushwah](https://stackoverflow.com/users/16789486/juhikushwah) on Stack Overflow. You can find more details on their post [here](https://stackoverflow.com/questions/59282476/error-rpc-failed-curl-92-http-2-stream-0-was-not-closed-cleanly-protocol-erro).
 
-![Stackoverflow answer to git stream error](/RDjarbeng/assets/images/git_stream_error_stackoverflow.png "Stackoverflow answer to git stream error")
+![Stackoverflow answer to git stream error](/assets/images/git_stream_error_stackoverflow.png "Stackoverflow answer to git stream error")
 
 #### **Conclusion**
 

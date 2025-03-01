@@ -55,7 +55,7 @@ A recent example of the practical application of mobile base stations in emergen
 
 This initiative not only demonstrates the versatility of mobile base stations but also underscores the potential for private sector innovation in public emergency response. By converting Cybertrucks into mobile base stations, Musk's strategy aims to cover areas where traditional infrastructure has failed, enhancing the response to the crisis by providing both power and internet connectivity.
 
-![A cybertruck](/RDjarbeng/assets/images/cybertruck.jpeg "A cybertruck")
+![A cybertruck](/assets/images/cybertruck.jpeg "A cybertruck")
 
 ## Conclusion
 

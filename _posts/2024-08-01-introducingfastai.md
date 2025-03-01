@@ -11,7 +11,7 @@ In case you ever have to do Deep learning or interested in building applications
 ## Practical Deep Learning
 
 "A free course designed for people with some coding experience, who want to learn how to apply deep learning and machine learning to practical problems."
-![fast ai website](/RDjarbeng/assets/images/fastai_website.png)
+![fast ai website](/assets/images/fastai_website.png)
 What you'll learn: 
 
 - Build and train deep learning models for computer vision, natural language processing, tabular analysis, and collaborative filtering problems
@@ -21,7 +21,7 @@ What you'll learn:
 
 ### Book: Deep Learning for Coders with Fastai and PyTorch: AI Applications Without a PhD
 
-<img src="/RDjarbeng/assets/images/fastaibook.webp" alt="drawing" height ="400px" />
+<img src="/assets/images/fastaibook.webp" alt="drawing" height ="400px" />
 
 This is the book that forms the basis for the course. It is recommended to read this as you complete the course. There’s a few ways to read the book – you can buy it as a paper book or Kindle ebook, or you can read it for free [online](https://github.com/fastai/fastbook). The whole book is written as Jupyter notebooks, so you can also execute all the code in the book yourself.
 

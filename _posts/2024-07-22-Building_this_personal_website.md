@@ -24,7 +24,7 @@ The site I had in mind was suppose to be simple in functionality
 
 Since I was interested in learning Ruby so I thought why not use that. That was when the trouble began.
 
-![jekyll_cyber_theme by RD ](/RDjarbeng/assets/images/jekyll_cyber.jpeg)
+![jekyll_cyber_theme by RD ](/assets/images/jekyll_cyber.jpeg)
 
 ## Jekyll
 
@@ -94,7 +94,7 @@ If you're reading this on my personal website then just know that the evil Dr Je
 
 ### Edit a few moments later:
 
-![Man surprised staring at laptop](/RDjarbeng/assets/images/man_surprised.png)
+![Man surprised staring at laptop](/assets/images/man_surprised.png)
 
 So I realized there are usually 2 builds which start and one of them usually succeeds and the other doesn't. I was using the 'jekyll-gh-pages' by before switching to just jekyll. 
 ![workflow in github](https://github.com/user-attachments/assets/a10a3c67-2d2b-42c9-9c87-848868aa4fb0)

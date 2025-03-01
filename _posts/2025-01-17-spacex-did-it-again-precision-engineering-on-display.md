@@ -15,7 +15,7 @@ layout: post
 ---
 Just when you thought Elon Musk couldn't surprise us anymore, he's done it again! Elon Musk and his team at SpaceX have _again_ successfully caught a 33-story building-sized rocket, the Super Heavy booster, coming from space at supersonic speeds. This isn't just rocket science; it's a feat of engineering marvel that pushes the boundaries of what we thought possible in space travel.
 
-![Space X super heavy booster catch -Credits: Elon Musk on Twitter/X](/RDjarbeng/assets/images/booster_catch.png "Space X super heavy booster catch- Credits: Elon Musk on Twitter/X")
+![Space X super heavy booster catch -Credits: Elon Musk on Twitter/X](/assets/images/booster_catch.png "Space X super heavy booster catch- Credits: Elon Musk on Twitter/X")
 
  Witnessing this achievement is like watching the future unfold before our eyes. Check out the incredible moment here: 
 

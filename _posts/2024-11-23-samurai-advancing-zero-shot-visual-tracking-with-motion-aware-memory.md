@@ -22,7 +22,7 @@ layout: post
 ---
 A new paper, titled _"SAMURAI: Adapting Segment Anything Model for Zero-Shot Visual Tracking with Motion-Aware Memory"_, introduces an enhancement to visual object tracking building upon Segment Anything Model 2 (SAM 2). This work from the University of Washington addresses key challenges in object tracking, particularly in crowded or dynamic environments, and demonstrates significant improvements in accuracy and robustness.
 
-![Samurai logo](/RDjarbeng/assets/images/Samurai_paper_logo.png "Samurai logo from the  paper")
+![Samurai logo](/assets/images/Samurai_paper_logo.png "Samurai logo from the  paper")
 
 SAMURAI incorporates a motion-based scoring mechanism to enhance mask prediction and employs memory selection strategies to address challenges like self-occlusion and sudden movements in crowded environments. The proposed enhancements consistently improve all variations of SAM across various VOT benchmarks and metrics.
 

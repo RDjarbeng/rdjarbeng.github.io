@@ -9,7 +9,7 @@ tags: [Artificial Intelligence, Github,AI engineer]
 
 
 GitHub is enabling the rise of the AI engineer with the introduction of GitHub Models, bringing the power of industry-leading large and small language models to its more than 100 million users directly on the platform.
-![Alt Text: The graphic is a promotional banner for the introduction of "GitHub Models." It features a dark purple background with various AI model names listed with the GitHub logo at the center.](/RDjarbeng/assets/images/github_models_pic.png)
+![Alt Text: The graphic is a promotional banner for the introduction of "GitHub Models." It features a dark purple background with various AI model names listed with the GitHub logo at the center.](/assets/images/github_models_pic.png)
 
 With GitHub Models, every developer can become an AI engineer, or so they say, with the right tools and training. From playground to coding with the model in Codespaces to production deployment via Azure, GitHub Models demonstrates how simple it can be. Users are invited to sign up for the waitlist to be among the first to experience GitHub Models. By joining the waitlist, users will have the opportunity to test and provide feedback on this innovative tool, helping GitHub to refine and improve it.
 

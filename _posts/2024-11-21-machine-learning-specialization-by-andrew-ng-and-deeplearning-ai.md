@@ -65,7 +65,7 @@ Andrew Ng’s teaching style is widely praised for its clarity and structure. Th
 - Lecture videos are freely accessible on YouTube through [this playlist](https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI).
 
 
-![Introduction to Machine Learning Specialization - Coursera](/RDjarbeng/assets/images/andrew_ng_coursera.png)
+![Introduction to Machine Learning Specialization - Coursera](/assets/images/andrew_ng_coursera.png)
 
 
 Whether you're a beginner or someone looking to refresh your knowledge with updated tools and techniques, this specialization offers an excellent starting point for mastering machine learning!

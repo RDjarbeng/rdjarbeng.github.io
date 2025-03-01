@@ -8,6 +8,7 @@ categories: ["Software Engineering"]
 tags: [NodeJs, raspberry pi, node version install]
 ---
 
+<!-- Todo: fix this link -->
 > For an updated version of this post see this post:
 > [Installing NodeJs on the Pi -linux based system](https://rdjarbeng.github.io/RDjarbeng/2024/07/26/Installing_NodeJs_16.html)
 

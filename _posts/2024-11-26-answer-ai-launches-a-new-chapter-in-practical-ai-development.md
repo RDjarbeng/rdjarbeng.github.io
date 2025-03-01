@@ -16,7 +16,7 @@ video: ""
 layout: post
 ---
 A groundbreaking AI venture has emerged with the launch of Answer.AI, a novel R&D laboratory founded by Jeremy Howard and Eric Ries with $10 million in funding from Decibel VC. This initiative represents a fresh approach to artificial intelligence development, focusing on practical applications rather than pursuing Artificial General Intelligence (AGI).
-![Answer.ai logo](/RDjarbeng/assets/images/answer_ai.jpg)
+![Answer.ai logo](/assets/images/answer_ai.jpg)
 ## Leadership and Vision
 
 Jeremy Howard, the founding CEO and co-founder of fast.ai, brings over 30 years of machine learning expertise, including the development of ULMFiT, a methodology now fundamental to modern language models like ChatGPT and Gemini. Eric Ries, serving as founding director, contributes his expertise in lean startup methodology and sustainable business development.

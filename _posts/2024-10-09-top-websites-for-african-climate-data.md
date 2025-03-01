@@ -21,7 +21,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Custom data services and applications for environmental monitoring and research.
 - **Notes**: TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa. The platform offers an API for easy data integration into applications.
 
-![TAHMO (Trans-African Hydro-Meteorological Observatory) website ](/RDjarbeng/assets/images/weather_post/tahmo.png)
+![TAHMO (Trans-African Hydro-Meteorological Observatory) website ](/assets/images/weather_post/tahmo.png)
 ## 2. African Mountain Research Foundation
 
 - **Website**: [African Mountain Research Foundation](https://www.africanmountainresearch.com/)
@@ -35,7 +35,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Wind direction and speed (mph)
 - **Notes**: Data here is limited to Southern Africa as at the time of publication. You can find daily data by selecting the country, station, year, and month.
 
-![African mountain research website ](/RDjarbeng/assets/images/weather_post/african_mr.png)
+![African mountain research website ](/assets/images/weather_post/african_mr.png)
 ## 3. Weather Underground
 
 - **Website**: [Weather Underground](https://www.wunderground.com/)
@@ -49,7 +49,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Wind direction and speed (mph)
 - **Notes**: Access daily data for specific stations, countries, and time periods.
 
-![Weather Underground website ](/RDjarbeng/assets/images/weather_post/wunderground.png)
+![Weather Underground website ](/assets/images/weather_post/wunderground.png)
 ## 4. Tutiempo
 
 - **Website**: [Tutiempo](https://en.tutiempo.net/climate/africa.html)
@@ -64,7 +64,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Occurrence of rain, snow, thunderstorms, fog
 - **Notes**: Provides monthly data over an average year, and some stations offer daily data spanning fifty years.
 
-![Tutiempo website ](/RDjarbeng/assets/images/weather_post/tutiempo.png)
+![Tutiempo website ](/assets/images/weather_post/tutiempo.png)
 
 ## 5. IRI Data Library
 
@@ -77,7 +77,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Ground frost (day/month)
 - **Notes**: A detailed resource for temperature and precipitation data across Africa.
 
-![IRI Data Library website ](/RDjarbeng/assets/images/weather_post/iri_data.png)
+![IRI Data Library website ](/assets/images/weather_post/iri_data.png)
 ## 6. All Met Sat
 
 - **Website**: [All Met Sat](http://fr.allmetsat.com/climat/afrique.php)
@@ -89,7 +89,7 @@ When working on climate research or environmental projects in Africa, having acc
 - Ground frost (day/month)
 - **Notes**: Website is not very responsive and may have empty sections on large screen.Some stations may not provide complete data sets.
 
-![All Met Sat website ](/RDjarbeng/assets/images/weather_post/allmetsat.png)
+![All Met Sat website ](/assets/images/weather_post/allmetsat.png)
 ## 7. Weatherbase
 
 - **Website**: [Weatherbase](http://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa)
@@ -104,13 +104,13 @@ When working on climate research or environmental projects in Africa, having acc
 - **Notes**: Comprehensive data, but some stations may have incomplete records.
 
 
-![Weatherbase website ](/RDjarbeng/assets/images/weather_post/weatherbase.png)
+![Weatherbase website ](/assets/images/weather_post/weatherbase.png)
 ## 8. UN Data (WMO)
 
 - **Website**: [UN Data](http://data.un.org/Explorer.aspx?d=CLINO)
 - **Notes**: The World Meteorological Organization (WMO) provides a very complete data set.
 - 
-![UN Data (WMO) website ](/RDjarbeng/assets/images/weather_post/undata.png)
+![UN Data (WMO) website ](/assets/images/weather_post/undata.png)
 
 ## 9. AQUASTAT Climate Information Tool
 
@@ -129,13 +129,13 @@ When working on climate research or environmental projects in Africa, having acc
 - Historical data dating back to 1945, with some records before 1900.
 - **Notes**: Found more rainfall data on their website compared to the others. Datasets might not be frequently updated. Uses interpolation from nearby weather stations to provide data for any location in Africa.
 
-![AQUASTAT Climate Information Tool website ](/RDjarbeng/assets/images/weather_post/aquastat.png)
+![AQUASTAT Climate Information Tool website ](/assets/images/weather_post/aquastat.png)
 ## 10. NOAA (National Oceanic and Atmospheric Administration)
 
 - **Website**: [NOAA](https://www.noaa.gov/)
 - **Notes**: Offers global climate data, including for Africa. It's an official website of the United States government
 
-![NOAA (National Oceanic and Atmospheric Administration) website ](/RDjarbeng/assets/images/weather_post/noaa.png)
+![NOAA (National Oceanic and Atmospheric Administration) website ](/assets/images/weather_post/noaa.png)
 ## Conclusion
 
 These websites offer valuable insights for those needing detailed climate data for Africa I hope you find them useful.

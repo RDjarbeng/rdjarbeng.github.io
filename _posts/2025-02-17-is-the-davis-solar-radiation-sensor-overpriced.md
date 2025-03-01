@@ -16,7 +16,7 @@ layout: post
 ---
 When it comes to measuring solar radiation for agricultural, meteorological, or environmental projects, precision is key. The [Davis Solar Radiation Sensor](https://www.davisinstruments.com/products/solar-radiation-sensor) is a popular choice among professionals, but a common question arises: is it worth the price?
 
-![Solar radiation sensor from Davis for sale](/RDjarbeng/assets/images/solar_radiation_senosr.png "Solar radiation sensor from Davis for sale")
+![Solar radiation sensor from Davis for sale](/assets/images/solar_radiation_senosr.png "Solar radiation sensor from Davis for sale")
 
 ## Product Overview
 
@@ -32,7 +32,7 @@ When it comes to measuring solar radiation for agricultural, meteorological, or 
 
 The Davis sensor is designed with high-quality materials and technology to ensure accurate readings, which is crucial for applications where solar radiation data directly affects decision-making, like in farming or weather stations. The precision of this sensor might justify its cost for those in need of dependable data.
 
-![Solar radiation sensor from Davis](/RDjarbeng/assets/images/Solar Radiation Sensor - SKU 6450.webp "Solar radiation sensor from Davis")
+![Solar radiation sensor from Davis](/assets/images/Solar Radiation Sensor - SKU 6450.webp "Solar radiation sensor from Davis")
 
 ### Market Perception
 
@@ -40,7 +40,7 @@ While some users appreciate its accuracy, others feel it's overpriced when compa
 
 Also, if you choose to extend this weather station by adding the Wind vane and anemometer also from DAVIS the budget will start approaching €500. Could this be a justifiable price for a weather station with 2 measurement devices? Can this be considered a low-cost solution for a weather station?
 
-![Wind vane and anemometer from Davis instruments](/RDjarbeng/assets/images/wind_vane_anemometer_from_davis.png "Wind vane and anemometer from Davis instruments")
+![Wind vane and anemometer from Davis instruments](/assets/images/wind_vane_anemometer_from_davis.png "Wind vane and anemometer from Davis instruments")
 
 ### Alternatives
 

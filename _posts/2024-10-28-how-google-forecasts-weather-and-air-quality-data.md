@@ -20,7 +20,7 @@ Google's weather forecasts are created using an internal forecasting system that
 - [Met Office](https://www.metoffice.gov.uk/)
 - [Unidata](https://www.unidata.ucar.edu/)
 
-![google search for weather ](/RDjarbeng/assets/images/google_weather.png)
+![google search for weather ](/assets/images/google_weather.png)
 
 ## Google Nowcast
 

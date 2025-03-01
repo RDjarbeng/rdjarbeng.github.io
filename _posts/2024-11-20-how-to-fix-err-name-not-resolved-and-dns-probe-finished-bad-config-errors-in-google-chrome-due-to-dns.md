@@ -24,7 +24,7 @@ In the terminal window type  this command and hit enter
 
  If it is successful you should see a result like the image below. In case the response continues after 4 tries hit ctrl+c to stop it.
 
-![Ping google DNS ip ](/RDjarbeng/assets/images/dns_post/dns_test_ip.png)
+![Ping google DNS ip ](/assets/images/dns_post/dns_test_ip.png)
 
 2. **Ping URL**
 
@@ -33,7 +33,7 @@ Now we will try to ping a URL 'google.com'. In In the terminal window type  this
  `ping google.com`
 
 If it is successful you should see a result like the image below. In case the response continues after 4 tries hit ctrl+c to stop it.
-![Ping google URL ](/RDjarbeng/assets/images/dns_post/dns_test_google.png)
+![Ping google URL ](/assets/images/dns_post/dns_test_google.png)
 
 If the 1st request to the IP address worked but the second one to the url `google.com` did not succeed then we have confirmed that you have a DNS problem. DNS is supposed to resolve the site address, for example `google.com`, to an IP address such as `8.8.8.8`.  So if we are able to reach the IP but not the site address then we have a DNS problem.
 

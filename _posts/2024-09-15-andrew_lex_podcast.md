@@ -15,7 +15,7 @@ In the episode, Lex poses the question, "What are the concepts in deep learning 
 
 For those interested in learning more about deep learning, check out Andrew Ng's company, deeplearning.ai, which offers highly-regarded machine learning courses. Get started on your AI journey with this insightful podcast episode - watch the AI Podcast Clip on "Advice on Getting Started in Deep Learning" [here](https://www.youtube.com/watch?v=1k37OcjH7BM).
 
-[![Lex Fridman and Andrew Ng on Deep learning](/RDjarbeng/assets/images/andrewng_lex.png)
+[![Lex Fridman and Andrew Ng on Deep learning](/assets/images/andrewng_lex.png)
 ](https://www.youtube.com/watch?v=1k37OcjH7BM)
 
 #AI #DeepLearning #MachineLearning #AndrewNg #LexFridman #CareerAdvice #Podcast #Learning #Tech #Innovation

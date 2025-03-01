@@ -15,7 +15,7 @@ layout: post
 ---
 Carnegie Mellon University Africa (CMU-Africa) has been at the forefront of health technology innovations, particularly with their recent development aimed at addressing neonatal health issues in developing countries. Their latest project involves the use of artificial intelligence to detect birth asphyxia, a condition critical for newborn health if not identified and treated promptly.
 
-![Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu](/RDjarbeng/assets/images/pamely_cmu_website.png "Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu")
+![Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu](/assets/images/pamely_cmu_website.png "Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu")
 
 
 

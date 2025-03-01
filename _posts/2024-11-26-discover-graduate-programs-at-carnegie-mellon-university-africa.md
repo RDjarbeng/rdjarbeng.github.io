@@ -29,7 +29,7 @@ A key feature of the program is its focus on practical experience, with students
 
 [Learn more about MSIT](https://www.africa.engineering.cmu.edu/academics/programs/msit.html)
 
-![CMU africa career fair](/RDjarbeng/assets/images/CMU_africa_brochure.png)
+![CMU africa career fair](/assets/images/CMU_africa_brochure.png)
 
 ---
 
