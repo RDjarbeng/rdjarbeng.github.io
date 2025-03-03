@@ -12,7 +12,7 @@ tags:
   - TrainingVideo
   - FutureTech
   - Technology
-title: 'The Danger of a Single Story -AI-Generated Video: Adapting'
+title: Adapting The Danger of a Single Story:AI-Generated Video
 image: /assets/images/danger_of_a_single_story_did.png
 video: ''
 layout: post
