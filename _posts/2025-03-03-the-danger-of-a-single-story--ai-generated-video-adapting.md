@@ -19,7 +19,7 @@ layout: post
 ---
 Witness an innovative AI-generated video adaptation of Chimamanda Ngozi Adichie’s iconic TED Talk, _"The Danger of a Single Story."_ The script was crafted by ChatGPT and brought to life by an AI avatar using [D-ID’s video generation tool](https://www.d-id.com/). This project was created about a year ago, offering an early look at the capabilities of generative AI. I would love to see what the current state of the art is for AI video generation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=9NfHZRSyshQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9NfHZRSyshQ?si=jP0KdfqxTWrJzGei" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 While this technology showcases impressive potential, it’s not without flaws. Lip synchronization and emotional expression remain limited, revealing areas for growth. Still, the possibilities are vast—especially for creating instructional and training videos where emotional depth is less critical.
 
