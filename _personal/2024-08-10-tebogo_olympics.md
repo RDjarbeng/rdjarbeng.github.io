@@ -15,7 +15,7 @@ Imagine you come from Botswana and participate in the 2024 olympics in Paris, Fr
 
 In a stunning upset, Botswana's Letsile Tebogo (r) pulled ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles.
 
-![Letsile Tebogo \\(r\\) pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports](/assets/images/TebogoOlympics2024200m.jpg "Letsile Tebogo \\(r\\) pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports")
+![Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports](/assets/images/TebogoOlympics2024200m.jpg "Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports")
 
 [Link to the video of the final 200m olympic final with Tebogo on 8th August,2024 .](https://olympics.com/en/paris-2024/videos/paris-2024-letsile-tebogo-200m-highlights?utm_campaign=dp_google)
 
