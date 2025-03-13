@@ -30,3 +30,7 @@ Reflecting on his journey, he shared a poignant message: _“It is possible to d
 ## Behind the Scenes: A Video Created with Meta.ai
 
 This inspiring story is brought to life in an exclusive video, I crafted using  [meta.ai](http://meta.ai). The images are generated as I typed. The video captures Onakoya’s determination, the vibrant atmosphere of Times Square, and the heart of his mission to educate and empower Nigerian children through chess. The song used is the trumpet version of _the Script Hall of fame_
+
+_https://youtube.com/shorts/-e8N0Wledrk?feature=share_
+
+<iframe width="315" height="560" src="https://www.youtube.com/embed/_e8N0Wledrk_"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
