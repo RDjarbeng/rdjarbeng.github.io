@@ -1,7 +1,7 @@
 ---
 title: Tunde Onakoya Breaks Guinness World Record with Epic Chess Marathon for Children's Education
 date: 2025-03-13T12:11:00
-image: ''
+image: /assets/images/nigerian-chess-master-tunde-onakoya-victory.webp
 video: ''
 layout: personal
 ---
@@ -18,6 +18,8 @@ Despite facing intense physical challenges—including vomiting, stomach pain, a
 ### A Mission to Educate Nigerian Children
 
 Tunde’s marathon wasn’t just about breaking a record; it was a powerful statement with a purpose. His goal was to raise $1 million to support chess education for children in Nigeria, particularly those in underserved communities. As the founder of Chess in Slums Africa, Onakoya has dedicated his life to using chess as a tool to empower underprivileged children, drawing inspiration from his own beginnings learning the game in a slum in Ikorodu, Lagos. This record-breaking effort underscores his belief in the transformative power of education and opportunity.
+
+![Tunde Onakoya staring at a chess board - King's gambit](/assets/images/tundeOnakoya.jpeg "Tunde Onakoya staring at a chess board - King's gambit")
 
 ## "It Is Possible to Do Great Things from a Small Place"
 
