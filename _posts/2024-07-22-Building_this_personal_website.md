@@ -2,7 +2,7 @@
 title: Dr Jekyll & Ruby -building Richard's personal website
 date: 2024-07-22T00:00:00
 author: Richard
- image :/assets/images/jekyll_cyber.jpeg
+image: /assets/images/jekyll_cyber.jpeg
 layout: post
 categories: ["Software Engineering"]
 tags: [Ruby, jekyll, website development, Richard Djarbeng's website]

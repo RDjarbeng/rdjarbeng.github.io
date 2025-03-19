@@ -2,7 +2,7 @@
 title: " Can AI bring images to life?"
 author: Richard
 date: 2024-08-16
- image :/assets/images/bees_luma.jpeg
+image: / /assets/images/bees_luma.jpeg
 categories: ["AI"]
 tags: [Generative AI, luma ai, Artificial Intelligence, animated images]
 ---

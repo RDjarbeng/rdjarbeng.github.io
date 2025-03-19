@@ -2,7 +2,7 @@
 title: Introducing fastai-Practical deep learning without a PhD
 date: 2024-08-01T00:00:00
 author: Richard
- image :/assets/images/fastaibook.webp
+image: / /assets/images/fastaibook.webp
 categories: ["AI"]
 tags: [Artificial Intelligence, fast ai, Machine Learning, deep learning, practical deep learning]
 ---
