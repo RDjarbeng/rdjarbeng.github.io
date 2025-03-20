@@ -1,12 +1,17 @@
 ---
-title: Understanding the Air Quality Index (AQI)
 date: 2024-10-29T10:11:00
 author: Richard
+categories:
+  - Environment
+tags:
+  - Air quality
+  - weather
+  - Air quality index
+  - environmental monitoring
+title: Understanding the Air Quality Index (AQI)
 image: /assets/images/air_quality/aqi.png
-video: ""
+video: ''
 layout: post
-categories: ["Environment"]
-tags: [Air quality, weather, Air quality index, environmental monitoring]
 ---
 The Air Quality Index (AQI) is a vital tool developed by the U.S. Environmental Protection Agency (EPA) to communicate outdoor air quality and its potential health impacts. This index provides an easy-to-understand system that helps individuals make informed decisions about their outdoor activities and health protection measures.
 
@@ -20,18 +25,18 @@ The AQI uses a color-coded system with six categories, each representing a diffe
 
 Here's a breakdown of the AQI categories for the United States:
 
-| AQI Category                     | Index Values | Health Concern                         | Color Code |
-|----------------------------------|--------------|----------------------------------------|------------|
-| Good                              | 0-50        | Minimal or no risk                     | Green      |
-| Moderate                          | 51-100      | Potential risk for sensitive individuals | Yellow   |
-| Unhealthy for Sensitive Groups    | 101-150     | Health effects for sensitive groups    | Orange     |
-| Unhealthy                         | 151-200     | Health effects possible for general public | Red   |
-| Very Unhealthy                    | 201-300     | Health alert for everyone              | Purple     |
-| Hazardous                         | 301+        | Emergency conditions                   | Maroon     |
+| AQI Category | Index Values | Health Concern | Color Code |
+| --- | --- | --- | --- |
+| Good | 0-50 | Minimal or no risk | Green |
+| Moderate | 51-100 | Potential risk for sensitive individuals | Yellow |
+| Unhealthy for Sensitive Groups | 101-150 | Health effects for sensitive groups | Orange |
+| Unhealthy | 151-200 | Health effects possible for general public | Red |
+| Very Unhealthy | 201-300 | Health alert for everyone | Purple |
+| Hazardous | 301+ | Emergency conditions | Maroon |
 
-![AQI table with colors ](/assets/images/air_quality/aqi.png)
+![AQI table with colors](/assets/images/air_quality/aqi.png)
 
-_[Image source](https://www.airnow.gov/aqi/aqi-basics/)_
+[_Image source_](https://www.airnow.gov/aqi/aqi-basics/)
 
 ## Key Pollutants Measured
 
@@ -46,6 +51,8 @@ The EPA establishes AQI values for five major air pollutants regulated by the Cl
 Each of these pollutants has a national air quality standard set by the EPA to protect public health.
 
 ## Using the AQI
+
+The [time frame](https://www.airnow.gov/aqi/aqi-basics/using-air-quality-index/) covered by the AQI for particle pollution measurements is 24 hours.
 
 Understanding the AQI can help take necessary precautions:
 
@@ -149,12 +156,12 @@ The concentration levels that trigger different AQI categories vary by country:
 
 The warning levels and associated colors can differ between countries:
 
-| Country | Good               | Moderate          | Unhealthy                | Very Unhealthy       | Hazardous            |
-|---------|---------------------|-------------------|--------------------------|----------------------|----------------------|
-| US      | Green              | Yellow           | Orange/Red               | Purple               | Maroon               |
-| EU      | Good (Green)       | Fair (Yellow)    | Moderate (Orange)        | Poor (Red)           | Very Poor (Dark Red) |
-| China   | Excellent (Green)  | Good (Yellow)    | Lightly Polluted (Orange)| Moderately Polluted (Red) | Heavily Polluted (Purple) |
-| Canada  | Low Risk (Green)   | Moderate (Yellow)| High Risk (Orange)       | Very High Risk (Red) | N/A                  |
+| Country | Good | Moderate | Unhealthy | Very Unhealthy | Hazardous |
+| --- | --- | --- | --- | --- | --- |
+| US | Green | Yellow | Orange/Red | Purple | Maroon |
+| EU | Good (Green) | Fair (Yellow) | Moderate (Orange) | Poor (Red) | Very Poor (Dark Red) |
+| China | Excellent (Green) | Good (Yellow) | Lightly Polluted (Orange) | Moderately Polluted (Red) | Heavily Polluted (Purple) |
+| Canada | Low Risk (Green) | Moderate (Yellow) | High Risk (Orange) | Very High Risk (Red) | N/A |
 
 ### Calculation Methods
 
