@@ -21,7 +21,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}'  }
       - {
           label: 'Author',
           name: 'author',
@@ -29,6 +29,7 @@ collections:
           collection: 'authors',
           display_fields: [display_name],
           search_fields: [display_name],
+          default: 'Richard',
           value_field: 'short_name',
         }
       - { label: 'Categories', name: 'categories', widget: 'list', required: false } # Add categories field
