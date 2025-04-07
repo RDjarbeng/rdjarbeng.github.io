@@ -61,6 +61,7 @@ $black-text-color: black;
 $link-hover-color: #1756a9;
 $nav-padding: 7%;
 $wrapper-max-width: 85%;
+$wrapper-default-width: 100%;
 $grey: #999;
 $link-color: #4a476e;
 $link-visited-color: #5e599e;
@@ -90,8 +91,9 @@ iframe{
   display: block;
   margin: 0 auto
 }
+
 .wrapper{
-  max-width: $wrapper-max-width;
+  max-width: $wrapper-default-width;
 }
 
 .home {
@@ -462,4 +464,12 @@ a:hover{
 
 .footer-col{
   margin-bottom: 0px;
+}
+
+
+@media (min-width: 992px) {
+  .wrapper{
+    max-width: $wrapper-max-width;
+  }
+  
 }
