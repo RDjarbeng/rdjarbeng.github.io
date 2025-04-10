@@ -8,7 +8,7 @@ tags:
   - Developer
   - IDE
   - Stackblitz
-title: 'StackBlitz: A Full-Fledged IDE in Your Browser'
+title: 'StackBlitz: A Full-IDE in Your Browser'
 image: /assets/images/stackblitz_logo.jpeg
 video: ''
 layout: post
