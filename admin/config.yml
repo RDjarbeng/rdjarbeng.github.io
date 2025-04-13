@@ -50,7 +50,7 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}'  }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Video', name: 'video', widget: 'file', media_folder: 'assets/videos', public_folder: '/assets/videos', required: false }
