@@ -20,4 +20,8 @@ Here's a video I found on Youtube showing the exit from the tunnel.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EX6A0yrGIjo?start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+I asked Grok to give me the names of the places shown.
+
+_'The bridge and tunnel exit described in the post is the Fort Pitt Tunnel and Fort Pitt Bridge in Pittsburgh, Pennsylvania. The tunnel passes under Mount Washington, and the bridge crosses the Monongahela River, connecting to Downtown Pittsburgh.'_
+
 The view shown in the video doesn't do justice to the experience. As I said before, I was told about it, before hand and I was expecting it yet was still left in awe.
