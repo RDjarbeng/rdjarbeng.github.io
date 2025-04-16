@@ -48,11 +48,11 @@ Some feedback I got suggested it moves like a zombie—and honestly, I can’t d
 
 Deep motion allows the final output to be exported in the following formats: FBX, BVH, GLB & MP4. This can be integrated into existing game engines for quick prototyping. The entire workflow can be described in 4 steps as:
 
-Text (prompt for image generation)- Image- Video (animated from image) -3D model
+_Text (prompt for image generation)- Image- Video (animated from image) -3D model_
 
 It is worth mentioning that deep motion has a text to 3D model (haven't tested this personally) that would simplify this workflow from 4 to 2 steps.
 
-Text- 3D model
+_Text- 3D model_
 
 ![Screen shot of Deep motion home page](/assets/images/deepmotion_home_page.png "Screen shot of Deep motion home page")
 
