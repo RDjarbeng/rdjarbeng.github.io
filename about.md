@@ -53,4 +53,10 @@ I specialize mostly in web development machine learning and Internet of Things (
 <p align="left"> <a href="https://www.github.com/RDjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/richarddjarbeng/" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> <a href="https://www.twitter.com/DjarbengRichard" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a></p>
 
 Feel free to reach out for collaborations or just a chat about technology!
+  <div class="donation-section" align="left">
+  <p>Love my work? Support me with a small donation!</p>
+  <a href="https://buymeacoffee.com/rdjarbeng" target="_blank">
+    <button class="donate-btn">Support Me</button>
+  </a>
+</div>
 
