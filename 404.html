@@ -17,9 +17,25 @@ layout: default
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <script>
+    // Get the requested URL path
+    const requestedPath = window.location.pathname;
+
+    // Check if the path starts with "/RDjarbeng"
+    if (requestedPath.startsWith("/RDjarbeng")) {
+      // Redirect to the new site homepage
+      window.location.href = "https://rdjarbeng.github.io";
+    }
+  </script>
+</head>
+<body>
+  <h1>Page Not Found</h1>
+  <p>Sorry, the page you’re looking for doesn’t exist.</p>
+  <p><a href="https://rdjarbeng.github.io">Go to the homepage</a></p>
+</body>
+</html>
