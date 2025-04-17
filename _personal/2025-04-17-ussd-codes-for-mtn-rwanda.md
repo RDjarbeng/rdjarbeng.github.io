@@ -9,21 +9,31 @@ USSD CODES and COMMANDS
 Change language (Kinyarwanda- English):
 \*182\*6\*5# 
 
+------------------------------------
+
 \*131#
 
 CHECK AIRTIME BALANCE
+
+------------------------------------
 
 #345#
 
 ACCESS INTERNET BUNDLE MENU (ACTIVATION AND BALANCE)
 
+------------------------------------
+
 \*345\*5#
 
  CHECK INTERNET BUNDLE BALANCE
 
+------------------------------------
+
 \*140#
 
 ACCESS VOICE BUNDLE MENU (ON-NET, OFF-NET, INTERNATIONAL)
+
+------------------------------------
 
 \*140\*5#
 
