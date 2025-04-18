@@ -249,14 +249,18 @@ a:hover{
   padding-bottom: 5px;
 }
 
+.published_date {
+  font-size: $small-font-size;
+}
+
+.last_edited {
+  font-size: $small-font-size;
+}
 .post-header, .section-title{
   border-bottom: 1px solid $grey;
 
 }
 
-.last_edited{
-  font-size: 0.8rem;
-}
 
 .post-navigation {
   display: flex;
