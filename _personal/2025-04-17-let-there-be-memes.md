@@ -4,7 +4,9 @@ date: 2025-04-17T13:15:00
 image: /assets/images/ChatGPT_meme.jpeg
 layout: personal
 ---
-A collection of memes/pictures I find... interesting!
+# A collection of memes/pictures I find... interesting!
+
+Emotions vs logic
 
 ![Emotions vs logic](/assets/images/EmotionvsLogic.jpeg "Emotions vs logic")
 
@@ -12,4 +14,9 @@ A collection of memes/pictures I find... interesting!
 
 ![Programmers vs scientists](/assets/images/dontTouchitMeme.jpg "Programmers vs scientists")
 
-![Forgotten documentation](/assets/images/ChatGPT_meme.jpeg "Forgotten documentation")![Midvale school for gifted](/assets/images/justNeedToPush.png "Midvale school for gifted")![Dilbert meeting about why nothing works](/assets/images/1709511653400.jpg "Dilbert meeting about why nothing works")![Update vs those who never turn off their PC](/assets/images/meme_never_update_pc.png "Update vs those who never turn off their PC")
+![Forgotten documentation](/assets/images/ChatGPT_meme.jpeg "Forgotten documentation")![Midvale school for gifted](/assets/images/justNeedToPush.png "Midvale school for gifted")
+
+![Dilbert meeting about why nothing works](/assets/images/1709511653400.jpg "Dilbert meeting about why nothing works")
+
+Update your PC vs those who never turn off their PC
+![Update vs those who never turn off their PC](/assets/images/meme_never_update_pc.png "Update vs those who never turn off their PC")
