@@ -67,6 +67,8 @@ $link-color: #4a476e;
 $link-visited-color: #5e599e;
 $small-font-size: 0.8rem;
 $default-font-size: 1rem;
+$animation-duration: 0.8s;
+
 
 *,
 *::before,
@@ -129,6 +131,19 @@ iframe{
   gap: 1em;
   // margin-top: 20px;
 }
+
+// Animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .post-card, .project-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -138,11 +153,19 @@ iframe{
   flex-direction: column;
   justify-content: space-between; /* Ensures that items are spread out and the date stays at the bottom */
   height: 100%; /* Makes the card take up the full height */
+
+    // Transition for hover effects
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
   
-  
-  &:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
+    // Animation triggered by JavaScript on child element
+    &.animate .post-link {
+      animation: fadeInUp $animation-duration ease-out forwards;
+    }
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-5px); // Hover effect now works
+    }
 }
 
 .post-card h4, .post-card h3{
@@ -680,3 +703,4 @@ a:hover{
     font-size: 0.9rem;
   }
 }
+
