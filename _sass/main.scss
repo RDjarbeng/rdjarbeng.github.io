@@ -65,6 +65,8 @@ $wrapper-default-width: 100%;
 $grey: #999;
 $link-color: #4a476e;
 $link-visited-color: #5e599e;
+$small-font-size: 0.8rem;
+$default-font-size: 1rem;
 
 *,
 *::before,
@@ -242,10 +244,9 @@ a:hover{
   padding-right: 0;
 }
 
-.author_date, .author{
+.author_date{
   color: $grey;
   padding-bottom: 5px;
-  // &:visited
 }
 
 .post-header, .section-title{
