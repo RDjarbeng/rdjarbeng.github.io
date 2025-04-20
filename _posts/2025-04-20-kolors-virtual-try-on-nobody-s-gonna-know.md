@@ -55,19 +55,19 @@ Let's see what else it can do. Can it change the black suit I am wearing to some
 
 Not bad at all. It would be a bit hard to tell that the original was a black suit if you hadn't seen it before.
 
-All right let's try something new I'm going to upload that image with a garment that's not in its library how do I know it's not in its library? Well, because the image in the center with the muscular guy in a vest with gold embroidery is an AI generated image I took from Adobe Firefly so high probability the model was not trained on an image such as this. So let's see if I can change the suit to a 2-piece vest and tie.
+All right let's try something new I'm going to upload that image with a garment that's not in its library how do I know it's not in its library? Well, because the garment image, with the muscular guy in a vest with gold embroidery, is an AI generated image I took from [Adobe Firefly](https://www.adobe.com/products/firefly.html) so high probability the model was not trained on an image such as this. So let's see if I can change the suit to a 2-piece vest and tie.
 
 ![Vest swap failing for kolors virtual try-on](blob:https://rdjarbeng.github.io/2bed158b-5716-4cad-9d71-ef0376467a1e "Vest swap failing for kolors virtual try-on")
 
-Oops this did not turn out so good not particularly sure why but the shoulders were a bit of a challenge for the model let's try a different input image. Not given up on this vest on my model yet.
+Oops! This did not turn out so good. I am not particularly sure why, but the shoulders were a bit of a challenge for the model. Let's try a different input image. Not giving up on wearing this vest on my model yet.
 
 ![Successful muscle vest swap](blob:https://rdjarbeng.github.io/118959b4-490c-470b-8911-744e0f23f12c "Successful muscle vest swap")
 
-Well this without splendid. Not particularly sure why this was much better than the previous attempt where I am just glad this worked and the problem was not my AI generated image. Here's a full image, look at that smile. Never thought I would see myself wearing something I designed and generated on the web.
+Well this was splendid. Not particularly sure why this was much better than the previous attempt.However I am just glad this worked and the problem was not my AI-generated image. Here's a full image. Never thought I would see myself wearing something I designed and generated on the web.
 
 ![Richard wearing a two piece of vest with a black tie](/assets/images/kolors_muscle_vest_swap_final.png "Richard wearing a two piece of vest with a black tie")
 
-Now let's try something a little bit different. After extensive research (a quick Google search) I found a picture of my favorite super strika, Shakes, is lets let's see how that goes. This was a 2D cartoon character I tried to map onto a real life picture.
+Now let's try something a little bit different. After extensive research (a quick Google search) I found a picture of my favorite [super strika](https://www.youtube.com/user/TheSupaStrikas), Shakes, is lets let's see how that goes. This was a 2D cartoon character I tried to map onto a real life picture.
 
 ![Shakes from Super Strikers Kolors virtual try-on result](/assets/images/kolors_super_strikas.png "Shakes from Super Strikers Kolors virtual try-on result")
 
