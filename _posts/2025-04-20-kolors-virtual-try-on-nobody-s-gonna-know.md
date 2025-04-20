@@ -77,7 +77,7 @@ Now I think I'm starting to realize a pattern here. It seems your best chances o
 
 ![Richard using virtual try-on with a yellow African design](/assets/images/kolors_yellow_africa.png "Richard using virtual try-on with a yellow African design")
 
-Check for example this image above which added yellow sleeves to the garment even though with the garment image does not have any yellow sleeves. Trying to find some rational explanation for this, I am guessing because the suit in the input image had long sleeves the model decided to add sleeves and did it's best to keep the color that matched the design in the input. Thus giving us the output we see. However it worked fine on the AI model which had no sleeves and a garment was a bit similar to the garment image.
+See, for example, this image above which added yellow sleeves to the garment even though with the garment image does not have any yellow sleeves. Trying to find some rational explanation for this, I am guessing because the suit in the input image had long sleeves the model decided to add sleeves and did it's best to keep the color that matched the design in the input. Thus giving us the output we see. However it worked fine on the AI model which had no sleeves and a garment was a bit similar to the garment image.
 
 ![Ai model in African print design](/assets/images/kolors_yellow_africa_model.png "Ai model in African print design")
 
