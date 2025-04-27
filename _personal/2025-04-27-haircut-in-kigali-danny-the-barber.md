@@ -8,7 +8,7 @@ For my haircuts in Kigali I've kept the same barber for more than 3 years. Here 
 
 ![Richard's haircut by Danny](/assets/images/1000060757.jpg "Richard's haircut by Danny")
 
-![](blob:https://rdjarbeng.github.io/bc0b8204-e08b-4ef1-ab47-e6957e410ffe)
+![Richard's haircut by Danny](/assets/images/1000047937.jpg "Richard's haircut by Danny")
 
 Usually the problem faced by foreigners is that the barbers  don't know their preferences when it comes to giving a haircut. Some people might not even feel comfortable trusting someone new to cut their hair for various reasons. Some people have barbers back home whom they've formed strong bonds with and can't just transfer that to a new guy. 
 
