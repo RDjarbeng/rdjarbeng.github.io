@@ -14,7 +14,7 @@ Usually the problem faced by foreigners is that the barbers  don't know their pr
 
 For me, to go to a barber I usually prefer one that someone has recommended; usually because I liked their haircut and asked them. Sitting at the mercy of a stranger with the power to wreak havoc on my hair is not something most people accept easily. It gives the feeling shown in this picture:
 
-![Haircut with scissors two boys and a red background](blob:https://rdjarbeng.github.io/2c0bd904-bc04-4952-9be5-21dcbbf844f4 "Haircut with scissors with the client not comfortable")
+![Haircut with scissors two boys and a red background](/assets/images/1000154742.jpg "Haircut with scissors with the client not comfortable")
 
 If a barber assumes you want it like the way the typical Rwandans cut their hair you might not be e so happy about that. 😕 Particularly if you have a different way of styling your hair where you're from. 
 
