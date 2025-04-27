@@ -35,6 +35,6 @@ Anyway, then I met Danny. He was the first barber in Kigali to ask me for a hair
 
 He does the haircut as close to the image as he can. In the sample there is a lot of hair up top. So I tell him to make mine lower and he does this. Finally a barber I can work with in Kigali.
 
-
+![Danny taking a photo of Richard after his haircut](/assets/images/1000060759.jpg "Danny the barber")
 
 Smiles are back 🙂
