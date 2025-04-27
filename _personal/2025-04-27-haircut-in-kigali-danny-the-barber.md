@@ -42,4 +42,4 @@ He doesn't have a beard himself though. Smiles are back 🙂
 
 Key takeaways when going for a haircut in Kigali you can bring reference photos, or learn basic Kinyarwanda phrases for haircuts and use recommendations from others when picking a hair salon for a cut.
 
-PS: Danny's number is +250780724956. When I wrote this post his shop was at Kimironko, Kigali opposite the marine supermarket
+PS: Danny's number is +250780724956 also on WhatsApp . When I wrote this post his shop was at Kimironko, Kigali. You can have it on one condition that you don't steal my spot. I keep having to wait in line nowadays to get a haircut.
