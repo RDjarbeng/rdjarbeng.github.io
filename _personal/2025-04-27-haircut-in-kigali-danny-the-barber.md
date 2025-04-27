@@ -12,11 +12,9 @@ Have you ever had a bad haircut abroad? For my haircuts in Kigali I've kept the 
 
 ## Challenges of Getting a Haircut in Kigali
 
-Usually the problem faced by foreigners to Rwanda is that the barbers don't know your personal preferences when it comes to giving a haircut. One of the challenges stems from a communication barrier between Kinyarwanda and English. You might find the barber doesn't understand what you mean or misinterprets what you wanted. If a barber assumes you want your hair styled similar to most people around him you might not be so happy with that assumption.  Particularly if you have a different way of styling your hair where you're from. Or worse if they don't take your input at all. 
+Usually the problem faced by foreigners to Rwanda is that the barbers don't know your personal preferences when it comes to giving a haircut. Part of this stems from a communication barrier between Kinyarwanda (the main language spoken in Rwanda) and English. You might find the barber doesn't understand what you mean or misinterprets what you wanted, more on this later. It could be even worse when they don't take your input at all. 
 
- For me, before I visit a barber I usually prefer one that someone has recommended. Personally I don't think being at the mercy of a stranger with the power to wreak havoc on your hair is something to be taken lightly.
-
-Personal complaints include: shifting the hairline to expose more of the forehead, trimming away parts of the beard. (this one is particularly painful when a part of the beard takes weeks to grow), shaving off the beard outright 🙄 ... I could keep going.
+ For me, before I visit a barber I usually prefer one that someone has recommended. Personally I don't think being at the mercy of a stranger with the power to wreak havoc on your hair is something to be taken lightly. Personal complaints include: shifting the hairline to expose more of the forehead, trimming away parts of the beard. (this one is particularly painful when a part of the beard takes weeks to grow), shaving off the beard outright ... I could keep going.
 
 ## My Worst Haircut Experience
 
