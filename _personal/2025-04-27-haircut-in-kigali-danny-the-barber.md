@@ -31,7 +31,10 @@ I found a picture that I think represents the look on my face then.
 
 Anyway, the damage had already been done and given the nature of the cut there was little that could be done to save this situation. I'm guessing he could tell the atmosphere in the room had shifted so he looked at me in the mirror for confirmation or perhaps apologi. So I had to tell him to remove the whole beard so he can finish the job and I leave in shame. I want to say, having a beard you've grown for years taking from you in a matter of seconds just feels wrong. Walking back home my face felt strange, even naked. 😶Needless to say I didn't go back there.
 
-
 Anyway, then I met Danny. He was the first barber in Kigali to ask me for a haircut style before he started. He usually says, 'Boss, show me design'. Wow he speaks more words than my last barber bur now he's asking me for stuff. First time this happened I started looking around the shop, left right, up as if I was watching some invisible bird fly around. He must have been confused 😕. Well, in Ghana the barbers usually have pictures of different hairstyles plastered all around the shop. So you normally just point out the style you want. Danny's shop didn't have any of those pictures. Well now what do I do. Think... I take out my phone and search something around haircuts for men, go to images, scroll and find one I like and show to him.  Now let's go. Danny is not done yet. He points out that the beard style in the sample I showed him  is very different from my current beard. This guy actually cares about my beard this time 🤔. So I tell him to just smooth out my current beard (the little I had managed to grow back😅) . Now let's go. 
 
 He does the haircut as close to the image as he can. In the sample there is a lot of hair up top. So I tell him to make mine lower and he does this. Finally a barber I can work with in Kigali.
+
+
+
+Smiles are back 🙂
