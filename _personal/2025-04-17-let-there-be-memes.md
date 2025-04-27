@@ -10,6 +10,7 @@ Emotions vs logic
 
 ![Emotions vs logic](/assets/images/EmotionvsLogic.jpeg "Emotions vs logic")
 
+Brute force attack prevention
 ![Brute force attack prevention](/assets/images/Brute%20force%20attack%20meme.png "Brute force attack prevention")
 
 ![Programmers vs scientists](/assets/images/dontTouchitMeme.jpg "Programmers vs scientists")
