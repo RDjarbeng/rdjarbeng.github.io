@@ -23,7 +23,6 @@ I recently stumbled upon an incredible tool called [Keeptrack.space](https://kee
 
 ![keeptrack app screenshot](/assets/images/keeptrack.png "keeptrack app screenshot")
 
-
 ## What is Keeptrack.space?
 
 [Keeptrack.space](https://keeptrack.space/) offers a unique, user-friendly perspective on satellite activity, making orbital analysis accessible to everyone—not just engineers. Built with TypeScript and enhanced by artificial intelligence, this astrodynamics software is remarkably lightweight at just 20 MB (including satellite data) and runs smoothly even on your phone. The 3D app is now hosted at [app.keeptrack.space](https://app.keeptrack.space/).
@@ -43,6 +42,6 @@ Created by Theodore Kruczek, Keeptrack.space adheres to the design guidelines of
 
 Ready to embark on your satellite exploration journey? Visit [Keeptrack.space](https://keeptrack.space/) to explore the 3D app at [app.keeptrack.space](https://app.keeptrack.space/). Curious about the code? Check out the project’s [GitHub repository](https://github.com/thkruz/keeptrack.space) for more details.
 
-Start exploring the cosmos today! 🌌
+Start exploring the cosmos today! 
 
-![Keeptrack.space in action](insert-video-link-here)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qkQSz1UA_PY?si=V-DwVG8eIxDppl1B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
