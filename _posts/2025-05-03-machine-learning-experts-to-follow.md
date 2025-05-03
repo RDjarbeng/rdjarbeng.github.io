@@ -18,9 +18,9 @@ Looking for inspiration in the field of Machine Learning? Here are my top picks 
 ## My Top Recommendations
 
 - **Andrew Ng**  
+![Andrew Ng presenting](/assets/images/andrew_ng_syd.jpg "Andrew Ng")
   Co-founder of [Google Brain](https://research.google/teams/brain/) and [deeplearning.ai](https://www.deeplearning.ai/), Andrew Ng is a pioneer in machine learning. His [Coursera courses](https://www.coursera.org/instructor/andrewng) are a must for anyone starting out or looking to deepen their understanding.  Before they were only available on Coursera and used MATLAB, now those courses are also available on YouTube and use python .
   _Why follow?_ Practical, accessible, and transformative insights into AI.
-
 - **Lex Fridman**  
   An AI researcher and professor at [MIT](https://www.mit.edu/), Lex is best known for his [Lex Fridman Podcast](https://lexfridman.com/podcast/) (formerly _The Artificial Intelligence Podcast_). He dives into AI, tech, and science with leading minds.  
   _Why follow?_ Thought-provoking discussions and a knack for breaking down complex topics.
