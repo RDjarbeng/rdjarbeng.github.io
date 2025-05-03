@@ -15,6 +15,7 @@ video: ''
 layout: post
 ---
 ### Key Points
+
 - Narrow layouts improve readability with optimal line lengths.
 - They align with mobile-first design for better device compatibility.
 - These designs enhance focus and reduce cognitive load.
@@ -34,7 +35,12 @@ Narrow layouts aren’t a new trend—they’re rooted in print media like newsp
 
 Narrow layouts prioritize readability, mobile compatibility, and user focus, making them a go-to choice for designers. Next time you notice a website or email with a narrow design, you’ll know it’s a deliberate choice for better usability.
 
+PS: The preference for narrow layouts is partly why my posts list on my website uses this 2-column layout
+
+![Posts on Richard Djarbeng's website showing 2 column layout](/assets/images/rd_posts_2column_layout.png "Posts on Richard Djarbeng's website showing 2 column layout")
+
 ### Key Citations
+
 - [Elementor Blog: Website Layout Ideas](https://elementor.com/blog/website-layout-ideas/)
 - [LinkedIn Pulse: Common Website Layouts](https://www.linkedin.com/pulse/common-website-layouts-mohammad-zeeshan)
 - [MDN Web Docs: Column Layouts](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts)
