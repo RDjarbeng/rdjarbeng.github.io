@@ -47,6 +47,8 @@ The Sentinel satellites power a wide range of applications. Here’s how each co
 #### Sentinel-5P: Atmospheric Monitoring
 
 - **Air Quality**: Sentinel-5P tracks nitrogen dioxide over cities like Delhi, informing policies that reduced urban smog by 10% in 2024.
+Here's a screenshot of the web interface where I was looking at a project focused on air quality emissions in New Delhi.
+![Screenshot of copernicus web interface](/assets/images/copernicus_airq_new_delhi.png "Screenshot of copernicus web interface")
 - **Climate Research**: It monitors methane leaks from oil fields in Texas, enabling targeted emission reductions.
 - **Volcanic Eruptions**: During the 2022 Tonga eruption, Sentinel-5P tracked sulfur dioxide plumes, aiding aviation safety.
 
