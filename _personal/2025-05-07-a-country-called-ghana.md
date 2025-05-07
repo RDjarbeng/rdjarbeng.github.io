@@ -6,6 +6,8 @@ layout: personal
 ---
 This is an introduction to Ghana I hope people will find interesting.
 
+![](/assets/images/2nd_collage_on_ghana.png)
+
 People
 
 ![](/assets/images/people_ghana.png)
@@ -29,3 +31,7 @@ Geography
 ## Entertainment
 
 ![](/assets/images/entertainment_ghana.png)
+
+A final picture to end this post
+
+![](/assets/images/collage_on_ghana.png)
