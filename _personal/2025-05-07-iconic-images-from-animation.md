@@ -19,3 +19,9 @@ From the 'Early man' movie after they had won football against real Bronzio on t
 Gru addresses the minions from despicable me
 
 ![Gru addresses the minions](/assets/images/gru_minions.jpg)
+
+---
+
+General Zhao from Avatar the Last Airbender 'We attack at sunrise'
+
+![Image](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
