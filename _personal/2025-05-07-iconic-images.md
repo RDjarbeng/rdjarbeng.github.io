@@ -20,6 +20,12 @@ In 2017 Dr. Paul Locus was attending a Halloween party dressed as the Joker when
 
 ---
 
+Trumpet boy (2018). Thanks to the [lost meme archive](https://x.com/LostMemeArchive/status/1899498051288682546) on Twitter/x
+
+![Boy blowing trumpet whilst girl covers her ears](https://pbs.twimg.com/media/GlxBY8JXUAE3A6H?format=jpg&name=small "Meme from 2018")
+
+---
+
 Chaos at football match
 
 ![](/assets/images/photo_5924816344866472352_x.jpg)
