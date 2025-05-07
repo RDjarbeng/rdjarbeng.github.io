@@ -22,7 +22,6 @@ Forgotten documentation
 ![Forgotten documentation](/assets/images/ChatGPT_meme.jpeg "Forgotten documentation")
 ----
 
-
 Midvale school for the gifted
 ![Midvale school for gifted](/assets/images/justNeedToPush.png "Midvale school for gifted")
 ---
@@ -44,3 +43,7 @@ Stop and Smell the flowers
 Warren Buffet calling Charlie Munger's name at a meeting after Charlie had passed away. Charlie was vice chairman of Berkshire Hathaway, the conglomerate controlled by Warren Buffett, from 1978 until his death in 2023. Before he passed they used to have these meetings side by side and Buffet would ask Charlie his opinion. Buffet said he had tried to catch himself from making this mistake.
 
 ![Warren Buffet accidentally calls Charlie's name at a meeting](https://pbs.twimg.com/media/GoiWj8VXUAAglL2?format=jpg&name=small "Warren Buffet accidentally calls Charlie's name at a meeting")
+
+---
+
+![Image](https://pbs.twimg.com/media/GMaxXZBa0AEaS-g?format=jpg&name=small)
