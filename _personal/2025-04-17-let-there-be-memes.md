@@ -47,3 +47,9 @@ Warren Buffet calling Charlie Munger's name at a meeting after Charlie had passe
 ---
 
 ![Image](https://pbs.twimg.com/media/GMaxXZBa0AEaS-g?format=jpg&name=small)
+
+---
+
+Frontend vs backend
+
+![Meme about frontend development](https://pbs.twimg.com/media/GY5Xg07WQAAYfcE?format=jpg&name=small)
