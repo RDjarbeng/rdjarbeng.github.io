@@ -32,6 +32,12 @@ Chaos at football match
 
 ---
 
+The Hercules Armor, forged in 1555 for Emperor Maximilian II of Austria.
+
+![Image](https://pbs.twimg.com/media/Gkw87SkaoAA0GLw?format=jpg&name=small)
+
+---
+
 Angry bird![](/assets/images/Serious_bird.jpg)
 
 ---
