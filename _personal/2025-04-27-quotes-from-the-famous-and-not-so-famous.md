@@ -16,3 +16,20 @@ Appreciation to [Goodreads](https://www.goodreads.com/quotes/361-books-serve-to-
 
 The only man who behaved sensibly was my tailor: he took my measure anew every time he saw me, whilst all the rest went on with their old measurements and expected them to fit me.
 -George Bernard Shaw
+
+---
+
+![Image](https://pbs.twimg.com/media/Goi5CsPW0AABO8o?format=jpg&name=small)
+
+---
+
+# “A man who calls his kinsmen to a feast does not do so to save them from starving. They all have food in their own homes. When we gather together in the moonlit village ground it is not because of the moon. Every man can see it in his own compound. We come together because it is good for kinsmen to do so.”
+
+― **Chinua Achebe,** [Things Fall Apart](https://www.goodreads.com/work/quotes/825843)
+
+# “When you meet a master swordsman, show him your sword. When you meet a man who is not a poet, do not show him your poem.
+
+Robert Greene rephrase:
+When you meet a swordsman, draw your sword. Do not recite poetry to one who is not a poet.”
+
+― **Lin-Chi**
