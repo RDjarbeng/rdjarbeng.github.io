@@ -1,7 +1,7 @@
 ---
 title: Iconic images from animation
 date: 2025-05-07T15:59:00
-image: ''
+image: /assets/images/early_man.png
 layout: personal
 ---
 I created this to separate the drawn/animated images in my original pos on iconic images from the internet
