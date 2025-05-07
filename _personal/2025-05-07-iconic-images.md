@@ -1,7 +1,7 @@
 ---
-title: Iconic images
+title: Iconic images from the internet
 date: 2025-05-07T13:50:00
-image: ''
+image: /assets/images/happy%20turtle.jpg
 layout: personal
 ---
 Pictures that caught my eye when I was browsing the internet. If I find the context behind them I'll add them below.
@@ -11,7 +11,6 @@ Pictures that caught my eye when I was browsing the internet. If I find the cont
 Chaos at football match
 
 ![](/assets/images/photo_5924816344866472352_x.jpg)
-
 
 ---
 
