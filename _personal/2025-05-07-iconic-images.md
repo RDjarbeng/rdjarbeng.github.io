@@ -33,3 +33,7 @@ Jerome Powell, chairman of the federal reserve in a blue suit looking up and lea
 ![Jerome Powell in a blue suit](https://media.npr.org/assets/img/2025/04/22/gettyimages-1782089362-e8963c586e28f9cfcf5280b48f0af864927b731a.jpg?s=1100&c=50&f=jpeg)
 
 ---
+
+We are not the same. Not sure where this image is from but it looks like something to post when you think you're better than someone.
+
+![Adjusting tie in Suit](/assets/images/we_are_not_the_same.jpeg "we are not the same")
