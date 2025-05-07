@@ -13,3 +13,9 @@ I created this to separate the drawn/animated images in my original pos on iconi
 From the 'Early man' movie after they had won football against real Bronzio on the sacred turf.
 
 ![From the 'Early man' movie after they had won football against real Bronzio on the sacred turf.](/assets/images/early_man.png "'Early man' movie after they had won football against real Bronzio on the sacred turf.")
+
+---
+
+Gru addresses the minions from despicable me
+
+![Gru addresses the minions](/assets/images/gru_minions.jpg)
