@@ -17,6 +17,12 @@ Brute force attack prevention
 Programmers vs scientists
 ![Programmers vs scientists](/assets/images/dontTouchitMeme.jpg "Programmers vs scientists")
 
+---
+
+And now we wait
+
+![Image](https://pbs.twimg.com/media/GlDyT_TbEAE66Pp?format=jpg&name=small)
+
 ----
 Forgotten documentation
 ![Forgotten documentation](/assets/images/ChatGPT_meme.jpeg "Forgotten documentation")
