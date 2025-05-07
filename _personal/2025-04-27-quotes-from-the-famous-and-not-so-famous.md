@@ -38,4 +38,4 @@ When you meet a swordsman, draw your sword. Do not recite poetry to one who is n
 
 Not all treasure is Silver and Gold mate \~ Captain Jack Sparrow
 
-![These 67 Pirates of the Caribbean Quotes are the Real Treasure | Bored Panda](https://www.boredpanda.com/blog/wp-content/uploads/2023/09/pirates-of-the-caribbean-quotes-fb.png)
+![These 67 Pirates of the Caribbean Quotes are the Real Treasure, Bored Panda](https://www.boredpanda.com/blog/wp-content/uploads/2023/09/pirates-of-the-caribbean-quotes-fb.png)
