@@ -24,4 +24,4 @@ Gru addresses the minions from despicable me
 
 General Zhao from Avatar the Last Airbender 'We attack at sunrise'
 
-![Image](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
+![General Zhao and Iroh from Avatar the Last Airbender 'We attack at sunrise'](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
