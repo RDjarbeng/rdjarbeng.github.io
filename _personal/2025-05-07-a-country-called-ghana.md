@@ -8,15 +8,19 @@ This is an introduction to Ghana I hope people will find interesting.
 
 ![](/assets/images/2nd_collage_on_ghana.png)
 
-People
+## People
+
+The people,  hospitable and most welcoming you can find
 
 ![](/assets/images/people_ghana.png)
 
-History
+History: let's start from the beginning
 
 ![](/assets/images/history_ghana.png)
 
-Geography
+## Geography
+
+Tropical climate, warm throughout the year.
 
 ![](/assets/images/geography_ghana.png)
 
