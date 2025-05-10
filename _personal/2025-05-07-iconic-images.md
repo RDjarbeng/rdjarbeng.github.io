@@ -6,11 +6,6 @@ layout: personal
 ---
 Pictures that caught my eye when I was browsing the internet. If I find the context behind them I'll add them below.
 
----
-
-Trying to stop a Japanese MP from speaking
-
-![Many people trying to stop one man from speaking into the microphone](https://pbs.twimg.com/media/Gm-qpqVWYAAYxXR?format=jpg&name=small)
 
 ---
 
@@ -29,6 +24,11 @@ Trumpet boy (2018). Thanks to the [lost meme archive](https://x.com/LostMemeArch
 Chaos at football match
 
 ![](/assets/images/photo_5924816344866472352_x.jpg)
+---
+
+Trying to stop a Japanese MP from speaking
+
+![Many people trying to stop one man from speaking into the microphone](https://pbs.twimg.com/media/Gm-qpqVWYAAYxXR?format=jpg&name=small)
 
 ---
 
