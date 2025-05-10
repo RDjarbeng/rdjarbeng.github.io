@@ -14,6 +14,12 @@ Homelander from _The Boys_ looking disgusted
 
 ---
 
+Look very carefully
+
+![Man Looks very carefully at a sheet](/assets/images/read_look_at_paper_again_meme.jpeg "Man Looks very carefully at a sheet")
+
+---
+
 Jose Mourinho takes headphones off in dramatic fashion
 
 ![Jose Mourinho takes headphones off in dramatic fashion](/assets/images/mourinho_takes_headphones_off.jpeg "Jose Mourinho takes headphones off in dramatic fashion")
