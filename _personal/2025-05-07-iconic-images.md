@@ -1,7 +1,7 @@
 ---
 title: Iconic images from the internet
 date: 2025-05-07T13:50:00
-image: /assets/images/happy%20turtle.jpg
+image: /assets/images/japanese_would_mp.jpeg
 layout: personal
 ---
 Pictures that caught my eye when I was browsing the internet. If I find the context behind them I'll add them below.
@@ -10,13 +10,13 @@ Pictures that caught my eye when I was browsing the internet. If I find the cont
 
 Trying to stop a Japanese MP from speaking
 
-![Image](https://pbs.twimg.com/media/Gm-qpqVWYAAYxXR?format=jpg&name=small)
+![Many people trying to stop one man from speaking into the microphone](https://pbs.twimg.com/media/Gm-qpqVWYAAYxXR?format=jpg&name=small)
 
 ---
 
 In 2017 Dr. Paul Locus was attending a Halloween party dressed as the Joker when he was urgently called to deliver a baby. Despite the costume he rushed to the hospital
 
-[![Image](https://pbs.twimg.com/media/GmZPxZBa8AUVogI?format=jpg&name=small)](https://x.com/PicturesFoIder/status/1902295605998973014)
+![Image](https://pbs.twimg.com/media/GmZPxZBa8AUVogI?format=jpg&name=small "https://x.com/PicturesFoIder/status/1902295605998973014")
 
 ---
 
