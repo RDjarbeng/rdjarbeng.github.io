@@ -6,12 +6,17 @@ layout: personal
 ---
 Pictures that caught my eye when I was browsing the internet. If I find the context behind them I'll add them below.
 
-
 ---
 
 In 2017 Dr. Paul Locus was attending a Halloween party dressed as the Joker when he was urgently called to deliver a baby. Despite the costume he rushed to the hospital
 
 ![Image](https://pbs.twimg.com/media/GmZPxZBa8AUVogI?format=jpg&name=small "https://x.com/PicturesFoIder/status/1902295605998973014")
+
+---
+
+Michael Jackson at the super bowl half time performance on January 31, 1993, at the Rose Bowl in Pasadena, California
+
+![Michael Jackson at the super bowl](/assets/images/20250510-120548.png "Michael Jackson king of pop at the super bowl with Aura")
 
 ---
 
@@ -24,6 +29,7 @@ Trumpet boy (2018). Thanks to the [lost meme archive](https://x.com/LostMemeArch
 Chaos at football match
 
 ![](/assets/images/photo_5924816344866472352_x.jpg)
+
 ---
 
 Trying to stop a Japanese MP from speaking
