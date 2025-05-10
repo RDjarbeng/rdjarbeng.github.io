@@ -26,6 +26,12 @@ Gru addresses the minions from despicable me.
 
 ---
 
+Pain from Naruto sitting on a tongue of a statue overlooking the village.
+
+![Pain from Naruto](/assets/images/20250510-154131.png "Pain from Naruto")
+
+---
+
 General Zhao from Avatar the Last Airbender 'We attack at sunrise'.
 
 ![General Zhao and Iroh from Avatar the Last Airbender 'We attack at sunrise'](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
