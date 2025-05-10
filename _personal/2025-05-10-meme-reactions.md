@@ -14,9 +14,13 @@ Homelander from _The Boys_ looking disgusted
 
 ---
 
+Jose Mourinho takes headphones off in dramatic fashion
+
 ![Jose Mourinho takes headphones off in dramatic fashion](/assets/images/mourinho_takes_headphones_off.jpeg "Jose Mourinho takes headphones off in dramatic fashion")
 
 ---
+
+Steve Harvey looking disappointed
 
 ![Steve Harvey looking disappointed](/assets/images/steve%20harvey_disappointed.jpeg "Steve Harvey looking disappointed")
 
@@ -24,4 +28,4 @@ Homelander from _The Boys_ looking disgusted
 
 Does this need an explanation?
 
-![Image](/assets/images/20250510-122006.png)
+![Does this need an explanation?](/assets/images/20250510-122006.png "Does this need an explanation?")
