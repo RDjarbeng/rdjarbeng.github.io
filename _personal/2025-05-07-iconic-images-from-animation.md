@@ -1,7 +1,7 @@
 ---
 title: Iconic images from animation
 date: 2025-05-07T15:59:00
-image: /assets/images/early_man.png
+image: /assets/images/gru_minions.jpg
 layout: personal
 ---
 I created this to separate the drawn/animated images in my original post on iconic images from the internet.
