@@ -19,3 +19,9 @@ Homelander from _The Boys_ looking disgusted
 ---
 
 ![Steve Harvey looking disappointed](/assets/images/steve%20harvey_disappointed.jpeg "Steve Harvey looking disappointed")
+
+---
+
+Does this need an explanation?
+
+![Image](/assets/images/20250510-122006.png)
