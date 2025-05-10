@@ -4,7 +4,7 @@ date: 2025-05-07T16:14:00
 image: /assets/images/2nd_collage_on_ghana.png
 layout: personal
 ---
-This is an introduction to Ghana I hope people will find interesting.
+This is an introduction to Ghana I hope you will find interesting.
 
 ![](/assets/images/2nd_collage_on_ghana.png)
 
