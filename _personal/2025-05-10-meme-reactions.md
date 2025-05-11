@@ -32,6 +32,12 @@ Steve Harvey looking disappointed
 
 ---
 
+If only I could count the number of times I've seen this. 'Well of course I know him. He's me'
+
+![Well of course I know him. He's me](/assets/images/20250511-220024.png "Well of course I know him. He's me")
+
+---
+
 Does this need an explanation?
 
 ![Does this need an explanation?](/assets/images/20250510-122006.png "Does this need an explanation?")
