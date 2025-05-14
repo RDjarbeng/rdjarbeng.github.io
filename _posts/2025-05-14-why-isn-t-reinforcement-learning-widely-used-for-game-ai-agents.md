@@ -14,7 +14,9 @@ image: /assets/images/reinforcement%20learning_in_games_grok.jpg
 video: ''
 layout: post
 ---
-Reinforcement learning (RL) has powered impressive achievements in game-playing AI, such as AlphaGo and OpenAI's Dota 2 bot. Tools like Unity ML Agents and examples like Gran Turismo 7's RL-trained AI racer show its potential. Yet, RL remains rare in complex games for NPCs or opponents. Why is this powerful technology not more widely adopted? Let's explore the key reasons based on insights from game development experts.
+Reinforcement learning (RL) has powered impressive achievements in game-playing AI, such as AlphaGo and OpenAI's Dota 2 bot. Tools like Unity ML Agents and examples like Gran Turismo 7's RL-trained AI racer show its potential. Yet, RL remains rare in complex games for NPCs or opponents. Why is this powerful technology not more widely adopted? 
+
+![Neon glowing tech with game controllers around a center console](/assets/images/reinforcement%20learning_in_games_grok.jpg "Neon glowing tech with game controllers around a center console")
 
 ## RL Solves a Different Problem Than Game AI Needs
 
@@ -29,6 +31,8 @@ Defining a reward function for "fun" is tricky, and RL's emergent behaviors are 
 ## Players Prefer Human Opponents for True Challenges
 
 For players seeking tough, adaptive opponents, multiplayer modes with human rivals are often preferred. Human opponents foster social connections—friends, rivals, or streaming audiences—that AI struggles to replicate. As DMGregory notes, RL could be useful for training modes to prepare players for competitive play, but the development cost is high compared to matchmaking systems that pair beginners together.
+
+Personally I find games where the AI takes the place of a human opponent or partner are not as entertaining as playing with another person. Also the satisfaction of seeing someone downcast and humbled, when you beat them in a just ended game is not something AI can easily emulate.
 
 ## Traditional AI Techniques Are Still Effective
 
@@ -45,7 +49,7 @@ Implementing RL in games faces several hurdles:
 
 - **Training time**: Training RL models during gameplay is impractical. Game sessions are too short, and players interact with individual enemies briefly, as Theraot points out. Pre-trained models are more feasible but still require significant upfront work.
 - **Performance costs**: Training or running complex RL models takes CPU resources, which games need for smooth rendering and physics.
-- **Debugging difficulty**: RL models are hard to interpret or fix when they behave oddly, unlike traditional AI systems.
+- **Debugging difficulty**: RL models are hard to interpret or fix when they behave oddly, unlike traditional AI systems. _Side note: Found out the hard way about this when I tried to use&#32;[reinforcement learning for my 3D game](https://rdjarbeng.github.io/three.js-and-reinforcement-learning-in-3-dimensions/)._
 
 An exception is _Black & White_ by Lionhead Studios, which used a small neural network trained during gameplay for pet creature behavior. Players could reward or punish actions, shaping the creature’s behavior. However, such examples are rare due to the complexity of scaling this approach.
 
