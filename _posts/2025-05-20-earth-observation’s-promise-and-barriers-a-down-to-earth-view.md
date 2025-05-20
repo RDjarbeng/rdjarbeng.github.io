@@ -16,6 +16,8 @@ In this post I consider the transformative potential of satellite data for tackl
 
 Let us consider the possible use cases of satellite data and also finding some useful examples of how it is being used in a positive way to solve problems on  a large scale.
 
+![a satellite orbiting Earth, a view of Earth with data overlays, showing analysis of satellite data. Map of earth is color coded like you would normally see in geospatial data](/assets/images/satellite_orbiting_earth_color_codes.jpg "2 Satellites orbiting earth")
+
 ### Environmental Monitoring & Climate Science
 
 Satellites provide unique capabilities for monitoring our planet's health at scales impossible to achieve through ground-based methods alone. They enable:
@@ -84,6 +86,8 @@ Health researchers can leverage satellite data to:
 ## The Current Reality
 
 Despite the exciting possibilities of satellite data, its use today faces real-world hurdles that keep it from reaching its full potential. These challenges affect who can use the data, how it’s applied, and whether it truly helps solve global problems.
+
+![a satellite orbiting Earth, a view of Earth with data overlays focusing on the Americas, showing analysis of satellite data.](/assets/images/satellite_orbiting_americas_color_codes.jpg "A satellite orbiting Earth over the Americas")
 
 ### Focus Areas and Funding Imbalances
 
