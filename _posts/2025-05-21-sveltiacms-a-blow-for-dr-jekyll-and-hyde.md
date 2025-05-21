@@ -10,8 +10,6 @@ image: /assets/images/sveltia-logo.svg
 video: ''
 layout: post
 ---
-## What is a CMS?
-
 **TL;DR**: SveltiaCMS continues to evolve, delivering essential features that make content management a breeze.
 
 In my previous [post](https://rdjarbeng.github.io/story-time-add-a-cms-to-a-jekyll-github-pages-website/) about navigating _CMS hell_, I shared how I switched to [SveltiaCMS](https://github.com/sveltia/sveltia-cms) to escape the tedious process of manually creating and naming files and images for my website which runs on Ruby(Jekyll). 
@@ -34,11 +32,8 @@ I’m thrilled to report that these issues have been resolved! SveltiaCMS now in
 One of SveltiaCMS’s standout features is its exceptional support. If you encounter an issue, you can open a ticket on [GitHub](https://github.com/sveltia/sveltia-cms/issues), and the creator, [Kohei Yoshino](https://github.com/kyoshino), is likely to respond promptly. When preparing this post, I checked my GitHub issues and found that all six of my previously reported issues had been resolved with effective fixes. It’s refreshing to see a project that genuinely prioritizes its users. See screenshot below.
 ![Sveltia CMS issue resolution screenshot](/assets/images/20250521-130235.png)
 
-
-
 The SveltiaCMS Discord community is another highlight, with Kohei actively engaging with users. I once reported an issue while he was on a flight, and thanks to in-flight WiFi, he fixed it before landing! 
 ![Sveltia CMS Discord](/assets/images/20250521-125206.png "Sveltia CMS: Kohei is active on Discord")
-
 
 ### Why SveltiaCMS Stands Out
 
