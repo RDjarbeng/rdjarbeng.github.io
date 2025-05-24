@@ -1,5 +1,5 @@
 ---
-title: Navigating Rwanda- motorbikes and an accent
+title: Navigating Kigali- motorbikes and an accent
 date: 2025-05-23T09:52:00
 image: /assets/images/pili_pili_motor_bike_portrait.jpg
 layout: personal
