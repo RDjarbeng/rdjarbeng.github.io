@@ -10,7 +10,7 @@ Here's a photo I took at a bus-stop showing the bikes on the move in Kigali.
 
 ![bikes on the move in Kigali](/assets/images/kigali_bustop_motor.jpg "Bikes in Kigali")
 
-For foreigners from other African countries the bike riders have been known to increase prices especially once they realize you do not speak the local language, Kinyarwanda. Partly for this reason I have been brushing up on my Kinyarwanda skills to be able to navigate Kigali as easily as a local. Also because I want to at least communicate properly in the language after living in Rwanda for some years.
+For foreigners from other African countries the bike riders have been known to increase prices, however this behaviour is not new for most cities even in other African cities such as Accra and Nairobi. This might happen once they realize you do not speak the local language, Kinyarwanda. Partly for this reason I have been brushing up on my Kinyarwanda skills to be able to navigate Kigali as easily as a local. Also because I want to at least communicate properly in the language after living in Rwanda for some years.
 
 ![Portrait of yego motor bikes from pili pili restaurant](/assets/images/pili_pili_motor_bike_portrait.jpg "Portrait of yego motor bikes from pili pili restaurant")
 
