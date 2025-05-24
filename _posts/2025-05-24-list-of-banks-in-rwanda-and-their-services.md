@@ -17,19 +17,19 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 
 - **Account Types**: Offers RWF and USD accounts.
 - **Fees**:
-  - USD accounts: $20 initial deposit for non-RWF accounts, $4 monthly maintenance fee, $8 initial fee for cheque book for USD accounts withdrawals over the counter.
-  - USD withdrawals: 1% charge (recently introduced without prior communication from the bank).
-  - Cards: VISA cards provided upon request. Need separate cards for RWF and USD accounts.
+- USD accounts: $20 initial deposit for non-RWF accounts, $4 monthly maintenance fee, $8 initial fee for cheque book for USD accounts withdrawals over the counter.
+- USD withdrawals: 1% charge (recently introduced without prior communication from the bank).
+- Cards: VISA cards provided upon request. Need separate cards for RWF and USD accounts.
 - **Interest Rates**: No interest on USD accounts. Interest rates for RWF accounts are not publicly disclosed; contact the bank for details.
 - **Services**:
-  - Foreign exchange services supporting multiple currencies (e.g., USD, EUR, GBP) via electronic transfers.
-  - International money transfers through SWIFT and partnerships with agents like Western Union and MoneyGram.
-  - Personal, business, and corporate banking products, including loans and trade finance.
+- Foreign exchange services supporting multiple currencies (e.g., USD, EUR, GBP) via electronic transfers.
+- International money transfers through SWIFT and partnerships with agents like Western Union and MoneyGram.
+- Personal, business, and corporate banking products, including loans and trade finance.
 - **Ecobank Mobile App**:
-  - Allows transfers to other Ecobank Rwanda account holders and to other banks in Kigali.
-  - Enables free transfers to other USD account holders within Ecobank’s network.
-  - Supports cross-border transfers to Ecobank accounts in other countries, but both sender and recipient must be Ecobank customers; otherwise, a SWIFT transfer is required.
-  - Note: When converting USD to RWF via the app (for customers with both USD and RWF accounts), the exchange rate is typically less favorable than withdrawing USD and exchanging at a forex bureau in Kigali.
+- Allows transfers to other Ecobank Rwanda account holders and to other banks in Kigali.
+- Enables free transfers to other USD account holders within Ecobank’s network.
+- Supports cross-border transfers to Ecobank accounts in other countries at a fee (generally cheaper than SWIFT), but both sender and recipient must be Ecobank customers; otherwise, a SWIFT transfer is required.
+- Note: When converting USD to RWF via the app (for customers with both USD and RWF accounts), the exchange rate is typically less favorable than withdrawing USD and exchanging at a forex bureau in Kigali.
 - **Other Countries of Operation**: Ecobank is a pan-African bank with a presence in 33 African countries, including Nigeria, Ghana, Kenya, Uganda, Tanzania, and South Africa.
 - **Notes for Foreigners**: Ideal for those needing multi-currency transactions or regional transfers due to Ecobank’s extensive African network. The mobile app is convenient for local and USD transfers, but be cautious of the 1% USD withdrawal fee and less competitive app-based exchange rates for USD to RWF conversions. The USD Visa card works internationally; for instance, if buying an item on Amazon in the US costing $50, exactly $50 will be deducted when the USD card is used without additional charges.
 
@@ -41,10 +41,10 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Fees**: Specific fees for USD accounts are not publicly listed; contact the bank for details. A $15 initial deposit is required for non-RWF accounts.
 - **Interest Rates**: Offers fixed deposit accounts in RWF and foreign currencies with attractive rates, but exact rates are not disclosed; inquire directly. No interest on standard USD accounts.
 - **Services**:
-  - Foreign exchange services for multiple currencies, including spot and forward transactions, and currency swaps for qualifying customers.
-  - BRISTK transfer service for near real-time transfers within I&M Bank’s network (Rwanda, Kenya, Tanzania) in USD, RWF, KES, and TZS.
-  - Diaspora banking services, including remittance management, mortgages, and personal transaction accounts.
-  - Loans (personal, business, mortgage) with interest rates ranging from 16–19.5% (negotiable after 1–3 months of banking).
+- Foreign exchange services for multiple currencies, including spot and forward transactions, and currency swaps for qualifying customers.
+- BRISTK transfer service for near real-time transfers within I&M Bank’s network (Rwanda, Kenya, Tanzania) in USD, RWF, KES, and TZS.
+- Diaspora banking services, including remittance management, mortgages, and personal transaction accounts.
+- Loans (personal, business, mortgage) with interest rates ranging from 16–19.5% (negotiable after 1–3 months of banking).
 - **Other Countries of Operation**: I&M Bank operates in Kenya, Tanzania, Uganda, and Mauritius (via a joint venture).
 - **Notes for Foreigners**: A strong choice for those with regional ties in East Africa or needing diaspora services. The BRISK transfer system is a standout for fast cross-border transactions within the I&M network.
 
@@ -54,9 +54,9 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Fees**: $15 initial deposit for non-RWF accounts. No specific monthly fees for USD accounts disclosed; contact the bank for clarity.
 - **Interest Rates**: Interest offered on fixed deposit accounts, but specific rates for RWF or USD accounts are not publicly available; inquire directly.
 - **Services**:
-  - Foreign exchange products for international trade and remittances.
-  - Consumer loans, micro-business loans, and trade finance, with loan interest rates ranging from 14–25% (eligible after 6 months of banking).
-  - Call deposit accounts, fixed deposit accounts, and current accounts tailored for individuals and businesses.
+- Foreign exchange products for international trade and remittances.
+- Consumer loans, micro-business loans, and trade finance, with loan interest rates ranging from 14–25% (eligible after 6 months of banking).
+- Call deposit accounts, fixed deposit accounts, and current accounts tailored for individuals and businesses.
 - **Other Countries of Operation**: Equity Bank Group operates in Kenya, Uganda, Tanzania, South Sudan, and the Democratic Republic of Congo.
 - **Notes for Foreigners**: Suitable for those seeking loan products or multi-currency accounts. The bank’s regional presence is beneficial for businesses or individuals with operations across East Africa.
 
@@ -66,9 +66,9 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Fees**: $20 initial deposit for non-RWF accounts. Specific USD account fees are not listed; contact the bank for details.
 - **Interest Rates**: Interest rates for fixed deposits are available but not publicly specified; inquire directly. No interest on standard USD accounts.
 - **Services**:
-  - Foreign exchange and international money transfers via SWIFT and partnerships with agents like Western Union and MoneyGram.
-  - Personal and business accounts, including savings, current, and fixed deposit accounts.
-  - Loans (personal, mortgage, business) with competitive rates (specifics require direct inquiry).
+- Foreign exchange and international money transfers via SWIFT and partnerships with agents like Western Union and MoneyGram.
+- Personal and business accounts, including savings, current, and fixed deposit accounts.
+- Loans (personal, mortgage, business) with competitive rates (specifics require direct inquiry).
 - **Other Countries of Operation**: Bank of Kigali primarily operates in Rwanda, with no direct subsidiaries elsewhere, but maintains international correspondent banking relationships for global transactions.
 - **Notes for Foreigners**: As Rwanda’s largest bank (over 30% market share), it’s a reliable option for those prioritizing stability and local presence.
 
@@ -78,9 +78,9 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Fees**: $15 initial deposit for non-RWF accounts. Monthly fees for USD accounts are not disclosed; contact the bank for details.
 - **Interest Rates**: Fixed deposit accounts offer interest, but rates are not publicly available; inquire directly.
 - **Services**:
-  - Foreign exchange services and international transfers via partnerships with Western Union and MoneyGram.
-  - Personal, business, and microfinance loans with interest rates ranging from 19–21%.
-  - Mobile banking and digital platforms for convenient account access.
+- Foreign exchange services and international transfers via partnerships with Western Union and MoneyGram.
+- Personal, business, and microfinance loans with interest rates ranging from 19–21%.
+- Mobile banking and digital platforms for convenient account access.
 - **Other Countries of Operation**: BPR is part of Atlas Mara, which operates in several African countries, including Zambia and Mozambique, but BPR itself is Rwanda-focused.
 - **Notes for Foreigners**: A good option for those seeking microfinance or digital banking solutions, with a strong local presence.
 
