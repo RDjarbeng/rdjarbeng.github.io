@@ -21,7 +21,7 @@ AI refers to systems that process data to perform specific tasks like recognizin
 - **Natural Language Processing (NLP):** Powers chatbots or language translation.
 - **Computer Vision:** Enables machines to “see,” like in facial recognition.![Computer vision: Object  -Cat -detection](/assets/images/rtdetr/cat_prediction_rtdetr.jpg "Computer vision: Object  -Cat -detection")
 
-AI is _narrow_—designed for specific tasks, not general human-like intelligence—and depends on quality data. It’s not conscious or magical, just a tool with limits.
+AI is \_narrow\_—designed for specific tasks, not general human-like intelligence—and depends on quality data. It’s not conscious or magical, just a tool with limits.
 
 ## How People Perceive AI
 
@@ -51,7 +51,7 @@ This approach keeps you informed enough to discuss AI confidently, like understa
 
 ## AI in the Media: The Role of Tech Leaders
 
-AI news often features CEOs like Elon Musk (xAI, Tesla), Sam Altman (OpenAI), Mark Zuckerberg (Meta), Sundar Pichai (Google), or startup founders. Why? They shape AI’s trajectory:
+Of course I cannot make a  post on the current views of AI without including those who are currently on the TV screens everytime AI is mentioned. AI news often features CEOs like Elon Musk (xAI, Tesla), Sam Altman (OpenAI), Mark Zuckerberg (Meta), Sundar Pichai (Google), or startup founders. Why? They shape AI’s trajectory in the public eye:
 
 - **Innovation Drivers:** Altman’s OpenAI created ChatGPT, while Musk’s xAI built Grok. Google and Meta lead in research and open-source models.
 - **Financial Influence:** OpenAI raised $6.6 billion in 2024, and xAI’s valuation hit up to $120 billion, fueling AI’s growth [The New York Times].
