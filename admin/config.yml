@@ -1,18 +1,14 @@
-# backend:
-#   name: git-gateway
-#   branch: main  # Ensure you're using your default branch, usually 'main' or 'master'
 backend:
   name: github
   repo: RDjarbeng/rdjarbeng.github.io
   branch: main
   base_url: https://sveltia-cms-auth.richarddjarbeng.workers.dev/
-  
+
 site_url: https://rdjarbeng.github.io/
-media_folder: "assets/images"  # Media files (images) will be stored here
-public_folder: "/assets/images"  # URL for media files
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
-  # Blog posts
   - name: 'posts'
     label: 'Posts'
     folder: '_posts'
@@ -21,7 +17,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}'  }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - {
           label: 'Author',
           name: 'author',
@@ -30,16 +26,31 @@ collections:
           display_fields: [display_name],
           search_fields: [display_name],
           default: 'Richard',
-          value_field: 'short_name',
+          value_field: 'short_name'
         }
-      - { label: 'Categories', name: 'categories', widget: 'list', required: false } # Add categories field
-      - { label: 'Tags', name: 'tags', widget: 'list', required: false } # Add tags field (as a list)
+      - {
+            label: 'Category',
+            name: 'categories',
+            widget: 'list',
+            allow_add: true,
+            max: 1,
+            field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
+            default: ['Technology']
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          allow_add: true,
+          field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
+          default: []
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
 
-  # Personal posts
+  # Personal posts (unchanged)
   - name: 'personal'
     label: 'Personal'
     folder: '_personal'
@@ -49,12 +60,12 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}'  }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'personal' }
 
-  # Authors collection
+  # Authors collection (unchanged)
   - name: 'authors'
     label: 'Authors'
     folder: '_authors'
@@ -66,18 +77,3 @@ collections:
       - { label: 'Display Name', name: 'display_name', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  # # Navigation Configuration
-  # - name: 'config'
-  #   label: 'Config'
-  #   files:
-  #     - label: 'Navigation'
-  #       name: 'navigation'
-  #       file: '_data/navigation.yml'
-  #       fields:
-  #         - label: 'Navigation Items'
-  #           name: 'items'
-  #           widget: 'list'
-  #           fields:
-  #             - { label: Name, name: name, widget: string }
-  #             - { label: Link, name: link, widget: string }
