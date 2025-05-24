@@ -22,12 +22,14 @@ Here's a video of the steps I used.
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/8vCgiVB8bZQ" title="Finding a song from youtube shorts with google feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Found out the song name is 'Ordinary' by Alex Warren. Sweet. It turns out the Youtube shorts used this audio specifically: Alex Warren: Ordinary The Tonight Show Starring Jimmy Fallon. That has a stronger/louder  instrumental at the end which is missing in the official video.  I'll include that particular video below.
+Found out the song name is 'Ordinary' by Alex Warren. 🙂 It turns out the Youtube shorts used this audio specifically: Alex Warren: Ordinary The Tonight Show Starring Jimmy Fallon. That has a stronger/louder  instrumental at the end which is missing in the official video for the song.  I'll include that particular video below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/P8mx2NVu4OA" title="Alex Warren: Ordinary  The Tonight Show Starring Jimmy Fallon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Thanks to Google 'Find a song' I can now free myself from wondering what song that was. However it doesn't always work out as you can see in the video below. For this, the video was one I took personally at one event, "Founder's Friday at Norrsken' in Kigali. Google was not able to find the song. Doesn't always work. However in Google's defense,  the saxophonist was playing his cover of a famous song so I can't really blame Google because it wasn't exactly the same thing.
+Thanks to Google 'Find a song' I can now free myself from wondering what song that was. However it doesn't always work out as you can see in the video below. For this, the video was one I took personally at one event, "Founder's Friday at Norrsken' in Kigali. 
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/IyikWqqkElY" title="Finding a song from youtube shorts with google feature" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-By the way that song the saxophonist was playing was '[Victony & Tempoe - Soweto](https://www.youtube.com/watch?v=DPBRGWUgQsA)'
+Google was not able to find the song so this method doesn't have a 100% success rate. When it works though it saves me from typing or trying to sing the song for Google. However in Google's defense,  this particular video input in the example was a bit tricky. The saxophonist was playing his cover of a famous song so I can't really blame Google because it wasn't exactly the same thing. By the way that song the saxophonist was playing was '[Victony & Tempoe - Soweto](https://www.youtube.com/watch?v=DPBRGWUgQsA)'
+
+I thought it was a cool way of finding songs that you randomly find online so I hope it works for you. Apparently this doesn't work for IPhone users because they can't split the screen yet. Unbelievable that such an _ordinary_ 🎶feature doesn't work for IPhones.
