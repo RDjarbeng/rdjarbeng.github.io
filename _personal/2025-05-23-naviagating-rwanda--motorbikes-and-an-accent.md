@@ -1,7 +1,7 @@
 ---
 title: Navigating Kigali- motorbikes and an accent
 date: 2025-05-23T09:52:00
-image: /assets/images/pili_pili_motor_bike_portrait.jpg
+image: /assets/images/kigali_bustop_motor.jpg
 layout: personal
 ---
 In Kigali, Rwanda one of the major forms of transport is using a motor taxi. Here you can find them riding along most roads or parked at a corner waiting for passengers.
