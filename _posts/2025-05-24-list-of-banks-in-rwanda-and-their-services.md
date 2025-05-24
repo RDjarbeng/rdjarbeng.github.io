@@ -8,7 +8,7 @@ tags:
   - Banking
   - Rwanda
 title: List of Banks in Rwanda and Their Services
-image: /assets/images/1000175376.jpg
+image: ''
 layout: post
 ---
 This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. Below is a list of major banks operating in Rwanda, focusing on their services, account types (Rwandan Franc [RWF] and US Dollar [USD] accounts), associated fees, interest rates, and foreign exchange capabilities. Where applicable, we’ve included the banks’ operations in other countries to give you a sense of their regional presence. This comparison aims to simplify your decision-making process when choosing a bank in Rwanda.
@@ -32,6 +32,8 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
     - Note: When converting USD to RWF via the app (for customers with both USD and RWF accounts), the exchange rate is typically less favorable than withdrawing USD and exchanging at a forex bureau in Kigali.
 - **Other Countries of Operation**: Ecobank is a pan-African bank with a presence in 33 African countries, including Nigeria, Ghana, Kenya, Uganda, Tanzania, and South Africa.
 - **Notes for Foreigners**: Ideal for those needing multi-currency transactions or regional transfers due to Ecobank’s extensive African network. The mobile app is convenient for local and USD transfers, but be cautious of the 1% USD withdrawal fee and less competitive app-based exchange rates for USD to RWF conversions. The USD Visa card works internationally; if buying an item on Amazon in the US for instance costing $50, exactly $50 will be deducted when the USD card is used without additional charges
+
+[![Screenshot of Ecobank Rwanda page](/assets/images/20250524-152402.png "Screenshot of Ecobank Rwanda page")](https://www.ecobank.com/rw/personal-banking/countries)
 
 ## 2. I&M Bank Rwanda
 
