@@ -32,4 +32,8 @@ Thanks to Google 'Find a song' I can now free myself from wondering what song th
 
 Google was not able to find the song so this method doesn't have a 100% success rate. When it works though it saves me from typing or trying to sing the song for Google. However in Google's defense,  this particular video input in the example was a bit tricky. The saxophonist was playing his cover of a famous song so I can't really blame Google because it wasn't exactly the same thing. By the way that song the saxophonist was playing was '[Victony & Tempoe - Soweto](https://www.youtube.com/watch?v=DPBRGWUgQsA)'
 
-I thought it was a cool way of finding songs that you randomly find online so I hope it works for you. Apparently this doesn't work for IPhone users because they can't split the screen yet. Unbelievable that such an _ordinary_ 🎶feature doesn't work for IPhones.
+I thought it was a cool way of finding songs that you randomly find online so I hope it works for you.
+
+Apparently this doesn't work for IPhone users because they can't split the screen yet. Unbelievable that such an _ordinary_ 🎶feature doesn't work for IPhones.
+
+ ![](/assets/images/worst_part_of_classical_music.jpeg)
