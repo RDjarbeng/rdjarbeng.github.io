@@ -37,7 +37,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
-      - { label: 'Video', name: 'video', widget: 'file', media_folder: 'assets/videos', public_folder: '/assets/videos', required: false }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
 
   # Personal posts
