@@ -1,8 +1,10 @@
 ---
 date: 2025-05-23T22:24:00
 author: Richard
-categories: []
-tags: []
+categories:
+  - Technology
+tags:
+  - AI, Machine Learning, Hype, Elon Musk, Zuckerbeg, ChatGPT, OpenAI, Google
 title: 'AI: What It Is, How It’s Seen, and How to Stay Informed'
 image: /assets/images/rtdetr/cat_prediction_rtdetr.jpg
 video: ''
@@ -18,8 +20,8 @@ AI refers to systems that process data to perform specific tasks like recognizin
 
 - **Machine Learning (ML):** Algorithms that learn from data, like spam filters or recommendation systems.
 - **Deep Learning:** Neural networks for complex tasks, like image or speech recognition.
-- **Natural Language Processing (NLP):** Powers chatbots or language translation.
-- **Computer Vision:** Enables machines to “see,” like in facial recognition.![Computer vision: Object  -Cat -detection](/assets/images/rtdetr/cat_prediction_rtdetr.jpg "Computer vision: Object  -Cat -detection")
+- **Natural Language Processing (NLP):** Powers chatbots or language translation such as in Google Translate.
+- **Computer Vision:** Enables machines to “see,” like in facial recognition. Here's a simple example of object detection, one field of computer vision.![Computer vision: Object  -Cat -detection](/assets/images/rtdetr/cat_prediction_rtdetr.jpg "Computer vision: Object  -Cat -detection")
 
 AI is \_narrow\_—designed for specific tasks, not general human-like intelligence—and depends on quality data. It’s not conscious or magical, just a tool with limits.
 
