@@ -38,7 +38,7 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 ## 2. I&M Bank Rwanda
 
 - **Account Types**: Offers RWF and USD accounts, as well as other foreign currency accounts (e.g., EUR, GBP, CHF, INR, JPY, ZAR, CNY, AUD, AED, CAD).
-- **Fees**: Specific fees for USD accounts are not publicly listed; contact the bank for details. A $15 initial deposit is required for non-RWF accounts.
+- **Fees**: $2 monthly maintenance fee on USD accounts contact the bank for details. No deposit required as at 23rd May, 2025.
 - **Interest Rates**: Offers fixed deposit accounts in RWF and foreign currencies with attractive rates, but exact rates are not disclosed; inquire directly. No interest on standard USD accounts.
 - **Services**:
 - Foreign exchange services for multiple currencies, including spot and forward transactions, and currency swaps for qualifying customers.
