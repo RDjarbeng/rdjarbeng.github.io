@@ -38,6 +38,14 @@ Trying to stop a Japanese MP from speaking
 
 ---
 
+Messi holding Lamine Yamal as a baby
+
+![Image](/assets/images/20250527-182624.png)
+
+Credit to [@historyinmemes](https://x.com/historyinmemes) on [twitter](https://x.com/historyinmemes/status/1927062805611462766).
+
+---
+
 The Hercules Armor, forged in 1555 for Emperor Maximilian II of Austria.
 
 ![Image](https://pbs.twimg.com/media/Gkw87SkaoAA0GLw?format=jpg&name=small)
