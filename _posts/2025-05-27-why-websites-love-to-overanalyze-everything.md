@@ -6,7 +6,7 @@ categories:
 tags:
   - Website
 title: Why Websites Love to Overanalyze Everything
-image: ''
+image: /assets/images/website_long_text_on_screen.jpg
 layout: post
 ---
 So, I was scrolling through Twitter the other day, and I came across this gem: a [post](https://x.com/programmerByDay/status/1927189984710140408) complaining about how websites never just get to the point. If you ask ChatGPT it gives you the answer right away. Instead, they dive into every single aspect of a topic before finally addressing what you actually searched for. Why do websites do this? 
