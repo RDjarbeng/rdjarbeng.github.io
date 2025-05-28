@@ -11,9 +11,13 @@ layout: post
 ---
 So, I was scrolling through Twitter the other day, and I came across this gem: a [post](https://x.com/programmerByDay/status/1927189984710140408) complaining about how websites never just get to the point. If you ask ChatGPT it gives you the answer right away. Instead, they dive into every single aspect of a topic before finally addressing what you actually searched for. Why do websites do this? 
 
+![big google logo with small chatGPT logo](/assets/images/big_google_vs_gpt.jpg "Big google logo with small chatGPT logo")
+
 ## The SEO Monster
 
-First off, let's talk about the big elephant in the room: SEO, or Search Engine Optimization. Websites are obsessed with ranking high on Google, and one way they think they can achieve this is by covering every possible angle of a topic. For example, if you're looking for "how to bake a chocolate cake," you might first get a history lesson on chocolate, a rundown of different cake types, and a dissertation on baking techniques before they even mention the recipe. Why? Because search engines like Google reward comprehensive content. They think, "Hey, this article covers everything about chocolate cakes, so it must be authoritative!" 
+ SEO, or Search Engine Optimization, websites want to rank higher on Google, or other search engines and one way they think they can achieve this is by covering every possible angle of a topic.
+
+ For example, if you're looking for "how to bake a chocolate cake," you might first get a history lesson on chocolate, a rundown of different cake types, and a dissertation on baking techniques before they even mention the recipe. Why? Because search engines like Google reward comprehensive content. They think, "Hey, this article covers everything about chocolate cakes, so it must be authoritative!" 
 
 > "Content that provides a complete answer to a user's query is more likely to rank higher in search results."  
 > — [Google's SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
@@ -29,6 +33,8 @@ Then there's the backlink game. Websites want other sites to link to them becaus
 ## SEO Tools Pushing the Envelope
 
 Don't forget the SEO tools. Plugins like [Yoast SEO](https://yoast.com/) are always nagging writers to make their content longer. They say, "Hey, your article is only 800 words, but it should be at least 1,500 to rank well!" So, writers pad their articles with extra fluff to meet these arbitrary targets. It's not that the extra text is always useless, but sometimes it's just there to hit a word count.
+
+![Long text on a screen for a website](/assets/images/website_long_text_on_screen.jpg "Long text on a screen for a website")
 
 ## The Competitive Jungle
 
