@@ -9,8 +9,8 @@ tags:
   - MasterCard
 title: 'Visa and Mastercard: Payment Cards, Not Transfer Tools'
 image: /assets/images/visa_locked_image.jpg
-video: ''
 layout: post
+video: ''
 ---
 Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service—each step adding fees and complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the marketed capabilities of these cards and their real-world functionality.
 
@@ -22,13 +22,15 @@ Visa and Mastercard are widely promoted by financial institutions for their spee
 
 ![Visa card showing a lock merged with a lock mechanism](/assets/images/visa_locked_image.jpg "Visa card showing a lock merged with a lock mechanism")
 
+In this post I hope to discuss the current situation regarding money transfer across card holders for US dollar accounts. I choose to use one currency to avoid making this post longer or more complex than it needs to be by avoiding a discussion on Foreign exchange services; that topic could be another post on its own.
+
 ## Limitations of Direct Transfers
 
-Visa and Mastercard operate as payment networks, facilitating transactions between cardholders and merchants. According to Visa’s operational guidelines, their system processes over 200 billion transactions annually, almost entirely for payments, not interbank transfers. Direct transfers to bank accounts typically rely on systems like SWIFT or ACH, which these cards are not designed to access independently. As a result, cardholders cannot initiate a transfer to a bank account or card holder without additional steps.
+Visa and Mastercard operate as payment networks, facilitating transactions between cardholders and merchants across multiple banks and countries. According to Visa’s operational guidelines, their system processes over 200 billion transactions annually, almost entirely for payments, not interbank transfers. Direct transfers to bank accounts typically rely on systems like SWIFT (Society for Worldwide Interbank Financial Telecommunication) or ACH (Automated Clearing House), which these cards are not designed to access independently. As a result, cardholders cannot initiate a transfer to a bank account or card holder without additional steps.
 
 ## Bank Involvement in Transfers
 
-Most banks do not allow Visa or Mastercard to fund wire transfers directly. When transfers are permitted, fees apply: domestic wire transfers average $25, while international ones range from $40 to $50, per Bankrate’s 2024 data. Additionally, if a card is used, banks may classify the transaction as a cash advance, incurring fees of 3%-5% (e.g., $15-$25 on a $500 transfer) and higher interest rates, often above 20% APR.
+Most banks do not allow Visa or Mastercard to fund wire transfers directly. For most wire transfers, fees apply: domestic wire transfers average $25, while international ones range from $40 to $50, per Bankrate’s 2024 data. Additionally, if a card is used, banks may classify the transaction as a cash advance, incurring fees of 3%-5% (e.g., $15-$25 on a $500 transfer) and higher interest rates, often above 20% APR.
 
 ![Image for the post that shows two people with visa and MasterCard cards between them](/assets/images/visa_card_barrier2.jpg "Image for the post shows a man and a woman with visa and MasterCard cards between them")
 
@@ -44,11 +46,13 @@ These solutions leverage direct bank connections or mobile networks, offering fa
 
 **Personal note:** I’ve used a mobile money wallet linked to my bank account, and it’s incredibly convenient. There’s usually no fee to move money between the bank and wallet, and sending cash to someone just requires their phone number—far easier than juggling Visa or Mastercard details, since most people know their phone number by heart. There is a fee to transfer between persons but it's usually lower than those of a regular bank transfer. Zelle, operated by US banks, seems to have borrowed this idea, using a phone number or email to send money instantly. End note.
 
-These solutions shine for in-country payments but hit a wall internationally, where the gap persists. Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option—at least none I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest. The next section delves into third-party services that attempt to address this global hurdle.
+These solutions shine for in-country payments but hit a wall internationally, where the gap persists. Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option—at least none I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest.
+
+ The next section delves into third-party services that attempt to address this global hurdle.
 
 ## Third-Party Services as an Alternative
 
-Services like Wise, PayPal, and Venmo enable card-funded transfers to bank accounts, bridging the gap. Wise, for example, charges 0.43%-1.0% plus a fixed fee (e.g., $4.14 for a $500 USD-to-USD transfer, per their March 2025 fee calculator). PayPal’s fee for card-funded transfers is 2.9% plus $0.30 per transaction domestically, with higher rates for international sends. However, banks may still apply cash advance fees, adding 3%-5% to the cost. These services process transfers via their own networks or SWIFT, not the Visa or Mastercard payment rails.
+Services like Wise, PayPal, and Venmo enable card-funded transfers to bank accounts, bridging the gap. This applies to cards that are not on the payment platform being used to initiate a payment.  Wise, for example, charges 0.43%-1.0% plus a fixed fee (e.g., $4.14 for a $500 USD-to-USD transfer, per their March 2025 fee calculator). PayPal’s fee for card-funded transfers is 2.9% plus $0.30 per transaction domestically, with higher rates for international sends. However, banks may still apply cash advance fees, adding 3%-5% to the cost. These services process transfers via their own networks or SWIFT, not the Visa or Mastercard payment rails.
 
 I’ve used Wise (formerly TransferWise) myself, and the fees can surprise you depending on your card. When I sent money from my USD Visa card—issued in Rwanda—to a US bank account, the cost shot from $26 to nearly $100 once Wise clocked the card’s origin. Skipping the issuing bank (though Wise feels bank-like itself) meant a higher fee than the $40-$50 I’d have paid for a traditional bank transfer. Worse, these services often lean on systems like SWIFT or WIRE, piling on extra charges that can outstrip standard bank rates.
 
