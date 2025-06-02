@@ -7,12 +7,12 @@ tags:
   - SveltiaCMS, CMS, Jekyll, Richard's Website, Website
 title: 'My Experience with SveltiaCMS: A Game-Changer for Website Management'
 image: /assets/images/sveltia-logo.svg
-video: ''
 layout: post
+video: ''
 ---
 **TL;DR**: SveltiaCMS continues to evolve, delivering essential features that make content management a breeze.
 
-In my previous [post](https://rdjarbeng.github.io/story-time-add-a-cms-to-a-jekyll-github-pages-website/) about navigating _CMS hell_, I shared how I switched to [SveltiaCMS](https://github.com/sveltia/sveltia-cms) to escape the tedious process of manually creating and naming files and images for my website which runs on Ruby(Jekyll). 
+In my [previous post](https://rdjarbeng.github.io/story-time-add-a-cms-to-a-jekyll-github-pages-website/) about navigating what I called _CMS hell_, I shared how I switched to [SveltiaCMS](https://github.com/sveltia/sveltia-cms) to escape the tedious process of manually creating and naming files and images for my website which runs on Ruby(Jekyll). 
 
 ![Sveltia CMS logo](https://raw.githubusercontent.com/sveltia/sveltia-cms/3b8a8751d79a940c34448aaf328edb3da467d64f/src/lib/assets/sveltia-logo.svg "Sveltia CMS logo")
 
