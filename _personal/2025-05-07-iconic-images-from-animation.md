@@ -32,6 +32,12 @@ Pain from Naruto sitting on a tongue of a statue overlooking the village.
 
 ---
 
+Tai Lung returns to the jade palace in Dreamwork's Kung Fu Panda. Credit to [@UTDTrey](https://x.com/UTDTrey/status/1930753434598183125) on twitter
+
+![Shifu looking at Tai Lung returns to the jade palace in Dreamwork's Kung Fu Panda](/assets/images/tai_lung_returns_to_shifu.jpeg "Master Shifu looking at Tai Lung returns to the jade palace in Dreamwork's Kung Fu Panda")
+
+---
+
 General Zhao from Avatar the Last Airbender 'We attack at sunrise'.
 
 ![General Zhao and Iroh from Avatar the Last Airbender 'We attack at sunrise'](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
