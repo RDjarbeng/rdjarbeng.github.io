@@ -20,8 +20,8 @@ However there are some nuances when it comes to blending in.
 
 I once told a bike rider I was going to Kimironko in my best Kinyarwanda hoping to blend in as a local. He paused looked at me and said, 'Where are you going?' in English. My cover was blown. We negotiated in English, and I resigned myself to likely paying a higher fare.
 
-That encounter taught me a key lesson: apparently locals don’t pronounce “Ki” as “Kim” (like the name) but closer to “Chim” (almost like chimney) or “Tsi.” It’s a subtle difference, hard to capture in English. So, it’s not Ki-mironko but Tsi-mironko. Talk about a dead giveaway the moment I opened my mouth.
+That encounter taught me a key lesson: apparently locals don’t pronounce “Ki” as “Kim” (like the name) but closer to “Chim” (almost like chimney) or “Kyi.” It’s a subtle difference, hard to capture in English. So, it’s not Ki-mironko but Kyi-mironko. Talk about a dead giveaway the moment I opened my mouth.
 
 At least that's one Kinyarwanda lesson that I'll remember. 
 
-In case you are noticing that Kigali and Kinyarwanda start with K-I and wondering whether the pronunciation applies, _yes_, yes it does. They usually say _Tsi_-gali city and _Chi_-nyarwanda, though the difference is tough for English speakers to catch. I suppose that's one way to blow your cover as foreigner in Kigali, sorry, in Tsi-gali city.
+In case you are noticing that Kigali and Kinyarwanda start with K-I and wondering whether the pronunciation applies, _yes_, yes it does. They usually say _Kyi_-gali city and _Chi_-nyarwanda, though the difference is tough for English speakers to catch. I suppose that's one way to blow your cover as foreigner in Kigali, sorry, in Kyi-gali city.
