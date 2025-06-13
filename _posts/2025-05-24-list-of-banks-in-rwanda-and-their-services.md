@@ -78,6 +78,9 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 ## 5. BPR Bank Rwanda (Part of Atlas Mara)
 
 - **Account Types**: Offers RWF and USD accounts, with multi-currency support for select international currencies.
+
+![BPR bank buildingin downtown Kigali](/assets/images/1000189531.jpg "BPR bank buildingin downtown Kigali - Photo credit Richard Djarbeng")
+
 - **Fees**:
     - USD accounts: $15 initial deposit for non-RWF accounts. Monthly fees for USD accounts not disclosed; contact the bank for details.
 - **Interest Rates**: Fixed deposit accounts offer interest, but rates are not publicly available; inquire directly.
