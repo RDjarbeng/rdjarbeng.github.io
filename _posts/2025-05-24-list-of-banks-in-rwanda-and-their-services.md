@@ -8,7 +8,7 @@ tags:
   - Banking
   - Rwanda
 title: List of Banks in Rwanda and Their Services
-image: /assets/images/1000175376.jpg
+image: /assets/images/1000189531.jpg
 layout: post
 ---
 This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. Below is a list of major banks operating in Rwanda, focusing on their services, account types (Rwandan Franc [RWF] and US Dollar [USD] accounts), associated fees, interest rates, and foreign exchange capabilities. Where applicable, we’ve included the banks’ operations in other countries to give you a sense of their regional presence. This comparison aims to simplify your decision-making process when choosing a bank in Rwanda.
