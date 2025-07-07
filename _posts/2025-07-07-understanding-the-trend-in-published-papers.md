@@ -19,47 +19,13 @@ layout: post
 
 ---
 
-#### Introduction
-
-Scientific ideas evolve from novel concepts to widely accepted standards through a fascinating lifecycle, often visualized in diagrams with two main phases: **Peer Review** and **Standardisation**. This post breaks down the process step by step, using examples and analogies to make it relatable for everyone—whether you’re a researcher, a student, or just curious about science.
-
-#### The Peer Review Phase: Testing and Refining Ideas
-
 ![Academic papers rising with the wind](/assets/images/academic_papers_rising_wind.jpg "Academic papers rising with the wind")
-
-This is where the journey begins, with new ideas tested and refined through expert scrutiny. Here’s what happens:
-
-- **Technique Papers**: The starting point, where a researcher introduces a new method, like the first papers on CRISPR-Cas9 gene editing, a breakthrough for editing genes.
-- **First to Measure Papers**: Other researchers test the technique, measuring its effectiveness, similar to cooks trying out a new recipe to see if it works.
-- **Us Too Papers**: As it gains popularity, many researchers adopt it, like restaurants copying a trendy dish, leading to a wave of similar studies.
-- **Evaluations Papers**: The community critically assesses the technique, identifying strengths and weaknesses, much like food critics reviewing a popular dish.
-- **Intercomparisons**: Different versions are compared to find the best approach, like comparing brands of a popular product.
-
-#### The Standardisation Phase: Building a Foundation
-
-Once a technique survives peer review, it enters the standardisation phase, becoming a trusted benchmark.
-
-![Academic sitting at a desk](/assets/images/academic_paper.jpeg "Academic sitting at a desk") 
-
-Here’s how it unfolds:
-
-- **Reference Method**: After testing and comparison, one approach emerges as the go-to solution, like PCR (Polymerase Chain Reaction) for DNA amplification.
-- **Public Data**: Researchers make data openly available, like the Human Genome Project sharing genetic sequences, solidifying the standard.
-
-This progression highlights the natural lifecycle of research, from innovation to standardization, shaping the scientific community. For more details, explore resources like [NNLM’s Research Lifecycle](https://www.nnlm.gov/guides/data-glossary/research-lifecycle) or [Harvard’s Research Support](https://researchsupport.harvard.edu/research-lifecycle).
-
----
-
-### Detailed Analysis: The Evolution of Research Papers from Technique to Standardization
-
-This section offers a comprehensive exploration of the trend in published papers, as depicted in the provided diagram. It’s designed to be engaging, relatable, and informative for a general audience, with headings, examples, analogies, and tables for clarity.
 
 #### Introduction: Understanding the Scientific Lifecycle
 
 In scientific research, the journey from a novel idea to a widely accepted standard is an iterative process. Diagrams often outline this lifecycle, from initial papers to standardization and public availability, divided into **Peer Review** and **Standardisation** phases. This reflects the collaborative nature of science and mirrors innovations in technology, business, or social movements. This post breaks down each stage with examples and analogies to connect with your own experiences.
 
-The analysis draws from sources like the National Network of Libraries of Medicine (NNLM) on the research lifecycle, Harvard’s Research Support, and Wikipedia entries on the scientific method. The current date is Monday, July 7, 2025, at 2:40 PM CAT.
-
+The analysis draws from sources like the National Network of Libraries of Medicine (NNLM) on the research lifecycle, Harvard’s Research Support, and Wikipedia entries on the scientific method. 
 #### The Peer Review Phase: Laying the Groundwork
 
 The Peer Review phase introduces, tests, and refines techniques through community scrutiny, ensuring reliability. Each stage is detailed below with examples and analogies.
