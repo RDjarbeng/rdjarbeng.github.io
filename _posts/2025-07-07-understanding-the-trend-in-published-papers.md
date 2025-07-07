@@ -26,6 +26,7 @@ layout: post
 In scientific research, the journey from a novel idea to a widely accepted standard is an iterative process. Diagrams often outline this lifecycle, from initial papers to standardization and public availability, divided into **Peer Review** and **Standardisation** phases. This reflects the collaborative nature of science and mirrors innovations in technology, business, or social movements. This post breaks down each stage with examples and analogies to connect with your own experiences.
 
 The analysis draws from sources like the National Network of Libraries of Medicine (NNLM) on the research lifecycle, Harvard’s Research Support, and Wikipedia entries on the scientific method. 
+
 #### The Peer Review Phase: Laying the Groundwork
 
 The Peer Review phase introduces, tests, and refines techniques through community scrutiny, ensuring reliability. Each stage is detailed below with examples and analogies.
@@ -33,7 +34,7 @@ The Peer Review phase introduces, tests, and refines techniques through communit
 ##### Technique Papers: The Birth of an Idea
 
 - **Description**: This stage introduces a new method, tool, or approach, with papers outlining the theoretical foundation, initial experiments, and potential applications.
-- **Real-world Example**: The first papers on CRISPR-Cas9 gene editing in the early 2010s described a revolutionary gene-editing method, with a 2012 paper by Jennifer Doudna and Emmanuelle Charpentier earning the 2020 Nobel Prize in Chemistry.
+- **Real-world Example**: The first papers on CRISPR-Cas9 gene editing in the early 2010s described a revolutionary gene-editing method, with a 2012 paper by Jennifer Doudna and Emmanuelle Charpentier later earning the 2020 Nobel Prize in Chemistry.
 - **Analogy**: It’s like a chef inventing a new recipe, sharing it with colleagues to test its appeal.
 - **Context from Sources**: Aligns with the NNLM’s “Plan” stage, designing the study and identifying data needs.
 
