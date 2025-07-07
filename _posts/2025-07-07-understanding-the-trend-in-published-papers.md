@@ -12,6 +12,7 @@ image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
 ---
 ### Key Points
+
 - Research suggests that the trend of published papers follows a lifecycle from introducing new techniques to standardization, with two main phases: Peer Review and Standardisation.
 - It seems likely that this process involves stages like initial technique papers, testing, widespread adoption, critical evaluations, comparisons, and eventually becoming a reference method with public data.
 - The evidence leans toward this being a collaborative, iterative process, similar to how innovations in other fields evolve, but the specifics can vary by discipline.
@@ -19,9 +20,13 @@ layout: post
 ---
 
 #### Introduction
+
 Scientific ideas evolve from novel concepts to widely accepted standards through a fascinating lifecycle, often visualized in diagrams with two main phases: **Peer Review** and **Standardisation**. This post breaks down the process step by step, using examples and analogies to make it relatable for everyone—whether you’re a researcher, a student, or just curious about science.
 
 #### The Peer Review Phase: Testing and Refining Ideas
+
+![Academic papers rising with the wind](/assets/images/academic_papers_rising_wind.jpg "Academic papers rising with the wind")
+
 This is where the journey begins, with new ideas tested and refined through expert scrutiny. Here’s what happens:
 
 - **Technique Papers**: The starting point, where a researcher introduces a new method, like the first papers on CRISPR-Cas9 gene editing, a breakthrough for editing genes.
@@ -31,7 +36,12 @@ This is where the journey begins, with new ideas tested and refined through expe
 - **Intercomparisons**: Different versions are compared to find the best approach, like comparing brands of a popular product.
 
 #### The Standardisation Phase: Building a Foundation
-Once a technique survives peer review, it enters the standardisation phase, becoming a trusted benchmark. Here’s how it unfolds:
+
+Once a technique survives peer review, it enters the standardisation phase, becoming a trusted benchmark.
+
+![Academic sitting at a desk](/assets/images/academic_paper.jpeg "Academic sitting at a desk") 
+
+Here’s how it unfolds:
 
 - **Reference Method**: After testing and comparison, one approach emerges as the go-to solution, like PCR (Polymerase Chain Reaction) for DNA amplification.
 - **Public Data**: Researchers make data openly available, like the Human Genome Project sharing genetic sequences, solidifying the standard.
@@ -112,6 +122,7 @@ Once refined, the technique becomes a reference method, ensuring longevity and a
 This lifecycle showcases science’s collaborative nature, ensuring reliable techniques. It mirrors life’s progress—like smartphones evolving from clunky models to standard features like touchscreens—connecting to your experiences in technology or personal projects.
 
 Sources include:
+
 - [NNLM’s Research Lifecycle](https://www.nnlm.gov/guides/data-glossary/research-lifecycle)
 - [Harvard’s Research Support](https://researchsupport.harvard.edu/research-lifecycle)
 - Wikipedia’s [scientific method](https://en.wikipedia.org/wiki/Scientific_method) and [history](https://en.wikipedia.org/wiki/History_of_scientific_method).
@@ -122,14 +133,14 @@ Understanding this process highlights the effort behind discoveries, inspiring y
 
 #### Summary Table: Research Lifecycle Stages with Examples
 
-| **Stage**               | **Description**                                                                 | **Scientific Example**                                      |
-|-------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------|
-| Technique Papers        | Introduction of a new method, laying theoretical foundation                 | First papers on CRISPR-Cas9 gene editing (2012)             |
-| First to Measure Papers | Testing effectiveness and applicability in labs                            | Studies measuring CRISPR efficiency in human cells (mid-2010s) |
-| Us Too Papers           | Widespread adoption, with variations and improvements                      | Surge of CRISPR papers for genetic diseases and GMOs (late 2010s) |
-| Evaluations Papers      | Critical assessment of strengths, weaknesses, and comparisons              | Studies on CRISPR off-target effects and specificity (early 2020s) |
-| Intercomparisons        | Comparing different implementations to standardize best practices          | Comparisons of CRISPR delivery systems (late 2010s-early 2020s) |
-| Reference Method        | Widely accepted as standard, cited in textbooks and courses                | PCR (Polymerase Chain Reaction) for DNA amplification (1980s onward) |
-| Public Data             | Data and protocols made publicly available for global use                  | Human Genome Project data via GenBank (post-2003)           |
+| **Stage** | **Description** | **Scientific Example** |
+| --- | --- | --- |
+| Technique Papers | Introduction of a new method, laying theoretical foundation | First papers on CRISPR-Cas9 gene editing (2012) |
+| First to Measure Papers | Testing effectiveness and applicability in labs | Studies measuring CRISPR efficiency in human cells (mid-2010s) |
+| Us Too Papers | Widespread adoption, with variations and improvements | Surge of CRISPR papers for genetic diseases and GMOs (late 2010s) |
+| Evaluations Papers | Critical assessment of strengths, weaknesses, and comparisons | Studies on CRISPR off-target effects and specificity (early 2020s) |
+| Intercomparisons | Comparing different implementations to standardize best practices | Comparisons of CRISPR delivery systems (late 2010s-early 2020s) |
+| Reference Method | Widely accepted as standard, cited in textbooks and courses | PCR (Polymerase Chain Reaction) for DNA amplification (1980s onward) |
+| Public Data | Data and protocols made publicly available for global use | Human Genome Project data via GenBank (post-2003) |
 
 This table provides a quick reference for understanding the progression.
