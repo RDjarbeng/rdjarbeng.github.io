@@ -9,7 +9,7 @@ tags:
   - Windows
   - Help
 title: How to Recover an Unsaved PowerPoint Presentation After Hitting "Don't Save"
-image: ''
+image: /assets/images/recover_unsaved_presentation_ppt.png
 layout: post
 ---
 How to Recover an Unsaved PowerPoint Presentation After Hitting "Don't Save"
