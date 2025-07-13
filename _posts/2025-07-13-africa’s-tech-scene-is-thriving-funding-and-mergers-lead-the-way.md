@@ -21,7 +21,7 @@ Africa’s technology ecosystem is moving forward in 2025, as startups secure bi
 
 According to Norrsken East Africa, funding for African startups jumped by 40% in the first five months of 2025 compared to last year. This cash is helping companies grow fast, and many are teaming up through mergers or buyouts to reach more people. Here’s a closer look at some game-changing deals:
 
-- **LemFi and Pillar Team Up**: [LemFi](https://www.norrsken.org/), a UK-based app for sending money across borders, bought Pillar, a Nigerian startup offering credit cards. Together, they’re making it easier for Africans abroad to send money home and access credit, solving real problems for families and businesses.  
+- **LemFi and Pillar Team Up**: [LemFi](https://lemfi.com/), a UK-based app for sending money across borders, bought Pillar, a Nigerian startup offering credit cards. Together, they’re making it easier for Africans abroad to send money home and access credit, solving real problems for families and businesses.  
 - **Miran and Welnes Create a Health App**: In Egypt, [Miran and Welnes joined forces](https://www.wamda.com/2025/04/miran-welnes-merge-build-powerful-health-fitness-app) to build a super-app for health and fitness. Miran brings wellness know-how, while Welnes adds tech to help users stay fit, aiming to make healthy living accessible across the Middle East and Africa.  
 - **BioLite and Baobab+ Light Up Africa**: [BioLite took a majority stake in Baobab+](https://cioafrica.co/biolite-acquires-majority-stake-in-baobab-to-expand-renewable-energy-access-across-africa/), a company that sells solar kits in rural areas. This deal will bring clean, affordable energy to homes without electricity, powering lights and phones in remote communities.  
 - **MaxAB-Wasoko Buys Fatura**: [MaxAB-Wasoko acquired Fatura](https://www.wamda.com/2025/05/maxab-wasoko-acquires-fatura-efg-finance-joins-board), a platform that helps small shops in Egypt stock up online. This move makes it easier for store owners to get goods, with big investors like EFG Finance joining the team.  
@@ -32,7 +32,7 @@ According to Norrsken East Africa, funding for African startups jumped by 40% in
 
 ## New Ways to Fund Dreams
 
-Startups are also finding creative ways to raise money. For example, [Payaza in Nigeria raised ~$10M](https://www.linkedin.com/posts/opeawo_payaza-commercialpaper-redemptioncomplete-activity-7344398320557006848-ynn8) through something called commercial paper, a kind of short-term loan usually used by big companies. In Egypt, Tasaheel (part of MNT-Halan) issued a huge EGP 2.5 billion bond, showing that African startups are now playing in the big leagues of finance.
+Startups are also finding creative ways to raise money. For example, [Payaza in Nigeria raised \~$10M](https://www.linkedin.com/posts/opeawo_payaza-commercialpaper-redemptioncomplete-activity-7344398320557006848-ynn8) through something called commercial paper, a kind of short-term loan usually used by big companies. In Egypt, Tasaheel (part of MNT-Halan) issued a huge EGP 2.5 billion bond, showing that African startups are now playing in the big leagues of finance.
 
 ## About Norrsken in Kigali
 
@@ -42,7 +42,7 @@ Startups are also finding creative ways to raise money. For example, [Payaza in 
 
 Want to see Africa’s tech revolution up close? [Africa/Week 2025](https://www.norrsken.org/africaweek) in Kigali this November brings together 500 founders, investors, and big thinkers to shape the continent’s future. Sign up to meet the people driving these exciting changes!
 
-*Follow Norrsken East Africa on [LinkedIn](https://www.linkedin.com/showcase/norrsken-kigali/), [Instagram](https://www.instagram.com/norrsken_eastafrica/), and [X](https://x.com/norrskenEA) for the latest on Africa’s tech scene.*
+_Follow Norrsken East Africa on&#32;[LinkedIn](https://www.linkedin.com/showcase/norrsken-kigali/),&#32;[Instagram](https://www.instagram.com/norrsken_eastafrica/), and&#32;[X](https://x.com/norrskenEA)&#32;for the latest on Africa’s tech scene._
 
 ---
-*About the Author*: Richard Djarbeng is a curious explorer of Africa’s booming tech ecosystem, passionate about the startups and innovators shaping the continent’s future. Through his personal blog, Richard shares stories and insights on African tech, from fintech breakthroughs to sustainable solutions, connecting readers with the people and ideas driving change. When he’s not writing, he’s diving into the latest trends in tech and dreaming up ways to support Africa’s next big idea.
+_About the Author_: Richard Djarbeng is a curious explorer of Africa’s booming tech ecosystem, passionate about the startups and innovators shaping the continent’s future. Through his personal blog, Richard shares stories and insights on African tech, from fintech breakthroughs to sustainable solutions, connecting readers with the people and ideas driving change. When he’s not writing, he’s diving into the latest trends in tech and dreaming up ways to support Africa’s next big idea.
