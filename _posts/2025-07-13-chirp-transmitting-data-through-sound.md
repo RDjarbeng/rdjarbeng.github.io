@@ -53,7 +53,7 @@ Chirp is built with a modern tech stack including React, TypeScript, Vite, and t
 
 Chirp is more than just a novelty—it's a creative exploration of alternative data transmission methods. While a proof of concept with a simplified encoding scheme, it opens possibilities for low-bandwidth environments or creative installations, and its visualization serves as an educational tool for understanding audio frequencies and data encoding.
 
-For a 5 month project it also happens to have a lot of stars on GitHub and interesting one particular developer caught my eye.
+For a 5 month project it also happens to almost 600 stars on GitHub and one particular developer caught my eye👀.
 
 ![jackjackbits stars chirp repository on GitHub](/assets/images/jackjackbits_dorsey_stars_chirp.png "Jack Dorsey starts chirp repository on GitHub")
 
