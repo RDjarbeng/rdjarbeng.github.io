@@ -5,7 +5,7 @@ description: >-
 keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
 author: Richard Djarbeng
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://RDjarbeng.github.io" # the base hostname & protocol for your site
+url: "https://rdjarbeng.com" # the base hostname & protocol for your site
 github_username: RDjarbeng
 twitter_username: DjarbengRichard
 linkedin_username: richarddjarbeng
