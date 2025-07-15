@@ -17,6 +17,8 @@ layout: post
 
 Particulate Matter (PM) comprises a diverse mix of solid and liquid particles suspended in the atmosphere, varying in size, chemical composition, and origin (U.S. Environmental Protection Agency [EPA], 2023). Among these, PM2.5—particles with an aerodynamic diameter of 2.5 micrometers or less—is a critical air pollutant due to its ability to penetrate deep into the respiratory system and bloodstream, posing significant health and environmental risks (World Health Organization [WHO], 2021). This article examines the composition of PM, the primary and secondary sources of PM2.5, and their broader implications, drawing on peer-reviewed literature and authoritative sources to provide a comprehensive overview.
 
+![urban city with trees and clouds with annotated text](/assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg "Urban city with trees and clouds with annotated text")
+
 ## Composition of Particulate Matter
 
 PM consists of various chemical and physical components, each contributing to its environmental and health impacts. The primary constituents include:
