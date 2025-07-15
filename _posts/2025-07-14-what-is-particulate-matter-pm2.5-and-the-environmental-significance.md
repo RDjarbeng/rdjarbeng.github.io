@@ -10,7 +10,7 @@ tags:
   - PM2.5
   - Black Carbon
 title: What is Particulate Matter (PM2.5) and the Environmental Significance
-image: /assets/images/brightglobe_in_africa.jpg
+image: /assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg
 layout: post
 ---
 ## Introduction
@@ -67,16 +67,16 @@ PM2.5 is a complex pollutant with far-reaching health and environmental implicat
 
 ## References
 
-- Behera, S. N., Sharma, M., Aneja, V. P., & Balasubramanian, R. (2013). Ammonia in the atmosphere: A review on emission sources, atmospheric chemistry, and deposition on terrestrial bodies. *Environmental Science and Pollution Research, 20*(11), 8092–8131. https://doi.org/10.1007/s11356-013-2051-9
-- Bond, T. C., Doherty, S. J., Fahey, D. W., et al. (2013). Bounding the role of black carbon in the climate system: A scientific assessment. *Journal of Geophysical Research: Atmospheres, 118*(11), 5380–5552. https://doi.org/10.1002/jgrd.50171
+- Behera, S. N., Sharma, M., Aneja, V. P., & Balasubramanian, R. (2013). Ammonia in the atmosphere: A review on emission sources, atmospheric chemistry, and deposition on terrestrial bodies. _Environmental Science and Pollution Research, 20_(11), 8092–8131. https://doi.org/10.1007/s11356-013-2051-9
+- Bond, T. C., Doherty, S. J., Fahey, D. W., et al. (2013). Bounding the role of black carbon in the climate system: A scientific assessment. _Journal of Geophysical Research: Atmospheres, 118_(11), 5380–5552. https://doi.org/10.1002/jgrd.50171
 - European Environment Agency (EEA). (2023). Air pollution. https://www.eea.europa.eu/en/topics/in-depth/air-pollution
-- Hallquist, M., Wenger, J. C., Baltensperger, U., et al. (2009). The formation, properties, and impact of secondary organic aerosol: Current and emerging issues. *Atmospheric Chemistry and Physics, 9*(14), 5155–5236. https://doi.org/10.5194/acp-9-5155-2009
+- Hallquist, M., Wenger, J. C., Baltensperger, U., et al. (2009). The formation, properties, and impact of secondary organic aerosol: Current and emerging issues. _Atmospheric Chemistry and Physics, 9_(14), 5155–5236. https://doi.org/10.5194/acp-9-5155-2009
 - Intergovernmental Panel on Climate Change (IPCC). (2021). Climate change 2021: The physical science basis. https://www.ipcc.ch/report/ar6/wg1/
-- Jacob, D. J. (1999). *Introduction to atmospheric chemistry*. Princeton University Press.
-- Lewis, E. R., & Schwartz, S. E. (2004). *Sea salt aerosol production: Mechanisms, methods, measurements, and models*. American Geophysical Union. https://doi.org/10.1029/GM152
-- Pope, C. A., Burnett, R. T., Thun, M. J., et al. (2002). Lung cancer, cardiopulmonary mortality, and long-term exposure to fine particulate air pollution. *Journal of the American Medical Association, 287*(9), 1132–1141. https://doi.org/10.1001/jama.287.9.1132
-- Prospero, J. M. (1999). Long-range transport of mineral dust in the global atmosphere: Impact of African dust on the environment of the southeastern United States. *Proceedings of the National Academy of Sciences, 96*(7), 3396–3403. https://doi.org/10.1073/pnas.96.7.3396
-- Reid, J. S., Koppmann, R., Eck, T. F., & Eleuterio, D. P. (2005). A review of biomass burning emissions part II: Intensive physical properties of biomass burning particles. *Atmospheric Chemistry and Physics, 5*(3), 799–825. https://doi.org/10.5194/acp-5-799-2005
-- Seinfeld, J. H., & Pandis, S. N. (2016). *Atmospheric chemistry and physics: From air pollution to climate change* (3rd ed.). Wiley.
+- Jacob, D. J. (1999). _Introduction to atmospheric chemistry_. Princeton University Press.
+- Lewis, E. R., & Schwartz, S. E. (2004). _Sea salt aerosol production: Mechanisms, methods, measurements, and models_. American Geophysical Union. https://doi.org/10.1029/GM152
+- Pope, C. A., Burnett, R. T., Thun, M. J., et al. (2002). Lung cancer, cardiopulmonary mortality, and long-term exposure to fine particulate air pollution. _Journal of the American Medical Association, 287_(9), 1132–1141. https://doi.org/10.1001/jama.287.9.1132
+- Prospero, J. M. (1999). Long-range transport of mineral dust in the global atmosphere: Impact of African dust on the environment of the southeastern United States. _Proceedings of the National Academy of Sciences, 96_(7), 3396–3403. https://doi.org/10.1073/pnas.96.7.3396
+- Reid, J. S., Koppmann, R., Eck, T. F., & Eleuterio, D. P. (2005). A review of biomass burning emissions part II: Intensive physical properties of biomass burning particles. _Atmospheric Chemistry and Physics, 5_(3), 799–825. https://doi.org/10.5194/acp-5-799-2005
+- Seinfeld, J. H., & Pandis, S. N. (2016). _Atmospheric chemistry and physics: From air pollution to climate change_ (3rd ed.). Wiley.
 - U.S. Environmental Protection Agency (EPA). (2023). Particulate matter (PM) basics. https://www.epa.gov/pm-pollution/particulate-matter-pm-basics
 - World Health Organization (WHO). (2021). Ambient (outdoor) air quality and health. https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health
