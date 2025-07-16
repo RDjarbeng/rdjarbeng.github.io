@@ -12,7 +12,7 @@ title: 'Chirp: Transmitting Data Through Sound'
 image: /assets/images/chirp_screenshot_data_with_sound.png
 layout: post
 ---
-In the ever-evolving world of data transfer, a fascinating project called **Chirp** caught my attention on GitHub. Developed by [solst-ice](https://github.com/solst-ice), Chirp enables users to send and receive data using sound waves, transforming text into audio frequencies that can be transmitted through speakers and captured by a microphone. You can try it out yourself on their [demo website](https://chirp.hex.dance/), where granting microphone access unlocks a unique data transfer experience.
+In the ever-evolving world of data transfer, a project called **Chirp** caught my attention on GitHub. Developed by [solst-ice](https://github.com/solst-ice), Chirp enables users to send and receive data using sound waves, transforming text into audio frequencies that can be transmitted through speakers and captured by a microphone. You can try it out yourself on their [demo website](https://chirp.hex.dance/), where granting microphone access unlocks a unique data transfer experience.
 
 ![Chirp website screenshot showing data being transmitted on a real-time frequency spectrum](/assets/images/chirp_screenshot_data_with_sound.png "Chirp website screenshot showing data being transmitted on a real-time frequency spectrum")
 
