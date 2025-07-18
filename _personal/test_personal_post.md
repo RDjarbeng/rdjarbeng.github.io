@@ -1,6 +1,7 @@
 ---
 layout: personal
 title: "My First Personal Post"
+published: false
 date: 2024-07-30
 ---
 
