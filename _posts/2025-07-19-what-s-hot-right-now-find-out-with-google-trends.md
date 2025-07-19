@@ -12,6 +12,9 @@ tags:
   - datascience
   - artificialintelligence
   - data
+  - interest
+  - Manchester United
+  - Trending
 title: What's Hot Right Now? Find Out with Google Trends!
 image: /assets/images/1Google trends.png
 layout: post
