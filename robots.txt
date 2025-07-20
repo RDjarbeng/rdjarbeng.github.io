@@ -1,4 +1,4 @@
-Sitemap: https://rdjarbeng.github.io/sitemap.xml
+Sitemap: https://rdjarbeng.com/sitemap.xml
 
 User-agent: *
 Allow: /
