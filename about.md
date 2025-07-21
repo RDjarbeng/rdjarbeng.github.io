@@ -53,7 +53,7 @@ I specialize mostly in web development machine learning and Internet of Things (
 Feel free to reach out for collaborations or just a chat about technology!
 
 ## Personal note 
-If you are interested in some details outside the professional space. I like football, or soccer if you're american and I am an undercover Manchester United fan, _for now_. Occasionally I try new things outside my regular field such as playing the piano, aerospace engineering, and video games.
+If you are interested in some details outside the professional space. I like football, or soccer if you're american. On bad seasons I am an undercover Manchester United fan, _for now_. Occasionally I try new things outside my regular field such as playing the piano, aerospace engineering, and video games.
 
 I studied at Carnegie Mellon University in Africa (CMU-Africa), Kigali for my Master's degree where I met many students from diverse countries in Africa; Kenya, South Sudan, Tanzania, Nigeria, Uganda, etc. Surprisingly I met my first Ivorian in CMU-Africa, surprising because Cote d'Ivoire is Ghana's western neighbour. Studying at CMU was a wonderful experience and my first international _expedition_ outside Ghana's shores.
 During that program I was in the United States briefly for a semester's exchange program at Carnegie Mellon University in Pittsburgh. 
