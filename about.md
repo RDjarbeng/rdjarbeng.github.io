@@ -13,18 +13,12 @@ Generally I am curious about many things but I have summarized my experience, sk
 -----------------------------
 
 I specialize mostly in web development machine learning and Internet of Things (IoT) devices such as the Raspberry Pi and Arduino.  
-<br/>
-
 ### Professional Summary
-
 - Specialized in web development, machine learning, and IoT devices (Raspberry Pi, Arduino)
 - Experienced in developing progressive web applications and data-driven solutions
 - Skilled in cloud technologies, particularly Google Cloud Platform
 - Contributor to the [complete machine learning package](https://github.com/Nyandwi/machine_learning_complete/)
-
-
 ### Technical skills
-
 - Languages: JavaScript (ES6+), Python, Java, C++
 - Web Development: React.js, Node.js, Express.js, RESTful APIs, WebSockets
 - Cloud & ML: Google Cloud (Vertex AI, BigQuery), CNN Architectures
@@ -60,7 +54,7 @@ Feel free to reach out for collaborations or just a chat about technology!
 
 If you are interested in some details outside the professional space. I like football, or soccer if you're american and I am an undercover Manchester United fan, _for now_. Occasionally I try new things outside my regular field such as playing the piano, aerospace engineering, and video games.
 
-I studied at Carnegie Mellon University in Africa, Kigali for my Master's degree where I met many students from diverse countries in Africa; Kenya, South Sudan, Tanzania, Nigeria, Uganda, etc. This was a wonderful experience and my first international _expedition_.
+I studied at Carnegie Mellon University in Africa (CMU-Africa), Kigali for my Master's degree where I met many students from diverse countries in Africa; Kenya, South Sudan, Tanzania, Nigeria, Uganda, etc. Surprisingly I met my first Ivorian in CMU-Africa, surprising because Cote d'Ivoire is Ghana's western neighbour. Studying at CMU was a wonderful experience and my first international _expedition_ outside Ghana's shores.
 During that program I was in the United States briefly for a semester's exchange program at Carnegie Mellon University in Pittsburgh. 
 
 Going further back in time I had my bachelor's degree at the University of Ghana where I met a lot of interesting people and began my journey as an engineer. 
