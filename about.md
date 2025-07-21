@@ -68,7 +68,7 @@ Big thank you to Prof. Heather Beem for teaching my Class Computer Aided Design 
 
 Achimota School (Motown) in Ghana was my high school where I gained an interest in Physics as a science student; surprisingly Physics was my least favourite subject at the beginning of my high school journey. Big thank you to Mr Ashong of blessed memory who thought me to appreciate the beauty of Physics and encouraged me to embrace Physics. It was also here that I first learned about tech; programming languages, web development and computers in general, simply from discussions with my class mates in Science 7.
 
-Well, that's enough about me, hopefully one day I'll make more thorough posts in my personal section on this website.
+Well, that's enough about me, hopefully one day I'll make more thorough posts in my personal section about myself on this website.
 
   <div class="donation-section" align="left">
   <p>Love my work? Support me with a small donation!</p>
