@@ -62,9 +62,14 @@ If you are interested in some details outside the professional space. I like foo
 
 I studied at Carnegie Mellon University in Africa, Kigali for my Master's degree where I met many students from diverse countries in Africa; Kenya, South Sudan, Tanzania, Nigeria, Uganda, etc. This was a wonderful experience and my first international _expedition_.
 During that program I was in the United States briefly for a semester's exchange program at Carnegie Mellon University in Pittsburgh. 
-Going further back in time I had my bachelor's degree at the University of Ghana where I met a lot of interesting people and began my journey as an engineer. Big thank you to Heather Beem for teaching my Class Computer Aided Design where we first designed 3D models of mechanical systems.
-Achimota School (Motown) was my high school where I gained an interest in Physics as a science student; surprisingly Physics was my least favourite subject at the beginning of my high school journey. Big thank you to Mr Ashong of blessed memory who thought me to appreciate the beauty of Physics. It was also here that I first learned about tech; programming languages, web development and computers in general, simply from discussions with my class mates in Science 7.
-That's enough about me, hopefully one day I'll make more thorough posts in my personal section on this website.
+
+Going further back in time I had my bachelor's degree at the University of Ghana where I met a lot of interesting people and began my journey as an engineer. 
+Big thank you to Prof. Heather Beem for teaching my Class Computer Aided Design where we first designed 3D models of mechanical systems.
+
+Achimota School (Motown) in Ghana was my high school where I gained an interest in Physics as a science student; surprisingly Physics was my least favourite subject at the beginning of my high school journey. Big thank you to Mr Ashong of blessed memory who thought me to appreciate the beauty of Physics and encouraged me to embrace Physics. It was also here that I first learned about tech; programming languages, web development and computers in general, simply from discussions with my class mates in Science 7.
+
+Well, that's enough about me, hopefully one day I'll make more thorough posts in my personal section on this website.
+
   <div class="donation-section" align="left">
   <p>Love my work? Support me with a small donation!</p>
   <a href="https://buymeacoffee.com/rdjarbeng" target="_blank">
