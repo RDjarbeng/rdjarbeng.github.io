@@ -16,6 +16,8 @@ layout: post
 ---
 This week, I dive into agentic object detection and document extraction using tools from Landing.ai, one of Andrew Ng's innovative startups! Inspired by Andrew Ng's recent post on X about their blazing-fast text extraction upgrades, I put their tech to the test. Here's what I found:
 
+![Agentic detection with landing ai cover image](/assets/images/agentic_obj_dection_landingai_cover.png "Agentic detection with landing ai")
+
 ## Agentic Object Detection
 
 Forget training models with tons of coffee cup images! Just describe the object, and the model nails it. Simple, smart, and efficient. For example, I noticed one of the coffee cups has a design made with milk that looks like a tree leaf, so I asked it to detect the 'coffee in a cup with plant design', and it successfully identified those cups. This differs from typical computer vision tasks (e.g., object detection or instance segmentation) where models are trained on specific object classes like cars or license plates.
