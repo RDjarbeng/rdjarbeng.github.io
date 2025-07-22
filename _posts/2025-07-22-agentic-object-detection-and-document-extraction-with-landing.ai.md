@@ -24,11 +24,13 @@ Forget training models with tons of coffee cup images! Just describe the object,
 
 In a screen recording, I specified detecting 'windows with room lights on' in a building picture, and it highlighted them with 100% accuracy. Similarly, using the singular 'building' (as instructed by the app) on a skyline image detected all buildings perfectly. Besides bounding boxes in the UI, it also provides JSON output with coordinates for API use.
 
+![landing ai detecting windows with lights on](/assets/images/landingai_window_detection.png "landing ai detecting windows with lights on")
+
 ## Agentic Document Extraction
 
-Prompted by Andrew Ng's tweet, I tested document extraction. It handled an invoice, outputting details in markdown or JSON, and a lab report with images and mixed layouts (two-column and single-column) effortlessly. It even described the logo and formatted results consistently. Here is a screenshot from the video
+Prompted by Andrew Ng's tweet, I tested document extraction. It handled an invoice, outputting details in markdown or JSON, and a lab report with images and mixed layouts (two-column and single-column) effortlessly. It even described the logo and formatted results consistently. Here is a screenshot from the video showing the extracted text
 
-
+![Extraracted text from landing ai agentic document extraction](/assets/images/landingai_document_extraction.png "Extraracted text from landing ai agentic document extraction")
 
 ### Andrew Ng's X Post
 
@@ -53,6 +55,6 @@ I reported a non-working 'Start for free' button on their site. I received this 
 
 Then Adrian from Landing.ai confirmed via LinkedIn that the team is addressing the issue.
 
-
+![Landing ai thanks Richard for noticing issue](/assets/images/landing_adrian_linkedin.png "Linkedin -Landing ai thanks Richard for noticing issue")
 
  It seems fixed now—glad to help, and impressed by their proactive response!
