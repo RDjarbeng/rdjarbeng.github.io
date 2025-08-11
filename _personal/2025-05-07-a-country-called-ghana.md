@@ -6,13 +6,13 @@ layout: personal
 ---
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain areas a visitor to Ghana might find interesting; people, history, governance, sights to visit.
 
-![](/assets/images/2nd_collage_on_ghana.png)
+![A collage featuring pictures of Ghana and historical sites](/assets/images/2nd_collage_on_ghana.png "A collage featuring pictures of Ghana and historical sites")
 
 ## People
 
 The people,  hospitable and most welcoming you can find. With diverse ethnic groups such as the Akan, Ewe, Ga, Mole-Dagbani with each having their own traditions, festivals and foodl
 
-![People from Ghana are very hospitable and it has a young population](/assets/images/people_ghana.png "People from Ghana are very hospitable and it has a young population")
+![3 pictures showing people from Ghana with text that they are very hospitable and it has a young population](/assets/images/people_ghana.png "People from Ghana are very hospitable and it has a young population")
 
 ## History in Governance: 
 
