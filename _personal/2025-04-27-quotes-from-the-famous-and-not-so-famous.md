@@ -4,11 +4,11 @@ date: 2025-04-27T13:28:00
 image: /assets/images/Warren_Buffett_quote_market.png
 layout: personal
 ---
-I use this post to keep quotes I find interesting across the internet and books I read.
+In this post we'll take a look at interesting quotes I found across the internet and books I read. For a glimpse I'm featuring George Bernard Shaw and Captain Jack Sparrow.
 
 “The stock market is a device for transferring money from the impatient to the patient.” - Warren Buffett
 
-![](/assets/images/Warren_Buffett_quote_market.png)
+![Warren buffet quote about the market](/assets/images/Warren_Buffett_quote_market.png "Warren buffet quote about the market")
 
 “Books serve to show a man that those original thoughts of his aren't very new after all.”
 ― Abraham Lincoln
