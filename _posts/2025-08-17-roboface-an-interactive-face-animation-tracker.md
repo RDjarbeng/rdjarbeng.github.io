@@ -5,7 +5,15 @@ author: Richard
 categories:
   - Technology
 tags:
-  - H
+  - Human Robot Interaction
+  - Face animation
+  - Digital avatar
+  - Uncanny valley
+  - 2D avatar
+  - React project
+  - RDjarbeng's project
+  - animation
+  - virtual head
 title: Roboface-an Interactive Face Animation Tracker
 image: /assets/images/face_animation_cover.png
 layout: post
@@ -24,13 +32,13 @@ The face shifts between emotional statesâ€”happy, surprised, bored, or neutralâ€
 - Turns bored after long inactivity.
 - Settles to neutral with less activity.
 
-![Face animation demo screenshot](/assets/images/face_animation_screenshot (1).png "Face animation demo screenshot")
+![Face animation with eyebrows](/assets/images/face_animation_screenshot \(1\).png "Face animation with eyebrows\"").png "Face animation demo screenshot")
 
 Smooth transitions come from CSS and JavaScript, adjusting eye movement, mouth shape, and blush.
 
 The current version is version 2. Here's a screenshot of an earlier version where I tried to include eyebrows on the face avatar to make it more _expressive_.
 
-![Face_animation_with eyebrows](/assets/images/face_animation_screenshot (2).png "Face animation with eyebrows")
+![Face_animation_with eyebrows](/assets/images/face_animation_screenshot \(2).png "Face animation with eyebrows")
 
 ---
 
