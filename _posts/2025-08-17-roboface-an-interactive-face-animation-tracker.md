@@ -36,9 +36,23 @@ The face shifts between emotional states—happy, surprised, bored, or neutral�
 
 Smooth transitions come from CSS and JavaScript, adjusting eye movement, mouth shape, and blush.
 
-The current version is version 2. Here's a screenshot of an earlier version where I tried to include eyebrows on the face avatar to make it more _expressive_.
+## Previous versions
+
+This project started with the bare minimum of pupils that follow the user's mouse on the screen. It was good for a simple proof of concept but needed improvement. One important aspect was emotion. I wanted the avatar to display surprise, happiness, sadness, boredom. How to do this with pixels on a screen was another problem to solve.
+
+After some iterations, a face was added for the eyes, then a nose and mouth. Then to show emotions based on the mouse movements I got the pupils to dilate when the pointer gets close to the face to mimic a surprised expression. The reflection of the light (of course there isn't actually a light) on the pupils were also made to move in the opposite direction of the gaze to mimic the eyes of an animated character being illuminated.
+
+I think I got a bit ahead of myself and added eyebrows and added blush" or "blush marks." They’re used to show emotions like affection, embarrassment, or shyness. In animation and comics, especially in anime or manga, they’re sometimes stylized as simple pink ovals, lines, or shading under the eyes.
+
+Take a look at this screenshot of an earlier version where I tried to include eyebrows on the face to make it more _expressive_.
 
 ![Face_animation_with eyebrows](/assets/images/face_animation_screenshot (2).png "Face animation with eyebrows")
+
+I thought maybe adding as many features to the face as possible to express emotion is not the ideal path, so I removed the eyebrows. If you look at projects such as keepon, referenced below, it is able to display a wide range of emotions without so many facial features. 
+
+To document the experience I made a video showing the progress from version 0 to the current version, version 5. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xsSTf1fn0Zw" frameborder="0" allowfullscreen></iframe>
 
 ---
 
