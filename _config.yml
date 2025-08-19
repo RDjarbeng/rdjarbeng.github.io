@@ -1,6 +1,6 @@
 title: Richard Djarbeng
 description: >- 
-  Explore the journey and insights of a Computer Engineer & Tech leader specializing in AI, 
+  Explore the journey and insights of Richard Djarbeng, a Computer Engineer & Tech leader specializing in AI, 
   web development, machine learning, and IoT. Occasionally I write personal reflections on the personal section.
 keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
 author: Richard Djarbeng
@@ -23,16 +23,7 @@ kramdown:
     span:
       line_numbers: false
 # TOC Configuration
-toc:
-  min_level: 2
-  max_level: 4
-  ordered_list: false
-  no_toc_section_class: no_toc
-  list_id: toc
-  list_class: section-nav
-  sublist_class: ''
-  item_class: toc-entry
-  item_prefix: toc-
+
 theme: minima
 future: true
 plugins:
