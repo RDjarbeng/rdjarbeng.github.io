@@ -57,6 +57,10 @@ For some reason when I was making this post, that club Manchester United was tre
 
 ![Google trends showing Manchester United trending](/assets/images/Google trends2.png "Google trends showing Manchester United trending")
 
+For data scientists, here's an extra bonus: You can download all of the data related to a specific topicSimply locate the download symbol in the top right of any widget, click it, and voila! You'll have access to the raw data behind the chart as a CSV file. 📈 You can now clean the data and visualize it and generate your own insights.
+
+![How to download data from google trends](/assets/images/google_trends_download_data_rdjarbeng.png "How to download data from google trends")
+
 ### Get Started Today!
 
 Head over to [Google Trends](https://trends.google.com/) and start exploring what’s hot. It’s free, fun, and can help you stay one step ahead—whether you’re planning your next big move or just curious about what’s trending.
