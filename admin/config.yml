@@ -19,7 +19,6 @@ collections:
     fields:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
-
       - {
           label: 'Author',
           name: 'author',
@@ -31,13 +30,13 @@ collections:
           value_field: 'short_name'
         }
       - {
-            label: 'Category',
-            name: 'categories',
-            widget: 'list',
-            allow_add: true,
-            max: 1,
-            field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
-            default: ['Technology']
+          label: 'Category',
+          name: 'categories',
+          widget: 'list',
+          allow_add: true,
+          max: 1,
+          field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
+          default: ['Technology']
         }
       - {
           label: 'Tags',
@@ -52,14 +51,13 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
 
-  # Personal posts (unchanged)
   - name: 'personal'
     label: 'Personal'
     folder: '_personal'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
@@ -68,7 +66,6 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'personal' }
 
-  # Authors collection (unchanged)
   - name: 'authors'
     label: 'Authors'
     folder: '_authors'
@@ -80,3 +77,19 @@ collections:
       - { label: 'Display Name', name: 'display_name', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: About
+    name: about_page
+    files:
+      -  name: 'about'
+         label: 'About Page'
+         file: 'about.md'
+         create: false
+         editor:
+           preview: false
+         fields:
+           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+           - { label: 'Title', name: 'title', widget: 'string' }
+           - { label: 'Permalink', name: 'permalink', widget: 'hidden', default: '/about/' }
+           - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
+           - { label: 'Body', name: 'body', widget: 'markdown' }
