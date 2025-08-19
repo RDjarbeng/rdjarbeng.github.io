@@ -13,6 +13,8 @@ rss: "RSS Feed"
 # Build settings
 markdown: kramdown
 kramdown:
+  toc_levels: 2..4  # Include headers from h2 to h4 in the TOC
+  auto_ids: true    # Automatically generate IDs for headers
   math_engine: katex
   input: GFM # Ensure GitHub Flavored Markdown is supported
   syntax_highlighter_opts:
@@ -20,6 +22,17 @@ kramdown:
       line_numbers: false
     span:
       line_numbers: false
+# TOC Configuration
+toc:
+  min_level: 2
+  max_level: 4
+  ordered_list: false
+  no_toc_section_class: no_toc
+  list_id: toc
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
 theme: minima
 future: true
 plugins:
@@ -29,6 +42,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-redirect-from
+  - jekyll-toc
 
 jekyll-archives:
   enabled:
@@ -88,6 +102,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      toc: true
+      toc_sticky: true
       permalink: /:title/ # Set permalink for posts globally to /title/
   - scope:
       path: ""
