@@ -52,13 +52,13 @@ I thought maybe adding as many features to the face as possible to express emoti
 
 To document the experience I made a video showing the progress from version 0 to the current version, version 5. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xsSTf1fn0Zw" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="475" src="https://www.youtube.com/embed/xsSTf1fn0Zw" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-## 🧠 HRI Inspiration
+## 🧠  Human-Robot Interaction: project Inspiration
 
-This project came from a human-robot interaction course at Carnegie Mellon, where I explored how robots evoke emotions. The [Keepon robot](https://en.wikipedia.org/wiki/Keepon), with its simple, expressive movements, inspired me to create a virtual version with similar charm.
+This project came from a Human-Robot Interaction (HRI) course at Carnegie Mellon, where I explored how robots evoke emotions. The [Keepon robot](https://en.wikipedia.org/wiki/Keepon), with its simple, expressive movements, inspired me to create a virtual version with similar charm.
 
 HRI concepts in the project:
 
