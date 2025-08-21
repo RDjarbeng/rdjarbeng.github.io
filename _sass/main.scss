@@ -133,7 +133,6 @@ iframe{
   gap: 1em;
   // margin-top: 20px;
 }
-
 // Animation keyframes
 @keyframes fadeInUp {
   from {
@@ -146,28 +145,84 @@ iframe{
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes appearSideways {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0px);
+  }
+}
+
+// Base card styles (shared)
 .post-card, .project-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures that items are spread out and the date stays at the bottom */
-  height: 100%; /* Makes the card take up the full height */
+  justify-content: space-between;
+  height: 100%;
 
-    // Transition for hover effects
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-  
-    // Animation triggered by JavaScript on child element
-    &.animate .post-link {
-      animation: fadeInUp $animation-duration ease-out forwards;
-    }
-    
-    &:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transform: translateY(-5px); // Hover effect now works
-    }
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+}
+
+// Home page specific animation (triggered by JavaScript)
+.home .post-card,
+.home .project-card {
+  opacity: 0; // Initial state
+  transition: opacity 0.8s ease, transform 0.8s ease;
+
+  &.animate {
+    animation: fadeInUp $animation-duration ease-out forwards;
+  }
+}
+
+// Posts page animation (scroll-based)
+.post-card:not(.home):not(.personal-posts-list .post-card),
+.project-card:not(.home):not(.personal-posts-list .project-card) {
+  opacity: 0; // Initial state
+  animation: appear 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; /* Trigger when 30% in view */
+}
+
+// Personal posts page animation (scroll-based)
+.personal-posts-list .post-card,
+.personal-posts-list .project-card {
+  opacity: 0; // Initial state
+  animation: appearSideways 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%; /* Trigger when 30% in view */
+}
+
+/* Fallback for browsers without animation-timeline */
+@supports not (animation-timeline: view()) {
+  .post-card:not(.home):not(.personal-posts-list .post-card),
+  .project-card:not(.home):not(.personal-posts-list .project-card),
+  .personal-posts-list .post-card,
+  .personal-posts-list .project-card {
+    opacity: 1; /* Default visible if no support */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
 }
 
 .post-card h4, .post-card h3{
