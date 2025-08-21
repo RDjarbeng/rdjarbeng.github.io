@@ -803,7 +803,7 @@ a:hover{
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {//was 768
   
   .toc-sidebar {
     position: static; /* Remove fixed positioning on mobile */
@@ -811,11 +811,16 @@ a:hover{
     height: auto;
     left: auto;
     transform: none;
-    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .page-content{
+    padding-top: 0;
   }
 
   .toc-content {
     display: none;
+    max-width: 100vw;
   }
 
   .toc-content.active {
@@ -835,7 +840,7 @@ a:hover{
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) { //was 769
   .toc-sidebar {
     display: block; /* Ensure TOC is visible on desktop */
   }
