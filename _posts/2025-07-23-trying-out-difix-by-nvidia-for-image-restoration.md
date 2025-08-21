@@ -104,6 +104,7 @@ Upload an image to see the restoration capabilities of Difix+. The model will au
 Difix by NVIDIA is a powerful tool for image restoration, particularly for those interested in enhancing 3D novel views or improving blurry images. While it requires some preparation in terms of image dimensions, the results are impressive and highlight NVIDIA's leadership in this field. Whether you're a researcher, developer, or enthusiast, Difix offers a glimpse into the future of image processing technology.
 
 I have embedded the space beneath this post so you can try it out for yourself
+
 ---
 <iframe
 	src="https://nvidia-difix.hf.space"
