@@ -2,31 +2,43 @@
 layout: default
 ---
 
-<div class="post-header">
-  <h1>{{ page.title }}</h1>
-  <div class="author_date">
-    <!-- Display full date with time and time zone -->
-    <div class="published_date">
-      Published: {{ page.date | date: "%B %-d, %Y at %-I:%M %p UTC%z" }}
-    </div>
-    
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-    
-    <div class="last_edited">
-      Last edited: {{ page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p UTC%z" }}
-    </div>
-    
-    {% if author %}
-    <div>
-      Author: <a href="{{ author.url | relative_url }}" class="author">{{ author.display_name }}</a>
-    </div>
-    {% endif %}
+<!-- Table of Contents Sidebar (moved outside post-container) -->
+<aside class="toc-sidebar">
+  <div class="toc-header">
+    <h2>Contents</h2>
+    <button class="toc-toggle" aria-label="Toggle Table of Contents">☰</button>
   </div>
-</div>
-<!-- Something's here {{page.author}} -->
-{{ content }}
-<!-- Display categories and tags -->
-<div class="post-meta">
+  <nav class="toc-content" id="toc-content">
+    {% toc %}
+  </nav>
+</aside>
+
+<div class="post-container">
+  <div class="post-header">
+    <h1>{{ page.title }}</h1>
+    <div class="author_date">
+      <div class="published_date">
+        Published: {{ page.date | date: "%B %-d, %Y at %-I:%M %p UTC%z" }}
+      </div>
+      {% assign author = site.authors | where: 'short_name', page.author | first %}
+      <div class="last_edited">
+        Last edited: {{ page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p UTC%z" }}
+      </div>
+      {% if author %}
+      <div>
+        Author: <a href="{{ author.url | relative_url }}" class="author">{{ author.display_name }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="post-with-toc">
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
+
+  <!-- Display categories and tags -->
   <div class="post-meta">
     Categories:
     {% for category in page.categories %}
@@ -38,33 +50,33 @@ layout: default
       <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
     {% endfor %}
   </div>
-</div>
 
-<hr class="post-separator">
-<div class="related-posts">
-  <h3>Related Posts</h3>
-  <ul>
-    {% assign related_posts = "" %}
-    {% for post in site.posts limit:4 %}
-      {% unless post.url == page.url %}
-        {% assign common_tags = post.tags | where: "tags", page.tags %}
-        {% if common_tags.size > 0 %}
-          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-        {% endif %}
-      {% endunless %}
-    {% endfor %}
-  </ul>
-</div>
-
-<div class="post-navigation">
-  <div class="prev-post">
-    {% if page.previous %}
-      <a href="{{ page.previous.url | relative_url }}">« Previous: {{ page.previous.title }}</a>
-    {% endif %}
+  <hr class="post-separator">
+  <div class="related-posts">
+    <h3>Related Posts</h3>
+    <ul>
+      {% assign related_posts = "" %}
+      {% for post in site.posts limit:4 %}
+        {% unless post.url == page.url %}
+          {% assign common_tags = post.tags | where: "tags", page.tags %}
+          {% if common_tags.size > 0 %}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </ul>
   </div>
-  <div class="next-post">
-    {% if page.next %}
-      <a href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} »</a>
-    {% endif %}
+
+  <div class="post-navigation">
+    <div class="prev-post">
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}">« Previous: {{ page.previous.title }}</a>
+      {% endif %}
+    </div>
+    <div class="next-post">
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }} »</a>
+      {% endif %}
+    </div>
   </div>
 </div>
