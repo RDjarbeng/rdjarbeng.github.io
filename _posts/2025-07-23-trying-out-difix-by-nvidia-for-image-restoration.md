@@ -13,21 +13,10 @@ title: Trying Out Difix by NVIDIA for Image Restoration
 image: /assets/images/difix_cover_image_rd.png
 layout: post
 ---
-I experimented with Difix, NVIDIA's single-step image diffusion model available on Hugging Face, designed for enhancing and restoring images, especially those with artifacts or blurriness. Here's my experience:
+In this post I discuss Difix, NVIDIA's single-step image diffusion model available on Hugging Face. It is designed for enhancing and restoring images, especially those with artifacts or blurriness. First we will look at some examples of the image restoration model in action, then we will look at the project description according to Nvidia. At the end we will look at the things the model does well, pros, and the parts where it falls short, cons. Now let us look at the examples
 
-## Pros and Cons
 
-### Pros
-
-- **Effective Restoration**: Difix does a commendable job at restoring images, even those that are blurry. It can significantly improve the clarity and detail of underconstrained regions in 3D representations.
-- **Ease of Use**: The model is straightforward to use via the Hugging Face interface, making it accessible for those without deep technical knowledge.
-
-### Cons
-
-- **Image Dimension Requirements**: One downside is the need to resize images to specific dimensions (1024x576 by default) before processing. In my case, Windows Photos did not allow me to specify exactly these dimensions, which required additional steps to prepare the images.
-- **Processing Limitations**: The restoration is limited to the specified dimensions, and any deviation might affect the output quality or require manual adjustment.
-
-## Before and After Restoration
+## Example's of Difix Image restoration -Before and After
 
 Below are examples of images before and after restoration using Difix. These visuals demonstrate the model's capability to enhance image quality.
 
@@ -79,7 +68,7 @@ Now the results here are subjective. On one hand it improves the sharpness of th
 
 ## NVIDIA Leading the Way
 
-NVIDIA continues to push the boundaries of AI and computer vision with projects like Difix. The tool shows their commitment to advancing image processing technologies. The fact that they made the model open source and deployed on hugging face is also one thing that deservers praise.
+NVIDIA continues to push the boundaries of AI and computer vision with projects like Difix. The tool shows their commitment to advancing image processing technologies. The fact that they made the model open source and deployed on hugging face is also one thing that deserves praise.
 
 ### Project Description
 
@@ -98,6 +87,18 @@ Upload an image to see the restoration capabilities of Difix+. The model will au
 🧑‍💻 [**GitHub Repository**](https://github.com/nv-tlabs/Difix3D)  
 📄 [**Research Paper**](https://arxiv.org/abs/2503.01774)  
 🤗 [**Hugging Face Model**](https://huggingface.co/spaces/nvidia/difix)
+
+## Pros and Cons
+
+### Pros
+
+- **Effective Restoration**: Difix does a commendable job at restoring images, even those that are blurry. It can significantly improve the clarity and detail of underconstrained regions in 3D representations.
+- **Ease of Use**: The model is straightforward to use via the Hugging Face interface, making it accessible for those without deep technical knowledge.
+
+### Cons
+
+- **Image Dimension Requirements**: One downside is the need to resize images to specific dimensions (1024x576 by default) before processing. In my case, Windows Photos did not allow me to specify exactly these dimensions, which required additional steps to prepare the images.
+- **Processing Limitations**: The restoration is limited to the specified dimensions, and any deviation might affect the output quality or require manual adjustment.
 
 ## Conclusion
 
