@@ -60,15 +60,15 @@ $visited-color-white: #fff;
 $black-text-color: black;
 $link-hover-color: #1756a9;
 $nav-padding: 7%;
-$wrapper-max-width: 85%;
+$wrapper-max-width: 100%;
 $wrapper-default-width: 100%;
 $grey: #999;
 $link-color: #4a476e;
 $link-visited-color: #5e599e;
+$toc-link-color: #5c859d;
 $small-font-size: 0.8rem;
 $default-font-size: 1rem;
 $animation-duration: 0.8s;
-
 
 *,
 *::before,
@@ -706,3 +706,144 @@ a:hover{
   }
 }
 
+/* Table of Contents Sidebar (Styled Separately) */
+.toc-sidebar {
+  // background: #f9f9f9;
+  border-radius: 8px;
+  padding: 5px;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll if TOC is long */
+  position: fixed; /* Fixed position on the left */
+  left: 1vw; /* Align to the left, using the side space */
+  transform: translateX(0); /* Ensure proper positioning */
+  opacity: 0.952;
+}
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toc-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.toc-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  padding: 5px;
+}
+
+.toc-content {
+  max-height: 80vh; /* Prevent overflow beyond viewport */
+  max-width: 15vw;
+  overflow-y: auto;
+}
+
+.toc-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-content li {
+  margin: 8px 0;
+}
+
+.toc-content a {
+  color: $toc-link-color;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.toc-content a:hover,
+.toc-content a.active {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+
+/* Nested TOC items */
+.toc-content ul ul {
+  margin-left: 10px;
+}
+
+.toc-content #toc {
+  margin-left: 0px;
+}
+
+.toc-content ul ul li {
+  font-size: 0.95rem;
+}
+
+.toc-content ul ul ul li {
+  font-size: 0.9rem;
+}
+
+/* Main Content Layout */
+.post-container {
+  max-width: $wrapper-max-width; /* Use your defined max-width (85%) */
+  margin: 0 auto;
+  padding-left: 70px; /* Offset for the TOC width + some space */
+  width: 100%;
+}
+
+.post-with-toc {
+  width: 100%;
+}
+
+.post-content {
+  max-width: 800px; /* Adjust based on your content width preference */
+  margin: 0 auto;
+  padding: 0 20px; /* Ensure content has some padding */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .toc-sidebar {
+    position: static; /* Remove fixed positioning on mobile */
+    width: 100%;
+    height: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .toc-content {
+    display: none;
+  }
+
+  .toc-content.active {
+    display: block;
+  }
+
+  .toc-toggle {
+    display: block;
+  }
+
+  .post-container {
+    padding-left: 0; /* Remove offset on mobile */
+  }
+
+  .post-content{
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .toc-sidebar {
+    display: block; /* Ensure TOC is visible on desktop */
+  }
+}
+
+/* Ensure other existing styles (e.g., post-meta, navigation) remain unaffected */
+.post-meta, .related-posts, .post-navigation {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
