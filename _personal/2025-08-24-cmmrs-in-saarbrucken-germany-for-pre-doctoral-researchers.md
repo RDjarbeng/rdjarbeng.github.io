@@ -21,6 +21,8 @@ For a good program summary, [Shreya Kochar](https://www.linkedin.com/in/shreyako
 
 It is an annual research school for undergraduate or Master’s students with a strong academic record in an accredited full-time program in computer science, computer engineering, or a closely related discipline. Intended to demystify PhD life and  show students what a PhD is not and why they should consider a PhD and encourage pursuit of advanced research.
 
+![Group photo of students from CMMRS outside the MPI-SWI](/assets/images/cmmrs_group_photo.JPG "Group photo of students from CMMRS outside the MPI-SWI")
+
 Bonus photo of me in front of some flags wearing attire from Ghana.
 
 ![Richard Djarbeng in front of Germany and EU flags at MPI-SWI, CMMRS](/assets/images/rd_max_planck_eu_german_flags.jpg "Richard Djarbeng in front of Germany and EU flags at MPI-SWI, CMMRS")
