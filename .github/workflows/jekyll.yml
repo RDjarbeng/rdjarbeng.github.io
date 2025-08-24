@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # Changed from read to write to allow committing changes
   pages: write
   id-token: write
 
@@ -24,6 +24,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch full Git history for accurate commit dates
+      - name: Update last_modified_at for posts
+        run: |
+          for file in _posts/*.md _personal/*.md; do
+            if [ -f "$file" ]; then
+              last_modified=$(git log -1 --format="%cI" -- "$file" || date -u +"%Y-%m-%dT%H:%M:%SZ")
+              if grep -q "^last_modified_at:" "$file"; then
+                sed -i "s/^last_modified_at:.*/last_modified_at: $last_modified/" "$file"
+              else
+                sed -i "/^---/a last_modified_at: $last_modified" "$file"
+              fi
+            fi
+          done
+          git config user.name "SveltiaCMS Bot"
+          git config user.email "bot@rdjarbeng.com"
+          git add _posts/*.md _personal/*.md
+          git commit -m "Update last_modified_at dates" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
