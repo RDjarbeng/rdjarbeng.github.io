@@ -5,7 +5,7 @@ published: true
 image: /assets/images/20250529-214542.png
 layout: personal
 ---
-For 3 years I have been in Rwanda and I haven't visited the other East-African countries in the region. For this reason have always wanted to travel to Uganda, Rwanda's northern neighbour. So when a friend of mine,  was headed to Kampala for a Toastmasters district conference I seized the opportunity to tag along.  In this post I will outline my trip to Kampala, the capital of Uganda highlighting  interesting parts from travel, music, food and anything in-between.. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
+For 3 years I have been in Rwanda and I haven't visited the other East-African countries in the region. For this reason I have always wanted to travel to Uganda, Rwanda's northern neighbour. So when a friend of mine,  was headed to Kampala for a Toastmasters district conference I seized the opportunity to tag along.  In this post I will outline my trip to Kampala, the capital of Uganda highlighting  interesting parts from travel, music, food and anything in-between.. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
 
 ## The beginning - Kigali
 
