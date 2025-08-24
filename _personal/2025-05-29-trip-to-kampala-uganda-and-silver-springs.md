@@ -5,7 +5,7 @@ published: true
 image: /assets/images/20250529-214542.png
 layout: personal
 ---
-For 3 years I have been in Rwanda and I haven't visited the other East-African countries in the region. For this reason I have always wanted to travel to Uganda, Rwanda's northern neighbour. So when a friend of mine,  was headed to Kampala for a Toastmasters district conference I seized the opportunity to tag along.  In this post I will outline my trip to Kampala, the capital of Uganda highlighting  interesting parts from travel, music, food and anything in-between.. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
+After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor, tagging along with a friend to a Toastmasters conference in Kampala, the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists, from a passenger left behind at the border to the thrill of exchanging Rwandan Francs for what felt like a fortune in Ugandan Shillings. Here’s part one of my journey to another East-African country. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
 
 ## The beginning - Kigali
 
@@ -40,4 +40,4 @@ In our travelling experience, we were used to some kind of announcement that a b
 
 The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I sometimes wonder what happened to that passenger, probably standing at the border checkpoint watching their bus rumble into the night.
 
-Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon. In part two, I hope to share the vibrant sights, sounds and food of Kampala, from bustling markets to unexpected musical discoveries.
+Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon. In part two, I hope to share the vibrant sights, sounds and food of Kampala. See you soon.
