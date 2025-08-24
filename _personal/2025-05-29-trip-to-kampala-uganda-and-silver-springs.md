@@ -1,12 +1,11 @@
 ---
-title: Trip to Kampala-Uganda and silver springs
+title: Trip to Uganda- Kampala and silver springs
 date: 2025-05-29T17:22:00
 published: true
 image: /assets/images/20250529-214542.png
 layout: personal
 ---
-For 3 years I have been in East Africa and I haven't visited the other countries in the region.
-I have always wanted to travel to Uganda. So when a friend of mine, Abdul-Jalil, told me he was headed to Kampala for a Toastmasters district conference I seized the opportunity to tag along.  In this post I will outline my trip to Kampala, the interesting parts from travel, music, food and anything in-between. 
+For 3 years I have been in East Africa and haven't visited the other countries in the region. For this reason have always wanted to travel to Uganda, Rwanda's Northern neighbour. So when a friend of mine,  was headed to Kampala for a Toastmasters district conference I seized the opportunity to tag along.  In this post I will outline my trip to Kampala, the capital of Uganda highlighting  interesting parts from travel, music, food and anything in-between.. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
 
 ## The beginning - Kigali
 
@@ -22,11 +21,15 @@ When we got to the border we first had to go through a health screening, for Wes
 
 There was a forex bureau so we exchanged some Rwandan Francs(RWF) for Ugandan Shillings(UGX); at that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 UGX to 1 RWF. At that time our money seemed to have been multiplied by 3.
 
-#### No passenger left behind?
+### No passenger left behind?
 
-I don't think we spent a lot of time at the forex bureau but when we got back to the bus there was apparently some final checks going on for the passengers and we had to wait outside the bus till the officer came down. After attending to the other passengers he checked our passports. We got on the bus and not a minute later the bus took off heading for Kampala. 
+I don't think we spent a lot of time at the forex bureau but when we got back to the bus there were some final checks going on for the passengers and we had to wait outside the bus till the officer came down. After attending to the other passengers he checked our passports. We got on the bus and not a minute later the bus took off heading for Kampala. 
 
 'Chauffeur, CHAUFFER...', someone shouted. There was someone not yet in the bus; we had barely started moving.  We thought it was reasonable for the driver to wait a couple of minutes, perhaps someone delayed at immigration or was using the washroom. 
-The driver kept on driving, exiting the checkpoint and turning unto a dark road. I would say he even sped up and kept ignoring the passenger's pleas. Abdul-Jalil and I were so shocked, we looked at each other, we couldn't imagine getting left behind by the bus and much more in a foreign country.  Perhaps what shocked us more was the driver who didn't say anything in response.
-The other passengers started murmuring something about the unfortunate person taking a motorbike. This was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT). 
-For context when travelling at least, we were used to is some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for.  Apparently none of that was standard for this trip and you either made it on time or were left behind. The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I still wonder what happened to that passenger, probably standing at the border checkpoint watching the bus depart into the night.
+The driver kept on driving, exiting the checkpoint and turning unto a dark road. I would say he even sped up and kept ignoring the passenger's pleas.
+
+ Abdul-Jalil and I were so shocked, we looked at each other, we couldn't imagine getting left behind by the bus and much more in a foreign country.  Perhaps what shocked us more was the driver who didn't say anything in response.
+The other passengers started murmuring something about the unfortunate person taking a motorbike. For context this was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT) at a border checkpoint that didn't seem to have any nearby communities. 
+In our experience travelling, we were used to some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for to make sure no one was left behind.  Apparently none of that was standard for this trip and you either made it on time or were left behind. 
+
+The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I still wonder what happened to that passenger, probably standing at the border checkpoint watching the bus rumble into the night.
