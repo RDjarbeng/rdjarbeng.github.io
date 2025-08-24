@@ -9,9 +9,9 @@ For 3 years I have been in Rwanda and I haven't visited the other East-African c
 
 ## The beginning - Kigali
 
-The journey was done by coach bus and took approximately 11 hours. 
+The journey was done by coach bus from Nyabugogo bus park and took approximately 11 hours. 
 
- We departed Kigali around 7pm CAT with the Trinity bus service. The bus was spacious with adjustable seats, USB ports and a foldable table like you find in airplanes. It wasn't full and had some empty seats especially at the back.  Here is a picture of the bus interior for reference.
+ We departed Kigali around 7pm CAT with the Trinity bus service. Once we left the city center after Nyabugogo, the road was mostly empty. The bus was spacious with adjustable seats, USB ports and a foldable table like you find in airplanes. It wasn't full and had some empty seats especially at the back.  Here is a picture of the bus interior for reference.
 
 ![Inside the Trinity bus on the journey from Kigali to Kampala](/assets/images/20250529-213008.png "Trinity bus on the journey from Kigali to Kampala")
 
