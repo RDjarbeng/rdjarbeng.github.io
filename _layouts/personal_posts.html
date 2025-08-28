@@ -9,6 +9,6 @@ permalink: /personal/
 <div class="personal-posts-list">
     {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
-    {% include post-card.html post=post %}
+    {% include post-card.html post=post truncate_words=45 %}
   {% endfor %}
 </div>
