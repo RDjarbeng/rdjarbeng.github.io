@@ -20,7 +20,7 @@ layout: default
   <h2 class="section-title">Personal posts</h2>
   <div class="post-list">
     {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-    {% for personal in sorted_posts limit:3 %}
+    {% for personal in sorted_posts limit:4 %}
 
       {% include post-card.html post=personal %}
 
