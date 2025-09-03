@@ -13,7 +13,7 @@ layout: post
 ---
 # Reflections on the Singapore FinTech Festival: Decoding an Email from Sopnendu Mohanty
 
-Hey everyone, welcome back to my blog! Today, I want to share something interesting that landed in my inbox – an email from Sopnendu Mohanty, the Group CEO of the Global Finance & Technology Network (GFTN). It's an open letter about the Singapore FinTech Festival (SFF), which is celebrating its 10th edition in 2025. As someone who's not deeply versed in finance, a lot of the terms threw me for a loop at first. Things like "open banking," "UPI," and "financing for SMEs" sounded straightforward but felt overwhelming. I did some digging to make sense of it all, and I thought it'd be fun to break it down here. If you're like me and fintech jargon makes your head spin, this post is for you. Let's dive in!
+Today, I want to share something interesting that landed in my inbox – an email from Sopnendu Mohanty, the Group CEO of the Global Finance & Technology Network (GFTN). The email was titled: "An Open Letter from Sopnendu Mohanty: A Decade of SFF and What’s Next". It's an open letter about the Singapore FinTech Festival (SFF), which is celebrating its 10th edition in 2025. As someone who's not deeply versed in finance, a lot of the terms threw me for a loop at first. Things like "open banking," "UPI," and "financing for SMEs" sounded straightforward but felt overwhelming. I did some digging to make sense of it all, and I thought it'd be fun to break it down here. If you're like me and fintech jargon makes your head spin, this post is for you. Let's dive in!
 
 ## The Email: A Quick Summary
 
