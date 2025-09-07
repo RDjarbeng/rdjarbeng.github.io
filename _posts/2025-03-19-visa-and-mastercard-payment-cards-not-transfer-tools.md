@@ -72,11 +72,20 @@ Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant
 
 This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account moves.
 
-- **Promotion vs. Limitations**: Cards are marketed for fast, secure purchases but lack native P2P support, relying on SWIFT/ACH via banks (domestic wires ~$26 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/), international ~$44 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/)), often triggering 3-5% cash advances plus 20%+ APR.
-- **Bank and Third-Party Costs**: Wires cost $25-50; Wise fees ~0.43-1% + $4 fixed (e.g., $4.14 for $500 USD-USD); PayPal 2.9% + $0.30 domestic, higher internationally; extra bank charges possible.
-- **Emerging Solutions**: US: Venmo ~$276B [volume in 2023](https://www.businessofapps.com/data/venmo-statistics/); Zelle 2.9B transactions/$806B [in 2023](https://www.emarketer.com/content/zelle-2023-transactions-806-billion). Africa: M-Pesa 33B transactions/$40.2T [value in FY2024](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). Plaid links to apps like Revolut/Wise, but coverage varies; phone/email-based for instant domestic P2P.
+- **Promotion vs. Limitations**: Cards are marketed for fast, secure purchases but lack native P2P support, relying on SWIFT/ACH via banks (domestic wires \~$26 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/), international \~$44 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/)), often triggering 3-5% cash advances plus 20%+ APR.
+- **Bank and Third-Party Costs**: Wires cost $25-50; Wise fees \~0.43-1% + $4 fixed (e.g., $4.14 for $500 USD-USD); PayPal 2.9% + $0.30 domestic, higher internationally; extra bank charges possible.
+- **Emerging Solutions**: US: Venmo \~$276B [volume in 2023](https://www.businessofapps.com/data/venmo-statistics/); Zelle 2.9B transactions/$806B [in 2023](https://www.emarketer.com/content/zelle-2023-transactions-806-billion). Africa: M-Pesa 33B transactions/$40.2T [value in FY2024](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). Plaid links to apps like Revolut/Wise, but coverage varies; phone/email-based for instant domestic P2P.
 - **International Hurdles**: Cross-border remains slow/expensive (e.g., $5 transfer: $15+ fees, 2-3 days); one-way limits (e.g., Remitly); sharing bank details risky; receiver deductions $15-20 common.
-- **Payments vs. Transfers**: Cards enable instant merchant loops; transfers use interbank systems like SWIFT (~$150T/year [SWIFT 2024](https://www.swift.com/about-us/discover-swift/facts-and-figures)) or ACH (31.5B transactions/$80.1T [in 2023](https://www.nacha.org/news/nacha-releases-2023-ach-network-volume-data)).
+- **Payments vs. Transfers**: Cards enable instant merchant loops; transfers use interbank systems like SWIFT (\~$150T/year [SWIFT 2024](https://www.swift.com/about-us/discover-swift/facts-and-figures)) or ACH (31.5B transactions/$80.1T [in 2023](https://www.nacha.org/news/nacha-releases-2023-ach-network-volume-data)).
+
+| Service/Method | Typical Fees (USD) | Speed | Key Features/Limitations | Best For |
+| --- | --- | --- | --- | --- |
+| Bank Wire (Domestic) | $26 | 1-2 days | ACH/SWIFT; card adds 3-5% cash advance | Large US transfers |
+| Bank Wire (International) | $44 | 2-5 days | High fees; receiver deducts $15-20 | Formal cross-border |
+| Wise | 0.43-1% + \~$4 fixed (e.g., $4.14 for $500) | Hours to 2 days | Card-funded OK but extra if foreign; needs bank details | Low-cost international |
+| PayPal | 2.9% + $0.30 (domestic); higher international | Instant to 1 day | Card-funded; one-way limits; security risks | Online P2P with accounts |
+| Venmo/Zelle | Often free (or low %) | Instant | Phone/email; US-only; Venmo links Visa | Domestic US P2P |
+| M-Pesa (Africa) | Low (e.g., <1% P2P) | Instant | Mobile-based; 33M users, $40.2T/year;in-country | African mobile transfers |
 
 ## Key Takeaway
 
