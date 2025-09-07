@@ -77,8 +77,13 @@ HRI concepts in the project:
 
 Since building this in May 2025, I’ve noticed similar projects. [xAI’s Grok Companions](https://x.ai/grok) (July 2025) introduced animated characters like “Ani” for premium users. Emotionally adaptive AI companions, discussed in tech blogs around August 2025, focus on emotional support but lack a specific project page. [KEYi Robot’s automated companions](https://www.keyirobot.com/) (August 2025) also emerged. These focus on conversation and emotional support but don’t react to user movement or proximity like this face does.
 
-One projects that has a _similar&#32;_look which deserves mentioning is the [Las Vegas sphere](https://www.thesphere.com/). I'm not particularly sure if that display runs on JavaScript however🙂. 
+One projects that has a _similar _look which deserves mentioning is the [Las Vegas sphere](https://www.thesphere.com/). I'm not particularly sure if that display runs on JavaScript however🙂. 
 
 ![Las vegas sphere screenshot](/assets/images/las_vegas_sphere_web_shot.png "Las vegas sphere screenshot")
+
+GitHub copilot also has a similar avatar on the GitHub web interface that I think is an attempt at anthropomorphism where it seems the model is actively watching you as you type in a prompt.
+
+![Github copilot interactive avatar watching the user type in a prompt](/assets/images/copilot_interactive _face_rd.png "Github copilot interactive avatar watching the user type in a prompt")
+
 
 _This is my take on blending HRI with code to create something lively and fun._
