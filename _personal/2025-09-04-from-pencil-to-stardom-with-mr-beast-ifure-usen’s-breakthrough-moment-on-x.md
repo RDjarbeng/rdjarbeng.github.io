@@ -45,6 +45,6 @@ What’s next for Ifure? With his talent and newfound platform, the possibilitie
 
 ### Bonus:
 
-Here is a timelapse of the drawing of Mr Beast from the artist himself so you can see it's not AI generated.
+Here is a timelapse of the drawing of Mr Beast from the artist himself so you can see that it's not AI generated.
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">The algorithm doesn't do well with me anytime I post a video here 🥲, let's see how we can get a million views on this one. Please repost 🙏<br><br>My full drawing process of <a href="https://twitter.com/MrBeast?ref_src=twsrc%5Etfw">@MrBeast</a> ✍️ <a href="https://t.co/XWjXLhJcko">pic.twitter.com/XWjXLhJcko</a></p>&mdash; Ifure Usen ✊🏾 (@real_Ifyarts) <a href="https://twitter.com/real_Ifyarts/status/1963984024788975883?ref_src=twsrc%5Etfw">September 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
