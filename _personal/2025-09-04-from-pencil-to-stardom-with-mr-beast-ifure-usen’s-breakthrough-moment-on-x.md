@@ -42,3 +42,9 @@ Ifure’s viral moment with MrBeast is likely just the beginning. As he navigate
 ![Ifure Usen, likely overwhelmed and googling how to handle fame](/assets/images/how_to_handle_fame_google_screenshot.jpeg)
 
 What’s next for Ifure? With his talent and newfound platform, the possibilities are endless. Keep an eye on this rising star—you won’t want to miss what he creates next.
+
+### Bonus:
+
+Here is a timelapse of the drawing of Mr Beast so you can see it's not AI generated.
+
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">The algorithm doesn&#39;t do well with me anytime I post a video here 🥲, let&#39;s see how we can get a million views on this one. Please repost 🙏<br><br>My full drawing process of <a href="https://twitter.com/MrBeast?ref_src=twsrc%5Etfw">@MrBeast</a> ✍️ <a href="https://t.co/XWjXLhJcko">pic.twitter.com/XWjXLhJcko</a></p>&mdash; Ifure Usen ✊🏾 (@real_Ifyarts) <a href="https://twitter.com/real_Ifyarts/status/1963984024788975883?ref_src=twsrc%5Etfw">September 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
