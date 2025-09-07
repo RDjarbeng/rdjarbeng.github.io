@@ -40,7 +40,7 @@ The inability to easily transfer money from one person to another across banks h
 
 - In the US, Venmo processed over $244 billion in transactions in 2023 ([Business of Apps](https://www.businessofapps.com/data/venmo-statistics/)), while Zelle handled [2.3 billion transactions worth $629 billion ](https://www.zellepay.com/press-releases/zelle-soars-806-billion-transaction-volume-28-prior-year).  Venmo also supports transactions by connecting Visa cards directly.
 - [Plaid](https://plaid.com/company/) facilitates seamless transfers by linking bank accounts to over 7,000 apps, as noted in their [2024 overview](https://plaid.com/company/), however it may not support your bank of interest. From their page Plaid seems to provide transfer services for apps like [Revolut](https://www.revolut.com/) and [Wise](https://wise.com/).
--  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report] (https://www.safaricom.co.ke/images/Downloads/Safaricom\_Annual\_Report\_2023.pdf). 
+-  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report] (https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
 
 These solutions leverage direct bank connections or mobile networks, offering faster and often cheaper alternatives to traditional bank transfers, addressing a gap Visa and Mastercard have yet to fill.
 
@@ -67,6 +67,16 @@ Even if the charges were better than using a regular bank, many people might pre
 Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha). Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement.
 
 ![Image shows two men with visa and MasterCard cards between them](/assets/images/visa_card_barrier3.jpg "Two men with visa and MasterCard cards between them")
+
+## Summary
+
+This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account moves.
+
+- **Promotion vs. Limitations**: Cards are marketed for fast, secure purchases but lack native P2P support, relying on SWIFT/ACH via banks (domestic wires ~$26 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/), international ~$44 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/)), often triggering 3-5% cash advances plus 20%+ APR.
+- **Bank and Third-Party Costs**: Wires cost $25-50; Wise fees ~0.43-1% + $4 fixed (e.g., $4.14 for $500 USD-USD); PayPal 2.9% + $0.30 domestic, higher internationally; extra bank charges possible.
+- **Emerging Solutions**: US: Venmo ~$276B [volume in 2023](https://www.businessofapps.com/data/venmo-statistics/); Zelle 2.9B transactions/$806B [in 2023](https://www.emarketer.com/content/zelle-2023-transactions-806-billion). Africa: M-Pesa 33B transactions/$40.2T [value in FY2024](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). Plaid links to apps like Revolut/Wise, but coverage varies; phone/email-based for instant domestic P2P.
+- **International Hurdles**: Cross-border remains slow/expensive (e.g., $5 transfer: $15+ fees, 2-3 days); one-way limits (e.g., Remitly); sharing bank details risky; receiver deductions $15-20 common.
+- **Payments vs. Transfers**: Cards enable instant merchant loops; transfers use interbank systems like SWIFT (~$150T/year [SWIFT 2024](https://www.swift.com/about-us/discover-swift/facts-and-figures)) or ACH (31.5B transactions/$80.1T [in 2023](https://www.nacha.org/news/nacha-releases-2023-ach-network-volume-data)).
 
 ## Key Takeaway
 
