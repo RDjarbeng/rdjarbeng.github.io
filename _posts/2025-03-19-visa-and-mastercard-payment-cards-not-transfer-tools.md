@@ -17,17 +17,20 @@ image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
 ---
-Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service. This situation creates additional steps for money transfers, each additional step adds fees and increases the complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the capabilities of these cards and their real-world functionality examining emerging solutions that try to bridge the gap.
+Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. 
+This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.
+
+Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service. This situation creates additional steps for money transfers, each additional step adds fees and increases the complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the capabilities of these cards and their real-world functionality examining emerging solutions that try to bridge the gap.
 
 ![image for the post that shows two people with visa and mastercard cards between them](/assets/images/visa_card_barrier1.jpg "Two people with visa and mastercard cards between them")
 
 ## How Banks Present Visa and Mastercard
 
-Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. However, these claims primarily apply to payments—purchasing goods or services—not to transferring funds directly to another bank account.
+Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. As mentioned, these claims primarily apply to payments—purchasing goods or services—not to transferring funds directly to another bank account.
 
 ![Visa card showing a lock merged with a lock mechanism](/assets/images/visa_locked_image.jpg "Visa card showing a lock merged with a lock mechanism")
 
-In this post I hope to discuss the current situation regarding money transfer across card holders for US dollar accounts. I choose to use one currency to avoid making this post longer or more complex than it needs to be by avoiding a discussion on Foreign exchange services; that topic could be another post on its own.
+In this post I hope to discuss the current situation regarding money transfer across card holders for US dollar accounts. I choose to use one currency as a simplifying assumption to avoid making this post longer or more complex than it needs to be by avoiding a discussion on Foreign exchange services; that topic could be another post on its own.
 
 ## Limitations of Direct Transfers
 
@@ -75,18 +78,22 @@ Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant
 
 ## Summary
 
-This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account moves.
+Visa and Mastercard excel as payment tools, processing billions of transactions yearly, but they are not built for direct bank account transfers. The alternative is Banks and third-party providers that enable transfers, typically at a cost ranging from $5 to $50 per transfer, depending on the method and amount. Cardholders seeking to move money must navigate these additional layers, as the cards’ core design prioritizes payments over transfers.
 
-- **Promotion vs. Limitations**: 
-Cards are marketed for fast, secure purchases but lack native P2P support, relying on SWIFT/ACH via banks (domestic wires \~$26 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/), international \~$44 [Bankrate 2025](https://www.bankrate.com/banking/checking/checking-account-fees/)), often triggering 3-5% cash advances plus 20%+ APR.
-- **Bank and Third-Party Costs**: 
-Wires cost $25-50; Wise fees \~0.43-1% + $4 fixed (e.g., $4.14 for $500 USD-USD); PayPal 2.9% + $0.30 domestic, higher internationally; extra bank charges possible.
-- **Emerging Solutions**: 
-- US: Venmo \~$276B [volume in 2023](https://www.businessofapps.com/data/venmo-statistics/),  Zelle 2.9B transactions/$806B [in 2023](https://www.emarketer.com/content/zelle-2023-transactions-806-billion). Plaid links to apps like Revolut/Wise, but coverage varies the advantage is that it is  phone/email-based for instant  transfers.
-- Africa: M-Pesa 33B transactions/$40.2T [value in FY2024](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
-- **International Hurdles**:
- Cross-border transfers remain slow/expensive, one-way limits (e.g., Remitly), sharing bank details could be risky and receiver deductions from $15-20 are common.
-- **Payments vs. Transfers**: Cards enable instant merchant loops, transfers use interbank systems like SWIFT (\~$150T/year [SWIFT 2024](https://www.swift.com/about-us/discover-swift/facts-and-figures)) or ACH (31.5B transactions/$80.1T [in 2023](https://www.nacha.org/news/nacha-releases-2023-ach-network-volume-data)).
+**Promotion vs. Reality**: Cards are marketed for fast, secure purchases but lack native P2P support. Users must rely on SWIFT/ACH transfers via banks, which add complexity and cost.
+
+**Traditional Transfer Costs**: Wire transfers cost $25-50 domestically and $40-50 internationally. When cards are used to fund these transfers, banks often classify them as cash advances, adding 3-5% fees and higher interest rates.
+
+**Third-Party Solutions**: Services like Wise charge approximately 0.43-1% plus a $4 fixed fee (e.g., $4.14 for a $500 USD-USD transfer), while PayPal charges 2.9% plus $0.30 for domestic transfers, with higher international rates. Additional bank charges may still apply.
+
+**Emerging Regional Solutions**: 
+- **US**: Venmo processed ~$276B in volume in 2023, while Zelle handled 2.9B transactions worth $806B in 2023. These services offer phone/email-based transfers for instant domestic payments.
+- **Africa**: M-Pesa processed 33B transactions worth $40.2T in FY2024, revolutionizing mobile-based transfers across the continent.
+- **Infrastructure**: Plaid connects bank accounts to apps like Revolut and Wise, though coverage varies by institution.
+
+**International Challenges**: Cross-border transfers remain slow and expensive, with many services offering only one-way transfers (e.g., Remitly). Users must share sensitive bank details, and receiver deductions of $15-20 are common even when senders pay all stated fees.
+
+**Technical Distinction**: Cards enable instant merchant payment loops, while transfers require separate interbank systems like SWIFT (~$150T annually) or ACH (31.5B transactions worth $80.1T in 2023).
 
 The fees for the different options available and their different properties are listed in the table below.
 
@@ -99,9 +106,6 @@ The fees for the different options available and their different properties are 
 | Venmo/Zelle | Often free (or low %) | Instant | Phone/email; US-only; Venmo links Visa | Domestic US P2P |
 | M-Pesa (Africa) | Low (e.g., <1% P2P) | Instant | Mobile-based; 33M users, $40.2T/year;in-country | African mobile transfers |
 
-## Key Takeaway
-
-Visa and Mastercard excel as payment tools, processing billions of transactions yearly, but they are not built for direct bank account transfers. Banks and third-party providers enable such functionality, typically at a cost ranging from $5 to $50 per transfer, depending on the method and amount. Cardholders seeking to move money must navigate these additional layers, as the cards’ core design prioritizes payments over transfers.
 
 _PS: Apart from the charges mentioned here most banks charge a fixed amount for receiving funds via transfers with a card or SWIFT transfer. You might find the receiver short by 15 or 20 USD after you have already paid the charges. Yes, this applies even if the sender chooses to pay for the transfer charges. And yes sadly I was a victim of this._
 
