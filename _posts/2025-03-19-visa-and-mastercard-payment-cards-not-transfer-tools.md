@@ -54,7 +54,11 @@ These solutions leverage direct bank connections or mobile networks, offering fa
 
 **Personal note:** I’ve used a mobile money wallet linked to my bank account, and it’s incredibly convenient. There’s usually no fee to move money between the bank and wallet, and sending cash to someone just requires their phone number—far easier than juggling Visa or Mastercard details, since most people know their phone number by heart. There is a fee to transfer between persons but it's usually lower than those of a regular bank transfer. Zelle, operated by US banks, seems to have borrowed this idea, using a phone number or email to send money instantly. End note.
 
-These solutions shine for in-country payments but hit a wall internationally, where the gap persists. Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option—at least none I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest.
+### A money transfer example
+
+From the points above you see that these solutions shine for in-country payments but hit a wall internationally, where the gap persists. 
+
+Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option, at least none that I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest.
 
  The next section delves into third-party services that attempt to address this global hurdle.
 
@@ -66,13 +70,15 @@ I’ve used Wise (formerly TransferWise) myself, and the fees can surprise you d
 
 Convenience? Not quite. Unlike mobile money or Zelle, where a phone number or email suffices, these platforms demand bank details—SWIFT codes, account numbers, addresses—that you have to exchange manually. You can’t just use the recipient’s Visa card number (ironic, since it’s their unique ID, but sharing it’s a security no-no). So you’re back to form-filling, waiting hours or days for the funds to land, and facing fees that sometimes dwarf traditional bank transfers.
 
+### One direction remittance transfer
+
 Then there’s the direction issue. Take [Remitly](https://www.remitly.com/), for example: I’ve seen it happily send money from the US or UK to Ghana or Brazil, but try reversing that—say, from Ghana to the US—and you’re out of luck. I naively assumed remittances flowed both ways, but not here. It’s a one-way street that leaves you stranded if you’re on the “wrong” side.
 
 Even if the charges were better than using a regular bank, many people might prefer not to hand their financial details to a 3rd party.
 
 ## Why Transfers Differ from Payments
 
-Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha). Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement.
+Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha) to process the details. Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement. The point is that payments and transfers use different systems that were not built to work with each other even though the .
 
 ![Image shows two men with visa and MasterCard cards between them](/assets/images/visa_card_barrier3.jpg "Two men with visa and MasterCard cards between them")
 
