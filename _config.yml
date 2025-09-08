@@ -66,12 +66,18 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - "*.bak"
+  - "*.tmp"
+  - .git/
+  - .gitignore
+  - README.md
+
 include:
   - redirects.json
 # Collections
 collections:
-  projects:
-    output: true
+  # projects:
+  #   output: true
   authors:
     output: true
   personal:
