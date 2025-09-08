@@ -770,7 +770,16 @@ a:hover{
   overflow-y: auto; /* Scroll if TOC is long */
   position: fixed; /* Fixed position on the left */
   left: 1vw; /* Align to the left, using the side space */
-  transform: translateY(-61px); /* Ensure proper positioning */
+  transform: translateY(-112px); /* Ensure proper positioning */
+  opacity: 0.952;
+  max-width: 205px;
+  
+}
+.toc-content{
+  opacity: 0.652;
+}
+
+.toc-content:hover {
   opacity: 0.952;
 }
 .toc-header {
@@ -812,7 +821,8 @@ a:hover{
 
 .toc-content a {
   color: $toc-link-color;
-  font-size: 1rem;
+  font-size: 0.875rem; /* 14px if root is 16px; adjust to 0.9375rem (15px) if you want even subtler */
+  line-height: 1.4; /* Slightly tighter for compact lists */
   transition: color 0.3s ease;
 }
 
