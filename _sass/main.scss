@@ -770,7 +770,7 @@ a:hover{
   overflow-y: auto; /* Scroll if TOC is long */
   position: fixed; /* Fixed position on the left */
   left: 1vw; /* Align to the left, using the side space */
-  transform: translateX(0); /* Ensure proper positioning */
+  transform: translateY(-61px); /* Ensure proper positioning */
   opacity: 0.952;
 }
 .toc-header {
