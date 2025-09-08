@@ -7,25 +7,20 @@ tags:
   - Research
   - Papers
   - Academics
+  - Trends in Published Papers
+  - Nobel prize in Chemistry
+  - Research methods
 title: Understanding the Trend in Published Papers
 image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
 ---
-### Key Points
-
-- Research suggests that the trend of published papers follows a lifecycle from introducing new techniques to standardization, with two main phases: Peer Review and Standardisation.
-- It seems likely that this process involves stages like initial technique papers, testing, widespread adoption, critical evaluations, comparisons, and eventually becoming a reference method with public data.
-- The evidence leans toward this being a collaborative, iterative process, similar to how innovations in other fields evolve, but the specifics can vary by discipline.
-
----
-
-![Academic papers rising with the wind](/assets/images/academic_papers_rising_wind.jpg "Academic papers rising with the wind")
-
-#### Introduction: Understanding the Scientific Lifecycle
-
 In scientific research, the journey from a novel idea to a widely accepted standard is an iterative process. Diagrams often outline this lifecycle, from initial papers to standardization and public availability, divided into **Peer Review** and **Standardisation** phases. This reflects the collaborative nature of science and mirrors innovations in technology, business, or social movements. This post breaks down each stage with examples and analogies to connect with your own experiences.
 
 The analysis draws from sources like the National Network of Libraries of Medicine (NNLM) on the research lifecycle, Harvard’s Research Support, and Wikipedia entries on the scientific method. 
+
+### ---
+
+![Academic papers rising with the wind](/assets/images/academic_papers_rising_wind.jpg "Academic papers rising with the wind")
 
 #### The Peer Review Phase: Laying the Groundwork
 
@@ -34,7 +29,7 @@ The Peer Review phase introduces, tests, and refines techniques through communit
 ##### Technique Papers: The Birth of an Idea
 
 - **Description**: This stage introduces a new method, tool, or approach, with papers outlining the theoretical foundation, initial experiments, and potential applications.
-- **Real-world Example**: The first papers on CRISPR-Cas9 gene editing in the early 2010s described a revolutionary gene-editing method, with a 2012 paper by Jennifer Doudna and Emmanuelle Charpentier later earning the 2020 Nobel Prize in Chemistry.
+- **Real-world Example**: The first papers on CRISPR-Cas9 gene editing in the early 2010s described a revolutionary gene-editing method, with a 2012 [paper](https://pubmed.ncbi.nlm.nih.gov/22745249/) by Jennifer Doudna and Emmanuelle Charpentier later earning the[ 2020 Nobel Prize in Chemistry](https://www.nobelprize.org/prizes/chemistry/2020/press-release/).
 - **Analogy**: It’s like a chef inventing a new recipe, sharing it with colleagues to test its appeal.
 - **Context from Sources**: Aligns with the NNLM’s “Plan” stage, designing the study and identifying data needs.
 
@@ -111,3 +106,9 @@ Understanding this process highlights the effort behind discoveries, inspiring y
 | Public Data | Data and protocols made publicly available for global use | Human Genome Project data via GenBank (post-2003) |
 
 This table provides a quick reference for understanding the progression.
+
+### Key Points
+
+- Research suggests that the trend of published papers follows a lifecycle from introducing new techniques to standardization, with two main phases: Peer Review and Standardisation.
+- It seems likely that this process involves stages like initial technique papers, testing, widespread adoption, critical evaluations, comparisons, and eventually becoming a reference method with public data.
+- The evidence leans toward this being a collaborative, iterative process, similar to how innovations in other fields evolve, but the specifics can vary by discipline.
