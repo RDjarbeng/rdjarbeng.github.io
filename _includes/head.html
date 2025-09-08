@@ -8,7 +8,7 @@
   <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
-  <meta property="og:description" content="Richard Djarbeng's website - {% if page.description % Dedent %}{{ page.description | escape }}{% else %}{{ skipsite.description | escape }}{% endif %}">
+  <meta property="og:description" content="Richard Djarbeng's website - {% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}">
   {%- seo -%}
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
