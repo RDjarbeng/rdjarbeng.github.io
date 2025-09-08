@@ -48,7 +48,7 @@ The inability to easily transfer money from one person to another across banks h
 
 - In the US, Venmo processed over $244 billion in transactions in 2023 ([Business of Apps](https://www.businessofapps.com/data/venmo-statistics/)), while Zelle handled [2.3 billion transactions worth $629 billion ](https://www.zellepay.com/press-releases/zelle-soars-806-billion-transaction-volume-28-prior-year).  Venmo also supports transactions by connecting Visa cards directly.
 - [Plaid](https://plaid.com/company/) facilitates seamless transfers by linking bank accounts to over 7,000 apps, as noted in their [2024 overview](https://plaid.com/company/), however it may not support your bank of interest. From their page Plaid seems to provide transfer services for apps like [Revolut](https://www.revolut.com/) and [Wise](https://wise.com/).
--  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report] (https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
+-  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
 
 These solutions leverage direct bank connections or mobile networks, offering faster and often cheaper alternatives to traditional bank transfers, addressing a gap Visa and Mastercard have yet to fill.
 
@@ -87,13 +87,14 @@ Visa and Mastercard excel as payment tools, processing billions of transactions 
 **Third-Party Solutions**: Services like Wise charge approximately 0.43-1% plus a $4 fixed fee (e.g., $4.14 for a $500 USD-USD transfer), while PayPal charges 2.9% plus $0.30 for domestic transfers, with higher international rates. Additional bank charges may still apply.
 
 **Emerging Regional Solutions**: 
-- **US**: Venmo processed ~$276B in volume in 2023, while Zelle handled 2.9B transactions worth $806B in 2023. These services offer phone/email-based transfers for instant domestic payments.
+
+- **US**: Venmo processed \~$276B in volume in 2023, while Zelle handled 2.9B transactions worth $806B in 2023. These services offer phone/email-based transfers for instant domestic payments.
 - **Africa**: M-Pesa processed 33B transactions worth $40.2T in FY2024, revolutionizing mobile-based transfers across the continent.
 - **Infrastructure**: Plaid connects bank accounts to apps like Revolut and Wise, though coverage varies by institution.
 
 **International Challenges**: Cross-border transfers remain slow and expensive, with many services offering only one-way transfers (e.g., Remitly). Users must share sensitive bank details, and receiver deductions of $15-20 are common even when senders pay all stated fees.
 
-**Technical Distinction**: Cards enable instant merchant payment loops, while transfers require separate interbank systems like SWIFT (~$150T annually) or ACH (31.5B transactions worth $80.1T in 2023).
+**Technical Distinction**: Cards enable instant merchant payment loops, while transfers require separate interbank systems like SWIFT (\~$150T annually) or ACH (31.5B transactions worth $80.1T in 2023).
 
 The fees for the different options available and their different properties are listed in the table below.
 
@@ -105,7 +106,6 @@ The fees for the different options available and their different properties are 
 | PayPal | 2.9% + $0.30 (domestic); higher international | Instant to 1 day | Card-funded; one-way limits; security risks | Online P2P with accounts |
 | Venmo/Zelle | Often free (or low %) | Instant | Phone/email; US-only; Venmo links Visa | Domestic US P2P |
 | M-Pesa (Africa) | Low (e.g., <1% P2P) | Instant | Mobile-based; 33M users, $40.2T/year;in-country | African mobile transfers |
-
 
 _PS: Apart from the charges mentioned here most banks charge a fixed amount for receiving funds via transfers with a card or SWIFT transfer. You might find the receiver short by 15 or 20 USD after you have already paid the charges. Yes, this applies even if the sender chooses to pay for the transfer charges. And yes sadly I was a victim of this._
 
