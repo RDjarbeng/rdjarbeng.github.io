@@ -1,5 +1,6 @@
 ---
 date: 2025-03-19T17:54:00
+published: true
 author: Richard
 categories:
   - Finance
@@ -7,12 +8,16 @@ tags:
   - Payments
   - Visa
   - MasterCard
+  - Revolut international transfers
+  - Wise international transfers with visa card
+  - Wise international transfers with visa or mastercard
+  - Revolut international transfers with visa or mastercard
 title: 'Visa and Mastercard: Payment Cards, Not Transfer Tools'
 image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
 ---
-Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service—each step adding fees and complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the marketed capabilities of these cards and their real-world functionality.
+Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service. This situation creates additional steps for money transfers, each additional step adds fees and increases the complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the capabilities of these cards and their real-world functionality examining emerging solutions that try to bridge the gap.
 
 ![image for the post that shows two people with visa and mastercard cards between them](/assets/images/visa_card_barrier1.jpg "Two people with visa and mastercard cards between them")
 
