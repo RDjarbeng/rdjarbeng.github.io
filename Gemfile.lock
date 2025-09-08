@@ -15,7 +15,6 @@ GEM
     eventmachine (1.2.7)
     eventmachine (1.2.7-java)
     execjs (2.9.1)
-    fast-stemmer (1.0.2)
     ffi (1.17.0-java)
     ffi (1.17.0-x64-mingw-ucrt)
     ffi (1.17.0-x86_64-linux-gnu)
@@ -85,7 +84,6 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    matrix (0.4.3)
     mercenary (0.4.0)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
@@ -136,7 +134,6 @@ PLATFORMS
 
 DEPENDENCIES
   base64
-  classifier-reborn
   csv
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.2)
