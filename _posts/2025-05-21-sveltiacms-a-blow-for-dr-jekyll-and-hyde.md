@@ -27,6 +27,10 @@ In my earlier post, I noted a few limitations with SveltiaCMS:
 
 I’m thrilled to report that these issues have been resolved! SveltiaCMS now includes a **native image picker**, eliminating the need to manually enter file paths. I can also **drag and drop multiple images** into the editor when creating a post. Plus, there’s support for copying images from other websites and linking to them seamlessly.
 
+### Extensible and full of new features
+
+SveltiaCMS consistently impresses with its flexibility and rapid feature integration. When I think of a new feature that could enhance my workflow, I either open a feature request on GitHub or ping Kohei on the Discord server. More often than not, within hours, I discover the feature already exists—someone else had the same idea!  For example, I used to manually set the date and time for each new post on my website, a tedious 5-second task. Turns out, SveltiaCMS already had an option to automate this. A single line of code later, and I never have to set a post date again. Problem solved, just like that!  
+
 ### Stellar Support and Community
 
 One of SveltiaCMS’s standout features is its exceptional support. If you encounter an issue, you can open a ticket on [GitHub](https://github.com/sveltia/sveltia-cms/issues), and the creator, [Kohei Yoshino](https://github.com/kyoshino), is likely to respond promptly. When preparing this post, I checked my GitHub issues and found that all six of my previously reported issues had been resolved with effective fixes. It’s refreshing to see a project that genuinely prioritizes its users. See screenshot below.

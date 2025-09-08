@@ -1,5 +1,6 @@
 ---
 date: 2025-03-19T17:54:00
+published: true
 author: Richard
 categories:
   - Finance
@@ -7,22 +8,29 @@ tags:
   - Payments
   - Visa
   - MasterCard
+  - Revolut international transfers
+  - Wise international transfers with visa card
+  - Wise international transfers with visa or mastercard
+  - Revolut international transfers with visa or mastercard
 title: 'Visa and Mastercard: Payment Cards, Not Transfer Tools'
 image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
 ---
-Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service—each step adding fees and complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the marketed capabilities of these cards and their real-world functionality.
+Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. 
+This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.
+
+Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service. This situation creates additional steps for money transfers, each additional step adds fees and increases the complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the capabilities of these cards and their real-world functionality examining emerging solutions that try to bridge the gap.
 
 ![image for the post that shows two people with visa and mastercard cards between them](/assets/images/visa_card_barrier1.jpg "Two people with visa and mastercard cards between them")
 
 ## How Banks Present Visa and Mastercard
 
-Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. However, these claims primarily apply to payments—purchasing goods or services—not to transferring funds directly to another bank account.
+Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. As mentioned, these claims primarily apply to payments—purchasing goods or services—not to transferring funds directly to another bank account.
 
 ![Visa card showing a lock merged with a lock mechanism](/assets/images/visa_locked_image.jpg "Visa card showing a lock merged with a lock mechanism")
 
-In this post I hope to discuss the current situation regarding money transfer across card holders for US dollar accounts. I choose to use one currency to avoid making this post longer or more complex than it needs to be by avoiding a discussion on Foreign exchange services; that topic could be another post on its own.
+In this post I hope to discuss the current situation regarding money transfer across card holders for US dollar accounts. I choose to use one currency as a simplifying assumption to avoid making this post longer or more complex than it needs to be by avoiding a discussion on Foreign exchange services; that topic could be another post on its own.
 
 ## Limitations of Direct Transfers
 
@@ -40,7 +48,7 @@ The inability to easily transfer money from one person to another across banks h
 
 - In the US, Venmo processed over $244 billion in transactions in 2023 ([Business of Apps](https://www.businessofapps.com/data/venmo-statistics/)), while Zelle handled [2.3 billion transactions worth $629 billion ](https://www.zellepay.com/press-releases/zelle-soars-806-billion-transaction-volume-28-prior-year).  Venmo also supports transactions by connecting Visa cards directly.
 - [Plaid](https://plaid.com/company/) facilitates seamless transfers by linking bank accounts to over 7,000 apps, as noted in their [2024 overview](https://plaid.com/company/), however it may not support your bank of interest. From their page Plaid seems to provide transfer services for apps like [Revolut](https://www.revolut.com/) and [Wise](https://wise.com/).
--  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report] (https://www.safaricom.co.ke/images/Downloads/Safaricom\_Annual\_Report\_2023.pdf). 
+-  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
 
 These solutions leverage direct bank connections or mobile networks, offering faster and often cheaper alternatives to traditional bank transfers, addressing a gap Visa and Mastercard have yet to fill.
 
@@ -68,9 +76,36 @@ Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant
 
 ![Image shows two men with visa and MasterCard cards between them](/assets/images/visa_card_barrier3.jpg "Two men with visa and MasterCard cards between them")
 
-## Key Takeaway
+## Summary
 
-Visa and Mastercard excel as payment tools, processing billions of transactions yearly, but they are not built for direct bank account transfers. Banks and third-party providers enable such functionality, typically at a cost ranging from $5 to $50 per transfer, depending on the method and amount. Cardholders seeking to move money must navigate these additional layers, as the cards’ core design prioritizes payments over transfers.
+Visa and Mastercard excel as payment tools, processing billions of transactions yearly, but they are not built for direct bank account transfers. The alternative is Banks and third-party providers that enable transfers, typically at a cost ranging from $5 to $50 per transfer, depending on the method and amount. Cardholders seeking to move money must navigate these additional layers, as the cards’ core design prioritizes payments over transfers.
+
+**Promotion vs. Reality**: Cards are marketed for fast, secure purchases but lack native P2P support. Users must rely on SWIFT/ACH transfers via banks, which add complexity and cost.
+
+**Traditional Transfer Costs**: Wire transfers cost $25-50 domestically and $40-50 internationally. When cards are used to fund these transfers, banks often classify them as cash advances, adding 3-5% fees and higher interest rates.
+
+**Third-Party Solutions**: Services like Wise charge approximately 0.43-1% plus a $4 fixed fee (e.g., $4.14 for a $500 USD-USD transfer), while PayPal charges 2.9% plus $0.30 for domestic transfers, with higher international rates. Additional bank charges may still apply.
+
+**Emerging Regional Solutions**: 
+
+- **US**: Venmo processed \~$276B in volume in 2023, while Zelle handled 2.9B transactions worth $806B in 2023. These services offer phone/email-based transfers for instant domestic payments.
+- **Africa**: M-Pesa processed 33B transactions worth $40.2T in FY2024, revolutionizing mobile-based transfers across the continent.
+- **Infrastructure**: Plaid connects bank accounts to apps like Revolut and Wise, though coverage varies by institution.
+
+**International Challenges**: Cross-border transfers remain slow and expensive, with many services offering only one-way transfers (e.g., Remitly). Users must share sensitive bank details, and receiver deductions of $15-20 are common even when senders pay all stated fees.
+
+**Technical Distinction**: Cards enable instant merchant payment loops, while transfers require separate interbank systems like SWIFT (\~$150T annually) or ACH (31.5B transactions worth $80.1T in 2023).
+
+The fees for the different options available and their different properties are listed in the table below.
+
+| Service/Method | Typical Fees (USD) | Speed | Key Features/Limitations | Best For |
+| --- | --- | --- | --- | --- |
+| Bank Wire (Domestic) | $26 | 1-2 days | ACH/SWIFT; card adds 3-5% cash advance | Large US transfers |
+| Bank Wire (International) | $44 | 2-5 days | High fees; receiver deducts $15-20 | Formal cross-border |
+| Wise | 0.43-1% + \~$4 fixed (e.g., $4.14 for $500) | Hours to 2 days | Card-funded OK but extra if foreign; needs bank details | Low-cost international |
+| PayPal | 2.9% + $0.30 (domestic); higher international | Instant to 1 day | Card-funded; one-way limits; security risks | Online P2P with accounts |
+| Venmo/Zelle | Often free (or low %) | Instant | Phone/email; US-only; Venmo links Visa | Domestic US P2P |
+| M-Pesa (Africa) | Low (e.g., <1% P2P) | Instant | Mobile-based; 33M users, $40.2T/year;in-country | African mobile transfers |
 
 _PS: Apart from the charges mentioned here most banks charge a fixed amount for receiving funds via transfers with a card or SWIFT transfer. You might find the receiver short by 15 or 20 USD after you have already paid the charges. Yes, this applies even if the sender chooses to pay for the transfer charges. And yes sadly I was a victim of this._
 
