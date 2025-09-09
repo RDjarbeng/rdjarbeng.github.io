@@ -779,8 +779,9 @@ a:hover{
   opacity: 0.652;
 }
 
-.toc-content:hover {
-  opacity: 0.952;
+.toc-content li :hover {
+  opacity: 1.0;
+  background-color: #d4d5ff;
 }
 .toc-header {
   display: flex;
@@ -829,7 +830,6 @@ a:hover{
 .toc-content a:hover,
 .toc-content a.active {
   color: $link-hover-color;
-  text-decoration: underline;
 }
 
 /* Nested TOC items */
