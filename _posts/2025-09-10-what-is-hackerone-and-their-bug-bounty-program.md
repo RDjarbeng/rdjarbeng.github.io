@@ -28,11 +28,13 @@ layout: post
 What on earth is a Bug Bounty? No it's not about insects, if you are in cyber security the term might be familiar to you but if you're not this post will shed some light.  In this post, we discuss HackerOne. 
 HackerOne is a leading hacker-powered security platform that connects organizations with a global community of over 2 million ethical hackers to identify and fix vulnerabilities before malicious exploitation [HackerOne](https://www.hackerone.com/). Founded in 2012, it empowers over 1,200 companies—including GitHub, PayPal, and Uber—to secure digital assets through crowdsourced testing [HackerOne About](https://www.hackerone.com/about). The platform has facilitated over 500,000 bug discoveries, with one critical vulnerability reported hourly, saving organizations millions per critical fix prevented [HackerOne Impact](https://www.hackerone.com/impact).
 
+![Padlock on company logos in Hacker one bug bounty post](/assets/images/hackerone_original_bugbounty_rd.jpg "Padlock on company logos in Hacker one bug bounty post")
+
 ### Practical Example: A Relatable Security Fix
+
 Imagine you're shopping online and notice a website lets you change a product price by editing the URL (e.g., from $10 to $1) before checkout. In 2016, an ethical hacker using HackerOne found a similar flaw on Uber's platform, where a pricing vulnerability could have allowed users to manipulate ride fares. The hacker reported it, Uber fixed the issue by validating prices server-side, and the hacker earned a $10,000 bounty. This fix prevented potential financial losses and protected users, showing how HackerOne turns everyday discoveries into real security wins [HackerOne Case Studies](https://www.hackerone.com/case-studies).
 
 HackerOne hosts a directory of programs, from public initiatives like the Internet Bug Bounty to exclusive private programs [HackerOne Directory](https://www.hackerone.com/directory). In 2024, reported vulnerabilities rose by 9%, highlighting the platform’s impact [HackerOne Impact](https://www.hackerone.com/impact).
-
 
 ## The HackerOne Bug Bounty Program
 
