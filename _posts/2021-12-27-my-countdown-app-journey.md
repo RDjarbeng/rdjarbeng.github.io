@@ -8,7 +8,7 @@ categories: ["Software Engineering"]
 tags: [Software engineering, apps, countdown]
 ---
 
-In December 2021, I embarked on a project to create a simple countdown app to display time left till midnight. Then I decided to count the days leading up to the New Year. Since then, it has evolved into something much more comprehensive and exciting!
+In December 2021, I embarked on a project to create a simple countdown app to display time left till midnight. Then I decided to extend it further to count the days leading up to the New Year. Since then, it has evolved into something much more comprehensive and exciting!
 You can check out the site here:
 - [Countdown App](https://rcountdown.netlify.app)
 
