@@ -1,7 +1,7 @@
 ---
 title: USSD codes for MTN Rwanda
 date: 2025-04-17T10:42:00
-image: /assets/images/mtn_logo.jpg
+image: /assets/images/mtn_logo_cover.JPG
 layout: personal
 ---
 USSD CODES and COMMANDS
@@ -75,4 +75,4 @@ Dial \*184#, then select 5 (my account) and 3 (change language) and follow the p
 
 Got it from this tweet
 
-<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Dial \*184#, then select 5 (my account) and 3 (change language) and follow the prompts.<br><br>Thank you,<br>MTN- Diana</p>&mdash; MTN Rwanda (@MTNRwanda) <a href="https://twitter.com/MTNRwanda/status/1661092733488906259?ref\_src=twsrc%5Etfw">May 23, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Dial \*184#, then select 5 (my account) and 3 (change language) and follow the prompts.<br><br>Thank you,<br>MTN- Diana</p>&mdash; MTN Rwanda (@MTNRwanda) <a href="https://twitter.com/MTNRwanda/status/1661092733488906259?ref_src=twsrc%5Etfw">May 23, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
