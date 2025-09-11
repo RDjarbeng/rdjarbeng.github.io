@@ -1,6 +1,7 @@
 ---
 title: USSD codes for MTN Rwanda
 date: 2025-04-17T10:42:00
+published: true
 image: /assets/images/mtn_logo_cover.JPG
 layout: personal
 ---
