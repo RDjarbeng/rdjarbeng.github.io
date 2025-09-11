@@ -43,7 +43,7 @@ collections:
           name: 'tags',
           widget: 'list',
           allow_add: true,
-          field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
+          # field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
           default: []
         }
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -95,3 +95,4 @@ collections:
            - { label: 'Permalink', name: 'permalink', widget: 'hidden', default: '/about/' }
            - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
            - { label: 'Body', name: 'body', widget: 'markdown' }
+    
