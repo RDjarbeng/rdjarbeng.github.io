@@ -4,7 +4,7 @@
         {{ include.post.title | escape }}
       </h4>
       {% if include.post.image and include.post.image.size > 0 %}
-        <img src="{{ include.post.image }}" alt="{{ include.post.title }}" class="post-image">
+        <img src="{{ include.post.image }}" alt="Cover image of post {{ include.post.title }}" class="post-image">
       {% endif %}
       {% assign words_to_truncate = include.truncate_words | default: 30 %}
       <p class="post-excerpt">{{ include.post.excerpt | strip_html | truncatewords: words_to_truncate }}</p>
