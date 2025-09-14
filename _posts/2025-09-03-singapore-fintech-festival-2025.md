@@ -1,6 +1,6 @@
 ---
 date: 2025-09-03T11:42:00
-published: false
+published: true
 author: Richard
 categories:
   - Finance
