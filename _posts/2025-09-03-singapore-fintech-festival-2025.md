@@ -6,8 +6,26 @@ categories:
   - Finance
 tags:
   - Singapore FinTech Festival
-  - Fintech
-title: Singapore FinTech Festival 2025
+  - SFF 2025
+  - FinTech
+  - Open Banking
+  - UPI
+  - PayNow
+  - SME Financing
+  - Digital Public Infrastructure
+  - Real-Time Payments
+  - AI in Finance
+  - Tokenization
+  - Quantum Computing
+  - Financial Inclusion
+  - Data Privacy
+  - Cybercrime
+  - Sopnendu Mohanty
+  - Global Finance
+  - Cross-Border Payments
+  - Digital Assets
+  - API-Driven Architecture
+title: A Decade of Singapore FinTech Festival 2025-Decoding an Email
 image: ''
 layout: post
 ---
@@ -67,3 +85,5 @@ What do you think? Have you dealt with any of these fintech tools in your life? 
 _Note: This post is based on an email I received on [insert date if known]. All opinions are my own, and I'm not affiliated with SFF or GFTN._ 
 
 Thanks for reading! Stay curious. 🚀
+
+PS: I know this email may not have come directlly from the CEO mentioned, I just thought it would be  interesting to document how I tried to understand the finance terms mentioned
