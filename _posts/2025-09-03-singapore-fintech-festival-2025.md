@@ -26,7 +26,7 @@ tags:
   - Digital Assets
   - API-Driven Architecture
 title: A Decade of Singapore FinTech Festival 2025-Decoding an Email
-image: ''
+image: /assets/images/sff_2025_cover_image.JPG
 layout: post
 ---
 # Reflections on the Singapore FinTech Festival: Decoding an Email from Sopnendu Mohanty
