@@ -4,7 +4,7 @@ title: Personal
 permalink: /personal/
 ---
 
-<h1>{{ site.personal | size }} Personal Posts </h1>
+<h1>Personal Posts ({{ site.personal | size }})</h1>
 
 <div class="personal-posts-list">
     {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
