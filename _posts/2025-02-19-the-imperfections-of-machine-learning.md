@@ -1,5 +1,6 @@
 ---
 date: 2025-02-19T22:12:00
+published: true
 author: Richard
 categories:
   - AI
@@ -7,10 +8,13 @@ tags:
   - Computer Vision
   - Machine Learning
   - ML5
+  - AI
+  - Javascript
+  - Imperfections
 title: The Imperfections of Machine Learning
 image: /assets/images/ml_false positive_cropped_charger_rd.jpg
-video: ''
 layout: post
+video: ''
 ---
 While machine learning is a powerful tool, it's important to remember that models are not infallible. In fact, they can sometimes be overconfident in their predictions, as shown in this image where a charger is misclassified as a cell phone with 94% confidence.
 
