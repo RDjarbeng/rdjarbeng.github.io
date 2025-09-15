@@ -56,3 +56,8 @@ HackerOne hosts a directory of programs, from public initiatives like the Intern
 - **For Companies**: Access diverse expertise to uncover hidden threats, accelerate fixes, and maximize ROI. Programs integrate with SDLC for robust defense [HackerOne Solutions](https://www.hackerone.com/solutions).
 
 Whether you’re a researcher or an organization, HackerOne’s bug bounty ecosystem is a cybersecurity game-changer. Visit [hackerone.com](https://www.hackerone.com/) to explore or launch programs.
+
+Learn more about bug bounty hunting, security testing, and usability testing. Resources include:
+
+- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- [Hacker101](https://www.hacker101.com/), a free educational platform for security testing.
