@@ -1,7 +1,7 @@
 ---
 title: Finding a song from my phone -an ordinary google task
 date: 2025-05-24T12:57:00
-image: /assets/images/1000175293.png
+image: /assets/images/ordinary_song_find_1000175293.webp
 layout: personal
 ---
 This was my method for finding a song from a video I watched on my phone. Here I used the split screen feature to open 2 apps at the same time. I open the Google app as one of them and get to the find a song feature. Google keeps changing the layout but it was underneath the search bar for me (see screenshot) . 
@@ -37,3 +37,5 @@ I thought it was a cool way of finding songs that you randomly find online so I 
 Apparently this doesn't work for IPhone users because they can't split the screen yet. Unbelievable that such an _ordinary_ 🎶feature doesn't work for IPhones.
 
  Let me end with this quote:![The worst part about liking classical music is when you forget the name of the piece and you can't find it because there are no lyrics.](/assets/images/worst_part_of_classical_music.jpeg "The worst part about liking classical music is when you forget the name of the piece and you can't find it because there are no lyrics.")
+
+PS: There is an easier way to bring up the find a song feature, and that involves holding the navigation bar at the bottom of the screen to show an overlay for Google lens and the find a song feature. Advantage of this approach is that you don't need to split the screen. Cool!

@@ -7,7 +7,7 @@ categories:
 tags:
   - Website, Lusion, CSS, threejs
 title: 'How to Check Website Performance: A Case Study on Lusion.co'
-image: /assets/images/lusion_web_astronaut_rdjarbeng.png
+image: /assets/images/lusion_web_astronaut.webp
 layout: post
 ---
 Recently, my friend Nathaniel Nyakotey checked out the visually stunning website at [lusion.co](https://lusion.co). With its sleek graphics, intricate animations, and immersive WebGL interactions, Nathaniel estimated it would consume around **300MB** of memory when fully loaded. To our surprise, after analyzing the site, we found it only used **18.9MB** of data! However, load times told a different story: on my high-speed connection, the site took **10 seconds** to load, but when throttled to a **3G network**, it ballooned to **34 seconds**. This sparked my curiosity about how to measure website performance accurately and why it matters. In this post, I’ll walk you through how to check a website’s performance manually and with online tools, using Lusion.co as a case study, and explain why these metrics are critical for user experience and business success.

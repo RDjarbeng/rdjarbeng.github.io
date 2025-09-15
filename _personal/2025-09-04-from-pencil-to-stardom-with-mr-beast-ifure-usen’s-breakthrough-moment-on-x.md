@@ -2,7 +2,7 @@
 title: 'From Pencil to Stardom with Mr Beast: Ifure Usen’s Breakthrough Moment on X'
 date: 2025-09-04T22:43:00
 published: true
-image: /assets/images/cover_mr_beast_reply_ifure_usen.PNG
+image: /assets/images/cover_mr_beast_reply_ifure_usen.webp
 layout: personal
 ---
 Meet Ifure Usen, a talented Nigerian pencil artist whose incredible journey to fame began with a single tweet. On **September 3, 2025**, Ifure replied to a MrBeast post on X featuring an AI-generated photo with a stunning pencil drawing he created of the same image. To everyone’s surprise—especially Ifure’s—MrBeast responded, expressing his admiration and desire to hang the artwork on his wall. This exchange, which took place at **8:32 PM UTC**, catapulted Ifure into the spotlight, proving that sometimes, you only need one shot to shine.

@@ -15,7 +15,7 @@ tags:
   - animation
   - virtual head
 title: Roboface-an Interactive Face Animation Tracker
-image: /assets/images/face_animation_cover.png
+image: /assets/images/face_animation_cover.webp
 layout: post
 ---
 I want you to imagine a character that tracks your mouse and expresses emotions based on how you interact with it. Emotions range from happy, surprised, bored, or neutral. The character in this case is a 2D face, a playful experiment to build something that feels alive. See it [on GitHub](https://github.com/RDjarbeng/interactive_face_animation) or try the [live demo](https://roboface.netlify.app/).
@@ -84,6 +84,5 @@ One projects that has a _similar _look which deserves mentioning is the [Las Veg
 GitHub copilot also has a similar avatar on the GitHub web interface that I think is an attempt at anthropomorphism where it seems the model is actively watching you as you type in a prompt.
 
 ![Github copilot interactive avatar watching the user type in a prompt](/assets/images/copilot_interactive _face_rd.png "Github copilot interactive avatar watching the user type in a prompt")
-
 
 _This is my take on blending HRI with code to create something lively and fun._

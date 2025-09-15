@@ -22,7 +22,7 @@ tags:
   - Digital Asset Protection
   - Internet Security
 title: What is HackerOne and Their Bug Bounty Program?
-image: /assets/images/hackerone_bugbounty_rd.JPG
+image: /assets/images/hackerone_bugbounty_rd.webp
 layout: post
 ---
 What on earth is a Bug Bounty? No it's not about hunting insects. If you are in the information security field the term might be familiar to you but if you're not this post will shed some light.  Many companies, especially in tech, offer bug bounty programs where they pay individuals for finding and reporting vulnerabilities or issues. These programs are designed to improve security and user experience and are usually posted on certain platforms with bug bounty programs such as _HackerOne_ or [_BugCrowdList_](https://www.bugcrowd.com/). In this post, we discuss one of these platforms, [HackerOne](https://www.hackerone.com/). 
@@ -59,7 +59,7 @@ Whether you’re a researcher or an organization, HackerOne’s bug bounty ecosy
 
 ### Resources for getting started- bug bounty hunting
 
-Learn more about bug bounty hunting, security testing, and usability testing. Resources include:
+Learn more about bug bounty hunting, security testing, and usability testing. Helpful resources include:
 
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [Hacker101](https://www.hacker101.com/), a free educational platform for security testing.

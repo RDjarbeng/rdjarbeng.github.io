@@ -16,7 +16,7 @@ tags:
   - Manchester United
   - Trending
 title: What's Hot Right Now? Find Out with Google Trends!
-image: /assets/images/1Google trends.png
+image: /assets/images/1Google trends.webp
 layout: post
 ---
 Ever wonder what people are searching for online—like the latest gadgets, hot topics, or even local events? Google Trends is a free, easy-to-use tool that shows you what’s trending on Google, whether it’s in your neighborhood or across the globe.

@@ -10,11 +10,10 @@ tags:
   - Nvidia
   - Difix
 title: Trying Out Difix by NVIDIA for Image Restoration
-image: /assets/images/difix_cover_image_rd.png
+image: /assets/images/difix_cover_image_rd.webp
 layout: post
 ---
 In this post I discuss Difix, NVIDIA's single-step image diffusion model available on Hugging Face. It is designed for enhancing and restoring images, especially those with artifacts or blurriness. First we will look at some examples of the image restoration model in action, then we will look at the project description according to Nvidia. At the end we will look at the things the model does well, pros, and the parts where it falls short, cons. Now let us look at the examples
-
 
 ## Example's of Difix Image restoration -Before and After
 

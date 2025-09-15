@@ -2,7 +2,7 @@
 title: Trip to Uganda- Kampala & silver springs
 date: 2025-05-29T17:22:00
 published: true
-image: /assets/images/20250529-214542.png
+image: /assets/images/rd_silver_springs_stare_at_statue.webp
 layout: personal
 ---
 After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor, tagging along with a friend to a Toastmasters conference in Kampala, the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists, from a passenger left behind at the border to the thrill of exchanging Rwandan Francs for what felt like a fortune in Ugandan Shillings. Here’s part one of my journey to another East-African country. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
