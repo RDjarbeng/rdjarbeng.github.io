@@ -57,7 +57,7 @@ HackerOne hosts a directory of programs, from public initiatives like the Intern
 
 Whether you’re a researcher or an organization, HackerOne’s bug bounty ecosystem is a cybersecurity game-changer. Visit [hackerone.com](https://www.hackerone.com/) to explore or launch programs.
 
-### Resources for getting started bug bounty hunting
+### Resources for getting started- bug bounty hunting
 
 Learn more about bug bounty hunting, security testing, and usability testing. Resources include:
 
