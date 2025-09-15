@@ -8,6 +8,7 @@ tags:
   - agentic object detection
   - document extraction
   - Landing.ai
+  - landingAI
   - Andrew Ng
   - AI technology
   - Computer vision
