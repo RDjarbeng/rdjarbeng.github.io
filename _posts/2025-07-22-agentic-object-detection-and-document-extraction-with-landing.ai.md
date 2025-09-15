@@ -10,6 +10,10 @@ tags:
   - Landing.ai
   - Andrew Ng
   - AI technology
+  - Computer vision
+  - OCR
+  - Bug Reporting and Feedback
+  - LandingAI and Andrew Ng
 title: Agentic Object Detection and Document Extraction with Landing.ai
 image: /assets/images/agentic_obj_dection_landingai_cover.png
 layout: post
