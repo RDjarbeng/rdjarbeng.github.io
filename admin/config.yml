@@ -48,7 +48,18 @@ collections:
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      # - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        media_libraries:
+          default:
+            config:
+              transformations:
+                raster_image:
+                  format: webp
+                  quality: 85
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
@@ -64,7 +75,17 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        media_libraries:
+          default:
+            config:
+              transformations:
+                raster_image:
+                  format: webp
+                  quality: 85
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'personal' }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
