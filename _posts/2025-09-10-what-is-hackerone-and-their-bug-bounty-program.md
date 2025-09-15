@@ -25,7 +25,7 @@ title: What is HackerOne and Their Bug Bounty Program?
 image: /assets/images/hackerone_bugbounty_rd.JPG
 layout: post
 ---
-What on earth is a Bug Bounty? No it's not about hunting insects. If you are in information security the term might be familiar to you but if you're not this post will shed some light.  In this post, we discuss HackerOne. 
+What on earth is a Bug Bounty? No it's not about hunting insects. If you are in information security the term might be familiar to you but if you're not this post will shed some light.  Bug Bounty Programs: Many companies, especially in tech, offer bug bounty programs where they pay individuals for finding and reporting vulnerabilities or issues. These programs are designed to improve security and user experience and are usually posted on certain platforms with bug bounty programs such as _HackerOne_ or _BugCrowdList_. In this post, we discuss HackerOne. 
 HackerOne is a leading hacker-powered security platform that connects organizations with a global community of over 2 million ethical hackers to identify and fix vulnerabilities before malicious exploitation [HackerOne](https://www.hackerone.com/). Founded in 2012, it empowers over 1,200 companies—including GitHub, PayPal, and Uber—to secure digital assets through crowdsourced testing [HackerOne About](https://www.hackerone.com/about). The platform has facilitated over 500,000 bug discoveries, with one critical vulnerability reported hourly, saving organizations millions per critical fix prevented [HackerOne Impact](https://www.hackerone.com/impact).
 
 ![Padlock on company logos in Hacker one bug bounty post](/assets/images/hackerone_original_bugbounty_rd.jpg "Padlock on company logos in Hacker one bug bounty post")
