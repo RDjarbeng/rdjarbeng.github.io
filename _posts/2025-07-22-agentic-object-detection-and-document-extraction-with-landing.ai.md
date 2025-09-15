@@ -92,7 +92,7 @@ Check out this video by Richard demonstrating the technology (note: detection is
 
 You can visit [landing AI](https://landing.ai/) and try it out if you want to achieve this at their playground
 
-## Side Note: Landing.ai Support
+##  Bug Reporting and Feedback: Landing.ai Support
 
 I reported a non-working 'Start for free' button on their site. I received this email:
 
@@ -101,7 +101,7 @@ I reported a non-working 'Start for free' button on their site. I received this 
 > Best,  
 > \*\*\*
 
-Then Adrian from Landing.ai confirmed via LinkedIn that the team is addressing the issue.
+Promptly Adrian from Landing.ai confirmed to me via LinkedIn that the team is addressing the issue. Talk about speed in a startup.
 
 ![Landing ai thanks Richard for noticing issue](/assets/images/landing_adrian_linkedin.png "Linkedin -Landing ai thanks Richard for noticing issue")
 
