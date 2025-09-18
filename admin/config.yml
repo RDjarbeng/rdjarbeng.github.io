@@ -82,6 +82,14 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          allow_add: true,
+          # field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
+          default: []
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Image'
         name: 'image'
