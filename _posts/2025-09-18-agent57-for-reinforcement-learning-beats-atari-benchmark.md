@@ -3,7 +3,7 @@ date: 2025-09-19T00:14:00
 published: false
 author: Richard
 categories:
-  - Technology
+  - AI
 tags:
   - Agent57
   - Reinforcement Learning
@@ -33,7 +33,6 @@ Timeline of reinforcement learning: DQN from deepmind around 2017 had  HNS of 7
 
 As noted in the presentation (https://www.youtube.com/watch?v=VQEg8aSpXcU) there is a general linear trend increasing across the years
 
-
 ## **Agent57: Key Concepts Explained**
 
 ## **What is CHNS?**
@@ -49,11 +48,7 @@ Q(x,a,j;θ)=Q(x,a,j;θe)+βjQ(x,a,h;θi)Q(x, a, j; \theta) = Q(x, a, j; \theta^e
 Where:
 
 - Q(x,a,j;θe)Q(x, a, j; \theta^e)Q(x,a,j;θe): Value from **extrinsic rewards** (from the environment’s "official" reward signals).
-
-
 - Q(x,a,h;θi)Q(x, a, h; \theta^i)Q(x,a,h;θi): Value from **intrinsic rewards** (from curiosity or exploration bonuses).
-
-
 - βj\beta_jβj: Weight determining the level of intrinsic motivation for the j-th policy.[neuralnet+1
 
 ](https://www.neuralnet.ai/towards-an-open-source-agent57/)
@@ -61,19 +56,13 @@ Where:
 ## **Discounted Extrinsic Returns: What Are They?**
 
 - **Extrinsic returns** are the total rewards an agent collects from the environment’s standard reward function (e.g., points in a game).
-
-
 - **Discounted extrinsic returns** refer to the sum of these external rewards, but where each reward is **multiplied by a discount factor (γ\gammaγ)** depending on how far in the future it is received.
-
-
 
 Mathematically:
 
 Gtextrinsic=∑k=0∞γkrt+kextrinsicG_t^{extrinsic} = \sum_{k=0}^{\infty} \gamma^k r_{t+k}^{extrinsic}Gtextrinsic=k=0∑∞γkrt+kextrinsic
 
 - Here, γ\gammaγ (0 < γ\gammaγ < 1) reduces the weight of future rewards, prioritizing immediate gains.
-
-
 - In the **random coin game** context, maximizing discounted extrinsic returns means following the optimal path to maximize the official game reward, such as taking the fastest route to collect the coin for a score.[ar5iv.arxiv+1
 
 ](https://ar5iv.labs.arxiv.org/html/2003.13350)
@@ -83,8 +72,6 @@ Gtextrinsic=∑k=0∞γkrt+kextrinsicG_t^{extrinsic} = \sum_{k=0}^{\infty} \gamm
 - **Augmented returns** are the sum of **extrinsic and weighted intrinsic rewards**:
  raugmented=rextrinsic+βrintrinsicr_{augmented} = r^{extrinsic} + \beta r^{intrinsic}raugmented=rextrinsic+βrintrinsic
 - Here, **intrinsic rewards** reflect bonuses for exploring novel or uncertain states, encouraging the agent to seek out new behaviors and avoid stagnation.
-
-
 - The parameter β\betaβ adjusts how much these curiosity-driven intrinsic rewards matter, allowing the agent to balance exploration and exploitation as needed through training.[vitalab.github+1
 
 ](https://vitalab.github.io/article/2020/06/05/Agent57.html)
@@ -92,11 +79,7 @@ Gtextrinsic=∑k=0∞γkrt+kextrinsicG_t^{extrinsic} = \sum_{k=0}^{\infty} \gamm
 **In essence:**
 
 - **Discounted extrinsic returns** focus only on the immediate goal as defined by the game.
-
-
 - **Augmented returns** combine both the official game goals and an exploration bonus, promoting both achievement and discovery.
-
-
 
 ## **Table: Key Differences**
 
@@ -107,14 +90,8 @@ Gtextrinsic=∑k=0∞γkrt+kextrinsicG_t^{extrinsic} = \sum_{k=0}^{\infty} \gamm
 ## **Summary**
 
 - **CHNS** measures how reliably an agent beats the human baseline even on difficult games.
-
-
 - **Discounted extrinsic returns** are the classic, game-defined, discounted sum of rewards.
-
-
 - **Augmented returns** add an intrinsic bonus to this sum, encouraging exploration.
-
-
 - Agent57’s innovation lies in smartly balancing these returns using a meta-controller, leading to its broad, superhuman mastery of Atari games.[acm+3
 
 ](https://dl.acm.org/doi/pdf/10.5555/3524938.3524986)
