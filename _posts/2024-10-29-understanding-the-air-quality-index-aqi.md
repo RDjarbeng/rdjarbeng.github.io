@@ -5,13 +5,23 @@ categories:
   - Environment
 tags:
   - Air quality
-  - weather
+  - weather and air quality
   - Air quality index
   - environmental monitoring
+  - PM2.5
+  - AQI
+  - Understanding AQI
+  - Understanding the Air Quality Index (AQI)
+  - How to calculate the Air Quality Index
+  - How the AQI works
+  - Importance of the AQI
+  - Calculate the AQI from PM readings
+  - International AQI standards
+  - AQI across countries
 title: Understanding the Air Quality Index (AQI)
 image: /assets/images/air_quality/aqi.png
-video: ''
 layout: post
+video: ''
 ---
 The Air Quality Index (AQI) is a vital tool developed by the U.S. Environmental Protection Agency (EPA) to communicate outdoor air quality and its potential health impacts. This index provides an easy-to-understand system that helps individuals make informed decisions about their outdoor activities and health protection measures.
 

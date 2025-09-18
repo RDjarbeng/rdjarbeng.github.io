@@ -25,6 +25,8 @@ At the border, we first went through a health screening with temperature checks.
 
 _Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops—drivers may not wait!_
 
+![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore")
+
 We took this opportunity to exchange our money. There was a forex bureau at the border, a small kiosk attached to what appeared to be a restaurant-supermarket. The attendants seemed ready and waiting, seems they were used to getting travellers at night. The bureau accepted mobile money and cash in Rwandan Francs(RWF),  Ugandan Shillings(UGX) and US dollars so we made a quick exchange for some of our money. At that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 UGX to 1 RWF; our money seemed to have been multiplied by 3, or so we thought.
 
 ### No passenger left behind?
