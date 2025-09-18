@@ -16,6 +16,10 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
+    view_filters:
+      - label: 'Drafts'
+        field: 'published'
+        pattern: false
     fields:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
@@ -70,6 +74,10 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: true
+    view_filters:
+      - label: 'Drafts'
+        field: 'published'
+        pattern: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
