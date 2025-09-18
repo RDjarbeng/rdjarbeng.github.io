@@ -2,6 +2,12 @@
 title: CMMRS in Saarbrucken, Germany for pre-doctoral researchers
 date: 2025-08-24T15:25:00
 published: true
+tags:
+  - CMMRS
+  - Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science (CMMRS)
+  - Germany research school
+  - summer school
+  - Phd advice
 image: /assets/images/rd_max_planck_eu_german_flags_annotated.webp
 layout: personal
 ---

@@ -2,6 +2,16 @@
 title: 'From Pencil to Stardom with Mr Beast: Ifure Usen’s Breakthrough Moment on X'
 date: 2025-09-04T22:43:00
 published: true
+tags:
+  - Ifure Usen
+  - Pencil Artist from Nigeria
+  - Mr Beast and pencil artist from Nigeria
+  - Mr Beast orders art from Ifure Usen on twitter/x
+  - MrBeast
+  - Unique artist on X
+  - Pencil art
+  - Art
+  - Art on X/Twitter
 image: /assets/images/cover_mr_beast_reply_ifure_usen.webp
 layout: personal
 ---
@@ -39,7 +49,7 @@ You can follow Ifure’s artistic journey on [X (@real_Ifyarts)](https://x.com/r
 
 Ifure’s viral moment with MrBeast is likely just the beginning. As he navigates this sudden fame, one can’t help but imagine him googling “how to handle fame” late into the night—perhaps on, as his world continues to transform.
 
-![Ifure Usen, likely overwhelmed and googling how to handle fame](/assets/images/how_to_handle_fame_google_screenshot.jpeg)
+![Ifure Usen, likely overwhelmed and googling how to handle fame](/assets/images/how_to_handle_fame_google_screenshot.jpeg "Ifure Usen, likely overwhelmed and googling how to handle fame")
 
 What’s next for Ifure? With his talent and newfound platform, the possibilities are endless. Keep an eye on this rising star—you won’t want to miss what he creates next.
 

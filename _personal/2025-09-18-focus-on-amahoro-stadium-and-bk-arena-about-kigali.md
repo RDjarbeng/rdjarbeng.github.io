@@ -2,6 +2,14 @@
 title: Focus on Amahoro Stadium and BK arena- About Kigali
 date: 2025-09-18T22:15:00
 published: false
+tags:
+  - Amahoro stadium
+  - BK arena
+  - Kigali
+  - Rwanda
+  - Landmarks in Kigali
+  - Remera landmarks
+  - Amahoro stadium and BK arena
 image: ''
 layout: personal
 ---
