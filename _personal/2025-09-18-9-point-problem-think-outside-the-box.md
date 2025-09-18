@@ -20,4 +20,6 @@ Here are the rules:
 
 \* \* \*
 
+_Hint: Think outside the box_
+
 Good luck!
