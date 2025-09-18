@@ -12,3 +12,5 @@ Here's a photo I took when I interrupted some birds. This was around sunset and 
 Aww so cute isn't it. 
 
 Not if you're cynical about love 🙄. This seems to be an appropriate reaction.
+
+![Man throwing slippers at couple meme with the lovebirds from Kigali ](/assets/images/1000255940.webp "Man throwing slippers at couple meme with the lovebirds from Kigali ")
