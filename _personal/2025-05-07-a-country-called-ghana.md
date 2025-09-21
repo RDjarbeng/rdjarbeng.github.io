@@ -1,5 +1,5 @@
 ---
-title: A country called Ghana
+title: A Country Called Ghana- All That Glitters is Still Gold
 date: 2025-05-07T16:14:00
 published: true
 image: /assets/images/2nd_collage_on_ghana.png
@@ -50,7 +50,7 @@ Ghana is rich in resources like gold, cocoa, bauxite and oil.
 
 ![A  canvas of resources in Ghana](/assets/images/resources_ghana.png "A  canvas of resources in Ghana")
 
-In this place _all that glitters is still gold.&#32;_Fun fact: Before independence Ghana was known as the _Gold Coast._
+In this place _all that glitters is still gold. _Fun fact: Before independence Ghana was known as the _Gold Coast._
 
 ## Entertainment
 
