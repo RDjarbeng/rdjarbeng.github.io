@@ -1,0 +1,25 @@
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+
+<!-- Include Simple Jekyll Search script -->
+<script>
+  function highlightTerm(text, term) {
+    var regex = new RegExp('(' + term + ')', 'gi');
+    return text.replace(regex, '<span class="highlighted">$1</span>');
+  }
+
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}">{title}</a><br><div><span>{date}</span><span>{type}</span></div></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    success: function (results) {
+      var term = document.getElementById('search-input').value;
+      var resultItems = document.querySelectorAll('#results-container li');
+      resultItems.forEach(function (item) {
+        item.innerHTML = highlightTerm(item.innerHTML, term);
+      });
+    }
+  });
+</script>
