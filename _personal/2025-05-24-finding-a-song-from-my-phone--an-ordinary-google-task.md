@@ -1,6 +1,15 @@
 ---
-title: Finding a song from my phone -an ordinary google task
+title: Finding a song -an ordinary google task
 date: 2025-05-24T12:57:00
+published: true
+tags:
+  - Find a song on Android
+  - Find a song with Google
+  - Google pixel find a song
+  - Split screen to find a song on pixel
+  - Android vs iphone
+  - Google find a song feature
+  - No need for shazam on google
 image: /assets/images/ordinary_song_find_1000175293.webp
 layout: personal
 ---
