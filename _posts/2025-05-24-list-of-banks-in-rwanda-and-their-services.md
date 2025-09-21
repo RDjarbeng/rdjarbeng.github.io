@@ -7,13 +7,34 @@ tags:
   - Finance
   - Banking
   - Rwanda
+  - List of Banks in Rwanda
+  - Ecobank Rwanda
+  - I&M Bank Rwanda
+  - Equity Bank Rwanda
+  - Bank of Kigali
+  - BPR Bank Rwanda (Part of Atlas Mara)
+  - Choosing banks in Rwanda
+  - USD vs RWF accounts
+  - What banks offer USD accounts in Kigali
 title: List of Banks in Rwanda and Their Services
 image: /assets/images/1000189531.jpg
 layout: post
 ---
-This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. Below is a list of major banks operating in Rwanda, focusing on their services, account types (Rwandan Franc [RWF] and US Dollar [USD] accounts), associated fees, interest rates, and foreign exchange capabilities. Where applicable, we’ve included the banks’ operations in other countries to give you a sense of their regional presence. This comparison aims to simplify your decision-making process when choosing a bank in Rwanda.
+This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. There are more than 16 commercial  and microfinance banks operating in Rwanda, with most of them having branches in Kigali. Below is a list of 5 major banks operating in Rwanda in no particular order.
+
+1. Ecobank Rwanda
+2. I&M Bank Rwanda
+3. Equity Bank Rwanda
+4. Bank of Kigali
+5. BPR Bank Rwanda (Part of Atlas Mara)
+
+ The list will be focusing on their services, account types (Rwandan Franc [RWF] and US Dollar [USD] accounts), associated fees, interest rates, and foreign exchange capabilities. Where applicable, we’ve included the banks’ operations in other countries to give you a sense of their regional presence as well as their main headquarters. This comparison aims to simplify your decision-making process when choosing a bank in Rwanda. Let's dive into more detail per bank, included at the end is a summary table for comparison.
 
 ## 1. Ecobank Rwanda
+
+Main Headquarters: [Lomé, Togo](https://en.wikipedia.org/wiki/Ecobank_Group)
+
+Operates in 36 other African countries with some subsidiaries outside the African continent.
 
 - **Account Types**: Offers RWF and USD accounts.
 - **Fees**:
@@ -35,7 +56,13 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 
 [![Screenshot of Ecobank Rwanda page](/assets/images/20250524-152402.png "Screenshot of Ecobank Rwanda page")](https://www.ecobank.com/rw/personal-banking/countries)
 
+#### Time to complete account creation at Ecobank Rwanda:  
+
+Approximately 3 hours to finish at the branch
+
 ## 2. I&M Bank Rwanda
+
+Main Headquarters: [Nairobi, Kenya](https://en.wikipedia.org/wiki/I%26M_Bank_Limited)
 
 - **Account Types**: Offers RWF and USD accounts, as well as other foreign currency accounts (e.g., EUR, GBP, CHF, INR, JPY, ZAR, CNY, AUD, AED, CAD).
 - **Fees**:
@@ -49,7 +76,13 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Other Countries of Operation**: I&M Bank operates in Kenya, Tanzania, Uganda, and Mauritius (via a joint venture).
 - **Notes for Foreigners**: A strong choice for those with regional ties in East Africa or needing diaspora services. The BRISK transfer system is a standout for fast cross-border transactions within the I&M network.
 
+#### Time to complete account creation at I&M Bank Rwanda:
+
+ Less than 1 hour to finish at the branch
+
 ## 3. Equity Bank Rwanda
+
+Main Headquarters: [Nairobi, Kenya](https://en.wikipedia.org/wiki/I%26M_Bank_Limited)
 
 - **Account Types**: Offers RWF and USD accounts, as well as multi-currency accounts for other major currencies (e.g., GBP, EUR, CAD, JPY, AUD).
 - **Fees**:
@@ -62,7 +95,13 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Other Countries of Operation**: Equity Bank Group operates in Kenya, Uganda, Tanzania, South Sudan, and the Democratic Republic of Congo.
 - **Notes for Foreigners**: Suitable for those seeking loan products or multi-currency accounts. The bank’s regional presence is beneficial for businesses or individuals with operations across East Africa.
 
+#### Time to account creation at Equity bank :
+
+Approximately 3 hours to finish at the branch (setup accounts, connect mobile apps, mobile money services)
+
 ## 4. Bank of Kigali
+
+Headquarters: [Kigali, Rwanda](https://en.wikipedia.org/wiki/Bank_of_Kigali)
 
 - **Account Types**: Offers RWF and USD accounts, with support for other major currencies via foreign exchange services.
 - **Fees**:
@@ -76,6 +115,8 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **Notes for Foreigners**: As Rwanda’s largest bank (over 30% market share), it’s a reliable option for those prioritizing stability and local presence.
 
 ## 5. BPR Bank Rwanda (Part of Atlas Mara)
+
+Headquarters: [Kigali, Rwanda](https://en.wikipedia.org/wiki/BPR_Bank_Rwanda)
 
 - **Account Types**: Offers RWF and USD accounts, with multi-currency support for select international currencies.
 
@@ -111,6 +152,16 @@ This guide is designed for foreigners arriving in Kigali, Rwanda, to help you na
 - **For Digital Banking**:
     - BPR Bank and Equity Bank provide robust mobile banking options, while Ecobank’s app excels for intra-bank and USD transfers.
 
+### Table summary
+
+| Bank | Headquarters | Account Types | USD Initial Deposit | USD Monthly Fee | Interest on USD Accounts | Key Services | Regional Presence | Notes for Foreigners |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Ecobank Rwanda | Lomé, Togo | RWF, USD | $20 | $4 | None | FX (multi-currency), SWIFT/Western Union, loans, mobile app for transfers (free intra-network USD) | 33 African countries (e.g., Nigeria, Ghana, Kenya) | Ideal for multi-currency/regional transfers; watch 1% USD withdrawal fee; app FX rates unfavorable. |
+| I&M Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-FC (EUR, GBP, etc.) | None (as of May 2025) | $2 | None | FX (spot/forward/swaps), BRISK transfers (East Africa), diaspora services, loans (16–19.5%) | Kenya, Tanzania, Uganda, Mauritius | Strong for East Africa ties/diaspora; BRISK for fast cross-border. |
+| Equity Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-currency (GBP, EUR, etc.) | $15 | Not disclosed | None | FX for trade/remittances, loans (14–25%), micro-business finance, deposits | Kenya, Uganda, Tanzania, South Sudan, DRC | Good for loans/multi-currency; regional ops beneficial for East Africa businesses. |
+| Bank of Kigali | Kigali, Rwanda | RWF, USD, FX support for majors | $20 | Not disclosed | None | FX/SWIFT/Western Union, savings/current/fixed deposits, loans (competitive) | Primarily Rwanda; global correspondents | Reliable for stability/local focus; largest market share (>30%). |
+| BPR Bank Rwanda | Kigali, Rwanda | RWF, USD, select multi-currency | $15 | Not disclosed | None | FX/Western Union, microfinance loans (19–21%), mobile/digital banking | Rwanda-focused; Atlas Mara in Zambia, Mozambique | Suited for microfinance/digital solutions; strong local presence. |
+
 For the latest details on fees, interest rates, or specific services, visit bank branches in Kigali or check their official websites:
 
 - Ecobank: [www.ecobank.com](https://www.ecobank.com)
@@ -119,4 +170,4 @@ For the latest details on fees, interest rates, or specific services, visit bank
 - Bank of Kigali: [www.bk.rw](https://www.bk.rw)
 - BPR Bank: Contact via the Rwanda Bankers Association or Atlas Mara.
 
-This list is based on available data as of May 2025 and may not cover all banks or services. Always verify with the bank before opening an account.
+Time to complete account creation is based on in-person visits to the branch of actual customers which may vary by branch. This list is based on available data as of May 2025 and may not cover all banks or services. Always verify with the bank before opening an account.
