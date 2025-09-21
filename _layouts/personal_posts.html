@@ -4,11 +4,19 @@ title: Personal
 permalink: /personal/
 ---
 
+<div class="header-container">
 <h1>Personal Posts ({{ site.personal | size }})</h1>
-
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
+</div>
+</div>
+<!-- Results container -->
+<ul id="results-container" style="box-shadow: 1px solid gray;"></ul>
 <div class="personal-posts-list">
-    {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-    {% for post in sorted_posts %}
-    {% include post-card.html post=post truncate_words=45 %}
+  {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
+  {% for post in sorted_posts %}
+  {% include post-card.html post=post truncate_words=45 %}
   {% endfor %}
 </div>
+
+{% include search-script.html %}
