@@ -401,12 +401,17 @@ a:hover{
 }
 
 
-/* Style for post date */
-#results-container li span {
-  display: block;
+#results-container li div {
+  display: flex;
   font-size: 14px;
   color: #666; /* Lighter color for date */
+  justify-content: space-between;
 }
+// #results-container li span {
+//   display: block;
+//   font-size: 14px;
+//   color: #666; /* Lighter color for date */
+// }
 
 /* Highlighted search term (optional) */
 .highlighted {
@@ -868,6 +873,19 @@ a:hover{
   padding: 0 20px; /* Ensure content has some padding */
 }
 
+.post-content table {
+  display: block;
+  overflow-x: auto;  /* Enables horizontal scroll when content overflows */
+  white-space: nowrap;  /* Prevents text wrapping inside cells, keeping columns intact */
+  width: 100%;  /* Ensures it fits the parent width */
+  border-collapse: collapse;  /* Optional: Maintains table styling */
+}
+
+.post-content th,
+.post-content td {
+  min-width: 100px;  /* Optional: Sets a minimum column width to prevent squishing; adjust as needed */
+}
+
 /* Responsive Design */
 @media (max-width: 1000px) {//was 768
   
@@ -903,6 +921,9 @@ a:hover{
 
   .post-content{
     padding: 0;
+  }
+  .toc-header{
+    box-shadow: 1px solid gray;
   }
 }
 
