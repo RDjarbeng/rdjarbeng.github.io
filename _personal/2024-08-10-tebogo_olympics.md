@@ -1,7 +1,17 @@
 ---
 title: Letsile Tobogo - Botswana's first gold at the 200m olympics
 date: 2024-08-10
-image: /assets/images/TebogoOlympics2024200m.jpg
+published: true
+tags:
+  - Letsile Tobogo
+  - Letsile Tobogo wins gold
+  - Botswana wins gold at 200m olympics
+  - Botswana gold medal
+  - Botswana beats USA to win gold
+  - Tobogo beats Noah Lyles
+  - Noah Lyles loses 200m to Letsile Tobogo
+  - Botswana declares holiday to celebrate gold medal
+image: /assets/images/TebogoOlympics2024200m_cover.webp
 layout: personal
 ---
 Imagine you win a gold medal at the olympics and your country declares a [holiday](https://abcnews.go.com/International/botswana-declares-holiday-after-letsile-tebogos-historic-200/story?id=112702358) to celebrate your win. 
@@ -15,7 +25,7 @@ Imagine you come from Botswana and participate in the 2024 olympics in Paris, Fr
 
 In a stunning upset, Botswana's Letsile Tebogo (r) pulled ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles.
 
-![Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports](/assets/images/TebogoOlympics2024200m.jpg "Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports")
+![Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports](/assets/images/TebogoOlympics2024200m_colourpop_rd.JPG "Letsile Tebogo pulls ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles. Image credit: Africa Top Sports")
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/Ax0sc37BNCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
