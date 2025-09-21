@@ -14,7 +14,7 @@ tags:
   - Rwanda to Uganda
   - part one from Rwanda to Uganda
   - part one from Kigali to Kampala
-image: /assets/images/rd_silver_springs_stare_at_statue.webp
+image: /assets/images/rd_silver_springs_stare_at_statue_cover.webp
 layout: personal
 ---
 After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor, tagging along with a friend to a Toastmasters conference in Kampala, the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists, from a passenger left behind at the border to the thrill of exchanging Rwandan Francs for what felt like a fortune in Ugandan Shillings. Here’s part one of my journey to another East-African country. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
@@ -37,6 +37,8 @@ At the border, we first went through a health screening with temperature checks.
 
 _Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops—drivers may not wait!_
 
+Here is an example of the passport sized vaccination card for illustration.
+
 ![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore")
 
 We took this opportunity to exchange our money. There was a forex bureau at the border, a small kiosk attached to what appeared to be a restaurant-supermarket. The attendants seemed ready and waiting, seems they were used to getting travellers at night. The bureau accepted mobile money and cash in Rwandan Francs(RWF),  Ugandan Shillings(UGX) and US dollars so we made a quick exchange for some of our money. At that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 UGX to 1 RWF; our money seemed to have been multiplied by 3, or so we thought.
@@ -49,9 +51,12 @@ We didn’t linger long at the forex bureau, but when we returned to the bus, fi
 However, the driver kept the bus moving, exiting the checkpoint and turning unto a dark road even as more passengers joined the shouting. I would say he even sped up and kept ignoring the passenger's pleas.
 
 My friend, Abdul-Jalil and I were so shocked, we looked at each other, we couldn't imagine getting left behind by the bus and much more in a foreign country.  Perhaps what shocked us more was the driver who didn't say anything in response.
-The other passengers started murmuring something about the unfortunate person taking a motorbike. For context this was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT) at a border checkpoint that didn't seem to have any nearby communities. 
+The other passengers started murmuring something about the unfortunate person using a motorbike for the rest of the journey. For context this was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT) at a border checkpoint that didn't seem to have any nearby communities.  
+
+#### Personal note
+
 In our travelling experience, we were used to some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for to make sure no one was left behind at a stop.  Apparently none of that was standard for this trip and you either made it on time or were left behind in a country you may be visiting for the first time.  The was a sign at the border checkpoint prohibiting honking but it still does not excuse what appears to be the hurried rush from the driver to depart without accounting for all passengers.
 
 The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I sometimes wonder what happened to that passenger, probably standing at the border checkpoint watching their bus rumble into the night.
 
-Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon. In part two, I hope to share the vibrant sights, sounds and food of Kampala. See you soon.
+Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... **soon**. In part two, I hope to share the vibrant sights, sounds and food of Kampala, the Silver Springs hotel and a suburb called Bugulobi. See you soon.
