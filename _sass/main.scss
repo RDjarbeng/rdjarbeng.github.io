@@ -243,7 +243,8 @@ iframe{
   width: 100%; /* Adjust as needed */
   max-height: 300px; 
   object-fit: cover; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
 }
 
 // .posts.post-image {
@@ -262,6 +263,7 @@ iframe{
   justify-content: space-between; /* Ensures meta is on the left and categories on the right */
   align-items: center; /* Aligns items vertically in the center */
   margin-top: auto; /* Pushes this section to the bottom of the card if needed */
+  padding-top: 5px;
 }
 
 .post-meta {
@@ -274,6 +276,12 @@ iframe{
   font-size: 0.85rem;
   color: $grey;
   margin-bottom: 0px;
+}
+
+.post-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Fills the parent card
 }
 
 .about-link {
@@ -924,6 +932,9 @@ a:hover{
   }
   .toc-header{
     box-shadow: 1px solid gray;
+  }
+  .post-card{
+    width: 100%;
   }
 }
 
