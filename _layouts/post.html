@@ -47,10 +47,10 @@ layout: default
       <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
     {% endfor %}
   
-    Tags:
+    <!-- Tags:
     {% for tag in page.tags %}
       <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-    {% endfor %}
+    {% endfor %} -->
   </div>
 
   <hr class="post-separator">
