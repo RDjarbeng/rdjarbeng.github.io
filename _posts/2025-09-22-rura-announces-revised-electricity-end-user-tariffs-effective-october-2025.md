@@ -39,9 +39,9 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 | **Telecom Towers** | >100 kWh | 386 |
 | **Hotels** (annual consumption < 660,000 kWh) | All consumed kWh | 239 |
 | **Health Facilities, Schools, and Higher Learning Institutions** | All consumed kWh | 214 |
-| **Small Industries** (5,000-100,000 kWh annual), Mining (>660,000 kWh annual), Commercial Data Centers | All consumed kWh | 176 |
-| **Medium Industries** (Mining: 100,000-1,000,000 kWh annual), Water Pumping Stations | All consumed kWh | 133 |
-| **Large Industry Plants** (Manufacturing ≥1,000,000 kWh annual), Broadcast Shared Infrastructure (≥660,000 kWh annual), Public Electric Charging Infrastructure | All consumed kWh | 110 |
+| **Small Industries** (5,000-100,000 kWh annual), | All consumed kWh | 176 |
+| **Medium Industries** (Mining: 100,000-1,000,000 kWh annual) | All consumed kWh | 133 |
+| **Large Industry Plants** (Manufacturing ≥1,000,000 kWh annual) | All consumed kWh | 110 |
 | **Steel, Mining, and Cement Industries** (≥1,000,000 kWh annual) | All consumed kWh | 97 |
 
 ### B. Tariffs for Industrial Customers with Smart Meters (Postpaid)
