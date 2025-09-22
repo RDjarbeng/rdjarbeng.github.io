@@ -1,6 +1,6 @@
 ---
 date: 2025-09-22T11:09:00
-published: false
+published: true
 author: Richard
 categories:
   - Energy
@@ -11,6 +11,7 @@ tags:
   - REG rates for residential increased
   - RURA announcement on REG user tariffs
 title: RURA Announces Revised Electricity End-User Tariffs Effective October 2025
+image: /assets/images/rura_tariffs_october2025_cover.webp
 layout: post
 ---
 The Rwanda Utilities Regulatory Authority (RURA) has notified the public of a revision to the Electricity End-User Tariff. The revised tariffs will take effect on 01 October 2025.
@@ -20,11 +21,11 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 ### A. Tariffs for All Customer Categories
 
 | Customer Category | Monthly Block | Tariff (RWF/kWh) |
-|-------------------|---------------|------------------|
+| --- | --- | --- |
 | **Residential (Households)** | 0-20 kWh | 89 |
-| | >20-50 kWh | 310 |
+|  | >20-50 kWh | 310 |
 | **Non-Residential** | 0-100 kWh | 355 |
-| | >100 kWh | 386 |
+|  | >100 kWh | 386 |
 | **Telecom Towers** | >100 kWh | 386 |
 | **Hotels** (annual consumption < 660,000 kWh) | All consumed kWh | 239 |
 | **Health Facilities, Schools, and Higher Learning Institutions** | All consumed kWh | 214 |
@@ -34,20 +35,22 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 | **Steel, Mining, and Cement Industries** (≥1,000,000 kWh annual) | All consumed kWh | 97 |
 
 ### B. Tariffs for Industrial Customers with Smart Meters (Postpaid)
+
 (VAT exclusive; includes energy charge and maximum demand charge per kVA/month)
 
 | Industry Category | Energy Charge (RWF/kWh) | Peak Hours (6:00 PM - 10:59 PM) | Off-Peak Hours (11:00 PM - 5:59 AM) | Shoulder Hours (8:00 AM - 5:59 PM) |
-|-------------------|-------------------------|--------------------------------|-------------------------------------|------------------------------------|
+| --- | --- | --- | --- | --- |
 | **Small** | 175 | 11,017 | 7,590 | 3,908 |
 | **Medium** | 133 | 10,514 | 0 | 3,588 |
 | **Large** (Manufacturing ≥1,000,000 kWh) | 110 | 7,184 | 0 | 2,004 |
 | **Steel, Mining, Cement** (≥1,000,000 kWh) | 97 | 7,184 | 0 | 2,004 |
 
 ### C. Flat Rates for Industrial Customers without Smart Meters (Prepaid)
+
 (VAT exclusive)
 
 | Industry Category | Flat Rate (RWF/kWh) |
-|-------------------|---------------------|
+| --- | --- |
 | **Small** | 175 |
 | **Medium** | 156 |
 | **Large** | 124 |
