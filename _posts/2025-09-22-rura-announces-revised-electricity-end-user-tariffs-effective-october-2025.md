@@ -25,6 +25,13 @@ image: /assets/images/rura_tariffs_october2025_cover.webp
 layout: post
 ---
 The Rwanda Utilities Regulatory Authority (RURA) has notified the public of a revision to the Electricity End-User Tariff. The revised tariffs will take effect on 01 October 2025.
+In residential households, the threshold for the lowest consumption bracket has been extended from 15 kWh to 20 kWh per month, maintaining affordability for basic needs. 
+
+## Rate changes for residential households
+
+**0-20 kWh** per month: RWF **89** per kWh (unchanged from previous rate).
+**20-50 kWh** per month: RWF **310** per kWh, an increase from RWF **212**.
+Above **50 kWh** per month: RWF **369** per kWh, up from RWF **249**.
 
 For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 18% VAT applies to all rates).
 
@@ -34,6 +41,7 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 | --- | --- | --- |
 | **Residential (Households)** | 0-20 kWh | 89 |
 |  | >20-50 kWh | 310 |
+|  | >50 kWh | 369 |
 | **Non-Residential** | 0-100 kWh | 355 |
 |  | >100 kWh | 386 |
 | **Telecom Towers** | >100 kWh | 386 |
@@ -67,4 +75,11 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 
 For more information, visit [www.rura.rw](https://www.rura.rw).
 
+Included below is a post from Rwanda Utilities Regulatory Authority announcing the revised tariffs.
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Rwanda Utilities Regulatory Authority (RURA) hereby notifies the public that the Electricity End-User Tariff has been revised pursuant to the provisions of Law Nº09/2013 of 01 March 2013 establishing RURA.<br><br>The revised tariff shall come into force on 01 October 2025 <a href="https://t.co/0KXbG8w2sY">pic.twitter.com/0KXbG8w2sY</a></p>&mdash; Rwanda Utilities Regulatory Authority - RURA (@RURA_RWANDA) <a href="https://twitter.com/RURA_RWANDA/status/1968345033389797563?ref_src=twsrc%5Etfw">September 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+External sources:
+[All Africa](https://allafrica.com/stories/202509180078.html)
+
+[New times Rwanda](https://www.newtimes.co.rw/article/29789/news/energy/rura-announces-new-electricity-tariffs-here-is-what-we-know)
