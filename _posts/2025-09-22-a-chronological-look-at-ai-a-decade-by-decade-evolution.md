@@ -29,7 +29,7 @@ title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
 image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 layout: post
 ---
-Here we cut through the noise to deliver a clear, compelling history of this transformative technology. From the theoretical roots of the 1940s to the generative AI boom of today in the 21st century; from the McCulloch-Pitts Neuron Model**** to generative AI in 2025. We trace the key milestones, the brilliant minds, and the surprising turns that shaped the field.
+Here we cut through the noise to deliver a clear, compelling history of this transformative technology. From the theoretical roots of the 1940s to the generative AI boom of today in the 21st century; from the McCulloch-Pitts Neuron Model\*\*\*\* to generative AI in 2025. We trace the key milestones, the brilliant minds, and the surprising turns that shaped the field.
 
 ![Cover image on chronological order of AI images by gemini from google](/assets/images/ai_chronological_order_rdjarbeng_cover.PNG "Cover image on chronological order of AI images by gemini from google")
 
@@ -199,11 +199,6 @@ The journey of artificial intelligence is a testament to human curiosity and tec
 
 ### How AI was used to write this post:
 
-Of course to write this post some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini  decided the placement of images and videos within the post and generated the cover image for this post. If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. Reader this looks like a nice spot to let you go, since you can see that AI models keep improving but aren't yet perfect.
+To write this post it is only fair that some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini decided the placement of images and videos within the post. Meta AI was used to create some images but they did not make it to the final draft because the chief editor, editor generated the cover image for this post by itself. Here's an imperfection, If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. 
 
-
-
------
-Bonus content- since you read all this way: 
-To understand the progression of AI from simple models to the complex systems of today, this video provides an overview of Apple's recent announcements on AI.
-http://googleusercontent.com/youtube_content/0
+Reader, this looks like a nice spot to let you go after telling you all the great advances AI has made, albeit with a warning. You can see that AI models keep improving but are not yet perfect as illustrated in this very post.
