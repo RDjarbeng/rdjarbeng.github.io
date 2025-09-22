@@ -196,6 +196,12 @@ iframe{
   }
 }
 
+.post-navigation .post-card {
+  opacity: 1 !important; // Override initial opacity
+  animation: none !important; // Disable any scroll-based or other animations
+  transition: none !important; // Prevent any transitions from interfering
+}
+
 // Posts page animation (scroll-based)
 .post-card:not(.home):not(.personal-posts-list .post-card),
 .project-card:not(.home):not(.personal-posts-list .project-card) {
@@ -392,6 +398,7 @@ a:hover{
 .related-posts ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .related-posts li {
