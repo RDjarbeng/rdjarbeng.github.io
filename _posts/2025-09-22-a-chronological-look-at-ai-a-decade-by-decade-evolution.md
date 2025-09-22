@@ -1,6 +1,6 @@
 ---
 date: 2025-09-22T13:45:00
-published: false
+published: true
 author: Richard
 categories:
   - AI
@@ -26,9 +26,12 @@ tags:
   - Tesla
   - Nvidia
 title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
+image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 layout: post
 ---
-Here we cut through the noise to deliver a clear, compelling history of this transformative technology. From the theoretical roots of the 1940s to the generative AI boom of today, we trace the key milestones, the brilliant minds, and the surprising turns that shaped the field.
+Here we cut through the noise to deliver a clear, compelling history of this transformative technology. From the theoretical roots of the 1940s to the generative AI boom of today in the 21st century; from the McCulloch-Pitts Neuron Model**** to generative AI in 2025. We trace the key milestones, the brilliant minds, and the surprising turns that shaped the field.
+
+![Cover image on chronological order of AI images by gemini from google](/assets/images/ai_chronological_order_rdjarbeng_cover.PNG "Cover image on chronological order of AI images by gemini from google")
 
 Discover why moments like the AlexNet breakthrough and the rise of Nvidia's GPUs were more than just incremental steps—they were the foundational sparks that ignited the AI revolution. We reveal how major tech giants like Google, Tesla, and Meta have driven innovation, open-source contributions and reshaped industries with their advancements. Whether you're an AI enthusiast or just curious about how we got here, this post provides the essential context you need to understand the forces at play. It's a journey through time, a story of human ingenuity, and a look at the future of intelligence itself. 
 
@@ -192,9 +195,15 @@ The AI race isn't just about who has the biggest model anymore; it's about who c
 
 ## Conclusion: An Unfolding Story
 
-The journey of artificial intelligence is a testament to human curiosity and technological ingenuity. From the theoretical musings of Turing to the silicon-fueled agentic swarms of today, the field has undergone dramatic shifts and explosive growth. The milestones of the past—the Logic Theorist, Deep Blue, and especially **AlexNet's GPU-powered coup**—weren't just victories; they were the essential sparks that ignited the inferno of innovation we are witnessing today. As AI matures, it promises to reshape our reality in ways we are only beginning to comprehend. The story isn't over; it's just getting started. What part of this incredible journey fascinates you the most?
+The journey of artificial intelligence is a testament to human curiosity and technological ingenuity. From the theoretical musings of Turing to the silicon-fueled agentic swarms of today, the field has undergone dramatic shifts and explosive growth. The milestones of the past—the Logic Theorist, Deep Blue, and especially **AlexNet's GPU-powered coup**—weren't just victories; they were the essential sparks that ignited the inferno of innovation we are witnessing today. As AI matures, it promises to reshape our reality in ways we are only beginning to comprehend. 
+
+### How AI was used to write this post:
+
+Of course to write this post some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini  decided the placement of images and videos within the post and generated the cover image for this post. If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. Reader this looks like a nice spot to let you go, since you can see that AI models keep improving but aren't yet perfect.
+
+
 
 -----
-
+Bonus content- since you read all this way: 
 To understand the progression of AI from simple models to the complex systems of today, this video provides an overview of Apple's recent announcements on AI.
 http://googleusercontent.com/youtube_content/0
