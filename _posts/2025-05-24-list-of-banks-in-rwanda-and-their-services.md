@@ -1,5 +1,6 @@
 ---
 date: 2025-05-24T14:55:00
+published: true
 author: Richard
 categories:
   - Technology
