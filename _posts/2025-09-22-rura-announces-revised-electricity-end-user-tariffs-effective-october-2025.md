@@ -10,6 +10,16 @@ tags:
   - REG tariffs October 2025
   - REG rates for residential increased
   - RURA announcement on REG user tariffs
+  - Rwanda
+  - Electricity Tariffs
+  - RURA
+  - Energy Sector
+  - Renewable Energy
+  - Household Access
+  - Industrial Rates
+  - Tariff Revision
+  - Sustainable Energy
+  - Kigali
 title: RURA Announces Revised Electricity End-User Tariffs Effective October 2025
 image: /assets/images/rura_tariffs_october2025_cover.webp
 layout: post
