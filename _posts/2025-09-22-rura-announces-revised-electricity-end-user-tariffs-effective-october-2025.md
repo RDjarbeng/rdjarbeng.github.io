@@ -81,9 +81,11 @@ Included below is a post from Rwanda Utilities Regulatory Authority announcing t
 
 ## App for electricity calculation
 
-I created an app to help calculate the units in kWH you receive and vice versa. Also added a feature to calculate the remaining kWH if you have already paid for electricity at the beginning of the month.
+Calculating how much electricity I get from the table is time consuming, so I created an app to help calculate this. It gives the approximate units in kWH you receive per RWF and vice versa. This takes into account the 18% VAT and displays the breakdown of costs across tiers. Also added a feature to calculate the remaining kWH if you have already paid for electricity at the beginning of the month.
 
 Find it [here](https://rwanda-energy-calculator.onrender.com/)
+
+![Screenshot of Rwanda energy group tariffs calculator app by Richard Djarbeng](/assets/images/reg_energy_calculator_screenshot.png "Screenshot of Rwanda energy group tariffs calculator app by Richard Djarbeng built with fastHTML")
 
 **External sources:**
 
