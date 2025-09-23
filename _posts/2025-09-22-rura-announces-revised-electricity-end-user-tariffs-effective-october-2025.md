@@ -79,6 +79,11 @@ Included below is a post from Rwanda Utilities Regulatory Authority announcing t
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The Rwanda Utilities Regulatory Authority (RURA) hereby notifies the public that the Electricity End-User Tariff has been revised pursuant to the provisions of Law Nº09/2013 of 01 March 2013 establishing RURA.<br><br>The revised tariff shall come into force on 01 October 2025 <a href="https://t.co/0KXbG8w2sY">pic.twitter.com/0KXbG8w2sY</a></p>&mdash; Rwanda Utilities Regulatory Authority - RURA (@RURA_RWANDA) <a href="https://twitter.com/RURA_RWANDA/status/1968345033389797563?ref_src=twsrc%5Etfw">September 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+I created an app to help calculate the units in kWH you receive and vice versa. Also added a feature to calculate the remaining kWH if you have already paid for electricity at the beginning of the month.
+
+Find it [here](https://rwanda-energy-calculator.onrender.com/)
+
 **External sources:**
-* [All Africa](https://allafrica.com/stories/202509180078.html)
-* [New times Rwanda](https://www.newtimes.co.rw/article/29789/news/energy/rura-announces-new-electricity-tariffs-here-is-what-we-know)
+
+- [All Africa](https://allafrica.com/stories/202509180078.html)
+- [New times Rwanda](https://www.newtimes.co.rw/article/29789/news/energy/rura-announces-new-electricity-tariffs-here-is-what-we-know)
