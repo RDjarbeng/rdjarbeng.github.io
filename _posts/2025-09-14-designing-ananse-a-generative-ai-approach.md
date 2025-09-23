@@ -38,6 +38,8 @@ For example, in one popular story, Ananse captures a python, a leopard, and a ho
 
 Here is my humble attempt to illustrate a folktale legend based on the few stories I know. Obviously I didn’t sit down over days with a paint brush or pencil to try and draw him in this modern age. I tried instead to describe this character to various AI models, and have them figure out how to draw them. Let’s take a look at the outputs.
 
+![Ananse trickster character from west Africa with a bald head small ears and selfish looking](/assets/images/Firefly%20trickster%20character%20from%20west%20Africa%20with%20a%20bald%20head%20small%20ears%20and%20selfish%20looking%20Backg%20%281%29.jpg "Ananse trickster character from west Africa with a bald head small ears and selfish looking from Adobe firefly")
+
 ### Firefly from Adobe
 
 Unfortunately I lost the original prompts I used to generate these images when I was first exploring the description of ananse. Adobe firefly has undergone some changes and it seems those prompts were not saved and are now lost to the winds that carried away the knowledge in the pot of wisdom.
