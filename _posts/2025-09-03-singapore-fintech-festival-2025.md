@@ -89,3 +89,5 @@ _Note: This post is based on an email I received on [insert date if known]. All 
 Thanks for reading! Stay curious. 🚀
 
 PS: I know this email may not have come directlly from the CEO mentioned, I just thought it would be  interesting to document how I tried to understand the finance terms mentioned
+
+_Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._
