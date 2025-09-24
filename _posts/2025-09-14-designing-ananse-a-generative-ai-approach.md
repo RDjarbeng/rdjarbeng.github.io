@@ -34,9 +34,11 @@ Ananse is a clever, mischievous spider who stars in countless stories passed dow
 
 For example, in one popular story, Ananse captures a python, a leopard, and a hornet to trade for Nyame’s stories, using clever traps and deception. Yet, he’s not infallible—his tricks can backfire, teaching lessons about humility or consequences. In the Caribbean, especially in Jamaica, his tales blend with local traditions, and he’s often called “Nancy” or “Aunt Nancy.”
 
-## A picture of Ananse
+## A picture of Ananse from GenAI
 
-Here is my humble attempt to illustrate a folktale legend based on the few stories I know. Obviously I didn’t sit down over days with a paint brush or pencil to try and draw him in this modern age. I tried instead to describe this character to various AI models, and have them figure out how to draw them. Let’s take a look at the outputs.
+Here is my humble attempt to illustrate a folktale legend based on the few stories I know. Obviously I didn’t sit down over days with a paint brush or pencil to try and draw him in this modern age. I tried instead to describe this character to various AI models, and have them figure out how to draw them. You can say this is a use case of generative AI or GenAI for short. Let’s take a look at the outputs.
+
+![Ananse trickster character from west Africa with a bald head small ears and selfish looking](/assets/images/Firefly%20trickster%20character%20from%20west%20Africa%20with%20a%20bald%20head%20small%20ears%20and%20selfish%20looking%20Backg%20%281%29.jpg "Ananse trickster character from west Africa with a bald head small ears and selfish looking from Adobe firefly")
 
 ### Firefly from Adobe
 
@@ -61,3 +63,7 @@ Showing Ananse's mood after he gains the pot of Wisdom 🍯.
 Last slide is a bombastic side eye. 👀😏
 
 If you're not familiar, Ananse is a trickster character commonly found in stories from Ghana 🇬🇭 [#gh](https://www.instagram.com/explore/tags/gh/).
+
+### Bing image Generator
+
+We moved to bing image generator, because we don't want any watermarks and adobe keeps on messing with us; right now I can't find the prompts for my old image generations and they can't seem to make up their minds if this will be a free feature.

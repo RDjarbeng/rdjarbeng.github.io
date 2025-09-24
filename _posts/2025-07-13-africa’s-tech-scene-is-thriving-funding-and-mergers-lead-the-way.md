@@ -1,5 +1,6 @@
 ---
 date: 2025-07-13T09:15:00
+published: true
 author: Richard
 categories:
   - Entrepreneurship
@@ -44,5 +45,4 @@ Want to see Africa’s tech revolution up close? [Africa/Week 2025](https://www.
 
 _Follow Norrsken East Africa on [LinkedIn](https://www.linkedin.com/showcase/norrsken-kigali/), [Instagram](https://www.instagram.com/norrsken_eastafrica/), and [X](https://x.com/norrskenEA) for the latest on Africa’s tech scene._
 
----
-_About the Author_: Richard Djarbeng is a curious explorer of Africa’s booming tech ecosystem, passionate about the startups and innovators shaping the continent’s future. Through his personal blog, Richard shares stories and insights on African tech, from fintech breakthroughs to sustainable solutions, connecting readers with the people and ideas driving change. When he’s not writing, he’s diving into the latest trends in tech and dreaming up ways to support Africa’s next big idea.
+_Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._

@@ -3,7 +3,7 @@ date: 2025-05-24T14:55:00
 published: true
 author: Richard
 categories:
-  - Technology
+  - Finance
 tags:
   - Finance
   - Banking
@@ -172,3 +172,5 @@ For the latest details on fees, interest rates, or specific services, visit bank
 - BPR Bank: Contact via the Rwanda Bankers Association or Atlas Mara.
 
 Time to complete account creation is based on in-person visits to the branch of actual customers which may vary by branch. This list is based on available data as of May 2025 and may not cover all banks or services. Always verify with the bank before opening an account.
+
+_Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._
