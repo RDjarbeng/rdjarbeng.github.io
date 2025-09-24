@@ -118,15 +118,14 @@ iframe{
   //   padding-left: $nav-padding;
 // }
 
-
 .post-list, .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 3em;
+  grid-template-columns: 1fr;  // Default: Single column for mobile
+  gap: 1.5em;  // Tighter gap on small screens
   margin-top: 20px;
-  // margin-bottom: 40px; // Add space after the grid
-  min-height: 0; // Add this line to ensure proper sizing
+  min-height: 0;
 }
+
 .single-column-post-list {
   display: grid;
   grid-template-columns: 1fr; /* Single column */
@@ -573,12 +572,6 @@ a:hover{
 }
 
 
-@media (min-width: 992px) {
-  .wrapper{
-    max-width: $wrapper-max-width;
-  }
-  
-}
 
 // donation section
   .donation-section {
@@ -949,6 +942,14 @@ a:hover{
   .toc-sidebar {
     display: block; /* Ensure TOC is visible on desktop */
   }
+  .wrapper{
+    max-width: $wrapper-max-width;
+  }
+  .post-list, .project-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3em;
+  }
+  
 }
 
 /* Ensure other existing styles (e.g., post-meta, navigation) remain unaffected */
