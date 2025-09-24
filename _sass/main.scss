@@ -205,9 +205,9 @@ iframe{
 .post-card:not(.home):not(.personal-posts-list .post-card),
 .project-card:not(.home):not(.personal-posts-list .project-card) {
   opacity: 0; // Initial state
-  animation: appear 0.8s ease-out forwards;
+  animation: appear 0.7s ease-out forwards;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%; /* Trigger when 30% in view */
+  animation-range: entry 0% cover 22%; /* Trigger when 30% in view */
 }
 
 // Personal posts page animation (scroll-based)
@@ -896,7 +896,9 @@ a:hover{
 
 /* Responsive Design */
 @media (max-width: 1000px) {//was 768
-  
+  .site-footer{
+    padding: 7px 0;
+  }
   .toc-sidebar {
     position: static; /* Remove fixed positioning on mobile */
     width: 100%;
@@ -931,10 +933,26 @@ a:hover{
     padding: 0;
   }
   .toc-header{
-    box-shadow: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
   }
   .post-card{
     width: 100%;
+  }
+  .post-navigation{
+    padding: 0;
+    flex-direction: column;
+    .post-meta-categories-container, .post-excerpt {
+    display: none;
+    }
+
+  }
+
+  .post-header{
+    margin-bottom: 0px;
+  }
+
+  .prev-post, .next-post, .toc-sidebar{
+    max-width: 100%;
   }
 }
 
@@ -956,5 +974,4 @@ a:hover{
 .post-meta, .related-posts, .post-navigation {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
 }
