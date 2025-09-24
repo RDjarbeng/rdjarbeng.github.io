@@ -1,4 +1,5 @@
 title: Richard Djarbeng
+tagline: Latest tech in computer vision, research and ML
 description: >- 
   Richard Djarbeng's website with technical and personal posts. Currently focused on latest tech in computer vision, air quality research and reinforcement learning. Reflections are in the personal section.
 keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
@@ -81,7 +82,7 @@ collections:
     output: true
   personal:
     output: true
-    permalink: /personal/:path/
+    permalink: /personal/:title/
 sass:
   sass_dir: _sass
   quiet_deps: true
