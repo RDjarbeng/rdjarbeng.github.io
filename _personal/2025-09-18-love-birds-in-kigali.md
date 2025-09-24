@@ -4,9 +4,22 @@ date: 2025-09-18T23:06:00
 published: true
 tags:
   - Lovebirds
-  - Kigali
   - Two birds on a ledge
   - Interrupted date
+  - Kigali
+  - Sunset
+  - Birds
+  - Romance
+  - Cynicism
+  - Desiderata
+  - Poetry
+  - Photography
+  - Nature
+  - Rwanda
+  - Personal Reflection
+  - Google Pixel
+  - East Africa
+  - Rwanda
 image: /assets/images/loverbirds_cover_rdjarbeng.webp
 layout: personal
 ---
