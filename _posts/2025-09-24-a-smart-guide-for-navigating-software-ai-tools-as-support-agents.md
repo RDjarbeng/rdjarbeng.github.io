@@ -1,6 +1,6 @@
 ---
 date: 2025-09-24T10:30:00
-published: true
+published: false
 author: Richard
 categories:
   - AI
