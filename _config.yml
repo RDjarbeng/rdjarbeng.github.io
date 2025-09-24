@@ -1,7 +1,6 @@
 title: Richard Djarbeng
 description: >- 
-  Explore the journey and insights of Richard Djarbeng. Currently focused on latest tech in computer vision, air quality research and reinforcement learning. Computer Engineer & Tech leader specializing in AI, 
-  web development, machine learning, and IoT. Occasionally writes personal reflections on the personal section.
+  Richard Djarbeng's website with technical and personal posts. Currently focused on latest tech in computer vision, air quality research and reinforcement learning. Reflections are in the personal section.
 keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
 author: Richard Djarbeng
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -48,7 +47,7 @@ jekyll-archives:
 timezone: Africa/Harare
 permalink: pretty
 seo:
-  title: "Richard Djarbeng's website- Web, Internet of things and Data -"
+  title: "Richard Djarbeng's website- Web, Internet of things and Data "
   description: >-
     Learning journey and reflections of Richard Djarbeng, computer engineer specializing in web development, 
     machine learning, and IoT devices.
