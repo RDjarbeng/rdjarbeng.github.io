@@ -22,3 +22,17 @@ layout: default
 <!-- Something's here {{page.author}} -->
 {{ content }}
 
+<hr class="post-separator">
+  <div class="post-navigation">
+    <div class="prev-post">
+      {% if page.previous %}
+        « Previouspost : {% include post-card.html post=page.previous %}
+      {% endif %}
+    </div>
+    <div class="next-post">
+      {% if page.next %}
+        Next post »: {% include post-card.html post=page.next %}
+      {% endif %}
+    </div>
+  </div>
+</div>
