@@ -43,7 +43,6 @@ layout: default
 </div> -->
 
 <script src="/assets/js/animation.js"></script>
-
 <!-- Schema.org JSON-LD for Home Page SEO -->
 <script type="application/ld+json">
 {
@@ -79,8 +78,32 @@ layout: default
           "position": {{ forloop.index }},
           "item": {
             "@type": "BlogPosting",
+            "headline": "{{ post.title | escape }}",
             "name": "{{ post.title | escape }}",
-            "url": "{{ site.url }}{{ post.url }}"
+            "url": "{{ site.url }}{{ post.url }}",
+            "datePublished": "{{ post.date | date_to_xmlschema }}",
+            "author": {
+              "@type": "Person",
+              "name": "Richard Djarbeng",
+              "url": "https://rdjarbeng.com"
+            },{% if post.image %}
+            "image": {
+              "@type": "ImageObject",
+              "url": "{{ site.url }}{{ post.image }}"
+            },{% else %}
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://rdjarbeng.com/favicon.ico"
+            },{% endif %}
+            "publisher": {
+              "@type": "Organization",
+              "name": "Richard Djarbeng",
+              "url": "https://rdjarbeng.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdjarbeng.com/favicon.ico"
+              }
+            }
           }
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
@@ -98,8 +121,32 @@ layout: default
           "position": {{ forloop.index }},
           "item": {
             "@type": "BlogPosting",
+            "headline": "{{ personal.title | escape }}",
             "name": "{{ personal.title | escape }}",
-            "url": "{{ site.url }}{{ personal.url }}"
+            "url": "{{ site.url }}{{ personal.url }}",
+            "datePublished": "{{ personal.date | date_to_xmlschema }}",
+            "author": {
+              "@type": "Person",
+              "name": "Richard Djarbeng",
+              "url": "https://rdjarbeng.com"
+            },{% if personal.image %}
+            "image": {
+              "@type": "ImageObject",
+              "url": "{{ site.url }}{{ personal.image }}"
+            },{% else %}
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://rdjarbeng.com/favicon.ico"
+            },{% endif %}
+            "publisher": {
+              "@type": "Organization",
+              "name": "Richard Djarbeng",
+              "url": "https://rdjarbeng.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://rdjarbeng.com/favicon.ico"
+              }
+            }
           }
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
