@@ -620,6 +620,10 @@ a:hover{
       margin: 10px;
     }
 
+    .header-container {
+      flex-direction: column;
+    }
+
     .donation-section p {
       font-size: 1rem;
     }
