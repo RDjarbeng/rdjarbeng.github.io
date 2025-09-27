@@ -26,8 +26,82 @@ title: Blog
   {% include post-card.html post=post %}
   {% endfor %}
 </div>
-<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
-
 <!-- Include Simple Jekyll Search script -->
-
 {% include search-script.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Richard Djarbeng's Blog",
+  "headline": "Technical Blog Posts - AI, Technology & Air Quality",
+  "url": "{{ site.url }}{{ page.url }}",
+  "description": "Find technical posts about technology, Artificial Intelligence, Air quality and trending topics related to these areas.",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Richard Djarbeng",
+    "url": "https://rdjarbeng.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Richard Djarbeng",
+    "url": "https://rdjarbeng.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rdjarbeng.com/favicon.ico"
+    }
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "All Blog Posts",
+    "numberOfItems": {{ site.posts | size }},
+    "itemListElement": [
+      {% for post in site.posts %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "BlogPosting",
+          "headline": "{{ post.title | jsonify }}",
+          "name": "{{ post.title | jsonify }}",
+          "url": "{{ site.url }}{{ post.url }}",
+          "datePublished": "{{ post.date | date_to_xmlschema }}",
+          "dateModified": "{{ post.last_modified_at | default: post.date | date_to_xmlschema }}",
+          "author": {
+            "@type": "Person",
+            "name": "Richard Djarbeng",
+            "url": "https://rdjarbeng.com"
+          }{% if post.excerpt %},
+          "description": "{{ post.excerpt | strip_html | jsonify | truncatewords: 30 }}"{% endif %}{% if post.image or true %},
+          "image": {
+            "@type": "ImageObject",
+            "url": {% if post.image %}"{{ site.url }}{{ post.image }}"{% else %}"https://rdjarbeng.com/favicon.ico"{% endif %}
+          }{% endif %}{% if post.categories and post.categories.size > 0 %},
+          "keywords": [
+            {% for category in post.categories %}"{{ category | jsonify }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+          ]{% endif %},
+          "publisher": {
+            "@type": "Organization",
+            "name": "Richard Djarbeng",
+            "url": "https://rdjarbeng.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://rdjarbeng.com/favicon.ico"
+            }
+          }
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/posts/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
