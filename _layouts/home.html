@@ -82,6 +82,7 @@ layout: default
             "name": "{{ post.title | escape }}",
             "url": "{{ site.url }}{{ post.url }}",
             "datePublished": "{{ post.date | date_to_xmlschema }}",
+            "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
             "author": {
               "@type": "Person",
               "name": "Richard Djarbeng",
@@ -125,6 +126,7 @@ layout: default
             "name": "{{ personal.title | escape }}",
             "url": "{{ site.url }}{{ personal.url }}",
             "datePublished": "{{ personal.date | date_to_xmlschema }}",
+            "dateModified": "{{ post.last_modified_at | date_to_xmlschema }}",
             "author": {
               "@type": "Person",
               "name": "Richard Djarbeng",
