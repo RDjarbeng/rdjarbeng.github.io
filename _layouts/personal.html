@@ -43,7 +43,7 @@ layout: default
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "{{ page.title | escape }}",
-  "description": "{{ page.excerpt | strip_html | truncate: 160 | escape }}",
+  "description": "{{ page.excerpt | strip_html | truncate: 260 | escape }}",
   "image": {% if page.image %}"{{ site.url }}{{ page.image | relative_url }}"{% else %}"{{ site.url }}/default-image.jpg"{% endif %},
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
