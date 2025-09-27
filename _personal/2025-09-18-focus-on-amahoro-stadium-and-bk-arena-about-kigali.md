@@ -31,7 +31,7 @@ layout: personal
 ---
 The long-awaited renovations of Amahoro Stadium are finally complete! To celebrate, I put together this quick video showcasing the revamped venue in all its glory. It's a must-see for anyone who's ever wondered about that massive, basket-shaped landmark dominating Kigali's skyline.
 
-![Amahoro Stadium exterior resembling a woven basket](https://rdjarbeng.com/path-to-image.jpg "Amahoro Stadium exterior resembling a woven basket")  
+![Amahoro Stadium exterior resembling a woven basket](/assets/images/1000257968.jpg "Amahoro Stadium exterior resembling a woven basket")  
 _(If you haven't seen it in person, trust me—it's even more impressive up close.)_
 
 ## A Quick Rundown
