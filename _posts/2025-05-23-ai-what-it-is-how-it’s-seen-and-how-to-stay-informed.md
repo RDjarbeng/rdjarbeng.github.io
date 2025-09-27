@@ -4,7 +4,14 @@ author: Richard
 categories:
   - Technology
 tags:
-  - AI, Machine Learning, Hype, Elon Musk, Zuckerbeg, ChatGPT, OpenAI, Google
+  - AI
+  - Machine Learning
+  - Hype
+  - Elon Musk
+  - Mark Zuckerberg
+  - ChatGPT
+  - OpenAI
+  - Google
 title: 'AI: What It Is, How It’s Seen, and How to Stay Informed'
 image: /assets/images/rtdetr/cat_prediction_rtdetr.jpg
 video: ''
