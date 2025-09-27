@@ -105,3 +105,42 @@ layout: default
   </div>
 </div>
 <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
+<!-- Schema.org JSON-LD for Blog Post SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.excerpt | strip_html | truncate: 160 | escape }}",
+  "image": {% if page.image %}"{{ site.url }}{{ page.image | relative_url }}"{% else %}"{{ site.url }}/default-image.jpg"{% endif %},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{% if author %}{{ author.display_name }}{% else %}{{ site.author | default: 'Richard Djarbeng' }}{% endif %}",
+    "url": "{% if author %}{{ site.url }}{{ author.url | relative_url }}{% else %}{{ site.url }}{% endif %}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "rdjarbeng.com",
+    "url": "https://rdjarbeng.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rdjarbeng.com/favicon.ico"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "articleBody": "{{ content | strip_html | escape | truncate: 5000 }}",
+  "inLanguage": "en",
+  {% if page.tags %}"keywords": "{{ page.tags | join: ', ' | escape }}"{% endif %},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ site.title | default: 'Richard Djarbeng\\'s Website' }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+
