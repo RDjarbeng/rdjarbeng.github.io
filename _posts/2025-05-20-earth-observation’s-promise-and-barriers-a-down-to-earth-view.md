@@ -4,7 +4,14 @@ author: Richard
 categories:
   - Technology
 tags:
-  - Satellites, Earth Observation, Geospatial data, European Space Agency, Landsat, Sentinel, Copernicus, Planet, NASA
+  - Satellites
+  - Earth Observation
+  - Geospatial data
+  - European Space Agency
+  - Landsat, Sentinel
+  - Copernicus
+  - Planet
+  - NASA
 title: 'Earth Observation’s Promise and Barriers: A Down to Earth View'
 image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 video: ''
