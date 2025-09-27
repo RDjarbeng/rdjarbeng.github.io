@@ -133,12 +133,10 @@ layout: default
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"
   },
-  "articleBody": "{{ content | strip_html | escape | truncate: 5000 }}",
   "inLanguage": "en",
-  {% if page.tags %}"keywords": "{{ page.tags | join: ', ' | escape }}"{% endif %},
   "isPartOf": {
     "@type": "WebSite",
-    "name": "{{ site.title | default: 'Richard Djarbeng\\'s Website' }}",
+    "name": "Richard Djarbeng's Website",
     "url": "{{ site.url }}"
   }
 }
