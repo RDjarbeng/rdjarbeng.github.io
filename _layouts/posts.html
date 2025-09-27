@@ -73,7 +73,7 @@ title: Blog
             "name": "Richard Djarbeng",
             "url": "https://rdjarbeng.com"
           }{% if post.excerpt %},
-          "description": "{{ post.excerpt | strip_html | jsonify | truncatewords: 30 }}"{% endif %}{% if post.image or true %},
+          "description": "{{ post.excerpt | strip_html | jsonify | truncatewords: 150 }}"{% endif %}{% if post.image or true %},
           "image": {
             "@type": "ImageObject",
             "url": {% if post.image %}"{{ site.url }}{{ post.image }}"{% else %}"https://rdjarbeng.com/favicon.ico"{% endif %}
