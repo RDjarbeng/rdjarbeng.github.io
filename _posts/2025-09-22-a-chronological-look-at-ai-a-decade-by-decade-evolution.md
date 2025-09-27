@@ -43,8 +43,10 @@ The intellectual seeds of artificial intelligence were sown long before the firs
 
 The 1940s were marked by groundbreaking theoretical work. In **1943**, Warren McCulloch and Walter Pitts published a seminal paper that modeled artificial neurons as logical circuits. This was a radical idea that provided the first mathematical model of a **neural network**. This period also saw Norbert Wiener coin the term **"cybernetics"** to describe feedback and control systems, which greatly influenced early AI's focus on self-regulating machines.
 
-- **McCulloch-Pitts Neuron Model**: The first mathematical model of neural activity. [Read the original paper](https://en.wikipedia.org/wiki/McCulloch%E2%80%93Pitts_neuron).
+- **McCulloch-Pitts Neuron Model**: The first mathematical model of neural activity. [Read the original paper](https://en.wikipedia.org/wiki/McCulloch%E2%80%93Pitts_neuron). In this work, taking inspiration from how the human brain works, the neuron was modeled as a sum of the product of inputs and weights which was then passed to a non-linear activation function. 
 - **Birth of Cybernetics**: Norbert Wiener's work on feedback systems. [Explore Wiener's legacy](https://en.wikipedia.org/wiki/Cybernetics).
+
+![Artificial neuron structure](/assets/images/1280px-Artificial_neuron_structure.svg.png "McCulloch-Pitts Neuron Model")
 
 ### 1948-1950: Turing's Test and Intelligent Machinery
 

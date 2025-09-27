@@ -85,7 +85,7 @@ Calculating how much electricity I get from the table is time consuming, so I cr
 
 Find it [here](https://rwanda-energy-calculator.onrender.com/)
 
-![Screenshot of Rwanda energy group tariffs calculator app by Richard Djarbeng](/assets/images/reg_energy_calculator_screenshot.png "Screenshot of Rwanda energy group tariffs calculator app by Richard Djarbeng built with fastHTML")
+![Screenshot of RURA electricity tariff calculator screenshot showing household rates effective October 2025 app by Richard Djarbeng ](/assets/images/reg_energy_calculator_screenshot.png "Screenshot of Rwanda energy group tariffs calculator app by Richard Djarbeng built with fastHTML")
 
 **External sources:**
 
