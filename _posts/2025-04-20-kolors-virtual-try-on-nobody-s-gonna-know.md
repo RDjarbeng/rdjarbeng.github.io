@@ -14,7 +14,7 @@ image: /assets/images/Screenshot%202024-11-27%20220411.png
 layout: post
 video: ''
 ---
-Let us look at the **Kolors Virtual Try-On**a useful option for trying out different outfits virtually. By uploading an image, you can see how various clothing styles might look without needing to physically try them on. In this post I am going to show a demo of the virtual try-on model in action to see firsthand how it works, then I give my understanding of the process and how to achieve good results as well as my experience with different garments. 
+Let us examine the **Kolors Virtual Try-On** app a useful option for trying out different outfits virtually. By uploading an image, you can see how various clothing styles might look without needing to physically try them on. In this post I am going to show a demo of the virtual try-on model in action to see firsthand how it works, then I give my understanding of the process and how to achieve good results as well as my experience with different garments. 
 
 ## Virtual try-on Demo video
 Here’s a short demo video to show how it works:
