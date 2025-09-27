@@ -63,8 +63,8 @@ title: Blog
         "position": {{ forloop.index }},
         "item": {
           "@type": "BlogPosting",
-          "headline": "{{ post.title | jsonify }}",
-          "name": "{{ post.title | jsonify }}",
+          "headline": {{ post.title | jsonify }},
+          "name": {{ post.title | jsonify }},
           "url": "{{ site.url }}{{ post.url }}",
           "datePublished": "{{ post.date | date_to_xmlschema }}",
           "dateModified": "{{ post.last_modified_at | default: post.date | date_to_xmlschema }}",
@@ -73,13 +73,13 @@ title: Blog
             "name": "Richard Djarbeng",
             "url": "https://rdjarbeng.com"
           }{% if post.excerpt %},
-          "description": "{{ post.excerpt | strip_html | jsonify | truncatewords: 150 }}"{% endif %}{% if post.image or true %},
+          "description": {{ post.excerpt | strip_html | jsonify | truncatewords: 150 }}{% endif %}{% if post.image or true %},
           "image": {
             "@type": "ImageObject",
             "url": {% if post.image %}"{{ site.url }}{{ post.image }}"{% else %}"https://rdjarbeng.com/favicon.ico"{% endif %}
           }{% endif %}{% if post.categories and post.categories.size > 0 %},
           "keywords": [
-            {% for category in post.categories %}"{{ category | jsonify }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+            {% for category in post.categories %}{{ category | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}
           ]{% endif %},
           "publisher": {
             "@type": "Organization",
