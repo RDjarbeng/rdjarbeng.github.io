@@ -17,3 +17,47 @@ layout: default
     <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+
+<!-- Schema.org JSON-LD for Author Page SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ page.display_name | escape }}",
+  {% if page.position %}"jobTitle": "{{ page.position | escape }}",{% endif %}
+  "description": "{{ content | strip_html | truncate: 500 | escape }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.display_name | escape }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "rdjarbeng.com",
+    "url": "https://rdjarbeng.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rdjarbeng.com/favicon.ico"
+    }
+  },
+  "inLanguage": "en",
+  "works": [
+    {% for post in filtered_posts %}
+    {
+      "@type": "BlogPosting",
+      "name": "{{ post.title | escape }}",
+      "url": "{{ site.url }}{{ post.url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ site.title | default: \"Richard Djarbeng's Website\" }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
