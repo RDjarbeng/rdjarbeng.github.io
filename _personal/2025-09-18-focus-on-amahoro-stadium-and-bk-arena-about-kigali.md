@@ -1,7 +1,7 @@
 ---
 title: 'Amahoro Stadium: A Birds Eye view After Renovations'
 date: 2025-09-18T22:15:00
-published: false
+published: true
 tags:
   - Amahoro stadium
   - BK arena
@@ -26,7 +26,7 @@ tags:
   - SportsInfrastructure
   - ''
   - ''
-image: ''
+image: /assets/images/amahoro_stadium_outside_cover_rdjarbeng.webp
 layout: personal
 ---
 The long-awaited renovations of Amahoro Stadium are finally complete! To celebrate, I put together this quick video showcasing the revamped venue in all its glory. It's a must-see for anyone who's ever wondered about that massive, basket-shaped landmark dominating Kigali's skyline.
