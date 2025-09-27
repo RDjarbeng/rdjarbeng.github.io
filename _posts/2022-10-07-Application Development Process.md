@@ -5,7 +5,7 @@ layout: post
 author: Richard
 image: https://github.com/user-attachments/assets/f8d639ae-687d-4eaa-af1d-60d2bd7b62fc
 categories: ["Software Engineering"]
-tags: [Software engineering, apps, app develpment]
+tags: [Software engineering, apps, app development]
 ---
 
 # Is there a general process to follow to build an application?
