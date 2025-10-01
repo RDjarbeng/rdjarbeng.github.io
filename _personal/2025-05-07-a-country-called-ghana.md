@@ -4,7 +4,6 @@ date: 2025-05-07T16:14:00
 published: true
 image: /assets/images/2nd_collage_on_ghana.png
 layout: personal
-last_modified_at: ''
 ---
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain aspects a visitor to Ghana might find interesting; people, history, governance, and sights to visit.
 
