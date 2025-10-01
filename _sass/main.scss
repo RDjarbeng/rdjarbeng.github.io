@@ -905,6 +905,9 @@ a:hover{
   min-width: 100px;  /* Optional: Sets a minimum column width to prevent squishing; adjust as needed */
 }
 
+.posts-page-intro, .personal-page-intro, .post-excerpt{
+  text-align: justify;
+}
 /* Responsive Design */
 /* Add this to your mobile responsive section (@media (max-width: 1000px)) */
 
