@@ -27,13 +27,13 @@ The journey was done by coach bus from Nyabugogo bus park and took approximately
 
 ![Inside the Trinity bus on the journey from Kigali to Kampala](/assets/images/20250529-213008.png "Trinity bus on the journey from Kigali to Kampala")
 
-I was able to get a window seat for my assigned seat number but it didn't make much of a difference in the night time since it was so dark you only saw the lights of the buildings streak past and couldn't see very far from the road where the light from the streetlights ended. After settling into the cozy Trinity bus, we were ready for the 11-hour ride to Kampala. Little did we know, the border crossing would bring its own surprises. We had no issues with the buses in general except another issue on the rest stops which I hope to speak about later.
+I was able to get a window seat for my assigned seat number but it didn't make much of a difference in the night time. Since it was dark you only saw the lights of the buildings streak past and couldn't see very far from the road where the light from the streetlights ended. After settling into the cozy Trinity bus, we were ready for the 11-hour ride to Kampala. Little did we know, the border crossing would bring its own surprises. We had no issues with the buses in general except another issue on the rest stops which I hope to speak about later.
 
 From the Rwandan capital, Kigali, ; it took 2 hours to reach the Rwanda-Uganda border, the majority of the time remaining for the journey  was from the border to Kampala which is close to the center of Uganda.
 
-## Border -Uganda+ Rwanda
+## At the Border -Uganda+ Rwanda
 
-At the border, we first went through a health screening with temperature checks. West Africans, like me, also had to show a yellow fever vaccination card. The border checkpoint was not very busy there were two or three other buses like ours arriving and departing with their passengers also in line. The temperature of the night air was comfortably cool as we waited in line to complete the temperature checks. Then we went through a security check with our luggage then headed to Rwandan immigration. After this, you guessed it, we moved to Ugandan Immigration with a few questions. Luckily, Ghanaians don't need a visa to enter Uganda. We also had a poster for the toastmasters event with location and time details on hand.
+We first went through a health screening with temperature checks. West Africans, like me, also had to show a yellow fever vaccination card. The border checkpoint was not very busy; there were two or three other buses like ours arriving and departing with their passengers also in line. The temperature of the night air was comfortably cool as we waited in line to complete the temperature checks. Then we went through a security check with our luggage then headed to Rwandan immigration. After this, you guessed it, we moved to Ugandan Immigration with a few questions. Luckily, Ghanaians don't need a visa to enter Uganda. We also had a poster for the toastmasters event with location and time details on hand.
 
 _Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops—drivers may not wait!_
 
