@@ -1,6 +1,21 @@
 ---
 title: Let there be memes
 date: 2025-04-17T13:15:00
+published: true
+tags:
+  - Memes from the internet
+  - Emotion vs logic owlturd
+  - Scientists vs engineers
+  - oreo website meme
+  - brute force prevention
+  - Forgotten documentation meme
+  - Everybody loves chatgpt
+  - Midvale school for the gifted
+  - Dilbert comic
+  - Dilbert
+  - Dilbert why nothing works
+  - Update your pc meme
+  - Never turn off your pc
 image: /assets/images/ChatGPT_meme.jpeg
 layout: personal
 ---
