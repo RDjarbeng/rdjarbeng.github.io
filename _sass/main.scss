@@ -618,6 +618,10 @@ a:hover{
 
   /* Responsive design */
   @media (max-width: 600px) {
+    .wrapper{
+      padding-left: 0;
+      padding-right: 0;
+    }
     .donation-section {
       padding: 15px;
       margin: 10px;
