@@ -243,6 +243,10 @@ iframe{
   max-height: 3em; /* Ensure it doesn't expand more than two lines */
 }
 
+.post-card h4{
+  margin-bottom: 6px;
+}
+
 .post-image {
   max-width: 100%;
   height: auto;
@@ -969,7 +973,6 @@ a:hover{
   .post-list {
     width: 100%;
     max-width: 100vw; /* Don't exceed viewport width */
-    padding: 0 10px; /* Add some padding */
     box-sizing: border-box;
     margin: 20px 0; /* Only top/bottom margins */
   }
