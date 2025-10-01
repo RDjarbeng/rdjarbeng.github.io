@@ -259,7 +259,7 @@ iframe{
 // }
 
 .post-excerpt {
-  font-size: 1.1rem;
+  font-size: $post-excerpt-font-size;
   padding-top: 5px;
   color: #666;
   text-overflow: ellipsis;
