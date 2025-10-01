@@ -899,12 +899,15 @@ a:hover{
 }
 
 /* Responsive Design */
-@media (max-width: 1000px) {//was 768
+/* Add this to your mobile responsive section (@media (max-width: 1000px)) */
+
+@media (max-width: 1000px) {
   .site-footer{
     padding: 7px 0;
   }
+  
   .toc-sidebar {
-    position: static; /* Remove fixed positioning on mobile */
+    position: static;
     width: 100%;
     height: auto;
     left: auto;
@@ -914,6 +917,8 @@ a:hover{
 
   .page-content{
     padding-top: 0;
+    padding-left: 10px;  /* Add some padding */
+    padding-right: 10px; /* Add some padding */
   }
 
   .toc-content {
@@ -930,25 +935,49 @@ a:hover{
   }
 
   .post-container {
-    padding-left: 0; /* Remove offset on mobile */
+    padding-left: 0;
+    padding-right: 0; /* Ensure no right padding */
   }
 
   .post-content{
-    padding: 0;
+    padding: 0 10px; /* Add horizontal padding instead of 0 */
   }
+  
   .toc-header{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
   }
+  
+  /* Fix for post-card overflow */
   .post-card{
     width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    margin: 0; /* Remove any margins that might cause overflow */
   }
+  
+  /* Fix for post-list container */
+  .post-list {
+    width: 100%;
+    max-width: 100vw; /* Don't exceed viewport width */
+    padding: 0 10px; /* Add some padding */
+    box-sizing: border-box;
+    margin: 20px 0; /* Only top/bottom margins */
+  }
+  
+  /* Ensure the main content container doesn't overflow */
+  .home {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
   .post-navigation{
-    padding: 0;
+    padding: 0 10px; /* Add padding instead of 0 */
     flex-direction: column;
     .post-meta-categories-container, .post-excerpt {
-    display: none;
+      display: none;
     }
-
   }
 
   .post-header{
@@ -978,4 +1007,30 @@ a:hover{
 .post-meta, .related-posts, .post-navigation {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.post-tags{
+  display: none;
+}
+
+.post-container, .personal-container{
+
+h2,h3,h4{
+  display: inline-block;
+}
+
+h2 {
+  border-left: 6px solid #a5a4a4;
+  padding-left: 6px;
+}
+
+h3 {
+  border-left: 4px solid #c7c6c6;
+  padding-left: 4px;
+}
+
+h4 {
+  border-left: 2px solid #ddd;
+  padding-left: 2px;
+}
 }
