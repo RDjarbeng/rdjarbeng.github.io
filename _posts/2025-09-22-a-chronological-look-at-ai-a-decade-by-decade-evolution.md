@@ -29,7 +29,7 @@ title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
 image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 layout: post
 ---
-Here we cut through the noise to deliver a clear, compelling history of this transformative technology. From the theoretical roots of the 1940s to the generative AI boom of today in the 21st century; from the McCulloch-Pitts Neuron Model to generative AI in 2025. We trace the key milestones, the brilliant minds, and the surprising turns that shaped the field.
+Here we cut through the noise to deliver a clear, compelling history of this transformative technology; Artificial Intelligence and Machine Learning. From the theoretical roots of the 1940s to the generative AI boom of today in the 21st century; from the McCulloch-Pitts Neuron Model to the state of deep learning in 2025. The focus will be on discoveries that proved key to the existence of other ideas or even led to more discoveries after they were introduced. We trace the key milestones, the brilliant minds, and the surprising turns that shaped the field from a bird's eye view, as simple as we can make it.
 
 ![Cover image on chronological order of AI images by gemini from google](/assets/images/ai_chronological_order_rdjarbeng_cover.PNG "Cover image on chronological order of AI images by gemini from google")
 
