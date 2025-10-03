@@ -1,6 +1,23 @@
 ---
 title: Navigating Kigali- motorbikes and an accent
 date: 2025-05-23T09:52:00
+published: true
+tags:
+  - Kigali
+  - Rwanda
+  - Moto Taxi
+  - Kinyarwanda
+  - Language Learning
+  - Expat Life
+  - Travel
+  - Transportation
+  - Pronunciation
+  - African Cities
+  - Living in Kigali
+  - Cultural Nuances
+  - Kimironko
+  - Travel Tips
+  - Navigating Kigali
 image: /assets/images/kigali_bustop_motor.jpg
 layout: personal
 ---

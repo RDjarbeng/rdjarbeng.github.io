@@ -7,6 +7,8 @@ tags:
   - Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science (CMMRS)
   - Germany research school
   - summer school
+  - summer school in Europe
+  - summer school Germany
   - Phd advice
 image: /assets/images/rd_max_planck_eu_german_flags_annotated.webp
 layout: personal

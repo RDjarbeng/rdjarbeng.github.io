@@ -2,8 +2,37 @@
 title: A Country Called Ghana- All That Glitters is Still Gold
 date: 2025-05-07T16:14:00
 published: true
+tags:
+  - Ghana
+  - All That Glitters is Still Gold
+  - A Country Called Ghana
+  - Introducing Ghana
+  - About Ghana from a Ghanaian
+  - Richard Djarbeng writing about Ghana
+  - People in Ghana
+  - Ghana's history in Governance
+  - Suarez vs Ghana
+  - Geography of Ghana
+  - Weather in Ghana
+  - Ghana humidity
+  - Sights to visit in Ghana
+  - Tourism
+  - Tourism in Ghana
+  - Sights to visit in West Africa
+  - Resources in Ghana
+  - Gold
+  - Oil
+  - Bauxite
+  - Bauxite from Ghana
+  - Larabanga mosque
+  - Ghana 2010 world cup
+  - Asamoah Gyan
+  - Ghana vs Uruguay
+  - Jollof in Ghana
+  - Entertainment in Ghana
 image: /assets/images/2nd_collage_on_ghana.png
 layout: personal
+last_modified_at: ''
 ---
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain aspects a visitor to Ghana might find interesting; people, history, governance, and sights to visit.
 
