@@ -7,7 +7,14 @@ custom_css_class: about-page
 Hello, I am Richard Djarbeng.
 I hope to give you an introduction of myself here and possibly answer questions regarding myself on this page.
 
-Generally I am curious about many things but I have summarized my experience, skills and a _brief_ summary of my personal interests.
+Generally I am interested in the Internet of Things (IoT), Computer Vision and Machine Learning (ML) applications. 
+I am currently improving my ML skills with the FastAI:practical deep learning course by Jeremy Howard as well as exploring applications of nano-banana; google's latest computer vision model for Gemini.  
+
+I am currently working with [Prof Edwin Mugume](https://www.africa.engineering.cmu.edu/about/contact/directory/bios/mugume-edwin.html) on a project building low cost weather sensors and focusing on deployment of these solutions across East Africa.
+
+Previously, I worked with [Prof Albert Presto](https://www.meche.engineering.cmu.edu/directory/bios/presto-albert.html) at the Center for Atmospheric Particle Studies (CAPS) -Carnegie Mellon University, to build models to classify pollution sources from [Particulate Matter (PM) filters using smartphone images](https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html). The aim was to conduct low-cost source apportionment of different pollution sources.
+
+I have summarized my experience, skills and a _brief_ summary of my personal interests.
 
 ## Computer Engineer | Machine Learning Enthusiast | IoT Developer
 
