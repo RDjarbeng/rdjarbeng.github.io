@@ -1,14 +1,19 @@
 ---
 title: Haircut in Kigali-Danny the barber
 date: 2025-04-27T09:56:00
+published: true
+tags:
+  - Experienc
+  - Haircut in Kigali
+  - Haircut in Rwanda
 image: /assets/images/1000060757.jpg
 layout: personal
 ---
 Have you ever had a bad haircut abroad? For my haircuts in Kigali I've kept the same barber for more than 3 years. Before I get into the story of how that happened. Here are pictures of my favorite cuts he made.
 
-![Richard's haircut by Danny](/assets/images/1000060757.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
+![Closeup of a Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000060757.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
 
-![Richard's haircut by Danny](/assets/images/1000047937.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
+![Closeup of  Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000047937.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
 
 ## Challenges of Getting a Haircut in Kigali
 
@@ -16,7 +21,7 @@ One of the problems faced by foreigners in Rwanda is that the barbers don't know
 
  For me, before I visit a barber I usually prefer one that someone has recommended. Personally I don't think being at the mercy of a stranger with the power to wreak havoc on your hair is something to be taken lightly. Personal complaints include: shifting the hairline to expose more of the forehead, trimming away parts of the beard. (this one is particularly painful when a part of the beard takes weeks to grow), shaving off the beard outright ... I could keep going.
 
-## My Worst Haircut Experience
+## My Worst Haircut Experience- a communication problem
 
 Here is an experience from one of my first haircuts in Kigali. The barber pointed at my beard and asked me one word, 'Cut?'. I looked at his fingers in the mirror and they looked like they were tracing the outline of my beard. So silly me assumed he meant a quick trim to shape it. With a smile I said yes.  My smile vanished as he shaved off the entire right sided of my beard and my smile disappeared. To my horror I now understood what he meant. I found a picture that I think represents the look on my face then.
 
