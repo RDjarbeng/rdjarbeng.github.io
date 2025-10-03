@@ -1050,4 +1050,11 @@ h4 {
   border-left: 2px solid #ddd;
   padding-left: 2px;
 }
+.post-card {
+    h2, h3, h4 {
+      display: block;
+      border-left: none;
+      padding-left: 0;
+    }
+  }
 }
