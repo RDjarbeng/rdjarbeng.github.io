@@ -4,8 +4,8 @@ title: About Richard Djarbeng
 permalink: /about/
 custom_css_class: about-page
 ---
-Hello, I am Richard Djarbeng, what brings you to my page?
-I hope to give you an introduction of myself here and possibly answer questions regarding myself with the naive assumption that, that's why you found this about page.
+Hello, I am Richard Djarbeng.
+I hope to give you an introduction of myself here and possibly answer questions regarding myself on this page.
 
 Generally I am curious about many things but I have summarized my experience, skills and a _brief_ summary of my personal interests.
 
