@@ -16,7 +16,7 @@ tags:
   - Github machine learning
   - open source
 title: Complete Machine Learning package- learn by doing
-image: /assets/images/cats.webp
+image: /assets/images/git_complete_ml_package_cover_rd.webp
 layout: post
 ---
 # Your Complete Roadmap to Becoming a Machine Learning Practitioner
