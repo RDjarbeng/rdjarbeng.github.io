@@ -19,13 +19,13 @@ title: Complete Machine Learning package- learn by doing
 image: /assets/images/git_complete_ml_package_cover_rd.webp
 layout: post
 ---
-# Your Complete Roadmap to Becoming a Machine Learning Practitioner
-
 Are you fascinated by machine learning but have no idea where to start? Do you find yourself jumping between YouTube tutorials, blog posts, and dense textbooks, only to end up more confused than when you began? This is a common struggle, but what you need is a structured path—a single roadmap that takes you from zero to capable.
 
 This is that roadmap.
 
 ![Complete Machine learning package cover by Jean de Dieu Nyandwi](/assets/images/git_cover.png "Complete Machine learning package cover by Jean de Dieu Nyandwi")
+
+# Your Complete Roadmap to Becoming a Machine Learning Practitioner
 
 Introducing the **Complete Machine Learning Package**, an open-source project designed by [Jean de Dieu Nyandwi](https://www.linkedin.com/in/nyandwi/) to be the definitive starting point for beginners. With over **4,200 stars on GitHub**, it has become a trusted resource for thousands of learners. Forget the fragmented learning; this is a comprehensive, hands-on curriculum that respects your journey as a newcomer.
 
