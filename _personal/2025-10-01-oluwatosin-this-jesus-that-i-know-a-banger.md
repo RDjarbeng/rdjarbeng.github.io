@@ -7,6 +7,7 @@ tags:
   - This Jesus that I know
   - This Jesus that I know song
   - This Jesus that I know is enough for me
+image: /assets/images/1000267977.webp
 layout: personal
 ---
 I have to share this track that's been on repeat for me lately. It's "Oluwatosin (Jesus Is Enough)" by Tkeyz and SteveHills. The song dropped in July 2025, and it's clear I'm not the only one who loves it – the visualizer has exploded with over **4.5 million views** already!
@@ -25,4 +26,4 @@ This song is an absolute vibe. Just when I thought it couldn't get any better, t
 
 Unsurprisingly, the track is now making waves on social media. This creator on Instagram is making it a trend in their videos and it's amazing to see.
 
-* **Check out the trend started by:** **[@InstagramHandleHere](Link-to-Instagram-Profile-Goes-Here)**
+- **Check out the trend started by:** [**@InstagramHandleHere**](Link-to-Instagram-Profile-Goes-Here)
