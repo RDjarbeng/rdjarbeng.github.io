@@ -37,7 +37,7 @@ This song is an absolute vibe. Just when I thought it couldn't get any better, t
 
 ### Catching Fire on Instagram
 
-Unsurprisingly, the track is now making waves on social media. This creator on Instagram is making it a trend in their videos and it's amazing to see. I haven't been able to find the singer for the version of Oluwatosin he uses though I've been searching for it.
+Unsurprisingly, the track is now making waves on social media. This creator on Instagram is making it a trend in their videos. He starts off with an initial assumption and somehow gets something far better than what he has been looking for. Then he plays the song 🕺🏽 Oluwatosin. I haven't been able to find the singer for the version of Oluwatosin he uses though I've been searching for it.
 
 - **Check out the trend started by:** [@harryMorah](https://www.threads.com/@harrymorah?xmt=AQF0BrYSBAzONAUuY_iBFeCu_pfo8dXZnQPoaig_JCCwzd8)
 
