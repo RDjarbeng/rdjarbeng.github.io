@@ -27,13 +27,13 @@ I have to share this track that's been on repeat for me lately. It's "Oluwatosin
 
 Give it a listen:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2u08HbxWnuc?si=K5nwCAnXTaRZCT3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="415" src="https://www.youtube.com/embed/2u08HbxWnuc?si=K5nwCAnXTaRZCT3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### And It Gets Better... There's a Part 2!
 
 This song is an absolute vibe. Just when I thought it couldn't get any better, they released a Part 2. The new track is an instant classic, rocketing to **705,000+ views** in less than two weeks. The energy is just incredible.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VI_KWEKtJPo?si=TCyJtX8oqWBPUTsR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="415" src="https://www.youtube.com/embed/VI_KWEKtJPo?si=TCyJtX8oqWBPUTsR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Catching Fire on Instagram
 
