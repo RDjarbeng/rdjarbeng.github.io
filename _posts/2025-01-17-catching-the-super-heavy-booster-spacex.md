@@ -1,17 +1,23 @@
 ---
 date: 2025-01-17T13:06:00
+published: true
 author: Richard
 categories:
   - Technology
 tags:
   - SpaceX
-  - ReusableRockets
-  - SpaceExploration
+  - Super Heavy Booster
+  - Space Exploration
+  - Technology
+  - Reusable Rockets
   - Elon Musk
+  - Aerospace Engineering
+  - Innovation
+  - Rocket Launch
 title: Catching the super heavy booster -SpaceX
 image: /assets/images/Starship_spacex_website.jpg
-video: ''
 layout: post
+video: ''
 ---
 **A Monumental Achievement in Space Technology**
 
