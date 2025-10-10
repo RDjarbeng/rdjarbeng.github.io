@@ -14,7 +14,7 @@ tags:
   - Aerospace Engineering
   - Innovation
   - Rocket Launch
-title: "# SpaceX's 'Mechazilla' Catches Super Heavy Booster: A Giant Leap for Rocket Reusability"
+title: "SpaceX's 'Mechazilla' Catches Super Heavy Booster: A Giant Leap for Rocket Reusability"
 image: /assets/images/Starship_spacex_website.jpg
 layout: post
 video: ''
