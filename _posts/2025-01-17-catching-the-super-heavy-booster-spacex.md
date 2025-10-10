@@ -19,9 +19,7 @@ image: /assets/images/Starship_spacex_website.jpg
 layout: post
 video: ''
 ---
-**A Monumental Achievement in Space Technology**
-
-On my X feed, I shared a moment that truly highlights the cutting-edge work being done by Elon Musk's SpaceX. They've managed to catch the **Super Heavy booster**, weighing an incredible **250 tons**, with centimeter precision right after it descended from space at supersonic speeds. Imagine the skill and technology required to catch something the size of a 33-story building! 
+On my X feed, I shared a moment that truly highlights the cutting-edge work being done by SpaceX. They've managed to catch the **Super Heavy booster**, weighing an incredible **250 tons**, with centimeter precision right after it descended from the upper atmosphere where it launched the first stage of a rocket, descending to it's launchpad at supersonic speeds. Imagine the skill and technology required to catch something the size of a 33-story building! 
 
 After launch the booster separates from the head of the rocket then The launch platforms arms/chopsticks were used to catch the 39 storey-rocket! Who thinks of these things?
 
