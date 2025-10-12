@@ -24,8 +24,7 @@ Got another update from my friend Robert on his Europe trip\! Today, he's in **P
 
 First up, check out this incredible statue called the **Head of Franz Kafka**. It's huge; 11 meters tall,and made of 42 layers of steel that are constantly moving. The pieces spin around, and Kafka's face comes together and then breaks apart again. It looks wild especially at night.
 
-
-
+![Picture of the Franz Kafka statue in Prague at night with light reflecting of the stainless steel statue](/assets/images/franz_k_statue.jpg "Picture of the Franz Kafka statue in Prague at night with light reflecting of the stainless steel statue")
 
 You can find it right outside the Quadrio shopping centre. Here's a link if you want to see the official page:
 [Statue of Franz Kafka](https://www.quadrio.cz/en/franz-kafka-statue)
