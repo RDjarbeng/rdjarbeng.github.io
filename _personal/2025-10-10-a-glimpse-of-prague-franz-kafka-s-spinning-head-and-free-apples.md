@@ -1,5 +1,5 @@
 ---
-title: "A Glimpse of Prague: Franz Kafka's Spinning Head and Free Apples!"
+title: Prague's Spinning Head and Free Apples!
 date: 2025-10-10T19:01:00
 published: false
 tags:
@@ -18,26 +18,36 @@ tags:
   - Robert's Travels
 layout: personal
 ---
-I'm continuing to live vicariously through my friend Robert Ayetey's European tour, and today's update comes from the beautiful city of **Prague, Czech Republic**. He shared a couple of experiences that were too good not to share.
+Got another update from my friend Robert on his Europe trip\! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
 
-#### The Mechanical Mind of Franz Kafka
+#### This Crazy Spinning Kafka Statue
 
-The highlight of his day was a visit to a truly unique and mesmerizing piece of public art: **The Head of Franz Kafka**. This massive, 11-meter-tall kinetic statue, created by artist David Černý, is made of 42 rotating stainless steel layers.
+First up, check out this incredible statue called the **Head of Franz Kafka**. It's huge; 11 meters tall,and made of 42 layers of steel that are constantly moving. The pieces spin around, and Kafka's face comes together and then breaks apart again. It looks wild especially at night.
 
-It's located outside the Quadrio shopping centre, and you can find more details on its official page here:
 
+
+
+You can find it right outside the Quadrio shopping centre. Here's a link if you want to see the official page:
 [Statue of Franz Kafka](https://www.quadrio.cz/en/franz-kafka-statue)
 
-The sculpture's layers constantly shift, deconstructing and reconstructing Kafka's face in a hypnotic display. Robert mentioned that the full, choreographed rotation happens for about 15 minutes at the top of every hour. He was there at night and captured a video of the incredible sight.
+Robert said it does a full show for about 15 minutes at the top of every hour. He was there at night and took this video.
 
-_(Your YouTube video iframe will go here)_
+\<iframe
+width="315"
+height="560"
+src="[https://www.youtube.com/embed/y6z1No1Zues](https://www.google.com/search?q=https://www.youtube.com/embed/y6z1No1Zues)"
+title="Head of Franz Kafka statue in Prague at night"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen\>
+\</iframe\>
 
-Watching the video, you can almost feel the complex and tormented genius the statue represents. It's one thing to see pictures, but another to see it in motion. I'm experiencing different parts of Europe as Robert travels, and I'm so glad I get to share the most interesting parts with all of you. One day, I hope to see it in person!
+Seriously, how cool is that? It's awesome getting to see bits of Europe through his trip, and I love sharing the cool finds with you all. This is definitely on my list of things to see in person one day.
 
-#### A Simple, Surprising Discovery
+#### You Mean Apples Grow on Trees for Free?\!
 
-But the wonders of Prague weren't just in its grand sculptures. Earlier in the afternoon, Robert encountered something much simpler but equally astonishing to him: apple trees in a public park with perfectly edible apples, free for the taking!
+But it wasn't just giant metal heads today. Later on, Robert saw something that really surprised him: apple trees in a park, with real, edible apples just hanging there for free.
 
-Coming from Ghana, where we're used to seeing apples sold at high prices in traffic, the sight of them just growing on a tree for anyone to enjoy was, in his words, "amazing." It's these small cultural differences that often make travel so fascinating.
+He was amazed because, back home in Ghana, we're so used to buying expensive apples from sellers in traffic. And here they are just... growing in a park for anyone. It's funny how the simplest things can be the most surprising when you're somewhere new.
 
-That's all the updates for today. Stay tuned for the next stop on Robert's journey!
+That's it from Prague for now\! Can't wait to see where he ends up next.
