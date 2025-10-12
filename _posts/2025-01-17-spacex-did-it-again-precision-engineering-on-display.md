@@ -1,5 +1,6 @@
 ---
 date: 2025-01-17T13:21:00
+published: true
 author: Richard
 categories:
   - Technology
@@ -8,10 +9,18 @@ tags:
   - ElonMusk
   - Innovation
   - SpaceTravel
+  - SpaceX
+  - Space Exploration
+  - Technology
+  - Reusable Rockets
+  - Elon Musk
+  - Aerospace Engineering
+  - Innovation
+  - Rocket Launch
 title: SpaceX Did It Again-Precision Engineering on Display
 image: /assets/images/booster_catch.png
-video: ''
 layout: post
+video: ''
 ---
 Just when you thought Elon Musk couldn't surprise us anymore, he's done it again! Elon Musk and his team at SpaceX have _again_ successfully caught a 33-story building-sized rocket, the Super Heavy booster, coming from space at supersonic speeds. This isn't just rocket science; it's a feat of engineering marvel that pushes the boundaries of what we thought possible in space travel.
 

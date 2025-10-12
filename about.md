@@ -14,6 +14,8 @@ I am currently working with [Prof Edwin Mugume](https://www.africa.engineering.c
 
 Previously, I worked with [Prof Albert Presto](https://www.meche.engineering.cmu.edu/directory/bios/presto-albert.html) at the Center for Atmospheric Particle Studies (CAPS) -Carnegie Mellon University, to build models to classify pollution sources from [Particulate Matter (PM) filters using smartphone images](https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html). The aim was to conduct low-cost source apportionment of different pollution sources.
 
+Contact with the form below or via email: rdjarbeng@rdjarbeng.com
+
 I have summarized my experience, skills and a _brief_ summary of my personal interests.
 
 ## Computer Engineer | Machine Learning Enthusiast | IoT Developer
