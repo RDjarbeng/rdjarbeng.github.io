@@ -32,7 +32,7 @@ You can find it right outside the Quadrio shopping centre. Here's a link if you 
 
 Robert said it does a full show for about 15 minutes at the top of every hour. He was there at night and took this video.
 
-\<iframe
+<iframe
 width="315"
 height="560"
 src="[https://www.youtube.com/embed/y6z1No1Zues](https://www.google.com/search?q=https://www.youtube.com/embed/y6z1No1Zues)"
@@ -40,7 +40,7 @@ title="Head of Franz Kafka statue in Prague at night"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen\>
-\</iframe\>
+</iframe\>
 
 Seriously, how cool is that? It's awesome getting to see bits of Europe through his trip, and I love sharing the cool finds with you all. This is definitely on my list of things to see in person one day.
 
