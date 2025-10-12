@@ -21,9 +21,9 @@ layout: personal
 ---
 Got another update from my friend Robert on his Europe trip\! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
 
-#### This Crazy Spinning Kafka Statue
+## This Crazy Spinning Kafka Statue
 
-First up, check out this incredible statue called the **Head of Franz Kafka**. It's huge; 11 meters tall,and made of 42 layers of steel that are constantly moving. The pieces spin around, and Kafka's face comes together and then breaks apart again. It looks wild especially at night.
+First up, check out this incredible statue called the **Head of Franz Kafka**. It's huge; 11 meters tall,and made of 42 layers of steel that are constantly moving. The pieces spin around, and Kafka's face comes together and then breaks apart again. The different part of the face moves in horizontal slices, the eyes, nose and mouth giving it an outworldly almost alien vibe. It looks wild especially at night.
 
 ![Picture of the Franz Kafka statue in Prague at night with light reflecting of the stainless steel statue](/assets/images/franz_k_statue.jpg "Picture of the Franz Kafka statue in Prague at night with light reflecting of the stainless steel statue")
 
@@ -44,7 +44,7 @@ allowfullscreen\>
 
 Seriously, how cool is that? It's awesome getting to see bits of Europe through his trip, and I love sharing the cool finds with you all. This is definitely on my list of things to see in person one day.
 
-#### You Mean Apples Grow on Trees for Free?\!
+## You Mean Apples Grow on Trees for Free?\!
 
 But it wasn't just giant metal heads today. Later on, Robert saw something that really surprised him: apple trees in a park, with real, edible apples just hanging there for free.
 
