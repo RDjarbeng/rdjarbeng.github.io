@@ -1,8 +1,9 @@
 ---
 title: Sample Title
-image: /assets/images/sample-image.webp
-image_alt: "Cover image of Sample Title"
+image: /assets/images/sample-image.jpg
+image_alt: Cover image of Sample Image
 ---
 
-# Sample Title
-Content of the post.
+# Sample Post
+
+This is a sample post.
