@@ -1,7 +1,7 @@
 ---
 title: Prague's Spinning Head and Free Apples!
 date: 2025-10-10T19:01:00
-published: false
+published: true
 tags:
   - Travel
   - Europe
