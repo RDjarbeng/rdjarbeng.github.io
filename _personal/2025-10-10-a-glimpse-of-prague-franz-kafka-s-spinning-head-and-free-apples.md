@@ -16,6 +16,7 @@ tags:
   - Cultural Differences
   - Things to see in Prague
   - Robert's Travels
+image: /assets/images/franz_k_statue_cover.webp
 layout: personal
 ---
 Got another update from my friend Robert on his Europe trip\! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
