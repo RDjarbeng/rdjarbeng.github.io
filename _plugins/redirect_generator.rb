@@ -11,9 +11,9 @@ module Jekyll
         puts "Found personal collection with #{site.collections['personal'].docs.length} posts"
         
         site.collections['personal'].docs.each do |post|
-          puts "\nProcessing: #{post.relative_path}"
-          puts "Current slug: #{post.data['slug']}"
-          puts "Current date: #{post.date}"
+        #   puts "\nProcessing: #{post.relative_path}"
+        #   puts "Current slug: #{post.data['slug']}"
+        #   puts "Current date: #{post.date}"
           
           post.data['redirect_from'] ||= []
           
@@ -27,7 +27,7 @@ module Jekyll
           # Remove duplicates
           post.data['redirect_from'].uniq!
           
-          puts "Added redirects: #{post.data['redirect_from'].inspect}"
+        #   puts "Added redirects: #{post.data['redirect_from'].inspect}"
         end
       else
         puts "ERROR: Personal collection not found!"
