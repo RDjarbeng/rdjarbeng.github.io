@@ -36,6 +36,8 @@ It does a full show for about 15 minutes at the top of every hour where individu
 
 Seriously, how cool is that? It's awesome getting to see bits of Europe through his trip, and I love sharing the cool finds with you all. This is definitely on my list of things to see in person one day.
 
+![Astronomical clock in Prague ](/assets/images/1000272100.jpg "Astronomical clock in Prague ")
+
 ## You Mean Apples Grow on Trees for Free?\!
 
 But it wasn't just giant metal heads today. Later on, Robert saw something that really surprised him: apple trees in a park, with real, edible apples just hanging there for free.
