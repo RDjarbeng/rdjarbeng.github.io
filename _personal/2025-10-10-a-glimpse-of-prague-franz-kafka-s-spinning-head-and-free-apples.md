@@ -30,7 +30,7 @@ First up, check out this incredible statue called the **Head of Franz Kafka**. I
 You can find it right outside the Quadrio shopping centre. Here's a link if you want to see the official page:
 [Statue of Franz Kafka](https://www.quadrio.cz/en/franz-kafka-statue)
 
-It does a full show for about 15 minutes at the top of every hour where individual parts spin. Robert was there at night and took this video.
+It does a full show for about 15 minutes at the top of every hour where individual parts spin. Robert was there at night and took this video:
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/y6z1No1Zues" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -41,9 +41,10 @@ Seriously, how cool is that? It's awesome getting to see bits of Europe through 
 The statue really brings to life the mind of the author it represents. Franz Kafka was a German-speaking Bohemian novelist and short-story writer, widely regarded as one of the major figures of 20th-century literature. His works often explore themes of alienation, existential anxiety, guilt, and the absurdity of bureaucracy.
 
 Some of his most famous works include:
-* **The Metamorphosis:** This novella tells the bizarre story of salesman Gregor Samsa, who wakes up one morning to find himself inexplicably transformed into a giant insect. It's a powerful exploration of isolation and the dehumanizing aspects of modern life.
-* **The Trial:** An unfinished novel about Josef K., a man arrested and prosecuted by an inaccessible authority, with the nature of his crime never revealed to him or the reader. It delves into themes of guilt, justice, and oppressive systems.
-* **The Castle:** Another unfinished novel, where a land surveyor named K. arrives in a village dominated by a mysterious castle and struggles endlessly to gain access to its authorities. It's a parable about bureaucracy, detachment, and the elusive search for belonging.
+
+- **The Metamorphosis:** This novella tells the bizarre story of salesman Gregor Samsa, who wakes up one morning to find himself inexplicably transformed into a giant insect. It's a powerful exploration of isolation and the dehumanizing aspects of modern life.
+- **The Trial:** An unfinished novel about Josef K., a man arrested and prosecuted by an inaccessible authority, with the nature of his crime never revealed to him or the reader. It delves into themes of guilt, justice, and oppressive systems.
+- **The Castle:** Another unfinished novel, where a land surveyor named K. arrives in a village dominated by a mysterious castle and struggles endlessly to gain access to its authorities. It's a parable about bureaucracy, detachment, and the elusive search for belonging.
 
 And yes, Kafka is absolutely related to the word **"Kafkaesque"**! This adjective is used to describe concepts, situations, or experiences that are reminiscent of his writings – typically complex, bizarre, illogical, or nightmarishly bureaucratic systems that are hard to escape.
 
