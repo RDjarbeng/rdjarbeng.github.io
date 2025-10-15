@@ -8,16 +8,17 @@
   <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
-  <!-- <meta property="og:description" content="Richard Djarbeng's website - {% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}"> -->
+  {% if page.noindex  %}
+  <meta name="robots" content="noindex, follow">
+  {% endif %}
+ 
   {%- seo -%}
 
   
-  <!-- Add here or in a separate include for post-specific meta tags -->
-  <!-- Example: -->
   {% if page.tags %}
   <meta name="keywords" content="{{ page.tags | join: ', ' }}, {{ page.categories | join: ', ' }}">
   {% endif %}
-  
+
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
