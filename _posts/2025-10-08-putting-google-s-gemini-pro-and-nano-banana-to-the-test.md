@@ -62,23 +62,31 @@ I then asked it about the technology, specifically mentioning "Nano Banana," the
 
 To move beyond simple prompts, I uploaded a hand-drawn floor plan of a room with specific dimensions for the room itself, a bed, a table, a cupboard, and two doors. The task was simple: generate a design.
 
+### Picture 1 - Design my room
+
 ![Room layout sketch with dimensions of door, table, bed and entrances](/assets/images/room_design.png "Room layout sketch with dimensions of door, table, bed and entrances")
 
-The first attempt came back. It was a nicely rendered photorealistic room, but it had a TV I never mentioned and had placed the doors on the same wall. I'll add it below.
+The first attempt came back. It was a nicely rendered photorealistic room, but it had a few issues. I'll add it below so you can see for yourself.
 
 ![Room layout from sketch by google nano-banana](/assets/images/20251014-173944.png "Room layout from sketch by google nano-banana")
 
-Not a great start. I corrected it.
+### Picture 2 - Remove the TV
+
+A couple of problems with this photo. It added a TV I never mentioned and had placed the doors on the same wall, this looks more like a hotel room. Not a great start. I corrected it.
 
 > There was no tv in the room and the doors were not on the same side of the wall
 
 ![2nd output of photorealistic Room layout from provided sketch by google nano-banana](/assets/images/20251014-174100.png "2nd output of photorealistic Room layout from sketch by google nano-banana")
+
+### Picture 3- Fix the Measurements
 
 The second version removed the TV and fixed the doors, but now the scale was off. The table looked larger than the cupboard, despite my dimensions clearly stating the cupboard was wider. Some text from the sketch in purple ink with an arrow was also somehow in the photo. I also pointed out that there were no lamps or pictures in my simple plan.
 
 ![3rd output of photorealistic Room layout from provided sketch by google nano-banana](/assets/images/20251014-174227.png "3rd output of photorealistic Room layout from provided sketch by google nano-banana")
 
 This attempt had a plainer slightly less visually appealing room that was better than the previous generations.
+
+### Picture 4- Bird's eye-view
 
 The third attempt was closer, but it was clear that the 3D perspective was making it hard for the AI to get the layout just right. So, I switched tactics.
 
@@ -88,7 +96,11 @@ This was the breakthrough.
 
 ![4th output of photorealistic Room layout bird's eye view from nano-banana](/assets/images/20251014-174342.png "4th output of photorealistic Room layout bird's eye view from nano-banana")
 
-The top-down view was much more accurate. Now we could really get into the details. I decided to add a window, specifying its exact size and location: centered on the wall directly opposite the entrance. The AI tried, but it put the window on the wrong wall. 
+The top-down view was much more accurate. 
+
+### Picture 5- Adding windows
+
+Now we could really get into the details. The top-down view has a window close to the table, while this addition was not intentional on my part, I wanted to work with it since the room had a window anyway. I decided to add a window, specifying its exact size and location: centered on the wall directly opposite the entrance. The AI tried, but it put the window on the wrong wall. 
 
 My prompt:
 
@@ -104,11 +116,17 @@ I corrected it again, and it moved the window... to the _other_ wrong wall.
 
 It was a fascinating failure. It showed the AI was trying to follow instructions but was struggling with spatial relationships described in text. I decided to scrap the window idea altogether.
 
+### Picture 6- Removing windows
+
 "Go back to the previous design before you added the window," I instructed.
 
 ![Output of photorealistic Room layout bird's eye view from nano-banana restored](/assets/images/20251014-174649.png "Output of photorealistic Room layout bird's eye view from nano-banana restored")
 
-It did, but it also removed the bathroom door in the process! A small but crucial detail. After one final correction to bring the door back, we had a perfect, minimalist top-down view of my original layout.
+It did, but it also removed the bathroom door in the process! A small but crucial detail. 
+
+### Picture 7- Bring back the bathroom
+
+After one final correction to bring the door back, we had a perfect, minimalist top-down view of my original layout.
 
 ![Output of minimalist room layout bird's eye-view from nano-banana restored from original](/assets/images/20251014-174727.png "Output of minimalist room layout bird's eye-view from nano-banana restored from original")
 
@@ -118,7 +136,7 @@ Now for the real test of its reasoning. I gave it a new set of rules: the cupboa
 
 > Assuming the cupboard position cannot be changed along with the position of the doors, but all other items can be moved, also the door at the entrance swings outward into the room can you. Suggest another possible layout?
 
-![Output of minimalist room layout  bird's eye-view with constraints from nano-banana restored from original](/assets/images/20251014-174902.png)
+![Output of minimalist room layout  bird's eye-view with constraints from nano-banana restored from original](/assets/images/20251014-174902.png "Output of minimalist room layout  bird's eye-view with constraints from nano-banana restored from original")
 
 Its first attempt was good, but I spotted a flaw that only someone who had studied the dimensions would see. 
 
@@ -144,6 +162,8 @@ Then after playing around to a point where I was satisfied with its ability to g
 
 > (The post ends like this)Then after playing around to a point where I was satisfied with it's ability to generate images, I told it to write this website post.
 
-This final portion is written by me, Richard. I hope you enjoyed testing out the capabilities of nano-banana in Gemini Pro with me. Did this layout come from an actual room to be designed? Yes, yes it did. When I was testing this the room was under construction. Happy to add that the final layout adopted by the occupant of the room was very similar to what was generated by nano-banana. Looks like AI wins this round. I have a confession. I lied a little in the post when I said the final output was this website post. In the end I realized I didn't have a cover image for this post so I gave Gemini another task to generate a cover image for this post.
+This final portion is written by me, Richard. I hope you enjoyed testing out the capabilities of nano-banana in Gemini Pro with me. Did this layout come from an actual room to be designed? Yes, yes it did. When I was testing this the room was under construction. Happy to add that the final layout adopted by the occupant of the room was very similar to what was generated by nano-banana. Looks like AI wins this round.
 
  I would like to figure out ways in which this can be extended one day. Also hope to review other models soon. See you in the next post.
+
+PS: I have a confession. I lied a little in the post when I said the final output was this website post. After writing this post I realized I didn't have a cover image for this post so I gave Gemini another task to generate a cover image for this post.
