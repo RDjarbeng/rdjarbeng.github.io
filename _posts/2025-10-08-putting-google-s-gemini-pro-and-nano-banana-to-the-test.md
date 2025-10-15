@@ -1,13 +1,27 @@
 ---
 date: 2025-10-08T15:46:00
-published: false
+published: true
 author: Richard
 categories:
   - Technology
 tags:
-  - Gemini
-  - Nano banana
-title: Putting Google's Gemini Pro and 'Nano Banana' to the Test
+  - Gemini Pro
+  - Nano Banana
+  - Richard Testing Out Nano Banana
+  - AI App Testing
+  - AI Image Generation
+  - Google AI
+  - Testing AI Image Generation
+  - Richard Djarbeng Testing AI Image Generation
+  - Generative AI
+  - AI Test
+  - Prompt Engineering
+  - Tech Review
+  - Interior Design
+  - AI User Experience
+  - Text-to-Image
+  - Artificial Intelligence
+title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
 image: /assets/images/gemini_room_design_cover.webp
 layout: post
 ---
