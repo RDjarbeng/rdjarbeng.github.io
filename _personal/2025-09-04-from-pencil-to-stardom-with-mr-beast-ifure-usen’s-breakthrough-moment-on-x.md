@@ -1,5 +1,5 @@
 ---
-title: 'From Pencil to Stardom with Mr Beast: Ifure Usen’s Breakthrough Moment on X'
+title: The Viral Tweet That Put a Nigerian Pencil Artist on MrBeast's Wall
 date: 2025-09-04T22:43:00
 published: true
 tags:
@@ -9,6 +9,10 @@ tags:
   - Mr Beast orders art from Ifure Usen on twitter/x
   - MrBeast
   - Unique artist on X
+  - How One Tweet to MrBeast Changed a Nigerian Artist's Life Forever
+  - This Artist Recreated MrBeast's AI Photo. The Real MrBeast Responded
+  - 'From Selling Art for $75 to Global Fame: The Power of a MrBeast Reply'
+  - How Ifure Usen's Pencil Art Caught the Eye of MrBeast
   - Pencil art
   - Art
   - Art on X/Twitter
