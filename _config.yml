@@ -90,6 +90,18 @@ sass:
 
 defaults:
   - scope:
+        path: ""
+        type: "tag"  # This targets jekyll-archives pages
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
+        path: ""
+        type: "category"  # This targets jekyll-archives pages
+    values:
+      noindex: true
+      sitemap: false
+  - scope:
       path: ""
       type: "authors"
     values:
