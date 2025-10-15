@@ -156,7 +156,7 @@ And it nailed it. The final image came back with the cupboard pushed right up ag
 
 ![Output of minimalist room layout bird's eye-view from sketch provided to nano-banana updaed with dimensions](/assets/images/20251014-175126.png "Output of minimalist room layout bird's eye-view from sketch provided to nano-banana updaed with dimensions")
 
-There were some flaws in the picture, I have to admit, but I considered them to be minor. They included problems with text within the image; spelling mistakes in the spelling of cupboard and missing parentheses '(' . Somehow it had also placed a semblance of a window on the correct wall, opposite the entrance and highlighted it in blue. In spite of this, I consider the final image a decent attempt to position and design the room.
+There were some flaws in the picture, I have to admit, but I considered them to be minor. They included problems with text and a semblance of a window on the correct wall highlighted it in blue. In spite of this, I consider the final image a decent attempt to position and design the room.
 
 Then after playing around to a point where I was satisfied with its ability to generate images, I told it to write this website post.
 
