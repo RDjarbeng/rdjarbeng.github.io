@@ -1,6 +1,18 @@
 ---
-title: Why is There a Giant Basket on This Building?
+title: Why is There a Giant Basket on This Building in Kigali?
 date: 2024-08-05
+published: true
+tags:
+  - Kigali
+  - Rwanda
+  - Gasabo
+  - Giant Basket
+  - Basket In Gasabo
+  - Landmark in Kigali
+  - Huge Basket in Kigali
+  - What's that Basket for in Kigali
+  - Rwanda and Baskets
+  - Richard Discusses Giant Basket in Kigali
 image: /assets/images/gasabo_cropped.jpg
 layout: personal
 ---
@@ -27,5 +39,3 @@ The giant basket is a pretty unique landmark in Kigali. It’s an interesting bl
 Source: Friends in Kigali. Thanks to Adonia, Clemence, Gad and Sandrine
 
 Music: Amaliza by Ruti Joel
-
-#kigali #rwanda #rd
