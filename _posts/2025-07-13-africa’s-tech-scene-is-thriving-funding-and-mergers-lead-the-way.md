@@ -12,7 +12,7 @@ tags:
   - Africa
   - East Africa
   - Norrsken
-title: 'Africa’s Tech Scene is Thriving: Funding and Mergers Lead the Way'
+title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
 image: /assets/images/africa_tech_startups_1_rdjarbeng_gk.jpg
 layout: post
 ---
