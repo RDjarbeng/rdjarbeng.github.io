@@ -1,5 +1,5 @@
 ---
-title: Prague's Spinning Head and Free Apples!
+title: Prague's Spinning Head, Astro Clock and Free Apples!
 date: 2025-10-10T19:01:00
 published: true
 tags:
@@ -9,12 +9,21 @@ tags:
   - Czech Republic
   - Franz Kafka
   - Kinetic Art
+  - Astronomical Clock
+  - Apples in Europe
+  - Free Apples
+  - Zodiac Signs
+  - Zodiac Clock
+  - Quadrio Shopping Centre
+  - Interesting Things To See In Prague
   - David Černý
   - Travel Blog
   - European Tour
   - Public Art
   - Cultural Differences
   - Things to see in Prague
+  - Robert Ayetey
+  - Robert
   - Robert's Travels
 image: /assets/images/franz_k_statue_cover.webp
 layout: personal
