@@ -4,8 +4,11 @@ title: About Richard Djarbeng
 permalink: /about/
 custom_css_class: about-page
 ---
-Hello, I am Richard Djarbeng.
-I hope to give you an introduction of myself here and possibly answer questions regarding myself on this page.
+# Hello, I am Richard Djarbeng.
+
+I hope to give you an introduction of myself here and possibly answer questions regarding myself on this page. There is a contact form at the bottom if you want to contact me.
+
+---
 
 Generally I am interested in the Internet of Things (IoT), Computer Vision and Machine Learning (ML) applications. 
 I am currently improving my ML skills with the FastAI:practical deep learning course by Jeremy Howard as well as exploring applications of nano-banana; google's latest computer vision model for Gemini.  
