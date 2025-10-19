@@ -23,7 +23,7 @@ tags:
   - Banking
   - Money Transfers
   - Financial Technology
-title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad?
+title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut
 image: /assets/images/revolut_sending_cross_border_cover.webp
 layout: post
 ---
