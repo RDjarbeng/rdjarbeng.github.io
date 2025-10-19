@@ -1031,10 +1031,65 @@ a:hover{
   margin: 0 auto;
 }
 
-.post-tags{
-  display: none;
+/* --- Post Tags and Categories Footer --- */
+
+.post-meta-footer {
+  max-width: 800px; /* Matches your .post-content and .related-posts width */
+  margin: 2em auto; /* Adds space above and below */
+  padding: 0 20px;  /* Matches your .post-content padding for alignment */
 }
 
+.meta-label {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333; /* A strong, readable label color */
+  margin-right: 8px;
+}
+
+.categories-section {
+  font-size: 0.95em;
+  color: $grey;
+  margin-bottom: 1.5em; /* Space between categories and tags */
+}
+
+.categories-section a {
+  color: $link-color;
+  text-decoration: underline;
+}
+.categories-section a:hover {
+  color: $link-hover-color;
+}
+
+.tags-section .meta-label {
+  display: block; /* Puts "Tagged In:" on its own line above the pills */
+  margin-bottom: 10px;
+}
+
+.tags-container {
+  display: flex;         /* Lines up the tags horizontally */
+  overflow-x: auto;      /* Adds a horizontal scrollbar *only if needed* */
+  white-space: nowrap;   /* Prevents tags from wrapping to a new line */
+  padding-bottom: 10px;  /* Adds a little space for the scrollbar so it doesn't overlap tags */
+}
+
+.tags-container a {
+  display: inline-block; 
+  background-color: #f0f0f0; /* Light gray pill background */
+  color: #555;              /* Darker text for contrast */
+  border-radius: 15px;       /* This creates the "pill" shape */
+  padding: 5px 12px;       /* Vertical and horizontal spacing inside the pill */
+  margin-right: 6px;       /* Space *between* the pills */
+  font-size: 0.9em; 
+  text-decoration: none; 
+  transition: background-color 0.2s;
+}
+
+.tags-container a:hover {
+  background-color: #ddd; /* Darken pill on hover */
+  color: #111;
+}
+
+/* --- End Post Tags --- */
 .post-container, .personal-container{
 
 h2,h3,h4{
