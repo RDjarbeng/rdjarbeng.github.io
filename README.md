@@ -19,7 +19,7 @@ Recent favorites:
   - [I Tried to Replace an Interior Designer with Gemini. Here's What Happened.](https://rdjarbeng.com/putting-google-s-gemini-pro-and-nano-banana-to-the-test/) – Testing Gemini Pro and Nano for creative tasks.
   - [Why Does Restarting Your Computer (or Router) Actually Work?](https://rdjarbeng.com/why-does-restarting-your-computer-or-router-actually-work/) – Unpacking the surprisingly elusive science of the ultimate tech reset.
   - [How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG Errors in Google Chrome](https://rdjarbeng.com/how-to-fix-err-name-not-resolved-and-dns-probe-finished-bad-config-errors-in-google-chrome-due-to-dns/) – Step-by-step guide to resolving DNS woes I encountered myself.
-- **[Personal](https://rdjarbeng.com/personal/)**: Candid stories, memes, and slices of life from my journeys—think Kigali sunsets, Ghanaian vibes, or unexpected adventures in Europe and East Africa.
+- **[Personal](https://rdjarbeng.com/personal/)**: Candid stories, memes, and slices of life from my journeys—think Kigali sunsets, Ghanaian vibes, or unexpected adventures in Europe and East Africa. One popular post is: [Trip to Uganda- Kampala & silver springs](https://rdjarbeng.com/personal/trip-to-kampala-uganda-and-silver-springs/)
 - **[About](https://rdjarbeng.com/about/)**: My background as a Machine Learning Engineer & IoT Specialist, including ways to [contact me](https://rdjarbeng.com/about/#contact-form) or [support my work through donations](https://rdjarbeng.com/about/#donate).
 
 ## Tech Stack & Features
