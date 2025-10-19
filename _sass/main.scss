@@ -803,20 +803,15 @@ a:hover{
 
 /* --- REPLACED .toc-sidebar rule --- */
 .toc-sidebar {
-  /* --- This is the new magic --- */
   position: sticky;
   top: 80px; /* Adjust this! This is the space from the top to clear your header */
   
-  /* --- Sizing --- */
   flex: 0 0 205px; /* Don't grow, don't shrink, 205px wide */
   margin-right: 20px; /* Adds a gap between ToC and content */
-  
   /* --- Internal Scrolling for long ToCs --- */
   /* We leave 80px for the top offset and 20px for a bottom margin */
   max-height: calc(100vh - 100px); 
   overflow-y: auto;
-  
-  /* --- Your old styles (keep them) --- */
   border-radius: 8px;
 opacity: 0.952;
 }
@@ -856,9 +851,7 @@ opacity: 0.952;
 .toc-content{
 opacity: 0.652;
 max-width: 15vw;
-  /* REMOVE THESE - the parent .toc-sidebar handles scrolling now */
-/* max-height: 80vh; */
-/* overflow-y: auto; */
+ 
 }
 
 .toc-content ul {
@@ -903,13 +896,9 @@ max-width: 15vw;
 .post-container {
   max-width: $wrapper-max-width; /* Use your defined max-width (85%) */
   margin: 0 auto;
-  // padding-left: 70px; /* Offset for the TOC width + some space */
   width: 100%;
 }
 
-// .post-with-toc {
-//   width: 100%;
-// }
 .post-with-toc {
   flex: 1 1 auto;  /* Allows content to grow */
   min-width: 0;    /* Fixes a common flexbox overflow bug */
@@ -957,19 +946,19 @@ max-width: 15vw;
     flex-direction: column; /* Stack ToC on top of content */
   }
 
-  /* --- Your existing .toc-sidebar rule for mobile --- */
- .toc-sidebar {
-position: static; /* IMPORTANT: un-stick it on mobile */
-    max-width: 100%; /* Override the 205px width */
-    margin-right: 0;
-width: 100%;
-height: auto;
-left: auto;
-transform: none;
-padding: 0;
-margin-bottom: 10px;
-flex-basis: auto;
-    max-height: none; /* IMPORTANT: remove height limit */
+ .toc-sidebar {position: static;
+  /* IMPORTANT: un-stick it on mobile */
+  max-width: 100%;
+  /* Override the 205px width */
+  margin-right: 0;
+  width: 100%;
+  height: auto;
+  left: auto;
+  transform: none;
+  padding: 0;
+  margin-bottom: 10px;
+  flex-basis: auto;
+  max-height: none; /* IMPORTANT: remove height limit */
 }
 
   .page-content{
