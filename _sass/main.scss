@@ -620,6 +620,17 @@ a:hover{
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
+  .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Aligns ToC and content to the top */
+  
+  /* Adjust max-width to match your .post-content + sidebar */
+  /* e.g., 800px (content) + 205px (sidebar) + 20px (gap) = 1025px */
+  max-width: 1045px; 
+  margin: 0 auto; /* Centers the whole layout */
+}
+
   /* Responsive design */
   @media (max-width: 600px) {
     .wrapper{
@@ -790,20 +801,28 @@ a:hover{
   }
 }
 
-/* Table of Contents Sidebar (Styled Separately) */
+/* --- REPLACED .toc-sidebar rule --- */
 .toc-sidebar {
-  // background: #f9f9f9;
-  border-radius: 8px;
-  padding: 5px;
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Scroll if TOC is long */
-  position: fixed; /* Fixed position on the left */
-  left: 1vw; /* Align to the left, using the side space */
-  transform: translateY(-112px); /* Ensure proper positioning */
-  opacity: 0.952;
-  max-width: 205px;
+  /* --- This is the new magic --- */
+  position: sticky;
+  top: 80px; /* Adjust this! This is the space from the top to clear your header */
   
+  /* --- Sizing --- */
+  flex: 0 0 205px; /* Don't grow, don't shrink, 205px wide */
+  margin-right: 20px; /* Adds a gap between ToC and content */
+  
+  /* --- Internal Scrolling for long ToCs --- */
+  /* We leave 80px for the top offset and 20px for a bottom margin */
+  max-height: calc(100vh - 100px); 
+  overflow-y: auto;
+  
+  /* --- Your old styles (keep them) --- */
+  border-radius: 8px;
+padding: 5px;
+opacity: 0.952;
 }
+
+
 .toc-content{
   opacity: 0.652;
 }
@@ -834,10 +853,12 @@ a:hover{
   padding: 5px;
 }
 
-.toc-content {
-  max-height: 80vh; /* Prevent overflow beyond viewport */
-  max-width: 15vw;
-  overflow-y: auto;
+.toc-content{
+opacity: 0.652;
+max-width: 15vw;
+  /* REMOVE THESE - the parent .toc-sidebar handles scrolling now */
+/* max-height: 80vh; */
+/* overflow-y: auto; */
 }
 
 .toc-content ul {
@@ -882,12 +903,16 @@ a:hover{
 .post-container {
   max-width: $wrapper-max-width; /* Use your defined max-width (85%) */
   margin: 0 auto;
-  padding-left: 70px; /* Offset for the TOC width + some space */
+  // padding-left: 70px; /* Offset for the TOC width + some space */
   width: 100%;
 }
 
+// .post-with-toc {
+//   width: 100%;
+// }
 .post-with-toc {
-  width: 100%;
+  flex: 1 1 auto;  /* Allows content to grow */
+  min-width: 0;    /* Fixes a common flexbox overflow bug */
 }
 
 .post-content {
@@ -928,15 +953,23 @@ a:hover{
   opacity: 1;
 }
   
-  .toc-sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-    left: auto;
-    transform: none;
-    padding: 0;
-    margin-bottom: 10px;
+  .content-wrapper {
+    flex-direction: column; /* Stack ToC on top of content */
   }
+
+  /* --- Your existing .toc-sidebar rule for mobile --- */
+ .toc-sidebar {
+position: static; /* IMPORTANT: un-stick it on mobile */
+    max-width: 100%; /* Override the 205px width */
+    margin-right: 0;
+width: 100%;
+height: auto;
+left: auto;
+transform: none;
+padding: 0;
+margin-bottom: 10px;
+    max-height: none; /* IMPORTANT: remove height limit */
+}
 
   .page-content{
     padding-top: 0;
@@ -1124,3 +1157,4 @@ h4 {
   color: $grey;
   margin-top: 4px;
 }
+
