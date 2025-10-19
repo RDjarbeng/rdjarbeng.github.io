@@ -81,6 +81,6 @@ Open to collaborations and guest posts. Check my other repos like [Countdown App
 
 ---
 
-**Last Updated**: October 18, 2025  
+
 **Author**: [Richard Djarbeng](https://rdjarbeng.com/about/) | Follow on [X/Twitter](https://twitter.com/DjarbengRichard) for updates.  
 Built with ❤️ from around the world.
