@@ -41,20 +41,25 @@ layout: default
   </div>
 
   <!-- Display categories and tags -->
-  <div class="post-meta">
-    Categories:
-    {% for category in page.categories %}
-      <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-    {% endfor %}
-  
-    <div class="post-tags">
-
-      Tags:
-      {% for tag in page.tags %}
-      <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+  <div class="post-meta-footer">
+    <div class="categories-section">
+      <span class="meta-label">Categories:</span>
+      {% for category in page.categories %}
+        <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
       {% endfor %}
     </div>
-  </div>
+
+  {% if page.tags.size > 0 %}
+    <div class="tags-section">
+      <span class="meta-label">Tagged In:</span>
+      <div class="tags-container">
+        {% for tag in page.tags %}
+          <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
 
   <hr class="post-separator">
   <div class="related-posts">
