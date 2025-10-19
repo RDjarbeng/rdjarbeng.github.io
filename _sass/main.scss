@@ -818,7 +818,6 @@ a:hover{
   
   /* --- Your old styles (keep them) --- */
   border-radius: 8px;
-padding: 5px;
 opacity: 0.952;
 }
 
@@ -835,6 +834,7 @@ opacity: 0.952;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px 12px;
 }
 
 .toc-header h2 {
@@ -968,6 +968,7 @@ left: auto;
 transform: none;
 padding: 0;
 margin-bottom: 10px;
+flex-basis: auto;
     max-height: none; /* IMPORTANT: remove height limit */
 }
 
