@@ -1,56 +1,54 @@
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif) I am Richard Djarbeng
-========================================================================================================================================
+rdjarbeng.com - Richard Djarbeng's Personal Website![Jekyll](https://jekyllrb.com/img/logo-2x.png) ![SveltiaCMS](https://github.com/sveltia/sveltia-cms/raw/main/media/logo.svg) ![GitHub Pages](https://github.com/github/docs/blob/main/assets/cb-24/images/projects/github-pages-badge.svg)Welcome to the source code for rdjarbeng.com, my personal corner of the web. This site is where I document anything interesting that catches my eye—from practical troubleshooting guides and tech solutions I've discovered, to explorations of emerging AI tools and occasional personal reflections drawn from my travels and life experiences across Ghana (my homeland), the USA, Germany, Uganda, and beyond.Built with Jekyll (a static site generator in Ruby) and powered by SveltiaCMS for seamless post management. Deployed via GitHub Pages for automatic builds and hosting. Live Site: rdjarbeng.comKey Pages & SectionsExplore the site through these core sections:Home: Overview of my latest posts and a quick intro to who I am.
+Posts: A collection of articles covering AI innovations, tech fixes, environmental insights, and more. Highlights include hands-on reviews like Andrew Ng's Landing AI for agentic object detection and document extraction, Kolors' virtual try-on app, and my latest deep dive: A Chronological Look At AI—A Decade-by-Decade Evolution, tracing the field from 1940s theoretical roots to today's generative AI boom. Recent favorites:I Tried to Replace an Interior Designer with Gemini. Here's What Happened. – Testing Gemini Pro and Nano for creative tasks.
+Why Does Restarting Your Computer (or Router) Actually Work? – Unpacking the surprisingly elusive science of the ultimate tech reset.
+How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG Errors in Google Chrome – Step-by-step guide to resolving DNS woes I encountered myself.
 
-Developer | Computer Engineer
------------------------------
+Personal: Candid stories, memes, and slices of life from my journeys—think Kigali sunsets, Ghanaian vibes, or unexpected adventures in Europe and East Africa.
+About: My background as a Machine Learning Engineer & IoT Specialist, including ways to contact me or support my work through donations.
 
-I specialize mostly in web development, machine learning and Internet of Things (IoT) devices such as the Raspberry Pi and Arduino.  
-<br/>
-Often I use Python, JavaScript, C++, Dart for Flutter mobile app development and a host of other languages to build a working application.  
-<br/>
-Owner of open-source [Countdown application with themes and dark mode](http://rcountdown.netlify.app/)
+Tech Stack & FeaturesStatic Site Generator: Jekyll – Ruby-based, for fast, SEO-friendly pages.
+Content Management: SveltiaCMS – Headless CMS integrated for editing blog posts directly in the browser.
+Styling: Custom CSS with responsive design; supports dark mode.
+Deployment: GitHub Pages – Push to main branch for instant updates.
+SEO Optimized: Meta tags, Open Graph, structured data for better search visibility on topics like AI tool reviews, DNS troubleshooting, and tech solutions from Africa.
 
-Contributor to the [complete machine learning package](https://github.com/Nyandwi/machine_learning_complete/)
+Keywords for discovery: personal tech blog, AI trends and reviews, troubleshooting guides Jekyll site, machine learning insights Rwanda, global travel stories tech.Quick Start: Local DevelopmentTo run this site locally (requires Ruby 3.0+ and Bundler):Clone the Repo:
 
+git clone https://github.com/RDjarbeng/rdjarbeng.github.io.git
+cd rdjarbeng.github.io
 
+Install Dependencies:
 
-* 🚀  I'm currently working on getting an AI agent to play this [3D game using reinforcement learning](https://github.com/RDjarbeng/3d-character-game)
-* Also building my [personal website](https://rdjarbeng.com/RDjarbeng/) where I [blog](https://rdjarbeng.com/RDjarbeng/posts) occasionally about non-technical stuff as well. Using [SveltiaCMS](https://github.com/sveltia/sveltia-cms) to manage posts.
-* 🧠  I'm learning Machine learning, Data Science, Software Engineering best practices. Also following the course [fastai](https://course.fast.ai/) for deep learning
-* My ML projects are deployed on [hugging face](https://huggingface.co/rdjarbeng)
-* 🤝  Open to collaborating on interesting projects
+bundle install
 
-_Most of my animation projects in Blender or work with Unity are not on Github._
-### Skills
+Serve Locally:
 
+bundle exec jekyll serve
 
-<p align="left">
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
-<a href="https://www.php.net/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="36" height="36" alt="PHP" /></a>
-<a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a>
-<a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" /></a>
-<a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" width="36" height="36" alt="C++" /></a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
-<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" /></a>
-<a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
-<a href="https://flutter.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg" width="36" height="36" alt="Flutter" /></a>
-</p>
+Open http://127.0.0.1:4000 in your browser.
+Edit Content:Use SveltiaCMS via the GitHub integration for posts in _posts/.
+Modify pages in the root or _pages/ for static content.
 
-## Contact
-Best way to contact me directly is via the [contact form on my website](https://rdjarbeng.com/RDjarbeng/about/#contact-form)
+For SveltiaCMS setup: Follow the official guide and configure sveltiarc.js for your collections.Repository Structure
 
-### Socials
+├── _includes/      # Layout snippets (header, footer)
+├── _layouts/       # Page templates
+├── _posts/         # Markdown blog posts (managed via SveltiaCMS)
+├── _sass/          # SCSS styles
+├── assets/         # Images, JS, CSS
+├── _config.yml     # Jekyll configuration
+├── Gemfile         # Ruby dependencies
+├── index.md        # Home page
+├── posts.md        # Posts index
+├── personal.md     # Personal page
+├── about.md        # About page
+└── README.md       # You're reading it!
 
-<p align="left">
-  <a href="https://www.github.com/rdjarbeng/" target="_blank" rel="noreferrer">
-  <img src="https://github.com/user-attachments/assets/a92b5110-4923-43a5-ac96-278dbf4eaf72"
-    width="32" height="32" alt="GitHub"/>
-</a>
-  <a href="https://www.linkedin.com/in/richarddjarbeng/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a>
-  <a href="https://www.twitter.com/DjarbengRichard" target="_blank" rel="noreferrer">
-    <img src="https://github.com/user-attachments/assets/ce226641-4a80-434e-b113-175c3598d5de" width="32" height="32" alt="twitter" /></a>
-</p>
+Currently content is still under copyright! 
+New post ideas (technical or personal).
+Improvements to SEO or accessibility.
 
-Reach me on X/twitter or on linkedIn.
+Open to guest authors, collaborations  on open-source ML tools or IoT for sustainability. Check my other repos like Countdown App or 3D Game AI.Last Updated: October 18, 2025
+Author: Richard Djarbeng | Follow on X/Twitter for updates.
+
 
