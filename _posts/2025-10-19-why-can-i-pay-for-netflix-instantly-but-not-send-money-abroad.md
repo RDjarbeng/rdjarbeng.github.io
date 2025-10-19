@@ -97,7 +97,7 @@ From my personal conversations with other users and acquaintances, this process 
 
 ### The "Gap": The Challenge of Unsupported Countries
 
-And this brings us back to the core problem. What happens when a Revolut user in the UK wants to send money to someone in **Ghana or Rwanda**?
+And this brings us back to the core problem. What happens when a Revolut user in the UK wants to send money to someone in **Ghana, Qatar or India**?
 
 This is where the fintech magic just... stops.
 
