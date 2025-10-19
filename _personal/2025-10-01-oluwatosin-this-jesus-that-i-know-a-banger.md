@@ -29,7 +29,7 @@ Give it a listen:
 
 <iframe width="560" height="415" src="https://www.youtube.com/embed/2u08HbxWnuc?si=K5nwCAnXTaRZCT3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-"Oluwatosin" by TKeyz, with special guest SteveHills, a powerful ode to finding true peace and unwavering faith in Jesus Christ. Infused with lyrics in English, Yoruba, and Igbo, this song fuses modern gospel vibes with authentic African praise traditions, offering an uplifting journey that resonates deeply with Christians worldwide.Crafted with a captivating tune and verses drawn straight from the Bible, "Oluwatosin" celebrates Jesus as our ultimate joy—the source that quenches every longing. From its gentle opening harmonies to the fervent chorus echoing "You are Enough for me," this piece transforms into a personal altar of adoration through music.
+"Oluwatosin" by TKeyz, with special guest SteveHills, a powerful tune on finding true peace and unwavering faith in Jesus Christ. Infused with lyrics in English, Yoruba, and Igbo, this song combines modern gospel vibes with authentic African praise traditions. Crafted with a captivating tune "Oluwatosin" celebrates Jesus as our ultimate joy—the source that quenches every longing. From its gentle opening harmonies to the fervent chorus echoing "You are Enough for me," this piece transforms into a personal altar of adoration through music.
 
 According to [muslyrics](https://muslyrics.com/oluwatosin-lyrics-tkeys-ft-stevehills-jesus-is-enoug/), _Oluwatosin_ means _“The Lord is Worthy to be Worshipped”_ in Yoruba
 
@@ -51,11 +51,13 @@ Unsurprisingly, the track is now making waves on social media. This creator on I
 # Oluwatosin Lyrics
 
 ## INTRO
+
 Oh Oh Oooh Ooh  
 This Jesus that I know  
 Oh Oh Oooh Ooh  
 
 ## VERSE 1
+
 I’ve Climbed the Mountains  
 Crossed the Seas  
 I’ve found no other Love like this  
@@ -68,6 +70,7 @@ You are the Treasure that I have
 In You, I’m truly Satisfied  
 
 ## CHORUS
+
 Oluwatosin, Oluwatosin  
 The Jesus that I know  
 Is Enough for me  
@@ -83,6 +86,7 @@ Oh Oh Oooh Ooh
 Eh Eh Ehhhh Eeh  
 
 ## VERSE 2
+
 This Jesus that I’ve Seen  
 Ah Ah Ahhhh Aah  
 This Jesus that I’ve Heard  
@@ -97,15 +101,17 @@ You are the Treasure inside of me
 In You, I’m truly Satisfied  
 
 ## PRE-CHORUS
-Izuru K’eme, Izuru K’eme *(You’re more than Enough)*  
+
+Izuru K’eme, Izuru K’eme _(You’re more than Enough)_  
 The Jesus that I Have  
 Is Enough for me  
 
-Izuru K’eme, Izuru K’eme *(You’re more than Enough)*  
+Izuru K’eme, Izuru K’eme _(You’re more than Enough)_  
 The Jesus that I Have  
 Is Enough for me  
 
 ## CHORUS
+
 Oluwatosin, Oluwatosin  
 The Jesus that I know  
 Is Enough for me  
@@ -115,17 +121,19 @@ The Jesus that I know
 Is Enough for me  
 
 ## VERSE 3
-Oto Funmi, Oto Funmi *(He’s Enough for Me)*  
-Jesu Ti Momo, Oto Funmi *(The Jesus that I know is Enough for me)*  
-Oto Funmi, Oto Funmi *(He’s Enough for Me)*  
-Jesu Ti Momo, Oto Funmi *(The Jesus that I know is Enough for me)*  
 
-Otomi O, Otomi O *(I’m Satisfied, I’m Satisfied)*  
-Jesu Ti Momo, Oto Funmi *(The Jesus that I know is Enough for me)*  
-Otomi O, Otomi O *(I’m Satisfied, I’m Satisfied)*  
-Jesu Ti Momo, Oto Funmi *(The Jesus that I know is Enough for me)*  
+Oto Funmi, Oto Funmi _(He’s Enough for Me)_  
+Jesu Ti Momo, Oto Funmi _(The Jesus that I know is Enough for me)_  
+Oto Funmi, Oto Funmi _(He’s Enough for Me)_  
+Jesu Ti Momo, Oto Funmi _(The Jesus that I know is Enough for me)_  
+
+Otomi O, Otomi O _(I’m Satisfied, I’m Satisfied)_  
+Jesu Ti Momo, Oto Funmi _(The Jesus that I know is Enough for me)_  
+Otomi O, Otomi O _(I’m Satisfied, I’m Satisfied)_  
+Jesu Ti Momo, Oto Funmi _(The Jesus that I know is Enough for me)_  
 
 ## CHORUS
+
 Oluwatosin, Oluwatosin  
 The Jesus that I know  
 Is Enough for me  
@@ -143,6 +151,7 @@ The Jesus that I know
 Is Enough for me  
 
 ## OUTRO
+
 You are Enough for me  
 You are Enough for me  
 You are Enough for me  
@@ -153,4 +162,4 @@ You are Enough for me
 Jesus is Enough  
 Jesus is Enough for me  
 
-*Source: Lyrics sourced from [MusLyrics.com](https://muslyrics.com/oluwatosin-lyrics-tkeys-ft-stevehills-jesus-is-enoug/)*
+_Source: Lyrics sourced from&#32;[MusLyrics.com](https://muslyrics.com/oluwatosin-lyrics-tkeys-ft-stevehills-jesus-is-enoug/)
