@@ -27,7 +27,7 @@ title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Rev
 image: /assets/images/revolut_sending_cross_border_cover.webp
 layout: post
 ---
-In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I vented about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.
+In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I wrote about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.
 
 The old systems are broken. But as I mentioned, new solutions are emerging. I want to walk you through one of the biggest names I've been exploring: [**Revolut**](https://www.revolut.com/). Is this the "super-app" that finally fixes this mess? Or is it just another walled garden?
 
@@ -41,6 +41,8 @@ If you and I are both on Revolut, sending money is instant and free. It doesn't 
 
 Even if you're _not_ on Revolut, sending money from the app to a traditional bank account in another country is still a huge improvement. The exchange rates are fantastic (way better than a typical bank), and the fees are transparent and low.
 
+![Revolut home page on October 19th 2025 featuring navigation buttons with hero text in bold font 'change the way you money'](/assets/images/revolut_home_page_oct25.png "Revolut home page screenshot")
+
 ## More Than Transfers: Revolut as "Bank 2.0"
 
 But then you look around the app and realize it's not just a transfer tool. It's a full-on replacement for a traditional bank, a "Bank 2.0" that lives on your phone.
@@ -51,9 +53,11 @@ It's a bank, but with a ton of features they should have had all along.
 
 ### Advanced Card Control
 
-This is my favorite part. Revolut offers **virtual cards** (which you can create and freeze at will) for online shopping. Even better is the **single-use card**, which generates temporary details that are automatically destroyed after one use, making it incredibly secure for paying on unfamiliar sites.
+This is one of the best parts of Revolut. It offers **virtual cards** (which you can create and freeze at will) for online shopping. Even better is the **single-use card**, which generates temporary details that are automatically destroyed after one use, making it incredibly secure for paying on unfamiliar sites.
 
 We've all been there: you sign up for a free trial for a service, forget to cancel, and then get that painful "Your card has been charged" notification. And of course, these apps make it as difficult as possible to unsubscribe.
+
+![Revolut cards on display with different colors. With text showing 'choose your spend'](/assets/images/revolut_cards_display.png "Revolut cards on display from the revolut website")
 
 With Revolut, that problem is gone. You simply create a new virtual card for "Subscriptions," set a monthly spending limit of, say, $15, and use it to sign up for Netflix, Apple TV, etc. You are now _guaranteed_ to never be overcharged. This proactive control is a stark contrast to the old model, where you just get a painful notification _after_ the money is gone.
 
