@@ -631,30 +631,6 @@ a:hover{
   margin: 0 auto; /* Centers the whole layout */
 }
 
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .wrapper{
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .donation-section {
-      padding: 15px;
-      margin: 10px;
-    }
-
-    .header-container {
-      flex-direction: column;
-    }
-
-    .donation-section p {
-      font-size: 1rem;
-    }
-
-    .donate-btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
-  }
 
   /* Contact Form Styles */
 .contact-section {
@@ -778,6 +754,27 @@ a:hover{
 
 /* Responsive Design */
 @media (max-width: 600px) {
+  .wrapper{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .donation-section {
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .header-container {
+      flex-direction: column;
+    }
+
+    .donation-section p {
+      font-size: 1rem;
+    }
+
+    .donate-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
   .contact-section {
     margin: 20px 10px;
     padding: 20px 10px;
