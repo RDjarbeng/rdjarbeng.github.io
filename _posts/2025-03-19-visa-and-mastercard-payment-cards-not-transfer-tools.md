@@ -5,6 +5,25 @@ author: Richard
 categories:
   - Finance
 tags:
+  - Visa
+  - Mastercard
+  - P2P Transfers
+  - Money Transfer
+  - Fintech
+  - Payment Networks
+  - Bank Transfers
+  - Cross-Border Payments
+  - SWIFT
+  - ACH
+  - Transaction Fees
+  - Cash Advance
+  - Venmo
+  - Zelle
+  - Wise
+  - PayPal
+  - M-Pesa
+  - Mobile Money
+  - Remittance
   - Payments
   - Visa
   - MasterCard
