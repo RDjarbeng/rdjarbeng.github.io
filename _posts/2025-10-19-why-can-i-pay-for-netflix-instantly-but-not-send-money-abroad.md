@@ -31,7 +31,7 @@ In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-tr
 
 The old systems are broken. But as I mentioned, new solutions are emerging. I want to walk you through one of the biggest names I've been exploring: [**Revolut**](https://www.revolut.com/). Is this the "super-app" that finally fixes this mess? Or is it just another walled garden?
 
-Let's dive in.
+![A split-screen image. On the left, a dark, chaotic scene depicts traditional banking obstacles: tangled chains, a rusted padlock, stone blocks labeled "FEES" and "DELAY," and small icons for banks and old money. On the right, a bright, clear scene shows a smartphone with the "revolut" app, connected by sleek lines to various country flags (UK, Germany, USA, Japan, Australia, Brazil, Singapore, Switzerland) and credit cards, all against a light blue map backdrop, symbolizing seamless global digital payments. The title "BEYOND THE BREEZE: IS REVOLUT THE ANSWER?" is prominently displayed across the top.](/assets/images/revolut_sending_cross_border_cover.webp "Beyond the Breeze: Traditional Banking vs. Revolut")
 
 ## The Core Problem: Fixing Cross-Border Transfers
 
@@ -118,9 +118,9 @@ Revolut's main differentiator is its "super-app" ambition: it wants to be your s
 
 Revolut's journey helps explain its ambition.
 
-* **Founding:** It was founded in **July 2015** by Nikolay Storonsky and Vlad Yatsenko.
-* **Headquarters:** It's a British company, founded in **London** at the Level39 tech accelerator.
-* **Major News:**
+- **Founding:** It was founded in **July 2015** by Nikolay Storonsky and Vlad Yatsenko.
+- **Headquarters:** It's a British company, founded in **London** at the Level39 tech accelerator.
+- **Major News:**
     - It grew incredibly fast, hitting 100,000 users in its first six months.
     - After Brexit, it secured an EU banking license in Lithuania to continue serving its European customers.
     - It fought a long, multi-year battle to get its UK banking license, highlighting the regulatory hurdles.
