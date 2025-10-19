@@ -20,6 +20,15 @@ layout: default
         Author: <a href="{{ author.url | relative_url }}" class="author">{{ author.display_name }}</a>
 </div>
       {% endif %}
+      
+      {% assign words_per_minute = 180 %}
+{% assign words = content | number_of_words %}
+{% assign minutes = words | divided_by: words_per_minute %}
+{% if minutes < 1 %}
+  <div class="reading-time">Less than a 1 min read</div>
+{% else %}
+  <div class="reading-time">{{ minutes }} min read</div>
+{% endif %}
     </div>
   </div>
 
