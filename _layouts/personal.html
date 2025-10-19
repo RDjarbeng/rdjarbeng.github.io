@@ -23,6 +23,16 @@ layout: default
 <!-- Something's here {{page.author}} -->
 {{ content }}
 
+{% if page.tags.size > 0 %}
+    <div class="tags-section">
+      <span class="meta-label">Tagged In:</span>
+      <div class="tags-container">
+        {% for tag in page.tags %}
+          <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 <hr class="post-separator">
   <div class="post-navigation">
     <div class="prev-post">
