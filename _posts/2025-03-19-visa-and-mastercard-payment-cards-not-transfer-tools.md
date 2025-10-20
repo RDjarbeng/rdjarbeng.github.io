@@ -32,7 +32,7 @@ tags:
   - Wise international transfers with visa card
   - Wise international transfers with visa or mastercard
   - Revolut international transfers with visa or mastercard
-title: 'Visa and Mastercard: Payment Cards, Not Transfer Tools'
+title: Why Can't I Just Send Money With My Visa Card?
 image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
