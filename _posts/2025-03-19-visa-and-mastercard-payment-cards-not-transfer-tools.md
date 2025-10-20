@@ -25,6 +25,7 @@ tags:
   - Mobile Money
   - Remittance
   - Payments
+  - Digital Banking
   - Visa
   - MasterCard
   - Revolut international transfers
