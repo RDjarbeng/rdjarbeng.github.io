@@ -141,5 +141,6 @@ Whether you're in a supported country or not, this shift in expectation is a goo
 
 ## Join the Revolut-ion
 
-Join me and over 50 million users who love Revolut. Sign up with my link below:
-[https://revolut.com/referral/?referral-code=richarlnuq!OCT1-25-AR-US-REFBLOCK&geo-redirect](https://revolut.com/referral/?referral-code=richarlnuq!OCT1-25-AR-US-REFBLOCK&geo-redirect)
+Join me and over 50 million users who love Revolut. Sign up with my [link](https://revolut.com/referral/?referral-code=richarlnuq!OCT1-25-AR-US-REFBLOCK&geo-redirect)
+
+_Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._
