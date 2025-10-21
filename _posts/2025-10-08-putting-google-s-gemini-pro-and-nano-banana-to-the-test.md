@@ -25,8 +25,7 @@ title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened
 image: /assets/images/gemini_room_design_cover.webp
 layout: post
 ---
-I wanted to test out Gemini and Nano banana, so once I got my access to Gemini Pro, I opened the page in the Google Chrome browser, it features a text input with some buttons to add files and select tools, a paper airplane send icon. I wanted to test it out specifically its abilities to generate images with the new Nano Banana image generation model.
-
+When I finally got access to Gemini Pro, I had one main goal: to test its new image generation capabilities, which I’d heard referred to by the intriguing codename "Nano Banana." After opening the familiar chat interface in Chrome, I decided to skip the basic "draw me a cat" prompts. I wanted to give it a real, practical challenge to see what this new model could actually do. So, I grabbed a hand-drawn sketch of a room that was actually under construction, complete with specific, messy dimensions. The experiment: Could Gemini follow my instructions, understand a crude drawing, and iterate on a design like a real collaborator? This is a step-by-step log of what happened when I put the new "Nano Banana" model to the test.
 ## Initial test
 
 I decided to put it to the test. First I prompted it 'Hello, can you show me what you can do'.
