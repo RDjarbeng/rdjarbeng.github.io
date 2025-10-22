@@ -1029,7 +1029,29 @@ max-width: 15vw;
   .prev-post, .next-post, .toc-sidebar{
     max-width: 100%;
   }
+
+  /* Override TOC width for mobile */
+  .toc-content, .post-content {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+
+  /* Make sure links in lists wrap on mobile */
+  .post-content li a {
+    display: inline-block;
+    max-width: 100%;
+  }
+  
+  /* Fix tables */
+  .post-content table {
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
 }
+
+
 
 @media (min-width: 1000px) { //was 769
   .toc-sidebar {
@@ -1144,4 +1166,31 @@ h4 {
   color: $grey;
   margin-top: 4px;
 }
+/* Fix for long URLs and text that doesn't wrap - add to your main CSS */
+
+/* Make links and long text wrap properly */
+.post-content a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  /* For very long URLs with no spaces */
+  hyphens: auto;
+}
+
+.post-content li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Fix for pre and code blocks */
+.post-content pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.post-content code {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 
