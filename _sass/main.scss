@@ -929,7 +929,7 @@ max-width: 15vw;
 
 @media (max-width: 1000px) {
   .site-footer{
-    padding: 7px 4px;
+    padding: 7px $page-sideways-padding;
   }
 
   .post-header h1{
@@ -961,8 +961,8 @@ max-width: 15vw;
 
   .page-content{
     padding-top: 0;
-    padding-left: 10px;  /* Add some padding */
-    padding-right: 10px; /* Add some padding */
+    padding-left: $page-sideways-padding;  /* Add some padding */
+    padding-right: $page-sideways-padding; /* Add some padding */
   }
 
   .toc-content {
