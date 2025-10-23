@@ -27,6 +27,8 @@ Lessons:
 
 Detailed does not always mean informative. Some technical posts here didn't receive much traffic
 
+Adding thumbnails of posts is good, even if they take time to make
+
 Writing takes time, even with AI
 
 Sometimes AI is double work. Maybe righting things myself is a better approach
@@ -46,3 +48,7 @@ Tags pages get more attention than posts
 Getting guest authors
 
 Improving backlinks
+
+Best posts:
+
+Trip to Uganda
