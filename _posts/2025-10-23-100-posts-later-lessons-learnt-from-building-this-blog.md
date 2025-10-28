@@ -47,9 +47,15 @@ AI is good for generating tags, images, refining titles. Cannot be trusted to cr
 
 Top AI models:
 
-Grok: good for refining text and is able to add current information in the proper context especially for posts where information needed is
+Grok: good for refining text and is able to add current information in the proper context especially for posts where information needed is about current events/trending news. Also good for verifying links but not 100% accurate. I've found some links to be dead after Grok assures me they are active. Hopefully it gets better eventually.
 
 Gemini (doing well with image generation especially with the text than grok)
+
+Sometimes I take the output from one model and give it to the other to criticize and work on improvements for the generated output. 
+
+Workflow for that AI work flow: Initial draft by me-> 1st draft post\* by AI model acting as a co-author -> Review by 2nd model acting as editor -> Update of draft post by me and 2nd AI model-> Final edits by senior Editor, Me
+
+\*1st draft post, may go through many iterations and is usually the nth version, but it's usually the version that I find suitable to publish but could use improvement so it's sent to the editor.
 
 Sometimes your work helps others
 
