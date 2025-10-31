@@ -15,7 +15,7 @@ layout: personal
 ---
 In late  July, 2025 I attended the [Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science (CMMRS) ](https://cmmrs.mpi-sws.org/)in Saarbrucken, Germany. We had group panel discussions that were helpful because we had the opportunity to meet current researchers and understand their PhD journey and research experience from their perspective. We also considered the differences between PhD programs in Europe and North America as well as academic versus industrial career paths, providing perspectives on future career options.
 
-We participated poster presentations where we got to meet PhD students as well as postdoctoral researchers working on interesting areas of research in computer science from Cornell University, University of Maryland and the Max-Planck software engineering institute.
+We participated in poster presentations where we got to meet PhD students as well as postdoctoral researchers working on interesting areas of research in computer science from Cornell University, University of Maryland and the Max-Planck software engineering institute.
 
 Here is a photo I took after the poster presentations.
 
