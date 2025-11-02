@@ -22,6 +22,8 @@ An astronaut and fear, what are you afraid of
 
 Inside the brain neurosurgeon
 
+https://youtu.be/esPRsT-lmw8
+
 Apparently there are banned/removed TED talks.
 
 Ideas worth sharing
