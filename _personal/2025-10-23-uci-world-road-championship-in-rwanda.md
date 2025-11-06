@@ -10,3 +10,7 @@ image: ''
 layout: personal
 ---
 I was there
+
+Took this picture in front of the mural.
+
+A picture of the crowd
