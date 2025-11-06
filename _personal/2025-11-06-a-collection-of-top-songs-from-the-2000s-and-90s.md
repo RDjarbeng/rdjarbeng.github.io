@@ -21,11 +21,11 @@ Gonna be some sweet sounds, coming down
 
 The instrumentals: bass line, drums, guitar exquisite, sublime
 
-Never too much A thousand Kisses
+Never too much- A thousand Kisses Luther Van Dross
 
 Will you be there - Michael Jackson
 
-Was used in the sound track for the movie Free Willy, I wonder what the story behind that is and the story behind the lyrics. 
+Was used in the sound track for the movie Free Willy, I wonder what the story behind that is and the story behind the lyrics.
 
 The mmhmm of this song is a part that everyone can sing. Some parts of the song are hard to sing for a beginner/amateur vocalist  so I'm just gonna mmhmm
 
