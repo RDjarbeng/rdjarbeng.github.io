@@ -6,7 +6,7 @@ categories:
   - Web
 tags:
   - Website, Lusion, CSS, threejs
-title: 'How to Check Website Performance: A Case Study on Lusion.co'
+title: "How to Check Your Website's Performance: A Case Study on Lusion.co"
 image: /assets/images/lusion_web_astronaut_annotated_rd.webp
 layout: post
 ---
@@ -14,7 +14,7 @@ Recently, my friend Nathaniel Nyakotey checked out the visually stunning website
 
 ## Why Website Performance Matters
 
-Website performance directly impacts user satisfaction, engagement, and conversions. Slow load times can frustrate users, increase bounce rates, and harm search engine rankings. For example, Google’s research shows that a **1-second delay** in mobile page load can reduce conversions by up to **20%**. For a site like Lusion.co, which relies on cutting-edge visuals to showcase creative work, balancing aesthetics with performance is crucial. Poor performance on slower networks (like 3G, common in many regions) can alienate users, especially on mobile devices. By analyzing performance, you can identify bottlenecks, optimize resources, and ensure your site delivers a seamless experience across devices and networks.
+Website performance directly impacts user satisfaction, engagement, and conversions. Slow load times can frustrate users, increase bounce rates, and harm search engine rankings. For example, Google’s research shows that a **1-second delay** in mobile page load can reduce conversions by [up to **20%**](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-site-speed-tools-improve-conversions/). For a site like Lusion.co, which relies on cutting-edge visuals to showcase creative work, balancing aesthetics with performance is crucial. Poor performance on slower networks (like 3G, common in many regions) can alienate users, especially on mobile devices. By analyzing performance, developers can identify bottlenecks, optimize resources, and ensure the site delivers a seamless experience across devices and networks.
 
 ## How to Check Website Performance
 
@@ -107,6 +107,6 @@ Analyzing website performance is essential for several reasons:
 
 ## Conclusion
 
-Checking website performance, as we did with Lusion.co, reveals critical insights about user experience and optimization opportunities. Nathaniel’s 300MB guess was off, but the **18.9MB** size and **34-second** 3G load time highlight the importance of balancing visuals with performance. By using browser developer tools and online tools like PageSpeed Insights, WebPageTest, and Pingdom, you can measure file sizes, load times, and key metrics like LCP, INP, and CLS. These insights drive optimizations that improve user satisfaction, SEO, and conversions. 
+Checking website performance, as we did with Lusion.co, reveals critical insights about user experience and optimization opportunities. Nathaniel’s 300MB guess was off, but the **18.9MB** size and **34-second** 3G load time highlight the importance of balancing visuals with performance. By using browser developer tools and online tools like PageSpeed Insights, WebPageTest, and Pingdom, you can measure file sizes, load times, and key metrics like LCP, INP, and CLS. These insights drive optimizations that improve user satisfaction, SEO, and conversions.
 
 _Test your website today and share your findings in the comments! What performance metrics surprised you?_
