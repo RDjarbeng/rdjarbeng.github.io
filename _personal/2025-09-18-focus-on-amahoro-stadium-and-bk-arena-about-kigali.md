@@ -1,5 +1,5 @@
 ---
-title: 'Amahoro Stadium: A Birds Eye view After Renovations'
+title: 'Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View'
 date: 2025-09-18T22:15:00
 published: true
 tags:
@@ -31,8 +31,9 @@ layout: personal
 ---
 The long-awaited renovations of Amahoro Stadium are finally complete! To celebrate, I put together this quick video showcasing the revamped venue in all its glory. It's a must-see for anyone who's ever wondered about that massive, basket-shaped landmark dominating Kigali's skyline.
 
-![Amahoro Stadium exterior resembling a woven basket](/assets/images/1000257968.jpg "Amahoro Stadium exterior resembling a woven basket")  
-![Amahoro stadium entrance with security checkpoint with the stadium name shown ](/assets/images/amahoro_stadium_outside.jpg "Amahoro stadium entrance with security checkpoint with the stadium name shown in bold white letters")
+![Amahoro Stadium exterior resembling a woven basket](/assets/images/1000257968.jpg "Amahoro Stadium exterior resembling a woven basket")
+
+![Amahoro stadium entrance with security checkpoint with the stadium name shown](/assets/images/amahoro_stadium_outside.jpg "Amahoro stadium entrance with security checkpoint with the stadium name shown in bold white letters")
 
 _(If you haven't seen it in person, trust me—it's even more impressive up close.)_
 
@@ -46,16 +47,16 @@ Also in the video, I squeezed in a nod to the neighboring **BK Arena**, Rwanda's
 
 ## Watch the Video
 
-Dive into the details with my video of the Amahoro stadium from the outside. 
+Dive into the details with my video of the Amahoro stadium from the outside.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe 
-    src="https://www.youtube.com/embed/jiec7XXD6EY" 
-    title="Why is there a giant basket on this building? – Amahoro Stadium Tour" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen 
+  <iframe
+    src="https://www.youtube.com/embed/jiec7XXD6EY"
+    title="Why is there a giant basket on this building? – Amahoro Stadium Tour"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>
