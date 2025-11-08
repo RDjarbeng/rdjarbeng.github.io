@@ -77,8 +77,6 @@ The volunteer maintainers of FFmpeg had a sharply different view. In their main 
 
 This kicked off a firestorm. As the FFmpeg account on X faced heated comments, it **repeatedly hammered home the point that the project is maintained by volunteers,** not a paid staff.
 
-In one of their blunter replies to the debate, they encapsulated their frustration: ["Stop jerking yourselves off, just submit a patch."](https://www.google.com/search?q=LINK-TO-THIS-REPLY)
-
 This sentiment, that Google should provide _fixes_ (patches) and not just _reports_, became the rallying cry for their side of the argument.
 
 ### 📣 The Community Weighs In
