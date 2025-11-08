@@ -119,3 +119,7 @@ What do you think?
 _Sources: Insights drawn from Google Project Zero announcements, FFmpeg communications, and community discussions as of November 8, 2025._
 
 _If you're a developer, consider contributing to [FFmpeg's tracker](https://trac.ffmpeg.org/) or supporting them via [sponsors](https://ffmpeg.org/donations.html)._
+
+Ending with a message from FFmpeg:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We would like to thank everyone who sent messages of support to FFmpeg this week!</p>&mdash; FFmpeg (@FFmpeg) <a href="https://twitter.com/FFmpeg/status/1986891772622999663?ref_src=twsrc%5Etfw">November 7, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
