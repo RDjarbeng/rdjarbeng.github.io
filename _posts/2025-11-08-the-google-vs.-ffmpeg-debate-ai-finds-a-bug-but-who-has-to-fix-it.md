@@ -5,7 +5,23 @@ author: Richard
 categories:
   - Security
 tags:
-  - FFMPEg
+  - Google
+  - FFmpeg
+  - Open Source
+  - AI
+  - Cybersecurity
+  - Google Project Zero
+  - Big Sleep AI
+  - Vulnerability Reporting
+  - Responsible Disclosure
+  - Open Source Maintainers
+  - Software Development
+  - Tech Dispute
+  - Google vs FFmpeg
+  - Bug Fixing
+  - Volunteer Developers
+  - Corporate Responsibility
+  - AI Ethics
 title: 'The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?'
 image: /assets/images/google_vs_ffmpeg_cover.webp
 layout: post
