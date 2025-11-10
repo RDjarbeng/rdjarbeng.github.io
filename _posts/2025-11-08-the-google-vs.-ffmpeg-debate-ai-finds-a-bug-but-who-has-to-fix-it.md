@@ -100,9 +100,9 @@ This sentiment, that Google should provide _fixes_ (patches) and not just _repor
 The tech community was instantly divided.
 
 * Security expert **Katie Moussouris** argued Google should go one step further and use its AI tools to _propose fixes_, not just find problems ([post](https://x.com/k8em0/status/1986428627073093808)).
-* Others, like **Dino Dai Zovi**, noted that Google's bug reports didn't even mention their own bounty program, which felt like a missed opportunity 
+* Others, like **Dino Dai Zovi**, noted that Google's bug reports didn't even mention their own bounty program, which felt like a missed opportunity
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">It looks like there is a $15k bounty out for an accepted PR that fixes the vulnerability identified by Big Sleep in <a href="https://twitter.com/FFmpeg?ref_src=twsrc%5Etfw">@FFmpeg</a>:<a href="https://t.co/C3v0sikr26">https://t.co/C3v0sikr26</a><br><br>I certainly didn&#39;t remember that this program existed, would be a different vibe to mention it in the bug report sent to project… <a href="https://t.co/UetMYTg0xj">https://t.co/UetMYTg0xj</a> <a href="https://t.co/YTwnUa1QWP">pic.twitter.com/YTwnUa1QWP</a></p>&mdash; Dino A. Dai Zovi (@dinodaizovi) <a href="https://twitter.com/dinodaizovi/status/1986097829077553339?ref_src=twsrc%5Etfw">November 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">It looks like there is a $15k bounty out for an accepted PR that fixes the vulnerability identified by Big Sleep in <a href="https://twitter.com/FFmpeg?ref_src=twsrc%5Etfw">@FFmpeg</a>:<a href="https://t.co/C3v0sikr26">https://t.co/C3v0sikr26</a><br><br>I certainly didn't remember that this program existed, would be a different vibe to mention it in the bug report sent to project… <a href="https://t.co/UetMYTg0xj">https://t.co/UetMYTg0xj</a> <a href="https://t.co/YTwnUa1QWP">pic.twitter.com/YTwnUa1QWP</a></p>&mdash; Dino A. Dai Zovi (@dinodaizovi) <a href="https://twitter.com/dinodaizovi/status/1986097829077553339?ref_src=twsrc%5Etfw">November 5, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 * Some critics called it a "perverse incentive" ([post](https://x.com/roddux/status/1978889021431406786)).
 * Broader takes, like this one on [PiunikaWeb](https://piunikaweb.com/2025/11/06/google-vs-ffmpeg-open-source-big-sleep-ai-bugs-and-who-must-fix-them/), framed it as corporations "privatizing the gains while socializing the risks" of open source.
@@ -131,12 +131,12 @@ It leaves us with critical questions for the future of software:
 
 What do you think?
 
+Ending this post with a message from FFmpeg on X/Twitter:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We would like to thank everyone who sent messages of support to FFmpeg this week!</p>&mdash; FFmpeg (@FFmpeg) <a href="https://twitter.com/FFmpeg/status/1986891772622999663?ref_src=twsrc%5Etfw">November 7, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 -----
 
 _Sources: Insights drawn from Google Project Zero announcements, FFmpeg communications, and community discussions as of November 8, 2025._
 
 _If you're a developer, consider contributing to [FFmpeg's tracker](https://trac.ffmpeg.org/) or supporting them via [sponsors](https://ffmpeg.org/donations.html)._
-
-Ending with a message from FFmpeg:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We would like to thank everyone who sent messages of support to FFmpeg this week!</p>&mdash; FFmpeg (@FFmpeg) <a href="https://twitter.com/FFmpeg/status/1986891772622999663?ref_src=twsrc%5Etfw">November 7, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
