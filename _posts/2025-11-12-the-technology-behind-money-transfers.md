@@ -16,7 +16,7 @@ How does money transfer work and what is the technology underneath.
 
 Let's focus on the pre-internet (before widespread adoption of the internet and online banking) vs the post internet(introduction to transfers over the internet and web payments).
 
-Pre-internet 
+Pre-internet
 
 Cheques...
 
