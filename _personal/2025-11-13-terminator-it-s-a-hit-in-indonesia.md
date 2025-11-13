@@ -26,6 +26,8 @@ In the YouTube comments for the video someone commented:
 
 > This song is very viral in Indonesia🇮🇩
 
+![Screenshot of youtube comment about Indonesia from King Promise Terminator video ](/assets/images/1000290734.png)
+
 As to how a song by a Ghanaian artiste collaborating with a Nigerian artiste becomes a hit in Indonesia your guess is as good as mine.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NPCC02SaJVg?si=ig4onab_IQtXExqp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
