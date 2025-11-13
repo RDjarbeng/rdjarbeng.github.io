@@ -16,6 +16,8 @@ Recently, my friend Nathaniel Nyakotey checked out the visually stunning website
 
 Website performance directly impacts user satisfaction, engagement, and conversions. Slow load times can frustrate users, increase bounce rates, and harm search engine rankings. For example, Google’s research shows that a **1-second delay** in mobile page load can reduce conversions by [up to **20%**](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-site-speed-tools-improve-conversions/). For a site like Lusion.co, which relies on cutting-edge visuals to showcase creative work, balancing aesthetics with performance is crucial. Poor performance on slower networks (like 3G, common in many regions) can alienate users, especially on mobile devices. By analyzing performance, developers can identify bottlenecks, optimize resources, and ensure the site delivers a seamless experience across devices and networks.
 
+![Screenshot of the lusion website with text, how fast is your website](/assets/images/lusion_web_astronaut_annotated_rd.webp "Lusion website with text, how fast is your website")
+
 ## How to Check Website Performance
 
 There are two primary ways to measure a website’s performance: **manual inspection** using browser developer tools and **online tools** for automated analysis. Below, I’ll explain both approaches, using Lusion.co as an example.
