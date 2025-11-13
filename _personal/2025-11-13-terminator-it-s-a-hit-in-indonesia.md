@@ -30,6 +30,8 @@ layout: personal
 ---
 Ghanaian Afrobeats star **King Promise** unleashed _"Terminator"_ in May 2023, but the remix featuring Nigeria's **Young Jonn**—dropped in July—turned it into a continental and international smash. This post dives into the remix (the one with **71M+ YouTube views** as of November 2025), while giving props to the original.
 
+![Cover for King Promise terminator web post asking it's a hit in Indonesia?](/assets/images/terminator_cover.webp "Cover for Terminator by King Promise post ")
+
 ## The Video: Sci-Fi Intro Meets Afrobeats Swagger
 
 Don't let the title fool you—this isn't Arnold Schwarzenegger's 1984 classic. The remix opens with an 8-second **low-budget CGI homage**: King Promise, bald head gleaming and rocking dark shades, levitates in a futuristic lab as electric crackles zap across the screen.
@@ -38,7 +40,7 @@ Don't let the title fool you—this isn't Arnold Schwarzenegger's 1984 classic. 
 
 Cut to reality: a blurred bedroom scene with on-screen song credits...
 
-![Blurred bedroom intro with overlaid song details text.](/assets/images/king_promise_terminator_video_start.png)
+![Blurred bedroom intro with overlaid song details text.](/assets/images/king_promise_terminator_video_start.png "Terminator song screenshot of video clip")
 
 ...followed by sweeping **drone shots over Ghanaian settlements**, grounding the track in vibrant African energy.
 
@@ -63,7 +65,7 @@ No gatekeeping here: stream both below and decide for yourself.
 
 ### International Love in the Comments
 
-![YouTube comment: "This song is very viral in Indonesia🇮🇩"](/assets/images/1000290734.png)
+![YouTube comment: "This song is very viral in Indonesia🇮🇩"](/assets/images/1000290734.png "YouTube comment")
 
 _How does a Ghana-Nigeria collab blow up in Indonesia (pop. 270M+)?_ Afrobeats' borderless appeal.
 
