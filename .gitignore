@@ -5,3 +5,4 @@ _site
 vendor
 /assets/images/*.py
 /assets/scripts/*.py
+.gemini_key
