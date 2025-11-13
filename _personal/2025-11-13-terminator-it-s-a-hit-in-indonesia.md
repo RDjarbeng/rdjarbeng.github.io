@@ -23,14 +23,12 @@ tags:
   - Uganda Music
   - African Drone Shots
   - Remix vs Original
-  - ''
-  - ''
 image: /assets/images/terminator_cover.webp
 layout: personal
 ---
 Ghanaian Afrobeats star **King Promise** unleashed _"Terminator"_ in May 2023, but the remix featuring Nigeria's **Young Jonn**—dropped in July—turned it into a continental and international smash. This post dives into the remix (the one with **71M+ YouTube views** as of November 2025), while giving props to the original.
 
-![Cover for King Promise terminator web post asking it's a hit in Indonesia?](/assets/images/terminator_cover.webp "Cover for Terminator by King Promise post ")
+![Cover for King Promise terminator web post asking it's a hit in Indonesia?](/assets/images/terminator_cover.webp "Cover for Terminator by King Promise post")
 
 ## The Video: Sci-Fi Intro Meets Afrobeats Swagger
 
@@ -89,5 +87,10 @@ King Promise is putting **Ghana on the world map**.
 ### Original Version
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xaEsUs6WwtA?si=4C7rPkdCc8Kokjwi" title="Terminator (Original)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Remix feat. Sean Paul, Tiwa Savage - Terminator 
+I have a confession to make. Before making this post I didn't know that there was a third version; a remix with Tiwa Savage and Sean Paul. In my defense it wasn't as popular as the Young Jonn remix but I'm still going to shamelessly include it here.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zelgtbWOdes?si=_XunqoSrJN07aY_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 _Two years in, "Terminator" still slaps. Which version reigns supreme for you?_
