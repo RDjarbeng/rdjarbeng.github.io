@@ -93,14 +93,14 @@ defaults:
         path: ""
         type: "tag"  # This targets jekyll-archives pages
     values:
-      noindex: true
-      sitemap: false
+      noindex: false
+      sitemap: true
   - scope:
         path: ""
         type: "category"  # This targets jekyll-archives pages
     values:
-      noindex: true
-      sitemap: false
+      noindex: false
+      sitemap: true
   - scope:
       path: ""
       type: "authors"
