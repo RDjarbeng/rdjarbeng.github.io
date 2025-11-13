@@ -84,12 +84,13 @@ King Promise is putting **Ghana on the world map**.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NPCC02SaJVg?si=ig4onab_IQtXExqp" title="Terminator Remix feat. Young Jonn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Original Version
+### Original Version (9M+ views)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xaEsUs6WwtA?si=4C7rPkdCc8Kokjwi" title="Terminator (Original)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Remix feat. Sean Paul, Tiwa Savage - Terminator 
-I have a confession to make. Before making this post I didn't know that there was a third version; a remix with Tiwa Savage and Sean Paul. In my defense it wasn't as popular as the Young Jonn remix but I'm still going to shamelessly include it here.
+### Remix feat. Sean Paul, Tiwa Savage - Terminator (934K views)
+
+I have a confession to make. Before making this post I didn't know that there was a third version; a remix with Tiwa Savage and Sean Paul. This was uploaded to YouTube on December, 3rd 2023. In my defense it wasn't as popular as the Young Jonn remix but I'm still going to shamelessly include it here.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zelgtbWOdes?si=_XunqoSrJN07aY_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
