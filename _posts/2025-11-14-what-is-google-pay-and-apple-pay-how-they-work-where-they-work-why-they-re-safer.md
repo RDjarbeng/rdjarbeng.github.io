@@ -116,8 +116,8 @@ Support is bank-by-bank. Here are a few examples:
 
 > **Always Check Your Bank**: The _only_ way to know for sure is to check the official lists.
 > >
->   \* [Apple Pay participating banks (by country)](https://support.apple.com/en-us/HT204916)
->   \* [Google Wallet supported countries & banks](https://support.google.com/wallet/answer/12059326)
+> \* [Apple Pay participating banks (by country)](https://support.apple.com/en-us/HT204916)
+>  \* [Google Wallet supported countries & banks](https://support.google.com/wallet/answer/12059326)
 
 ## Key Caveats & Limitations
 
