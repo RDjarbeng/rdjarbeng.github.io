@@ -22,7 +22,7 @@ tags:
   - Payments in Africa
   - Payments in Asia
 title: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're Safer
-image: ''
+image: /assets/images/google_pay_and_apple_pay_cover.webp
 layout: post
 ---
 In a world where your phone is your wallet, **Google Pay** (also known as the [Google Wallet](https://wallet.google/)) and [**Apple Pay**](https://www.apple.com/apple-pay/) have become essential tools for millions. But what exactly are they? How do they differ from your regular bank account? And can you use them everywhere, including in Africa and Asia?
