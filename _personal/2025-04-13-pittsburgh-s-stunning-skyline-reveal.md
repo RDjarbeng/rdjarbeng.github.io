@@ -1,6 +1,36 @@
 ---
 title: Pittsburgh's Stunning Skyline Reveal
 date: 2025-04-13T16:21:00
+published: true
+tags:
+  - Pittsburgh
+  - Fort Pitt Tunnel
+  - Fort Pitt Bridge
+  - Pittsburgh skyline
+  - Mount Washington
+  - Monongahela River
+  - first time in Pittsburgh
+  - airport to city drive
+  - night arrival
+  - tunnel reveal
+  - city reveal
+  - skyline at night
+  - Pittsburgh International Airport
+  - giant robot statue
+  - Carnegie Mellon University
+  - exchange semester
+  - Pennsylvania
+  - travel surprise
+  - breathtaking view
+  - downtown Pittsburgh
+  - city lights reflection
+  - January 2024
+  - hidden gem city
+  - dramatic entrance
+  - bridge view
+  - panoramic skyline
+  - ''
+  - ''
 image: /assets/images/ford_pitt_tunnel_exit.png
 layout: personal
 ---

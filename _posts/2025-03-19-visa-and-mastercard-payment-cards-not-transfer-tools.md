@@ -37,7 +37,7 @@ image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
 ---
-Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders. 
+Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders.
 This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.
 
 Unlike their standard role in point-of-sale purchases or online payments, these cards don’t support direct bank account transfers without involving a bank or third-party service. This situation creates additional steps for money transfers, each additional step adds fees and increases the complexity. Moreover, such transfers can take hours or even days to process, delaying even the simplest exchanges between users. This post examines the disconnect between the capabilities of these cards and their real-world functionality examining emerging solutions that try to bridge the gap.
@@ -64,11 +64,11 @@ Most banks do not allow Visa or Mastercard to fund wire transfers directly. For 
 
 ## Market Gap and Emerging Solutions
 
-The inability to easily transfer money from one person to another across banks has been recognized by several companies, leading to innovative solutions. 
+The inability to easily transfer money from one person to another across banks has been recognized by several companies, leading to innovative solutions.
 
 - In the US, Venmo processed over $244 billion in transactions in 2023 ([Business of Apps](https://www.businessofapps.com/data/venmo-statistics/)), while Zelle handled [2.3 billion transactions worth $629 billion ](https://www.zellepay.com/press-releases/zelle-soars-806-billion-transaction-volume-28-prior-year).  Venmo also supports transactions by connecting Visa cards directly.
 - [Plaid](https://plaid.com/company/) facilitates seamless transfers by linking bank accounts to over 7,000 apps, as noted in their [2024 overview](https://plaid.com/company/), however it may not support your bank of interest. From their page Plaid seems to provide transfer services for apps like [Revolut](https://www.revolut.com/) and [Wise](https://wise.com/).
--  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf). 
+-  In Africa, mobile money platforms from telecom giants like MTN Mobile Money and M-Pesa have revolutionized peer-to-peer transfers, with M-Pesa alone boasting 51 million active users in Kenya moving $315 billion annually, per [Safaricom’s 2023 Annual Report](https://www.safaricom.co.ke/images/Downloads/Safaricom_Annual_Report_2023.pdf).
 
 These solutions leverage direct bank connections or mobile networks, offering faster and often cheaper alternatives to traditional bank transfers, addressing a gap Visa and Mastercard have yet to fill.
 
@@ -76,7 +76,7 @@ These solutions leverage direct bank connections or mobile networks, offering fa
 
 ### A money transfer example
 
-From the points above you see that these solutions shine for in-country payments but hit a wall internationally, where the gap persists. 
+From the points above you see that these solutions shine for in-country payments but hit a wall internationally, where the gap persists.
 
 Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option, at least none that I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest.
 
@@ -112,7 +112,7 @@ Visa and Mastercard excel as payment tools, processing billions of transactions 
 
 **Third-Party Solutions**: Services like Wise charge approximately 0.43-1% plus a $4 fixed fee (e.g., $4.14 for a $500 USD-USD transfer), while PayPal charges 2.9% plus $0.30 for domestic transfers, with higher international rates. Additional bank charges may still apply.
 
-**Emerging Regional Solutions**: 
+**Emerging Regional Solutions**:
 
 - **US**: Venmo processed \~$276B in volume in 2023, while Zelle handled 2.9B transactions worth $806B in 2023. These services offer phone/email-based transfers for instant domestic payments.
 - **Africa**: M-Pesa processed 33B transactions worth $40.2T in FY2024, revolutionizing mobile-based transfers across the continent.
