@@ -1046,9 +1046,10 @@ max-width: 15vw;
   
   /* Fix tables */
   .post-content table {
-    max-width: 100%;
+    max-width: 99vw;
     display: block;
     overflow-x: auto;
+    white-space: normal;
   }
 }
 
