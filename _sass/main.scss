@@ -234,14 +234,8 @@ iframe{
 }
 
 .post-card h4, .post-card h3{
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* Number of lines to show */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 3em; /* Approximate height for two lines of text */
   line-height: 1.5em; /* Adjust line-height if necessary */
-  max-height: 3em; /* Ensure it doesn't expand more than two lines */
+  /* All truncation properties have been removed */
 }
 
 .post-card h4{
