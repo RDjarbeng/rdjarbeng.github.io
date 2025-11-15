@@ -1,5 +1,6 @@
 ---
 date: 2025-01-17T11:48:00
+published: true
 author: Richard
 categories:
   - Research
@@ -7,17 +8,28 @@ tags:
   - Birth Asphyxia
   - Carnegie Mellon University Africa
   - Pamely Zantou
+  - CMU-Africa
+  - HealthTech
+  - Artificial Intelligence
+  - AI
+  - Machine Learning
+  - Federated Learning
+  - Neonatal Health
+  - Birth Asphyxia
   - HumekaFL
+  - Ubenwa
+  - Global Health
+  - Healthcare Innovation
+  - Infant Cry Analysis
+  - Carnegie Mellon University
 title: Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL
 image: /assets/images/pamely_cmu_website.png
-video: ''
 layout: post
+video: ''
 ---
 Carnegie Mellon University Africa (CMU-Africa) has been at the forefront of health technology innovations, particularly with their recent development aimed at addressing neonatal health issues in developing countries. Their latest project involves the use of artificial intelligence to detect birth asphyxia, a condition critical for newborn health if not identified and treated promptly.
 
 ![Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu](/assets/images/pamely_cmu_website.png "Pamely Zantou, the project’s lead research assistant-HumekaFl credits-engineering.cmu.edu")
-
-
 
 ## The Project
 

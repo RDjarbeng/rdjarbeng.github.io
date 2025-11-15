@@ -1,26 +1,42 @@
 ---
-title: " Can AI bring images to life?"
-author: Richard
 date: 2024-08-16
+published: true
+author: Richard
+categories:
+  - AI
+tags:
+  - Luma AI
+  - Dream Machine
+  - Generative AI
+  - AI Limitations
+  - Text-to-Video
+  - AI Video Generation
+  - AI Animation
+  - Machine Learning
+  - Bing Image Creator
+  - AI Fail
+  - Physics
+  - Bees
+  - Insects
+title: Can AI bring images to life?
 image: /assets/images/bees_luma.jpeg
-categories: ["AI"]
-tags: [Generative AI, luma ai, Artificial Intelligence, animated images]
 ---
-
 Limits of Generative AI: My Experience with Luma AI and Virtual Bees.
 
- I recently tried out Luma AI's  [dream machine](https://lumalabs.ai/dream-machine) using a picture of what I believe are wasps or bees (though I'm not entirely sure which!).. 
+ I recently tried out Luma AI's  [dream machine](https://lumalabs.ai/dream-machine) using a picture of what I believe are wasps or bees (though I'm not entirely sure which!)..
 
 ### What I Did
+
 After signing up for a Luma Labs account, I uploaded my chosen image to their platform. Below is the input image I used:
 
 ![Many bees with one large bee or flying insect in the background](/assets/images/bees_luma.jpeg)
 
 I then entered this simple prompt:
 
-```
+```plain
 Move the insects in a realistic manner
 ```
+
 After a short wait, the results were in.
 
 ### Result
