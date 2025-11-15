@@ -20,7 +20,7 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
-      preview: false
+      preview: true
     view_filters:
       - label: 'Drafts'
         field: 'published'
