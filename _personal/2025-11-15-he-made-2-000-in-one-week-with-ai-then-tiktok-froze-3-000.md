@@ -54,7 +54,7 @@ He gives a great example of a "trash hook" versus a "good hook" for a men's heal
 * **Trash Hook:** "Beetroot is a natural way to support your health and energy levels." (Boring, no one cares.)
 * **Good Hook:** "I see you've stopped playing with your kids, but it's not because you're old. It's because your blood can't keep up." (Ouch. That's specific, relatable, and hits an insecurity.)
 
-This formula worked. One of his AI-generated videos ("You ever brush your tongue and it's still white... that's not hygiene. That's yeast.") **went viral, hitting 1.4 million views** and generating a flood of sales.
+This formula worked. One of his AI-generated videos ("You ever brush your tongue and it's still white... that's not hygiene. That's yeast.") **went viral, hitting 1.4 million views** and generating a flood of sales. Such luck!
 
 ---
 
