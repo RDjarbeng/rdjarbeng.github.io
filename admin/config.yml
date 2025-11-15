@@ -8,6 +8,11 @@ site_url: https://rdjarbeng.com/
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '-'
+
 collections:
   - name: 'posts'
     label: 'Posts'
