@@ -62,11 +62,13 @@ This formula worked. One of his AI-generated videos ("You ever brush your tongue
 
 ## The "Traumatizing" Downside
 
+![A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.](/assets/images/tiktok_shop_with_mikey_cover_image.webp "The high risk versus high reward of making money with AI on TikTok.")
+
 This is where the story turns. While the sales were climbing, Mikey lived in constant fear of one thing: **"Violations."**
 
 TikTok's platform is notoriously strict and automated. If your video accidentally says or does the wrong thing, you get "violation points" that can lead to an instant, irreversible ban.
 
-This is especially terrifying because to even *start* with TikTok Shop, you need **5,000 followers**. Mikey notes that many creators just *buy* an account for around **$400** to get started. Imagine spending $400 on an account, finally getting it to make money, and then losing it all overnight.
+This is especially terrifying because to even _start_ with TikTok Shop, you need **5,000 followers**. Mikey notes that many creators just _buy_ an account for around **$400** to get started. Imagine spending $400 on an account, finally getting it to make money, and then losing it all overnight.
 
 He describes the feeling as "PTSD," saying he was "traumatized" to even check his phone, knowing that everything could be gone in an instant.
 
@@ -85,7 +87,7 @@ This story isn't all gloom. Mikey's expensive lesson revealed a crucial workarou
 It's a clever way to de-risk the entire operation:
 
 1.  Instead of having TikTok pay you the full 20% commission, you arrange with the brand to set your official, in-app commission to the **lowest possible rate (e.g., 1%)**.
-2.  The brand then **pays you the rest of your *real* commission** (the other 19%) **directly** through PayPal, bank transfer, or another method outside of the TikTok app.
+2.  The brand then **pays you the rest of your _real_ commission** (the other 19%) **directly** through PayPal, bank transfer, or another method outside of the TikTok app.
 
 This way, you never have a large sum of money sitting in your TikTok account "wallet." If you get banned, you only lose the 1% that was pending, not your entire month's earnings.
 
