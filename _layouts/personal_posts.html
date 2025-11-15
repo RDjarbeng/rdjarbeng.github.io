@@ -2,13 +2,8 @@
 layout: default
 title: Personal
 permalink: /personal/
-pagination:
-  enabled: true
-  collection: 'personal'
-  per_page: 10
 ---
 
-<div class="personal-page-intro"> Here you find personal reflections from Richard Djarbeng about Ghana, travel experience across multiple countries and discussions on non-technical areas that I find generally interesting</div>
 <div class="header-container">
 <h1>Personal Posts ({{ site.personal | size }})</h1>
 <div id="search-container">
@@ -18,24 +13,10 @@ pagination:
 <!-- Results container -->
 <ul id="results-container" style="box-shadow: 1px solid gray;"></ul>
 <div class="personal-posts-list">
-  {% for post in paginator.posts %}
+  {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
+  {% for post in sorted_posts %}
   {% include post-card.html post=post truncate_words=45 %}
   {% endfor %}
 </div>
-
-<!-- Pagination Navigation -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">← Previous</a>
-  {% endif %}
-  
-  <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next →</a>
-  {% endif %}
-</div>
-{% endif %}
 
 {% include search-script.html %}
