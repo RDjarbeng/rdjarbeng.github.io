@@ -20,7 +20,7 @@ Africa’s technology ecosystem is moving forward in 2025, as startups secure bi
 
 ## More Money, Bigger Moves
 
-According to Norrsken East Africa, funding for African startups jumped by 40% in the first five months of 2025 compared to last year. This cash is helping companies grow fast, and many are teaming up through mergers or buyouts to reach more people. Here’s a closer look at some game-changing deals:
+According to Norrsken East Africa and the [Making Finance Work for Africa (MFW4A](https://www.mfw4a.org/news/african-startup-funding-40-early-2025-led-big-four#:~:text=Egypt%20also%20dominated%20the%20continent's,by%20Catalyst%20Partners%20Middle%20East.))Partnership, funding for African startups jumped by 40% in the first five months of 2025 compared to last year. This cash is helping companies grow fast, and many are teaming up through mergers or buyouts to reach more people. Here’s a closer look at some game-changing deals:
 
 - **LemFi and Pillar Team Up**: [LemFi](https://lemfi.com/), a UK-based app for sending money across borders, bought Pillar, a Nigerian startup offering credit cards. Together, they’re making it easier for Africans abroad to send money home and access credit, solving real problems for families and businesses.  
 - **Miran and Welnes Create a Health App**: In a merger between Egyptian and Saudi Arabian startups, [Miran and Welnes joined forces](https://www.wamda.com/2025/04/miran-welnes-merge-build-powerful-health-fitness-app) to build a super-app for health and fitness. Miran brings wellness know-how, while Welnes adds tech to help users stay fit, aiming to make healthy living accessible across the Middle East and Africa.  
