@@ -25,6 +25,9 @@ collections:
       - label: 'Drafts'
         field: 'published'
         pattern: false
+      - label: 'Published posts'
+        field: 'published'
+        pattern: true
     fields:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
