@@ -1,7 +1,7 @@
 ---
 title: He Made $2,000 in One Week With AI... Then TikTok Froze $3,000
 date: 2025-11-15T17:56:00
-published: false
+published: true
 tags:
   - AI
   - Google Veo3
