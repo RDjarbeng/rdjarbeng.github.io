@@ -9,13 +9,23 @@ layout: personal
 ---
 The start
 
-![Mirror selfie in the barbering salon. Modeled by Richard Djarbeng ](/assets/images/1000289277.jpg "Mirror selfie ")
+![Mirror selfie in the barbering salon. Modeled by Richard Djarbeng](/assets/images/1000289277.jpg "Mirror selfie")
 
 I've let my beard grow more than usual today. And my hairline could use some work. Hoping to get that Spiderman, Myles Morales straight cut.
 
 My barber doesn't have a beard but I know he's gonna respect the outline of the beard and shape it up nicely, unlike my unfortunate beard experience during my first haircut in Kigali 😩
 
-I remember this ine haircut that left me almost speechless
+I remember this one haircut that left me almost speechless
+
+![](/assets/images/1000289855.jpg)
+
+![](/assets/images/1000289856.jpg)
+
+![](/assets/images/1000289863.jpg)
+
+![](/assets/images/1000289849.jpg)
+
+![](/assets/images/1000289854.jpg)
 
 But nowadays I rarely have a bad haircut because my barber understands me now and what I need. I hink.
 
