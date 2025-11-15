@@ -5,30 +5,46 @@ author: Richard
 categories:
   - Entrepreneurship
 tags:
-  - Technology
-  - Startups
-  - Funding
+  - Africa Tech
+  - African Startups
   - Tech in Africa
-  - Africa
-  - East Africa
+  - Startup Funding
+  - Venture Capital
+  - Investments
+  - Mergers and Acquisitions
+  - M&A
   - Norrsken
+  - Norrsken East Africa
+  - Norrsken House Kigali
+  - Fintech
+  - Healthtech
+  - Clean Energy
+  - Solar
+  - E-commerce
+  - Kigali
+  - Rwanda
+  - Nigeria
+  - Egypt
+  - Africa/Week 2025
+  - Innovation
+  - Entrepreneurship
 title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
 image: /assets/images/africa_tech_startups_1_rdjarbeng_gk.jpg
 layout: post
 ---
-Africa’s technology ecosystem is moving forward in 2025, as startups secure big investments and join forces to make a bigger impact. From mobile apps for money transfers to solar power for rural areas, African innovators are showing the world what’s possible. In a recent newsletter, [Norrsken East Africa](https://www.norrsken.org/) shared exciting updates on this growth, and we’re diving into the details to show how Africa’s tech scene is stronger than ever. 
+Africa’s technology ecosystem is moving forward in 2025, as startups secure big investments and join forces to make a bigger impact. From mobile apps for money transfers to solar power for rural areas, African innovators are showing the world what’s possible. In a recent newsletter, [Norrsken East Africa](https://www.norrsken.org/) shared exciting updates on this growth, and we’re diving into the details to show how Africa’s tech scene is stronger than ever.
 
 ## More Money, Bigger Moves
 
 According to Norrsken East Africa and the [Making Finance Work for Africa (MFW4A](https://www.mfw4a.org/news/african-startup-funding-40-early-2025-led-big-four#:~:text=Egypt%20also%20dominated%20the%20continent's,by%20Catalyst%20Partners%20Middle%20East.))Partnership, funding for African startups jumped by 40% in the first five months of 2025 compared to last year. This cash is helping companies grow fast, and many are teaming up through mergers or buyouts to reach more people. Here’s a closer look at some game-changing deals:
 
-- **LemFi and Pillar Team Up**: [LemFi](https://lemfi.com/), a UK-based app for sending money across borders, bought Pillar, a Nigerian startup offering credit cards. Together, they’re making it easier for Africans abroad to send money home and access credit, solving real problems for families and businesses.  
-- **Miran and Welnes Create a Health App**: In a merger between Egyptian and Saudi Arabian startups, [Miran and Welnes joined forces](https://www.wamda.com/2025/04/miran-welnes-merge-build-powerful-health-fitness-app) to build a super-app for health and fitness. Miran brings wellness know-how, while Welnes adds tech to help users stay fit, aiming to make healthy living accessible across the Middle East and Africa.  
-- **BioLite and Baobab+ Light Up Africa**: [BioLite took a majority stake in Baobab+](https://cioafrica.co/biolite-acquires-majority-stake-in-baobab-to-expand-renewable-energy-access-across-africa/), a company that sells solar kits in rural areas. This deal will bring clean, affordable energy to homes without electricity, powering lights and phones in remote communities.  
-- **MaxAB-Wasoko Buys Fatura**: [MaxAB-Wasoko acquired Fatura](https://www.wamda.com/2025/05/maxab-wasoko-acquires-fatura-efg-finance-joins-board), a platform that helps small shops in Egypt stock up online. This move makes it easier for store owners to get goods, with big investors like EFG Finance joining the team.  
-- **Qardy’s Big Win**: Egyptian fintech [Qardy landed a $23M deal](https://launchbaseafrica.com/2025/05/19/egypts-first-spac-merger-sealed-with-23m-acquisition-of-fintech-startup-qardy/) through a [SPAC](https://www.investopedia.com/terms/s/spac.asp), a special company that raises money to buy startups. It’s Egypt’s first deal like this, helping Qardy grow its lending services for small businesses.  
-- **Chowdeck Snags Mira**: In Nigeria, [Chowdeck, a food delivery app, bought Mira](https://techpoint.africa/news/chowdeck-acquires-mira/), a system that helps restaurants manage orders. This makes life easier for restaurant owners and improves food delivery for customers.  
-- **Lesaka Grabs Bank Zero**: In South Africa, [Lesaka Technologies paid $5M for Bank Zero](https://techcabal.com/2025/06/27/south-africas-bank-zero-owners-to-pocket-5-mill/), a digital bank, to offer better banking tools for small businesses.  
+- **LemFi and Pillar Team Up**: [LemFi](https://lemfi.com/), a UK-based app for sending money across borders, bought Pillar, a Nigerian startup offering credit cards. Together, they’re making it easier for Africans abroad to send money home and access credit, solving real problems for families and businesses.
+- **Miran and Welnes Create a Health App**: In a merger between Egyptian and Saudi Arabian startups, [Miran and Welnes joined forces](https://www.wamda.com/2025/04/miran-welnes-merge-build-powerful-health-fitness-app) to build a super-app for health and fitness. Miran brings wellness know-how, while Welnes adds tech to help users stay fit, aiming to make healthy living accessible across the Middle East and Africa.
+- **BioLite and Baobab+ Light Up Africa**: [BioLite took a majority stake in Baobab+](https://cioafrica.co/biolite-acquires-majority-stake-in-baobab-to-expand-renewable-energy-access-across-africa/), a company that sells solar kits in rural areas. This deal will bring clean, affordable energy to homes without electricity, powering lights and phones in remote communities.
+- **MaxAB-Wasoko Buys Fatura**: [MaxAB-Wasoko acquired Fatura](https://www.wamda.com/2025/05/maxab-wasoko-acquires-fatura-efg-finance-joins-board), a platform that helps small shops in Egypt stock up online. This move makes it easier for store owners to get goods, with big investors like EFG Finance joining the team.
+- **Qardy’s Big Win**: Egyptian fintech [Qardy landed a $23M deal](https://launchbaseafrica.com/2025/05/19/egypts-first-spac-merger-sealed-with-23m-acquisition-of-fintech-startup-qardy/) through a [SPAC](https://www.investopedia.com/terms/s/spac.asp), a special company that raises money to buy startups. It’s Egypt’s first deal like this, helping Qardy grow its lending services for small businesses.
+- **Chowdeck Snags Mira**: In Nigeria, [Chowdeck, a food delivery app, bought Mira](https://techpoint.africa/news/chowdeck-acquires-mira/), a system that helps restaurants manage orders. This makes life easier for restaurant owners and improves food delivery for customers.
+- **Lesaka Grabs Bank Zero**: In South Africa, [Lesaka Technologies paid $5M for Bank Zero](https://techcabal.com/2025/06/27/south-africas-bank-zero-owners-to-pocket-5-mill/), a digital bank, to offer better banking tools for small businesses.
 - **SokoFund and Umurava in Kigali**: These two Rwandan startups merged to help people find jobs and companies hire talent, meeting the growing need for skilled workers in tech.
 
 ## New Ways to Fund Dreams
