@@ -44,7 +44,7 @@ _Travel Tip: Always keep your passport and vaccination card handy at East Africa
 
 Here is an example of the passport sized vaccination card for illustration.
 
-![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) U.S. Government Bookstore")
+![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization Package of 25 U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) U.S. Government Bookstore")
 
 ### Foreign exchange
 
