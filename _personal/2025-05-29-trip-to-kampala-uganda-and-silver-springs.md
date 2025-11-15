@@ -22,11 +22,11 @@ tags:
 image: /assets/images/rd_silver_springs_stare_at_statue_cover.webp
 layout: personal
 ---
-After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor, tagging along with a friend to a Toastmasters conference in Kampala, the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists, from a passenger left behind at the border to the thrill of exchanging Rwandan Francs for what felt like a fortune in Ugandan Shillings. Here’s part one of my journey to another East-African country. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.  
+After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor, tagging along with a friend to a Toastmasters conference in Kampala, the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists, from a passenger left behind at the border to the thrill of exchanging Rwandan Francs for what felt like a fortune in Ugandan Shillings. Here’s part one of my journey to another East-African country. This post may be longer than anticipated because of the many interesting moments so I have to break it up into parts.
 
 ## The beginning - Kigali
 
-The journey was done by coach bus from Nyabugogo bus park and took approximately 11 hours. 
+The journey was done by coach bus from Nyabugogo bus park and took approximately 11 hours.
 
  We departed Kigali around 7pm CAT with the Trinity bus service. Once we left the city center after Nyabugogo, the road was mostly empty. The bus was spacious with adjustable seats, USB ports and a foldable table like you find in airplanes. It wasn't full and had some empty seats especially at the back.  Here is a picture of the bus interior for reference.
 
@@ -44,20 +44,21 @@ _Travel Tip: Always keep your passport and vaccination card handy at East Africa
 
 Here is an example of the passport sized vaccination card for illustration.
 
-![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) | U.S. Government Bookstore")
+![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization Package of 25 U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) U.S. Government Bookstore")
 
-### Foreign exchange 
+### Foreign exchange
+
 We took this opportunity to exchange our money. There was a forex bureau at the border, a small kiosk attached to what appeared to be a restaurant-supermarket. The attendants seemed ready and waiting, seems they were used to getting travellers at night. The bureau accepted mobile money and cash in Rwandan Francs(RWF),  Ugandan Shillings(UGX) and US dollars so we made a quick exchange for some of our money. At that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 UGX to 1 RWF; our money seemed to have been multiplied by 3, or so we thought.
 
 ### No passenger left behind?
 
-We didn’t linger long at the forex bureau, but when we returned to the bus, final passenger checks were already underway. We waited outside until an officer stepped off, checked our passports, and let us board. We got to our seats on the bus and not a minute later the bus took off heading for Kampala. 
+We didn’t linger long at the forex bureau, but when we returned to the bus, final passenger checks were already underway. We waited outside until an officer stepped off, checked our passports, and let us board. We got to our seats on the bus and not a minute later the bus took off heading for Kampala.
 
-'Chauffeur, CHAUFFER! ...', someone shouted above the roar of the engines. It seems there was someone missing, not yet in the bus; we had barely exited the border checkpoint.  We thought it was reasonable for the driver to wait a couple of minutes for this person, perhaps someone delayed at immigration or was using the washroom. 
+'Chauffeur, CHAUFFER! ...', someone shouted above the roar of the engines. It seems there was someone missing, not yet in the bus; we had barely exited the border checkpoint.  We thought it was reasonable for the driver to wait a couple of minutes for this person, perhaps someone delayed at immigration or was using the washroom.
 However, the driver kept the bus moving, exiting the checkpoint and turning unto a dark road even as more passengers joined the shouting. I would say he even sped up and kept ignoring the passenger's pleas.
 
 My friend, Abdul-Jalil and I were so shocked, we looked at each other, we couldn't imagine getting left behind by the bus and much more in a foreign country.  Perhaps what shocked us more was the driver who didn't say anything in response.
-The other passengers started murmuring something about the unfortunate person using a motorbike for the rest of the journey. For context this was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT) at a border checkpoint that didn't seem to have any nearby communities.  
+The other passengers started murmuring something about the unfortunate person using a motorbike for the rest of the journey. For context this was around 10pm in Ugandan time (Uganda is 1 hour ahead of Kigali's time CAT) at a border checkpoint that didn't seem to have any nearby communities.
 
 #### Personal note
 
