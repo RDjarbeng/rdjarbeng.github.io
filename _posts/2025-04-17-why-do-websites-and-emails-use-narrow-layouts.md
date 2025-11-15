@@ -11,19 +11,10 @@ tags:
   - Web design
 title: Why Do Websites and Emails Use Narrow Layouts?
 image: /assets/images/narrow_website_layout_grok.jpg
-video: ''
 layout: post
+video: ''
 ---
-### Key Points
-
-- Narrow layouts improve readability with optimal line lengths.
-- They align with mobile-first design for better device compatibility.
-- These designs enhance focus and reduce cognitive load.
-- This is a standard practice, not just a recent trend.
-
-### Why Narrow Layouts Are Common
-
-Many websites and emails use narrow, single-column layouts, typically 600–700 pixels wide, to improve user experience. Research shows that the optimal line length for reading is 50–75 characters, which narrow designs achieve, reducing eye strain and making content easier to scan ([Elementor Blog: Website Layout Ideas](https://elementor.com/blog/website-layout-ideas/)). 
+Many websites and email formats use narrow, single-column layouts, typically 600–700 pixels wide, to improve user experience. Research shows that the optimal line length for reading is 50–75 characters, which narrow designs achieve, reducing eye strain and making content easier to scan ([Elementor Blog: Website Layout Ideas](https://elementor.com/blog/website-layout-ideas/)).
 
 With over 50% of web traffic from mobile devices, narrow layouts ensure compatibility across screens, fitting well without horizontal scrolling ([LinkedIn Pulse: Common Website Layouts](https://www.linkedin.com/pulse/common-website-layouts-mohammad-zeeshan)). They also help focus attention by limiting distractions, which is great for content-heavy pages, and reduce cognitive load by presenting information in a digestible format.
 
@@ -39,8 +30,12 @@ PS: The preference for narrow layouts is partly why my posts list on my website 
 
 ![Posts on Richard Djarbeng's website showing 2 column layout](/assets/images/rd_posts_2column_layout.png "Posts on Richard Djarbeng's website showing 2 column layout")
 
-### Key Citations
+### Key Points
 
+- Narrow layouts improve readability with optimal line lengths.
+- They align with mobile-first design for better device compatibility.
+- These designs enhance focus and reduce cognitive load.
+- This is a standard practice, not just a recent trend.
 - [Elementor Blog: Website Layout Ideas](https://elementor.com/blog/website-layout-ideas/)
 - [LinkedIn Pulse: Common Website Layouts](https://www.linkedin.com/pulse/common-website-layouts-mohammad-zeeshan)
 - [MDN Web Docs: Column Layouts](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts)
