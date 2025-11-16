@@ -1,22 +1,17 @@
 ---
 layout: default
 ---
-
-<h1>Posts in {{ page.title }}</h1>
+<!-- Categories and Tags Section add a way for the user to go back-->
+<div class="categories-tags-container">
+  <a href="/categories/">All Categories</a>|
+  <a href="/tags/">All Tags</a>
+</div>
+<h1>Posts in Category: {{ page.title }}</h1>
 
 <div class="post-list">
   {% for post in site.posts %}
     {% if post.categories contains page.title %}
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        <div class="post-card">
-          <h3>{{ post.title | escape }}</h3>
-          {% if post.image %}
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image posts">
-          {% endif %}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-        </div>
-      </a>
+      {% include post-card.html post=post %}
     {% endif %}
   {% endfor %}
 </div>
