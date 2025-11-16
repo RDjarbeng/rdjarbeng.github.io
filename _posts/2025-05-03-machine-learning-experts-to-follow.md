@@ -4,7 +4,7 @@ author: Richard
 categories:
   - AI
 tags:
-  - MachineLearning
+  - Machine Learning
   - AI
   - DataScience
   - TechInspiration

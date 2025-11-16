@@ -2,7 +2,7 @@
 date: 2025-01-10T13:39:00
 author: Richard
 categories:
-  - Computer vision
+  - Computer Vision
 tags:
   - AI
   - computer vision

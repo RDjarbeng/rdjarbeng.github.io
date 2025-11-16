@@ -7,14 +7,14 @@ categories:
 tags:
   - Google
   - FFmpeg
-  - Open Source
+  - Open-Source
   - AI
   - Cybersecurity
   - Google Project Zero
   - Big Sleep AI
   - Vulnerability Reporting
   - Responsible Disclosure
-  - Open Source Maintainers
+  - Open-Source Maintainers
   - Software Development
   - Tech Dispute
   - Google vs FFmpeg

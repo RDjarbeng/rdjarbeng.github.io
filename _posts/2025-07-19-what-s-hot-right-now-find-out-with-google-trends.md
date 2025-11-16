@@ -8,7 +8,7 @@ tags:
   - trends
   - googletrends
   - marketing
-  - ', business'
+  - business
   - datascience
   - artificialintelligence
   - data

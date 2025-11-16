@@ -18,7 +18,7 @@ tags:
   - image-segmentation
   - open-source
   - open-source background removal
-  - machine-learning
+  - machine learning
   - deployment
   - free-ai
   - images with transparent background

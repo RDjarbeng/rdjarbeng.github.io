@@ -5,7 +5,7 @@ categories:
   - Open-source
 tags:
   - Capcut
-  - Open-source
+  - Open-Source
   - Video editing
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png
