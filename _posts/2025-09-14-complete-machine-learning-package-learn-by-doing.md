@@ -5,9 +5,9 @@ author: Richard
 categories:
   - Technology
 tags:
-  - machine-learning
+  - machine learning
   - python
-  - complete-machine-learning
+  - complete machine learning
   - tutorial
   - getting started
   - data analysis
