@@ -6,7 +6,7 @@ layout: default
   <a href="/categories/">All Categories</a> |
   <a href="/tags/">All Tags</a>
 </div>
-<h1>Posts Tagged with: {{ page.title }}</h1>
+<h1>Posts Tagged with: {{ page.title }} ({{ page.posts | size }})</h1>
 
 <div class="post-list">
   {% for post in page.posts %}
