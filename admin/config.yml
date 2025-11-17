@@ -86,6 +86,9 @@ collections:
       - label: 'Drafts'
         field: 'published'
         pattern: false
+      - label: 'Published posts'
+        field: 'published'
+        pattern: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
