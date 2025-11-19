@@ -26,7 +26,7 @@ tags:
   - borrowed words
   - Danish words
   - emotional vocabulary
-image: ''
+image: /assets/images/happily_exhausted_cover_image.webp
 layout: personal
 ---
 You know the feeling.
@@ -65,7 +65,7 @@ And yet… he’s glowing.
 There’s this quiet, unbreakable contentment that leaks through every frame. You feel like he’d rather be nowhere else on Earth than standing in that half-lit classroom at 2 A.M. explaining backpropagation for the 47th take.
 
 Years later he confirmed it in an interview, that “Most people don’t realize those videos were usually recorded between midnight and 4 A.M. after a full day of research, teaching, and everything else. I was exhausted… but I loved every second of it.”
-— Andrew Ng 
+— Andrew Ng
 
 He also says it's about the fourth time that he's seen people being surprised about AI as if it came out of nowhere but is excited every time ([paraphrased from this podcast](https://a16z.com/podcast/navigating-the-future-of-ai-with-andrew-ng/)).
 
