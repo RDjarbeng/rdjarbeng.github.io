@@ -8,7 +8,11 @@
       {% if include.post.image and include.post.image.size > 0 %}
         <img src="{{ include.post.image }}" alt="Cover image of post: {{ include.post.title }}" class="post-image" fetchpriority="high">
       {% endif %}
-      <!-- Display categories -->
+      
+      {% assign words_per_minute = 180 %}
+      {% assign words = include.post.content | number_of_words %}
+      {% assign minutes = words | divided_by: words_per_minute | ceil %} 
+
       <div class="post-meta-categories-container">
         <p class="post-meta">{{ include.post.date | date: "%B %-d, %Y" }}</p>
         {% if include.post.categories and include.post.categories.size > 0 %}
