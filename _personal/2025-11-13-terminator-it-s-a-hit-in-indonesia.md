@@ -24,8 +24,8 @@ tags:
   - African Drone Shots
   - Remix vs Original
 image: /assets/images/terminator_cover.webp
+image_alt: Cover for King Promise terminator web post asking it's a hit in Indonesia?
 layout: personal
-image_alt: "Cover image for King Promise Drops a Global Banger: \"Terminator\" feat. Young Jonn (2023)"
 ---
 Ghanaian Afrobeats star **King Promise** unleashed _"Terminator"_ in May 2023, but the remix featuring Nigeria's **Young Jonn**—dropped in July—turned it into a continental and international smash. This post dives into the remix (the one with **71M+ YouTube views** as of November 2025), while giving props to the original.
 
