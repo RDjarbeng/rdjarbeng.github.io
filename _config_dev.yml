@@ -1,0 +1,13 @@
+# _config_dev.yml
+plugins:
+  - jekyll-last-modified-at
+  - jekyll-seo-tag
+  # - jekyll-archives     # disabled locally
+  # - jekyll-toc          # disabled locally
+  # - jekyll-redirect-from
+
+minima:
+  feed: false
+
+toc:
+  enabled: false
