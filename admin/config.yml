@@ -72,6 +72,7 @@ collections:
                 raster_image:
                   format: webp
                   quality: 85
+      - { label: 'Image Alt Text', name: 'image_alt', widget: 'string', required: false, hint: 'Alt text for the cover image' }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
@@ -113,6 +114,7 @@ collections:
                 raster_image:
                   format: webp
                   quality: 85
+      - { label: 'Image Alt Text', name: 'image_alt', widget: 'string', required: false, hint: 'Alt text for the cover image' }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'personal' }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
@@ -143,4 +145,3 @@ collections:
            - { label: 'Permalink', name: 'permalink', widget: 'hidden', default: '/about/' }
            - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
            - { label: 'Body', name: 'body', widget: 'markdown' }
-    
