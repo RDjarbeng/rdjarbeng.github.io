@@ -20,14 +20,14 @@ tags:
   - Creator Economy
   - Platform Risk
 image: /assets/images/tiktok_shop_with_mikey_cover_image.webp
+image_alt: A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.
 layout: personal
-image_alt: "Cover image for He Made $2,000 in One Week With AI... Then TikTok Froze $3,000"
 ---
 First came the win: **$2,200 in profit** in just one week.
 Then came the loss: **$3,722 in earnings**, frozen and inaccessible.
 This is the high-stakes reality of one creator's experiment with AI avatars and TikTok Shop. In his video, "[How I Used AI To Make $2000 PROFIT in 1 week](https://youtu.be/d9oQ9mudR-o)", **Mikey Again** documents the entire roller-coaster ride.
 
-![YouTube thumbnail image for Mikey Again post on using AI to create videos on TikTok ](/assets/images/1000258877.jpg "Mikey Again's thumbnail for the video")
+![YouTube thumbnail image for Mikey Again post on using AI to create videos on TikTok](/assets/images/1000258877.jpg "Mikey Again's thumbnail for the video")
 
 It's a clear case study for anyone interested in AI, side hustles, or the volatility of building a business on someone else's platform. He found a winning formula, but he also discovered the brutal catch.
 
