@@ -12,3 +12,5 @@ layout: post
 ---
 Apparently https://www.antigravity.tech/ is a drone startup. Not sure how they are taking the news. They are higher up on the rankings though.
 Got to find a link to actually download antigravity
+
+Ha they actually used a .google domain. https://antigravity.google/
