@@ -7,6 +7,7 @@ tags:
   - Don't love your job
   - Kim Kardashian
 layout: personal
+image_alt: "Cover image for Podcasters just saying anything -Don't love your job"
 ---
 "Don't love your job, job your love"
 

@@ -32,7 +32,7 @@ tags:
   - Entertainment in Ghana
 image: /assets/images/2nd_collage_on_ghana.png
 layout: personal
-last_modified_at: ''
+image_alt: "Cover image for Ghana, an Introduction- All That Glitters is Still Gold"
 ---
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain aspects a visitor to Ghana might find interesting; people, history, governance, and sights to visit.
 

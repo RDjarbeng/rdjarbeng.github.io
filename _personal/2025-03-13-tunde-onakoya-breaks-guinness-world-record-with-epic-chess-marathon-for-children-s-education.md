@@ -23,6 +23,7 @@ tags:
 image: /assets/images/nigerian-chess-master-tunde-onakoya-victory.webp
 layout: personal
 video: ''
+image_alt: "Cover image for Tunde Onakoya Breaks Guinness World Record with Epic Chess Marathon for Children's Education"
 ---
 On April 20, 2024, Nigerian chess master Tunde Onakoya made history by shattering the Guinness World Record for the longest chess marathon, playing continuously for over 60 hours in New York’s iconic Times Square. This extraordinary feat surpassed the previous record of 56 hours, 9 minutes, and 37 seconds, set by Norwegian players Hallvard Haug Flatebø and Sjur Ferkingstad in 2018.
 

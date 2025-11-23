@@ -7,6 +7,7 @@ tags:
   - Dreamworks
   - Shrek
 layout: personal
+image_alt: "Cover image for Best Scenes in Animation"
 ---
 Do you know the muffin man? - voice actor for Gingy and Farquaad
 

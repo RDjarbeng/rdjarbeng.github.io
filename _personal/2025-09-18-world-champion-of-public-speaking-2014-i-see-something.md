@@ -8,6 +8,7 @@ tags:
   - Toastmasters Full Speech
 image: ''
 layout: personal
+image_alt: "Cover image for World Champion of Public Speaking 2014 -I see something"
 ---
 # Dananjaya Hettiarachchi - World Champion of Public Speaking 2014 - Full Speech
 

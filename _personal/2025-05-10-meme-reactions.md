@@ -3,6 +3,7 @@ title: MEME reactions
 date: 2025-05-10T12:11:00
 image: /assets/images/mourinho_takes_headphones_off.jpeg
 layout: personal
+image_alt: "Cover image for MEME reactions"
 ---
 Pictures of reactions I found interesting across the internet. Could be memes, but I'm just gonna create a new post for these.
 

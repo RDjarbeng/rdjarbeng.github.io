@@ -8,6 +8,7 @@ tags:
   - Rwanda
 image: ''
 layout: personal
+image_alt: "Cover image for UCI World Road Championship in Rwanda"
 ---
 I was there
 

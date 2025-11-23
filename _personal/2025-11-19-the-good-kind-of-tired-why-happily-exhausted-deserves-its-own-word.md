@@ -28,6 +28,7 @@ tags:
   - emotional vocabulary
 image: /assets/images/happily_exhausted_cover_image.webp
 layout: personal
+image_alt: "Cover image for The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word"
 ---
 You know the feeling.
 

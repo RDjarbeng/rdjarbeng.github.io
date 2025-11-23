@@ -8,6 +8,7 @@ tags:
   - Bill Withers
 image: ''
 layout: personal
+image_alt: "Cover image for A Collection of Top Songs From The 2000s and 90s"
 ---
 Bill Withers- Lean on Me
 

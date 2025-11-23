@@ -4,6 +4,7 @@ date: 2025-04-17T10:42:00
 published: true
 image: /assets/images/mtn_logo_cover.JPG
 layout: personal
+image_alt: "Cover image for USSD codes for MTN Rwanda"
 ---
 USSD CODES and COMMANDS
 

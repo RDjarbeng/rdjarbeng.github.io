@@ -3,6 +3,7 @@ layout: personal
 title: "Ronaldo Hits Gold in Less Than 24 Hours!"
 image: /assets/images/ronaldo_tweet.png
 date: 2024-08-26
+image_alt: "Cover image for Ronaldo Hits Gold in Less Than 24 Hours!"
 ---
 
 Cristiano Ronaldo recently launched his YouTube channel with an announcement on Twitter (or X) on August 21st.

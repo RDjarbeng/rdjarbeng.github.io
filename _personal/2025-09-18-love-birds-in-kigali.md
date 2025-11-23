@@ -22,6 +22,7 @@ tags:
   - Rwanda
 image: /assets/images/loverbirds_cover_rdjarbeng.webp
 layout: personal
+image_alt: "Cover image for Interrupted Romance: Sunset, Cynicism And Love birds In Kigali"
 ---
 I stumbled upon this serene moment the other evening, right around sunset in Kigali.  This was around sunset and it looks like they were on a date of some sort  just chilling at the end of the day. They stand on a ledge overlooking the Special Economic Zone, gazing into the horizon like they were lost in some avian rom-com.
 Then I show up with my camera ready to capture this romantic scene.📸 Click. They didn't look happy to see me ,the ultimate paparazzo. They shot me the side-eye—clearly not thrilled about the intrusion. 

@@ -6,6 +6,7 @@ tags:
   - Haircut
 image: ''
 layout: personal
+image_alt: "Cover image for Haircut in Kigali: Follow From Start to Finish"
 ---
 The start
 

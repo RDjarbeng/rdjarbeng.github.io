@@ -4,6 +4,7 @@ date: 2025-09-18T11:06:00
 published: false
 image: ''
 layout: personal
+image_alt: "Cover image for 9 point problem-think outside the box"
 ---
 For a grid of 9 points arranged in a 3x3 pattern, can you connect all the points with 4 straight lines?
 

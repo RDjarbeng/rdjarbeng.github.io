@@ -3,6 +3,7 @@ title: Iconic images from animation
 date: 2025-05-07T15:59:00
 image: /assets/images/gru_minions.jpg
 layout: personal
+image_alt: "Cover image for Iconic images from animation"
 ---
 I created this to separate the drawn/animated images from my original post on iconic images from the internet.
 

@@ -6,6 +6,7 @@ tags:
   - Memes
 image: ''
 layout: personal
+image_alt: "Cover image for Arican King of Memes"
 ---
 Pawpaw meme, thinking
 

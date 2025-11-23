@@ -6,6 +6,7 @@ tags:
   - TED
 image: ''
 layout: personal
+image_alt: "Cover image for TED vs TEDx a YouTube Guide"
 ---
 What's the difference between TED and TEDx talks on youtube?
 

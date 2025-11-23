@@ -7,6 +7,7 @@ tags:
   - Music
 image: ''
 layout: personal
+image_alt: "Cover image for Michael Jackson-All The Songs In The New Biopic"
 ---
 Michael Jackson Biopic - Michael
 

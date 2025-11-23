@@ -7,6 +7,7 @@ tags:
   - Music
 image: ''
 layout: personal
+image_alt: "Cover image for Songs From The Past For The Traveller"
 ---
 Some songs you may have forgotten, here is some nostalgia
 

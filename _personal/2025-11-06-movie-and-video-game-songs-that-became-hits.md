@@ -8,6 +8,7 @@ tags:
   - Richard Reviews
 image: ''
 layout: personal
+image_alt: "Cover image for Movie And Video Game Songs That Became Hits"
 ---
 Here we take a look at some songs that were not initially released as standalone but were made for a purpose. For example a soundtrack for a movie that eventually became popular, also adding video game songs that surpassed expectations and became mainstream. To narrow our search we are gonna set the loose requirement that the video/song should have at least 1 million views on Youtube or a million streams on spotify.
 

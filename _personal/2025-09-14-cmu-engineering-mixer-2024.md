@@ -4,6 +4,7 @@ date: 2025-09-14T21:06:00
 published: false
 image: ''
 layout: personal
+image_alt: "Cover image for CMU engineering mixer 2024"
 ---
 I still remember this mixer event on the CMU campus. 
 So nice to meet new people from other departments across campus.

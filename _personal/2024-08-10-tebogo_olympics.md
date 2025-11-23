@@ -13,6 +13,7 @@ tags:
   - Botswana declares holiday to celebrate gold medal
 image: /assets/images/TebogoOlympics2024200m_cover.webp
 layout: personal
+image_alt: "Cover image for Letsile Tobogo - Botswana's first gold at the 200m olympics"
 ---
 Imagine you win a gold medal at the olympics and your country declares a [holiday](https://abcnews.go.com/International/botswana-declares-holiday-after-letsile-tebogos-historic-200/story?id=112702358) to celebrate your win. 
 Now imagine that this is your continent's first gold medal in a particular event and the first time your country's national anthem 🎶 was played at the olympics.

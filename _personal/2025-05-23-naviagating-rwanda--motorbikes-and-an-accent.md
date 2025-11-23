@@ -20,6 +20,7 @@ tags:
   - Navigating Kigali
 image: /assets/images/kigali_bustop_motor.jpg
 layout: personal
+image_alt: "Cover image for Navigating Kigali- motorbikes and an accent"
 ---
 In Kigali, Rwanda one of the major forms of transport is using a motor taxi. Here you can find them riding along most roads or parked at a corner waiting for passengers.
 

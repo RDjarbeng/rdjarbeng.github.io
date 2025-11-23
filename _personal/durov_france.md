@@ -27,6 +27,7 @@ tags:
 image: /assets/images/durov_mountains.jpg
 layout: personal
 author: Richard
+image_alt: "Cover image for Is this where Durov's French journey began"
 ---
 Did Pavel Durov unknowingly predict his own arrest with this light-hearted post?
 

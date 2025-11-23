@@ -6,6 +6,7 @@ tags:
   - Haircut
   - Kigali
 layout: personal
+image_alt: "Cover image for Haircuts In Kigali-Part  2"
 ---
 Let's look at the typical experience of getting a haircut in Kigali.
 

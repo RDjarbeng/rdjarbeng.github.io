@@ -13,6 +13,7 @@ tags:
   - Richard Djarbeng's series on Youtube videos
 image: /assets/images/nike_the_last_game_cover_rdjarbeng.webp
 layout: personal
+image_alt: "Cover image for The Story of Nike The Last Game"
 ---
 I'm trying to start a series on interesting videos on the internet that I found ... interesting from way back. 
 

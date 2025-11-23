@@ -7,6 +7,7 @@ tags:
   - Music
 image: ''
 layout: personal
+image_alt: "Cover image for Orchestra Music With Vocal leads"
 ---
 Orchestra music with Singing
 

@@ -4,6 +4,7 @@ date: 2025-07-30T11:29:00
 published: false
 image: ''
 layout: personal
+image_alt: "Cover image for Research school -A trip to Germany CMMRS"
 ---
 Welcome to the [The Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science (CMMRS 2025)](https://cmmrs.mpi-sws.org/) taking place at the Max-Planck institute in Saarland Germany.
 

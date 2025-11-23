@@ -6,6 +6,7 @@ tags:
   - Music
 image: ''
 layout: personal
+image_alt: "Cover image for Reason with Me, best music videos RudeBoy"
 ---
 The setup starts with Rudeboy living in the Ghetto shown to be a penniless carpenter in a small room with the bed on the floor.
 

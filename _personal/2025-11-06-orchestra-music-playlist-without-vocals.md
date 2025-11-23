@@ -8,6 +8,7 @@ tags:
   - No Vocals
 image: ''
 layout: personal
+image_alt: "Cover image for Orchestra Music Playlist Without Vocals"
 ---
 Beethoven's 5 Secrets - The piano guys
 

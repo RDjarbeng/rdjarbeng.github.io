@@ -3,6 +3,7 @@ layout: personal
 title: "Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 image: /assets/images/andrewng_youtube.png
 date: 2024-08-05
+image_alt: "Cover image for Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 ---
 
 For those who promised to go back to Andrew Ng's coursera course on machine learning there is now a youtube version🙂.

@@ -3,6 +3,7 @@ title: Iconic images from the internet
 date: 2025-05-07T13:50:00
 image: /assets/images/japanese_would_mp.jpeg
 layout: personal
+image_alt: "Cover image for Iconic images from the internet"
 ---
 Pictures that caught my eye when I was browsing the internet. If I find the context behind them I'll add them below.
 

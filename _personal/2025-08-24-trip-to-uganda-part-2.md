@@ -4,6 +4,7 @@ date: 2025-08-24T13:25:00
 published: false
 image: ''
 layout: personal
+image_alt: "Cover image for Trip to Uganda -part 2"
 ---
 ## The journey to Kampala
 

@@ -27,6 +27,7 @@ tags:
   - Robert's Travels
 image: /assets/images/franz_k_statue_cover.webp
 layout: personal
+image_alt: "Cover image for Prague's Spinning Head, Astro Clock and Free Apples!"
 ---
 Got another update from my friend Robert on his Europe trip! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
 

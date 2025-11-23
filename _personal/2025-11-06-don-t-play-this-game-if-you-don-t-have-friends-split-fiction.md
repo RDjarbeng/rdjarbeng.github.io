@@ -9,6 +9,7 @@ tags:
   - Co-op games
 image: ''
 layout: personal
+image_alt: "Cover image for Don't Play This Game If You Don't Have Friends - Split Fiction"
 ---
 Split fiction co-op game. Available on steam.
 

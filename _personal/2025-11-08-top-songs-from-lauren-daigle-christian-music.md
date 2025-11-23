@@ -8,6 +8,7 @@ tags:
   - Christian Music
 image: ''
 layout: personal
+image_alt: "Cover image for Top Songs From Lauren Daigle- Christian Music"
 ---
 You say
 

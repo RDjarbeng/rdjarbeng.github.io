@@ -3,6 +3,7 @@ title: Quotes from the famous and not so famous
 date: 2025-04-27T13:28:00
 image: /assets/images/Warren_Buffett_quote_market.png
 layout: personal
+image_alt: "Cover image for Quotes from the famous and not so famous"
 ---
 In this post we'll take a look at interesting quotes I found across the internet and books I read. For a glimpse I'm featuring George Bernard Shaw and Captain Jack Sparrow.
 

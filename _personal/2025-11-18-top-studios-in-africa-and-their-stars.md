@@ -7,5 +7,6 @@ tags:
   - Music in Africa
 image: ''
 layout: personal
+image_alt: "Cover image for Top Studios in Africa and Their Stars"
 ---
 What are the top studios? What bangers have they produced? Sarkodie, Kizz Daniel, Burna Boy, Diamond Platinum, Southern African studios

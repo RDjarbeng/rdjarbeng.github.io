@@ -20,6 +20,7 @@ tags:
   - Frontend has become more complicated
 image: /assets/images/ChatGPT_meme.jpeg
 layout: personal
+image_alt: "Cover image for Let There Be Memes: A Curated Collection of Internet Gold"
 ---
 Welcome to my personal gallery of memes and pictures that have made me laugh, think, or just nod in solemn agreement. In the vast, chaotic landscape of the internet, these are a few of the gems I found... interesting
 Emotions vs logic

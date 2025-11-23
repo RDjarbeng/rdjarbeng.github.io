@@ -21,6 +21,7 @@ tags:
   - Platform Risk
 image: /assets/images/tiktok_shop_with_mikey_cover_image.webp
 layout: personal
+image_alt: "Cover image for He Made $2,000 in One Week With AI... Then TikTok Froze $3,000"
 ---
 First came the win: **$2,200 in profit** in just one week.
 Then came the loss: **$3,722 in earnings**, frozen and inaccessible.

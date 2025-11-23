@@ -15,6 +15,7 @@ tags:
   - Richard Discusses Giant Basket in Kigali
 image: /assets/images/gasabo_cropped.jpg
 layout: personal
+image_alt: "Cover image for Why is There a Giant Basket on This Building in Kigali?"
 ---
 First time visitors to Kigali might wonder why there is this giant basket on a building? I know I did.
 
