@@ -29,7 +29,7 @@ tags:
   - Datasets for Datascience
 title: 'Finding Your Fuel: A Guide to Popular Open Data Repositories'
 image: /assets/images/finding_your_data_fuel_cover.webp
-image_alt: 'futuristic illustration of a glowing blue digital brain made of network connections and data icons, set between two server racks, with the text "Finding Your Fuel: A Guide to Popular Open Data Repositories" and "rdjarbeng.com" overlaid.'
+image_alt: "futuristic illustration of a glowing blue digital brain made of network connections and data icons, set between two server racks, with the text 'Finding Your Fuel: A Guide to Popular Open Data Repositories' and 'rdjarbeng.com' overlaid."
 layout: post
 ---
 In data science and machine learning, data is the new oil—it's the fuel that powers our models and insights. But finding the _right_ data can be a challenge. Whether you're a seasoned researcher, a data scientist looking for a competition, or a student just starting, knowing where to look is key.
