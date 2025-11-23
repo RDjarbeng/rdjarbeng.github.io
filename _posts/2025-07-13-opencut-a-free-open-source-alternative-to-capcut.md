@@ -10,6 +10,7 @@ tags:
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png
 layout: post
+image_alt: "Cover image for OpenCut: A Free, Open-Source Alternative to CapCut"
 ---
 If you're a video editor frustrated with CapCut's recent changes, you're not alone. CapCut, once marketed as a free app, has shifted to a freemium model, adding watermarks to exported videos for free users on mobile and desktop and locking previously free features behind a paywall. Many users feel betrayed by this bait-and-switch tactic, as CapCut lured them in with free features only to reveal a more restrictive, premium-focused side. This growing discontent has sparked interest in open-source alternatives, and one project is stepping up to fill the gap: **OpenCut**.
 

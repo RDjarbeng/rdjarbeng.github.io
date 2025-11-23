@@ -12,6 +12,7 @@ title: Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts
 image: /assets/images/planet_california_wildfires.jpeg
 video: ''
 layout: post
+image_alt: "Cover image for Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts"
 ---
 In the wake of the devastating wildfires sweeping through the Los Angeles area, **Planet Labs**, known for their satellite imagery services, has stepped up to offer crucial support. On January 9, 2025, Planet announced through a [tweet](https://x.com/planet/status/1877395904820555919) that their Crisis Response Program has made available select non-commercial data for those directly involved in or supporting the response efforts.
 

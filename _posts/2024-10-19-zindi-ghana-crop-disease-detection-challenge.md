@@ -7,6 +7,7 @@ video: ""
 layout: post
 categories: ["News"]
 tags: [Hackathons, Ghana, Zindi, Machine Learning, Computer Vision]
+image_alt: "Cover image for Zindi -Ghana Crop Disease Detection Challenge"
 ---
 
 

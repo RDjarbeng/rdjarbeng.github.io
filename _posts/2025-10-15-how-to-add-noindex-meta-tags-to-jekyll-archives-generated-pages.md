@@ -9,6 +9,7 @@ tags:
   - Jekyll
 title: How to Add Noindex Meta Tags to Jekyll-Archives Generated Pages
 layout: post
+image_alt: "Cover image for How to Add Noindex Meta Tags to Jekyll-Archives Generated Pages"
 ---
 If you're using Jekyll with the `jekyll-archives` plugin to generate tag and category pages, you might notice that these pages can dominate your search engine results. Because tag and category pages often contain many links, search engines may prioritize them over your homepage and actual content. Using noindex tags allows search engines to still crawl these pages (following the links to your content) without ranking them in search results, ensuring your homepage and posts appear first.
 

@@ -9,6 +9,7 @@ tags:
 title: "I can't see you in Fog: A mobile scenario for low visibility driving"
 image: ''
 layout: post
+image_alt: "Cover image for I can't see you in Fog: A mobile scenario for low visibility driving"
 ---
 If I was afraid to cross a foggy road because I would not be seen by oncoming cars is there anything that can be done? Zebra crossing won't save me from getting hit if the driver can't see it.
 

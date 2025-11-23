@@ -21,6 +21,7 @@ tags:
 title: Why Does Restarting Your Computer (or Router) Actually Work?
 image: /assets/images/why_does_restarting_work_rdjarbeng_cover.webp
 layout: post
+image_alt: "Cover image for Why Does Restarting Your Computer (or Router) Actually Work?"
 ---
 Ever stared at your frozen screen, shrugged, and hit restart? Same with that finicky WiFi router. What _exactly_ does it do? Spoiler: Nobody really knows. It's the tech equivalent of turning off the light switch and back on to "fix" the bulb; except it works almost _every time_.
 

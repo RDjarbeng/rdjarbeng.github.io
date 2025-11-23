@@ -22,6 +22,7 @@ tags:
 title: 'The Evolution of a Side Project: My Countdown App'
 image: https://github.com/user-attachments/assets/792bcbd5-ec73-43e2-bac5-2328482da1b3
 layout: post
+image_alt: "Cover image for The Evolution of a Side Project: My Countdown App"
 ---
 In December 2021, I embarked on a project to create a simple countdown app to display time left till midnight. Then I decided to extend it further to count the days leading up to the New Year. Since then, it has evolved into something much more comprehensive and exciting!
 You can check out the site here:

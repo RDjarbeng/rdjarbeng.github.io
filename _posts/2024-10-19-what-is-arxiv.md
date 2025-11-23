@@ -7,6 +7,7 @@ video: ""
 layout: post
 categories: ["Research"]
 tags: [ArXiv, publishing, papers, research papers]
+image_alt: "Cover image for What is arXiv?"
 ---
 **arXiv** (pronounced "archive") is a pioneering open-access repository where researchers can upload preprints of their scientific papers before formal peer review. Launched in 1991, it revolutionized the way academic papers are shared, making cutting-edge research available to everyone, free of charge. Initially focused on physics, arXiv now covers a broad range of fields including mathematics, computer science, biology, statistics, economics, and more.
 

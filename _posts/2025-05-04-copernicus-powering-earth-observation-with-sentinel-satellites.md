@@ -7,6 +7,7 @@ title: 'Copernicus: Powering Earth Observation with Sentinel Satellites'
 image: /assets/images/copernicus_airq_new_delhi.png
 video: ''
 layout: post
+image_alt: "Cover image for Copernicus: Powering Earth Observation with Sentinel Satellites"
 ---
 The **Copernicus program**, the European Union’s premier Earth observation initiative, delivers free, high-quality data to monitor our planet’s environment. Led by the European Commission and the European Space Agency (ESA), Copernicus uses its **Sentinel satellites** to provide insights into climate change, disaster response, and more. Let’s explore how Copernicus works and the specific ways its Sentinel satellites are transforming our world.
 

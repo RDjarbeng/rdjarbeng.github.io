@@ -12,6 +12,7 @@ tags:
 title: Google Rich Results Testing Tool
 image: ''
 layout: post
+image_alt: "Cover image for Google Rich Results Testing Tool"
 ---
 What is the google rich results testing tool and how does it help you.
 

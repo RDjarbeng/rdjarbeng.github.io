@@ -6,6 +6,7 @@ image: /assets/images/servers.jpeg
 layout: post
 categories: ["Software Engineering"]
 tags: [Software engineering]
+image_alt: "Cover image for Hello World -Skynet is Self aware"
 ---
 # Hello world
 

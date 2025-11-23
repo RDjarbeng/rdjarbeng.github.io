@@ -11,6 +11,7 @@ tags:
   - Macbook Pro M4 chip
 title: Apple Macbook Pro M4 a bird's eye review
 layout: post
+image_alt: "Cover image for Apple Macbook Pro M4 a bird's eye review"
 ---
 Macbook Pro M4 does have fans, in fact it may come with multiple fans depending on the type you order.
 

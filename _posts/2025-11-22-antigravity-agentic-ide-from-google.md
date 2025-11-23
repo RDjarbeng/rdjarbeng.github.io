@@ -19,6 +19,7 @@ tags:
 title: 'Review: Google Antigravity License Agreement and First Impressions'
 image: /assets/images/antigravity_cover_image.webp
 layout: post
+image_alt: "Cover image for Review: Google Antigravity License Agreement and First Impressions"
 ---
 There has been significant discussion recently regarding "Antigravity." It is worth clarifying immediately that if you visit [antigravity.tech](https://www.antigravity.tech/), you will find a startup specializing in drone technology. While they rank highly in search results, they are unrelated to the subject of this post.
 

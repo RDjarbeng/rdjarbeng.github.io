@@ -12,6 +12,7 @@ tags:
   - USA Air Quality
 title: 'The Air We Breathe: A Global Journey in the Fight for a Cleaner Future'
 layout: post
+image_alt: "Cover image for The Air We Breathe: A Global Journey in the Fight for a Cleaner Future"
 ---
 Have you ever wondered about the air you breathe and how it's changed over time? Decades ago, smog-filled skies were a common sight in many of the world's major cities. Since then, a quiet but dramatic revolution in air quality has taken place. This post will take you on a global journey to explore this transformation. We'll start by defining the key pollutants and looking at the groundbreaking success of the U.S. Clean Air Act. Then, we'll travel across the world, from Canada and Europe to the bustling cities of Asia, South America, and Africa, to see how different nations are tackling one of the most fundamental environmental challenges of our time. Finally, we'll bring it all together to understand the shared lessons from this worldwide effort.
 

@@ -16,6 +16,7 @@ title: 'Earth Observation’s Promise and Barriers: A Down to Earth View'
 image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 video: ''
 layout: post
+image_alt: "Cover image for Earth Observation’s Promise and Barriers: A Down to Earth View"
 ---
 In this post I consider the transformative potential of satellite data for tackling global challenges like climate change, food security, and urban planning, while examining the real-world hurdles that limit its impact today. Yet a significant gap exists between what's possible and what's currently being implemented,  this article explores both the immense potential and current realities of satellite-based research.
 

@@ -15,6 +15,7 @@ title: Guide to Accessing Air Quality Data from US Embassies Worldwide
 image: /assets/images/airnow_africa.png
 layout: post
 video: ''
+image_alt: "Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide"
 ---
 > Update: As of March 2024, this website has been offline, with no estimated timeframe for its return.
 

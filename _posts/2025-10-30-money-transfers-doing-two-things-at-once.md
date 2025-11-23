@@ -10,6 +10,7 @@ tags:
 title: Money Transfers Doing Two Things At Once
 image: ''
 layout: post
+image_alt: "Cover image for Money Transfers Doing Two Things At Once"
 ---
 Most money transfers try to do 2 things at once, transfer money and convert the currency.
 

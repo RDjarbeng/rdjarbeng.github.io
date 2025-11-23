@@ -13,6 +13,7 @@ title: Revolutionizing Healthcare in Developing Nations Through Data
 image: /assets/images/hr_constraints_africa.png
 video: ''
 layout: post
+image_alt: "Cover image for Revolutionizing Healthcare in Developing Nations Through Data"
 ---
 Jeremy Howard, a prominent figure in artificial intelligence and healthcare innovation, highlights a critical issue in global healthcare: developing nations have less than 10% of the medical experts they need. This severe shortage means most patients lack access to proper medical diagnostics, while existing physicians are overwhelmed with work.
 

@@ -24,6 +24,7 @@ title: Why Do Websites and Emails Use Narrow Layouts?
 image: /assets/images/narrow_website_layout_grok.jpg
 layout: post
 video: ''
+image_alt: "Cover image for Why Do Websites and Emails Use Narrow Layouts?"
 ---
 Ever noticed how most websites—from a New York Times article to your email inbox—don't use the full width of your screen? This isn't a mistake; it's a deliberate design choice.
 

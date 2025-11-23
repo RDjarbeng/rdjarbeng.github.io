@@ -6,6 +6,7 @@ author: Richard
 image: /assets/images/old_node_js.png
 categories: ["Software Engineering"]
 tags: [NodeJs, raspberry pi, node version install]
+image_alt: "Cover image for Install-NodeJs-on-Raspberry-Pi"
 ---
 
 <!-- Todo: fix this link -->

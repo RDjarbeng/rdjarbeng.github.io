@@ -9,6 +9,7 @@ tags:
 title: Crossover LinkedIn Workflow Broken
 image: ''
 layout: post
+image_alt: "Cover image for Crossover LinkedIn Workflow Broken"
 ---
 I just signed up using the option to "sign up with linkedIn" and noticed that my linkedIn profile isn't connected. Seems something is broken on your end. 
 

@@ -17,6 +17,7 @@ title: Adapting The Danger of a Single Story:AI-Generated Video
 image: /assets/images/danger_of_a_single_story_did.png
 layout: post
 video: ''
+image_alt: "Cover image for Adapting The Danger of a Single Story:AI-Generated Video"
 ---
 Witness an innovative AI-generated video adaptation of Chimamanda Ngozi Adichie’s iconic TED Talk, _"The Danger of a Single Story."_ The script was crafted by ChatGPT and brought to life by an AI avatar using [D-ID’s video generation tool](https://www.d-id.com/). This project was created about a year ago, offering an early look at the capabilities of generative AI. I would love to see what the current state of the art is for AI video generation.
 

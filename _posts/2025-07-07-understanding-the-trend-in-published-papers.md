@@ -13,6 +13,7 @@ tags:
 title: Understanding the Trend in Published Papers
 image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
+image_alt: "Cover image for Understanding the Trend in Published Papers"
 ---
 In scientific research, the journey from a novel idea to a widely accepted standard is an iterative process. Diagrams often outline this lifecycle, from initial papers to standardization and public availability, divided into **Peer Review** and **Standardisation** phases. This reflects the collaborative nature of science and mirrors innovations in technology, business, or social movements. This post breaks down each stage with examples and analogies to connect with your own experiences.
 

@@ -5,6 +5,7 @@ date: 2024-08-26
 image: /assets/images/programming_language.png
 categories: ["Software Engineering"]
 tags: [programming languages,Software engineering, comparison]
+image_alt: "Cover image for Why Not Stick to One Programming Language for Everything?"
 ---
 
 It might seem like a great idea to use your favorite programming language for every project. However, the reality is that the best programming language—whether it's C++, Python, JavaScript, or another—depends on the specific requirements and the problem you're trying to solve.

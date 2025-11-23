@@ -7,6 +7,7 @@ video: ""
 layout: post
 categories: ["AI"]
 tags: [Machine Learning, gradients, python, pytorch, loss calculation, loss.backward]
+image_alt: "Cover image for Understanding Gradients with loss.backward() in PyTorch"
 ---
 In this post, let us take a closer look at how gradients are calculated in PyTorch, particularly focusing on the interaction between the `loss.backward()` function and a variable’s `.grad` attribute. If you've ever wondered how PyTorch handles gradients under the hood or why specific operations return the gradients as they do, then this post is for you.
 ![man holding glowing test tube background with math equations ](/assets/images/math_science.jpeg)

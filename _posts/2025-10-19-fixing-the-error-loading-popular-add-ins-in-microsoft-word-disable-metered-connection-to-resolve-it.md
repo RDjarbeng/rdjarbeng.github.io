@@ -9,6 +9,7 @@ tags:
 title: 'Fixing the "Error Loading Popular Add-ins" in Microsoft Word: Disable Metered Connection to Resolve It'
 image: ''
 layout: post
+image_alt: "Cover image for Fixing the \"Error Loading Popular Add-ins\" in Microsoft Word: Disable Metered Connection to Resolve It"
 ---
 If you've ever fired up Microsoft Word, headed to **Insert > Get Add-ins**, and been slapped with the frustrating message *"There was an error loading popular add-ins. Please dismiss this flyout and try again"*, you're not alone. This pesky error can halt your productivity dead in its tracks, especially when you're trying to grab handy tools like citation managers or diagramming extensions. I ran into this exact issue recently while using **Microsoft Office Professional Plus 2021** on a Windows laptop tethered to mobile data via hotspot. After hours of scouring forums, Microsoft docs, and Reddit threads—only to come up empty-handed on a clear fix—I finally cracked it.
 

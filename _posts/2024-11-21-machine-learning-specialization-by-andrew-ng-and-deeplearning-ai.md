@@ -12,6 +12,7 @@ title: Machine Learning Specialization by Andrew Ng and DeepLearning.AI
 image: /assets/images/andrew_ng_coursera.png
 video: ""
 layout: post
+image_alt: "Cover image for Machine Learning Specialization by Andrew Ng and DeepLearning.AI"
 ---
 The **Machine Learning Specialization**, created by Andrew Ng and DeepLearning.AI, is a revamped and modernized version of the original Stanford Machine Learning course, one of the most popular and foundational AI courses ever made. This updated program is designed to make machine learning more accessible to beginners while incorporating the latest tools, techniques, and best practices in the field.
 

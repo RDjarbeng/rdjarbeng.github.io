@@ -14,6 +14,7 @@ tags:
 title: Agent57 for Reinforcement Learning beats Atari benchmark
 image: ''
 layout: post
+image_alt: "Cover image for Agent57 for Reinforcement Learning beats Atari benchmark"
 ---
 Post about Agent 57 
 

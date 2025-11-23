@@ -16,6 +16,7 @@ title: Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscr
 image: /assets/images/elon_la_fire_dtc.png
 video: ''
 layout: post
+image_alt: "Cover image for Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers"
 ---
 In a recent development that highlights the innovative strides in satellite communication, Elon Musk took to X (formerly Twitter) to announce that Starlink's Direct to Cell service is now available in Los Angeles, California, specifically for subscribers of T-Mobile. This announcement comes at a crucial time, especially considering the recent wildfires that have disrupted traditional communication channels in the area.
 

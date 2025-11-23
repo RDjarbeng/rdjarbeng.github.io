@@ -15,6 +15,7 @@ title: The Imperfections of Machine Learning
 image: /assets/images/ml_false positive_cropped_charger_rd.jpg
 layout: post
 video: ''
+image_alt: "Cover image for The Imperfections of Machine Learning"
 ---
 While machine learning is a powerful tool, it's important to remember that models are not infallible. In fact, they can sometimes be overconfident in their predictions, as shown in this image where a charger is misclassified as a cell phone with 94% confidence.
 

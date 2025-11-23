@@ -25,6 +25,7 @@ tags:
 title: 'The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?'
 image: /assets/images/google_vs_ffmpeg_cover.webp
 layout: post
+image_alt: "Cover image for The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?"
 ---
 In the vast world of software, a recent conflict has flared up between Google's elite security team and the volunteer maintainers of FFmpeg, a project that powers countless apps you use every day. This isn't just a technical squabble; it's a story about AI, corporate responsibility, and the foundations of the open-source world.
 

@@ -22,6 +22,7 @@ tags:
 title: Moving the Start Button Back to the Left in Windows 11
 image: ''
 layout: post
+image_alt: "Cover image for Moving the Start Button Back to the Left in Windows 11"
 ---
 When Windows 11 first launched, many people were surprised (and annoyed) that the Start button and taskbar icons were centered by default. The good news? Moving everything back to the classic left-aligned position takes literally four clicks—no registry hacks, no third-party tools required.
 

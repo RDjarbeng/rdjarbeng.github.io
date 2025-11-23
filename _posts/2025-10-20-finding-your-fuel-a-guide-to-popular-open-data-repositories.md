@@ -30,6 +30,7 @@ tags:
 title: 'Finding Your Fuel: A Guide to Popular Open Data Repositories'
 image: /assets/images/finding_your_data_fuel_cover.webp
 layout: post
+image_alt: "Cover image for Finding Your Fuel: A Guide to Popular Open Data Repositories"
 ---
 In data science and machine learning, data is the new oil—it's the fuel that powers our models and insights. But finding the _right_ data can be a challenge. Whether you're a seasoned researcher, a data scientist looking for a competition, or a student just starting, knowing where to look is key.
 

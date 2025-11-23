@@ -13,6 +13,7 @@ title: 'Exploring Machine Learning: The Best Resources for Beginners'
 image: /assets/images/jason_brownlee_start_ml.png
 video: ''
 layout: post
+image_alt: "Cover image for Exploring Machine Learning: The Best Resources for Beginners"
 ---
 If you're just stepping into the world of machine learning, finding the right resources can feel like navigating a labyrinth. Thankfully, Jason Brownlee at Machine Learning Mastery has compiled an excellent guide titled ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/). Jason Brownlee has earned a reputation for providing solutions to machine learning errors and seems to be a good person to take recommendations on where to start. I his [words](https://machinelearningmastery.com/about/), he  helps  **developers** get results with **machine learning**."
 

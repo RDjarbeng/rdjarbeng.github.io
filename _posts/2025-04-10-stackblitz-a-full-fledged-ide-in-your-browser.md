@@ -12,6 +12,7 @@ title: 'StackBlitz: A Full-IDE in Your Browser'
 image: /assets/images/stackblitz_logo.jpeg
 video: ''
 layout: post
+image_alt: "Cover image for StackBlitz: A Full-IDE in Your Browser"
 ---
 [Stackblitz](https://stackblitz.com/) allowing me to access the terminal from the browser is one of the reasons I use it. Very cool. It feels like a full-fledged IDE right in your browser, and one feature I love is the built-in terminal. I can run commands like npm install or npm start without leaving my tab—perfect for quick prototyping or debugging. For example, while working on my air quality dashboard (see the screenshot below), I used the terminal to install dependencies and run my Next.js app seamlessly.
 

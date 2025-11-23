@@ -11,6 +11,7 @@ tags:
 title: The Technology Behind Money Transfers
 image: ''
 layout: post
+image_alt: "Cover image for The Technology Behind Money Transfers"
 ---
 How does money transfer work and what is the technology underneath.
 

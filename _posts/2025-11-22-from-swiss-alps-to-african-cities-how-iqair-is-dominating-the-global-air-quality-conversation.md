@@ -21,6 +21,7 @@ tags:
 title: 'From Swiss Alps to African Cities: How IQAir is Dominating the Global Air Quality Conversation'
 image: /assets/images/iqair_air_quality_cover.webp
 layout: post
+image_alt: "Cover image for From Swiss Alps to African Cities: How IQAir is Dominating the Global Air Quality Conversation"
 ---
 When you think of a technology company, you might picture a social media app or a smartphone. But one Swiss company has quietly built a global empire on something more fundamental: the air we breathe.
 

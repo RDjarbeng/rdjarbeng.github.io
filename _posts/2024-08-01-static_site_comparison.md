@@ -5,6 +5,7 @@ author: Richard
 image: /assets/images/static_site.jpeg
 categories: ["Software development"]
 tags: [Software engineering, dev ops, cloud hosting, hosting providers, comparison]
+image_alt: "Cover image for Comparison of Static Site Hosting Options"
 ---
 
 When it comes to hosting static sites, there are numerous options available, to make an informed decision, here’s a comparison of some of the most popular static site hosting providers. This table summarizes the key features of each provider, so you can quickly see which one might be the best fit for your needs.

@@ -5,6 +5,7 @@ date: 2024-08-05
 image: /assets/images/github_models_pic.png
 categories: ["AI"]
 tags: [Artificial Intelligence, Github,AI engineer]
+image_alt: "Cover image for Introducing GitHub Models"
 ---
 
 

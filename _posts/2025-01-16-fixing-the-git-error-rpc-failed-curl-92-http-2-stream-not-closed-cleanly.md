@@ -12,6 +12,7 @@ title: 'Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream Not Closed Clean
 image: /assets/images/git_stream_error_screenshot.png
 video: ''
 layout: post
+image_alt: "Cover image for Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream Not Closed Cleanly"
 ---
 If you've encountered the following error while using Git, you're not alone:
 

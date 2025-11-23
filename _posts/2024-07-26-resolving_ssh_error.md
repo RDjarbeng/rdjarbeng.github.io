@@ -5,6 +5,7 @@ author: Richard
 image: /assets/images/error_image.webp
 categories: ["Software Engineering"]
 tags: [Software engineering, SSH, fixing ssh error]
+image_alt: "Cover image for Resolving SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED' Error"
 ---
 
 If you encounter this error when connecting to your Raspberry Pi via SSH using its IP address or rasperrypi.local:

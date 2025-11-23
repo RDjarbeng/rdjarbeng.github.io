@@ -6,6 +6,7 @@ image: https://github.com/user-attachments/assets/aa1035db-077c-439a-971e-5f8a00
 layout: post
 categories: ["UI"]
 tags: [Software engineering, apps, UI/UX, countdown]
+image_alt: "Cover image for The UI- The Challenge of Color Themes"
 ---
 ![Light mode and dark mode comparison](https://github.com/user-attachments/assets/aa1035db-077c-439a-971e-5f8a002daaeb)
 

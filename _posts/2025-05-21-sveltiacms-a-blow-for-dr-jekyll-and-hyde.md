@@ -9,6 +9,7 @@ title: 'My Experience with SveltiaCMS: A Game-Changer for Website Management'
 image: /assets/images/sveltia-logo.svg
 layout: post
 video: ''
+image_alt: "Cover image for My Experience with SveltiaCMS: A Game-Changer for Website Management"
 ---
 **TL;DR**: SveltiaCMS continues to evolve, delivering essential features that make content management a breeze.
 

@@ -36,6 +36,7 @@ title: Why Can't I Just Send Money With My Visa Card?
 image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
+image_alt: "Cover image for Why Can't I Just Send Money With My Visa Card?"
 ---
 Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders.
 This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.

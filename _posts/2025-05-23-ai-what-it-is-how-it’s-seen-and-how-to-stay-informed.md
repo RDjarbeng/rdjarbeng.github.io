@@ -16,6 +16,7 @@ title: 'AI: What It Is, How It’s Seen, and How to Stay Informed'
 image: /assets/images/rtdetr/cat_prediction_rtdetr.jpg
 video: ''
 layout: post
+image_alt: "Cover image for AI: What It Is, How It’s Seen, and How to Stay Informed"
 ---
 Artificial Intelligence (AI) is driving innovation and sparking curiosity, but the hype can make it hard to see clearly. Whether you want just enough knowledge to follow AI news and conversations or aim to become an expert, this post breaks down what AI is, how people perceive it, why tech leaders dominate its coverage, how to stay informed without getting lost, and the path to expertise.
 

@@ -9,6 +9,7 @@ tags:
   - IOT
 title: Precision Agriculture With IOT And Financing For Farms
 layout: post
+image_alt: "Cover image for Precision Agriculture With IOT And Financing For Farms"
 ---
 What is precision agriculture?
 

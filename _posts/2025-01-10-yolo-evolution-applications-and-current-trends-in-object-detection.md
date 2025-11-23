@@ -12,6 +12,7 @@ title: 'YOLO: Evolution, Applications, and Current Trends in Object Detection'
 image: /assets/images/ultralytics_yolo.png
 video: ''
 layout: post
+image_alt: "Cover image for YOLO: Evolution, Applications, and Current Trends in Object Detection"
 ---
 YOLO (You Only Look Once) has transformed from a groundbreaking concept to an industry standard in object detection since its inception in 2015. Initially developed by Joseph Redmon and Ali Farhadi at the University of Washington, YOLO gained popularity for its unprecedented speed and accuracy.
 

@@ -12,6 +12,7 @@ tags:
 title: What is Particulate Matter (PM2.5) and the Environmental Significance
 image: /assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg
 layout: post
+image_alt: "Cover image for What is Particulate Matter (PM2.5) and the Environmental Significance"
 ---
 Particulate Matter (PM) comprises a diverse mix of solid and liquid particles suspended in the atmosphere, varying in size, chemical composition, and origin (U.S. Environmental Protection Agency [EPA], 2023). Among these, PM2.5—particles with an aerodynamic diameter of 2.5 micrometers or less—is a critical air pollutant due to its ability to penetrate deep into the respiratory system and bloodstream, posing significant health and environmental risks (World Health Organization [WHO], 2021). This article examines the composition of PM, the primary and secondary sources of PM2.5, and their broader implications, drawing on peer-reviewed literature and authoritative sources to provide a comprehensive overview.
 

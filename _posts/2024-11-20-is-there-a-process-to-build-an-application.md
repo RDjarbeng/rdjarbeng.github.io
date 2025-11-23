@@ -7,6 +7,7 @@ video: ""
 layout: post
 categories: ["Software Engineering"]
 tags: [Software engineering, Software process, app building, process]
+image_alt: "Cover image for Is There a Process to Build an Application?"
 ---
 Generally, it is a good idea to break down the steps you need and then test each one before moving to the next. However, the particular process to follow will depend on the company and their techniques, such as agile methodologies, and the specific application you are building.
 

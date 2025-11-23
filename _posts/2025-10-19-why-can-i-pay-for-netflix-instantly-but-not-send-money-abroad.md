@@ -26,6 +26,7 @@ tags:
 title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut
 image: /assets/images/revolut_sending_cross_border_cover.webp
 layout: post
+image_alt: "Cover image for Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
 ---
 In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I wrote about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.
 

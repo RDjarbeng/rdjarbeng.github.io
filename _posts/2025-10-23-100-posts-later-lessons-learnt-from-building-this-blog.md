@@ -10,6 +10,7 @@ tags:
 title: 100 posts later-lessons learnt from building this blog
 image: ''
 layout: post
+image_alt: "Cover image for 100 posts later-lessons learnt from building this blog"
 ---
 Changes since the start:
 

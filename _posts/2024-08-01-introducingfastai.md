@@ -5,6 +5,7 @@ author: Richard
 image: /assets/images/fastaibook.webp
 categories: ["AI"]
 tags: [Artificial Intelligence, fast ai, Machine Learning, deep learning, practical deep learning]
+image_alt: "Cover image for Introducing fastai-Practical deep learning without a PhD"
 ---
 In case you ever have to do Deep learning or interested in building applications with neural networks in a hands-on way you can check out [fastai](https://course.fast.ai/) by Jeremy Howard.
 

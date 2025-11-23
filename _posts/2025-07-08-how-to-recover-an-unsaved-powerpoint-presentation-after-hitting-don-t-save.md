@@ -11,6 +11,7 @@ tags:
 title: '"Don''t Save" -How to Recover an Unsaved PowerPoint Presentation After Mistake'
 image: /assets/images/recover_unsaved_presentation_ppt.png
 layout: post
+image_alt: "Cover image for Don''t Save\" -How to Recover an Unsaved PowerPoint Presentation After Mistake"
 ---
 How to Recover an Unsaved PowerPoint Presentation After Hitting "Don't Save"
 

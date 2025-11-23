@@ -9,6 +9,7 @@ tags:
 title: The AI Chatbots Annual Class Reunion
 image: ''
 layout: post
+image_alt: "Cover image for The AI Chatbots Annual Class Reunion"
 ---
 ## Gemini
 

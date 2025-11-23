@@ -6,6 +6,7 @@ author: Richard
 image: /assets/images/peterKimanziPortfolio.png
 categories: ["Software Engineering"]
 tags: [Software engineering, Peter Kimanzi, web developer, Kenya, html, css, js]
+image_alt: "Screenshot of Peter Kimanzi's portfolio website featuring a dark theme, his name, and title as Software Engineer."
 ---
 
 _Developer from Nairobi, Kenya._

@@ -18,6 +18,7 @@ tags:
 title: Agentic Object Detection and Document Extraction with Landing.ai
 image: /assets/images/agentic_obj_dection_landingai_cover.png
 layout: post
+image_alt: "Cover image for Agentic Object Detection and Document Extraction with Landing.ai"
 ---
 This week, I dive into agentic object detection and document extraction using tools from Landing.ai, one of Andrew Ng's innovative startups! Inspired by Andrew Ng's recent post on X about their blazing-fast text extraction upgrades, I put their tech to the test. Here's what I found:
 

@@ -12,6 +12,7 @@ title: Machine Learning Experts to Follow
 image: /assets/images/andrew_ng_syd.jpg
 video: ''
 layout: post
+image_alt: "Cover image for Machine Learning Experts to Follow"
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI. 
 

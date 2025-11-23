@@ -19,6 +19,7 @@ title: 'SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory'
 image: /assets/images/Samurai_paper_logo.png
 video: ''
 layout: post
+image_alt: "Cover image for SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory"
 ---
 A new paper, titled _"SAMURAI: Adapting Segment Anything Model for Zero-Shot Visual Tracking with Motion-Aware Memory"_, introduces an enhancement to visual object tracking building upon Segment Anything Model 2 (SAM 2). This work from the University of Washington addresses key challenges in object tracking, particularly in crowded or dynamic environments, and demonstrates significant improvements in accuracy and robustness.
 

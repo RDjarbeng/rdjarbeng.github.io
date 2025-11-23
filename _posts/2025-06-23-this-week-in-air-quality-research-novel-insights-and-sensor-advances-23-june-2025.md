@@ -13,6 +13,7 @@ tags:
 title: 'This Week in Air Quality Research: Novel Insights and Sensor Advances (23-June-2025)'
 image: /assets/images/air_quality_sensors_city_background.jpg
 layout: post
+image_alt: "Cover image for This Week in Air Quality Research: Novel Insights and Sensor Advances (23-June-2025)"
 ---
 I have been keeping up with air quality research to understand emerging risks, technological advances, and policy implications. This week I'm spotlighting literature that highlights the increasing role of low-cost sensors, real-time exposure assessment, and high-resolution monitoring—from global cities to African urban centers. Below, I summarize some key papers, discuss their impact, and provide references for deeper exploration. African-focused research is separated for emphasis.
 

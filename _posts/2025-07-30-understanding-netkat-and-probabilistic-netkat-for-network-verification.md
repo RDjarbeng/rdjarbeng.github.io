@@ -15,6 +15,7 @@ tags:
 title: Understanding NetKAT and Probabilistic NetKAT for Network Verification
 image: ''
 layout: post
+image_alt: "Cover image for Understanding NetKAT and Probabilistic NetKAT for Network Verification"
 ---
 Network management has evolved from manual, error-prone configurations to formal, verifiable systems. [NetKAT](https://netkat.org/), a domain-specific language built on Kleene Algebra with Tests (KAT), offers a rigorous way to define and verify network policies. Its probabilistic extension, Probabilistic NetKAT (ProbNetKAT), introduces randomness to model real-world scenarios like load balancing or 5G network slicing. This post explores NetKAT, its probabilistic variant, their applications in cloud and 5G networks, and their significance in modern network verification, based on a detailed discussion of key concepts.
 

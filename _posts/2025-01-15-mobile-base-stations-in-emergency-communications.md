@@ -14,6 +14,7 @@ title: Cybertrucks as mobile Base Stations in Emergency Communications
 image: /assets/images/cybertruck.jpeg
 video: ''
 layout: post
+image_alt: "Cover image for Cybertrucks as mobile Base Stations in Emergency Communications"
 ---
 - Elon Musk is deploying Tesla Cybertrucks equipped with Starlink terminals in a grid pattern to provide internet connectivity and power in areas of Los Angeles and Malibu affected by wildfires, highlighting a private sector response to a natural disaster.
 - This initiative comes after Musk's criticism of California's wildfire management, suggesting a comparison between his actions and the state's response, which adds a layer of socio-political commentary to the [post.](https://x.com/elonmusk/status/1878550409851093287)

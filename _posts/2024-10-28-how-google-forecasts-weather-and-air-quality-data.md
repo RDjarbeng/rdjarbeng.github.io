@@ -7,6 +7,7 @@ video: ""
 layout: post
 categories: ["AI"]
 tags: [Google, Weather, Air quality,Artificial Intelligence, Machine Learning, Business, how Google works]
+image_alt: "Cover image for How Google forecasts Weather and Air Quality Data"
 ---
 
 Google's weather forecasts are created using an internal forecasting system that combines weather models and observations from various global weather agencies. The primary data sources for Google's weather forecasting include:

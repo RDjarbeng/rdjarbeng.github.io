@@ -26,6 +26,7 @@ title: Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphy
 image: /assets/images/pamely_cmu_website.png
 layout: post
 video: ''
+image_alt: "Cover image for Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL"
 ---
 Carnegie Mellon University Africa (CMU-Africa) has been at the forefront of health technology innovations, particularly with their recent development aimed at addressing neonatal health issues in developing countries. Their latest project involves the use of artificial intelligence to detect birth asphyxia, a condition critical for newborn health if not identified and treated promptly.
 

@@ -10,6 +10,7 @@ tags:
 title: My Money Is Bigger Than Yours-Currency analysis by volume
 image: ''
 layout: post
+image_alt: "Cover image for My Money Is Bigger Than Yours-Currency analysis by volume"
 ---
 Let's do an analysis of the major currencies by volume of trade. Let's take a look at the top 10
 

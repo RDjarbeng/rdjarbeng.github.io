@@ -18,6 +18,7 @@ title: Explore the Fascinating World of Satellite Orbits with Keeptrack.space
 image: /assets/images/keeptrack.png
 video: ''
 layout: post
+image_alt: "Cover image for Explore the Fascinating World of Satellite Orbits with Keeptrack.space"
 ---
 I recently stumbled upon an incredible tool called [Keeptrack.space](https://keeptrack.space/) that brings the mesmerizing world of satellite orbits to life. Check out the short video below to see it in action! The colorful dots gracefully orbiting Earth represent satellites, and with a single click, you can dive into detailed information about each one. It’s mind-blowing to watch some satellites zip across entire countries in seconds.
 

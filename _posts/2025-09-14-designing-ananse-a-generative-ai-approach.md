@@ -21,6 +21,7 @@ tags:
 title: Designing ananse a generative AI approach
 image: /assets/images/ananse_design_cover_rdjarbeng.JPG
 layout: post
+image_alt: "Cover image for Designing ananse a generative AI approach"
 ---
 How do you design a character of legend? A myth? Known only from stories told by grandparents to their grandchildren. A character so wise that his wisdom extends beyond his hut and places he’s travelled. A character who is said to sometimes be a spirit, sometimes a man, sometimes a spider and sometimes just a fleeting whisper told to scare children into behaving. If you could paint him it would be easy to have a way to visualize what he looks like. Unfortunately this character comes from a time before modern smartphones or else we would have pictures of him we can reference. Also, this character sometimes represents the desires of man itself, such as greed? How do you paint a picture of greed? Of envy? Of cunning and shrewdness?
 

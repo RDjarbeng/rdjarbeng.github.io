@@ -9,6 +9,7 @@ tags:
   - GenAI
 title: A smart guide for navigating software-AI tools as support agents
 layout: post
+image_alt: "Cover image for A smart guide for navigating software-AI tools as support agents"
 ---
 Sometimes what I use these AI tools for: as a help section for different apps. For example I find asking Grok or Gemini about fusion360 a CAD modeling tool, how to configure certain settings in my browser, what the new app I just downloaded can do and how to work with certain features is better, in terms of time consumed, than browsing their documentation or watching training videos. For instance if I wanted to add a payment link for an item on my website for users to purchase, a tutorial probably exists but from my forecast I might spend hours implementing something that probably should take minutes if I know what I'm doing.
 

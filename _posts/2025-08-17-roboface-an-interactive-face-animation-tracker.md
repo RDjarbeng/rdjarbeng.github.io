@@ -17,6 +17,7 @@ tags:
 title: Roboface-an Interactive Face Animation Tracker
 image: /assets/images/face_animation_cover.webp
 layout: post
+image_alt: "Cover image for Roboface-an Interactive Face Animation Tracker"
 ---
 I want you to imagine a character that tracks your mouse and expresses emotions based on how you interact with it. Emotions range from happy, surprised, bored, or neutral. The character in this case is a 2D face, a playful experiment to build something that feels alive. See it [on GitHub](https://github.com/RDjarbeng/interactive_face_animation) or try the [live demo](https://roboface.netlify.app/).
 

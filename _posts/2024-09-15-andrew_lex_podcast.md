@@ -5,6 +5,7 @@ date: 2024-08-26
 image: /assets/images/andrewng_lex.png
 categories: ["AI"]
 tags: [Lex Fridman, Artificial Intelligence, Machine Learning, Lex podcast, Andrew Ng]
+image_alt: "Cover image for Lex Fridman and Andrew Ng on Deep learning - Lex Podcast"
 ---
 
 

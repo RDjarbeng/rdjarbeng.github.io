@@ -12,6 +12,7 @@ title: "Kaggle competitions: Gateway to Data Science Success"
 image: /assets/images/kaggle_competitions.png
 video: ""
 layout: post
+image_alt: "Cover image for Kaggle competitions: Gateway to Data Science Success"
 ---
 Imagine a place where data scientists from around the world gather to solve real-world problems, compete for substantial prizes, and build their careers. That's Kaggle competitions in a nutshell - a platform that not only transforms data science into an exciting sport but also opens doors to remarkable opportunities.
 

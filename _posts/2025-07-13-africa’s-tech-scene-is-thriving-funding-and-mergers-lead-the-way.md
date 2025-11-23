@@ -31,6 +31,7 @@ tags:
 title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
 image: /assets/images/africa_tech_startups_1_rdjarbeng_gk.jpg
 layout: post
+image_alt: "Cover image for From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future"
 ---
 Africa’s technology ecosystem is moving forward in 2025, as startups secure big investments and join forces to make a bigger impact. From mobile apps for money transfers to solar power for rural areas, African innovators are showing the world what’s possible. In a recent newsletter, [Norrsken East Africa](https://www.norrsken.org/) shared exciting updates on this growth, and we’re diving into the details to show how Africa’s tech scene is stronger than ever.
 

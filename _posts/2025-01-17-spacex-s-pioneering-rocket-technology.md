@@ -12,6 +12,7 @@ title: SpaceX Pioneering Rocket Technology
 image: /assets/images/space_x_gallery.avif
 video: ''
 layout: post
+image_alt: "Cover image for SpaceX Pioneering Rocket Technology"
 ---
 SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology with several groundbreaking innovations:
 
