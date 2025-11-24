@@ -29,11 +29,13 @@ tags:
   - Innovation
   - Entrepreneurship
 title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
-image: /assets/images/africa_tech_startups_1_rdjarbeng_gk.jpg
+image: /assets/images/norrsken_africa_tech_boom_cover.webp
+image_alt: 'A stylized, glowing, circuit-board map of Africa overlaid on a digital background with radiating connections. Key sectors and themes are highlighted around the map with icons and text, indicating a growing technology ecosystem. The highlighted sectors are Fintech (smartphone icon with an arrow), Clean Energy (solar panel and house icon), Healthtech (heart with a plus sign icon), and Mergers & Acquisitions (M&A acronym, appearing twice). Text reads: "Africa''s Tech Ecosystem Moving Forward" and "AFRICA''S TECH BOOM 2025: INVESTMENTS & INNOVATION."'
 layout: post
-image_alt: "Cover image for From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future"
 ---
 Africa’s technology ecosystem is moving forward in 2025, as startups secure big investments and join forces to make a bigger impact. From mobile apps for money transfers to solar power for rural areas, African innovators are showing the world what’s possible. In a recent newsletter, [Norrsken East Africa](https://www.norrsken.org/) shared exciting updates on this growth, and we’re diving into the details to show how Africa’s tech scene is stronger than ever.
+
+![A stylized, glowing, circuit-board map of Africa overlaid on a digital background with radiating connections. Key sectors and themes are highlighted around the map with icons and text, indicating a growing technology ecosystem. The highlighted sectors are Fintech (smartphone icon with an arrow), Clean Energy (solar panel and house icon), Healthtech (heart with a plus sign icon), and Mergers & Acquisitions (M&A acronym, appearing twice). Text reads: "Africa's Tech Ecosystem Moving Forward" and "AFRICA'S TECH BOOM 2025: INVESTMENTS & INNOVATION."](/assets/images/norrsken_africa_tech_boom_cover.webp "Africa's Tech Boom 2025: Investments & Innovation")
 
 ## More Money, Bigger Moves
 
