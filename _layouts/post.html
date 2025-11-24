@@ -69,6 +69,25 @@ layout: default
       </div>
     </div>
   {% endif %}
+  <div style="margin-top: 1rem; display: flex; align-items: center;">
+    <applause-button style="width: 58px; height: 58px;" color="#2ecc71" multiclap="true"></applause-button>
+    <span id="clap-label" style="margin-left: 10px; font-weight: bold;"></span>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const button = document.querySelector("applause-button");
+      const label = document.getElementById("clap-label");
+      if (button && label) {
+        const updateLabel = (count) => { label.textContent = count === 1 ? "clap" : "claps"; };
+        button.addEventListener("clapped", (e) => updateLabel(e.detail.count));
+        if (button.initialClapCount) {
+          button.initialClapCount.then(count => updateLabel(count));
+        } else {
+          label.textContent = "claps";
+        }
+      }
+    });
+  </script>
 </div>
 
   <hr class="post-separator">
