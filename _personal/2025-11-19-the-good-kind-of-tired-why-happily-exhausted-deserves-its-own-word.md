@@ -27,12 +27,10 @@ tags:
   - Danish words
   - emotional vocabulary
 image: /assets/images/happily_exhausted_cover_image.webp
+image_alt: 'Illustration of a man leaning happily exhausted against a large rock on a mountain top at sunset. The text reads: "The Good Kind of Tired: Why ''Happily Exhausted'' Deserves Its Own Word.'
 layout: personal
-image_alt: "Cover image for The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word"
 ---
-You know the feeling.
-
-Your legs are jelly after the final whistle, your eyes burn after the last line of code compiles, your arms ache from carrying a laughing kid on your shoulders all day at the zoo.
+You know the feeling. Your legs are jelly after the final whistle, your eyes burn after the last line of code compiles, your arms ache from carrying a laughing kid on your shoulders all day at the zoo.
 By every objective measure you should be miserable… but you’re grinning like an idiot.
 
 We’ve all been there, yet English still doesn’t have a single, perfect word for it.
@@ -46,6 +44,8 @@ Other languages do:
 In English we make do with phrases: _happily exhausted_, _pleasantly tired_, _blissfully wrecked_, or simply “that good kind of tired.”
 
 ### The Happy [Sisyphus](https://en.wikipedia.org/wiki/Sisyphus)
+
+![Illustration of a man leaning happily exhausted against a large rock on a mountain top at sunset. The text reads: "The Good Kind of Tired: Why 'Happily Exhausted' Deserves Its Own Word.](/assets/images/happily_exhausted_cover_image.webp "The Good Kind of Tired: Why 'Happily Exhausted' Deserves Its Own Word")
 
 Camus famously said the struggle itself toward the heights is enough to fill a man’s heart. Most of us picture poor Sisyphus cursing the boulder as it rolls back down for the ten-thousandth time.
 
