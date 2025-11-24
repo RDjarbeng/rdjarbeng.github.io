@@ -2,39 +2,40 @@
 layout: default
 ---
 <div class="personal-container">
-<div class="post-header">
-  <h1>{{ page.title }}</h1>
-  <div class="author_date">
-    <!-- Display full date with time if the time is provided, otherwise just the date -->
-    Published: {{ page.date | date: "%B %-d, %Y at %-I:%M %p" }}
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
-    <div class="last_edited">
-      Last edited: {{ page.last_modified_at | date: '%-d %B,%Y at %-I:%M %p ' }}
-    </div>
-    
-    {% if author %}
-    <div>
-      Author: <a href="{{ author.url| relative_url  }}" class="author">{{ author.display_name }}</a>
-    </div>
-    {% endif %}
-  </div>
-</div>
-
-<!-- Something's here {{page.author}} -->
-{{ content }}
-
-<!-- {% if page.tags.size > 0 %}
-    <div class="tags-section">
-      <span class="meta-label">Tagged In:</span>
-      <div class="tags-container">
-        {% for tag in page.tags %}
-          <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
+  <div class="post-header">
+    <h1>{{ page.title }}</h1>
+    <div class="author_date">
+      <!-- Display full date with time if the time is provided, otherwise just the date -->
+      Published: {{ page.date | date: "%B %-d, %Y at %-I:%M %p" }}
+      {% assign author = site.authors | where: 'short_name', page.author | first %}
+      <div class="last_edited">
+        Last edited: {{ page.last_modified_at | date: '%-d %B,%Y at %-I:%M %p ' }}
       </div>
+
+      {% if author %}
+      <div>
+        Author: <a href="{{ author.url| relative_url  }}" class="author">{{ author.display_name }}</a>
+      </div>
+      {% endif %}
     </div>
+  </div>
+
+  <!-- Something's here {{page.author}} -->
+  {{ content }}
+
+  {% if page.tags.size > 0 %}
+  <div class="tags-section">
+    <span class="meta-label">Tagged In:</span>
+    <div class="tags-container">
+      {% for tag in page.tags %}
+      <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </div>
   {% endif %}
   <div style="margin-top: 1rem; display: flex; align-items: center;">
-    <applause-button style="width: 58px; height: 58px;" color="#2ecc71" multiclap="true"></applause-button>
+    <applause-button style="width: 58px; height: 58px;" color="#2ecc71" multiclap="true"
+      api="https://applause.chabouis.fr"></applause-button>
     <span id="clap-label-personal" style="margin-left: 10px; font-weight: bold;"></span>
   </div>
   <script>
@@ -52,16 +53,16 @@ layout: default
       }
     });
   </script>
-<hr class="post-separator">
+  <hr class="post-separator">
   <div class="post-navigation">
     <div class="prev-post">
       {% if page.previous %}
-        « Previouspost : {% include post-card.html post=page.previous %}
+      « Previouspost : {% include post-card.html post=page.previous %}
       {% endif %}
     </div>
     <div class="next-post">
       {% if page.next %}
-        Next post »: {% include post-card.html post=page.next %}
+      Next post »: {% include post-card.html post=page.next %}
       {% endif %}
     </div>
   </div>
