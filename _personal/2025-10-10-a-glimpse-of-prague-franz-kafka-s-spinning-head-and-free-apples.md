@@ -26,8 +26,8 @@ tags:
   - Robert
   - Robert's Travels
 image: /assets/images/franz_k_statue_cover.webp
+image_alt: Cover image featuring a picture of the Franz Kafka statue in Prague at night with light reflecting of the stainless steel statue with text 'Franz Kafka statue in Prague'
 layout: personal
-image_alt: "Cover image for Prague's Spinning Head, Astro Clock and Free Apples!"
 ---
 Got another update from my friend Robert on his Europe trip! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
 
