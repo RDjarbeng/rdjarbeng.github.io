@@ -6,10 +6,11 @@ layout: default
   <h1>Richard Djarbeng's Website</h1>
    <div class="intro">
     <p> Explore my journey through technical posts on emerging tech trends, hands-on coding projects, and occasional personal reflections—non-technical insights are in the <a href="{{ '/personal' | relative_url }}">personal section</a>.</p>
+    <div>Aside technical posts on Technology in general, I take an interest in AI applications, and review the most intriguing ones in the posts section. Extra information about me and how to contact me are on the <a href="{{ '/about' | relative_url }}">about page</a></div>
   </div>
-  {% include category-tags.html %}
-
+  
   <h2 class="section-title">Latest Posts</h2>
+  {% include category-tags.html %}
   <div class="post-list">
     {% for post in site.posts limit:4 %}
     {% include post-card.html post=post %}
