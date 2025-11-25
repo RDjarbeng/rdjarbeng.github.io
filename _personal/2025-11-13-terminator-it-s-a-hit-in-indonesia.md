@@ -64,9 +64,9 @@ No gatekeeping here: stream both below and decide for yourself.
 
 ### International Love in the Comments
 
-![Screenshot of YouTube comment: "This song is very viral in Indonesia🇮🇩"](/assets/images/1000290734.png "YouTube comment")
+![A video thumbnail featuring a still from King Promise's "Terminator" music video, with the artist and a crowd in the background. Overlaid on the image is large, bold text in yellow and pink that reads, "TERMINATOR IT'S A HIT IN INDONESIA?". Below this text, in smaller white font, is the URL for the post](/assets/images/1000290734.png "YouTube comment about Indonesia")
 
-_How does a Ghana-Nigeria collab blow up in Indonesia (pop. 270M+)?_ Afrobeats' borderless appeal.
+_How does a Ghana-Nigeria collab blow up in Indonesia (pop. 270M+)?_ Afrobeats' borderless appeal. The screenshot above shows a fan expressing how this Terminator song is so big in Indonesia. Fun fact about Indonesia is that this country has the 4th largest population in the world. Now I'm not saying that's why this video in particular has so many viewers, but it's just an observation.
 
 Another gem:
 
