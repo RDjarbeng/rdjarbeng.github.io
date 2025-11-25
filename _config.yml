@@ -1,11 +1,22 @@
 title: Richard Djarbeng
 tagline: A blog about technology research and personal posts from Richard Djarbeng
 description:  Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe
-keywords: [Richard Djarbeng, AI, web development, Internet of Things, machine learning, air quality, IoT, tech trends, coding, engineering]
 author: Richard Djarbeng
+lang: en
 logo: favicon.ico
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rdjarbeng.com" # the base hostname & protocol for your site
+
+# Author schema for SEO
+author:
+  name: Richard Djarbeng
+  email: rdjarbeng@rdjarbeng.com
+  uri: https://rdjarbeng.com
+  twitter: DjarbengRichard
+  github: RDjarbeng
+  linkedin: richarddjarbeng
+
+# Social profiles (legacy support)
 github_username: RDjarbeng
 twitter_username: DjarbengRichard
 linkedin_username: richarddjarbeng
@@ -55,7 +66,17 @@ seo:
   url: "https://rdjarbeng.com/"
   twitter: DjarbengRichard
   logo: "/favicon.ico"
+  image: "/favicon.ico"
   theme_color: "#999"
+
+# Social media defaults
+twitter:
+  username: DjarbengRichard
+  card: summary
+
+# Default image for social sharing
+defaults_image: /favicon.ico
+
 slugify: default #to deal with spaces
 # Exclude from processing.
 exclude:
