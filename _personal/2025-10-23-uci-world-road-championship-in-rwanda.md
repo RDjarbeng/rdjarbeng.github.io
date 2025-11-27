@@ -7,11 +7,13 @@ tags:
   - Cycling
   - Rwanda
 image: ''
+image_alt: Cover image for UCI World Road Championship in Rwanda
 layout: personal
-image_alt: "Cover image for UCI World Road Championship in Rwanda"
 ---
 I was there
 
 Took this picture in front of the mural.
+
+![](/assets/images/1000262968.jpg)
 
 A picture of the crowd
