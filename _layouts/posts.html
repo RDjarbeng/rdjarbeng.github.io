@@ -18,13 +18,26 @@ title: Blog
 <!-- Results container -->
 <ul id="results-container"></ul>
 
+<!-- DEBUG: page.pager: {{ page.pager | inspect }} -->
+<!-- DEBUG: page keys: {{ page | inspect }} -->
+
 {% if page.pager %}
 {% assign posts_to_display = page.pager.posts %}
-{% assign total_posts = site.posts | size %}
+{% assign total_posts = page.pager.total_posts %}
+{% assign current_page = page.pager.current_page %}
+{% assign per_page = page.pager.per_page %}
+{% assign start_index = current_page | minus: 1 | times: per_page | plus: 1 %}
+{% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
 {% else %}
 {% assign posts_to_display = site.posts %}
 {% assign total_posts = site.posts | size %}
+{% assign start_index = 1 %}
+{% assign end_index = total_posts %}
 {% endif %}
+
+<div class="pagination-status" style="text-align: right;">
+  Showing posts {{ start_index }}-{{ end_index }} of {{ total_posts }}
+</div>
 
 <div class="post-list">
   {% for post in posts_to_display %}

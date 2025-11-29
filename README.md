@@ -30,6 +30,14 @@ Recent favorites:
 - **Deployment**: GitHub Pages – Push to `main` branch for instant updates.
 - **SEO Optimized**: Meta tags, Open Graph, structured data for better search visibility on topics like **AI tool reviews**, **DNS troubleshooting**, and **tech solutions from Africa**.
 
+### Custom Pagination Implementation
+
+The site uses a custom pagination solution to handle the `posts` collection, as the default `jekyll-paginate` plugin has limitations with custom collections and complex sorting requirements.
+
+- **Plugin**: `_plugins/custom-pagination.rb`
+- **Logic**: Generates paginated pages for the `posts` collection, sorting them by date.
+- **Credit**: This implementation was adapted from a solution provided by [@eugeneandrienko](https://github.com/eugeneandrienko) in [jekyll-paginate-v2 Issue #265](https://github.com/sverrirs/jekyll-paginate-v2/issues/265).
+
 Keywords for discovery: personal tech blog, AI trends and reviews, troubleshooting guides Jekyll site, machine learning insights Rwanda, global travel stories tech.
 
 ## Quick Start: Local Development

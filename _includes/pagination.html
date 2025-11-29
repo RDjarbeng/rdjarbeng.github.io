@@ -4,6 +4,14 @@
 
 {% if paginator.posts.size > 0 %}
 <div class="paginator">
+    <!-- First Page Link -->
+    {% if paginator.current_page > 1 %}
+    <a href="/posts/" class="first">First</a>
+    {% else %}
+    <span class="first disabled">First</span>
+    {% endif %}
+
+    <!-- Previous Page Link -->
     <span class="previous">
         {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
@@ -12,18 +20,62 @@
         <a href="/posts/page-{{ paginator.previous_page}}/">Prev</a>
         {% endif %}
         {% else %}
-        <span>Prev</span>
+        <span class="disabled">Prev</span>
         {% endif %}
     </span>
 
-    <span class="indicator">{{ paginator.current_page }}/{{ paginator.total_pages }}</span>
+    <!-- Page Numbers with Ellipses -->
+    <div class="page-numbers">
+        {% assign trail = 2 %}
+        {% assign range_start = paginator.current_page | minus: trail %}
+        {% assign range_end = paginator.current_page | plus: trail %}
 
+        {% if range_start < 1 %} {% assign range_start=1 %} {% endif %} {% if range_end> paginator.total_pages %}
+            {% assign range_end = paginator.total_pages %}
+            {% endif %}
+
+            <!-- Always show first page -->
+            {% if range_start > 1 %}
+            <a href="/posts/">1</a>
+            {% if range_start > 2 %}
+            <span class="ellipsis">...</span>
+            {% endif %}
+            {% endif %}
+
+            {% for page in (range_start..range_end) %}
+            {% if page == paginator.current_page %}
+            <span class="current-page">{{ page }}</span>
+            {% else %}
+            {% if page == 1 %}
+            <a href="/posts/">{{ page }}</a>
+            {% else %}
+            <a href="/posts/page-{{ page }}/">{{ page }}</a>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+            <!-- Always show last page -->
+            {% if range_end < paginator.total_pages %} {% assign penultimate=paginator.total_pages | minus: 1 %} {% if
+                range_end < penultimate %} <span class="ellipsis">...</span>
+                {% endif %}
+                <a href="/posts/page-{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
+                {% endif %}
+    </div>
+
+    <!-- Next Page Link -->
     <span class="next">
         {% if paginator.next_page %}
         <a href="/posts/page-{{ paginator.next_page}}/">Next</a>
         {% else %}
-        <span>Next</span>
+        <span class="disabled">Next</span>
         {% endif %}
     </span>
+
+    <!-- Last Page Link -->
+    {% if paginator.current_page < paginator.total_pages %} <a href="/posts/page-{{ paginator.total_pages }}/"
+        class="last">Last</a>
+        {% else %}
+        <span class="last disabled">Last</span>
+        {% endif %}
 </div>
 {% endif %}

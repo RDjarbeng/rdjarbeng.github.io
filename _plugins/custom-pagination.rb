@@ -44,11 +44,13 @@ module Jekyll
     end
 
     class Pager
-      attr_reader :current_page, :total_pages, :posts, :previous_page, :next_page
+      attr_reader :current_page, :total_pages, :posts, :previous_page, :next_page, :total_posts, :per_page
 
       def initialize(site, current_page, all_posts, total_pages, paginate_size)
         @current_page = current_page
         @total_pages = total_pages
+        @total_posts = all_posts.size
+        @per_page = paginate_size
         start = (current_page - 1) * paginate_size
         @posts = all_posts.slice(start, paginate_size)
         @previous_page = current_page > 1 ? current_page - 1 : nil
@@ -61,7 +63,9 @@ module Jekyll
           'total_pages' => @total_pages,
           'posts' => @posts,
           'previous_page' => @previous_page,
-          'next_page' => @next_page
+          'next_page' => @next_page,
+          'total_posts' => @total_posts,
+          'per_page' => @per_page
         }
       end
     end
