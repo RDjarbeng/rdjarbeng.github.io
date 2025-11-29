@@ -16,7 +16,7 @@ Changes since the start:
 
 Content about the website:
 
-Made more long form content that is more than a 5 minute read. I think these posts allow me to cover more and are more informative. One good example is my post on a [decade by decade look at AI](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/) which is sitting at 16 min read time. Ironically it is one of the posts that I would have liked to make longer but didn't have the time to add in all the extra details. If I had my way I could spend days writing about AI and it's hard to figure out which content to leave out. Because what to write is not just the issue what to leave out is also a big part of it. I must admit it's a bit painful leaving out a section of a piece you've worked on for days because you don't think it contributes to the story you're currently telling.
+Made more long form content that is more than a 5 minute read. I think these posts allow me to cover more and are more informative. One good example is my post on a [decade by decade look at AI](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/) which is sitting at 16 min read time. Ironically it is one of the posts that I would have liked to make longer but didn't have the time to add in all the extra details. If I had my way I could spend days writing about AI and it's hard to figure out which content to leave out. Because what to write is not just the issue what to leave out is also a big part of it. I must admit it's a bit painful leaving out a section of a piece you've worked on for days because you don't think it contributes to the story you're currently telling. Now that I am writing this post it might actually exceed that record of 16 minutes, but we'll see.
 
 Sometimes too I end up changing a post so much that I'm not quite sure if the final version that was published is what I intended from the start. Especially when I use Gemini as an editor to brainstorm the drafts of post. If the wording in every paragraph is changed and the sentence structure differs but it's saying the same thing is it still the same post with different words or a new post with a different idea but similar to the first? It's giving the vibe of the [ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) so much
 
@@ -62,11 +62,13 @@ Gemini: doing well with image generation especially with the text than grok. Als
 
 ![](/assets/images/google_vs_ffmpeg_cover.webp)
 
-However the problem with gemini is that sometimes it can produce beautifully written post that don't sound like the author. So I have to be careful not to lose my _voice_ or flow of thought when editing with gemini.
+However the problem with gemini is that sometimes it can produce beautifully written posts that don't sound like the author (me). So I have to be careful not to lose my _voice_ and flow of thought when editing with gemini by always referencing the earlier drafts.
 
 I mentioned this when speaking about how I can change posts so many times. If I don't track the original intention of the post I may end up missing the point of the post if I leave the reins to the AI tools.
 
 Claude: I used to edit posts with claude. It excelled at keeping context and also did not change too many things. If I had to change a particular paragraph alone most likely I would use claude and specify the rest of the post as context. So claude was good at quick edits that didn't disrupt much. But it failed at adding relevant context to posts, adding links and verifying that they were working was also something it could not do at that time, it also used to timeout a lot and I find that I have to revisit a post multiple times everytime it times out. This friction of going back to posts whenever I ran out of tokens made me eventually stop using it for web posts.
+
+Meta ai: I used meta AI for the post on [Tunde Onakoya's chess marathon](https://rdjarbeng.com/personal/tunde-onakoya-breaks-guinness-world-record-with-epic-chess-marathon-for-children-s-education/) in Times square. I liked the feature where it generated images as you typed allowing you to kind of edit on the fly.  However since then I have not used it much, also because when I was in Rwanda it was not available in that Region for some time. It is now available but now, just like Claude I haven't really felt a need to go back to it after I stopped using it.
 
 ### AI tools as writers and editors
 
@@ -82,17 +84,19 @@ Sometimes your work helps others. Landing AI post highlighted how I was able to 
 
 Detailed does not always mean informative. Some technical posts here didn't receive much traffic
 
+Some posts that I thought were just regular posts actually did pretty well. For instance my post about my trip to Uganda had a lot of interest even from my friends who were Ugandans and I got a lot of messages when I posted about it. It's funny because I didn't really consider a it as a post that was going to pick up traction. My whole idea was to tell a story about my experience. I didn't really think I was writing a post the whole premise of the post was, 'See what happened was...'
+
 Adding thumbnails of posts is good, even if they take time to make.
 
 Writing takes time, even with AI
 
-Sometimes AI is double work. Maybe writing things myself is a better approach
+Sometimes AI is double work because I have to write drafts, write prompts, edit the AI output, edit my prompts, make minor tweaks, revert changes and scan the posts many times again with reference to the original draft to make sure no important detail was left out acting as a senior editor to make sure everything is set before signing off on a publications. Sometimes I wonder if writing everything myself and editing my drafts is not a less tiring approach. Editing with AI does have the advantage of speed but the extra supervision needed almost negates the speed boost. Maybe writing things myself is a better approach but that also takes up much of my time and posts come out slowly.
 
-AI is good for generating tags, images, refining titles. Cannot be trusted to create and edit posts without supervision.
+My conclusion for AI tools is that they are  good for generating tags, images, refining titles. Cannot be trusted to create and edit posts from start to finish without supervision.
 
 ## Improvements to be made:
 
-Homepage apparently is not very informative, according to google. Been thinking of improving the homepage structure to reflect the different categories. I find that seeing a post on finance, then next another on air quality then another about AI spoils the experience. What are the chances that a user will be interested in all three. So if you look at it like a recommendation algorithm the closely related items should be grouped into a place where the user can browse their interests without navigating other posts which they have little interest in. I think this is also good for SEO
+Homepage apparently is not very informative, according to google. Been thinking of improving the homepage structure to reflect the different categories. I find that seeing a post on finance, then next another on air quality then another about AI spoils the experience. What are the chances that a user will be interested in all three yet they are presented in order on the site. So if you look at it like a recommendation algorithm the closely related items should be grouped into a place where the user can browse their interests without navigating other posts which they have little interest in. I should think this is also good for SEO but I haven't verified this.
 
 About page does not indicate a contact page at first glance
 
@@ -104,7 +108,7 @@ Improving backlinks
 
 Best posts:
 
-Trip to Uganda
+Trip to Uganda. This post got a lot of attention. 
 
 My favorites:
 
