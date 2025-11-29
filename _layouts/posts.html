@@ -4,7 +4,8 @@ title: Blog
 ---
 
 <div class="posts-page-intro">
-  Find technical posts about technology, Artificial Intelligence, Air quality and trending topics related to these areas.
+  Find technical posts about technology, Artificial Intelligence, Air quality and trending topics related to these
+  areas.
 </div>
 <div class="header-container">
   <h1>({{ site.posts | size }}) Posts</h1>
@@ -17,10 +18,22 @@ title: Blog
 <!-- Results container -->
 <ul id="results-container"></ul>
 
+{% if page.pager %}
+{% assign posts_to_display = page.pager.posts %}
+{% assign total_posts = site.posts | size %}
+{% else %}
+{% assign posts_to_display = site.posts %}
+{% assign total_posts = site.posts | size %}
+{% endif %}
+
 <div class="post-list">
-  {% for post in site.posts %}
+  {% for post in posts_to_display %}
   {% include post-card.html post=post %}
   {% endfor %}
 </div>
+
+{% if page.pager %}
+{% include pagination.html paginator=page.pager %}
+{% endif %}
 <!-- Include Simple Jekyll Search script -->
 {% include search-script.html %}

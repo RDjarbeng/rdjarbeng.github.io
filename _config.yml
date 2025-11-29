@@ -139,3 +139,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Custom pagination configuration
+pagination:
+  active: true
+  paginate: 10  # Number of posts per page
+  collection: 'posts'  # Target the posts collection
