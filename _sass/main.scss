@@ -1190,28 +1190,41 @@ h4 {
 }
 
 /* Pagination styles */
+.pagination-status {
+  text-align: right;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
 .paginator {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
   margin: 40px 0;
   padding: 20px;
   font-size: 1.1rem;
 }
 
-.paginator .previous,
-.paginator .next {
-  min-width: 60px;
+.paginator .page-numbers {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.paginator a {
+.paginator a,
+.paginator span.current-page {
   color: #0056b3;
   text-decoration: none;
   padding: 8px 16px;
   border: 1px solid #0056b3;
   border-radius: 5px;
   transition: all 0.3s ease;
+  min-width: 40px;
+  text-align: center;
 }
 
 .paginator a:hover {
