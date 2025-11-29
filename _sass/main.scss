@@ -1219,16 +1219,18 @@ h4 {
   color: white;
 }
 
-.paginator span:not(.indicator) {
-  color: #999;
-  padding: 8px 16px;
+.paginator span.current-page {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
 }
 
-.paginator .indicator {
-  font-weight: bold;
-  color: #333;
-  padding: 8px 16px;
-  background-color: #f0f0f0;
+.paginator span.disabled {
+  color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
