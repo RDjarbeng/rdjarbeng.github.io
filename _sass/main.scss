@@ -1232,3 +1232,26 @@ h4 {
   border-radius: 5px;
 }
 
+.paginator span.ellipsis {
+  padding: 8px 5px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .paginator {
+    gap: 5px;
+  }
+
+  .paginator a,
+  .paginator span.current-page {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    min-width: 30px;
+  }
+
+  .paginator .page-numbers {
+    display: none;
+    /* Hide page numbers on very small screens if needed, or adjust */
+  }
+}
