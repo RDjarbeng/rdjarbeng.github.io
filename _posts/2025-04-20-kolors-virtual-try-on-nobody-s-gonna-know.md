@@ -106,4 +106,4 @@ I would like an option to see if a garment actually fits if the dimensions are p
 
 ## Conclusion
 
- Kolors virtual try-on is straightforward, and the results are convincing enough to give a good sense of fit and style for garments that the user wants to try out. However not all garments are equal here and the model seems to struggle when the input model and the garment fit vary in pose and garment style. In spite of all this I find it a useful tool for trying out different garments.
+ Kolors virtual try-on is straightforward, and the results are convincing enough to give a good sense of fit and style for garments that the user wants to try out. However not all garments are equal here and the model seems to struggle when the input model and the garment fit vary in pose and garment style. In spite of all this I find it a useful tool for trying out many different garments.
