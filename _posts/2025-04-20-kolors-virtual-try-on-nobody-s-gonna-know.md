@@ -11,10 +11,10 @@ tags:
   - Virtual try-on
   - Hugging face
 title: Kolors Virtual Try-On:Nobody's Gonna Know
-image: /assets/images/kolors_try_on-rdjarbeng_gif_cover.webp
+image: /assets/images/kolors_try_on-ezgif.com-optimize.webp
+image_alt: Cover image for Kolors Virtual Try-On:Nobody's Gonna Know
 layout: post
 video: ''
-image_alt: "Cover image for Kolors Virtual Try-On:Nobody's Gonna Know"
 ---
 Let us examine the **Kolors Virtual Try-On** app a useful option for trying out different outfits virtually. By uploading an image, you can see how various clothing styles might look without needing to physically try them on. In this post I am going to show a demo of the virtual try-on model in action to see firsthand how it works, then I give my understanding of the process and how to achieve good results as well as my experience with different garments.
 
