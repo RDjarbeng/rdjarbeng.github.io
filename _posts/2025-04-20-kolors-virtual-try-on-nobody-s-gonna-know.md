@@ -11,7 +11,7 @@ tags:
   - Virtual try-on
   - Hugging face
 title: Kolors Virtual Try-On:Nobody's Gonna Know
-image: /assets/images/kolors_default_suit_swap.png
+image: /assets/images/kolors_try_on-ezgif.com-optimize.webp
 image_alt: Cover image for Kolors Virtual Try-On:Nobody's Gonna Know
 layout: post
 video: ''
