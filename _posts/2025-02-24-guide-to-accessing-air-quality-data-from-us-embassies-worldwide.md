@@ -51,10 +51,10 @@ The data primarily consists of **PM2.5 (fine particulate matter)** measurements,
 
 Some files may also include the **Air Quality Index (AQI)**, a standardized scale that indicates the level of air pollution and its potential health effects. The AQI uses a numerical range where:
 
-- **0-50:** Good air quality\*\*
-**- \*\*51-100:** Moderate\*\*
-**- \*\*101-150:** Unhealthy for sensitive groups\*\*
-**- \*\*151+:** Increasingly unhealthy levels
+- **0-50:** Good air quality
+- **51-100:** Moderate
+- **101-150:** Unhealthy for sensitive groups
+- **151+:** Increasingly unhealthy levels
 
 Higher AQI values signify greater pollution and increased health concerns.
 
