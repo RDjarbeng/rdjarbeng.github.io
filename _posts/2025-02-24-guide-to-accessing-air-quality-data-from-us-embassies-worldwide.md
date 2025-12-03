@@ -11,19 +11,22 @@ tags:
   - US embassies air quality data
   - Airnow
   - Global air quality data sources
+  - AQI
 title: Guide to Accessing Air Quality Data from US Embassies Worldwide
 image: /assets/images/airnow_africa.png
+image_alt: Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide
 layout: post
 video: ''
-image_alt: "Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide"
 ---
-> Update: As of March 2024, this website has been offline, with no estimated timeframe for its return.
-
 AirNow.gov is a collaborative platform involving the US Environmental Protection Agency (EPA), the National Oceanic and Atmospheric Administration (NOAA), and other agencies, dedicated to providing air quality information to the public. Among its offerings is air quality data from US embassies and consulates located around the world. This data serves as a critical resource for researchers, policymakers, and individuals concerned with environmental health and air pollution trends globally.
 
 ![Screenshot or Air Now website showing map of air quality](/assets/images/airnow_africa.png "Air Now website showing map of air quality across different countries")
 
 ## Accessing the Data
+
+> Update: As of March 2024, this website has been offline, with no estimated timeframe for its return.
+
+![Screenshot of airnow website showing 'this web page does not exist' message](/assets/images/airnow_screenshot_showing_webpage_not_available.png "Air now website down for us embassies")
 
 To retrieve air quality data from a specific US embassy or consulate, follow these steps:
 
@@ -35,8 +38,8 @@ To retrieve air quality data from a specific US embassy or consulate, follow the
 
 When downloading historical air quality data from AirNow.gov, you will encounter files labeled with terms such as "MTD" and "YTD." These abbreviations represent different time periods of data collection:
 
-- **MTD (Month to Date):** Typically, this includes data from the beginning of the current month up to the date the file is downloaded. For example, an MTD file downloaded on February 24, 2025, would contain data from February 1, 2025, to February 24, 2025.
-- **YTD (Year to Date):** This generally covers data from the start of the calendar year up to the download date. For instance, a YTD file downloaded on February 24, 2025, would include data from January 1, 2025, to February 24, 2025.
+- **MTD (Month to Date):** Typically, this includes data from the beginning of the current month up to the date the file is downloaded. For example, an MTD file downloaded on February 24, 2025, would contain data from February 1, 2025, to February 24, 2025.\*\*
+**- \*\*YTD (Year to Date):** This generally covers data from the start of the calendar year up to the download date. For instance, a YTD file downloaded on February 24, 2025, would include data from January 1, 2025, to February 24, 2025.
 
 Additionally, files for complete calendar years are available, such as "2024 PM2.5," which provides data for the entire year from January 1 to December 31, 2024.
 
