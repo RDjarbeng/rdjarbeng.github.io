@@ -1049,6 +1049,8 @@ a:hover {
   /* Allows content to grow */
   min-width: 0;
   /* Fixes a common flexbox overflow bug */
+  max-width: 100%; // fixes image overflow on mobile posts
+
 }
 
 .post-content {
@@ -1403,88 +1405,4 @@ a:hover {
 .post-content code {
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-
-
-/* Pagination styles */
-.pagination-status {
-  text-align: right;
-  color: #666;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.paginator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 40px 0;
-  padding: 20px;
-  font-size: 1rem;
-}
-
-.paginator .page-numbers {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.paginator a,
-.paginator span.current-page {
-  color: #0056b3;
-  text-decoration: none;
-  padding: 8px 12px;
-  border: 1px solid #0056b3;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  min-width: 40px;
-  text-align: center;
-}
-
-.paginator a:hover {
-  background-color: #0056b3;
-  color: white;
-}
-
-.paginator span.current-page {
-  background-color: #0056b3;
-  color: white;
-  font-weight: bold;
-}
-
-.paginator span.disabled {
-  color: #ccc;
-  border-color: #ccc;
-  cursor: not-allowed;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.paginator span.ellipsis {
-  padding: 8px 5px;
-  color: #666;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .paginator {
-    gap: 5px;
-  }
-
-  .paginator a,
-  .paginator span.current-page {
-    padding: 5px 8px;
-    font-size: 0.9rem;
-    min-width: 30px;
-  }
-
-  .paginator .page-numbers {
-    display: none;
-    /* Hide page numbers on very small screens if needed, or adjust */
-  }
 }
