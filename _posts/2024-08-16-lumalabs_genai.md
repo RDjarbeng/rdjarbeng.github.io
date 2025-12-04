@@ -18,9 +18,10 @@ tags:
   - Physics
   - Bees
   - Insects
+  - Animated-Images
 title: Can AI bring images to life?
 image: /assets/images/bees_luma.jpeg
-image_alt: "Cover image for Can AI bring images to life?"
+image_alt: Cover image for Can AI bring images to life?
 ---
 Limits of Generative AI: My Experience with Luma AI and Virtual Bees.
 
