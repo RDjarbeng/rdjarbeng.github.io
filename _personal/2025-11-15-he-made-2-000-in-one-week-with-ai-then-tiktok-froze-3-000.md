@@ -1,5 +1,5 @@
 ---
-title: He Made $2,000 in One Week With AI... Then TikTok Froze $3,000
+title: He Made $2,000 in One Week With AI... Then TikTok Froze It
 date: 2025-11-15T17:56:00
 published: true
 tags:
@@ -23,9 +23,9 @@ image: /assets/images/tiktok_shop_with_mikey_cover_image.webp
 image_alt: A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.
 layout: personal
 ---
-First came the win: **$2,200 in profit** in just one week.
-Then came the loss: **$3,722 in earnings**, frozen and inaccessible.
-This is the high-stakes reality of one creator's experiment with AI avatars and TikTok Shop. In his video, "[How I Used AI To Make $2000 PROFIT in 1 week](https://youtu.be/d9oQ9mudR-o)", **Mikey Again** documents the entire roller-coaster ride.
+First came the win: **$2,200 in profit** in just one week.\*\*
+**Then came the loss: \*\*$3,722 in earnings**, frozen and inaccessible.\*\*
+**This is the high-stakes reality of one creator's experiment with AI avatars and TikTok Shop. In his video, "[How I Used AI To Make $2000 PROFIT in 1 week](https://youtu.be/d9oQ9mudR-o)", \*\*Mikey Again** documents the entire roller-coaster ride.
 
 ![YouTube thumbnail image for Mikey Again post on using AI to create videos on TikTok](/assets/images/1000258877.jpg "Mikey Again's thumbnail for the video")
 
@@ -47,10 +47,10 @@ Mikey's strategy wasn't random; it was a clever combination of new technology an
 
 His real breakthrough was in the scriptwriting. He used ChatGPT to brainstorm ideas, but he followed a specific, high-converting formula:
 
-1.  **A Relatable Hook:** Start with a hook that "digs deep" into the target audience's insecurities and problems.
-2.  **Agitate the Problem:** Keep digging into that pain point so they "feel it deep in their bones."
-3.  **Provide the Solution:** Introduce the product as the one and only solution.
-4.  **A Strong Offer:** Sell it hard with a discount or a clear call to action.
+1.  **A Relatable Hook:** Start with a hook that "digs deep" into the target audience's insecurities and problems.\*\*
+**2.  \*\*Agitate the Problem:** Keep digging into that pain point so they "feel it deep in their bones."\*\*
+**3.  \*\*Provide the Solution:** Introduce the product as the one and only solution.\*\*
+**4.  \*\*A Strong Offer:** Sell it hard with a discount or a clear call to action.
 
 He gives a great example of a "trash hook" versus a "good hook" for a men's health supplement:
 
@@ -87,8 +87,8 @@ This story isn't all gloom. Mikey's expensive lesson revealed a crucial workarou
 
 It's a clever way to de-risk the entire operation:
 
-1.  Instead of having TikTok pay you the full 20% commission, you arrange with the brand to set your official, in-app commission to the **lowest possible rate (e.g., 1%)**.
-2.  The brand then **pays you the rest of your _real_ commission** (the other 19%) **directly** through PayPal, bank transfer, or another method outside of the TikTok app.
+1.  Instead of having TikTok pay you the full 20% commission, you arrange with the brand to set your official, in-app commission to the **lowest possible rate (e.g., 1%)**.\*\*
+**2.  The brand then \*\*pays you the rest of your _real_ commission** (the other 19%) **directly** through PayPal, bank transfer, or another method outside of the TikTok app.
 
 This way, you never have a large sum of money sitting in your TikTok account "wallet." If you get banned, you only lose the 1% that was pending, not your entire month's earnings.
 
