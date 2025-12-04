@@ -27,7 +27,9 @@ First came the win: **$2,200 in profit** in just one week.
 Then came the loss: **$3,722 in earnings**, frozen and inaccessible.
 This is the high-stakes reality of one creator's experiment with AI avatars and TikTok Shop. In his video, "[How I Used AI To Make $2000 PROFIT in 1 week](https://youtu.be/d9oQ9mudR-o)", Mikey Again documents the entire roller-coaster ride.
 
-![YouTube thumbnail image for Mikey Again post on using AI to create videos on TikTok](/assets/images/1000258877.jpg "Mikey Again's thumbnail for the video")
+![YouTube thumbnail image for Mikey Again post on using AI to create videos on TikTok with the text '$2,000 with AI' in bright green and 'FROZEN!' in red.](/assets/images/tiktok_ai_frozen_thumbnail.png "He made $2,000 with AI, then TikTok froze his funds.")
+
+
 
 It's a clear case study for anyone interested in AI, side hustles, or the volatility of building a business on someone else's platform. He found a winning formula, but he also discovered the brutal catch.
 
@@ -64,7 +66,10 @@ This formula worked. One of his AI-generated videos ("You ever brush your tongue
 
 ## The "Traumatizing" Downside
 
-![A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright green and 'FROZEN!' in red.](/assets/images/tiktok_ai_frozen_thumbnail.png "He made $2,000 with AI, then TikTok froze his funds.")
+
+
+![A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.](/assets/images/tiktok_shop_with_mikey_cover_image.webp "The high risk versus high reward of making money with AI on TikTok.")
+
 
 This is where the story turns. While the sales were climbing, Mikey lived in constant fear of one thing: **"Violations."**
 
