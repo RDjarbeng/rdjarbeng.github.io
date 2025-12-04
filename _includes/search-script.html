@@ -21,4 +21,20 @@
       });
     }
   });
+
+  // Handle query parameter for search
+  window.addEventListener('load', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    if (query) {
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) {
+        searchInput.value = query;
+        // Trigger input event to start search
+        searchInput.dispatchEvent(new Event('input'));
+        // Also trigger keyup as some libraries listen to that
+        searchInput.dispatchEvent(new Event('keyup'));
+      }
+    }
+  });
 </script>
