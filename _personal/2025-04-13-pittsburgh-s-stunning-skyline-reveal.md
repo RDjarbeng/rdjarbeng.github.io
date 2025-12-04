@@ -33,7 +33,7 @@ tags:
   - ''
 image: /assets/images/ford_pitt_tunnel_exit.png
 layout: personal
-image_alt: "Cover image for Pittsburgh's Stunning Skyline Reveal"
+image_alt: "Cover image for post Pittsburgh's Stunning Skyline Reveal ford pitt tunnel exit at night leading unto the bridge into Pittsburgh Downtown"
 ---
 Picture this it's Your first visit to Pittsburgh and you were picked up from the Pittsburgh International Airport after your long journey. On the drive from the airport you mostly pass through a countryside just seeing the hills and a few houses. Nothing fancy just a standard ride from for about 45 minutes and you are yet to see the city. It's night time and dark, you only see the silhouette of the hills on the horizon as the road weaves through what appears to be barren hills on a highway leading into the mountains. You don't really seem to be heading anywhere interesting and the road ahead looks just as gloomy as the road behind. The most interesting thing so far was the airport you left with their statues of dinosaurs and robots. _(insert robot picture here)_
 
