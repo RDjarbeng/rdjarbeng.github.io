@@ -16,6 +16,8 @@ Advantages, it doesn't lag like the copilot vscode and doesn't complain when it 
 
 Doesn't seem to know when it breaks something and doesn't seem to have access to the terminal output to see errors unless I tell it.
 
+Jupyter notebook: When editing content in jupyter notebooks it usually prefers to run python commands in the terminal and then append to the notebook. Yet to test it's ability to change code cells and markdown cells directly though.
+
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
-For the antigravity browser because of the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time.
+For the antigravity browser because of the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time. One example is if you want to test that a feature is working on your website, say the search functionality. Instead of watching the agent launch the browser and run tests and different queries, you can tell it to run the tests, leave it for a few minutes whilst you switch to another task and then come back to read the walkthrough generated at the end. This would contain all the information you need about the tests, but the advantage is you wouldn't need to be watching the agent the entire time.
