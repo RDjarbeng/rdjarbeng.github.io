@@ -41,7 +41,8 @@ Mikey's strategy wasn't random; it was a clever combination of new technology an
 
 * **The Opportunity:** The **TikTok Shop Affiliate** program. This lets creators earn a commission (sometimes 20-30%) on products they promote in their videos. This made the difference from other creators who were selling products they didn't know anything about. 
 * **The Problem:** As a young guy, Mikey felt he couldn't effectively sell products to other demographics. As he says, "it's a lot harder to sell to other demographics if you don't look like them."
-* **The Tool:** He used **Google's Veo3** (which he calls "V3") to create realistic AI avatars. This let him create a 70-year-old grandma to sell oregano supplements or a concerned middle-aged man to sell beetroot supplements. He could be anyone his audience would trust.
+
+* **The Tool:** Enter the secret tool which also made it a lot easier to sell to other demographics whilst being less work than dropshipping. He used **Google's Veo3** (which he calls "V3") to create realistic AI avatars. This let him create a 70-year-old grandma to sell oregano supplements or a concerned middle-aged man to sell beetroot supplements. He could be anyone his audience would trust.
 
 ### The "Secret Sauce" was the Script
 
