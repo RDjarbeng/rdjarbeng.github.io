@@ -30,7 +30,7 @@ tags:
   - Ghana vs Uruguay
   - Jollof in Ghana
   - Entertainment in Ghana
-image: /assets/images/2nd_collage_on_ghana.png
+image: /assets/images/ghana_introduction_collage.png
 layout: personal
 image_alt: "Cover image for Ghana, an Introduction- All That Glitters is Still Gold"
 ---
