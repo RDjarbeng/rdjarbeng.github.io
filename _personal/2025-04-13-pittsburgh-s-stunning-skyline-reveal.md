@@ -29,8 +29,6 @@ tags:
   - dramatic entrance
   - bridge view
   - panoramic skyline
-  - ''
-  - ''
 image: /assets/images/ford_pitt_tunnel_exit.png
 layout: personal
 image_alt: "Cover image for post Pittsburgh's Stunning Skyline Reveal ford pitt tunnel exit at night leading unto the bridge into Pittsburgh Downtown"
