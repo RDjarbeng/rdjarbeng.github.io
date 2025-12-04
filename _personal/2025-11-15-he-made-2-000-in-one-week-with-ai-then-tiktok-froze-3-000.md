@@ -35,7 +35,7 @@ Here's a breakdown of how he did it, what went wrong, and the lesson every creat
 
 ---
 
-## The $2,200/Week AI Playbook
+## The $2,200/Week AI Playbook - with Google Veo3
 
 Mikey's strategy wasn't random; it was a clever combination of new technology and a specific market opportunity.
 
