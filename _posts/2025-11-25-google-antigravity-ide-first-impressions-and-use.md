@@ -1,12 +1,14 @@
 ---
-title: Google antigravity IDE first impressions and use
 date: 2025-11-25T11:11:00
 published: false
+categories:
+  - Technology
 tags:
   - IDE
+title: Google antigravity IDE first impressions and use
 image: ''
 image_alt: ''
-layout: personal
+layout: post
 ---
 antigravity IDE- tested, makes a lot of unnecessary changes especially white space
 
