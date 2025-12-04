@@ -26,6 +26,8 @@ Doesn't seem to know when it breaks something and doesn't seem to have access to
 
 Sometimes it can be done with a task but take a while to generate the walkthroughs, and shows 'generating' or 'loading'. The walkthroughs are usually several paragraphs which for me is too long. I usually only care about the results; if the feature worked or not. The implementation details are not always necessary for me since I can usually see the modified files/code and have to click accept for the changes to remain. Perhaps there should be an option to specify short or summarized walkthroughs vs longer walkthroughs.
 
+![Screenshot of Antigravity browser AI output stuck on loading with user comment 'seems you are done but taking some time to finish up? Can you end now. All I see is you loading'](/assets/images/antigravity_server_stopped_but_still_loading.png "Screenshot of Antigravity browser AI output stuck loading")
+
 #### Jupyter notebook:
 
 When editing content in jupyter notebooks it usually prefers to run python commands in the terminal and then append to the notebook. I am yet to test it's ability to change code cells and markdown cells directly though.
@@ -33,3 +35,9 @@ When editing content in jupyter notebooks it usually prefers to run python comma
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
 For the antigravity browser because of the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time. One example is if you want to test that a feature is working on your website, say the search functionality. Instead of watching the agent launch the browser and run tests and different queries, you can tell it to run the tests, leave it for a few minutes whilst you switch to another task and then come back to read the walkthrough generated at the end. This would contain all the information you need about the tests, but the advantage is you wouldn't need to be watching the agent the entire time.
+
+CPU usage on idle:
+
+For some reason it has 29 subprocesses running on task manager when left on idle on windows. Of course it doesn't beat the king of many subprocesses Google Chrome browser shown here with 101 subprocesses
+
+![Task manager screenshot showing antigravity CPU sub processes](/assets/images/antigravity_29_subprocesses_taskmanager.png "Task manager screenshot showing antigravity CPU subprocesses")
