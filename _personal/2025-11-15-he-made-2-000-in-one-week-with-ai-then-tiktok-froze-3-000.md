@@ -19,8 +19,8 @@ tags:
   - AI Video Generation
   - Creator Economy
   - Platform Risk
-image: /assets/images/tiktok_shop_with_mikey_cover_image.webp
-image_alt: A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.
+image: /assets/images/tiktok_ai_frozen_thumbnail.png
+image_alt: A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright green and 'FROZEN!' in red, overlaid on a background showing a person in a black shirt with an ai generated old woman.
 layout: personal
 ---
 First came the win: **$2,200 in profit** in just one week.
@@ -63,7 +63,7 @@ This formula worked. One of his AI-generated videos ("You ever brush your tongue
 
 ## The "Traumatizing" Downside
 
-![A split-screen image contrasting profit and risk. On the left, a glowing gold bar chart trends upward on a circuit board. On the right, a smartphone with a cracked screen displays 'ACCOUNT BANNED' in red text, with coins scattered at its base.](/assets/images/tiktok_shop_with_mikey_cover_image.webp "The high risk versus high reward of making money with AI on TikTok.")
+![A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright green and 'FROZEN!' in red.](/assets/images/tiktok_ai_frozen_thumbnail.png "He made $2,000 with AI, then TikTok froze his funds.")
 
 This is where the story turns. While the sales were climbing, Mikey lived in constant fear of one thing: **"Violations."**
 
