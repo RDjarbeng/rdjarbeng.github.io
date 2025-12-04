@@ -17,3 +17,5 @@ Advantages, it doesn't lag like the copilot vscode and doesn't complain when it 
 Doesn't seem to know when it breaks something and doesn't seem to have access to the terminal output to see errors unless I tell it.
 
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
+
+For the antigravity browser because of the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time.
