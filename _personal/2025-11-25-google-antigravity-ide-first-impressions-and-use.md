@@ -14,9 +14,15 @@ Can create python scripts that do bulk tasks. Seems to prefer this. Actually inf
 
 Advantages, it doesn't lag like the copilot vscode and doesn't complain when it has to do work across multiple files. Seems to understand the file structure and can infer what type of project it is. For instance I never told it that my website was a jekyll one deployed on Github pages but it was able to infer this. Probably based on the config and the files present in the repository
 
-Doesn't seem to know when it breaks something and doesn't seem to have access to the terminal output to see errors unless I tell it.
+Doesn't seem to know when it breaks something and doesn't seem to have access to the terminal output to see errors unless I tell it. 
 
-Jupyter notebook: When editing content in jupyter notebooks it usually prefers to run python commands in the terminal and then append to the notebook. Yet to test it's ability to change code cells and markdown cells directly though.
+#### Loading issue:
+
+Sometimes it can be done with a task but take a while to generate the walkthroughs, and shows 'generating' or 'loading'. The walkthroughs are usually several paragraphs which for me is too long. I usually only care about the results; if the feature worked or not. The implementation details are not always necessary for me since I can usually see the modified files/code and have to click accept for the changes to remain. Perhaps there should be an option to specify short or summarized walkthroughs vs longer walkthroughs.
+
+#### Jupyter notebook: 
+
+When editing content in jupyter notebooks it usually prefers to run python commands in the terminal and then append to the notebook. I am yet to test it's ability to change code cells and markdown cells directly though.
 
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
