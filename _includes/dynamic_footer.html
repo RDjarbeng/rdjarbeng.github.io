@@ -1,0 +1,60 @@
+<div class="dynamic-footer">
+    <div class="dynamic-footer-content">
+        <div class="minimized-view">
+            <h2>Get in touch</h2>
+        </div>
+        <div class="expanded-view">
+            <div class="contact-main">
+                <h2>Get in touch</h2>
+                <a href="mailto:{{ site.author.email }}" class="email-link">{{ site.author.email }}</a>
+            </div>
+            <div class="contact-details">
+                <p>I'm always looking for new and exciting projects and people to work with.</p>
+                <p>If you have an idea that you want to discuss, reach out to me!</p>
+
+                <div class="social-links">
+                    {% if site.author.github %}
+                    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    {% endif %}
+                    {% if site.author.linkedin %}
+                    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                    {% endif %}
+                    {% if site.author.twitter %}
+                    <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                    {% endif %}
+                </div>
+
+                <div class="footer-bottom">
+                    <span>{{ site.time | date: "%Y" }} &copy; {{ site.author.name }}</span>
+                    <a href="{{ '/about' | relative_url }}" class="about-link-footer">About Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const footer = document.querySelector('.dynamic-footer');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    footer.classList.add('is-expanded');
+                } else {
+                    footer.classList.remove('is-expanded');
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the footer is visible
+        });
+
+        observer.observe(footer);
+    });
+</script>
