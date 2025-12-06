@@ -43,10 +43,31 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const footer = document.querySelector('.dynamic-footer');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    footer.classList.add('is-expanded');
+        const progressBar = document.querySelector('.progress-bar');
+        let progress = 0;
+        let isExpanded = false;
+        const THRESHOLD = 500; // Total scroll delta needed to expand
+        const DECAY = 5; // How fast progress decays when not scrolling
+
+        // Ensure initial height is set correctly
+        footer.style.height = '50px';
+
+        // Wheel event handler
+        window.addEventListener('wheel', (e) => {
+            // Check if we are at the bottom of the page (with a small buffer)
+            const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
+
+            if (!isExpanded) {
+                if (scrollBottom && e.deltaY > 0) {
+                    // At bottom and scrolling down -> Lock scroll and fill progress
+                    e.preventDefault();
+
+                    progress = Math.min(progress + e.deltaY, THRESHOLD);
+
+                    if (progress >= THRESHOLD) {
+                        expandFooter();
+                    }
+                }
                 } else {
                     footer.classList.remove('is-expanded');
                 }
