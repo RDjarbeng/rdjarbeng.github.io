@@ -76,13 +76,46 @@
                     }
                 }
                 } else {
-                    footer.classList.remove('is-expanded');
+                // Expanded logic
+                if (e.deltaY < 0) {
+                    // Scrolling up -> Collapse immediately
+                    collapseFooter();
+                    progress = 0;
                 }
-            });
-        }, {
-            threshold: 0.1 // Trigger when 10% of the footer is visible
-        });
+            }
 
-        observer.observe(footer);
+            updateUI();
+        }, { passive: false });
+
+        function expandFooter() {
+            isExpanded = true;
+            footer.classList.add('is-expanded');
+            footer.style.height = ''; // Remove inline height to let CSS take over (90vh)
+
+            // Auto-scroll to the bottom to reveal content
+            setTimeout(() => {
+                footer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }, 100);
+        }
+
+        function collapseFooter() {
+            isExpanded = false;
+            footer.classList.remove('is-expanded');
+            footer.style.height = '50px'; // Force back to 50px
+        }
+
+        function updateUI() {
+            const percentage = (progress / THRESHOLD) * 100;
+            progressBar.style.width = `${percentage}%`;
+            progressBar.style.opacity = percentage > 0 ? 1 : 0;
+        }
+
+        // Decay progress if user stops scrolling before threshold
+        setInterval(() => {
+            if (!isExpanded && progress > 0) {
+                progress = Math.max(0, progress - DECAY);
+                updateUI();
+            }
+        }, 16);
     });
 </script>
