@@ -11,9 +11,15 @@ tags:
   - Netflix
   - ATLA
   - Miya Cech
+  - Live Action
+  - Season 2
+  - Trailer
+  - Reaction
+  - News
+  - Earth Kingdom
 image: /assets/images/avatar_netflix/avatar_season2_cover_rdjarbeng.png
 image_alt: 'Avatar The Last Airbender Season 2 Title Card with Earth Kingdom background'
-layout: post
+layout: personal
 ---
 
 The wait is finally over! Netflix has just dropped the first official trailer for **Avatar: The Last Airbender** Season 2, giving us our very first look at the highly anticipated debut of **Toph Beifong**, the Blind Bandit.
