@@ -17,25 +17,41 @@ layout: default
 
     <div class="gallery-grid" id="gallery-grid">
         <!-- Cover Images Category -->
-        {% for post in site.posts %}
-        {% if post.image %}
+        {% if site.data.gallery_images.cover_images %}
+        {% for img in site.data.gallery_images.cover_images %}
         <div class="gallery-item" data-category="cover-images" data-type="image"
-            data-src="{{ post.image | relative_url }}" data-caption="{{ post.title | escape }}">
+            data-src="{{ img.image | relative_url }}" data-caption="{{ img.title | escape }}">
             <div class="gallery-thumb-wrapper">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}"
-                    loading="lazy">
+                <img src="{{ img.image | relative_url }}" alt="{{ img.caption | default: img.title }}" loading="lazy">
                 <div class="gallery-overlay">
-                    <span class="gallery-title">{{ post.title }}</span>
+                    <span class="gallery-title">{{ img.title }}</span>
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
+        {% endif %}
 
-        <!-- Videos Category -->
-        {% if site.data.gallery.videos %}
-        {% for video in site.data.gallery.videos %}
-        <div class="gallery-item" data-category="videos {{ video.category }}" data-type="html"
+        <!-- External Images -->
+        {% if site.data.gallery_images.external_images %}
+        {% for img in site.data.gallery_images.external_images %}
+        <div class="gallery-item" data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
+            data-src="{{ img.image | relative_url }}" data-caption="{{ img.caption | markdownify | escape }}">
+            <div class="gallery-thumb-wrapper">
+                <img src="{{ img.image | relative_url }}" alt="{{ img.title }}" loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-title">{{ img.title }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Videos Categories -->
+        {% assign video_platforms = "youtube,tiktok,instagram,twitter" | split: "," %}
+        {% for platform in video_platforms %}
+        {% if site.data.gallery_videos[platform] %}
+        {% for video in site.data.gallery_videos[platform] %}
+        <div class="gallery-item" data-category="videos {{ platform }}" data-type="html"
             data-caption="{{ video.title | escape }}">
             <div class="gallery-thumb-wrapper">
                 {% if video.thumbnail and video.thumbnail != "" %}
@@ -52,11 +68,21 @@ layout: default
             </div>
             <!-- Hidden content for lightbox -->
             <div class="gallery-html-content" style="display:none;">
-                {{ video.embed }}
+                <div class="video-container">
+                    <div class="video-embed">
+                        {{ video.embed }}
+                    </div>
+                    {% if video.caption %}
+                    <div class="video-caption-side">
+                        {{ video.caption | markdownify }}
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
         {% endfor %}
         {% endif %}
+        {% endfor %}
     </div>
 </div>
 

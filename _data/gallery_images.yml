@@ -1,0 +1,771 @@
+---
+cover_images:
+- title: 'The Evolution of a Side Project: My Countdown App'
+  image: https://github.com/user-attachments/assets/792bcbd5-ec73-43e2-bac5-2328482da1b3
+  caption: 'Cover image for The Evolution of a Side Project: My Countdown App'
+  link: "/my-countdown-app-journey"
+- title: The UI- The Challenge of Color Themes
+  image: https://github.com/user-attachments/assets/aa1035db-077c-439a-971e-5f8a002daaeb
+  caption: Cover image for The UI- The Challenge of Color Themes
+  link: "/ui_color_themes"
+- title: 'App Development Process: From Concept to Launch'
+  image: https://github.com/user-attachments/assets/f8d639ae-687d-4eaa-af1d-60d2bd7b62fc
+  caption: 'Cover image for App Development Process: From Concept to Launch'
+  link: "/Application Development Process"
+- title: Spotlight on Peter Kimanzi
+  image: "/assets/images/peterKimanziPortfolio.png"
+  caption: Screenshot of Peter Kimanzi's portfolio website featuring a dark theme,
+    his name, and title as Software Engineer.
+  link: "/Spotlight on Peter Kimanzi"
+- title: Stranger Things by Peter Kimanzi
+  image: "/assets/images/stranger_things.png"
+  caption: Cover image for Stranger Things by Peter Kimanzi
+  link: "/Stranger Things by Peter Kimanzi"
+- title: 'Google Earth Engine: A Useful Tool for Satellite Imagery'
+  image: https://github.com/user-attachments/assets/213b0937-d8b0-4b12-82fc-9220c977fd39
+  caption: 'Cover image for Google Earth Engine: A Useful Tool for Satellite Imagery'
+  link: "/gee_recommendation"
+- title: GSM module HTTP GET & POST request using arduino microcontroller and SIM900
+  image: "/assets/images/gsm_module.jpg"
+  caption: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.
+  link: "/http-get-post-sim900"
+- title: Install-NodeJs-on-Raspberry-Pi
+  image: "/assets/images/old_node_js.png"
+  caption: Cover image for Install-NodeJs-on-Raspberry-Pi
+  link: "/Install_NodeJs_on_Raspberry_Pi"
+- title: Hello World -Skynet is Self aware
+  image: "/assets/images/servers.jpeg"
+  caption: Cover image for Hello World -Skynet is Self aware
+  link: "/hello_World"
+- title: Dr Jekyll & Ruby -building Richard's personal website
+  image: "/assets/images/jekyll_cyber.jpeg"
+  caption: Cover image for Dr Jekyll & Ruby -building Richard's personal website
+  link: "/Building_this_personal_website"
+- title: Mastering Python for Algorithms and Efficiency
+  image: https://github.com/user-attachments/assets/7f4e6f80-cae3-4622-b1cf-4bc4825c3ba8
+  caption: Cover image for Mastering Python for Algorithms and Efficiency
+  link: "/Python for Algorithms and Efficiency"
+- title: 'Installing and removing Node.js on linux-based Systems-for raspberry pi
+    4B '
+  image: "/assets/images/nodejs_2024.png"
+  caption: 'Cover image for Installing and removing Node.js on linux-based Systems-for
+    raspberry pi 4B '
+  link: "/Installing_NodeJs_16"
+- title: Resolving SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED' Error
+  image: "/assets/images/error_image.webp"
+  caption: Cover image for Resolving SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED'
+    Error
+  link: "/resolving_ssh_error"
+- title: Introducing fastai-Practical deep learning without a PhD
+  image: "/assets/images/fastaibook.webp"
+  caption: Cover image for Introducing fastai-Practical deep learning without a PhD
+  link: "/introducingfastai"
+- title: Comparison of Static Site Hosting Options
+  image: "/assets/images/static_site.jpeg"
+  caption: Cover image for Comparison of Static Site Hosting Options
+  link: "/static_site_comparison"
+- title: How AI Could Empower Any Business - Andrew Ng
+  image: "/assets/images/andrew_ng_ai_talk.png"
+  caption: Cover image for How AI Could Empower Any Business - Andrew Ng
+  link: "/andrewng_ted"
+- title: Introducing GitHub Models
+  image: "/assets/images/github_models_pic.png"
+  caption: Cover image for Introducing GitHub Models
+  link: "/github_models"
+- title: Learn to Build Computer Vision Models with Roboflow
+  image: "/assets/images/comp_vision_roboflow.jpeg"
+  caption: Cover image for Learn to Build Computer Vision Models with Roboflow
+  link: "/comp_vison_roboflow"
+- title: Can AI bring images to life?
+  image: "/assets/images/bees_luma.jpeg"
+  caption: Cover image for Can AI bring images to life?
+  link: "/lumalabs_genai"
+- title: Why Not Stick to One Programming Language for Everything?
+  image: "/assets/images/programming_language.png"
+  caption: Cover image for Why Not Stick to One Programming Language for Everything?
+  link: "/programming_lex_fridman"
+- title: Automating Script Execution on a Raspberry Pi
+  image: "/assets/images/raspberrypi.png"
+  caption: Cover image for Automating Script Execution on a Raspberry Pi
+  link: "/automating-rpi"
+- title: Automating Python Execution on a Raspberry Pi with a virtual environment
+  image: "/assets/images/just_start.png"
+  caption: Cover image for Automating Python Execution on a Raspberry Pi with a virtual
+    environment
+  link: "/automating-rpi_python"
+- title: Lex Fridman and Andrew Ng on Deep learning - Lex Podcast
+  image: "/assets/images/andrewng_lex.png"
+  caption: Cover image for Lex Fridman and Andrew Ng on Deep learning - Lex Podcast
+  link: "/andrew_lex_podcast"
+- title: Escaping CMS hell-DecapCMS, Netlify and Sveltia
+  image: "/assets/images/static_site.jpeg"
+  caption: Cover image for Escaping CMS hell-DecapCMS, Netlify and Sveltia
+  link: "/story-time-add-a-cms-to-a-jekyll-github-pages-website"
+- title: Top Websites for African Climate Data
+  image: "/assets/images/weather_post/wunderground.png"
+  caption: Cover image for Top Websites for African Climate Data
+  link: "/top-websites-for-african-climate-data"
+- title: Why You Should Consider Publishing in arXiv
+  image: "/assets/images/academic_paper.jpeg"
+  caption: Cover image for Why You Should Consider Publishing in arXiv
+  link: "/why-you-should-consider-publishing-in-arxiv"
+- title: What is arXiv?
+  image: "/assets/images/arxiv_snap.png"
+  caption: Cover image for What is arXiv?
+  link: "/what-is-arxiv"
+- title: Zindi -Ghana Crop Disease Detection Challenge
+  image: "/assets/images/zindi_crop_disease.png"
+  caption: Cover image for Zindi -Ghana Crop Disease Detection Challenge
+  link: "/zindi-ghana-crop-disease-detection-challenge"
+- title: Understanding Gradients with loss.backward() in PyTorch
+  image: "/assets/images/math_science.jpeg"
+  caption: Cover image for Understanding Gradients with loss.backward() in PyTorch
+  link: "/understanding-gradients-with-loss-backward-in-pytorch"
+- title: How Google forecasts Weather and Air Quality Data
+  image: "/assets/images/google_weather.png"
+  caption: Cover image for How Google forecasts Weather and Air Quality Data
+  link: "/how-google-forecasts-weather-and-air-quality-data"
+- title: Understanding the Air Quality Index (AQI)
+  image: "/assets/images/air_quality/aqi.png"
+  caption: Cover image for Understanding the Air Quality Index (AQI)
+  link: "/understanding-the-air-quality-index-aqi"
+- title: How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG Errors
+    in Google Chrome due to DNS
+  image: "/assets/images/dns_post/dns_error.webp"
+  caption: Cover image for How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG
+    Errors in Google Chrome due to DNS
+  link: "/how-to-fix-err-name-not-resolved-and-dns-probe-finished-bad-config-errors-in-google-chrome-due-to-dns"
+- title: Is There a Process to Build an Application?
+  image: "/assets/images/light bulb.jpg"
+  caption: Cover image for Is There a Process to Build an Application?
+  link: "/is-there-a-process-to-build-an-application"
+- title: Machine Learning Specialization by Andrew Ng and DeepLearning.AI
+  image: "/assets/images/andrew_ng_coursera.png"
+  caption: Cover image for Machine Learning Specialization by Andrew Ng and DeepLearning.AI
+  link: "/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai"
+- title: 'SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory'
+  image: "/assets/images/Samurai_paper_logo.png"
+  caption: 'Cover image for SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware
+    Memory'
+  link: "/samurai-advancing-zero-shot-visual-tracking-with-motion-aware-memory"
+- title: 'Answer.AI Launches: A New Chapter in Practical AI Development'
+  image: "/assets/images/answer_ai.jpg"
+  caption: 'Cover image for Answer.AI Launches: A New Chapter in Practical AI Development'
+  link: "/answer-ai-launches-a-new-chapter-in-practical-ai-development"
+- title: Discover Graduate Programs at Carnegie Mellon University Africa
+  image: "/assets/images/CMU_africa_brochure.png"
+  caption: Cover image for Discover Graduate Programs at Carnegie Mellon University
+    Africa
+  link: "/discover-graduate-programs-at-carnegie-mellon-university-africa"
+- title: Revolutionizing Healthcare in Developing Nations Through Data
+  image: "/assets/images/hr_constraints_africa.png"
+  caption: Cover image for Revolutionizing Healthcare in Developing Nations Through
+    Data
+  link: "/revolutionizing-healthcare-in-developing-nations-through-data"
+- title: 'Kaggle competitions: Gateway to Data Science Success'
+  image: "/assets/images/kaggle_competitions.png"
+  caption: 'Cover image for Kaggle competitions: Gateway to Data Science Success'
+  link: "/kaggle-competitions-gateway-to-data-science-success"
+- title: What is TechRxiv?
+  image: "/assets/images/techrxiv/techrxiv_screenshot_good.png"
+  caption: Cover image for What is TechRxiv?
+  link: "/what-is-techrxiv"
+- title: 'Starlink''s Direct to Cell: Revolutionizing Mobile Connectivity'
+  image: "/assets/images/starlink_direct_to_cell.png"
+  caption: 'Cover image for Starlink''s Direct to Cell: Revolutionizing Mobile Connectivity'
+  link: "/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity"
+- title: 'YOLO: Evolution, Applications, and Current Trends in Object Detection'
+  image: "/assets/images/ultralytics_yolo.png"
+  caption: 'Cover image for YOLO: Evolution, Applications, and Current Trends in Object
+    Detection'
+  link: "/yolo-evolution-applications-and-current-trends-in-object-detection"
+- title: Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers
+  image: "/assets/images/elon_la_fire_dtc.png"
+  caption: Cover image for Starlink's Direct to Cell Service Now Available in LA for
+    T-Mobile Subscribers
+  link: "/starlink-s-direct-to-cell-service-now-available-in-la-for-t-mobile-subscribers"
+- title: 'Ambient Air Quality Standards in West Africa: The Current State (2025)'
+  image: "/assets/images/brightglobe_in_africa.jpg"
+  caption: 'Cover image for Ambient Air Quality Standards in West Africa: The Current
+    State (2025)'
+  link: "/ambient-air-quality-standards-in-west-africa-the-current-state-2025"
+- title: Cybertrucks as mobile Base Stations in Emergency Communications
+  image: "/assets/images/cybertruck.jpeg"
+  caption: Cover image for Cybertrucks as mobile Base Stations in Emergency Communications
+  link: "/mobile-base-stations-in-emergency-communications"
+- title: SpaceX Falcon 9 rocket  successfully reaches a hundred launches.
+  image: "/assets/images/falcon9_launch.jpeg"
+  caption: Cover image for SpaceX Falcon 9 rocket  successfully reaches a hundred
+    launches.
+  link: "/spacex-falcon-9-rocket-successfully-reaches-a-hundred-launches."
+- title: 'Exploring Machine Learning: The Best Resources for Beginners'
+  image: "/assets/images/jason_brownlee_start_ml.png"
+  caption: 'Cover image for Exploring Machine Learning: The Best Resources for Beginners'
+  link: "/exploring-machine-learning-the-best-resources-for-beginners"
+- title: 'Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream Not Closed Cleanly'
+  image: "/assets/images/git_stream_error_screenshot.png"
+  caption: 'Cover image for Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream
+    Not Closed Cleanly'
+  link: "/fixing-the-git-error-rpc-failed-curl-92-http-2-stream-not-closed-cleanly"
+- title: Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL
+  image: "/assets/images/pamely_cmu_website.png"
+  caption: Cover image for Carnegie Mellon University Africa's Breakthrough in Detecting
+    Birth Asphyxia-HumekaFL
+  link: "/carnegie-mellon-university-africa-s-breakthrough-in-detecting-birth-asphyxia-humekafl"
+- title: 'SpaceX''s ''Mechazilla'' Catches Super Heavy Booster: A Giant Leap for Rocket
+    Reusability'
+  image: "/assets/images/Starship_spacex_website.webp"
+  caption: 'Cover image for SpaceX''s ''Mechazilla'' Catches Super Heavy Booster:
+    A Giant Leap for Rocket Reusability'
+  link: "/catching-the-super-heavy-booster-spacex"
+- title: Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts
+  image: "/assets/images/planet_california_wildfires.jpeg"
+  caption: Cover image for Planet's Crisis Response Program Aids Los Angeles Wildfire
+    Efforts
+  link: "/planet-s-crisis-response-program-aids-los-angeles-wildfire-efforts"
+- title: SpaceX Did It Again-Precision Engineering on Display
+  image: "/assets/images/booster_catch.png"
+  caption: Cover image for SpaceX Did It Again-Precision Engineering on Display
+  link: "/spacex-did-it-again-precision-engineering-on-display"
+- title: SpaceX Pioneering Rocket Technology
+  image: "/assets/images/space_x_gallery.avif"
+  caption: Cover image for SpaceX Pioneering Rocket Technology
+  link: "/spacex-s-pioneering-rocket-technology"
+- title: 'ML5.js:  Machine Learning for the Web'
+  image: "/assets/images/ml5js_screenshot.png"
+  caption: 'Cover image for ML5.js:  Machine Learning for the Web'
+  link: "/ml5.js-machine-learning-for-the-web"
+- title: ThreeJs and Reinforcement Learning in 3D
+  image: "/assets/images/3d_rl_game_cover.webp"
+  caption: Cover image for ThreeJs and Reinforcement Learning in 3D
+  link: "/three.js-and-reinforcement-learning-in-3-dimensions"
+- title: Is the Davis Solar Radiation Sensor Overpriced?
+  image: "/assets/images/solar_radiation_senosr.png"
+  caption: Cover image for Is the Davis Solar Radiation Sensor Overpriced?
+  link: "/is-the-davis-solar-radiation-sensor-overpriced"
+- title: The Imperfections of Machine Learning
+  image: "/assets/images/ml_false positive_cropped_charger_rd.jpg"
+  caption: Cover image for The Imperfections of Machine Learning
+  link: "/the-imperfections-of-machine-learning"
+- title: Guide to Accessing Air Quality Data from US Embassies Worldwide
+  image: "/assets/images/airnow_africa.png"
+  caption: Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide
+  link: "/guide-to-accessing-air-quality-data-from-us-embassies-worldwide"
+- title: Adapting The Danger of a Single Story:AI-Generated Video
+  image: "/assets/images/danger_of_a_single_story_did.png"
+  caption: Cover image for Adapting The Danger of a Single Story:AI-Generated Video
+  link: "/the-danger-of-a-single-story--ai-generated-video-adapting"
+- title: Future of Space Technology with Starlink
+  image: "/assets/images/starlink_branch_education.png"
+  caption: Cover image for Future of Space Technology with Starlink
+  link: "/future-of-space-technology-with-starlink"
+- title: Why Can't I Just Send Money With My Visa Card?
+  image: "/assets/images/visa_locked_image.jpg"
+  caption: Cover image for Why Can't I Just Send Money With My Visa Card?
+  link: "/visa-and-mastercard-payment-cards-not-transfer-tools"
+- title: 'Zombie Walk: Turning an Image into a 3D Model with DeepMotion'
+  image: "/assets/images/deepmotion_walking.png"
+  caption: 'Cover image for Zombie Walk: Turning an Image into a 3D Model with DeepMotion'
+  link: "/zombie-walk-image-to-3d-with-deep-motion"
+- title: 'StackBlitz: A Full-IDE in Your Browser'
+  image: "/assets/images/stackblitz_logo.jpeg"
+  caption: 'Cover image for StackBlitz: A Full-IDE in Your Browser'
+  link: "/stackblitz-a-full-fledged-ide-in-your-browser"
+- title: Why Do Websites and Emails Use Narrow Layouts?
+  image: "/assets/images/narrow_website_layout_grok.jpg"
+  caption: Cover image for Why Do Websites and Emails Use Narrow Layouts?
+  link: "/why-do-websites-and-emails-use-narrow-layouts"
+- title: Kolors Virtual Try-On:Nobody's Gonna Know
+  image: "/assets/images/kolors_try_on-ezgif.com-optimize.webp"
+  caption: Cover image for Kolors Virtual Try-On:Nobody's Gonna Know
+  link: "/kolors-virtual-try-on-nobody-s-gonna-know"
+- title: Explore the Fascinating World of Satellite Orbits with Keeptrack.space
+  image: "/assets/images/keeptrack.png"
+  caption: Cover image for Explore the Fascinating World of Satellite Orbits with
+    Keeptrack.space
+  link: "/explore-the-fascinating-world-of-satellite-orbits-with-keeptrack.space"
+- title: Machine Learning Experts to Follow
+  image: "/assets/images/andrew_ng_syd.jpg"
+  caption: Cover image for Machine Learning Experts to Follow
+  link: "/machine-learning-experts-to-follow"
+- title: 'Copernicus: Powering Earth Observation with Sentinel Satellites'
+  image: "/assets/images/copernicus_airq_new_delhi.png"
+  caption: 'Cover image for Copernicus: Powering Earth Observation with Sentinel Satellites'
+  link: "/copernicus-powering-earth-observation-with-sentinel-satellites"
+- title: Why Isn't Reinforcement Learning Widely Used for Game AI Agents?
+  image: "/assets/images/reinforcement%20learning_in_games_grok.jpg"
+  caption: Cover image for Why Isn't Reinforcement Learning Widely Used for Game AI
+    Agents?
+  link: "/why-isn-t-reinforcement-learning-widely-used-for-game-ai-agents"
+- title: 'Earth Observation’s Promise and Barriers: A Down to Earth View'
+  image: "/assets/images/satellite_orbiting_earth_color_codes.jpg"
+  caption: 'Cover image for Earth Observation’s Promise and Barriers: A Down to Earth
+    View'
+  link: "/earth-observation’s-promise-and-barriers-a-down-to-earth-view"
+- title: 'NVIDIA''s Consumer GPU Restrictions in Data Centers: Impact on Cloud Computing
+    Costs'
+  image: "/assets/images/douglas-county-servers.jpg"
+  caption: 'Cover image for NVIDIA''s Consumer GPU Restrictions in Data Centers: Impact
+    on Cloud Computing Costs'
+  link: "/nvidia-s-consumer-gpu-restrictions-in-data-centers-impact-on-cloud-computing-costs"
+- title: 'My Experience with SveltiaCMS: A Game-Changer for Website Management'
+  image: "/assets/images/sveltia-logo.svg"
+  caption: 'Cover image for My Experience with SveltiaCMS: A Game-Changer for Website
+    Management'
+  link: "/sveltiacms-a-blow-for-dr-jekyll-and-hyde"
+- title: 'AI: What It Is, How It’s Seen, and How to Stay Informed'
+  image: "/assets/images/rtdetr/cat_prediction_rtdetr.jpg"
+  caption: 'Cover image for AI: What It Is, How It’s Seen, and How to Stay Informed'
+  link: "/ai-what-it-is-how-it’s-seen-and-how-to-stay-informed"
+- title: List of Banks in Rwanda and Their Services
+  image: "/assets/images/1000189531.jpg"
+  caption: Cover image for List of Banks in Rwanda and Their Services
+  link: "/list-of-banks-in-rwanda-and-their-services"
+- title: Why Websites Love to Overanalyze Everything
+  image: "/assets/images/website_long_text_on_screen.jpg"
+  caption: Cover image for Why Websites Love to Overanalyze Everything
+  link: "/why-websites-love-to-overanalyze-everything"
+- title: 'This Week in Air Quality Research: Novel Insights and Sensor Advances (23-June-2025)'
+  image: "/assets/images/air_quality_sensors_city_background.jpg"
+  caption: 'Cover image for This Week in Air Quality Research: Novel Insights and
+    Sensor Advances (23-June-2025)'
+  link: "/this-week-in-air-quality-research-novel-insights-and-sensor-advances-23-june-2025"
+- title: Understanding the Trend in Published Papers
+  image: "/assets/images/academic_papers_rising_wind.jpg"
+  caption: Cover image for Understanding the Trend in Published Papers
+  link: "/understanding-the-trend-in-published-papers"
+- title: '"Don''t Save" -How to Recover an Unsaved PowerPoint Presentation After Mistake'
+  image: "/assets/images/recover_unsaved_presentation_ppt.png"
+  caption: Cover image for Don''t Save" -How to Recover an Unsaved PowerPoint Presentation
+    After Mistake
+  link: "/how-to-recover-an-unsaved-powerpoint-presentation-after-hitting-don-t-save"
+- title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
+  image: "/assets/images/norrsken_africa_tech_boom_cover.webp"
+  caption: 'A stylized, glowing, circuit-board map of Africa overlaid on a digital
+    background with radiating connections. Key sectors and themes are highlighted
+    around the map with icons and text, indicating a growing technology ecosystem.
+    The highlighted sectors are Fintech (smartphone icon with an arrow), Clean Energy
+    (solar panel and house icon), Healthtech (heart with a plus sign icon), and Mergers
+    & Acquisitions (M&A acronym, appearing twice). Text reads: "Africa''s Tech Ecosystem
+    Moving Forward" and "AFRICA''S TECH BOOM 2025: INVESTMENTS & INNOVATION."'
+  link: "/africa’s-tech-scene-is-thriving-funding-and-mergers-lead-the-way"
+- title: 'Chirp: Transmitting Data Through Sound'
+  image: "/assets/images/chirp_screenshot_data_with_sound.png"
+  caption: 'Cover image for Chirp: Transmitting Data Through Sound'
+  link: "/chirp-transmitting-data-through-sound"
+- title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
+  image: "/assets/images/opencut.png"
+  caption: 'Cover image for OpenCut: A Free, Open-Source Alternative to CapCut'
+  link: "/opencut-a-free-open-source-alternative-to-capcut"
+- title: What is Particulate Matter (PM2.5) and the Environmental Significance
+  image: "/assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg"
+  caption: Cover image for What is Particulate Matter (PM2.5) and the Environmental
+    Significance
+  link: "/what-is-particulate-matter-pm2.5-and-the-environmental-significance"
+- title: 'How to Check Your Website''s Performance: A Case Study on Lusion.co'
+  image: "/assets/images/lusion_web_astronaut_annotated_rd.webp"
+  caption: 'Cover image for How to Check Your Website''s Performance: A Case Study
+    on Lusion.co'
+  link: "/how-to-check-website-performance-a-case-study-on-lusion.co"
+- title: What's Hot Right Now? Find Out with Google Trends!
+  image: "/assets/images/1Google trends.webp"
+  caption: Cover image for What's Hot Right Now? Find Out with Google Trends!
+  link: "/what-s-hot-right-now-find-out-with-google-trends"
+- title: Agentic Object Detection and Document Extraction with Landing.ai
+  image: "/assets/images/agentic_obj_dection_landingai_cover.png"
+  caption: Cover image for Agentic Object Detection and Document Extraction with Landing.ai
+  link: "/agentic-object-detection-and-document-extraction-with-landing.ai"
+- title: Trying Out Difix by NVIDIA for Image Restoration
+  image: "/assets/images/difix_cover_image_rd.webp"
+  caption: Cover image for Trying Out Difix by NVIDIA for Image Restoration
+  link: "/trying-out-difix-by-nvidia-for-image-restoration"
+- title: Understanding NetKAT and Probabilistic NetKAT for Network Verification
+  image: ''
+  caption: Cover image for Understanding NetKAT and Probabilistic NetKAT for Network
+    Verification
+  link: "/understanding-netkat-and-probabilistic-netkat-for-network-verification"
+- title: 'I can''t see you in Fog: A mobile scenario for low visibility driving'
+  image: ''
+  caption: 'Cover image for I can''t see you in Fog: A mobile scenario for low visibility
+    driving'
+  link: "/i-can-t-see-you-in-fog-a-mobile-scenario-for-low-visibility-driving"
+- title: Roboface-an Interactive Face Animation Tracker
+  image: "/assets/images/face_animation_cover.webp"
+  caption: Cover image for Roboface-an Interactive Face Animation Tracker
+  link: "/roboface-an-interactive-face-animation-tracker"
+- title: A Decade of Singapore FinTech Festival 2025-Decoding an Email
+  image: "/assets/images/sff_2025_cover_image.webp"
+  caption: Cover image for A Decade of Singapore FinTech Festival 2025-Decoding an
+    Email
+  link: "/singapore-fintech-festival-2025"
+- title: What is HackerOne and Their Bug Bounty Program?
+  image: "/assets/images/hackerone_bugbounty_rd.webp"
+  caption: Cover image for What is HackerOne and Their Bug Bounty Program?
+  link: "/what-is-hackerone-and-their-bug-bounty-program"
+- title: Complete Machine Learning package- learn by doing
+  image: "/assets/images/git_complete_ml_package_cover_rd.webp"
+  caption: Cover image for Complete Machine Learning package- learn by doing
+  link: "/complete-machine-learning-package-learn-by-doing"
+- title: Designing ananse a generative AI approach
+  image: "/assets/images/ananse_design_cover_rdjarbeng.JPG"
+  caption: Cover image for Designing ananse a generative AI approach
+  link: "/designing-ananse-a-generative-ai-approach"
+- title: Agent57 for Reinforcement Learning beats Atari benchmark
+  image: ''
+  caption: Cover image for Agent57 for Reinforcement Learning beats Atari benchmark
+  link: "/agent57-for-reinforcement-learning-beats-atari-benchmark"
+- title: 'Free HD Background Remover: Effortless Image Editing Tool'
+  image: "/assets/images/bg_remover_cover_rd.webp"
+  caption: 'Cover image for Free HD Background Remover: Effortless Image Editing Tool'
+  link: "/free-hd-background-remover-effortless-image-editing-tool"
+- title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
+  image: "/assets/images/ai_chronological_order_rdjarbeng_cover.webp"
+  caption: 'Cover image for A Chronological Look At AI: A Decade-by-Decade Evolution'
+  link: "/a-chronological-look-at-ai-a-decade-by-decade-evolution"
+- title: RURA Announces Revised Electricity End-User Tariffs Effective October 2025
+  image: "/assets/images/rura_tariffs_october2025_cover.webp"
+  caption: Cover image for RURA Announces Revised Electricity End-User Tariffs Effective
+    October 2025
+  link: "/rura-announces-revised-electricity-end-user-tariffs-effective-october-2025"
+- title: Why Does Restarting Your Computer (or Router) Actually Work?
+  image: "/assets/images/why_does_restarting_work_rdjarbeng_cover.webp"
+  caption: Cover image for Why Does Restarting Your Computer (or Router) Actually
+    Work?
+  link: "/why-does-restarting-your-computer-or-router-actually-work"
+- title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
+  image: "/assets/images/gemini_room_design_cover.webp"
+  caption: Cover image for I Tried to Replace an Interior Designer with Gemini. Here's
+    What Happened.
+  link: "/putting-google-s-gemini-pro-and-nano-banana-to-the-test"
+- title: 'Fixing the "Error Loading Popular Add-ins" in Microsoft Word: Disable Metered
+    Connection to Resolve It'
+  image: ''
+  caption: 'Cover image for Fixing the "Error Loading Popular Add-ins" in Microsoft
+    Word: Disable Metered Connection to Resolve It'
+  link: "/fixing-the-error-loading-popular-add-ins-in-microsoft-word-disable-metered-connection-to-resolve-it"
+- title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut
+  image: "/assets/images/revolut_sending_cross_border_cover.webp"
+  caption: 'A split-screen image. On the left, a dark, chaotic scene depicts traditional
+    banking obstacles: tangled chains, a rusted padlock, stone blocks labeled "FEES"
+    and "DELAY," and small icons for banks and old money. On the right, a bright,
+    clear scene shows a smartphone with the "revolut" app, connected by sleek lines
+    to various country flags (UK, Germany, USA, Japan, Australia, Brazil, Singapore,
+    Switzerland) and credit cards, all against a light blue map backdrop, symbolizing
+    seamless global digital payments. The title "BEYOND THE BREEZE: IS REVOLUT THE
+    ANSWER?" is prominently displayed across the top.'
+  link: "/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad"
+- title: 'Finding Your Fuel: A Guide to Popular Open Data Repositories'
+  image: "/assets/images/finding_your_data_fuel_cover.webp"
+  caption: 'futuristic illustration of a glowing blue digital brain made of network
+    connections and data icons, set between two server racks, with the text ''Finding
+    Your Fuel: A Guide to Popular Open Data Repositories'' and ''rdjarbeng.com'' overlaid.'
+  link: "/finding-your-fuel-a-guide-to-popular-open-data-repositories"
+- title: 100 posts later-lessons learnt from building this blog
+  image: ''
+  caption: Cover image for 100 posts later-lessons learnt from building this blog
+  link: "/100-posts-later-lessons-learnt-from-building-this-blog"
+- title: Money Transfers Doing Two Things At Once
+  image: ''
+  caption: Cover image for Money Transfers Doing Two Things At Once
+  link: "/money-transfers-doing-two-things-at-once"
+- title: My Money Is Bigger Than Yours-Currency analysis by volume
+  image: ''
+  caption: Cover image for My Money Is Bigger Than Yours-Currency analysis by volume
+  link: "/my-money-is-bigger-than-yours-currency-analysis-by-volume"
+- title: Federated login sign up with an external service
+  image: ''
+  caption: Cover image for Federated login sign up with an external service
+  link: "/federated-login-sign-up-with-an-external-service"
+- title: 'The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?'
+  image: "/assets/images/google_vs_ffmpeg_cover.webp"
+  caption: A vertical poster illustrating the Google vs. FFmpeg debate using a "David
+    vs. Goliath" meme. A giant, menacing robot labeled "GOOGLE" holds an AI-themed
+    magnifying glass and says, "I found bugs! You fix." Below, a small, heroic figure
+    labeled "FFMPEG" stands on a cliff and replies, "But... who pays for it?" The
+    text "GOOGLE VS FFMPEG" is in the center, with "rdjarbeng.com" at the bottom.
+  link: "/the-google-vs.-ffmpeg-debate-ai-finds-a-bug-but-who-has-to-fix-it"
+- title: Google Rich Results Testing Tool
+  image: ''
+  caption: Cover image for Google Rich Results Testing Tool
+  link: "/google-rich-results-testing-tool"
+- title: The Technology Behind Money Transfers
+  image: ''
+  caption: Cover image for The Technology Behind Money Transfers
+  link: "/the-technology-behind-money-transfers"
+- title: Crossover LinkedIn Workflow Broken
+  image: ''
+  caption: Cover image for Crossover LinkedIn Workflow Broken
+  link: "/crossover-linkedin-workflow-broken"
+- title: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're
+    Safer
+  image: "/assets/images/google_pay_and_apple_pay_cover.webp"
+  caption: A cover image for an article titled "What is 'Google Pay and Apple Pay?'".
+    It shows an Android phone with the Google Wallet app and an iPhone with the Apple
+    Pay app, side-by-side, in front of a glowing world map to illustrate global payments.
+  link: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer"
+- title: The AI Chatbots Annual Class Reunion
+  image: ''
+  caption: Cover image for The AI Chatbots Annual Class Reunion
+  link: "/the-ai-chatbots-annual-class-reunion"
+- title: Moving the Start Button Back to the Left in Windows 11
+  image: ''
+  caption: Cover image for Moving the Start Button Back to the Left in Windows 11
+  link: "/moving-the-start-button-back-to-the-left-in-windows-11"
+- title: 'Review: Google Antigravity License Agreement and First Impressions'
+  image: "/assets/images/antigravity_cover_image.webp"
+  caption: A dark, futuristic image for a tech review. A curved computer monitor displays
+    the Google Antigravity IDE interface with lines of code. Above the screen, a glowing
+    circuit pattern connects to a large Google 'G' logo, symbolizing the flow of AI
+    data. In the foreground, a transparent tablet features the words "TERMS OF SERVICE"
+    next to a magnifying glass and a tag reading "REVIEW," emphasizing the post's
+    focus on the license agreement.
+  link: "/antigravity-agentic-ide-from-google"
+- title: 'From Swiss Alps to African Cities: How IQAir is Dominating the Global Air
+    Quality Conversation'
+  image: "/assets/images/iqair_air_quality_cover.webp"
+  caption: 'Cover image for From Swiss Alps to African Cities: How IQAir is Dominating
+    the Global Air Quality Conversation'
+  link: "/from-swiss-alps-to-african-cities-how-iqair-is-dominating-the-global-air-quality-conversation"
+- title: Check Hardware Specifications for Windows Computers
+  image: ''
+  caption: ''
+  link: "/check-hardware-specifications-for-windows-computers"
+- title: Google antigravity IDE first impressions and use
+  image: ''
+  caption: ''
+  link: "/google-antigravity-ide-first-impressions-and-use"
+- title: Intel Ultra Versus i7
+  image: ''
+  caption: ''
+  link: "/intel-ultra-versus-i7"
+- title: Google Veo3 for video generation review
+  image: ''
+  caption: ''
+  link: "/google-veo3-for-video-generation-review"
+- title: Kiira Motors Kayoola EV from Uganda to South Africa.
+  image: ''
+  caption: ''
+  link: "/kiira-motors-kayoola-ev-from-uganda-to-south-africa"
+- title: Letsile Tobogo - Botswana's first gold at the 200m olympics
+  image: "/assets/images/TebogoOlympics2024200m_cover.webp"
+  caption: Cover image for Letsile Tobogo - Botswana's first gold at the 200m olympics
+  link: "/personal/tebogo_olympics/"
+- title: Tunde Onakoya Breaks Guinness World Record with Epic Chess Marathon for Children's
+    Education
+  image: "/assets/images/nigerian-chess-master-tunde-onakoya-victory.webp"
+  caption: Cover image for Tunde Onakoya Breaks Guinness World Record with Epic Chess
+    Marathon for Children's Education
+  link: "/personal/tunde-onakoya-breaks-guinness-world-record-with-epic-chess-marathon-for-children-s-education/"
+- title: Pittsburgh's Stunning Skyline Reveal
+  image: "/assets/images/ford_pitt_tunnel_exit.png"
+  caption: Cover image for post Pittsburgh's Stunning Skyline Reveal ford pitt tunnel
+    exit at night leading unto the bridge into Pittsburgh Downtown
+  link: "/personal/pittsburgh-s-stunning-skyline-reveal/"
+- title: 'Let There Be Memes: A Curated Collection of Internet Gold'
+  image: "/assets/images/ChatGPT_meme.jpeg"
+  caption: 'Cover image for Let There Be Memes: A Curated Collection of Internet Gold'
+  link: "/personal/let-there-be-memes/"
+- title: USSD codes for MTN Rwanda
+  image: "/assets/images/mtn_logo_cover.JPG"
+  caption: Cover image for USSD codes for MTN Rwanda
+  link: "/personal/ussd-codes-for-mtn-rwanda/"
+- title: Haircut in Kigali-Danny the barber
+  image: "/assets/images/haircut_in_kigali_cover.webp"
+  caption: Cover image for Haircut in Kigali-Danny the barber
+  link: "/personal/haircut-in-kigali-danny-the-barber/"
+- title: Quotes from the famous and not so famous
+  image: "/assets/images/Warren_Buffett_quote_market.png"
+  caption: Cover image for Quotes from the famous and not so famous
+  link: "/personal/quotes-from-the-famous-and-not-so-famous/"
+- title: Ghana, an Introduction- All That Glitters is Still Gold
+  image: "/assets/images/ghana_introduction_collage.png"
+  caption: Cover image for Ghana, an Introduction- All That Glitters is Still Gold
+  link: "/personal/a-country-called-ghana/"
+- title: Iconic images from animation
+  image: "/assets/images/gru_minions.jpg"
+  caption: Cover image for Iconic images from animation
+  link: "/personal/iconic-images-from-animation/"
+- title: Iconic images from the internet
+  image: "/assets/images/japanese_would_mp.jpeg"
+  caption: Cover image for Iconic images from the internet
+  link: "/personal/iconic-images/"
+- title: MEME reactions
+  image: "/assets/images/mourinho_takes_headphones_off.jpeg"
+  caption: Cover image for MEME reactions
+  link: "/personal/meme-reactions/"
+- title: Navigating Kigali- motorbikes and an accent
+  image: "/assets/images/kigali_bustop_motor.jpg"
+  caption: Cover image for Navigating Kigali- motorbikes and an accent
+  link: "/personal/naviagating-rwanda--motorbikes-and-an-accent/"
+- title: Finding a song -an ordinary google task
+  image: "/assets/images/ordinary_song_find_1000175293.webp"
+  caption: Cover image for Finding a song -an ordinary google task
+  link: "/personal/finding-a-song-from-my-phone--an-ordinary-google-task/"
+- title: Trip to Uganda- Kampala & silver springs
+  image: "/assets/images/rd_silver_springs_stare_at_statue_cover.webp"
+  caption: Cover image for Trip to Uganda- Kampala & silver springs
+  link: "/personal/trip-to-kampala-uganda-and-silver-springs/"
+- title: Research school -A trip to Germany CMMRS
+  image: ''
+  caption: Cover image for Research school -A trip to Germany CMMRS
+  link: "/personal/research-school-a-trip-to-germany-cmmrs/"
+- title: CMMRS in Saarbrucken, Germany for pre-doctoral researchers
+  image: "/assets/images/rd_max_planck_eu_german_flags_annotated.webp"
+  caption: Cover image for CMMRS in Saarbrucken, Germany for pre-doctoral researchers
+  link: "/personal/cmmrs-in-saarbrucken-germany-for-pre-doctoral-researchers/"
+- title: Trip to Uganda -part 2
+  image: ''
+  caption: Cover image for Trip to Uganda -part 2
+  link: "/personal/trip-to-uganda-part-2/"
+- title: The Viral Tweet That Put a Nigerian Pencil Artist on MrBeast's Wall
+  image: "/assets/images/cover_mr_beast_reply_ifure_usen.webp"
+  caption: Cover image for The Viral Tweet That Put a Nigerian Pencil Artist on MrBeast's
+    Wall
+  link: "/personal/from-pencil-to-stardom-with-mr-beast-ifure-usen’s-breakthrough-moment-on-x/"
+- title: CMU engineering mixer 2024
+  image: ''
+  caption: Cover image for CMU engineering mixer 2024
+  link: "/personal/cmu-engineering-mixer-2024/"
+- title: Perry the platypus and Doofenshmirtz - a running joke
+  image: ''
+  caption: Cover image for Perry the platypus and Doofenshmirtz - a running joke
+  link: "/personal/perry-the-platypus-and-doofenshmirtz-a-running-joke/"
+- title: 9 point problem-think outside the box
+  image: ''
+  caption: Cover image for 9 point problem-think outside the box
+  link: "/personal/9-point-problem-think-outside-the-box/"
+- title: 'Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View'
+  image: "/assets/images/amahoro_stadium_outside_cover_rdjarbeng.webp"
+  caption: 'Cover image for Amahoro Stadium: Landmark in Kigali, Rwanda An Outside
+    View'
+  link: "/personal/focus-on-amahoro-stadium-and-bk-arena-about-kigali/"
+- title: 'Interrupted Romance: Sunset, Cynicism And Love birds In Kigali'
+  image: "/assets/images/loverbirds_cover_rdjarbeng.webp"
+  caption: 'Cover image for Interrupted Romance: Sunset, Cynicism And Love birds In
+    Kigali'
+  link: "/personal/love-birds-in-kigali/"
+- title: World Champion of Public Speaking 2014 -I see something
+  image: ''
+  caption: Cover image for World Champion of Public Speaking 2014 -I see something
+  link: "/personal/world-champion-of-public-speaking-2014-i-see-something/"
+- title: The Story of Nike The Last Game
+  image: "/assets/images/nike_the_last_game_cover_rdjarbeng.webp"
+  caption: Cover image for The Story of Nike The Last Game
+  link: "/personal/the-story-of-nike-the-last-game/"
+- title: 'Now On Repeat: "Oluwatosin" by Tkeyz ft. SteveHills'
+  image: "/assets/images/1000267977.webp"
+  caption: 'Cover image for Now On Repeat: "Oluwatosin" by Tkeyz ft. SteveHills'
+  link: "/personal/oluwatosin-this-jesus-that-i-know-a-banger/"
+- title: Prague's Spinning Head, Astro Clock and Free Apples!
+  image: "/assets/images/franz_k_statue_cover.webp"
+  caption: Cover image featuring a picture of the Franz Kafka statue in Prague at
+    night with light reflecting of the stainless steel statue with text 'Franz Kafka
+    statue in Prague'
+  link: "/personal/a-glimpse-of-prague-franz-kafka-s-spinning-head-and-free-apples/"
+- title: UCI World Road Championship in Rwanda
+  image: ''
+  caption: Cover image for UCI World Road Championship in Rwanda
+  link: "/personal/uci-world-road-championship-in-rwanda/"
+- title: TED vs TEDx a YouTube Guide
+  image: ''
+  caption: Cover image for TED vs TEDx a YouTube Guide
+  link: "/personal/ted-vs-tedx-a-youtube-guide/"
+- title: 2 Cellos Youtube Channel Where Did They Go?
+  image: ''
+  caption: Cover image for 2 Cellos Youtube Channel Where Did They Go?
+  link: "/personal/2-cellos-youtube-channel-where-did-they-go/"
+- title: A Collection of Top Songs From The 2000s and 90s
+  image: ''
+  caption: Cover image for A Collection of Top Songs From The 2000s and 90s
+  link: "/personal/a-collection-of-top-songs-from-the-2000s-and-90s/"
+- title: Don't Play This Game If You Don't Have Friends - Split Fiction
+  image: ''
+  caption: Cover image for Don't Play This Game If You Don't Have Friends - Split
+    Fiction
+  link: "/personal/don-t-play-this-game-if-you-don-t-have-friends-split-fiction/"
+- title: Movie And Video Game Songs That Became Hits
+  image: ''
+  caption: Cover image for Movie And Video Game Songs That Became Hits
+  link: "/personal/movie-and-video-game-songs-that-became-hits/"
+- title: Orchestra Music Playlist Without Vocals
+  image: ''
+  caption: Cover image for Orchestra Music Playlist Without Vocals
+  link: "/personal/orchestra-music-playlist-without-vocals/"
+- title: Orchestra Music With Vocal leads
+  image: ''
+  caption: Cover image for Orchestra Music With Vocal leads
+  link: "/personal/orchestra-music-with-vocal-leads/"
+- title: Songs From The Past For The Traveller
+  image: ''
+  caption: Cover image for Songs From The Past For The Traveller
+  link: "/personal/songs-from-the-past-for-the-traveller/"
+- title: Top Songs From Lauren Daigle- Christian Music
+  image: ''
+  caption: Cover image for Top Songs From Lauren Daigle- Christian Music
+  link: "/personal/top-songs-from-lauren-daigle-christian-music/"
+- title: 'Haircut in Kigali: Follow From Start to Finish'
+  image: ''
+  caption: 'Cover image for Haircut in Kigali: Follow From Start to Finish'
+  link: "/personal/haircut-in-kigali-follow-from-start-to-finish/"
+- title: Michael Jackson-All The Songs In The New Biopic
+  image: ''
+  caption: Cover image for Michael Jackson-All The Songs In The New Biopic
+  link: "/personal/michael-jackson/"
+- title: Reason with Me, best music videos RudeBoy
+  image: ''
+  caption: Cover image for Reason with Me, best music videos RudeBoy
+  link: "/personal/reason-with-me-best-music-videos-rudeboy/"
+- title: 'King Promise Drops a Global Banger: "Terminator" feat. Young Jonn (2023)'
+  image: "/assets/images/terminator_cover_new_rdjarbeng.webp"
+  caption: A video thumbnail featuring a still from King Promise's "Terminator" music
+    video, with the artist and a crowd in the background. Overlaid on the image is
+    large, bold text in yellow and pink that reads, "TERMINATOR IT'S A HIT IN INDONESIA?".
+    Below this text, in smaller white font, is the URL for the post
+  link: "/personal/terminator-it-s-a-hit-in-indonesia/"
+- title: He Made $2,000 in One Week With AI... Then TikTok Froze It
+  image: "/assets/images/tiktok_ai_frozen_thumbnail.png"
+  caption: A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright
+    green and 'FROZEN!' in red, overlaid on a background showing a person in a black
+    shirt with an ai generated old woman.
+  link: "/personal/he-made-2-000-in-one-week-with-ai-then-tiktok-froze-3-000/"
+- title: Arican King of Memes
+  image: ''
+  caption: Cover image for Arican King of Memes
+  link: "/personal/arican-king-of-memes/"
+- title: Top Studios in Africa and Their Stars
+  image: ''
+  caption: Cover image for Top Studios in Africa and Their Stars
+  link: "/personal/top-studios-in-africa-and-their-stars/"
+- title: 'The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word'
+  image: "/assets/images/happily_exhausted_cover_image.webp"
+  caption: 'Illustration of a man leaning happily exhausted against a large rock on
+    a mountain top at sunset. The text reads: "The Good Kind of Tired: Why ''Happily
+    Exhausted'' Deserves Its Own Word.'
+  link: "/personal/the-good-kind-of-tired-why-happily-exhausted-deserves-its-own-word/"
+- title: Gilles Tchianga -We is me
+  image: ''
+  caption: ''
+  link: "/personal/gilles-tchianga-we-is-me/"
+- title: Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI
+  image: "/assets/images/andrewng_youtube.png"
+  caption: Cover image for Machine Learning Specialization on Youtube - Andrew Ng,
+    DeepLearningAI
+  link: "/personal/andrewng_youtube/"
+- title: Is this where Durov's French journey began
+  image: "/assets/images/durov_mountains.jpg"
+  caption: Cover image for Is this where Durov's French journey began
+  link: "/personal/durov_france/"
+- title: Why is There a Giant Basket on This Building in Kigali?
+  image: "/assets/images/gasabo_cropped.jpg"
+  caption: Cover image for Why is There a Giant Basket on This Building in Kigali?
+  link: "/personal/gasabo_basket/"
+- title: Ronaldo Hits Gold in Less Than 24 Hours!
+  image: "/assets/images/ronaldo_tweet.png"
+  caption: Cover image for Ronaldo Hits Gold in Less Than 24 Hours!
+  link: "/personal/ronaldo_youtube_channel/"
+external_images:
+  - title: "Gen AI Smirk Blue"
+    category: "ai-generations"
+    labels: ["grok"]
+    image: "/assets/images/genai/gen_ai_smirk_blue_grok.jpg"
+    caption: "A smirk in blue, generated by Grok."

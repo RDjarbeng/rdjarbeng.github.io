@@ -181,6 +181,60 @@ $gallery-accent-color: #007bff; // Adjust based on site theme
     }
 }
 
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 1200px;
+    }
+}
+
+.video-embed {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-caption-side {
+    flex: 1;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+
+    @media (min-width: 992px) {
+        max-width: 350px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $gallery-accent-color;
+        margin-top: 0;
+    }
+
+    a {
+        color: $gallery-accent-color;
+        text-decoration: underline;
+    }
+}
+
 .lightbox-caption {
     color: #ccc;
     text-align: center;
