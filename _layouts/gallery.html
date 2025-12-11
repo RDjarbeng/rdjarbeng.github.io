@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="gallery-container">
+    <header class="gallery-header">
+        <h1>Gallery</h1>
+        <nav class="gallery-nav">
+            <button class="gallery-filter active" data-filter="all">All</button>
+            <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
+            <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
+            <button class="gallery-filter" data-filter="videos">Videos</button>
+            <button class="gallery-filter" data-filter="tiktok">TikTok</button>
+            <button class="gallery-filter" data-filter="ghana">Ghana</button>
+        </nav>
+    </header>
+
+    <div class="gallery-grid" id="gallery-grid">
+        <!-- Cover Images Category -->
+        {% for post in site.posts %}
+        {% if post.image %}
+        <div class="gallery-item" data-category="cover-images" data-type="image"
+            data-src="{{ post.image | relative_url }}" data-caption="{{ post.title | escape }}">
+            <div class="gallery-thumb-wrapper">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span class="gallery-title">{{ post.title }}</span>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <!-- Videos Category -->
+        {% if site.data.gallery.videos %}
+        {% for video in site.data.gallery.videos %}
+        <div class="gallery-item" data-category="videos {{ video.category }}" data-type="html"
+            data-caption="{{ video.title | escape }}">
+            <div class="gallery-thumb-wrapper">
+                {% if video.thumbnail and video.thumbnail != "" %}
+                <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy">
+                {% else %}
+                <div class="gallery-placeholder">
+                    <span>{{ video.title }}</span>
+                    <span class="gallery-type-icon">▶</span>
+                </div>
+                {% endif %}
+                <div class="gallery-overlay">
+                    <span class="gallery-title">{{ video.title }}</span>
+                </div>
+            </div>
+            <!-- Hidden content for lightbox -->
+            <div class="gallery-html-content" style="display:none;">
+                {{ video.embed }}
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="gallery-lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-nav prev">&#10094;</button>
+    <div class="lightbox-content">
+        <div id="lightbox-media-container"></div>
+        <div class="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav next">&#10095;</button>
+</div>
+
+<script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
