@@ -41,3 +41,5 @@ CPU usage on idle:
 For some reason it has 29 subprocesses running on task manager when left on idle on windows. Of course it doesn't beat the king of many subprocesses Google Chrome browser shown here with 101 subprocesses
 
 ![Task manager screenshot showing antigravity CPU sub processes](/assets/images/antigravity_29_subprocesses_taskmanager.png "Task manager screenshot showing antigravity CPU subprocesses")
+
+Most times leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage that the user didn't start. It seems unable to terminate the terminal as well, possibly because of double check before the server stops. jekyll for instance requires you to enter yes (Y/N) to terminate or hit ctrl+c again but antigravity doesn't seem to know this.
