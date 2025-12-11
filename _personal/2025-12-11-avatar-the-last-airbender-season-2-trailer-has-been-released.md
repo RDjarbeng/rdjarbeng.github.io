@@ -26,6 +26,8 @@ The wait is finally over! Netflix has just dropped the first official trailer fo
 
 After the massive success of Season 1, fans have been eagerly waiting to see how the live-action adaptation would handle Book 2: Earth. The trailer confirms that the series will return to our screens in **2026**.
 
+![a screenshot of avatar the last airbender in green/jade earth themed color from the netflix trailer](/assets/images/avatar_netflix/avatar_the_last_airbender_season2_tile_rdjarbeng.png "Avatar The Last Airbender Season 2 Tile")
+
 ## Enter The Blind Bandit
 
 The highlight of the trailer is undoubtedly the reveal of **Miya Cech** as Toph. The casting had been a topic of intense speculation, and seeing her in action has set the internet on fire. The trailer showcases her earthbending prowess, with a faithful recreation of her signature seismic sense and unique fighting style derived from the badgermoles.
