@@ -1,0 +1,8 @@
+---
+title: The Viral Tweet That Put a Nigerian Pencil Artist on MrBeast's Wall
+image: "/assets/images/cover_mr_beast_reply_ifure_usen.webp"
+type: cover
+caption: Cover image for The Viral Tweet That Put a Nigerian Pencil Artist on MrBeast's
+  Wall
+link: "/personal/from-pencil-to-stardom-with-mr-beast-ifure-usen’s-breakthrough-moment-on-x/"
+---

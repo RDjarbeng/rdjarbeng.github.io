@@ -149,33 +149,32 @@ collections:
 
   - name: 'gallery'
     label: 'Gallery'
-    files:
-      - name: 'gallery_images'
-        label: 'Images'
-        file: '_data/gallery_images.yml'
-        fields:
-          - label: 'Cover Images'
-            name: 'cover_images'
-            widget: 'list'
-            collapsed: true
-            minimize_collapsed: true # <--- Keeps them tight
-            summary: '{{title}}'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Caption', name: 'caption', widget: 'string' }
-              - { label: 'Link', name: 'link', widget: 'string' }
-          
-          - label: 'External Images'
-            name: 'external_images'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Category', name: 'category', widget: 'select', options: ['ai-generations', 'ghana', 'other'] }
-              - { label: 'Labels', name: 'labels', widget: 'list', default: [], hint: 'Subcategories like grok, meta, etc.' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+    folder: '_gallery'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      
+      - label: 'Type'
+        name: 'type'
+        widget: 'select'
+        options: 
+          - { label: 'Cover Image', value: 'cover' }
+          - { label: 'External Image', value: 'external' }
+        default: 'cover'
 
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
+      
+      - { label: 'Category', name: 'category', widget: 'select', options: ['ai-generations', 'ghana', 'other'], required: false }
+      - { label: 'Labels', name: 'labels', widget: 'list', default: [], required: false }
+
+  - name: 'gallery_videos'
+    label: 'Videos'
+    files:
       - name: 'gallery_videos'
         label: 'Videos'
         file: '_data/gallery_videos.yml'

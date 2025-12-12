@@ -17,8 +17,8 @@ layout: default
 
     <div class="gallery-grid" id="gallery-grid">
         <!-- Cover Images Category -->
-        {% if site.data.gallery_images.cover_images %}
-        {% for img in site.data.gallery_images.cover_images %}
+        {% assign cover_images = site.gallery | where: "type", "cover" %}
+        {% for img in cover_images %}
         <div class="gallery-item" data-category="cover-images" data-type="image"
             data-src="{{ img.image | relative_url }}" data-caption="{{ img.title | escape }}">
             <div class="gallery-thumb-wrapper">
@@ -29,11 +29,10 @@ layout: default
             </div>
         </div>
         {% endfor %}
-        {% endif %}
 
         <!-- External Images -->
-        {% if site.data.gallery_images.external_images %}
-        {% for img in site.data.gallery_images.external_images %}
+        {% assign external_images = site.gallery | where: "type", "external" %}
+        {% for img in external_images %}
         <div class="gallery-item" data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
             data-src="{{ img.image | relative_url }}" data-caption="{{ img.caption | markdownify | escape }}">
             <div class="gallery-thumb-wrapper">
@@ -44,7 +43,6 @@ layout: default
             </div>
         </div>
         {% endfor %}
-        {% endif %}
 
         <!-- Videos Categories -->
         {% assign video_platforms = "youtube,tiktok,instagram,twitter" | split: "," %}
