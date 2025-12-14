@@ -92,7 +92,11 @@ Writing takes time, even with AI
 
 Sometimes AI is double work because I have to write drafts, write prompts, edit the AI output, edit my prompts, make minor tweaks, revert changes and scan the posts many times again with reference to the original draft to make sure no important detail was left out acting as a senior editor to make sure everything is set before signing off on a publications. Sometimes I wonder if writing everything myself and editing my drafts is not a less tiring approach. Editing with AI does have the advantage of speed but the extra supervision needed almost negates the speed boost. Maybe writing things myself is a better approach but that also takes up much of my time and posts come out slowly.
 
-My conclusion for AI tools is that they are  good for generating tags, images, refining titles. Cannot be trusted to create and edit posts from start to finish without supervision.
+My conclusion for AI tools is that they are  good for generating tags, images, refining titles. Cannot be trusted to create and edit posts from start to finish without supervision. Opinions mine.
+
+Gallery feature:
+
+You might be surprised to hear this, but creating 160 (or even 1,000) small text files is actually **more efficient** for the workflow and the CMS than one giant yaml file, and it had **zero noticeable impact** on your build speed.
 
 ## Improvements to be made:
 
@@ -108,7 +112,7 @@ Improving backlinks
 
 Best posts:
 
-Trip to Uganda. This post got a lot of attention. 
+Trip to Uganda. This post got a lot of attention.
 
 My favorites:
 
