@@ -45,3 +45,7 @@ For some reason it has 29 subprocesses running on task manager when left on idle
 Most times leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage that the user didn't start. It seems unable to terminate the terminal as well, possibly because of double check before the server stops. jekyll for instance requires you to enter yes (Y/N) to terminate or hit ctrl+c again but antigravity doesn't seem to know this.
 
 The effect of this is you have multiple terminals running servers in the background that are not immediately evident and also not clear how to terminate them.
+
+Small UI problems like this. The line to be decided on is blocked by the button menu to accept or deny. Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way.
+
+![](/assets/images/20251216-115320.png)
