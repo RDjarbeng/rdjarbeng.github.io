@@ -207,43 +207,19 @@ collections:
 
   - name: 'gallery_videos'
     label: 'Videos'
-    files:
-      - name: 'gallery_videos'
-        label: 'Videos'
-        file: '_data/gallery_videos.yml'
-        fields:
-          - label: 'YouTube'
-            name: 'youtube'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Embed Code', name: 'embed', widget: 'text' }
-              - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
-              - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
-          
-          - label: 'TikTok'
-            name: 'tiktok'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Embed Code', name: 'embed', widget: 'text' }
-              - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
-              - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
-
-          - label: 'Instagram'
-            name: 'instagram'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Embed Code', name: 'embed', widget: 'text' }
-              - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
-              - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
-
-          - label: 'Twitter/X'
-            name: 'twitter'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Embed Code', name: 'embed', widget: 'text' }
-              - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
-              - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
+    folder: '_gallery/videos'
+    media_folder: "../../assets/images/videos"
+    public_folder: "/assets/images/videos"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Platform', name: 'platform', widget: 'select', options: ['youtube', 'tiktok', 'instagram', 'twitter'], default: 'youtube' }
+      - { label: 'YouTube ID', name: 'youtube_id', widget: 'string', required: false, hint: 'For YouTube: Paste Video ID (e.g., dQw4w9WgXcQ)' }
+      - { label: 'Embed Code', name: 'embed_code', widget: 'text', required: false, hint: 'For TikTok/Insta/Twitter: Paste full embed code' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'video' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'videos' }
