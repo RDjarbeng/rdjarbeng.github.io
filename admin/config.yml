@@ -150,7 +150,7 @@ collections:
   - name: 'ai_generations'
     label: 'AI Generations'
     folder: '_gallery/ai'
-    media_folder: "assets/images/ai"
+    media_folder: "../../assets/images/ai"
     public_folder: "/assets/images/ai"
     create: true
     slug: '{{slug}}'
@@ -167,7 +167,7 @@ collections:
   - name: 'memes'
     label: 'Memes'
     folder: '_gallery/memes'
-    media_folder: "assets/images/memes"
+    media_folder: "../../assets/images/memes"
     public_folder: "/assets/images/memes"
     create: true
     slug: '{{slug}}'
