@@ -104,6 +104,8 @@ collections:
   personal:
     output: true
     permalink: /personal/:title/
+  gallery:
+    output: false
 sass:
   sass_dir: _sass
   quiet_deps: true
@@ -145,3 +147,4 @@ pagination:
   active: true
   paginate: 10  # Number of posts per page
   collection: 'posts'  # Target the posts collection
+
