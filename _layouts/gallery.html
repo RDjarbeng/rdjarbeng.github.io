@@ -46,15 +46,16 @@ layout: default
         {% endfor %}
 
         <!-- Videos Categories -->
-        {% assign video_platforms = "youtube,tiktok,instagram,twitter" | split: "," %}
-        {% for platform in video_platforms %}
-        {% if site.data.gallery_videos[platform] %}
-        {% for video in site.data.gallery_videos[platform] %}
-        <div class="gallery-item" data-category="videos {{ platform }}" data-type="html"
+        {% assign videos = site.gallery | where: "type", "video" %}
+        {% for video in videos %}
+        <div class="gallery-item" data-category="videos {{ video.platform }}" data-type="html"
             data-caption="{{ video.title | escape }}">
             <div class="gallery-thumb-wrapper">
                 {% if video.thumbnail and video.thumbnail != "" %}
-                <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy">
+                <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.title }}" loading="lazy">
+                {% elsif video.platform == 'youtube' and video.youtube_id %}
+                <img src="https://img.youtube.com/vi/{{ video.youtube_id }}/hqdefault.jpg" alt="{{ video.title }}"
+                    loading="lazy">
                 {% else %}
                 <div class="gallery-placeholder">
                     <span>{{ video.title }}</span>
@@ -69,7 +70,14 @@ layout: default
             <div class="gallery-html-content" style="display:none;">
                 <div class="video-container">
                     <div class="video-embed">
-                        {{ video.embed }}
+                        {% if video.platform == 'youtube' and video.youtube_id %}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+                            title="{{ video.title }}" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        {% else %}
+                        {{ video.embed_code }}
+                        {% endif %}
                     </div>
                     {% if video.caption %}
                     <div class="video-caption-side">
@@ -79,8 +87,6 @@ layout: default
                 </div>
             </div>
         </div>
-        {% endfor %}
-        {% endif %}
         {% endfor %}
     </div>
 </div>
