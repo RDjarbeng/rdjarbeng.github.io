@@ -147,8 +147,41 @@ collections:
           - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'ai_generations'
+    label: 'AI Generations'
+    folder: '_gallery/ai'
+    media_folder: "assets/images/ai"
+    public_folder: "/assets/images/ai"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Model', name: 'labels', widget: 'select', options: ['Grok', 'Gemini', 'Midjourney', 'DALL-E', 'Stable Diffusion', 'Other'], default: 'Grok' }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'external' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'ai-generations' }
+
+  - name: 'memes'
+    label: 'Memes'
+    folder: '_gallery/memes'
+    media_folder: "assets/images/memes"
+    public_folder: "/assets/images/memes"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'external' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'memes' }
+
   - name: 'gallery'
-    label: 'Gallery'
+    label: 'General Gallery'
     folder: '_gallery'
     create: true
     slug: '{{slug}}'
@@ -169,7 +202,7 @@ collections:
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
       - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
       
-      - { label: 'Category', name: 'category', widget: 'select', options: ['ai-generations', 'ghana', 'other'], required: false }
+      - { label: 'Category', name: 'category', widget: 'select', options: ['ghana', 'other'], required: false }
       - { label: 'Labels', name: 'labels', widget: 'list', default: [], required: false }
 
   - name: 'gallery_videos'
