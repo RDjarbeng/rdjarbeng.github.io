@@ -58,7 +58,15 @@ layout: default
                 {% if video.thumbnail and video.thumbnail != "" %}
                 <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.title }}" loading="lazy">
                 {% elsif video.platform == 'youtube' and video.youtube_id %}
-                <img src="https://img.youtube.com/vi/{{ video.youtube_id }}/hqdefault.jpg" alt="{{ video.title }}"
+                {% assign video_id = video.youtube_id %}
+                {% if video.youtube_id contains 'youtube.com/watch' %}
+                {% assign video_id = video.youtube_id | split: 'v=' | last | split: '&' | first %}
+                {% elsif video.youtube_id contains 'youtube.com/shorts/' %}
+                {% assign video_id = video.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                {% elsif video.youtube_id contains 'youtu.be/' %}
+                {% assign video_id = video.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                {% endif %}
+                <img src="https://img.youtube.com/vi/{{ video_id }}/hqdefault.jpg" alt="{{ video.title }}"
                     loading="lazy">
                 {% else %}
                 <div class="gallery-placeholder">
@@ -75,7 +83,15 @@ layout: default
                 <div class="video-container">
                     <div class="video-embed">
                         {% if video.platform == 'youtube' and video.youtube_id %}
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+                        {% assign video_id = video.youtube_id %}
+                        {% if video.youtube_id contains 'youtube.com/watch' %}
+                        {% assign video_id = video.youtube_id | split: 'v=' | last | split: '&' | first %}
+                        {% elsif video.youtube_id contains 'youtube.com/shorts/' %}
+                        {% assign video_id = video.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                        {% elsif video.youtube_id contains 'youtu.be/' %}
+                        {% assign video_id = video.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                        {% endif %}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}"
                             title="{{ video.title }}" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>

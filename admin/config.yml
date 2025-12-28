@@ -217,7 +217,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Platform', name: 'platform', widget: 'select', options: ['youtube', 'tiktok', 'instagram', 'twitter'], default: 'youtube' }
-      - { label: 'YouTube ID', name: 'youtube_id', widget: 'string', required: false, hint: 'For YouTube: Paste Video ID (e.g., dQw4w9WgXcQ)' }
+      - { label: 'YouTube URL or ID', name: 'youtube_id', widget: 'string', required: false, hint: 'Paste full YouTube URL (Video or Short) or just the ID' }
       - { label: 'Embed Code', name: 'embed_code', widget: 'text', required: false, hint: 'For TikTok/Insta/Twitter: Paste full embed code' }
       - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
