@@ -21,11 +21,15 @@ layout: default
     </header>
 
     <div class="gallery-grid" id="gallery-grid">
+        <!-- Sort gallery items by date -->
+        {% assign gallery_items = site.gallery | sort: "date" | reverse %}
+
         <!-- Cover Images Category -->
-        {% assign cover_images = site.gallery | where: "type", "cover" %}
+        {% assign cover_images = gallery_items | where: "type", "cover" %}
         {% for img in cover_images %}
         <div class="gallery-item" data-category="cover-images" data-type="image"
-            data-src="{{ img.image | relative_url }}" data-caption="{{ img.title | escape }}">
+            data-src="{{ img.image | relative_url }}" data-caption="{{ img.title | escape }}"
+            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}">
             <div class="gallery-thumb-wrapper">
                 <img src="{{ img.image | relative_url }}" alt="{{ img.caption | default: img.title }}" loading="lazy">
                 <div class="gallery-overlay">
@@ -36,10 +40,11 @@ layout: default
         {% endfor %}
 
         <!-- External Images -->
-        {% assign external_images = site.gallery | where: "type", "external" %}
+        {% assign external_images = gallery_items | where: "type", "external" %}
         {% for img in external_images %}
         <div class="gallery-item" data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
-            data-src="{{ img.image | relative_url }}" data-caption="{{ img.caption | markdownify | escape }}">
+            data-src="{{ img.image | relative_url }}" data-caption="{{ img.caption | markdownify | escape }}"
+            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}">
             <div class="gallery-thumb-wrapper">
                 <img src="{{ img.image | relative_url }}" alt="{{ img.title }}" loading="lazy">
                 <div class="gallery-overlay">
@@ -50,10 +55,11 @@ layout: default
         {% endfor %}
 
         <!-- Videos Categories -->
-        {% assign videos = site.gallery | where: "type", "video" %}
+        {% assign videos = gallery_items | where: "type", "video" %}
         {% for video in videos %}
         <div class="gallery-item" data-category="videos {{ video.platform }}" data-type="html"
-            data-caption="{{ video.title | escape }}">
+            data-caption="{{ video.title | escape }}" data-date="{{ video.date | date: '%B %d, %Y' }}"
+            data-title="{{ video.title | escape }}">
             <div class="gallery-thumb-wrapper">
                 {% if video.thumbnail and video.thumbnail != "" %}
                 <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.title }}" loading="lazy">
@@ -115,10 +121,20 @@ layout: default
 <div id="gallery-lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <button class="lightbox-nav prev">&#10094;</button>
-    <div class="lightbox-content">
-        <div id="lightbox-media-container"></div>
-        <div class="lightbox-caption"></div>
+
+    <div class="lightbox-content-wrapper">
+        <div class="lightbox-media-column">
+            <div id="lightbox-media-container"></div>
+        </div>
+        <div class="lightbox-info-column">
+            <h2 class="lightbox-title"></h2>
+            <div class="lightbox-meta">
+                <span class="lightbox-date"></span>
+            </div>
+            <div class="lightbox-caption"></div>
+        </div>
     </div>
+
     <button class="lightbox-nav next">&#10095;</button>
 </div>
 
