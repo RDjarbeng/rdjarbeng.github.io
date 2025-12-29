@@ -1,5 +1,6 @@
 ---
 title: 'King Promise Drops a Global Banger: "Terminator" feat. Young Jonn (2023)'
+date: 2025-12-28 22:55:10
 image: "/assets/images/terminator_cover_new_rdjarbeng.webp"
 type: cover
 caption: A video thumbnail featuring a still from King Promise's "Terminator" music

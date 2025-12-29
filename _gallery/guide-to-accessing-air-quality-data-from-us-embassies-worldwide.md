@@ -1,5 +1,6 @@
 ---
 title: Guide to Accessing Air Quality Data from US Embassies Worldwide
+date: 2025-02-24 12:00:00
 image: "/assets/images/airnow_africa.png"
 type: cover
 caption: Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide

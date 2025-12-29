@@ -1,5 +1,6 @@
 ---
 title: He Made $2,000 in One Week With AI... Then TikTok Froze It
+date: 2025-12-28 22:55:10
 image: "/assets/images/tiktok_ai_frozen_thumbnail.png"
 type: cover
 caption: A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright

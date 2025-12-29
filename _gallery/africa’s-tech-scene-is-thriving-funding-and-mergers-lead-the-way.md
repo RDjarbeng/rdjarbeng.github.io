@@ -1,5 +1,6 @@
 ---
 title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
+date: 2025-07-13 12:00:00
 image: "/assets/images/norrsken_africa_tech_boom_cover.webp"
 type: cover
 caption: 'A stylized, glowing, circuit-board map of Africa overlaid on a digital background

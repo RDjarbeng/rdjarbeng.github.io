@@ -1,5 +1,6 @@
 ---
 title: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're
+date: 2025-11-14 12:00:00
   Safer
 image: "/assets/images/google_pay_and_apple_pay_cover.webp"
 type: cover
