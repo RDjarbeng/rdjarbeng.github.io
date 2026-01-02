@@ -1,5 +1,6 @@
 ---
 title: 'The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word'
+date: 2025-12-28 22:55:10
 image: "/assets/images/happily_exhausted_cover_image.webp"
 type: cover
 caption: 'Illustration of a man leaning happily exhausted against a large rock on
