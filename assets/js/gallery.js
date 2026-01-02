@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.gallery-filter');
     const galleryItems = document.querySelectorAll('.gallery-item');
-    const lightbox = document.getElementById('gallery-lightbox');
+    const lightbox = document.getElementById('gallery-modal');
     const lightboxMediaContainer = document.getElementById('lightbox-media-container');
     const lightboxCaption = document.querySelector('.lightbox-caption');
     const closeBtn = document.querySelector('.lightbox-close');
@@ -59,8 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = item.getAttribute('data-type');
         const src = item.getAttribute('data-src');
         const caption = item.getAttribute('data-caption');
+        const title = item.getAttribute('data-title');
+        const date = item.getAttribute('data-date');
 
         lightboxMediaContainer.innerHTML = ''; // Clear previous content
+
+        // Populate info column
+        document.querySelector('.lightbox-title').textContent = title || '';
+        document.querySelector('.lightbox-date').textContent = date || '';
+        lightboxCaption.innerHTML = caption || ''; // Use innerHTML for markdown content
 
         if (type === 'image') {
             const img = document.createElement('img');
@@ -88,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             lightboxMediaContainer.appendChild(div);
         }
 
-        lightboxCaption.textContent = caption;
+        // lightboxCaption.textContent = caption; // Moved to info column population
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent scrolling background
     }
