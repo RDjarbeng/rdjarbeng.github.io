@@ -6,7 +6,7 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ " /feed.xml" | relative_url }}">
 
   <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% if page.layout == 'post' or page.layout == 'personal' %}
   <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
   <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
