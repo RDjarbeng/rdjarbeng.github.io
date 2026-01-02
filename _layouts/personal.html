@@ -23,7 +23,7 @@ layout: default
   <!-- Something's here {{page.author}} -->
   {{ content }}
 
-  {% if page.tags.size > 0 %}
+  <!-- {% if page.tags.size > 0 %}
   <div class="tags-section">
     <span class="meta-label">Tagged In:</span>
     <div class="tags-container">
@@ -32,7 +32,7 @@ layout: default
       {% endfor %}
     </div>
   </div>
-  {% endif %}
+  {% endif %} -->
   <div style="margin-top: 1rem; display: flex; align-items: center;">
     <applause-button style="width: 58px; height: 58px;" color="#2ecc71" multiclap="true"
       api="https://applause.chabouis.fr" url="{{ page.url | absolute_url }}"></applause-button>
