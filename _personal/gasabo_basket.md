@@ -43,6 +43,6 @@ Music: Amaliza by Ruti Joel
 
 I found the source of this particular audio on YouTube from one of Ruti Joel's concerts - Rumata wa Musomandera - Part (3) (Official concert video)
 
-You'll have to forward to around the 20th minute to reach where this song starts.
+You'll have to forward to around the 21:00 minute to reach where this song starts.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J0yf7GeWHhQ?si=EIyoiPmBFop97WZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
