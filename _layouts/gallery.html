@@ -2,6 +2,27 @@
 layout: default
 ---
 
+<!-- Lightbox Modal -->
+<div id="gallery-modal" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-nav prev">&#10094;</button>
+
+    <div class="lightbox-content-wrapper">
+        <div class="lightbox-media-column">
+            <div id="lightbox-media-container"></div>
+        </div>
+        <div class="lightbox-info-column">
+            <h2 class="lightbox-title"></h2>
+            <div class="lightbox-meta">
+                <span class="lightbox-date"></span>
+            </div>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <button class="lightbox-nav next">&#10095;</button>
+</div>
+
 <div class="gallery-container">
     <header class="gallery-header">
         <h1>Gallery</h1>
@@ -115,27 +136,6 @@ layout: default
         </div>
         {% endfor %}
     </div>
-</div>
-
-<!-- Lightbox Modal -->
-<div id="gallery-lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <button class="lightbox-nav prev">&#10094;</button>
-
-    <div class="lightbox-content-wrapper">
-        <div class="lightbox-media-column">
-            <div id="lightbox-media-container"></div>
-        </div>
-        <div class="lightbox-info-column">
-            <h2 class="lightbox-title"></h2>
-            <div class="lightbox-meta">
-                <span class="lightbox-date"></span>
-            </div>
-            <div class="lightbox-caption"></div>
-        </div>
-    </div>
-
-    <button class="lightbox-nav next">&#10095;</button>
 </div>
 
 <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
