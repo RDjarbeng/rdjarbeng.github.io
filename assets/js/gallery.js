@@ -41,6 +41,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial update
     updateVisibleItems();
 
+    // Handle initial hash on page load
+    function handleInitialHash() {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            const item = Array.from(galleryItems).find(i => i.getAttribute('data-slug') === hash);
+            if (item) {
+                const index = visibleItems.indexOf(item);
+                if (index !== -1) {
+                    openLightbox(index);
+                }
+            }
+        }
+    }
+
+    handleInitialHash();
+
     // Lightbox Functionality
     galleryItems.forEach((item) => {
         item.addEventListener('click', function () {
