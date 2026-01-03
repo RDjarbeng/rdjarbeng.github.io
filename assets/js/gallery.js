@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const caption = item.getAttribute('data-caption');
         const title = item.getAttribute('data-title');
         const date = item.getAttribute('data-date');
+        const slug = item.getAttribute('data-slug');
 
         lightboxMediaContainer.innerHTML = ''; // Clear previous content
 
@@ -111,7 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
             lightboxMediaContainer.appendChild(div);
         }
 
-        // lightboxCaption.textContent = caption; // Moved to info column population
+        // Update URL hash
+        if (slug) {
+            history.replaceState(null, null, '#' + slug);
+        }
+
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent scrolling background
     }
@@ -120,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
         lightbox.classList.remove('active');
         lightboxMediaContainer.innerHTML = ''; // Stop video playback
         document.body.style.overflow = ''; // Restore scrolling
+
+        // Remove hash from URL
+        history.replaceState(null, null, window.location.pathname + window.location.search);
     }
 
     function showNext() {
