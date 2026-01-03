@@ -105,7 +105,8 @@ collections:
     output: true
     permalink: /personal/:title/
   gallery:
-    output: false
+    output: true
+    permalink: /gallery/:title/
 sass:
   sass_dir: _sass
   quiet_deps: true
