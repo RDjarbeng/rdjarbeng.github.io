@@ -2,6 +2,21 @@
 layout: default
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "{{ page.title }}",
+  "description": "{{ page.gallery-description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "image": [
+    {% for item in site.gallery %}
+      "{{ item.image | absolute_url }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
 <!-- Lightbox Modal -->
 <div id="gallery-modal" class="lightbox">
     <span class="lightbox-close">&times;</span>
@@ -49,14 +64,17 @@ layout: default
         {% assign cover_images = gallery_items | where: "type", "cover" %}
         {% for img in cover_images %}
         <div class="gallery-item" data-category="cover-images" data-type="image"
-            data-src="{{ img.image | relative_url }}" data-caption="{{ img.title | escape }}"
-            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}">
+            data-src="{{ img.image | relative_url }}"
+            data-caption="{{ img.title | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
+            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
+            data-slug="{{ img.title | slugify }}">
             <div class="gallery-thumb-wrapper">
                 <img src="{{ img.image | relative_url }}" alt="{{ img.caption | default: img.title }}" loading="lazy">
                 <div class="gallery-overlay">
                     <span class="gallery-title">{{ img.title }}</span>
                 </div>
             </div>
+            <a href="{{ img.url | relative_url }}" class="seo-link" style="display:none;">View {{ img.title }}</a>
         </div>
         {% endfor %}
 
@@ -64,14 +82,17 @@ layout: default
         {% assign external_images = gallery_items | where: "type", "external" %}
         {% for img in external_images %}
         <div class="gallery-item" data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
-            data-src="{{ img.image | relative_url }}" data-caption="{{ img.caption | markdownify | escape }}"
-            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}">
+            data-src="{{ img.image | relative_url }}"
+            data-caption="{{ img.caption | markdownify | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
+            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
+            data-slug="{{ img.title | slugify }}">
             <div class="gallery-thumb-wrapper">
                 <img src="{{ img.image | relative_url }}" alt="{{ img.title }}" loading="lazy">
                 <div class="gallery-overlay">
                     <span class="gallery-title">{{ img.title }}</span>
                 </div>
             </div>
+            <a href="{{ img.url | relative_url }}" class="seo-link" style="display:none;">View {{ img.title }}</a>
         </div>
         {% endfor %}
 
@@ -79,8 +100,9 @@ layout: default
         {% assign videos = gallery_items | where: "type", "video" %}
         {% for video in videos %}
         <div class="gallery-item" data-category="videos {{ video.platform }}" data-type="html"
-            data-caption="{{ video.title | escape }}" data-date="{{ video.date | date: '%B %d, %Y' }}"
-            data-title="{{ video.title | escape }}">
+            data-caption="{{ video.title | escape }}{% if video.link %} <a href='{{ video.link | relative_url }}'>Read more...</a>{% endif %}"
+            data-date="{{ video.date | date: '%B %d, %Y' }}" data-title="{{ video.title | escape }}"
+            data-slug="{{ video.title | slugify }}">
             <div class="gallery-thumb-wrapper">
                 {% if video.thumbnail and video.thumbnail != "" %}
                 <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.title }}" loading="lazy">
@@ -133,6 +155,7 @@ layout: default
                     {% endif %}
                 </div>
             </div>
+            <a href="{{ video.url | relative_url }}" class="seo-link" style="display:none;">View {{ video.title }}</a>
         </div>
         {% endfor %}
     </div>
