@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+<div class="gallery-item-page">
+    <div class="container">
+        <header class="gallery-item-header">
+            <a href="{{ '/gallery/' | relative_url }}" class="back-link">&larr; Back to Gallery</a>
+            <h1>{{ page.title }}</h1>
+            <div class="gallery-item-meta">
+                <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+            </div>
+        </header>
+
+        <div class="gallery-item-content">
+            <div class="gallery-item-media">
+                {% if page.type == 'video' %}
+                <div class="video-container">
+                    {% if page.platform == 'youtube' and page.youtube_id %}
+                    {% assign video_id = page.youtube_id %}
+                    {% if page.youtube_id contains 'youtube.com/watch' %}
+                    {% assign video_id = page.youtube_id | split: 'v=' | last | split: '&' | first %}
+                    {% elsif page.youtube_id contains 'youtube.com/shorts/' %}
+                    {% assign video_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                    {% elsif page.youtube_id contains 'youtu.be/' %}
+                    {% assign video_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                    {% endif %}
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ video_id }}"
+                        title="{{ page.title }}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    {% else %}
+                    {{ page.embed_code }}
+                    {% endif %}
+                </div>
+                {% else %}
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="main-image">
+                {% endif %}
+            </div>
+
+            <div class="gallery-item-info">
+                <div class="caption">
+                    {{ page.caption | markdownify }}
+                </div>
+                {% if page.link %}
+                <div class="related-post">
+                    <a href="{{ page.link | relative_url }}" class="btn">Read Related Post</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .gallery-item-page {
+        padding: 40px 0;
+    }
+
+    .gallery-item-header {
+        margin-bottom: 30px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: var(--link-color, #007bff);
+        text-decoration: none;
+    }
+
+    .gallery-item-meta {
+        color: #666;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    .gallery-item-media {
+        margin-bottom: 30px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery-item-media img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .gallery-item-info {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .caption {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .related-post {
+        margin-top: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+
+    .btn:hover {
+        background: #555;
+    }
+</style>
