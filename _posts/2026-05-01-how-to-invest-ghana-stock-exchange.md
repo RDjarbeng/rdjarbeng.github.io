@@ -1,6 +1,6 @@
 ---
 date: 2026-01-05
-published: true
+published: false
 author: Nathaniel
 categories:
   - Finance
