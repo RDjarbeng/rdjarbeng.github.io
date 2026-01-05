@@ -201,4 +201,4 @@ Successful investing requires continuous learning, patience, and discipline. The
 
 Start with education, begin small, and gradually increase your investments as you gain experience and confidence. Consider consulting with a financial advisor for personalized guidance, and always invest only what you can afford to lose.
 
-**Disclaimer**: This article is for educational purposes only and does not constitute investment advice. Always conduct your own research and consider consulting with qualified financial professionals before making investment decisions. The author is affiliated with Isedan. Opinions of guest authors do not constitute the opinions of this website management.
+**Disclaimer**: This article is for educational purposes only and does not constitute investment advice. Always conduct your own research and consider consulting with qualified financial professionals before making investment decisions. The author is affiliated with ISEDAN. Opinions of guest authors do not constitute the opinions of this website management.
