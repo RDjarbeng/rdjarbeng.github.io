@@ -170,7 +170,7 @@ Diversification is key to managing risk. Don't put all your money in one stock o
 
 ## Educational Platforms & Resources
 
-There is still much too cover in your investment journey. This is where platforms like [ISEDAN](https://isedan.netlify.app) come in.
+There is still much to cover in your investment journey. This is where platforms like [ISEDAN](https://isedan.netlify.app) come in.
 
 ![ISEDAN Platform Logo](/assets/images/gse_article_nat/isedan.png "ISEDAN Investment Platform")
 
