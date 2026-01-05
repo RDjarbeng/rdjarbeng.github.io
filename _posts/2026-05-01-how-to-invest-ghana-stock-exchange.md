@@ -23,6 +23,8 @@ The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian inve
 
 Whether you're a complete beginner or have some investment experience, understanding the fundamentals of stock market investing is crucial before you start. This comprehensive guide will walk you through everything you need to know to begin your investment journey on the Ghana Stock Exchange.
 
+![Illustration of Ghana Stock Exchange with bull market symbol and financial charts](/assets/images/gse_article_nat/gse_cover.png "How to invest in GSE cover image")
+
 ## What is a Stock and Why Invest?
 
 A stock represents ownership in a company. When you buy shares of a company listed on the GSE, you become a shareholder and own a small portion of that business. This ownership comes with certain rights and potential benefits.
