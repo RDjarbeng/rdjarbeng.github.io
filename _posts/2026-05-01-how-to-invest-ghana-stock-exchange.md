@@ -174,7 +174,7 @@ There is still much to cover in your investment journey. This is where platforms
 
 ![ISEDAN Platform Logo](/assets/images/gse_article_nat/isedan.png "ISEDAN Investment Platform")
 
-**ISEDAN** is leading GSE Tracker provides:
+**ISEDAN** is the leading GSE Tracker. It provides:
 
 - **Real-time GSE Data**: Live stock prices, market trends, and company information throughout trading hours. This is essential in deciding when to place sell or buy orders based on market activity.
 - **Portfolio Analysis**: Comprehensive portfolio performance breakdown of statements from supported stockbrokers.
