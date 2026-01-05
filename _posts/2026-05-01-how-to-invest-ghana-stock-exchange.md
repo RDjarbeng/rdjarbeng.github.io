@@ -182,7 +182,7 @@ There is still much too cover in your investment journey. This is where platform
 - **Performance Monitoring**: Detailed charts, gain/loss calculations, and historical portfolio comparisons
 - **Market News**: Curated GSE news and company announcements to stay informed
 
-![ISEDAN Mobile App Charts](/assets/images/gse_article_nat/isedan_charts_light_mobile.png "ISEDAN Real-time Charts")
+![ISEDAN App Charts mobile view](/assets/images/gse_article_nat/isedan_charts_light_mobile.png "ISEDAN Real-time Charts")
 
 ![ISEDAN Web Dashboard](/assets/images/gse_article_nat/isedan_dashboard_light.png "ISEDAN Portfolio Dashboard")
 
