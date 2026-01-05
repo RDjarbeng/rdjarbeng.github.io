@@ -15,10 +15,9 @@ tags:
   - ISEDAN
 title: How To Invest On The Ghana Stock Exchange
 image: /assets/images/gse_article_nat/gse_cover.png
-image_alt: 'Illustration of Ghana Stock Exchange with bull market symbol and financial charts'
+image_alt: Illustration of Ghana Stock Exchange with bull market symbol and financial charts
 layout: post
 ---
-
 The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian investors to participate in the growth of the country's economy. As Ghana's primary stock market, the GSE provides access to publicly traded companies across various sectors including banking, telecommunications, mining, and consumer goods. Investing on the GSE allows you to become a partial owner in these companies and potentially benefit from their success through capital appreciation and dividends.
 
 Whether you're a complete beginner or have some investment experience, understanding the fundamentals of stock market investing is crucial before you start. This comprehensive guide will walk you through everything you need to know to begin your investment journey on the Ghana Stock Exchange.
@@ -50,7 +49,9 @@ Investing in stocks offers several ways to potentially build wealth:
 - **Inflation Protection**: Stocks historically outpace inflation over time
 
 ### Taxation on Returns
+
 It's important to understand the tax implications of your investments:
+
 - **Dividends**: Subject to an **8% withholding tax**, which is deducted at the source.
 - **Capital Gains**: Currently, capital gains on listed securities are **exempt from tax** to encourage investment on the exchange.
 
@@ -73,7 +74,6 @@ Several reputable brokers operate in Ghana, including:
 - **SIC Brokerage**
 
 ![SIC Brokerage Logo](/assets/images/gse_article_nat/sic.png "SIC Brokerage")
-
 
 _Find the full list of registered brokers on the [GSE](https://gse.com.gh/licensed-dealing-members/) website._
 
@@ -103,6 +103,7 @@ Funds are usually available for trading within 24 hours.
 ## Understanding Stock Trading Basics
 
 ### Trading Hours
+
 The Ghana Stock Exchange is open for trading from **10:00 AM to 3:00 PM GMT**, Monday through Friday (excluding public holidays).
 
 ### Stock Orders
@@ -189,7 +190,7 @@ There is still much too cover in your investment journey. This is where platform
 ## Frequently Asked Questions (FAQ)
 
 **Can I lose all my money?**
-While stock prices can fall, it is rare to lose *everything* unless a company goes bankrupt. Diversification helps mitigate this risk.
+While stock prices can fall, it is rare to lose _everything_ unless a company goes bankrupt. Diversification helps mitigate this risk.
 
 **How do I get my money back?**
 You can sell your shares on the exchange through your broker during trading hours. Settlement (receiving the cash) typically takes a few days.
