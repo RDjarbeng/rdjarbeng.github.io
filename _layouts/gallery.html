@@ -63,7 +63,7 @@ layout: default
         <!-- Cover Images Category -->
         {% assign cover_images = gallery_items | where: "type", "cover" %}
         {% for img in cover_images %}
-        <div class="gallery-item" data-category="cover-images" data-type="image"
+        <a href="{{ img.url | relative_url }}" class="gallery-item" data-category="cover-images" data-type="image"
             data-src="{{ img.image | relative_url }}"
             data-caption="{{ img.title | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
             data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
@@ -74,14 +74,14 @@ layout: default
                     <span class="gallery-title">{{ img.title }}</span>
                 </div>
             </div>
-            <a href="{{ img.url | relative_url }}" class="seo-link" style="display:none;">View {{ img.title }}</a>
-        </div>
+        </a>
         {% endfor %}
 
         <!-- External Images -->
         {% assign external_images = gallery_items | where: "type", "external" %}
         {% for img in external_images %}
-        <div class="gallery-item" data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
+        <a href="{{ img.url | relative_url }}" class="gallery-item"
+            data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
             data-src="{{ img.image | relative_url }}"
             data-caption="{{ img.caption | markdownify | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
             data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
@@ -92,15 +92,16 @@ layout: default
                     <span class="gallery-title">{{ img.title }}</span>
                 </div>
             </div>
-            <a href="{{ img.url | relative_url }}" class="seo-link" style="display:none;">View {{ img.title }}</a>
-        </div>
+        </a>
         {% endfor %}
 
         <!-- Videos Categories -->
         {% assign videos = gallery_items | where: "type", "video" %}
         {% for video in videos %}
-        <div class="gallery-item" data-category="videos {{ video.platform }}" data-type="html"
-            data-caption="{{ video.title | escape }}{% if video.link %} <a href='{{ video.link | relative_url }}'>Read more...</a>{% endif %}"
+        <a href="{{ video.url | relative_url }}" class="gallery-item" data-category="videos {{ video.platform }}"
+            data-type="html" data-video-caption="{{ video.caption | escape }}"
+            data-is-vertical="{% if video.platform == 'tiktok' or video.platform == 'instagram' or video.youtube_id contains 'shorts/' %}true{% else %}false{% endif %}"
+            data-caption="{% if video.link %}<a href='{{ video.link | relative_url }}'>Read related post...</a>{% endif %}"
             data-date="{{ video.date | date: '%B %d, %Y' }}" data-title="{{ video.title | escape }}"
             data-slug="{{ video.title | slugify }}">
             <div class="gallery-thumb-wrapper">
@@ -148,15 +149,9 @@ layout: default
                         {{ video.embed_code }}
                         {% endif %}
                     </div>
-                    {% if video.caption %}
-                    <div class="video-caption-side">
-                        {{ video.caption | markdownify }}
-                    </div>
-                    {% endif %}
                 </div>
             </div>
-            <a href="{{ video.url | relative_url }}" class="seo-link" style="display:none;">View {{ video.title }}</a>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </div>

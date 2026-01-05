@@ -41,34 +41,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial update
     updateVisibleItems();
 
-    // Handle initial hash on page load
-    function handleInitialHash() {
-        const hash = window.location.hash.substring(1);
-        if (hash) {
-            const item = Array.from(galleryItems).find(i => i.getAttribute('data-slug') === hash);
-            if (item) {
-                const index = visibleItems.indexOf(item);
-                if (index !== -1) {
-                    openLightbox(index);
-                }
-            }
-        }
-    }
-
-    handleInitialHash();
-
     // Lightbox Functionality
     galleryItems.forEach((item) => {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent navigation to the item's URL
             // Find the index of this item in the visibleItems array
             currentIndex = visibleItems.indexOf(this);
             if (currentIndex !== -1) {
-                openLightbox(currentIndex);
+                openLightbox(currentIndex, true);
             }
         });
     });
 
-    function openLightbox(index) {
+    function openLightbox(index, updateHistory = false) {
         if (index < 0 || index >= visibleItems.length) return;
 
         const item = visibleItems[index];
@@ -77,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const caption = item.getAttribute('data-caption');
         const title = item.getAttribute('data-title');
         const date = item.getAttribute('data-date');
-        const slug = item.getAttribute('data-slug');
 
         lightboxMediaContainer.innerHTML = ''; // Clear previous content
 
@@ -112,32 +96,35 @@ document.addEventListener('DOMContentLoaded', function () {
             lightboxMediaContainer.appendChild(div);
         }
 
-        // Update URL hash
-        if (slug) {
-            history.replaceState(null, null, '#' + slug);
-        }
-
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent scrolling background
+
+        if (updateHistory) {
+            const url = item.getAttribute('href');
+            history.pushState({ index: index }, title, url);
+        }
     }
 
-    function closeLightbox() {
+    function closeLightbox(updateHistory = true) {
         lightbox.classList.remove('active');
         lightboxMediaContainer.innerHTML = ''; // Stop video playback
         document.body.style.overflow = ''; // Restore scrolling
 
-        // Remove hash from URL
-        history.replaceState(null, null, window.location.pathname + window.location.search);
+        if (updateHistory) {
+            if (window.location.pathname !== '/gallery/') {
+                history.pushState({ index: -1 }, 'Gallery', '/gallery/');
+            }
+        }
     }
 
     function showNext() {
         currentIndex = (currentIndex + 1) % visibleItems.length;
-        openLightbox(currentIndex);
+        openLightbox(currentIndex, true);
     }
 
     function showPrev() {
         currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-        openLightbox(currentIndex);
+        openLightbox(currentIndex, true);
     }
 
     // Event Listeners for Lightbox Controls
@@ -186,20 +173,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const swipeDistance = touchStartY - touchEndY;
 
-        // Check if the swipe is significant enough
         if (Math.abs(swipeDistance) > minSwipeDistance) {
-            // Check if we are scrolling content in the info column
-            // If the target is within the info column and it's scrollable, we might want to avoid triggering nav
-            // But user asked for "scrolling vertically to move to the next post", which implies the main action is nav.
-            // Let's assume swipe on the media column or general container triggers nav.
-
             if (swipeDistance > 0) {
-                // Swipe Up -> Next
                 showNext();
             } else {
-                // Swipe Down -> Previous
                 showPrev();
             }
         }
     }
+
+    // Handle Browser Back/Forward
+    window.addEventListener('popstate', function (event) {
+        if (event.state && event.state.index !== undefined && event.state.index !== -1) {
+            openLightbox(event.state.index, false);
+        } else {
+            closeLightbox(false);
+        }
+    });
+
+    // Initial check for deep link
+    function checkDeepLink() {
+        const currentPath = window.location.pathname;
+        if (currentPath.startsWith('/gallery/') && currentPath !== '/gallery/') {
+            const targetItem = Array.from(galleryItems).find(item => {
+                const itemPath = new URL(item.href, window.location.origin).pathname;
+                return itemPath === currentPath;
+            });
+
+            if (targetItem) {
+                const index = visibleItems.indexOf(targetItem);
+                if (index !== -1) {
+                    openLightbox(index, false);
+                } else {
+                    currentIndex = Array.from(galleryItems).indexOf(targetItem);
+                    openLightbox(Array.from(galleryItems).indexOf(targetItem), false);
+                }
+            }
+        }
+    }
+
+    checkDeepLink();
 });
