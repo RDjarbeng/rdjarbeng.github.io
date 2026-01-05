@@ -1,6 +1,6 @@
 ---
 date: 2026-01-05
-published: false
+published: true
 author: Nathaniel
 categories:
   - Finance
@@ -27,6 +27,9 @@ Whether you're a complete beginner or have some investment experience, understan
 
 A stock represents ownership in a company. When you buy shares of a company listed on the GSE, you become a shareholder and own a small portion of that business. This ownership comes with certain rights and potential benefits.
 
+> [!NOTE]
+> **Central Securities Depository (CSD)**: Unlike the old days of paper certificates, shares on the GSE are held electronically in a CSD account. This ensures your holdings are secure and easily transferable.
+
 ### Shareholder Rights
 
 As a shareholder, you have several important rights:
@@ -44,6 +47,11 @@ Investing in stocks offers several ways to potentially build wealth:
 - **Total Return**: Combination of price gains and dividends
 - **Inflation Protection**: Stocks historically outpace inflation over time
 
+### Taxation on Returns
+It's important to understand the tax implications of your investments:
+- **Dividends**: Subject to an **8% withholding tax**, which is deducted at the source.
+- **Capital Gains**: Currently, capital gains on listed securities are **exempt from tax** to encourage investment on the exchange.
+
 ## Opening Your First Brokerage Account
 
 Before you can invest on the GSE, you'll need to open a brokerage account with a licensed stockbroker. The Securities & Exchange Commission (SEC) regulates all stockbrokers in Ghana to ensure investor protection.
@@ -58,7 +66,7 @@ Several reputable brokers operate in Ghana, including:
 
 - **BlackStar group**: modern platform with mobile apps for ease and convenience.
 
-![BlackStar Group Mobile App Interface](/assets/images/gse_article_nat/bs.png "BlackStar Group Trading Platform")
+![BlackStar group logo](/assets/images/gse_article_nat/bs.png "BlackStar Group Trading Platform")
 
 - **SIC Brokerage**
 
@@ -92,6 +100,9 @@ Funds are usually available for trading within 24 hours.
 
 ## Understanding Stock Trading Basics
 
+### Trading Hours
+The Ghana Stock Exchange is open for trading from **10:00 AM to 3:00 PM GMT**, Monday through Friday (excluding public holidays).
+
 ### Stock Orders
 
 - **Market Orders**: Execute immediately at the current market price
@@ -106,9 +117,12 @@ When researching stocks, pay attention to:
 - 52-week price range
 - Market capitalization (company size)
 
+> [!TIP]
+> **GSE Composite Index (GSE-CI)**: Keep an eye on this index. It tracks the general performance of the entire market, helping you gauge if the overall market is trending up or down.
+
 ## Placing Your First Trade
 
-Once your account is funded, you're ready to make your first investment. Start small and focus on learning the process.
+Once your account is funded, you're ready to make your first investment. You don't need millions to start; you can begin with as little as **GHS 50 or GHS 100**, as many stocks trade for just a few cedis per share. Start small and focus on learning the process.
 
 ### Step-by-Step Trading Process
 
@@ -169,6 +183,17 @@ There is still much too cover in your investment journey. This is where platform
 ![ISEDAN Mobile App Charts](/assets/images/gse_article_nat/isedan_charts_light_mobile.png "ISEDAN Real-time Charts")
 
 ![ISEDAN Web Dashboard](/assets/images/gse_article_nat/isedan_dashboard_light.png "ISEDAN Portfolio Dashboard")
+
+## Frequently Asked Questions (FAQ)
+
+**Can I lose all my money?**
+While stock prices can fall, it is rare to lose *everything* unless a company goes bankrupt. Diversification helps mitigate this risk.
+
+**How do I get my money back?**
+You can sell your shares on the exchange through your broker during trading hours. Settlement (receiving the cash) typically takes a few days.
+
+**Is it gambling?**
+No. Investing is buying a piece of a real business. Gambling is betting on an outcome with no underlying asset.
 
 ## Long-Term Success on the GSE
 
