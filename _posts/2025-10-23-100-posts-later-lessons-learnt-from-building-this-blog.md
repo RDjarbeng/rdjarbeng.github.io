@@ -12,9 +12,9 @@ image: ''
 image_alt: Cover image for 100 posts later-lessons learnt from building this blog
 layout: post
 ---
-## Changes since the start:
+## Changes Since the Start
 
-### Post content about the website:
+### Content Evolution
 Started off with short form content, simple drafts with a basic outline, then started improving the content with AI tools (Grok, claude, Gemini). 
 Made more long form content that is more than a 5 minute read. I think these posts allow me to cover more and are more informative from a reader's perspective. One good example is my post on a [decade by decade look at AI](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/) which is sitting at 16 min read time. Ironically it is one of the posts that I would have liked to make longer but didn't have the time to add in all the extra details. 
 If I had my way I could spend days writing about AI and it's hard to figure out which content to leave out. Because what to write is not just the issue what to leave out is also a big part of it. I must admit it's a bit painful leaving out a section of a piece you've worked on for days because I don't think it contributes to the story I am currently telling. Now that I am writing this particular post you are reading now it might actually exceed that record of 16 minutes, but we'll see. 
@@ -25,7 +25,7 @@ Sometimes too I end up changing a post so much that I'm not quite sure if the fi
 
 One of the things that has changed is that, I mostly include references directly in the post with the link to the external resource. I used to 'cite' them in the text and place them at the end of the post, but I felt that this breaks the flow of reading for the web reader and doesn't usually help them find what they are looking for quickly; they have to scroll through the list of references to find the actual reference before finally clicking to see what they are looking for. On the upside it makes the post more compact. However one downside to this is that if the reader doesn't notice that the text they are currently reading (currently displayed in blue) is a link to a reference it may sound as if I'm just speaking from my personal experience. For personal stuff like that I've got the personal section of this website for that. Also sometimes I do a lot of research too before including certain content in a post, reading across many sources and then when I finally mention it in the post I include a link. I feel this  doesn't show the effort put into looking up sources for that particular post when all you see is a link; which the reader may or may not notice.
 
-### Post thumbnails
+### Post Thumbnails
 Thumbnails for the posts have become more detailed with more information about the post highlighted on the thumbnail. I realise that for the posts that feature me in the cover I have a tendency to strike a pose where I am looking up. 
 
 Just like that vegeta video where he's in the rain and staring up into the sky.
@@ -36,7 +36,7 @@ Typical example is the cover image for my personal post on my trip to Uganda whe
 
 ![Trip to Uganda](/assets/images/uganda.jpg "Trip to Uganda")
 
-## Technical about the website building:
+## Technical Aspects of Building the Website
 This section is dedicated to the technical changes I made after the initial setup of the website detailed in my 'building this personal website' post.
 ### Got a .com domain
 Changed from long url rdjarbeng.github.io to rdjarbeng.com very nice. Also before this I kept failing to add a sitemap to my website in google search console but once I setup  the domain, it worked with no code changes. Apparently google search console is biased against .github.io domains or subdomains in general.
@@ -55,7 +55,7 @@ Made a series of posts about this if you want to read them, I talk about my expe
 - [Sveltia CMS: A Git-based CMS for Jekyll](https://rdjarbeng.com/sveltia-cms-a-git-based-cms-for-jekyll/)
 
 ### Contact form
-I added a form for people to contact me on the about page because I felt it wasn't wise to publish my personal email on the web. urns out that this website domain also comes with the ability to setup a custom email ...@rdjarbeng.com. Nice very official.
+I added a form for people to contact me on the about page because I felt it wasn't wise to publish my personal email on the web. Turns out that this website domain also comes with the ability to setup a custom email ...@rdjarbeng.com. Nice very official.
 
 Setup emails ending in @rdjarbeng.com for branding purposes. It also helps me filter emails/contacts related to the site. Very handy
 
@@ -88,18 +88,18 @@ Later on got problems with 'crawled-not indexed' and 'discovered-not indexed' th
 
 Tags and category pages are ranked higher on google search instead of the home page or the navigation links. So searching for this website on google mostly returns tags and categories pages instead of the post pages.
 
-### Gallery feature:
+### Gallery Feature
 
 I added a gallery page for media content such as cover images for the website and videos hosted on youtube and other platforms. I found I have a lot of media content in the asset folder that was just hidden away in a random post with one mention that was going to waste.  
-Also added iframes to my social media videos since adding the videos directly to the sitewas consuming too much bandwidth and the video files were also huge giving me trouble whenever i clone the repository. Also it gave me a way to organise my media and memes so I could search them. Sweet.
+Also added iframes to my social media videos since adding the videos directly to the site was consuming too much bandwidth and the video files were also huge giving me trouble whenever i clone the repository. Also it gave me a way to organise my media and memes so I could search them. Sweet.
 
 You might be surprised to hear this, but creating 160 (or even 1,000) small markdown files is actually **more efficient** for the workflow and the CMS than one giant yaml file, and it had **zero noticeable impact** on my build speed.
 
-## AI tools
+## AI Tools
 
 AI tools have been a game changer for me. AI - Gemini pro supercharged my content creation process, thumbnails and image creation for the covers. It also enabled me to create and edit cover images whilst editing posts when using copilot or the chat in the antigravity browser saving me time. The graph of posts over time shows a clear increase in the number of posts after I started using SveltiaCMS but also this increase is also due to the fact that I started using AI tools to create posts and edit them much faster.
 
-### Top AI models I used when creating posts:
+### Top AI Models Used
 
 Grok: good for refining text and is able to add current information in the proper context especially for posts where information needed is about current events/trending news. Also good for verifying links but not 100% accurate. I've found some links to be dead after Grok assures me they are active. Hopefully it gets better eventually.
 
@@ -119,7 +119,7 @@ Claude: I used to edit posts with claude. It excelled at keeping context and als
 
 Meta ai: I used meta AI for the post on [Tunde Onakoya's chess marathon](https://rdjarbeng.com/personal/tunde-onakoya-breaks-guinness-world-record-with-epic-chess-marathon-for-children-s-education/) in Times square. I liked the feature where it generated images as you typed allowing you to kind of edit on the fly.  However since then I have not used it much, also because when I was in Rwanda it was not available in that Region for some time. It is now available but now, just like Claude, I haven't really felt a need to go back to it after I stopped using it.
 
-### AI tools as writers and editors
+### AI Tools as Writers and Editors
 
 Sometimes I take the output from one model and give it to the other to criticize and work on improvements for the generated output.
 
@@ -127,43 +127,40 @@ Workflow for that AI work flow: Initial draft by me-> 1st draft post\* by AI mod
 
 When I mention \*1st draft post, may go through many iterations and is usually the nth version, but it's usually the version that I find suitable to publish but could use improvement so that's what is sent to the editor.
 
-## Help section
-Sometimes your work helps others. Landing AI post highlighted how I was able to notify them about the bug on their website,  RuRa electricity announcement saving costs for electricity, interior AI post helped someone create an appropriate layout for their room. For help posts I have the help category for posts that focus on fixing a bug or some issue I have faced that helped someone.
+## Helping Others
 
-## Lessons in content creation:
+Sometimes your work helps others.
 
-* Detailed does not always mean informative. Some technical posts here didn't receive much traffic
+* **Landing AI post**: Highlighted how I was able to notify them about the bug on their website.
+* **RuRa electricity announcement**: Saving costs for electricity.
+* **Interior AI post**: Helped someone create an appropriate layout for their room.
 
-Some posts that I thought were just regular posts actually did pretty well. For instance my post about my trip to Uganda had a lot of interest even from my friends who were Ugandans and I received a lot of messages when I posted about it. It's funny because I didn't really consider a it as a post that was going to pick up traction. My whole idea was to tell a story about my experience. I didn't really think I was writing a post the whole premise of the post was, 'See what happened was...'
+For help posts I have the help category for posts that focus on fixing a bug or some issue I have faced that helped someone.
 
-* Adding thumbnails of posts is good, even if they take time to make.
+## Lessons in Content Creation
 
-* Writing takes time, even with AI
+* **Detailed does not always mean informative.** Some technical posts here didn't receive much traffic. Some posts that I thought were just regular posts actually did pretty well. For instance my post about my trip to Uganda had a lot of interest even from my friends who were Ugandans and I received a lot of messages when I posted about it. It's funny because I didn't really consider a it as a post that was going to pick up traction. My whole idea was to tell a story about my experience. I didn't really think I was writing a post the whole premise of the post was, 'See what happened was...'
 
-Sometimes AI is double work because I have to write drafts, write prompts, edit the AI output, edit my prompts, make minor tweaks, revert changes and scan the posts many times again with reference to the original draft to make sure no important detail was left out acting as a senior editor to make sure everything is set before signing off on a publications. Sometimes I wonder if writing everything myself and editing my drafts is not a less tiring approach. Editing with AI does have the advantage of speed but the extra supervision needed almost negates the speed boost. Maybe writing things myself is a better approach but that also takes up much of my time and posts come out slowly.
+* **Adding thumbnails of posts is good**, even if they take time to make.
+
+* **Writing takes time, even with AI.** Sometimes AI is double work because I have to write drafts, write prompts, edit the AI output, edit my prompts, make minor tweaks, revert changes and scan the posts many times again with reference to the original draft to make sure no important detail was left out acting as a senior editor to make sure everything is set before signing off on a publications. Sometimes I wonder if writing everything myself and editing my drafts is not a less tiring approach. Editing with AI does have the advantage of speed but the extra supervision needed almost negates the speed boost. Maybe writing things myself is a better approach but that also takes up much of my time and posts come out slowly.
 
 My conclusion for AI tools is that they are  good for generating tags, images, refining titles. Cannot be trusted to create and edit posts from start to finish without supervision. Opinions mine.
 
 
-## Improvements to be made:
+## Future Improvements
 
-* Homepage layout
+* **Homepage layout**: Homepage apparently is not very informative, according to google. Been thinking of improving the homepage structure to reflect the different categories. I find that seeing a post on finance, then next another on air quality then another about AI spoils the experience. What are the chances that a user will be interested in all three yet they are presented in order on the site. So if you look at it like a recommendation algorithm the closely related items should be grouped into a place where the user can browse their interests without navigating other posts which they have little interest in. I should think this is also good for SEO but I haven't verified this.
+* **About page**: Does not indicate a contact page at first glance.
+* **Tags pages**: Get more attention than posts on Google.
+* **Getting guest authors**: I actually got my first author to make a post on January 5th, 2026 with the post on the Ghana Stock Exchange located [here](https://rdjarbeng.com/how-to-invest-ghana-stock-exchange/).
+* **Improving backlinks**: Need more links from other sites pointing to rdjarbeng.com
 
-Homepage apparently is not very informative, according to google. Been thinking of improving the homepage structure to reflect the different categories. I find that seeing a post on finance, then next another on air quality then another about AI spoils the experience. What are the chances that a user will be interested in all three yet they are presented in order on the site. So if you look at it like a recommendation algorithm the closely related items should be grouped into a place where the user can browse their interests without navigating other posts which they have little interest in. I should think this is also good for SEO but I haven't verified this.
-
-* About page does not indicate a contact page at first glance.
-
-* Tags pages get more attention than posts on Google
-
-* Getting guest authors - I actually got my first author to make a post on January 5th, 2026 with the post on the Ghana Stock Exchange located [here](https://rdjarbeng.com/how-to-invest-ghana-stock-exchange/). 
-
-* Improving backlinks: need more links from oher sites pointing to rdjarbeng.com
-
-Best posts:
+### Best Performing Posts
 
 Trip to Uganda. This post got a lot of attention.
 
-My favorites:
+### My Personal Favorites
 
 * [Banks in Rwanda](https://rdjarbeng.com/list-of-banks-in-rwanda-and-their-services/)
 * [Letsile Tebogo wins 200m gold](https://rdjarbeng.com/personal/tebogo_olympics/)
