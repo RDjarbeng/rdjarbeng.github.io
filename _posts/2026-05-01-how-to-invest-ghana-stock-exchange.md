@@ -172,7 +172,7 @@ Diversification is key to managing risk. Don't put all your money in one stock o
 
 There is still much to cover in your investment journey. This is where platforms like [ISEDAN](https://isedan.netlify.app) come in.
 
-![ISEDAN Platform Logo](/assets/images/gse_article_nat/isedan.png "ISEDAN Investment Platform")
+![ISEDAN Platform Logo](/assets/images/isedan_icon_small.png "ISEDAN Investment Platform")
 
 **ISEDAN** is the leading GSE Tracker. It provides:
 
