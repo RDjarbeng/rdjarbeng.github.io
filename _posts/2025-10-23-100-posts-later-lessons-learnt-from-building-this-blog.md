@@ -8,8 +8,8 @@ tags:
   - Richard Djarbeng's Blog
   - Review
 title: 100 posts later-lessons learnt from building this blog
-image: ''
-image_alt: Cover image for 100 posts later-lessons learnt from building this blog
+image: /assets/images/100_posts_cover.png
+image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark
 layout: post
 ---
 ## Changes Since the Start
@@ -26,7 +26,9 @@ Sometimes too I end up changing a post so much that I'm not quite sure if the fi
 One of the things that has changed is that, I mostly include references directly in the post with the link to the external resource. I used to 'cite' them in the text and place them at the end of the post, but I felt that this breaks the flow of reading for the web reader and doesn't usually help them find what they are looking for quickly; they have to scroll through the list of references to find the actual reference before finally clicking to see what they are looking for. On the upside it makes the post more compact. However one downside to this is that if the reader doesn't notice that the text they are currently reading (currently displayed in blue) is a link to a reference it may sound as if I'm just speaking from my personal experience. For personal stuff like that I've got the personal section of this website for that. Also sometimes I do a lot of research too before including certain content in a post, reading across many sources and then when I finally mention it in the post I include a link. I feel this  doesn't show the effort put into looking up sources for that particular post when all you see is a link; which the reader may or may not notice.
 
 ### Post Thumbnails
-Thumbnails for the posts have become more detailed with more information about the post highlighted on the thumbnail. I realise that for the posts that feature me in the cover I have a tendency to strike a pose where I am looking up. 
+Thumbnails for the posts have become more detailed with more information about the post highlighted on the thumbnail. I realise that for the posts that feature me in the cover I have a tendency to strike a pose where I am looking up.
+
+![100 Posts Later Cover Image](/assets/images/100_posts_cover.png) 
 
 Just like that vegeta video where he's in the rain and staring up into the sky.
 
