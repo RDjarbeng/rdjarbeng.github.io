@@ -34,7 +34,7 @@ Just like that vegeta video where he's in the rain and staring up into the sky.
 
 Typical example is the cover image for my personal post on my trip to Uganda where I am looking up at a statue.
 
-![Trip to Uganda](/assets/images/uganda.jpg "Trip to Uganda")
+![Trip to Uganda](/assets/images/rd_silver_springs_stare_at_statue_cover.webp "Trip to Uganda")
 
 ## Technical Aspects of Building the Website
 This section is dedicated to the technical changes I made after the initial setup of the website detailed in my 'building this personal website' post.
