@@ -799,6 +799,50 @@ a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+// Pagination
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.paginator a,
+.paginator span {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: $link-color;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.paginator a:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  color: $link-hover-color;
+}
+
+.paginator .current-page {
+  background-color: $base-color;
+  color: white;
+  border-color: $base-color;
+}
+
+.paginator .disabled {
+  color: #ccc;
+  border-color: #eee;
+  pointer-events: none;
+}
+
+.paginator .ellipsis {
+  border: none;
+  padding: 0 5px;
+}
+
 .contact-container h2 {
   font-size: 1.8rem;
   color: #333;
@@ -1407,4 +1451,6 @@ a:hover {
 .post-content code {
   word-wrap: break-word;
   overflow-wrap: break-word;
-}@import "gallery";
+}
+
+@import "gallery";
