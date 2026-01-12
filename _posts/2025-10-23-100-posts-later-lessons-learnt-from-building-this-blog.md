@@ -13,7 +13,7 @@ image_alt: Cover image for 100 posts later - lessons learnt from building this b
 layout: post
 ---
 ## Changes Since the Start
-
+Reaching the milestone of 100 website posts is a moment for reflection. What started as a simple platform to share thoughts has grown into a comprehensive collection of technical guides, personal stories, and reviews. This journey hasn't just been about writing; it has been about building a system, refining a workflow, and learning to leverage new technologies like AI to enhance creativity. In this post, I'll share the lessons I've learned, the technical hurdles I've navigated, and how my approach to content creation has evolved from the first post to the hundredth.
 ### Content Evolution
 Started off with short form content, simple drafts with a basic outline, then started improving the content with AI tools (Grok, claude, Gemini). 
 Made more long form content that is more than a 5 minute read. I think these posts allow me to cover more and are more informative from a reader's perspective. One good example is my post on a [decade by decade look at AI](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/) which is sitting at 16 min read time. Ironically it is one of the posts that I would have liked to make longer but didn't have the time to add in all the extra details. 
