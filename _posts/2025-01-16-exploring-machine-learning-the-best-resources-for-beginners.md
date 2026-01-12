@@ -42,4 +42,4 @@ My recommendation:
 
 If you read all this way and want my personal recommendation I would suggest to take Jeremy Howard's [course](https://course.fast.ai/) on fast ai - Practical deep learning for coders. This would be most useful to you if you already have some knowledge of programming in python.
 
-Previously I wrote a post about this here: `[fastai-Practical deep learning without a PhD](https://rdjarbeng.github.io/RDjarbeng/introducingfastai/)`
+Previously I wrote a post about this here: `[fastai-Practical deep learning without a PhD](https://rdjarbeng.github.io/introducingfastai/)`

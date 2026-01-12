@@ -46,7 +46,7 @@ This move by Starlink and T-Mobile is part of a larger vision to provide near-co
 
 Elon Musk's announcement of Starlink's Direct to Cell service in Los Angeles is a testament to the evolving landscape of communication technology, especially in crisis situations. It underscores the potential of satellite technology to not only enhance everyday connectivity but also to serve as a lifeline when traditional systems fail.
 
-For more information you can look at this earlier [post](https://rdjarbeng.github.io/RDjarbeng/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/) I made about [starlink's direct to cell technology](https://rdjarbeng.github.io/RDjarbeng/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/)
+For more information you can look at this earlier [post](https://rdjarbeng.github.io/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/) I made about [starlink's direct to cell technology](https://rdjarbeng.github.io/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/)
 
 ---
 

@@ -13,7 +13,7 @@ tags:
   - paddle
   - paystack
   - saas
-image: assets/images/payment-platforms-thumbnail-v2.png
+image: /assets/images/payment-platforms-thumbnail-v2.png
 description: "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026."
 ---
 
