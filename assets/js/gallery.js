@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let allItems = [];
     let currentCategory = 'all';
     let currentPage = 1;
-    const itemsPerPage = 10;
+    const itemsPerPage = 12;
     let currentView = 'dashboard'; // 'dashboard' or 'grid'
     let visibleItems = []; // For lightbox navigation
     let currentLightboxIndex = 0;
