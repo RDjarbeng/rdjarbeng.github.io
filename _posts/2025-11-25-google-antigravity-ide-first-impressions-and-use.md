@@ -49,3 +49,13 @@ The effect of this is you have multiple terminals running servers in the backgro
 Small UI problems like this. The line to be decided on is blocked by the button menu to accept or deny. Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way.
 
 ![](/assets/images/20251216-115320.png)
+
+### Error while editing file
+
+This error when editing a file showed up a lot. Usually the agent tries multiple different method to update the file and one of them finally succeeds. I'm curious why it mostly fails on the first attempt though. In cases where it's not able to fix it then it leaves the file halfway-edited.
+
+Many times it does not catch this until I tell it that it broke the application because of certain files with missing code. Then it goes to actually update the files. Just pray you catch the error or else you won't know there's parts of your code missing till you run into the error in production.
+
+I've lost count of the number of time a perfectly working feature stopped working after antigravity updated a completely different feature and left out existing code. It's probably a bug and not intentional I suppose.
+
+![](/assets/images/20260112-203038.png)
