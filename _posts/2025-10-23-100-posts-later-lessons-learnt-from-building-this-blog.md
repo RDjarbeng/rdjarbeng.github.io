@@ -41,7 +41,14 @@ Typical example is the cover image for my personal post on my trip to Uganda whe
 ## Technical Aspects of Building the Website
 This section is dedicated to the technical changes I made after the initial setup of the website detailed in my 'building this personal website' post.
 ### Got a .com domain
-Changed from the long URL rdjarbeng.github.io to rdjarbeng.com. Very nice. Also, before this, I kept failing to add a sitemap to my website in Google Search Console, but once I set up the domain, it worked with no code changes. Apparently, Google Search Console is biased against .github.io domains or subdomains in general.
+
+Changed from the long URL rdjarbeng.github.io to rdjarbeng.com. 
+
+This is an improvement, easy to memorize and also shows that the website url keeps getting shorter and better. I'll insert a picture to illustrate this using the spaceX booster engines.
+
+![Improvement in rdjarbeng.com site urls compared with Spacex booster engines](/assets/images/spacex-boosters-urls.png "Improvement in rdjarbeng.com site urls compared with Spacex booster engines")
+
+ Also, I had an issue before changing to the _dot -com _domain, I kept failing to add a sitemap to my website in Google Search Console, but once I set up the domain, it worked with no code changes. Apparently, Google Search Console is biased against .github.io domains or subdomains in general.
 
 ### Moved to SveltiaCMS for managing posts.
 
