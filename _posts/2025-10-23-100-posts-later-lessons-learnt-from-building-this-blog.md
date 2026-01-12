@@ -52,10 +52,14 @@ This is an improvement, easy to memorize and also shows that the website url kee
 
 ![Improvement in rdjarbeng.com site urls compared with Spacex booster engines](/assets/images/spacex-boosters-urls.png "Improvement in rdjarbeng.com site urls compared with Spacex booster engines")
 
- Also, I had an issue before changing to the _dot -com _domain, I kept failing to add a sitemap to my website in Google Search Console, but once I set up the domain, it worked with no code changes. Apparently, Google Search Console is biased against .github.io domains or subdomains in general.
+ I had an issue before changing to the .com domain, I kept failing to add a sitemap to my website in Google Search Console. However, once I set up the domain, it worked with no code changes. Apparently, Google Search Console is biased against .github.io domains or subdomains in general.
 
 ### Moved to SveltiaCMS for managing posts.
+This change was necessary because adding posts on the website at first felt like a chore and managing different files was just taking too long.
+The CMS made the addition of posts go from creating and naming different files to just writing a post similar to posting on social media and adding images. By reducing friction when creating posts it really sped up my development process. Also I could think about the code and web content separately now.
+The biggest improvement for this was that I didn't have to think of naming files for posts. I could just write the post and it would be automatically added to the website. I also didn't have to think of naming the files for the images. I could just name the file whatever I wanted and it would be automatically added to the website.
 
+You can see here for yourself my graph of the monthly post frequency and cumulative number of posts since the introduction of SveltiaCMS.
 ![Monthly Post Frequency](/assets/images/blog_stats_frequency.png "Monthly Post Frequency on rdjarbeng.com")
 
 _Figure 1: Monthly frequency of blog posts._
