@@ -13,7 +13,8 @@ image_alt: Cover image for 100 posts later - lessons learnt from building this b
 layout: post
 ---
 ## Changes Since the Start
-Reaching the milestone of 100 website posts is a moment for reflection. What started as a simple platform to share thoughts has grown into a comprehensive collection of technical guides, personal stories, and reviews. This journey hasn't just been about writing; it has been about building a system, refining a workflow, and learning to leverage new technologies like AI to enhance creativity. In this post, I'll share the lessons I've learned, the technical hurdles I've navigated, and how my approach to content creation has evolved from the first post to the hundredth.
+Reaching the milestone of 100 website posts is a moment for reflection. What started as a simple platform to share thoughts has grown into a comprehensive collection of technical guides, personal stories, and reviews. It has been about building a system, refining a workflow, and learning to leverage new technologies like AI to enhance creativity. 
+In this post, I'll share the lessons I've learned, the technical hurdles I've navigated, and how my approach to content creation has evolved from the first post to the hundredth.
 ### Content Evolution
 
 Started off with short form content, simple drafts with a basic outline, then started improving the content with AI tools (Grok, claude, Gemini).
