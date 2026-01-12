@@ -1,5 +1,5 @@
 ---
-title: 'King Promise Drops a Global Banger: "Terminator" feat. Young Jonn (2023)'
+title: 'King Promise Drops a Global Banger: "Terminator" feat. Young Jonn'
 date: 2025-11-13T11:23:00
 published: true
 tags:
