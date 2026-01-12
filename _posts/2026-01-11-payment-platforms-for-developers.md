@@ -116,4 +116,4 @@ The "right" choice depends entirely on your business model:
 
 Whichever you choose, the good news is that integrating payments has never been easier. Grab an API key and start building!
 
-![Payment Platforms for Developers](assets/images/payment-platforms-thumbnail-v2.png "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026.")
+![Payment Platforms for Developers](/assets/images/payment-platforms-thumbnail-v2.png "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026.")
