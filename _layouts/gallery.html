@@ -149,14 +149,14 @@ layout: default
             <div class="gallery-html-content" style="display:none;">
                 <div class="video-container">
                     <div class="video-embed">
-                        {% if video.platform == 'youtube' and video.youtube_id %}
-                        {% assign video_id = video.youtube_id %}
-                        {% if video.youtube_id contains 'youtube.com/watch' %}
-                        {% assign video_id = video.youtube_id | split: 'v=' | last | split: '&' | first %}
-                        {% elsif video.youtube_id contains 'youtube.com/shorts/' %}
-                        {% assign video_id = video.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-                        {% elsif video.youtube_id contains 'youtu.be/' %}
-                        {% assign video_id = video.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+            {% if item.platform == 'youtube' and item.youtube_id %}
+            {% assign video_id = item.youtube_id %}
+            {% if item.youtube_id contains 'youtube.com/watch' %}
+            {% assign video_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+            {% elsif item.youtube_id contains 'youtube.com/shorts/' %}
+            {% assign video_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+            {% elsif item.youtube_id contains 'youtu.be/' %}
+            {% assign video_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
                         {% endif %}
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}"
                             title="{{ video.title }}" frameborder="0"
