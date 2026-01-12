@@ -19,42 +19,46 @@ layout: default
 
 <!-- Lightbox Modal -->
 <div id="gallery-modal" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <button class="lightbox-nav prev">&#10094;</button>
+  <span class="lightbox-close">&times;</span>
+  <button class="lightbox-nav prev">&#10094;</button>
 
-    <div class="lightbox-content-wrapper">
-        <div class="lightbox-media-column">
-            <div id="lightbox-media-container"></div>
-        </div>
-        <div class="lightbox-info-column">
-            <h2 class="lightbox-title"></h2>
-            <div class="lightbox-meta">
-                <span class="lightbox-date"></span>
-            </div>
-            <div class="lightbox-caption"></div>
-        </div>
+  <div class="lightbox-content-wrapper">
+    <div class="lightbox-media-column">
+      <div id="lightbox-media-container"></div>
     </div>
+    <div class="lightbox-info-column">
+      <h2 class="lightbox-title"></h2>
+      <div class="lightbox-meta">
+        <span class="lightbox-date"></span>
+      </div>
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
 
-    <button class="lightbox-nav next">&#10095;</button>
+  <button class="lightbox-nav next">&#10095;</button>
 </div>
 
 <div class="gallery-container">
-    <header class="gallery-header">
-        <h1>Gallery</h1>
-        <p class="gallery-description">
-            Explore a visual journey through my life and interests. This collection features cover images from my blog
-            posts, AI-generated art, memes I enjoy, and videos from social media.
-        </p>
-        <nav class="gallery-nav">
-            <button class="gallery-filter active" data-filter="all">All</button>
-            <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
-            <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
-            <button class="gallery-filter" data-filter="memes">Memes</button>
-            <button class="gallery-filter" data-filter="videos">Videos</button>
-            <button class="gallery-filter" data-filter="tiktok">TikTok</button>
-            <button class="gallery-filter" data-filter="ghana">Ghana</button>
-        </nav>
-    </header>
+  <header class="gallery-header">
+    <h1>Gallery</h1>
+    <p class="gallery-description">
+      Explore a visual journey through my life and interests. This collection features cover images from my blog
+      posts, AI-generated art, memes I enjoy, and videos from social media.
+    </p>
+    <nav class="gallery-nav">
+      <button class="gallery-filter active" data-filter="all">All Images</button>
+      <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
+      <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
+      <button class="gallery-filter" data-filter="memes">Memes</button>
+      <button class="gallery-filter" data-filter="ghana">Ghana</button>
+      <button class="gallery-filter" data-filter="videos">Videos</button>
+      <!-- Video Sub-filters -->
+      <button class="gallery-filter" data-filter="tiktok">TikTok</button>
+      <button class="gallery-filter" data-filter="instagram">Instagram</button>
+      <button class="gallery-filter" data-filter="youtube">YouTube</button>
+      <button class="gallery-filter" data-filter="twitter">Twitter/X</button>
+    </nav>
+  </header>
 
   <!-- Dashboard View (Horizontal Scrolling) -->
   <div id="gallery-dashboard" class="gallery-dashboard">
@@ -75,80 +79,23 @@ layout: default
 
   <!-- Hidden Data Source -->
   <div id="gallery-data" style="display: none;">
-        {% assign gallery_items = site.gallery | sort: "date" | reverse %}
+    {% assign gallery_items = site.gallery | sort: "date" | reverse %}
 
-        <!-- Cover Images Category -->
-        {% assign cover_images = gallery_items | where: "type", "cover" %}
-        {% for img in cover_images %}
-        <a href="{{ img.url | relative_url }}" class="gallery-item" data-category="cover-images" data-type="image"
-            data-src="{{ img.image | relative_url }}"
-            data-caption="{{ img.title | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
-            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
-            data-slug="{{ img.title | slugify }}">
-            <div class="gallery-thumb-wrapper">
-                <img src="{{ img.image | relative_url }}" alt="{{ img.caption | default: img.title }}" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">{{ img.title }}</span>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
+    {% for item in gallery_items %}
+    <div class="gallery-data-item"
+      data-category="{% if item.type == 'cover' %}cover-images{% elsif item.type == 'video' %}videos {{ item.platform | downcase }}{% else %}{{ item.category }} {{ item.labels | join: ' ' }}{% endif %}"
+      data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}"
+      data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}"
+      data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
+      data-caption="{{ item.caption | escape }}" data-title="{{ item.title | escape }}"
+      data-date="{{ item.date | date: '%B %d, %Y' }}" data-slug="{{ item.title | slugify }}"
+      data-url="{{ item.url | relative_url }}" data-link="{{ item.link | relative_url }}"
+      data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
 
-        <!-- External Images -->
-        {% assign external_images = gallery_items | where: "type", "external" %}
-        {% for img in external_images %}
-        <a href="{{ img.url | relative_url }}" class="gallery-item"
-            data-category="{{ img.category }} {{ img.labels | join: ' ' }}" data-type="image"
-            data-src="{{ img.image | relative_url }}"
-            data-caption="{{ img.caption | markdownify | escape }}{% if img.link %} <a href='{{ img.link | relative_url }}'>Read more...</a>{% endif %}"
-            data-date="{{ img.date | date: '%B %d, %Y' }}" data-title="{{ img.title | escape }}"
-            data-slug="{{ img.title | slugify }}">
-            <div class="gallery-thumb-wrapper">
-                <img src="{{ img.image | relative_url }}" alt="{{ img.title }}" loading="lazy">
-                <div class="gallery-overlay">
-                    <span class="gallery-title">{{ img.title }}</span>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
-
-        <!-- Videos Categories -->
-        {% assign videos = gallery_items | where: "type", "video" %}
-        {% for video in videos %}
-        <a href="{{ video.url | relative_url }}" class="gallery-item" data-category="videos {{ video.platform }}"
-            data-type="html" data-video-caption="{{ video.caption | escape }}"
-            data-is-vertical="{% if video.platform == 'tiktok' or video.platform == 'instagram' or video.youtube_id contains 'shorts/' %}true{% else %}false{% endif %}"
-            data-caption="{% if video.link %}<a href='{{ video.link | relative_url }}'>Read related post...</a>{% endif %}"
-            data-date="{{ video.date | date: '%B %d, %Y' }}" data-title="{{ video.title | escape }}"
-            data-slug="{{ video.title | slugify }}">
-            <div class="gallery-thumb-wrapper">
-                {% if video.thumbnail and video.thumbnail != "" %}
-                <img src="{{ video.thumbnail | relative_url }}" alt="{{ video.title }}" loading="lazy">
-                {% elsif video.platform == 'youtube' and video.youtube_id %}
-                {% assign video_id = video.youtube_id %}
-                {% if video.youtube_id contains 'youtube.com/watch' %}
-                {% assign video_id = video.youtube_id | split: 'v=' | last | split: '&' | first %}
-                {% elsif video.youtube_id contains 'youtube.com/shorts/' %}
-                {% assign video_id = video.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-                {% elsif video.youtube_id contains 'youtu.be/' %}
-                {% assign video_id = video.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
-                {% endif %}
-                <img src="https://img.youtube.com/vi/{{ video_id }}/hqdefault.jpg" alt="{{ video.title }}"
-                    loading="lazy">
-                {% else %}
-                <div class="gallery-placeholder">
-                    <span>{{ video.title }}</span>
-                    <span class="gallery-type-icon">▶</span>
-                </div>
-                {% endif %}
-                <div class="gallery-overlay">
-                    <span class="gallery-title">{{ video.title }}</span>
-                </div>
-            </div>
-            <!-- Hidden content for lightbox -->
-            <div class="gallery-html-content" style="display:none;">
-                <div class="video-container">
-                    <div class="video-embed">
+      {% if item.type == 'video' %}
+      <div class="gallery-html-content">
+        <div class="video-container">
+          <div class="video-embed">
             {% if item.platform == 'youtube' and item.youtube_id %}
             {% assign video_id = item.youtube_id %}
             {% if item.youtube_id contains 'youtube.com/watch' %}
@@ -157,20 +104,34 @@ layout: default
             {% assign video_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
             {% elsif item.youtube_id contains 'youtu.be/' %}
             {% assign video_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
-                        {% endif %}
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}"
-                            title="{{ video.title }}" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        {% else %}
-                        {{ video.embed_code }}
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
+            {% endif %}
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="{{ item.title }}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            {% else %}
+            {{ item.embed_code }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
     </div>
+    {% endfor %}
+  </div>
 </div>
+
+<!-- Pagination Template (Hidden) -->
+<template id="pagination-template">
+  <div class="paginator">
+    <span class="first-page-btn disabled">First</span>
+    <span class="prev-page-btn disabled">Prev</span>
+    <div class="page-numbers">
+      <!-- Page numbers injected here -->
+    </div>
+    <span class="next-page-btn disabled">Next</span>
+    <span class="last-page-btn disabled">Last</span>
+  </div>
+</template>
 
 <script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
