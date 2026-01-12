@@ -11,12 +11,20 @@
         document.getElementById("rdjarbeng-website-contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
+            // Honeypot check
+            const honeypot = document.getElementById("website-url");
+            if (honeypot && honeypot.value) {
+                console.log("Bot detected.");
+                return; // Stop execution if honeypot is filled
+            }
+
             const formMessage = document.getElementById("form-message");
             const loadingIndicator = document.getElementById("loading-indicator");
 
             // Show the loading indicator
             loadingIndicator.style.display = "block";
             formMessage.style.display = "none"; // Hide previous messages
+            formMessage.className = ""; // Reset classes
 
             emailjs
                 .sendForm("contact_service", "contact_form", this)
@@ -26,7 +34,7 @@
 
                     // Display success message
                     formMessage.textContent = "Your message has been sent successfully!";
-                    formMessage.className = "success";
+                    formMessage.className = "success-message";
                     formMessage.style.display = "block";
 
                     // Clear the form
@@ -38,7 +46,7 @@
 
                     // Display error message
                     formMessage.textContent = "Failed to send your message. Please try again.";
-                    formMessage.className = "error";
+                    formMessage.className = "error-message";
                     formMessage.style.display = "block";
 
                     console.error("EmailJS Error:", error);
@@ -53,6 +61,12 @@
         <h2>Send a Message</h2>
         <p>Have a question or want to connect? Please add a way to contact you.</p>
         <form id="rdjarbeng-website-contact-form">
+            <!-- Honeypot field (hidden from users) -->
+            <div class="form-group" style="display: none;">
+                <label for="website-url">Website</label>
+                <input type="text" id="website-url" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
             <div class="form-group">
                 <label for="name">Name* <small>(Required)</small></label>
                 <input type="text" id="name" name="user_name" required placeholder="Enter your name">
@@ -61,6 +75,11 @@
             <div class="form-group">
                 <label for="email">Email* <small>(Responses will be sent here)</small></label>
                 <input type="email" id="email" name="user_email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
             </div>
 
             <div class="form-group">
