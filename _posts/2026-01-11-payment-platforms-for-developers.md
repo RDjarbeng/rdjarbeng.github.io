@@ -1,7 +1,9 @@
 ---
 layout: post
+published: true
+author: Richard
 title: "The Developer's Guide to Payment Platforms: Stripe, Lemon Squeezy, Paddle, and Paystack"
-date: 2026-01-11 12:00:00 +0000
+date: 2026-01-11T12:00:00
 categories:
   - Finance
 tags:
@@ -13,7 +15,6 @@ tags:
   - saas
 image: assets/images/payment-platforms-thumbnail-v2.png
 description: "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026."
-published: true
 ---
 
 Building an app is hard. Getting paid for it shouldn't be.
