@@ -106,13 +106,19 @@ collections:
     permalink: /personal/:title/
   gallery:
     output: true
-    permalink: /gallery/:title/
+    permalink: /gallery/:name/
+
 sass:
   sass_dir: _sass
   quiet_deps: true
   style: compressed
 
 defaults:
+  - scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: "gallery"
   - scope:
         path: ""
         type: "tag"  # This targets jekyll-archives pages
