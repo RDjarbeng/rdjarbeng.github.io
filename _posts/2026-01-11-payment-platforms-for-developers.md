@@ -18,12 +18,11 @@ description: "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and P
 ---
 
 Building an app is hard. Getting paid for it shouldn't be.
-
 In 2026, the landscape of payment providers is richer than ever. Gone are the days when PayPal was your only real option. Today, we have sophisticated platforms that not only process credit cards but also handle global tax compliance, subscriptions, and fraud protection.
 
 In this post, we'll dive into four of the biggest players: **Stripe**, **Lemon Squeezy**, **Paddle**, and **Paystack**. We'll break down their pros, cons, and ideal use cases so you can make an informed decision.
 
----
+![Payment Platforms for Developers](/assets/images/payment-platforms-cover.png)
 
 ## 1. Stripe: The Industry Standard
 
@@ -116,3 +115,5 @@ The "right" choice depends entirely on your business model:
 4.  **Choose Paystack** if you are building for the African continent.
 
 Whichever you choose, the good news is that integrating payments has never been easier. Grab an API key and start building!
+
+![Payment Platforms for Developers](assets/images/payment-platforms-thumbnail-v2.png "A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026.")
