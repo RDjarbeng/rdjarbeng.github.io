@@ -20,7 +20,7 @@ As a tech enthusiast (definitely not a medical expert),  I wanted to know if the
 
 ## 1. The "Stuffy Room" Effect: Why Grades Drop
 
-The article claims that poor Indoor Air Quality (IAQ) causes a *"decrease in students' ability to perform specific mental tasks requiring concentration, calculation, and memory."*
+The article claims that poor Indoor Air Quality (IAQ) causes a _"decrease in students' ability to perform specific mental tasks requiring concentration, calculation, and memory."_
 
 **The Verdict:** This is true, but it’s rarely about "toxins"—it’s usually about ventilation and CO2.
 
@@ -30,7 +30,7 @@ Another study by [Haverinen-Shaughnessy et al. (2011)](https://onlinelibrary.wil
 
 ## 2. The Scary Claim: "Verbal, Perceptual, and Motor Disabilities"
 
-The text warns that poor air can cause *"verbal, perceptual, motor, and behavioral disabilities in children."* This sounds incredibly severe for just "bad air."
+The text warns that poor air can cause _"verbal, perceptual, motor, and behavioral disabilities in children."_ This sounds incredibly severe for just "bad air."
 
 **The Verdict:** This is accurate, but context is critical. This language almost certainly refers to **Lead** and **Neurotoxicants**, not just stuffy air.
 
@@ -38,7 +38,7 @@ According to the [American Academy of Pediatrics](https://www.aap.org/en/patient
 
 ## 3. Hearing Loss? Really?
 
-This was the most surprising claim to me: *"It can also cause hearing impairment."*
+This was the most surprising claim to me: _"It can also cause hearing impairment."_
 
 **The Verdict:** Surprisingly, yes. There are two hidden ways air quality hurts hearing:
 
@@ -47,7 +47,7 @@ This was the most surprising claim to me: *"It can also cause hearing impairment
 
 ## 4. The "14 Million Days" Stat
 
-The article mentions illnesses that *"keep students home from school."*
+The article mentions illnesses that _"keep students home from school."_
 
 **The Verdict:** This is a solid statistic rooted in CDC data.
 Asthma is the leading chronic disease in children, and the [CDC estimates](https://www.google.com/search?q=https://www.cdc.gov/asthma/schools.html) that asthma accounts for approximately **13.8 million missed school days** per year in the US alone. The primary triggers for these asthma attacks are indoor allergens: dust mites, mold spores, and cockroach debris—all indicators of "poor IAQ."
@@ -64,4 +64,4 @@ It turns out that "fresh air" isn't just a nice-to-have; it's a prerequisite for
 
 ---
 
-*Note: I am not a doctor or an environmental scientist. I have simply collated these sources to verify the claims made in the original text.*
+_Note: I am not a doctor or an environmental scientist. I have simply collated these sources to verify the claims made in the original text._
