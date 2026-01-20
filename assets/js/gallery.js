@@ -62,14 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isDeepLink) {
             // Handle deep link (open lightbox)
-            renderDashboard();
-            checkDeepLink();
+            // Pass false to prevent renderDashboard from overwriting the URL before we check it
+            renderDashboard(false);
+            checkDeepLink(currentPath);
         } else if (categoryParam) {
             // Open specific category grid
             switchToGrid(categoryParam, pageParam);
         } else {
             // Default to dashboard
-            renderDashboard();
+            renderDashboard(true);
         }
 
         setupEventListeners();
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- Rendering Logic ---
 
-    function renderDashboard() {
+    function renderDashboard(updateUrl = true) {
         currentView = 'dashboard';
         currentCategory = 'all';
         dashboardContainer.innerHTML = '';
@@ -86,8 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         updateActiveFilter('all');
 
-        // Update URL
-        history.pushState({ view: 'dashboard' }, 'Gallery', '/gallery/');
+        // Update URL only if requested
+        if (updateUrl) {
+            history.pushState({ view: 'dashboard' }, 'Gallery', '/gallery/');
+        }
 
         // Render strips for IMAGE categories only
         imageCategories.forEach(category => {
@@ -487,12 +490,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Deep Link Check
-    function checkDeepLink() {
-        const currentPath = window.location.pathname;
-        if (currentPath.startsWith('/gallery/') && currentPath !== '/gallery/') {
+    function checkDeepLink(pathToCheck) {
+        const normalizePath = (path) => {
+            try {
+                let decoded = decodeURIComponent(path);
+                if (decoded.endsWith('/') && decoded.length > 1) {
+                    decoded = decoded.slice(0, -1);
+                }
+                return decoded;
+            } catch (e) {
+                return path;
+            }
+        };
+
+        // Use passed path or current location
+        const currentPath = normalizePath(pathToCheck || window.location.pathname);
+
+        if (currentPath.startsWith('/gallery/') && currentPath !== '/gallery') {
             const targetItem = allItems.find(item => {
-                const itemPath = new URL(item.dataset.url, window.location.origin).pathname;
-                return itemPath === currentPath;
+                try {
+                    const itemUrl = new URL(item.dataset.url, window.location.origin);
+                    const itemPath = normalizePath(itemUrl.pathname);
+                    return itemPath === currentPath;
+                } catch (e) {
+                    return false;
+                }
             });
 
             if (targetItem) {
@@ -500,7 +522,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
                 visibleItems = categoryItems;
                 currentLightboxIndex = visibleItems.indexOf(targetItem);
-                openLightbox(currentLightboxIndex, false); // Don't push state again, we are already there
+                openLightbox(currentLightboxIndex, false);
+            } else {
+                // Fallback: Try matching by slug from URL
+                const urlSlug = currentPath.split('/').pop();
+                const fallbackItem = allItems.find(item => {
+                    try {
+                        const itemUrl = new URL(item.dataset.url, window.location.origin);
+                        const itemSlug = normalizePath(itemUrl.pathname).split('/').pop();
+                        return itemSlug === urlSlug;
+                    } catch (e) { return false; }
+                });
+
+                if (fallbackItem) {
+                    const categoryId = getCategoryFromItem(fallbackItem);
+                    const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
+                    visibleItems = categoryItems;
+                    currentLightboxIndex = visibleItems.indexOf(fallbackItem);
+                    openLightbox(currentLightboxIndex, false);
+                }
             }
         }
     }
