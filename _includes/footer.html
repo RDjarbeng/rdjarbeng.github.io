@@ -20,6 +20,7 @@
           {%- if site.email -%}
           <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {%- endif -%}
+          <li><a class="u-email" href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
         </ul>
         <div>&copy; {{ site.time | date: "%Y" }}</div>
       </div>

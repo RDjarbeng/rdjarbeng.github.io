@@ -13,10 +13,12 @@ tags:
   - request
 title: GSM module HTTP GET & POST request using arduino microcontroller and SIM900
 image: /assets/images/gsm_module.jpg
+image_alt: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.
 layout: post
-image_alt: "Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins."
 ---
-This post covers the procedure to send a GET and POST request with AT commands using the SIM900 GSM/GPRS module and the Arduino UNO. This is useful for retrieving data from the Web and sending data to a web server for Internet of Things(IOT) or embedded systems projects. Could work with other GSM modules that are operated by AT commands such as SIM800L, SIM808, SIM7000e etc. This tutorial uses 2G (GSM) connection. I would be glad if it could be updated for 3G and 4G modules, it's a pity 😒 we have to be using 2G networks for projects in 2023.
+This post covers the procedure to send a GET and POST request with AT commands using the SIM900 GSM/GPRS module and the Arduino UNO. It is useful for retrieving data from the Web and sending data to a web server for Internet of Things(IOT) or embedded systems projects. Also this should work with simlar GSM modules that are operated by AT commands such as SIM800L, SIM808, SIM7000e etc. This tutorial uses 2G (GSM) connection. 
+
+_I would be glad if it could be updated for 3G and 4G modules, it's a pity 😒 we have to be using 2G networks for projects in 2025._
 
 This tutorial assumes you are using an arduino uno but it should work for other arduino boards with minor changes. If you are using a raspberry pi microcontroller do **NOT** connect the raspberry pi directly to the SIM900. The SIM900 uses 5V logic level and the raspberry pi uses 3.3V logic level.
 For raspberry Pi users see the raspberry Pi section below.
@@ -31,7 +33,7 @@ For raspberry Pi users see the raspberry Pi section below.
 ![Picture of a SIM card for illustration purposes](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/ca85a718-33f3-4004-9a33-f0abff9242e7)
 
 - SIM900 GSM/GPRS module
-  
+
 ![image](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/b578b016-4e7f-448a-a0a3-1699ee9bebec)
 
 ### Connection diagram
@@ -50,7 +52,7 @@ From my experience, the second connection of the ground cable to the pin on the 
 
 To use the SIM900 GSM module with an Arduino Uno, you first need to import the SoftwareSerial library and define a SoftwareSerial object for communication with the module. Here's an example:
 
-```
+```plain
 #include <SoftwareSerial.h>
 
 // SoftwareSerial object for communication with SIM900
@@ -63,7 +65,7 @@ Next, there are two utility functions provided in the code that simplify sending
 
 The utility functions are as follows
 
-```
+```plain
 void sendCommand(const char* command) {
   SIM900.println(command);
   ShowSerialData();
@@ -90,7 +92,7 @@ Please note that these utility functions are provided to assist in displaying th
 
 The SIM900 GSM module communicates with AT commands, where **AT** stands for attention. To perform any action with the GSM module such as sending the GET and POST request you will send a series of AT-commands that look like this mostly:
 
-```
+```plain
 AT+command
 AT+command=value1, value2
 ```
@@ -101,21 +103,21 @@ The simplest AT-command is simply 'AT' which is used to check if the module is c
 
 # Connecting to the internet
 
-![UncappedSpeedRoaringPowaaahGIF](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/ba2e8c01-9aa1-41e4-b8a6-9dc96cad629c)
+![wifi signal gif loading in purple](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/ba2e8c01-9aa1-41e4-b8a6-9dc96cad629c "wifi signal gif ")
 
-## GET request - Retrieving data from the internet 
+## GET request - Retrieving data from the internet
 
 This code snippet demonstrates how to perform a GET request using the GPRS connection of the SIM900 GSM module. It utilizes various AT commands to establish the connection and send the request.
 
-```
+```plain
 void sendGetRequest(){
 
   //Check if the module is responsive, expected value OK
-  sendCommand("AT"); 
+  sendCommand("AT");
   //close or turn off network connection in case it was left open, expected value OK
-  sendCommand("AT+CIPSHUT"); 
+  sendCommand("AT+CIPSHUT");
   // close GPRS context bearer in case it was left open, expected value OK
-  sendCommand("AT+SAPBR=0,1"); 
+  sendCommand("AT+SAPBR=0,1");
   // open GPRS context establish GPRS connection
   sendCommand("AT+SAPBR=3,1,\"Contype\",\"GPRS\"");
   //Set the Access Point Name (APN) for the network provider
@@ -132,7 +134,7 @@ void sendGetRequest(){
   //Initiate the HTTP GET request, send http request to specified URL
   sendCommand("AT+HTTPACTION=0");
   // Wait for the response (adjust the delay as needed)
-  delay(9000); 
+  delay(9000);
   // Read the HTTP response, normally contains status code 200 if successful
   sendCommand("AT+HTTPREAD");
   //Terminate the HTTP service
@@ -141,7 +143,7 @@ void sendGetRequest(){
   sendCommand("AT+CIPSHUT");
   // close GPRS context bearer
   sendCommand("AT+SAPBR=0,1");
-  
+
 
 }
 ```
@@ -154,7 +156,6 @@ void sendGetRequest(){
 2. **AT+SAPBR=3,1,\"Contype\",\"GPRS\"**: Sets the connection type to GPRS. Expected response: "OK" if the command is successful.
 3. **AT+SAPBR=3,1,\"APN\",\"internet.mtn\"**: Sets the Access Point Name (APN) for the GPRS connection. Please change the "internet.mtn" to the appropriate APN for your network provider. Expected response: "OK" if the command is successful.
 4. **AT+SAPBR=1,1**: Opens the GPRS context to establish the connection. Expected response: "OK" if the connection is successfully established.
- 
 
 > Note: This command **AT+SAPBR=1,1** may fail when running it a second time and show "ERROR" but the GET request can still work.
 
@@ -170,15 +171,15 @@ Please note that the APN and URL for the server are provided as hardcoded values
 
 It is worth mentioning that the get request is not only used for retrieving data from the internet it can be used to send data in the following format
 `http://example.com?value1=2?value2=13`
-Where value1 and value2 are the parameters being sent as 2 and 13. 
+Where value1 and value2 are the parameters being sent as 2 and 13.
 
 ## POST request - Sending data to the internet
 
-```
+```plain
 void testPostRequest(String jsonToSend){
   //Example format of JSON:
   // String jsonToSend="{\"uploadedAt\":\"2023-06-26T20:18:22.826Z\",\"data\":[{\"unit\":\"C\",\"reading\":31}]}";
-  
+
 
   sendCommand("AT");
   ShowSerialData();
@@ -187,7 +188,7 @@ void testPostRequest(String jsonToSend){
   delay(500);
   sendCommand("AT+SAPBR=0,1");
   delay(2000);
-  
+
   ShowSerialData();
   sendCommand("AT+SAPBR=3,1,\"Contype\",\"GPRS\"");
   ShowSerialData();
@@ -224,17 +225,17 @@ void testPostRequest(String jsonToSend){
 
 #### Explanation of AT commands for POST request:
 
-The AT commands for the POST request are similar to the get request above except on these lines. 
+The AT commands for the POST request are similar to the get request above except on these lines.
 
 1. **AT+HTTPPARA="CONTENT","application/json"**: Indicates that the data will be in JSON format. Expected value: OK
 2. **AT+HTTPDATA=lengthOfJson,20000**: Prepares the module to receive the JSON data. First parameter is the length of the JSON to be sent and the second parameter is the time in milliseconds to wait for the data to be received, in this case; `20000` = 20 seconds. The module normally responds 'DOWNLOAD' waiting for the JSON input. The next command is actually not an 'AT' command but just the JSON input with the given length of characters specified.
-3. **jsonToSend** : Send just the JSON data. Expected response: OK  If the number of characters are lower or higher than expected the command will fail with 'ERROR'. 
+3. **jsonToSend** : Send just the JSON data. Expected response: OK  If the number of characters are lower or higher than expected the command will fail with 'ERROR'.
 4. **AT+HTTPACTION=1**: Initiates the HTTP POST request. Expected response: "OK", number of characters in HTTP response followed by the HTTP response code (e.g. "+HTTPACTION:42,201")
 5. **AT+HTTPREAD**: Reads the HTTP response from the server. Expected response: The response data from the server, usually contains the json data you just transmitted with some additional details or error information in case the request returns anything other than 200 or 201 status code.
 6. The rest of the commands are the same as the GET request code, where we close the connection and reset the bearer
 
-```
-AT+HTTPPARA="CONTENT","application/json" 
+```plain
+AT+HTTPPARA="CONTENT","application/json"
 AT+HTTPDATA=lengthOfJson,20000
 AT+HTTPACTION=1
 ```
@@ -245,7 +246,7 @@ _Note_: The length of the characters in the JSON to send for the command `AT+HTT
 
 You can run the file [testSerial.ino](https://github.com/RDjarbeng/HTTP-GET-POST-Request-with-GSM/blob/main/testSerial.ino) to test the serial commands one by one. Enter commands in the serial monitor and send them to the GSM modules and view the response.
 
-## Full arduino code 
+## Full arduino code
 
 Find the full code here:
 
@@ -257,7 +258,7 @@ Note that you will have to replace the URL based on the server you are sending t
 
 ## Raspberry Pi- Note for raspberry pi users and SIM900
 
-It is not recommended to connect the SIM900 board directly to the RX and TX (UART) pins of the raspberry Pi, because the SIM900 uses a 5V logic level and the raspberry Pi uses 3.3V. Connecting them directly could damage the Pi. You may have to use a voltage level shifter. Unfortunately, I don't know any recommended level shifters, if you do let me know; submit a PR or open an issue to get my attention. 
+It is not recommended to connect the SIM900 board directly to the RX and TX (UART) pins of the raspberry Pi, because the SIM900 uses a 5V logic level and the raspberry Pi uses 3.3V. Connecting them directly could damage the Pi. You may have to use a voltage level shifter. Unfortunately, I don't know any recommended level shifters, if you do let me know; submit a PR or open an issue to get my attention.
 
 ### Alternative GSM module for Raspberry Pi
 
@@ -278,4 +279,4 @@ Start- 27 June, 2023
 Last update- 22nd June, 2023
 Have feedback or comments? Open an issue or contact me on [LinkedIn](https://www.linkedin.com/in/richarddjarbeng/) or social media if you want to suggest improvements.
 
-[![Richard_Linkedin Badge](https://img.shields.io/badge/-Richard-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/richarddjarbeng/)](https://www.linkedin.com/in/richarddjarbeng/) [![Richard_X Badge](https://img.shields.io/badge/-Richard-1DA1F2?style=flat-square&logo=X&logoColor=white&link=https://x.com/DjarbengRichard)](https://x.com/DjarbengRichard)
+[![Richard_Linkedin Badge](https://img.shields.io/badge/-Richard-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/richarddjarbeng/ "LinkedIn for Richard Djarbeng")](https://www.linkedin.com/in/richarddjarbeng/) [![Richard_X Badge](https://img.shields.io/badge/-Richard-1DA1F2?style=flat-square&logo=X&logoColor=white&link=https://x.com/DjarbengRichard)](https://x.com/DjarbengRichard)

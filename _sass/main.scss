@@ -139,6 +139,7 @@ table {
 
 /* basic reset */
 @import "minima";
+@import "gallery";
 @import "personal";
 @import "dynamic_footer";
 @import "categories_tags";
@@ -271,7 +272,7 @@ iframe {
 // Base card styles (shared)
 .post-card,
 .project-card {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
@@ -628,7 +629,7 @@ a:hover {
   background-color: #e6f7ff;
 }
 
-#contact-form {
+#rdjarbeng-website-contact-form {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
@@ -640,16 +641,16 @@ a:hover {
   font-family: Arial, sans-serif;
 }
 
-#contact-form label {
+#rdjarbeng-website-contact-form label {
   display: block;
   margin: 10px 0 5px;
   font-weight: bold;
   font-size: 14px;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
+#rdjarbeng-website-contact-form input[type="text"],
+#rdjarbeng-website-contact-form input[type="email"],
+#rdjarbeng-website-contact-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -658,12 +659,12 @@ a:hover {
   font-size: 14px;
 }
 
-#contact-form textarea {
+#rdjarbeng-website-contact-form textarea {
   height: 120px;
   resize: vertical;
 }
 
-#contact-form input[type="submit"] {
+#rdjarbeng-website-contact-form input[type="submit"] {
   width: 100%;
   padding: 10px 15px;
   border: none;
@@ -675,7 +676,7 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
-#contact-form input[type="submit"]:hover {
+#rdjarbeng-website-contact-form input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
@@ -799,6 +800,50 @@ a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+// Pagination
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.paginator a,
+.paginator span {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: $link-color;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.paginator a:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  color: $link-hover-color;
+}
+
+.paginator .current-page {
+  background-color: $base-color;
+  color: white;
+  border-color: $base-color;
+}
+
+.paginator .disabled {
+  color: #ccc;
+  border-color: #eee;
+  pointer-events: none;
+}
+
+.paginator .ellipsis {
+  border: none;
+  padding: 0 5px;
+}
+
 .contact-container h2 {
   font-size: 1.8rem;
   color: #333;
@@ -813,7 +858,7 @@ a:hover {
   text-align: center;
 }
 
-#contact-form {
+#rdjarbeng-website-contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1408,3 +1453,6 @@ a:hover {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+@import "gallery";
+@import "../assets/css/contact";

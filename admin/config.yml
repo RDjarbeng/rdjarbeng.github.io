@@ -1,3 +1,4 @@
+# Force rebuild
 backend:
   name: github
   repo: RDjarbeng/rdjarbeng.github.io
@@ -41,14 +42,15 @@ collections:
           default: 'Richard',
           value_field: 'short_name'
         }
-      - {
-          label: 'Category',
-          name: 'categories',
-          widget: 'list',
-          allow_add: true,
-          max: 1,
-          field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
-          default: ['Technology']
+      - { 
+        label: 'Category',
+        name: 'category',
+        widget: 'relation',
+        collection: 'category_info',
+        display_fields: [category_name],
+        search_fields: [category_name],
+        default: 'Technology',
+        value_field: 'category_name'
         }
       - {
           label: 'Tags',
@@ -130,18 +132,118 @@ collections:
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'category_info'
+    label: 'Category Info'
+    folder: '_category_info'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Category Name', name: 'category_name', widget: 'string' }
+      - { label: 'Category Description', name: 'description', widget: 'markdown', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+
+  - name: 'gallery_categories'
+    label: 'Gallery Categories'
+    folder: '_gallery_categories'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+
   - label: About
     name: about_page
     files:
-      -  name: 'about'
-         label: 'About Page'
-         file: 'about.md'
-         create: false
-         editor:
-           preview: false
-         fields:
-           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
-           - { label: 'Title', name: 'title', widget: 'string' }
-           - { label: 'Permalink', name: 'permalink', widget: 'hidden', default: '/about/' }
-           - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
-           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - name: 'about'
+        label: 'About Page'
+        file: 'about.md'
+        create: false
+        editor:
+          preview: false
+        fields:
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Permalink', name: 'permalink', widget: 'hidden', default: '/about/' }
+          - { label: 'Custom CSS Class', name: 'custom_css_class', widget: 'string', default: 'about-page' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'ai_generations'
+    label: 'AI Generations'
+    folder: '_gallery/ai'
+    media_folder: "../../assets/images/ai"
+    public_folder: "/assets/images/ai"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Model', name: 'labels', widget: 'select', options: ['Grok', 'Gemini', 'Midjourney', 'DALL-E', 'Stable Diffusion', 'Other'], default: 'Grok' }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'external' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'ai-generations' }
+
+  - name: 'memes'
+    label: 'Memes'
+    folder: '_gallery/memes'
+    media_folder: "../../assets/images/memes"
+    public_folder: "/assets/images/memes"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'external' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'memes' }
+
+  - name: 'gallery'
+    label: 'General Gallery'
+    folder: '_gallery'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      
+      - label: 'Type'
+        name: 'type'
+        widget: 'select'
+        options: 
+          - { label: 'Cover Image', value: 'cover' }
+          - { label: 'External Image', value: 'external' }
+        default: 'external'
+
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
+      
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'gallery_categories', display_fields: [title], search_fields: [title], value_field: 'title', required: false }
+      - { label: 'Labels', name: 'labels', widget: 'list', default: [], required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+
+  - name: 'gallery_videos'
+    label: 'Videos'
+    folder: '_gallery/videos'
+    media_folder: "../../assets/images/videos"
+    public_folder: "/assets/images/videos"
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Platform', name: 'platform', widget: 'select', options: ['youtube', 'tiktok', 'instagram', 'twitter'], default: 'youtube' }
+      - { label: 'YouTube URL or ID', name: 'youtube_id', widget: 'string', required: false, hint: 'Paste full YouTube URL (Video or Short) or just the ID' }
+      - { label: 'Embed Code', name: 'embed_code', widget: 'text', required: false, hint: 'For TikTok/Insta/Twitter: Paste full embed code' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image', required: false }
+      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'video' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'videos' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }

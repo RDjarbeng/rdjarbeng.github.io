@@ -41,3 +41,25 @@ CPU usage on idle:
 For some reason it has 29 subprocesses running on task manager when left on idle on windows. Of course it doesn't beat the king of many subprocesses Google Chrome browser shown here with 101 subprocesses
 
 ![Task manager screenshot showing antigravity CPU sub processes](/assets/images/antigravity_29_subprocesses_taskmanager.png "Task manager screenshot showing antigravity CPU subprocesses")
+
+Most times leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage that the user didn't start. It seems unable to terminate the terminal as well, possibly because of double check before the server stops. jekyll for instance requires you to enter yes (Y/N) to terminate or hit ctrl+c again but antigravity doesn't seem to know this.
+
+The effect of this is you have multiple terminals running servers in the background that are not immediately evident and also not clear how to terminate them.
+
+Small UI problems like this. The line to be decided on is blocked by the button menu to accept or deny. Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way.
+
+![](/assets/images/20251216-115320.png)
+
+### Error while editing file
+
+This error when editing a file showed up a lot. Usually the agent tries multiple different method to update the file and one of them finally succeeds. I'm curious why it mostly fails on the first attempt though. In cases where it's not able to fix it then it leaves the file halfway-edited.
+
+Many times it does not catch this until I tell it that it broke the application because of certain files with missing code. Then it goes to actually update the files. Just pray you catch the error or else you won't know there's parts of your code missing till you run into the error in production.
+
+I've lost count of the number of time a perfectly working feature stopped working after antigravity updated a completely different feature and left out existing code. It's probably a bug and not intentional I suppose.
+
+![](/assets/images/20260112-203038.png)
+
+### Implementation plan woes:
+
+Even after adding this to my prompt: 'Approved in advance. yes' I usually have to still approve again the implementation plan. Somtimes it understands and auto-proceeds, however most times it still waits for approval of the implementation plan. The other option is to switch from 'planning' to 'fast' mode, but I like to see the reasoning behind what the model did. I just don't like it to stop and ask me for approval of an implementation plan I already approved. When asked about this 'Gemini(High)' responded that it determines whether to auto-proceed based on previous responses.

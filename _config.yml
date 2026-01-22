@@ -104,12 +104,25 @@ collections:
   personal:
     output: true
     permalink: /personal/:title/
+  gallery:
+    output: true
+    permalink: /gallery/:name/
+  category_info:
+    output: false
+  gallery_categories:
+    output: false
+
 sass:
   sass_dir: _sass
   quiet_deps: true
   style: compressed
 
 defaults:
+  - scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: "gallery"
   - scope:
         path: ""
         type: "tag"  # This targets jekyll-archives pages
@@ -145,3 +158,4 @@ pagination:
   active: true
   paginate: 10  # Number of posts per page
   collection: 'posts'  # Target the posts collection
+

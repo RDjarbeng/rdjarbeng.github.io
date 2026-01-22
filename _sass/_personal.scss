@@ -7,45 +7,46 @@
 }
 
 .personal-posts-list {
-    .post-card {
-      border: 1px solid #ddd;
-      margin-bottom: 20px;
-      width: 70%;
-      min-width: 350px;
-  
-      // .post-link {
-      //   font-weight: bold;
-      // }
-  
-      .post-excerpt {
-        color: #666;
-      }
-  
-      .post-meta {
-        color: #999;
-      }
+  .post-card {
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    width: 70%;
+    min-width: 350px;
+
+    // .post-link {
+    //   font-weight: bold;
+    // }
+
+    .post-excerpt {
+      color: #666;
     }
 
-    .post-image {
-      
-      max-height: 355px; 
-      
-    }
-    .post-card h4{
-      margin-bottom: 0;
-      height: auto;
+    .post-meta {
+      color: #999;
     }
   }
 
+  .post-image {
+
+    max-height: 355px;
+
+  }
+
+  .post-card h4 {
+    margin-bottom: 0;
+    height: auto;
+  }
+}
+
+.page-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 992px) {
   .page-content {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0;
   }
-  
-  @media (min-width: 992px) {
-    .page-content {
-      padding-left: 100px;
-      padding-right: 100px;
-      padding-top: 0;
-    }
-  }
+}

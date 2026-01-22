@@ -14,8 +14,8 @@ tags:
   - Rwanda and Baskets
   - Richard Discusses Giant Basket in Kigali
 image: /assets/images/gasabo_cropped.jpg
+image_alt: Cover image for Why is There a Giant Basket on This Building in Kigali?
 layout: personal
-image_alt: "Cover image for Why is There a Giant Basket on This Building in Kigali?"
 ---
 First time visitors to Kigali might wonder why there is this giant basket on a building? I know I did.
 
@@ -23,7 +23,7 @@ First time visitors to Kigali might wonder why there is this giant basket on a b
 
 ## 📍Where are we?
 
-Let's start with the basics: we’re in Africa, in Rwanda, in Kigali, and finally, we arrive at the Gasabo district. Gasabo is a district in Kigali, and “Gasabo” (also known as "agaseke") means "basket" in the local language, Kinyarwanda. 
+Let's start with the basics: we’re in Africa, in Rwanda, in Kigali, and finally, we arrive at the Gasabo district. Gasabo is a district in Kigali, and “Gasabo” (also known as "agaseke") means "basket" in the local language, Kinyarwanda.
 
 ### The Story Behind the Basket
 
@@ -40,3 +40,11 @@ The giant basket is a pretty unique landmark in Kigali. It’s an interesting bl
 Source: Friends in Kigali. Thanks to Adonia, Clemence, Gad and Sandrine
 
 Music: Amaliza by Ruti Joel
+
+PS:
+
+I found the source of this particular audio on YouTube from one of Ruti Joel's concerts - Rumata wa Musomandera - Part (3) (Official concert video)
+
+You'll have to forward to around the 21:00 minute to reach where this song starts.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J0yf7GeWHhQ?si=EIyoiPmBFop97WZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
