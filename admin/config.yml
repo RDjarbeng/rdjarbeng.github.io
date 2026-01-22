@@ -218,7 +218,7 @@ collections:
         options: 
           - { label: 'Cover Image', value: 'cover' }
           - { label: 'External Image', value: 'external' }
-        default: 'cover'
+        default: 'external'
 
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
       - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
