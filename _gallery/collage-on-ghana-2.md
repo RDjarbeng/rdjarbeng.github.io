@@ -7,5 +7,5 @@ link: ''
 category: ghana
 labels:
   - Ghana
+date: 2026-01-22T22:27:00
 ---
-
