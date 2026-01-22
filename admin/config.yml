@@ -223,3 +223,5 @@ collections:
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'video' }
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'videos' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
