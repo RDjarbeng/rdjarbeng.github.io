@@ -42,14 +42,15 @@ collections:
           default: 'Richard',
           value_field: 'short_name'
         }
-      - {
-          label: 'Category',
-          name: 'categories',
-          widget: 'list',
-          allow_add: true,
-          max: 1,
-          field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
-          default: ['Technology']
+      - { 
+        label: 'Category',
+        name: 'category',
+        widget: 'relation',
+        collection: 'category_info',
+        display_fields: [category_name],
+        search_fields: [category_name],
+        default: 'Technology',
+        value_field: 'category_name'
         }
       - {
           label: 'Tags',
