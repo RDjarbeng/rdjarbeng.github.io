@@ -131,6 +131,15 @@ collections:
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'gallery_categories'
+    label: 'Gallery Categories'
+    folder: '_gallery_categories'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+
   - label: About
     name: about_page
     files:
