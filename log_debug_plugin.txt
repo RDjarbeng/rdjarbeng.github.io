@@ -1,0 +1,210 @@
+Configuration file: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_config.yml
+
+
+***** Archive title (GENERATOR) RUNNING *****
+
+            Source: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io
+       Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at /personal/
+My custom pagination: Creating pager for page 1. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Removed existing page at /personal/ to replace with paginated version
+My custom pagination: Creating pager for page 2. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 2 pager data: 28 posts
+My custom pagination: Creating pager for page 3. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 3 pager data: 28 posts
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    done in 281.167 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/Richard/RD/myprojects/rdjarbeng.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2026-01-20 23:31:06
+                    log_debug_plugin.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at /personal/
+My custom pagination: Creating pager for page 1. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Removed existing page at /personal/ to replace with paginated version
+My custom pagination: Creating pager for page 2. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 2 pager data: 28 posts
+My custom pagination: Creating pager for page 3. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 3 pager data: 28 posts
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 280.893508 seconds.
+                    
+      Regenerating: 8 file(s) changed at 2026-01-20 23:35:47
+                    log_debug_plugin.txt
+                    log_debug_layout.txt
+                    log_refactor.txt
+                    log_debug_pager.txt
+                    log_css_fix.txt
+                    log_debug_restore.txt
+                    log_fix.txt
+                    log_final_verify.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at /personal/
+My custom pagination: Creating pager for page 1. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Removed existing page at /personal/ to replace with paginated version
+My custom pagination: Creating pager for page 2. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 2 pager data: 28 posts
+My custom pagination: Creating pager for page 3. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 3 pager data: 28 posts
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 46855.909602 seconds.
+                    
+      Regenerating: 7 file(s) changed at 2026-01-21 12:36:43
+                    log_debug_plugin.txt
+                    log_refactor.txt
+                    log_css_fix.txt
+                    log_fix.txt
+                    log_debug_restore.txt
+                    log_debug_pager.txt
+                    log_debug_layout.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at /personal/
+My custom pagination: Creating pager for page 1. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Removed existing page at /personal/ to replace with paginated version
+My custom pagination: Creating pager for page 2. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 2 pager data: 28 posts
+My custom pagination: Creating pager for page 3. all_posts size: 28
+My custom pagination: Pager created. total_posts: 28
+My custom pagination: Page 3 pager data: 28 posts
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m

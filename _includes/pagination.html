@@ -6,7 +6,7 @@
 <div class="paginator">
     <!-- First Page Link -->
     {% if paginator.current_page > 1 %}
-    <a href="/posts/" class="first">First</a>
+    <a href="{{ include.base_url }}" class="first">First</a>
     {% else %}
     <span class="first disabled">First</span>
     {% endif %}
@@ -15,9 +15,9 @@
     <span class="previous">
         {% if paginator.previous_page %}
         {% if paginator.previous_page == 1 %}
-        <a href="/posts/">Prev</a>
+        <a href="{{ include.base_url }}">Prev</a>
         {% else %}
-        <a href="/posts/page-{{ paginator.previous_page}}/">Prev</a>
+        <a href="{{ include.base_url }}page-{{ paginator.previous_page}}/">Prev</a>
         {% endif %}
         {% else %}
         <span class="disabled">Prev</span>
@@ -36,7 +36,7 @@
 
             <!-- Always show first page -->
             {% if range_start > 1 %}
-            <a href="/posts/">1</a>
+            <a href="{{ include.base_url }}">1</a>
             {% if range_start > 2 %}
             <span class="ellipsis">...</span>
             {% endif %}
@@ -47,9 +47,9 @@
             <span class="current-page">{{ page }}</span>
             {% else %}
             {% if page == 1 %}
-            <a href="/posts/">{{ page }}</a>
+            <a href="{{ include.base_url }}">{{ page }}</a>
             {% else %}
-            <a href="/posts/page-{{ page }}/">{{ page }}</a>
+            <a href="{{ include.base_url }}page-{{ page }}/">{{ page }}</a>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -58,22 +58,22 @@
             {% if range_end < paginator.total_pages %} {% assign penultimate=paginator.total_pages | minus: 1 %} {% if
                 range_end < penultimate %} <span class="ellipsis">...</span>
                 {% endif %}
-                <a href="/posts/page-{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
+                <a href="{{ include.base_url }}page-{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
                 {% endif %}
     </div>
 
     <!-- Next Page Link -->
     <span class="next">
         {% if paginator.next_page %}
-        <a href="/posts/page-{{ paginator.next_page}}/">Next</a>
+        <a href="{{ include.base_url }}page-{{ paginator.next_page}}/">Next</a>
         {% else %}
         <span class="disabled">Next</span>
         {% endif %}
     </span>
 
     <!-- Last Page Link -->
-    {% if paginator.current_page < paginator.total_pages %} <a href="/posts/page-{{ paginator.total_pages }}/"
-        class="last">Last</a>
+    {% if paginator.current_page < paginator.total_pages %} <a
+        href="{{ include.base_url }}page-{{ paginator.total_pages }}/" class="last">Last</a>
         {% else %}
         <span class="last disabled">Last</span>
         {% endif %}

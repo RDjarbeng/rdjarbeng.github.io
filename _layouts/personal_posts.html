@@ -1,12 +1,9 @@
 ---
 layout: default
-title: Personal
-permalink: /personal/
 ---
 <div class="posts-page-intro">
-Find personal posts about travel experiences though Africa; Ghana, Rwanda Uganda and general posts that I find interesting.
+  {{ content }}
 </div>
-<div class="header-container">
 <h1>Personal Posts ({{ site.personal | size }})</h1>
 <div id="search-container">
   <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
@@ -14,11 +11,33 @@ Find personal posts about travel experiences though Africa; Ghana, Rwanda Uganda
 </div>
 <!-- Results container -->
 <ul id="results-container" style="box-shadow: 1px solid gray;"></ul>
+
+{% if page.custom_pager %}
+{% assign posts_to_display = page.custom_pager.posts %}
+{% assign total_posts = page.custom_pager.total_posts %}
+{% assign current_page = page.custom_pager.current_page %}
+{% assign per_page = page.custom_pager.per_page %}
+{% assign start_index = current_page | minus: 1 | times: per_page | plus: 1 %}
+{% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
+{% else %}
+{% assign posts_to_display = site.personal | sort: 'date' | reverse %}
+{% assign total_posts = site.personal | size %}
+{% assign start_index = 1 %}
+{% assign end_index = total_posts %}
+{% endif %}
+
+<div class="pagination-status" style="text-align: right;">
+  Showing posts {{ start_index }}-{{ end_index }} of {{ total_posts }}
+</div>
+
 <div class="personal-posts-list">
-  {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-  {% for post in sorted_posts %}
+  {% for post in posts_to_display %}
   {% include post-card.html post=post truncate_words=45 %}
   {% endfor %}
 </div>
+
+{% if page.custom_pager %}
+{% include pagination.html paginator=page.custom_pager base_url="/personal/" %}
+{% endif %}
 
 {% include search-script.html %}

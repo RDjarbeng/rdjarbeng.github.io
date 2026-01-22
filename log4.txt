@@ -1,0 +1,393 @@
+Configuration file: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_config.yml
+
+
+***** Archive title (GENERATOR) RUNNING *****
+
+            Source: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io
+       Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    done in 139.955 seconds.
+  Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+ Auto-regeneration: enabled for 'C:/Users/Richard/RD/myprojects/rdjarbeng.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 2 file(s) changed at 2026-01-20 22:28:00
+                    log4.txt
+                    log5.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 113.8829576 seconds.
+                    
+      Regenerating: 5 file(s) changed at 2026-01-20 22:29:54
+                    log4.txt
+                    log2.txt
+                    log.txt
+                    log3.txt
+                    log6.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 118.236158 seconds.
+                    
+      Regenerating: 6 file(s) changed at 2026-01-20 22:31:52
+                    log4.txt
+                    log5.txt
+                    log2.txt
+                    log.txt
+                    log6.txt
+                    log3.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 139.0124432 seconds.
+                    
+      Regenerating: 9 file(s) changed at 2026-01-20 22:34:11
+                    log4.txt
+                    log3.txt
+                    _plugins/custom-pagination.rb
+                    log2.txt
+                    log.txt
+                    log5.txt
+                    build_log.txt
+                    build_log_no_pag.txt
+                    build_log_clean.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 103.549647 seconds.
+                    
+      Regenerating: 7 file(s) changed at 2026-01-20 22:35:55
+                    build_log_clean.txt
+                    log4.txt
+                    log2.txt
+                    log5.txt
+                    log.txt
+                    log3.txt
+                    build_log.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+[33m             Error: Permission denied @ apply2files - C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site/assets/images/20250510-154131.png[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+      Regenerating: 9 file(s) changed at 2026-01-20 22:37:42
+                    log4.txt
+                    log3.txt
+                    build_log_no_pag.txt
+                    log2.txt
+                    log.txt
+                    log5.txt
+                    _plugins/custom-pagination.rb
+                    build_log_clean.txt
+                    build_log_custom.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    ...done in 137.8173958 seconds.
+                    
+      Regenerating: 8 file(s) changed at 2026-01-20 22:40:00
+                    build_log_custom.txt
+                    log4.txt
+                    log5.txt
+                    log3.txt
+                    _plugins/custom-pagination.rb
+                    log2.txt
+                    log.txt
+                    log_final.txt
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+       Jekyll Feed: Generating feed for posts
+Terminate batch job (Y/N)? 

@@ -1,0 +1,85 @@
+Configuration file: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_config.yml
+
+
+***** Archive title (GENERATOR) RUNNING *****
+
+            Source: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io
+       Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at /personal/
+My custom pagination: Injected pager into existing page at /personal/
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+[31m  Liquid Exception: Liquid syntax error (line 6): Unexpected outer 'else' tag in C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_layouts/personal_posts.html[0m
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.3.3   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/document.rb:21:in `unknown_tag': Liquid syntax error (line 6): Unexpected outer 'else' tag (Liquid::SyntaxError)
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/document.rb:11:in `block in parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:32:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/document.rb:10:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/document.rb:5:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/template.rb:130:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/liquid-4.0.4/lib/liquid/template.rb:114:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/liquid_renderer/file.rb:13:in `block in parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/liquid_renderer/file.rb:70:in `measure_time'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/liquid_renderer/file.rb:12:in `parse'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/renderer.rb:124:in `render_liquid'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/renderer.rb:192:in `render_layout'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/renderer.rb:161:in `place_in_layouts'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/renderer.rb:93:in `render_document'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/renderer.rb:63:in `run'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:572:in `render_regenerated'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:564:in `block in render_pages'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:563:in `each'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:563:in `render_pages'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:211:in `render'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/site.rb:80:in `process'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/command.rb:28:in `process_site'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/commands/build.rb:65:in `build'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/commands/build.rb:36:in `process'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/command.rb:91:in `each'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/lib/jekyll/commands/serve.rb:86:in `block (2 levels) in init_with_program'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from c:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/jekyll-4.3.3/exe/jekyll:15:in `<top (required)>'
+	from C:/Ruby33-x64/bin/jekyll:25:in `load'
+	from C:/Ruby33-x64/bin/jekyll:25:in `<main>'
