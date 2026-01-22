@@ -107,6 +107,8 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:name/
+  categories:
+    output: false
 
 sass:
   sass_dir: _sass
