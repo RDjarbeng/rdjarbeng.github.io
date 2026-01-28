@@ -1,7 +1,7 @@
 ---
 title: Biggest game stores
 date: 2026-01-27T12:38:00
-published: true
+published: false
 tags:
   - Gaming
 image: ''
@@ -11,6 +11,6 @@ layout: personal
 
 GOG - Cyberpunk
 
-Epic Games 
+Epic Games
 
 Steam
