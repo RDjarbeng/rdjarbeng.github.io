@@ -2,20 +2,7 @@
 layout: default
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ImageGallery",
-  "name": "{{ page.title }}",
-  "description": "{{ page.gallery-description | escape }}",
-  "url": "{{ page.url | absolute_url }}",
-  "image": [
-    {% for item in site.gallery %}
-      "{{ item.image | absolute_url }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+
 
 <!-- Lightbox Modal -->
 <div id="gallery-modal" class="lightbox">
