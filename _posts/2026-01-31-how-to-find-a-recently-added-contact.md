@@ -13,3 +13,5 @@ layout: post
 ---
 
 To find a recently added contact on Android, open the Google Contacts app, tap the Highlights tab at the bottom, and look under the "Recent" or "Added recently" section. This displays a list of the most recently saved contacts. Alternatively, searching in the contacts app often shows the most recently accessed or created contacts first.
+
+https://youtu.be/BQNwdWe6ACg
