@@ -4,54 +4,6 @@ layout: default
 
 <div class="home">
   <h1>Richard Djarbeng's Website</h1>
-  <!-- <div class="intro">
-    <p> Explore my journey through technical posts on emerging tech trends, hands-on coding projects, and occasional
-      personal reflections—non-technical insights are in the <a href="{{ '/personal' | relative_url }}">personal
-        section</a>.</p>
-    <div>Aside technical posts on Technology in general, I take an interest in AI applications, and review the most
-      intriguing ones in the posts section. Extra information about me and how to contact me are on the <a
-        href="{{ '/about' | relative_url }}">about page</a></div>
-  </div> -->
-
-  <!-- <div class="top-categories">
-    <h2 class="section-title">Top Categories</h2>
-    <div class="category-list">
-      {% assign categories_list = "" | split: "" %}
-      {% for category in site.categories %}
-      {% assign category_name = category[0] %}
-      {% assign category_size = category[1].size %}
-      {% capture category_string %}{{ category_size | prepend: '000000' | slice: -6, 6 }}:::{{ category_name }}{%
-      endcapture %}
-      {% assign categories_list = categories_list | push: category_string %}
-      {% endfor %}
-      {% assign sorted_categories = categories_list | sort | reverse %}
-
-      {% for item in sorted_categories limit:5 %}
-      {% assign parts = item | split: ":::" %}
-      {% assign cat_size = parts[0] | plus: 0 %}
-      {% assign cat_name = parts[1] %}
-
-      <div class="category-section" style="margin-bottom: 40px;">
-        <h3 class="category-title" style="margin-bottom: 20px;"><a
-            href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}">{{ cat_name }}</a></h3>
-        <div class="post-list">
-          {% for post in site.categories[cat_name] limit:3 %}
-          {% include post-card.html post=post %}
-          {% endfor %}
-        </div>
-        <div style="text-align: right; margin-top: 10px;">
-          <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="view-all-link">View all posts in
-            {{ cat_name }} ➡️</a>
-        </div>
-      </div>
-      {% unless forloop.last %}
-      <hr class="category-divider" style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">{% endunless %}
-      {% endfor %}
-    </div>
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="{{ '/categories/' | relative_url }}" class="about-link">View all categories ➡️</a>
-    </div>
-  </div> -->
 
   <h2 class="section-title">Latest Posts</h2>
   {% include category-tags.html %}
