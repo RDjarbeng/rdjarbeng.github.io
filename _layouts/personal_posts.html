@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
+<h1>Richard Djarbeng's Personal Posts</h1>
 <div class="posts-page-intro">
   {{ content }}
 </div>
-<h1>Personal Posts ({{ site.personal | size }})</h1>
+<h2 class="section-title">({{ site.personal | size }}) Personal Posts </h2>
 <div id="search-container">
   <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
 </div>
-</div>
+
 <!-- Results container -->
 <ul id="results-container" style="box-shadow: 1px solid gray;"></ul>
-
 {% if page.custom_pager %}
 {% assign posts_to_display = page.custom_pager.posts %}
 {% assign total_posts = page.custom_pager.total_posts %}
