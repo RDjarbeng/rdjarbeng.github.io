@@ -52,44 +52,60 @@ module Jekyll
         all_posts = site.collections['personal'].docs.sort_by { |p| p.date }.reverse
         Jekyll.logger.info "My custom pagination:", "Found #{all_posts.size} personal posts."
         
+        if all_posts.empty?
+          Jekyll.logger.warn "My custom pagination:", "No posts found in personal collection."
+          return
+        end
+
         paginate_size = site.config['custom_pagination']['paginate'].to_i
         total_pages = (all_posts.size / paginate_size.to_f).ceil
         Jekyll.logger.info "My custom pagination:", "Total pages: #{total_pages}"
 
         # Find the existing index page (e.g. personal.md)
-        index_page = site.pages.find { |page| page.url == '/personal/' }
+        # Prioritize finding by Path which is unique and constant
+        index_page = site.pages.find { |page| page.path == 'personal.md' }
+        
         if index_page
-          Jekyll.logger.info "My custom pagination:", "Found existing index page at #{index_page.url}"
+           Jekyll.logger.info "My custom pagination:", "Found existing index page at #{index_page.path} (URL: #{index_page.url})"
+           # We must remove it immediately to avoid conflicts
+           site.pages.delete(index_page) 
+           Jekyll.logger.info "My custom pagination:", "Removed original #{index_page.path} from site.pages"
         else
-          Jekyll.logger.warn "My custom pagination:", "Could not find existing index page at /personal/"
-          # Try to find by path as fallback
-          index_page = site.pages.find { |page| page.path == 'personal.md' }
-          Jekyll.logger.info "My custom pagination:", "Found by path: #{index_page.url}" if index_page
+           # Fallback to URL search if path fails for some reason
+           index_page = site.pages.find { |page| page.url == '/personal/' }
+           if index_page
+             Jekyll.logger.info "My custom pagination:", "Found existing index page by URL at #{index_page.url}"
+             site.pages.delete(index_page)
+             Jekyll.logger.info "My custom pagination:", "Removed original page from site.pages"
+           else
+             Jekyll.logger.warn "My custom pagination:", "Could not find existing index page 'personal.md' or '/personal/'"
+           end
         end
 
+
         (1..total_pages).each do |current_page|
+          Jekyll.logger.info "My custom pagination:", "Paginating personal #{current_page} / #{total_pages}"
           pager = Pager.new(site, current_page, all_posts, total_pages, paginate_size)
           
+          # Create a new page
+          personal_page = PersonalIndexPage.new(site, current_page)
+          personal_page.pager = pager
+          personal_page.data['custom_pager'] = pager.to_liquid
+          personal_page.data['last_modified_at'] = Time.now
+          
+          # If we had an original index page, copy its metadata for the first page
           if current_page == 1 && index_page
-            # Remove the original page to avoid conflicts and ensure our generated page takes precedence
-            site.pages.delete(index_page)
-            
-            # Create a new page 1 that mimics the original but with pager
-            personal_page = PersonalIndexPage.new(site, current_page)
-            personal_page.pager = pager
-            personal_page.data['custom_pager'] = pager.to_liquid
-            personal_page.content = index_page.content # Preserve content from personal.md
-            personal_page.data['title'] = index_page.data['title'] # Preserve title
-            site.pages << personal_page
+            # Inject the original content into the template where {{ content }} is
+            personal_page.content = personal_page.content.sub('{{ content }}', index_page.content)
+            personal_page.data['title'] = index_page.data['title']
           else
-            # Generate new page for subsequent pages
-            personal_page = PersonalIndexPage.new(site, current_page)
-            personal_page.pager = pager
-            personal_page.data['custom_pager'] = pager.to_liquid
-            personal_page.data['last_modified_at'] = Time.now # Fix for jekyll-last-modified-at plugin
-            site.pages << personal_page
+            # For other pages, remove the {{ content }} placeholder so it doesn't render recursively
+            personal_page.content = personal_page.content.sub('{{ content }}', '')
           end
+          
+          site.pages << personal_page
         end
+        Jekyll.logger.info "My custom pagination:", "Finished adding personal pages to site.pages."
       end
     end
 
@@ -137,7 +153,7 @@ module Jekyll
       def initialize(site, current_page)
         @site = site
         @base = site.source
-        @dir = current_page == 1 ? '/posts' : "/posts/page-#{current_page}"
+        @dir = current_page == 1 ? 'posts' : "posts/page-#{current_page}"
         @name = "index.html"
         self.process(@name)
         self.read_yaml(File.join(@base, '_layouts'), 'posts.html')
@@ -149,7 +165,7 @@ module Jekyll
       def initialize(site, current_page)
         @site = site
         @base = site.source
-        @dir = current_page == 1 ? '/personal' : "/personal/page-#{current_page}"
+        @dir = current_page == 1 ? 'personal' : "personal/page-#{current_page}"
         @name = "index.html"
         self.process(@name)
         self.read_yaml(File.join(@base, '_layouts'), 'personal_posts.html')
