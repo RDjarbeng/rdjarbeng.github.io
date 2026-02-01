@@ -59,3 +59,7 @@ Many times it does not catch this until I tell it that it broke the application 
 I've lost count of the number of time a perfectly working feature stopped working after antigravity updated a completely different feature and left out existing code. It's probably a bug and not intentional I suppose.
 
 ![](/assets/images/20260112-203038.png)
+
+### Implementation plan woes:
+
+Even after adding this to my prompt: 'Approved in advance. yes' I usually have to still approve again the implementation plan. Somtimes it understands and auto-proceeds, however most times it still waits for approval of the implementation plan. The other option is to switch from 'planning' to 'fast' mode, but I like to see the reasoning behind what the model did. I just don't like it to stop and ask me for approval of an implementation plan I already approved. When asked about this 'Gemini(High)' responded that it determines whether to auto-proceed based on previous responses.

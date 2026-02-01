@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
         { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
         { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
-        { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') }
+        { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
+        { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
+        { id: 'external', title: 'External', filter: item => item.dataset.category.includes('external') },
     ];
 
     const videoCategories = [

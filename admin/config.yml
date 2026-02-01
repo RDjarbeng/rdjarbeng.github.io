@@ -42,14 +42,15 @@ collections:
           default: 'Richard',
           value_field: 'short_name'
         }
-      - {
-          label: 'Category',
-          name: 'categories',
-          widget: 'list',
-          allow_add: true,
-          max: 1,
-          field: { label: 'Category', name: 'category', widget: 'string', default: 'Technology', hint: 'Enter a category (e.g., Technology, Science, Programming, AI)' },
-          default: ['Technology']
+      - { 
+        label: 'Category',
+        name: 'category',
+        widget: 'relation',
+        collection: 'category_info',
+        display_fields: [category_name],
+        search_fields: [category_name],
+        default: 'Technology',
+        value_field: 'category_name'
         }
       - {
           label: 'Tags',
@@ -131,6 +132,26 @@ collections:
       - { label: 'Position', name: 'position', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'category_info'
+    label: 'Category Info'
+    folder: '_category_info'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Category Name', name: 'category_name', widget: 'string' }
+      - { label: 'Category Description', name: 'description', widget: 'markdown', required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+
+  - name: 'gallery_categories'
+    label: 'Gallery Categories'
+    folder: '_gallery_categories'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+
   - label: About
     name: about_page
     files:
@@ -197,13 +218,14 @@ collections:
         options: 
           - { label: 'Cover Image', value: 'cover' }
           - { label: 'External Image', value: 'external' }
-        default: 'cover'
+        default: 'external'
 
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
       - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
       
-      - { label: 'Category', name: 'category', widget: 'select', options: ['ghana', 'other'], required: false }
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'gallery_categories', display_fields: [title], search_fields: [title], value_field: 'title', required: false }
       - { label: 'Labels', name: 'labels', widget: 'list', default: [], required: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
 
   - name: 'gallery_videos'
     label: 'Videos'
@@ -223,3 +245,5 @@ collections:
       - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'video' }
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'videos' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
