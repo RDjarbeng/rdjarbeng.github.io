@@ -1,15 +1,18 @@
 ---
 date: 2025-11-25T11:11:00
 published: false
-categories:
-  - Technology
+author: Richard
+category: Technology
 tags:
   - IDE
 title: Google antigravity IDE first impressions and use
 image: ''
 image_alt: ''
 layout: post
+categories:
+  - Technology
 ---
+
 antigravity IDE- tested, makes a lot of unnecessary changes especially white space
 
 Can create python scripts that do bulk tasks. The IDE seems to prefer this. Actually inferred my python version and run this.
@@ -34,27 +37,43 @@ When editing content in jupyter notebooks it usually prefers to run python comma
 
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
-For the antigravity browser because of the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time. One example is if you want to test that a feature is working on your website, say the search functionality. Instead of watching the agent launch the browser and run tests and different queries, you can tell it to run the tests, leave it for a few minutes whilst you switch to another task and then come back to read the walkthrough generated at the end. This would contain all the information you need about the tests, but the advantage is you wouldn't need to be watching the agent the entire time.
+### Antigravity Browser and micro-management
 
-CPU usage on idle:
+Tthe antigravity browser, a chrome instance separate from the regular chrome browser, can be launched by the agent to explore and navigate an external website or a local site in development on your machine. However most times it takes a while to complete the navigation and observe the output in the browser. You can tell when the agent is actively controlling the browser by a blue highlight. 
+
+I think it is a very cool feature and it's very useful for UI problems that would be difficult to describe through prompts alone. The problem with this though is that it's a bit slow and takes much more time than a solution that doesn't launch the browser.
+
+#### Managing the browser agent
+
+Considering the time it takes to reason and implement tasks, you are better off giving it tasks and coming back to check later, maybe this is what agentic means, because micromanaging it and waiting in front of the screen will just waste your time. One example is if you want to test that a feature is working on your website, say the search functionality. Instead of watching the agent launch the browser and run tests and different queries, you can tell it to run the tests, leave it for a few minutes whilst you switch to another task and then come back to read the walkthrough generated at the end. This would contain all the information you need about the tests, but the advantage is you wouldn't need to be watching the agent the entire time.
+
+CPU Usage and a Laptop Fever
+
+CPU usage and RAM use when the Browser agent is in-use pretty high especially when an error occurs. Many times it happens that my laptop fans kick in at full throttle and the PC seems to be running some intense activity in the background. This is usually a signal to me that something is not working and the agent is stuck so I switch to antigravity to see what's going on. 
+
+Usually what I found is that this happens when the agent is stuck in some kind of loop. It _edits a file_, checks the browser, finds something broken/unexpected, attempts a quick fix (which involves _editing a file_) and we are back where we started. When this happens there are usually many edits without any progress being made. The agents attempt to fix what is broken or not working keeps failing, but instead of reverting it keeps on attempting a fix until I come check out what's going on. Fans blaring, PC temperature on the high side, feels like a fever. I make the decision to pull the plug by cancelling the current execution. And finally my fans cool down and my laptop temperature goes back to normal.
+
+## CPU usage on idle:
 
 For some reason it has 29 subprocesses running on task manager when left on idle on windows. Of course it doesn't beat the king of many subprocesses Google Chrome browser shown here with 101 subprocesses
 
 ![Task manager screenshot showing antigravity CPU sub processes](/assets/images/antigravity_29_subprocesses_taskmanager.png "Task manager screenshot showing antigravity CPU subprocesses")
 
-Most times leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage that the user didn't start. It seems unable to terminate the terminal as well, possibly because of double check before the server stops. jekyll for instance requires you to enter yes (Y/N) to terminate or hit ctrl+c again but antigravity doesn't seem to know this.
+Many times it leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage left from a previous debug session. It seems unable to terminate the terminal as well when there is a keystroke needed, possibly because of a double check before the server stops. Jekyll for instance requires you to enter _yes (Y/N) _to terminate or hit ctrl+c again but antigravity doesn't seem to know this and gets stuck. It seems to work fine with server processes that require only a single command such as Vite with React.
 
-The effect of this is you have multiple terminals running servers in the background that are not immediately evident and also not clear how to terminate them.
+The effect of this behaviour however is you can have multiple terminals running servers in the background that are not immediately evident and also not clear how to terminate them.
 
-Small UI problems like this. The line to be decided on is blocked by the button menu to accept or deny. Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way.
+### UI issues when editing code
+
+Small UI problems like this. The line to be decided on, whether to accept or reject is blocked by the button menu to accept or deny (see screenshot below). Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way. You can only wonder why not use that alone instead.
 
 ![](/assets/images/20251216-115320.png)
 
 ### Error while editing file
 
-This error when editing a file showed up a lot. Usually the agent tries multiple different method to update the file and one of them finally succeeds. I'm curious why it mostly fails on the first attempt though. In cases where it's not able to fix it then it leaves the file halfway-edited.
+This error when editing a file showed up a lot. Usually the agent tries multiple different method to update a file and one of them finally succeeds. I'm curious why it mostly fails on the first attempt though. In cases where it's not able to fix it then it leaves the file halfway-edited causing your app to crash.
 
-Many times it does not catch this until I tell it that it broke the application because of certain files with missing code. Then it goes to actually update the files. Just pray you catch the error or else you won't know there's parts of your code missing till you run into the error in production.
+Many times it does not catch this error until I tell it that it broke the application because of certain files with missing code. Then it goes to actually update the files. Just pray you catch the error or else you won't know there's parts of your code missing till you run into the error in production.
 
 I've lost count of the number of time a perfectly working feature stopped working after antigravity updated a completely different feature and left out existing code. It's probably a bug and not intentional I suppose.
 
@@ -63,3 +82,7 @@ I've lost count of the number of time a perfectly working feature stopped workin
 ### Implementation plan woes:
 
 Even after adding this to my prompt: 'Approved in advance. yes' I usually have to still approve again the implementation plan. Somtimes it understands and auto-proceeds, however most times it still waits for approval of the implementation plan. The other option is to switch from 'planning' to 'fast' mode, but I like to see the reasoning behind what the model did. I just don't like it to stop and ask me for approval of an implementation plan I already approved. When asked about this 'Gemini(High)' responded that it determines whether to auto-proceed based on previous responses.
+
+### Accept or Deny prompt is so small
+
+Sometimes it asks for user intervention amid a series of other instructions and I don't really notice until I realize it's taking longer than usual, and go check to see what the hold-up is. I think the part where it's stalled awaiting user intervention needs to be clearer. To try to express this, it should be, 'A SIGN SO BIG YOU COULD NOT MISS IT'
