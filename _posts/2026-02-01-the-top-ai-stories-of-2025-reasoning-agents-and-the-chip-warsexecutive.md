@@ -2,13 +2,15 @@
 layout: post
 title: "The Top AI Stories of 2025: Reasoning, Agents, and the Chip Wars"
 date: 2026-02-01T21:17:00
-published: false
 author: Richard
 category: AI
-tags: [AI, Tech, Future]
+tags: 
+- AI 
+- Tech 
+- Future
 image: assets/images/20260201-top-ai-2025-v2.png
 image_alt: "Top AI Stories of 2025 Cover"
-published: true
+published: false
 ---
 
 The year 2025 marked the transition of artificial intelligence from a digital novelty to a driver of global industrial strategy. According to [The Batch Issue 333](https://www.deeplearning.ai/the-batch/issue-333/), the year was defined by five pivotal shifts: a technological "Sputnik moment" from China, the arrival of deliberative reasoning models, the maturation of autonomous coding agents, an aggressive war for talent with professional sports-level compensation, and a physical infrastructure boom that reshaped national economies.
