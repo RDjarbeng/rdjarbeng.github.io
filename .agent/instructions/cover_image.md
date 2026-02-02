@@ -19,7 +19,8 @@ When generating cover images for this website, please adhere to the following sp
     *   **Capture the Essence**: The image should be specific to the post's topic. Avoid vague, generic, or abstract abstract art that doesn't convey meaning.
     *   **Not Vague**: If the post is about a specific technology, visualize that technology. If it's about a leaderboard, show a leaderboard.
     *   **Aesthetic**: Modern, sleek, "tech-forward" and professional.
+    *   **Performance First**: While quality is important, prioritize web-optimized images. Images do NOT need to be 4k. High-definition (1080p equivalent) is sufficient to ensure fast loading times on the homepage.
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
-> "A modern [subject] illustration using primary colors. Text overlay says '[Title]'. Watermark 'rdjarbeng.com' at the bottom. High quality, 4k."
+> "A modern [subject] illustration using primary colors. Text overlay says '[Title]'. Watermark 'rdjarbeng.com' at the bottom. **High quality, web-optimized, high-definition (HD)**."
