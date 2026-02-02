@@ -6,7 +6,7 @@ category: Help
 tags:
   - Contact
   - Android
-title: How To Find A Recently Added Contact
+title: How To Find A Recently Added Contact on Android
 image: ''
 image_alt: ''
 layout: post
