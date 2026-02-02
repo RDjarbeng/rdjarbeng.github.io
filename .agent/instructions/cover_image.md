@@ -16,11 +16,20 @@ When generating cover images for this website, please adhere to the following sp
     *   Use bold, vibrant, and high-contrast color schemes.
 
 4.  **Content & Style**:
-    *   **Capture the Essence**: The image should be specific to the post's topic. Avoid vague, generic, or abstract abstract art that doesn't convey meaning.
+    *   **Style**: Use **Flat Vector Art**, **Editorial Illustration**, or **Minimalist Geometric** styles.
+    *   **Texture**: Use **Matte** finishes. Avoid shiny, glossy, or metallic textures.
+    *   **Capture the Essence**: The image should be specific to the post's topic.
     *   **Not Vague**: If the post is about a specific technology, visualize that technology. If it's about a leaderboard, show a leaderboard.
-    *   **Aesthetic**: Modern, sleek, "tech-forward" and professional.
-    *   **Performance First**: While quality is important, prioritize web-optimized images. Images do NOT need to be 4k. High-definition (1080p equivalent) is sufficient to ensure fast loading times on the homepage.
+    *   **Aesthetic**: Professional, clean, and distinct.
+    *   **Anti-Patterns (STRICT)**:
+        *   **NO** glowing blue neon networks.
+        *   **NO** "cyberpunk" or generic "matrix" backgrounds.
+        *   **NO** "abstract tech nodes" connecting dots.
+        *   **NO** typical "AI generated" look (excessive lens flares, hyper-realism).
+
+5.  **Performance First**:
+    *   Prioritize web-optimized images. High-definition (1080p equivalent) is sufficient.
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
-> "A modern [subject] illustration using primary colors. Text overlay says '[Title]'. Watermark 'rdjarbeng.com' at the bottom. **High quality, web-optimized, high-definition (HD)**."
+> "A **flat vector illustration** of [subject] using a **matte** finish. **Solid** primary colors (Red, Blue, Yellow). Clean lines, **white or light background**. Text overlay means '[Title]'. Watermark 'rdjarbeng.com' at the bottom. **No neon, no glow, editorial style**."
