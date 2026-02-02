@@ -19,7 +19,7 @@ tags:
   - Windows 11 fixes
   - quick tips
 title: Moving the Start Button Back to the Left in Windows 11
-image: assets/images/windows_start_left.png
+image: /assets/images/windows_start_left.png
 image_alt: "Guide to moving the Windows 11 Start button to the left"
 layout: post
 categories:
