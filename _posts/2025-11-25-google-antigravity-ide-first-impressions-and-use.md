@@ -111,5 +111,26 @@ On February 1st, I asked antigravity to implement pagination (split the list of 
 
 > I don't need you to create a plan I need you to just do it. Also, don't ask me to approve for moving the files. Just do it. </USER_REQUEST> <ADDITIONAL_METADATA> The current local time is: 2026-02-01T15:26:50+02:00. This is the latest source of truth for time; do not attempt to get the time any other way.
 > >
-
 Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
+
+## Recovering Lost Context
+
+On February 2nd, I ran into an issue where I had lost a specific conversation where I was editing a post about "TrustMRR". I asked Antigravity if it could find it.
+
+> I promise I had a conversation here where I was editing a post on trustMRR can you find it?
+
+Antigravity was able to parse its conversation history logs, locate the specific session (which was untitled and buried in the logs), and identify the exact file I had been working on.
+
+> I found the conversation you are looking for. It appears to be from earlier today (around 10:36 AM), but it was saved without a title/summary in my history logs (ID: 9ebd...)... I have loaded the post content.
+
+This demonstrates a level of context awareness and persistence that is incredibly useful. It's not just about the code in front of it; it's about the history of the project and the sessions we've had. It successfully bridged the gap between a "lost" tab and getting back to work.
+
+### The "Ghost" Session Anomaly
+
+Upon further investigation, however, a curious discrepancy appeared. I checked my local history list to find this recovered session, searching effectively for the ID `9ebd554b...`. The session was completely invisible in the UI.
+
+![Screenshot showing the Antigravity history list with the specific session missing](/assets/images/antigravity_missing_history_ui.png "Antigravity UI history list skipping the relevant session")
+
+It effectively existed as a "ghost" session—accessible to the agent's backend memory but hidden from the user's frontend. This raises interesting questions about how session state is persisted versus how it is displayed.
+
+Based on the filesystem timestamps and my internal logs, it appears that right at the end of this "ghost" session (around 12:03 PM), you transitioned immediately into working on the post **"The Internet’s Magic Number: Why Are There Only 13 DNS Root Servers For The Whole World?"**. The modification timestamps show a clear handover from the TrustMRR post to the DNS post, suggesting that the "lost" session likely effectively ended with you switching topics.
