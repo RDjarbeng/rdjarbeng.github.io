@@ -4,7 +4,7 @@
     <div class="post-card-image">
       <img src="{{ include.post.image }}"
         alt="{% if include.post.image_alt %}{{ include.post.image_alt }}{% else %}Cover image of post: {{ include.post.title }}{% endif %}"
-        class="post-image" fetchpriority="high">
+        title="{{ include.post.title | escape }}" class="post-image" fetchpriority="high">
     </div>
     {% endif %}
 
