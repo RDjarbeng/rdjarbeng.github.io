@@ -247,3 +247,32 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'videos' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
+
+
+singletons:
+- name: "config"
+  label: "config"
+  file: "admin/config-b.yml"
+  fields:
+    - name: "collections"
+      label: "collections"
+      widget: list
+      fields:
+        - { label: "name", name: "name", widget: "string" }
+        - { label: "label", name: "label", widget: "string" }
+        - label: "slug"
+          name: "slug"
+          widget: "string"
+          comment: "slug used for defining filenames and/or urls. only touch if you know what you’re doing"
+          required: false
+        - label: "ability to create entry"
+          name: "create"
+          widget: boolean
+
+        - label: "fields"
+          name: "fields"
+          widget: "list"
+          fields:
+            - { label: "name", name: "name", widget: "string" }
+            - { label: "label", name: "label", widget: "string" }
+            - { label: "widget", name: "widget", widget: "string" }
