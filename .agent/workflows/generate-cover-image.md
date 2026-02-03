@@ -24,6 +24,7 @@ When generating cover images for this website, please adhere to the following sp
     *   **Not Vague**: If the post is about a specific technology, visualize that technology. If it's about a leaderboard, show a leaderboard.
     *   **Aesthetic**: Modern, sleek, "tech-forward" and professional.
     *   **Performance First**: While quality is important, prioritize web-optimized images. Images do NOT need to be 4k. High-definition (1080p equivalent) is sufficient to ensure fast loading times on the homepage.
+    *   **Dimensions**: The image MUST have an aspect ratio of **16:9**. Recommended dimensions are **1280x720** or **1920x1080**. This is critical as the website cards are fixed to this ratio.
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
