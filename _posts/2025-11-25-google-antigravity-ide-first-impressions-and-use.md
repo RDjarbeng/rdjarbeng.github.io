@@ -79,6 +79,14 @@ I've lost count of the number of time a perfectly working feature stopped workin
 
 ![](/assets/images/20260112-203038.png)
 
+### Using the terminal to search with GREP
+
+Sometimes the agent behaves strangely to me. I had the impression that it had knowledge of the entire codebase I was currently working in. Sometimes that assumption is challenged when it runs code such as this grep on a file. Why is it searching for a keyword in a file if it already knows what's in it? Even if it doesn't I thought it could just look within the file instead of querying it from the terminal. Perhaps just like its inability to edit a jupyter notebook it actually can't just browse through a file in the workspace but runs terminal commands under the hood. Wish I had a way to confirm this.
+
+```plain
+ grep -n "classifyEvent" src/durable-objects/harness.ts
+```
+
 ### Implementation plan woes:
 
 Even after adding this to my prompt: 'Approved in advance. yes' I usually have to still approve again the implementation plan. Somtimes it understands and auto-proceeds, however most times it still waits for approval of the implementation plan. The other option is to switch from 'planning' to 'fast' mode, but I like to see the reasoning behind what the model did. I just don't like it to stop and ask me for approval of an implementation plan I already approved. When asked about this 'Gemini(High)' responded that it determines whether to auto-proceed based on previous responses.
@@ -111,7 +119,7 @@ On February 1st, I asked antigravity to implement pagination (split the list of 
 
 > I don't need you to create a plan I need you to just do it. Also, don't ask me to approve for moving the files. Just do it. </USER_REQUEST> <ADDITIONAL_METADATA> The current local time is: 2026-02-01T15:26:50+02:00. This is the latest source of truth for time; do not attempt to get the time any other way.
 > >
-Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
+> Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
 
 ## Recovering Lost Context
 
