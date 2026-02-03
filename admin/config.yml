@@ -124,6 +124,7 @@ collections:
     label: 'Authors'
     folder: '_authors'
     create: true
+    slug: '{{short_name}}'
     editor:
       preview: false
     fields:
@@ -136,6 +137,7 @@ collections:
     label: 'Category Info'
     folder: '_category_info'
     create: true
+    slug: '{{category_name}}'
     editor:
       preview: false
     fields:
@@ -147,6 +149,7 @@ collections:
     label: 'Gallery Categories'
     folder: '_gallery_categories'
     create: true
+    slug: '{{title}}'
     editor:
       preview: false
     fields:
@@ -265,7 +268,7 @@ singletons:
         - label: "slug"
           name: "slug"
           widget: "string"
-          comment: "slug used for defining filenames and/or urls. only touch if you know what you’re doing"
+          hint: "Define filename format. Examples: '{{year}}-{{month}}-{{day}}-{{slug}}' for posts, '{{slug}}' for simple collections. Leave blank for file-based collections."
           required: false
         - label: "ability to create entry"
           name: "create"
