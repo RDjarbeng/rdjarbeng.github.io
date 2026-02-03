@@ -3,6 +3,9 @@ collections:
     label: Posts
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
+    folder: _posts
+    media_folder: ''
+    public_folder: ''
     fields:
       - name: date
         label: Publish Date
@@ -15,28 +18,28 @@ collections:
       - name: author
         label: Author
         widget: relation
-        value_field: short_name
-        default: Richard
-        search_fields:
-          - display_name
+        collection: authors
         display_fields:
           - display_name
-        collection: authors
+        search_fields:
+          - display_name
+        default: Richard
+        value_field: short_name
       - name: category
         label: Category
         widget: relation
-        value_field: category_name
-        default: Technology
-        search_fields:
-          - category_name
+        collection: category_info
         display_fields:
           - category_name
-        collection: category_info
+        search_fields:
+          - category_name
+        default: Technology
+        value_field: category_name
       - name: tags
         label: Tags
         widget: list
-        default: []
         allow_add: true
+        default: []
       - name: title
         label: Title
         widget: string
@@ -46,37 +49,37 @@ collections:
       - name: image
         label: Image
         widget: image
+        required: false
         media_libraries:
           default:
             config:
               transformations:
                 raster_image:
-                  quality: 85
                   format: webp
-        required: false
+                  quality: 85
       - name: image_alt
         label: Image Alt Text
         widget: string
-        hint: Alt text for the cover image
         required: false
+        hint: Alt text for the cover image
       - name: layout
         label: Layout
         widget: hidden
         default: post
-    view_filters:
-      - pattern: false
-        field: published
-        label: Drafts
-      - pattern: true
-        field: published
-        label: Published posts
     editor:
       preview: true
-    folder: _posts
+    view_filters:
+      - label: Drafts
+        field: published
+        pattern: false
+      - label: Published posts
+        field: published
+        pattern: true
   - name: personal
     label: Personal
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true
+    folder: _personal
     fields:
       - name: title
         label: Title
@@ -92,44 +95,45 @@ collections:
       - name: tags
         label: Tags
         widget: list
-        default: []
         allow_add: true
+        default: []
       - name: body
         label: Body
         widget: markdown
       - name: image
         label: Image
         widget: image
+        required: false
         media_libraries:
           default:
             config:
               transformations:
                 raster_image:
-                  quality: 85
                   format: webp
-        required: false
+                  quality: 85
       - name: image_alt
         label: Image Alt Text
         widget: string
-        hint: Alt text for the cover image
         required: false
+        hint: Alt text for the cover image
       - name: layout
         label: Layout
         widget: hidden
         default: personal
-    view_filters:
-      - pattern: false
-        field: published
-        label: Drafts
-      - pattern: true
-        field: published
-        label: Published posts
     editor:
       preview: true
-    folder: _personal
+    view_filters:
+      - label: Drafts
+        field: published
+        pattern: false
+      - label: Published posts
+        field: published
+        pattern: true
   - name: authors
     label: Authors
+    slug: '{{short_name}}'
     create: true
+    folder: _authors
     fields:
       - name: short_name
         label: Short Name
@@ -145,10 +149,10 @@ collections:
         widget: markdown
     editor:
       preview: false
-    folder: _authors
   - name: category_info
     label: Category Info
     create: true
+    folder: _category_info
     fields:
       - name: category_name
         label: Category Name
@@ -163,49 +167,51 @@ collections:
         default: '{{now}}'
     editor:
       preview: false
-    folder: _category_info
   - name: gallery_categories
     label: Gallery Categories
     create: true
+    folder: _gallery_categories
     fields:
       - name: title
         label: Title
         widget: string
     editor:
       preview: false
-    folder: _gallery_categories
   - name: about_page
     label: About
     files:
-      - fields:
-          - default: about
-            widget: hidden
-            name: layout
+      - name: about
+        label: About Page
+        file: about.md
+        create: false
+        fields:
+          - name: layout
             label: Layout
-          - widget: string
-            name: title
-            label: Title
-          - default: /about/
             widget: hidden
-            name: permalink
-            label: Permalink
-          - default: about-page
+            default: about
+          - name: title
+            label: Title
             widget: string
-            name: custom_css_class
+          - name: permalink
+            label: Permalink
+            widget: hidden
+            default: /about/
+          - name: custom_css_class
             label: Custom CSS Class
-          - widget: markdown
-            name: body
+            widget: string
+            default: about-page
+          - name: body
             label: Body
+            widget: markdown
         editor:
           preview: false
-        create: false
-        file: about.md
-        label: About Page
-        name: about
   - name: ai_generations
     label: AI Generations
     slug: '{{slug}}'
     create: true
+    folder: _gallery/ai
+    media_folder: ../../assets/images/ai
+    public_folder: /assets/images/ai
     fields:
       - name: title
         label: Title
@@ -216,7 +222,6 @@ collections:
       - name: labels
         label: Model
         widget: select
-        default: Grok
         options:
           - Grok
           - Gemini
@@ -224,6 +229,7 @@ collections:
           - DALL-E
           - Stable Diffusion
           - Other
+        default: Grok
       - name: caption
         label: Caption
         widget: markdown
@@ -238,13 +244,13 @@ collections:
         default: ai-generations
     editor:
       preview: false
-    public_folder: /assets/images/ai
-    media_folder: ../../assets/images/ai
-    folder: _gallery/ai
   - name: memes
     label: Memes
     slug: '{{slug}}'
     create: true
+    folder: _gallery/memes
+    media_folder: ../../assets/images/memes
+    public_folder: /assets/images/memes
     fields:
       - name: title
         label: Title
@@ -266,13 +272,13 @@ collections:
         default: memes
     editor:
       preview: false
-    public_folder: /assets/images/memes
-    media_folder: ../../assets/images/memes
-    folder: _gallery/memes
   - name: gallery
     label: General Gallery
     slug: '{{slug}}'
     create: true
+    folder: _gallery
+    media_folder: ''
+    public_folder: ''
     fields:
       - name: title
         label: Title
@@ -283,12 +289,12 @@ collections:
       - name: type
         label: Type
         widget: select
-        default: external
         options:
-          - value: cover
-            label: Cover Image
-          - value: external
-            label: External Image
+          - label: Cover Image
+            value: cover
+          - label: External Image
+            value: external
+        default: external
       - name: caption
         label: Caption
         widget: markdown
@@ -296,34 +302,36 @@ collections:
       - name: link
         label: Link
         widget: string
-        hint: For Cover Images
         required: false
+        hint: For Cover Images
       - name: category
         label: Category
         widget: relation
-        required: false
-        value_field: title
-        search_fields:
-          - title
+        collection: gallery_categories
         display_fields:
           - title
-        collection: gallery_categories
+        search_fields:
+          - title
+        value_field: title
+        required: false
       - name: labels
         label: Labels
         widget: list
-        required: false
         default: []
+        required: false
       - name: date
         label: Publish Date
         widget: datetime
         default: '{{now}}'
     editor:
       preview: false
-    folder: _gallery
   - name: gallery_videos
     label: Videos
     slug: '{{slug}}'
     create: true
+    folder: _gallery/videos
+    media_folder: ../../assets/images/videos
+    public_folder: /assets/images/videos
     fields:
       - name: title
         label: Title
@@ -331,22 +339,22 @@ collections:
       - name: platform
         label: Platform
         widget: select
-        default: youtube
         options:
           - youtube
           - tiktok
           - instagram
           - twitter
+        default: youtube
       - name: youtube_id
         label: YouTube URL or ID
         widget: string
-        hint: Paste full YouTube URL (Video or Short) or just the ID
         required: false
+        hint: Paste full YouTube URL (Video or Short) or just the ID
       - name: embed_code
         label: Embed Code
         widget: text
-        hint: 'For TikTok/Insta/Twitter: Paste full embed code'
         required: false
+        hint: 'For TikTok/Insta/Twitter: Paste full embed code'
       - name: thumbnail
         label: Thumbnail
         widget: image
@@ -373,13 +381,13 @@ collections:
         default: true
     editor:
       preview: false
-    public_folder: /assets/images/videos
-    media_folder: ../../assets/images/videos
-    folder: _gallery/videos
   - name: post-media
     label: post-media
     slug: ''
     create: true
+    folder: _gallery/post_media
+    media_folder: ''
+    public_folder: ''
     fields:
       - name: post-image-media
         label: post-image
