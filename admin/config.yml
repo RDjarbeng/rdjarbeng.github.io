@@ -253,6 +253,8 @@ singletons:
 - name: "config"
   label: "config"
   file: "admin/config-b.yml"
+  editor:
+      preview: false
   fields:
     - name: "collections"
       label: "collections"
