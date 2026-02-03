@@ -1,42 +1,6 @@
 // _sass/_personal.scss
 
-.personal-posts-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.personal-posts-list {
-  .post-card {
-    border: 2px solid #ddd;
-    margin-bottom: 20px;
-    width: 70%;
-    min-width: 350px;
-
-    // .post-link {
-    //   font-weight: bold;
-    // }
-
-    .post-excerpt {
-      color: #666;
-    }
-
-    .post-meta {
-      color: #999;
-    }
-  }
-
-  .post-image {
-
-    max-height: 355px;
-
-  }
-
-  .post-card h4 {
-    margin-bottom: 0;
-    height: auto;
-  }
-}
 
 .page-content {
   padding-left: 0;
