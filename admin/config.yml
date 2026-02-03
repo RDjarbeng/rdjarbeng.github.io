@@ -271,6 +271,35 @@ singletons:
           name: "create"
           widget: boolean
 
+        - label: "folder"
+          name: "folder"
+          widget: "string"
+          required: false
+        - label: "media_folder"
+          name: "media_folder"
+          widget: "string"
+          required: false
+        - label: "public_folder"
+          name: "public_folder"
+          widget: "string"
+          required: false
+        - label: "files"
+          name: "files"
+          widget: "list"
+          required: false
+          fields:
+            - { label: "name", name: "name", widget: "string" }
+            - { label: "label", name: "label", widget: "string" }
+            - { label: "file", name: "file", widget: "string" }
+            - { label: "create", name: "create", widget: "boolean", default: false, required: false }
+            - label: "fields"
+              name: "fields"
+              widget: "list"
+              fields:
+                - { label: "name", name: "name", widget: "string" }
+                - { label: "label", name: "label", widget: "string" }
+                - { label: "widget", name: "widget", widget: "string" }
+
         - label: "fields"
           name: "fields"
           widget: "list"
