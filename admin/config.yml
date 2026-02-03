@@ -223,12 +223,44 @@ collections:
           - { label: 'External Image', value: 'external' }
         default: 'external'
 
-      - { label: 'Caption', name: 'caption', widget: 'markdown', required: false }
-      - { label: 'Link', name: 'link', widget: 'string', required: false, hint: 'For Cover Images' }
-      
-      - { label: 'Category', name: 'category', widget: 'relation', collection: 'gallery_categories', display_fields: [title], search_fields: [title], value_field: 'title', required: false }
-      - { label: 'Labels', name: 'labels', widget: 'list', default: [], required: false }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}' }
+      - {
+          label: "Caption",
+          name: "caption",
+          widget: "markdown",
+          required: false,
+        }
+      - {
+          label: "Link",
+          name: "link",
+          widget: "string",
+          required: false,
+          hint: "For Cover Images",
+        }
+
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "gallery_categories",
+          display_fields: [title],
+          search_fields: [title],
+          value_field: "title",
+          required: false,
+          default: "None",
+        }
+      - {
+          label: "Labels",
+          name: "labels",
+          widget: "list",
+          default: [],
+          required: false,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "{{now}}",
+        }
 
   - name: 'gallery_videos'
     label: 'Videos'
