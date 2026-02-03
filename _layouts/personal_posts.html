@@ -30,7 +30,7 @@ layout: default
   Showing posts {{ start_index }}-{{ end_index }} of {{ total_posts }}
 </div>
 
-<div class="personal-posts-list">
+<div class="post-list">
   {% for post in posts_to_display %}
   {% include post-card.html post=post truncate_words=45 %}
   {% endfor %}
