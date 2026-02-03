@@ -8,7 +8,7 @@ layout: default
   <h2 class="section-title">Latest Posts</h2>
   {% include category-tags.html %}
   <div class="post-list">
-    {% for post in site.posts limit:4 %}
+    {% for post in site.posts limit:6 %}
     {% include post-card.html post=post %}
     {% endfor %}
 
@@ -20,7 +20,7 @@ layout: default
   <h2 class="section-title">Personal posts</h2>
   <div class="post-list">
     {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-    {% for personal in sorted_posts limit:4 %}
+    {% for personal in sorted_posts limit:6 %}
 
     {% include post-card.html post=personal %}
 
