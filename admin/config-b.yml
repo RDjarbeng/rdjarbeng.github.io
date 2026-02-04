@@ -1,16 +1,17 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 collections:
   - name: posts
     label: Posts
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     folder: _posts
-    media_folder: ''
-    public_folder: ''
+    media_folder: ""
+    public_folder: ""
     fields:
       - name: date
         label: Publish Date
         widget: datetime
-        default: '{{now}}'
+        default: "{{now}}"
       - name: published
         label: Published
         widget: boolean
@@ -77,7 +78,7 @@ collections:
         pattern: true
   - name: personal
     label: Personal
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     folder: _personal
     fields:
@@ -87,7 +88,7 @@ collections:
       - name: date
         label: Publish Date
         widget: datetime
-        default: '{{now}}'
+        default: "{{now}}"
       - name: published
         label: Published
         widget: boolean
@@ -131,7 +132,7 @@ collections:
         pattern: true
   - name: authors
     label: Authors
-    slug: '{{short_name}}'
+    slug: "{{short_name}}"
     create: true
     folder: _authors
     fields:
@@ -164,7 +165,7 @@ collections:
       - name: date
         label: Publish Date
         widget: datetime
-        default: '{{now}}'
+        default: "{{now}}"
     editor:
       preview: false
   - name: gallery_categories
@@ -207,7 +208,7 @@ collections:
           preview: false
   - name: ai_generations
     label: AI Generations
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     create: true
     folder: _gallery/ai
     media_folder: ../../assets/images/ai
@@ -246,7 +247,7 @@ collections:
       preview: false
   - name: memes
     label: Memes
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     create: true
     folder: _gallery/memes
     media_folder: ../../assets/images/memes
@@ -274,11 +275,11 @@ collections:
       preview: false
   - name: gallery
     label: General Gallery
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     create: true
     folder: _gallery
-    media_folder: ''
-    public_folder: ''
+    media_folder: ""
+    public_folder: ""
     fields:
       - name: title
         label: Title
@@ -314,6 +315,7 @@ collections:
           - title
         value_field: title
         required: false
+        default: None
       - name: labels
         label: Labels
         widget: list
@@ -322,12 +324,12 @@ collections:
       - name: date
         label: Publish Date
         widget: datetime
-        default: '{{now}}'
+        default: "{{now}}"
     editor:
       preview: false
   - name: gallery_videos
     label: Videos
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     create: true
     folder: _gallery/videos
     media_folder: ../../assets/images/videos
@@ -354,7 +356,7 @@ collections:
         label: Embed Code
         widget: text
         required: false
-        hint: 'For TikTok/Insta/Twitter: Paste full embed code'
+        hint: "For TikTok/Insta/Twitter: Paste full embed code"
       - name: thumbnail
         label: Thumbnail
         widget: image
@@ -374,7 +376,7 @@ collections:
       - name: date
         label: Publish Date
         widget: datetime
-        default: '{{now}}'
+        default: "{{now}}"
       - name: published
         label: Published
         widget: boolean
@@ -383,11 +385,11 @@ collections:
       preview: false
   - name: post-media
     label: post-media
-    slug: ''
+    slug: ""
     create: true
     folder: _gallery/post_media
-    media_folder: ''
-    public_folder: ''
+    media_folder: ""
+    public_folder: ""
     fields:
       - name: post-image-media
         label: post-image
@@ -403,4 +405,4 @@ media_folder: assets/images
 slug:
   encoding: ascii
   clean_accents: true
-  sanitize_replacement: '-'
+  sanitize_replacement: "-"
