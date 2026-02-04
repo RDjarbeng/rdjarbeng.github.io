@@ -7,7 +7,7 @@ categories:
 tags:
   - Money
   - Money Transfers
-  - ''
+
 title: The Technology Behind Money Transfers
 image: ''
 layout: post
