@@ -24,7 +24,7 @@ tags:
   - African Drone Shots
   - Remix vs Original
 image: /assets/images/terminator_cover_new_rdjarbeng.webp
-image_alt: A video thumbnail featuring a still from King Promise's "Terminator" music video, with the artist and a crowd in the background. Overlaid on the image is large, bold text in yellow and pink that reads, "TERMINATOR IT'S A HIT IN INDONESIA?". Below this text, in smaller white font, is the URL for the post
+image_alt: A video thumbnail featuring a still from King Promise's 'Terminator' music video, with the artist and a crowd in the background. Overlaid on the image is large, bold text in yellow and pink that reads, 'TERMINATOR IT'S A HIT IN INDONESIA?'. Below this text, in smaller white font, is the URL for the post
 layout: personal
 ---
 Ghanaian Afrobeats star **King Promise** unleashed _"Terminator"_ in May 2023, but the remix featuring Nigeria's **Young Jonn**—dropped in July—turned it into a continental and international smash. This post dives into the remix (the one with **71M+ YouTube views** as of November 2025), while giving props to the original.
