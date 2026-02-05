@@ -287,6 +287,11 @@ collections:
       - name: image
         label: Image
         widget: image
+      - name: image_alt
+        label: Image Alt Text
+        widget: string
+        required: false
+        hint: Alt text for the cover image
       - name: type
         label: Type
         widget: select
@@ -315,7 +320,7 @@ collections:
           - title
         value_field: title
         required: false
-        default: None
+        default: "None"
       - name: labels
         label: Labels
         widget: list

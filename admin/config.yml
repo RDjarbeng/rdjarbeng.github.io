@@ -309,7 +309,16 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - label: "Image"
+        name: "image"
+        widget: "image"
+      - {
+          label: "Image Alt Text",
+          name: "image_alt",
+          widget: "string",
+          required: false,
+          hint: "Alt text for the cover image",
+        }
 
       - label: "Type"
         name: "type"
