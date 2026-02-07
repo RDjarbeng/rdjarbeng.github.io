@@ -4,15 +4,11 @@ layout: default
 
 <div class="home">
   <h1>Richard Djarbeng's Website</h1>
-   <div class="intro">
-    <p> Explore my journey through technical posts on emerging tech trends, hands-on coding projects, and occasional personal reflections—non-technical insights are in the <a href="{{ '/personal' | relative_url }}">personal section</a>.</p>
-    <div>Aside technical posts on Technology in general, I take an interest in AI applications, and review the most intriguing ones in the posts section. Extra information about me and how to contact me are on the <a href="{{ '/about' | relative_url }}">about page</a></div>
-  </div>
-  
+
   <h2 class="section-title">Latest Posts</h2>
   {% include category-tags.html %}
   <div class="post-list">
-    {% for post in site.posts limit:4 %}
+    {% for post in site.posts limit:6 %}
     {% include post-card.html post=post %}
     {% endfor %}
 
@@ -24,9 +20,9 @@ layout: default
   <h2 class="section-title">Personal posts</h2>
   <div class="post-list">
     {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-    {% for personal in sorted_posts limit:4 %}
+    {% for personal in sorted_posts limit:6 %}
 
-      {% include post-card.html post=personal %}
+    {% include post-card.html post=personal %}
 
     {% endfor %}
   </div>

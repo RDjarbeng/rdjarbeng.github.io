@@ -1,0 +1,53 @@
+Configuration file: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_config.yml
+
+
+***** Archive title (GENERATOR) RUNNING *****
+
+            Source: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io
+       Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+
+
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+
+Normalizing tags for 131 total documents...
+
+
+***** NORMALIZE TAGS FINISHED *****
+
+
+
+***** REDIRECT GENERATOR RUNNING *****
+
+Found personal collection with 28 posts
+
+
+***** REDIRECT GENERATOR FINISHED *****
+
+My custom pagination: Paginating posts 1 / 11
+My custom pagination: Paginating posts 2 / 11
+My custom pagination: Paginating posts 3 / 11
+My custom pagination: Paginating posts 4 / 11
+My custom pagination: Paginating posts 5 / 11
+My custom pagination: Paginating posts 6 / 11
+My custom pagination: Paginating posts 7 / 11
+My custom pagination: Paginating posts 8 / 11
+My custom pagination: Paginating posts 9 / 11
+My custom pagination: Paginating posts 10 / 11
+My custom pagination: Paginating posts 11 / 11
+My custom pagination: Found 28 personal posts.
+My custom pagination: Total pages: 3
+My custom pagination: Initializing PersonalIndexPage for page 1
+My custom pagination: Paginating personal 1 / 3 at /personal/
+My custom pagination: Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site/personal/index.html
+My custom pagination: Initializing PersonalIndexPage for page 2
+My custom pagination: Paginating personal 2 / 3 at /personal/page-2/
+My custom pagination: Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site/personal/page-2/index.html
+My custom pagination: Initializing PersonalIndexPage for page 3
+My custom pagination: Paginating personal 3 / 3 at /personal/page-3/
+My custom pagination: Destination: C:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_site/personal/page-3/index.html
+       Jekyll Feed: Generating feed for posts
+[33m           Warning: Empty `slug` generated for ''.[0m
+                    done in 194.466 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

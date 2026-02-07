@@ -2,20 +2,7 @@
 layout: default
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ImageGallery",
-  "name": "{{ page.title }}",
-  "description": "{{ page.gallery-description | escape }}",
-  "url": "{{ page.url | absolute_url }}",
-  "image": [
-    {% for item in site.gallery %}
-      "{{ item.image | absolute_url }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
+
 
 <!-- Lightbox Modal -->
 <div id="gallery-modal" class="lightbox">
@@ -53,6 +40,8 @@ layout: default
       <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
       <button class="gallery-filter" data-filter="memes">Memes</button>
       <button class="gallery-filter" data-filter="ghana">Ghana</button>
+      <button class="gallery-filter" data-filter="rwanda">Rwanda</button>
+      <button class="gallery-filter" data-filter="external">External</button>
       <button class="gallery-filter" data-filter="videos">Videos</button>
       <!-- Video Sub-filters -->
       <button class="gallery-filter" data-filter="tiktok">TikTok</button>
@@ -71,7 +60,7 @@ layout: default
   <div id="gallery-grid-view" class="gallery-grid-view" style="display: none;">
     <div class="gallery-grid-header">
       <button id="back-to-dashboard" class="back-btn">← Back to Gallery</button>
-      <h2 id="grid-category-title">Category Name</h2>
+      <h2 id="grid-category-title"></h2>
     </div>
     <div class="gallery-grid" id="gallery-grid">
       <!-- Items will be injected here by JS -->
@@ -85,7 +74,7 @@ layout: default
 
     {% for item in gallery_items %}
     <div class="gallery-data-item"
-      data-category="{% if item.type == 'cover' %}cover-images{% elsif item.type == 'video' %}videos {{ item.platform | downcase }}{% else %}{{ item.category }} {{ item.labels | join: ' ' }}{% endif %}"
+      data-category="{% if item.type == 'cover' %}cover-images {% endif %}{% if item.type == 'video' %}videos {{ item.platform | downcase }} {% endif %}{% if item.type == 'external' %}external {% endif %}{{ item.category | downcase }} {{ item.labels | join: ' ' | downcase }}"
       data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}"
       data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}"
       data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"

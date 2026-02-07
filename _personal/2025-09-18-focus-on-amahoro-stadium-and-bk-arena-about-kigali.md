@@ -24,8 +24,8 @@ tags:
   - YouTubeTour
   - RwandaCulture
   - SportsInfrastructure
-  - ''
-  - ''
+
+
 image: /assets/images/amahoro_stadium_outside_cover_rdjarbeng.webp
 layout: personal
 image_alt: "Cover image for Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View"

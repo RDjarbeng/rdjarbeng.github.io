@@ -107,6 +107,10 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:name/
+  category_info:
+    output: false
+  gallery_categories:
+    output: false
 
 sass:
   sass_dir: _sass
@@ -118,7 +122,7 @@ defaults:
       path: ""
       type: "gallery"
     values:
-      layout: "gallery"
+      layout: "gallery_item"
   - scope:
         path: ""
         type: "tag"  # This targets jekyll-archives pages
@@ -150,8 +154,13 @@ defaults:
       layout: "default"
 
 # Custom pagination configuration
-pagination:
+custom_pagination:
   active: true
+  paginate: 10
+  collection: 'posts'
+
+pagination:
+  active: false
   paginate: 10  # Number of posts per page
   collection: 'posts'  # Target the posts collection
 

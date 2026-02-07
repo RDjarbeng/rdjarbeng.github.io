@@ -1,0 +1,413 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+collections:
+  - name: posts
+    label: Posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    folder: _posts
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - name: date
+        label: Publish Date
+        widget: datetime
+        default: "{{now}}"
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+      - name: author
+        label: Author
+        widget: relation
+        collection: authors
+        display_fields:
+          - display_name
+        search_fields:
+          - display_name
+        default: Richard
+        value_field: short_name
+      - name: category
+        label: Category
+        widget: relation
+        collection: category_info
+        display_fields:
+          - category_name
+        search_fields:
+          - category_name
+        default: Technology
+        value_field: category_name
+      - name: tags
+        label: Tags
+        widget: list
+        allow_add: true
+        default: []
+      - name: title
+        label: Title
+        widget: string
+      - name: body
+        label: Body
+        widget: markdown
+      - name: image
+        label: Image
+        widget: image
+        required: false
+        media_libraries:
+          default:
+            config:
+              transformations:
+                raster_image:
+                  format: webp
+                  quality: 85
+      - name: image_alt
+        label: Image Alt Text
+        widget: string
+        required: false
+        hint: Alt text for the cover image
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: post
+    editor:
+      preview: true
+    view_filters:
+      - label: Drafts
+        field: published
+        pattern: false
+      - label: Published posts
+        field: published
+        pattern: true
+  - name: personal
+    label: Personal
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    folder: _personal
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Publish Date
+        widget: datetime
+        default: "{{now}}"
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+      - name: tags
+        label: Tags
+        widget: list
+        allow_add: true
+        default: []
+      - name: body
+        label: Body
+        widget: markdown
+      - name: image
+        label: Image
+        widget: image
+        required: false
+        media_libraries:
+          default:
+            config:
+              transformations:
+                raster_image:
+                  format: webp
+                  quality: 85
+      - name: image_alt
+        label: Image Alt Text
+        widget: string
+        required: false
+        hint: Alt text for the cover image
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: personal
+    editor:
+      preview: true
+    view_filters:
+      - label: Drafts
+        field: published
+        pattern: false
+      - label: Published posts
+        field: published
+        pattern: true
+  - name: authors
+    label: Authors
+    slug: "{{short_name}}"
+    create: true
+    folder: _authors
+    fields:
+      - name: short_name
+        label: Short Name
+        widget: string
+      - name: display_name
+        label: Display Name
+        widget: string
+      - name: position
+        label: Position
+        widget: string
+      - name: body
+        label: Body
+        widget: markdown
+    editor:
+      preview: false
+  - name: category_info
+    label: Category Info
+    create: true
+    folder: _category_info
+    fields:
+      - name: category_name
+        label: Category Name
+        widget: string
+      - name: description
+        label: Category Description
+        widget: markdown
+        required: false
+      - name: date
+        label: Publish Date
+        widget: datetime
+        default: "{{now}}"
+    editor:
+      preview: false
+  - name: gallery_categories
+    label: Gallery Categories
+    create: true
+    folder: _gallery_categories
+    fields:
+      - name: title
+        label: Title
+        widget: string
+    editor:
+      preview: false
+  - name: about_page
+    label: About
+    files:
+      - name: about
+        label: About Page
+        file: about.md
+        create: false
+        fields:
+          - name: layout
+            label: Layout
+            widget: hidden
+            default: about
+          - name: title
+            label: Title
+            widget: string
+          - name: permalink
+            label: Permalink
+            widget: hidden
+            default: /about/
+          - name: custom_css_class
+            label: Custom CSS Class
+            widget: string
+            default: about-page
+          - name: body
+            label: Body
+            widget: markdown
+        editor:
+          preview: false
+  - name: ai_generations
+    label: AI Generations
+    slug: "{{slug}}"
+    create: true
+    folder: _gallery/ai
+    media_folder: ../../assets/images/ai
+    public_folder: /assets/images/ai
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: image
+        label: Image
+        widget: image
+      - name: labels
+        label: Model
+        widget: select
+        options:
+          - Grok
+          - Gemini
+          - Midjourney
+          - DALL-E
+          - Stable Diffusion
+          - Other
+        default: Grok
+      - name: caption
+        label: Caption
+        widget: markdown
+        required: false
+      - name: type
+        label: Type
+        widget: hidden
+        default: external
+      - name: category
+        label: Category
+        widget: hidden
+        default: ai-generations
+    editor:
+      preview: false
+  - name: memes
+    label: Memes
+    slug: "{{slug}}"
+    create: true
+    folder: _gallery/memes
+    media_folder: ../../assets/images/memes
+    public_folder: /assets/images/memes
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: image
+        label: Image
+        widget: image
+      - name: caption
+        label: Caption
+        widget: markdown
+        required: false
+      - name: type
+        label: Type
+        widget: hidden
+        default: external
+      - name: category
+        label: Category
+        widget: hidden
+        default: memes
+    editor:
+      preview: false
+  - name: gallery
+    label: General Gallery
+    slug: "{{slug}}"
+    create: true
+    folder: _gallery
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: image
+        label: Image
+        widget: image
+      - name: image_alt
+        label: Image Alt Text
+        widget: string
+        required: false
+        hint: Alt text for the cover image
+      - name: type
+        label: Type
+        widget: select
+        options:
+          - label: Cover Image
+            value: cover
+          - label: External Image
+            value: external
+        default: external
+      - name: caption
+        label: Caption
+        widget: markdown
+        required: false
+      - name: link
+        label: Link
+        widget: string
+        required: false
+        hint: For Cover Images
+      - name: category
+        label: Category
+        widget: relation
+        collection: gallery_categories
+        display_fields:
+          - title
+        search_fields:
+          - title
+        value_field: title
+        required: false
+        default: "None"
+      - name: labels
+        label: Labels
+        widget: list
+        default: []
+        required: false
+      - name: date
+        label: Publish Date
+        widget: datetime
+        default: "{{now}}"
+    editor:
+      preview: false
+  - name: gallery_videos
+    label: Videos
+    slug: "{{slug}}"
+    create: true
+    folder: _gallery/videos
+    media_folder: ../../assets/images/videos
+    public_folder: /assets/images/videos
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: platform
+        label: Platform
+        widget: select
+        options:
+          - youtube
+          - tiktok
+          - instagram
+          - twitter
+        default: youtube
+      - name: youtube_id
+        label: YouTube URL or ID
+        widget: string
+        required: false
+        hint: Paste full YouTube URL (Video or Short) or just the ID
+      - name: embed_code
+        label: Embed Code
+        widget: text
+        required: false
+        hint: "For TikTok/Insta/Twitter: Paste full embed code"
+      - name: thumbnail
+        label: Thumbnail
+        widget: image
+        required: false
+      - name: caption
+        label: Caption
+        widget: markdown
+        required: false
+      - name: type
+        label: Type
+        widget: hidden
+        default: video
+      - name: category
+        label: Category
+        widget: hidden
+        default: videos
+      - name: date
+        label: Publish Date
+        widget: datetime
+        default: "{{now}}"
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+    editor:
+      preview: false
+  - name: post-media
+    label: post-media
+    slug: ""
+    create: true
+    folder: _gallery/post_media
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - name: post-image-media
+        label: post-image
+        widget: image
+public_folder: /assets/images
+backend:
+  name: github
+  repo: RDjarbeng/rdjarbeng.github.io
+  branch: main
+  base_url: https://sveltia-cms-auth.richarddjarbeng.workers.dev/
+site_url: https://rdjarbeng.com/
+media_folder: assets/images
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"

@@ -18,10 +18,10 @@ tags:
   - WELL
   - AirVisual
   - PM2.5
-title: 'From Swiss Alps to African Cities: How IQAir is Dominating the Global Air Quality Conversation'
+title: 'From Swiss Alps to African Cities: How IQAir is Joining the Global Air Quality Conversation'
 image: /assets/images/iqair_air_quality_cover.webp
+image_alt: 'Cover image for From Swiss Alps to African Cities: How IQAir is Dominating the Global Air Quality Conversation'
 layout: post
-image_alt: "Cover image for From Swiss Alps to African Cities: How IQAir is Dominating the Global Air Quality Conversation"
 ---
 When you think of a technology company, you might picture a social media app or a smartphone. But one Swiss company has quietly built a global empire on something more fundamental: the air we breathe.
 
@@ -37,17 +37,17 @@ IQAir's business model is simple: it makes the invisible threat of air pollution
 
 ### Pillar 1: High-Performance Hardware
 
-This is the company's commercial engine. IQAir sells a range of premium, "medical-grade" air purifiers and monitors.[6, 7] They are [vocal opponents of technologies that produce ozone](https://en.wikipedia.org/wiki/IQAir), positioning their mechanical filtration as the safest choice.[5]
+This is the company's commercial engine. IQAir sells a range of premium, "medical-grade" air purifiers and monitors.[6, 7] They are ['vocal opponents' of technologies that produce ozone](https://en.wikipedia.org/wiki/IQAir), positioning their mechanical filtration as the safest choice.[5]
 
 Their product lines include:
 
-* **HealthPro Series:** This is the flagship line. The [HealthPro Plus](https://www.youtube.com/watch?v=NJIcw-ud5wQ) is their most popular model, designed to filter a wide spectrum of pollutants, including allergens, chemicals, odors, and airborne viruses.[8, 9] While praised for exceptional performance, this quality comes at a premium price.[10, 11]
+- **HealthPro Series:** This is the flagship line. The [HealthPro Plus](https://www.youtube.com/watch?v=NJIcw-ud5wQ) is their most popular model, designed to filter a wide spectrum of pollutants, including allergens, chemicals, odors, and airborne viruses.[8, 9] While praised for exceptional performance, this quality comes at a premium price.[10, 11]
     - **Price:** The series ranges from **$1,154.60** (HealthPro 100) to **$1,431.11** (HealthPro 250).[7]
-* **Atem Series:** A line of compact, personal purifiers for spaces like a desk or car.[8]
+- **Atem Series:** A line of compact, personal purifiers for spaces like a desk or car.[8]
     - **Price:** The [Atem Desk](https://www.walmart.com/browse/iqair/YnJhbmQ6SVFBaXIie) and Atem Car are priced around **$580.46** each.[12, 7]
-* **GC MultiGas Series:** Specialized units focused on removing high concentrations of gases, odors, and chemicals.[8, 13]
+- **GC MultiGas Series:** Specialized units focused on removing high concentrations of gases, odors, and chemicals.[8, 13]
     - **Price:** Approximately **$1,870.15**.[7]
-* **AirVisual Monitors:** These are the sensors that power the network. The [**AirVisual Pro**](https://www.newegg.com/IQAir/BrandStore/ID-62996) is a monitor that measures indoor and outdoor PM2.5, CO2, temperature, and humidity, providing real-time and forecasted data.[6, 14, 15]
+- **AirVisual Monitors:** These are the sensors that power the network. The [**AirVisual Pro**](https://www.newegg.com/IQAir/BrandStore/ID-62996) is a monitor that measures indoor and outdoor PM2.5, CO2, temperature, and humidity, providing real-time and forecasted data.[6, 14, 15]
     - **Price:** Both the AirVisual Pro and AirVisual Outdoor monitors are listed at **$487.59**.[7]
 
 ### Pillar 2: The Global Data Platform (AirVisual)
@@ -89,8 +89,8 @@ For IQAir's data-first model, this "data desert" is both a problem and a massive
 
 IQAir has entered Africa not as a commercial vendor, but as a foundational partner, primarily through high-level alliances and its own non-profit.
 
-* **UN Partnership:** In February 2020, IQAir, the **UN Environment Programme (UNEP)**, and **UN-Habitat** [launched the world's largest air quality data platform](https://www.unep.org/news-and-stories/press-release/worlds-largest-platform-air-quality-data-launched-tenth-world-urban).[23, 30] This partnership was explicitly aimed at solving Africa's data gap.[23] It immediately helped integrate monitoring networks in cities like [Addis Ababa (Ethiopia), Nairobi (Kenya), and Kampala (Uganda)](https://www.unep.org/news-and-stories/press-release/worlds-largest-platform-air-quality-data-launched-tenth-world-urban).[23] In 2021, the partnership expanded to create a [real-time air pollution exposure calculator](https://www.jpost.com/jpost-tech/environment/unep-iqair-develop-calculator-to-combat-air-pollution-in-cities-678930), which applies AI to population data to show which age groups are most exposed to pollution by the hour.[31, 32, 33, 34]
-* **The IQAir Foundation:** This is the company's non-profit arm, dedicated to fighting "environmental and climate injustice" by providing monitoring solutions to vulnerable communities, with a [specific focus on Africa and Latin America](https://iqairfoundation.org/).[3, 4]
+- **UN Partnership:** In February 2020, IQAir, the **UN Environment Programme (UNEP)**, and **UN-Habitat** [launched the world's largest air quality data platform](https://www.unep.org/news-and-stories/press-release/worlds-largest-platform-air-quality-data-launched-tenth-world-urban).[23, 30] This partnership was explicitly aimed at solving Africa's data gap.[23] It immediately helped integrate monitoring networks in cities like [Addis Ababa (Ethiopia), Nairobi (Kenya), and Kampala (Uganda)](https://www.unep.org/news-and-stories/press-release/worlds-largest-platform-air-quality-data-launched-tenth-world-urban).[23] In 2021, the partnership expanded to create a [real-time air pollution exposure calculator](https://www.jpost.com/jpost-tech/environment/unep-iqair-develop-calculator-to-combat-air-pollution-in-cities-678930), which applies AI to population data to show which age groups are most exposed to pollution by the hour.[31, 32, 33, 34]
+- **The IQAir Foundation:** This is the company's non-profit arm, dedicated to fighting "environmental and climate injustice" by providing monitoring solutions to vulnerable communities, with a [specific focus on Africa and Latin America](https://iqairfoundation.org/).[3, 4]
     - **Community Air Monitoring Program:** The foundation provides "turn-key solutions" to help local non-profits, schools, and organizations [deploy their own public air quality stations](https://iqairfoundation.org/pages/air-monitoring-program).[4, 35] It actively [recruits "Hosts"](https://iqairfoundation.org/pages/become-a-host) to build out this crowdsourced network.[36]
     - **Clean Air for Kids:** This program focuses on the severe impact of poor air quality on [children's health and cognitive development](https://iqairfoundation.org/pages/cleanair-impact).[37, 38] It works to [deliver clean air solutions and monitoring to underserved communities](https://iqairfoundation.org/), including in Africa.[4]
 
@@ -114,9 +114,9 @@ The result of this expanding data network is a series of shocking headlines from
 
 Just as with air quality monitoring, while [JLL reports](https://www.jll.com/en-us/insights/pathways-to-prosperity-sustainability-in-africa), the continent has a strong and growing ecosystem of its own green building certifications.
 
-* **Green Star (South Africa):** This is the continent's most established standard, developed by the [Green Building Council of South Africa (GBCSA)](https://www.gbcsa.org.za/). Described as the "South African gold standard," it is specifically tailored to the local environment. The GBCSA is also adapting it for other African nations through "Local Context Reports".
-* **EDGE (Excellence in Design for Greater Efficiencies):** An innovation of the [International Finance Corporation (IFC)](https://www.sgs.com/en-za/services/edge-green-building-certification), this standard is very common across Africa due to its focus on being "easy, smart and affordable".
-* **National Standards:** Many nations are developing their own frameworks:
+- **Green Star (South Africa):** This is the continent's most established standard, developed by the [Green Building Council of South Africa (GBCSA)](https://www.gbcsa.org.za/). Described as the "South African gold standard," it is specifically tailored to the local environment. The GBCSA is also adapting it for other African nations through "Local Context Reports".
+- **EDGE (Excellence in Design for Greater Efficiencies):** An innovation of the [International Finance Corporation (IFC)](https://www.sgs.com/en-za/services/edge-green-building-certification), this standard is very common across Africa due to its focus on being "easy, smart and affordable".
+- **National Standards:** Many nations are developing their own frameworks:
     - **Kenya:** The Green Africa Foundation established the [**"GreenMark"**](https://www.greenafricafoundation.org/programs/GAF_building_standards.php) standard, which is supported by government bodies like NEMA and the Kenya Bureau of Standards.
     - **Egypt:** Uses its own local rating systems called the [Green Pyramid Rating System](https://www.alpinme.com/files/Green-Building-Africa-v1210210308.pdf).
     - **Rwanda:** Has developed a [Rwanda Green Building Minimum Compliance System](https://gggi.org/wp-content/uploads/2019/07/Annex-3-Rwanda-Green-Building-Minimum-Compliance-System-REVISED.pdf) and has been a regional leader in promoting energy efficiency in building codes.

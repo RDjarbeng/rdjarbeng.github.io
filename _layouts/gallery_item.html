@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<div class="post-container">
+    <div class="post-header">
+        <div style="margin-bottom: 1rem;">
+            <a href="{{ '/gallery/' | relative_url }}" style="text-decoration: none; font-weight: bold;">← Back to
+                Gallery</a>
+        </div>
+        <h1>{{ page.title }}</h1>
+        <div class="author_date">
+            {{ page.date | date: "%B %-d, %Y" }}
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="post-content">
+            <!-- Media Display -->
+            <div class="gallery-item-media" style="margin-bottom: 2rem;">
+                {% if page.type == 'video' %}
+                <div class="video-container"
+                    style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    {% if page.platform == 'youtube' and page.youtube_id %}
+                    {% assign video_id = page.youtube_id %}
+                    {% if page.youtube_id contains 'youtube.com/watch' %}
+                    {% assign video_id = page.youtube_id | split: 'v=' | last | split: '&' | first %}
+                    {% elsif page.youtube_id contains 'youtube.com/shorts/' %}
+                    {% assign video_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                    {% elsif page.youtube_id contains 'youtu.be/' %}
+                    {% assign video_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                    {% endif %}
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ page.title }}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                    {% else %}
+                    {{ page.embed_code }}
+                    {% endif %}
+                </div>
+                {% else %}
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"
+                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                {% endif %}
+            </div>
+
+            <!-- Caption & Content -->
+            {% if page.caption %}
+            <div class="gallery-caption"
+                style="font-style: italic; color: #555; margin-bottom: 1.5rem; border-left: 4px solid #eee; padding-left: 1rem;">
+                {{ page.caption | markdownify }}
+            </div>
+            {% endif %}
+
+            <div class="gallery-body">
+                {{ content }}
+            </div>
+
+            {% if page.link %}
+            <div style="margin-top: 2rem;">
+                <a href="{{ page.link | relative_url }}" class="btn"
+                    style="display: inline-block; padding: 0.5rem 1rem; border: 1px solid currentColor; border-radius: 4px; text-decoration: none;">View
+                    Related Post / Source</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -4,13 +4,48 @@ title: Categories
 permalink: /categories/
 ---
 
-<h1>({{ site.categories | size }}) Categories</h1>
-<p>This page lists all the categories for the posts on Richard Djarbeng's website</p>
-<ul class="categories-list">
+<div class="categories-page">
+  <h1>Categories</h1>
+
+  {% assign categories_list = "" | split: "" %}
   {% for category in site.categories %}
-    <li>
-      <a href="{{ '/categories/' | relative_url }}{{ category[0] | slugify }}">{{ category[0] }}</a>
-      ({{ category[1].size }})
-    </li>
+  {% assign category_name = category[0] %}
+  {% assign category_size = category[1].size %}
+  {% capture category_string %}{{ category_size | prepend: '000000' | slice: -6, 6 }}:::{{ category_name }}{% endcapture
+  %}
+  {% assign categories_list = categories_list | push: category_string %}
   {% endfor %}
-</ul>
+  {% assign sorted_categories = categories_list | sort | reverse %}
+
+  <p style="text-align: center; margin-bottom: 20px;">Total Categories: {{ site.categories.size }}</p>
+
+  <h2 class="section-title" style="text-align: center;">Top 4 Categories</h2>
+  <ul class="category-grid">
+    {% for item in sorted_categories limit:4 %}
+    {% assign parts = item | split: ":::" %}
+    {% assign cat_size = parts[0] | plus: 0 %}
+    {% assign cat_name = parts[1] %}
+    <li>
+      <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
+        <span class="category-name">{{ cat_name }}</span>
+        <span class="category-count">{{ cat_size }} posts</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="section-title" style="text-align: center; margin-top: 40px;">Browse all categories</h2>
+  <ul class="category-grid">
+    {% assign alpha_sorted_categories = site.categories | sort %}
+    {% for category in alpha_sorted_categories %}
+    {% assign cat_name = category[0] %}
+    {% assign cat_items = category[1] %}
+    <li>
+      <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
+        <span class="category-name">{{ cat_name }}</span>
+        <span class="category-count">{{ cat_items.size }} posts</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

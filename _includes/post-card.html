@@ -1,25 +1,28 @@
 <div class="post-card">
   <a class="post-link" href="{{ include.post.url | relative_url }}">
-    <h4 title="{{ include.post.title | escape }}">
-      {{ include.post.title | escape }}
-    </h4>
-    {% assign words_to_truncate = include.truncate_words | default: 30 %}
-    <p class="post-excerpt">{{ include.post.excerpt | strip_html | truncatewords: words_to_truncate }}</p>
     {% if include.post.image and include.post.image.size > 0 %}
-    <img src="{{ include.post.image }}"
-      alt="{% if include.post.image_alt %}{{ include.post.image_alt }}{% else %}Cover image of post: {{ include.post.title }}{% endif %}"
-      class="post-image" fetchpriority="high">
+    <div class="post-card-image">
+      <img src="{{ include.post.image }}"
+        alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
+        title="{{ include.post.title | escape }}" class="post-image" fetchpriority="high">
+    </div>
     {% endif %}
 
-    {% assign words_per_minute = 180 %}
-    {% assign words = include.post.content | number_of_words %}
-    {% assign minutes = words | divided_by: words_per_minute | ceil %}
+    <div class="post-card-content">
+      <h4 title="{{ include.post.title | escape }}">
+        {{ include.post.title | escape }}
+      </h4>
 
-    <div class="post-meta-categories-container">
-      <div class="post-meta-card">{{ include.post.date | date: "%B %-d, %Y" }}</div>
+      {% assign words_per_minute = 180 %}
+      {% assign words = include.post.content | number_of_words %}
+      {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
-      <div class="post-meta-card">
-        {{ minutes }} min read
+      <div class="post-meta-categories-container">
+        <div class="post-meta-card">{{ include.post.date | date: "%B %-d, %Y" }}</div>
+        <div class="post-meta-dot">·</div>
+        <div class="post-meta-card">
+          {{ minutes }} min read
+        </div>
       </div>
     </div>
   </a>

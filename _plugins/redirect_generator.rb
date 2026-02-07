@@ -8,7 +8,7 @@ module Jekyll
       
       # Handle personal posts
       if site.collections['personal']
-        puts "Found personal collection with #{site.collections['personal'].docs.length} posts"
+        # puts "Found personal collection with #{site.collections['personal'].docs.length} posts"
         
         site.collections['personal'].docs.each do |post|
         #   puts "\nProcessing: #{post.relative_path}"

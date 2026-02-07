@@ -2,41 +2,41 @@
 layout: default
 title: Blog
 ---
-
+<h1>Richard Djarbeng's Technical Posts</h1>
 <div class="posts-page-intro">
   Find technical posts about technology, Artificial Intelligence, Air quality and trending topics related to these
   areas.
 </div>
-<div class="header-container">
-  <h1>({{ site.posts | size }}) Posts</h1>
-  <!-- Search box aligned to the right -->
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
-  </div>
+<h2 class="section-title">({{ site.posts | size }}) Posts</h2>
+<!-- Search box aligned to the right -->
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
 </div>
-{% include category-tags.html %}
 <!-- Results container -->
 <ul id="results-container"></ul>
+<div class="header-container">
+  {% include category-tags.html %}
 
-<!-- DEBUG: page.pager: {{ page.pager | inspect }} -->
-<!-- DEBUG: page keys: {{ page | inspect }} -->
+  <!-- DEBUG: page.pager: {{ page.pager | inspect }} -->
+  <!-- DEBUG: page keys: {{ page | inspect }} -->
 
-{% if page.pager %}
-{% assign posts_to_display = page.pager.posts %}
-{% assign total_posts = page.pager.total_posts %}
-{% assign current_page = page.pager.current_page %}
-{% assign per_page = page.pager.per_page %}
-{% assign start_index = current_page | minus: 1 | times: per_page | plus: 1 %}
-{% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
-{% else %}
-{% assign posts_to_display = site.posts %}
-{% assign total_posts = site.posts | size %}
-{% assign start_index = 1 %}
-{% assign end_index = total_posts %}
-{% endif %}
+  {% if page.pager %}
+  {% assign posts_to_display = page.pager.posts %}
+  {% assign total_posts = page.pager.total_posts %}
+  {% assign current_page = page.pager.current_page %}
+  {% assign per_page = page.pager.per_page %}
+  {% assign start_index = current_page | minus: 1 | times: per_page | plus: 1 %}
+  {% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
+  {% else %}
+  {% assign posts_to_display = site.posts %}
+  {% assign total_posts = site.posts | size %}
+  {% assign start_index = 1 %}
+  {% assign end_index = total_posts %}
+  {% endif %}
 
-<div class="pagination-status" style="text-align: right;">
-  Showing posts {{ start_index }}-{{ end_index }} of {{ total_posts }}
+  <div class="pagination-status" style="text-align: right;">
+    Showing posts {{ start_index }}-{{ end_index }} of {{ total_posts }}
+  </div>
 </div>
 
 <div class="post-list">
@@ -46,7 +46,7 @@ title: Blog
 </div>
 
 {% if page.pager %}
-{% include pagination.html paginator=page.pager %}
+{% include pagination.html paginator=page.pager base_url="/posts/" %}
 {% endif %}
 <!-- Include Simple Jekyll Search script -->
 {% include search-script.html %}
