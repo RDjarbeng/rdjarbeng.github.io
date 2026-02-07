@@ -438,6 +438,23 @@ document.addEventListener('DOMContentLoaded', function () {
             lightboxMediaContainer.appendChild(div);
         }
 
+        const link = item.dataset.link;
+        if (link && link.trim() !== '') {
+            const lightboxLink = document.querySelector('.lightbox-link');
+            if (lightboxLink) {
+                // Check if it's an internal link (relative URL) to handle properly or just use as is
+                // Since relative_url filter is used, it should be fine.
+                lightboxLink.href = link;
+                lightboxLink.style.display = 'inline-block';
+                lightboxLink.textContent = 'Read Related Post';
+            }
+        } else {
+            const lightboxLink = document.querySelector('.lightbox-link');
+            if (lightboxLink) {
+                lightboxLink.style.display = 'none';
+            }
+        }
+
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
 

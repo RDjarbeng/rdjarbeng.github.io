@@ -1,5 +1,6 @@
 ---
 title: Roberto the Destroyer Goes Sky-Diving
+date: 2025-11-15 12:00:00
 platform: youtube
 youtube_id: https://youtu.be/JZvSoi4v-_Y
 embed_code: ''

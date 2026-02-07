@@ -19,6 +19,8 @@ layout: default
         <span class="lightbox-date"></span>
       </div>
       <div class="lightbox-caption"></div>
+      <a class="lightbox-link btn" href="#" style="display: none; margin-top: 15px;">Read Related
+        Post</a>
     </div>
   </div>
 
@@ -78,7 +80,7 @@ layout: default
       data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
       data-caption="{{ item.caption | escape }}" data-title="{{ item.title | escape }}"
       data-date="{{ item.date | date: '%B %d, %Y' }}" data-slug="{{ item.title | slugify }}"
-      data-url="{{ item.url | relative_url }}" data-link="{{ item.link | relative_url }}"
+      data-url="{{ item.url | relative_url }}" data-link="{% if item.link %}{{ item.link | relative_url }}{% endif %}"
       data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
 
       {% if item.type == 'video' %}
