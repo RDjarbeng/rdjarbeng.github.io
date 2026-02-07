@@ -1,5 +1,6 @@
 ---
 title: Cast of the Emperor's New Groove
+date: 2026-02-07 12:00:00
 platform: instagram
 youtube_id: ''
 embed_code: |-
