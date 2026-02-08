@@ -83,6 +83,10 @@ layout: default
       data-url="{{ item.url | relative_url }}" data-link="{% if item.link %}{{ item.link | relative_url }}{% endif %}"
       data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
 
+      <div class="gallery-caption-content" style="display:none;">
+        {{ item.caption | markdownify }}
+      </div>
+
       {% if item.type == 'video' %}
       <div class="gallery-html-content">
         <div class="video-container">
