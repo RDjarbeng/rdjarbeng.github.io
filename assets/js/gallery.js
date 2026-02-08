@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const item = visibleItems[index];
         const type = item.dataset.type;
         const src = item.dataset.src;
-        const caption = item.dataset.caption;
+        const caption = item.querySelector('.gallery-caption-content').innerHTML;
         const title = item.dataset.title;
         const date = item.dataset.date;
 
