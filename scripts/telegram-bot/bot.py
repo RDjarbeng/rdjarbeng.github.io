@@ -29,15 +29,25 @@ def is_authorized(update: Update):
         return True # Default to true if not set, but recommended to set it
     return str(update.effective_user.id) == str(ALLOWED_USER_ID)
 
-async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not is_authorized(update):
         await update.message.reply_text("Unauthorized.")
         return
 
-    # Get the photo and caption
-    photo = update.message.photo[-1]
-    caption = update.message.caption or "Untitled Meme"
-    
+    # Determine if it's a photo or document and get file object & caption
+    if update.message.document:
+        media_obj = update.message.document
+        # Check mime type just in case filter let it through
+        if not media_obj.mime_type or not media_obj.mime_type.startswith('image/'):
+            await update.message.reply_text("Please send an image file.")
+            return
+        caption = update.message.caption or "Untitled Meme"
+    elif update.message.photo:
+        media_obj = update.message.photo[-1]
+        caption = update.message.caption or "Untitled Meme"
+    else:
+        return
+
     # Create a slug for the filename
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_title = "".join([c if c.isalnum() else "-" for c in caption[:30].lower()]).strip("-")
@@ -53,8 +63,15 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     collection_dir.mkdir(parents=True, exist_ok=True)
     
     # Download image
-    new_file = await context.bot.get_file(photo.file_id)
-    image_ext = ".jpg" # Default to jpg
+    new_file = await context.bot.get_file(media_obj.file_id)
+    
+    # Determine extension from the file path provided by Telegram
+    valid_exts = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
+    image_ext = Path(new_file.file_path).suffix.lower()
+    
+    if image_ext not in valid_exts:
+        image_ext = ".jpg" # Default fallback
+        
     image_filename = f"{filename}{image_ext}"
     image_path = media_dir / image_filename
     await new_file.download_to_drive(custom_path=str(image_path))
@@ -87,8 +104,9 @@ if __name__ == '__main__':
         
     application = ApplicationBuilder().token(TOKEN).build()
     
-    photo_handler = MessageHandler(filters.PHOTO, handle_photo)
-    application.add_handler(photo_handler)
+    # Handle both photos (compressed) and documents (files/uncompressed images)
+    media_handler = MessageHandler(filters.PHOTO | filters.Document.IMAGE, handle_media)
+    application.add_handler(media_handler)
     
     print("Bot is starting...")
     application.run_polling()
