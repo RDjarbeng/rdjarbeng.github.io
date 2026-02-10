@@ -64,7 +64,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # fields: title, image, caption, type (hidden: external), category (hidden: memes)
     
     frontmatter = {
-        "title": caption[:50],
+        "title": caption[:70],
         "image": f"/{MEME_MEDIA_PATH}/{image_filename}",
         "caption": caption,
         "type": "external",
