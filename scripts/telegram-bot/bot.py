@@ -41,7 +41,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Create a slug for the filename
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_title = "".join([c if c.isalnum() else "-" for c in caption[:30].lower()]).strip("-")
-    filename = f"{timestamp}-{safe_title}"
+    filename = f"{safe_title}-{timestamp}"
     
     # Paths
     root_path = Path(REPO_ROOT).resolve()
@@ -65,6 +65,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     frontmatter = {
         "title": caption[:70],
+        "date": datetime.now().replace(microsecond=0),
         "image": f"/{MEME_MEDIA_PATH}/{image_filename}",
         "caption": caption,
         "type": "external",
