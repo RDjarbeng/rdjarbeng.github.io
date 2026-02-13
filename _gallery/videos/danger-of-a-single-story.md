@@ -7,4 +7,5 @@ thumbnail: ''
 caption: Danger of a Single Story adapted from Chimamanda Adichie's TED talk
 type: video
 category: videos
+date: 2026-02-07 19:44:16
 ---
