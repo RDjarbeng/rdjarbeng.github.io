@@ -380,6 +380,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: true,
+        }
+      - {
           label: "Publish Date",
           name: "date",
           widget: "datetime",
@@ -412,12 +418,6 @@ collections:
           widget: "image",
           required: false,
         }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
       - { label: "Type", name: "type", widget: "hidden", default: "video" }
       - {
           label: "Category",
@@ -425,12 +425,11 @@ collections:
           widget: "hidden",
           default: "videos",
         }
-
       - {
-          label: "Published",
-          name: "published",
-          widget: "boolean",
-          default: true,
+          label: "Caption",
+          name: "caption",
+          widget: "markdown",
+          required: false,
         }
 
 singletons:
