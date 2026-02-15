@@ -2,17 +2,17 @@
 title: Just Do The Thing - Chris Williamson on The Things That Are Not Doing The Thing
 date: 2026-02-15T18:49:00
 published: true
-layout: personal
 tags:
   - Mindset
   - Productivity
-image: ''
-image_alt: ''
+image: /assets/images/1000360962.webp
+image_alt: Just do the thing with Chris Williamson thumbnail image
+layout: personal
 ---
 
 There's this video on 'Doing the Thing' that I like so much so I'm gonna share it with you. [Chris Williamson](https://www.youtube.com/@ChrisWillx) shares a perspective on productivity and procrastination.
 
-The video captures a list of things that are *not* doing the thing:
+The video captures a list of things that are _not_ doing the thing:
 
 *   Preparing to do the thing.
 *   Scheduling time to do the thing.
