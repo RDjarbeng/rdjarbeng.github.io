@@ -10,7 +10,7 @@ image: ''
 image_alt: ''
 ---
 
-[Chris Williamson](https://www.youtube.com/@ChrisWillx) shares a powerful perspective on productivity and procrastination.
+There's this video on 'Doing the Thing' that I like so much so I'm gonna share it with you. [Chris Williamson](https://www.youtube.com/@ChrisWillx) shares a perspective on productivity and procrastination.
 
 The video captures a list of things that are *not* doing the thing:
 
