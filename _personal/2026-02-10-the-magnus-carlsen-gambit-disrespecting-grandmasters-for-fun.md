@@ -48,7 +48,8 @@ Even when he is completely losing according to the engine, he manages to consoli
 
 The highlight of the video is the third game, where an opponent actually tries to _stop_ the gambit by playing **b5** to prevent **Qa4+**.
 
-Did Magnus play a normal game? Of course not. He simply walked his King all the way up and around the board to reach the same awkward position he wanted anyway. He even hung a pawn because he calculated that the activity he’d gain from his opponent "wandering into his position" was worth more than the material.
+Did Magnus play a normal game? Of course not. He simply walked his King all the way up and around the board to reach the same awkward position he wanted anyway. So many moves wasted just to swap the King and Queen's positions. 
+Gotham Chess didn't go into the details of why Magnus does this, but I think it's because he's bored and wants to make the game more interesting for himself. He even hung a pawn because he calculated that the activity he’d gain from his opponent "wandering into his position" was worth more than the material.
 
 ## Final Thoughts
 
