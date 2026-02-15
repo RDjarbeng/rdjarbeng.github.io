@@ -17,7 +17,7 @@ caption: |
 
   Through this experience, Esther learned a valuable lesson: "Facing fear doesn't have to be dramatic. Sometimes it's just about showing up." Her bravery is truly inspiring, and her humorous storytelling makes for an entertaining watch.
 
-  I do like the end however. _Odeshi_ 🤣🤣 It's the scream for me. Why pretend to be composed when you're afraid inside? 
+  I do like the end however. _Odeshi!_ 🤣🤣 It's the scream for me. Why pretend to be composed when you're afraid inside? 
 
   Watch the video to see if she managed to conquer her fear or if she ran for the hills! 😅
 
