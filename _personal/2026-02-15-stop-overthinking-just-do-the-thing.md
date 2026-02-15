@@ -1,5 +1,5 @@
 ---
-title: Stop Overthinking Just Do The Thing
+title: Just Do The Thing - Chris Williamson on The Things That Are Not Doing The Thing
 date: 2026-02-15T18:49:00
 published: true
 layout: personal
