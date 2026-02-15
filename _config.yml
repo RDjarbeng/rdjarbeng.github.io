@@ -156,11 +156,11 @@ defaults:
 # Custom pagination configuration
 custom_pagination:
   active: true
-  paginate: 10
+  paginate: 12
   collection: 'posts'
 
 pagination:
   active: false
-  paginate: 10  # Number of posts per page
+  paginate: 12  # Number of posts per page
   collection: 'posts'  # Target the posts collection
 
