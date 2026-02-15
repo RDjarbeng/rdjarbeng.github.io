@@ -1,5 +1,5 @@
 ---
-title: 'Stop Overthinking: Just Do The Thing'
+title: Chris Williamson on 'Do The Thing' with a list of things that are not doing the thing
 published: true
 date: 2026-02-15T18:32:00
 platform: youtube
@@ -32,11 +32,19 @@ caption: |-
 
   If you've been stuck in the planning phase, let this be your sign to stop preparing and start performing.
 
+<<<<<<< HEAD
   ***
 
   ### Full Transcript
 
   [[**00:00**](http://www.youtube.com/watch?v=980YJeoORAc&t=0)**]** I fell in love with an essay by Strangest Loop and it is a list of things that are not doing the thing. So here is a list of things that are not doing the thing:
+=======
+  ---
+
+  ### Full Transcript
+
+  **[[00:00](http://www.youtube.com/watch?v=980YJeoORAc&t=0)]** I fell in love with an essay by Strangest Loop and it is a list of things that are not doing the thing. So here is a list of things that are not doing the thing:
+>>>>>>> 5a9c73229c7a2d4fa9180ed53f6d0fd33187a8bd
 
   * Preparing to do the thing isn't doing the thing.
   * Scheduling time to do the thing isn't doing the thing.
@@ -52,7 +60,17 @@ caption: |-
   * Reading about how other people did the thing isn't doing the thing.
   * Reading this essay isn't doing the thing.
 
+<<<<<<< HEAD
   [[**00:49**](http://www.youtube.com/watch?v=980YJeoORAc&t=49)**]** **The only thing that is doing the thing is doing the thing.**
 
   #Productivity #ChrisWilliamson #Mindset #Procrastination #DoTheThing #Growth
+=======
+  **[[00:49](http://www.youtube.com/watch?v=980YJeoORAc&t=49)]** The only thing that is doing the thing is doing the thing.
+
+  #Productivity #ChrisWilliamson #Mindset #Procrastination #DoTheThing #Growth
+type: video
+category: videos
+published: true
+date: 2026-02-15 18:32:53
+>>>>>>> 5a9c73229c7a2d4fa9180ed53f6d0fd33187a8bd
 ---
