@@ -32,8 +32,6 @@ caption: |-
 
   If you've been stuck in the planning phase, let this be your sign to stop preparing and start performing.
 
-  ---
-
   ### Full Transcript
 
   **[[00:00](http://www.youtube.com/watch?v=980YJeoORAc&t=0)]** I fell in love with an essay by Strangest Loop and it is a list of things that are not doing the thing. So here is a list of things that are not doing the thing:
