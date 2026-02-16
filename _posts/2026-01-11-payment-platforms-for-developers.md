@@ -37,6 +37,10 @@ In this post, we'll dive into four of the biggest players: **Stripe**, **Lemon S
 ### The Catch: Tax Compliance
 Stripe is primarily a **Payment Processor**, not a Merchant of Record (MoR). This means *you* are the merchant. You are responsible for calculating, collecting, and remitting sales tax/VAT in every jurisdiction where you have customers. While **Stripe Tax** helps with calculation, the ultimate legal liability rests with you.
 
+'Global payments' but does not directly support Africa. See the response to my enquiry on Twitter
+
+![Screenshot of stripe replying to Richard on Twitter about their support for Countries in Africa such as Ghana](/assets/images/stripe_reply_to_richard_twitter_paystack.png "Screenshot of Stripe Support replying to Richard on Twitter/X")
+
 **Best For:**
 - SaaS platforms needing deep customization.
 - Marketplaces (using Stripe Connect).
