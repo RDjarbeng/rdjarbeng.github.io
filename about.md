@@ -92,6 +92,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 <div class="about-section">
   <h2 class="about-section-title">Projects</h2>
   <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
+  <p style="text-align: center; font-size: 0.9em; color: #777; margin-bottom: 20px;"><em>* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
 
   <div class="filter-container">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -186,7 +187,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     <div class="project-card-about" data-category="ml data">
       <div class="project-image-container">
          <!-- Used relevant existing asset: payment related -->
-        <img src="/assets/images/payment-platforms-thumbnail-v2.png" alt="Loan Risk">
+        <img src="/assets/images/loan_risk_prediction_dashboard.png" alt="Loan Risk">
         <span class="project-type-badge">AutoML</span>
       </div>
       <div class="project-content">
@@ -227,7 +228,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 
      <div class="project-card-about projects-hidden" data-category="web">
       <div class="project-image-container">
-        <img src="/assets/images/pamely_cmu_website.png" alt="University System">
+        <img src="/assets/images/university_management_system_dashboard.png" alt="University System">
         <span class="project-type-badge">Java/TSQL</span>
       </div>
       <div class="project-content">
@@ -252,7 +253,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 
     <div class="project-card-about projects-hidden" data-category="web game">
       <div class="project-image-container">
-         <img src="/assets/images/3d_rl_game_cover.webp" alt="Game">
+         <img src="/assets/images/escape_covid_maze_game.png" alt="Game">
         <span class="project-type-badge">Unity / C#</span>
       </div>
       <div class="project-content">
