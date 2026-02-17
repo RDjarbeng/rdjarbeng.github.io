@@ -10,4 +10,5 @@ caption: |-
   The song however is a success in my books. It's encouraging and the prayer in the song is for the Holy Ghost to guide our steps wherever we go. I hope you find encouragement today from this song.
 type: video
 category: videos
+date: 2026-02-07 19:44:16
 ---

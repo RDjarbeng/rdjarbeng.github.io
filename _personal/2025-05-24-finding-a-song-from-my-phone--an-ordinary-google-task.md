@@ -1,5 +1,5 @@
 ---
-title: Finding a song -an ordinary google task
+title: Finding a Song – An Ordinary Google Task with Split Screen
 date: 2025-05-24T12:57:00
 published: true
 tags:
@@ -18,9 +18,10 @@ tags:
   - Google find a song feature
   - No need for shazam on google
 image: /assets/images/ordinary_song_find_1000175293.webp
+image_alt: Cover image for Finding a song -an ordinary google task
 layout: personal
-image_alt: "Cover image for Finding a song -an ordinary google task"
 ---
+
 Here is a method for finding a song from a video you are watching on my phone. Let's do it together. Here I used the split screen feature to open 2 apps at the same time. I open the Google app as one of them and get to the find a song feature. Google keeps changing the layout but it was underneath the search bar for me (see screenshot) .
 
 _Disclaimer for iPhone users: It seems the split screen feature isn't available on iOS yet, so sad. Unfortunately you are going to rely on shazam or wait for similar functionality for Iphones. Android club, please continue reading this post_

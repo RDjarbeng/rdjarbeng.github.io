@@ -1,7 +1,7 @@
 ---
 title: Papaoutai Afro Soul - A Different Vibe
 platform: youtube
-youtube_id: https://www.youtube.com/watch?v=6mFI1ykxAXg
+youtube_id: https://www.youtube.com/watch?v=2sp5HeLNW5o
 embed_code: ''
 thumbnail: assets/images/videos/papaoutai_afro_soul_cover.png
 caption: |-
@@ -18,10 +18,15 @@ caption: |-
   I used this version originally but it seems it got taken down on youtube.
 
   https://www.youtube.com/watch?v=UK-E85WJR_A
-
-  This is the current latest video I can see.
-
+  
+  On February 7th, I noticed this video wasn't playing and tried this version that has a man singing it
   https://www.youtube.com/watch?v=6mFI1ykxAXg
+  Apparently that video is now private and so I'm using this version instead.
+  
+  This is the current latest video I can see. Hopefully this doesn't get taken down either. 3rd time making this change.
+  https://www.youtube.com/watch?v=2sp5HeLNW5o
+  
+
 type: video
 category: videos
 date: 2026-02-07T23:00:00
