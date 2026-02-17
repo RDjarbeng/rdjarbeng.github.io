@@ -5,8 +5,8 @@ published: true
 tags:
   - Mindset
   - Productivity
-image: /assets/images/1000360962.webp
-image_alt: Just do the thing with Chris Williamson thumbnail image
+image: /assets/images/do_the_thing_tv_cover_animated.png
+image_alt: Animated illustration of a person watching Chris Williamson on a monitor
 layout: personal
 ---
 
