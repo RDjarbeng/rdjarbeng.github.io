@@ -37,6 +37,8 @@ This post is for the experience of going to Germany, we are going to skip the de
  Found the platform and train and the doors slammed shut on us. Was ready to give up then, till one lady pushed the button and the doors opened, we are so back. Arrived in Saarbrucken, nice train station, nice flowers. Navigating the trams and buses was another issue and we missed our stop so had to get off and walk the rest of the way. That’s how we made it to the Europa youth hostel. Check-in was at 2pm so we had to wait. It’s good to be in Germany. Now to wait for the start of the program. 
 Experience in Frankfurt, no uber in Saarbrucken, the trains (day ticket, airport ticket), navigation, Doner Kebab and Indian restaurant; that’s how you get people to come back, people smoking, turns out I’m lactose intolerant, Galeria luxury mall, MyZeil,  (not gonna mention IBIS budget)
 
+The gallery section just looks uninteresting on mobile view, I think it's the layout, I'm not sure how to fix it, I'll have to look into it. Memes need to be scrollable
+
 
 Potential posts
 Battery technologies – previous, current. Flat vs round, heating sand or molten salt. How do they pair with solar panels
