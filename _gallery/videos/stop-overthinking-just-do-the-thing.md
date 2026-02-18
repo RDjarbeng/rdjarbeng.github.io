@@ -1,5 +1,5 @@
 ---
-title: Chris Williamson on 'Do The Thing' with a list of things that are not doing the thing
+title: Chris Williamson on 'Doing The Thing' with a list of things that are not doing the thing
 published: true
 date: 2026-02-15T18:32:00
 platform: youtube
