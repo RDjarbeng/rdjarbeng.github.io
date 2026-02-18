@@ -170,7 +170,7 @@ This is a meta-repository, just like Google Dataset Search. **DataPortals.org** 
 
 ## 11. Wikipedia’s List of Machine Learning Datasets
 
-[Image of Wikipedia logo]
+![Screenshot of Wikipedia List of Machine Learning Datasets interface](/assets/images/posts/2025-10-20-finding-your-fuel/wikipedia.png)
 
 * Link: [https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
 
