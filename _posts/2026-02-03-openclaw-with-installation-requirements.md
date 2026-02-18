@@ -8,7 +8,7 @@ tags:
   - Open Source
   - Automation
   - Agents
-title: OpenClaw with Installation Requirements
+title: How to Install OpenClaw with Installation Requirements
 image: /assets/images/openclaw_install_guide_cover.png
 image_alt: Get OpenClaw - Installation Guide
 layout: post
