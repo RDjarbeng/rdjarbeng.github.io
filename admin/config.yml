@@ -93,14 +93,14 @@ collections:
         }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
-      - label: "Repositories"
-        name: "repositories"
+      - label: "Card Items"
+        name: "card_items"
         widget: "list"
         required: false
         collapsed: true
         summary: "{{fields.name}}"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Title", name: "name", widget: "string" }
           - label: "Image"
             name: "image"
             widget: "image"
@@ -119,18 +119,18 @@ collections:
               required: false,
             }
           - {
-              label: "Best For Badge",
-              name: "best_for",
+              label: "Badge 1 (e.g. Best For)",
+              name: "badge_1",
               widget: "string",
               required: false,
-              hint: "E.g. 🔍 Best for: Broad searches",
+              hint: "First badge (blue)",
             }
           - {
-              label: "Type Badge",
-              name: "type",
+              label: "Badge 2 (e.g. Type)",
+              name: "badge_2",
               widget: "string",
               required: false,
-              hint: "E.g. 📦 Type: Search Engine",
+              hint: "Second badge (green)",
             }
           - {
               label: "Description",
@@ -138,12 +138,17 @@ collections:
               widget: "markdown",
               required: false,
             }
-          - { label: "URL", name: "url", widget: "string", required: false }
           - {
-              label: "Link Text",
+              label: "Primary Link URL",
+              name: "url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Primary Link Text",
               name: "link_text",
               widget: "string",
-              default: "Visit Repository",
+              default: "Visit Link",
               required: false,
             }
 
@@ -209,6 +214,64 @@ collections:
           widget: "hidden",
           default: "personal",
         }
+      - label: "Card Items"
+        name: "card_items"
+        widget: "list"
+        required: false
+        collapsed: true
+        summary: "{{fields.name}}"
+        fields:
+          - { label: "Title", name: "name", widget: "string" }
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            required: false
+            media_libraries:
+              default:
+                config:
+                  transformations:
+                    raster_image:
+                      format: webp
+                      quality: 85
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Badge 1 (e.g. Best For)",
+              name: "badge_1",
+              widget: "string",
+              required: false,
+              hint: "First badge (blue)",
+            }
+          - {
+              label: "Badge 2 (e.g. Type)",
+              name: "badge_2",
+              widget: "string",
+              required: false,
+              hint: "Second badge (green)",
+            }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Primary Link URL",
+              name: "url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Primary Link Text",
+              name: "link_text",
+              widget: "string",
+              default: "Visit Link",
+              required: false,
+            }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
   - name: "authors"
