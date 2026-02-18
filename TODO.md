@@ -11,6 +11,7 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query.
 - [ ] **Telegram Bot**: Test bot for memes. Deploy (PythonAnywhere or Oracle Cloud Free Tier).
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
+Card images have a top padding that leaves a gray space
 
 ## Content Ideas & Drafts
 - [ ] **Ananse**: Finish Ananse website post.
