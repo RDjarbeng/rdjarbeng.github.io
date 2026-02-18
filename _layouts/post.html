@@ -44,6 +44,9 @@ layout: default
   <div class="post-with-toc">
     <div class="post-content">
       {{ content }}
+      {% if page.card_items %}
+      {% include card_list.html %}
+      {% endif %}
     </div>
   </div>
 </div>

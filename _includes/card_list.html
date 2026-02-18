@@ -1,0 +1,27 @@
+<div class="repo-list">
+    {% for item in page.card_items %}
+    <div class="repo-item">
+        <div class="repo-image-container">
+            {% if item.image %}
+            <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="repo-screenshot">
+            {% endif %}
+        </div>
+        <div class="repo-details">
+            <h3 class="repo-title">{{ item.name }}</h3>
+            <div class="repo-meta">
+                {% if item.badge_1 %}
+                <span class="repo-tag best-for">{{ item.badge_1 }}</span>
+                {% endif %}
+                {% if item.badge_2 %}
+                <span class="repo-tag data-type">{{ item.badge_2 }}</span>
+                {% endif %}
+            </div>
+            <p class="repo-description">{{ item.description | markdownify }}</p>
+            {% if item.url %}
+            <a href="{{ item.url }}" class="repo-link-btn" target="_blank" rel="noopener noreferrer">{{ item.link_text |
+                default: "Visit Link" }}</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
