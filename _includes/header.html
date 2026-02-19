@@ -28,7 +28,21 @@
           </svg>
           <span class="gallery-text">Gallery</span>
         </a>
+
         <a class="page-link" href="{{ '/about' | relative_url }}">About</a>
+        <form action="{{ '/search/' | relative_url }}" method="get" class="header-search-form"
+          style="display: inline-flex; align-items: center; margin-left: 15px;">
+          <input type="text" name="q" placeholder="Search" aria-label="Search"
+            style="padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 14px;">
+          <button type="submit" aria-label="Search"
+            style="background: none; border: none; cursor: pointer; padding: 4px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
       </div>
     </nav>
   </div>
