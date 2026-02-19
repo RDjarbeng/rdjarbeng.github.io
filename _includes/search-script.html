@@ -17,13 +17,41 @@
 
   // Only initialize navbar search if main search is NOT active to avoid conflicts
   if (document.getElementById('nav-search-input') && !sjs) {
+    var navSearchInput = document.getElementById('nav-search-input');
+    var navSearchResults = document.getElementById('nav-search-results');
+
     navSjs = SimpleJekyllSearch({
-      searchInput: document.getElementById('nav-search-input'),
-      resultsContainer: document.getElementById('nav-search-results'),
+      searchInput: navSearchInput,
+      resultsContainer: navSearchResults,
       json: '{{ "/search.json" | relative_url }}',
       searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{date}</span></div></a></div>',
       noResultsText: '<div class="nav-search-item" style="padding: 10px;">No results found</div>',
       limit: 5
+    });
+
+    // Hide results when clicking outside
+    document.addEventListener('click', function (e) {
+      if (e.target !== navSearchInput && !navSearchResults.contains(e.target)) {
+        navSearchResults.style.display = 'none';
+      }
+    });
+
+    // Show results again when focusing the input if there is text
+    navSearchInput.addEventListener('focus', function () {
+      if (navSearchInput.value.length > 0) {
+        navSearchResults.style.display = '';
+        // Trigger search again to ensure fresh results if needed
+        if (navSearchResults.innerHTML.trim() === '') {
+          navSearchInput.dispatchEvent(new Event('input'));
+        }
+      }
+    });
+
+    // Ensure display is reset on input
+    navSearchInput.addEventListener('input', function () {
+      if (navSearchInput.value.length > 0) {
+        navSearchResults.style.display = '';
+      }
     });
   }
 
