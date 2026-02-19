@@ -1,5 +1,5 @@
 ---
-title: . This blind singer from Nigeria performs Defe Defe by team Eternity Ghana and transitions into Kumama flawlessly
+title: This blind singer from Nigeria performs Defe Defe by team Eternity Ghana and transitions into Kumama flawlessly
 published: true
 date: 2026-02-19T18:22:00
 platform: tiktok
