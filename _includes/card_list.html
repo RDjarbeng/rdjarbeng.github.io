@@ -1,11 +1,11 @@
 <div class="repo-list">
     {% for item in page.card_items %}
     <div class="repo-item">
+        {% if item.image %}
         <div class="repo-image-container">
-            {% if item.image %}
             <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="repo-screenshot">
-            {% endif %}
         </div>
+        {% endif %}
         <div class="repo-details">
             <h3 class="repo-title">{{ item.name }}</h3>
             <div class="repo-meta">
