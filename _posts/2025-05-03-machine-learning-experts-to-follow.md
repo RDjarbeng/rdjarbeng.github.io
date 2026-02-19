@@ -47,10 +47,35 @@ card_items:
     description: "Author of the [Complete Machine Learning Package](https://github.com/Nyandwi/machine_learning_complete), a GitHub repository with over 3,900 stars 🌟. Jean is an avid learner and content creator who explains Python and AI concepts with clarity. _Why follow?_ Beginner-friendly tutorials and open-source contributions."
     url: "https://github.com/Nyandwi/machine_learning_complete"
     link_text: "Visit GitHub Repo"
+  - name: "Jeremy Howard"
+    badge_1: "fast.ai Founder"
+    badge_2: "ULMFiT"
+    description: "Co-founder of [fast.ai](https://www.fast.ai/), which is dedicated to making deep learning accessible to all. He is a research scientist and educator known for pioneering transfer learning in NLP with ULMFiT. _Why follow?_ For his mission to democratize AI and his incredibly effective teaching methods."
+    url: "https://www.fast.ai/"
+    link_text: "Visit fast.ai"
+  - name: "Andrej Karpathy"
+    badge_1: "AI Educator"
+    badge_2: "Computer Vision"
+    description: "Former Director of AI at Tesla and a founding member of OpenAI. He is famous for his Stanford CS231n course and his 'Zero to Hero' neural network tutorials on YouTube. _Why follow?_ For deep technical dives and clear explanations of complex AI architectures."
+    url: "https://karpathy.ai/"
+    link_text: "Visit Website"
+  - name: "Yann LeCun"
+    badge_1: "Turing Award"
+    badge_2: "Meta AI Chief"
+    description: "Chief AI Scientist at Meta and a professor at NYU. He is one of the 'Godfathers of AI', known for his foundational work on Convolutional Neural Networks (CNNs). _Why follow?_ For high-level perspectives on the future of AI and often spirited debates on social media."
+    url: "http://yann.lecun.com/"
+    link_text: "Visit Website"
+  - name: "Ian Goodfellow"
+    badge_1: "GANs Creator"
+    badge_2: "Deep Learning"
+    description: "Inventor of Generative Adversarial Networks (GANs), which revolutionized generative AI. He has worked at Google Brain, OpenAI, and Apple, and is the lead author of the 'Deep Learning' textbook. _Why follow?_ To keep up with the cutting edge of generative models and deep learning theory."
+    url: "https://www.iangoodfellow.com/"
+    link_text: "Visit Website"
+
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI.
 
-I’m a huge fan of Andrew Ng and Lex Fridman (okay, maybe a bit biased 😅), but their ability to make complex AI topics accessible and engaging is unmatched. Whether you're new to machine learning or a seasoned pro, their content—along with the work of Andreas, Emmanuel, and Jean—offers something valuable for everyone.
+I’m a huge fan of Andrew Ng and Lex Fridman (okay, maybe a bit biased 😅), but their ability to make complex AI topics accessible and engaging is unmatched. Whether you're new to machine learning or a seasoned pro, their content—along with the work of Andreas, Emmanuel, Jean, Jeremy, Andrej, Yann, and Ian—offers something valuable for everyone.
 
 ## Paying It Forward
 
