@@ -9,7 +9,7 @@ permalink: /search/
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search..." class="search-box">
   </div>
-  <ul id="results-container"></ul>
+  <div id="results-container" class="post-list" style="margin-top: 20px;"></div>
 </div>
 
 {% include search-script.html %}

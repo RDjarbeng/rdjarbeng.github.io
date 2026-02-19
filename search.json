@@ -4,12 +4,23 @@ layout: none
 [
   {% assign all_searchable = site.posts | concat: site.personal %}
   {% for post in all_searchable %}
-  {
-    "title"    : "{{ post.title | escape }}",
-    "url"      : "{{ post.url | relative_url }}",
-    "date"     : "{{ post.date | date: '%Y-%m-%d' }}",
-    "excerpt": "{{ post.excerpt | strip_html | strip_newlines }}",
-    "type"     : "{{ post.collection | default: 'posts' }}"
-  }{% unless forloop.last %},{% endunless %}
+    {% assign words = post.content | number_of_words %}
+    {% assign minutes = words | divided_by: 180 | ceil %}
+    {% capture image_html %}
+      {% if post.image %}
+        <div class='post-card-image'>
+          <img src='{{ post.image }}' alt='{{ post.title | escape }}' class='post-image'>
+        </div>
+      {% endif %}
+    {% endcapture %}
+    {
+      "title"     : {{ post.title | jsonify }},
+      "url"       : {{ post.url | relative_url | jsonify }},
+      "date"      : {{ post.date | date: '%B %-d, %Y' | jsonify }},
+      "read_time" : "{{ minutes }} min read",
+      "image_html": {{ image_html | strip | jsonify }},
+      "excerpt"   : {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+      "type"      : {{ post.collection | default: 'posts' | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
