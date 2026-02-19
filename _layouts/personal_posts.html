@@ -6,12 +6,7 @@ layout: default
   {{ content }}
 </div>
 <h2 class="section-title">({{ site.personal | size }}) Personal Posts </h2>
-<div id="search-container">
-  <input type="text" id="search-input" placeholder="Search posts..." class="search-box">
-</div>
 
-<!-- Results container -->
-<ul id="results-container" style="box-shadow: 1px solid gray;"></ul>
 {% if page.custom_pager %}
 {% assign posts_to_display = page.custom_pager.posts %}
 {% assign total_posts = page.custom_pager.total_posts %}
@@ -39,5 +34,3 @@ layout: default
 {% if page.custom_pager %}
 {% include pagination.html paginator=page.custom_pager base_url="/personal/" %}
 {% endif %}
-
-{% include search-script.html %}
