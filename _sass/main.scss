@@ -1645,4 +1645,73 @@ a:hover {
     background-color: #2980b9;
     text-decoration: none;
   }
+}/* Search Form Styles */
+.header-search-form {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 15px;
+
+    .search-input {
+        width: 0;
+        padding: 0;
+        border: none;
+        /* Hidden border when collapsed */
+        background: transparent;
+        font-size: 14px;
+        color: #333;
+        outline: none;
+        border-radius: 20px;
+        /* Rounded ends as requested */
+        transition: width 0.4s ease, padding 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+        opacity: 0;
+        /* Fully hide text/placeholder when collapsed */
+        cursor: pointer;
+        /* Allows clicking to focus if slightly visible */
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+
+    .search-submit {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #555;
+        transition: color 0.3s ease;
+        z-index: 2;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
+
+    /* Expansion Logic */
+    &:hover .search-input,
+    &:focus-within .search-input {
+        width: 200px;
+        padding: 6px 15px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        opacity: 1;
+        cursor: text;
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+}
+
+/* Mobile responsive check */
+@media (max-width: 600px) {
+
+    .header-search-form:hover .search-input,
+    .header-search-form:focus-within .search-input {
+        width: 140px;
+    }
 }
