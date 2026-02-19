@@ -31,7 +31,10 @@
 
         <a class="page-link" href="{{ '/about' | relative_url }}">About</a>
         <form action="{{ '/search/' | relative_url }}" method="get" class="header-search-form">
-          <input type="text" name="q" class="search-input" placeholder="Search" aria-label="Search" required>
+
+          <input type="text" id="nav-search-input" name="q" class="search-input" placeholder="Search"
+            aria-label="Search" required autocomplete="off">
+
           <button type="submit" class="search-submit" aria-label="Search">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -42,5 +45,6 @@
         </form>
       </div>
     </nav>
+    <div id="nav-search-results" class="nav-search-results"></div>
   </div>
 </header>

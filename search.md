@@ -12,4 +12,4 @@ permalink: /search/
   <div id="results-container" class="post-list" style="margin-top: 20px;"></div>
 </div>
 
-{% include search-script.html %}
+

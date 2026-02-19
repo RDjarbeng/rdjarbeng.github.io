@@ -1645,73 +1645,144 @@ a:hover {
     background-color: #2980b9;
     text-decoration: none;
   }
-}/* Search Form Styles */
+}
+
+/* Search Form Styles */
 .header-search-form {
-    display: inline-flex;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 15px;
+
+  .search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    /* Hidden border when collapsed */
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    border-radius: 20px;
+    /* Rounded ends as requested */
+    transition: width 0.4s ease, padding 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+    opacity: 0;
+    /* Fully hide text/placeholder when collapsed */
+    cursor: pointer;
+    /* Allows clicking to focus if slightly visible */
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  .search-submit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
     align-items: center;
-    position: relative;
-    margin-left: 15px;
+    justify-content: center;
+    color: #555;
+    transition: color 0.3s ease;
+    z-index: 2;
 
-    .search-input {
-        width: 0;
-        padding: 0;
-        border: none;
-        /* Hidden border when collapsed */
-        background: transparent;
-        font-size: 14px;
-        color: #333;
-        outline: none;
-        border-radius: 20px;
-        /* Rounded ends as requested */
-        transition: width 0.4s ease, padding 0.4s ease, border 0.4s ease, background-color 0.4s ease;
-        opacity: 0;
-        /* Fully hide text/placeholder when collapsed */
-        cursor: pointer;
-        /* Allows clicking to focus if slightly visible */
-
-        &::placeholder {
-            color: transparent;
-        }
+    &:hover {
+      color: #007bff;
     }
+  }
 
-    .search-submit {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #555;
-        transition: color 0.3s ease;
-        z-index: 2;
+  /* Expansion Logic */
+  &:hover .search-input,
+  &:focus-within .search-input {
+    width: 200px;
+    padding: 6px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    opacity: 1;
+    cursor: text;
 
-        &:hover {
-            color: #007bff;
-        }
+    &::placeholder {
+      color: #999;
     }
-
-    /* Expansion Logic */
-    &:hover .search-input,
-    &:focus-within .search-input {
-        width: 200px;
-        padding: 6px 15px;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        opacity: 1;
-        cursor: text;
-
-        &::placeholder {
-            color: #999;
-        }
-    }
+  }
 }
 
 /* Mobile responsive check */
 @media (max-width: 600px) {
 
-    .header-search-form:hover .search-input,
-    .header-search-form:focus-within .search-input {
-        width: 140px;
-    }
+  .header-search-form:hover .search-input,
+  .header-search-form:focus-within .search-input {
+    width: 140px;
+  }
+}
+
+/* Navbar Search Preview */
+.nav-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 5px;
+  /* Add some spacing */
+}
+
+/* Ensure header wrapper positions the results correctly */
+.site-header .wrapper {
+  position: relative;
+}
+
+.nav-search-results:empty {
+  display: none;
+}
+
+.nav-search-item {
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  // list-style: none; /* simple-jekyll-search often uses div but if resultsContainer is ul/li */
+}
+
+.nav-search-item:last-child {
+  border-bottom: none;
+}
+
+.nav-search-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.nav-search-link:hover {
+  background-color: #f6f8fa;
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.nav-search-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-search-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.nav-search-date {
+  font-size: 12px;
+  color: #888;
 }

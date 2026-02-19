@@ -1,27 +1,48 @@
 <script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
 
 <script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '{{ "/search.json" | relative_url }}',
-    searchResultTemplate: '<div class="post-card"><a class="post-link" href="{url}">{image_html}<div class="post-card-content"><h4 title="{title}">{title}</h4><div class="post-meta-categories-container"><div class="post-meta-card">{date}</div><div class="post-meta-dot">·</div><div class="post-meta-card">{read_time}</div></div></div></a></div>',
-    noResultsText: '<p>No results found</p>',
-    limit: 10
-  });
+  var sjs = null;
+  var navSjs = null;
+
+  if (document.getElementById('search-input')) {
+    sjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ "/search.json" | relative_url }}',
+      searchResultTemplate: '<div class="post-card"><a class="post-link" href="{url}">{image_html}<div class="post-card-content"><h4 title="{title}">{title}</h4><div class="post-meta-categories-container"><div class="post-meta-card">{date}</div><div class="post-meta-dot">·</div><div class="post-meta-card">{read_time}</div></div></div></a></div>',
+      noResultsText: '<p>No results found</p>',
+      limit: 10
+    });
+  }
+
+  // Only initialize navbar search if main search is NOT active to avoid conflicts
+  if (document.getElementById('nav-search-input') && !sjs) {
+    navSjs = SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('nav-search-results'),
+      json: '{{ "/search.json" | relative_url }}',
+      searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{date}</span></div></a></div>',
+      noResultsText: '<div class="nav-search-item" style="padding: 10px;">No results found</div>',
+      limit: 5
+    });
+  }
 
   // Handle query parameter for search
   window.addEventListener('load', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q');
     if (query) {
+      // Prioritize the main search input if it exists
       const searchInput = document.getElementById('search-input');
       if (searchInput) {
         searchInput.value = query;
         // Trigger input event to start search
-        searchInput.dispatchEvent(new Event('input'));
-        // Also trigger keyup as some libraries listen to that
-        searchInput.dispatchEvent(new Event('keyup'));
+        // Wait a bit for the JSON to be fetched and processed
+        setTimeout(function () {
+          searchInput.dispatchEvent(new Event('input'));
+          // Also trigger keyup as some libraries listen to that
+          searchInput.dispatchEvent(new Event('keyup'));
+        }, 500);
       }
     }
   });
