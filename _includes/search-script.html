@@ -24,7 +24,7 @@
       searchInput: navSearchInput,
       resultsContainer: navSearchResults,
       json: '{{ "/search.json" | relative_url }}',
-      searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{date}</span></div></a></div>',
+      searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{display_type} • {date}</span></div></a></div>',
       noResultsText: '<div class="nav-search-item" style="padding: 10px;">No results found</div>',
       limit: 5
     });
