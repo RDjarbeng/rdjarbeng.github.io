@@ -137,4 +137,3 @@ In data science and machine learning, data is the new oil—it's the fuel that p
 
 Here’s a breakdown of some of the most popular and useful open data repositories available today.
 
-{% include card_list.html %}
