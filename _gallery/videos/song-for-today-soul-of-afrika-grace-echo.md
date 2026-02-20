@@ -1,5 +1,5 @@
 ---
-title: Song for Today  Soul of Afrika Grace Echo
+title: Song for Today: "Soul of Afrika" by Grace Echo
 published: true
 date: 2026-02-19T18:41:00
 platform: tiktok
@@ -9,9 +9,9 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  Song for Today 🎶 🎧 Soul of Afrika Grace Echo on Youtube
+  Song for today 🎶 🎧 Check out "Soul of Afrika" by Grace Echo on YouTube.
 
-  May it guide your steps wherever you go 😉
+  May it guide your steps wherever you go! 😉
 
-  [**#gospelmusic**](https://www.tiktok.com/tag/gospelmusic) [**#graceecho**](https://www.tiktok.com/tag/graceecho) [**#soulofafrika**](https://www.tiktok.com/tag/soulofafrika) [**#english**](https://www.tiktok.com/tag/english) [**#Nigeria**](https://www.tiktok.com/tag/nigeria)
+  [**#gospelmusic**](https://www.tiktok.com/tag/gospelmusic) [**#graceecho**](https://www.tiktok.com/tag/graceecho) [**#soulofafrika**](https://www.tiktok.com/tag/soulofafrika) [**#english**](https://www.tiktok.com/tag/english) [**#Nigeria**](https://www.tiktok.com/tag/nigeria)
 ---

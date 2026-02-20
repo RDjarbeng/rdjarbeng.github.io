@@ -1,5 +1,5 @@
 ---
-title: IshowSpeed finds coconuts in West Africa Benin
+title: IShowSpeed Finds Coconuts in Benin, West Africa
 published: true
 date: 2026-02-19T18:38:00
 platform: tiktok
@@ -9,7 +9,7 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  IshowSpeed finds coconuts 🥥 in West Africa Benin 🇧🇯. Surprised that not all countries habe this available? [**#ishowspeed**](https://www.tiktok.com/tag/ishowspeed) [**#benin**](https://www.tiktok.com/tag/benin) [**#africa**](https://www.tiktok.com/tag/africa)
+  IShowSpeed finds coconuts 🥥 in Benin, West Africa 🇧🇯. Are you surprised that not all countries have this available? [**#ishowspeed**](https://www.tiktok.com/tag/ishowspeed) [**#benin**](https://www.tiktok.com/tag/benin) [**#africa**](https://www.tiktok.com/tag/africa)
 
-  **Song is Papa Outai-Afro Soul**
+  **Song is "Papaoutai - Afro Soul"**
 ---

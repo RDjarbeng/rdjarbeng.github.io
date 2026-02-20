@@ -1,5 +1,5 @@
 ---
-title: This blind singer from Nigeria performs Defe Defe by team Eternity Ghana and transitions into Kumama flawlessly
+title: A Blind Singer from Nigeria Performs "Defe Defe" by Team Eternity Ghana and Transitions Flawlessly into "Kumama"
 published: true
 date: 2026-02-19T18:22:00
 platform: tiktok
@@ -8,5 +8,5 @@ embed_code: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@rich
 thumbnail: assets/images/videos/transition_chrisvic_defedefeto_kumama_-Cover.jpg
 type: video
 category: videos
-caption: Wait for the song Switch🎶🌟 as the crowd goes wild. This blind singer from Nigeria performs Defe Defe by team Eternity Ghana and transitions into Kumama🎶 flawlessly. Reaction video from Nazir Rap battle. Original video from Now GospelTV [**#Ghana**](https://www.tiktok.com/tag/Ghana) [**#music**](https://www.tiktok.com/tag/music) [**#Nigeria**](https://www.tiktok.com/tag/Nigeria) [**#gospel**](https://www.tiktok.com/tag/gospel) [**#english**](https://www.tiktok.com/tag/english)
+caption: Wait for the song switch 🎶🌟 as the crowd goes wild! A blind singer from Nigeria performs "Defe Defe" by Team Eternity Ghana and transitions flawlessly into "Kumama" 🎶. This is a reaction video from Nazir Rap Battle; the original video is from Now GospelTV. [**#Ghana**](https://www.tiktok.com/tag/Ghana) [**#music**](https://www.tiktok.com/tag/music) [**#Nigeria**](https://www.tiktok.com/tag/Nigeria) [**#gospel**](https://www.tiktok.com/tag/gospel) [**#english**](https://www.tiktok.com/tag/english)
 ---

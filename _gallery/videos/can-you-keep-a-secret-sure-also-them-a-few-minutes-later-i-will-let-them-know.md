@@ -1,5 +1,5 @@
 ---
-title: Can you keep a secret? Sure. Also them a Few Minutes Later- I will let them know
+title: "Can You Keep a Secret?" Them a Few Minutes Later: "I Will Let Them Know!"
 published: true
 date: 2026-02-19T18:24:00
 platform: tiktok
@@ -9,7 +9,9 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  Can you keep a secret? Them: Sure. We listen we don't judge. Nobody will hear of this. A few moments later 😭
+  "Can you keep a secret?"
+  Them: "Sure. We listen, we don't judge. Nobody will hear of this."
+  A few moments later... 😭
 
-  I will let them know - From Undignified song by Dunsin Oyekan
+  "I will let them know" - Excerpt from the "Undignified" song by Dunsin Oyekan.
 ---

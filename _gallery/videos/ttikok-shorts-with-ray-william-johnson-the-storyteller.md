@@ -1,5 +1,5 @@
 ---
-title: Ttikok shorts with Ray William Johnson the storyteller
+title: TikTok Shorts with Ray William Johnson, the Storyteller
 published: true
 date: 2026-02-19T18:23:00
 platform: tiktok
@@ -9,7 +9,7 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  How it feels watching tikok shorts with Ray William Johnson the storyteller. So this woman.... then we stop scrolling and just watch.
+  How it feels watching TikTok shorts with Ray William Johnson the storyteller! "So this woman..." — then we stop scrolling and just watch.
 
-  His tiktok channel: https://www.tiktok.com/@realraywilliam
+  His TikTok channel: https://www.tiktok.com/@realraywilliam
 ---

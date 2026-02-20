@@ -1,5 +1,5 @@
 ---
-title: Streamer iShowSpeed Africa Tour Comes To An End
+title: Streamer IShowSpeed's Africa Tour Comes to an End
 published: true
 date: 2026-02-19T18:26:00
 platform: tiktok
@@ -9,9 +9,8 @@ thumbnail: assets/images/videos/ishowspeed_africa_tour_conclusion(1)-Cover.jpg
 type: video
 category: videos
 caption: |-
-  ishowspeed africa tour comes to an end.
-  Speed says he's glad he came to Africa.
+  IShowSpeed's Africa tour comes to an end! Speed reflects on his trip and says he is glad he came to Africa.
 
-  Song used in the intro  🎶united in grief (intro loop)
-  [**#ishowspeed**](https://www.tiktok.com/tag/ishowspeed) [**#musiclyrics**](https://www.tiktok.com/tag/musiclyrics) [**#unitedingrief**](https://www.tiktok.com/tag/unitedingrief) [**#kendricklamar**](https://www.tiktok.com/tag/kendricklamar) [**#africa**](https://www.tiktok.com/tag/africa)
+  The song used in the intro is 🎶 "United In Grief" (intro loop) by Kendrick Lamar.
+  [**#ishowspeed**](https://www.tiktok.com/tag/ishowspeed) [**#musiclyrics**](https://www.tiktok.com/tag/musiclyrics) [**#unitedingrief**](https://www.tiktok.com/tag/unitedingrief) [**#kendricklamar**](https://www.tiktok.com/tag/kendricklamar) [**#africa**](https://www.tiktok.com/tag/africa)
 ---
