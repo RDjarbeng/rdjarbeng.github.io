@@ -7,8 +7,8 @@ import html
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
-from telegram import Update
-from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters, CommandHandler
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, CallbackQueryHandler, filters, CommandHandler
 
 # Load environment variables
 load_dotenv()
@@ -58,7 +58,15 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         for url in urls:
             yt_id = extract_youtube_id(url)
             if yt_id:
-                title = get_page_title(url) or "YouTube Video"
+                # Allow user to provide title and caption by just typing it before/after the link
+                text_without_url = text.replace(url, '').strip()
+                if text_without_url:
+                    parts = text_without_url.split('\n', 1)
+                    title = parts[0].strip()
+                    caption = parts[1].strip() if len(parts) > 1 else ""
+                else:
+                    title = get_page_title(url) or "YouTube Video"
+                    caption = ""
                 
                 # Create Markdown file for gallery_videos
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -70,8 +78,6 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 root_path = Path(REPO_ROOT).resolve()
                 collection_dir = root_path / "_gallery/videos"
                 collection_dir.mkdir(parents=True, exist_ok=True)
-                
-                caption = text.replace(url, '').strip()
                 
                 frontmatter = {
                     "title": title[:70],
@@ -92,11 +98,11 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 with open(md_path, "w", encoding="utf-8") as f:
                     f.write(md_content)
                 
-                await update.message.reply_text(f"✅ YouTube video added to gallery!\n📄 File: {md_path.name}\n🎥 ID: {yt_id}\n📝 Title: {title}")
+                await update.message.reply_text(f"✅ YouTube video added to gallery!\n📄 File: {md_path.name}\n📝 Title: {title}")
         return
 
     await update.message.reply_text(
-        "I didn't recognize any commands or YouTube links in that text. "
+        "I didn't recognize any YouTube links in that text. "
         "Send an image to add a file, or send a YouTube link to add a video."
     )
 
@@ -117,38 +123,69 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         return
 
-    target_type = "meme"
-    clean_caption = caption
+    # Present user with a menu instead of parsing commands manually
+    keyboard = [
+        [
+            InlineKeyboardButton("Meme", callback_data="dest_meme"),
+            InlineKeyboardButton("Gallery", callback_data="dest_gallery")
+        ],
+        [
+            InlineKeyboardButton("AI Gen", callback_data="dest_ai"),
+            InlineKeyboardButton("Asset Only", callback_data="dest_asset")
+        ],
+        [
+            InlineKeyboardButton("Cancel", callback_data="dest_cancel")
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    msg = await update.message.reply_text(
+        "Where would you like to add this image?", 
+        reply_markup=reply_markup,
+        reply_to_message_id=update.message.message_id
+    )
+    
+    # Store data for the callback handler
+    context.user_data[str(msg.message_id)] = {
+        'file_id': media_obj.file_id,
+        'caption': caption
+    }
 
-    # Check for routing commands in caption
-    if caption.startswith("/ai "):
-        target_type = "ai"
-        clean_caption = caption.replace("/ai ", "", 1).strip()
-    elif caption.strip() == "/ai":
-        target_type = "ai"
-        clean_caption = ""
-    elif caption.startswith("/gallery "):
-        target_type = "gallery"
-        clean_caption = caption.replace("/gallery ", "", 1).strip()
-    elif caption.strip() == "/gallery":
-        target_type = "gallery"
-        clean_caption = ""
-    elif caption.startswith("/asset "):
-        target_type = "asset"
-        clean_caption = caption.replace("/asset ", "", 1).strip()
-    elif caption.strip() == "/asset":
-        target_type = "asset"
-        clean_caption = ""
-    elif caption.startswith("/meme "):
-        target_type = "meme"
-        clean_caption = caption.replace("/meme ", "", 1).strip()
-    elif caption.strip() == "/meme":
-        target_type = "meme"
-        clean_caption = ""
+async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    
+    if not is_authorized(update):
+        await query.edit_message_text(text="Unauthorized.")
+        return
+        
+    data = query.data
+    if not data.startswith("dest_"):
+        return
+        
+    target_type = data.split("_")[1]
+    
+    if target_type == "cancel":
+        await query.edit_message_text(text="❌ Upload cancelled.")
+        return
+        
+    msg_id = str(query.message.message_id)
+    payload = context.user_data.get(msg_id)
+    
+    if not payload:
+        await query.edit_message_text(text="❌ Session expired or data lost. Please send the image again.")
+        return
 
-    if not clean_caption:
-        clean_caption = "Untitled"
-
+    await query.edit_message_text(text="⏳ Downloading and processing image...")
+    
+    file_id = payload['file_id']
+    caption = payload['caption']
+    
+    # clean up context immediately
+    del context.user_data[msg_id]
+    
+    clean_caption = caption.strip() if caption else "Untitled"
+    
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_title = "".join([c if c.isalnum() else "-" for c in clean_caption[:30].lower()]).strip("-")
     if not safe_title:
@@ -177,19 +214,23 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
         collection_dir = root_path / collection_rel_dir
         collection_dir.mkdir(parents=True, exist_ok=True)
     
-    new_file = await context.bot.get_file(media_obj.file_id)
-    
-    valid_exts = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
-    image_ext = Path(new_file.file_path).suffix.lower()
-    if image_ext not in valid_exts:
-        image_ext = ".jpg"
+    try:
+        new_file = await context.bot.get_file(file_id)
         
-    image_filename = f"{filename}{image_ext}"
-    image_path = media_dir / image_filename
-    await new_file.download_to_drive(custom_path=str(image_path))
-    
+        valid_exts = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
+        image_ext = Path(new_file.file_path).suffix.lower()
+        if image_ext not in valid_exts:
+            image_ext = ".jpg"
+            
+        image_filename = f"{filename}{image_ext}"
+        image_path = media_dir / image_filename
+        await new_file.download_to_drive(custom_path=str(image_path))
+    except Exception as e:
+        await query.edit_message_text(text=f"❌ Failed to download image: {e}")
+        return
+        
     if target_type == "asset":
-        await update.message.reply_text(
+        await query.edit_message_text(
             f"✅ Image saved as asset!\n\n📄 File: {image_filename}\n"
             f"🔗 Markdown path: `/{media_rel_dir}/{image_filename}`\n\n"
             f"Use this path in your blog posts."
@@ -228,12 +269,15 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
     md_path = collection_dir / f"{filename}.md"
     
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(md_content)
+    try:
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write(md_content)
+    except Exception as e:
+        await query.edit_message_text(text=f"❌ Failed to write markdown file: {e}")
+        return
     
-    await update.message.reply_text(
-        f"✅ Uploaded to {target_type}!\n\n📄 File: {md_path.name}\n🖼 Image: {image_filename}\n\n"
-        f"💡 Tip: You can change categories by adding `/ai`, `/gallery` or `/asset` as the caption to images."
+    await query.edit_message_text(
+        f"✅ Uploaded to {target_type}!\n\n📄 File: {md_path.name}\n🖼 Image: {image_filename}"
     )
 
 async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -241,13 +285,12 @@ async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Hello! I am your CMS Bot.\n"
         "Here is what I can do:\n\n"
         "🖼 *Images*:\n"
-        "Send an image. The default is 'meme'. You can use these commands in the caption:\n"
-        "• `/meme <caption...>` - Add to memes gallery\n"
-        "• `/ai <caption...>` - Add to AI gallery\n"
-        "• `/gallery <caption...>` - Add to General gallery\n"
-        "• `/asset <caption...>` - Just upload the image to assets (no post created)\n\n"
+        "Send any image from your gallery or as a file document. "
+        "I will reply with an interactive inline menu allowing you to quickly choose a destination (Meme, Gallery, AI, or generic Asset).\n\n"
         "🎥 *Videos*:\n"
-        "Send a text message with a YouTube URL to automatically add it to the video gallery.",
+        "Send a YouTube URL. If you send just a URL, I'll attempt to automatically extract the title of the video from YouTube.\n"
+        "Or, you can simply type your custom Title in the same message on the first line, then the URL.\n"
+        "(Any text below your title will become the description/caption).",
         parse_mode="Markdown"
     )
 
@@ -266,6 +309,9 @@ if __name__ == '__main__':
     
     text_handler = MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text)
     application.add_handler(text_handler)
+
+    # Add callback query handler for inline buttons
+    application.add_handler(CallbackQueryHandler(handle_callback))
     
     print("Bot is starting...")
     application.run_polling()
