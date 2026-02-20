@@ -9,5 +9,6 @@ thumbnail: ''
 caption: An experiment combining football/soccer ⚽ and meta segment anything models. Modeled and created by Richard Djarbeng.
 type: video
 category: videos
+date: 2026-02-07 19:44:16
 ---
 

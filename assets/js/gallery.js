@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const item = visibleItems[index];
         const type = item.dataset.type;
         const src = item.dataset.src;
-        const caption = item.dataset.caption;
+        const caption = item.querySelector('.gallery-caption-content').innerHTML;
         const title = item.dataset.title;
         const date = item.dataset.date;
 
@@ -436,6 +436,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
             lightboxMediaContainer.appendChild(div);
+        }
+
+        const link = item.dataset.link;
+        if (link && link.trim() !== '') {
+            const lightboxLink = document.querySelector('.lightbox-link');
+            if (lightboxLink) {
+                // Check if it's an internal link (relative URL) to handle properly or just use as is
+                // Since relative_url filter is used, it should be fine.
+                lightboxLink.href = link;
+                lightboxLink.style.display = 'inline-block';
+                lightboxLink.textContent = 'Read Related Post';
+            }
+        } else {
+            const lightboxLink = document.querySelector('.lightbox-link');
+            if (lightboxLink) {
+                lightboxLink.style.display = 'none';
+            }
         }
 
         lightbox.classList.add('active');

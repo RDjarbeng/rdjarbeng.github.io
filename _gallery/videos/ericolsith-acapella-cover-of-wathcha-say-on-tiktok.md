@@ -1,0 +1,15 @@
+---
+title: EricolSith Acapella Cover of Wathcha Say on Tiktok
+platform: tiktok
+youtube_id: ''
+embed_code: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ericolsith/video/7567431982561414413" data-video-id="7567431982561414413" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@ericolsith" href="https://www.tiktok.com/@ericolsith?refer=embed">@ericolsith</a> Hide and seek @Imogen Heap <a title="cover" target="_blank" href="https://www.tiktok.com/tag/cover?refer=embed">#cover</a> <a title="acapella" target="_blank" href="https://www.tiktok.com/tag/acapella?refer=embed">#acapella</a> <a title="harmony" target="_blank" href="https://www.tiktok.com/tag/harmony?refer=embed">#harmony</a> <a target="_blank" title="♬ original sound - Olsith" href="https://www.tiktok.com/music/original-sound-7567432049318054669?refer=embed">♬ original sound - Olsith</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
+thumbnail: ''
+caption: |-
+  This cover of Jason Derulo - Whatcha Say, has been playing for me non-stop. @[ericolsith ](https://www.tiktok.com/@ericolsith)does an acapella cover of the Whatcha Say song with 6 different parts.
+
+  Original video link on [Tiktok](http://tiktok.com/@ericolsith/video/7567431982561414413)
+type: video
+category: videos
+date: 2026-02-07T18:55:00
+published: true
+---

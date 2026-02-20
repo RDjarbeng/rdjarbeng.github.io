@@ -7,4 +7,5 @@ thumbnail: ''
 caption: Air Quality Visualization for Kigali -Song used Sail
 type: video
 category: videos
+date: 2026-02-07 19:44:16
 ---

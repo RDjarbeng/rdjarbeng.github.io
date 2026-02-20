@@ -7,7 +7,7 @@ tags:
   - Summer School
   - Research
 image: /assets/images/20260204-111129.png
-image_alt: 'Official announcement banner for CMMRS 2026 in Saarbrücken, Germany'
+image_alt: Official announcement banner for CMMRS 2026 in Saarbrücken, Germany
 layout: personal
 ---
 
@@ -19,6 +19,8 @@ The small, select group of attendees will be exposed to state-of-the-art researc
 
 For full consideration, applications should be received by February 14, 2026 AOE. Travel and accommodation will be covered for accepted students. Further information about the school and how to apply can be found at [https://cmmrs.mpi-sws.org](https://cmmrs.mpi-sws.org/)
 
-Disclaimer: Author attended CMMRS in 2025 and loved it.
 
+![Richard looking at a billboard in Saarbrucken with CMMRS on it's banner ](/assets/images/1000356593.png "Richard at CMMRS ")
+
+Disclaimer: Author attended CMMRS in 2025 and loved it.
 ![CMMRS 2025 group photo with Richard Djarbeng in attendance](/assets/images/cmmrs_group_photo.JPG "CMMRS group photo")

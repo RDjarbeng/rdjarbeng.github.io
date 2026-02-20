@@ -93,6 +93,64 @@ collections:
         }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
+      - label: "Card Items"
+        name: "card_items"
+        widget: "list"
+        required: false
+        collapsed: true
+        summary: "{{fields.name}}"
+        fields:
+          - { label: "Title", name: "name", widget: "string" }
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            required: false
+            media_libraries:
+              default:
+                config:
+                  transformations:
+                    raster_image:
+                      format: webp
+                      quality: 85
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Badge 1 (e.g. Best For)",
+              name: "badge_1",
+              widget: "string",
+              required: false,
+              hint: "First badge (blue)",
+            }
+          - {
+              label: "Badge 2 (e.g. Type)",
+              name: "badge_2",
+              widget: "string",
+              required: false,
+              hint: "Second badge (green)",
+            }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Primary Link URL",
+              name: "url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Primary Link Text",
+              name: "link_text",
+              widget: "string",
+              default: "Visit Link",
+              required: false,
+            }
 
   - name: "personal"
     label: "Personal"
@@ -129,6 +187,7 @@ collections:
           allow_add: true,
           # field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
           default: [],
+          required: false,
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Image"
@@ -155,6 +214,64 @@ collections:
           widget: "hidden",
           default: "personal",
         }
+      - label: "Card Items"
+        name: "card_items"
+        widget: "list"
+        required: false
+        collapsed: true
+        summary: "{{fields.name}}"
+        fields:
+          - { label: "Title", name: "name", widget: "string" }
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            required: false
+            media_libraries:
+              default:
+                config:
+                  transformations:
+                    raster_image:
+                      format: webp
+                      quality: 85
+          - {
+              label: "Alt Text",
+              name: "alt",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Badge 1 (e.g. Best For)",
+              name: "badge_1",
+              widget: "string",
+              required: false,
+              hint: "First badge (blue)",
+            }
+          - {
+              label: "Badge 2 (e.g. Type)",
+              name: "badge_2",
+              widget: "string",
+              required: false,
+              hint: "Second badge (green)",
+            }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Primary Link URL",
+              name: "url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Primary Link Text",
+              name: "link_text",
+              widget: "string",
+              default: "Visit Link",
+              required: false,
+            }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
   - name: "authors"
@@ -385,6 +502,18 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: true,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "{{now}}",
+        }
+      - {
           label: "Platform",
           name: "platform",
           widget: "select",
@@ -411,12 +540,6 @@ collections:
           widget: "image",
           required: false,
         }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
       - { label: "Type", name: "type", widget: "hidden", default: "video" }
       - {
           label: "Category",
@@ -425,16 +548,10 @@ collections:
           default: "videos",
         }
       - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          default: "{{now}}",
-        }
-      - {
-          label: "Published",
-          name: "published",
-          widget: "boolean",
-          default: true,
+          label: "Caption",
+          name: "caption",
+          widget: "markdown",
+          required: false,
         }
 
 singletons:

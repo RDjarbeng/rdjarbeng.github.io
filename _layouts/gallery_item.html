@@ -45,8 +45,7 @@ layout: default
 
             <!-- Caption & Content -->
             {% if page.caption %}
-            <div class="gallery-caption"
-                style="font-style: italic; color: #555; margin-bottom: 1.5rem; border-left: 4px solid #eee; padding-left: 1rem;">
+            <div class="gallery-caption">
                 {{ page.caption | markdownify }}
             </div>
             {% endif %}
@@ -55,7 +54,7 @@ layout: default
                 {{ content }}
             </div>
 
-            {% if page.link %}
+            {% if page.link and page.link != '' %}
             <div style="margin-top: 2rem;">
                 <a href="{{ page.link | relative_url }}" class="btn"
                     style="display: inline-block; padding: 0.5rem 1rem; border: 1px solid currentColor; border-radius: 4px; text-decoration: none;">View

@@ -7,4 +7,5 @@ thumbnail: /assets/images/agentic_obj_dection_landingai_cover.png
 caption: ''
 type: video
 category: videos
+date: 2026-02-07 19:44:16
 ---
