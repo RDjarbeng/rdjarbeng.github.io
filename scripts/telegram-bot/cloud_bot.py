@@ -288,10 +288,15 @@ def handle_text(message):
             yt_id = extract_youtube_id(url)
             if yt_id:
                 status_msg = bot.reply_to(message, "⏳ Connecting to GitHub API to register YouTube Video...")
-                title = get_page_title(url) or "YouTube Video"
                 
                 text_without_url = text.replace(url, '').strip()
-                caption = text_without_url if text_without_url else ""
+                if text_without_url:
+                    parts = text_without_url.split('\n', 1)
+                    title = parts[0].strip()
+                    caption = parts[1].strip() if len(parts) > 1 else ""
+                else:
+                    title = "YouTube Video"
+                    caption = ""
                 
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
