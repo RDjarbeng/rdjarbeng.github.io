@@ -60,15 +60,11 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             yt_id = extract_youtube_id(url)
             if yt_id:
                 status_msg = await update.message.reply_text("⏳ Processing YouTube link...")
-                # Allow user to provide title and caption by just typing it before/after the link
+                # Get title by scraping the URL directly
+                title = get_page_title(url) or "YouTube Video"
+                
                 text_without_url = text.replace(url, '').strip()
-                if text_without_url:
-                    parts = text_without_url.split('\n', 1)
-                    title = parts[0].strip()
-                    caption = parts[1].strip() if len(parts) > 1 else ""
-                else:
-                    title = get_page_title(url) or "YouTube Video"
-                    caption = ""
+                caption = text_without_url if text_without_url else ""
                 
                 # Create Markdown file for gallery_videos
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
