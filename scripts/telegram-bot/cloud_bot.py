@@ -322,7 +322,7 @@ def handle_text(message):
                 
                 try:
                     commit_to_github(md_path, md_content, f"Add YouTube Video {filename}.md")
-                    bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}", message.chat.id, status_msg.message_id)
+                    bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", message.chat.id, status_msg.message_id)
                 except Exception as e:
                     bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", message.chat.id, status_msg.message_id)
         return
