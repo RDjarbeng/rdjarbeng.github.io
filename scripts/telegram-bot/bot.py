@@ -140,6 +140,9 @@ async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_mod
     elif target_type == "asset":
         media_rel_dir = "assets/images"
         collection_rel_dir = None
+    elif target_type == "grouped":
+        media_rel_dir = "assets/images/grouped"
+        collection_rel_dir = None
     else:
         return
         
@@ -164,7 +167,7 @@ async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_mod
         await app.bot.edit_message_text(text=f"❌ Failed to download image: {e}", chat_id=chat_id, message_id=message_id)
         return
         
-    if target_type == "asset":
+    if target_type == "asset" or target_type == "grouped":
         await app.bot.edit_message_text(
             f"✅ Image saved as asset!\n\n📄 File: {image_filename}\n"
             f"🔗 Markdown path: `/{media_rel_dir}/{image_filename}`\n\n"
@@ -270,7 +273,7 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     if update.message.media_group_id:
-        status_msg = await update.message.reply_text("⏳ Saving grouped image to assets...", reply_to_message_id=update.message.message_id)
+        status_msg = await update.message.reply_text("⏳ Saving grouped image to assets/grouped...", reply_to_message_id=update.message.message_id)
         msg_id_key = str(status_msg.message_id)
         if 'uploads' not in context.application.bot_data:
             context.application.bot_data['uploads'] = {}
@@ -279,7 +282,7 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
             'caption': caption,
             'state': 'main'
         }
-        await upload_image(context.application, update.message.chat_id, status_msg.message_id, msg_id_key, "asset")
+        await upload_image(context.application, update.message.chat_id, status_msg.message_id, msg_id_key, "grouped")
         return
 
     keyboard = [
