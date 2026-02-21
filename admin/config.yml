@@ -375,7 +375,7 @@ collections:
               "Stable Diffusion",
               "Other",
             ],
-          default: "Grok",
+          default: "Gemini",
         }
       - {
           label: "Caption",
