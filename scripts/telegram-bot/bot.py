@@ -59,6 +59,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         for url in urls:
             yt_id = extract_youtube_id(url)
             if yt_id:
+                status_msg = await update.message.reply_text("⏳ Processing YouTube link...")
                 # Allow user to provide title and caption by just typing it before/after the link
                 text_without_url = text.replace(url, '').strip()
                 if text_without_url:
@@ -82,16 +83,16 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 
                 frontmatter = {
                     "title": title[:70],
-                    "published": True,
-                    "date": datetime.now().replace(microsecond=0),
                     "platform": "youtube",
                     "youtube_id": url,
+                    "embed_code": "",
+                    "thumbnail": "",
+                    "caption": caption if caption else "",
                     "type": "video",
-                    "category": "videos"
+                    "category": "videos",
+                    "date": datetime.now().replace(microsecond=0),
+                    "published": True
                 }
-                
-                if caption:
-                    frontmatter["caption"] = caption
                 
                 md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
                 md_path = collection_dir / f"{filename}.md"
@@ -100,9 +101,9 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     with open(md_path, "w", encoding="utf-8") as f:
                         f.write(md_content)
                     
-                    await update.message.reply_text(f"✅ YouTube video added to gallery!\n📄 File: {md_path.name}\n📝 Title: {title}")
+                    await status_msg.edit_text(f"✅ YouTube video added to gallery!\n📄 File: {md_path.name}\n📝 Title: {title}")
                 except Exception as e:
-                    await update.message.reply_text(f"❌ Failed to write file: {e}")
+                    await status_msg.edit_text(f"❌ Failed to write file: {e}")
         return
 
     await update.message.reply_text(
@@ -110,7 +111,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Send an image to add a file, or send a YouTube link to add a video."
     )
 
-async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_model="Grok", gallery_cat="None"):
+async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_model="Gemini", gallery_cat="None"):
     if msg_id_key not in app.bot_data.get('uploads', {}):
         return  # already processed or cancelled
 
@@ -235,15 +236,15 @@ async def timeout_callback(context: ContextTypes.DEFAULT_TYPE):
         # Determine defaults based on current state
         if state == 'main':
             target_type = 'gallery'
-            ai_model = 'Grok'
+            ai_model = 'Gemini'
             gallery_cat = 'None'
         elif state == 'ai':
             target_type = 'ai'
-            ai_model = 'Grok'
+            ai_model = 'Gemini'
             gallery_cat = 'None'
         elif state == 'gallery':
             target_type = 'gallery'
-            ai_model = 'Grok'
+            ai_model = 'Gemini'
             gallery_cat = 'None'
         else:
             return
@@ -284,7 +285,7 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     msg = await update.message.reply_text(
-        "Where would you like to add this image? (Automatically defaults to Gallery 'None' in 60s)", 
+        "Where would you like to add this image? (Automatically defaults to Gallery 'None' in 30s)", 
         reply_markup=reply_markup,
         reply_to_message_id=update.message.message_id
     )
@@ -303,7 +304,7 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if context.job_queue:
         context.job_queue.run_once(
             timeout_callback, 
-            60, 
+            30, 
             data={'chat_id': update.message.chat_id, 'message_id': msg.message_id, 'msg_id_key': msg_id_key},
             name=f"timeout_{msg_id_key}"
         )
@@ -349,11 +350,11 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
             ]
             await query.edit_message_text(
-                text="Which AI Model generated this? (Defaults to 'Grok' in 60s)",
+                text="Which AI Model generated this? (Defaults to 'Gemini' in 30s)",
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
             if context.job_queue:
-                context.job_queue.run_once(timeout_callback, 60, data={'chat_id': query.message.chat_id, 'message_id': query.message.message_id, 'msg_id_key': msg_id_key}, name=f"timeout_{msg_id_key}")
+                context.job_queue.run_once(timeout_callback, 30, data={'chat_id': query.message.chat_id, 'message_id': query.message.message_id, 'msg_id_key': msg_id_key}, name=f"timeout_{msg_id_key}")
             return
             
         elif target_type == "gallery":
@@ -364,11 +365,11 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
             ]
             await query.edit_message_text(
-                text="Select a Category for this Gallery Entry: (Defaults to 'None' in 60s)",
+                text="Select a Category for this Gallery Entry: (Defaults to 'None' in 30s)",
                 reply_markup=InlineKeyboardMarkup(keyboard)
             )
             if context.job_queue:
-                context.job_queue.run_once(timeout_callback, 60, data={'chat_id': query.message.chat_id, 'message_id': query.message.message_id, 'msg_id_key': msg_id_key}, name=f"timeout_{msg_id_key}")
+                context.job_queue.run_once(timeout_callback, 30, data={'chat_id': query.message.chat_id, 'message_id': query.message.message_id, 'msg_id_key': msg_id_key}, name=f"timeout_{msg_id_key}")
             return
             
         else:
@@ -396,7 +397,7 @@ async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🖼 *Images*:\n"
         "Send any image from your gallery or as a file document. "
         "I will reply with an interactive inline menu allowing you to quickly choose a destination (Meme, Gallery, AI, or generic Asset).\n"
-        "If you don't respond to the menu within 60 seconds, I will automatically save it to the General Gallery under the 'None' category.\n\n"
+        "If you don't respond to the menu within 30 seconds, I will automatically save it to the General Gallery under the 'None' category.\n\n"
         "🎥 *Videos*:\n"
         "Send a YouTube URL. If you send just a URL, I'll attempt to automatically extract the title of the video from YouTube.\n"
         "Or, you can simply type your custom Title in the same message on the first line, then the URL.\n"
