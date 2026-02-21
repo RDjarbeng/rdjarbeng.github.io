@@ -319,7 +319,7 @@ collections:
         search_fields:
           - title
         value_field: title
-        required: false
+        required: true
         default: "None"
       - name: labels
         label: Labels

@@ -467,7 +467,7 @@ collections:
           display_fields: [title],
           search_fields: [title],
           value_field: "title",
-          required: false,
+          required: true,
           default: "None",
         }
       - {
