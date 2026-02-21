@@ -269,6 +269,19 @@ async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         return
 
+    if update.message.media_group_id:
+        status_msg = await update.message.reply_text("⏳ Saving grouped image to assets...", reply_to_message_id=update.message.message_id)
+        msg_id_key = str(status_msg.message_id)
+        if 'uploads' not in context.application.bot_data:
+            context.application.bot_data['uploads'] = {}
+        context.application.bot_data['uploads'][msg_id_key] = {
+            'file_id': media_obj.file_id,
+            'caption': caption,
+            'state': 'main'
+        }
+        await upload_image(context.application, update.message.chat_id, status_msg.message_id, msg_id_key, "asset")
+        return
+
     keyboard = [
         [
             InlineKeyboardButton("Meme", callback_data="main_meme"),
