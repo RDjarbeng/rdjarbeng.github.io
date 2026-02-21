@@ -1,5 +1,5 @@
 ---
-title: Song for Today: "Soul of Afrika" by Grace Echo
+title: "Song for Today: Soul of Afrika by Grace Echo"
 published: true
 date: 2026-02-19T18:41:00
 platform: tiktok
