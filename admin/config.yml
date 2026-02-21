@@ -375,7 +375,7 @@ collections:
               "Stable Diffusion",
               "Other",
             ],
-          default: "Grok",
+          default: "Gemini",
         }
       - {
           label: "Caption",
@@ -402,6 +402,12 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          default: "{{now}}",
+        }
       - { label: "Image", name: "image", widget: "image" }
       - {
           label: "Caption",
