@@ -9,7 +9,7 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  How it feels watching TikTok shorts with Ray William Johnson the storyteller! "So this woman..." — then we stop scrolling and just watch.
+  Discover the magnetic storytelling style of Ray William Johnson on TikTok! Known for his gripping, hilarious, and highly entertaining short-form content, Ray has completely mastered the art of grabbing your attention. From the very moment he says "So this woman...", you simply have to stop scrolling and watch his viral storytime videos to the end. Dive into the engaging appeal of one of the internet's most popular storytellers.
 
-  His TikTok channel: https://www.tiktok.com/@realraywilliam
+  Check out his official TikTok channel: [Ray William Johnson](https://www.tiktok.com/@realraywilliam)
 ---

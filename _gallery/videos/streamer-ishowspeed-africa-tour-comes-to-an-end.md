@@ -9,8 +9,8 @@ thumbnail: assets/images/videos/ishowspeed_africa_tour_conclusion(1)-Cover.jpg
 type: video
 category: videos
 caption: |-
-  IShowSpeed's Africa tour comes to an end! Speed reflects on his trip and says he is glad he came to Africa.
+  The unforgettable IShowSpeed Africa tour finally comes to an end! In this heartfelt clip, popular streamer IShowSpeed reflects on his incredible journey and expresses how glad he is to have visited the African continent. Watch as he shares his genuine appreciation for the culture and fans he met along the way.
 
-  The song used in the intro is 🎶 "United In Grief" (intro loop) by Kendrick Lamar.
+  The intro features the hypnotic loop from 🎶 "United In Grief" by Kendrick Lamar.
   [**#ishowspeed**](https://www.tiktok.com/tag/ishowspeed) [**#musiclyrics**](https://www.tiktok.com/tag/musiclyrics) [**#unitedingrief**](https://www.tiktok.com/tag/unitedingrief) [**#kendricklamar**](https://www.tiktok.com/tag/kendricklamar) [**#africa**](https://www.tiktok.com/tag/africa)
 ---

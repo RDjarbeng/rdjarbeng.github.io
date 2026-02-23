@@ -9,7 +9,7 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  Girls sending signals [**#Relationship**](https://www.tiktok.com/tag/Relationship) [**#girls**](https://www.tiktok.com/tag/girls) [**#boys**](https://www.tiktok.com/tag/boys) [**#english**](https://www.tiktok.com/tag/english) [**#rango**](https://www.tiktok.com/tag/rango)
+  Have you ever wondered what happens when girls send signals to boys they like? This funny TikTok clip playfully illustrates the classic dating dilemma where guys completely miss the romance hints! Adapted from the hilarious conversation scene in the animated comedy movie "Rango," this relatable relationship humor perfectly captures youthful dating communication struggles.
 
-  The guys see the signal and have no idea what to do with it! This clip is adapted from the movie "Rango" during the search for water confrontation scene with the entire family of the suspects.
+  [**#Relationship**](https://www.tiktok.com/tag/Relationship) [**#girls**](https://www.tiktok.com/tag/girls) [**#boys**](https://www.tiktok.com/tag/boys) [**#english**](https://www.tiktok.com/tag/english) [**#rango**](https://www.tiktok.com/tag/rango)
 ---

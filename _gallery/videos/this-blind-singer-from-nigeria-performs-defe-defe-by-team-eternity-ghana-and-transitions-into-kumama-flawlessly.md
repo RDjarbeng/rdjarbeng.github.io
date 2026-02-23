@@ -8,5 +8,8 @@ embed_code: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@rich
 thumbnail: assets/images/videos/transition_chrisvic_defedefeto_kumama_-Cover.jpg
 type: video
 category: videos
-caption: Wait for the song switch 🎶🌟 as the crowd goes wild! A blind singer from Nigeria performs "Defe Defe" by Team Eternity Ghana and transitions flawlessly into "Kumama" 🎶. This is a reaction video from Nazir Rap Battle; the original video is from Now GospelTV. [**#Ghana**](https://www.tiktok.com/tag/Ghana) [**#music**](https://www.tiktok.com/tag/music) [**#Nigeria**](https://www.tiktok.com/tag/Nigeria) [**#gospel**](https://www.tiktok.com/tag/gospel) [**#english**](https://www.tiktok.com/tag/english)
+caption: |-
+  Witness an incredible musical performance as a talented blind singer from Nigeria covers the popular track "Defe Defe" by Team Eternity Ghana. Wait for the flawless live song switch into the hit gospel track "Kumama" that makes the entire crowd go wild! This inspiring display of vocal talent bridges Nigerian and Ghanaian gospel music beautifully, providing an unforgettable spiritual experience. Featuring reaction footage from Nazir Rap Battle (original video by Now GospelTV).
+
+  [**#Ghana**](https://www.tiktok.com/tag/Ghana) [**#music**](https://www.tiktok.com/tag/music) [**#Nigeria**](https://www.tiktok.com/tag/Nigeria) [**#gospel**](https://www.tiktok.com/tag/gospel) [**#english**](https://www.tiktok.com/tag/english)
 ---

@@ -9,9 +9,7 @@ thumbnail: ''
 type: video
 category: videos
 caption: |-
-  Song for today 🎶 🎧 Check out "Soul of Afrika" by Grace Echo on YouTube.
-
-  May it guide your steps wherever you go! 😉
+  Looking for uplifting music? Listen to "Soul of Afrika" by the talented Nigerian gospel choir Grace Echo. This deeply moving African gospel song blends harmonious choir vocals with inspiring messages to help guide your day. Experience the rich culture and powerful spirituality of modern Nigerian gospel music in this beautiful and moving rendition.
 
   [**#gospelmusic**](https://www.tiktok.com/tag/gospelmusic) [**#graceecho**](https://www.tiktok.com/tag/graceecho) [**#soulofafrika**](https://www.tiktok.com/tag/soulofafrika) [**#english**](https://www.tiktok.com/tag/english) [**#Nigeria**](https://www.tiktok.com/tag/nigeria)
 ---
