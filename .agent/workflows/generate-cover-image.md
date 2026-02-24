@@ -8,7 +8,7 @@ When generating cover images for this website, please adhere to the following sp
 ## Specifications
 
 1.  **Text Overlay**:
-    *   The image MUST include the **title** of the post or a short, **interesting hook** to grab the reader's attention.
+    *   The image MUST include a short, **interesting hook** to grab the reader's attention or the **title** of the post.
     *   Typography should be modern, bold, and legible.
 
 2.  **Watermark**:
