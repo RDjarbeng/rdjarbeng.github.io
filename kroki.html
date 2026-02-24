@@ -4,44 +4,147 @@ title: "Kroki Diagram Generator"
 permalink: /kroki/
 ---
 
-<div class="row pt-5 pb-5">
-    <div class="col-md-10 offset-md-1">
-        <h1 class="mb-4">Kroki Diagram Service</h1>
-        <p>Paste your diagram code below to generate and download it via Kroki.io.</p>
+<style>
+    .kroki-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        <div class="mb-3">
-            <label for="diagramType" class="form-label">Diagram Type</label>
-            <select id="diagramType" class="form-select">
-                <option value="mermaid">Mermaid</option>
-                <option value="plantuml">PlantUML</option>
-                <option value="graphviz">GraphViz</option>
-                <option value="excalidraw">Excalidraw</option>
-                <option value="c4plantuml">C4 (PlantUML)</option>
-            </select>
-        </div>
+    .editor-pane {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
 
-        <div class="mb-3">
-            <label for="diagramSource" class="form-label">Diagram Source Code</label>
-            <textarea id="diagramSource" class="form-control" rows="10"
-                placeholder="graph TD\nA[Start] --> B[End]"></textarea>
-        </div>
+    .preview-pane {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
 
-        <button id="generateBtn" class="btn btn-primary mb-4">Generate & Preview</button>
+    .preview-image-container {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        border: 1px dashed #ced4da;
+        border-radius: 4px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        position: relative;
+        min-height: 300px;
+    }
 
-        <div id="resultContainer" style="display: none;">
-            <h4>Preview</h4>
-            <div id="imagePreview" class="border p-3 mb-3 bg-light text-center" style="min-height: 200px;"></div>
+    .preview-image-container img {
+        max-width: 100%;
+        max-height: 600px;
+    }
 
-            <div class="d-flex gap-2">
-                <a id="downloadSvgUrl" href="#" target="_blank" class="btn btn-success" download="diagram.svg">Download
-                    SVG</a>
-                <a id="downloadPngUrl" href="#" target="_blank" class="btn btn-info" download="diagram.png">Download
-                    PNG</a>
+    textarea.diagram-code {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        resize: vertical;
+    }
+
+    .btn-action {
+        transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+        transform: translateY(-2px);
+    }
+
+    .spinner-border {
+        display: none;
+    }
+
+    .text-light-gray {
+        color: #ced4da;
+    }
+</style>
+
+<div class="row pt-4 pb-5 kroki-container">
+    <div class="col-12 text-center mb-5">
+        <h1 class="display-5 fw-bold text-dark">Diagram Generator</h1>
+        <p class="lead text-muted">Create beautiful diagrams from code instantly.</p>
+    </div>
+
+    <div class="row g-4 w-100 m-0">
+        <div class="col-lg-5 ps-lg-0">
+            <div class="editor-pane h-100 d-flex flex-column">
+                <h4 class="mb-3">Code Editor</h4>
+
+                <div class="mb-3">
+                    <label for="diagramType" class="form-label fw-bold">Syntax <span
+                            class="text-danger">*</span></label>
+                    <select id="diagramType" class="form-select form-select-lg">
+                        <option value="mermaid">Mermaid</option>
+                        <option value="plantuml">PlantUML</option>
+                        <option value="graphviz">GraphViz</option>
+                        <option value="excalidraw">Excalidraw</option>
+                        <option value="c4plantuml">C4 (PlantUML)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 flex-grow-1 d-flex flex-column" style="min-height: 250px;">
+                    <label for="diagramSource" class="form-label fw-bold">Source Code <span
+                            class="text-danger">*</span></label>
+                    <textarea id="diagramSource" class="form-control diagram-code flex-grow-1" rows="12"
+                        placeholder="graph TD&#10;A[Start] --> B[End]"></textarea>
+                </div>
+
+                <div class="d-grid mt-3">
+                    <button id="generateBtn" class="btn btn-primary btn-lg btn-action">
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"
+                            id="loadingSpinner"></span>
+                        <i class="fas fa-magic me-2"></i>Generate Diagram
+                    </button>
+                </div>
             </div>
+        </div>
 
-            <div class="mt-3">
-                <label class="form-label">Kroki Image URL (SVG)</label>
-                <input type="text" id="krokiSvgUrl" class="form-control" readonly>
+        <div class="col-lg-7 pe-lg-0">
+            <div class="preview-pane h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="mb-0">Live Preview</h4>
+                    <div id="actionButtons" style="display: none;">
+                        <a id="downloadSvgUrl" href="#" target="_blank"
+                            class="btn btn-outline-success btn-sm btn-action" download="diagram.svg">
+                            <i class="fas fa-download mx-1"></i>SVG
+                        </a>
+                        <a id="downloadPngUrl" href="#" target="_blank"
+                            class="btn btn-outline-info btn-sm btn-action ms-2" download="diagram.png">
+                            <i class="fas fa-download mx-1"></i>PNG
+                        </a>
+                    </div>
+                </div>
+
+                <div class="preview-image-container mb-4" id="imagePreviewContainer">
+                    <div class="text-muted text-center" id="placeholderText">
+                        <i class="fas fa-image fa-3x mb-3 text-light-gray" style="font-size: 3rem;"></i>
+                        <p>Your diagram will appear here</p>
+                    </div>
+                    <img id="imagePreview" src="" alt="Diagram preview" style="display: none;" />
+                    <div class="text-danger text-center" id="errorMessage" style="display: none;">
+                        <i class="fas fa-exclamation-triangle fa-2x mb-2"></i>
+                        <p class="mb-0">Failed to render diagram. Please check your syntax.</p>
+                    </div>
+                </div>
+
+                <div id="urlContainer" style="display: none;">
+                    <label class="form-label fw-bold text-muted small">Hotlink URL</label>
+                    <div class="input-group">
+                        <input type="text" id="krokiSvgUrl" class="form-control" readonly>
+                        <button class="btn btn-outline-secondary" type="button" id="copyBtn"
+                            onclick="copyUrl()">Copy</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -49,17 +152,130 @@ permalink: /kroki/
 
 <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 <script>
+    function copyUrl() {
+        var copyText = document.getElementById("krokiSvgUrl");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+
+        var btn = document.getElementById("copyBtn");
+        var originalText = btn.innerHTML;
+        btn.innerHTML = "Copied!";
+        setTimeout(function () {
+            btn.innerHTML = originalText;
+        }, 2000);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         const generateBtn = document.getElementById('generateBtn');
+        const img = document.getElementById('imagePreview');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        let currentTimeoutId = null;
+
+        // Setup initial demo based on default selection
+        const demoCode = "graph TD\n    A[Hard Work] --> B(Success)\n    B --> C{More Work?}\n    C -- Yes --> A\n    C -- No --> D[Retire]";
+        document.getElementById('diagramSource').value = demoCode;
+
+        img.onload = function () {
+            if (currentTimeoutId) clearTimeout(currentTimeoutId);
+            // Image loaded successfully
+            loadingSpinner.style.display = 'none';
+            generateBtn.disabled = false;
+
+            document.getElementById('placeholderText').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+            img.style.display = 'block';
+
+            document.getElementById('actionButtons').style.display = 'block';
+            document.getElementById('urlContainer').style.display = 'block';
+        };
+
+        img.onerror = function () {
+            if (currentTimeoutId) clearTimeout(currentTimeoutId);
+            // Image failed to load
+            loadingSpinner.style.display = 'none';
+            generateBtn.disabled = false;
+
+            img.style.display = 'none';
+            document.getElementById('placeholderText').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'block';
+
+            document.getElementById('actionButtons').style.display = 'none';
+            document.getElementById('urlContainer').style.display = 'none';
+        };
 
         generateBtn.addEventListener('click', function () {
             const type = document.getElementById('diagramType').value;
-            const source = document.getElementById('diagramSource').value;
+            let source = document.getElementById('diagramSource').value;
 
             if (!source.trim()) {
-                alert('Please enter some diagram source code.');
+                alert('Please enter some diagram source code or a valid Kroki URL.');
                 return;
             }
+
+            // Check if it's a Kroki URL and decode if so
+            if (source.includes("kroki.io/") && source.trim().match(/https?:\/\//)) {
+                try {
+                    const urlStr = source.trim();
+                    const urlObj = new URL(urlStr);
+                    const pathParts = urlObj.pathname.split('/').filter(Boolean);
+
+                    // Path is typically /{type}/{svg|png}/{payload}
+                    if (pathParts.length >= 3) {
+                        const parsedType = pathParts[0];
+                        let payload = pathParts[pathParts.length - 1];
+
+                        // Fix Base64 URL mapping
+                        payload = payload.replace(/-/g, '+').replace(/_/g, '/');
+                        while (payload.length % 4) { payload += '='; }
+
+                        // Decode Base64 to binary string
+                        const binaryStr = atob(payload);
+                        const bytes = new Uint8Array(binaryStr.length);
+                        for (let i = 0; i < binaryStr.length; i++) {
+                            bytes[i] = binaryStr.charCodeAt(i);
+                        }
+
+                        // Inflate using pako
+                        const decompressed = pako.inflate(bytes);
+
+                        // Decode bytes to text
+                        source = new TextDecoder('utf-8').decode(decompressed);
+
+                        // Update UI to reflect the decoded info
+                        document.getElementById('diagramType').value = parsedType;
+                        document.getElementById('diagramSource').value = source;
+                    }
+                } catch (err) {
+                    console.error("Failed to decode URL", err);
+                    alert("The pasted link appears to be a Kroki URL but failed to decode: " + err.message);
+                    return; // Stop execution to let them fix it
+                }
+            }
+
+            // Normalize literal \n to actual newlines (helps if pasted from a single line string)
+            source = source.replace(/\\n/g, '\n');
+
+            if (currentTimeoutId) clearTimeout(currentTimeoutId);
+
+            loadingSpinner.style.display = 'inline-block';
+            generateBtn.disabled = true;
+            img.style.display = 'none';
+            // Force reset img src so onload fires even if URL is identical to before 
+            img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
+            document.getElementById('placeholderText').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('actionButtons').style.display = 'none';
+            document.getElementById('urlContainer').style.display = 'none';
+
+            // Fail safe timeout
+            currentTimeoutId = setTimeout(function () {
+                if (loadingSpinner.style.display !== 'none') {
+                    console.error("Kroki request timed out");
+                    img.onerror();
+                }
+            }, 8000);
 
             try {
                 // Compress using zlib (pako)
@@ -82,20 +298,28 @@ permalink: /kroki/
                 const svgUrl = `https://kroki.io/${type}/svg/${base64}`;
                 const pngUrl = `https://kroki.io/${type}/png/${base64}`;
 
-                // Update UI
+                // Update UI variables (will only show if ONLOAD succeeds)
                 document.getElementById('krokiSvgUrl').value = svgUrl;
-                document.getElementById('imagePreview').innerHTML = `<img src="${svgUrl}" class="img-fluid" alt="Diagram preview" />`;
-
-                // To force download requires fetching as blob or opening directly since it's cross-origin.
                 document.getElementById('downloadSvgUrl').href = svgUrl;
                 document.getElementById('downloadPngUrl').href = pngUrl;
 
-                document.getElementById('resultContainer').style.display = 'block';
+                // Triggers load
+                img.src = svgUrl;
 
             } catch (e) {
                 console.error(e);
-                alert('Error generating diagram: ' + e.message);
+                loadingSpinner.style.display = 'none';
+                generateBtn.disabled = false;
+                alert('Error generating diagram link: ' + e.message);
+                document.getElementById('placeholderText').style.display = 'block';
             }
         });
+
+        // Auto-click generate on load to show demo
+        setTimeout(function () {
+            if (generateBtn && !generateBtn.disabled) {
+                generateBtn.click();
+            }
+        }, 500);
     });
 </script>
