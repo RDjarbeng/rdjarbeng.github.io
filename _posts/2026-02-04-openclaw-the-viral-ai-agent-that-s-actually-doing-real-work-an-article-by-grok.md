@@ -1,13 +1,13 @@
 ---
 date: 2026-02-04T17:35:00
-published: false
+published: true
 author: Richard
 category: AI
 tags:
   - OpenClaw
 title: OpenClaw, The Viral AI Agent That's Actually Doing Real Work An Article by Grok
-image: ''
-image_alt: ''
+image: /assets/images/openclaw_cover_refined.png
+image_alt: 'OpenClaw space-lobster AI assistant cover'
 layout: post
 ---
 
