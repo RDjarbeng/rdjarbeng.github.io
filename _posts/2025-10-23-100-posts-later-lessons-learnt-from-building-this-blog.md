@@ -11,6 +11,23 @@ title: 100 Posts Later - Lessons Learnt From Building This Blog
 image: /assets/images/100_posts_cover.png
 image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark
 layout: post
+card_items:
+  - name: "Grok"
+    badge_1: "Text Refinement"
+    badge_2: "Current Events"
+    description: "Good for refining text and is able to add current information in the proper context especially for posts where information needed is about current events/trending news. Also good for verifying links but not 100% accurate. I've found some links to be dead after Grok assures me they are active. Hopefully it gets better eventually."
+  - name: "Gemini"
+    badge_1: "Image Generation"
+    badge_2: "Long Context"
+    description: "Does well with image generation especially with the text on images than Grok. Experienced a productivity boost with the launch of Nano-Banana Pro for image generation which also reduced the number of typos in cover images. For text content it's also able to retain context of long posts and is most likely the one that will be used to edit this post. Other models like Claude and Meta AI have their own strengths but I find Gemini to be the most versatile. Grok for example has the tendency to summarize sections of the post that don't need to be summarized or leave out important information on long posts. Gemini does this less often."
+  - name: "Claude"
+    badge_1: "Context Retention"
+    badge_2: "Minor Edits"
+    description: "I used to edit posts with Claude. It excelled at keeping context and also did not change too many things. If I had to change a particular paragraph alone most likely I would use Claude and specify the rest of the post as context. So Claude was good at quick edits that didn't disrupt much. But it failed at adding relevant context to posts, adding links and verifying that they were working was also something it could not do at that time, it also used to timeout a lot and I found that I had to revisit a post multiple times over a course of days or weeks everytime it timed out. This friction of going back to posts whenever I ran out of tokens made me eventually stop using it for web posts."
+  - name: "Meta AI"
+    badge_1: "Real-time Generation"
+    badge_2: "On-the-fly Editing"
+    description: "I used Meta AI for the post on [Tunde Onakoya's chess marathon](https://rdjarbeng.com/personal/tunde-onakoya-breaks-guinness-world-record-with-epic-chess-marathon-for-children-s-education/) in Times square. I liked the feature where it generated images as you typed allowing you to kind of edit on the fly. However since then I have not used it much, also because when I was in Rwanda it was not available in that Region for some time. It is now available but now, just like Claude, I haven't really felt a need to go back to it after I stopped using it."
 ---
 ## Changes Since the Start
 Reaching the milestone of 100 website posts is a moment for reflection. What started as a simple platform to share thoughts has grown into a comprehensive collection of technical guides, personal stories, and reviews. It has been about building a system, refining a workflow, and learning to leverage new technologies like AI to enhance creativity. 
