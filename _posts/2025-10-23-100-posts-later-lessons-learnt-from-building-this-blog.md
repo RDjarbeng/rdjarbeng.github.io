@@ -200,3 +200,9 @@ Trip to Uganda. This post got a lot of attention.
 
 * [Banks in Rwanda](https://rdjarbeng.com/list-of-banks-in-rwanda-and-their-services/)
 * [Letsile Tebogo wins 200m gold](https://rdjarbeng.com/personal/tebogo_olympics/)
+
+---
+
+## Top AI Models Summary
+
+*As discussed in the AI Tools section, I use AI for writing, editing, and thumbnail generation. Here is a breakdown of my top AI models and how I use them:*
