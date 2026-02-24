@@ -1,0 +1,20 @@
+# Richard Djarbeng
+
+> Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe.
+
+## Main Sections
+
+- [Home](https://rdjarbeng.com/) - Technical articles, blog posts about web development, AI, and IoT devices.
+- [About Me](https://rdjarbeng.com/about/) - Information about Richard Djarbeng, learning journey and reflections.
+- [Contact](https://rdjarbeng.com/contact/) - How to get in touch.
+
+## Content Collections
+
+- [Personal Blog](https://rdjarbeng.com/personal/) - Reflections and stories from real-life adventures.
+- [Projects](https://rdjarbeng.com/projects/) - Selected software and engineering projects.
+- [Gallery](https://rdjarbeng.com/gallery/) - A collection of images, videos and other media.
+
+## Navigation and Discovery
+
+- [Search](https://rdjarbeng.com/search/) - Search through all posts and articles.
+- [Tags](https://rdjarbeng.com/tags/) - Browse content by specific tags.
