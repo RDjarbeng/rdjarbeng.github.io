@@ -9,7 +9,8 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 ## Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query.
-- [ ] **Telegram Bot**: Test bot for memes. Deployed ✅ (PythonAnywhere or Oracle Cloud Free Tier).
+- [ ] **Card layouts**: Cards are not shown in the table of contents.
+- [ ] **Telegram Bot**: Does 2 commits instead of 1, need a fix, group images are renamed as untitled, need to find a solution.
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
 Card images have a top padding that leaves a gray space
 
