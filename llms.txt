@@ -11,7 +11,7 @@
 ## Content Collections
 
 - [Personal Blog](https://rdjarbeng.com/personal/) - Reflections and stories from real-life adventures.
-- [Projects](https://rdjarbeng.com/projects/) - Selected software and engineering projects.
+- [Posts](https://rdjarbeng.com/posts/) - Technical articles, blog posts about web development, AI, and IoT devices.
 - [Gallery](https://rdjarbeng.com/gallery/) - A collection of images, videos and other media.
 
 ## Navigation and Discovery
