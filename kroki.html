@@ -112,15 +112,16 @@ permalink: /kroki/
         <div class="col-lg-7 pe-lg-0">
             <div class="preview-pane h-100">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="mb-0">Live Preview</h4>
+                    <h4 class="mb-0">Live Preview <span id="httpStatus" class="badge ms-2"
+                            style="display: none;"></span></h4>
                     <div id="actionButtons" style="display: none;">
                         <a id="downloadSvgUrl" href="#" target="_blank"
                             class="btn btn-outline-success btn-sm btn-action" download="diagram.svg">
-                            <i class="fas fa-download mx-1"></i>SVG
+                            <i class="fas fa-download mx-1"></i>Download SVG
                         </a>
                         <a id="downloadPngUrl" href="#" target="_blank"
                             class="btn btn-outline-info btn-sm btn-action ms-2" download="diagram.png">
-                            <i class="fas fa-download mx-1"></i>PNG
+                            <i class="fas fa-download mx-1"></i>Download PNG
                         </a>
                     </div>
                 </div>
@@ -268,6 +269,7 @@ permalink: /kroki/
             document.getElementById('errorMessage').style.display = 'none';
             document.getElementById('actionButtons').style.display = 'none';
             document.getElementById('urlContainer').style.display = 'none';
+            document.getElementById('httpStatus').style.display = 'none';
 
             // Fail safe timeout
             currentTimeoutId = setTimeout(function () {
@@ -305,6 +307,16 @@ permalink: /kroki/
 
                 // Triggers load
                 img.src = svgUrl;
+
+                // Fetch HTTP status
+                fetch(svgUrl)
+                    .then(response => {
+                        const statusStatus = document.getElementById('httpStatus');
+                        statusStatus.textContent = 'HTTP ' + response.status;
+                        statusStatus.className = 'badge ms-2 ' + (response.ok ? 'bg-success' : 'bg-danger');
+                        statusStatus.style.display = 'inline-block';
+                    })
+                    .catch(e => console.error('Status fetch error:', e));
 
             } catch (e) {
                 console.error(e);
