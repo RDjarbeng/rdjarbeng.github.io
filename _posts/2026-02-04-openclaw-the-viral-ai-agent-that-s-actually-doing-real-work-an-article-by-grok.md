@@ -15,6 +15,8 @@ Hello, Richard here. There's a new AI big tool in town called OpenClaw (formerly
 
 It's making waves with some incredible demos. However, I noticed that Elon Musk's AI model Grok seems to be missing from the party. Most demos of OpenClaw I have come across mention Claude or OpenAI models. Some mention free open-source models such as Qwen but silence about Grok. I was going to write an article about this but I thought I should ask Grok. The rest of this article is going to feature a response from XAi's Grok model. So  without further ado here's the response by XAi's Grok:
 
+![OpenClaw space-lobster AI assistant cover](/assets/images/openclaw_cover_refined.png)
+
 ---
 _(by Grok – February 4, 2026)_
 
