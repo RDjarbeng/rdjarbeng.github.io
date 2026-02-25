@@ -25,6 +25,7 @@ app = Flask(__name__)
 # Very simple in-memory state. In a multi-worker setup on PythonAnywhere, 
 # this can theoretically reset between requests, but for a free account with 1 worker, it usually persists well enough for brief menus.
 uploads = {}
+group_captions = {}
 
 def is_authorized(user_id):
     if not ALLOWED_USER_ID:
@@ -47,11 +48,31 @@ def extract_youtube_id(url):
     match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
     return match.group(1) if match else None
 
-def commit_to_github(path, content, message):
-    """Pushes a file directly to the GitHub repository via API"""
+def commit_files_to_github(files_dict, message):
+    """Pushes multiple files to the GitHub repository in a single atomic commit"""
+    import base64
+    from github import InputGitTreeElement
+    
     g = Github(GITHUB_TOKEN)
     repo = g.get_repo(REPO_NAME)
-    repo.create_file(path, message, content, branch="main")
+    
+    master_ref = repo.get_git_ref("heads/main")
+    master_sha = master_ref.object.sha
+    base_tree = repo.get_git_tree(master_sha)
+    
+    element_list = []
+    for path, content in files_dict.items():
+        if isinstance(content, bytes):
+            blob = repo.create_git_blob(base64.b64encode(content).decode('utf-8'), "base64")
+            element = InputGitTreeElement(path=path, mode="100644", type="blob", sha=blob.sha)
+        else:
+            element = InputGitTreeElement(path=path, mode="100644", type="blob", content=content)
+        element_list.append(element)
+    
+    tree = repo.create_git_tree(element_list, base_tree)
+    parent = repo.get_git_commit(master_sha)
+    commit = repo.create_git_commit(message, tree, [parent])
+    master_ref.edit(commit.sha)
 
 # ===============================
 # WEBHOOK ROUTE FOR PYTHONANYWHERE
@@ -115,18 +136,18 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         image_filename = f"{filename}{ext}"
         image_path = f"{media_rel_dir}/{image_filename}"
         
-        # 2. Push image to GitHub
-        commit_to_github(image_path, image_bytes, f"Add image {image_filename} via Cloud Bot")
+        if target_type in ["asset", "grouped"]:
+            # Single file push for asset
+            commit_files_to_github({image_path: image_bytes}, f"Add image {image_filename} via Cloud Bot")
+            bot.edit_message_text(
+                f"✅ Image saved directly to GitHub!\n\n📄 File: {image_filename}\n"
+                f"🔗 Markdown path: `/{media_rel_dir}/{image_filename}`",
+                chat_id, message_id
+            )
+            return
+            
     except Exception as e:
         bot.edit_message_text(f"❌ Failed to download or upload image to GitHub: {e}", chat_id, message_id)
-        return
-
-    if target_type in ["asset", "grouped"]:
-        bot.edit_message_text(
-            f"✅ Image saved directly to GitHub!\n\n📄 File: {image_filename}\n"
-            f"🔗 Markdown path: `/{media_rel_dir}/{image_filename}`",
-            chat_id, message_id
-        )
         return
 
     # 3. Create Markdown Frontmatter
@@ -162,10 +183,13 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     md_path = f"{collection_rel_dir}/{filename}.md"
 
     try:
-        # 4. Push Markdown to GitHub
-        commit_to_github(md_path, md_content, f"Add post {filename}.md via Cloud Bot")
+        # 3. Push Both Files in One Single Commit
+        commit_files_to_github({
+            image_path: image_bytes,
+            md_path: md_content
+        }, f"Add post {filename} + image via Cloud Bot")
     except Exception as e:
-        bot.edit_message_text(f"❌ Failed to upload markdown file to GitHub: {e}", chat_id, message_id)
+        bot.edit_message_text(f"❌ Failed to push files to GitHub: {e}", chat_id, message_id)
         return
 
     label_text = f" ({gallery_cat})" if target_type == 'gallery' else (f" ({ai_model})" if target_type == 'ai' else "")
@@ -191,7 +215,14 @@ def handle_media(message):
     else:
         return
 
+    # Keep track of album captions
     if message.media_group_id:
+        if message.caption:
+            group_captions[message.media_group_id] = message.caption
+            caption = message.caption
+        else:
+            caption = group_captions.get(message.media_group_id, "")
+            
         status_msg = bot.reply_to(message, "⏳ Committing grouped image to GitHub...")
         msg_id_key = str(status_msg.message_id)
         uploads[msg_id_key] = {
@@ -321,7 +352,7 @@ def handle_text(message):
                 md_path = f"_gallery/videos/{filename}.md"
                 
                 try:
-                    commit_to_github(md_path, md_content, f"Add YouTube Video {filename}.md")
+                    commit_files_to_github({md_path: md_content}, f"Add YouTube Video {filename}.md")
                     bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", message.chat.id, status_msg.message_id)
                 except Exception as e:
                     bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", message.chat.id, status_msg.message_id)
