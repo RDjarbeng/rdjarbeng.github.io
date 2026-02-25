@@ -1,6 +1,6 @@
 ---
 date: 2026-02-24T14:40:00
-published: false
+published: true
 author: Richard
 categories:
   - Technology
@@ -20,6 +20,8 @@ image_alt: "A smartphone sending an image to a website folder via a paper airpla
 
 
 In my [100 Posts Later](https://rdjarbeng.com/100-posts-later-lessons-learnt-from-building-this-blog/) reflection and my article on [SveltiaCMS escaping CMS hell](https://rdjarbeng.com/my-experience-with-sveltiacms-a-game-changer-for-website-management/), I talked about how I shifted away from a code editor (like VS Code) for managing my website's content. Switching to SveltiaCMS was a huge step forward because it allowed me to edit posts directly through a user-friendly interface. 
+
+![A smartphone sending an image to a website folder via a paper airplane](/assets/images/posts/telegram-bot-cover.png)
 
 But even with the native image pickers and drag-and-drop improvements in SveltiaCMS, managing **minor media**—like saving a funny meme to my gallery, bookmarking a YouTube video I liked, or uploading an AI-generated portrait—still had a bit of friction. 
 
@@ -56,3 +58,6 @@ Instead of relying on a local script running on my laptop, the bot is hosted on 
 ---
 
 Building this bot removed the one remaining barrier I had to updating the visual and gallery portions of this site: convenience. SveltiaCMS handles the long-form essays, but my Telegram bot now handles all the quick rapid-fire assets, letting me enjoy sharing content straight from my pocket to the open web.
+
+## I tweeted about the telegram bot implementation
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Added a feature to add media via telegram to my website repo using the Github API and a telegram bot. <br><br>This makes it super convenient to upload images by texting the bot. I even added a menu to categorize the images. Useful for memes in particular😃 <a href="https://t.co/nflC8uVD3T">https://t.co/nflC8uVD3T</a> <a href="https://t.co/VHGNcOKAp6">pic.twitter.com/VHGNcOKAp6</a></p>&mdash; Richard Djarbeng (@DjarbengRichard) <a href="https://twitter.com/DjarbengRichard/status/2026249158407995647?ref_src=twsrc%5Etfw">February 24, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
