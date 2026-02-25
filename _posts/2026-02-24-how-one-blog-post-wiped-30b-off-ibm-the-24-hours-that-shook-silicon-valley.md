@@ -9,8 +9,8 @@ tags:
   - Claude
   - Business
 title: "How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley"
-image: "https://kroki.io/mermaid/svg/eJxNUE1rhDAQvfdXzKGH7UFa6L1gYl1dlF26ewt7mMZBRZuEJLbI2v_eGAvtwJzex7w3rUXTwSW7gzCpqKhFOcN5dp4-3BWS5GU56S-y1MD7vADblawGfmTH6iFK2EoBfqu10kaPM9TYKx-Wmu9I4NGj6NsOuHbeLZAJrq3RFj0BH3tS3sHZT3K4RsGrSJXvrDa93O6_0UjoKCjzGx9xaoJMN7TZ55FSo3GQkSHVkJL9yt3vLhaVG8MV9z9w_pcnlXKyoW4gR2i_eQVvq6BC1U7YrlaFOOAnPp5m32m1hSxi7VKs36g1emBWD_QLlhE8iPvk-YmFh9iBPHA0kIVW1x-_SHHd"
-image_alt: "Diagram representing IBM's $30B Loss"
+image: "/assets/images/posts/ibm-cobol-cover.png"
+image_alt: "An AI breaking down a vintage mainframe computer with a crashing stock chart."
 description: "How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap."
 card_items:
   - name: "Anthropic"
@@ -41,6 +41,8 @@ The tech world is more than accustomed to disruption, but the events of Monday, 
 *   **Immediate Market Reaction:** IBM shares saw their sharpest single-day drop since October 2000, plummeting 13.1%.
 *   **A Broader Trend:** Other established tech players, especially in cybersecurity, are also feeling the heat from AI agents automating complex tasks.
 *   **Geopolitical Stakes:** The implications extend beyond Wall Street, drawing attention from state actors and the Pentagon.
+
+![Diagram representing IBM's $30B Loss](/assets/images/ibm-30b-loss.svg)
 
 ### The Day the "Priesthood" Lost Its Monopoly
 
