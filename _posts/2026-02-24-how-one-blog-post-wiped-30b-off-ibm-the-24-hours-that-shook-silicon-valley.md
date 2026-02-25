@@ -8,6 +8,10 @@ tags:
   - AI
   - Claude
   - Business
+  - Stock Market
+  - Tech News
+  - COBOL
+  - Mainframe
 title: "How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley"
 image: "/assets/images/posts/ibm-cobol-cover.png"
 image_alt: "An AI breaking down a vintage mainframe computer with a crashing stock chart."
@@ -40,7 +44,7 @@ The tech world is more than accustomed to disruption, but the events of Monday, 
 ### Key Takeaways
 
 *   **The Moat is Broken:** Anthropic's Claude Code successfully demonstrated the ability to map, document, and translate legacy COBOL code with 98% accuracy.
-*   **Immediate Market Reaction:** IBM shares saw their sharpest single-day drop since October 2000, plummeting 13.1%.
+*   **Immediate Market Reaction:** IBM shares saw their sharpest single-day drop since October 2000, plummeting 13.15% (erasing roughly $30–31 billion in market value).
 *   **A Broader Trend:** Other established tech players, especially in cybersecurity, are also feeling the heat from AI agents automating complex tasks.
 *   **Geopolitical Stakes:** The implications extend beyond Wall Street, drawing attention from state actors and the Pentagon.
 
@@ -62,7 +66,9 @@ Anthropic demonstrated that its latest **Claude Code** agent can now flawlessly:
 
 > "The priesthood of COBOL maintenance had officially lost its monopoly."
 
-The market’s reaction was devastatingly instant. **IBM shares plummeted 13.1%**, marking its sharpest single-day plunge since the dot-com crash in October 2000. 
+The market’s reaction was devastatingly instant. Before the Anthropic announcement, IBM had closed at **$257.16** on Friday, February 20, 2026. By the close of trading on Monday, February 23, the stock had plummeted to **$223.35**—a brutal decline of approximately **13.15%** (a 33.81 point drop). This represented IBM's worst single-day percentage drop in over 25 years (reminiscent of the dot-com bust in October 2000), erasing roughly **$30–$31 billion** in market value in a matter of hours. While the stock has partially rebounded since the February 23 low, the psychological damage to the enterprise tech sector is profound.
+
+![IBM Common Stock Chart showing the sudden drop](/assets/images/posts/ibm-stock-chart.png)
 
 ### Live Demos and Ebooks: A Guide to Escaping the Mainframe
 
