@@ -3,7 +3,7 @@ title: hilarious Spam Email from Elon Musk Allegedly
 date: 2026-02-20T00:09:00
 published: false
 tags: []
-image: /assets/images/1000363579.webp
+image: /assets/images/elon_spam_improved.png
 image_alt: ''
 layout: personal
 card_items: []
