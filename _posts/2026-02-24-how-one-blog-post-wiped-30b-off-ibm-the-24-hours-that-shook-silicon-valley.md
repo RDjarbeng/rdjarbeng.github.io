@@ -35,6 +35,8 @@ card_items:
 
 The tech world is more than accustomed to disruption, but the events of Monday, February 23, 2026, were something else entirely. In a single afternoon, a concise blog post from **Anthropic** accomplished what decades of fierce competition couldn't: it shattered IBM’s legendary "COBOL moat," wiping a staggering **$30 billion** off its market cap in mere hours.
 
+![An AI breaking down a vintage mainframe computer with a crashing stock chart.](/assets/images/posts/ibm-cobol-cover.png)
+
 ### Key Takeaways
 
 *   **The Moat is Broken:** Anthropic's Claude Code successfully demonstrated the ability to map, document, and translate legacy COBOL code with 98% accuracy.
@@ -62,7 +64,7 @@ Anthropic demonstrated that its latest **Claude Code** agent can now flawlessly:
 
 The market’s reaction was devastatingly instant. **IBM shares plummeted 13.1%**, marking its sharpest single-day plunge since the dot-com crash in October 2000. 
 
-### Beyond Code: Financial Intelligence and Modernization
+### Live Demos and Ebooks: A Guide to Escaping the Mainframe
 
 Anthropic isn't simply releasing another developer tool; they are actively showing the entire industry exactly how to wield it. The AI powerhouse has rapidly begun hosting [live demonstrations](https://www.anthropic.com/webinars/claude-code-financial-services) focused narrowly and deliberately on real-world financial applications. These public sessions visibly showcase how Claude can ingest massive trading datasets, synthesize hyper-accurate predictive forecasts, and—crucially—migrate heavily entrenched legacy COBOL systems directly onto the modern cloud infrastructure.
 
@@ -74,12 +76,7 @@ IBM wasn't the sole tech giant to feel the sting this week. Just last Thursday, 
 
 Industry stalwarts like **CrowdStrike**, **Okta**, and **Cloudflare** all witnessed significant drops in their valuations as institutional investors rapidly came to a unified realization: AI agents can now actively hunt down and automatically remediate critical software bugs exponentially faster than the best human-led security operations centers.
 
-### The Geopolitical Storm: Espionage and Ultimatums
 
-While Anthropic was busy dismantling legacy business models on Wall Street, it concurrently found itself fighting a relentless two-front war spanning Washington and Beijing:
-
-1. **Chinese Industrial Espionage:** Anthropic publicly revealed that three leading Chinese AI labs—DeepSeek, Moonshot AI, and MiniMax—had orchestrated a massive, coordinated operation involving **24,000 synthesized accounts** and over 16 million discrete exchanges. Their singular objective? To covertly "steal" and exfiltrate Claude’s state-of-the-art capabilities.
-2. **The Pentagon’s "Ultimatum":** In a surreal and unprecedented escalation, the Pentagon summoned Anthropic CEO Dario Amodei. Behind closed doors, military officials reportedly issued a stark ultimatum: allow the U.S. military unrestricted, priority usage of Claude for critical national security operations, or realistically face being categorically blacklisted as a critical "supply chain risk," akin to the sweeping sanctions placed on Huawei.
 
 ### The Bottom Line
 
