@@ -4,13 +4,14 @@ published: true
 author: Richard
 category: Technology
 tags:
-  - Emails
-  - Domains
-  - Custom Emails
+  - Email Hosting
+  - Custom Domain
+  - Tutorials
   - Cloudflare
+  - Free Limits
 title: How to Get a Free Professional Custom Domain Email in 2026 (Even If You Don't Own a Domain Yet)
-image: ''
-image_alt: ''
+image: '/assets/images/free_professional_email_2026.png'
+image_alt: 'Free Custom Domain Email 2026'
 layout: post
 card_items: []
 ---
@@ -67,7 +68,7 @@ Steps to register (example with Namecheap):
 4. Create account → pay (credit card, PayPal, etc.)
 5. After purchase, you'll get login access to manage the domain
 
-Tip: Choose `.com`, `.me`, `.dev`, or `.app` — they look professional and are widely accepted.
+> **Tip:** Choose `.com`, `.me`, `.dev`, or `.app` — they look professional and are widely accepted.
 
 ## Step 1: Add Your Domain to Cloudflare & Enable Email Routing (Incoming Mail)
 
@@ -91,7 +92,7 @@ Cloudflare is free and secure — it will handle receiving emails and forward th
     - Save
 11. Test: Send an email to your new custom address → it should appear in Gmail within seconds!
 
-You can create unlimited addresses — all forward to the same Gmail (or different ones).
+> **Note:** You can create unlimited addresses — all forward to the same Gmail (or different ones).
 
 ## Step 2: Prepare Gmail to Send (Must-Do: App Password)
 
@@ -106,7 +107,7 @@ Gmail needs extra security for sending from custom addresses.
 
 ## Step 3: Add Your Custom Email to Gmail (Send From It!)
 
-**Important:** Do **not** use Cloudflare's server for sending — use Gmail's.
+> **Important:** Do **not** use Cloudflare's server for sending — use Gmail's.
 
 1. Open Gmail → click the gear icon → **See all settings** → **Accounts and Import** tab.
 2. Under **Send mail as** → click **Add another email address**.
