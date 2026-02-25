@@ -12,6 +12,8 @@ tags:
   - GitHub Pages
 title: Building a Telegram Bot for Easy Media Uploads to My Blog
 layout: post
+image: "/assets/images/posts/telegram-bot-cover.png"
+image_alt: "A smartphone sending an image to a website folder via a paper airplane"
 ---
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Added a feature to add media via telegram to my website repo using the Github API and a telegram bot. <br><br>This makes it super convenient to upload images by texting the bot. I even added a menu to categorize the images. Useful for memes in particular😃 <a href="https://t.co/nflC8uVD3T">https://t.co/nflC8uVD3T</a> <a href="https://t.co/VHGNcOKAp6">pic.twitter.com/VHGNcOKAp6</a></p>&mdash; Richard Djarbeng (@DjarbengRichard) <a href="https://twitter.com/DjarbengRichard/status/2026249158407995647?ref_src=twsrc%5Etfw">February 24, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
