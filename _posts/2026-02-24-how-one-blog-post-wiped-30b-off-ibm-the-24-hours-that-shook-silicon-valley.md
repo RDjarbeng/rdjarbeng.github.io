@@ -76,6 +76,10 @@ IBM wasn't the sole tech giant to feel the sting this week. Just last Thursday, 
 
 Industry stalwarts like **CrowdStrike**, **Okta**, and **Cloudflare** all witnessed significant drops in their valuations as institutional investors rapidly came to a unified realization: AI agents can now actively hunt down and automatically remediate critical software bugs exponentially faster than the best human-led security operations centers.
 
+### Mentions in the Media
+Here is a post on Twitter/X that captures the mood of the moment:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A blog post just wiped $30 billion off IBM in a single afternoon.<br><br>Not a product launch. Not an earnings miss. Not a competitor undercutting on price.<br><br>A five-minute blog post explaining that Claude can read COBOL.<br><br>IBM dropped 13%. Worst single-day loss since October 2000.… <a href="https://t.co/2hqcNhEdkG">pic.twitter.com/2hqcNhEdkG</a></p>&mdash; Shanaka Anslem Perera ⚡ (@shanaka86) <a href="https://twitter.com/shanaka86/status/2026064775772504138?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ### The Bottom Line
