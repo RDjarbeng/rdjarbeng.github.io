@@ -8,6 +8,7 @@ backend:
 site_url: https://rdjarbeng.com/
 media_folder: "assets/images"
 public_folder: "/assets/images"
+app_title: "Admin-rdjarbeng.com"
 
 slug:
   encoding: "ascii"

@@ -8,7 +8,7 @@ When generating cover images for this website, please adhere to the following sp
 ## Specifications
 
 1.  **Text Overlay**:
-    *   The image MUST include the **title** of the post or a short, **interesting hook** to grab the reader's attention.
+    *   The image MUST include a short, **interesting hook** to grab the reader's attention or the **title** of the post.
     *   Typography should be modern, bold, and legible.
 
 2.  **Watermark**:
@@ -16,8 +16,8 @@ When generating cover images for this website, please adhere to the following sp
     *   Placement: subtle but visible, typically at the bottom center or bottom right.
 
 3.  **Color Palette**:
-    *   **Primary Colors** (Red, Blue, Yellow) are preferred.
-    *   Use bold, vibrant, and high-contrast color schemes.
+    *   **Text Color (STRICT)**: You MUST pick exactly ONE solid color for the entire text overlay (e.g., solid black, solid white, solid red, yellow or blue). Do NOT use gradients, multiple colors, or mix and match colors in the text.
+    *   **Background/Illustration Colors**: Use bold, vibrant, and high-contrast color schemes (Primary Colors like Red, Blue, Yellow).
 
 4.  **Content & Style**:
     *   **Style**: Use **Flat Vector Art**, **Editorial Illustration**, or **Minimalist Geometric** styles.
@@ -37,4 +37,4 @@ When generating cover images for this website, please adhere to the following sp
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
-> "A **flat vector illustration** of [subject] using a **matte** finish. **Solid** primary colors (Red, Blue, Yellow). Clean lines, **white or light background**. Text overlay says '[Title]'. Watermark 'rdjarbeng.com' at the bottom. **No neon, no glow, editorial style**. **16:9 Aspect Ratio**."
+> "A **flat vector illustration** of [subject] using a **matte** finish. **Solid** primary colors (Red, Blue, Yellow) for the illustration. Clean lines, **white or light background**. Text overlay says '[Title]' in exactly **ONE solid color** (e.g., solid black). Watermark 'rdjarbeng.com' at the bottom. **No neon, no glow, editorial style**. **16:9 Aspect Ratio**."

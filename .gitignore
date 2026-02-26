@@ -11,3 +11,4 @@ external_links.txt
 generate_tags_gemini.rb
 *.txt
 .env
+!llms.txt

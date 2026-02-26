@@ -3,13 +3,16 @@
 This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](https://rdjarbeng.com) codebase.
 
 ## High Priority
+
+- Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
 - [ ] **Move gallery captions out of Front Matter**: Currently, captions for gallery items (images/videos) are stored in the YAML Front Matter. This should be moved to the markdown body to leverage full markdown rendering and avoid YAML parsing issues with multiline strings.
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
 ## Enhancements & Infrastructure
+- The gallery page for videos on mobile sucks and needs a total redesign, it's not scrollable, doesn't exit back to gallery, the youtube thumbnails don't load, the text is hidden, the layout is just bad, scrolling memes is not nice, not easy to find memes...
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
-- [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query.
-- [ ] **Telegram Bot**: Test bot for memes. Deploy (PythonAnywhere or Oracle Cloud Free Tier).
+- [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
+- [ ] **Card layouts**: Cards are not shown in the table of contents.
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
 Card images have a top padding that leaves a gray space
 
@@ -78,5 +81,3 @@ Demos of projects focused on zero-shot detection and segmentation.
 OpenAi gym environments - about this and it’s connection with the reinforcement learning paper on world models
  with most of them showing a runtime error.  A few of them work though like this matAnyone space
 https://huggingface.co/spaces/PeiqingYang/MatAnyone
-
-
