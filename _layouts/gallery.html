@@ -70,14 +70,14 @@ layout: default
       data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}"
       data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}"
       data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{{ item.youtube_id }}/hqdefault.jpg{% elsif item.type == 'video' and item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
-      data-caption="{{ item.caption | escape }}" data-title="{{ item.title | escape }}"
+      data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-title="{{ item.title | escape }}"
       data-date="{{ item.date | date: '%B %d, %Y' }}" data-slug="{{ item.title | slugify }}"
       data-url="{{ item.url | relative_url }}"
       data-link="{% if item.link and item.link != '' %}{{ item.link | relative_url }}{% endif %}"
       data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
 
       <div class="gallery-caption-content" style="display:none;">
-        {{ item.caption | markdownify }}
+        {{ item.content }}
       </div>
 
       {% if item.type == 'video' %}
