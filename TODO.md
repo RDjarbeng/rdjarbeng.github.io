@@ -81,3 +81,25 @@ Demos of projects focused on zero-shot detection and segmentation.
 OpenAi gym environments - about this and it’s connection with the reinforcement learning paper on world models
  with most of them showing a runtime error.  A few of them work though like this matAnyone space
 https://huggingface.co/spaces/PeiqingYang/MatAnyone
+
+
+Possible improvements
+- Here is the strategic roadmap:
+
+1. Doubling Daily Active Users (2x DAU)
+The focus here is on Distribution and Search Intent.
+
+Programmatic SEO for AI Trends: Since you work with YOLO World and Gemini, I would create a series of "Solution Recipes"—short, highly searchable posts solving specific technical hurdles (e.g., "How to deploy YOLO World on a Raspberry Pi"). These capture long-tail search traffic from developers.
+The "Project-to-Post" Pipeline: Every time you update a project like MAHORAGA or the Lyric Video Generator, I would automate the generation of a "Build Log." Sharing these technical journeys on LinkedIn and Twitter (where you're already active) drives high-intent referral traffic.
+Newsletter Integration: Implement a "Digital Garden" style newsletter. Instead of a standard blog, treat it as a recurring update on your AI research. This converts one-time visitors into the "Daily Active" cohort.
+GitHub Cross-Pollination: Ensure every README in your repositories (like rdjarbeng.github.io) has a "Learn how this was built" link leading back to a specific deep-dive on the site.
+2. Increasing Time Spent by 35%
+The focus here is on Interactivity and Content Loops.
+
+Live Interactive Demos: Instead of just screenshots, I would suggest embedding "Lite" versions of your projects directly in the posts. If a user can play with a YOLO World detector or a TTS preview in-browser, their session duration will skyrocket.
+Series-Based Architecture: Reorganize content into "Tracks" (e.g., The Autonomous Trading Track). At the end of every post, use a "Next in Series" prompt rather than just "Related Posts." This creates a "binge-reading" effect.
+Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000-word authoritative guides. Detailed tutorials with annotated code blocks and architectural diagrams (using the landscape screenshots you prefer) naturally keep users on the page longer.
+Readability UX: Improve the "In-App" feel by adding:
+Estimated Reading Time: Sets expectations.
+Table of Contents (Sticky): Allows users to jump to sections of interest without leaving.
+Code "Copy" and "Play" buttons: Increases interaction events within the page.
