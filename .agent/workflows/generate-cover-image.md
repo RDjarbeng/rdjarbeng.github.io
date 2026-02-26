@@ -16,7 +16,7 @@ When generating cover images for this website, please adhere to the following sp
     *   Placement: subtle but visible, typically at the bottom center or bottom right.
 
 3.  **Color Palette**:
-    *   **Primary Colors** (Red, Blue, Yellow) are preferred.
+    *   **Primary Colors** (Red, Blue, Yellow) are preferred for Text, Pick one color for the text without mix. Other colors can be used outside of the text.
     *   Use bold, vibrant, and high-contrast color schemes.
 
 4.  **Content & Style**:
