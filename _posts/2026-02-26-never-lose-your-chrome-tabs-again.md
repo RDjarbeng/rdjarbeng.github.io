@@ -8,7 +8,7 @@ tags:
   - windows
   - productivity
 title: 'Never Lose Your Chrome Tabs Again: How to Resume on Startup'
-image: /assets/images/posts/2026-02-26-resume-chrome-tabs-cover.png
+image: /assets/images/resume_chrome_tabs_rd.webp
 image_alt: Resume Chrome Tabs Cover Image
 layout: post
 categories: Technology
@@ -34,3 +34,5 @@ By default, Chrome shows "Open the New tab page", but making this small switch m
 ![Chrome Resume on Start Setting](/assets/images/posts/chrome_resume_on_start.png)
 
 Now, regardless of whether you have to reboot for an update or simply shut down for the night, all your vital tabs will respawn completely intact when you launch Chrome again.
+
+![Resume Chrome Tabs Cover Image](/assets/images/resume_chrome_tabs_rd.webp "Engineer glad to help fix your issues")
