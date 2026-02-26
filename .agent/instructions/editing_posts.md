@@ -8,6 +8,7 @@ When editing or creating posts (blog posts, personal posts, etc.), adhere to the
     *   **INCORRECT**: `assets/images/my-image.png`
     *   **INCORRECT**: `../assets/images/my-image.png`
 *   **Reasoning**: The CMS `public_folder` configuration expects absolute paths from the site root.
+*   **Flat Structure Only (CRITICAL)**: Do NOT use a nested structure for images (e.g., do not use `image: \n  path: ... \n  alt: ...`). You **MUST** use the flat structure: `image: <path>` and `image_alt: <alt>`.
 
 ## 2. Title Formatting
 *   **YAML Parsing & Colons**: The colon character `:` is a reserved key-value separator in YAML.
