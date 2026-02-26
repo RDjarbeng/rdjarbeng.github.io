@@ -31,3 +31,8 @@ categories: Category1
 published: true
 ---
 ```
+
+## 4. Categories
+*   **Existing Categories**: Use the categories defined in the `_category_info` directory (e.g., `ai`, `air-quality`, `computer-vision`, `education`, `energy`, `entrepreneurship`, `environment`, `finance`, `gis`, `help`, `iot`, `it`, `news`, `open-source`, `research`, `satellite`, `security`, `software-development`, `software-engineering`, `technology`, `ui`, `web`) unless you absolutely need to create a new one.
+*   **Capitalization (CRITICAL)**: You MUST capitalize the first letter of the category in the front matter (e.g., use `Technology` instead of `technology`).
+*   **Creating New Categories**: You MUST notify the user if you want to create a new category that doesn't fit into the existing ones.
