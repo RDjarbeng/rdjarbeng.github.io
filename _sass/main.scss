@@ -1782,7 +1782,8 @@ body {
 }
 
 .post-container,
-.post-content {
+.post-content,
+.personal-container {
   font-family: inherit;
   color: #0f1419;
 
@@ -1848,4 +1849,10 @@ body {
     margin-top: 12px;
     margin-bottom: 12px;
   }
+}
+
+.personal-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
