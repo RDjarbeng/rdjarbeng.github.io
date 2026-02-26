@@ -37,9 +37,9 @@ When editing content in jupyter notebooks it usually prefers to run python comma
 
 ![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
-It later admitted it is unable to navigate a jupyter notebook and run the cells individually. This is a feature that I was actually hoping to have because of the interactive nature of jupyter notebooks. I actually thought I could code alongside, but alas I was mistaken. 
+It later admitted it is unable to navigate a jupyter notebook and run the cells individually. This is a feature that I was actually hoping to have because of the interactive nature of jupyter notebooks. I actually thought I could code alongside, but alas I was mistaken.
 
-A loss for antigravity though. 
+A loss for antigravity though.
 
 ### Antigravity Browser and micro-management
 
@@ -89,7 +89,7 @@ Even after adding this to my prompt: 'Approved in advance. yes' I usually have t
 
 ## Allow, allow, allow terminal access
 
-For many terminal commands before they can run I have to click 'accept' or 'reject'. Now this I think is a good security feature. However, I didn't think I would have to do this for most commands. 
+For many terminal commands before they can run I have to click 'accept' or 'reject'. Now this I think is a good security feature. However, I didn't think I would have to do this for most commands.
 
 For example,  `ls` which lists the content of a directory, doesn't change any files and is relatively low risk so imagine my surprise to come back to a task to approve an `ls` operation. _Annoying_ is too weak a word to describe the feeling.
 
@@ -135,6 +135,5 @@ On February 1st, I asked antigravity to implement pagination (split the list of 
 > >
 
 Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
-
 
 Apparently you can't update from withing the Antigravity application and you have to download and install the latest version.
