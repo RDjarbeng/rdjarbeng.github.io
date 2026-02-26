@@ -27,7 +27,7 @@ image: /assets/images/cover.png
 image_alt: "Description of cover image"
 description: "A short summary for SEO"
 tags: [Tag1, Tag2]
-categories: [Category1]
+categories: Category1
 published: true
 ---
 ```
