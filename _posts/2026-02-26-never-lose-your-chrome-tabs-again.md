@@ -1,14 +1,20 @@
 ---
-layout: post
-title: "Never Lose Your Chrome Tabs Again: How to Resume on Startup"
 date: 2026-02-26 15:15:00 +0200
-categories: Technology
-tags: [chrome, windows, productivity]
+published: true
+author: Richard
+category: Help
+tags:
+  - chrome
+  - windows
+  - productivity
+title: 'Never Lose Your Chrome Tabs Again: How to Resume on Startup'
 image: /assets/images/posts/2026-02-26-resume-chrome-tabs-cover.png
-image_alt: "Resume Chrome Tabs Cover Image"
+image_alt: Resume Chrome Tabs Cover Image
+layout: post
+categories: Technology
 ---
 
-When a Windows update unexpectedly interrupts your work and forces a restart, you don't have to worry about losing all your carefully organized Chrome windows and tabs. 
+When a Windows update unexpectedly interrupts your work and forces a restart, you don't have to worry about losing all your carefully organized Chrome windows and tabs.
 
 You also don't have to go through the tedious process of restoring the tabs manually using keyboard commands like `Ctrl+Shift+T` on Windows or `Cmd+Shift+T` on Mac—which I used to do all the time.
 
