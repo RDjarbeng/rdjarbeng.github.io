@@ -137,3 +137,5 @@ On February 1st, I asked antigravity to implement pagination (split the list of 
 Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
 
 Apparently you can't update from withing the Antigravity application and you have to download and install the latest version.
+
+![](/assets/images/20260226-155020.png)
