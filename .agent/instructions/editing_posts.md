@@ -21,15 +21,18 @@ When editing or creating posts (blog posts, personal posts, etc.), adhere to the
 Refer to `admin/config.yml` for the definitive schema, but ensure standard posts structure typically includes:
 ```yaml
 ---
-layout: post
-title: "Your Post Title"
 date: YYYY-MM-DD HH:MM:SS
+published: true
+author: "Author Name"
+categories: Category1
+tags:
+  - Tag1
+  - Tag2
+title: "Your Post Title"
 image: /assets/images/cover.png
 image_alt: "Description of cover image"
 description: "A short summary for SEO"
-tags: [Tag1, Tag2]
-categories: Category1
-published: true
+layout: post
 ---
 ```
 
