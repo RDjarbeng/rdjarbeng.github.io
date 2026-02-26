@@ -29,17 +29,17 @@ Doesn't seem to know when it breaks something and doesn't seem to have access to
 
 Sometimes it can be done with a task but take a while to generate the walkthroughs, and shows 'generating' or 'loading'. The walkthroughs are usually several paragraphs which for me is too long. I usually only care about the results; if the feature worked or not. The implementation details are not always necessary for me since I can usually see the modified files/code and have to click accept for the changes to remain. Perhaps there should be an option to specify short or summarized walkthroughs vs longer walkthroughs.
 
-![Screenshot of Antigravity browser AI output stuck on loading with user comment 'seems you are done but taking some time to finish up? Can you end now. All I see is you loading'](/assets/images/antigravity_server_stopped_but_still_loading.png "Screenshot of Antigravity browser AI output stuck loading")
+
 
 #### Jupyter notebook:
 
 When editing content in jupyter notebooks it usually prefers to run python commands in the terminal and then append to the notebook. I am yet to test it's ability to change code cells and markdown cells directly though.
 
-![Antigravity stalling whilst coding so](/assets/images/antigravity_stalling_whilst_coding.png)
 
-It later admitted it is unable to navigate a jupyter notebook and run the cells individually. This is a feature that I was actually hoping to have because of the interactive nature of jupyter notebooks. I actually thought I could code alongside, but alas I was mistaken. 
 
-A loss for antigravity though. 
+It later admitted it is unable to navigate a jupyter notebook and run the cells individually. This is a feature that I was actually hoping to have because of the interactive nature of jupyter notebooks. I actually thought I could code alongside, but alas I was mistaken.
+
+A loss for antigravity though.
 
 ### Antigravity Browser and micro-management
 
@@ -61,7 +61,7 @@ Usually what I found is that this happens when the agent is stuck in some kind o
 
 For some reason it has 29 subprocesses running on task manager when left on idle on windows. Of course it doesn't beat the king of many subprocesses Google Chrome browser shown here with 101 subprocesses
 
-![Task manager screenshot showing antigravity CPU sub processes](/assets/images/antigravity_29_subprocesses_taskmanager.png "Task manager screenshot showing antigravity CPU subprocesses")
+
 
 Many times it leaves the server running after it completes implementation, evidenced by visiting the server url such as localhost:4000, and receiving a webpage left from a previous debug session. It seems unable to terminate the terminal as well when there is a keystroke needed, possibly because of a double check before the server stops. Jekyll for instance requires you to enter _yes (Y/N) _to terminate or hit ctrl+c again but antigravity doesn't seem to know this and gets stuck. It seems to work fine with server processes that require only a single command such as Vite with React.
 
@@ -71,7 +71,7 @@ The effect of this behaviour however is you can have multiple terminals running 
 
 Small UI problems like this. The line to be decided on, whether to accept or reject is blocked by the button menu to accept or deny (see screenshot below). Simple solution is to offset the button higher or lower. However what makes it interesting is that at the bottom of the editor is a similar menu with the blue button, which is nicely out of the way. You can only wonder why not use that alone instead.
 
-![](/assets/images/20251216-115320.png)
+
 
 ### Error while editing file
 
@@ -81,7 +81,7 @@ Many times it does not catch this error until I tell it that it broke the applic
 
 I've lost count of the number of time a perfectly working feature stopped working after antigravity updated a completely different feature and left out existing code. It's probably a bug and not intentional I suppose.
 
-![](/assets/images/20260112-203038.png)
+
 
 ### Implementation plan woes:
 
@@ -89,7 +89,7 @@ Even after adding this to my prompt: 'Approved in advance. yes' I usually have t
 
 ## Allow, allow, allow terminal access
 
-For many terminal commands before they can run I have to click 'accept' or 'reject'. Now this I think is a good security feature. However, I didn't think I would have to do this for most commands. 
+For many terminal commands before they can run I have to click 'accept' or 'reject'. Now this I think is a good security feature. However, I didn't think I would have to do this for most commands.
 
 For example,  `ls` which lists the content of a directory, doesn't change any files and is relatively low risk so imagine my surprise to come back to a task to approve an `ls` operation. _Annoying_ is too weak a word to describe the feeling.
 
@@ -136,5 +136,6 @@ On February 1st, I asked antigravity to implement pagination (split the list of 
 
 Now this is a strange command I didn't instruct. Not only that it seems wherever this command came from it's also very determined to execute._ 'I need you to just do it' "Don't ask me to approve"._ Well for the first time I think I'm actually glad the request to auto-approve file creation was denied. Not sure what this is though, because from what I can tell this change is just a change in my website structure and not exactly malicious. It's just a command not asked for. Also the time stamp is wrong. Asking the agent not to get the time any other way is a bit troubling though what was the intention here?
 
-
 Apparently you can't update from withing the Antigravity application and you have to download and install the latest version.
+
+
