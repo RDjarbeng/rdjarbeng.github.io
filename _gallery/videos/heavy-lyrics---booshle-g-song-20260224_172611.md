@@ -1,7 +1,7 @@
 ---
 title: HEAVY Lyrics - Booshle G song for a moment
 platform: youtube
-youtube_id: https://youtu.be/USsso5DCNts
+youtube_id: USsso5DCNts
 embed_code: ''
 thumbnail: ''
 caption: "Tired, uninspired, empty pages, \nyou feel wasted \nfrustrated\nfilled with\

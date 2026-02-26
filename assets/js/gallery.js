@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const DEFAULT_THUMBNAIL = '/assets/images/webOrMobile.jpeg';
+    const TIKTOK_THUMBNAIL = '/assets/images/tiktok_thumb.png'; // Fallback for TikTok
     // DOM Elements
     const closeBtn = document.querySelector('.lightbox-close');
     const prevBtn = document.querySelector('.lightbox-nav.prev');
@@ -149,9 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let imgContent;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
         } else {
-            imgContent = `<img src="${DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
@@ -245,9 +246,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let imgContent;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
         } else {
-            imgContent = `<img src="${DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
