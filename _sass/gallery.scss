@@ -205,206 +205,6 @@
     flex-direction: column;
 }
 
-/* Gallery Grid Styles */
-.gallery-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.gallery-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.gallery-description {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.gallery-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.gallery-filter {
-    background: #f0f0f0;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-.gallery-filter:hover,
-.gallery-filter.active {
-    background: #333;
-    color: #fff;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* Common Item Styles (Dashboard & Grid) */
-.gallery-item,
-.dashboard-item {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background: #fff;
-}
-
-.gallery-item.hidden {
-    display: none;
-}
-
-.gallery-item:hover,
-.dashboard-item:hover {
-    transform: translateY(-5px);
-}
-
-.gallery-thumb-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-    /* 1:1 Aspect Ratio */
-}
-
-.gallery-thumb-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.gallery-title {
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-}
-
-.gallery-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #eee;
-    display: flex;
-    flex-direction: column;
-    color: #333;
-    overflow-y: auto;
-    border-left: 1px solid #eee;
-}
-
-/* Lightbox Styles */
-.lightbox {
-    position: fixed;
-    z-index: 2000;
-    /* Ensure it's above everything */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.lightbox.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.lightbox-content-wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.lightbox-media-column {
-    flex: 1;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-#lightbox-media-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#lightbox-media-container>div,
-.video-container,
-.video-embed {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-media-column img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.lightbox-media-column iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.lightbox-info-column {
-    width: 30%;
-    flex: 0 0 30%;
-    height: 100%;
-    background-color: #fff;
-    padding: 4rem 2rem 2rem;
-    /* Top padding for close button */
-    overflow-y: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .lightbox-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -440,16 +240,18 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #333;
-    font-size: 30px;
+    color: #fff; /* Make it white for visibility on black backdrop */
+    font-size: 36px; /* Slightly bigger */
     font-weight: bold;
     cursor: pointer;
     z-index: 2100;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-close:hover {
-    color: #000;
+    color: #ccc;
+    transform: scale(1.1);
 }
 
 .lightbox-nav {
@@ -484,25 +286,85 @@
 @media (max-width: 900px) {
     .lightbox-content-wrapper {
         flex-direction: column;
+        overflow-y: auto; /* Enable scrolling for the entire wrapper if needed */
+        -webkit-overflow-scrolling: touch;
+        height: auto;
+        min-height: 100%;
     }
 
     .lightbox-media-column {
-        flex: 2;
-        min-height: 60vh;
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+        min-height: 40vh; /* Adjust height for mobile */
+        max-height: 60vh;
+    }
+
+    #lightbox-media-container img, 
+    #lightbox-media-container iframe {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16/9; /* Default for videos */
+        max-height: 100%;
     }
 
     .lightbox-info-column {
         width: 100%;
-        flex: 1;
-        padding: 2rem;
+        flex: 1 0 auto;
+        padding: 1rem 1.5rem; /* Reduced top padding */
+        background-color: #fff;
+        min-height: 40vh;
+        overflow-y: visible; /* Let the wrapper handle scrolling if needed */
+    }
+
+    .lightbox-title {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .lightbox-caption {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding-bottom: 2rem;
     }
 
     .lightbox-nav {
-        display: none;
+        display: flex; /* Keep nav but make it smaller/different? Or hide if too cluttered */
+        padding: 10px;
+        font-size: 20px;
+        top: 40%; /* Move up away from text */
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .lightbox-nav.prev {
+        left: 10px;
     }
 
     .lightbox-nav.next {
-        right: 20px;
+        right: 10px; /* Reset from 32% */
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+        font-size: 40px; /* Big enough to touch easily */
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+    }
+
+    .mobile-close-btn {
+        display: block !important;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
     }
 }
 
@@ -544,16 +406,20 @@
     gap: 15px;
     padding: 10px 5px 20px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE/Edge */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
+/* Hide scrollbar but keep functionality */
 .horizontal-scroll-container::-webkit-scrollbar,
 .dashboard-scroll-container::-webkit-scrollbar {
-    display: none;
-    /* Chrome/Safari */
+    height: 6px;
+    display: block; /* Show a small scrollbar for better affordance on mobile */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb,
+.dashboard-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
 }
 
 .dashboard-item {

@@ -21,6 +21,7 @@ layout: default
       <div class="lightbox-caption"></div>
       <a class="lightbox-link btn" href="#" style="display: none; margin-top: 15px;">Read Related
         Post</a>
+      <button class="btn mobile-close-btn" style="display: none; margin-top: 2rem; background: #333; color: #fff; width: 100%;">Close</button>
     </div>
   </div>
 
@@ -35,20 +36,11 @@ layout: default
       posts, AI-generated art, memes I enjoy, and videos from social media.
     </p>
     <nav class="gallery-nav">
-      <button class="gallery-filter active" data-filter="all">All Images</button>
-      <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
-      <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
-      <button class="gallery-filter" data-filter="memes">Memes</button>
-      <button class="gallery-filter" data-filter="ghana">Ghana</button>
-      <button class="gallery-filter" data-filter="rwanda">Rwanda</button>
-      <button class="gallery-filter" data-filter="external">External</button>
-      <button class="gallery-filter" data-filter="videos">Videos</button>
-      <!-- Video Sub-filters -->
-      <button class="gallery-filter" data-filter="tiktok">TikTok</button>
-      <button class="gallery-filter" data-filter="instagram">Instagram</button>
-      <button class="gallery-filter" data-filter="youtube">YouTube</button>
-      <button class="gallery-filter" data-filter="twitter">Twitter/X</button>
+      <!-- ... filters ... -->
     </nav>
+    <div class="gallery-search-container" style="max-width: 400px; margin: 0 auto 30px;">
+      <input type="text" id="gallery-search" placeholder="Search gallery items..." style="width: 100%; padding: 10px 15px; border-radius: 20px; border: 1px solid #ccc; font-size: 1rem;">
+    </div>
   </header>
 
   <!-- Dashboard View (Horizontal Scrolling) -->
@@ -77,7 +69,7 @@ layout: default
       data-category="{% if item.type == 'cover' %}cover-images {% endif %}{% if item.type == 'video' %}videos {{ item.platform | downcase }} {% endif %}{% if item.type == 'external' %}external {% endif %}{{ item.category | downcase }} {{ item.labels | join: ' ' | downcase }}"
       data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}"
       data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}"
-      data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{{ item.youtube_id }}/hqdefault.jpg{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
+      data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{{ item.youtube_id }}/hqdefault.jpg{% elsif item.type == 'video' and item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
       data-caption="{{ item.caption | escape }}" data-title="{{ item.title | escape }}"
       data-date="{{ item.date | date: '%B %d, %Y' }}" data-slug="{{ item.title | slugify }}"
       data-url="{{ item.url | relative_url }}"
