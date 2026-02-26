@@ -3,6 +3,7 @@
 This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](https://rdjarbeng.com) codebase.
 
 ## High Priority
+
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
 - [ ] **Move gallery captions out of Front Matter**: Currently, captions for gallery items (images/videos) are stored in the YAML Front Matter. This should be moved to the markdown body to leverage full markdown rendering and avoid YAML parsing issues with multiline strings.
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
@@ -80,5 +81,3 @@ Demos of projects focused on zero-shot detection and segmentation.
 OpenAi gym environments - about this and it’s connection with the reinforcement learning paper on world models
  with most of them showing a runtime error.  A few of them work though like this matAnyone space
 https://huggingface.co/spaces/PeiqingYang/MatAnyone
-
-
