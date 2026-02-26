@@ -31,7 +31,7 @@ If you are a current user of Google Antigravity, **you might need to manually tr
 
 Along with the addition of Gemini 3.1 Pro, Antigravity has rolled out several new features, improvements, fixes, and patches since the start of 2026. Because Antigravity is an agent-first IDE, its infrastructure is complex, and these recent fixes dramatically improve the everyday developer experience.
 
-Some notable updates from the new release include:
+Some notable updates from the new release of antigravity version 1.19.5 include:
 
 ### **Browser Subagent Fix:**
  Antigravity utilizes an autonomous browser subagent that can navigate the web, bypass pop-ups, read DOM structures, and capture screenshots to gather context for your code. Earlier this year, this subagent sometimes struggled with heavy single-page applications (SPAs) or dynamic content loading. The recent patches have overhauled its DOM-parsing logic, drastically improving its stability when crawling complex websites and allowing the AI to research documentation with far fewer timeouts.
