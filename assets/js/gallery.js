@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const DEFAULT_THUMBNAIL = '/assets/images/webOrMobile.jpeg';
     const TIKTOK_THUMBNAIL = '/assets/images/tiktok_thumb.png'; // Fallback for TikTok
+    const INSTAGRAM_THUMBNAIL = '/assets/images/instagram_thumb.png'; // Fallback for Instagram
+    const TWITTER_THUMBNAIL = '/assets/images/twitter_thumb.png'; // Fallback for Twitter
     // DOM Elements
     const closeBtn = document.querySelector('.lightbox-close');
     const prevBtn = document.querySelector('.lightbox-nav.prev');
@@ -149,10 +151,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = dataItem.dataset.title;
 
         let imgContent;
+        const platform = dataItem.dataset.platform;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL : 
+                         platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                         platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
@@ -245,10 +251,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = dataItem.dataset.title;
 
         let imgContent;
+        const platform = dataItem.dataset.platform;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL : 
+                         platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                         platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
