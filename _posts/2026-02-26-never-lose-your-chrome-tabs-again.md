@@ -4,9 +4,8 @@ title: "Never Lose Your Chrome Tabs Again: How to Resume on Startup"
 date: 2026-02-26 15:15:00 +0200
 categories: Technology
 tags: [chrome, windows, productivity]
-image:
-  path: /assets/images/posts/2026-02-26-resume-chrome-tabs-cover.png
-  alt: "Resume Chrome Tabs Cover Image"
+image: /assets/images/posts/2026-02-26-resume-chrome-tabs-cover.png
+image_alt: "Resume Chrome Tabs Cover Image"
 ---
 
 When a Windows update unexpectedly interrupts your work and forces a restart, you don't have to worry about losing all your carefully organized Chrome windows and tabs. 
