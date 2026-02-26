@@ -1,7 +1,7 @@
 ---
 title: HOW TO MAKE AUTHENTIC GHANA PEANUT BUTTER SOUP CHICKEN PEANUT BUTTER S
 platform: youtube
-youtube_id: https://youtu.be/8-BsuzhV2t8
+youtube_id: 8-BsuzhV2t8
 embed_code: ''
 thumbnail: ''
 caption: ''
