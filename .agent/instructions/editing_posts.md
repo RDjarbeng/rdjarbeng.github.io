@@ -24,7 +24,7 @@ Refer to `admin/config.yml` for the definitive schema, but ensure standard posts
 date: YYYY-MM-DD HH:MM:SS
 published: true
 author: "Author Name"
-categories: Category1
+category: Category1
 tags:
   - Tag1
   - Tag2
