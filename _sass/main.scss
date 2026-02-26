@@ -1856,3 +1856,16 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Post Cards Typography Overrides */
+div.post-card {
+
+  h3,
+  h4 {
+    font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #0f1419;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+}
