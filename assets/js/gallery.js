@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const paginationContainer = document.getElementById('gallery-pagination');
     const galleryDataContainer = document.getElementById('gallery-data');
     const filterButtons = document.querySelectorAll('.gallery-filter');
+    const searchInput = document.getElementById('gallery-search');
 
     // Lightbox Elements
     const lightbox = document.getElementById('gallery-modal');
@@ -216,7 +217,17 @@ document.addEventListener('DOMContentLoaded', function () {
         gridContainer.innerHTML = '';
 
         const categoryDef = allCategories.find(c => c.id === currentCategory);
-        const filteredItems = categoryDef ? allItems.filter(categoryDef.filter) : allItems;
+        let filteredItems = categoryDef ? allItems.filter(categoryDef.filter) : allItems;
+
+        // Apply Search Filter
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm !== '') {
+            filteredItems = filteredItems.filter(item => {
+                const title = item.dataset.title.toLowerCase();
+                const caption = item.dataset.caption.toLowerCase();
+                return title.includes(searchTerm) || caption.includes(searchTerm);
+            });
+        }
 
         // Update visible items for lightbox
         visibleItems = filteredItems;
@@ -389,6 +400,18 @@ document.addEventListener('DOMContentLoaded', function () {
             renderDashboard();
         });
 
+        // Search Listener
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                if (currentView === 'dashboard') {
+                    // If searching from dashboard, switch to 'all' grid to show results
+                    switchToGrid('all');
+                } else {
+                    renderGridItems();
+                }
+            });
+        }
+
         // Browser Back/Forward
         window.addEventListener('popstate', (e) => {
             if (e.state) {
@@ -510,7 +533,17 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.addEventListener('click', () => closeLightbox());
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    
+    // Close on clicking backdrop/wrapper
+    lightbox.addEventListener('click', (e) => { 
+        if (e.target === lightbox || e.target === document.querySelector('.lightbox-content-wrapper')) {
+            closeLightbox();
+        }
+    });
+
+    // On mobile, the media column takes a lot of space. 
+    // If you click it but not the image/video, maybe you wanted to close?
+    // No, that's brittle. Let's make the close button better.
 
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
