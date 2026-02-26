@@ -138,4 +138,4 @@ Now this is a strange command I didn't instruct. Not only that it seems wherever
 
 Apparently you can't update from withing the Antigravity application and you have to download and install the latest version.
 
-![](/assets/images/20260226-155020.png)
+![Antigravity IDE notification showing IDE is out of date](/assets/images/20260226-155020.png)
