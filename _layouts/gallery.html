@@ -22,7 +22,9 @@ layout: default
       <a class="lightbox-link btn" href="#" style="display: none; margin-top: 15px;">Read Related
         Post</a>
       <div class="mobile-only-footer" style="display: none; margin-top: 3rem; padding-bottom: 2rem;">
-        <button class="btn mobile-close-btn" style="background: #000; color: #fff; width: 100%; padding: 1rem; border-radius: 8px; font-weight: bold; border: none;">Close Gallery</button>
+        <button class="btn mobile-close-btn"
+          style="background: #000; color: #fff; width: 100%; padding: 1rem; border-radius: 8px; font-weight: bold; border: none;">Close
+          Gallery</button>
       </div>
     </div>
   </div>
@@ -53,7 +55,8 @@ layout: default
       <button class="gallery-filter" data-filter="twitter">Twitter/X</button>
     </nav>
     <div class="gallery-search-container" style="max-width: 400px; margin: 0 auto 30px;">
-      <input type="text" id="gallery-search" placeholder="Search gallery items..." style="width: 100%; padding: 10px 15px; border-radius: 20px; border: 1px solid #ccc; font-size: 1rem;">
+      <input type="text" id="gallery-search" placeholder="Search gallery items..."
+        style="width: 100%; padding: 10px 15px; border-radius: 20px; border: 1px solid #ccc; font-size: 1rem;">
     </div>
   </header>
 
@@ -96,26 +99,28 @@ layout: default
 
       {% if item.type == 'video' %}
       <div class="gallery-html-content">
-        <div class="video-container">
-          <div class="video-embed">
-            {% if item.platform == 'youtube' and item.youtube_id %}
-            {% assign video_id = item.youtube_id %}
-            {% if item.youtube_id contains 'youtube.com/watch' %}
-            {% assign video_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
-            {% elsif item.youtube_id contains 'youtube.com/shorts/' %}
-            {% assign video_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-            {% elsif item.youtube_id contains 'youtu.be/' %}
-            {% assign video_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
-            {% endif %}
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="{{ item.title }}"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            {% else %}
-            {{ item.embed_code }}
-            {% endif %}
+        <template class="raw-embed-code">
+          <div class="video-container">
+            <div class="video-embed">
+              {% if item.platform == 'youtube' and item.youtube_id %}
+              {% assign video_id = item.youtube_id %}
+              {% if item.youtube_id contains 'youtube.com/watch' %}
+              {% assign video_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+              {% elsif item.youtube_id contains 'youtube.com/shorts/' %}
+              {% assign video_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+              {% elsif item.youtube_id contains 'youtu.be/' %}
+              {% assign video_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+              {% endif %}
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}"
+                title="{{ item.title }}" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              {% else %}
+              {{ item.embed_code }}
+              {% endif %}
+            </div>
           </div>
-        </div>
+        </template>
       </div>
       {% endif %}
     </div>

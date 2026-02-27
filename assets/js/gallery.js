@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
 
             const scrollContainer = document.createElement('div');
-            scrollContainer.className = 'horizontal-scroll-container'; 
+            scrollContainer.className = 'horizontal-scroll-container';
 
             // Take first 6 items
             const previewItems = categoryItems.slice(0, 6);
@@ -151,9 +151,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let imgContent;
         const platform = dataItem.dataset.platform;
-        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL : 
-                         platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
-                         platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL :
+            platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
             imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
@@ -259,9 +259,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let imgContent;
         const platform = dataItem.dataset.platform;
-        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL : 
-                         platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
-                         platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL :
+            platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
             imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function handleSwipe() {
             const swipeThreshold = 50;
             const verticalThreshold = 100;
-            
+
             if (Math.abs(touchEndY - touchStartY) < verticalThreshold) {
                 if (touchEndX < touchStartX - swipeThreshold) {
                     showNext();
@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = item.dataset.title;
         const date = item.dataset.date;
 
-        lightboxMediaContainer.innerHTML = ''; 
+        lightboxMediaContainer.innerHTML = '';
 
         document.querySelector('.lightbox-title').textContent = title || '';
         document.querySelector('.lightbox-date').textContent = date || '';
@@ -487,9 +487,17 @@ document.addEventListener('DOMContentLoaded', function () {
             img.alt = title;
             lightboxMediaContainer.appendChild(img);
         } else if (type === 'html') {
-            const htmlContent = item.querySelector('.gallery-html-content').innerHTML;
+            const template = item.querySelector('.raw-embed-code');
             const div = document.createElement('div');
-            div.innerHTML = htmlContent;
+
+            // Clone the template content instead of innerHTML
+            if (template && template.content) {
+                div.appendChild(document.importNode(template.content, true));
+            } else {
+                // Fallback (shouldn't be hit with correct HTML, but just in case)
+                div.innerHTML = item.querySelector('.gallery-html-content').innerHTML;
+            }
+
             div.style.width = '100%';
             div.style.height = '100%';
             div.style.display = 'flex';
@@ -499,11 +507,13 @@ document.addEventListener('DOMContentLoaded', function () {
             Array.from(div.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.innerHTML) {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
             lightboxMediaContainer.appendChild(div);
-            
+
             // Re-initialize Instagram/TikTok if needed
             if (item.dataset.platform === 'instagram') {
                 setTimeout(() => {
@@ -540,9 +550,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = 'hidden';
 
         if (updateHistory) {
-            const url = item.dataset.url; 
+            const url = item.dataset.url;
             const state = { index: index, view: currentView, category: currentCategory, page: currentPage };
-            
+
             if (lightbox.classList.contains('active')) {
                 history.replaceState(state, title, url);
             } else {
@@ -558,7 +568,7 @@ document.addEventListener('DOMContentLoaded', function () {
             indicators.className = 'lightbox-indicators';
             lightbox.appendChild(indicators);
         }
-        
+
         indicators.innerHTML = '';
         const count = Math.min(visibleItems.length, 10);
         for (let i = 0; i < count; i++) {
@@ -581,7 +591,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showNext() {
         currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length;
-        openLightbox(currentLightboxIndex, false); 
+        openLightbox(currentLightboxIndex, false);
     }
 
     function showPrev() {
@@ -592,8 +602,8 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closeLightbox(); });
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    
-    lightbox.addEventListener('click', (e) => { 
+
+    lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox || e.target === document.querySelector('.lightbox-content-wrapper')) {
             closeLightbox();
         }
