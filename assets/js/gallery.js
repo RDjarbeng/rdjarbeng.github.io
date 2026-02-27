@@ -504,8 +504,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             lightboxMediaContainer.appendChild(div);
             
-            if (item.dataset.platform === 'instagram' && window.instgrm) {
-                window.instgrm.Embeds.process();
+            // Re-initialize Instagram/TikTok if needed
+            if (item.dataset.platform === 'instagram') {
+                setTimeout(() => {
+                    if (window.instgrm) {
+                        window.instgrm.Embeds.process();
+                    } else {
+                        const script = document.createElement('script');
+                        script.src = '//www.instagram.com/embed.js';
+                        script.async = true;
+                        document.body.appendChild(script);
+                    }
+                }, 100);
             }
         }
 
