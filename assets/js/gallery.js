@@ -538,13 +538,28 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
-        if (updateHistory) {
+    // Show Swipe Hint for mobile on first open
+    if (window.innerWidth <= 900 && !document.querySelector('.swipe-hint')) {
+        const hint = document.createElement('div');
+        hint.className = 'swipe-hint';
+        hint.textContent = '← Swipe to navigate →';
+        lightbox.appendChild(hint);
+        setTimeout(() => hint.remove(), 4000);
+    }
+
+    if (updateHistory) {
             const url = item.dataset.url; // Use the permalink URL
-            // Push state for lightbox on top of current view
-            history.pushState({ index: index, view: currentView, category: currentCategory, page: currentPage }, title, url);
+            const state = { index: index, view: currentView, category: currentCategory, page: currentPage };
+            
+            // If the lightbox is already open, use replaceState so "Back" always exits the gallery
+            if (lightbox.classList.contains('active')) {
+                history.replaceState(state, title, url);
+            } else {
+                history.pushState(state, title, url);
+            }
         }
     }
 
