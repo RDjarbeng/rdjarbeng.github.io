@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isDeepLink) {
             // Handle deep link (open lightbox)
-            // Pass false to prevent renderDashboard from overwriting the URL before we check it
             renderDashboard(false);
             checkDeepLink(currentPath);
         } else if (categoryParam) {
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             history.pushState({ view: 'dashboard' }, 'Gallery', '/gallery/');
         }
 
-        // Render strips for ALL categories (including videos)
+        // Render strips for ALL categories
         allCategories.forEach(category => {
             const categoryItems = allItems.filter(category.filter);
             if (categoryItems.length === 0) return;
@@ -138,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
             section.appendChild(scrollContainer);
             dashboardContainer.appendChild(section);
 
-            // Add event listener to header link
             header.querySelector('.view-all-link').addEventListener('click', () => switchToGrid(category.id));
         });
     }
@@ -187,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function getCategoryFromItem(item) {
-        // Helper to find primary category
         for (const cat of allCategories) {
             if (item.dataset.category.includes(cat.id)) return cat.id;
         }
@@ -207,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const categoryDef = allCategories.find(c => c.id === categoryId);
         gridCategoryTitle.textContent = categoryDef ? categoryDef.title : 'Gallery';
 
-        // Update URL
         const url = new URL(window.location);
         url.searchParams.set('category', categoryId);
         url.searchParams.set('page', page);
@@ -232,14 +228,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Update visible items for lightbox
         visibleItems = filteredItems;
 
-        // Pagination Logic
         const totalItems = filteredItems.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-        // Ensure current page is valid
         if (currentPage > totalPages) currentPage = totalPages;
         if (currentPage < 1) currentPage = 1;
 
@@ -258,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createGridItem(dataItem) {
         const item = document.createElement('a');
         item.className = 'gallery-item';
-        item.href = dataItem.dataset.url; // For SEO/fallback
+        item.href = dataItem.dataset.url;
 
         const type = dataItem.dataset.type;
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
@@ -310,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const lastBtn = clone.querySelector('.last-page-btn');
         const pageNumbers = clone.querySelector('.page-numbers');
 
-        // Setup Prev/Next/First/Last
         if (currentPage > 1) {
             firstBtn.classList.remove('disabled');
             prevBtn.classList.remove('disabled');
@@ -325,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function () {
             lastBtn.onclick = () => changePage(totalPages);
         }
 
-        // Page Numbers Logic
         const trail = 2;
         let start = Math.max(1, currentPage - trail);
         let end = Math.min(totalPages, currentPage + trail);
@@ -370,7 +361,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function changePage(page) {
         currentPage = page;
-        // Update URL
         const url = new URL(window.location);
         url.searchParams.set('page', page);
         history.pushState({ view: 'grid', category: currentCategory, page: page }, '', url);
@@ -390,7 +380,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setupEventListeners() {
-        // Nav Filters
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.dataset.filter;
@@ -406,11 +395,9 @@ document.addEventListener('DOMContentLoaded', function () {
             renderDashboard();
         });
 
-        // Search Listener
         if (searchInput) {
             searchInput.addEventListener('input', () => {
                 if (currentView === 'dashboard') {
-                    // If searching from dashboard, switch to 'all' grid to show results
                     switchToGrid('all');
                 } else {
                     renderGridItems();
@@ -418,7 +405,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Global Event Delegation for Dynamic Elements
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('mobile-close-btn')) {
                 e.preventDefault();
@@ -448,24 +434,19 @@ document.addEventListener('DOMContentLoaded', function () {
             const swipeThreshold = 50;
             const verticalThreshold = 100;
             
-            // Only swipe if movement is horizontal enough
             if (Math.abs(touchEndY - touchStartY) < verticalThreshold) {
                 if (touchEndX < touchStartX - swipeThreshold) {
-                    // Swiped Left -> Next
                     showNext();
                 }
                 if (touchEndX > touchStartX + swipeThreshold) {
-                    // Swiped Right -> Prev
                     showPrev();
                 }
             }
         }
 
-        // Browser Back/Forward
         window.addEventListener('popstate', (e) => {
             if (e.state) {
                 if (e.state.index !== undefined && e.state.index !== -1) {
-                    // Lightbox state
                     openLightbox(e.state.index, false);
                 } else if (e.state.view === 'grid') {
                     closeLightbox(false);
@@ -475,14 +456,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     renderDashboard(false);
                 }
             } else {
-                // Default: Close lightbox if open and show dashboard
                 closeLightbox(false);
                 renderDashboard(false);
             }
         });
     }
 
-    // --- Lightbox Logic (Reused & Adapted) ---
+    // --- Lightbox Logic ---
 
     function openLightbox(index, updateHistory = false) {
         if (index < 0 || index >= visibleItems.length) return;
@@ -495,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = item.dataset.title;
         const date = item.dataset.date;
 
-        lightboxMediaContainer.innerHTML = ''; // Clear previous
+        lightboxMediaContainer.innerHTML = ''; 
 
         document.querySelector('.lightbox-title').textContent = title || '';
         document.querySelector('.lightbox-date').textContent = date || '';
@@ -507,7 +487,6 @@ document.addEventListener('DOMContentLoaded', function () {
             img.alt = title;
             lightboxMediaContainer.appendChild(img);
         } else if (type === 'html') {
-            // Clone the hidden HTML content
             const htmlContent = item.querySelector('.gallery-html-content').innerHTML;
             const div = document.createElement('div');
             div.innerHTML = htmlContent;
@@ -517,7 +496,6 @@ document.addEventListener('DOMContentLoaded', function () {
             div.style.justifyContent = 'center';
             div.style.alignItems = 'center';
 
-            // Execute scripts if any
             Array.from(div.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
@@ -526,7 +504,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             lightboxMediaContainer.appendChild(div);
             
-            // Re-initialize Instagram if needed
             if (item.dataset.platform === 'instagram' && window.instgrm) {
                 window.instgrm.Embeds.process();
             }
@@ -536,8 +513,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (link && link.trim() !== '') {
             const lightboxLink = document.querySelector('.lightbox-link');
             if (lightboxLink) {
-                // Check if it's an internal link (relative URL) to handle properly or just use as is
-                // Since relative_url filter is used, it should be fine.
                 lightboxLink.href = link;
                 lightboxLink.style.display = 'inline-block';
                 lightboxLink.textContent = 'Read Related Post';
@@ -549,17 +524,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Indicators
         updateIndicators();
 
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
 
         if (updateHistory) {
-            const url = item.dataset.url; // Use the permalink URL
+            const url = item.dataset.url; 
             const state = { index: index, view: currentView, category: currentCategory, page: currentPage };
             
-            // If the lightbox is already open, use replaceState so "Back" always exits the gallery
             if (lightbox.classList.contains('active')) {
                 history.replaceState(state, title, url);
             } else {
@@ -569,7 +542,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateIndicators() {
-        // Create indicator container if it doesn't exist
         let indicators = document.querySelector('.lightbox-indicators');
         if (!indicators) {
             indicators = document.createElement('div');
@@ -578,7 +550,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         
         indicators.innerHTML = '';
-        // Show up to 10 dots for navigation hint
         const count = Math.min(visibleItems.length, 10);
         for (let i = 0; i < count; i++) {
             const dot = document.createElement('div');
@@ -594,14 +565,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.title = currentView === 'grid' ? gridCategoryTitle.textContent : 'Gallery';
 
         if (updateHistory && window.history.state && window.history.state.index !== undefined) {
-            // Only go back if we actually pushed a state for the lightbox
             window.history.back();
         }
     }
 
     function showNext() {
         currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length;
-        openLightbox(currentLightboxIndex, false); // Use false for updateHistory because openLightbox now handles replaceState
+        openLightbox(currentLightboxIndex, false); 
     }
 
     function showPrev() {
@@ -609,21 +579,15 @@ document.addEventListener('DOMContentLoaded', function () {
         openLightbox(currentLightboxIndex, false);
     }
 
-    // Lightbox Controls
     closeBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closeLightbox(); });
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
     
-    // Close on clicking backdrop/wrapper
     lightbox.addEventListener('click', (e) => { 
         if (e.target === lightbox || e.target === document.querySelector('.lightbox-content-wrapper')) {
             closeLightbox();
         }
     });
-
-    // On mobile, the media column takes a lot of space. 
-    // If you click it but not the image/video, maybe you wanted to close?
-    // No, that's brittle. Let's make the close button better.
 
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
@@ -632,7 +596,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'ArrowLeft') showPrev();
     });
 
-    // Deep Link Check
     function checkDeepLink(pathToCheck) {
         const normalizePath = (path) => {
             try {
@@ -646,7 +609,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // Use passed path or current location
         const currentPath = normalizePath(pathToCheck || window.location.pathname);
 
         if (currentPath.startsWith('/gallery/') && currentPath !== '/gallery') {
@@ -666,28 +628,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 visibleItems = categoryItems;
                 currentLightboxIndex = visibleItems.indexOf(targetItem);
                 openLightbox(currentLightboxIndex, false);
-            } else {
-                // Fallback: Try matching by slug from URL
-                const urlSlug = currentPath.split('/').pop();
-                const fallbackItem = allItems.find(item => {
-                    try {
-                        const itemUrl = new URL(item.dataset.url, window.location.origin);
-                        const itemSlug = normalizePath(itemUrl.pathname).split('/').pop();
-                        return itemSlug === urlSlug;
-                    } catch (e) { return false; }
-                });
-
-                if (fallbackItem) {
-                    const categoryId = getCategoryFromItem(fallbackItem);
-                    const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
-                    visibleItems = categoryItems;
-                    currentLightboxIndex = visibleItems.indexOf(fallbackIndex);
-                    openLightbox(currentLightboxIndex, false);
-                }
             }
         }
     }
 
-    // Start
     init();
 });
