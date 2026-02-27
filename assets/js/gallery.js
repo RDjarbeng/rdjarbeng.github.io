@@ -511,6 +511,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const htmlContent = item.querySelector('.gallery-html-content').innerHTML;
             const div = document.createElement('div');
             div.innerHTML = htmlContent;
+            div.style.width = '100%';
+            div.style.height = '100%';
+            div.style.display = 'flex';
+            div.style.justifyContent = 'center';
+            div.style.alignItems = 'center';
+
             // Execute scripts if any
             Array.from(div.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
@@ -519,6 +525,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
             lightboxMediaContainer.appendChild(div);
+            
+            // Re-initialize Instagram if needed
+            if (item.dataset.platform === 'instagram' && window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
         }
 
         const link = item.dataset.link;
@@ -538,19 +549,13 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+        // Indicators
+        updateIndicators();
 
-    // Show Swipe Hint for mobile on first open
-    if (window.innerWidth <= 900 && !document.querySelector('.swipe-hint')) {
-        const hint = document.createElement('div');
-        hint.className = 'swipe-hint';
-        hint.textContent = '← Swipe to navigate →';
-        lightbox.appendChild(hint);
-        setTimeout(() => hint.remove(), 4000);
-    }
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
 
-    if (updateHistory) {
+        if (updateHistory) {
             const url = item.dataset.url; // Use the permalink URL
             const state = { index: index, view: currentView, category: currentCategory, page: currentPage };
             
@@ -560,6 +565,25 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 history.pushState(state, title, url);
             }
+        }
+    }
+
+    function updateIndicators() {
+        // Create indicator container if it doesn't exist
+        let indicators = document.querySelector('.lightbox-indicators');
+        if (!indicators) {
+            indicators = document.createElement('div');
+            indicators.className = 'lightbox-indicators';
+            lightbox.appendChild(indicators);
+        }
+        
+        indicators.innerHTML = '';
+        // Show up to 10 dots for navigation hint
+        const count = Math.min(visibleItems.length, 10);
+        for (let i = 0; i < count; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot' + (i === currentLightboxIndex % count ? ' active' : '');
+            indicators.appendChild(dot);
         }
     }
 
@@ -577,16 +601,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showNext() {
         currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length;
-        openLightbox(currentLightboxIndex, true);
+        openLightbox(currentLightboxIndex, false); // Use false for updateHistory because openLightbox now handles replaceState
     }
 
     function showPrev() {
         currentLightboxIndex = (currentLightboxIndex - 1 + visibleItems.length) % visibleItems.length;
-        openLightbox(currentLightboxIndex, true);
+        openLightbox(currentLightboxIndex, false);
     }
 
     // Lightbox Controls
-    closeBtn.addEventListener('click', () => closeLightbox());
+    closeBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closeLightbox(); });
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
     
@@ -657,7 +681,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const categoryId = getCategoryFromItem(fallbackItem);
                     const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
                     visibleItems = categoryItems;
-                    currentLightboxIndex = visibleItems.indexOf(fallbackItem);
+                    currentLightboxIndex = visibleItems.indexOf(fallbackIndex);
                     openLightbox(currentLightboxIndex, false);
                 }
             }
