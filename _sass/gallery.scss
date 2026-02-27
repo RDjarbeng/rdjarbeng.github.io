@@ -240,17 +240,25 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #fff; /* Make it white for visibility on black backdrop */
-    font-size: 36px; /* Slightly bigger */
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circle shape */
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     z-index: 2100;
-    transition: color 0.3s, transform 0.2s;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    line-height: 1;
 }
 
 .lightbox-close:hover {
-    color: #ccc;
+    background: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
 }
 
@@ -286,35 +294,36 @@
 @media (max-width: 900px) {
     .lightbox-content-wrapper {
         flex-direction: column;
-        overflow-y: auto; /* Enable scrolling for the entire wrapper if needed */
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        height: auto;
-        min-height: 100%;
+        height: 100%; /* Fix height to allow inner scrolling */
     }
 
     .lightbox-media-column {
-        flex: 0 0 auto;
+        flex: 0 0 50%; /* Give video 50% of the viewport height */
         width: 100%;
-        height: auto;
-        min-height: 40vh; /* Adjust height for mobile */
-        max-height: 60vh;
+        height: 50vh;
+        min-height: 50vh;
+        background-color: #000;
+        position: sticky;
+        top: 0;
+        z-index: 10;
     }
 
     #lightbox-media-container img, 
     #lightbox-media-container iframe {
         width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16/9; /* Default for videos */
-        max-height: 100%;
+        height: 100% !important;
+        object-fit: contain;
     }
 
     .lightbox-info-column {
         width: 100%;
         flex: 1 0 auto;
-        padding: 1rem 1.5rem; /* Reduced top padding */
+        padding: 1.5rem;
         background-color: #fff;
-        min-height: 40vh;
-        overflow-y: visible; /* Let the wrapper handle scrolling if needed */
+        min-height: 50vh;
+        overflow-y: visible;
     }
 
     .lightbox-title {

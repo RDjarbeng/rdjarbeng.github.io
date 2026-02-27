@@ -1,7 +1,7 @@
 ---
 title: Papaoutai Afro Soul - A Different Vibe
 platform: youtube
-youtube_id: 2sp5HeLNW5o
+youtube_id: https://www.youtube.com/watch?v=2sp5HeLNW5o
 embed_code: ''
 thumbnail: assets/images/videos/papaoutai_afro_soul_cover.png
 published: true

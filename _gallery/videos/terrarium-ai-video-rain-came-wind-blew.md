@@ -1,7 +1,7 @@
 ---
 title: Terrarium AI video- rain came wind blew
 platform: youtube
-youtube_id: D-YNOhxqL_0
+youtube_id: https://www.youtube.com/watch?v=D-YNOhxqL_0
 embed_code: ''
 thumbnail: ''
 type: video

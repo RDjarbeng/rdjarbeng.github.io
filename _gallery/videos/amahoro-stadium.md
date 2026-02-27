@@ -2,7 +2,7 @@
 title: Amahoro Stadium and Bk arena by Richard Djarbeng
 date: 2025-12-28 22:55:10
 platform: youtube
-youtube_id: jiec7XXD6EY
+youtube_id: https://www.youtube.com/watch?v=jiec7XXD6EY
 type: video
 ---
 

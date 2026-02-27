@@ -1,7 +1,7 @@
 ---
 title: May-borns waiting for their birthday
 platform: youtube
-youtube_id: L-y-Z6tBdxk
+youtube_id: https://www.youtube.com/watch?v=L-y-Z6tBdxk
 embed_code: ''
 thumbnail: ''
 type: video

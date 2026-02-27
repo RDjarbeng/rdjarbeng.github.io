@@ -1,7 +1,7 @@
 ---
 title: Kigali downtown with the hills in the background
 platform: youtube
-youtube_id: cXgQwLsgEBI
+youtube_id: https://www.youtube.com/watch?v=cXgQwLsgEBI
 embed_code: ''
 thumbnail: ''
 type: video

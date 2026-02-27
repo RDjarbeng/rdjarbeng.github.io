@@ -1,7 +1,7 @@
 ---
 title: Danger of a Single Story
 platform: youtube
-youtube_id: 9NfHZRSyshQ
+youtube_id: https://www.youtube.com/watch?v=9NfHZRSyshQ
 embed_code: ''
 thumbnail: ''
 type: video

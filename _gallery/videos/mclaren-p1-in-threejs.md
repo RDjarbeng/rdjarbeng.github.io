@@ -1,7 +1,7 @@
 ---
 title: McLaren P1 in ThreeJs
 platform: youtube
-youtube_id: LznxzrRLuM0
+youtube_id: https://www.youtube.com/watch?v=LznxzrRLuM0
 embed_code: ''
 thumbnail: ''
 type: video

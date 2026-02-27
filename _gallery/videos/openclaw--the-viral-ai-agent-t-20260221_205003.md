@@ -3,7 +3,7 @@ title: 'OpenClaw: The Viral AI Agent that Broke the Internet - Peter Steinberg'
 published: true
 date: 2026-02-21 20:50:03
 platform: youtube
-youtube_id: YFjfBk8HI5o
+youtube_id: https://www.youtube.com/watch?v=YFjfBk8HI5o
 type: video
 category: videos
 ---

@@ -1,7 +1,7 @@
 ---
 title: LusionCo-Sometimes I forget this is a website
 platform: youtube
-youtube_id: L1x4Js32E_0
+youtube_id: https://www.youtube.com/watch?v=L1x4Js32E_0
 embed_code: ''
 thumbnail: ''
 type: video

@@ -3,7 +3,7 @@ title: Visiting the Kenyan Snake Park in Nairobi a brave visit ft. Growing with 
 published: true
 date: 2026-02-15 17:46:00
 platform: youtube
-youtube_id: fA9A3aUFaOM
+youtube_id: https://www.youtube.com/watch?v=fA9A3aUFaOM
 embed_code: ''
 thumbnail: ''
 type: video

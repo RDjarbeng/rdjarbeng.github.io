@@ -1,7 +1,7 @@
 ---
 title: Efua Looking in Awe
 platform: youtube
-youtube_id: O3Q7O-AvK9A
+youtube_id: https://www.youtube.com/watch?v=O3Q7O-AvK9A
 embed_code: ''
 thumbnail: ''
 type: video

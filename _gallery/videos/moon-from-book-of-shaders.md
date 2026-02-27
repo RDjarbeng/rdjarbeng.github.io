@@ -1,7 +1,7 @@
 ---
 title: Moon From Book of Shaders
 platform: youtube
-youtube_id: kAgoMrOjC3w
+youtube_id: https://www.youtube.com/watch?v=kAgoMrOjC3w
 embed_code: ''
 thumbnail: ''
 type: video

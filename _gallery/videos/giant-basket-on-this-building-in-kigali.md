@@ -1,7 +1,7 @@
 ---
 title: Giant basket on this building in Kigali
 platform: youtube
-youtube_id: -b5LKcZK5y8
+youtube_id: https://www.youtube.com/watch?v=-b5LKcZK5y8
 embed_code: ''
 thumbnail: ''
 type: video

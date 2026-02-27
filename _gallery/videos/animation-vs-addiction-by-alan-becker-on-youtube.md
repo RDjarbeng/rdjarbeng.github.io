@@ -3,7 +3,7 @@ title: Animation vs. Addiction by Alan Becker on YouTube
 published: true
 date: 2026-02-18 00:11:00
 platform: youtube
-youtube_id: KoB2cqmYZNg
+youtube_id: https://www.youtube.com/watch?v=KoB2cqmYZNg
 embed_code: ''
 thumbnail: ''
 type: video

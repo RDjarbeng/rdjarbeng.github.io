@@ -1,7 +1,7 @@
 ---
 title: Testing ArenaXR - Find the Pinata Challenge
 platform: youtube
-youtube_id: DTa249f6CAg
+youtube_id: https://www.youtube.com/watch?v=DTa249f6CAg
 embed_code: ''
 thumbnail: ''
 type: video

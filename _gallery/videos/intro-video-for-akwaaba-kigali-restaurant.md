@@ -1,7 +1,7 @@
 ---
 title: Intro Video for Akwaaba Kigali Restaurant
 platform: youtube
-youtube_id: o29_Youh9z8
+youtube_id: https://www.youtube.com/watch?v=o29_Youh9z8
 embed_code: ''
 thumbnail: ''
 type: video

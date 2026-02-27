@@ -1,7 +1,7 @@
 ---
 title: Jimmy Idoko - The Lifter of Men | Live (Official Video)
 platform: youtube
-youtube_id: 7NmC31ug6_k
+youtube_id: https://www.youtube.com/watch?v=7NmC31ug6_k
 embed_code: ''
 thumbnail: ''
 type: video

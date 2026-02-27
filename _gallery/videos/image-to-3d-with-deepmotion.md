@@ -1,7 +1,7 @@
 ---
 title: Image to 3D with Deepmotion
 platform: youtube
-youtube_id: 7ELLY7xnZvI
+youtube_id: https://www.youtube.com/watch?v=7ELLY7xnZvI
 embed_code: ''
 thumbnail: ''
 type: video

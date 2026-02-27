@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
             history.pushState({ view: 'dashboard' }, 'Gallery', '/gallery/');
         }
 
-        // Render strips for IMAGE categories only
-        imageCategories.forEach(category => {
+        // Render strips for ALL categories (including videos)
+        allCategories.forEach(category => {
             const categoryItems = allItems.filter(category.filter);
             if (categoryItems.length === 0) return;
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
 
             const scrollContainer = document.createElement('div');
-            scrollContainer.className = 'horizontal-scroll-container'; // Updated class name
+            scrollContainer.className = 'horizontal-scroll-container'; 
 
             // Take first 6 items
             const previewItems = categoryItems.slice(0, 6);
@@ -415,20 +415,20 @@ document.addEventListener('DOMContentLoaded', function () {
         // Browser Back/Forward
         window.addEventListener('popstate', (e) => {
             if (e.state) {
-                if (e.state.view === 'grid') {
-                    switchToGrid(e.state.category, e.state.page);
-                } else if (e.state.view === 'dashboard') {
-                    renderDashboard();
-                } else if (e.state.index !== undefined && e.state.index !== -1) {
+                if (e.state.index !== undefined && e.state.index !== -1) {
                     // Lightbox state
                     openLightbox(e.state.index, false);
-                } else {
-                    // Close lightbox
+                } else if (e.state.view === 'grid') {
                     closeLightbox(false);
+                    switchToGrid(e.state.category, e.state.page);
+                } else if (e.state.view === 'dashboard') {
+                    closeLightbox(false);
+                    renderDashboard(false);
                 }
             } else {
-                // Default
-                renderDashboard();
+                // Default: Close lightbox if open and show dashboard
+                closeLightbox(false);
+                renderDashboard(false);
             }
         });
     }
@@ -503,19 +503,11 @@ document.addEventListener('DOMContentLoaded', function () {
         lightbox.classList.remove('active');
         lightboxMediaContainer.innerHTML = '';
         document.body.style.overflow = '';
+        document.title = currentView === 'grid' ? gridCategoryTitle.textContent : 'Gallery';
 
-        if (updateHistory) {
-            // Go back to current view URL
-            const url = new URL(window.location);
-            if (currentView === 'grid') {
-                url.pathname = '/gallery/';
-                url.searchParams.set('category', currentCategory);
-                url.searchParams.set('page', currentPage);
-            } else {
-                url.pathname = '/gallery/';
-                url.search = '';
-            }
-            history.pushState({ view: currentView, category: currentCategory, page: currentPage }, 'Gallery', url);
+        if (updateHistory && window.history.state && window.history.state.index !== undefined) {
+            // Only go back if we actually pushed a state for the lightbox
+            window.history.back();
         }
     }
 

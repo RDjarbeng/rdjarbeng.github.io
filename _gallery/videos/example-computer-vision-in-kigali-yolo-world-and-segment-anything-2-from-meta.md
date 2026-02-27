@@ -1,7 +1,7 @@
 ---
 title: Example Computer vision in Kigali yolo world and Segment anything 2 from meta
 platform: youtube
-youtube_id: cDRjDNA8nHc
+youtube_id: https://www.youtube.com/watch?v=cDRjDNA8nHc
 embed_code: ''
 thumbnail: ''
 type: video

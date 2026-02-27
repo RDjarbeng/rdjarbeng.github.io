@@ -1,7 +1,7 @@
 ---
 title: Nazir and Adjoa AI Upscale
 platform: youtube
-youtube_id: XeYrDVjCOBE
+youtube_id: https://www.youtube.com/watch?v=XeYrDVjCOBE
 embed_code: ''
 thumbnail: ''
 type: video

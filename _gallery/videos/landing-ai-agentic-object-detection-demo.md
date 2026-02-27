@@ -1,7 +1,7 @@
 ---
 title: Landing AI agentic Object Detection Demo
 platform: youtube
-youtube_id: lC6g-T5V470
+youtube_id: https://www.youtube.com/watch?v=lC6g-T5V470
 embed_code: ''
 thumbnail: /assets/images/agentic_obj_dection_landingai_cover.png
 type: video

@@ -1,7 +1,7 @@
 ---
 title: Four Low Bass Singers Cover Far Over The Misty Mountains cold from the Hobbit
 platform: youtube
-youtube_id: Erkv1-_xR7U
+youtube_id: https://www.youtube.com/watch?v=Erkv1-_xR7U
 embed_code: ''
 thumbnail: ''
 type: video

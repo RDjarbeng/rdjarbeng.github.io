@@ -1,7 +1,7 @@
 ---
 title: Manditora by the unveiled is such a jam.
 platform: youtube
-youtube_id: b8ArhlyeG-k
+youtube_id: https://www.youtube.com/watch?v=b8ArhlyeG-k
 embed_code: ''
 thumbnail: ''
 type: video

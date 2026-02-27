@@ -1,7 +1,7 @@
 ---
 title: A ride through Kigali in the daytime
 platform: youtube
-youtube_id: T46so9H5zX0
+youtube_id: https://www.youtube.com/watch?v=T46so9H5zX0
 embed_code: ''
 thumbnail: ''
 type: video

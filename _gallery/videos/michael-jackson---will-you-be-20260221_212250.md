@@ -1,7 +1,7 @@
 ---
 title: Michael Jackson - Will You Be There (Official Video - Upscaled)
 platform: youtube
-youtube_id: jQY_QL_wvQU
+youtube_id: https://www.youtube.com/watch?v=jQY_QL_wvQU
 embed_code: ''
 thumbnail: ''
 type: video

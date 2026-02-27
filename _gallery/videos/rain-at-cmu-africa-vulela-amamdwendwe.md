@@ -1,7 +1,7 @@
 ---
 title: Rain at CMU-Africa - Vulela amamdwendwe
 platform: youtube
-youtube_id: fTMoXGZvd_c
+youtube_id: https://www.youtube.com/watch?v=fTMoXGZvd_c
 embed_code: ''
 thumbnail: ''
 type: video

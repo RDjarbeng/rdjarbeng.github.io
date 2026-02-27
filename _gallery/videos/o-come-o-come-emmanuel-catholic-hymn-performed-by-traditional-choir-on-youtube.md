@@ -3,7 +3,7 @@ title: O Come, O Come Emmanuel - Catholic Hymn Performed By Traditional Choir On
 published: true
 date: 2026-02-21 18:37:00
 platform: youtube
-youtube_id: 7xtpJ4Q_Q-4
+youtube_id: https://www.youtube.com/watch?v=7xtpJ4Q_Q-4
 embed_code: ''
 thumbnail: ''
 type: video

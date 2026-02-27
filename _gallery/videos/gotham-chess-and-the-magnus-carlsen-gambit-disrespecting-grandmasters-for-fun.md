@@ -2,7 +2,7 @@
 title: 'Gotham Chess and The Magnus Carlsen Gambit: Disrespecting Grandmasters for
   Fun'
 platform: youtube
-youtube_id: vlaar3KY6sU
+youtube_id: https://www.youtube.com/watch?v=vlaar3KY6sU
 embed_code: ''
 thumbnail: ''
 type: video

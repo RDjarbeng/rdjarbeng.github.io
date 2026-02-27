@@ -1,7 +1,7 @@
 ---
 title: Image To 3D Robot
 platform: youtube
-youtube_id: f4yHChpbyjM
+youtube_id: https://www.youtube.com/watch?v=f4yHChpbyjM
 embed_code: ''
 thumbnail: assets/images/videos/image_to_3d_robot_rd.png
 type: video

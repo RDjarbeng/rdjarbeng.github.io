@@ -4,7 +4,7 @@ title: Chris Williamson on 'Doing The Thing' with a list of things that are not 
 published: true
 date: 2026-02-15 18:32:00
 platform: youtube
-youtube_id: 980YJeoORAc
+youtube_id: https://www.youtube.com/watch?v=980YJeoORAc
 embed_code: ''
 thumbnail: ''
 type: video

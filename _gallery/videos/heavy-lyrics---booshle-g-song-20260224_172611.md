@@ -1,7 +1,7 @@
 ---
 title: HEAVY Lyrics - Booshle G song for a moment
 platform: youtube
-youtube_id: USsso5DCNts
+youtube_id: https://www.youtube.com/watch?v=USsso5DCNts
 embed_code: ''
 thumbnail: ''
 type: video
