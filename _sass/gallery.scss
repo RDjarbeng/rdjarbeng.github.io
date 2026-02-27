@@ -195,12 +195,14 @@
 /* Ensure Instagram/TikTok embeds fill space */
 #lightbox-media-container .instagram-media,
 #lightbox-media-container .tiktok-embed {
-    margin: 0 !important;
+    margin: 0 auto !important;
     max-width: 100% !important;
     min-width: 320px !important;
     width: 100% !important;
-    height: auto !important;
-    max-height: 90vh !important;
+}
+
+#lightbox-media-container .tiktok-embed iframe {
+    min-height: 600px; /* Force minimum height for TikTok */
 }
 
 .lightbox-media-column img {
