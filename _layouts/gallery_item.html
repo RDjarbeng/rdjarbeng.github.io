@@ -16,51 +16,59 @@ layout: default
     <div class="content-wrapper">
         <div class="post-content">
             <!-- Media Display -->
-            <div class="gallery-item-media" style="margin-bottom: 2rem;">
-                {% if page.type == 'video' %}
-                <div class="video-container"
-                    style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    {% if page.platform == 'youtube' and page.youtube_id %}
-                    {% assign video_id = page.youtube_id %}
-                    {% if page.youtube_id contains 'youtube.com/watch' %}
-                    {% assign video_id = page.youtube_id | split: 'v=' | last | split: '&' | first %}
-                    {% elsif page.youtube_id contains 'youtube.com/shorts/' %}
-                    {% assign video_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-                    {% elsif page.youtube_id contains 'youtu.be/' %}
-                    {% assign video_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
-                    {% endif %}
-                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ page.title }}" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                    </iframe>
-                    {% else %}
-                    {{ page.embed_code }}
-                    {% endif %}
-                </div>
+            {% if page.type == 'video' %}
+            <div class="video-container"
+                style="{% if page.platform != 'instagram' and page.platform != 'tiktok' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%;{% endif %} overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                {% if page.platform == 'youtube' and page.youtube_id %}
+                {% assign video_id = page.youtube_id %}
+                {% if page.youtube_id contains 'youtube.com/watch' %}
+                {% assign video_id = page.youtube_id | split: 'v=' | last | split: '&' | first %}
+                {% elsif page.youtube_id contains 'youtube.com/shorts/' %}
+                {% assign video_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                {% elsif page.youtube_id contains 'youtu.be/' %}
+                {% assign video_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                {% endif %}
+                <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ page.title }}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
                 {% else %}
-                <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"
-                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                {{ page.embed_code }}
                 {% endif %}
             </div>
-
-            <!-- Caption & Content -->
-            {% if page.caption %}
-            <div class="gallery-caption">
-                {{ page.caption | markdownify }}
-            </div>
+            {% if page.platform == 'instagram' %}
+            <script>
+                window.onload = function () {
+                    if (window.instgrm) {
+                        window.instgrm.Embeds.process();
+                    }
+                }
+            </script>
             {% endif %}
-
-            <div class="gallery-body">
-                {{ content }}
-            </div>
-
-            {% if page.link and page.link != '' %}
-            <div style="margin-top: 2rem;">
-                <a href="{{ page.link | relative_url }}" class="btn"
-                    style="display: inline-block; padding: 0.5rem 1rem; border: 1px solid currentColor; border-radius: 4px; text-decoration: none;">View
-                    Related Post / Source</a>
-            </div>
+            {% else %}
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"
+                style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             {% endif %}
         </div>
+
+        <!-- Caption & Content -->
+        {% if page.caption %}
+        <div class="gallery-caption">
+            {{ page.caption | markdownify }}
+        </div>
+        {% endif %}
+
+        <div class="gallery-body">
+            {{ content }}
+        </div>
+
+        {% if page.link and page.link != '' %}
+        <div style="margin-top: 2rem;">
+            <a href="{{ page.link | relative_url }}" class="btn"
+                style="display: inline-block; padding: 0.5rem 1rem; border: 1px solid currentColor; border-radius: 4px; text-decoration: none;">View
+                Related Post / Source</a>
+        </div>
+        {% endif %}
     </div>
+</div>
 </div>
