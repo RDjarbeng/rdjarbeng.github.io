@@ -378,12 +378,7 @@ collections:
             ],
           default: "Gemini",
         }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
       - { label: "Type", name: "type", widget: "hidden", default: "external" }
       - {
           label: "Category",
@@ -410,12 +405,7 @@ collections:
           default: "{{now}}",
         }
       - { label: "Image", name: "image", widget: "image" }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
       - { label: "Type", name: "type", widget: "hidden", default: "external" }
       - {
           label: "Category",
@@ -452,12 +442,7 @@ collections:
           - { label: "External Image", value: "external" }
         default: "external"
 
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
       - {
           label: "Link",
           name: "link",
@@ -548,12 +533,7 @@ collections:
           widget: "hidden",
           default: "videos",
         }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "markdown",
-          required: false,
-        }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
 
 singletons:
   - name: "config"
