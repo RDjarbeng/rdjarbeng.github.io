@@ -1,5 +1,5 @@
 ---
-title: How To Eliminate Self Doubt Forever & The Power of Your Unconscious Mi
+title: How To Eliminate Self Doubt Forever & The Power of Your Unconscious Mind
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=v1ojZKWfShQ
 embed_code: ''
