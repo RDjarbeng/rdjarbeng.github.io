@@ -19,7 +19,7 @@ layout: default
             <div class="gallery-item-media" style="margin-bottom: 2rem;">
                 {% if page.type == 'video' %}
                 <div class="video-container"
-                    style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    style="{% if page.platform == 'youtube' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%; min-height: 550px;{% endif %} overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     {% if page.platform == 'youtube' and page.youtube_id %}
                     {% assign video_id = page.youtube_id %}
                     {% if page.youtube_id contains 'youtube.com/watch' %}

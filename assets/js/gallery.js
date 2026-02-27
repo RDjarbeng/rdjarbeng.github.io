@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const DEFAULT_THUMBNAIL = '/assets/images/webOrMobile.jpeg';
     const TIKTOK_THUMBNAIL = '/assets/images/tiktok_thumb.png'; // Fallback for TikTok
+    const INSTAGRAM_THUMBNAIL = '/assets/images/instagram_thumb.png'; // Fallback for Instagram
+    const TWITTER_THUMBNAIL = '/assets/images/twitter_thumb.png'; // Fallback for Twitter
     // DOM Elements
     const closeBtn = document.querySelector('.lightbox-close');
     const prevBtn = document.querySelector('.lightbox-nav.prev');
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const paginationContainer = document.getElementById('gallery-pagination');
     const galleryDataContainer = document.getElementById('gallery-data');
     const filterButtons = document.querySelectorAll('.gallery-filter');
+    const searchInput = document.getElementById('gallery-search');
 
     // Lightbox Elements
     const lightbox = document.getElementById('gallery-modal');
@@ -65,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isDeepLink) {
             // Handle deep link (open lightbox)
-            // Pass false to prevent renderDashboard from overwriting the URL before we check it
             renderDashboard(false);
             checkDeepLink(currentPath);
         } else if (categoryParam) {
@@ -95,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
             history.pushState({ view: 'dashboard' }, 'Gallery', '/gallery/');
         }
 
-        // Render strips for IMAGE categories only
-        imageCategories.forEach(category => {
+        // Render strips for ALL categories
+        allCategories.forEach(category => {
             const categoryItems = allItems.filter(category.filter);
             if (categoryItems.length === 0) return;
 
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             `;
 
             const scrollContainer = document.createElement('div');
-            scrollContainer.className = 'horizontal-scroll-container'; // Updated class name
+            scrollContainer.className = 'horizontal-scroll-container';
 
             // Take first 6 items
             const previewItems = categoryItems.slice(0, 6);
@@ -135,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
             section.appendChild(scrollContainer);
             dashboardContainer.appendChild(section);
 
-            // Add event listener to header link
             header.querySelector('.view-all-link').addEventListener('click', () => switchToGrid(category.id));
         });
     }
@@ -149,19 +150,26 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = dataItem.dataset.title;
 
         let imgContent;
+        const platform = dataItem.dataset.platform;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL :
+            platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title">${title}</span>
+                    <span class="gallery-title-overlay">${title}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
+            </div>
+            <div class="gallery-item-info">
+                <h4 class="gallery-item-title">${title}</h4>
             </div>
         `;
 
@@ -177,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function getCategoryFromItem(item) {
-        // Helper to find primary category
         for (const cat of allCategories) {
             if (item.dataset.category.includes(cat.id)) return cat.id;
         }
@@ -197,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const categoryDef = allCategories.find(c => c.id === categoryId);
         gridCategoryTitle.textContent = categoryDef ? categoryDef.title : 'Gallery';
 
-        // Update URL
         const url = new URL(window.location);
         url.searchParams.set('category', categoryId);
         url.searchParams.set('page', page);
@@ -210,16 +216,23 @@ document.addEventListener('DOMContentLoaded', function () {
         gridContainer.innerHTML = '';
 
         const categoryDef = allCategories.find(c => c.id === currentCategory);
-        const filteredItems = categoryDef ? allItems.filter(categoryDef.filter) : allItems;
+        let filteredItems = categoryDef ? allItems.filter(categoryDef.filter) : allItems;
 
-        // Update visible items for lightbox
+        // Apply Search Filter
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm !== '') {
+            filteredItems = filteredItems.filter(item => {
+                const title = item.dataset.title.toLowerCase();
+                const caption = item.dataset.caption.toLowerCase();
+                return title.includes(searchTerm) || caption.includes(searchTerm);
+            });
+        }
+
         visibleItems = filteredItems;
 
-        // Pagination Logic
         const totalItems = filteredItems.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-        // Ensure current page is valid
         if (currentPage > totalPages) currentPage = totalPages;
         if (currentPage < 1) currentPage = 1;
 
@@ -238,26 +251,33 @@ document.addEventListener('DOMContentLoaded', function () {
     function createGridItem(dataItem) {
         const item = document.createElement('a');
         item.className = 'gallery-item';
-        item.href = dataItem.dataset.url; // For SEO/fallback
+        item.href = dataItem.dataset.url;
 
         const type = dataItem.dataset.type;
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
 
         let imgContent;
+        const platform = dataItem.dataset.platform;
+        const fallback = platform === 'tiktok' ? TIKTOK_THUMBNAIL :
+            platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
+                platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}';">`;
+            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${dataItem.dataset.platform === 'tiktok' ? TIKTOK_THUMBNAIL : DEFAULT_THUMBNAIL}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
         }
 
         item.innerHTML = `
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title">${title}</span>
+                    <span class="gallery-title-overlay">${title}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
+            </div>
+            <div class="gallery-item-info">
+                <h4 class="gallery-item-title">${title}</h4>
             </div>
         `;
 
@@ -283,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const lastBtn = clone.querySelector('.last-page-btn');
         const pageNumbers = clone.querySelector('.page-numbers');
 
-        // Setup Prev/Next/First/Last
         if (currentPage > 1) {
             firstBtn.classList.remove('disabled');
             prevBtn.classList.remove('disabled');
@@ -298,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function () {
             lastBtn.onclick = () => changePage(totalPages);
         }
 
-        // Page Numbers Logic
         const trail = 2;
         let start = Math.max(1, currentPage - trail);
         let end = Math.min(totalPages, currentPage + trail);
@@ -343,7 +361,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function changePage(page) {
         currentPage = page;
-        // Update URL
         const url = new URL(window.location);
         url.searchParams.set('page', page);
         history.pushState({ view: 'grid', category: currentCategory, page: page }, '', url);
@@ -363,7 +380,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setupEventListeners() {
-        // Nav Filters
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.dataset.filter;
@@ -379,28 +395,74 @@ document.addEventListener('DOMContentLoaded', function () {
             renderDashboard();
         });
 
-        // Browser Back/Forward
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                if (currentView === 'dashboard') {
+                    switchToGrid('all');
+                } else {
+                    renderGridItems();
+                }
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mobile-close-btn')) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeLightbox();
+            }
+        });
+
+        // Swipe Support for Lightbox
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const verticalThreshold = 100;
+
+            if (Math.abs(touchEndY - touchStartY) < verticalThreshold) {
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    showNext();
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    showPrev();
+                }
+            }
+        }
+
         window.addEventListener('popstate', (e) => {
             if (e.state) {
-                if (e.state.view === 'grid') {
+                if (e.state.index !== undefined && e.state.index !== -1) {
+                    openLightbox(e.state.index, false);
+                } else if (e.state.view === 'grid') {
+                    closeLightbox(false);
                     switchToGrid(e.state.category, e.state.page);
                 } else if (e.state.view === 'dashboard') {
-                    renderDashboard();
-                } else if (e.state.index !== undefined && e.state.index !== -1) {
-                    // Lightbox state
-                    openLightbox(e.state.index, false);
-                } else {
-                    // Close lightbox
                     closeLightbox(false);
+                    renderDashboard(false);
                 }
             } else {
-                // Default
-                renderDashboard();
+                closeLightbox(false);
+                renderDashboard(false);
             }
         });
     }
 
-    // --- Lightbox Logic (Reused & Adapted) ---
+    // --- Lightbox Logic ---
 
     function openLightbox(index, updateHistory = false) {
         if (index < 0 || index >= visibleItems.length) return;
@@ -413,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = item.dataset.title;
         const date = item.dataset.date;
 
-        lightboxMediaContainer.innerHTML = ''; // Clear previous
+        lightboxMediaContainer.innerHTML = '';
 
         document.querySelector('.lightbox-title').textContent = title || '';
         document.querySelector('.lightbox-date').textContent = date || '';
@@ -425,26 +487,52 @@ document.addEventListener('DOMContentLoaded', function () {
             img.alt = title;
             lightboxMediaContainer.appendChild(img);
         } else if (type === 'html') {
-            // Clone the hidden HTML content
-            const htmlContent = item.querySelector('.gallery-html-content').innerHTML;
+            const template = item.querySelector('.raw-embed-code');
             const div = document.createElement('div');
-            div.innerHTML = htmlContent;
-            // Execute scripts if any
+
+            // Clone the template content instead of innerHTML
+            if (template && template.content) {
+                div.appendChild(document.importNode(template.content, true));
+            } else {
+                // Fallback (shouldn't be hit with correct HTML, but just in case)
+                div.innerHTML = item.querySelector('.gallery-html-content').innerHTML;
+            }
+
+            div.style.width = '100%';
+            div.style.height = '100%';
+            div.style.display = 'flex';
+            div.style.justifyContent = 'center';
+            div.style.alignItems = 'center';
+
             Array.from(div.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.innerHTML) {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
             lightboxMediaContainer.appendChild(div);
+
+            // Re-initialize Instagram/TikTok if needed
+            if (item.dataset.platform === 'instagram') {
+                setTimeout(() => {
+                    if (window.instgrm) {
+                        window.instgrm.Embeds.process();
+                    } else {
+                        const script = document.createElement('script');
+                        script.src = '//www.instagram.com/embed.js';
+                        script.async = true;
+                        document.body.appendChild(script);
+                    }
+                }, 100);
+            }
         }
 
         const link = item.dataset.link;
         if (link && link.trim() !== '') {
             const lightboxLink = document.querySelector('.lightbox-link');
             if (lightboxLink) {
-                // Check if it's an internal link (relative URL) to handle properly or just use as is
-                // Since relative_url filter is used, it should be fine.
                 lightboxLink.href = link;
                 lightboxLink.style.display = 'inline-block';
                 lightboxLink.textContent = 'Read Related Post';
@@ -456,13 +544,37 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        updateIndicators();
+
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
 
         if (updateHistory) {
-            const url = item.dataset.url; // Use the permalink URL
-            // Push state for lightbox on top of current view
-            history.pushState({ index: index, view: currentView, category: currentCategory, page: currentPage }, title, url);
+            const url = item.dataset.url;
+            const state = { index: index, view: currentView, category: currentCategory, page: currentPage };
+
+            if (lightbox.classList.contains('active')) {
+                history.replaceState(state, title, url);
+            } else {
+                history.pushState(state, title, url);
+            }
+        }
+    }
+
+    function updateIndicators() {
+        let indicators = document.querySelector('.lightbox-indicators');
+        if (!indicators) {
+            indicators = document.createElement('div');
+            indicators.className = 'lightbox-indicators';
+            lightbox.appendChild(indicators);
+        }
+
+        indicators.innerHTML = '';
+        const count = Math.min(visibleItems.length, 10);
+        for (let i = 0; i < count; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot' + (i === currentLightboxIndex % count ? ' active' : '');
+            indicators.appendChild(dot);
         }
     }
 
@@ -470,37 +582,32 @@ document.addEventListener('DOMContentLoaded', function () {
         lightbox.classList.remove('active');
         lightboxMediaContainer.innerHTML = '';
         document.body.style.overflow = '';
+        document.title = currentView === 'grid' ? gridCategoryTitle.textContent : 'Gallery';
 
-        if (updateHistory) {
-            // Go back to current view URL
-            const url = new URL(window.location);
-            if (currentView === 'grid') {
-                url.pathname = '/gallery/';
-                url.searchParams.set('category', currentCategory);
-                url.searchParams.set('page', currentPage);
-            } else {
-                url.pathname = '/gallery/';
-                url.search = '';
-            }
-            history.pushState({ view: currentView, category: currentCategory, page: currentPage }, 'Gallery', url);
+        if (updateHistory && window.history.state && window.history.state.index !== undefined) {
+            window.history.back();
         }
     }
 
     function showNext() {
         currentLightboxIndex = (currentLightboxIndex + 1) % visibleItems.length;
-        openLightbox(currentLightboxIndex, true);
+        openLightbox(currentLightboxIndex, false);
     }
 
     function showPrev() {
         currentLightboxIndex = (currentLightboxIndex - 1 + visibleItems.length) % visibleItems.length;
-        openLightbox(currentLightboxIndex, true);
+        openLightbox(currentLightboxIndex, false);
     }
 
-    // Lightbox Controls
-    closeBtn.addEventListener('click', () => closeLightbox());
+    closeBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closeLightbox(); });
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === document.querySelector('.lightbox-content-wrapper')) {
+            closeLightbox();
+        }
+    });
 
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
@@ -509,7 +616,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.key === 'ArrowLeft') showPrev();
     });
 
-    // Deep Link Check
     function checkDeepLink(pathToCheck) {
         const normalizePath = (path) => {
             try {
@@ -523,7 +629,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        // Use passed path or current location
         const currentPath = normalizePath(pathToCheck || window.location.pathname);
 
         if (currentPath.startsWith('/gallery/') && currentPath !== '/gallery') {
@@ -543,28 +648,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 visibleItems = categoryItems;
                 currentLightboxIndex = visibleItems.indexOf(targetItem);
                 openLightbox(currentLightboxIndex, false);
-            } else {
-                // Fallback: Try matching by slug from URL
-                const urlSlug = currentPath.split('/').pop();
-                const fallbackItem = allItems.find(item => {
-                    try {
-                        const itemUrl = new URL(item.dataset.url, window.location.origin);
-                        const itemSlug = normalizePath(itemUrl.pathname).split('/').pop();
-                        return itemSlug === urlSlug;
-                    } catch (e) { return false; }
-                });
-
-                if (fallbackItem) {
-                    const categoryId = getCategoryFromItem(fallbackItem);
-                    const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
-                    visibleItems = categoryItems;
-                    currentLightboxIndex = visibleItems.indexOf(fallbackItem);
-                    openLightbox(currentLightboxIndex, false);
-                }
             }
         }
     }
 
-    // Start
     init();
 });
