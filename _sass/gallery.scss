@@ -71,7 +71,8 @@
 .gallery-thumb-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
     background: #f0f0f0;
 }
 
@@ -90,7 +91,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 40px 12px 12px; /* Deeper gradient */
+    padding: 40px 12px 12px;
+    /* Deeper gradient */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
     color: #fff;
     z-index: 5;
@@ -130,7 +132,7 @@
 }
 
 .gallery-title-overlay {
-    display: none; 
+    display: none;
 }
 
 /* Lightbox Styles */
@@ -182,7 +184,7 @@
     padding: 20px;
 }
 
-#lightbox-media-container > div,
+#lightbox-media-container>div,
 .video-container,
 .video-embed {
     width: 100%;
@@ -192,25 +194,19 @@
     align-items: center;
 }
 
-/* Ensure Instagram/TikTok embeds fill space appropriately */
-#lightbox-media-container .instagram-media {
-    margin: 0 auto !important;
-    max-width: 540px !important;
-    min-width: 320px !important;
-    width: 100% !important;
-    max-height: 80vh !important; /* Limit height to prevent overflow */
-    box-shadow: none !important;
-}
+/* Instagram/TikTok embeds */
 
 #lightbox-media-container .tiktok-embed {
     margin: 0 auto !important;
-    max-width: 400px !important; /* TikTok is usually portrait */
+    max-width: 400px !important;
+    /* TikTok is usually portrait */
     min-width: 320px !important;
     width: 100% !important;
 }
 
 #lightbox-media-container .tiktok-embed iframe {
-    min-height: 600px; /* Force minimum height for TikTok */
+    min-height: 600px;
+    /* Force minimum height for TikTok */
 }
 
 .lightbox-media-column img {
@@ -308,7 +304,8 @@
 }
 
 .lightbox-nav.next {
-    right: 370px; /* Adjust for sidebar */
+    right: 370px;
+    /* Adjust for sidebar */
 }
 
 /* Indicators */

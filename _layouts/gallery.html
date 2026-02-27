@@ -115,6 +115,10 @@ layout: default
                 title="{{ item.title }}" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+              {% elsif item.platform == 'instagram' and item.instagram_id %}
+              <iframe src="https://www.instagram.com/p/{{ item.instagram_id }}/embed" width="100%" height="100%"
+                style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true"
+                allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
               {% else %}
               {{ item.embed_code }}
               {% endif %}
