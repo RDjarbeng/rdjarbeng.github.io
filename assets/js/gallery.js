@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const DEFAULT_THUMBNAIL = '/assets/images/webOrMobile.jpeg';
-    const TIKTOK_THUMBNAIL = '/assets/images/tiktok_thumb.png'; // Fallback for TikTok
-    const INSTAGRAM_THUMBNAIL = '/assets/images/instagram_thumb.png'; // Fallback for Instagram
-    const TWITTER_THUMBNAIL = '/assets/images/twitter_thumb.png'; // Fallback for Twitter
+    const TIKTOK_THUMBNAIL = '/assets/images/webOrMobile.jpeg'; // Fallback for TikTok
+    const INSTAGRAM_THUMBNAIL = '/assets/images/webOrMobile.jpeg'; // Fallback for Instagram
+    const TWITTER_THUMBNAIL = '/assets/images/webOrMobile.jpeg'; // Fallback for Twitter
     // DOM Elements
     const closeBtn = document.querySelector('.lightbox-close');
     const prevBtn = document.querySelector('.lightbox-nav.prev');
