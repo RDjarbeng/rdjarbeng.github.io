@@ -166,9 +166,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title">${title}</span>
+                    <span class="gallery-title-overlay">${title}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
+            </div>
+            <div class="gallery-item-info">
+                <h4 class="gallery-item-title">${title}</h4>
             </div>
         `;
 
@@ -276,9 +279,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title">${title}</span>
+                    <span class="gallery-title-overlay">${title}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
+            </div>
+            <div class="gallery-item-info">
+                <h4 class="gallery-item-title">${title}</h4>
             </div>
         `;
 
@@ -410,6 +416,49 @@ document.addEventListener('DOMContentLoaded', function () {
                     renderGridItems();
                 }
             });
+        }
+
+        // Global Event Delegation for Dynamic Elements
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mobile-close-btn')) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeLightbox();
+            }
+        });
+
+        // Swipe Support for Lightbox
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const verticalThreshold = 100;
+            
+            // Only swipe if movement is horizontal enough
+            if (Math.abs(touchEndY - touchStartY) < verticalThreshold) {
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swiped Left -> Next
+                    showNext();
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swiped Right -> Prev
+                    showPrev();
+                }
+            }
         }
 
         // Browser Back/Forward
