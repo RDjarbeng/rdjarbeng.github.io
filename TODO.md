@@ -5,7 +5,7 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 ## High Priority
 
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
-- [ ] **Move gallery captions out of Front Matter**: Currently, captions for gallery items (images/videos) are stored in the YAML Front Matter. This should be moved to the markdown body to leverage full markdown rendering and avoid YAML parsing issues with multiline strings.
+
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
 ## Enhancements & Infrastructure
