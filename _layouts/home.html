@@ -76,6 +76,9 @@ layout: default
       </div>
     </div>
     {% endfor %}
+    <div style="text-align: right; margin-top: -10px;">
+      <a href="/categories/" class="about-link" style="font-size: 1rem;">Browse All Categories &rarr;</a>
+    </div>
   </div>
 
   <!-- Tags Showcase with Example Posts -->
@@ -108,6 +111,9 @@ layout: default
       </div>
     </div>
     {% endfor %}
+    <div style="text-align: right; margin-top: -10px;">
+      <a href="/tags/" class="about-link" style="font-size: 1rem;">Browse All Tags &rarr;</a>
+    </div>
   </div>
 
   <!-- Personal Posts Section -->
@@ -136,8 +142,8 @@ layout: default
         const j = Math.floor(Math.random() * (i + 1));
         [personalPosts[i], personalPosts[j]] = [personalPosts[j], personalPosts[i]];
       }
-      personalPosts.slice(0, 4).forEach(post => post.style.display = 'block');
-      personalPosts.slice(4).forEach(post => post.remove());
+      personalPosts.slice(0, 6).forEach(post => post.style.display = 'block');
+      personalPosts.slice(6).forEach(post => post.remove());
     });
   </script>
 
@@ -148,7 +154,7 @@ layout: default
     style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
     {% assign recent_gallery = site.gallery | sort: 'date' | reverse %}
     {% for item in recent_gallery limit:8 %}
-    <a href="/gallery" class="gallery-thumbnail-card"
+    <a href="{{ '/gallery' | relative_url }}?item={{ item.title | slugify }}" class="gallery-thumbnail-card"
       style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--bg-color-secondary, #f4f4f4); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
       <!-- Thumbnail -->
       <div style="width: 100%; height: 140px; background-color: #000; overflow: hidden;">
