@@ -5,68 +5,12 @@ layout: default
 <div class="home">
   <h1>Richard Djarbeng's Website</h1>
 
-  <!-- Top Categories and Tags -->
-  <div class="home-categories-tags"
-    style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; margin-bottom: 40px; justify-content: space-between;">
-    <div class="top-categories" style="flex: 1; min-width: 300px;">
-      <h2 class="section-title">Top Categories</h2>
-      {% assign categories_list = "" | split: "" %}
-      {% for category in site.categories %}
-      {% capture category_string %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{%
-      endcapture %}
-      {% assign categories_list = categories_list | push: category_string %}
-      {% endfor %}
-      {% assign sorted_categories = categories_list | sort | reverse %}
-      <ul class="category-grid" style="margin-bottom: 0;">
-        {% for item in sorted_categories limit:4 %}
-        {% assign parts = item | split: ":::" %}
-        {% assign cat_name = parts[1] %}
-        {% assign cat_size = parts[0] | plus: 0 %}
-        <li>
-          <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
-            <span class="category-name">{{ cat_name }}</span>
-            <span class="category-count">{{ cat_size }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      <div style="text-align: right; margin-top: 10px;">
-        <a href="/categories/" class="about-link" style="font-size: 0.9rem;">All Categories &rarr;</a>
-      </div>
-    </div>
-
-    <div class="top-tags" style="flex: 1; min-width: 300px;">
-      <h2 class="section-title">Top Tags</h2>
-      {% assign tags_list = "" | split: "" %}
-      {% for tag in site.tags %}
-      {% capture tag_string %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
-      {% assign tags_list = tags_list | push: tag_string %}
-      {% endfor %}
-      {% assign sorted_tags = tags_list | sort | reverse %}
-      <ul class="tags-cloud" style="margin-bottom: 0;">
-        {% for item in sorted_tags limit:4 %}
-        {% assign parts = item | split: ":::" %}
-        {% assign tag_size = parts[0] | plus: 0 %}
-        {% assign tag_name = parts[1] %}
-        <li>
-          <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
-            {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      <div style="text-align: right; margin-top: 10px;">
-        <a href="/tags/" class="about-link" style="font-size: 0.9rem;">All Tags &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="section-title">Discover Posts</h2>
-  <div class="post-list" id="random-posts-container">
-    {% for post in site.posts limit:20 %}
-    <div class="random-post-item" style="display: none;">
-      {% include post-card.html post=post %}
-    </div>
+  <!-- Latest Posts Section -->
+  <h2 class="section-title">Latest Posts</h2>
+  {% include category-tags.html %}
+  <div class="post-list">
+    {% for post in site.posts limit:6 %}
+    {% include post-card.html post=post %}
     {% endfor %}
   </div>
   <a href="{{ '/posts' | relative_url }}" class="about-link">View all posts <svg width="16" height="16"
@@ -76,49 +20,97 @@ layout: default
       <polyline points="12 5 19 12 12 19"></polyline>
     </svg></a>
 
+  <!-- Selected Posts Section -->
+  <br><br>
+  <h2 class="section-title">Selected Posts</h2>
+  <div class="post-list" id="random-posts-container">
+    {% for post in site.posts limit:20 %}
+    <div class="random-post-item" style="display: none;">
+      {% include post-card.html post=post %}
+    </div>
+    {% endfor %}
+  </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const posts = Array.from(document.querySelectorAll('.random-post-item'));
-      // Shuffle array
       for (let i = posts.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [posts[i], posts[j]] = [posts[j], posts[i]];
       }
-      // Show exactly 6 randomized posts
-      posts.slice(0, 6).forEach(post => {
+      posts.slice(0, 4).forEach(post => {
         post.style.display = 'block';
       });
-      // Remove the rest to keep DOM clean
-      posts.slice(6).forEach(post => post.remove());
+      posts.slice(4).forEach(post => post.remove());
     });
   </script>
 
+  <!-- Categories Showcase with Example Posts -->
   <br><br>
-  <h2 class="section-title">Latest from the Gallery</h2>
-  <div class="home-gallery-wrapper"
-    style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
-    {% assign recent_gallery = site.gallery | sort: 'date' | reverse %}
-    {% for item in recent_gallery limit:8 %}
-    <a href="/gallery" class="gallery-thumbnail-card"
-      style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--bg-color-secondary, #f4f4f4); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <!-- Thumbnail -->
-      <div style="width: 100%; height: 140px; background-color: #000; overflow: hidden;">
-        <img
-          src="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.type == 'video' and item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% elsif item.image %}{{ item.image }}{% else %}/assets/images/default-gallery.jpg{% endif %}"
-          alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+  <h2 class="section-title">Top Categories</h2>
+  <div class="categories-showcase">
+    {% assign categories_list = "" | split: "" %}
+    {% for category in site.categories %}
+    {% capture category_string %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{%
+    endcapture %}
+    {% assign categories_list = categories_list | push: category_string %}
+    {% endfor %}
+    {% assign sorted_categories = categories_list | sort | reverse %}
+
+    {% for item in sorted_categories limit:2 %}
+    {% assign parts = item | split: ":::" %}
+    {% assign cat_name = parts[1] %}
+    <div class="category-section" style="margin-bottom: 40px;">
+      <h3
+        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
+        <span>{{ cat_name }}</span>
+        <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}"
+          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all {{ cat_name
+          }} &rarr;</a>
+      </h3>
+      <div class="post-list" style="margin-top: 20px;">
+        {% assign cat_posts = site.categories[cat_name] | sort: 'date' | reverse %}
+        {% for post in cat_posts limit:2 %}
+        {% include post-card.html post=post %}
+        {% endfor %}
       </div>
-      <!-- Title -->
-      <div style="padding: 10px;">
-        <h4
-          style="margin: 0; font-size: 0.95rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
-          {{ item.title }}</h4>
-      </div>
-    </a>
+    </div>
     {% endfor %}
   </div>
-  <a href="{{ '/gallery' | relative_url }}" class="about-link" style="display: block; text-align: right;">Go to Gallery
-    &rarr;</a>
 
+  <!-- Tags Showcase with Example Posts -->
+  <br>
+  <h2 class="section-title">Top Tags</h2>
+  <div class="tags-showcase">
+    {% assign tags_list = "" | split: "" %}
+    {% for tag in site.tags %}
+    {% capture tag_string %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
+    {% assign tags_list = tags_list | push: tag_string %}
+    {% endfor %}
+    {% assign sorted_tags = tags_list | sort | reverse %}
+
+    {% for item in sorted_tags limit:2 %}
+    {% assign parts = item | split: ":::" %}
+    {% assign tag_name = parts[1] %}
+    <div class="tag-section" style="margin-bottom: 40px;">
+      <h3
+        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
+        <span>#{{ tag_name }}</span>
+        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}"
+          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all #{{ tag_name
+          }} &rarr;</a>
+      </h3>
+      <div class="post-list" style="margin-top: 20px;">
+        {% assign tag_posts = site.tags[tag_name] | sort: 'date' | reverse %}
+        {% for post in tag_posts limit:2 %}
+        {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Personal Posts Section -->
   <br>
   <h2 class="section-title">Personal Posts</h2>
   <div class="post-list" id="random-personal-container">
@@ -148,6 +140,38 @@ layout: default
       personalPosts.slice(4).forEach(post => post.remove());
     });
   </script>
+
+  <!-- Gallery Horizontal Scroll Section -->
+  <br><br>
+  <h2 class="section-title">Latest from the Gallery</h2>
+  <div class="home-gallery-wrapper"
+    style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
+    {% assign recent_gallery = site.gallery | sort: 'date' | reverse %}
+    {% for item in recent_gallery limit:8 %}
+    <a href="/gallery" class="gallery-thumbnail-card"
+      style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--bg-color-secondary, #f4f4f4); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <!-- Thumbnail -->
+      <div style="width: 100%; height: 140px; background-color: #000; overflow: hidden;">
+        <img
+          src="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.type == 'video' and item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% elsif item.image %}{{ item.image }}{% else %}/assets/images/default-gallery.jpg{% endif %}"
+          alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+      </div>
+      <!-- Title -->
+      <div style="padding: 10px;">
+        <h4
+          style="margin: 0; font-size: 0.95rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+          {{ item.title }}</h4>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <a href="{{ '/gallery' | relative_url }}" class="about-link" style="display: block; text-align: right;">Go to Gallery
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"
+      style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg></a>
 
   <br><br>
   <div class="about-snippet"
