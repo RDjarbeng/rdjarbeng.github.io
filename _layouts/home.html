@@ -95,9 +95,9 @@ layout: default
     <div class="tag-section" style="margin-bottom: 40px;">
       <h3
         style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
-        <span>#{{ tag_name }}</span>
+        <span>{{ tag_name }}</span>
         <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}"
-          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all #{{ tag_name
+          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all {{ tag_name
           }} &rarr;</a>
       </h3>
       <div class="post-list" style="margin-top: 20px;">
