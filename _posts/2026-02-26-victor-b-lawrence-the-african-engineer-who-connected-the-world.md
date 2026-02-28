@@ -8,7 +8,7 @@ tags:
   - Inspiration
   - Telecommunications
   - Victor Lawrence
-title: 'Victor B. Lawrence: The African Engineer Who Connected the World'
+title: 'Victor B. Lawrence: The Ghanaian Engineer Who Connected the World'
 image: /assets/images/victor_b_lawrence_inventions_1772127000500.png
 image_alt: A vibrant illustration of an African engineer working on networks
 layout: post
