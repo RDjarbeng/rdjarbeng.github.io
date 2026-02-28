@@ -16,11 +16,42 @@
   <meta name="robots" content="noindex, follow">
   {% endif %}
 
+  {%- if page.type == 'video' -%}
+  {%- assign vid_thumbnail = page.thumbnail -%}
+  {%- if vid_thumbnail == nil or vid_thumbnail == '' -%}
+  {%- if page.platform == 'youtube' and page.youtube_id -%}
+  {%- assign yt_id = page.youtube_id -%}
+  {%- if page.youtube_id contains 'v=' -%}
+  {%- assign yt_id = page.youtube_id | split: 'v=' | last | split: '&' | first -%}
+  {%- elsif page.youtube_id contains 'shorts/' -%}
+  {%- assign yt_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first -%}
+  {%- elsif page.youtube_id contains 'youtu.be/' -%}
+  {%- assign yt_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first -%}
+  {%- endif -%}
+  {%- assign vid_thumbnail = "https://img.youtube.com/vi/" | append: yt_id | append: "/hqdefault.jpg" -%}
+  {%- elsif page.platform == 'instagram' and page.instagram_id -%}
+  {%- assign vid_thumbnail = "https://www.instagram.com/p/" | append: page.instagram_id | append: "/media/?size=l" -%}
+  {%- endif -%}
+  {%- endif -%}
+
+  {%- if vid_thumbnail -%}
+  {%- assign page_has_video_thumbnail = vid_thumbnail -%}
+  {%- endif -%}
+  {%- endif -%}
+
   {%- if jekyll.environment == 'production' -%}
+  {%- if page_has_video_thumbnail -%}
+  {%- assign original_image = page.image -%}
+  {%- assign page.image = page_has_video_thumbnail -%}
   {%- seo -%}
+  {%- assign page.image = original_image -%}
+  {%- else -%}
+  {%- seo -%}
+  {%- endif -%}
   {%- endif -%}
 
 
+  {% endif %}
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
   {%- feed_meta -%}
