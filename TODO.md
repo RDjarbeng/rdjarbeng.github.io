@@ -9,7 +9,6 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
 ## Enhancements & Infrastructure
-- The gallery page for videos on mobile sucks and needs a total redesign, it's not scrollable, doesn't exit back to gallery, the youtube thumbnails don't load, the text is hidden, the layout is just bad, scrolling memes is not nice, not easy to find memes...
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards are not shown in the table of contents.
