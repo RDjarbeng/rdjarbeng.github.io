@@ -43,6 +43,10 @@ Explore the site through these core sections:
 - **Deployment**: GitHub Pages – Push to `main` branch for instant updates.
 - **SEO Optimized**: Meta tags, Open Graph, structured data for better search visibility on topics like **AI tool reviews**, **DNS troubleshooting**, and **tech solutions from Africa**.
 
+### 📖 Learn How This Was Built
+If you are curious about the technical setup of this blog, check out my deep-dive:
+- [Story Time: Add a CMS to a Jekyll / GitHub Pages Website](https://rdjarbeng.com/story-time-add-a-cms-to-a-jekyll-github-pages-website/)
+
 ### Custom Pagination Implementation
 
 The site uses a custom pagination solution to handle the `posts` collection, as the default `jekyll-paginate` plugin has limitations with custom collections and complex sorting requirements.
