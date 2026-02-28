@@ -60,22 +60,33 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check URL params for deep linking or view state
         const urlParams = new URLSearchParams(window.location.search);
         const categoryParam = urlParams.get('category');
+        const itemParam = urlParams.get('item');
         const pageParam = parseInt(urlParams.get('page')) || 1;
 
-        // Check for deep link path
-        const currentPath = window.location.pathname;
-        const isDeepLink = currentPath.startsWith('/gallery/') && currentPath !== '/gallery/';
-
-        if (isDeepLink) {
-            // Handle deep link (open lightbox)
+        if (itemParam) {
+            // Handle URL query parameter deep link
             renderDashboard(false);
-            checkDeepLink(currentPath);
+            const targetItem = allItems.find(item => item.dataset.slug === itemParam);
+            if (targetItem) {
+                const categoryId = getCategoryFromItem(targetItem);
+                const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
+                visibleItems = categoryItems;
+                currentLightboxIndex = visibleItems.indexOf(targetItem);
+                openLightbox(currentLightboxIndex, false);
+            }
         } else if (categoryParam) {
             // Open specific category grid
             switchToGrid(categoryParam, pageParam);
         } else {
             // Default to dashboard
-            renderDashboard(true);
+            const currentPath = window.location.pathname;
+            const isDeepLink = currentPath.startsWith('/gallery/') && currentPath !== '/gallery/';
+            if (isDeepLink) {
+                renderDashboard(false);
+                checkDeepLink(currentPath);
+            } else {
+                renderDashboard(true);
+            }
         }
 
         setupEventListeners();
