@@ -38,7 +38,7 @@ layout: default
         const j = Math.floor(Math.random() * (i + 1));
         [posts[i], posts[j]] = [posts[j], posts[i]];
       }
-      posts.slice(0, 4).forEach(post => {
+      posts.slice(0, 6).forEach(post => {
         post.style.display = 'block';
       });
       posts.slice(4).forEach(post => post.remove());
