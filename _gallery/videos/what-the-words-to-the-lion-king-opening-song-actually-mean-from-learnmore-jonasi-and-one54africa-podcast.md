@@ -13,3 +13,5 @@ category: videos
 The clip shows Learnmore Jonasi translating 'Nants ingonyama bagithi Baba / Sithi uhm ingonyama' as 'Look, there's a lion! Father / Oh my god, it's a lion!' Hosts double over, one mimicking the melody in English amid gasps and howls. South African artist Lebo M. created the chant for Disney's 1994 film, blending Zulu roots with the story's East African setting. Zulu speakers confirm the literal meaning, while some note 'ingonyama' evokes both lion and king in ceremonies.
 
 View full podcast [Here](https://www.youtube.com/watch?v=1_t_-0nmpLo)
+
+While we are talking about the music from Lion King,  here is a version of the musical hits of  _Lion King - Circle of Life and He Lives In You_ performed by the [United States Navy Band](https://rdjarbeng.com/gallery/music-of-lion-king-circle-of-life-and-he-lives-in-you-performed-by-us-navy-band/) which is my favourite rendition particularly because of the richness of the sound.
