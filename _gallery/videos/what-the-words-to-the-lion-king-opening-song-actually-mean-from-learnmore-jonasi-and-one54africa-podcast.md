@@ -15,3 +15,5 @@ The clip shows Learnmore Jonasi translating 'Nants ingonyama bagithi Baba / Sith
 View full podcast [Here](https://www.youtube.com/watch?v=1_t_-0nmpLo)
 
 While we are talking about the music from Lion King,  here is a version of the musical hits of  _Lion King - Circle of Life and He Lives In You_ performed by the [United States Navy Band](https://rdjarbeng.com/gallery/music-of-lion-king-circle-of-life-and-he-lives-in-you-performed-by-us-navy-band/) which is my favourite rendition particularly because of the richness of the sound.
+
+Here is a link to a video of the opening sequence for those who haven't seen it: https://rdjarbeng.com/gallery/lion-king-opening-scene-circle-of-life-performed-by-carmen-twillie-lebo-m-from-the-lion-king/
