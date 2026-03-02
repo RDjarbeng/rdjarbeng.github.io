@@ -2,7 +2,7 @@
 date: 2026-02-26 19:30:00
 published: true
 author: Richard
-category: Technology
+category: People & Blogs
 tags:
   - Engineering
   - Inspiration
