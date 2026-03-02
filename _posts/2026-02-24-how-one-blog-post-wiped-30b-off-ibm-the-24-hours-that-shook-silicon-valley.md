@@ -1,9 +1,8 @@
 ---
-layout: post
 date: 2026-02-24T10:35:00
 published: true
 author: Richard
-category: AI
+category: AI News
 tags:
   - AI
   - Claude
@@ -12,29 +11,30 @@ tags:
   - Tech News
   - COBOL
   - Mainframe
-title: "How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley"
-image: "/assets/images/posts/ibm-cobol-cover.png"
-image_alt: "An AI breaking down a vintage mainframe computer with a crashing stock chart."
-description: "How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap."
+title: 'How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley'
+image: /assets/images/posts/ibm-cobol-cover.png
+image_alt: An AI breaking down a vintage mainframe computer with a crashing stock chart.
+layout: post
 card_items:
-  - name: "Anthropic"
-    badge_1: "AI Disruptor"
-    badge_2: "Claude Creator"
-    description: "The AI powerhouse behind Claude Code, currently valued at $380 billion. Their recent advancements in automating complex programming tasks, starting with COBOL modernization, have sent shockwaves across legacy tech sectors."
-    url: "https://www.anthropic.com/"
-    link_text: "Visit Anthropic"
-  - name: "IBM"
-    badge_1: "Legacy Tech"
-    badge_2: "COBOL Moat"
-    description: "A longstanding tech giant that historically held a monopoly on maintaining critical COBOL systems for banks and governments. They recently suffered a $30 billion market cap loss following the rollout of Claude Code."
-    url: "https://www.ibm.com/"
-    link_text: "Visit IBM"
-  - name: "Claude Code"
-    badge_1: "AI Agent"
-    badge_2: "Code Translator"
-    description: "Anthropic's latest developer agent capable of mapping massive dependencies, documenting intricate legacy workflows, and translating archaic COBOL logic into modern languages like Java and Python with 98% accuracy."
-    url: "https://claude.com/"
-    link_text: "Learn about Claude"
+  - name: Anthropic
+    badge_1: AI Disruptor
+    badge_2: Claude Creator
+    description: The AI powerhouse behind Claude Code, currently valued at $380 billion. Their recent advancements in automating complex programming tasks, starting with COBOL modernization, have sent shockwaves across legacy tech sectors.
+    url: https://www.anthropic.com/
+    link_text: Visit Anthropic
+  - name: IBM
+    badge_1: Legacy Tech
+    badge_2: COBOL Moat
+    description: A longstanding tech giant that historically held a monopoly on maintaining critical COBOL systems for banks and governments. They recently suffered a $30 billion market cap loss following the rollout of Claude Code.
+    url: https://www.ibm.com/
+    link_text: Visit IBM
+  - name: Claude Code
+    badge_1: AI Agent
+    badge_2: Code Translator
+    description: Anthropic's latest developer agent capable of mapping massive dependencies, documenting intricate legacy workflows, and translating archaic COBOL logic into modern languages like Java and Python with 98% accuracy.
+    url: https://claude.com/
+    link_text: Learn about Claude
+description: How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap.
 ---
 
 The tech world is more than accustomed to disruption, but the events of Monday, February 23, 2026, were something else entirely. In a single afternoon, a concise blog post from **Anthropic** accomplished what decades of fierce competition couldn't: it shattered IBM’s legendary "COBOL moat," wiping a staggering **$30 billion** off its market cap in mere hours.
@@ -68,7 +68,7 @@ Anthropic demonstrated that its latest **Claude Code** agent can now flawlessly:
 
 The market’s reaction was devastatingly instant. Before the Anthropic announcement, IBM had closed at **$257.16** on Friday, February 20, 2026. By the close of trading on Monday, February 23, the stock had plummeted to **$223.35**—a brutal decline of approximately **13.15%** (a 33.81 point drop). This represented IBM's worst single-day percentage drop in over 25 years (reminiscent of the dot-com bust in October 2000), erasing roughly **$30–$31 billion** in market value in a matter of hours. While the stock has partially rebounded since the February 23 low, the psychological damage to the enterprise tech sector is profound.
 
-![IBM Common Stock Chart showing the sudden drop](/assets/images/posts/ibm-stock-chart.png)
+![IBM Common Stock Chart showing the sudden drop](/assets/images/posts/ibm-stock-chart.png "IBM Common Stock Chart on Google finance showing the sudden drop")
 
 ### Live Demos and Ebooks: A Guide to Escaping the Mainframe
 
@@ -83,10 +83,10 @@ IBM wasn't the sole tech giant to feel the sting this week. Just last Thursday, 
 Industry stalwarts like **CrowdStrike**, **Okta**, and **Cloudflare** all witnessed significant drops in their valuations as institutional investors rapidly came to a unified realization: AI agents can now actively hunt down and automatically remediate critical software bugs exponentially faster than the best human-led security operations centers.
 
 ### Mentions in the Media
+
 Here is a post on Twitter/X that captures the mood of the moment:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A blog post just wiped $30 billion off IBM in a single afternoon.<br><br>Not a product launch. Not an earnings miss. Not a competitor undercutting on price.<br><br>A five-minute blog post explaining that Claude can read COBOL.<br><br>IBM dropped 13%. Worst single-day loss since October 2000.… <a href="https://t.co/2hqcNhEdkG">pic.twitter.com/2hqcNhEdkG</a></p>&mdash; Shanaka Anslem Perera ⚡ (@shanaka86) <a href="https://twitter.com/shanaka86/status/2026064775772504138?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 ### The Bottom Line
 
@@ -94,7 +94,7 @@ Anthropic's valuation has skyrocketed to an eye-watering **$380 billion**, yet i
 
 Whatever your personal stance on the trajectory of artificial general intelligence might be, IBM’s bleeding stock chart just abruptly settled the immediate debate: **The era of the legacy technological moat is definitively over.**
 
----
+***
 
 ### **Sources:**
 
