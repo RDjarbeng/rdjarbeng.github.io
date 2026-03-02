@@ -48,9 +48,8 @@ This post confirmed:
 ### OpenClaw Founder's Reaction and Support Removal
 OpenClaw's creator, **Peter Steinberger** (@steipete), was vocal and critical. He called Google's approach "pretty draconian" in posts around February 23, 2026, contrasting it with more communicative providers like Anthropic:
 
-> Pretty draconian from Google. Be careful out there if you use Antigravity. I guess I'll remove support (from OpenClaw). Even Anthropic pings me and is nice about issues. Google just… bans?  
-> 
-> - Peter Steinberger (paraphrased and quoted across sources including [The Register](https://www.theregister.com/), [MLQ.ai](https://www.mlq.ai/), and others)
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pretty draconian from Google. Be careful out there if you use Antigravity. I guess I&#39;ll remove support. <br><br>Even Anthropic pings me and is nice about issues. Google just... bans? <a href="https://t.co/JBq9YCB7nB">https://t.co/JBq9YCB7nB</a></p>&mdash; Peter Steinberger 🦖 (@steipete) <a href="https://twitter.com/steipete/status/2025743825126273066?ref_src=twsrc%5Etfw">February 23, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 He followed through: **OpenClaw removed Antigravity support** in updates around late February 2026. Community reports and coverage confirm the OAuth bridge was moved to a bundled (disabled-by-default) plugin, and official docs no longer list Google Antigravity as a supported provider. Users updating to versions like 2026.2.23 found the integration gone or requiring manual re-enablement that was discouraged.
 
