@@ -1,22 +1,21 @@
 ---
-layout: post
-title: "The Top AI Stories of 2025: Reasoning, Agents, and the Chip Wars"
 date: 2026-02-01T21:17:00
-author: Richard
-category: AI
-tags: 
-- AI 
-- Tech 
-- Future
-image: assets/images/20260201-top-ai-2025-v2.png
-image_alt: "Top AI Stories of 2025 Cover"
 published: false
+author: Richard
+category: AI News
+tags:
+  - AI
+  - Tech
+  - Future
+title: 'The Top AI Stories of 2025: Reasoning, Agents, and the Chip Wars'
+image: assets/images/20260201-top-ai-2025-v2.png
+image_alt: Top AI Stories of 2025 Cover
+layout: post
 ---
 
 The year 2025 marked the transition of artificial intelligence from a digital novelty to a driver of global industrial strategy. According to [The Batch Issue 333](https://www.deeplearning.ai/the-batch/issue-333/), the year was defined by five pivotal shifts: a technological "Sputnik moment" from China, the arrival of deliberative reasoning models, the maturation of autonomous coding agents, an aggressive war for talent with professional sports-level compensation, and a physical infrastructure boom that reshaped national economies.
 
 ![2025 AI Timeline](https://kroki.io/mermaid/svg/eNpdkM1OwzAQhO88xb5AqxLUS24haQuIQtTAgaOTjMIKZx35h9K3x0mFkLwHHzwzO5_W8wjNghuK49lrULbJtlQ80pE1nDcCt4hPSoKyF8qpAqYG-FqdbukEDeWu8b_Jqbk4j5GyKCtnhGWgnVWLaY_WzntyKrUKPag08SkGiF_0YrKslyXvDe1-JiX9HG-UdJ6NuKSpwjfLTJutN4n0ENQZTB8M3TuqTGj1lbMIQ3B-trxOkJj9pzxGGJ12RJBnYxzEUfnJE90rWRwVOowtbE4HjCxMd1Rbk4QP9dtqu86S35fQxbtZqs0ZNvY7r6z_BYJtbeg=)
-
 
 ## 1. China Turns the Tables: The Efficiency Breakthrough
 
@@ -30,8 +29,6 @@ The year began with the [DeepSeek model](https://www.iss.europa.eu/publications/
 
 ![Chip War Feedback Loop](https://kroki.io/mermaid/svg/eNpN0D1PwzAQBuCdX_FOCIZK7ciClOajqZRKVQJT1MF1Lo0F9UW2UyiY_07iCFGv97x3vjsZ0Xd4Se4wvqh-rVAJLZ1ibRFtEXeqtwcsFs--JOuMks4iXy2X1mP9MFa1wFZrvogpgo3oH0OndYhkbCQ1N8Aj_k6I-oroDffIB_FB6ick4pDYcYrIyE45km4wNI5J6r_EolwdbmzC5_FLSiITR4-0jqwk3eBptYxnlowj0kD3ZFo253Ezwk442Xlk0657oZWccRZgwdaCW5R0IT2Qx2Zi0xVQ8PF4Vfo0883cl9-VvKLqVOs88vr_dgWzJU3NrPOg08-ejUM0uI6N-qLGI_oFQUZ47Q==)
 
-
-
 ## 2. Reasoning Models Boost Performance
 
 **Timeline: January – December 2025**
@@ -41,8 +38,8 @@ In 2025, AI moved from "System 1" (fast, intuitive chat) to "System 2" (slow, de
 *   **January 2025:** [The Batch](https://www.deeplearning.ai/the-batch/) popularized the use of [reinforcement learning](https://openai.com/index/learning-to-reason-with-llms/) to help models "think" before they speak, significantly improving accuracy in math and logic.
 *   **August 2025:** OpenAI launched its [new models](https://www.ainewshub.org/post/the-top-10-ai-trends-of-2025), which integrated these reasoning capabilities natively. The model moved away from a "thinking mode" to a unified architecture designed for agentic tasks.
 *   **December 2025:** The year concluded with a duel between Google’s Gemini 3 Pro and OpenAI’s GPT-5.2.
-    *   **December 11:** Google released [Gemini 3 Pro](https://blog.google/products/gemini/) with a "Deep Think" mode and 1-million-token context window.
-    *   **December 20:** OpenAI released [GPT-5.2](https://openai.com/blog), which achieved state-of-the-art results on "GDPval" benchmarks, outperforming human professionals in knowledge work across 44 different occupations.
+    -   **December 11:** Google released [Gemini 3 Pro](https://blog.google/products/gemini/) with a "Deep Think" mode and 1-million-token context window.
+    -   **December 20:** OpenAI released [GPT-5.2](https://openai.com/blog), which achieved state-of-the-art results on "GDPval" benchmarks, outperforming human professionals in knowledge work across 44 different occupations.
 
 ## 3. Agents Write Code: From Assistant to Engineer
 
@@ -73,4 +70,3 @@ The "cloud" exerted a heavy physical weight on the economy in 2025, as infrastru
 *   **H1 2025:** AI-related capital expenditure (CapEx) contributed between 1.1% and 1.3% to U.S. GDP growth [according to Goldman Sachs](https://www.goldmansachs.com/intelligence/pages/gen-ai-too-much-spend-too-little-benefit.html). Data center construction hit a record $40 billion annual rate in June, serving as a rare bright spot in the construction sector.
 *   **September 2025:** The energy demand for these centers led to historic policy shifts. To power gigawatt-scale clusters, Microsoft signed a 20-year deal to restart the Three Mile Island nuclear reactor.
 *   **December 2025:** The push for 24/7 baseload power resulted in a 13% spike in coal electricity generation, only the second increase in a decade, as renewable energy struggled to keep pace with the power-hungry AI economy. Microsoft also [restarted Three Mile Island](https://www.constellationenergy.com/newsroom/news-releases/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html) to power its data centers.
-
