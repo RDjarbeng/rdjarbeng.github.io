@@ -5,7 +5,7 @@ author: Richard
 category: AI
 tags:
   - AI
-title: 'Can AI bring images to life? (Part 2: The Google Approach)'
+title: 'Can AI bring images to life? (Part 2: The Google Approach)- Dear Upstairs Neighbors'
 image: ''
 image_alt: ''
 layout: post
