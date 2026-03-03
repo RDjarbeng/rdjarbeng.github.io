@@ -546,12 +546,41 @@ document.addEventListener('DOMContentLoaded', function () {
             if (lightboxLink) {
                 lightboxLink.href = link;
                 lightboxLink.style.display = 'inline-block';
-                lightboxLink.textContent = 'Read Related Post';
+                if (item.dataset.platform === 'instagram' || link.includes('instagram.com')) {
+                    lightboxLink.textContent = 'View on Instagram';
+                    lightboxLink.target = '_blank';
+                } else if (item.dataset.platform === 'tiktok' || link.includes('tiktok.com')) {
+                    lightboxLink.textContent = 'View on TikTok';
+                    lightboxLink.target = '_blank';
+                } else if (item.dataset.platform === 'youtube' || link.includes('youtube.com') || link.includes('youtu.be')) {
+                    lightboxLink.textContent = 'View on YouTube';
+                    lightboxLink.target = '_blank';
+                } else if (item.dataset.platform === 'twitter' || link.includes('twitter.com') || link.includes('x.com')) {
+                    lightboxLink.textContent = 'View on Twitter / X';
+                    lightboxLink.target = '_blank';
+                } else if (link.startsWith('http')) {
+                    lightboxLink.textContent = 'Read Related Post';
+                    lightboxLink.target = '_blank';
+                } else {
+                    lightboxLink.textContent = 'Read Related Post';
+                    lightboxLink.target = '_self';
+                }
             }
         } else {
             const lightboxLink = document.querySelector('.lightbox-link');
             if (lightboxLink) {
                 lightboxLink.style.display = 'none';
+            }
+        }
+
+        const fullPostBtn = document.querySelector('.lightbox-full-post-btn');
+        if (fullPostBtn) {
+            const itemUrl = item.dataset.url;
+            if (itemUrl && itemUrl.trim() !== '') {
+                fullPostBtn.href = itemUrl;
+                fullPostBtn.style.display = 'inline-block';
+            } else {
+                fullPostBtn.style.display = 'none';
             }
         }
 
