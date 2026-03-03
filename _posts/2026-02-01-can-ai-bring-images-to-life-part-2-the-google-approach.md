@@ -1,14 +1,25 @@
 ---
 date: 2026-02-01T21:42:00
-published: false
+published: true
 author: Richard
 category: AI
 tags:
   - AI
 title: 'Can AI bring images to life? (Part 2: The Google Approach)- Dear Upstairs Neighbors'
-image: ''
-image_alt: ''
+image: /assets/images/dear_upstairs_neighbors_cover.png
+image_alt: 'A vibrant 2D animated abstract drawing depicting a stressed character with their hands on their head surrounded by floating neon objects'
 layout: post
+card_items:
+  - name: "Dear Upstairs Neighbors - Blog Post"
+    badge_1: "Official Source"
+    description: "Read the original breakdown by Google DeepMind detailing how they used fine-tuned Veo and Imagen models to bring this short film to life."
+    url: "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/"
+    link_text: "Read on Google Blog"
+  - name: "Dear Upstairs Neighbors - Trailer"
+    badge_1: "Video"
+    description: "Watch the complete official trailer for 'Dear Upstairs Neighbors' directly on YouTube."
+    url: "https://www.youtube.com/watch?v=eCk5VFKKz08"
+    link_text: "Watch Trailer"
 ---
 
 In [Part 1 of this series](https://rdjarbeng.com/lumalabs_genai/), I tested Luma Labs' Dream Machine with a simple picture of bees. The result was... well, let's call it "biologically creative." While the AI recognized the insects, it had no understanding of physics. This led to some hilarious, sliding bees that didn't quite know how wings worked.
@@ -54,3 +65,7 @@ So, after looking at the bleeding edge of AI animation, the answer to the questi
 **It can Kinda bring images to life but you might not like it's first attempt.**
 
 #google #deepmind #animation #veo #generativeAI
+
+**Official Trailer:**
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/eCk5VFKKz08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
