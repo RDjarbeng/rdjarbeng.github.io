@@ -1,14 +1,7 @@
 ---
 title: Harry Mack Does Freestyle Rap For SEC Legends
 platform: tiktok
-youtube_id: ''
-embed_code: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@harrymackofficial/video/7597525696826723614"
-  data-video-id="7597525696826723614" style="max-width: 605px;min-width: 325px;" >
-  <section> <a target="_blank" title="@harrymackofficial" href="https://www.tiktok.com/@harrymackofficial?refer=embed">@harrymackofficial</a>
-  <p>Freestyled for some SEC legends at the SEC Championship game 🔥 I didn’t expect
-  them to hop in the cypher 👀</p> <a target="_blank" title="♬ original sound - Harry
-  Mack" href="https://www.tiktok.com/music/original-sound-7597530926425295646?refer=embed">♬
-  original sound - Harry Mack</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
+youtube_id: 'https://www.tiktok.com/@harrymackofficial/video/7597525696826723614'
 thumbnail: ''
 type: video
 category: videos

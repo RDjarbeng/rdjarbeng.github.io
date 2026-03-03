@@ -3,8 +3,7 @@ title: What The words to The Lion King Opening Song Actually Mean From Learnmore
 published: true
 date: 2026-02-28T22:16:00
 platform: twitter
-youtube_id: ''
-embed_code: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">😂Hilarious! What the words to The Lion King song actually mean… <a href="https://t.co/42N7ctwGrL">pic.twitter.com/42N7ctwGrL</a></p>&mdash; Don Keith (@RealDonKeith) <a href="https://twitter.com/RealDonKeith/status/2027369068731195677?ref_src=twsrc%5Etfw">February 27, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+youtube_id: 'https://twitter.com/RealDonKeith/status/2027369068731195677'
 thumbnail: assets/images/videos/1000369980.jpg
 type: video
 category: videos
