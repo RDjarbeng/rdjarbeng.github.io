@@ -511,7 +511,7 @@ collections:
           name: "youtube_id",
           widget: "string",
           required: false,
-          hint: "Paste full URL (YouTube/Instagram) or just the ID",
+          hint: "Paste full URL (YouTube/Instagram/TikTok/Twitter) or ID",
         }
       - {
           label: "Embed Code",
