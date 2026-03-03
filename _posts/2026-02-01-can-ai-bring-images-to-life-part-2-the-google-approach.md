@@ -5,6 +5,9 @@ author: Richard
 category: AI
 tags:
   - AI
+  - Generative AI
+  - DeepMind
+  - Animation
 title: 'Can AI bring images to life? (Part 2: The Google Approach)- Dear Upstairs Neighbors'
 image: /assets/images/dear_upstairs_neighbors_cover.png
 image_alt: 'A vibrant 2D animated abstract drawing depicting a stressed character with their hands on their head surrounded by floating neon objects'
@@ -22,7 +25,14 @@ card_items:
     link_text: "Watch Trailer"
 ---
 
+![Cover Image: Can AI bring images to life? - The Google Approach](/assets/images/dear_upstairs_neighbors_cover.png)
+
 In [Part 1 of this series](https://rdjarbeng.com/lumalabs_genai/), I tested Luma Labs' Dream Machine with a simple picture of bees. The result was... well, let's call it "biologically creative." While the AI recognized the insects, it had no understanding of physics. This led to some hilarious, sliding bees that didn't quite know how wings worked.
+
+<video width="100%" controls>
+  <source src="/assets/videos/luma_bees.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 That experiment highlighted the limits of **"Text-to-Video"**. You type a prompt, and you get what you get. But what happens when professional animators and AI researchers team up to solve this?
 
