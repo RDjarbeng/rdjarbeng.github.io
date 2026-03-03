@@ -2,7 +2,7 @@
 title: Cast of the Emperor's New Groove
 date: 2026-02-07 12:00:00
 platform: instagram
-youtube_id: ''
+youtube_id: DSScEfzD95w
 embed_code: '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSScEfzD95w/?utm_source=ig_embed&amp;utm_campaign=loading"
   data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px;
   box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px;
@@ -85,7 +85,6 @@ embed_code: '<blockquote class="instagram-media" data-instgrm-permalink="https:/
 thumbnail: assets/images/videos/emperors_new_groove_gallery_cover_instagram.png
 type: video
 category: videos
-instagram_id: DSScEfzD95w
 ---
 
 Strange this is my first time seeing Yzma's voice actor
