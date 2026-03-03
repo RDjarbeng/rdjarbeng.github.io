@@ -87,6 +87,8 @@ layout: default
     {% for item in gallery_items %}
     {% assign computed_link = item.link %}
     {% assign computed_ig_id = item.instagram_id %}
+    {% assign computed_tk_id = "" %}
+    {% assign computed_tt_id = "" %}
 
     {% if item.platform == 'instagram' %}
     {% if computed_link == blank or computed_link == nil %}
@@ -109,6 +111,28 @@ layout: default
     {% if computed_ig_id != blank and computed_ig_id != nil %}
     {% assign computed_link = 'https://www.instagram.com/p/' | append: computed_ig_id | append: '/' %}
     {% endif %}
+    {% endif %}
+    {% elsif item.platform == 'tiktok' %}
+    {% assign computed_tk_id = item.youtube_id %}
+    {% if computed_tk_id == blank or computed_tk_id == nil %}
+    {% assign computed_tk_id = item.link %}
+    {% endif %}
+    {% if computed_tk_id contains '/video/' %}
+    {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+    {% endif %}
+    {% if computed_link == blank or computed_link == nil %}
+    {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
+    {% endif %}
+    {% elsif item.platform == 'twitter' %}
+    {% assign computed_tt_id = item.youtube_id %}
+    {% if computed_tt_id == blank or computed_tt_id == nil %}
+    {% assign computed_tt_id = item.link %}
+    {% endif %}
+    {% if computed_tt_id contains '/status/' %}
+    {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first %}
+    {% endif %}
+    {% if computed_link == blank or computed_link == nil %}
+    {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
     {% endif %}
     {% endif %}
 

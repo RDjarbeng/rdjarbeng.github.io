@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return 'all';
     }
 
-    function switchToGrid(categoryId, page = 1) {
+    function switchToGrid(categoryId, page = 1, updateHistory = true) {
         currentView = 'grid';
         currentCategory = categoryId;
         currentPage = page;
@@ -218,7 +218,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const url = new URL(window.location);
         url.searchParams.set('category', categoryId);
         url.searchParams.set('page', page);
-        history.pushState({ view: 'grid', category: categoryId, page: page }, `Gallery - ${categoryDef ? categoryDef.title : ''}`, url);
+
+        if (updateHistory) {
+            history.pushState({ view: 'grid', category: categoryId, page: page }, `Gallery - ${categoryDef ? categoryDef.title : ''}`, url);
+        }
 
         renderGridItems();
     }
@@ -370,11 +373,14 @@ document.addEventListener('DOMContentLoaded', function () {
         return span;
     }
 
-    function changePage(page) {
+    function changePage(page, updateHistory = true) {
         currentPage = page;
         const url = new URL(window.location);
         url.searchParams.set('page', page);
-        history.pushState({ view: 'grid', category: currentCategory, page: page }, '', url);
+
+        if (updateHistory) {
+            history.pushState({ view: 'grid', category: currentCategory, page: page }, '', url);
+        }
 
         renderGridItems();
         window.scrollTo(0, 0);
@@ -461,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     openLightbox(e.state.index, false);
                 } else if (e.state.view === 'grid') {
                     closeLightbox(false);
-                    switchToGrid(e.state.category, e.state.page);
+                    switchToGrid(e.state.category, e.state.page, false);
                 } else if (e.state.view === 'dashboard') {
                     closeLightbox(false);
                     renderDashboard(false);
@@ -525,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             lightboxMediaContainer.appendChild(div);
 
-            // Re-initialize Instagram/TikTok if needed
+            // Re-initialize Instagram/TikTok/Twitter if needed
             if (item.dataset.platform === 'instagram') {
                 setTimeout(() => {
                     if (window.instgrm) {
@@ -533,6 +539,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         const script = document.createElement('script');
                         script.src = '//www.instagram.com/embed.js';
+                        script.async = true;
+                        document.body.appendChild(script);
+                    }
+                }, 100);
+            } else if (item.dataset.platform === 'twitter') {
+                setTimeout(() => {
+                    if (window.twttr && window.twttr.widgets) {
+                        window.twttr.widgets.load(lightboxMediaContainer);
+                    } else {
+                        const script = document.createElement('script');
+                        script.src = 'https://platform.twitter.com/widgets.js';
                         script.async = true;
                         document.body.appendChild(script);
                     }

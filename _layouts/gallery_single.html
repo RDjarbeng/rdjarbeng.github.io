@@ -16,6 +16,8 @@ layout: default
     <div class="content-wrapper">
         {% assign computed_link = page.link %}
         {% assign computed_ig_id = page.instagram_id %}
+        {% assign computed_tk_id = "" %}
+        {% assign computed_tt_id = "" %}
 
         {% if page.platform == 'instagram' %}
         {% if computed_link == blank or computed_link == nil %}
@@ -38,6 +40,29 @@ layout: default
         {% if computed_ig_id != blank and computed_ig_id != nil %}
         {% assign computed_link = 'https://www.instagram.com/p/' | append: computed_ig_id | append: '/' %}
         {% endif %}
+        {% endif %}
+        {% elsif page.platform == 'tiktok' %}
+        {% assign computed_tk_id = page.youtube_id %}
+        {% if computed_tk_id == blank or computed_tk_id == nil %}
+        {% assign computed_tk_id = page.link %}
+        {% endif %}
+        {% if computed_tk_id contains '/video/' %}
+        {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+        {% endif %}
+        {% if computed_link == blank or computed_link == nil %}
+        {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
+        {% endif %}
+        {% elsif page.platform == 'twitter' %}
+        {% assign computed_tt_id = page.youtube_id %}
+        {% if computed_tt_id == blank or computed_tt_id == nil %}
+        {% assign computed_tt_id = page.link %}
+        {% endif %}
+        {% if computed_tt_id contains '/status/' %}
+        {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first
+        %}
+        {% endif %}
+        {% if computed_link == blank or computed_link == nil %}
+        {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
         {% endif %}
         {% endif %}
         <div class="post-content">
@@ -64,6 +89,17 @@ layout: default
                         style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no"
                         allowtransparency="true" allow="autoplay; encrypted-media; picture-in-picture"
                         allowfullscreen></iframe>
+                    {% elsif page.platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk_id }}"
+                        data-video-id="{{ computed_tk_id }}" style="max-width: 605px;min-width: 325px;">
+                        <section></section>
+                    </blockquote>
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    {% elsif page.platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
+                    <blockquote class="twitter-tweet" data-width="550" data-dnt="true" data-theme="dark">
+                        <a href="https://twitter.com/x/status/{{ computed_tt_id }}"></a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     {% else %}
                     {{ page.embed_code }}
                     {% endif %}

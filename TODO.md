@@ -8,6 +8,8 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
+- Set homepage items to not show the same post over and over
+- Update telegram bot to put captions in body for gallery items
 ## Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
