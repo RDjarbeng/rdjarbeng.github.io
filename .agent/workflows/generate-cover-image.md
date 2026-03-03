@@ -35,6 +35,10 @@ When generating cover images for this website, please adhere to the following sp
     *   The image MUST have an aspect ratio of **16:9**. Recommended dimensions are **1280x720** or **1920x1080**. This is critical as the website cards are fixed to this ratio.
     *   **Performance First**: Prioritize web-optimized images. High-definition (1080p equivalent) is sufficient.
 
+6.  **Directory Placement**:
+    *   Cover images MUST be saved to the `assets/images/posts/covers/` directory.
+    *   Other related post images MUST be saved to the `assets/images/posts/` directory.
+
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
 > "A **flat vector illustration** of [subject] using a **matte** finish. **Solid** primary colors (Red, Blue, Yellow) for the illustration. Clean lines, **white or light background**. Text overlay says '[Title]' in exactly **ONE solid color** (e.g., solid black). Watermark 'rdjarbeng.com' at the bottom. **No neon, no glow, editorial style**. **16:9 Aspect Ratio**."
