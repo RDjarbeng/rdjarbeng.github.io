@@ -30,7 +30,7 @@ card_items:
 In [Part 1 of this series](https://rdjarbeng.com/lumalabs_genai/), I tested Luma Labs' Dream Machine with a simple picture of bees. The result was... well, let's call it "biologically creative." While the AI recognized the insects, it had no understanding of physics. This led to some hilarious, sliding bees that didn't quite know how wings worked.
 
 <video width="100%" controls>
-  <source src="/assets/videos/luma_bees.mp4" type="video/mp4">
+  <source src="{{ '/assets/videos/luma_bees.mp4' | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -52,6 +52,9 @@ Google’s blog post details three key techniques. Here is what they actually me
 Google "fine-tuned" their Veo and Imagen models using their own concept art.
 
 * **What it means:** Imagine you hire an artist, but they have never seen your main character "Ada" before. You would have to describe her every single time you want a drawing. Fine-tuning is like showing the artist a portfolio of Ada first so they learn her face, her clothes, and the specific brushstrokes you like.
+
+![Google Workflow: Iterating on design styles](/assets/images/google_workflow_dog.png)
+*By combining fine-tuned Veo models with video-to-video workflows, the team could continuously refine the dog's appearance and the surrounding artistic flourishes. This approach gave them unparalleled flexibility to experiment with different visual styles.*
 * **Can you do this?** Currently, not really. For the average user, tools like Google Veo or Luma are "black boxes." You cannot pop the hood and teach them your own style yet. This level of control is mostly reserved for enterprise partners or requires technical coding skills with open-source models. For now, we are stuck with the "generic" style the AI was trained on.
 
 #### 2. Video-to-Video (Tracing Paper)
