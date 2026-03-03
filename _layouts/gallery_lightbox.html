@@ -149,6 +149,17 @@ layout: default
               <iframe src="https://www.instagram.com/p/{{ computed_ig_id }}/embed" width="100%" height="100%"
                 style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true"
                 allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+              {% elsif item.platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
+              <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk_id }}"
+                data-video-id="{{ computed_tk_id }}" style="max-width: 605px;min-width: 325px;">
+                <section></section>
+              </blockquote>
+              <script async src="https://www.tiktok.com/embed.js"></script>
+              {% elsif item.platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
+              <blockquote class="twitter-tweet" data-width="550" data-dnt="true" data-theme="dark">
+                <a href="https://twitter.com/x/status/{{ computed_tt_id }}"></a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               {% else %}
               {{ item.embed_code }}
               {% endif %}
