@@ -1,14 +1,14 @@
 ---
 title: Time Flies - William Osula's Journey from Man Utd Youth Star to Newcastle Hero
-date: 2026-03-05T14:28:00
+date: 2026-03-05T15:08:00
 published: true
 tags:
   - Manchester United
   - Newcastle
   - Premier League
   - Football
-image: '/assets/images/posts/covers/osula_time_flies_cover.jpg'
-image_alt: 'Flat illustration showing William Osula journey from Man Utd youth player to Newcastle United goal scorer'
+image: /assets/images/posts/covers/osula_time_flies_cover.jpg
+image_alt: Flat illustration showing William Osula journey from Man Utd youth player to Newcastle United goal scorer
 layout: personal
 card_items: []
 ---
@@ -32,6 +32,7 @@ Then came the caption:
 > Time flies 😅
 
 Paired with two side-by-side images. Embedded tweet below:
+
 - Top: 23-year-old Osula wheeling away in wild celebration after curling home the decisive goal against the very club that once celebrated him.
 - Bottom: 11-year-old Osula proudly holding his trophy in 2014.
 
@@ -60,5 +61,3 @@ The win ended Man Utd's unbeaten run under interim boss Michael Carrick and gave
 Osula summed it up perfectly afterward: the "best feeling ever."
 
 Moments like this remind us why we love football. Twists of fate, poetic justice, and a bit of delicious rivalry banter.
-
-
