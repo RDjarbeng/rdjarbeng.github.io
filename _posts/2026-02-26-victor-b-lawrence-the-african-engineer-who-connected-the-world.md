@@ -61,5 +61,4 @@ Quote from Victor Lawrence:
 
 > "You have to stand on somebody’s shoulder before you can see far. And so, it’s very important that I have a strong shoulder for others to stand on, so they can see far and they can do greater things."
 
-> [!TIP]
-> **Want to dive deeper?** Dr. Lawrence continues his work today as a Research Professor and Director of the Center for Intelligent Networked Systems (iNetS) at the Stevens Institute of Technology. You can read more about his remarkable career and patents on the [National Inventors Hall of Fame](https://www.invent.org/inductees/victor-b-lawrence) website.
+ **Want to dive deeper?** Dr. Lawrence continues his work today as a Research Professor and Director of the Center for Intelligent Networked Systems (iNetS) at the Stevens Institute of Technology. You can read more about his remarkable career and patents on the [National Inventors Hall of Fame](https://www.invent.org/inductees/victor-b-lawrence) website.
