@@ -1,12 +1,14 @@
 ---
-title: Time Flies- William Osula's Journey from Man Utd Youth Star to Newcastle Hero
+title: Time Flies - William Osula's Journey from Man Utd Youth Star to Newcastle Hero
 date: 2026-03-05T14:28:00
-published: false
+published: true
 tags:
   - Manchester United
   - Newcastle
-image: ''
-image_alt: ''
+  - Premier League
+  - Football
+image: '/assets/images/posts/covers/osula_time_flies_cover.jpg'
+image_alt: 'Flat illustration showing William Osula journey from Man Utd youth player to Newcastle United goal scorer'
 layout: personal
 card_items: []
 ---
@@ -18,7 +20,7 @@ In a dramatic Premier League clash at St. James' Park, 10-man Newcastle United c
 The real magic, though, came hours later when Newcastle's official X account dropped pure gold.
 
 ### The Legendary Banter Tweet
-https://x.com/NUFC/status/2029333545752146266
+
 **@NUFC** quoted Manchester United's own post from November 8, 2014:
 
 > Congratulations to 11-year-old William Osula from Denmark, winner of today's MU Soccer Schools World Skills Final.
@@ -33,7 +35,9 @@ Paired with two side-by-side images:
 - Left: 11-year-old Osula proudly holding his trophy in 2014.
 - Right: 23-year-old Osula wheeling away in wild celebration after curling home the decisive goal against the very club that once celebrated him.
 
-The post exploded — over 52,000 likes, 1.7+ million views, thousands of replies filled with laughing emojis and rival fans piling on.![](grok_render_searched_image_card_json={"cards":[{"cardId":"91e343","imageId":"0","size":"LARGE"},{"cardId":"0dfa92","imageId":"1","size":"LARGE"},{"cardId":"96684d","imageId":"2","size":"LARGE"}]})
+The post exploded — over 52,000 likes, 1.7+ million views, thousands of replies filled with laughing emojis and rival fans piling on.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Time flies 😅 <a href="https://t.co/HfjwVIdNsh">https://t.co/HfjwVIdNsh</a> <a href="https://t.co/DBcGQ0A0ZW">pic.twitter.com/DBcGQ0A0ZW</a></p>&mdash; Newcastle United (@NUFC) <a href="https://twitter.com/NUFC/status/2029333545752146266?ref_src=twsrc%5Etfw">March 4, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### The Goal That Started It All
 
@@ -42,18 +46,10 @@ With the score level at 1-1 late on (Anthony Gordon had scored a first-half pena
 He kept it alive with brilliant footwork to prevent it going out, drove inside past his marker, and unleashed an unstoppable curling strike into the top corner from the edge of the box. St. James' Park erupted.
 
 Newcastle's official account posted the moment soon after:
-https://x.com/NUFC/status/2029346157336383832
 
-**@NUFC** (video post):
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Clock ticking down.<br><br>Scores level.<br><br>Defenders to beat.<br><br>Step forward, Will Osula 👏👏👏 <a href="https://t.co/IkAU1DCxp6">pic.twitter.com/IkAU1DCxp6</a></p>&mdash; Newcastle United (@NUFC) <a href="https://twitter.com/NUFC/status/2029346157336383832?ref_src=twsrc%5Etfw">March 5, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-> Clock ticking down.  
-> Scores level.  
-> Defenders to beat.  
-> Step forward, Will Osula 👏👏👏
-
-Watch the full brilliant sequence here — the skill to retain possession, the drive, and that rocket finish:
-
-(Video: Official Newcastle United clip of William Osula's 90th-minute winner vs Manchester United. Available on X via @NUFC — search for their post from March 5, 2026 at approx. 00:00 GMT, or check highlights on YouTube channels like Newcastle United FC or NBC Sports Premier League.)![](grok_render_searched_image_card_json={"cards":[{"cardId":"bf206f","imageId":"3","size":"LARGE"}]})
+Watch the full brilliant sequence — the skill to retain possession, the drive, and that rocket finish.
 
 ### From Academy Promise to Cult Hero
 
