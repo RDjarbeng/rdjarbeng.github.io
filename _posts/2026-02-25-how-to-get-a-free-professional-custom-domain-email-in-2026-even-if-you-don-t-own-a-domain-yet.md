@@ -10,8 +10,8 @@ tags:
   - Cloudflare
   - Free Limits
 title: How to Get a Free Professional Custom Domain Email in 2026 (Even If You Don't Own a Domain Yet)
-image: /assets/images/free_professional_email_2026.png
-image_alt: Free Custom Domain Email 2026
+image: '/assets/images/free_professional_email_2026.jpg'
+image_alt: 'Free Custom Domain Email 2026'
 layout: post
 card_items: []
 ---
