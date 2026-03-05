@@ -7,7 +7,7 @@ tags:
   - DNS
   - AWS
 title: 'The Internet’s Magic Number: Why Are There Only 13 DNS Root Servers For The Whole World?'
-image: /assets/images/dns_root_servers_cover.png
+image: /assets/images/dns_root_servers_cover.jpg
 image_alt: A digital illustration of the globe connected by a network of glowing nodes, highlighting the number 13.
 layout: post
 description: Discover why the entire internet relies on just 13 DNS root servers. Explore the history, the 512-byte limit, and the Anycast technology that makes it possible.
@@ -22,7 +22,7 @@ At first glance, this sounds terrifying. We have billions of devices, trillions 
 
 The answer lies in a fascinating mix of 1980s history, hard math, and a clever routing trick called "Anycast." Here is everything you need to know about the 13 Root Servers—and why the internet is stronger than it looks.
 
-![Map of the world with red markers to signify DNS servers with number 13](/assets/images/dns_root_servers_cover.png "Mock DNS Map of the world with red markers ")
+![Map of the world with red markers to signify DNS servers with number 13](/assets/images/dns_root_servers_cover.jpg "Mock DNS Map of the world with red markers ")
 
 ## 1. The History Lesson: The 512-Byte Box
 

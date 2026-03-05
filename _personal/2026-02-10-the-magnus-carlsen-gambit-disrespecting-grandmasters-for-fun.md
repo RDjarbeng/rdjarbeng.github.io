@@ -5,7 +5,7 @@ published: true
 tags:
   - Magnus Carlsen
   - Chess
-image: '/assets/images/magnus_carlsen_gambit_cover.png'
+image: '/assets/images/magnus_carlsen_gambit_cover.jpg'
 image_alt: 'A stylized illustration of Magnus Carlsen playing a gambit with his king in the center of the board.'
 layout: personal
 ---
@@ -13,7 +13,7 @@ layout: personal
 
 Magnus Carlsen is so good at chess that he often has to "nerf" himself just to make online games interesting, according to the YouTube channel Gotham Chess. While most of us are struggling to remember basic opening theory, Magnus is out here playing what Levy Rozman (GothamChess) calls the **Magnus Carlsen Gambit**.
 
-![The Magnus Carlsen Gambit](/assets/images/magnus_carlsen_gambit_cover.png)
+![The Magnus Carlsen Gambit](/assets/images/magnus_carlsen_gambit_cover.jpg)
 
 In his recent video, GothamChess breaks down three games where Magnus deliberately plays "dumb" moves in the first few turns, effectively giving odds to titled players—and still finds a way to win.
 

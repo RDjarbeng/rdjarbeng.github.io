@@ -9,7 +9,7 @@ tags:
   - Telecommunications
   - Victor Lawrence
 title: 'Victor B. Lawrence: The Ghanaian Engineer Who Connected the World'
-image: /assets/images/victor_b_lawrence_inventions_1772127000500.png
+image: /assets/images/victor_b_lawrence_inventions_1772127000500.jpg
 image_alt: A vibrant illustration of an African engineer working on networks
 layout: post
 description: Discover the inspiring story of Victor B. Lawrence, an African engineer whose pioneering work in telecommunications revolutionized the internet.
@@ -18,7 +18,7 @@ categories: Technology
 
 When you connect to the internet today, streaming high-definition video, joining crystal-clear video calls, or simply browsing at lightning speeds, you are benefiting from the life’s work of a pioneer you may have never heard of: **Dr. Victor B. Lawrence**. A Ghanaian-born electrical engineer, his [innovations in digital signal processing (DSP)](https://nationalmedals.org/laureate/victor-b-lawrence/) and data communications were instrumental in the world's transition from clunky analog systems to the high-speed digital networks we rely on today.
 
-![A vibrant illustration of an African engineer working on networks](/assets/images/victor_b_lawrence_inventions_1772127000500.png)
+![A vibrant illustration of an African engineer working on networks](/assets/images/victor_b_lawrence_inventions_1772127000500.jpg)
 
 But who exactly is Dr. Lawrence, and why is his story so profoundly relevant, especially for young African innovators? His journey from Accra to the highest echelons of Bell Laboratories is not just a testament to academic brilliance; it is a blueprint for how technical expertise combined with visionary leadership can literally connect continents.
 

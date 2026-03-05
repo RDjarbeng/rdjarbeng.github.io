@@ -3,7 +3,7 @@ title: Hilarious Spam Email from Elon Musk Allegedly
 date: 2026-02-20T00:09:00
 published: true
 tags: []
-image: /assets/images/elon_spam_improved.png
+image: /assets/images/elon_spam_improved.jpg
 image_alt: ''
 layout: personal
 card_items: []
@@ -11,7 +11,7 @@ card_items: []
 
 Usually I delete spam/phishing emails, but this one was so blatantly fake and hilarious that I had to make a post about it. Here is the full unedited email I received, allegedly from Elon Musk himself!
 
-![](/assets/images/1000363354.png)
+![](/assets/images/1000363354.jpg)
 
 > We are so excited to have you as part of the Tesla stakeholders club, Welcome indeed to our community of long-term growth stock investment for the future of energy, AI, and mobility.
 > 

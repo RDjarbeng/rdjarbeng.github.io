@@ -8,7 +8,7 @@ tags:
   - Richard Djarbeng's Blog
   - Review
 title: 100 Posts Later - Lessons Learnt From Building This Blog
-image: /assets/images/100_posts_cover.png
+image: /assets/images/100_posts_cover.jpg
 image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark
 layout: post
 card_items:
@@ -48,7 +48,7 @@ One of the things that has changed is that I mostly include references directly 
 
 Thumbnails for the posts have become more detailed with more information about the post highlighted on the thumbnail. I realize that for the posts that feature me in the cover, I have a tendency to strike a pose where I am looking up.
 
-![100 Posts Later Cover Image](/assets/images/100_posts_cover.png)
+![100 Posts Later Cover Image](/assets/images/100_posts_cover.jpg)
 
 Just like that vegeta video where he's in the rain and staring up into the sky.
 
@@ -68,7 +68,7 @@ Changed from the long URL rdjarbeng.github.io to rdjarbeng.com.
 
 This is an improvement, easy to memorize and also shows that the website url keeps getting shorter and better. I'll insert a picture to illustrate this using the spaceX booster engines.
 
-![Improvement in rdjarbeng.com site urls compared with Spacex booster engines](/assets/images/spacex-boosters-urls.png "Improvement in rdjarbeng.com site urls compared with Spacex booster engines")
+![Improvement in rdjarbeng.com site urls compared with Spacex booster engines](/assets/images/spacex-boosters-urls.jpg "Improvement in rdjarbeng.com site urls compared with Spacex booster engines")
 
  I had an issue before changing to the .com domain, I kept failing to add a sitemap to my website in Google Search Console. However, once I set up the domain, it worked with no code changes. Apparently, Google Search Console is biased against .github.io domains or subdomains in general.
 

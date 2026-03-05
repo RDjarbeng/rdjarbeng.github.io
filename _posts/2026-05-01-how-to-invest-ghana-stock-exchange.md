@@ -14,7 +14,7 @@ tags:
   - GSE
   - ISEDAN
 title: How To Invest On The Ghana Stock Exchange
-image: /assets/images/gse_article_nat/gse_cover.png
+image: /assets/images/gse_article_nat/gse_cover.jpg
 image_alt: Illustration of Ghana Stock Exchange with bull market symbol and financial charts
 layout: post
 ---
@@ -22,7 +22,7 @@ The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian inve
 
 Whether you're a complete beginner or have some investment experience, understanding the fundamentals of stock market investing is crucial before you start. This comprehensive guide will walk you through everything you need to know to begin your investment journey on the Ghana Stock Exchange.
 
-![Illustration of Ghana Stock Exchange with bull market symbol and financial charts](/assets/images/gse_article_nat/gse_cover.png "How to invest in GSE cover image")
+![Illustration of Ghana Stock Exchange with bull market symbol and financial charts](/assets/images/gse_article_nat/gse_cover.jpg "How to invest in GSE cover image")
 
 ## What is a Stock and Why Invest?
 

@@ -8,7 +8,7 @@ tags:
   - Tech
   - Future
 title: 'The Top AI Stories of 2025: Reasoning, Agents, and the Chip Wars'
-image: assets/images/20260201-top-ai-2025-v2.png
+image: assets/images/20260201-top-ai-2025-v2.jpg
 image_alt: Top AI Stories of 2025 Cover
 layout: post
 ---

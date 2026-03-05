@@ -5,7 +5,7 @@ published: true
 tags:
   - Mindset
   - Productivity
-image: /assets/images/do_the_thing_tv_cover_animated.png
+image: /assets/images/do_the_thing_tv_cover_animated.jpg
 image_alt: Animated illustration of a person watching Chris Williamson on a monitor
 layout: personal
 ---

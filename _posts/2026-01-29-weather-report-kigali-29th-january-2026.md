@@ -9,7 +9,7 @@ tags:
   - Environment
   - Sensors
 title: Dense Haze Over Kigali - Weather Report - 29th January, 2026
-image: '/assets/images/kigali_weather_thumbnail.png'
+image: '/assets/images/kigali_weather_thumbnail.jpg'
 image_alt: 'Kigali Weather Report thumbnail showing the hills and title for the post'
 layout: post
 ---

@@ -2,7 +2,7 @@
 layout: personal
 title: Kenya, Uganda and Rwanda Ban Cash Bouquets
 date: 2026-02-13T12:19:00
-image: /assets/images/cash_bouquets_banned_cover.png
+image: /assets/images/cash_bouquets_banned_cover.jpg
 image_alt: innovative Cash Bouquets Banned Cover Image
 tags:
   - Valentine's Day

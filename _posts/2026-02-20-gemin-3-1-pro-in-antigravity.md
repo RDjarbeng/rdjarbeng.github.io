@@ -10,7 +10,7 @@ tags:
   - LLM
   - Update
 title: Gemini 3.1 Pro Is Now Available in Google Antigravity
-image: /assets/images/gemini_3_1_pro_antigravity_supercharged.png
+image: /assets/images/gemini_3_1_pro_antigravity_supercharged.jpg
 image_alt: Gemini 3.1 Pro in Antigravity SUPERCHARGED
 layout: post
 card_items: []
@@ -42,7 +42,7 @@ Rendering massive contexts—such as conversational memory, rich markdown artifa
 ### **Fix for Windows Auto-updater:**
 A critical but subtle bug was affecting Windows users where OS-level background task managers were interrupting Antigravity's silent update payload. This led to users being stranded on older versions without realizing it. The engineering team has now natively integrated the updater with Windows background services, ensuring future patches—like the rollout of Gemini 3.1 Pro—are delivered seamlessly without requiring manual intervention.
 
-![Visualizes a supercharged AI IDE with a sense of speed and power, using speed lines and the yellow and blue solid primary colors.](/assets/images/gemini_3_1_pro_antigravity_supercharged.png "Supercharge Antigravity 3.1 pro IDE")
+![Visualizes a supercharged AI IDE with a sense of speed and power, using speed lines and the yellow and blue solid primary colors.](/assets/images/gemini_3_1_pro_antigravity_supercharged.jpg "Supercharge Antigravity 3.1 pro IDE")
 
 You can view the full changelog and details of this update here:
 [https://antigravity.google/changelog](https://antigravity.google/changelog)

@@ -10,7 +10,7 @@ tags:
   - Websites
   - SEO
 title: "Google Rich Results Testing Tool: Your Key to SEO Visibility"
-image: /assets/images/google_rich_results_cover.png
+image: /assets/images/google_rich_results_cover.jpg
 layout: post
 image_alt: "Google Rich Results Testing Tool Cover Image"
 ---
@@ -21,7 +21,7 @@ These are **Rich Results**. They turn a standard, boring blue link into an inter
 
 But how do you get them? And more importantly, how do you know if you've implemented them correctly? Enter the **Google Rich Results Testing Tool**.
 
-![Google Rich Results Testing Tool Cover Image](/assets/images/google_rich_results_cover.png)
+![Google Rich Results Testing Tool Cover Image](/assets/images/google_rich_results_cover.jpg)
 
 ## What is the Google Rich Results Testing Tool?
 

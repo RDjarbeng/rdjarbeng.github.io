@@ -12,7 +12,7 @@ tags:
   - COBOL
   - Mainframe
 title: 'How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley'
-image: /assets/images/posts/ibm-cobol-cover.png
+image: /assets/images/posts/ibm-cobol-cover.jpg
 image_alt: An AI breaking down a vintage mainframe computer with a crashing stock chart.
 layout: post
 card_items:
@@ -39,7 +39,7 @@ description: How Anthropic's Claude Code shattered IBM's COBOL legacy in a singl
 
 The tech world is more than accustomed to disruption, but the events of Monday, February 23, 2026, were something else entirely. In a single afternoon, a concise blog post from **Anthropic** accomplished what decades of fierce competition couldn't: it shattered IBM’s legendary "COBOL moat," wiping a staggering **$30 billion** off its market cap in mere hours.
 
-![An AI breaking down a vintage mainframe computer with a crashing stock chart.](/assets/images/posts/ibm-cobol-cover.png)
+![An AI breaking down a vintage mainframe computer with a crashing stock chart.](/assets/images/posts/ibm-cobol-cover.jpg)
 
 ### Key Takeaways
 

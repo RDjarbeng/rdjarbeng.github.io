@@ -4,14 +4,14 @@ date: 2026-02-15T19:09:35
 published: true
 tags:
   - Books
-image: /assets/images/half_of_a_yellow_sun_first_look.png
+image: /assets/images/half_of_a_yellow_sun_first_look.jpg
 image_alt: 'A stylized illustration of a half yellow sun with text "First Look: Half of a Yellow Sun"'
 layout: personal
 ---
 
 
 I finally picked up a copy of *Half of a Yellow Sun* by Chimamanda Ngozi Adichie. The blurb at the back doesn't give away too many spoilers, but I am incredibly curious to find out why this specific novel was crowned the **Women's Prize for Fiction 'Winner of Winners'**.
-![First Look: Half of a Yellow Sun Book Cover](/assets/images/half_of_a_yellow_sun_first_look.png "First Look: Half of a Yellow Sun")
+![First Look: Half of a Yellow Sun Book Cover](/assets/images/half_of_a_yellow_sun_first_look.jpg "First Look: Half of a Yellow Sun")
 
 
 > 'Here is a new writer endowed with the gift of ancient storytellers'  
