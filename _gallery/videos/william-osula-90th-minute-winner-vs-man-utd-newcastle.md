@@ -1,7 +1,7 @@
 ---
 title: William Osula 90th Minute Winner vs Man Utd - Newcastle United
 published: true
-date: 2026-03-05T14:28:00
+date: 2026-03-05T14:28:00+02:00
 platform: twitter
 youtube_id: ''
 embed_code: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Clock ticking down.<br><br>Scores level.<br><br>Defenders to beat.<br><br>Step forward, Will Osula 👏👏👏 <a href="https://t.co/IkAU1DCxp6">pic.twitter.com/IkAU1DCxp6</a></p>&mdash; Newcastle United (@NUFC) <a href="https://twitter.com/NUFC/status/2029346157336383832?ref_src=twsrc%5Etfw">March 5, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

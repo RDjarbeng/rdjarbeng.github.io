@@ -1,6 +1,6 @@
 ---
 title: Time Flies - William Osula's Journey from Man Utd Youth Star to Newcastle Hero
-date: 2026-03-05T15:08:00
+date: 2026-03-05T15:08:00+02:00
 published: true
 tags:
   - Manchester United
