@@ -18,7 +18,8 @@
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
       <div class="post-meta-categories-container">
-        <div class="post-meta-card">{{ include.post.date | date: "%B %-d, %Y" }}</div>
+        <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
+            include.post.date | date: "%B %-d, %Y" }}</time></div>
         <div class="post-meta-dot">·</div>
         <div class="post-meta-card">
           {{ minutes }} min read
