@@ -76,7 +76,7 @@ From highlife and hiplife music to colorful festivals with many different dances
 
 Most Ghanaians, and many Africans, were heartbroken in the 2010 world Cup when Asamoah Gyan missed a penalty during the quarter final match with Uruguay. The cause of the penalty was a handball from **Luiz Suarez** of Uruguay whom many find hard to forgive to this day.
 
-I have included a video from Twitter that gives a good summary of the football Ghana-Suarez situation.
+I have included a video from Twitter that gives a good summary of the Ghana-Suarez football situation.
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">When Luis Suarez’s blatant handball prevented Ghana from becoming the first Africa nation to reach a World Cup semifinal. 😲🏆<br><br>(Via <a href="https://twitter.com/FIFAWorldCup?ref_src=twsrc%5Etfw">@FIFAWorldCup</a>)<br><br> <a href="https://t.co/vEM0m0YsfA">pic.twitter.com/vEM0m0YsfA</a></p>&mdash; Pubity Sport (@pubitysport) <a href="https://twitter.com/pubitysport/status/1828885097711579293?ref_src=twsrc%5Etfw">August 28, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
