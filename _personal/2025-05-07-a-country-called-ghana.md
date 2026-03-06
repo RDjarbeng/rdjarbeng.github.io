@@ -35,7 +35,7 @@ image_alt: Cover image for Ghana, an Introduction- All That Glitters is Still Go
 layout: personal
 card_items:
   - name: "Ananse the Spider"
-    image: "/assets/images/ananse_design_cover_rdjarbeng.JPG"
+    image: "/assets/images/posts/scary_ananse.jpeg"
     badge_1: "Folklore"
     badge_2: "Culture"
     description: "Kweku Ananse is the legendary spider trickster of West African folklore. Originally from the Ashanti people, these stories taught wisdom and survival, eventually spreading across the diaspora."
