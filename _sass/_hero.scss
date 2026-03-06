@@ -1,0 +1,131 @@
+.home-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    min-height: 400px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        min-height: auto;
+    }
+}
+
+.hero-content {
+    flex: 1;
+    padding: 40px;
+    z-index: 2;
+
+    @media (max-width: 800px) {
+        order: 2;
+        padding: 30px;
+    }
+}
+
+.hero-label {
+    display: inline-block;
+    background: #ce1126;
+    /* Ghana Red */
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff !important;
+    border: none !important;
+    padding: 0 !important;
+
+    @media (max-width: 600px) {
+        font-size: 1.8rem;
+    }
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc !important;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #fcd116;
+    /* Ghana Gold */
+    color: #000 !important;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(252, 209, 22, 0.3);
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(252, 209, 22, 0.4);
+        text-decoration: none;
+    }
+}
+
+.hero-image {
+    flex: 1;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 800px) {
+        order: 1;
+        width: 100%;
+        height: 300px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 20%);
+
+        @media (max-width: 800px) {
+            background: linear-gradient(to top, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 20%);
+        }
+    }
+}
+
+/* Add a subtle green accent somewhere to complete the Ghana flag colors */
+.home-hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #006b3f;
+    /* Ghana Green */
+    z-index: 3;
+}

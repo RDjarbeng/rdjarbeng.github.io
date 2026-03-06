@@ -1,0 +1,20 @@
+{% assign spotlight_post = site.personal | where: "title", "Ghana, an Introduction- All That Glitters is Still Gold" |
+first %}
+<div class="home-hero">
+    <div class="hero-content">
+        <div class="hero-label">Occasion Spotlight</div>
+        <h1 class="hero-title">Ghana, an Introduction- All That Glitters is Still Gold</h1>
+        <p class="hero-description">
+            Celebrating the 69th Independence Day of Ghana. Explore the rich culture, history, and golden opportunities
+            of the first sub-Saharan nation to gain independence.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ spotlight_post.url | relative_url }}" class="hero-btn">Read the
+                Post</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="{{ '/assets/images/posts/happy_indepence_ghana_post_cover.png' | relative_url }}"
+            alt="Happy 69th Independence Day Ghana">
+    </div>
+</div>
