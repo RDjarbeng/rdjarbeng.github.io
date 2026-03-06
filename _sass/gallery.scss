@@ -211,7 +211,7 @@
 .twitter-tweet,
 iframe[id^="twitter-widget-"] {
     width: 100% !important;
-    max-width: 550px !important;
+    max-width: 1000px !important;
     margin: 0 auto !important;
 }
 
@@ -230,10 +230,12 @@ iframe[id^="twitter-widget-"] {
 .lightbox-media-column iframe[src*="youtube.com"],
 .lightbox-media-column iframe[src*="youtu.be"] {
     width: 85%;
-    max-width: 1200px;
+    max-width: 1000px;
     height: auto;
     aspect-ratio: 16 / 9;
     max-height: 85vh;
+    flex-shrink: 0;
+    min-height: 1px;
 }
 
 .lightbox-info-column {
