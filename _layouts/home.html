@@ -8,7 +8,7 @@ layout: default
   <!-- Latest Posts Section -->
   <h2 class="section-title">Latest Posts</h2>
   {% include category-tags.html %}
-  <div class="post-list">
+  <div class="post-list" id="latest-posts">
     {% for post in site.posts limit:6 %}
     {% include post-card.html post=post %}
     {% endfor %}
@@ -20,47 +20,32 @@ layout: default
       <polyline points="12 5 19 12 12 19"></polyline>
     </svg></a>
 
-  <!-- Selected Posts Section -->
+  <!-- Selected Posts Section (Varied Selection) -->
   <br><br>
   <h2 class="section-title">Selected Posts</h2>
   <div class="post-list" id="random-posts-container">
-    {% for post in site.posts limit:20 %}
+    {% for post in site.posts limit:100 %}
     <div class="random-post-item" style="display: none;">
       {% include post-card.html post=post %}
     </div>
     {% endfor %}
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const posts = Array.from(document.querySelectorAll('.random-post-item'));
-      for (let i = posts.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [posts[i], posts[j]] = [posts[j], posts[i]];
-      }
-      posts.slice(0, 6).forEach(post => {
-        post.style.display = 'block';
-      });
-      posts.slice(6).forEach(post => post.remove());
-    });
-  </script>
-
-  <!-- Categories Showcase with Example Posts -->
+  <!-- Categories Showcase: Randomized selection from top categories, 3 posts each -->
   <br><br>
   <h2 class="section-title">Top Categories</h2>
-  <div class="categories-showcase">
-    {% assign categories_list = "" | split: "" %}
+  <div id="categories-container">
+    {% assign cat_build = "" | split: "" %}
     {% for category in site.categories %}
-    {% capture category_string %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{%
-    endcapture %}
-    {% assign categories_list = categories_list | push: category_string %}
+    {% capture cat_str %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{% endcapture %}
+    {% assign cat_build = cat_build | push: cat_str %}
     {% endfor %}
-    {% assign sorted_categories = categories_list | sort | reverse %}
+    {% assign sorted_cats = cat_build | sort | reverse %}
 
-    {% for item in sorted_categories limit:2 %}
+    {% for item in sorted_cats limit:12 %}
     {% assign parts = item | split: ":::" %}
     {% assign cat_name = parts[1] %}
-    <div class="category-section" style="margin-bottom: 40px;">
+    <div class="category-section-source" style="display: none; margin-bottom: 40px;" data-name="{{ cat_name }}">
       <h3
         style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
         <span>{{ cat_name }}</span>
@@ -70,8 +55,10 @@ layout: default
       </h3>
       <div class="post-list" style="margin-top: 20px;">
         {% assign cat_posts = site.categories[cat_name] | sort: 'date' | reverse %}
-        {% for post in cat_posts limit:2 %}
-        {% include post-card.html post=post %}
+        {% for post in cat_posts limit:10 %}
+        <div class="cat-post-item">
+          {% include post-card.html post=post %}
+        </div>
         {% endfor %}
       </div>
     </div>
@@ -81,21 +68,21 @@ layout: default
     </div>
   </div>
 
-  <!-- Tags Showcase with Example Posts -->
+  <!-- Tags Showcase: Randomized selection from top tags, 3 posts each -->
   <br>
   <h2 class="section-title">Top Tags</h2>
-  <div class="tags-showcase">
-    {% assign tags_list = "" | split: "" %}
+  <div id="tags-container">
+    {% assign tag_build = "" | split: "" %}
     {% for tag in site.tags %}
-    {% capture tag_string %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
-    {% assign tags_list = tags_list | push: tag_string %}
+    {% capture tag_str %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
+    {% assign tag_build = tag_build | push: tag_str %}
     {% endfor %}
-    {% assign sorted_tags = tags_list | sort | reverse %}
+    {% assign sorted_tags = tag_build | sort | reverse %}
 
-    {% for item in sorted_tags limit:2 %}
+    {% for item in sorted_tags limit:12 %}
     {% assign parts = item | split: ":::" %}
     {% assign tag_name = parts[1] %}
-    <div class="tag-section" style="margin-bottom: 40px;">
+    <div class="tag-section-source" style="display: none; margin-bottom: 40px;" data-name="{{ tag_name }}">
       <h3
         style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
         <span>{{ tag_name }}</span>
@@ -105,8 +92,10 @@ layout: default
       </h3>
       <div class="post-list" style="margin-top: 20px;">
         {% assign tag_posts = site.tags[tag_name] | sort: 'date' | reverse %}
-        {% for post in tag_posts limit:2 %}
-        {% include post-card.html post=post %}
+        {% for post in tag_posts limit:10 %}
+        <div class="tag-post-item">
+          {% include post-card.html post=post %}
+        </div>
         {% endfor %}
       </div>
     </div>
@@ -116,36 +105,23 @@ layout: default
     </div>
   </div>
 
-  <!-- Personal Posts Section -->
+  <!-- Personal Posts Section (Recent + Random Older Mix) -->
   <br>
   <h2 class="section-title">Personal Posts</h2>
   <div class="post-list" id="random-personal-container">
-    {% assign sorted_posts = site.personal | sort: 'date' | reverse %}
-    {% for personal in sorted_posts limit:10 %}
+    {% assign all_personal = site.personal | sort: 'date' | reverse %}
+    {% for personal in all_personal limit:60 %}
     <div class="random-personal-item" style="display: none;">
       {% include post-card.html post=personal %}
     </div>
     {% endfor %}
   </div>
-
   <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts <svg width="16" height="16"
       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
       <line x1="5" y1="12" x2="19" y2="12"></line>
       <polyline points="12 5 19 12 12 19"></polyline>
     </svg></a>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const personalPosts = Array.from(document.querySelectorAll('.random-personal-item'));
-      for (let i = personalPosts.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [personalPosts[i], personalPosts[j]] = [personalPosts[j], personalPosts[i]];
-      }
-      personalPosts.slice(0, 6).forEach(post => post.style.display = 'block');
-      personalPosts.slice(6).forEach(post => post.remove());
-    });
-  </script>
 
   <!-- Gallery Horizontal Scroll Section -->
   <br><br>
@@ -194,4 +170,128 @@ layout: default
       My Full Story</a>
   </div>
 
+  <script>
+    (function () {
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      function getPostUrl(el) {
+        const link = el.querySelector('.post-link');
+        return link ? link.getAttribute('href') : null;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const seenUrls = new Set();
+
+        // 1. Initial seen URLs from Latest Posts (Always visible)
+        document.querySelectorAll('#latest-posts .post-link').forEach(a => {
+          seenUrls.add(a.getAttribute('href'));
+        });
+
+        // 2. Process Selected Posts
+        const randomPosts = shuffle(Array.from(document.querySelectorAll('.random-post-item')));
+        let selectedCount = 0;
+        randomPosts.forEach(item => {
+          const url = getPostUrl(item);
+          if (selectedCount < 6 && url && !seenUrls.has(url)) {
+            item.style.display = 'block';
+            seenUrls.add(url);
+            selectedCount++;
+          } else {
+            item.remove();
+          }
+        });
+
+        // 3. Process Categories
+        const catSections = shuffle(Array.from(document.querySelectorAll('.category-section-source')));
+        let catsShown = 0;
+        catSections.forEach(section => {
+          if (catsShown >= 3) {
+            section.remove();
+            return;
+          }
+          const posts = Array.from(section.querySelectorAll('.cat-post-item'));
+          let postsInCat = 0;
+          posts.forEach(post => {
+            const url = getPostUrl(post);
+            if (postsInCat < 3 && url && !seenUrls.has(url)) {
+              seenUrls.add(url);
+              postsInCat++;
+            } else {
+              post.remove();
+            }
+          });
+          if (postsInCat > 0) {
+            section.style.display = 'block';
+            catsShown++;
+          } else {
+            section.remove();
+          }
+        });
+
+        // 4. Process Tags
+        const tagSections = shuffle(Array.from(document.querySelectorAll('.tag-section-source')));
+        let tagsShown = 0;
+        tagSections.forEach(section => {
+          if (tagsShown >= 3) {
+            section.remove();
+            return;
+          }
+          const posts = Array.from(section.querySelectorAll('.tag-post-item'));
+          let postsInTag = 0;
+          posts.forEach(post => {
+            const url = getPostUrl(post);
+            if (postsInTag < 3 && url && !seenUrls.has(url)) {
+              seenUrls.add(url);
+              postsInTag++;
+            } else {
+              post.remove();
+            }
+          });
+          if (postsInTag > 0) {
+            section.style.display = 'block';
+            tagsShown++;
+          } else {
+            section.remove();
+          }
+        });
+
+        // 5. Process Personal Posts
+        const personalItems = Array.from(document.querySelectorAll('.random-personal-item'));
+        if (personalItems.length > 0) {
+          const recentPool = personalItems.slice(0, 10);
+          const olderPool = personalItems.slice(10);
+
+          const pickedRecent = shuffle(recentPool).slice(0, 3);
+          const pickedOlder = shuffle(olderPool).slice(0, 3);
+          const finalSelection = shuffle(pickedRecent.concat(pickedOlder));
+
+          finalSelection.forEach(item => {
+            const url = getPostUrl(item);
+            // We don't deduplicate personal posts against regular posts usually, 
+            // but let's check just in case.
+            if (url && !seenUrls.has(url)) {
+              item.style.display = 'block';
+              seenUrls.add(url);
+            } else if (url && seenUrls.has(url)) {
+              // If it was already shown in cats/tags, we might want to skip or show anyway.
+              // Let's allow personal posts to show even if they are in cats/tags for now, 
+              // OR deduplicate if they are actually the same URL.
+              // Most personal posts won't be in regular categories.
+              item.style.display = 'block';
+            }
+          });
+
+          personalItems.forEach(item => {
+            if (item.style.display !== 'block') item.remove();
+          });
+        }
+      });
+    })();
+  </script>
 </div>
