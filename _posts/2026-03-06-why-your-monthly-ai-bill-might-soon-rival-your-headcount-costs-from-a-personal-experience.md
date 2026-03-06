@@ -1,7 +1,7 @@
 ---
 date: 2026-03-06T16:10:00+02:00
 published: false
-author: Richard
+author: Anthonio
 category: Software development
 tags:
   - AI Engineering
