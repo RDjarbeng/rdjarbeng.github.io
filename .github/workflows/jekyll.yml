@@ -27,7 +27,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2.0'
+          ruby-version: "3.2.0"
           bundler-cache: true
           cache-version: 0
       - name: Setup Pages
@@ -37,6 +37,43 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Optimize cover images and thumbnails
+        run: |
+          echo "Optimizing cover images and thumbnails listed in cover-images.txt ..."
+          LIMIT=614400  # 600 KB in bytes
+
+          if [ ! -f _site/cover-images.txt ]; then
+            echo "No cover-images.txt found, skipping."
+            exit 0
+          fi
+
+          while IFS= read -r img_path || [ -n "$img_path" ]; do
+            [ -z "$img_path" ] && continue
+
+            # Only process local jpg/jpeg files (skip external URLs, webp, png, etc.)
+            case "${img_path,,}" in
+              http*) continue ;;
+              *.jpg|*.jpeg) ;;
+              *) continue ;;
+            esac
+
+            full_path="_site/$img_path"
+            if [ ! -f "$full_path" ]; then
+              echo "  Skipping (not found): $full_path"
+              continue
+            fi
+
+            size=$(stat -c%s "$full_path")
+            if [ "$size" -gt "$LIMIT" ]; then
+              echo "  Compressing: $img_path ($(($size / 1024)) KB)"
+              convert "$full_path" -resize "1200x>" -quality 78 "/tmp/_og_opt.jpg"
+              mv "/tmp/_og_opt.jpg" "$full_path"
+              newsize=$(stat -c%s "$full_path")
+              echo "    -> $(($newsize / 1024)) KB"
+            fi
+          done < _site/cover-images.txt
+
+          echo "Done optimizing cover images and thumbnails."
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
