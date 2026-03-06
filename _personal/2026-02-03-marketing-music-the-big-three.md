@@ -4,7 +4,7 @@ date: 2026-02-03
 layout: personal
 author: Richard
 tags: [Music Business, Sony, Universal, Warner, Economics]
-image: /assets/images/music_big_three_cover.png
+image: /assets/images/music_big_three_cover.jpg
 image_alt: "The Big 3 Music Labels: Universal, Sony, and Warner"
 ---
 

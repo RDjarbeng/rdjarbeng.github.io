@@ -30,10 +30,11 @@ tags:
   - Ghana vs Uruguay
   - Jollof in Ghana
   - Entertainment in Ghana
-image: /assets/images/ghana_introduction_collage.png
+image: /assets/images/ghana_introduction_collage.jpg
+image_alt: Cover image for Ghana, an Introduction- All That Glitters is Still Gold
 layout: personal
-image_alt: "Cover image for Ghana, an Introduction- All That Glitters is Still Gold"
 ---
+
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain aspects a visitor to Ghana might find interesting; people, history, governance, and sights to visit.
 
 ![A collage featuring pictures of Ghana and historical sites](/assets/images/2nd_collage_on_ghana.png "A collage featuring pictures of Ghana and historical sites")
@@ -48,13 +49,15 @@ Major ethnic groups:
 2. Ewe - Strong presence in  Eastern Ghana; volta region. Said to have migrated from Notsie in present day Benin heading Westward to present day Ghana. Fun fact, the Volta region was once part of Togo, Ghana's eastern neighbour.  "The Volta region was formed by the state union of the former British Togoland which had been part of the German protectorate of Togoland." Link to [Wikipedia](https://en.wikipedia.org/wiki/Volta_Region) if interested in the history.
 3. Ga-Adangbe - Concentrated in the southern parts of Ghana and also the capital city Accra.
 4. Guan - Found across many regions of Ghana and believed to be the first [settlers](https://en.wikipedia.org/wiki/Guang_people) to arrive in Ghana.
-5. Mole-Dagbani - This ethnic grouping involves many different subgroups in the North of Ghana and are also said to have migrated Southwards at different times before the formation of Ghana as a country.
+5. Mole-Dagbani - This ethnic grouping involves many different and diverse subgroups in the North of Ghana and are also said to have migrated Southwards at different times before the formation of Ghana as a country.
 
 ![3 pictures showing people from Ghana with text that they are very hospitable and it has a young population](/assets/images/people_ghana.png "People from Ghana are very hospitable and it has a young population")
 
-## History in Governance: 
+## History in Governance:
 
-Earlier Governance will go all the way further to the 19th century with the Old Ghana empire and the Ashanti Kingdom. Let us start from the recent beginning as the first sub-Saharan nation to gain independence in 1957. It's first president was Dr Kwame Nkrumah and reached republic status in 1960. There have been 4 democratic republics in Ghana and at the time of writing this post (2025) it's been 33 years of the 4th democratic republic.
+Earlier Governance will go all the way further to the 19th century with the Old Ghana empire and the Ashanti Kingdom. 
+
+Let us start from the recent beginning as the first sub-Saharan nation to gain independence in 1957. It's first president was Dr Kwame Nkrumah and reached republic status in 1960. There have been 4 democratic republics in Ghana and at the time of writing this post (2025) it's been 33 years of the 4th democratic republic.
 
 ![Ghana's history in governance](/assets/images/history_ghana.png "Ghana's history in governance")
 
@@ -62,7 +65,9 @@ Earlier Governance will go all the way further to the 19th century with the Old 
 
 ![Ghana - Wikipedia](/assets/images/250px-Ghana_%28orthographic_projection%29.svg.png "Ghana on a map, image credit wikipedia")
 
-Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round.From coastal plains to lush rainforests and savannas, its diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe. Fun fact: the Volta Lake held the record for the largest artificial lake in the World when the Akosombo Dam in the Eastern region of Ghana was constructed in 1965 until the early 1970s when other larger reservoirs were created
+Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round. From coastal plains to lush rainforests and savannas, its diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe. 
+
+**Fun fact: T**he Volta Lake held the record for the largest artificial lake in the World when the Akosombo Dam in the Eastern region of Ghana was constructed in 1965 until the early 1970s when other larger reservoirs were created
 
 ![Geography of Ghana](/assets/images/geography_ghana.png "Geography of Ghana")
 
@@ -78,11 +83,13 @@ Ghana is rich in resources like gold, cocoa, bauxite and oil.
 
 ![A  canvas of resources in Ghana](/assets/images/resources_ghana.png "A  canvas of resources in Ghana")
 
-In this place _all that glitters is still gold. _Fun fact: Before independence Ghana was known as the _Gold Coast._
+In this place _all that glitters is still gold_. 
 
-## Entertainment
+Fun fact: Before independence Ghana was known as the _Gold Coast._
 
-From highlife and hiplife music to colorful festivals with many different dances, Ghana has a variety of activities that count as entertainment. A special one is the Ghanaian's love for football and the men's national team the Black stars. 
+## Entertainment in Ghana 
+
+From highlife and hiplife music to colorful festivals with many different dances, Ghana has a variety of activities that count as entertainment. A special one is the Ghanaian's love for football and the men's national team the Black stars.
 
 ![Entertainment in Ghana,from boxing to football](/assets/images/entertainment_ghana.png "Entertainment in Ghana,from boxing to football")
 

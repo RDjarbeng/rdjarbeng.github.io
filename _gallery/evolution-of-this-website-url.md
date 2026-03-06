@@ -1,6 +1,6 @@
 ---
 title: Evolution of this website url
-image: /assets/images/spacex-boosters-urls.png
+image: /assets/images/spacex-boosters-urls.jpg
 type: external
 link: ''
 labels:

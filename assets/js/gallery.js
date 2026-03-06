@@ -490,12 +490,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = item.dataset.src;
         const caption = item.querySelector('.gallery-caption-content').innerHTML;
         const title = item.dataset.title;
-        const date = item.dataset.date;
+        const dateRaw = item.dataset.date;
+        let dateFormatted = dateRaw || '';
+        if (dateRaw) {
+            const dateObj = new Date(dateRaw);
+            if (!isNaN(dateObj)) {
+                dateFormatted = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+        }
 
         lightboxMediaContainer.innerHTML = '';
 
         document.querySelector('.lightbox-title').textContent = title || '';
-        document.querySelector('.lightbox-date').textContent = date || '';
+        document.querySelector('.lightbox-date').textContent = dateFormatted;
         lightboxCaption.innerHTML = caption || '';
 
         if (type === 'image') {

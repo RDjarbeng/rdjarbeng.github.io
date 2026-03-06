@@ -9,7 +9,7 @@ tags:
   - Automation
   - Agents
 title: How to Install OpenClaw with Installation Requirements
-image: /assets/images/openclaw_install_guide_cover.png
+image: /assets/images/openclaw_install_guide_cover.jpg
 image_alt: Get OpenClaw - Installation Guide
 layout: post
 ---
@@ -24,7 +24,7 @@ It's often called "the AI that actually does things" and has a fun lobster/space
 
 ### Installation Requirements
 
-![Installing OpenClaw](/assets/images/openclaw_install_wrench.png "Installing OpenClaw")
+![Installing OpenClaw](/assets/images/openclaw_install_wrench.jpg "Installing OpenClaw")
 
 Installation is straightforward and Node.js-based (it's primarily a Node runtime project). **Note:** Always consult the [official repository](https://github.com/openclaw/openclaw) or [OpenClaw.ai](https://openclaw.ai/) for the most up-to-date instructions, as requirements can change quickly.
 
@@ -58,7 +58,7 @@ Overall, the base install is lightweight; any "huge" aspect is optional and tied
 
 ### Can it run on an ordinary laptop with less than 16GB RAM?
 
-![OpenClaw Hardware Guide](/assets/images/openclaw_guide_box.png "OpenClaw Hardware Guide")
+![OpenClaw Hardware Guide](/assets/images/openclaw_guide_box.jpg "OpenClaw Hardware Guide")
 
 **Yes working with less than 16GB is entirely possible.** The core agent software is efficient, and the heavy lifting depends on how you configure it.
 

@@ -5,11 +5,14 @@ import re
 import urllib.request
 import html
 import asyncio
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from dotenv import load_dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, CallbackQueryHandler, filters, CommandHandler
+
+# CAT timezone (Central Africa Time, UTC+2)
+CAT = timezone(timedelta(hours=2))
 
 # Load environment variables
 load_dotenv()
@@ -67,7 +70,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 caption = text_without_url if text_without_url else ""
                 
                 # Create Markdown file for gallery_videos
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
                 safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
                 if not safe_title:
                     safe_title = f"video-{timestamp}"
@@ -86,7 +89,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "caption": caption if caption else "",
                     "type": "video",
                     "category": "videos",
-                    "date": datetime.now().replace(microsecond=0),
+                    "date": datetime.now(CAT).replace(microsecond=0),
                     "published": True
                 }
                 
@@ -116,7 +119,7 @@ async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_mod
     caption = payload['caption']
     
     clean_caption = caption.strip() if caption else "Untitled"
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
     safe_title = "".join([c if c.isalnum() else "-" for c in clean_caption[:30].lower()]).strip("-")
     if not safe_title:
         safe_title = "image"
@@ -176,7 +179,7 @@ async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_mod
     if target_type == "meme":
         frontmatter = {
             "title": clean_caption[:70],
-            "date": datetime.now().replace(microsecond=0),
+            "date": datetime.now(CAT).replace(microsecond=0),
             "image": f"/{media_rel_dir}/{image_filename}",
             "caption": clean_caption if clean_caption != "Untitled" else "",
             "type": "external",
@@ -198,7 +201,7 @@ async def upload_image(app, chat_id, message_id, msg_id_key, target_type, ai_mod
             "type": "external",
             "caption": clean_caption if clean_caption != "Untitled" else "",
             "category": gallery_cat,
-            "date": datetime.now().replace(microsecond=0)
+            "date": datetime.now(CAT).replace(microsecond=0)
         }
     
     md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"

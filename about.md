@@ -108,7 +108,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     <div class="project-card-about" data-category="web iot web research">
       <div class="project-image-container">
         <!-- Replaced with generated asset -->
-        <img src="/assets/images/project_air_quality_dashboard.png" alt="Air Quality Dashboard" onerror="this.src='https://images.unsplash.com/photo-1623851724495-9d332d7c57eb?auto=format&fit=crop&w=600&q=80'">
+        <img src="/assets/images/project_air_quality_dashboard.jpg" alt="Air Quality Dashboard" onerror="this.src='https://images.unsplash.com/photo-1623851724495-9d332d7c57eb?auto=format&fit=crop&w=600&q=80'">
         <span class="project-type-badge">Research Trend</span>
       </div>
       <div class="project-content">
@@ -187,7 +187,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     <div class="project-card-about" data-category="ml data">
       <div class="project-image-container">
          <!-- Used relevant existing asset: payment related -->
-        <img src="/assets/images/loan_risk_prediction_dashboard.png" alt="Loan Risk">
+        <img src="/assets/images/loan_risk_prediction_dashboard.jpg" alt="Loan Risk">
         <span class="project-type-badge">AutoML</span>
       </div>
       <div class="project-content">
@@ -203,7 +203,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     
     <div class="project-card-about projects-hidden" data-category="data">
       <div class="project-image-container">
-        <img src="/assets/images/trustmrr_revenue_leaderboard_cover.png" alt="BigQuery">
+        <img src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="BigQuery">
         <span class="project-type-badge">Big Data</span>
       </div>
       <div class="project-content">
@@ -228,7 +228,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 
      <div class="project-card-about projects-hidden" data-category="web">
       <div class="project-image-container">
-        <img src="/assets/images/university_management_system_dashboard.png" alt="University System">
+        <img src="/assets/images/university_management_system_dashboard.jpg" alt="University System">
         <span class="project-type-badge">Java/TSQL</span>
       </div>
       <div class="project-content">
@@ -253,7 +253,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 
     <div class="project-card-about projects-hidden" data-category="web game">
       <div class="project-image-container">
-         <img src="/assets/images/escape_covid_maze_game.png" alt="Game">
+         <img src="/assets/images/escape_covid_maze_game.jpg" alt="Game">
         <span class="project-type-badge">Unity / C#</span>
       </div>
       <div class="project-content">

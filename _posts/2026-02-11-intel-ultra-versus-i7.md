@@ -9,12 +9,12 @@ tags:
   - Hardware
   - Processors
 title: "Intel Ultra Versus i7: What's the Difference In 2026?"
-image: /assets/images/intel_ultra_vs_i7_cover.png
+image: /assets/images/intel_ultra_vs_i7_cover.jpg
 image_alt: Intel Core Ultra vs New Core i7 Illustration
 layout: post
 ---
 
-![Intel Core Ultra vs New Core i7 Illustration](/assets/images/intel_ultra_vs_i7_cover.png "Intel Core Ultra vs New Core i7 Illustration")
+![Intel Core Ultra vs New Core i7 Illustration](/assets/images/intel_ultra_vs_i7_cover.jpg "Intel Core Ultra vs New Core i7 Illustration")
 
 If you've been looking at new laptops or desktop CPUs recently, you might have noticed a shift in Intel's branding. The familiar "Core i7" is now being joined (and in many cases, replaced) by the "Core Ultra 7." But what exactly is a Core Ultra 7, and is it just a fancy name for the same old i7?
 

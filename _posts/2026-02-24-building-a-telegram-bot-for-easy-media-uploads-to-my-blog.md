@@ -12,7 +12,7 @@ tags:
   - GitHub Pages
 title: Building a Telegram Bot for Easy Media Uploads to My Blog
 layout: post
-image: "/assets/images/posts/telegram-bot-cover.png"
+image: "/assets/images/posts/telegram-bot-cover.jpg"
 image_alt: "A smartphone sending an image to a website folder via a paper airplane"
 ---
 
@@ -20,7 +20,7 @@ image_alt: "A smartphone sending an image to a website folder via a paper airpla
 
 In my [100 Posts Later](https://rdjarbeng.com/100-posts-later-lessons-learnt-from-building-this-blog/) reflection and my article on [SveltiaCMS escaping CMS hell](https://rdjarbeng.com/my-experience-with-sveltiacms-a-game-changer-for-website-management/), I talked about how I shifted away from a code editor (like VS Code) for managing my website's content. Switching to SveltiaCMS was a huge step forward because it allowed me to edit posts directly through a user-friendly interface. 
 
-![A smartphone sending an image to a website folder via a paper airplane](/assets/images/posts/telegram-bot-cover.png)
+![A smartphone sending an image to a website folder via a paper airplane](/assets/images/posts/telegram-bot-cover.jpg)
 
 But even with the native image pickers and drag-and-drop improvements in SveltiaCMS, managing **minor media**—like saving a funny meme to my gallery, bookmarking a YouTube video I liked, or uploading an AI-generated portrait—still had a bit of friction. 
 

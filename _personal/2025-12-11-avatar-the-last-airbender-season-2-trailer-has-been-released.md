@@ -17,7 +17,7 @@ tags:
   - Reaction
   - News
   - Earth Kingdom
-image: /assets/images/avatar_netflix/avatar_season2_cover_rdjarbeng.png
+image: /assets/images/avatar_netflix/avatar_season2_cover_rdjarbeng.jpg
 image_alt: 'Avatar The Last Airbender Season 2 Title Card with Earth Kingdom background'
 layout: personal
 ---

@@ -11,15 +11,19 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 - Set homepage items to not show the same post over and over
 - Update telegram bot to put captions in body for gallery items
 ## Enhancements & Infrastructure
+## Low Priority
+Implement jekyll-responsive-image to properly size images on mobile devices
+
+### Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
-- [ ] **Card layouts**: Cards are not shown in the table of contents.
+- [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
-Card images have a top padding that leaves a gray space
+- [ ] **Card images**: Card images have a top padding that leaves a gray space
 
 ## Content Ideas & Drafts
 - [ ] **Ananse**: Finish Ananse website post.
-- [ ] **Review**: Food Ghana vs Nigeria Jollof.
+- [ ] **Review**: Food-Ghana vs Nigeria Jollof.
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
 - [ ] **Design**: Create banners with my model templates.

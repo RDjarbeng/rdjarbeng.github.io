@@ -4,7 +4,7 @@
     <div class="post-card-image">
       <img src="{{ include.post.image }}"
         alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
-        title="{{ include.post.title | escape }}" class="post-image" fetchpriority="high">
+        title="{{ include.post.title | escape }}" class="post-image" width="800" height="450" loading="lazy">
     </div>
     {% endif %}
 
@@ -18,7 +18,8 @@
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
       <div class="post-meta-categories-container">
-        <div class="post-meta-card">{{ include.post.date | date: "%B %-d, %Y" }}</div>
+        <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
+            include.post.date | date: "%B %-d, %Y" }}</time></div>
         <div class="post-meta-dot">·</div>
         <div class="post-meta-card">
           {{ minutes }} min read

@@ -35,9 +35,10 @@ When generating cover images for this website, please adhere to the following sp
     *   The image MUST have an aspect ratio of **16:9**. Recommended dimensions are **1280x720** or **1920x1080**. This is critical as the website cards are fixed to this ratio.
     *   **Performance First**: Prioritize web-optimized images. High-definition (1080p equivalent) is sufficient.
 
-6.  **Directory Placement**:
+6.  **Directory Placement & Naming**:
     *   Cover images MUST be saved to the `assets/images/posts/covers/` directory.
     *   Other related post images MUST be saved to the `assets/images/posts/` directory.
+    *   **CRITICAL**: You MUST save the generated image with the **`.jpg`** file extension (e.g. `title_cover.jpg`). AI image generators typically return JPEG data, and saving it as `.png` causes a file mismatch that breaks social media link previews!
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:

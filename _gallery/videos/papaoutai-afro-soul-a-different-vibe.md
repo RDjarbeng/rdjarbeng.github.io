@@ -5,6 +5,9 @@ youtube_id: https://www.youtube.com/watch?v=2sp5HeLNW5o
 embed_code: ''
 thumbnail: assets/images/videos/papaoutai_afro_soul_cover.png
 published: true
+date: 2026-02-28 20:50:03
+type: video
+category: videos
 ---
 
 Dive into a completely different musical vibe with this incredibly powerful Afro Soul rendition of the hit song "Papaoutai." Originally popularized by the famous Belgian artist Stromae, this version takes the familiar French lyrics and infuses them with rich, deep, and intensely emotional Afro-centric musical arrangements. The result is a breathtaking sonic experience that feels entirely fresh.
