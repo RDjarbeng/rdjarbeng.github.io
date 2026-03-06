@@ -104,3 +104,47 @@ Readability UX: Improve the "In-App" feel by adding:
 Estimated Reading Time: Sets expectations.
 Table of Contents (Sticky): Allows users to jump to sections of interest without leaving.
 Code "Copy" and "Play" buttons: Increases interaction events within the page.
+
+### Copy this carousel/hero section for the gallery
+https://inkscape.org/
+
+## CSS optimization to try
+
+Victor
+@vponamariov
+You know what kills your site performance?
+
+Rendering 3000px of content when the user can only see 900px. And there is an easy fix for that.
+
+It's a magical CSS property
+
+content-visibility: auto.
+
+6:13 PM · Mar 3, 2026
+·
+8,386
+ Views
+Relevant
+
+Victor
+@vponamariov
+·
+3h
+Look, the browser doesn't care that your testimonials are off-screen.
+
+It still calculates their layout, styles, and geometry. Your hero section is ready, but the main thread is busy with content the user can't see until they scroll down.
+
+Result: slow INP, laggy interactions.
+Victor
+@vponamariov
+·
+3h
+The rescue is - content-visibility: auto
+
+It's like a toggle that tells the browser: "Skip rendering this section until it's actually needed."
+
+The browser saves CPU resources. Your page becomes interactive faster. Scrolling is smoother.
+Victor
+@vponamariov
+·
+3h
