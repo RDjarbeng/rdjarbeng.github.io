@@ -55,9 +55,9 @@ Major ethnic groups:
 
 ## History in Governance:
 
-Earlier Governance will go all the way further to the 19th century with the Old Ghana empire and the Ashanti Kingdom. 
+Earlier Governance will go all the way further to the 19th century with the Old Ghana empire and the Ashanti Kingdom.
 
-Let us start from the recent beginning as the first sub-Saharan nation to gain independence in 1957. It's first president was Dr Kwame Nkrumah and reached republic status in 1960. There have been 4 democratic republics in Ghana and at the time of writing this post (2025) it's been 33 years of the 4th democratic republic.
+Instead, let us start from the recent beginning as the first sub-Saharan nation to gain independence in 1957. Ghana's first president was Dr Kwame Nkrumah. The nation reached republic status in 1960. Since then there have been 4 democratic republics in Ghana with military overthrows of the government in-between. However at the time of writing this post (2025) it's been 33 years of the 4th democratic republic for which we are most grateful to God.
 
 ![Ghana's history in governance](/assets/images/history_ghana.png "Ghana's history in governance")
 
@@ -65,7 +65,9 @@ Let us start from the recent beginning as the first sub-Saharan nation to gain i
 
 ![Ghana - Wikipedia](/assets/images/250px-Ghana_%28orthographic_projection%29.svg.png "Ghana on a map, image credit wikipedia")
 
-Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round. From coastal plains to lush rainforests and savannas, its diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe. 
+Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round. From coastal plains to lush rainforests and savannas, its diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe.
+
+![Akosombo Dam in Ghana top view image showing the lake and Dam Tubes and retaining wall](/assets/images/20260306-165126.png "Akosombo Dam in Ghana was built in the 1960's for hydro power.")
 
 **Fun fact: T**he Volta Lake held the record for the largest artificial lake in the World when the Akosombo Dam in the Eastern region of Ghana was constructed in 1965 until the early 1970s when other larger reservoirs were created
 
@@ -83,11 +85,11 @@ Ghana is rich in resources like gold, cocoa, bauxite and oil.
 
 ![A  canvas of resources in Ghana](/assets/images/resources_ghana.png "A  canvas of resources in Ghana")
 
-In this place _all that glitters is still gold_. 
+In this place _all that glitters is still gold_.
 
 Fun fact: Before independence Ghana was known as the _Gold Coast._
 
-## Entertainment in Ghana 
+## Entertainment in Ghana
 
 From highlife and hiplife music to colorful festivals with many different dances, Ghana has a variety of activities that count as entertainment. A special one is the Ghanaian's love for football and the men's national team the Black stars.
 
