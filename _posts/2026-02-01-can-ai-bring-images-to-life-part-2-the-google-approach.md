@@ -1,5 +1,5 @@
 ---
-date: 2026-03-31T21:42:00
+date: 2026-03-01T21:42:00
 published: true
 author: Richard
 category: AI
