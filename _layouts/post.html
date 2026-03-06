@@ -7,11 +7,13 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="author_date">
       <div class="published_date">
-        Published: {{ page.date | date: "%B %-d, %Y at %-I:%M %p CAT" }}
+        Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d,
+          %Y at %-I:%M %p" }}</time>
       </div>
       {% assign author = site.authors | where: 'short_name', page.author | first %}
       <div class="last_edited">
-        Last edited: {{ page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p CAT" }}
+        Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
+          page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
       </div>
       {% if author %}
       <div>
