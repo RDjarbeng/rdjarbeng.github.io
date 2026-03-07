@@ -113,26 +113,46 @@ layout: default
     {% endif %}
     {% endif %}
     {% elsif item.platform == 'tiktok' %}
-    {% assign computed_tk_id = item.youtube_id %}
-    {% if computed_tk_id == blank or computed_tk_id == nil %}
-    {% assign computed_tk_id = item.link %}
+    {% assign raw_tk_url = item.youtube_id %}
+    {% if raw_tk_url == blank or raw_tk_url == nil %}
+    {% assign raw_tk_url = item.link %}
     {% endif %}
+    {% assign computed_tk_id = raw_tk_url %}
     {% if computed_tk_id contains '/video/' %}
     {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
     {% endif %}
+    {% assign tk_is_shortlink = false %}
     {% if computed_link == blank or computed_link == nil %}
+    {% if raw_tk_url contains 'http' %}
+    {% if raw_tk_url contains '/video/' %}
+    {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
+    {% else %}
+    {% assign computed_link = raw_tk_url %}
+    {% assign tk_is_shortlink = true %}
+    {% endif %}
+    {% else %}
     {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
     {% endif %}
-    {% elsif item.platform == 'twitter' %}
-    {% assign computed_tt_id = item.youtube_id %}
-    {% if computed_tt_id == blank or computed_tt_id == nil %}
-    {% assign computed_tt_id = item.link %}
     {% endif %}
+    {% elsif item.platform == 'twitter' %}
+    {% assign raw_tt_url = item.youtube_id %}
+    {% if raw_tt_url == blank or raw_tt_url == nil %}
+    {% assign raw_tt_url = item.link %}
+    {% endif %}
+    {% assign computed_tt_id = raw_tt_url %}
     {% if computed_tt_id contains '/status/' %}
     {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first %}
     {% endif %}
     {% if computed_link == blank or computed_link == nil %}
+    {% if raw_tt_url contains 'http' %}
+    {% if raw_tt_url contains '/status/' %}
     {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
+    {% else %}
+    {% assign computed_link = raw_tt_url %}
+    {% endif %}
+    {% else %}
+    {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
+    {% endif %}
     {% endif %}
     {% endif %}
 
@@ -174,10 +194,16 @@ layout: default
                 style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true"
                 allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
               {% elsif item.platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
+              {% if tk_is_shortlink %}
+              <blockquote class="tiktok-embed" cite="{{ computed_link }}" style="max-width: 605px;min-width: 325px;">
+                <section></section>
+              </blockquote>
+              {% else %}
               <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk_id }}"
                 data-video-id="{{ computed_tk_id }}" style="max-width: 605px;min-width: 325px;">
                 <section></section>
               </blockquote>
+              {% endif %}
               <script async src="https://www.tiktok.com/embed.js"></script>
               {% elsif item.platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
               <blockquote class="twitter-tweet" data-width="800" data-dnt="true" data-theme="dark">
