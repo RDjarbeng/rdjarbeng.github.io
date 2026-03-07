@@ -3,8 +3,11 @@ import re
 import yaml
 import urllib.request
 import html
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from dotenv import load_dotenv
+
+# CAT timezone (Central Africa Time, UTC+2)
+CAT = timezone(timedelta(hours=2))
 
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -98,7 +101,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     caption = payload['caption']
 
     clean_caption = caption.strip() if caption else "Untitled"
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
     safe_title = "".join([c if c.isalnum() else "-" for c in clean_caption[:30].lower()]).strip("-")
     if not safe_title:
         safe_title = "image"
@@ -154,9 +157,8 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     if target_type == "meme":
         frontmatter = {
             "title": clean_caption[:70],
-            "date": datetime.now().replace(microsecond=0),
+            "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
-            "caption": clean_caption if clean_caption != "Untitled" else "",
             "type": "external",
             "category": "memes"
         }
@@ -165,7 +167,6 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
             "title": clean_caption[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
             "labels": ai_model,
-            "caption": clean_caption if clean_caption != "Untitled" else "",
             "type": "external",
             "category": "ai-generations"
         }
@@ -174,12 +175,14 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
             "title": clean_caption[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
             "type": "external",
-            "caption": clean_caption if clean_caption != "Untitled" else "",
             "category": gallery_cat,
-            "date": datetime.now().replace(microsecond=0)
+            "date": datetime.now(CAT).isoformat(timespec="seconds")
         }
 
     md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    if clean_caption and clean_caption != "Untitled":
+        md_content += f"\n{clean_caption}\n"
+        
     md_path = f"{collection_rel_dir}/{filename}.md"
 
     try:
@@ -313,12 +316,25 @@ def handle_text(message):
         return
 
     text = message.text
-    urls = re.findall(r'(https?://(?:www\.)?(?:youtube\.com|youtu\.be)[^\s]+)', text)
+    
+    # Simple regex to catch most URLs
+    url_pattern = r'(https?://[^\s]+)'
+    urls = re.findall(url_pattern, text)
+    
     if urls:
         for url in urls:
-            yt_id = extract_youtube_id(url)
-            if yt_id:
-                status_msg = bot.reply_to(message, "⏳ Connecting to GitHub API to register YouTube Video...")
+            platform = "unknown"
+            if "youtube.com" in url or "youtu.be" in url:
+                platform = "youtube"
+            elif "twitter.com" in url or "x.com" in url:
+                platform = "twitter"
+            elif "tiktok.com" in url:
+                platform = "tiktok"
+            elif "instagram.com" in url:
+                platform = "instagram"
+            
+            if platform != "unknown":
+                status_msg = bot.reply_to(message, f"⏳ Connecting to GitHub API to register {platform.capitalize()} Video...")
                 
                 text_without_url = text.replace(url, '').strip()
                 if text_without_url:
@@ -326,10 +342,10 @@ def handle_text(message):
                     title = parts[0].strip()
                     caption = parts[1].strip() if len(parts) > 1 else ""
                 else:
-                    title = "YouTube Video"
+                    title = "Video Update"
                     caption = ""
                 
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
                 safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
                 if not safe_title:
                     safe_title = f"video-{timestamp}"
@@ -337,25 +353,32 @@ def handle_text(message):
                 
                 frontmatter = {
                     "title": title[:70],
-                    "platform": "youtube",
-                    "youtube_id": url,
+                    "platform": platform,
+                    "youtube_id": url, # Using URL here as well to match schema if requested by OP
                     "embed_code": "",
                     "thumbnail": "",
-                    "caption": caption,
                     "type": "video",
                     "category": "videos",
-                    "date": datetime.now().replace(microsecond=0),
+                    "date": datetime.now(CAT).isoformat(timespec="seconds"),
                     "published": True
                 }
                 
+                if platform == "youtube":
+                    yt_id = extract_youtube_id(url)
+                    if yt_id:
+                        frontmatter["youtube_id"] = url # Preserving the current custom behaviour
+                
                 md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+                if caption:
+                    md_content += f"\n{caption}\n"
+                    
                 md_path = f"_gallery/videos/{filename}.md"
                 
                 try:
-                    commit_files_to_github({md_path: md_content}, f"Add YouTube Video {filename}.md")
+                    commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
                     bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", message.chat.id, status_msg.message_id)
                 except Exception as e:
                     bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", message.chat.id, status_msg.message_id)
         return
 
-    bot.reply_to(message, "I didn't recognize any commands or YouTube links.")
+    bot.reply_to(message, "I didn't recognize any commands or mapped Video links.")
