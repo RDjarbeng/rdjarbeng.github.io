@@ -51,6 +51,19 @@ def extract_youtube_id(url):
     match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
     return match.group(1) if match else None
 
+def resolve_shortlink(url):
+    try:
+        # User-Agent is necessary because some platforms (like TikTok) might block default Python headers on HEAD requests
+        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+        res = urllib.request.urlopen(req, timeout=10)
+        final_url = res.geturl()
+        # strip tracking query params
+        if '?' in final_url:
+            final_url = final_url.split('?')[0]
+        return final_url
+    except Exception:
+        return url
+
 def commit_files_to_github(files_dict, message):
     """Pushes multiple files to the GitHub repository in a single atomic commit"""
     import base64
@@ -367,7 +380,11 @@ def handle_text(message):
                     yt_id = extract_youtube_id(url)
                     if yt_id:
                         frontmatter["youtube_id"] = url # Preserving the current custom behaviour
-                
+                elif platform == "tiktok" and "vt.tiktok.com" in url or "vm.tiktok.com" in url:
+                    status_msg = bot.edit_message_text(f"⏳ Resolving TikTok exact video ID...", message.chat.id, status_msg.message_id)
+                    long_url = resolve_shortlink(url)
+                    frontmatter["youtube_id"] = long_url
+                    
                 md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
                 if caption:
                     md_content += f"\n{caption}\n"
