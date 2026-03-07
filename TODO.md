@@ -18,16 +18,17 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
+- [ ] add skeleton loader for images
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
 - [ ] **Card images**: Card images have a top padding that leaves a gray space
- Post cover images to improve:
- /top-websites-for-african-climate-data/
- /explore-the-fascinating-world-of-satellite-orbits-with-keeptrack.space/
- /carnegie-mellon-university-africa-s-breakthrough-in-detecting-birth-asphyxia-humekafl/
- /how-google-forecasts-weather-and-air-quality-data/
- /africa-s-tech-scene-is-thriving-funding-and-mergers-lead-the-way/
- /lumalabs_genai/
- /antigravity-agentic-ide-from-google/
+    Post cover images to improve:
+    /top-websites-for-african-climate-data/
+    /explore-the-fascinating-world-of-satellite-orbits-with-keeptrack.space/
+    /carnegie-mellon-university-africa-s-breakthrough-in-detecting-birth-asphyxia-humekafl/
+    /how-google-forecasts-weather-and-air-quality-data/
+    /africa-s-tech-scene-is-thriving-funding-and-mergers-lead-the-way/
+    /lumalabs_genai/
+    /antigravity-agentic-ide-from-google/
 
 ## Content Ideas & Drafts
 - [ ] **Ananse**: Finish Ananse website post.
