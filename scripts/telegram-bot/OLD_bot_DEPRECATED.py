@@ -1,3 +1,17 @@
+"""
+================================================================================
+⚠️ WARNING: DO NOT USE THIS FILE ⚠️
+================================================================================
+This is the old, deprecated polling-based bot. It uses `python-telegram-bot`
+(asyncio) which is incompatible with PythonAnywhere's WSGI free tier.
+
+DO NOT deploy this code to the cloud.
+
+The active, production-ready webhook code is located in:
+👉 `cloud_bot.py` (which uses `pyTelegramBotAPI`)
+================================================================================
+"""
+
 import os
 import logging
 import yaml
