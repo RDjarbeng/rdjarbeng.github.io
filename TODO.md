@@ -8,7 +8,8 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
-- Set homepage items to not show the same post over and over
+
+Security issues mentioned in Github comments need to be address
 
 ## Enhancements & Infrastructure
 ## Low Priority
@@ -21,7 +22,13 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] add skeleton loader for images
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
 - [ ] **Card images**: Card images have a top padding that leaves a gray space
+- [ ] **Cards**: add category to cards
+- [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
 - [ ] Add authors page listing all the authors
+- [ ] Remove tiktok expander plugin if not necessary'
+Search needs to include gallery items, tags, categories
+Tags and categories need to be added to personal posts, gallery images and videos
+
 - [ ]    Post cover images to improve:
     /top-websites-for-african-climate-data/
     /explore-the-fascinating-world-of-satellite-orbits-with-keeptrack.space/
