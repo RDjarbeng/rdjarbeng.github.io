@@ -9,7 +9,7 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
 - Set homepage items to not show the same post over and over
-- Update telegram bot to put captions in body for gallery items
+
 ## Enhancements & Infrastructure
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
