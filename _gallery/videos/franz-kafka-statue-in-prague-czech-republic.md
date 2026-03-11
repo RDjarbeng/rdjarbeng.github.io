@@ -1,5 +1,5 @@
 ---
-title: Franz Kafka statue in Prague Czech Republic
+title: Franz Kafka Spinning Head statue in Prague Czech Republic
 published: true
 date: 2026-01-22 22:39:00
 platform: youtube
