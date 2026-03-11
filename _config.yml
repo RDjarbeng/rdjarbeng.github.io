@@ -1,8 +1,8 @@
 title: Richard Djarbeng
 tagline: A blog about technology research and personal posts from Richard Djarbeng
-description:  Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe
+description: Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe
 lang: en
-logo: favicon.ico
+logo: /assets/images/logo.jpeg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rdjarbeng.com" # the base hostname & protocol for your site
 
@@ -19,12 +19,12 @@ author:
 github_username: RDjarbeng
 twitter_username: DjarbengRichard
 linkedin_username: richarddjarbeng
-rss: "RSS Feed"  
+rss: "RSS Feed"
 # Build settings
 markdown: kramdown
 kramdown:
-  toc_levels: 2..3  # Include headers from h2 to h3 in the TOC
-  auto_ids: true    # Automatically generate IDs for headers
+  toc_levels: 2..3 # Include headers from h2 to h3 in the TOC
+  auto_ids: true # Automatically generate IDs for headers
   math_engine: katex
   input: GFM # Ensure GitHub Flavored Markdown is supported
   syntax_highlighter_opts:
@@ -64,8 +64,8 @@ seo:
     machine learning, and IoT devices.
   url: "https://rdjarbeng.com/"
   twitter: DjarbengRichard
-  logo: "/favicon.ico"
-  image: "/favicon.ico"
+  logo: "/assets/images/logo.jpeg"
+  image: "/assets/images/logo.jpeg"
   theme_color: "#999"
 
 # Social media defaults
@@ -74,7 +74,7 @@ twitter:
   card: summary
 
 # Default image for social sharing
-defaults_image: /favicon.ico
+defaults_image: /assets/images/logo.jpeg
 
 slugify: default #to deal with spaces
 # Exclude from processing.
@@ -123,14 +123,14 @@ defaults:
     values:
       layout: "gallery_single"
   - scope:
-        path: ""
-        type: "tag"  # This targets jekyll-archives pages
+      path: ""
+      type: "tag" # This targets jekyll-archives pages
     values:
       noindex: false
       sitemap: true
   - scope:
-        path: ""
-        type: "category"  # This targets jekyll-archives pages
+      path: ""
+      type: "category" # This targets jekyll-archives pages
     values:
       noindex: false
       sitemap: true
@@ -156,10 +156,10 @@ defaults:
 custom_pagination:
   active: true
   paginate: 12
-  collection: 'posts'
+  collection: "posts"
 
 pagination:
   active: false
-  paginate: 12  # Number of posts per page
-  collection: 'posts'  # Target the posts collection
+  paginate: 12 # Number of posts per page
+  collection: "posts" # Target the posts collection
 
