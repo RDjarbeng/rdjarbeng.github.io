@@ -21,7 +21,8 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] add skeleton loader for images
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
 - [ ] **Card images**: Card images have a top padding that leaves a gray space
-    Post cover images to improve:
+- [ ] Add authors page listing all the authors
+- [ ]    Post cover images to improve:
     /top-websites-for-african-climate-data/
     /explore-the-fascinating-world-of-satellite-orbits-with-keeptrack.space/
     /carnegie-mellon-university-africa-s-breakthrough-in-detecting-birth-asphyxia-humekafl/
