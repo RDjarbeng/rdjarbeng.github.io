@@ -1,5 +1,5 @@
 ---
-title: "Gemini said NVIDIA GTC Washington D.C.: Jensen Huang’s Vision for the 'AI Factory'"
+title: "NVIDIA GTC Washington D.C.: Jensen Huang’s Vision for the 'AI Factory'"
 published: true
 date: 2026-03-11T14:00:00+02:00
 platform: youtube
