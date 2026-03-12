@@ -16,13 +16,13 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 </p>
 </div>
 
----
+***
 
 Questions of interest:
 
-The Measurement Gap: How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+**The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
 
-Sensor Fusion: How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+**Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
 
 How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
 
@@ -30,7 +30,7 @@ How do the latest advances in computer vision advance remote sensing and what ar
 
 What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
 
----
+***
 
 <hr class="post-separator">
 
