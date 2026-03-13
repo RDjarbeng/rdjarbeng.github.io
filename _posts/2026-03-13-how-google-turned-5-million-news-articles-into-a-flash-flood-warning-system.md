@@ -1,6 +1,6 @@
 ---
 date: 2026-03-13T14:28:00+02:00
-published: false
+published: true
 author: Richard
 category: AI News
 tags:
@@ -8,15 +8,12 @@ tags:
   - Floods
   - Weather
 title: How Google Turned 5 Million News Articles into a Flash Flood Warning System
-image: ''
-image_alt: ''
+image: '/assets/images/posts/covers/google_flood_cover.jpg'
+image_alt: 'Flat vector illustration of AI parsing news reports for flood warnings'
 layout: post
-card_items: []
----
-
 card_items:
   - name: "Groundsource Dataset"
-    image: ""
+    image: "/assets/images/posts/card_groundsource.jpg"
     alt: "Groundsource flood events global map"
     badge_1: "Open Data"
     badge_2: "Dataset"
@@ -26,7 +23,7 @@ card_items:
     link_text: "Download Dataset"
 
   - name: "Google Flood Hub"
-    image: ""
+    image: "/assets/images/posts/card_flood_hub.jpg"
     alt: "Google Flood Hub flood forecasting platform"
     badge_1: "Live Tool"
     badge_2: "Forecasting"
@@ -36,7 +33,7 @@ card_items:
     link_text: "Visit Flood Hub"
 
   - name: "Flash Flood Forecasting Research Blog"
-    image: ""
+    image: "/assets/images/posts/card_research_blog.jpg"
     alt: "Google Research blog on flash flood forecasting"
     badge_1: "Technical Deep Dive"
     badge_2: "Google Research"
@@ -46,7 +43,7 @@ card_items:
     link_text: "Read the Blog"
 
   - name: "Groundsource Methodology Blog"
-    image: ""
+    image: "/assets/images/posts/card_methodology_blog.jpg"
     alt: "Google Research blog introducing the Groundsource methodology"
     badge_1: "Methodology"
     badge_2: "Google Research"
@@ -56,7 +53,7 @@ card_items:
     link_text: "Read the Blog"
 
   - name: "EarthArxiv Preprint"
-    image: ""
+    image: "/assets/images/posts/card_eartharxiv_paper.jpg"
     alt: "EarthArxiv preprint on AI flash flood forecasting"
     badge_1: "Not Peer Reviewed"
     badge_2: "Research Paper"
@@ -71,7 +68,7 @@ card_items:
 Google just announced it can predict urban flash floods up to 24 hours in advance, for most of the world, without building a single physical sensor. Here is how they did it, and what the limits are.
 
 > **Sundar Pichai, Google CEO, [announced on X](https://x.com/sundarpichai/status/2032137438089658764?s=20):**
-> *(embed tweet here)*
+> <blockquote class="twitter-tweet"><a href="https://twitter.com/sundarpichai/status/2032137438089658764"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
 
@@ -99,7 +96,7 @@ The result is [Groundsource](https://zenodo.org/records/18647054), an open datas
 
 For comparison, GDACS took years of coordinated international monitoring to build its 10,000 entries. Groundsource produced 260 times that volume from news text alone.
 
-<!-- DIAGRAM: Groundsource vs GDACS bar chart -->
+![Groundsource vs GDACS](/assets/images/posts/google_flood_forecasting/diagram_gdacs_vs_groundsource.svg)
 
 Google is upfront about the accuracy tradeoffs. Manual audits found that 60% of extracted events were correct in both location and timing. 82% were accurate enough to be practically useful, for example correctly identifying the right district, or placing the event within a day of its actual peak. That 18% imprecision matters, and is part of why the underlying paper, currently a [preprint on EarthArxiv](https://eartharxiv.org/repository/view/12082/) and not yet peer reviewed, deserves scrutiny as independent scientists dig into it.
 
@@ -117,7 +114,7 @@ Once trained, the model does not consult the news archive again. For real time f
 
 The dataset being static is not a bug. A model trained on historical flood patterns does not need new historical data to generate tomorrow's forecast, any more than a doctor trained on years of clinical cases needs to review new textbooks before diagnosing a patient today. The current inputs are the live weather feeds, not the news archive.
 
-<!-- DIAGRAM: Training vs inference pipeline flowchart -->
+![Training vs Inference pipeline](/assets/images/posts/google_flood_forecasting/diagram_training_pipeline.svg)
 
 ---
 
