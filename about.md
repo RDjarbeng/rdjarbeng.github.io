@@ -16,6 +16,22 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 </p>
 </div>
 
+***
+
+Questions of interest:
+
+**The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+
+**Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+
+How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
+
+How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
+
+What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
+
+***
+
 <hr class="post-separator">
 
 <div class="about-section">
@@ -61,7 +77,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
               <!-- <span class="skill-item">HTML/CSS</span> -->
           </div>
       </div>
-      
+
       <div class="skill-category">
           <div class="skill-category-title">Web & Mobile</div>
           <div class="skill-list">
@@ -74,7 +90,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
               <!-- <span class="skill-item">PWA</span> -->
           </div>
       </div>
-      
+
       <div class="skill-category">
           <div class="skill-category-title">Cloud & AI</div>
           <div class="skill-list">
@@ -92,7 +108,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 <div class="about-section">
   <h2 class="about-section-title">Projects</h2>
   <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
-  <p style="text-align: center; font-size: 0.9em; color: #777; margin-bottom: 20px;"><em>* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
+  <p style="text-align: center; font-size: 0.9em; color: #777; margin-bottom: 20px;"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
 
   <div class="filter-container">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -103,7 +119,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
   </div>
 
   <div class="cards-grid" id="projects-grid">
-    
+
     <!-- Project 1: Air Quality -->
     <div class="project-card-about" data-category="web iot web research">
       <div class="project-image-container">
@@ -200,7 +216,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     </div>
 
     <!-- HIDDEN PROJECTS -->
-    
+
     <div class="project-card-about projects-hidden" data-category="data">
       <div class="project-image-container">
         <img src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="BigQuery">
@@ -258,10 +274,10 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
       </div>
       <div class="project-content">
         <h3 class="project-title">Escape the Covid Maze</h3>
-        <p class="project-desc">A 2D Unity3D game challenging players to navigate a maze while avoiding dynamic enemies using A* search algorithms.</p>
+        <p class="project-desc">A 2D Unity3D game challenging players to navigate a maze while avoiding dynamic enemies using A\* search algorithms.</p>
       </div>
     </div>
-    
+
      <div class="project-card-about projects-hidden" data-category="ml web">
       <div class="project-image-container">
          <img src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="ML Package">
@@ -277,7 +293,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
     </div>
 
   </div> <!-- End Grid -->
-  
+
   <div class="show-more-container">
       <button id="show-more-btn" class="show-more-btn">Show More Projects</button>
   </div>
@@ -286,8 +302,6 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 <div class="about-section">
   <h2 class="about-section-title">Experience</h2>
   <!-- <p class="about-section-subtitle">A blend of research excellence, industry innovation, and educational mentorship</p> -->
-
-
 
   <div class="experience-card">
     <div class="exp-header">
@@ -341,10 +355,10 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
 <div class="about-section" style="text-align: center;">
     <h3>Connect With Me</h3>
     <p>Feel free to reach out for collaborations or just a chat about technology!</p>
-    
-    <p align="center"> 
-        <a href="https://www.github.com/RDjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" style="display:inline; margin:10px;" /></a> 
-        <a href="https://www.linkedin.com/in/richarddjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" style="display:inline; margin:10px;" /></a> 
+
+    <p align="center">
+        <a href="https://www.github.com/RDjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
+        <a href="https://www.linkedin.com/in/richarddjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
         <a href="https://www.twitter.com/DjarbengRichard" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
     </p>
 </div>
@@ -375,7 +389,7 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
                 // Check if card matches filter (or if filter is 'all')
                 if (filterValue === 'all' || (cardCategories && cardCategories.includes(filterValue))) {
                     card.style.display = 'flex'; // Or appropriate display type
-                     // If it was hidden by 'Show More', we might need to respect that logic, 
+                     // If it was hidden by 'Show More', we might need to respect that logic,
                      // OR simply show all matching items and potentially hide the 'Show More' button if we filter.
                      // A simple approach: When filtering, show all matches immediately, ignoring 'Show More' limit.
                      card.classList.remove('projects-hidden'); // Ensure it's not hidden by class
@@ -383,12 +397,12 @@ I am a Computer Engineer and Machine Learning Enthusiast with a passion for Inte
                     card.style.display = 'none';
                 }
             });
-            
+
              // Hide "Show More" button when filtering (optional, but cleaner)
             const showMoreBtn = document.getElementById('show-more-btn');
             if(showMoreBtn) {
                  if (filterValue === 'all') {
-                     // Maybe restore original state if 'all' is clicked? 
+                     // Maybe restore original state if 'all' is clicked?
                      // For simplicity, let's just keep everything visible if user filters back to all
                       showMoreBtn.style.display = 'none';
                  } else {
