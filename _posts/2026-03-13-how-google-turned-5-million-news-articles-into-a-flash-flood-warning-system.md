@@ -124,9 +124,8 @@ The model currently operates at a 20x20 kilometre resolution and focuses on urba
 
 Google's evaluation showed the model achieving precision and recall in much of South America and Southeast Asia that is comparable to performance in wealthier countries with advanced sensor infrastructure. For context, the US National Weather Service Flash Flood Warning system, adjusted to the same 20x20 km grid and 24-hour window, showed 22% recall and 44% precision. Google's model reaches similar numbers in many of the countries most frequently affected by floods — which, given it runs without any physical sensors on the ground, is the central claim worth watching.
 
-Africa remains the clearest gap. As Google's own paper states directly: "Many countries in Africa are still lacking in ground truth beyond Groundsource, making it difficult to accurately estimate the accuracy of our model." In other words, the dataset built to fill the data gap is, in parts of Africa, the only data that exists — leaving no independent benchmark to check the model against.
+Africa remains the clearest gap. As Google's own paper states directly: "Many countries in Africa are still lacking in ground truth beyond Groundsource, making it difficult to accurately estimate the accuracy of our model." In other words, the dataset built to fill the data gap happens to be the only data that exists for parts of Africa leaving no independent benchmark to check the model against for most African countries.
 
----
 
 ## Why the Method Matters More Than This One Dataset
 
