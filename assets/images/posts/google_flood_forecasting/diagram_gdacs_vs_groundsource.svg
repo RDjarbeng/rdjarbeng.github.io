@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="360" viewBox="0 0 680 360" font-family="system-ui, sans-serif">
+  <defs>
+    <style>
+      .label-title { font-size: 14px; font-weight: 600; fill: #1a1a1a; }
+      .label-sub   { font-size: 12px; font-weight: 400; fill: #555; }
+      .label-axis  { font-size: 12px; font-weight: 400; fill: #888; }
+      .grid        { stroke: #e8e8e8; stroke-width: 0.5; stroke-dasharray: 4 3; }
+      .axis        { stroke: #ccc; stroke-width: 0.5; }
+      .bar-gray    { fill: #d3d1c7; stroke: #5f5e5a; stroke-width: 0.5; }
+      .bar-teal    { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 0.5; }
+      .bar-label-teal { font-size: 14px; font-weight: 600; fill: #085041; }
+    </style>
+  </defs>
+
+  <rect width="680" height="360" fill="white"/>
+
+  <!-- Y axis label -->
+  <text class="label-axis" x="54" y="40" text-anchor="middle" dominant-baseline="central">Events</text>
+
+  <!-- Axis lines -->
+  <line class="axis" x1="80" y1="30" x2="80" y2="270"/>
+  <line class="axis" x1="80" y1="270" x2="620" y2="270"/>
+
+  <!-- Grid + Y labels -->
+  <line class="grid" x1="80" y1="70"  x2="620" y2="70"/>
+  <line class="grid" x1="80" y1="110" x2="620" y2="110"/>
+  <line class="grid" x1="80" y1="150" x2="620" y2="150"/>
+  <line class="grid" x1="80" y1="190" x2="620" y2="190"/>
+  <line class="grid" x1="80" y1="230" x2="620" y2="230"/>
+
+  <text class="label-axis" x="72" y="70"  text-anchor="end" dominant-baseline="central">2.5M</text>
+  <text class="label-axis" x="72" y="110" text-anchor="end" dominant-baseline="central">2.0M</text>
+  <text class="label-axis" x="72" y="150" text-anchor="end" dominant-baseline="central">1.5M</text>
+  <text class="label-axis" x="72" y="190" text-anchor="end" dominant-baseline="central">1.0M</text>
+  <text class="label-axis" x="72" y="230" text-anchor="end" dominant-baseline="central">0.5M</text>
+  <text class="label-axis" x="72" y="270" text-anchor="end" dominant-baseline="central">0</text>
+
+  <!-- GDACS bar — ~10,000 entries, nearly invisible at this scale -->
+  <rect class="bar-gray" x="160" y="268" width="140" height="2" rx="1"/>
+  <text class="label-title" x="230" y="295" text-anchor="middle" dominant-baseline="central">GDACS</text>
+  <text class="label-sub"  x="230" y="312" text-anchor="middle" dominant-baseline="central">~10,000 entries</text>
+  <text class="label-sub"  x="230" y="328" text-anchor="middle" dominant-baseline="central">High-impact events only</text>
+
+  <!-- Groundsource bar — 2.6M, scale: 240px = 2.6M so bar height = 240 -->
+  <rect class="bar-teal" x="390" y="30" width="140" height="240" rx="4"/>
+  <text class="bar-label-teal" x="460" y="50" text-anchor="middle" dominant-baseline="central">260x more data</text>
+  <text class="label-title" x="460" y="295" text-anchor="middle" dominant-baseline="central">Groundsource</text>
+  <text class="label-sub"  x="460" y="312" text-anchor="middle" dominant-baseline="central">2.6 million events</text>
+  <text class="label-sub"  x="460" y="328" text-anchor="middle" dominant-baseline="central">150+ countries, 80 languages</text>
+</svg>
