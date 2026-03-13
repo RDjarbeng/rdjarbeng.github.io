@@ -7,6 +7,10 @@ tags:
   - Google
   - Floods
   - Weather
+  - Artificial Intelligence
+  - Machine Learning
+  - Gemini
+  - Environment
 title: How Google Turned 5 Million News Articles into a Flash Flood Warning System
 image: '/assets/images/posts/covers/google_flood_cover.jpg'
 image_alt: 'Flat vector illustration of AI parsing news reports for flood warnings'
