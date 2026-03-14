@@ -6,6 +6,8 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
 
+- [ ] add skeleton loader for images
+- [ ] **Card images**: Card images have a top padding that leaves a gray space, shows the skeleton loader behind it
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
 
