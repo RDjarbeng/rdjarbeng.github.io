@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7604161341040987412'
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 "Can you keep a secret?" We’ve all been in that exact situation where we trust someone with confidential information, right? They hit you with the classic: "Sure. We listen, we don't judge. Nobody will hear of this." You feel safe and completely validated.

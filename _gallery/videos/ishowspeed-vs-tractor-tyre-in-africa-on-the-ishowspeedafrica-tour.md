@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7600488058949061906'
 thumbnail: assets/images/videos/IshowSpeed_carrying_a_tractor_tyre(1)-Cover.jpg
 type: video
 category: videos
+genre: Travel & Events
 ---
 
 When the motivation is incredibly LOUD, but the massive tractor tire firmly says NO! Watch this absolutely hilarious moment from the IShowSpeed Africa tour. The high-energy streamer attempts a grueling, heavy tire flip challenge. 

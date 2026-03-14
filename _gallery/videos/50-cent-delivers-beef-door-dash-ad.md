@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 50 cent Delivers Beef- Door Dash AD

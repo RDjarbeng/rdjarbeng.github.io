@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: /assets/images/franz_k_statue_cover.webp
 type: video
 category: videos
+genre: Travel & Events
 ---
 
 Prepare to be captivated by one of the most mesmerizing public art installations in Europe: the rotating Head of Franz Kafka statue located in Prague, Czech Republic! This stunning YouTube video perfectly captures the hypnotic, mechanical movements of the massive sculpture, brilliantly set against the eerie, powerful backdrop of the hit song "The Sound of Silence" (specifically, the heavy, emotional cover by the band Disturbed).

@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 caption: |-
   Phil Wickham What An Awesome God (Sunset Walk)
 

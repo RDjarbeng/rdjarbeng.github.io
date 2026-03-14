@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Interviews
 date: 2026-02-11 18:26:00
 published: true
 ---

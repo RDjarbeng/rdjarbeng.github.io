@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Film & Animation
 date: '2026-03-08T10:31:58+02:00'
 published: true
 ---

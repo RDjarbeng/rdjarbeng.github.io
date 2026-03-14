@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: assets/images/videos/pushing_to_prod_cover.png
 type: video
 category: videos
+genre: Entertainment
 date: 2026-02-07 19:44:16
 ---
 

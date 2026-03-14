@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 ---
 
 Immerse yourself in the profound, historical beauty of traditional Christian music with this breathtaking performance of the famous Catholic hymn, "O Come, O Come Emmanuel." Sung flawlessly by a dedicated traditional choir, this YouTube video beautifully captures the deep reverence, solemnity, and spiritual anticipation that is traditionally associated with the Advent season and Christmas liturgy.

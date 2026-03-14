@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7598195934585015563'
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 ---
 
 Looking for uplifting music? Listen to "Soul of Afrika" by the talented Nigerian gospel choir Grace Echo. This deeply moving African gospel song blends harmonious choir vocals with inspiring messages to help guide your day and provide spiritual nourishment.

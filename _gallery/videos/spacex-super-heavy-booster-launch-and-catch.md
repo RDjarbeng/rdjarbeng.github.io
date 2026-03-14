@@ -10,6 +10,7 @@ embed_code: |-
 thumbnail: assets/images/videos/Super_heavy_booster_catch_horizontal-Cover.jpg
 type: video
 category: videos
+genre: Science & Technology
 caption: ''
 ---
 

@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 part 1

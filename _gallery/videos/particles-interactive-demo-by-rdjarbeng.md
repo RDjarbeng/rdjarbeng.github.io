@@ -5,6 +5,7 @@ youtube_id: 'https://twitter.com/DjarbengRichard/status/2009641438536184245'
 thumbnail: assets/images/videos/particles_rd_twitter_averycode-Cover.jpg
 type: video
 category: videos
+genre: Science & Technology
 date: 2026-01-09 10:59:00
 published: true
 twitter_id: '2009641438536184245'

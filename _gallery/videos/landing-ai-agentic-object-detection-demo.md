@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: /assets/images/agentic_obj_dection_landingai_cover.png
 type: video
 category: videos
+genre: Science & Technology
 date: 2026-02-07 19:44:16
 ---
 

@@ -8,6 +8,7 @@ embed_code: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Clock ticki
 thumbnail: assets/images/posts/covers/osula_time_flies_cover.jpg
 type: video
 category: videos
+genre: Other
 twitter_id: '2029346157336383832'
 ---
 

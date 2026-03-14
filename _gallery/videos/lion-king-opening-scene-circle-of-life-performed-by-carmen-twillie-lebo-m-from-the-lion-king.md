@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Other
 ---
 
 # Carmen Twillie, Lebo M. perform Circle of Life (From "The Lion King")

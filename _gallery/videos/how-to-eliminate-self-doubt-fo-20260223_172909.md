@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Tutorials
 date: 2026-02-23 17:29:09
 published: true
 ---

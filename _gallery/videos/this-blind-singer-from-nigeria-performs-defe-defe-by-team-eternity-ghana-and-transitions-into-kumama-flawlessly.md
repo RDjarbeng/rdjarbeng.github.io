@@ -8,6 +8,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7588642614572797240'
 thumbnail: assets/images/videos/transition_chrisvic_defedefeto_kumama_-Cover.jpg
 type: video
 category: videos
+genre: Music
 ---
 
 Witness an incredible musical performance as a talented blind singer from Nigeria covers the popular track "Defe Defe" by Team Eternity Ghana. This inspiring display of raw vocal talent bridges Nigerian and Ghanaian gospel music beautifully, providing an unforgettable spiritual experience for the audience.

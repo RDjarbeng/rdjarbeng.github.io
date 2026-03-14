@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7598603932469972235'
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 In another hilarious and highly entertaining moment from the IShowSpeed Africa tour, the famous streamer finds himself genuinely surprised in Benin, West Africa 🇧🇯! Watch as he reacts to the simple discovery of fresh coconuts 🥥 growing naturally. His over-the-top reaction highlights the contrast between his everyday life and the vibrant, organic environment of West Africa.

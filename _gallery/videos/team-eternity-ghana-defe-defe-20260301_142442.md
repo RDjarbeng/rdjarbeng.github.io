@@ -38,8 +38,3 @@ Song written by  Vessel Chordrick and Naana Asiedu\nDefe Defe\n\
   \ don\u2019t hold me back / So allow me)\nMma obiara nha me\n(Let no one bother\
   \ me)\nYesu abro bonsam w\u0254 as\u025Bndua no so ma w\u2019ay\u025B hahaaha!\n\
   (Jesus has defeated the devil on the cross and now he is powerless!)"
-type: video
-category: videos
-date: 2026-03-01 14:24:42
-published: true
----

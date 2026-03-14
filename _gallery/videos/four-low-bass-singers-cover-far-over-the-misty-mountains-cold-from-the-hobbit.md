@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 date: 2026-02-07 19:26:00
 published: true
 ---

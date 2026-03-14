@@ -4,6 +4,7 @@ date: 2025-12-28 22:55:10
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=jiec7XXD6EY
 type: video
+genre: Travel & Events
 ---
 
 Take a tour of East Africa's rapidly modernizing sports infrastructure with this incredible visual showcase of the newly renovated Amahoro Stadium and the iconic BK Arena in Kigali, Rwanda! Filmed and produced by Richard Djarbeng, this YouTube video highlights the stunning architectural advancements that have transformed the Remera area into a world-class sporting and entertainment hub.

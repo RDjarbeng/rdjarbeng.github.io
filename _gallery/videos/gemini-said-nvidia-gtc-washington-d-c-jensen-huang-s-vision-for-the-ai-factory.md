@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Science & Technology
 ---
 
 This video features Jensen Huang’s keynote highlights from NVIDIA GTC in Washington, D.C., focusing on the pivotal role of accelerated computing and AI in national security, telecommunications, and American manufacturing. Huang positions the current era as a turning point where the GPU and CUDA programming model—technologies NVIDIA has developed for 30 years—have become the essential "lifeblood" of the modern economy.

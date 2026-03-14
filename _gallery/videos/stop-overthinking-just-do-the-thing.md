@@ -9,6 +9,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 # Stop Overthinking: Just Do The Thing
