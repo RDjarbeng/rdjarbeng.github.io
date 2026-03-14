@@ -8,7 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
-genre: Other
+genre: Music
 caption: ''
 ---
 
