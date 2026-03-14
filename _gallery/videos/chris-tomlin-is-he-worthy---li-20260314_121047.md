@@ -1,13 +1,13 @@
 ---
-title: Chris Tomlin Is He Worthy? (Live)
+title: Chris Tomlin Is He Worthy? (Live) -Revelations 5 and The Lion of Judah
+published: true
+date: 2026-03-14T12:10:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/FkRiYsTN7KY
 embed_code: ''
 thumbnail: ''
 type: video
 category: videos
-date: '2026-03-14T12:10:47+02:00'
-published: true
 ---
 
 This music video from Chris Tomlin reminds us about Revelations 5 and the reason why Christ, the Lion of Judah, is the only one worthy. He came to ransom the slave.
