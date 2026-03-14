@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Other
 ---
 
 There is nothing quite like a bowl of traditional Ghanaian groundnut soup. This recipe features a rich, creamy base made with hard chicken and a blend of aromatic spices like anise seed, cumin, and rosemary. Whether you serve it with fufu, omo tuo (rice balls), or boiled yam, it is the ultimate comfort food.
