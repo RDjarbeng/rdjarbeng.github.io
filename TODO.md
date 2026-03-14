@@ -169,3 +169,17 @@ Victor
 @vponamariov
 ·
 3h
+
+Creators to feature: Career ladder
+Anatoly
+Diary of a CEO 
+Mr Beast
+Kaestrings
+WodeMaya
+IshowSpeed
+JOnathan Bynoe (Bill withers )
+Trevor Noah
+HMack
+KaeStrings
+Lex Fridman
+Apnaj (check if this is safe)
