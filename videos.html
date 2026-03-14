@@ -1,0 +1,219 @@
+---
+layout: default
+title: Videos
+permalink: /videos/
+---
+
+<div class="home-section" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h1 class="page-heading" style="font-size: 2.5rem; margin-bottom: 10px;">Video Gallery</h1>
+        <p style="color: #627d98; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">A collection of embedded videos
+            and curated clips.</p>
+    </div>
+
+    <style>
+        .video-masonry {
+            column-count: 3;
+            column-gap: 25px;
+        }
+
+        .video-masonry-item {
+            break-inside: avoid;
+            margin-bottom: 25px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+            transition: transform 0.2s;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .video-masonry-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 1024px) {
+            .video-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .video-masonry {
+                column-count: 1;
+            }
+        }
+    </style>
+
+    <div class="video-masonry">
+        {% assign videos = site.gallery | where: "type", "video" | sort: "date" | reverse %}
+        {% for item in videos %}
+        <!-- Computing Thumbnails -->
+        {% assign computed_ig_id = item.instagram_id %}
+        {% if item.platform == 'instagram' and computed_ig_id == blank %}
+        {% if item.link contains 'instagram.com/p/' %}
+        {% assign computed_ig_id = item.link | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' |
+        first %}
+        {% elsif item.link contains 'instagram.com/reel/' %}
+        {% assign computed_ig_id = item.link | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?' |
+        first %}
+        {% endif %}
+        {% endif %}
+
+        {% assign computed_tk_id = "" %}
+        {% if item.platform == 'tiktok' %}
+        {% assign raw_tk_url = item.youtube_id %}
+        {% if raw_tk_url == blank or raw_tk_url == nil %}{% assign raw_tk_url = item.link %}{% endif %}
+        {% assign computed_tk_id = raw_tk_url %}
+        {% if computed_tk_id contains '/video/' %}
+        {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+        {% endif %}
+        {% endif %}
+
+        {% assign yt_vid_id = "" %}
+        {% assign yt_list_id = "" %}
+        {% if item.platform == 'youtube' %}
+        {% if item.youtube_id contains "list=" %}
+        {% assign yt_list_id = item.youtube_id | split: "list=" | last | split: "&" | first %}
+        {% endif %}
+
+        {% if item.youtube_id contains "v=" %}
+        {% assign yt_vid_id = item.youtube_id | split: "v=" | last | split: "&" | first %}
+        {% elsif item.youtube_id contains "youtu.be/" %}
+        {% assign yt_vid_id = item.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
+        {% elsif item.youtube_id contains "shorts/" %}
+        {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
+        {% else %}
+        {% assign yt_vid_id = item.youtube_id %}
+        {% endif %}
+        {% endif %}
+
+        <!-- Branded Fallback Placeholder -->
+        {% assign fallback_image = "/assets/images/logo-small.png" %}
+
+        <div class="video-masonry-item">
+            <div class="video-thumbnail inline-play-container" data-platform="{{ item.platform }}"
+                data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}" data-tk="{{ computed_tk_id }}"
+                data-ig="{{ computed_ig_id }}" data-tt="{{ item.youtube_id | default: item.link }}"
+                style="width: 100%; position: relative; background: #102a43; display: flex; align-items: center; justify-content: center; aspect-ratio: {% if item.platform == 'tiktok' or item.platform == 'instagram' %}9/16{% else %}16/9{% endif %}; overflow: hidden;">
+
+                <a href="javascript:void(0);" class="inline-play-btn"
+                    style="display: block; width: 100%; height: 100%;">
+                    <!-- If it's a known thumbnail, inject it immediately. -->
+                    <img class="robust-thumbnail" data-platform="{{ item.platform }}"
+                        data-tiktok-id="{{ computed_tk_id }}" data-instagram-id="{{ computed_ig_id }}"
+                        data-fallback="{{ fallback_image | relative_url }}"
+                        src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.platform == 'youtube' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{{ yt_vid_id }}/hqdefault.jpg{% else %}{{ fallback_image | relative_url }}{% endif %}"
+                        alt="{{ item.title | escape }}"
+                        style="width: 100%; height: 100%; object-fit: {% if item.platform == 'tiktok' or item.platform == 'instagram' and item.thumbnail == '' %}contain{% else %}cover{% endif %}; opacity: 0.8; transition: opacity 0.3s;"
+                        loading="lazy"
+                        onerror="this.onerror=null; this.src='{{ fallback_image | relative_url }}'; this.style.objectFit='contain'; this.style.padding='2rem';">
+
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+
+                    <!-- Platform Tag -->
+                    <div
+                        style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
+                        {{ item.platform }}
+                    </div>
+                </a>
+            </div>
+            <div class="video-info" style="padding: 20px;">
+                <h3 style="font-size: 1.15rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
+                    {{ item.title | escape }}
+                </h3>
+                <div style="font-size: 0.85rem; color: #829ab1;">{{ item.date | date: "%B %-d, %Y" }}</div>
+                <div style="font-size: 0.75rem; color: #ff0000; margin-top: 5px; text-transform: uppercase;">{{
+                    item.category | default: "Other" }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const thumbnails = document.querySelectorAll('img.robust-thumbnail');
+        thumbnails.forEach(img => {
+            const platform = img.getAttribute('data-platform');
+            const fallback = img.getAttribute('data-fallback');
+
+            if (platform === 'tiktok' && img.src.includes(fallback)) {
+                const tkId = img.getAttribute('data-tiktok-id');
+                if (tkId) {
+                    img.style.objectFit = 'contain';
+                    img.style.padding = '3rem';
+                }
+            }
+
+            if (platform === 'instagram' && img.src.includes(fallback)) {
+                const igId = img.getAttribute('data-instagram-id');
+                if (igId) {
+                    const igUrl = `https://www.instagram.com/p/${igId}/media/?size=l`;
+                    const tempImg = new Image();
+                    tempImg.onload = () => { img.src = igUrl; img.style.objectFit = 'cover'; img.style.padding = '0'; };
+                    tempImg.src = igUrl;
+                    img.style.objectFit = 'contain';
+                    img.style.padding = '3rem';
+                }
+            }
+        });
+
+        document.querySelectorAll('.inline-play-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const container = this.closest('.inline-play-container');
+                const platform = container.getAttribute('data-platform');
+
+                let iframe = document.createElement('iframe');
+                iframe.setAttribute('width', '100%');
+                iframe.setAttribute('height', '100%');
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', 'true');
+                iframe.style.position = 'absolute';
+                iframe.style.top = '0';
+                iframe.style.left = '0';
+
+                if (platform === 'youtube') {
+                    const vidId = container.getAttribute('data-vid');
+                    const listId = container.getAttribute('data-list');
+                    let src = `https://www.youtube.com/embed/${vidId}?autoplay=1`;
+                    if (listId) {
+                        src = `https://www.youtube.com/embed/videoseries?list=${listId}&autoplay=1`;
+                        if (vidId) src += `&v=${vidId}`;
+                    }
+                    iframe.setAttribute('src', src);
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                } else if (platform === 'tiktok') {
+                    const tkId = container.getAttribute('data-tk');
+                    iframe.setAttribute('src', `https://www.tiktok.com/embed/v2/${tkId}?lang=en-US`);
+                    iframe.setAttribute('allow', 'encrypted-media');
+                } else if (platform === 'instagram') {
+                    const igId = container.getAttribute('data-ig');
+                    iframe.setAttribute('src', `https://www.instagram.com/p/${igId}/embed/captioned/`);
+                    iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+                    iframe.setAttribute('scrolling', 'no');
+                    iframe.setAttribute('allowtransparency', 'true');
+                } else if (platform === 'twitter') {
+                    // Twitter embed requires scripts
+                    const ttUrl = container.getAttribute('data-tt');
+                    container.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark"><a href="${ttUrl}"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"><\/script>`;
+                    container.style.overflow = "auto";
+                    container.style.background = "#000";
+                    return;
+                }
+
+                container.innerHTML = '';
+                container.appendChild(iframe);
+            });
+        });
+    });
+</script>
