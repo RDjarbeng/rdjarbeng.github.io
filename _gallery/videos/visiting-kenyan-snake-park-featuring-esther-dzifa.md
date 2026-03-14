@@ -8,7 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
-genre: Science & Technology
+genre: People & Blogs 
 ---
 
 Many of us harbor a deep-seated, paralyzing fear of snakes (ophidiophobia), and it was absolutely no different for Esther Dzifa from the popular YouTube channel [Growing with Dzidzi](https://www.youtube.com/@growingwithDzidzi). In this hilarious, relatable, and ultimately heart-warming vlog, she takes her viewers along on an unforgettable journey to the famous **Kenyan Snake Park** in Nairobi. Her mission? To challenge her long-standing fears completely head-on in front of the camera!
