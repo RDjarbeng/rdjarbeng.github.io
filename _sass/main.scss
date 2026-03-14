@@ -1743,6 +1743,11 @@ a:hover {
 }
 
 /* Ensure header wrapper positions the results correctly */
+.site-header {
+  position: relative;
+  z-index: 999;
+}
+
 .site-header .wrapper {
   position: relative;
 }
