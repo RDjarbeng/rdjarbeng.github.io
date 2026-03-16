@@ -7,5 +7,6 @@ youtube_id: DU84ILwCHCw
 thumbnail: ''
 type: video
 category: videos
+genre: Travel & Events
 caption: Taken from instagram, the friend that's always travelling
 ---

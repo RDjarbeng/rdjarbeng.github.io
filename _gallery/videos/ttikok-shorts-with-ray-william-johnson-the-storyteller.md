@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7605633989918887188'
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 Discover the magnetic storytelling style of Ray William Johnson on TikTok! Known for his gripping, hilarious, and highly entertaining short-form content, Ray has completely mastered the art of grabbing your attention. From the very moment he says "So this woman...", you simply have to stop scrolling and watch his viral storytime videos to the end.

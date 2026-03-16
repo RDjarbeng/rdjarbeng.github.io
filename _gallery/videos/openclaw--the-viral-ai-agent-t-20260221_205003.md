@@ -6,6 +6,7 @@ platform: youtube
 youtube_id: https://www.youtube.com/watch?v=YFjfBk8HI5o
 type: video
 category: videos
+genre: Science & Technology
 ---
 
 Dive deeply into the fascinating and slightly terrifying story of "OpenClaw," the viral AI agent that quite literally broke the internet. In this incredibly informative YouTube video, tech expert Peter Steinberg provides a comprehensive breakdown of the rapid rise, the underlying technology, and the ultimate systemic consequences of one of the most talked-about artificial intelligence events of the decade.

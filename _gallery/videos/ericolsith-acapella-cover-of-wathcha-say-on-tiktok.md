@@ -5,6 +5,7 @@ youtube_id: 'https://www.tiktok.com/@ericolsith/video/7567431982561414413'
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 date: 2026-02-07 18:55:00
 published: true
 ---

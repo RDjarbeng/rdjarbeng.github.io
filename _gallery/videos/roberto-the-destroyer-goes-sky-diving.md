@@ -7,6 +7,7 @@ embed_code: ''
 thumbnail: assets/images/videos/roberto_the_destroyer(1)-Cover.jpg
 type: video
 category: videos
+genre: Entertainment
 ---
 
 "On top of the world—how it feels to free fall!" Experience the absolute thrill and breath-taking adrenaline rush of skydiving in this fantastic YouTube video featuring the one and only Roberto the Destroyer. Dropping from thousands of feet in the air, this visual journey perfectly captures the incredible mix of terror, excitement, and ultimate liberation that comes with willingly jumping out of a perfectly good airplane!

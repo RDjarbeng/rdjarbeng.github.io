@@ -7,6 +7,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Sports
 date: 2026-02-10 21:18:00
 published: true
 ---

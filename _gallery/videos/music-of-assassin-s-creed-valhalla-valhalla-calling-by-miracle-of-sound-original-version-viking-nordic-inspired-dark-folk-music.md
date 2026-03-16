@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 ---
 
 The echoes of eternity - there are many lines in the song that use alliteration with repeated sounds on the same line

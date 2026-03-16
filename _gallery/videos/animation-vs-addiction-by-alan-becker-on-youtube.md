@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Film & Animation
 ---
 
 Dive into the powerful and thought-provoking world of Alan Becker with his incredible short film, "Animation vs. Addiction." This visually stunning masterpiece takes a unique approach to explaining the complex nature of addiction by visualizing it entirely through the medium of stick figure animation. It offers an engaging yet deeply impactful narrative that resonates with audiences of all ages.

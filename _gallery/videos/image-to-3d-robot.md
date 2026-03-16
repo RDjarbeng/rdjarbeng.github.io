@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: assets/images/videos/image_to_3d_robot_rd.png
 type: video
 category: videos
+genre: Science & Technology
 date: 2026-02-07 19:09:00
 ---
 

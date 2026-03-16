@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: assets/images/videos/face_animation_cover.png
 type: video
 category: videos
+genre: Film & Animation
 date: 2025-12-28 22:55:10
 ---
 

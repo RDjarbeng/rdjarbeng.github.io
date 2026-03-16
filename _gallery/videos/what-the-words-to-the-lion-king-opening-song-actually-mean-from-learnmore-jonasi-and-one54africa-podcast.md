@@ -7,6 +7,7 @@ youtube_id: 'https://twitter.com/RealDonKeith/status/2027369068731195677'
 thumbnail: assets/images/videos/1000369980.jpg
 type: video
 category: videos
+genre: Reviews & Reactions
 ---
 
 The clip shows Learnmore Jonasi translating 'Nants ingonyama bagithi Baba / Sithi uhm ingonyama' as 'Look, there's a lion! Father / Oh my god, it's a lion!' Hosts double over, one mimicking the melody in English amid gasps and howls. South African artist Lebo M. created the chant for Disney's 1994 film, blending Zulu roots with the story's East African setting. Zulu speakers confirm the literal meaning, while some note 'ingonyama' evokes both lion and king in ceremonies.

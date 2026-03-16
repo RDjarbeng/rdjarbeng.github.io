@@ -7,6 +7,7 @@ youtube_id: 'https://twitter.com/MrAkyeampong/status/2025863012490285064'
 thumbnail: assets/images/videos/yakubu_manage.png
 type: video
 category: videos
+genre: Other
 ---
 
 I finally found the  “Yakubu Manage” video

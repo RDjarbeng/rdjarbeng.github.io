@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Tutorials
 ---
 
 Transcript: Stop manually tracking your GSE stocks on Excel spreadsheets when you can upload your broker statement and get instant portfolio analysis in seconds.

@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Music
 ---
 
 # Lion King - Circle of Life and He Lives In You

@@ -4,7 +4,14 @@ platform: youtube
 youtube_id: https://youtu.be/KgSIbnegeSQ
 embed_code: ''
 thumbnail: ''
-caption: "\u200B\n\nSong written by  Vessel Chordrick and Naana Asiedu\nDefe Defe\n\
+type: video
+category: videos
+genre: Music
+date: 2026-03-01 14:24:42
+published: true
+---
+
+Song written by  Vessel Chordrick and Naana Asiedu\nDefe Defe\n\
   \nVerse:\nFather, the universe You made\nEverything displays the wonders of your\
   \ grace\nYou took my sin, my guilt and shame\nAnd You gave me Your name\nWe go sing\
   \ halle! 2x\n\nB\u0254hy\u025B na Wohy\u025B\u025B no aba mu o\n(The promise You\
@@ -31,8 +38,3 @@ caption: "\u200B\n\nSong written by  Vessel Chordrick and Naana Asiedu\nDefe Def
   \ don\u2019t hold me back / So allow me)\nMma obiara nha me\n(Let no one bother\
   \ me)\nYesu abro bonsam w\u0254 as\u025Bndua no so ma w\u2019ay\u025B hahaaha!\n\
   (Jesus has defeated the devil on the cross and now he is powerless!)"
-type: video
-category: videos
-date: 2026-03-01 14:24:42
-published: true
----

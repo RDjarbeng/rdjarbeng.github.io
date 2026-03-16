@@ -84,6 +84,7 @@ embed_code: '<blockquote class="instagram-media" data-instgrm-permalink="https:/
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 date: 2026-01-22 22:53:00
 published: true
 ---

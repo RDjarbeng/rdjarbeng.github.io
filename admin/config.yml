@@ -534,6 +534,32 @@ collections:
         }
       - { label: "Type", name: "type", widget: "hidden", default: "video" }
       - {
+          label: "Genre",
+          name: "genre",
+          widget: "select",
+          options:
+            [
+              "Film & Animation",
+              "Music",
+              "Gaming",
+              "Education",
+              "Entertainment",
+              "People & Blogs",
+              "Science & Technology",
+              "Travel & Events",
+              "Comedy",
+              "Sports",
+              "Food & Recipes",
+              "Behind the Scenes (BTS)",
+              "Reviews & Reactions",
+              "Memes & Highlights",
+              "Interviews",
+              "Tutorials",
+              "Other",
+            ],
+          default: "Other",
+        }
+      - {
           label: "Category",
           name: "category",
           widget: "hidden",

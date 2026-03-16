@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7602006473924709652'
 thumbnail: assets/images/videos/ishowspeed_africa_tour_conclusion(1)-Cover.jpg
 type: video
 category: videos
+genre: Entertainment
 ---
 
 The unforgettable IShowSpeed Africa tour finally comes to an end! In this heartfelt clip, popular streamer IShowSpeed reflects on his incredible journey and expresses how genuinely glad he is to have visited the African continent. Watch as he shares his deep appreciation for the diverse cultures, beautiful landscapes, and the incredibly passionate fans he met along the way.

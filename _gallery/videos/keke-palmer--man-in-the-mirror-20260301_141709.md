@@ -7,6 +7,7 @@ thumbnail: ''
 caption: (From Joyful Noise)
 type: video
 category: videos
+genre: Music
 date: 2026-03-01 14:17:09
 published: true
 ---

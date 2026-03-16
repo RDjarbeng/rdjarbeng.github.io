@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 freestyle rap dropped by Harry Mack Himself, this is one of the videos that goes on the shelf. And the beat, HMack was just killing that beat 🎶

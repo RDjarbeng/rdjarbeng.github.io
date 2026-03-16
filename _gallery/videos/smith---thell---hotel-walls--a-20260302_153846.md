@@ -28,6 +28,7 @@ caption: "\u25BA Lyrics\nI signed the papers\nFor a lifelong lease\nI rent the e
   \ it called us out\nSo, I hand back the key as the door man bows"
 type: video
 category: videos
+genre: Music
 date: 2026-03-02 15:38:46
 published: true
 ---

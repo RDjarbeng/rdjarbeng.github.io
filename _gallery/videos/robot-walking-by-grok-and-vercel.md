@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Science & Technology
 ---
 
 One of the smoothest movements of this image that I have from an AI model, this just shows AI tools getting better by the day especially regarding video generation

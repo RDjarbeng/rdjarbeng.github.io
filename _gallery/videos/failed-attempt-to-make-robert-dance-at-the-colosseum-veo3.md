@@ -7,6 +7,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Science & Technology
 ---
 
 "Well, this totally didn't work out as expected!" Dive into the unpredictable and highly experimental world of AI video generation with this hilarious clip attempting to make "Robert" dance at the historic Colosseum using the Veo3 AI model. What starts as an ambitious creative prompt quickly devolves into a glitchy, comedic, and highly entertaining digital disaster.

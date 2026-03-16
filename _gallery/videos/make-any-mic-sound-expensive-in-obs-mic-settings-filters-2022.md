@@ -8,6 +8,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Other
 ---
 
 Apparently Lady Gaga once went on a stream and sang into the wrong side of her microphone. Yikes!

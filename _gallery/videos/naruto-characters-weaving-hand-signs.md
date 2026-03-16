@@ -7,6 +7,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7578501485969870092'
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 ---
 
 Anime fans, wait for it! This highly creative video edit showcases a seamless, unexpected transition from classic Tom and Jerry animation into the intense world of Naruto. Watch as the characters expertly weave complex jutsu hand signs, perfectly synchronized to a hard-hitting musical beat. 

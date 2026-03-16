@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Science & Technology
 date: '2026-03-08T00:04:50+02:00'
 published: true
 ---

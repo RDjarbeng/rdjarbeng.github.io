@@ -5,6 +5,7 @@ youtube_id: 'https://www.tiktok.com/@richmanrd/video/7598195934585015563'
 thumbnail: ''
 type: video
 category: videos
+genre: Entertainment
 date: 2026-02-07 19:44:16
 ---
 

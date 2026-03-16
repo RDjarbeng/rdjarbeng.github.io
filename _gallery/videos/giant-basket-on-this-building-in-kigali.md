@@ -6,6 +6,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Travel & Events
 date: 2026-01-22 22:46:00
 published: true
 ---

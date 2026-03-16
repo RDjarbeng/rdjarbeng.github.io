@@ -7,6 +7,7 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
+genre: Science & Technology
 ---
 
 "Nobody's gonna know!" Welcome to the future of digital fashion and e-commerce with this mind-blowing demonstration of the Kolors Virtual Try-On tool. Using highly advanced artificial intelligence, this program allows users to seamlessly swap outfits on digital avatars or photos of themselves with astonishing realism, completely changing the way we think about shopping online.

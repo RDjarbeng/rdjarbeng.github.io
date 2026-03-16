@@ -85,6 +85,7 @@ embed_code: '<blockquote class="instagram-media" data-instgrm-permalink="https:/
 thumbnail: assets/images/videos/emperors_new_groove_gallery_cover_instagram.png
 type: video
 category: videos
+genre: Entertainment
 ---
 
 Strange this is my first time seeing Yzma's voice actor

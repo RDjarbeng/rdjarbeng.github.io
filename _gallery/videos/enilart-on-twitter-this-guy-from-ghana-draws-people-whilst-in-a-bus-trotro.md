@@ -6,6 +6,7 @@ youtube_id: 'https://twitter.com/Enilart/status/2008876696255279287'
 thumbnail: ''
 type: video
 category: videos
+genre: Other
 twitter_id: '2008876696255279287'
 ---
 
