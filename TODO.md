@@ -5,6 +5,7 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 ## High Priority
 
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
+- Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content)
 
 - [ ] add skeleton loader for images
 - [ ] **Card images**: Card images have a top padding that leaves a gray space, shows the skeleton loader behind it
@@ -21,9 +22,9 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
-- [ ] add skeleton loader for images
+
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
-- [ ] **Card images**: Card images have a top padding that leaves a gray space
+
 - [ ] **Cards**: add category to cards
 - [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
 - [ ] Add authors page listing all the authors
@@ -189,3 +190,9 @@ Ride Wif Me
 Sweet Adjeley
 Esther Dzifa
 Nazir - Loui Cage
+Andre Rieu
+Redbull
+Connor Price
+Bible animations (bible from Devil's perspective)
+Israel Obasola
+Gabrit
