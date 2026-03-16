@@ -185,3 +185,7 @@ HMack
 KaeStrings
 Lex Fridman
 Apnaj (check if this is safe)
+Ride Wif Me
+Sweet Adjeley
+Esther Dzifa
+Nazir - Loui Cage
