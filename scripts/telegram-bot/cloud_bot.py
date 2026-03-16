@@ -51,19 +51,6 @@ def extract_youtube_id(url):
     match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
     return match.group(1) if match else None
 
-def resolve_shortlink(url):
-    try:
-        # User-Agent is necessary because some platforms (like TikTok) might block default Python headers on HEAD requests
-        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
-        res = urllib.request.urlopen(req, timeout=10)
-        final_url = res.geturl()
-        # strip tracking query params
-        if '?' in final_url:
-            final_url = final_url.split('?')[0]
-        return final_url
-    except Exception:
-        return url
-
 def commit_files_to_github(files_dict, message):
     """Pushes multiple files to the GitHub repository in a single atomic commit"""
     import base64
@@ -218,6 +205,55 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         chat_id, message_id
     )
 
+def process_video_upload(chat_id, message_id, msg_id_key, genre):
+    if msg_id_key not in uploads:
+        bot.edit_message_text("❌ Session expired.", chat_id, message_id)
+        return
+    payload = uploads.pop(msg_id_key)
+    url = payload.get('url')
+    text = payload.get('text')
+    platform = payload.get('platform', 'unknown')
+
+    text_without_url = text.replace(url, '').strip()
+    if text_without_url:
+        parts = text_without_url.split('\n', 1)
+        title = parts[0].strip()
+        caption = parts[1].strip() if len(parts) > 1 else ""
+    else:
+        title = "Video Update"
+        caption = ""
+    
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
+    if not safe_title:
+        safe_title = f"video-{timestamp}"
+    filename = f"{safe_title}-{timestamp}"
+    
+    frontmatter = {
+        "title": title[:70],
+        "platform": platform,
+        "youtube_id": url,
+        "embed_code": "",
+        "thumbnail": "",
+        "type": "video",
+        "genre": genre,
+        "category": "videos",
+        "date": datetime.now(CAT).isoformat(timespec="seconds"),
+        "published": True
+    }
+    
+    md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    if caption:
+        md_content += f"\n{caption}\n"
+        
+    md_path = f"_gallery/videos/{filename}.md"
+    
+    try:
+        commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
+        bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n🎭 Genre: {genre}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", chat_id, message_id)
+
 @bot.message_handler(content_types=['document', 'photo'])
 def handle_media(message):
     if not is_authorized(message.from_user.id):
@@ -325,6 +361,12 @@ def handle_callback(call):
         bot.edit_message_text("⏳ Processing Gallery logic and sending to GitHub...", call.message.chat.id, call.message.message_id)
         gallery_cat = data.split("_", 1)[1]
         process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "gallery", gallery_cat=gallery_cat)
+        return
+
+    elif data.startswith("vidgenre_"):
+        bot.edit_message_text("⏳ Processing Video and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        genre = data.split("_", 1)[1]
+        process_video_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
         return
 
 @bot.message_handler(func=lambda message: True)
