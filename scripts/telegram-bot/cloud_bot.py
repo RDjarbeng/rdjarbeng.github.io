@@ -347,55 +347,24 @@ def handle_text(message):
                 platform = "instagram"
             
             if platform != "unknown":
-                status_msg = bot.reply_to(message, f"⏳ Connecting to GitHub API to register {platform.capitalize()} Video...")
+                keyboard = [
+                    [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
+                    [InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming"), InlineKeyboardButton("Education", callback_data="vidgenre_Education")],
+                    [InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment"), InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology")],
+                    [InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
+                    [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
+                    [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+                ]
+                reply_markup = InlineKeyboardMarkup(keyboard)
+                status_msg = bot.reply_to(message, f"Select a genre for the {platform.capitalize()} Video:", reply_markup=reply_markup)
                 
-                text_without_url = text.replace(url, '').strip()
-                if text_without_url:
-                    parts = text_without_url.split('\n', 1)
-                    title = parts[0].strip()
-                    caption = parts[1].strip() if len(parts) > 1 else ""
-                else:
-                    title = "Video Update"
-                    caption = ""
-                
-                timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-                safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
-                if not safe_title:
-                    safe_title = f"video-{timestamp}"
-                filename = f"{safe_title}-{timestamp}"
-                
-                frontmatter = {
-                    "title": title[:70],
-                    "platform": platform,
-                    "youtube_id": url, # Using URL here as well to match schema if requested by OP
-                    "embed_code": "",
-                    "thumbnail": "",
-                    "type": "video",
-                    "category": "videos",
-                    "date": datetime.now(CAT).isoformat(timespec="seconds"),
-                    "published": True
+                uploads[str(status_msg.message_id)] = {
+                    'url': url,
+                    'text': text,
+                    'platform': platform,
+                    'state': 'video_genre'
                 }
-                
-                if platform == "youtube":
-                    yt_id = extract_youtube_id(url)
-                    if yt_id:
-                        frontmatter["youtube_id"] = url # Preserving the current custom behaviour
-                elif platform == "tiktok" and "vt.tiktok.com" in url or "vm.tiktok.com" in url:
-                    status_msg = bot.edit_message_text(f"⏳ Resolving TikTok exact video ID...", message.chat.id, status_msg.message_id)
-                    long_url = resolve_shortlink(url)
-                    frontmatter["youtube_id"] = long_url
-                    
-                md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
-                if caption:
-                    md_content += f"\n{caption}\n"
-                    
-                md_path = f"_gallery/videos/{filename}.md"
-                
-                try:
-                    commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
-                    bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", message.chat.id, status_msg.message_id)
-                except Exception as e:
-                    bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", message.chat.id, status_msg.message_id)
+                return # Only handle the first supported URL
         return
 
     bot.reply_to(message, "I didn't recognize any commands or mapped Video links.")
