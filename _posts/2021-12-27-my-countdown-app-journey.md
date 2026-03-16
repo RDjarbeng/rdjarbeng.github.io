@@ -13,7 +13,7 @@ tags:
   - Progressive Web App
   - Netlify
   - GitHub
-  - Open-Source
+  - open-source
   - Side Project
   - Web Development
   - Flutter

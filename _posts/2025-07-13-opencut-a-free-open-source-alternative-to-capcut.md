@@ -2,10 +2,10 @@
 date: 2025-07-13T10:07:00
 author: Richard
 categories:
-  - Open-source
+  - open-source
 tags:
   - Capcut
-  - Open-Source
+  - open-source
   - Video editing
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png

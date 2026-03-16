@@ -7,7 +7,7 @@ categories:
 tags:
   - Google
   - FFmpeg
-  - Open-Source
+  - open-source
   - AI
   - Cybersecurity
   - Google Project Zero
