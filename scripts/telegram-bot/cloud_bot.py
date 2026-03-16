@@ -167,11 +167,13 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         return
 
     # 3. Create Markdown Frontmatter
+    alt_text_fallback = clean_caption if clean_caption and clean_caption != "Untitled" else f"Image {safe_title}"
     if target_type == "meme":
         frontmatter = {
             "title": clean_caption[:70],
             "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "type": "external",
             "category": "memes"
         }
@@ -179,6 +181,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         frontmatter = {
             "title": clean_caption[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "labels": ai_model,
             "type": "external",
             "category": "ai-generations"
@@ -187,6 +190,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         frontmatter = {
             "title": clean_caption[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "type": "external",
             "category": gallery_cat,
             "date": datetime.now(CAT).isoformat(timespec="seconds")
