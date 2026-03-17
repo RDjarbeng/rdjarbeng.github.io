@@ -4,7 +4,14 @@ platform: youtube
 youtube_id: https://youtu.be/Rnj3ps7V7D4
 embed_code: ''
 thumbnail: ''
-caption: "\u25BA Lyrics\nI signed the papers\nFor a lifelong lease\nI rent the earth\
+type: video
+category: videos
+genre: Music
+date: 2026-03-02 15:38:46
+published: true
+---
+Acoustic version of Music video for Smith & Thell - Hotel Walls played on Guitar. That melody before the chorus '🎵 So I stand back
+Lyrics\nI signed the papers\nFor a lifelong lease\nI rent the earth\
   \ where I stand\nAnd the air I breathe\nThen you forget that deal you made with\
   \ God\nWhile busy finding yourself being young, being dumb and in love\nIt's all\
   \ too easy\nAnd you're easily bored\nNever once has it crossed your mind that life's\
@@ -26,9 +33,3 @@ caption: "\u25BA Lyrics\nI signed the papers\nFor a lifelong lease\nI rent the e
   \ out\nSo, I hand back the key as the door man bows\n\nSo, I stand back, and I watch\
   \ us fall\nAs we break everything inside these hotel walls\nLife's for rent and\
   \ it called us out\nSo, I hand back the key as the door man bows"
-type: video
-category: videos
-genre: Music
-date: 2026-03-02 15:38:46
-published: true
----

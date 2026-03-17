@@ -9,7 +9,9 @@ thumbnail: ''
 type: video
 category: videos
 genre: Music 
-caption: |-
+---
+
+Music video for Smith & Thell - Hotel Walls. Era: Music from 2020s. It explores the idea that we are all just temporary tenants in our own lives.
   ► Lyrics
   I signed the papers
   For a lifelong lease
@@ -65,4 +67,3 @@ caption: |-
   As we break everything inside these hotel walls
   Life's for rent and it called us out
   So, I hand back the key as the door man bows
----
