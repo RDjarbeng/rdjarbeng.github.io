@@ -8,7 +8,6 @@ embed_code: ''
 thumbnail: ''
 type: video
 category: videos
-caption: ''
 ---
 
 To take my hands off of my life and give you control

@@ -11,7 +11,6 @@ thumbnail: assets/images/videos/Super_heavy_booster_catch_horizontal-Cover.jpg
 type: video
 category: videos
 genre: Science & Technology
-caption: ''
 ---
 
 SpaceX super heavy booster launch and catch on the mechazilla platform - October 13th, 2024
