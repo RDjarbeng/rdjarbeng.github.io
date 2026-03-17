@@ -82,7 +82,9 @@ I have included a video from Twitter that gives a good summary of the Ghana-Suar
 
 ## People
 
-The people,  hospitable and most welcoming you can find. With diverse ethnic groups such as the Akan, Ewe, Ga, Mole-Dagbani with each having their own traditions, festivals and food. Below I will attempt to give a brief overview of the major ethnic groups in Ghana.
+The people,  hospitable and most welcoming you can find. With diverse ethnic groups such as the Akan, Ewe, Ga, Mole-Dagbani with each having their own traditions, festivals and food. Below I will attempt to give a brief overview of the major ethnic groups in Ghana with the regions where they have a strong presence.
+
+![Administrative map of Ghana and its sixteen different ...](/assets/images/20260316-152406.png)
 
 Major ethnic groups:
 

@@ -1,5 +1,7 @@
 ---
-title: Gaius stands up to Uther about his stance on magic
+title: Gaius Stands up to Uther about his distrust of friends - Merlin Season 2
+published: true
+date: 2026-03-16T14:50:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/AzCtMm2r288
 embed_code: ''
@@ -7,11 +9,9 @@ thumbnail: ''
 type: video
 genre: Film & Animation
 category: videos
-date: '2026-03-16T14:50:19+02:00'
-published: true
 ---
 
-You see enemies where there are friends - It's almost as if Gaius is speaking to the viewer 
+You see enemies where there are friends - It's almost as if Gaius is speaking to the viewer
 Merlin Season 2 Ep 7
 
 All rights and credit go to BBC studios. Amazing acting from Richard Wilson:)
