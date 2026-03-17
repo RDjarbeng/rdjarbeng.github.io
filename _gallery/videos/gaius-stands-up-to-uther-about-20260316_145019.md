@@ -17,3 +17,10 @@ Merlin Season 2 Ep 7
 All rights and credit go to BBC studios. Amazing acting from Richard Wilson:)
 
 For context, Gaius had almost been executed by the Witch Hunter on Uther's orders. Felt bad for Uther a bit here, just a bit, because he definitely still deserved to be told that.
+
+
+This comment from youtube User @brandonmedina494 at how Gaius tell Uther to leave is golden:
+
+"Gaius: now if you'll excuse me, i have work to do.
+
+Translation: now get out of my sight."
