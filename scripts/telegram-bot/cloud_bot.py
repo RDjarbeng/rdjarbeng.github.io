@@ -100,9 +100,13 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     file_id = payload['file_id']
     caption = payload['caption']
 
-    clean_caption = caption.strip() if caption else "Untitled"
+    full_caption = payload['caption'].strip() if payload.get('caption') else "Untitled"
+    parts = full_caption.split('\n', 1)
+    title_text = parts[0].strip()
+    body_text = parts[1].strip() if len(parts) > 1 else ""
+
     timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-    safe_title = "".join([c if c.isalnum() else "-" for c in clean_caption[:30].lower()]).strip("-")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title_text[:30].lower()]).strip("-")
     if not safe_title:
         safe_title = "image"
         
@@ -154,10 +158,10 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         return
 
     # 3. Create Markdown Frontmatter
-    alt_text_fallback = clean_caption if clean_caption and clean_caption != "Untitled" else f"Image {safe_title}"
+    alt_text_fallback = title_text if title_text and title_text != "Untitled" else f"Image {safe_title}"
     if target_type == "meme":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text[:70],
             "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
@@ -166,7 +170,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "ai":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "labels": ai_model,
@@ -175,7 +179,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "gallery":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text[:70],
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "type": "external",
@@ -184,8 +188,8 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
 
     md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
-    if clean_caption and clean_caption != "Untitled":
-        md_content += f"\n{clean_caption}\n"
+    if full_caption and full_caption != "Untitled":
+        md_content += f"\n{full_caption}\n"
         
     md_path = f"{collection_rel_dir}/{filename}.md"
 
@@ -201,7 +205,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
 
     label_text = f" ({gallery_cat})" if target_type == 'gallery' else (f" ({ai_model})" if target_type == 'ai' else "")
     bot.edit_message_text(
-        f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}",
+        f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.",
         chat_id, message_id
     )
 
