@@ -1,6 +1,5 @@
 ---
-title: "Elderly Male Lion In It's Last Days\n\n\U0001F3B6 And on that day when my\
-  \ strengt"
+title: Elderly Male Lion In It's Last Days
 image: /assets/images/elderly-male-lion-in-it-s-last-20260314_130215.jpg
 type: external
 category: Other
