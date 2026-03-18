@@ -25,6 +25,7 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Cards**: add category to cards
 - [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
 - [ ] Add authors page listing all the authors
+- [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
 - [ ] Remove tiktok expander plugin if not necessary'
 Search needs to include gallery items, tags, categories
 Tags and categories need to be added to personal posts, gallery images and videos
@@ -44,6 +45,7 @@ Tags and categories need to be added to personal posts, gallery images and video
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
 - [ ] **Design**: Create banners with my model templates.
+- [ ] Comment from reddit I'd like to implement: "Then i switched things up and started automating all that research part, like it would handle the keyword stuff and competitor analysis automatically so i could just focus on making the actual content good, the weird part is it also optimized everything for those AI overview things that show up in google now and that's when my traffic actually started moving"
 
 ## Research & Questions
 - [ ] Are there any studies on how the air quality changes after a plane flies past?
