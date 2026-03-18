@@ -1841,8 +1841,8 @@ body {
     font-size: 26px;
     line-height: 36px;
     font-weight: 800;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    // margin-top: 24px;
+    // margin-bottom: 24px;
   }
 
   h3 {
@@ -1864,6 +1864,7 @@ body {
 
 .post-header {
   border-bottom: none;
+  margin-bottom: 0px;
 
   h1 {
     font-size: 34px;
