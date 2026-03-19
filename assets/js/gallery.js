@@ -33,20 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Categories Configuration
     const imageCategories = [
-        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
         { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
         { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
         { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
         { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
-        { id: 'external', title: 'External', filter: item => item.dataset.category.includes('external') },
+        { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
+        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
     ];
 
     const videoCategories = [
-        { id: 'videos', title: 'Videos', filter: item => item.dataset.category.includes('videos') },
-        { id: 'tiktok', title: 'TikTok', filter: item => item.dataset.category.includes('tiktok') },
-        { id: 'instagram', title: 'Instagram', filter: item => item.dataset.category.includes('instagram') },
+        { id: 'videos', title: 'All Videos', filter: item => item.dataset.category.includes('videos') },
         { id: 'youtube', title: 'YouTube', filter: item => item.dataset.category.includes('youtube') },
-        { id: 'twitter', title: 'Twitter/X', filter: item => item.dataset.category.includes('twitter') }
+        { id: 'twitter', title: 'Twitter/X', filter: item => item.dataset.category.includes('twitter') },
+        { id: 'instagram', title: 'Instagram', filter: item => item.dataset.category.includes('instagram') },
+        { id: 'tiktok', title: 'TikTok', filter: item => item.dataset.category.includes('tiktok') }
     ];
 
     const allCategories = [...imageCategories, ...videoCategories];
