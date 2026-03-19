@@ -168,7 +168,7 @@ layout: default
       data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
 
       <div class="gallery-caption-content" style="display:none;">
-        {{ item.content }}
+        {{ item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
       </div>
 
       {% if item.type == 'video' %}
