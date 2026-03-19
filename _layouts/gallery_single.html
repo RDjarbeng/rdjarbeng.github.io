@@ -114,12 +114,12 @@ layout: default
             <!-- Caption & Content -->
             {% if page.caption %}
             <div class="gallery-caption">
-                {{ page.caption | markdownify }}
+                {{ page.caption | markdownify | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
             </div>
             {% endif %}
 
             <div class="gallery-body">
-                {{ content }}
+                {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
             </div>
 
             {% if computed_link and computed_link != '' %}

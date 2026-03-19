@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const item = visibleItems[index];
         const type = item.dataset.type;
         const src = item.dataset.src;
-        const caption = item.querySelector('.gallery-caption-content').innerHTML;
+        let caption = item.querySelector('.gallery-caption-content').innerHTML;
         const title = item.dataset.title;
         const dateRaw = item.dataset.date;
         let dateFormatted = dateRaw || '';
@@ -497,6 +497,20 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isNaN(dateObj)) {
                 dateFormatted = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
             }
+        }
+
+        // Fix relative image paths in caption
+        if (caption) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = caption;
+            const imgs = tempDiv.querySelectorAll('img');
+            imgs.forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('/') && !src.startsWith('http') && !src.startsWith('data:')) {
+                    img.setAttribute('src', '/' + src);
+                }
+            });
+            caption = tempDiv.innerHTML;
         }
 
         lightboxMediaContainer.innerHTML = '';
