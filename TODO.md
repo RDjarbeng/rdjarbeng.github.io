@@ -20,7 +20,7 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
 - [ ] add skeleton loader for images
-- [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
+- [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature). 270x200 might be good image size
 - [ ] **Card images**: Card images have a top padding that leaves a gray space
 - [ ] **Cards**: add category to cards
 - [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
