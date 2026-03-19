@@ -1,5 +1,5 @@
 ---
-title: WAKE UP TO REALITY - Madara Uchiha's Words To Obito With Royalty Soundtrack
+title: WAKE UP TO REALITY! Nothing Ever Goes as Planned- Madara Uchiha's Words To Obito With Royalty Soundtrack
 published: true
 date: 2026-03-19T17:16:00+02:00
 platform: youtube
