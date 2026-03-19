@@ -6,4 +6,5 @@ category: memes
 date: 2026-02-10 12:40:38
 ---
 
-LOTR reference
+Actor of Faramir posts picture showing his age, and people comment that Boromir, his brother in the trilogy would have looked younger.
+It's a LOTR reference to how their father treated them.
