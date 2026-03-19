@@ -1,5 +1,5 @@
 ---
-title: The Feeling Of Weightlessness NASA Astronauts Preparing To Go For SpaceWalk Recorded From Twitter (March 18th)
+title: The Feeling Of Weightlessness NASA Astronauts Preparing To Go For SpaceWalk Recorded From Twitter Livestream (March 18th)
 published: true
 date: 2026-03-18T14:28:00+02:00
 platform: youtube
@@ -19,4 +19,6 @@ The astronauts are weightless and are floating in the space station. It's cool s
 
 Later on they go outside the space station, [livestream link](https://x.com/i/broadcasts/1oKMvRQVpPeGQ)
 
-![](assets/images/videos/20260318-235302.png)
+![Screenshot of twitter livestream showing NASA Astronauts outside the space station To Go For SpaceWalk Recorded From Twitter Livestream (March 18th)](assets/images/videos/nasa_astronauts_spacewalk.png)
+
+Aren't we fortunate to live in an era where we can witness such moments of astronauts on our phones?
