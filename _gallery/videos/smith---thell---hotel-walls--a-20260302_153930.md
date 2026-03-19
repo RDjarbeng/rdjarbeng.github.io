@@ -1,5 +1,5 @@
 ---
-title: Smith & Thell - Hotel Walls  [with Lyrics]
+title: 'Smith & Thell - Hotel Walls: A Visual Metaphor for Transience  [with Lyrics]'
 published: true
 date: 2026-03-02T15:39:00
 platform: youtube
@@ -12,7 +12,6 @@ category: videos
 ---
 
 Music video for Smith & Thell - Hotel Walls. Era: Music from 2020s. It explores the idea that we are all just temporary tenants in our own lives.
-
 
 >   ► Lyrics
 >   I signed the papers
