@@ -9,6 +9,6 @@ vendor
 auto-tag-all.rb
 external_links.txt
 generate_tags_gemini.rb
-*.txt
+# *.txt
 .env
 !llms.txt
