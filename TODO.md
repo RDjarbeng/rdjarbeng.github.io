@@ -24,6 +24,7 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Card images**: Card images have a top padding that leaves a gray space
 - [ ] **Cards**: add category to cards
 - [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
+- [] Carousel: Try carousel design from apple site, book flipping carousel, story mode, carousel for categories with 3D animations
 - [ ] Add authors page listing all the authors
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
 - [ ] Remove tiktok expander plugin if not necessary'
