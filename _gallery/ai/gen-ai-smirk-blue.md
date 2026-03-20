@@ -1,6 +1,6 @@
 ---
 title: Gen AI Smirk Blue
-date: 2025-12-28 22:55:10
+date: 2026-03-02T14:00:00+00:00
 image: /assets/images/genai/gen_ai_smirk_blue_grok.jpg
 labels: Grok
 type: external
