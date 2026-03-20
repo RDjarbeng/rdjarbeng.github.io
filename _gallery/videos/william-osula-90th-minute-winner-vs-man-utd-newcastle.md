@@ -17,5 +17,3 @@ William Osula scores a stunning 90th-minute curling winner for 10-man Newcastle 
 Clock ticking down. Scores level. Defenders to beat. Step forward, Will Osula 👏👏👏
 
 On March 4, 2026, Newcastle United didn't just beat Manchester United with a 90th-minute winner—they used a 12-year-old trophy photo to deliver the ultimate social media burn.
-
-https://x.com/NUFC/status/2029346157336383832
