@@ -161,7 +161,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     alt_text_fallback = title_text if title_text and title_text != "Untitled" else f"Image {safe_title}"
     if target_type == "meme":
         frontmatter = {
-            "title": title_text[:150],
+            "title": title_text,
             "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
@@ -170,7 +170,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "ai":
         frontmatter = {
-            "title": title_text[:150],
+            "title": title_text,
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "labels": ai_model,
@@ -179,7 +179,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "gallery":
         frontmatter = {
-            "title": title_text[:150],
+            "title": title_text,
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "type": "external",
@@ -234,7 +234,7 @@ def process_video_upload(chat_id, message_id, msg_id_key, genre):
     filename = safe_title
     
     frontmatter = {
-        "title": title[:150],
+        "title": title,
         "platform": platform,
         "youtube_id": url,
         "embed_code": "",
