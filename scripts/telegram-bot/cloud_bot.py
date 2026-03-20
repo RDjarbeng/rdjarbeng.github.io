@@ -106,11 +106,11 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     body_text = parts[1].strip() if len(parts) > 1 else ""
 
     timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-    safe_title = "".join([c if c.isalnum() else "-" for c in title_text[:30].lower()]).strip("-")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title_text[:120].lower()]).strip("-")
     if not safe_title:
         safe_title = "image"
         
-    filename = f"{safe_title}-{timestamp}"
+    filename = safe_title
     
     if target_type == "meme":
         media_rel_dir = "assets/images/memes"
@@ -161,7 +161,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     alt_text_fallback = title_text if title_text and title_text != "Untitled" else f"Image {safe_title}"
     if target_type == "meme":
         frontmatter = {
-            "title": title_text[:70],
+            "title": title_text[:150],
             "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
@@ -170,7 +170,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "ai":
         frontmatter = {
-            "title": title_text[:70],
+            "title": title_text[:150],
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "labels": ai_model,
@@ -179,7 +179,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         }
     elif target_type == "gallery":
         frontmatter = {
-            "title": title_text[:70],
+            "title": title_text[:150],
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "type": "external",
@@ -228,13 +228,13 @@ def process_video_upload(chat_id, message_id, msg_id_key, genre):
         caption = ""
     
     timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-    safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
     if not safe_title:
         safe_title = f"video-{timestamp}"
-    filename = f"{safe_title}-{timestamp}"
+    filename = safe_title
     
     frontmatter = {
-        "title": title[:70],
+        "title": title[:150],
         "platform": platform,
         "youtube_id": url,
         "embed_code": "",
