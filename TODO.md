@@ -56,6 +56,7 @@ Tags and categories need to be added to personal posts, gallery images and video
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
 - [ ] **Design**: Create banners with my model templates.
+Add page for apps of interest, AI apps, image creators,video generators, I love pdf, ...
 - [ ] Comment from reddit I'd like to implement: "Then i switched things up and started automating all that research part, like it would handle the keyword stuff and competitor analysis automatically so i could just focus on making the actual content good, the weird part is it also optimized everything for those AI overview things that show up in google now and that's when my traffic actually started moving"
 
 ## Research & Questions
