@@ -15,8 +15,7 @@ Gaius has spent years as Uther’s shadow, but in this scene, he proves that eve
 
 > You see foes where there are friends
 
-- It's almost as if Gaius is speaking to the viewer
-Merlin Season 2 Ep 7
+- It's almost as if Gaius is speaking to the viewer here. video clip is taken from Merlin Season 2 Episode 7
 
 All rights and credit go to BBC studios. Amazing acting from Richard Wilson:)
 
