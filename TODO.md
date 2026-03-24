@@ -2,6 +2,16 @@
 
 This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](https://rdjarbeng.com) codebase.
 
+## Specifications
+- This website should scale globally
+- Blogs are rarely written, but often read
+- Some of the website is purely static files, the rest is a dynamic REST API
+- Caching must be implemented where possible
+- Any new users that subscribes should receive a welcome email- todo
+- Email newsletter - todo
+- Comments on blog posts - todo
+- Any photo uploaded to the blog should have a thumbnail generated- todo
+
 ## High Priority
 
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
