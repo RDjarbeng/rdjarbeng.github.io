@@ -1,5 +1,5 @@
 ---
-title: Time Flies - William Osula's Journey from Man Utd Youth Star to Newcastle Hero
+title: 'The 11-Year-Old Mistake: How Man Utd’s Former Starlet William Osula Became Their Nightmare'
 date: 2026-03-05T15:08:00+02:00
 published: true
 tags:
@@ -13,7 +13,7 @@ layout: personal
 card_items: []
 ---
 
-Football loves a good full-circle story, and Newcastle United delivered one of the best on March 4, 2026.
+Football loves a good full-circle story, and Newcastle United delivered one of the best on March 4, 2026. Newcastle United didn't just beat Manchester United with a 90th-minute winner, they also used a 12-year-old trophy photo to deliver the ultimate social media burn.
 
 In a dramatic Premier League clash at St. James' Park, 10-man Newcastle United came from behind (after going down to 10 men in the first half) to beat Manchester United 2-1 with a stunning 90th-minute winner from substitute striker **William Osula**.
 
