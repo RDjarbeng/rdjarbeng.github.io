@@ -6,7 +6,7 @@ date: 2024-08-05
 image_alt: "Cover image for Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 ---
 
-Andrew Ng's Machine Learning Specialization — one of the most popular AI courses ever made — is now completely free on YouTube. If you've been putting it off, this is the easiest on-ramp to learning ML properly.
+Andrew Ng's Machine Learning Specialization, one of the most popular AI courses ever made, is now completely free on YouTube. If you've been putting it off, this is the easiest on-ramp to learning ML properly.
 
 ![Screenshot of Andrew Ng's Machine Learning Specialization YouTube playlist](/assets/images/andrewng_youtube.png)
 
@@ -14,9 +14,9 @@ Andrew Ng's Machine Learning Specialization — one of the most popular AI cours
 
 The **Machine Learning Specialization** is the updated version of Andrew Ng's legendary Stanford ML course, rebuilt from the ground up by [DeepLearning.AI](https://www.deeplearning.ai/). It covers:
 
-- **Supervised Learning** — linear & logistic regression, decision trees, neural networks
-- **Unsupervised Learning** — clustering, anomaly detection, recommender systems
-- **Best Practices** — how to debug and improve ML models in the real world
+- **Supervised Learning**: linear & logistic regression, decision trees, neural networks
+- **Unsupervised Learning**: clustering, anomaly detection, recommender systems
+- **Best Practices**: how to debug and improve ML models in the real world
 
 The biggest upgrade from the old Stanford course: everything is now in **Python** (NumPy, scikit-learn, TensorFlow) instead of Matlab/Octave.
 
@@ -28,7 +28,7 @@ This course is ideal if you:
 - Took the old Stanford ML course and want to catch up with modern tools
 - Want to understand the theory *and* the code behind ML algorithms
 
-You don't need a math degree — Andrew Ng is famously good at making complex concepts approachable.
+You don't need a math degree. Andrew Ng is famously good at making complex concepts approachable.
 
 ## Free on YouTube vs. Coursera
 
@@ -40,7 +40,7 @@ The **lecture videos are 100% free on YouTube**. If you want graded assignments 
 
 ## My Take
 
-If you're serious about understanding machine learning — not just using libraries blindly — this is the course to do. Andrew Ng doesn't just show you *how* to run the code, he explains *why* it works. That intuition is what separates someone who can apply ML from someone who can debug and improve it.
+If you're serious about understanding machine learning (not just using libraries blindly), this is the course to do. Andrew Ng doesn't just show you *how* to run the code, he explains *why* it works. That intuition is what separates someone who can apply ML from someone who can debug and improve it.
 
 ---
 
