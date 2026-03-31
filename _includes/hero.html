@@ -14,7 +14,14 @@ first %}
         </div>
     </div>
     <div class="hero-image">
-        <img src="{{ '/assets/images/posts/happy_indepence_ghana_post_cover.png' | relative_url }}"
-            alt="Happy 69th Independence Day Ghana">
+        <picture>
+            <source srcset="{{ '/assets/images/posts/happy_indepence_ghana_post_cover_400w.webp' | relative_url }} 400w,
+                            {{ '/assets/images/posts/happy_indepence_ghana_post_cover.webp' | relative_url }} 640w"
+                    sizes="(max-width: 768px) 100vw, 390px"
+                    type="image/webp">
+            <img src="{{ '/assets/images/posts/happy_indepence_ghana_post_cover.png' | relative_url }}"
+                 alt="Happy 69th Independence Day Ghana"
+                 style="width: 100%; height: auto; object-fit: cover;">
+        </picture>
     </div>
 </div>
