@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved)"
+title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved?)"
 date: 2026-03-31T23:08:34+02:00
 author: Richard
 category: Security
