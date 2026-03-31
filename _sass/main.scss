@@ -1764,12 +1764,12 @@ a:hover {
     width: 200px;
     padding: 6px 15px;
     border: 1px solid var(--card-border);
-    background-color: #fff;
+    background-color: var(--card-bg);
     opacity: 1;
     cursor: text;
 
     &::placeholder {
-      color: #999;
+      color: var(--grey-text);
     }
   }
 }
