@@ -6,6 +6,51 @@ layout: default
   <h1>Richard Djarbeng's Blog</h1>
   {% include hero.html %}
 
+  {% assign latest_urls = "" | split: "" %}
+  {% for lp in site.posts limit:6 %}
+    {% assign latest_urls = latest_urls | push: lp.url %}
+  {% endfor %}
+
+  {% assign all_topics_raw = "" | split: "" %}
+  {% for cat in site.categories %}
+    {% assign cat_size = cat[1].size | prepend: '000000' | slice: -6, 6 %}
+    {% assign cat_str = cat_size | append: ":::category:::" | append: cat[0] %}
+    {% assign all_topics_raw = all_topics_raw | push: cat_str %}
+  {% endfor %}
+  {% for tag in site.tags %}
+    {% assign tag_size = tag[1].size | prepend: '000000' | slice: -6, 6 %}
+    {% assign tag_str = tag_size | append: ":::tag:::" | append: tag[0] %}
+    {% assign all_topics_raw = all_topics_raw | push: tag_str %}
+  {% endfor %}
+  
+  {% assign top_topics = all_topics_raw | sort | reverse | slice: 0, 30 %}
+  {% assign featured_topics_raw = top_topics | sample: 4 %}
+
+  {% assign featured_topics = "" | split: "" %}
+  {% for topic in featured_topics_raw %}
+    {% assign parts = topic | split: ":::" %}
+    {% assign t_type = parts[1] %}
+    {% assign t_name = parts[2] %}
+    {% if t_type == 'category' %}
+      {% assign t_posts = site.categories[t_name] %}
+    {% else %}
+      {% assign t_posts = site.tags[t_name] %}
+    {% endif %}
+    
+    {% assign has_valid = false %}
+    {% assign topic_posts = t_posts | sample: 6 %}
+    {% for p in topic_posts %}
+      {% unless latest_urls contains p.url %}
+        {% assign has_valid = true %}
+        {% break %}
+      {% endunless %}
+    {% endfor %}
+    
+    {% if has_valid %}
+      {% assign featured_topics = featured_topics | push: topic %}
+    {% endif %}
+  {% endfor %}
+
   <!-- Layout wrapper for Desktop TOC -->
   <div class="home-layout" style="display: flex; gap: 40px; align-items: flex-start; position: relative; margin-top: 40px;">
     
@@ -17,7 +62,12 @@ layout: default
           <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
           <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
               <ul id="toc-dynamic-featured" style="list-style: none; padding: 0; margin: 0; margin-left: 28px; border-left: 1px solid var(--border-color, #ccc);">
-                <!-- JS injects bubbles here -->
+                {% for topic in featured_topics %}
+                  {% assign parts = topic | split: ":::" %}
+                  {% assign t_name = parts[2] %}
+                  {% assign safe_id = 'featured-' | append: t_name | slugify %}
+                  <li><a href="#{{ safe_id }}" class="toc-link" style="padding-left: 10px;">{{ t_name }}</a></li>
+                {% endfor %}
               </ul>
           </li>
           
@@ -88,55 +138,38 @@ layout: default
       
       <div id="featured-posts-unified-container">
         <div id="featured-tags-categories" style="display: flex; flex-direction: column; gap: 20px;">
-          <!-- JavaScript will inject bubbles and sub-posts here -->
-        </div>
-      </div>
+          {% for topic in featured_topics %}
+            {% assign parts = topic | split: ":::" %}
+            {% assign t_type = parts[1] %}
+            {% assign t_name = parts[2] %}
+            {% assign safe_id = 'featured-' | append: t_name | slugify %}
+            {% assign t_name_slug = t_name | slugify %}
+            {% if t_type == 'category' %}
+              {% assign t_url = '/categories/' | append: t_name_slug | relative_url %}
+              {% assign t_posts = site.categories[t_name] %}
+            {% else %}
+              {% assign t_url = '/tags/' | append: t_name_slug | relative_url %}
+              {% assign t_posts = site.tags[t_name] %}
+            {% endif %}
 
-      <!-- Hidden Data for Random Posts -->
-      <div style="display: none;">
-        <div id="hidden-random-posts">
-          {% for post in site.posts limit:100 %}
-          <div class="random-post-item" style="display: none;">
-            {% include post-card.html post=post %}
-          </div>
-          {% endfor %}
-        </div>
-
-        <div id="hidden-cats-tags">
-          {% assign cat_build = "" | split: "" %}
-          {% for category in site.categories %}
-          {% capture cat_str %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{% endcapture %}
-          {% assign cat_build = cat_build | push: cat_str %}
-          {% endfor %}
-          {% assign sorted_cats = cat_build | sort | reverse %}
-
-          {% for item in sorted_cats limit:15 %}
-          {% assign parts = item | split: ":::" %}
-          {% assign cat_name = parts[1] %}
-          <div class="ct-source" data-type="category" data-name="{{ cat_name }}" data-url="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}">
-            {% assign cat_posts = site.categories[cat_name] | sort: 'date' | reverse %}
-            {% for post in cat_posts limit:10 %}
-            <div class="ct-post-item">{% include post-card.html post=post %}</div>
-            {% endfor %}
-          </div>
-          {% endfor %}
-
-          {% assign tag_build = "" | split: "" %}
-          {% for tag in site.tags %}
-          {% capture tag_str %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
-          {% assign tag_build = tag_build | push: tag_str %}
-          {% endfor %}
-          {% assign sorted_tags = tag_build | sort | reverse %}
-
-          {% for item in sorted_tags limit:15 %}
-          {% assign parts = item | split: ":::" %}
-          {% assign tag_name = parts[1] %}
-          <div class="ct-source" data-type="tag" data-name="{{ tag_name }}" data-url="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">
-            {% assign tag_posts = site.tags[tag_name] | sort: 'date' | reverse %}
-            {% for post in tag_posts limit:10 %}
-            <div class="ct-post-item">{% include post-card.html post=post %}</div>
-            {% endfor %}
-          </div>
+            <div class="featured-topic-container" id="{{ safe_id }}" style="background: var(--card-bg, #fcfcfc); border-radius: 20px; padding: 5px 20px; border: 1px solid var(--border-color, #eaeaea); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+              <a href="{{ t_url }}" style="text-decoration: none; color: inherit; display: inline-block;">
+                <div style="display: inline-block; background: var(--border-color, #eaeaea); color: var(--text-color, #222); padding: 10px 16px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: background 0.2s;" onmouseover="this.style.background='#007acc'; this.style.color='#fff';" onmouseout="this.style.background='var(--border-color, #eaeaea)'; this.style.color='var(--text-color, #222)';">
+                  {{ t_name }}
+                </div>
+              </a>
+              <div class="post-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+                {% assign valid_count = 0 %}
+                {% assign valid_sampled = t_posts | sample: 6 %}
+                {% for p in valid_sampled %}
+                  {% unless latest_urls contains p.url %}
+                    {% include post-card.html post=p %}
+                    {% assign valid_count = valid_count | plus: 1 %}
+                    {% if valid_count == 2 %}{% break %}{% endif %}
+                  {% endunless %}
+                {% endfor %}
+              </div>
+            </div>
           {% endfor %}
         </div>
       </div>
@@ -146,10 +179,13 @@ layout: default
       <h2 class="section-title" id="personal-posts" style="scroll-margin-top: 80px;">Personal Posts</h2>
       <div class="post-list" id="random-personal-container">
         {% assign all_personal = site.personal | sort: 'date' | reverse %}
-        {% for personal in all_personal limit:60 %}
-        <div class="random-personal-item" style="display: none;">
+        {% assign personal_recent = all_personal | slice: 0, 10 %}
+        {% assign personal_older = all_personal | slice: 10, 50 %}
+        {% assign rand_recent = personal_recent | sample: 3 %}
+        {% assign rand_older = personal_older | sample: 3 %}
+        {% assign personal_mixed = rand_recent | concat: rand_older | sample: 6 %}
+        {% for personal in personal_mixed %}
           {% include post-card.html post=personal %}
-        </div>
         {% endfor %}
       </div>
       <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts <svg width="16" height="16"
@@ -235,121 +271,8 @@ layout: default
 
   <script>
     (function () {
-      function shuffle(arr) {
-        let array = [...arr];
-        for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-      }
-
-      function getPostUrl(el) {
-        const link = el.querySelector('.post-link');
-        return link ? link.getAttribute('href') : null;
-      }
-
       document.addEventListener("DOMContentLoaded", function () {
-        const seenUrls = new Set();
-
-        // 1. Mark URLs in Latest Posts as seen
-        document.querySelectorAll('#latest-posts-container .post-link').forEach(a => {
-          seenUrls.add(a.getAttribute('href'));
-        });
-
-        // 2 & 3. Process Categories and Tags to build Featured Bubbles
-        const ctSources = Array.from(document.querySelectorAll('.ct-source'));
-        const distinctNames = new Set();
-        const consolidatedGroups = [];
-        
-        shuffle(ctSources).forEach(source => {
-           let originalName = source.getAttribute('data-name');
-           let lowerName = originalName.toLowerCase();
-           
-           if (distinctNames.has(lowerName)) return; 
-           
-           const posts = Array.from(source.querySelectorAll('.ct-post-item'));
-           const validPosts = [];
-           posts.forEach(post => {
-              const url = getPostUrl(post);
-              if (url && !seenUrls.has(url) && validPosts.length < 2) {
-                 validPosts.push(post);
-                 seenUrls.add(url);
-              }
-           });
-           
-           if (validPosts.length > 0) {
-              distinctNames.add(lowerName);
-              consolidatedGroups.push({
-                 name: originalName,
-                 type: source.getAttribute('data-type'),
-                 url: source.getAttribute('data-url'),
-                 posts: validPosts
-              });
-           }
-        });
-
-        const selectedGroups = consolidatedGroups.slice(0, 4);
-        const ctContainer = document.getElementById('featured-tags-categories');
-        
-        selectedGroups.forEach(group => {
-           let wrap = document.createElement('div');
-           wrap.className = 'featured-topic-container';
-           let safeId = 'featured-' + group.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-           wrap.id = safeId;
-           // Stylizing the bubble/container
-           wrap.style.cssText = "background: var(--card-bg, #fcfcfc); border-radius: 20px; padding: 5px 20px; border: 1px solid var(--border-color, #eaeaea); box-shadow: 0 4px 10px rgba(0,0,0,0.03);";
-           
-           let headerHtml = `
-             <a href="${group.url}" style="text-decoration: none; color: inherit; display: inline-block;">
-               <div style="display: inline-block; background: var(--border-color, #eaeaea); color: var(--text-color, #222); padding: 10px 16px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: background 0.2s;" onmouseover="this.style.background='#007acc'; this.style.color='#fff';" onmouseout="this.style.background='var(--border-color, #eaeaea)'; this.style.color='var(--text-color, #222)';">
-                  ${group.name}
-               </div>
-             </a>
-             <div class="post-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;"></div>
-           `;
-           wrap.innerHTML = headerHtml;
-           let postListEl = wrap.querySelector('.post-list');
-           group.posts.forEach(p => {
-              p.style.display = 'block';
-              postListEl.appendChild(p);
-           });
-           ctContainer.appendChild(wrap);
-           
-           let tocFeatured = document.getElementById('toc-dynamic-featured');
-           if (tocFeatured) {
-              let li = document.createElement('li');
-              li.innerHTML = `<a href="#${safeId}" class="toc-link" style="padding-left: 10px;">${group.name}</a>`;
-              tocFeatured.appendChild(li);
-           }
-        });
-
-        // 5. Personal Posts Mix
-        const personalItems = Array.from(document.querySelectorAll('.random-personal-item'));
-        if (personalItems.length > 0) {
-          const recentPool = personalItems.slice(0, 10);
-          const olderPool = personalItems.slice(10);
-
-          const pickedRecent = shuffle(recentPool).slice(0, 3);
-          const pickedOlder = shuffle(olderPool).slice(0, 3);
-          const finalSelection = shuffle(pickedRecent.concat(pickedOlder));
-
-          finalSelection.forEach(item => {
-            const url = getPostUrl(item);
-            if (url && !seenUrls.has(url)) {
-              item.style.display = 'block';
-              seenUrls.add(url);
-            } else if (url && seenUrls.has(url)) {
-              item.style.display = 'block';
-            }
-          });
-
-          personalItems.forEach(item => {
-            if (item.style.display !== 'block') item.remove();
-          });
-        }
-
-        // 6. Highlight active TOC link on scroll
+        // Highlight active TOC link on scroll
         const tocLinks = document.querySelectorAll('.desktop-toc .toc-link, .mobile-toc .mobile-toc-link');
         const sections = [
           document.getElementById('latest-posts'),
