@@ -8,12 +8,12 @@
     font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
 }
 
 .about-section-subtitle {
     text-align: center;
-    color: #666;
+    color: var(--grey-text);
     margin-bottom: 30px;
     font-size: 1rem;
 }
@@ -27,8 +27,8 @@
 
 // Experience Card (List Style)
 .experience-card {
-    background: white;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 20px;
@@ -53,19 +53,19 @@
         font-size: 1.25rem;
         font-weight: 600;
         margin: 0;
-        color: #1a1a1a;
+        color: var(--text-color);
     }
 
     .exp-date {
-        color: #666;
+        color: var(--grey-text);
         font-size: 0.9rem;
-        background: #f5f5f5;
+        background: var(--category-bg);
         padding: 4px 8px;
         border-radius: 6px;
     }
 
     .exp-org {
-        color: #007acc; // Accent color
+        color: var(--link-color); // Accent color
         font-size: 1rem;
         margin-bottom: 16px;
         display: block;
@@ -73,7 +73,7 @@
     }
 
     .exp-desc {
-        color: #444;
+        color: var(--text-color);
         line-height: 1.6;
         margin-bottom: 16px;
     }
@@ -97,8 +97,8 @@
 
 // Project Card (Grid Style)
 .project-card-about {
-    background: white;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     overflow: hidden;
     display: flex;
@@ -113,7 +113,7 @@
 
     .project-image-container {
         height: 180px;
-        background: #f0f0f0;
+        background: var(--card-bg);
         position: relative;
         overflow: hidden;
 
@@ -129,12 +129,12 @@
             position: absolute;
             top: 12px;
             right: 12px;
-            background: rgba(255, 255, 255, 0.9);
+            background: var(--card-bg);
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 0.75rem;
             font-weight: 600;
-            color: #333;
+            color: var(--text-color);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     }
@@ -150,12 +150,12 @@
         font-size: 1.2rem;
         font-weight: 600;
         margin: 0 0 10px 0;
-        color: #1a1a1a;
+        color: var(--text-color);
     }
 
     .project-desc {
         font-size: 0.95rem;
-        color: #666;
+        color: var(--grey-text);
         line-height: 1.5;
         margin-bottom: 20px;
         flex: 1;
@@ -184,8 +184,8 @@
 
 // Honors Card
 .honor-card {
-    background: white;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 20px;
     display: flex;
@@ -219,7 +219,7 @@
         font-size: 1.1rem;
         font-weight: 600;
         margin: 0 0 8px 0;
-        color: #333;
+        color: var(--text-color);
     }
 
     .honor-badge {
@@ -235,7 +235,7 @@
 
     .honor-desc {
         font-size: 0.9rem;
-        color: #666;
+        color: var(--grey-text);
         line-height: 1.5;
     }
 }
@@ -243,8 +243,8 @@
 // Skills List Styles (Icon + Text)
 .skills-container {
     padding: 30px;
-    background: white;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     margin-bottom: 30px;
 }
@@ -260,9 +260,9 @@
 .skill-category-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #444;
+    color: var(--text-color);
     margin-bottom: 15px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid var(--card-border);
     padding-bottom: 8px;
     display: inline-block;
 }
@@ -278,11 +278,11 @@
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
-    color: #333;
-    background-color: #f8f9fa;
+    color: var(--text-color);
+    background-color: var(--category-bg);
     padding: 8px 16px;
     border-radius: 8px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--card-border);
     font-weight: 500;
     transition: all 0.2s ease;
 
@@ -295,7 +295,7 @@
     }
 
     &:hover {
-        background-color: #e9ecef;
+        background-color: var(--category-hover);
         transform: translateY(-2px);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
@@ -310,14 +310,12 @@
     h1 {
         font-size: 2.5rem;
         margin-bottom: 16px;
-        background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--text-color);
     }
 
     p {
         font-size: 1.1rem;
-        color: #555;
+        color: var(--grey-text);
         line-height: 1.7;
     }
 }
@@ -325,7 +323,7 @@
 .contact-email {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #007acc;
+    color: var(--link-color);
     margin-top: 10px;
     display: inline-block;
 }
@@ -351,7 +349,7 @@
 .show-more-btn {
     background-color: transparent;
     border: 2px solid #007acc;
-    color: #007acc;
+    color: var(--link-color);
     padding: 10px 24px;
     border-radius: 8px;
     font-size: 1rem;
@@ -360,7 +358,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: #007acc;
+        background-color: var(--link-color);
         color: white;
     }
 }
@@ -377,7 +375,7 @@
 .filter-btn {
     background: transparent;
     border: 1px solid #d1d5db;
-    color: #555;
+    color: var(--grey-text);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -392,7 +390,7 @@
     &.active {
         background: #007acc;
         color: white;
-        border-color: #007acc;
+        border-color: var(--link-color);
     }
 }
 

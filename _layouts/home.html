@@ -132,7 +132,7 @@ layout: default
     {% assign recent_gallery = site.gallery | sort: 'date' | reverse %}
     {% for item in recent_gallery limit:8 %}
     <a href="{{ '/gallery' | relative_url }}?item={{ item.title | slugify }}" class="gallery-thumbnail-card"
-      style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--bg-color-secondary, #f4f4f4); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
       <!-- Thumbnail -->
       <div style="width: 100%; height: 140px; background-color: #000; overflow: hidden;">
         <img
@@ -158,7 +158,7 @@ layout: default
 
   <br>
   <div class="about-snippet"
-    style="background: var(--bg-color-secondary, #f9f9f9); border: 1px solid var(--border-color, #eaeaea); padding: 30px; border-radius: 12px; margin-bottom: 40px; text-align: center;">
+    style="background: var(--card-bg, #f9f9f9); border: 1px solid var(--card-border, #eaeaea); padding: 30px; border-radius: 12px; margin-bottom: 40px; text-align: center;">
     <h2 class="section-title" style="border-bottom: none; margin-bottom: 10px; text-align: center;">About Me</h2>
     <p style="font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto; color: var(--text-color, #555);">
       I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI

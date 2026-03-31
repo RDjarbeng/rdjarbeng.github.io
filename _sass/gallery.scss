@@ -13,7 +13,7 @@
 .gallery-description {
     max-width: 800px;
     margin: 0 auto 30px;
-    color: #666;
+    color: var(--grey-text);
     line-height: 1.6;
 }
 
@@ -26,14 +26,14 @@
 }
 
 .gallery-filter {
-    background: #f0f0f0;
+    background: var(--card-bg);
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .gallery-filter:hover,
@@ -57,7 +57,7 @@
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background: #fff;
+    background: var(--card-bg);
     display: flex;
     flex-direction: column;
 }
@@ -73,7 +73,7 @@
     width: 100%;
     padding-top: 56.25%;
     /* 16:9 Aspect Ratio */
-    background: #f0f0f0;
+    background: var(--card-bg);
 }
 
 .gallery-thumb-wrapper img {
@@ -167,7 +167,7 @@
 
 .lightbox-media-column {
     flex: 1;
-    background-color: #000;
+    background-color: var(--text-color);
     position: relative;
     overflow: hidden;
 }
@@ -242,7 +242,7 @@ iframe[id^="twitter-widget-"] {
     width: 350px;
     flex: 0 0 350px;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--card-bg);
     padding: 5rem 2rem 2rem;
     overflow-y: auto;
     position: relative;
@@ -255,21 +255,21 @@ iframe[id^="twitter-widget-"] {
     margin-bottom: 0.5rem;
     font-weight: 700;
     line-height: 1.3;
-    color: #000;
+    color: var(--text-color);
 }
 
 .lightbox-meta {
     margin-bottom: 1.5rem;
-    color: #666;
+    color: var(--grey-text);
     font-size: 0.9rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--card-border);
     padding-bottom: 1rem;
 }
 
 .lightbox-caption {
     font-size: 1rem;
     line-height: 1.6;
-    color: #444;
+    color: var(--text-color);
 }
 
 .lightbox-close {
@@ -362,7 +362,7 @@ iframe[id^="twitter-widget-"] {
         width: 100%;
         height: auto;
         min-height: 50vh;
-        background-color: #000;
+        background-color: var(--text-color);
         position: relative;
         z-index: 10;
         padding: 20px 0;
@@ -372,7 +372,7 @@ iframe[id^="twitter-widget-"] {
         width: 100%;
         flex: 1 0 auto;
         padding: 1.5rem;
-        background-color: #fff;
+        background-color: var(--card-bg);
         min-height: 50vh;
         overflow-y: visible;
     }
@@ -460,9 +460,9 @@ iframe[id^="twitter-widget-"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f9f9f9;
+    background: var(--category-bg);
     border: 1px solid #e5e5e5;
-    color: #606060;
+    color: var(--grey-text);
 }
 
 .view-all-icon {
@@ -473,7 +473,7 @@ iframe[id^="twitter-widget-"] {
 .back-btn {
     background: none;
     border: none;
-    color: #606060;
+    color: var(--grey-text);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;

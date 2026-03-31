@@ -1,7 +1,7 @@
 .dynamic-footer {
     width: 100%;
-    background-color: #f0f0f0; // Light gray start
-    color: #000;
+    background-color: var(--card-bg); // Light gray start
+    color: var(--text-color);
     padding: 0 20px; // Remove vertical padding to fit height
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     height: 50px; // Forced small initial height
@@ -11,13 +11,13 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--card-border);
     box-sizing: border-box;
 
     &.is-expanded {
         min-height: 90vh; // Take up almost full screen
         height: 90vh;
-        background-color: #fff;
+        background-color: var(--bg-color);
         padding: 40px 20px; // Restore padding when expanded
 
         .minimized-view {
@@ -51,7 +51,7 @@
 
     .progress-bar {
         height: 100%;
-        background-color: #000;
+        background-color: var(--text-color);
         width: 0%;
         transition: width 0.1s linear; // Smooth but responsive
     }
@@ -84,7 +84,7 @@
             font-size: 1.2rem; // Smaller font
             font-weight: 600;
             margin: 0;
-            color: #333;
+            color: var(--text-color);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -92,7 +92,7 @@
         .scroll-hint {
             margin-top: 0; // Remove top margin
             font-size: 0.8rem;
-            color: #666;
+            color: var(--grey-text);
             display: flex;
             flex-direction: row; // Horizontal hint
             align-items: center;
@@ -135,14 +135,14 @@
         h2 {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #000;
+            color: var(--text-color);
             font-weight: 700;
         }
 
         .email-link {
             font-size: 5vw; // Reduced to fit on one line
             font-weight: 900;
-            color: #000; // Black
+            color: var(--text-color); // Black
             text-decoration: none;
             line-height: 1;
             white-space: nowrap; // Prevent wrapping
@@ -153,7 +153,7 @@
             }
 
             &:hover {
-                color: #555; // Dark gray on hover
+                color: var(--grey-text); // Dark gray on hover
             }
         }
     }
@@ -163,7 +163,7 @@
         max-width: 400px;
         font-size: 1.1rem;
         line-height: 1.6;
-        color: #333;
+        color: var(--text-color);
 
         p {
             margin-bottom: 20px;
@@ -175,14 +175,14 @@
             margin: 30px 0;
 
             a {
-                color: #000;
+                color: var(--text-color);
                 font-weight: 600;
                 text-decoration: none;
                 border-bottom: 1px solid transparent;
                 transition: border-color 0.3s ease;
 
                 &:hover {
-                    border-bottom-color: #000;
+                    border-bottom-color: var(--text-color);
                 }
             }
         }
@@ -193,12 +193,12 @@
             align-items: center;
             margin-top: 40px;
             font-size: 0.9rem;
-            color: #666;
+            color: var(--grey-text);
             border-top: 1px solid #eee;
             padding-top: 20px;
 
             .about-link-footer {
-                color: #000;
+                color: var(--text-color);
                 font-weight: 600;
                 text-decoration: none;
 
