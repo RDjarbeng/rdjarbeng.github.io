@@ -83,7 +83,7 @@ Continue tracking this situation as npm security teams address the compromised p
 npm quickly unpublished the malicious versions (**axios@1.14.1**, **axios@0.30.4**, and the injected dependency **plain-crypto-js@4.2.1**) within roughly 3 hours of publication (they went live around 00:21–01:00 UTC on March 31, 2026, and were removed by ~03:29 UTC).  
 
 As of now (evening of March 31, 2026):  
-- The **latest** version on npm is **axios@1.14.0** (published a few days *before* the attack).  
+- The **latest** version on npm is **axios@1.14.0** (published a 4 days *before* the attack).  
 - A clean `npm install axios` (or equivalent) will now pull a safe version.  
 - The malicious versions no longer appear on the npm registry and cannot be installed fresh.  
 
