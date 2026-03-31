@@ -12,7 +12,7 @@ custom_css_class: about-page
 </div>
 <div class="about-section">
 <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
-I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. Currently, I am expanding my expertise in Deep Learning and building on AWS. Occasionally I write technical posts and personal reflections on this Blog.
+Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. Currently, I am expanding my expertise in Deep Learning and building on AWS. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
 
