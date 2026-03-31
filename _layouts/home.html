@@ -272,7 +272,7 @@ layout: default
            const validPosts = [];
            posts.forEach(post => {
               const url = getPostUrl(post);
-              if (url && !seenUrls.has(url) && validPosts.length < 3) {
+              if (url && !seenUrls.has(url) && validPosts.length < 2) {
                  validPosts.push(post);
                  seenUrls.add(url);
               }
