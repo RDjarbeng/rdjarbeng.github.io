@@ -69,7 +69,7 @@
     display: inline-block;
     background: #fcd116;
     /* Ghana Gold */
-    color: #000 !important;
+    color: var(--text-color) !important;
     padding: 12px 28px;
     border-radius: 30px;
     font-weight: 700;
