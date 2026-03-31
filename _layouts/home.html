@@ -55,10 +55,10 @@ layout: default
   <div class="home-layout" style="display: flex; gap: 40px; align-items: flex-start; position: relative; margin-top: 40px;">
     
     <!-- Sidebar TOC -->
-    <aside class="desktop-toc" style="position: sticky; top: 45px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg, #f4f4f4); padding: 8px 10px; border-radius: 12px; border: 1px solid var(--border-color, #eaeaea); z-index: 10; font-weight: 500; overflow-y: auto;">
+    <aside class="desktop-toc" style="position: sticky; top: 45px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg); padding: 8px 10px; border-radius: 12px; border: 1px solid var(--card-border); z-index: 10; font-weight: 500; overflow-y: auto;">
        <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;" class="toc-list">
-          <li style="font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color, #f4f4f4);">Blog</li>
-          <li style="font-size: 1.05rem; font-weight: bold; color: var(--text-color, #ccc); padding-left: 10px; margin-bottom: 5px;">Technical posts</li>
+          <li style="font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">Blog</li>
+          <li style="font-size: 1.05rem; font-weight: bold; color: var(--text-color); padding-left: 10px; margin-bottom: 5px;">Technical posts</li>
           <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
           <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
               <ul id="toc-dynamic-featured" style="list-style: none; padding: 0; margin: 0; margin-left: 28px; border-left: 1px solid var(--border-color, #ccc);">
@@ -73,7 +73,7 @@ layout: default
           
           <li style="margin-top: 15px;"><a href="#personal-posts" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
           
-          <li style="margin-top: 15px; font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color, #f4f4f4);">Latest from the Gallery</li>
+          <li style="margin-top: 15px; font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">Latest from the Gallery</li>
           <div style="margin-left: 10px; border-left: 2px solid rgba(150, 150, 150, 0.4); padding-top: 5px; padding-bottom: 5px;">
             <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
             <li><a href="#gallery-images" class="toc-link" style="padding-left: 10px;">Images</a></li>
@@ -87,12 +87,12 @@ layout: default
       .home-layout { flex-direction: column; }
       .desktop-toc { display: none; }
       
-      .toc-link { text-decoration: none; color: var(--text-color, #f4f4f4); display: block; border-radius: 4px; padding: 6px 12px; transition: all 0.2s ease; font-size: 1.05rem; margin: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;}
+      .toc-link { text-decoration: none; color: var(--text-color); display: block; border-radius: 4px; padding: 6px 12px; transition: all 0.2s ease; font-size: 1.05rem; margin: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;}
       .toc-link:hover { background: rgba(150, 150, 150, 0.2); color: #007acc !important; }
       .toc-link.active { background: #007acc !important; color: #fff !important; font-weight: bold; border-left: none; }
 
-      .mobile-toc { display: flex; overflow-x: auto; white-space: nowrap; gap: 10px; padding-bottom: 10px; margin-bottom: 25px; -webkit-overflow-scrolling: touch; border-bottom: 1px solid var(--border-color, #eaeaea); }
-      .mobile-toc-link { padding: 8px 16px; background: var(--card-bg, #f4f4f4); border: 1px solid var(--border-color, #eaeaea); border-radius: 20px; text-decoration: none; color: var(--text-color, #333); font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
+      .mobile-toc { display: flex; overflow-x: auto; white-space: nowrap; gap: 10px; padding-bottom: 10px; margin-bottom: 25px; -webkit-overflow-scrolling: touch; border-bottom: 1px solid var(--card-border); }
+      .mobile-toc-link { padding: 8px 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; text-decoration: none; color: var(--text-color); font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
       .mobile-toc-link:hover, .mobile-toc-link.active { background: #007acc; color: #fff; border-color: #007acc; }
       
       @media (min-width: 1024px) {
