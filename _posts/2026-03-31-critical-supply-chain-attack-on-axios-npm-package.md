@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package"
+title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved)"
 date: 2026-03-31T23:08:34+02:00
 author: Richard
 category: Security
@@ -14,7 +14,7 @@ image: /assets/images/posts/axios_security_breach.png
 image_alt: "Cybersecurity warning for Axios NPM supply chain attack"
 card_items:
   - name: What is Axios?
-    description: Axios is a simple promise based HTTP client for the browser and node.js, enabling developers to easily send asynchronous HTTP requests. It is one of the most depended-on packages in the entire npm ecosystem.
+    description: Axios is a simple promise based HTTP client for the browser and node.js, enabling developers to easily send asynchronous HTTP requests. It is one of the most depended-on packages in the entire npm ecosystem. Allowing devs to make XMLHttpRequests directly from the browser.
     url: https://axios-http.com/
     link_text: Learn about Axios
     badge_1: Framework
@@ -74,3 +74,37 @@ If you use Axios in any of your projects—whether personal, enterprise, or expe
 4. **Scan CI/CD:** Ensure that your automated deployment pipelines have not inadvertently pulled the latest broken patch.
 
 Continue tracking this situation as npm security teams address the compromised package. Stay vigilant and triple-check your dependencies!
+
+## Has this been resolved?
+
+
+**Yes, the supply chain attack has been resolved at the source.**  
+
+npm quickly unpublished the malicious versions (**axios@1.14.1**, **axios@0.30.4**, and the injected dependency **plain-crypto-js@4.2.1**) within roughly 3 hours of publication (they went live around 00:21–01:00 UTC on March 31, 2026, and were removed by ~03:29 UTC).  
+
+As of now (evening of March 31, 2026):  
+- The **latest** version on npm is **axios@1.14.0** (published a few days *before* the attack).  
+- A clean `npm install axios` (or equivalent) will now pull a safe version.  
+- The malicious versions no longer appear on the npm registry and cannot be installed fresh.  
+
+The attacker had hijacked the lead maintainer’s npm account (jasonsaayman) and published the poisoned packages manually, bypassing normal GitHub Actions workflows. npm and the maintainers acted fast to revoke access and clean up.  
+
+### Important caveat (this part is *not* fully resolved for everyone)
+If your project (or any CI/CD pipeline, dev machine, etc.) installed **axios@1.14.1**, **axios@0.30.4**, or **plain-crypto-js@4.2.1** *during the short window the packages were live*, the postinstall malware likely ran. In that case:  
+- Assume the machine/environment is compromised (cross-platform RAT that steals credentials and beacons out).  
+- Immediately **rotate all secrets** (npm tokens, cloud keys, API keys, SSH keys, etc.).  
+- Delete `node_modules`, your lockfile (`package-lock.json` / `yarn.lock` / `pnpm-lock.yaml`), and reinstall with a pinned safe version:  
+  ```bash
+  npm install axios@1.14.0   # or axios@0.30.3 for the 0.x branch
+  ```  
+- For extra safety, add an `overrides` (npm) / `resolutions` (yarn) block to force the safe version even for transitive dependencies.  
+
+**Quick check command:**  
+```bash
+npm ls axios plain-crypto-js
+```  
+Look for the bad versions in any lockfile or `node_modules`.
+
+The ecosystem response (Socket Security, Step Security, various security firms) caught it extremely fast, and the attack window was narrow, so most people who update today onward are fine. Pin your dependencies going forward and consider tools like Socket or npm audit + lockfile scanning to avoid the next one.  
+
+The immediate threat is over, but treat any exposure from earlier today as a real breach.
