@@ -8,3 +8,10 @@ category: memes
 ---
 
 What happens when everyone sells shovels and no one mines?
+
+### Why this matters today
+
+In the 1840s, the most consistent wealth wasn't found in the gold mines, but in the pockets of those selling the picks and shovels. Today, we see a mirror image in the tech industry:
+
+- **The "Shovels":** AI wrappers, "prompt engineering" courses, and generic SaaS templates.
+- **The "Mining":** The difficult, specialized work of building or developing unique solutions that actually solve a problem.
