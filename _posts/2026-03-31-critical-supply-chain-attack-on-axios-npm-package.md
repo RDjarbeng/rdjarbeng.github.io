@@ -12,10 +12,25 @@ tags:
   - Supply Chain Attack
 image: /assets/images/posts/axios_security_breach.png
 image_alt: "Cybersecurity warning for Axios NPM supply chain attack"
+card_items:
+  - name: What is Axios?
+    description: Axios is a simple promise based HTTP client for the browser and node.js, enabling developers to easily send asynchronous HTTP requests. It is one of the most depended-on packages in the entire npm ecosystem.
+    url: https://axios-http.com/
+    link_text: Learn about Axios
+    badge_1: Framework
+  - name: Socket Security Report
+    description: Read the in-depth technical analysis and official incident report regarding the compromised plain-crypto-js package directly from the Socket Security research team.
+    url: https://socket.dev/blog/axios-npm-package-compromised
+    link_text: Read the full report
+    badge_1: Detailed Analysis
 ---
+**TLDR:** A popular npm package has been attacked and it's used by many web developers.
+
 If you are a JavaScript or Node.js developer, **stop what you are doing and audit your dependencies.** 
 
-A critical, active supply chain attack is currently underway targeting **Axios**, one of the most heavily depended-on packages in the entire npm ecosystem (boasting over 100 million weekly downloads). This is textbook supply chain installer malware, and any `npm install` pulling the latest version is potentially compromised right now.
+A critical, active supply chain attack is currently underway targeting **Axios**, one of the most heavily depended-on packages in the entire npm ecosystem (boasting over 100 million weekly downloads). 
+
+This terrifying live compromise was discovered and publicly reported by X/Twitter user [@feross](https://twitter.com/feross) (Founder + CEO @SocketSecurity • Visiting lecturer @Stanford). This is textbook supply chain installer malware, and any `npm install` pulling the latest version is potentially compromised right now.
 
 <center>
 <blockquote class="twitter-tweet">
