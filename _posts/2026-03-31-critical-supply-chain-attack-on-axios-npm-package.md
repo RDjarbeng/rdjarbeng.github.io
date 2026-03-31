@@ -10,7 +10,7 @@ tags:
   - Axios
   - Malware
   - Supply Chain Attack
-image: /assets/images/posts/axios_security_breach.png
+image: /assets/images/posts/covers/axios_security_cover.jpg
 image_alt: "Cybersecurity warning for Axios NPM supply chain attack"
 card_items:
   - name: What is Axios?
@@ -23,6 +23,11 @@ card_items:
     url: https://socket.dev/blog/axios-npm-package-compromised
     link_text: Read the full report
     badge_1: Detailed Analysis
+  - name: GitHub Issue #10604
+    description: Tracking the supply chain attack and the resolution process directly on the official Axios repository. Technical details and maintainer responses can be found here.
+    url: https://github.com/axios/axios/issues/10604
+    link_text: View on GitHub
+    badge_1: Technical Track
 ---
 **TLDR:** A popular npm package has been attacked and it's used by many web developers.
 
@@ -88,6 +93,8 @@ As of now (evening of March 31, 2026):
 - The malicious versions no longer appear on the npm registry and cannot be installed fresh.  
 
 The attacker had hijacked the lead maintainer’s npm account (jasonsaayman) and published the poisoned packages manually, bypassing normal GitHub Actions workflows. npm and the maintainers acted fast to revoke access and clean up.  
+
+Technical users can find the official GitHub issue tracking this vulnerability and the community resolution process here: [Axios Issue #10604](https://github.com/axios/axios/issues/10604)
 
 ### Important caveat (this part is *not* fully resolved for everyone)
 If your project (or any CI/CD pipeline, dev machine, etc.) installed **axios@1.14.1**, **axios@0.30.4**, or **plain-crypto-js@4.2.1** *during the short window the packages were live*, the postinstall malware likely ran. In that case:  
