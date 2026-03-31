@@ -10,10 +10,10 @@ layout: default
   <div class="home-layout" style="display: flex; gap: 40px; align-items: flex-start; position: relative; margin-top: 40px;">
     
     <!-- Sidebar TOC -->
-    <aside class="desktop-toc" style="position: sticky; top: 100px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg, #f4f4f4); padding: 10px 15px; border-radius: 12px; border: 1px solid var(--border-color, #eaeaea); z-index: 10; font-weight: 500; overflow-y: hidden;">
-       <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.3;" class="toc-list">
-          <li style="font-size: 1rem; font-weight: bold; margin-bottom: 0px; color: var(--text-color, #333);">Blog</li>
-          <li style="font-size: 0.95rem; font-weight: bold; color: var(--text-color, #555); padding-left: 10px; margin-bottom: 0px;">Technical posts</li>
+    <aside class="desktop-toc" style="position: sticky; top: 45px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg, #f4f4f4); padding: 8px 10px; border-radius: 12px; border: 1px solid var(--border-color, #eaeaea); z-index: 10; font-weight: 500; overflow-y: auto;">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;" class="toc-list">
+          <li style="font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color, #f4f4f4);">Blog</li>
+          <li style="font-size: 1.05rem; font-weight: bold; color: var(--text-color, #ccc); padding-left: 10px; margin-bottom: 5px;">Technical posts</li>
           <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
           <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
               <ul id="toc-dynamic-featured" style="list-style: none; padding: 0; margin: 0; margin-left: 28px; border-left: 1px solid var(--border-color, #ccc);">
@@ -21,16 +21,15 @@ layout: default
               </ul>
           </li>
           
-          <li style="margin-top: 5px;"><a href="#personal-posts" class="toc-link" style="font-size: 1rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
+          <li style="margin-top: 15px;"><a href="#personal-posts" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
           
           <li style="margin-top: 15px; font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color, #f4f4f4);">Latest from the Gallery</li>
           <div style="margin-left: 10px; border-left: 2px solid rgba(150, 150, 150, 0.4); padding-top: 5px; padding-bottom: 5px;">
             <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
             <li><a href="#gallery-images" class="toc-link" style="padding-left: 10px;">Images</a></li>
-            <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
           </div>
           
-          <li style="margin-top: 8px;"><a href="#about-me" class="toc-link" style="font-size: 1rem; font-weight: bold; padding-left: 0;">About Me</a></li>
+          <li style="margin-top: 15px;"><a href="#about-me" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">About Me</a></li>
        </ul>
     </aside>
 
@@ -38,8 +37,8 @@ layout: default
       .home-layout { flex-direction: column; }
       .desktop-toc { display: none; }
       
-      .toc-link { text-decoration: none; color: var(--text-color, #333); display: block; border-radius: 4px; padding: 2px 6px; transition: all 0.2s ease; font-size: 0.9rem; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;}
-      .toc-link:hover { background: var(--border-color, rgba(150,150,150,0.2)); color: #007acc !important; }
+      .toc-link { text-decoration: none; color: var(--text-color, #f4f4f4); display: block; border-radius: 4px; padding: 6px 12px; transition: all 0.2s ease; font-size: 1.05rem; margin: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;}
+      .toc-link:hover { background: rgba(150, 150, 150, 0.2); color: #007acc !important; }
       .toc-link.active { background: #007acc !important; color: #fff !important; font-weight: bold; border-left: none; }
 
       .mobile-toc { display: flex; overflow-x: auto; white-space: nowrap; gap: 10px; padding-bottom: 10px; margin-bottom: 25px; -webkit-overflow-scrolling: touch; border-bottom: 1px solid var(--border-color, #eaeaea); }
@@ -290,7 +289,7 @@ layout: default
            }
         });
 
-        const selectedGroups = consolidatedGroups.slice(0, 4);
+        const selectedGroups = consolidatedGroups.slice(0, 3);
         const ctContainer = document.getElementById('featured-tags-categories');
         
         selectedGroups.forEach(group => {
@@ -299,11 +298,11 @@ layout: default
            let safeId = 'featured-' + group.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
            wrap.id = safeId;
            // Stylizing the bubble/container
-           wrap.style.cssText = "background: var(--card-bg, #fcfcfc); border-radius: 20px; padding: 25px; border: 1px solid var(--border-color, #eaeaea); box-shadow: 0 4px 10px rgba(0,0,0,0.03);";
+           wrap.style.cssText = "background: var(--card-bg, #fcfcfc); border-radius: 20px; padding: 5px 20px; border: 1px solid var(--border-color, #eaeaea); box-shadow: 0 4px 10px rgba(0,0,0,0.03);";
            
            let headerHtml = `
-             <a href="${group.url}" style="text-decoration: none; color: inherit; display: inline-block; margin-bottom: 20px;">
-               <div style="display: inline-block; background: var(--border-color, #eaeaea); color: var(--text-color, #222); padding: 10px 22px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: background 0.2s;" onmouseover="this.style.background='#007acc'; this.style.color='#fff';" onmouseout="this.style.background='var(--border-color, #eaeaea)'; this.style.color='var(--text-color, #222)';">
+             <a href="${group.url}" style="text-decoration: none; color: inherit; display: inline-block;">
+               <div style="display: inline-block; background: var(--border-color, #eaeaea); color: var(--text-color, #222); padding: 10px 16px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: background 0.2s;" onmouseover="this.style.background='#007acc'; this.style.color='#fff';" onmouseout="this.style.background='var(--border-color, #eaeaea)'; this.style.color='var(--text-color, #222)';">
                   ${group.name}
                </div>
              </a>
