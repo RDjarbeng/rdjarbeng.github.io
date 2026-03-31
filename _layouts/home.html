@@ -6,179 +6,242 @@ layout: default
   <h1>Richard Djarbeng's Blog</h1>
   {% include hero.html %}
 
-  <!-- Latest Posts Section -->
-  <h2 class="section-title">Latest Posts</h2>
-  {% include category-tags.html %}
-  <div class="post-list" id="latest-posts">
-    {% for post in site.posts limit:6 %}
-    {% include post-card.html post=post %}
-    {% endfor %}
-  </div>
-  <a href="{{ '/posts' | relative_url }}" class="about-link">View all posts <svg width="16" height="16"
-      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-      stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg></a>
+  <!-- Layout wrapper for Desktop TOC -->
+  <div class="home-layout" style="display: flex; gap: 40px; align-items: flex-start; position: relative; margin-top: 40px;">
+    
+    <!-- Sidebar TOC -->
+    <aside class="desktop-toc" style="position: sticky; top: 100px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg, #f4f4f4); padding: 10px 15px; border-radius: 12px; border: 1px solid var(--border-color, #eaeaea); z-index: 10; font-weight: 500; overflow-y: hidden;">
+       <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.3;" class="toc-list">
+          <li style="font-size: 1rem; font-weight: bold; margin-bottom: 0px; color: var(--text-color, #333);">Blog</li>
+          <li style="font-size: 0.95rem; font-weight: bold; color: var(--text-color, #555); padding-left: 10px; margin-bottom: 0px;">Technical posts</li>
+          <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
+          <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
+              <ul id="toc-dynamic-featured" style="list-style: none; padding: 0; margin: 0; margin-left: 28px; border-left: 1px solid var(--border-color, #ccc);">
+                <!-- JS injects bubbles here -->
+              </ul>
+          </li>
+          
+          <li style="margin-top: 5px;"><a href="#personal-posts" class="toc-link" style="font-size: 1rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
+          
+          <li style="margin-top: 8px; font-size: 1rem; font-weight: bold; margin-bottom: 0px; color: var(--text-color, #333);">Latest from the Gallery</li>
+          <div style="margin-left: 10px; border-left: 1px solid var(--border-color, #ccc);">
+            <li><a href="#gallery-images" class="toc-link" style="padding-left: 10px;">Images</a></li>
+            <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
+          </div>
+          
+          <li style="margin-top: 8px;"><a href="#about-me" class="toc-link" style="font-size: 1rem; font-weight: bold; padding-left: 0;">About Me</a></li>
+       </ul>
+    </aside>
 
-  <!-- Selected Posts Section (Varied Selection) -->
-  <br>
-  <h2 class="section-title">Selected Posts</h2>
-  <div class="post-list" id="random-posts-container">
-    {% for post in site.posts limit:100 %}
-    <div class="random-post-item" style="display: none;">
-      {% include post-card.html post=post %}
-    </div>
-    {% endfor %}
-  </div>
+      <style>
+      .home-layout { flex-direction: column; }
+      .desktop-toc { display: none; }
+      
+      .toc-link { text-decoration: none; color: var(--text-color, #333); display: block; border-radius: 4px; padding: 2px 6px; transition: all 0.2s ease; font-size: 0.9rem; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;}
+      .toc-link:hover { background: var(--border-color, rgba(150,150,150,0.2)); color: #007acc !important; }
+      .toc-link.active { background: #007acc !important; color: #fff !important; font-weight: bold; border-left: none; }
 
-  <!-- Categories Showcase: Randomized selection from top categories, 3 posts each -->
-  <br>
-  <h2 class="section-title">Top Categories</h2>
-  <div id="categories-container">
-    {% assign cat_build = "" | split: "" %}
-    {% for category in site.categories %}
-    {% capture cat_str %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{% endcapture %}
-    {% assign cat_build = cat_build | push: cat_str %}
-    {% endfor %}
-    {% assign sorted_cats = cat_build | sort | reverse %}
+      .mobile-toc { display: flex; overflow-x: auto; white-space: nowrap; gap: 10px; padding-bottom: 10px; margin-bottom: 25px; -webkit-overflow-scrolling: touch; border-bottom: 1px solid var(--border-color, #eaeaea); }
+      .mobile-toc-link { padding: 8px 16px; background: var(--card-bg, #f4f4f4); border: 1px solid var(--border-color, #eaeaea); border-radius: 20px; text-decoration: none; color: var(--text-color, #333); font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
+      .mobile-toc-link:hover, .mobile-toc-link.active { background: #007acc; color: #fff; border-color: #007acc; }
+      
+      @media (min-width: 1024px) {
+        .home-layout { flex-direction: row; }
+        .desktop-toc { display: block; }
+        .mobile-toc { display: none; }
+      }
+      
+      html { scroll-behavior: smooth; }
+    </style>
 
-    {% for item in sorted_cats limit:12 %}
-    {% assign parts = item | split: ":::" %}
-    {% assign cat_name = parts[1] %}
-    <div class="category-section-source" style="display: none; margin-bottom: 40px;" data-name="{{ cat_name }}">
-      <h3
-        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
-        <span>{{ cat_name }}</span>
-        <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}"
-          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all {{ cat_name
-          }} &rarr;</a>
-      </h3>
-      <div class="post-list" style="margin-top: 20px;">
-        {% assign cat_posts = site.categories[cat_name] | sort: 'date' | reverse %}
-        {% for post in cat_posts limit:10 %}
-        <div class="cat-post-item">
-          {% include post-card.html post=post %}
+    <!-- Main Content Area -->
+    <main class="home-main" style="flex-grow: 1; min-width: 0; width: 100%;">
+      
+      <!-- Mobile TOC -->
+      <nav class="mobile-toc">
+         <a href="#latest-posts" class="mobile-toc-link">Latest Posts</a>
+         <a href="#featured-posts" class="mobile-toc-link">Featured Posts</a>
+         <a href="#personal-posts" class="mobile-toc-link">Personal Posts</a>
+         <a href="#gallery-videos" class="mobile-toc-link">Latest Gallery Videos</a>
+         <a href="#gallery-images" class="mobile-toc-link">Latest Gallery Images</a>
+         <a href="#about-me" class="mobile-toc-link">About Me</a>
+      </nav>
+      
+      <!-- Latest Posts Section -->
+      <h2 class="section-title" id="latest-posts" style="scroll-margin-top: 80px;">Latest Posts</h2>
+      {% include category-tags.html %}
+      <div class="post-list" id="latest-posts-container">
+        {% for post in site.posts limit:6 %}
+        {% include post-card.html post=post %}
+        {% endfor %}
+      </div>
+      <a href="{{ '/posts' | relative_url }}" class="about-link">View all posts <svg width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg></a>
+
+      <!-- Featured Posts Section (Combines tags, categories, and random selection in visually distinct bubbles) -->
+      <br>
+      <h2 class="section-title" id="featured-posts" style="scroll-margin-top: 80px;">Featured Posts</h2>
+      
+      <div id="featured-posts-unified-container">
+        <div id="featured-tags-categories" style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- JavaScript will inject bubbles and sub-posts here -->
+        </div>
+      </div>
+
+      <!-- Hidden Data for Random Posts -->
+      <div style="display: none;">
+        <div id="hidden-random-posts">
+          {% for post in site.posts limit:100 %}
+          <div class="random-post-item" style="display: none;">
+            {% include post-card.html post=post %}
+          </div>
+          {% endfor %}
+        </div>
+
+        <div id="hidden-cats-tags">
+          {% assign cat_build = "" | split: "" %}
+          {% for category in site.categories %}
+          {% capture cat_str %}{{ category[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ category[0] }}{% endcapture %}
+          {% assign cat_build = cat_build | push: cat_str %}
+          {% endfor %}
+          {% assign sorted_cats = cat_build | sort | reverse %}
+
+          {% for item in sorted_cats limit:15 %}
+          {% assign parts = item | split: ":::" %}
+          {% assign cat_name = parts[1] %}
+          <div class="ct-source" data-type="category" data-name="{{ cat_name }}" data-url="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}">
+            {% assign cat_posts = site.categories[cat_name] | sort: 'date' | reverse %}
+            {% for post in cat_posts limit:10 %}
+            <div class="ct-post-item">{% include post-card.html post=post %}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+
+          {% assign tag_build = "" | split: "" %}
+          {% for tag in site.tags %}
+          {% capture tag_str %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
+          {% assign tag_build = tag_build | push: tag_str %}
+          {% endfor %}
+          {% assign sorted_tags = tag_build | sort | reverse %}
+
+          {% for item in sorted_tags limit:15 %}
+          {% assign parts = item | split: ":::" %}
+          {% assign tag_name = parts[1] %}
+          <div class="ct-source" data-type="tag" data-name="{{ tag_name }}" data-url="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}">
+            {% assign tag_posts = site.tags[tag_name] | sort: 'date' | reverse %}
+            {% for post in tag_posts limit:10 %}
+            <div class="ct-post-item">{% include post-card.html post=post %}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Personal Posts Section -->
+      <br>
+      <h2 class="section-title" id="personal-posts" style="scroll-margin-top: 80px;">Personal Posts</h2>
+      <div class="post-list" id="random-personal-container">
+        {% assign all_personal = site.personal | sort: 'date' | reverse %}
+        {% for personal in all_personal limit:60 %}
+        <div class="random-personal-item" style="display: none;">
+          {% include post-card.html post=personal %}
         </div>
         {% endfor %}
       </div>
-    </div>
-    {% endfor %}
-    <div style="text-align: right; margin-top: -10px;">
-      <a href="/categories/" class="about-link" style="font-size: 1rem;">Browse All Categories &rarr;</a>
-    </div>
-  </div>
+      <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts <svg width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg></a>
 
-  <!-- Tags Showcase: Randomized selection from top tags, 3 posts each -->
-  <br>
-  <h2 class="section-title">Top Tags</h2>
-  <div id="tags-container">
-    {% assign tag_build = "" | split: "" %}
-    {% for tag in site.tags %}
-    {% capture tag_str %}{{ tag[1].size | prepend: '000000' | slice: -6, 6 }}:::{{ tag[0] }}{% endcapture %}
-    {% assign tag_build = tag_build | push: tag_str %}
-    {% endfor %}
-    {% assign sorted_tags = tag_build | sort | reverse %}
-
-    {% for item in sorted_tags limit:12 %}
-    {% assign parts = item | split: ":::" %}
-    {% assign tag_name = parts[1] %}
-    <div class="tag-section-source" style="display: none; margin-bottom: 40px;" data-name="{{ tag_name }}">
-      <h3
-        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 8px;">
-        <span>{{ tag_name }}</span>
-        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}"
-          style="font-size: 0.95rem; font-weight: normal; color: #007acc; text-decoration: none;">View all {{ tag_name
-          }} &rarr;</a>
-      </h3>
-      <div class="post-list" style="margin-top: 20px;">
-        {% assign tag_posts = site.tags[tag_name] | sort: 'date' | reverse %}
-        {% for post in tag_posts limit:10 %}
-        <div class="tag-post-item">
-          {% include post-card.html post=post %}
-        </div>
+      <!-- Gallery Videos Section -->
+      <br>
+      <h2 class="section-title" id="gallery-videos" style="scroll-margin-top: 80px;">Latest Gallery Videos</h2>
+      <div class="home-gallery-wrapper"
+        style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
+        {% assign recent_videos = site.gallery | where_exp: "item", "item.type == 'video'" | sort: 'date' | reverse %}
+        {% for item in recent_videos limit:8 %}
+        <a href="{{ '/gallery' | relative_url }}?item={{ item.title | slugify }}" class="gallery-thumbnail-card"
+          style="display: inline-block; margin-right: 15px; width: 300px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
+          <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
+            <img
+              src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
+              alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+          </div>
+          <div style="padding: 15px;">
+            <h4
+              style="margin: 0; font-family: var(--font-family, inherit); font-weight: 600; font-size: 1rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">
+              {{ item.title }}</h4>
+            <span style="display:inline-block; margin-top: 8px; font-size: 0.8rem; background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 10px;">{% if item.genre %}{{ item.genre | capitalize }}{% elsif item.category %}{{ item.category | capitalize }}{% elsif item.platform %}{{ item.platform | capitalize }}{% else %}Video{% endif %}</span>
+          </div>
+        </a>
         {% endfor %}
       </div>
-    </div>
-    {% endfor %}
-    <div style="text-align: right; margin-top: -10px;">
-      <a href="/tags/" class="about-link" style="font-size: 1rem;">Browse All Tags &rarr;</a>
-    </div>
-  </div>
-
-  <!-- Personal Posts Section (Recent + Random Older Mix) -->
-  <br>
-  <h2 class="section-title">Personal Posts</h2>
-  <div class="post-list" id="random-personal-container">
-    {% assign all_personal = site.personal | sort: 'date' | reverse %}
-    {% for personal in all_personal limit:60 %}
-    <div class="random-personal-item" style="display: none;">
-      {% include post-card.html post=personal %}
-    </div>
-    {% endfor %}
-  </div>
-  <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts <svg width="16" height="16"
-      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-      stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg></a>
-
-  <!-- Gallery Horizontal Scroll Section -->
-  <br>
-  <h2 class="section-title">Latest from the Gallery</h2>
-  <div class="home-gallery-wrapper"
-    style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
-    {% assign recent_gallery = site.gallery | sort: 'date' | reverse %}
-    {% for item in recent_gallery limit:8 %}
-    <a href="{{ '/gallery' | relative_url }}?item={{ item.title | slugify }}" class="gallery-thumbnail-card"
-      style="display: inline-block; margin-right: 15px; width: 220px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
-      <!-- Thumbnail -->
-      <div style="width: 100%; height: 140px; background-color: #000; overflow: hidden;">
-        <img
-          src="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.type == 'video' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.type == 'video' and item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% elsif item.image %}{{ item.image }}{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
-          alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+      
+      <!-- Gallery Images Section -->
+      <br>
+      <h2 class="section-title" id="gallery-images" style="scroll-margin-top: 80px;">Latest Gallery Images</h2>
+      <div class="home-gallery-wrapper"
+        style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
+        {% assign recent_images = site.gallery | where_exp: "item", "item.type != 'video'" | sort: 'date' | reverse %}
+        {% for item in recent_images limit:8 %}
+        <a href="{{ '/gallery' | relative_url }}?item={{ item.title | slugify }}" class="gallery-thumbnail-card"
+          style="display: inline-block; margin-right: 15px; width: 300px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
+          <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
+            <img
+              src="{% if item.image %}{{ item.image }}{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
+              alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+          </div>
+          <div style="padding: 15px;">
+            <h4
+              style="margin: 0; font-family: var(--font-family, inherit); font-weight: 600; font-size: 1rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">
+              {{ item.title }}</h4>
+            <span style="display:inline-block; margin-top: 8px; font-size: 0.8rem; background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 10px;">{% if item.category %}{{ item.category | capitalize }}{% else %}Image{% endif %}</span>
+          </div>
+        </a>
+        {% endfor %}
       </div>
-      <!-- Title -->
-      <div style="padding: 10px;">
-        <h4
-          style="margin: 0; font-size: 0.95rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
-          {{ item.title }}</h4>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-  <a href="{{ '/gallery' | relative_url }}" class="about-link" style="display: block; text-align: right;">Go to Gallery
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round"
-      style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg></a>
+      
+      <a href="{{ '/gallery' | relative_url }}" class="about-link" style="display: block; text-align: right;">Go to full Gallery
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"
+          style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg></a>
 
-  <br>
-  <div class="about-snippet"
-    style="background: var(--card-bg, #f9f9f9); border: 1px solid var(--card-border, #eaeaea); padding: 30px; border-radius: 12px; margin-bottom: 40px; text-align: center;">
-    <h2 class="section-title" style="border-bottom: none; margin-bottom: 10px; text-align: center;">About Me</h2>
-    <p style="font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto; color: var(--text-color, #555);">
-      I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI
-      applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world
-      impact. Currently, I am expanding my expertise in Deep Learning and building on AWS.
-    </p>
-    <br>
-    <a href="/about/" class="btn"
-      style="display: inline-block; padding: 10px 20px; border-radius: 30px; border: 1px solid var(--text-color); color: var(--text-color); text-decoration: none; font-weight: bold;">Read
-      My Full Story</a>
+      <br>
+      <div id="about-me" class="about-snippet"
+        style="background: var(--card-bg, #f9f9f9); border: 1px solid var(--card-border, #eaeaea); padding: 30px; border-radius: 12px; margin-bottom: 40px; text-align: center; scroll-margin-top: 80px;">
+        <h2 class="section-title" style="border-bottom: none; margin-bottom: 10px; text-align: center;">About Me</h2>
+        <p style="font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto; color: var(--text-color, #555);">
+          I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI
+          applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world
+          impact. Currently, I am expanding my expertise in Deep Learning and building on AWS.
+        </p>
+        <br>
+        <a href="/about/" class="btn"
+          style="display: inline-block; padding: 10px 20px; border-radius: 30px; border: 1px solid var(--text-color, #333); color: var(--text-color, #333); text-decoration: none; font-weight: bold;">Read
+          My Full Story</a>
+      </div>
+      
+    </main>
   </div>
 
   <script>
     (function () {
       function shuffle(arr) {
-        for (let i = arr.length - 1; i > 0; i--) {
+        let array = [...arr];
+        for (let i = array.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
-          [arr[i], arr[j]] = [arr[j], arr[i]];
+          [array[i], array[j]] = [array[j], array[i]];
         }
-        return arr;
+        return array;
       }
 
       function getPostUrl(el) {
@@ -189,80 +252,79 @@ layout: default
       document.addEventListener("DOMContentLoaded", function () {
         const seenUrls = new Set();
 
-        // 1. Initial seen URLs from Latest Posts (Always visible)
-        document.querySelectorAll('#latest-posts .post-link').forEach(a => {
+        // 1. Mark URLs in Latest Posts as seen
+        document.querySelectorAll('#latest-posts-container .post-link').forEach(a => {
           seenUrls.add(a.getAttribute('href'));
         });
 
-        // 2. Process Selected Posts
-        const randomPosts = shuffle(Array.from(document.querySelectorAll('.random-post-item')));
-        let selectedCount = 0;
-        randomPosts.forEach(item => {
-          const url = getPostUrl(item);
-          if (selectedCount < 6 && url && !seenUrls.has(url)) {
-            item.style.display = 'block';
-            seenUrls.add(url);
-            selectedCount++;
-          } else {
-            item.remove();
-          }
+        // 2 & 3. Process Categories and Tags to build Featured Bubbles
+        const ctSources = Array.from(document.querySelectorAll('.ct-source'));
+        const distinctNames = new Set();
+        const consolidatedGroups = [];
+        
+        shuffle(ctSources).forEach(source => {
+           let originalName = source.getAttribute('data-name');
+           let lowerName = originalName.toLowerCase();
+           
+           if (distinctNames.has(lowerName)) return; 
+           
+           const posts = Array.from(source.querySelectorAll('.ct-post-item'));
+           const validPosts = [];
+           posts.forEach(post => {
+              const url = getPostUrl(post);
+              if (url && !seenUrls.has(url) && validPosts.length < 3) {
+                 validPosts.push(post);
+                 seenUrls.add(url);
+              }
+           });
+           
+           if (validPosts.length > 0) {
+              distinctNames.add(lowerName);
+              consolidatedGroups.push({
+                 name: originalName,
+                 type: source.getAttribute('data-type'),
+                 url: source.getAttribute('data-url'),
+                 posts: validPosts
+              });
+           }
         });
 
-        // 3. Process Categories
-        const catSections = shuffle(Array.from(document.querySelectorAll('.category-section-source')));
-        let catsShown = 0;
-        catSections.forEach(section => {
-          if (catsShown >= 3) {
-            section.remove();
-            return;
-          }
-          const posts = Array.from(section.querySelectorAll('.cat-post-item'));
-          let postsInCat = 0;
-          posts.forEach(post => {
-            const url = getPostUrl(post);
-            if (postsInCat < 3 && url && !seenUrls.has(url)) {
-              seenUrls.add(url);
-              postsInCat++;
-            } else {
-              post.remove();
-            }
-          });
-          if (postsInCat > 0) {
-            section.style.display = 'block';
-            catsShown++;
-          } else {
-            section.remove();
-          }
+        const selectedGroups = consolidatedGroups.slice(0, 4);
+        const ctContainer = document.getElementById('featured-tags-categories');
+        
+        selectedGroups.forEach(group => {
+           let wrap = document.createElement('div');
+           wrap.className = 'featured-topic-container';
+           let safeId = 'featured-' + group.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+           wrap.id = safeId;
+           // Stylizing the bubble/container
+           wrap.style.cssText = "background: var(--card-bg, #fcfcfc); border-radius: 20px; padding: 25px; border: 1px solid var(--border-color, #eaeaea); box-shadow: 0 4px 10px rgba(0,0,0,0.03);";
+           
+           let headerHtml = `
+             <a href="${group.url}" style="text-decoration: none; color: inherit; display: inline-block; margin-bottom: 20px;">
+               <div style="display: inline-block; background: var(--border-color, #eaeaea); color: var(--text-color, #222); padding: 10px 22px; border-radius: 30px; font-weight: bold; font-size: 1.1rem; transition: background 0.2s;" onmouseover="this.style.background='#007acc'; this.style.color='#fff';" onmouseout="this.style.background='var(--border-color, #eaeaea)'; this.style.color='var(--text-color, #222)';">
+                  ${group.name}
+               </div>
+             </a>
+             <div class="post-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;"></div>
+           `;
+           wrap.innerHTML = headerHtml;
+           let postListEl = wrap.querySelector('.post-list');
+           group.posts.forEach(p => {
+              p.style.display = 'block';
+              postListEl.appendChild(p);
+           });
+           ctContainer.appendChild(wrap);
+           
+           let tocFeatured = document.getElementById('toc-dynamic-featured');
+           if (tocFeatured) {
+              let li = document.createElement('li');
+              li.innerHTML = `<a href="#${safeId}" class="toc-link" style="padding-left: 10px;">${group.name}</a>`;
+              tocFeatured.appendChild(li);
+           }
         });
 
-        // 4. Process Tags
-        const tagSections = shuffle(Array.from(document.querySelectorAll('.tag-section-source')));
-        let tagsShown = 0;
-        tagSections.forEach(section => {
-          if (tagsShown >= 3) {
-            section.remove();
-            return;
-          }
-          const posts = Array.from(section.querySelectorAll('.tag-post-item'));
-          let postsInTag = 0;
-          posts.forEach(post => {
-            const url = getPostUrl(post);
-            if (postsInTag < 3 && url && !seenUrls.has(url)) {
-              seenUrls.add(url);
-              postsInTag++;
-            } else {
-              post.remove();
-            }
-          });
-          if (postsInTag > 0) {
-            section.style.display = 'block';
-            tagsShown++;
-          } else {
-            section.remove();
-          }
-        });
-
-        // 5. Process Personal Posts
+        // 5. Personal Posts Mix
         const personalItems = Array.from(document.querySelectorAll('.random-personal-item'));
         if (personalItems.length > 0) {
           const recentPool = personalItems.slice(0, 10);
@@ -274,16 +336,10 @@ layout: default
 
           finalSelection.forEach(item => {
             const url = getPostUrl(item);
-            // We don't deduplicate personal posts against regular posts usually, 
-            // but let's check just in case.
             if (url && !seenUrls.has(url)) {
               item.style.display = 'block';
               seenUrls.add(url);
             } else if (url && seenUrls.has(url)) {
-              // If it was already shown in cats/tags, we might want to skip or show anyway.
-              // Let's allow personal posts to show even if they are in cats/tags for now, 
-              // OR deduplicate if they are actually the same URL.
-              // Most personal posts won't be in regular categories.
               item.style.display = 'block';
             }
           });
@@ -292,6 +348,37 @@ layout: default
             if (item.style.display !== 'block') item.remove();
           });
         }
+
+        // 6. Highlight active TOC link on scroll
+        const tocLinks = document.querySelectorAll('.desktop-toc .toc-link, .mobile-toc .mobile-toc-link');
+        const sections = [
+          document.getElementById('latest-posts'),
+          document.getElementById('featured-posts'),
+          document.getElementById('personal-posts'),
+          document.getElementById('gallery-videos'),
+          document.getElementById('gallery-images'),
+          document.getElementById('about-me'),
+          ...document.querySelectorAll('.featured-topic-container')
+        ];
+
+        const observerOptions = { root: null, rootMargin: '-20% 0px -60% 0px', threshold: 0 };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const activeLinks = document.querySelectorAll('.desktop-toc .toc-link, .mobile-toc .mobile-toc-link');
+              activeLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + entry.target.id) {
+                  link.classList.add('active');
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach(sec => {
+          if (sec) observer.observe(sec);
+        });
       });
     })();
   </script>
