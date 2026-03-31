@@ -27,11 +27,14 @@ module Jekyll
             
             # Save the expanded URL seamlessly right back into the memory for Jekyll to compile
             doc.data[field] = final_url
-            puts "[TikTok Expander Plugin] Successfully expanded #{url} -> #{final_url}"
           rescue => e
             puts "[TikTok Expander Plugin] Failed to expand #{url}: #{e.message}"
           end
         end
+      end
+      unless $tiktok_plugin_printed
+        puts "[TikTok Expander Plugin] Successfully checked/expanded URLs"
+        $tiktok_plugin_printed = true
       end
     end
   end
