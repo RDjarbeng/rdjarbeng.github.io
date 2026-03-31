@@ -66,13 +66,13 @@ The sudden shift in CapCut’s pricing model highlights the inherent risks of re
 
 Open-source projects like OpenCut empower users by offering absolute transparency, community-driven development, and freedom from unexpected software rent. By supporting OpenCut, you’re not just getting a free video editor—you’re contributing to a movement for fair, accessible creative tools that actually respect their users.
 
-## Join the Open-Source Revolution
+## Conclusion
 
-OpenCut stands out by striving to combine CapCut’s beloved ease-of-use with the freedom of open-source software. With no watermarks, no subscriptions, and a firm commitment to local processing, it’s a massive breath of fresh air for struggling creators.
+As someone who relies on easy-to-use video editors, I'm thrilled to see a community-driven project stepping up to challenge restrictive freemium models. OpenCut stands out by striving to combine the familiar timeline interface we all loved with the absolute freedom of open-source software. With no watermarks, no subscriptions, and a firm commitment to local processing, it’s a massive breath of fresh air. 
 
-Want to help shape the future of video editing? OpenCut welcomes external contributions! Fork the repository, dive into the code, or simply use the tool to show your support. 
+While I'm not a contributor to the project, I support its mission to empower creators. If you want to check out the underlying code or support the developers building it, you can browse their [GitHub repository](https://github.com/OpenCut-app/OpenCut). 
 
-Let’s move beyond freemium traps and embrace tools that prioritize creators. Stop renting your workflow and start owning it today!
+I tweeted about this:
 
 <center>
 <blockquote class="twitter-tweet">
