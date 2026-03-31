@@ -44,6 +44,12 @@ He gets to work trying to get my hair as close to the image as he can. In the sa
 
 He doesn't have a beard himself but gives a good beard trimming though. Smiles are back 🙂. 
 
+For those looking for a visual experience, here's a timelapse video of one of my haircuts with Danny.
+
+<center>
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/NdC5q4fSS9M" title="Haircut in Kigali with Danny the barber" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 20px; margin-bottom: 20px;"></iframe>
+</center> 
+
 ## Conclusion
 
 **Key takeaways:**
