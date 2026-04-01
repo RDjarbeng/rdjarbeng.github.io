@@ -17,19 +17,27 @@ permalink: /youtube/
             style="flex: 1; min-width: 250px; background: #f0f4f8; padding: 25px; border-radius: 12px; height: fit-content;">
             <h3
                 style="margin-top: 0; margin-bottom: 20px; font-size: 1.2rem; border-bottom: 2px solid #d9e2ec; padding-bottom: 10px;">
-                Categories</h3>
+                Genres</h3>
             <ul id="yt-category-list"
                 style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
                 <li><button class="yt-cat-btn active" data-filter="all">All Videos</button></li>
                 <li><button class="yt-cat-btn" data-filter="playlist" style="font-weight: bold;">📺 Playlists</button>
                 </li>
+                <li><button class="yt-cat-btn" data-filter="film-animation">Film & Animation</button></li>
                 <li><button class="yt-cat-btn" data-filter="music">Music</button></li>
+                <li><button class="yt-cat-btn" data-filter="gaming">Gaming</button></li>
+                <li><button class="yt-cat-btn" data-filter="education">Education</button></li>
                 <li><button class="yt-cat-btn" data-filter="entertainment">Entertainment</button></li>
-                <li><button class="yt-cat-btn" data-filter="travel-events">Travel & Events</button></li>
                 <li><button class="yt-cat-btn" data-filter="people-blogs">People & Blogs</button></li>
-                <li><button class="yt-cat-btn" data-filter="african-music">African Music</button></li>
-                <li><button class="yt-cat-btn" data-filter="nigerian-movies">Nigerian Movies</button></li>
-                <li><button class="yt-cat-btn" data-filter="shorts">Shorts</button></li>
+                <li><button class="yt-cat-btn" data-filter="science-technology">Science & Technology</button></li>
+                <li><button class="yt-cat-btn" data-filter="travel-events">Travel & Events</button></li>
+                <li><button class="yt-cat-btn" data-filter="comedy">Comedy</button></li>
+                <li><button class="yt-cat-btn" data-filter="sports">Sports</button></li>
+                <li><button class="yt-cat-btn" data-filter="behind-the-scenes-(bts)">Behind the Scenes</button></li>
+                <li><button class="yt-cat-btn" data-filter="reviews-reactions">Reviews & Reactions</button></li>
+                <li><button class="yt-cat-btn" data-filter="memes-highlights">Memes & Highlights</button></li>
+                <li><button class="yt-cat-btn" data-filter="interviews">Interviews</button></li>
+                <li><button class="yt-cat-btn" data-filter="tutorials">Tutorials</button></li>
                 <li><button class="yt-cat-btn" data-filter="other">Other</button></li>
             </ul>
 
@@ -55,8 +63,8 @@ permalink: /youtube/
                 style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
                 {% assign yt_videos = site.gallery | where: "platform", "youtube" | sort: "date" | reverse %}
                 {% for item in yt_videos %}
-                {% assign item_cat = item.category | default: "Other" | downcase | replace: " & ", "-" | replace: " ",
-                "-" %}
+                {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ",
+                "-" | replace: " ", "-" %}
                 {% assign has_playlist = false %}
                 {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
 
@@ -72,15 +80,16 @@ permalink: /youtube/
                 {% assign yt_vid_id = item.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
                 {% elsif item.youtube_id contains "shorts/" %}
                 {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
-                {% assign item_cat = "shorts" %}
+                {% assign item_gen = "shorts" %}
                 {% else %}
                 {% assign yt_vid_id = item.youtube_id %}
                 {% endif %}
 
-                <div class="yt-card" data-category="{{ item_cat }} {% if has_playlist %}playlist{% endif %}"
+                <div class="yt-card" data-genre="{{ item_gen }} {% if has_playlist %}playlist{% endif %}"
                     style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eaeaea; display: flex; flex-direction: column; transition: transform 0.2s;">
                     <div class="video-thumbnail" data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}"
                         style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative;">
+                        <!-- Inline Play Button Over Thumbnail -->
                         <a href="javascript:void(0);" class="inline-play-btn"
                             style="display: block; width: 100%; height: 100%;">
                             <img src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{{ yt_vid_id }}/hqdefault.jpg{% endif %}"
@@ -102,14 +111,20 @@ permalink: /youtube/
                             {% endif %}
                         </a>
                     </div>
-                    <div class="video-info" style="padding: 15px; flex-grow: 1;">
-                        <h3 style="font-size: 1.05rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
-                            {{ item.title | escape }}
-                        </h3>
-                        <div style="font-size: 0.85rem; color: #627d98;">{{ item.date | date: "%B %-d, %Y" }}</div>
-                        <div style="font-size: 0.75rem; color: #ff0000; margin-top: 5px; text-transform: uppercase;">{{
-                            item.category | default: "Other" }}</div>
-                    </div>
+                    <!-- Details Link (Navigates to item view) -->
+                    <a href="{{ item.url | relative_url }}"
+                        style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
+                        <div class="video-info" style="padding: 15px; height: 100%;">
+                            <h3 style="font-size: 1.05rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
+                                {{ item.title | escape }}
+                            </h3>
+                            <div style="font-size: 0.85rem; color: #627d98;">{{ item.date | date: "%B %-d, %Y" }}</div>
+                            <div
+                                style="font-size: 0.75rem; color: #ff0000; margin-top: 5px; text-transform: uppercase;">
+                                {{
+                                item.genre | default: item.category | default: "Other" }}</div>
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
@@ -149,8 +164,8 @@ permalink: /youtube/
 
         function applyFilter(val) {
             allCards.forEach(card => {
-                const cats = card.getAttribute('data-category').toLowerCase();
-                if (val === 'all' || cats.includes(val)) {
+                const genres = card.getAttribute('data-genre').toLowerCase();
+                if (val === 'all' || genres.includes(val)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
