@@ -1,5 +1,5 @@
 ---
-title: Trip to Uganda- Kampala & silver springs
+title: 'Kigali to Kampala: 11 Hours, 3 Currencies, and One Missing Passenger'
 date: 2025-05-29T17:22:00
 published: true
 tags:
@@ -24,7 +24,7 @@ image_alt: Cover image for Trip to Uganda- Kampala & silver springs
 layout: personal
 ---
 
-After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor. By a stroke of luck there was a Toastmasters conference in Kampala, so tagging along with a friend Toastmaster we took a l_ittle_ road trip to the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists; from a passenger left behind at the border, to the thrill of exchanging Rwandan Francs **(RWF)** for what felt like a fortune in Ugandan Shillings (UGX). 
+After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor. By a stroke of luck there was a Toastmasters conference in Kampala, so tagging along with a friend Toastmaster we took a l_ittle_ road trip to the Ugandan capital. What followed was an 11-hour bus adventure filled with unexpected twists; from a passenger left behind at the border, to the thrill of exchanging Rwandan Francs **(RWF)** for what felt like a fortune in Ugandan Shillings (UGX).
 
 Here’s **part one** of my journey to the East-African country of Uganda. This post may be longer than anticipated because of the many interesting moments so I have broken it into parts.
 
