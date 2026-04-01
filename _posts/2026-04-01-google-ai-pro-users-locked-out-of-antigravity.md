@@ -49,11 +49,15 @@ OpenAI codex
 
 Opensource tools include clinebot (include any other)
 
-References
+How long has this been going on about 3 months, see references
+
+### References
+
+Oh you know we brought receipts
 
 Thread on discuss.ai.google.dev/
 
-Oldest open issue I could find from January 25, 2026: https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686
+Oldest open issue I could find from January 25, 2026 639 replies with 26.5k views: https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686
 
 Recent thread showing issue is still active: https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8
 
