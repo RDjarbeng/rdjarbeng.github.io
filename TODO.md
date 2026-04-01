@@ -47,6 +47,8 @@ Tags and categories need to be added to personal posts, gallery images and video
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
 - [ ] **Design**: Create banners with my model templates.
+- [ ] Check if youtube/social media has live most followed accounts for each year month, write post about this
+- [ ] Add related gallery items/ meme packs, video series, eg: brother may I have some oats series, predictive history...
 
 ## Research & Questions
 - [ ] Are there any studies on how the air quality changes after a plane flies past?
@@ -196,3 +198,4 @@ Connor Price
 Bible animations (bible from Devil's perspective)
 Israel Obasola
 Gabrit
+Saviour Bee
