@@ -17,7 +17,6 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
 
 - Add a section for AI tools and AI projects
-- THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
@@ -28,6 +27,8 @@ Security issues mentioned in Github comments need to be address
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
 
+- THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
+- The loading indicator for the contact dynamic footer for light mode isn't showing
 ### Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
