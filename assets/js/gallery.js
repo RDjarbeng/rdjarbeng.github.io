@@ -185,6 +185,10 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         item.addEventListener('click', () => {
+            if (type === 'html' || dataItem.dataset.category.includes('memes')) {
+                window.location.href = dataItem.dataset.url;
+                return;
+            }
             const categoryId = getCategoryFromItem(dataItem);
             const categoryItems = allItems.filter(i => i.dataset.category.includes(categoryId));
             visibleItems = categoryItems;
@@ -297,6 +301,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         item.addEventListener('click', (e) => {
             e.preventDefault();
+            if (type === 'html' || dataItem.dataset.category.includes('memes')) {
+                window.location.href = dataItem.dataset.url;
+                return;
+            }
             currentLightboxIndex = visibleItems.indexOf(dataItem);
             openLightbox(currentLightboxIndex, true);
         });
