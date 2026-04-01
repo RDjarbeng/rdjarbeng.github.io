@@ -5,13 +5,43 @@ permalink: /videos/
 ---
 
 <div class="home-section" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-    <div style="text-align: center; margin-bottom: 50px;">
+    <div style="text-align: center; margin-bottom: 30px;">
         <h1 class="page-heading" style="font-size: 2.5rem; margin-bottom: 10px;">Video Gallery</h1>
         <p style="color: #627d98; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">A collection of embedded videos
             and curated clips.</p>
     </div>
 
+    <!-- Source Filter Bar -->
+    <div class="video-filters"
+        style="display: flex; gap: 10px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
+        <button class="vid-source-btn active" data-filter="all">All Sources</button>
+        <button class="vid-source-btn" data-filter="youtube" style="color: #ff0000;">YouTube</button>
+        <button class="vid-source-btn" data-filter="tiktok" style="color: #000;">TikTok</button>
+        <button class="vid-source-btn" data-filter="instagram" style="color: #E1306C;">Instagram</button>
+        <button class="vid-source-btn" data-filter="twitter" style="color: #1DA1F2;">Twitter / X</button>
+    </div>
+
     <style>
+        .vid-source-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid #d9e2ec;
+            cursor: pointer;
+            background: white;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .vid-source-btn:hover {
+            background: #f0f4f8;
+        }
+
+        .vid-source-btn.active {
+            background: #102a43;
+            color: white !important;
+            border-color: #102a43;
+        }
+
         .video-masonry {
             column-count: 3;
             column-gap: 25px;
@@ -94,7 +124,7 @@ permalink: /videos/
         <!-- Branded Fallback Placeholder -->
         {% assign fallback_image = "/assets/images/logo-small.png" %}
 
-        <div class="video-masonry-item">
+        <div class="video-masonry-item" data-platform="{{ item.platform }}">
             <div class="video-thumbnail inline-play-container" data-platform="{{ item.platform }}"
                 data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}" data-tk="{{ computed_tk_id }}"
                 data-ig="{{ computed_ig_id }}" data-tt="{{ item.youtube_id | default: item.link }}"
@@ -126,14 +156,17 @@ permalink: /videos/
                     </div>
                 </a>
             </div>
-            <div class="video-info" style="padding: 20px;">
-                <h3 style="font-size: 1.15rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
-                    {{ item.title | escape }}
-                </h3>
-                <div style="font-size: 0.85rem; color: #829ab1;">{{ item.date | date: "%B %-d, %Y" }}</div>
-                <div style="font-size: 0.75rem; color: #ff0000; margin-top: 5px; text-transform: uppercase;">{{
-                    item.category | default: "Other" }}</div>
-            </div>
+            <a href="{{ item.url | relative_url }}"
+                style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
+                <div class="video-info" style="padding: 20px; height: 100%;">
+                    <h3 style="font-size: 1.15rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
+                        {{ item.title | escape }}
+                    </h3>
+                    <div style="font-size: 0.85rem; color: #829ab1;">{{ item.date | date: "%B %-d, %Y" }}</div>
+                    <div style="font-size: 0.75rem; color: #ff0000; margin-top: 5px; text-transform: uppercase;">{{
+                        item.genre | default: item.category | default: "Other" }}</div>
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>
@@ -141,6 +174,27 @@ permalink: /videos/
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Source Filtering Logic
+        const filterBtns = document.querySelectorAll('.vid-source-btn');
+        const allCards = Array.from(document.querySelectorAll('.video-masonry-item'));
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const val = this.getAttribute('data-filter');
+                allCards.forEach(card => {
+                    const platform = card.getAttribute('data-platform').toLowerCase();
+                    if (val === 'all' || platform === val) {
+                        card.style.display = 'inline-block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
         const thumbnails = document.querySelectorAll('img.robust-thumbnail');
         thumbnails.forEach(img => {
             const platform = img.getAttribute('data-platform');
