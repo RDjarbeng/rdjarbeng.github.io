@@ -2,10 +2,23 @@
 
 This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](https://rdjarbeng.com) codebase.
 
+## Specifications
+- This website should scale globally
+- Blogs are rarely written, but often read
+- Some of the website is purely static files, the rest is a dynamic REST API
+- Caching must be implemented where possible
+- Any new users that subscribes should receive a welcome email- todo
+- Email newsletter - todo
+- Comments on blog posts - todo
+- Any photo uploaded to the blog should have a thumbnail generated- todo
+
 ## High Priority
 
 - Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
 - Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content)
+
+- Add a section for AI tools and AI projects
+- THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 
 - [ ] add skeleton loader for images
 - [ ] **Card images**: Card images have a top padding that leaves a gray space, shows the skeleton loader behind it
@@ -22,12 +35,14 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
-
-- [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature).
-
+- [ ] add skeleton loader for images
+- [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature). 270x200 might be good image size
+- [ ] **Card images**: Card images have a top padding that leaves a gray space
 - [ ] **Cards**: add category to cards
 - [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
+- [] Carousel: Try carousel design from apple site, book flipping carousel, story mode, carousel for categories with 3D animations
 - [ ] Add authors page listing all the authors
+- [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
 - [ ] Remove tiktok expander plugin if not necessary'
 Search needs to include gallery items, tags, categories
 Tags and categories need to be added to personal posts, gallery images and videos
@@ -49,6 +64,8 @@ Tags and categories need to be added to personal posts, gallery images and video
 - [ ] **Design**: Create banners with my model templates.
 - [ ] Check if youtube/social media has live most followed accounts for each year month, write post about this
 - [ ] Add related gallery items/ meme packs, video series, eg: brother may I have some oats series, predictive history...
+Add page for apps of interest, AI apps, image creators,video generators, I love pdf, ...
+- [ ] Comment from reddit I'd like to implement: "Then i switched things up and started automating all that research part, like it would handle the keyword stuff and competitor analysis automatically so i could just focus on making the actual content good, the weird part is it also optimized everything for those AI overview things that show up in google now and that's when my traffic actually started moving"
 
 ## Research & Questions
 - [ ] Are there any studies on how the air quality changes after a plane flies past?
@@ -188,6 +205,7 @@ HMack
 KaeStrings
 Lex Fridman
 Apnaj (check if this is safe)
+Josh2funny
 Ride Wif Me
 Sweet Adjeley
 Esther Dzifa

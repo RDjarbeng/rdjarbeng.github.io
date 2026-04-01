@@ -1,34 +1,70 @@
 ---
 title: Smith & Thell - Hotel Walls (Acoustic Version) [with Lyrics]
+published: true
+date: 2026-03-02T15:38:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/Rnj3ps7V7D4
 embed_code: ''
 thumbnail: ''
-caption: "\u25BA Lyrics\nI signed the papers\nFor a lifelong lease\nI rent the earth\
-  \ where I stand\nAnd the air I breathe\nThen you forget that deal you made with\
-  \ God\nWhile busy finding yourself being young, being dumb and in love\nIt's all\
-  \ too easy\nAnd you're easily bored\nNever once has it crossed your mind that life's\
-  \ too short\n\nAnd there's a third person walking behind us\nA tap on the back and\
-  \ it's there to remind us\nLife is a blink of an eye 'til you are no more.\n\nSo,\
-  \ I stand back, and I watch us fall\nAs we break everything inside these hotel walls\n\
-  Life's for rent and it called us out\nSo, I hand back the key as the door man bows\n\
-  \nThey greet you welcome\nWith roses and champagne\nAnd when you walk through the\
-  \ lobby\nThey all know your name\nBut all beautiful things\nCome with edges and\
-  \ thorns\nAnd the body you borrowed is starting to look kind of worn\n\nSo, I stand\
-  \ back, and I watch us fall\nAs we break everything inside these hotel walls\nLife's\
-  \ for rent and it called us out\nSo, I hand back the key as the door man bows\n\n\
-  We're just grains in the universe\nI let that comfort me when I'm anxious\nThis\
-  \ life is beautifully ugly at times \n\nWe're just grains in the universe\nI let\
-  \ that comfort me when I'm anxious\nThis life is beautifully ugly at times\n\nIt's\
-  \ beautifully ugly at times\nIt's beautifully ugly at times\nIt's beautifully ugly\
-  \ at times\nIt's beautifully ugly at times\n\nSo, I stand back, and I watch us fall\n\
-  As we break everything inside these hotel walls\nLife's for rent and it called us\
-  \ out\nSo, I hand back the key as the door man bows\n\nSo, I stand back, and I watch\
-  \ us fall\nAs we break everything inside these hotel walls\nLife's for rent and\
-  \ it called us out\nSo, I hand back the key as the door man bows"
 type: video
-category: videos
 genre: Music
-date: 2026-03-02 15:38:46
-published: true
+category: videos
 ---
+
+Acoustic version of Music video for Smith & Thell - Hotel Walls played on Guitar. That melody before the chorus '🎵 So I stand back
+
+>   ► Lyrics
+>   I signed the papers
+>   For a lifelong lease
+>   I rent the earth where I stand
+>   And the air I breathe
+>   Then you forget that deal you made with God
+>   While busy finding yourself being young, being dumb and in love
+>   It's all too easy
+>   And you're easily bored
+>   Never once has it crossed your mind that life's too short
+
+>   And there's a third person walking behind us
+>   A tap on the back and it's there to remind us
+>   Life is a blink of an eye 'til you are no more.
+
+>   So, I stand back, and I watch us fall
+>   As we break everything inside these hotel walls
+>   Life's for rent and it called us out
+>   So, I hand back the key as the door man bows
+
+>   They greet you welcome
+>   With roses and champagne
+>   And when you walk through the lobby
+>   They all know your name
+>   But all beautiful things
+>   Come with edges and thorns
+>   And the body you borrowed is starting to look kind of worn
+
+>   So, I stand back, and I watch us fall
+>   As we break everything inside these hotel walls
+>   Life's for rent and it called us out
+>   So, I hand back the key as the door man bows
+
+>   We're just grains in the universe
+>   I let that comfort me when I'm anxious
+>   This life is beautifully ugly at times
+
+>   We're just grains in the universe
+>   I let that comfort me when I'm anxious
+>   This life is beautifully ugly at times
+
+>   It's beautifully ugly at times
+>   It's beautifully ugly at times
+>   It's beautifully ugly at times
+>   It's beautifully ugly at times
+
+>   So, I stand back, and I watch us fall
+>   As we break everything inside these hotel walls
+>   Life's for rent and it called us out
+>   So, I hand back the key as the door man bows
+
+>   So, I stand back, and I watch us fall
+>   As we break everything inside these hotel walls
+>   Life's for rent and it called us out
+>   So, I hand back the key as the door man bows

@@ -1,5 +1,5 @@
 ---
-title: Just because I'm a software developer does not mean I know how to setu
+title: Just because I'm a software developer does not mean I know how to setup your printer- Will Smith Meme
 date: '2026-03-12T10:38:01+02:00'
 image: /assets/images/memes/just-because-i-m-a-software-de-20260312_103801.jpg
 type: external

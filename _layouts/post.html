@@ -45,7 +45,7 @@ layout: default
 
   <div class="post-with-toc">
     <div class="post-content">
-      {{ content }}
+      {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
       {% if page.card_items %}
       {% include card_list.html %}
       {% endif %}
@@ -73,7 +73,7 @@ layout: default
     </div>
   </div>
   {% endif %}
-  <div style="margin-top: 1rem; display: flex; align-items: center;">
+  <div style="display: flex; align-items: center;">
     <applause-button style="width: 58px; height: 58px;" color="#2ecc71" multiclap="true"
       api="https://applause.chabouis.fr" url="{{ page.url | absolute_url }}"></applause-button>
     <span id="clap-label" style="margin-left: 10px; font-weight: bold;"></span>

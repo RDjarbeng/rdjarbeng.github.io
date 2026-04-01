@@ -51,19 +51,6 @@ def extract_youtube_id(url):
     match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
     return match.group(1) if match else None
 
-def resolve_shortlink(url):
-    try:
-        # User-Agent is necessary because some platforms (like TikTok) might block default Python headers on HEAD requests
-        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
-        res = urllib.request.urlopen(req, timeout=10)
-        final_url = res.geturl()
-        # strip tracking query params
-        if '?' in final_url:
-            final_url = final_url.split('?')[0]
-        return final_url
-    except Exception:
-        return url
-
 def commit_files_to_github(files_dict, message):
     """Pushes multiple files to the GitHub repository in a single atomic commit"""
     import base64
@@ -113,13 +100,17 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     file_id = payload['file_id']
     caption = payload['caption']
 
-    clean_caption = caption.strip() if caption else "Untitled"
+    full_caption = payload['caption'].strip() if payload.get('caption') else "Untitled"
+    parts = full_caption.split('\n', 1)
+    title_text = parts[0].strip()
+    body_text = parts[1].strip() if len(parts) > 1 else ""
+
     timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-    safe_title = "".join([c if c.isalnum() else "-" for c in clean_caption[:30].lower()]).strip("-")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title_text[:120].lower()]).strip("-")
     if not safe_title:
         safe_title = "image"
         
-    filename = f"{safe_title}-{timestamp}"
+    filename = safe_title
     
     if target_type == "meme":
         media_rel_dir = "assets/images/memes"
@@ -167,34 +158,38 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         return
 
     # 3. Create Markdown Frontmatter
+    alt_text_fallback = title_text if title_text and title_text != "Untitled" else f"Image {safe_title}"
     if target_type == "meme":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text,
             "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "type": "external",
             "category": "memes"
         }
     elif target_type == "ai":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text,
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "labels": ai_model,
             "type": "external",
             "category": "ai-generations"
         }
     elif target_type == "gallery":
         frontmatter = {
-            "title": clean_caption[:70],
+            "title": title_text,
             "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
             "type": "external",
             "category": gallery_cat,
             "date": datetime.now(CAT).isoformat(timespec="seconds")
         }
 
     md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
-    if clean_caption and clean_caption != "Untitled":
-        md_content += f"\n{clean_caption}\n"
+    if full_caption and full_caption != "Untitled":
+        md_content += f"\n{full_caption}\n"
         
     md_path = f"{collection_rel_dir}/{filename}.md"
 
@@ -210,9 +205,58 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
 
     label_text = f" ({gallery_cat})" if target_type == 'gallery' else (f" ({ai_model})" if target_type == 'ai' else "")
     bot.edit_message_text(
-        f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}",
+        f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.",
         chat_id, message_id
     )
+
+def process_video_upload(chat_id, message_id, msg_id_key, genre):
+    if msg_id_key not in uploads:
+        bot.edit_message_text("❌ Session expired.", chat_id, message_id)
+        return
+    payload = uploads.pop(msg_id_key)
+    url = payload.get('url')
+    text = payload.get('text')
+    platform = payload.get('platform', 'unknown')
+
+    text_without_url = text.replace(url, '').strip()
+    if text_without_url:
+        parts = text_without_url.split('\n', 1)
+        title = parts[0].strip()
+        caption = parts[1].strip() if len(parts) > 1 else ""
+    else:
+        title = "Video Update"
+        caption = ""
+    
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
+    if not safe_title:
+        safe_title = f"video-{timestamp}"
+    filename = safe_title
+    
+    frontmatter = {
+        "title": title,
+        "platform": platform,
+        "youtube_id": url,
+        "embed_code": "",
+        "thumbnail": "",
+        "type": "video",
+        "genre": genre,
+        "category": "videos",
+        "date": datetime.now(CAT).isoformat(timespec="seconds"),
+        "published": True
+    }
+    
+    md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    if caption:
+        md_content += f"\n{caption}\n"
+        
+    md_path = f"_gallery/videos/{filename}.md"
+    
+    try:
+        commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
+        bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n🎭 Genre: {genre}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", chat_id, message_id)
 
 @bot.message_handler(content_types=['document', 'photo'])
 def handle_media(message):
@@ -323,6 +367,12 @@ def handle_callback(call):
         process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "gallery", gallery_cat=gallery_cat)
         return
 
+    elif data.startswith("vidgenre_"):
+        bot.edit_message_text("⏳ Processing Video and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        genre = data.split("_", 1)[1]
+        process_video_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
+        return
+
 @bot.message_handler(func=lambda message: True)
 def handle_text(message):
     if not is_authorized(message.from_user.id):
@@ -347,55 +397,24 @@ def handle_text(message):
                 platform = "instagram"
             
             if platform != "unknown":
-                status_msg = bot.reply_to(message, f"⏳ Connecting to GitHub API to register {platform.capitalize()} Video...")
+                keyboard = [
+                    [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
+                    [InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming"), InlineKeyboardButton("Education", callback_data="vidgenre_Education")],
+                    [InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment"), InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology")],
+                    [InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
+                    [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
+                    [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+                ]
+                reply_markup = InlineKeyboardMarkup(keyboard)
+                status_msg = bot.reply_to(message, f"Select a genre for the {platform.capitalize()} Video:", reply_markup=reply_markup)
                 
-                text_without_url = text.replace(url, '').strip()
-                if text_without_url:
-                    parts = text_without_url.split('\n', 1)
-                    title = parts[0].strip()
-                    caption = parts[1].strip() if len(parts) > 1 else ""
-                else:
-                    title = "Video Update"
-                    caption = ""
-                
-                timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
-                safe_title = "".join([c if c.isalnum() else "-" for c in title[:30].lower()]).strip("-")
-                if not safe_title:
-                    safe_title = f"video-{timestamp}"
-                filename = f"{safe_title}-{timestamp}"
-                
-                frontmatter = {
-                    "title": title[:70],
-                    "platform": platform,
-                    "youtube_id": url, # Using URL here as well to match schema if requested by OP
-                    "embed_code": "",
-                    "thumbnail": "",
-                    "type": "video",
-                    "category": "videos",
-                    "date": datetime.now(CAT).isoformat(timespec="seconds"),
-                    "published": True
+                uploads[str(status_msg.message_id)] = {
+                    'url': url,
+                    'text': text,
+                    'platform': platform,
+                    'state': 'video_genre'
                 }
-                
-                if platform == "youtube":
-                    yt_id = extract_youtube_id(url)
-                    if yt_id:
-                        frontmatter["youtube_id"] = url # Preserving the current custom behaviour
-                elif platform == "tiktok" and "vt.tiktok.com" in url or "vm.tiktok.com" in url:
-                    status_msg = bot.edit_message_text(f"⏳ Resolving TikTok exact video ID...", message.chat.id, status_msg.message_id)
-                    long_url = resolve_shortlink(url)
-                    frontmatter["youtube_id"] = long_url
-                    
-                md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
-                if caption:
-                    md_content += f"\n{caption}\n"
-                    
-                md_path = f"_gallery/videos/{filename}.md"
-                
-                try:
-                    commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
-                    bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", message.chat.id, status_msg.message_id)
-                except Exception as e:
-                    bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", message.chat.id, status_msg.message_id)
+                return # Only handle the first supported URL
         return
 
     bot.reply_to(message, "I didn't recognize any commands or mapped Video links.")

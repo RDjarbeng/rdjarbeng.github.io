@@ -7,6 +7,7 @@ youtube_id: https://www.youtube.com/watch?v=8-BsuzhV2t8
 embed_code: ''
 thumbnail: ''
 type: video
+genre: Food & Recipes
 category: videos
 genre: Food & Recipes
 ---
@@ -20,5 +21,3 @@ From the savory spice blend to the slow-simmered finish, this is how you make an
 I’m embedding this fantastic tutorial from Sweet Adjeley because her technique for groundnut soup is spot on. I love her tip about scraping the sides of the pot to keep all that concentrated flavor in the soup
 
 **Pro-tip:** It pairs excellently with **fufu, banku, rice, or even boiled yams**
-
-**Video: **[HOW TO MAKE AUTHENTIC GHANA PEANUT BUTTER SOUP | CHICKEN PEANUT BUTTER SOUP | GROUNDNUT SOUP RECIPE Sweet Adjeley on Youtube](https://www.youtube.com/watch?v=8-BsuzhV2t8)

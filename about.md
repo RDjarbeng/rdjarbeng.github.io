@@ -12,7 +12,7 @@ custom_css_class: about-page
 </div>
 <div class="about-section">
 <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
-I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. Currently, I am expanding my expertise in Deep Learning and building on AWS. Occasionally I write technical posts and personal reflections on this Blog.
+Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. Currently, I am expanding my expertise in Deep Learning and building on AWS. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
 
@@ -37,7 +37,7 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
 <div class="about-section">
   <h2 class="about-section-title">Professional Summary</h2>
    <div class="experience-card" style="border-left: 4px solid #007acc;">
-    <ul style="margin-bottom: 0; padding-left: 20px; color: #444; line-height: 1.8;">
+    <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
         <li>Specialized in <strong>Web Development</strong>, <strong>Machine Learning</strong>, and <strong>IoT devices</strong> (Raspberry Pi, Arduino).</li>
         <li>Experienced in developing <strong>Progressive Web Applications (PWAs)</strong> and scalable data-driven solutions.</li>
         <li>Skilled in cloud technologies, particularly <strong>Google Cloud Platform (Vertex AI, BigQuery)</strong> and AWS.</li>
@@ -46,7 +46,7 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
     </ul>
    </div>
 
-   <h3 style="text-align:center; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px; color: #333;">Download Resumes</h3>
+   <h3 style="text-align:center; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Download Resumes</h3>
    <div class="resume-section">
       <a href="/assets/documents/Richard_resume_SE_ats.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
@@ -108,7 +108,7 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
 <div class="about-section">
   <h2 class="about-section-title">Projects</h2>
   <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
-  <p style="text-align: center; font-size: 0.9em; color: #777; margin-bottom: 20px;"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
+  <p style="text-align: center; font-size: 0.9em; margin-bottom: 20px;"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
 
   <div class="filter-container">
       <button class="filter-btn active" data-filter="all">All</button>

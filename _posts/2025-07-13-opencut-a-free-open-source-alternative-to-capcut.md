@@ -1,53 +1,86 @@
 ---
 date: 2025-07-13T10:07:00
 author: Richard
-categories:
-  - open-source
+category: Technology
 tags:
   - Capcut
   - open-source
   - Video editing
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png
+image_alt: 'Cover image for OpenCut: A Free, Open-Source Alternative to CapCut'
 layout: post
-image_alt: "Cover image for OpenCut: A Free, Open-Source Alternative to CapCut"
+categories:
+  - Open-source
+card_items:
+  - name: DaVinci Resolve
+    description: A professional-grade, industry-standard editor featuring a massive free version. It includes world-class color grading, visual effects, and multi-track audio editing.
+    url: https://www.blackmagicdesign.com/products/davinciresolve
+    link_text: Visit DaVinci Resolve
+    badge_1: Professional
+  - name: OpenShot
+    description: An award-winning, open-source video editor available for Windows, macOS, and Linux. It offers an incredibly user-friendly interface and multi-track editing.
+    url: https://www.openshot.org/
+    link_text: Visit OpenShot
+    badge_1: Easy to Use
+  - name: Kdenlive
+    description: A lightweight, open-source option that supports complex multi-track editing across Linux, Windows, and macOS. It strikes a fantastic balance between flexibility and simplicity.
+    url: https://kdenlive.org/
+    link_text: Visit Kdenlive
+    badge_1: Lightweight
+  - name: Shotcut
+    description: A free, open-source editor with a clean, dockable interface and support for a massive range of codecs. It’s highly cross-platform and extremely reliable.
+    url: https://shotcut.org/
+    link_text: Visit Shotcut
+    badge_1: Cross-platform
 ---
-If you're a video editor frustrated with CapCut's recent changes, you're not alone. CapCut, once marketed as a free app, has shifted to a freemium model, adding watermarks to exported videos for free users on mobile and desktop and locking previously free features behind a paywall. Many users feel betrayed by this bait-and-switch tactic, as CapCut lured them in with free features only to reveal a more restrictive, premium-focused side. This growing discontent has sparked interest in open-source alternatives, and one project is stepping up to fill the gap: **OpenCut**.
+
+> **Update (March 2026):** The OpenCut project has officially entered beta! You can now try the beta version for yourself directly in the browser.
+
+If you're a video editor frustrated with CapCut's recent changes, you're not alone. CapCut—once heavily marketed as the ultimate free app—has aggressively shifted to a restrictive freemium model. They've stealthily added watermarks to exported videos for free users and locked previously essential free features behind new paywalls. 
+
+Many creators feel understandably betrayed by this bait-and-switch tactic. This growing discontent has sparked massive interest in open-source editing alternatives, and one highly promising project is stepping up to fill the gap: **OpenCut**.
+
+![OpenCut Beta Release Homepage](/assets/images/open_cut_homepage_showing_beta_release.png "OpenCut beta release")
 
 ## Meet OpenCut: The CapCut Alternative You’ve Been Waiting For
 
-[OpenCut](https://github.com/OpenCut-app/OpenCut) is an open-source video editing tool designed to deliver a powerful, user-friendly experience without the frustrations of CapCut’s new restrictions. Built to run in your browser, OpenCut offers:
+[OpenCut](https://github.com/OpenCut-app/OpenCut) is a fully open-source video editing tool designed to deliver a powerful, user-friendly experience without the frustrations of modern freemium apps. Built entirely to run inside your web browser, OpenCut offers:
 
-- **Privacy First**: All video processing happens locally on your device, ensuring your content stays private.
-- **No Watermarks**: Export your videos without any branding or restrictions.
-- **Free Forever**: Unlike CapCut, OpenCut is committed to providing core editing features without paywalls.
-- **Timeline-Based Editing**: Enjoy multi-track support and real-time previews, making editing intuitive and seamless.
+- **Privacy First**: All video processing happens *locally* on your device. Your media is never uploaded to external servers, ensuring your content stays strictly private.
+- **No Watermarks**: Export your final videos without any forced branding or restrictive watermarks.
+- **Free Forever**: Unlike CapCut, OpenCut's core editing features will never be locked behind a subscription paywall.
+- **Familiar Timeline Editing**: Enjoy multi-track support, fluid real-time previews, and an interface that feels instantly familiar to CapCut veterans.
 
-Currently in its early stages, OpenCut is rapidly developing and already supports essential features like timeline editing, multi-track functionality, and watermark-free exports. The project is hosted on GitHub, where a vibrant community is contributing to its growth. You can check out the repository here: [github.com/OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut).[](https://github.com/OpenCut-app/OpenCut)[](https://hellogithub.com/en/repository/OpenCut-app/OpenCut)
+Currently in its early beta stages, OpenCut is rapidly developing. It already supports essential features like basic timeline manipulation, multi-track functionality, and clean exports. The project is hosted on GitHub, where a vibrant community is actively contributing to its stable release.
 
-## Join the Waitlist
+## How to Try OpenCut
 
-Excited to try OpenCut? You can sign up for the waitlist at [opencut.app](https://opencut.app/) to stay updated on its release and get early access. There was a minor hiccup with the waitlist sign-up process, but no worries—a fix has already been reported on GitHub ([Issue #228](https://github.com/OpenCut-app/OpenCut/issues/228)), and it should be resolved by the time you read this. Join the waitlist to support this promising open-source project and be among the first to experience a truly free video editing tool.[](https://github.com/OpenCut-app/OpenCut/security)
+Excited to give it a spin? You can sign up for updates and jump straight into the beta at [opencut.app](https://opencut.app/). 
 
-## Why Open-Source Matters
+If you encounter any issues during these initial beta phases, the developer community is extremely responsive. You can check out known issues or report bugs directly on their [GitHub repository](https://github.com/OpenCut-app/OpenCut).
 
-The shift in CapCut’s model highlights the risks of relying on proprietary software. Open-source projects like OpenCut empower users by offering transparency, community-driven development, and freedom from unexpected paywalls. By supporting OpenCut, you’re not just getting a free editor—you’re contributing to a movement for fair, accessible creative tools.[](https://hoanghamobile.com/tin-tuc/opencut/)
+## Why Open-Source Software Matters for Creators
 
-## Other Video Editing Alternatives
+The sudden shift in CapCut’s pricing model highlights the inherent risks of relying heavily on proprietary, closed-source software. The rug can be pulled out from under your entire workflow overnight. 
 
-If you’re looking for other options to replace CapCut, here are a few video editors worth exploring:
+Open-source projects like OpenCut empower users by offering absolute transparency, community-driven development, and freedom from unexpected software rent. By supporting OpenCut, you’re not just getting a free video editor—you’re contributing to a movement for fair, accessible creative tools that actually respect their users.
 
-- **[OpenShot](https://www.openshot.org/)**: An award-winning, open-source video editor available for Windows, macOS, and Linux. OpenShot offers a user-friendly interface, multi-track editing, and robust animation tools, making it a great choice for beginners and pros alike. [GitHub](https://github.com/OpenShot/openshot-qt).[](https://github.com/OpenShot/openshot-qt)
-- **[DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)**: A professional-grade editor with a free version that includes powerful features like color grading, effects, and multi-track editing. While it has a steeper learning curve, it’s ideal for advanced users.
-- **[Kdenlive](https://kdenlive.org/)**: Another open-source option, Kdenlive is lightweight, supports multi-track editing, and works well on Linux, Windows, and macOS. It’s perfect for users who want flexibility without complexity.
-- **[Shotcut](https://shotcut.org/)**: A free, open-source editor with a clean interface and support for a wide range of formats. It’s cross-platform and great for users who need a straightforward yet powerful tool.
+## Conclusion
 
-## Why Switch to OpenCut?
+As someone who relies on easy-to-use video editors, I'm thrilled to see a community-driven project stepping up to challenge restrictive freemium models. OpenCut stands out by striving to combine the familiar timeline interface we all loved with the absolute freedom of open-source software. With no watermarks, no subscriptions, and a firm commitment to local processing, it’s a massive breath of fresh air. 
 
-OpenCut stands out by combining CapCut’s ease of use with the freedom of open-source software. With no watermarks, no subscriptions, and a commitment to local processing, it’s a breath of fresh air for creators tired of CapCut’s limitations. Whether you’re a casual editor or a content creator, OpenCut aims to provide a seamless, transparent editing experience.
+While I'm not a contributor to the project, I support its mission to empower creators. If you want to check out the underlying code or support the developers building it, you can browse their [GitHub repository](https://github.com/OpenCut-app/OpenCut). 
 
-## Get Involved
+I tweeted about this:
 
-Want to help shape the future of video editing? OpenCut welcomes contributions! Fork the repository, dive into the code, or simply join the waitlist to show your support. Visit [opencut.app](https://opencut.app/) to sign up, and check out the [GitHub repository](https://github.com/OpenCut-app/OpenCut) for more details on how to get involved.[](https://github.com/focusline2025/opencut)[](https://kevintiong.github.io/)
+<center>
+<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/DjarbengRichard/status/2038992245286654291"></a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
-Let’s move beyond freemium traps and embrace tools that prioritize creators. Try OpenCut and join the open-source revolution today!
+## Other Established Video Editing Alternatives
+
+If OpenCut is too early in development for your specific professional needs, check out these other powerful desktop editors below:

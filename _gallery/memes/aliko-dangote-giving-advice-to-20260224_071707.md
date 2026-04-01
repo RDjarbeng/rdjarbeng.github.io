@@ -6,4 +6,4 @@ type: external
 category: memes
 ---
 
-Aliko Dangote giving advice to content creator, photoshop
+Aliko Dangote giving advice to content creator, probably made in photoshop

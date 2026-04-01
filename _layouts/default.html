@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {%- include head.html -%}
 
@@ -21,6 +21,7 @@
 
   {%- include search-script.html -%}
   <script src="{{ '/assets/js/local-time.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 </body>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TW73L4TE58"></script>

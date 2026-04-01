@@ -9,7 +9,8 @@ thumbnail: ''
 type: video
 category: videos
 genre: Music
-caption: |-
+---
+
   Phil Wickham What An Awesome God (Sunset Walk)
 
   Lyrics: 
@@ -97,4 +98,3 @@ caption: |-
 
   Our God is an awesome God
   Our God, what an awesome God
----

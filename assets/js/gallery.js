@@ -33,20 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Categories Configuration
     const imageCategories = [
-        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
         { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
         { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
         { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
         { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
-        { id: 'external', title: 'External', filter: item => item.dataset.category.includes('external') },
+        { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
+        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
     ];
 
     const videoCategories = [
-        { id: 'videos', title: 'Videos', filter: item => item.dataset.category.includes('videos') },
-        { id: 'tiktok', title: 'TikTok', filter: item => item.dataset.category.includes('tiktok') },
-        { id: 'instagram', title: 'Instagram', filter: item => item.dataset.category.includes('instagram') },
+        { id: 'videos', title: 'All Videos', filter: item => item.dataset.category.includes('videos') },
         { id: 'youtube', title: 'YouTube', filter: item => item.dataset.category.includes('youtube') },
-        { id: 'twitter', title: 'Twitter/X', filter: item => item.dataset.category.includes('twitter') }
+        { id: 'twitter', title: 'Twitter/X', filter: item => item.dataset.category.includes('twitter') },
+        { id: 'instagram', title: 'Instagram', filter: item => item.dataset.category.includes('instagram') },
+        { id: 'tiktok', title: 'TikTok', filter: item => item.dataset.category.includes('tiktok') }
     ];
 
     const allCategories = [...imageCategories, ...videoCategories];
@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const item = visibleItems[index];
         const type = item.dataset.type;
         const src = item.dataset.src;
-        const caption = item.querySelector('.gallery-caption-content').innerHTML;
+        let caption = item.querySelector('.gallery-caption-content').innerHTML;
         const title = item.dataset.title;
         const dateRaw = item.dataset.date;
         let dateFormatted = dateRaw || '';
@@ -505,6 +505,20 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!isNaN(dateObj)) {
                 dateFormatted = dateObj.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
             }
+        }
+
+        // Fix relative image paths in caption
+        if (caption) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = caption;
+            const imgs = tempDiv.querySelectorAll('img');
+            imgs.forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('/') && !src.startsWith('http') && !src.startsWith('data:')) {
+                    img.setAttribute('src', '/' + src);
+                }
+            });
+            caption = tempDiv.innerHTML;
         }
 
         lightboxMediaContainer.innerHTML = '';

@@ -141,18 +141,72 @@ table {
 @import "about_cards";
 @import "hero";
 
-$base-color: #c6538c;
-$border-dark: rgba($base-color, 0.88);
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --base-color: #c6538c;
+  --border-color: var(--text-color)333;
+  --border-dark: #333333;
+  --link-color: #bb86fc;
+  --link-hover-color: #3700b3;
+  --link-visited-color: #bb86fc;
+  --toc-link-color: #bb86fc;
+  --grey-text: #aaaaaa;
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --header-bg: #121212;
+  --category-bg: #2d2d2d;
+  --category-hover: #3d3d3d;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --btn-bg: #0056b3;
+  --btn-hover: #003366;
+  --input-bg: #2a2a2a;
+  --input-border: #444;
+  --input-text: #e0e0e0;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: var(--text-color)000;
+  --base-color: #c6538c;
+  --border-color: #e0e0e0;
+  --border-dark: rgba(198, 83, 140, 0.88);
+  --link-color: #4a476e;
+  --link-hover-color: #1756a9;
+  --link-visited-color: #5e599e;
+  --toc-link-color: #5c859d;
+  --grey-text: #999999;
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --header-bg: #ffffff;
+  --category-bg: #f9f9f9;
+  --category-hover: #e6f7ff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --btn-bg: #0056b3;
+  --btn-hover: #003366;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --input-text: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+$base-color: var(--base-color);
+$border-dark: var(--border-dark);
 $visited-color-white: #fff;
-$black-text-color: black;
-$link-hover-color: #1756a9;
+$black-text-color: var(--text-color);
+$link-hover-color: var(--link-hover-color);
 $nav-padding: 7%;
 $wrapper-max-width: 100%;
 $wrapper-default-width: 100%;
-$grey: #999;
-$link-color: #4a476e;
-$link-visited-color: #5e599e;
-$toc-link-color: #5c859d;
+$grey: var(--grey-text);
+$link-color: var(--link-color);
+$link-visited-color: var(--link-visited-color);
+$toc-link-color: var(--toc-link-color);
 $small-font-size: 0.8rem;
 $default-font-size: 1rem;
 $post-excerpt-font-size: 1.1rem;
@@ -269,22 +323,19 @@ iframe {
 // Base card styles (shared)
 .post-card,
 .project-card {
-  border: 1px solid #e0e0e0;
-  /* Lighter border like YT */
+  border: 1px solid var(--card-border);
   border-radius: 12px;
-  /* Slightly rounder */
   padding: 0;
-  /* Remove padding to let image hit edges */
   overflow: hidden;
-  /* Ensure image stays inside rounded corners */
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, background-color 0.8s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-color: var(--card-bg);
 
   &:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--shadow-color);
     transform: translateY(-5px);
   }
 }
@@ -355,7 +406,7 @@ iframe {
   aspect-ratio: 16 / 9;
   /* Standard video format */
   overflow: hidden;
-  background-color: #f0f0f0;
+  background-color: var(--card-bg);
   /* Placeholder color */
 
   .post-image {
@@ -383,7 +434,7 @@ iframe {
   display: flex;
   align-items: center;
   font-size: 0.85rem;
-  color: #606060;
+  color: var(--grey-text);
   /* YT meta color */
   margin-top: auto;
   /* Push to bottom if we want strict alignment */
@@ -416,7 +467,7 @@ iframe {
 .post-excerpt {
   font-size: $post-excerpt-font-size;
   padding-top: 5px;
-  color: #666;
+  color: var(--grey-text);
   text-overflow: ellipsis;
 }
 
@@ -455,7 +506,7 @@ iframe {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #0056b3;
+  background-color: var(--btn-bg);
   /* Changed from #007bff to #0056b3 */
   color: white;
   text-decoration: none;
@@ -464,7 +515,7 @@ iframe {
   margin-bottom: 1em;
 
   &:hover {
-    background-color: #003366;
+    background-color: var(--btn-hover);
     /* You might want to adjust this as well */
   }
 }
@@ -533,7 +584,7 @@ a:hover {
 .post-navigation a {
   text-decoration: none;
   font-size: 1.1em;
-  color: #007acc;
+  color: var(--link-color);
   /* Change this color as needed */
 }
 
@@ -557,14 +608,14 @@ a:hover {
 /* Separator to add space between sections */
 .post-separator {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--card-border);
   margin: 2em 0;
   /* Adjust spacing as needed */
 }
 
 .section-separator {
   border: none;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid var(--card-border);
   margin: 1em 0;
   /* Adjust spacing as needed */
 }
@@ -589,7 +640,9 @@ a:hover {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -598,7 +651,7 @@ a:hover {
 #results-container li div {
   display: flex;
   font-size: 14px;
-  color: #666;
+  color: var(--grey-text);
   /* Lighter color for date */
   justify-content: space-between;
 }
@@ -606,7 +659,7 @@ a:hover {
 // #results-container li span {
 //   display: block;
 //   font-size: 14px;
-//   color: #666; /* Lighter color for date */
+//   color: var(--grey-text); /* Lighter color for date */
 // }
 
 /* Highlighted search term (optional) */
@@ -629,7 +682,9 @@ a:hover {
   /* Adjust width as needed */
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
   border-radius: 5px;
 }
 
@@ -642,9 +697,9 @@ a:hover {
 
 /* Style for each search result */
 #results-container li {
-  background-color: #f9f9f9;
+  background-color: var(--category-bg);
   /* Light background color */
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border);
   /* Light border */
   padding: 15px;
   margin-bottom: 10px;
@@ -674,7 +729,7 @@ a:hover {
 
 .categories-list li,
 .tags-list li {
-  background-color: #f9f9f9;
+  background-color: var(--category-bg);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -682,7 +737,7 @@ a:hover {
 
 .categories-list li:hover,
 .tags-list li:hover {
-  background-color: #e6f7ff;
+  background-color: var(--category-hover);
 }
 
 #rdjarbeng-website-contact-form {
@@ -690,10 +745,11 @@ a:hover {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border);
   border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--category-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
   font-family: Arial, sans-serif;
 }
 
@@ -710,7 +766,9 @@ a:hover {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--input-text);
   border-radius: 4px;
   font-size: 14px;
 }
@@ -733,7 +791,7 @@ a:hover {
 }
 
 #rdjarbeng-website-contact-form input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: var(--btn-bg);
 }
 
 /* Style for success/error message */
@@ -776,7 +834,7 @@ a:hover {
 
 .donation-section p {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -784,7 +842,7 @@ a:hover {
 .donate-btn {
   background-color: #FFDD00;
   /* Buy Me a Coffee yellow */
-  color: #1a1a1a;
+  color: var(--text-color);
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -869,7 +927,7 @@ a:hover {
 .paginator a,
 .paginator span {
   padding: 8px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border);
   border-radius: 4px;
   text-decoration: none;
   color: $link-color;
@@ -878,7 +936,7 @@ a:hover {
 }
 
 .paginator a:hover {
-  background-color: #f5f5f5;
+  background-color: var(--category-bg);
   border-color: #ccc;
   color: $link-hover-color;
 }
@@ -902,14 +960,14 @@ a:hover {
 
 .contact-container h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 10px;
   text-align: center;
 }
 
 .contact-container p {
   font-size: 1rem;
-  color: #666;
+  color: var(--grey-text);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -928,23 +986,23 @@ a:hover {
 .form-group label {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 5px;
 }
 
 .form-group label small {
   font-weight: 400;
-  color: #666;
+  color: var(--grey-text);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--card-border);
   border-radius: 6px;
   font-size: 1rem;
-  color: #333;
-  background: #f9f9f9;
+  color: var(--text-color);
+  background: var(--category-bg);
   transition: border-color 0.3s ease;
 }
 
@@ -990,7 +1048,7 @@ a:hover {
 
 #loading-indicator {
   text-align: center;
-  color: #666;
+  color: var(--grey-text);
 }
 
 /* Responsive Design */
@@ -1066,7 +1124,7 @@ a:hover {
 
 .toc-content li :hover {
   opacity: 1.0;
-  background-color: #d4d5ff;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
 }
 
 .toc-header {
@@ -1078,7 +1136,7 @@ a:hover {
 
 .toc-header h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -1089,7 +1147,7 @@ a:hover {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: var(--text-color);
   padding: 5px;
 }
 
@@ -1190,7 +1248,7 @@ a:hover {
 
 .posts-page-intro,
 .personal-page-intro {
-  color: #666;
+  color: var(--grey-text);
 }
 
 /* Responsive Design */
@@ -1384,7 +1442,7 @@ a:hover {
 .meta-label {
   font-weight: bold;
   font-size: 1.1em;
-  color: #333;
+  color: var(--text-color);
   /* A strong, readable label color */
   margin-right: 8px;
 }
@@ -1424,9 +1482,9 @@ a:hover {
 
 .tags-container a {
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: var(--card-bg);
   /* Light gray pill background */
-  color: #555;
+  color: var(--grey-text);
   /* Darker text for contrast */
   border-radius: 15px;
   /* This creates the "pill" shape */
@@ -1500,6 +1558,7 @@ a:hover {
 .post-content code {
   word-wrap: break-word;
   overflow-wrap: break-word;
+  background: inherit;
 }
 
 @import "gallery";
@@ -1517,10 +1576,10 @@ a:hover {
 .repo-item {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 1px solid #eaeaea;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px var(--shadow-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
   padding: 1.5rem;
@@ -1554,7 +1613,7 @@ a:hover {
   height: 100px;
   overflow: hidden;
   border-radius: 8px;
-  background: #f8f9fa;
+  background: var(--category-bg);
 
   @media (max-width: 640px) {
     flex: 0 0 auto;
@@ -1584,7 +1643,7 @@ a:hover {
 .repo-title {
   margin: 0 0 0.5rem 0 !important;
   font-size: 1.3rem;
-  color: #2c3e50;
+  color: var(--text-color);
   border: none !important;
   padding: 0 !important;
 
@@ -1593,7 +1652,7 @@ a:hover {
     text-decoration: none;
 
     &:hover {
-      color: #3498db;
+      color: var(--link-hover-color);
     }
   }
 }
@@ -1609,10 +1668,10 @@ a:hover {
 .repo-tag {
   font-size: 0.8rem;
   padding: 4px 10px;
-  background: #f8f9fa;
+  background: var(--category-bg);
   border-radius: 20px;
-  color: #666;
-  border: 1px solid #eee;
+  color: var(--grey-text);
+  border: 1px solid var(--card-border);
   font-weight: 500;
 
   &.best-for {
@@ -1631,7 +1690,7 @@ a:hover {
 .repo-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: #4a4a4a;
+  color: var(--grey-text);
   margin-bottom: 0;
   /* Handled by container gap */
 }
@@ -1667,7 +1726,7 @@ a:hover {
     /* Hidden border when collapsed */
     background: transparent;
     font-size: 14px;
-    color: #333;
+    color: var(--text-color);
     outline: none;
     border-radius: 20px;
     /* Rounded ends as requested */
@@ -1690,7 +1749,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #555;
+    color: var(--grey-text);
     transition: color 0.3s ease;
     z-index: 2;
 
@@ -1704,13 +1763,13 @@ a:hover {
   &:focus-within .search-input {
     width: 200px;
     padding: 6px 15px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: 1px solid var(--card-border);
+    background-color: var(--card-bg);
     opacity: 1;
     cursor: text;
 
     &::placeholder {
-      color: #999;
+      color: var(--grey-text);
     }
   }
 }
@@ -1731,15 +1790,14 @@ a:hover {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #fff;
-  border: 1px solid #e1e4e8;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 0 0 6px 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   z-index: 1000;
   max-height: 400px;
   overflow-y: auto;
   margin-top: 5px;
-  /* Add some spacing */
 }
 
 /* Ensure header wrapper positions the results correctly */
@@ -1757,9 +1815,8 @@ a:hover {
 }
 
 .nav-search-item {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--card-border);
   padding: 0;
-  // list-style: none; /* simple-jekyll-search often uses div but if resultsContainer is ul/li */
 }
 
 .nav-search-item:last-child {
@@ -1770,14 +1827,14 @@ a:hover {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   transition: background-color 0.2s;
 }
 
 .nav-search-link:hover {
-  background-color: #f6f8fa;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.1));
   text-decoration: none;
-  color: #0366d6;
+  color: var(--link-color);
 }
 
 .nav-search-content {
@@ -1789,7 +1846,7 @@ a:hover {
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 4px;
-  color: #333;
+  color: var(--text-color);
   line-height: 1.2;
 }
 
@@ -1826,7 +1883,7 @@ body {
   h5,
   h6 {
     font-family: inherit;
-    color: #0f1419;
+    color: var(--text-color);
   }
 
   h1 {
@@ -1841,8 +1898,8 @@ body {
     font-size: 26px;
     line-height: 36px;
     font-weight: 800;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    // margin-top: 24px;
+    // margin-bottom: 24px;
   }
 
   h3 {
@@ -1864,12 +1921,13 @@ body {
 
 .post-header {
   border-bottom: none;
+  margin-bottom: 0px;
 
   h1 {
     font-size: 34px;
     line-height: 44px;
     font-weight: 800;
-    color: #0f1419;
+    color: var(--text-color);
     margin-top: 12px;
     margin-bottom: 12px;
   }
@@ -1887,9 +1945,52 @@ div.post-card {
   h3,
   h4 {
     font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #0f1419;
+    color: var(--text-color);
     margin-top: 0;
     margin-bottom: 8px;
     line-height: 1.4;
+  }
+}
+
+// --- Overrides for Minima Theme in Night Mode ---
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.site-title:visited,
+.site-nav .page-link,
+.page-content p,
+.page-content li {
+  color: var(--text-color);
+}
+
+.site-nav .page-link:hover,
+.site-title:hover {
+  color: var(--link-hover-color) !important;
+}
+
+// --- Theme Toggle: Always visible in navbar on mobile ---
+// The toggle is placed outside .trigger so it remains visible when
+// the hamburger menu is collapsed on mobile screens.
+.nav-theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  // On desktop: it's between the hamburger label and the .trigger div.
+  // Minima hides .trigger at <= 600px. We need to float the toggle to the
+  // right of the hamburger icon so it's always in view.
+  position: absolute;
+  right: 45px; // leave space for the hamburger button (~30px) + gap
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media screen and (min-width: 601px) {
+    // On desktop .trigger is always visible; hide the floated version
+    // to avoid it appearing between logo and the nav links.
+    display: none;
   }
 }
