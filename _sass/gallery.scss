@@ -513,3 +513,24 @@ iframe[id^="twitter-widget-"] {
     display: flex;
     justify-content: center;
 }
+
+/* Lyrics / poetry blockquote styling in gallery single pages */
+.gallery-body blockquote {
+    border-left: 3px solid var(--link-color, #888);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-style: italic;
+
+    /* Collapse paragraph spacing so each lyric line sits on its own line
+       without large gaps between them */
+    p {
+        margin: 0;
+        line-height: 1.6;
+        white-space: pre-wrap; /* honours soft line breaks */
+    }
+
+    /* Small gap between stanzas (blockquote blocks separated by a blank line) */
+    & + blockquote {
+        margin-top: 0.25rem;
+    }
+}
