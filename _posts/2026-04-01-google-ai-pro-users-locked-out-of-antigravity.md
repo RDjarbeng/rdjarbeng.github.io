@@ -19,7 +19,8 @@ Now google suggests moving to the $200 AI ultra plan, which is considered by som
 
 One google.dev user was quoted as saying:
 
-> 
+>
+
 > I no longer use those Antigravity agents, only my Claude subscription. I do not want to feel like I am having a stroke every day because of unfair terms and the complete lack of communication.
 
 https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/682?u=rdjarbeng
@@ -34,12 +35,19 @@ The IDE has an internal issue reporting feature, that includes the logs, but som
 
 From AI Ultra subscribers, seems upgrading to the highest tier might not solve your wores either:
 
-
 Quoting user @YND:
 
 > I’m an Ultra subscriber, do not upgrade bro) Right now it’s the same situation with quota. No support, no annauncements, just silent quota cut off
 
-https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685?u=rdjarbeng
+https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685
+
+Of course we can't let you go without giving alternatives:
+
+Claude Code from Anthropic
+
+OpenAI codex
+
+Opensource tools include clinebot (include any other)
 
 References
 
