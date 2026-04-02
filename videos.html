@@ -6,7 +6,7 @@ permalink: /videos/
 
 <div class="home-section" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
     <div style="text-align: center; margin-bottom: 30px;">
-        <h1 class="page-heading" style="font-size: 2.5rem; margin-bottom: 10px;">Video Gallery</h1>
+        <h1 class="page-heading" style="font-size: 2.5rem; margin-bottom: 10px;">Video Library</h1>
         <p style="color: #627d98; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">A collection of embedded videos
             and curated clips.</p>
     </div>
@@ -78,6 +78,7 @@ permalink: /videos/
         }
     </style>
 
+    <!-- Debug: Gallery Size: {{ site.gallery | size }} | Videos Found: {{ site.gallery | where: "type", "video" | size }} -->
     <div class="video-masonry">
         {% assign videos = site.gallery | where: "type", "video" | sort: "date" | reverse %}
         {% for item in videos %}
