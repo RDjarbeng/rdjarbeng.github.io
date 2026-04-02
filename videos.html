@@ -214,27 +214,74 @@ permalink: /videos/
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Source Filtering Logic
         const filterBtns = document.querySelectorAll('.vid-source-btn');
+        const genreSelect = document.getElementById('genre-select');
+        const searchInput = document.getElementById('video-search-input');
         const allCards = Array.from(document.querySelectorAll('.video-masonry-item'));
+        const noResults = document.getElementById('no-results');
+        const videoCount = document.getElementById('video-count');
 
+        let activeSource = 'all';
+        let activeGenre = 'all';
+        let activeSearch = '';
+
+        function updateVisibility() {
+            let visibleCount = 0;
+
+            allCards.forEach(card => {
+                const platform = card.getAttribute('data-platform').toLowerCase();
+                const genre = card.getAttribute('data-genre');
+                const title = card.getAttribute('data-title').toLowerCase();
+
+                const matchesSource = activeSource === 'all' || platform === activeSource;
+                const matchesGenre = activeGenre === 'all' || genre === activeGenre;
+                const matchesSearch = activeSearch === '' || title.includes(activeSearch.toLowerCase());
+
+                if (matchesSource && matchesGenre && matchesSearch) {
+                    card.style.display = 'inline-block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            
+            // Update count
+            videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+        }
+
+        // Source Filtering Logic
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function (e) {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-
-                const val = this.getAttribute('data-filter');
-                allCards.forEach(card => {
-                    const platform = card.getAttribute('data-platform').toLowerCase();
-                    if (val === 'all' || platform === val) {
-                        card.style.display = 'inline-block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                activeSource = this.getAttribute('data-filter');
+                updateVisibility();
             });
         });
 
+        // Genre Filtering Logic
+        genreSelect.addEventListener('change', function () {
+            activeGenre = this.value;
+            updateVisibility();
+        });
+
+        // Search Logic
+        let searchTimeout;
+        searchInput.addEventListener('input', function () {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                activeSearch = this.value.trim();
+                updateVisibility();
+            }, 200);
+        });
+
+        // Initialize count
+        updateVisibility();
+
+        // Thumbnail loading
         const thumbnails = document.querySelectorAll('img.robust-thumbnail');
         thumbnails.forEach(img => {
             const platform = img.getAttribute('data-platform');
