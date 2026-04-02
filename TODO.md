@@ -27,6 +27,7 @@ Security issues mentioned in Github comments need to be address
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
 - The categories page night mode isn't properly displayed
+- videos page inline player is not obvious that video can play without navigating, perhaps set to play on hover or something
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 - The loading indicator for the contact dynamic footer for light mode isn't showing
 ### Enhancements & Infrastructure
