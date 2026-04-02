@@ -1,0 +1,548 @@
+// ============================================
+// Videos Page Styles
+// ============================================
+// This file contains all styles specific to
+// the /videos/ page. It uses CSS custom
+// properties for light/dark mode support.
+// ============================================
+
+.videos-page {
+  // ============================================
+  // Layout
+  // ============================================
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  // ============================================
+  // Page Header (compact)
+  // ============================================
+  .videos-page-header {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      color: var(--text-color);
+    }
+
+    p {
+      color: var(--grey-text);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+  }
+
+  // ============================================
+  // Source Filter Bar (compact, top)
+  // ============================================
+  .source-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    background: var(--bg-color);
+    border-radius: 8px;
+
+    .filter-label {
+      font-weight: 600;
+      color: var(--grey-text);
+      font-size: 0.85rem;
+      margin-right: 5px;
+    }
+
+    .source-filter-btn {
+      padding: 6px 14px;
+      border-radius: 18px;
+      border: 1px solid var(--card-border);
+      cursor: pointer;
+      background: var(--card-bg);
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: var(--category-bg);
+      }
+
+      &.active {
+        background: var(--text-color);
+        color: var(--bg-color);
+        border-color: var(--text-color);
+      }
+
+      // Platform-specific colors
+      &.youtube.active {
+        background: #ff0000;
+        border-color: #ff0000;
+        color: white;
+      }
+
+      &.tiktok.active {
+        background: #000;
+        border-color: #000;
+        color: white;
+      }
+
+      &.instagram.active {
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        border-color: #dc2743;
+        color: white;
+      }
+
+      &.twitter.active {
+        background: #1da1f2;
+        border-color: #1da1f2;
+        color: white;
+      }
+    }
+  }
+
+  // ============================================
+  // Main Content Area (sidebar + grid)
+  // ============================================
+  .videos-content-wrapper {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+
+  // ============================================
+  // Genre Sidebar (collapsible)
+  // ============================================
+  .genre-sidebar {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 120px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 90;
+
+    &.collapsed {
+      flex: 0 0 40px;
+      overflow: hidden;
+
+      .genre-sidebar-content {
+        opacity: 0;
+        pointer-events: none;
+        width: 0;
+      }
+    }
+
+    .genre-sidebar-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      width: 100%;
+      text-align: left;
+
+      &:hover {
+        background: var(--category-bg);
+      }
+
+      .toggle-icon {
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+      }
+
+      &.expanded .toggle-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .genre-sidebar-content {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      padding: 15px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+
+      // Search inside sidebar
+      .sidebar-search {
+        position: relative;
+        margin-bottom: 15px;
+
+        .search-icon {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--grey-text);
+          pointer-events: none;
+        }
+
+        input {
+          width: 100%;
+          padding: 8px 12px 8px 35px;
+          border-radius: 20px;
+          border: 1px solid var(--card-border);
+          background: var(--category-bg);
+          color: var(--text-color);
+          font-size: 0.9rem;
+          outline: none;
+          transition: border-color 0.2s;
+
+          &:focus {
+            border-color: var(--base-color);
+          }
+
+          &::placeholder {
+            color: var(--grey-text);
+          }
+        }
+      }
+
+      // Video count
+      .video-count {
+        font-size: 0.8rem;
+        color: var(--grey-text);
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      // Genre tags
+      .genre-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .genre-tag {
+        padding: 5px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--card-border);
+        cursor: pointer;
+        background: var(--category-bg);
+        color: var(--grey-text);
+        font-weight: 500;
+        font-size: 0.8rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: var(--card-border);
+          color: var(--text-color);
+        }
+
+        &.active {
+          background: var(--base-color);
+          color: white;
+          border-color: var(--base-color);
+        }
+
+        &.more-toggle {
+          background: transparent;
+          border: 1px dashed var(--card-border);
+          color: var(--base-color);
+
+          &:hover {
+            border-color: var(--base-color);
+            background: var(--category-bg);
+          }
+        }
+      }
+    }
+  }
+
+  // ============================================
+  // Search Bar (main page)
+  // ============================================
+  .videos-search-bar {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 25px;
+    padding: 0 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus-within {
+      border-color: var(--base-color);
+      box-shadow: 0 0 0 3px rgba(198, 83, 140, 0.15);
+    }
+
+    .search-icon {
+      color: var(--grey-text);
+      flex-shrink: 0;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px 12px;
+      border: none;
+      background: transparent;
+      color: var(--text-color);
+      font-size: 0.95rem;
+      outline: none;
+
+      &::placeholder {
+        color: var(--grey-text);
+      }
+    }
+  }
+
+  // ============================================
+  // Video Grid Area
+  // ============================================
+  .videos-grid-area {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // ============================================
+  // Video Masonry
+  // ============================================
+  .video-masonry {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  .video-masonry-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow-color);
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  // ============================================
+  // Video Thumbnail
+  // ============================================
+  .video-thumbnail {
+    position: relative;
+    background: var(--category-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &.youtube-aspect {
+      aspect-ratio: 16/9;
+    }
+
+    &.vertical-aspect {
+      aspect-ratio: 9/16;
+    }
+
+    .inline-play-btn {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .robust-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .play-button-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+      svg {
+        margin-left: 4px;
+      }
+    }
+
+    .platform-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  }
+
+  // ============================================
+  // Video Info
+  // ============================================
+  .video-info {
+    padding: 15px;
+
+    h3 {
+      font-size: 1rem;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+      color: var(--text-color);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .video-date {
+      font-size: 0.8rem;
+      color: var(--grey-text);
+    }
+
+    .video-genre {
+      font-size: 0.7rem;
+      color: var(--base-color);
+      margin-top: 5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  // ============================================
+  // No Results Message
+  // ============================================
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--grey-text);
+    font-size: 1.1rem;
+    display: none;
+
+    svg {
+      margin-bottom: 15px;
+    }
+  }
+
+  // ============================================
+  // Responsive
+  // ============================================
+  @media (max-width: 1024px) {
+    .video-masonry {
+      column-count: 2;
+    }
+
+    .genre-sidebar {
+      flex: 0 0 180px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .videos-content-wrapper {
+      flex-direction: column;
+    }
+
+    .genre-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      max-height: 100vh;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      flex: 0 0 280px;
+      background: var(--card-bg);
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      &.collapsed {
+        transform: translateX(-100%);
+      }
+    }
+
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .video-masonry {
+      column-count: 1;
+    }
+
+    .source-filter-bar {
+      position: sticky;
+      top: 50px;
+      z-index: 50;
+    }
+  }
+}
+
+// ============================================
+// Navbar auto-hide on videos page
+// ============================================
+.videos-page-autohide-header {
+  .site-header {
+    transition: opacity 0.3s ease;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    // Logo always visible
+    .site-title,
+    .site-logo {
+      opacity: 1 !important;
+    }
+  }
+}
