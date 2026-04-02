@@ -29,6 +29,28 @@ permalink: /videos/
         <button class="vid-source-btn" data-filter="twitter" style="color: #1DA1F2;">Twitter / X</button>
     </div>
 
+    <!-- Genre Filter Dropdown -->
+    <div class="genre-filter" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; align-items: center;">
+        <label for="genre-select" style="font-weight: bold; color: #627d98; font-size: 0.9rem;">Genre:</label>
+        <select id="genre-select" 
+            style="padding: 8px 18px; border-radius: 20px; border: 1px solid #d9e2ec; font-size: 0.95rem; font-weight: bold; cursor: pointer; background: white; outline: none; transition: border-color 0.2s;">
+            <option value="all">All Genres</option>
+            {% assign videos = site.gallery | where: "type", "video" %}
+            {% assign genres = "" | split: "" %}
+            {% for item in videos %}
+                {% assign g = item.genre | default: item.category | default: "Other" %}
+                {% unless genres contains g %}
+                    {% assign genres = genres | push: g %}
+                {% endunless %}
+            {% endfor %}
+            {% assign sorted_genres = genres | sort %}
+            {% for genre in sorted_genres %}
+            <option value="{{ genre | escape }}">{{ genre }}</option>
+            {% endfor %}
+        </select>
+        <span id="video-count" style="color: #829ab1; font-size: 0.9rem; margin-left: 10px;"></span>
+    </div>
+
     <style>
         .vid-source-btn {
             padding: 8px 18px;
