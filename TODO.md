@@ -4,7 +4,7 @@ This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](h
 
 ## Specifications
 - This website should scale globally
-- Blogs are rarely written, but often read
+- Blog posts are rarely written, but often read
 - Some of the website is purely static files, the rest is a dynamic REST API
 - Caching must be implemented where possible
 - Any new users that subscribes should receive a welcome email- todo
@@ -26,7 +26,7 @@ Security issues mentioned in Github comments need to be address
 ## Enhancements & Infrastructure
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
-
+- The categories page night mode isn't properly displayed
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 - The loading indicator for the contact dynamic footer for light mode isn't showing
 ### Enhancements & Infrastructure
