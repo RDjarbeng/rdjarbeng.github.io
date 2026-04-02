@@ -21,8 +21,9 @@ permalink: /videos/
 
     <!-- Source Filter Bar -->
     <div class="video-filters"
-        style="display: flex; gap: 10px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
-        <button class="vid-source-btn active" data-filter="all">All Sources</button>
+        style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap;">
+        <span style="font-weight: bold; color: #627d98; margin-right: 5px; align-self: center; font-size: 0.9rem;">Source:</span>
+        <button class="vid-source-btn active" data-filter="all">All</button>
         <button class="vid-source-btn" data-filter="youtube" style="color: #ff0000;">YouTube</button>
         <button class="vid-source-btn" data-filter="tiktok" style="color: #000;">TikTok</button>
         <button class="vid-source-btn" data-filter="instagram" style="color: #E1306C;">Instagram</button>
@@ -72,6 +73,11 @@ permalink: /videos/
             border-color: #102a43;
         }
 
+        #genre-select:focus {
+            border-color: #102a43;
+            box-shadow: 0 0 0 3px rgba(16,42,67,0.1);
+        }
+
         .video-masonry {
             column-count: 3;
             column-gap: 25px;
@@ -95,6 +101,14 @@ permalink: /videos/
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
 
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #829ab1;
+            font-size: 1.1rem;
+            display: none;
+        }
+
         @media (max-width: 1024px) {
             .video-masonry {
                 column-count: 2;
@@ -109,7 +123,7 @@ permalink: /videos/
     </style>
 
     <!-- Debug: Gallery Size: {{ site.gallery | size }} | Videos Found: {{ site.gallery | where: "type", "video" | size }} -->
-    <div class="video-masonry">
+    <div class="video-masonry" id="video-masonry">
         {% assign videos = site.gallery | where: "type", "video" | sort: "date" | reverse %}
         {% for item in videos %}
         <!-- Computing Thumbnails -->
@@ -155,7 +169,10 @@ permalink: /videos/
         <!-- Branded Fallback Placeholder -->
         {% assign fallback_image = "/assets/images/logo-small.png" %}
 
-        <div class="video-masonry-item" data-platform="{{ item.platform }}">
+        <div class="video-masonry-item" 
+             data-platform="{{ item.platform }}" 
+             data-genre="{{ item.genre | default: item.category | default: 'Other' | escape }}"
+             data-title="{{ item.title | escape | downcase }}">
             <div class="video-thumbnail inline-play-container" data-platform="{{ item.platform }}"
                 data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}" data-tk="{{ computed_tk_id }}"
                 data-ig="{{ computed_ig_id }}" data-tt="{{ item.youtube_id | default: item.link }}"
@@ -308,6 +325,7 @@ permalink: /videos/
             }
         });
 
+        // Inline Play Logic
         document.querySelectorAll('.inline-play-btn').forEach(btn => {
             btn.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -344,7 +362,6 @@ permalink: /videos/
                     iframe.setAttribute('scrolling', 'no');
                     iframe.setAttribute('allowtransparency', 'true');
                 } else if (platform === 'twitter') {
-                    // Twitter embed requires scripts
                     const ttUrl = container.getAttribute('data-tt');
                     container.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark"><a href="${ttUrl}"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"><\/script>`;
                     container.style.overflow = "auto";
