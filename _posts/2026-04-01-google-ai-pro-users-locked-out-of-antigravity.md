@@ -51,20 +51,20 @@ Included below is a screenshot of the Antigravity model console for an AI Pro us
 
 ![Screenshot of the Antigravity console showing usage limits](/assets/images/20260401-174233.png "Antigravity usage limits")
 
-### The Irony of the IDE Bug
+## The Irony of the IDE Bug
 
 To compound users' frustrations, the IDE has an internal issue-reporting feature designed to capture logs and send feedback. Naturally, users attempted to use this to report the lockouts, only to find that the issue submission tool itself is broken. The irony is palpable.
 
 ![Screenshot of the antigravity issue submission error, saying an error occured while submitting your feedback please try again](/assets/images/20260401-175048.png "Antigravity bug reporter error")
 
-### Will Upgrading Save You?
+## Will Upgrading Save You?
 
 If you're thinking about biting the bullet and upgrading to the highest tier, think again. According to current AI Ultra subscribers, the $200 price tag might not solve your woes either. 
 
 > "I’m an Ultra subscriber, do not upgrade bro. Right now it’s the same situation with quota. No support, no announcements, just silent quota cut off."
 > ([@YND](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685))
 
-### Alternatives to Antigravity
+## Alternatives to Antigravity
 
 We can't let you go without providing a few working alternatives. If you are looking to jump ship, consider these tools:
 * **Claude Code** (Anthropic)
@@ -73,7 +73,7 @@ We can't let you go without providing a few working alternatives. If you are loo
 
 ---
 
-### References
+## References
 
 How long has this been going on? About three months. And yes, we brought receipts:
 
