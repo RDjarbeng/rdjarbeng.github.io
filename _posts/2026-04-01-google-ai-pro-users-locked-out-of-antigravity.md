@@ -45,7 +45,7 @@ Now, Google's suggestion to resolve the issue is to move up to the **$200 AI Ult
 One disgruntled user on the Google Dev forums put it bluntly:
 
 > "I no longer use those Antigravity agents, only my Claude subscription. I do not want to feel like I am having a stroke every day because of unfair terms and the complete lack of communication." 
-> (google.dev user: https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/682?u=rdjarbeng)
+> ([google.dev user](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/682?u=rdjarbeng))
 
 Included below is a screenshot of the Antigravity model console for an AI Pro user, showing the exorbitant wait time for the usage limits to reset:
 
@@ -62,7 +62,7 @@ To compound users' frustrations, the IDE has an internal issue-reporting feature
 If you're thinking about biting the bullet and upgrading to the highest tier, think again. According to current AI Ultra subscribers, the $200 price tag might not solve your woes either. 
 
 > "I’m an Ultra subscriber, do not upgrade bro. Right now it’s the same situation with quota. No support, no announcements, just silent quota cut off."
-> (@YND: https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685)
+> ([@YND](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685))
 
 ### Alternatives to Antigravity
 
