@@ -13,7 +13,7 @@ layout: post
 card_items: []
 ---
 
-## The Google AI Pro Quota Crisis: When 5 Hours Becomes 7 Days
+
 
 Google advertised AI coding with **5-hour reset limits**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
 
