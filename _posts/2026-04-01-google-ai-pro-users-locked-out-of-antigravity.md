@@ -6,59 +6,57 @@ category: AI News
 tags:
   - AI
   - Antigravity
-title: Google AI Pro Users Locked Out Of Antigravity
+title: Google AI Pro Users Are Locked Out of Antigravity IDE (And is the Bug Reporter Broken?)
 image: ''
 image_alt: ''
 layout: post
 card_items: []
 ---
 
-Google advertised AI coding with 5 hour reset limits, but apparently those who signed up for the AI pro plan got a negatively different treatment than what was promised.
+## The Google AI Pro Quota Crisis: When 5 Hours Becomes 7 Days
 
-Now google suggests moving to the $200 AI ultra plan, which is considered by some to be a slap in the face. Since the AI plan was in the middle between the free tier and the Ultra plan and didn't deliver. Reset limits are upwards of 120 hours (7 days in some cases) Most users expected to supercharge their coding and then if the benefits were great probably move up a tier to the Ultra plan. However we are not sure if most users are comfortable moving up now.  Some might consider cancelling their subscription (check if it's a yearly or monthly subscription). Or moving downwards to the free tier.
+Google advertised AI coding with **5-hour reset limits**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
 
-One google.dev user was quoted as saying:
+Instead of a quick reset, some users are facing lockouts upwards of **120 hours** (and in some cases, a full 7 days). Because the AI Pro plan was positioned as the sweet spot between the free tier and the Ultra plan, many users expected to supercharge their workflows, perhaps upgrading to Ultra later if the benefits were clear. 
 
->
+Now, Google's suggestion to resolve the issue is to move up to the **$200 AI Ultra plan**—a move considered by many to be a slap in the face. Unsurprisingly, users are hesitant to upgrade. Instead, many are weighing whether to downgrade back to the free tier or cancel their monthly and yearly subscriptions entirely.
 
-> I no longer use those Antigravity agents, only my Claude subscription. I do not want to feel like I am having a stroke every day because of unfair terms and the complete lack of communication.
+One disgruntled user on the Google Dev forums put it bluntly:
 
-https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/682?u=rdjarbeng
+> "I no longer use those Antigravity agents, only my Claude subscription. I do not want to feel like I am having a stroke every day because of unfair terms and the complete lack of communication." 
+> — [google.dev user](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/682?u=rdjarbeng)
 
-> Included below is a screenshot of the antigravity model console for an AI pro user showing when the usage reset limits will reset.
+Included below is a screenshot of the Antigravity model console for an AI Pro user, showing the exorbitant wait time for the usage limits to reset:
 
 ![](/assets/images/20260401-174233.png)
 
-The IDE has an internal issue reporting feature, that includes the logs, but some users reported that the issue submission for the IDE was also broken, compounding their woes. The irony.
+### The Irony of the IDE Bug
+
+To compound users' frustrations, the IDE has an internal issue-reporting feature designed to capture logs and send feedback. Naturally, users attempted to use this to report the lockouts, only to find that the issue submission tool itself is broken. The irony is palpable.
 
 ![Screenshot of the antigravity issue submission error, saying an error occured while submitting your feedback please try again](/assets/images/20260401-175048.png)
 
-From AI Ultra subscribers, seems upgrading to the highest tier might not solve your wores either:
+### Will Upgrading Save You?
 
-Quoting user @YND:
+If you're thinking about biting the bullet and upgrading to the highest tier, think again. According to current AI Ultra subscribers, the $200 price tag might not solve your woes either. 
 
-> I’m an Ultra subscriber, do not upgrade bro) Right now it’s the same situation with quota. No support, no annauncements, just silent quota cut off
+> "I’m an Ultra subscriber, do not upgrade bro) Right now it’s the same situation with quota. No support, no announcements, just silent quota cut off."
+> — [@YND](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685)
 
-https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/685
+### Alternatives to Antigravity
 
-Of course we can't let you go without giving alternatives:
+We can't let you go without providing a few working alternatives. If you are looking to jump ship, consider these tools:
+* **Claude Code** (Anthropic)
+* **OpenAI Codex**
+* **Open-Source Tools:** Cline, Aider, and Continue.dev
 
-Claude Code from Anthropic
-
-OpenAI codex
-
-Opensource tools include clinebot (include any other)
-
-How long has this been going on about 3 months, see references
+---
 
 ### References
 
-Oh you know we brought receipts
+How long has this been going on? About three months. And yes, we brought receipts:
 
-Thread on discuss.ai.google.dev/
+* **The Original Thread:** An open issue from January 25, 2026, with over 639 replies and 26.5k views. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686)
+* **The Active Issue:** A recent thread confirming the 6-day lockout bug is still very much active for Pro subscribers. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
-Oldest open issue I could find from January 25, 2026 639 replies with 26.5k views: https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686
-
-Recent thread showing issue is still active: https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8
-
-PS: The writer is aware of this irony, that this post you just read was formatted with Gemini 3.1 Pro from google.
+*P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google.*
