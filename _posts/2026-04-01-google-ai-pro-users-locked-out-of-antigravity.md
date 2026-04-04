@@ -34,11 +34,15 @@ card_items:
     badge_1: Popular
 ---
 
+**TL;DR:** Google’s agent-first IDE, **Antigravity**, promised a 5-hour quota reset but is currently locking AI Pro users out for up to **7 days**. Worse, the built-in bug reporter is also broken, leaving users stuck with zero support and a suggestion to upgrade to a $200/month plan.
 
+---
 
-Google advertised AI coding with **5-hour reset limits**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
+Google advertised AI coding with **5-hour reset limits** in its agent-first IDE, **Antigravity**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
 
-Instead of a quick reset, some users are facing lockouts upwards of **120 hours** (and in some cases, a full 7 days). Because the AI Pro plan was positioned as the sweet spot between the free tier and the Ultra plan, many users expected to supercharge their workflows, perhaps upgrading to Ultra later if the benefits were clear. 
+## The 120-Hour Reality Check
+
+Instead of a quick reset, some antigravity users are facing lockouts upwards of **120 hours** (and in some cases, a full 7 days). Because the AI Pro plan was positioned as the sweet spot between the free tier and the Ultra plan, many users expected to supercharge their workflows, perhaps upgrading to Ultra later if the benefits were clear. 
 
 ![Cover image for post titled Many Google AI Pro Users Are Locked Out of Antigravity IDE](/assets/images/posts/covers/antigravity_lockout.jpg "Many Google AI Pro Users Are Locked Out of Antigravity IDE")
 
