@@ -6,7 +6,7 @@ category: AI News
 tags:
   - AI
   - Antigravity
-title: Google AI Pro Users Are Locked Out of Antigravity IDE (And is the Bug Reporter Broken?)
+title: Many Google AI Pro Users Are Locked Out of Antigravity IDE (And is the Bug Reporter Broken?)
 image: /assets/images/posts/covers/antigravity_lockout.jpg
 image_alt: 'Cover image showing an AI user locked out of the Antigravity IDE'
 layout: post
