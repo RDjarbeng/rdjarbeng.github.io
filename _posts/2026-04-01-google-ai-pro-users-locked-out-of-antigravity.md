@@ -40,6 +40,8 @@ Google advertised AI coding with **5-hour reset limits**, but those who signed u
 
 Instead of a quick reset, some users are facing lockouts upwards of **120 hours** (and in some cases, a full 7 days). Because the AI Pro plan was positioned as the sweet spot between the free tier and the Ultra plan, many users expected to supercharge their workflows, perhaps upgrading to Ultra later if the benefits were clear. 
 
+![Cover image for post titled Many Google AI Pro Users Are Locked Out of Antigravity IDE](/assets/images/posts/covers/antigravity_lockout.jpg "Many Google AI Pro Users Are Locked Out of Antigravity IDE")
+
 Now, Google's suggestion to resolve the issue is to move up to the **$200 AI Ultra plan**, a move considered by many to be a slap in the face. Unsurprisingly, users are hesitant to upgrade. Instead, many are weighing whether to downgrade back to the free tier or cancel their monthly and yearly subscriptions entirely.
 
 One disgruntled user on the Google Dev forums put it bluntly:
