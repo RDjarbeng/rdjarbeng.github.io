@@ -20,8 +20,7 @@ This todo file contains design specifications and technical  directions for rdja
 
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
 
-- The homepage nav for dark mode on mobile is still showing as light mode
-Security issues mentioned in Github comments need to be addressed
+- The nav search button is hidden on mobile once the user starts typing, needs a fix
 
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
