@@ -11,21 +11,24 @@ genre: Music
 category: videos
 ---
 
-Gathering a thousand singers to sing this arrangement is Chef's kiss
+This video is a nearly 10-minute choral worship performance featuring an "African Medley" arrangement of the popular hymn "10,000 Reasons." Gathering a thousand singers to sing this arrangement is Chef's kiss.
+The addition of the Bola Yesu song from Sunmisola Agbebi   in the middle is a stroke of musical genius.
 
-The addition of the Bola Yesu song in the middle is a stroke of musical genius.
+## Key highlights and structural moments from the performance:
 
-Here is an overview of the video you shared:
+* **The Classic Chorus :** The medley opens with the familiar lyrics of the song, singing, _"Bless the Lord, oh my soul... the sun comes up, it's a new day."_
+* **A Unique Spoken Prayer:** Rather than strictly following the standard hymn structure, this arrangement includes a distinct, beautiful spoken-word segment. The spoken word segment uses the melody of _Bola_ from Sunmisola Agbebi  Part of the wording from the spoken word performance is given by a male choir member:
 
-This video is a nearly 10-minute choral worship performance featuring an "African Medley" arrangement of the popular hymn "10,000 Reasons."
+> "Lord your mercy is so great that you humble your might to love me. You lavish your gifts on me day after day. Though I am so sinful. 
+A lady continues:
+> The gentle touch of your grace multiplies a millionfold my subtle thanks and praises. Oh bless the Lord my soul, for 10,000 reasons and more..."\*
 
-Here are the key highlights and structural moments from the performance:
+* **Choral Adoration:** Then The latter half of the video transitions into an extended period of layered choral worship, repeating the core refrain ("I worship your holy name") and fading into a powerful, meditative instrumental and vocal close.
 
-- \*\*The Classic Chorus [\*\*[**00:25**](http://www.youtube.com/watch?v=qZFbRkJ9eoM&t=25)**]:** The medley opens with the familiar lyrics of the song, singing, _"Bless the Lord, oh my soul... the sun comes up, it's a new day."_
-- \*\*A Unique Spoken Prayer [\*\*[**02:33**](http://www.youtube.com/watch?v=qZFbRkJ9eoM&t=153)**]:** Rather than strictly following the standard hymn structure, this arrangement includes a distinct, beautiful spoken-word segment. The exact wording from the performance is: _"Lord your mercy is so great that you humble your might to love me. You lavish your gifts on me day after day. Though I am so sinful, the gentle touch of your grace multiplies a millionfold my subtle thanks and praises. Oh bless the Lord my soul, for 10,000 reasons and more..."_
-- \*\*Choral Adoration [\*\*[**05:15**](http://www.youtube.com/watch?v=qZFbRkJ9eoM&t=315)**]:** The latter half of the video transitions into an extended period of layered choral worship, repeating the core refrain ("I worship your holy name") and fading into a powerful, meditative instrumental and vocal close.
+At 5:14 the bass singers take us on an adventure that sounds heavenly. Before different singers take turns singing 'Bless the Lord oh my soul' with the choir vocalizing in the background. Definitely recommend headphones for this.
+At 6:17 there is a short instrumental and the full choir joins in for 'bless the Lord oh my soul ...'
 
-**The Visuals & Atmosphere:**
+## The Visuals & Atmosphere:
 
 - **The Choir:** True to its name, the video features a massive choir packed into a large auditorium or church setting. Every member of the choir is uniformly dressed in blue t-shirts, creating a beautiful sea of blue.
 - **The Lighting:** The stage and audience area are bathed in deep, atmospheric blue and purple lighting, punctuated by bright stage spotlights that give the performance a very reverent and majestic feel.
@@ -35,7 +38,7 @@ Here are the key highlights and structural moments from the performance:
 
 **Key Moments:**
 
-- **The Spoken Word [**[**02:33**](http://www.youtube.com/watch?v=qZFbRkJ9eoM&t=153)**]:** The camera focuses on a male soloist in the choir who passionately delivers the spoken prayer section (_"Lord your mercy is so great..."_).
+- **The Spoken Word ** The camera focuses on a male soloist in the choir who passionately delivers the spoken prayer section (_"Lord your mercy is so great..."_).
 - **The Climax & Joy:** As the song builds, the energy of the choir visibly increases. By the end of the performance, the entire room is smiling, swaying, and singing in full, joyful unison.
 - **The Credits:** The video concludes with a sweeping credits roll against a black screen, highlighting the massive effort behind this production. It lists the directors, producers, sound engineers, and every single singer categorized by their vocal parts (Soprano 1 & 2, Alto 1 & 2, Tenor 1 & 2, Bass 1 & 2).
 
