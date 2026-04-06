@@ -2033,12 +2033,12 @@ h1, h2, h3, h4, h5, h6,
 
     // Invert hamburger icon colors for dark mode
     .menu-icon {
-      background-color: var(--card-border) !important; // Dark container for stripes
+     
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4px;
+      
       
       svg path {
         fill: var(--text-color) !important; // White/Dark stripes
