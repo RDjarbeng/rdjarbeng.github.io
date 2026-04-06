@@ -17,7 +17,7 @@ The addition of the Bola Yesu song from Sunmisola Agbebi   in the middle is a st
 ## Key highlights and structural moments from the performance:
 
 * **The Classic Chorus :** The medley opens with the familiar lyrics of the song, singing, _"Bless the Lord, oh my soul... the sun comes up, it's a new day."_
-* **A Unique Spoken Prayer:** Rather than strictly following the standard hymn structure, this arrangement includes a distinct, beautiful spoken-word segment. The spoken word segment uses the melody of _Bola_ from Sunmisola Agbebi. Part of the wording from the spoken word performance is given by a male choir member:
+* **A Unique Spoken Prayer:** Rather than strictly following the standard hymn structure, this arrangement includes a distinct, beautiful spoken-word segment. The spoken word segment uses the melody of _Bola_ from Sunmisola Agbebi _ooh oh oh_. Part of the wording from the spoken word performance is given by a male choir member:
 
 > "Lord your mercy is so great that you humble your might to love me. You lavish your gifts on me day after day. Though I am so sinful.
 
@@ -31,12 +31,13 @@ Then the choir joins in with the verse, led by the male voices and the ladies jo
 > Still my Soul will sing your praise unending,
 > Ten Thousand years and then Forever more
 
-After this they transition to the refrain of  _Bola_ from Sunmisola Agbebi
+After this they transition to the words of the refrain of  _Bola_ from Sunmisola Agbebi.
 
->  Aye mi b’ola fun o Jesu (My life will honor you Jesus)
+> eeh eeh, eeeh eeeh
+> Aye mi b’ola fun o Jesu (My life will honor you Jesus)
 > Emi mi fi ogo fun o Jesu (My spirit will give You glory, Jesus) (Repeat)
 
-(lyrics here from [African Gospel Lyrics](https://africangospellyrics.com/2023/08/29/bola/))
+_(lyrics here from_ [_African Gospel Lyrics_](https://africangospellyrics.com/2023/08/29/bola/)_)_
 
 Then transition to one of the local languages of Nigeria, which unfortunately I don't know what language it is  not being able to identify it, but it uses Eze for king.
 
