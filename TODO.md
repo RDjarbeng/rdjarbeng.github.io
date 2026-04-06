@@ -7,3 +7,6 @@ This repo is a blog that's being built as well as being filled with content conc
 List of todos is split across two files:
 TODO_content.md: Todos related to content 
 TODO_design.md: Todos related to design and technical site building 
+
+Current focus:
+Working on the videos page now
