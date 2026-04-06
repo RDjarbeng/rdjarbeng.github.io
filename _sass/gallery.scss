@@ -10,6 +10,106 @@
     margin-bottom: 40px;
 }
 
+/* Gallery Hub Sections */
+.gallery-sections-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0 50px;
+  padding: 0 10px;
+}
+
+.hub-card {
+  position: relative;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #1a1a1a;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    .hub-card-bg {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+
+    .hub-card-content {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
+  }
+
+  .hub-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  .hub-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+    transition: background 0.4s ease;
+  }
+
+  &.memes .hub-card-tag { background: #ff9800; }
+  &.videos .hub-card-tag { background: #2196f3; }
+  &.youtube .hub-card-tag { background: #ff0000; }
+
+  .hub-card-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .hub-card-title {
+    margin: 0 0 5px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hub-card-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-sections-hub {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .hub-card {
+    height: 200px;
+  }
+}
+
 .gallery-description {
     max-width: 800px;
     margin: 0 auto 30px;
