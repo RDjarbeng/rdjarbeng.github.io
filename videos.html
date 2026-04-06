@@ -6,19 +6,12 @@ permalink: /videos/
 
 <div class="videos-page-shell">
     <aside class="video-filter-rail" id="video-filter-rail" aria-label="Video source filters">
-        <div class="video-filter-rail-header">
-            <h2>Sources</h2>
-            <p>Select one source, then refine by genre.</p>
-        </div>
         <div class="video-filter-rail-actions" id="source-filter-list">
             <button class="vid-source-btn active" data-filter="all" data-label="All">All</button>
             <button class="vid-source-btn youtube" data-filter="youtube" data-label="YouTube">YouTube</button>
             <button class="vid-source-btn tiktok" data-filter="tiktok" data-label="TikTok">TikTok</button>
             <button class="vid-source-btn instagram" data-filter="instagram" data-label="Instagram">Instagram</button>
             <button class="vid-source-btn twitter" data-filter="twitter" data-label="Twitter / X">Twitter / X</button>
-        </div>
-        <div class="video-filter-rail-note">
-            Results match both the selected source and genre.
         </div>
     </aside>
 
@@ -34,81 +27,87 @@ permalink: /videos/
             and curated clips.</p>
     </div>
 
-    <!-- Search Bar -->
-    <div class="video-search" style="max-width: 500px; margin: 0 auto 20px auto;">
-        <input type="text" id="video-search-input" placeholder="Search videos by title..." 
-            style="width: 100%; padding: 12px 18px; border-radius: 25px; border: 1px solid #d9e2ec; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;"
-            onfocus="this.style.borderColor='#102a43'; this.style.boxShadow='0 0 0 3px rgba(16,42,67,0.1)';"
-            onblur="this.style.borderColor='#d9e2ec'; this.style.boxShadow='none';">
-    </div>
-
-    <div class="filter-summary" id="filter-summary">
-        Showing: Source = <strong>All</strong> | Genre = <strong>All Genres</strong>
-    </div>
-
-    <!-- Genre Filter Horizontal List -->
-    <div class="genre-filter-row">
-        <span class="genre-filter-label">Genre:</span>
-        <div class="genre-filter-scroll" id="genre-filter-scroll" role="tablist" aria-label="Genre filters">
-            <button class="genre-chip active" data-genre="all" data-label="All Genres">All Genres</button>
-            {% assign videos = site.gallery | where: "type", "video" %}
-            {% assign genres = "" | split: "" %}
-            {% for item in videos %}
-            {% assign g = item.genre | default: item.category | default: "Other" %}
-            {% unless genres contains g %}
-            {% assign genres = genres | push: g %}
-            {% endunless %}
-            {% endfor %}
-            {% assign sorted_genres = genres | sort %}
-            {% for genre in sorted_genres %}
-            <button class="genre-chip" data-genre="{{ genre | escape }}" data-label="{{ genre | escape }}">{{ genre }}</button>
-            {% endfor %}
+    <div class="sticky-filter-stack">
+        <!-- Search Bar -->
+        <div class="video-search" style="max-width: 500px; margin: 0 auto 12px auto;">
+            <input type="text" id="video-search-input" placeholder="Search videos by title..." 
+                style="width: 100%; padding: 12px 18px; border-radius: 25px; border: 1px solid #d9e2ec; font-size: 1rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;"
+                onfocus="this.style.borderColor='#102a43'; this.style.boxShadow='0 0 0 3px rgba(16,42,67,0.1)';"
+                onblur="this.style.borderColor='#d9e2ec'; this.style.boxShadow='none';">
         </div>
-        <span id="video-count" class="video-count-inline"></span>
+
+        <!-- Genre Filter Horizontal List -->
+        <div class="genre-filter-row">
+            <span class="genre-filter-label">Genre:</span>
+            <div class="genre-filter-scroll" id="genre-filter-scroll" role="tablist" aria-label="Genre filters">
+                <button class="genre-chip active" data-genre="all" data-label="All Genres">All Genres</button>
+                {% assign videos = site.gallery | where: "type", "video" %}
+                {% assign genres = "" | split: "" %}
+                {% for item in videos %}
+                {% assign g = item.genre | default: item.category | default: "Other" %}
+                {% unless genres contains g %}
+                {% assign genres = genres | push: g %}
+                {% endunless %}
+                {% endfor %}
+                {% assign sorted_genres = genres | sort %}
+                {% for genre in sorted_genres %}
+                <button class="genre-chip" data-genre="{{ genre | escape }}" data-label="{{ genre | escape }}">{{ genre }}</button>
+                {% endfor %}
+            </div>
+            <span id="video-count" class="video-count-inline"></span>
+        </div>
     </div>
 
     <style>
         .videos-page-shell {
             --video-shell-max: 1200px;
-            --rail-width: 220px;
-            --rail-gap: 16px;
+            --rail-gap: 14px;
             --top-offset: 70px;
             position: relative;
         }
 
         .video-filter-rail {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            inline-size: max-content;
+            min-width: 9.5ch;
+            max-width: 12.5ch;
+            transform: translateX(-105%);
+            transition: transform 0.28s ease;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 16px;
+            border-radius: 0;
+            border-left: 0;
+            padding: 10px 6px;
             box-shadow: 0 8px 22px var(--shadow-color);
-            z-index: 120;
-        }
-
-        .video-filter-rail-header h2 {
-            font-size: 1rem;
-            margin: 0 0 6px 0;
-            color: var(--text-color);
-        }
-
-        .video-filter-rail-header p {
-            font-size: 0.82rem;
-            color: var(--grey-text);
-            margin: 0 0 14px 0;
-            line-height: 1.4;
+            z-index: 150;
+            overflow-y: auto;
         }
 
         .video-filter-rail-actions {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
+            width: max-content;
         }
 
-        .video-filter-rail-note {
-            margin-top: 12px;
-            font-size: 0.78rem;
-            color: var(--grey-text);
-            line-height: 1.4;
+        .video-filter-rail.open {
+            transform: translateX(0);
+        }
+
+        .video-filter-rail.rail-fixed {
+            transform: none;
+            border-radius: 10px;
+            border-left: 1px solid var(--card-border);
+            top: var(--top-offset);
+            left: var(--rail-left, 12px);
+            bottom: auto;
+            inline-size: max-content;
+            min-width: 9.5ch;
+            max-width: 12.5ch;
+            max-height: calc(100vh - var(--top-offset) - 16px);
         }
 
         .video-sidebar-toggle {
@@ -124,7 +123,7 @@ permalink: /videos/
             font-weight: 700;
             padding: 8px 14px;
             cursor: pointer;
-            display: none;
+            display: inline-block;
         }
 
         .video-filter-overlay {
@@ -139,23 +138,22 @@ permalink: /videos/
             display: block;
         }
 
-        .filter-summary {
-            text-align: center;
-            color: #829ab1;
-            font-size: 0.9rem;
-            margin-bottom: 14px;
+        .sticky-filter-stack {
+            position: sticky;
+            top: 0;
+            z-index: 95;
+            background: var(--bg-color);
+            padding: 2px 0 8px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--card-border);
         }
 
         .genre-filter-row {
-            position: sticky;
-            top: 58px;
-            z-index: 60;
-            background: var(--bg-color);
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 30px;
-            padding: 8px 0 12px;
+            margin-bottom: 0;
+            padding: 8px 0 10px;
         }
 
         .genre-filter-label {
@@ -171,9 +169,14 @@ permalink: /videos/
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
-            scrollbar-width: thin;
+            scrollbar-width: none;
             padding-bottom: 4px;
             flex: 1;
+            -ms-overflow-style: none;
+        }
+
+        .genre-filter-scroll::-webkit-scrollbar {
+            display: none;
         }
 
         .genre-chip {
@@ -207,16 +210,18 @@ permalink: /videos/
         }
 
         .vid-source-btn {
-            width: 100%;
+            width: auto;
             text-align: left;
-            padding: 10px 12px;
-            border-radius: 10px;
+            padding: 8px 8px;
+            border-radius: 8px;
             border: 1px solid var(--card-border);
             cursor: pointer;
             background: var(--card-bg);
             color: var(--text-color);
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.84rem;
+            line-height: 1.1;
+            white-space: nowrap;
             transition: all 0.2s;
         }
 
@@ -287,38 +292,25 @@ permalink: /videos/
             }
         }
 
-        @media (min-width: 1360px) {
-            .video-filter-rail {
-                position: fixed;
-                width: var(--rail-width);
-                top: var(--top-offset);
-                left: max(12px, calc((100vw - min(var(--video-shell-max), calc(100vw - 40px))) / 2 - var(--rail-width) - var(--rail-gap)));
-                max-height: calc(100vh - var(--top-offset) - 16px);
-                overflow-y: auto;
-            }
+        .videos-page-shell.drawer-mode .video-sidebar-toggle {
+            display: inline-block;
         }
 
-        @media (max-width: 1359px) {
-            .video-sidebar-toggle {
-                display: inline-block;
-            }
+        .videos-page-shell:not(.drawer-mode) .video-sidebar-toggle {
+            display: none;
+        }
 
-            .video-filter-rail {
-                position: fixed;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                width: min(82vw, 320px);
+        .videos-page-shell:not(.drawer-mode) .video-filter-overlay {
+            display: none !important;
+        }
+
+        .videos-page-shell:not(.drawer-mode) .video-filter-rail {
+            transform: none;
+        }
+
+        @media (max-width: 1100px) {
+            .video-filter-rail.rail-fixed {
                 transform: translateX(-105%);
-                transition: transform 0.28s ease;
-                border-radius: 0;
-                border-left: 0;
-                z-index: 150;
-                overflow-y: auto;
-            }
-
-            .video-filter-rail.open {
-                transform: translateX(0);
             }
         }
 
@@ -457,22 +449,14 @@ permalink: /videos/
         const allCards = Array.from(document.querySelectorAll('.video-masonry-item'));
         const noResults = document.getElementById('no-results');
         const videoCount = document.getElementById('video-count');
-        const filterSummary = document.getElementById('filter-summary');
         const sidebar = document.getElementById('video-filter-rail');
+        const shell = document.querySelector('.videos-page-shell');
         const sidebarToggle = document.getElementById('video-sidebar-toggle');
         const sidebarOverlay = document.getElementById('video-filter-overlay');
 
         let activeSource = 'all';
         let activeGenre = 'all';
         let activeSearch = '';
-
-        function updateFilterSummary() {
-            const sourceBtn = document.querySelector('.vid-source-btn.active');
-            const genreBtn = document.querySelector('.genre-chip.active');
-            const sourceLabel = sourceBtn ? sourceBtn.getAttribute('data-label') : 'All';
-            const genreLabel = genreBtn ? genreBtn.getAttribute('data-label') : 'All Genres';
-            filterSummary.innerHTML = `Showing: Source = <strong>${sourceLabel}</strong> | Genre = <strong>${genreLabel}</strong>`;
-        }
 
         function updateVisibility() {
             let visibleCount = 0;
@@ -499,7 +483,27 @@ permalink: /videos/
             
             // Update count
             videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
-            updateFilterSummary();
+        }
+
+        function syncSidebarMode() {
+            const viewport = window.innerWidth;
+            const contentWidth = Math.min(1200, viewport - 40);
+            const leftGutter = Math.max(0, (viewport - contentWidth) / 2);
+            const railApproxWidth = 108; // compact 9-12ch rail + padding
+            const required = railApproxWidth + 14;
+            const canFitFixedRail = leftGutter >= required;
+
+            shell.classList.toggle('drawer-mode', !canFitFixedRail);
+            sidebar.classList.toggle('rail-fixed', canFitFixedRail);
+
+            if (canFitFixedRail) {
+                const left = Math.max(10, Math.floor(leftGutter - railApproxWidth - 14));
+                sidebar.style.setProperty('--rail-left', `${left}px`);
+                sidebar.classList.remove('open');
+                sidebarOverlay.classList.remove('active');
+            } else {
+                sidebar.style.removeProperty('--rail-left');
+            }
         }
 
         // Source Filtering Logic
@@ -509,7 +513,7 @@ permalink: /videos/
                 this.classList.add('active');
                 activeSource = this.getAttribute('data-filter');
                 updateVisibility();
-                if (window.innerWidth <= 1359) {
+                if (shell.classList.contains('drawer-mode')) {
                     sidebar.classList.remove('open');
                     sidebarOverlay.classList.remove('active');
                 }
@@ -548,13 +552,11 @@ permalink: /videos/
         });
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 1359) {
-                sidebar.classList.remove('open');
-                sidebarOverlay.classList.remove('active');
-            }
+            syncSidebarMode();
         });
 
         // Initialize count
+        syncSidebarMode();
         updateVisibility();
 
         // Thumbnail loading
