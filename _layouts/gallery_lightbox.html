@@ -42,27 +42,7 @@ layout: default
       Explore a visual journey through my life and interests. This collection features cover images from my blog
       posts, AI-generated art, memes I enjoy, and videos from social media.
     </p>
-    <nav class="gallery-nav">
-      <button class="gallery-filter active" data-filter="all">All Items</button>
-      <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
-      <button class="gallery-filter" data-filter="memes">Memes</button>
-      <button class="gallery-filter" data-filter="ghana">Ghana</button>
-      <button class="gallery-filter" data-filter="rwanda">Rwanda</button>
-      <button class="gallery-filter" data-filter="external">Gallery Images</button>
-      <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
-      <button class="gallery-filter" data-filter="videos">All Videos</button>
-      <!-- Video Sub-filters -->
-      <button class="gallery-filter" data-filter="youtube">YouTube</button>
-      <button class="gallery-filter" data-filter="twitter">Twitter/X</button>
-      <button class="gallery-filter" data-filter="instagram">Instagram</button>
-      <button class="gallery-filter" data-filter="tiktok">TikTok</button>
-    </nav>
-    <div class="gallery-search-container">
-      <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
-    </div>
-  </header>
-  
-  <!-- Gallery Hub Sections -->
+    <!-- Gallery Hub Sections -->
   <div class="gallery-sections-hub">
     <a href="{{ '/gallery/memes/' | relative_url }}" class="hub-card memes">
       <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/memes_card.png' | relative_url }}')"></div>
@@ -89,6 +69,27 @@ layout: default
       </div>
     </a>
   </div>
+    <nav class="gallery-nav">
+      <button class="gallery-filter active" data-filter="all">All Items</button>
+      <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
+      <button class="gallery-filter" data-filter="memes">Memes</button>
+      <button class="gallery-filter" data-filter="ghana">Ghana</button>
+      <button class="gallery-filter" data-filter="rwanda">Rwanda</button>
+      <button class="gallery-filter" data-filter="external">Gallery Images</button>
+      <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
+      <button class="gallery-filter" data-filter="videos">All Videos</button>
+      <!-- Video Sub-filters -->
+      <button class="gallery-filter" data-filter="youtube">YouTube</button>
+      <button class="gallery-filter" data-filter="twitter">Twitter/X</button>
+      <button class="gallery-filter" data-filter="instagram">Instagram</button>
+      <button class="gallery-filter" data-filter="tiktok">TikTok</button>
+    </nav>
+    <div class="gallery-search-container">
+      <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
+    </div>
+  </header>
+  
+  
 
   <!-- Dashboard View (Horizontal Scrolling) -->
   <div id="gallery-dashboard" class="gallery-dashboard">

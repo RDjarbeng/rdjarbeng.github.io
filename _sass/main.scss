@@ -2047,3 +2047,100 @@ h1, h2, h3, h4, h5, h6,
     }
   }
 }
+
+// Navigation Dropdown Styles
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    .nav-dropdown-content {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown-caret {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--header-bg);
+  min-width: 180px;
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  padding: 5px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  a {
+    color: var(--text-color) !important;
+    padding: 10px 20px ;
+    text-decoration: none ;
+    display: block ;
+    font-size: 0.95rem ;
+    transition: background 0.2s;
+    border-bottom: none ;
+    text-align: left ;
+
+    &:hover {
+      background-color: var(--card-border) ;
+      color: var(--link-color) ;
+    }
+  }
+}
+
+// Mobile-specific adjustments for dropdown
+@media screen and (max-width: 600px) {
+  .nav-dropdown {
+    display: block ;
+    width: 100%;
+
+    .page-link {
+        border-bottom: 1px solid var(--card-border) ;
+        display: flex ;
+        justify-content: space-between ;
+        align-items: center ;
+    }
+
+    .nav-dropdown-content {
+      position: static ;
+      display: block ; // Keep it simple on mobile
+      background: rgba(0,0,0,0.02) ;
+      padding: 0 ;
+      border: none ;
+      box-shadow: none ;
+      opacity: 1 ;
+      visibility: visible ;
+      transform: none ;
+      
+      a {
+        padding: 12px 30px ;
+        border-bottom: 1px solid var(--card-border) ;
+        font-size: 0.9rem ;
+        opacity: 0.8;
+        background: transparent ;
+        text-align: left ;
+
+        &:last-child {
+            border-bottom: none ;
+        }
+      }
+    }
+  }
+  
+  .dropdown-caret {
+    display: inline-block ;
+    transition: transform 0.3s ;
+  }
+}

@@ -31,18 +31,24 @@
 
         <a class="page-link" href="{{ '/posts' | relative_url }}">Posts</a>
         <a class="page-link" href="{{ '/personal' | relative_url }}">Personal</a>
-        <a class="page-link" href="{{ '/gallery' | relative_url }}" aria-label="Gallery">
-          <svg style="vertical-align: middle; margin-right: 4px;" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-            <polyline points="21 15 16 10 5 21"></polyline>
-          </svg>
-          <span class="gallery-text">Gallery</span>
-        </a>
-        <a class="page-link" href="{{ '/gallery/memes/' | relative_url }}">Memes</a>
-        <a class="page-link" href="{{ '/gallery/videos/' | relative_url }}">Videos</a>
-        <a class="page-link" href="{{ '/gallery/videos/youtube/' | relative_url }}">YouTube</a>
+        <div class="nav-dropdown">
+          <a class="page-link" href="{{ '/gallery' | relative_url }}" aria-label="Gallery">
+            <svg style="vertical-align: middle; margin-right: 4px;" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span class="gallery-text">Gallery</span>
+            <svg class="dropdown-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 2px; vertical-align: middle; transition: transform 0.2s;"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown-content">
+            <a href="{{ '/gallery' | relative_url }}">Overview</a>
+            <a href="{{ '/gallery/memes/' | relative_url }}">Memes</a>
+            <a href="{{ '/gallery/videos/' | relative_url }}">Videos</a>
+            <a href="{{ '/gallery/videos/youtube/' | relative_url }}">YouTube Hub</a>
+          </div>
+        </div>
 
         <a class="page-link" href="{{ '/about' | relative_url }}">About</a>
         <form action="{{ '/search/' | relative_url }}" method="get" class="header-search-form">
