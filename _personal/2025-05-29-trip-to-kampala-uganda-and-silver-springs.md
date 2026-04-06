@@ -24,35 +24,49 @@ image_alt: Cover image for Trip to Uganda- Kampala & silver springs
 layout: personal
 ---
 
-After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor. It took a Toastmasters conference in Kampala to finally get me across the border. Tagging along with a friend, I traded the quiet streets of Kigali for an 11-hour bus ride filled with unexpected twists; from a passenger left behind at the border, to the thrill of exchanging Rwandan Francs **(RWF)** for what felt like a fortune in Ugandan Shillings (UGX).
+After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor. It took a Toastmasters conference in Kampala to finally get me across the border. Tagging along with a friend, I traded the quiet streets of Kigali for an 11-hour bus ride filled with unexpected twists; from a passenger left behind at the border, to the thrill of exchanging Rwandan Francs **(RWF)** for what felt like a fortune in Ugandan Shillings (**UGX**).
 
 Here’s **part one** of my journey to the East-African country of Uganda. This post may be longer than anticipated because of the many interesting moments so I have broken it into parts.
+
+Here's Uganda on a map of africa taken from Wikipedia
+
+![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%2528-mini_map_-rivers%2529.svg "Uganda in Africa ")
 
 ## The beginning - Kigali
 
 The journey was done by coach bus from Nyabugogo bus park and took approximately 11 hours.
 
- We departed Kigali around 7pm CAT with the Trinity bus service. Once we left the city center after Nyabugogo, the road was mostly empty. The bus was spacious with adjustable seats, USB ports and a foldable table like you find in airplanes. It wasn't full and had some empty seats especially at the back.  Here is a picture of the bus interior for reference.
+ We departed Kigali around 7pm CAT with the Trinity bus service out of the Nyabugogo bus station. Once we left the city center, the road was mostly empty. 
+
+### The bus interior
+
+The bus was spacious with adjustable seats, USB ports and a foldable table like you find in airplanes. It wasn't full and had some empty seats mostly at the back of the bus.  Here is a picture of the bus interior for reference.
 
 ![Inside the Trinity bus on the journey from Kigali to Kampala](/assets/images/20250529-213008.png "Trinity bus on the journey from Kigali to Kampala")
 
-I was able to get a window seat for my assigned seat number but it didn't make much of a difference in the night time since it was so dark you only saw the lights of the buildings streak past and couldn't see very far from the road where the light from the streetlights ended. After settling into the cozy Trinity bus, we were ready for the 11-hour ride to Kampala. Little did we know, the border crossing would bring its own surprises. We had no issues with the buses in general except another issue on the rest stops which I hope to speak about later.
+We settled into the cozy Trinity bus, ready for the 11-hour overnight haul to Kampala. I was thrilled to get a window seat, though the pitch-black night meant I could only see the blur of streetlights streaking past. The ride itself was comfortable enough (minus a separate issue with the rest stops that I'll get to later!), but little did we know, the border crossing was about to bring its own surprises.
 
-From the Rwandan capital, Kigali, ; it took 2 hours to reach the Rwanda-Uganda border, the majority of the time remaining for the journey  was from the border to Kampala which is close to the center of Uganda.
+Departing from Kigali, it only took us about two hours to hit the Rwanda-Uganda border. That left the lion's share of our overnight drive for the long haul up to Kampala, right near the center of Uganda.
 
-## Border -Uganda+ Rwanda
+## Border -Ugandan+ Rwandan Immigration
 
-At the border, we first went through a health screening with temperature checks. West Africans, like me, also had to show a yellow fever vaccination card. The border checkpoint was not very busy there were two or three other buses like ours arriving and departing with their passengers also in line. The temperature of the night air was comfortably cool as we waited in line to complete the temperature checks. Then we went through a security check with our luggage then headed to Rwandan immigration. After this, you guessed it, we moved to Ugandan Immigration with a few questions. Luckily, Ghanaians don't need a visa to enter Uganda. We also had a poster for the toastmasters event with location and time details on hand.
+Waiting in the cool night air, the border process was fairly quick since there were only a few other buses ahead of us. Here is how it went: First, a health screening where they checked our temperatures and verified yellow fever vaccination cards for West Africans like myself (picture below). Second, a luggage scan and checkout at Rwandan immigration. Finally, we crossed to Ugandan immigration. As a Ghanaian, I didn't need a visa, so answering a few routine questions and showing them our Toastmasters event poster was enough to get us cleared.
 
 _Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops—drivers may not wait!_
 
-Here is an example of the passport sized vaccination card for illustration.
+Here is an example of the passport sized vaccination card for illustration
 
 ![International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization Package of 25 U.S. Government Bookstore](/assets/images/017-001-00566-5_0.jpg "International Certificate of Vaccination or Prophylaxis as Approved by the  World Health Organization (Package of 25) U.S. Government Bookstore")
 
 ### Foreign exchange
 
-We took this opportunity to exchange our money. There was a forex bureau at the border, a small kiosk attached to what appeared to be a restaurant-supermarket. The attendants seemed ready and waiting, seems they were used to getting travellers at night. The bureau accepted mobile money and cash in Rwandan Francs(RWF),  Ugandan Shillings(UGX) and US dollars so we made a quick exchange for some of our money. At that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 UGX to 1 RWF; our money seemed to have been multiplied by 3, or so we thought.
+We took this opportunity to exchange our money. There was a forex bureau at the border, a small kiosk attached to what appeared to be a restaurant-supermarket. The attendants seemed ready and waiting, seems they were used to getting travellers at night. The bureau accepted mobile money and cash in 
+
+1. Rwandan Francs (**RWF**)
+2. Ugandan Shillings (**UGX**) 
+3. US dollars (**USD**)
+
+We made a quick exchange for some of our money. At that time it seemed like a lot of money, the exchange rate from RWF to UGX was \~3 **UGX** to 1 **RWF**; our money in **RWF** seemed to have been multiplied by 3, or so we thought.
 
 ### No passenger left behind?
 
@@ -66,8 +80,10 @@ The other passengers started murmuring something about the unfortunate person us
 
 #### Personal note
 
-In our travelling experience, we were used to some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for to make sure no one was left behind at a stop.  Apparently none of that was standard for this trip and you either made it on time or were left behind in a country you may be visiting for the first time.  There was a sign at the border checkpoint prohibiting honking but it still does not excuse what appears to be the hurried rush from the driver to depart without accounting for all passengers.
+In our travelling experience, we were used to some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for to make sure no one was left behind at a stop.  Apparently none of that was standard for this trip and you either made it on time or were left behind in a country you may be visiting for the first time.  There was a sign at the border checkpoint prohibiting honking but it still does not excuse what appears to be the hurried rush from the driver to depart without accounting for all passengers. _End personal note_
 
 The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I sometimes wonder what happened to that passenger, probably standing at the border checkpoint watching their bus rumble into the night.
 
-Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... **soon**. In part two, I hope to share the vibrant sights, sounds and food of Kampala, the Silver Springs hotel and a suburb called Bugulobi. See you soon.
+Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon.
+
+In part two, I hope to share the vibrant sights, sounds and food of Kampala, the Silver Springs hotel and a suburb called Bugulobi. See you soon.

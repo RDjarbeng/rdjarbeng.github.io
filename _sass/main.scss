@@ -1131,7 +1131,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
+  padding: 6px 5px;
 }
 
 .toc-header h2 {
@@ -1985,7 +1985,7 @@ h1, h2, h3, h4, h5, h6,
   // Minima hides .trigger at <= 600px. We need to float the toggle to the
   // right of the hamburger icon so it's always in view.
   position: absolute;
-  right: 45px; // leave space for the hamburger button (~30px) + gap
+  right: 50px; // leave space for the hamburger button (~30px) + gap
   top: 50%;
   transform: translateY(-50%);
 
@@ -1993,5 +1993,57 @@ h1, h2, h3, h4, h5, h6,
     // On desktop .trigger is always visible; hide the floated version
     // to avoid it appearing between logo and the nav links.
     display: none;
+  }
+}
+
+// Mobile Navigation Refinements
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: transparent !important;
+
+    label[for="nav-trigger"] {
+      background-color: transparent !important;
+      margin-bottom: 0;
+    }
+
+    // Hide mobile theme toggle when menu is expanded to avoid overlap with menu items
+    .nav-trigger:checked ~ .nav-theme-toggle {
+      display: none !important;
+    }
+
+    .trigger {
+      background-color: var(--header-bg) !important;
+      border: 1px solid var(--border-color) !important;
+      box-shadow: 0 4px 15px var(--shadow-color) !important;
+      z-index: 100;
+
+      // Hide the desktop theme toggle inside .trigger on mobile
+      .theme-toggle {
+        display: none !important;
+      }
+    }
+    
+    .page-link {
+      color: var(--text-color) !important;
+      border-bottom: 1px solid var(--card-border);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    // Invert hamburger icon colors for dark mode
+    .menu-icon {
+     
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+      svg path {
+        fill: var(--text-color) !important; // White/Dark stripes
+      }
+    }
   }
 }
