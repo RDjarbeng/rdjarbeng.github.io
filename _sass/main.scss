@@ -1995,13 +1995,31 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-// Mobile Navigation Dark Mode Fix
+// Mobile Navigation Refinements
 @media screen and (max-width: 600px) {
   .site-nav {
+    background-color: transparent !important;
+
+    label[for="nav-trigger"] {
+      background-color: transparent !important;
+      margin-bottom: 0;
+    }
+
+    // Hide mobile theme toggle when menu is expanded to avoid overlap with menu items
+    .nav-trigger:checked ~ .nav-theme-toggle {
+      display: none !important;
+    }
+
     .trigger {
       background-color: var(--header-bg) !important;
       border: 1px solid var(--border-color) !important;
       box-shadow: 0 4px 15px var(--shadow-color) !important;
+      z-index: 100;
+
+      // Hide the desktop theme toggle inside .trigger on mobile
+      .theme-toggle {
+        display: none !important;
+      }
     }
     
     .page-link {
@@ -2010,6 +2028,20 @@ h1, h2, h3, h4, h5, h6,
       
       &:last-child {
         border-bottom: none;
+      }
+    }
+
+    // Invert hamburger icon colors for dark mode
+    .menu-icon {
+      background-color: var(--card-border) !important; // Dark container for stripes
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      
+      svg path {
+        fill: var(--text-color) !important; // White/Dark stripes
       }
     }
   }
