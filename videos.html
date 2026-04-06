@@ -4,6 +4,29 @@ title: Videos
 permalink: /videos/
 ---
 
+<div class="videos-page-shell">
+    <aside class="video-filter-rail" id="video-filter-rail" aria-label="Video source filters">
+        <div class="video-filter-rail-header">
+            <h2>Sources</h2>
+            <p>Select one source, then refine by genre.</p>
+        </div>
+        <div class="video-filter-rail-actions" id="source-filter-list">
+            <button class="vid-source-btn active" data-filter="all" data-label="All">All</button>
+            <button class="vid-source-btn youtube" data-filter="youtube" data-label="YouTube">YouTube</button>
+            <button class="vid-source-btn tiktok" data-filter="tiktok" data-label="TikTok">TikTok</button>
+            <button class="vid-source-btn instagram" data-filter="instagram" data-label="Instagram">Instagram</button>
+            <button class="vid-source-btn twitter" data-filter="twitter" data-label="Twitter / X">Twitter / X</button>
+        </div>
+        <div class="video-filter-rail-note">
+            Results match both the selected source and genre.
+        </div>
+    </aside>
+
+    <button class="video-sidebar-toggle" id="video-sidebar-toggle" aria-label="Open filters">
+        Filters
+    </button>
+    <div class="video-filter-overlay" id="video-filter-overlay"></div>
+
 <div class="home-section" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
     <div style="text-align: center; margin-bottom: 30px;">
         <h1 class="page-heading" style="font-size: 2.5rem; margin-bottom: 10px;">Video Library</h1>
@@ -19,52 +42,186 @@ permalink: /videos/
             onblur="this.style.borderColor='#d9e2ec'; this.style.boxShadow='none';">
     </div>
 
-    <!-- Source Filter Bar -->
-    <div class="video-filters"
-        style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap;">
-        <span style="font-weight: bold; color: #627d98; margin-right: 5px; align-self: center; font-size: 0.9rem;">Source:</span>
-        <button class="vid-source-btn active" data-filter="all">All</button>
-        <button class="vid-source-btn" data-filter="youtube" style="color: #ff0000;">YouTube</button>
-        <button class="vid-source-btn" data-filter="tiktok" style="color: #000;">TikTok</button>
-        <button class="vid-source-btn" data-filter="instagram" style="color: #E1306C;">Instagram</button>
-        <button class="vid-source-btn" data-filter="twitter" style="color: #1DA1F2;">Twitter / X</button>
+    <div class="filter-summary" id="filter-summary">
+        Showing: Source = <strong>All</strong> | Genre = <strong>All Genres</strong>
     </div>
 
-    <!-- Genre Filter Dropdown -->
-    <div class="genre-filter" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; align-items: center;">
-        <label for="genre-select" style="font-weight: bold; color: #627d98; font-size: 0.9rem;">Genre:</label>
-        <select id="genre-select" 
-            style="padding: 8px 18px; border-radius: 20px; border: 1px solid #d9e2ec; font-size: 0.95rem; font-weight: bold; cursor: pointer; background: white; outline: none; transition: border-color 0.2s;">
-            <option value="all">All Genres</option>
+    <!-- Genre Filter Horizontal List -->
+    <div class="genre-filter-row">
+        <span class="genre-filter-label">Genre:</span>
+        <div class="genre-filter-scroll" id="genre-filter-scroll" role="tablist" aria-label="Genre filters">
+            <button class="genre-chip active" data-genre="all" data-label="All Genres">All Genres</button>
             {% assign videos = site.gallery | where: "type", "video" %}
             {% assign genres = "" | split: "" %}
             {% for item in videos %}
-                {% assign g = item.genre | default: item.category | default: "Other" %}
-                {% unless genres contains g %}
-                    {% assign genres = genres | push: g %}
-                {% endunless %}
+            {% assign g = item.genre | default: item.category | default: "Other" %}
+            {% unless genres contains g %}
+            {% assign genres = genres | push: g %}
+            {% endunless %}
             {% endfor %}
             {% assign sorted_genres = genres | sort %}
             {% for genre in sorted_genres %}
-            <option value="{{ genre | escape }}">{{ genre }}</option>
+            <button class="genre-chip" data-genre="{{ genre | escape }}" data-label="{{ genre | escape }}">{{ genre }}</button>
             {% endfor %}
-        </select>
-        <span id="video-count" style="color: #829ab1; font-size: 0.9rem; margin-left: 10px;"></span>
+        </div>
+        <span id="video-count" class="video-count-inline"></span>
     </div>
 
     <style>
-        .vid-source-btn {
-            padding: 8px 18px;
+        .videos-page-shell {
+            --video-shell-max: 1200px;
+            --rail-width: 220px;
+            --rail-gap: 16px;
+            --top-offset: 70px;
+            position: relative;
+        }
+
+        .video-filter-rail {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 8px 22px var(--shadow-color);
+            z-index: 120;
+        }
+
+        .video-filter-rail-header h2 {
+            font-size: 1rem;
+            margin: 0 0 6px 0;
+            color: var(--text-color);
+        }
+
+        .video-filter-rail-header p {
+            font-size: 0.82rem;
+            color: var(--grey-text);
+            margin: 0 0 14px 0;
+            line-height: 1.4;
+        }
+
+        .video-filter-rail-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .video-filter-rail-note {
+            margin-top: 12px;
+            font-size: 0.78rem;
+            color: var(--grey-text);
+            line-height: 1.4;
+        }
+
+        .video-sidebar-toggle {
+            position: fixed;
+            left: 14px;
+            top: 140px;
+            z-index: 140;
+            border: 1px solid var(--card-border);
             border-radius: 20px;
-            border: 1px solid #d9e2ec;
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 14px;
             cursor: pointer;
-            background: white;
+            display: none;
+        }
+
+        .video-filter-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.48);
+            z-index: 130;
+            display: none;
+        }
+
+        .video-filter-overlay.active {
+            display: block;
+        }
+
+        .filter-summary {
+            text-align: center;
+            color: #829ab1;
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+
+        .genre-filter-row {
+            position: sticky;
+            top: 58px;
+            z-index: 60;
+            background: var(--bg-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 8px 0 12px;
+        }
+
+        .genre-filter-label {
             font-weight: bold;
+            color: #627d98;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .genre-filter-scroll {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scrollbar-width: thin;
+            padding-bottom: 4px;
+            flex: 1;
+        }
+
+        .genre-chip {
+            border-radius: 999px;
+            border: 1px solid #d9e2ec;
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 7px 14px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .genre-chip:hover {
+            background: #f0f4f8;
+        }
+
+        .genre-chip.active {
+            background: #102a43;
+            color: #fff;
+            border-color: #102a43;
+        }
+
+        .video-count-inline {
+            color: #829ab1;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin-left: 6px;
+        }
+
+        .vid-source-btn {
+            width: 100%;
+            text-align: left;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            cursor: pointer;
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 0.9rem;
             transition: all 0.2s;
         }
 
         .vid-source-btn:hover {
-            background: #f0f4f8;
+            background: var(--category-bg);
         }
 
         .vid-source-btn.active {
@@ -73,9 +230,24 @@ permalink: /videos/
             border-color: #102a43;
         }
 
-        #genre-select:focus {
-            border-color: #102a43;
-            box-shadow: 0 0 0 3px rgba(16,42,67,0.1);
+        .vid-source-btn.youtube.active {
+            background: #ff0000;
+            border-color: #ff0000;
+        }
+
+        .vid-source-btn.tiktok.active {
+            background: #000;
+            border-color: #000;
+        }
+
+        .vid-source-btn.instagram.active {
+            background: #e1306c;
+            border-color: #e1306c;
+        }
+
+        .vid-source-btn.twitter.active {
+            background: #1da1f2;
+            border-color: #1da1f2;
         }
 
         .video-masonry {
@@ -115,9 +287,55 @@ permalink: /videos/
             }
         }
 
+        @media (min-width: 1360px) {
+            .video-filter-rail {
+                position: fixed;
+                width: var(--rail-width);
+                top: var(--top-offset);
+                left: max(12px, calc((100vw - min(var(--video-shell-max), calc(100vw - 40px))) / 2 - var(--rail-width) - var(--rail-gap)));
+                max-height: calc(100vh - var(--top-offset) - 16px);
+                overflow-y: auto;
+            }
+        }
+
+        @media (max-width: 1359px) {
+            .video-sidebar-toggle {
+                display: inline-block;
+            }
+
+            .video-filter-rail {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: min(82vw, 320px);
+                transform: translateX(-105%);
+                transition: transform 0.28s ease;
+                border-radius: 0;
+                border-left: 0;
+                z-index: 150;
+                overflow-y: auto;
+            }
+
+            .video-filter-rail.open {
+                transform: translateX(0);
+            }
+        }
+
         @media (max-width: 640px) {
             .video-masonry {
                 column-count: 1;
+            }
+
+            .genre-filter-row {
+                flex-wrap: wrap;
+                top: 48px;
+                gap: 8px;
+            }
+
+            .video-count-inline {
+                width: 100%;
+                margin-left: 0;
             }
         }
     </style>
@@ -228,19 +446,33 @@ permalink: /videos/
         <p>No videos match your filters. Try adjusting your search or filters.</p>
     </div>
 </div>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const filterBtns = document.querySelectorAll('.vid-source-btn');
-        const genreSelect = document.getElementById('genre-select');
+        const genreFilterScroll = document.getElementById('genre-filter-scroll');
+        const genreChips = document.querySelectorAll('.genre-chip');
         const searchInput = document.getElementById('video-search-input');
         const allCards = Array.from(document.querySelectorAll('.video-masonry-item'));
         const noResults = document.getElementById('no-results');
         const videoCount = document.getElementById('video-count');
+        const filterSummary = document.getElementById('filter-summary');
+        const sidebar = document.getElementById('video-filter-rail');
+        const sidebarToggle = document.getElementById('video-sidebar-toggle');
+        const sidebarOverlay = document.getElementById('video-filter-overlay');
 
         let activeSource = 'all';
         let activeGenre = 'all';
         let activeSearch = '';
+
+        function updateFilterSummary() {
+            const sourceBtn = document.querySelector('.vid-source-btn.active');
+            const genreBtn = document.querySelector('.genre-chip.active');
+            const sourceLabel = sourceBtn ? sourceBtn.getAttribute('data-label') : 'All';
+            const genreLabel = genreBtn ? genreBtn.getAttribute('data-label') : 'All Genres';
+            filterSummary.innerHTML = `Showing: Source = <strong>${sourceLabel}</strong> | Genre = <strong>${genreLabel}</strong>`;
+        }
 
         function updateVisibility() {
             let visibleCount = 0;
@@ -267,6 +499,7 @@ permalink: /videos/
             
             // Update count
             videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+            updateFilterSummary();
         }
 
         // Source Filtering Logic
@@ -276,12 +509,20 @@ permalink: /videos/
                 this.classList.add('active');
                 activeSource = this.getAttribute('data-filter');
                 updateVisibility();
+                if (window.innerWidth <= 1359) {
+                    sidebar.classList.remove('open');
+                    sidebarOverlay.classList.remove('active');
+                }
             });
         });
 
         // Genre Filtering Logic
-        genreSelect.addEventListener('change', function () {
-            activeGenre = this.value;
+        genreFilterScroll.addEventListener('click', function (e) {
+            const chip = e.target.closest('.genre-chip');
+            if (!chip) return;
+            genreChips.forEach((btn) => btn.classList.remove('active'));
+            chip.classList.add('active');
+            activeGenre = chip.getAttribute('data-genre');
             updateVisibility();
         });
 
@@ -293,6 +534,24 @@ permalink: /videos/
                 activeSearch = this.value.trim();
                 updateVisibility();
             }, 200);
+        });
+
+        // Sidebar open/close behavior
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('active');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1359) {
+                sidebar.classList.remove('open');
+                sidebarOverlay.classList.remove('active');
+            }
         });
 
         // Initialize count
