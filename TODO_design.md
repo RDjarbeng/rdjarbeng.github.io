@@ -25,6 +25,7 @@ This todo file contains design specifications and technical  directions for rdja
 ## Low Priority
 Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
+- Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
 - The categories page night mode isn't properly displayed
 - videos page inline player is not obvious that video can play without navigating, perhaps set to play on hover or something
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
