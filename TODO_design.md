@@ -23,6 +23,7 @@ This todo file contains design specifications and technical  directions for rdja
 - The nav search button is hidden on mobile once the user starts typing, needs a fix
 
 ## Low Priority
+- Css needs to be optimized, currently loads css for personal and video pages when not needed
 Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
 - Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
