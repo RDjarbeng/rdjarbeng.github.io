@@ -51,6 +51,7 @@ Gallery item titles need to be capitalized- possible use of jekyll capitalize fi
 
 The gallery section just looks uninteresting on mobile view, I think it's the layout, I'm not sure how to fix it, I'll have to look into it. Memes need to be scrollable
 
+- Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content)
 
 
 Possible improvements
