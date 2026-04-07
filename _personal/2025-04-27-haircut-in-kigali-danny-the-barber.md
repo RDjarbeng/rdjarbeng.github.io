@@ -25,7 +25,7 @@ One of the problems faced by foreigners in Rwanda is that the barbers don't know
 
 ## My Worst Haircut Experience- a communication problem
 
-Here is an experience from one of my first haircuts in Kigali. The barber pointed at my beard and asked me one word, 'Cut?'. I looked at his fingers in the mirror and they looked like they were tracing the outline of my beard. So silly me assumed he meant a quick trim to shape it. With a smile I said yes.  ☹️ My smile vanished as he shaved off the entire right sided of my beard and my smile disappeared. To my horror I now understood what he meant. I found a picture that I think represents the look on my face then.
+Here is an experience from one of my first haircuts in Kigali. The barber pointed at my beard and asked me one word, 'Cut?'. I looked at his fingers in the mirror and they looked like they were tracing the outline of my beard. So silly me assumed he meant a quick trim to shape it. With a smile I said yes.  My smile vanished as he shaved off the entire right side of my beard and my expression changed ☹️ . To my horror I now understood what he meant. I found a picture that best represents the look on my face then.
 
 ![Angry bird without a smile, this image captures my expression when my beard disappeared](/assets/images/d1b63370-a010-4671-8c6e-45a742ce1538-1_all_5977.jpg "This image captures my expression when my beard disappeared")
 
