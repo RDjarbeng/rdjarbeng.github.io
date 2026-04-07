@@ -1795,7 +1795,7 @@ a:hover {
   border: 1px solid var(--card-border);
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
+  z-index: 1001;
   max-height: 400px;
   overflow-y: auto;
   margin-top: 5px;
@@ -1813,6 +1813,25 @@ a:hover {
 
 .nav-search-results:empty {
   display: none;
+}
+
+/* Mobile search results: position below the search input */
+@media screen and (max-width: 600px) {
+  .header-search-form {
+    position: relative;
+  }
+
+  .nav-search-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    width: 85vw;
+    max-height: 50vh;
+    border-radius: 0 0 10px 10px;
+    margin-top: 2px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .nav-search-item {
@@ -2049,6 +2068,22 @@ h1, h2, h3, h4, h5, h6,
 }
 
 // Navigation Dropdown Styles
+
+// Hidden checkbox for mobile toggle
+.gallery-dropdown-toggle {
+  display: none;
+}
+
+// Invisible label overlay on mobile to intercept taps on Gallery link
+.gallery-dropdown-label {
+  display: none;
+}
+
+.dropdown-icon {
+  font-size: 0.85em;
+  margin-right: 2px;
+}
+
 .nav-dropdown {
   position: relative;
   display: inline-block;
@@ -2070,32 +2105,33 @@ h1, h2, h3, h4, h5, h6,
   display: none;
   position: absolute;
   background-color: var(--header-bg);
-  min-width: 180px;
-  box-shadow: 0 8px 25px var(--shadow-color);
+  min-width: 150px;
+  box-shadow: 0 6px 20px var(--shadow-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   z-index: 1000;
   top: 100%;
   left: 0;
-  padding: 5px 0;
+  padding: 4px 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   a {
     color: var(--text-color) !important;
-    padding: 10px 20px ;
-    text-decoration: none ;
-    display: block ;
-    font-size: 0.95rem ;
+    padding: 7px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.85rem;
     transition: background 0.2s;
-    border-bottom: none ;
-    text-align: left ;
+    border-bottom: none;
+    text-align: left;
+    white-space: nowrap;
 
     &:hover {
-      background-color: var(--card-border) ;
-      color: var(--link-color) ;
+      background-color: var(--card-border);
+      color: var(--link-color);
     }
   }
 }
@@ -2103,44 +2139,77 @@ h1, h2, h3, h4, h5, h6,
 // Mobile-specific adjustments for dropdown
 @media screen and (max-width: 600px) {
   .nav-dropdown {
-    display: block ;
+    display: block;
     width: 100%;
 
     .page-link {
-        border-bottom: 1px solid var(--card-border) ;
-        display: flex ;
-        justify-content: space-between ;
-        align-items: center ;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .nav-dropdown-content {
-      position: static ;
-      display: block ; // Keep it simple on mobile
-      background: rgba(0,0,0,0.02) ;
-      padding: 0 ;
-      border: none ;
-      box-shadow: none ;
-      opacity: 1 ;
-      visibility: visible ;
-      transform: none ;
-      
-      a {
-        padding: 12px 30px ;
-        border-bottom: 1px solid var(--card-border) ;
-        font-size: 0.9rem ;
-        opacity: 0.8;
-        background: transparent ;
-        text-align: left ;
+    // Invisible label that overlays the Gallery link on mobile
+    // to intercept taps and toggle the checkbox
+    .gallery-dropdown-label {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px; // cover the Gallery link area
+      z-index: 10;
+      cursor: pointer;
+    }
 
-        &:last-child {
-            border-bottom: none ;
+    // Hidden by default on mobile
+    .nav-dropdown-content {
+      position: static;
+      display: none;
+      background: transparent;
+      padding: 8px 12px;
+      border: none;
+      box-shadow: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      // Display as a wrapping row of pill chips
+      flex-wrap: wrap;
+      gap: 6px;
+
+      a {
+        display: inline-block;
+        padding: 5px 12px;
+        border-bottom: none;
+        font-size: 0.8rem;
+        opacity: 0.95;
+        background: var(--card-bg, rgba(255,255,255,0.08));
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        text-align: center;
+        white-space: nowrap;
+        transition: background 0.2s, transform 0.15s;
+
+        &:hover {
+          background: var(--card-border);
+          transform: scale(1.04);
         }
       }
     }
+
+    // When checkbox is checked, show the dropdown content as flex row of pills
+    .gallery-dropdown-toggle:checked ~ .nav-dropdown-content {
+      display: flex;
+    }
+
+    // Rotate caret when open
+    .gallery-dropdown-toggle:checked ~ .page-link .dropdown-caret {
+      transform: rotate(180deg);
+    }
   }
-  
+
   .dropdown-caret {
-    display: inline-block ;
-    transition: transform 0.3s ;
+    display: inline-block;
+    transition: transform 0.3s;
   }
 }

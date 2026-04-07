@@ -32,6 +32,7 @@
         <a class="page-link" href="{{ '/posts' | relative_url }}">Posts</a>
         <a class="page-link" href="{{ '/personal' | relative_url }}">Personal</a>
         <div class="nav-dropdown">
+          <input type="checkbox" id="gallery-dropdown-toggle" class="gallery-dropdown-toggle" />
           <a class="page-link" href="{{ '/gallery' | relative_url }}" aria-label="Gallery">
             <svg style="vertical-align: middle; margin-right: 4px;" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,11 +43,12 @@
             <span class="gallery-text">Gallery</span>
             <svg class="dropdown-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 2px; vertical-align: middle; transition: transform 0.2s;"><path d="m6 9 6 6 6-6"/></svg>
           </a>
+          <label for="gallery-dropdown-toggle" class="gallery-dropdown-label" aria-label="Toggle gallery submenu"></label>
           <div class="nav-dropdown-content">
-            <a href="{{ '/gallery' | relative_url }}">Overview</a>
-            <a href="{{ '/gallery/memes/' | relative_url }}">Memes</a>
-            <a href="{{ '/gallery/videos/' | relative_url }}">Videos</a>
-            <a href="{{ '/gallery/videos/youtube/' | relative_url }}">YouTube Hub</a>
+            <a href="{{ '/gallery' | relative_url }}"><span class="dropdown-icon">🖼️</span> Overview</a>
+            <a href="{{ '/gallery/memes/' | relative_url }}"><span class="dropdown-icon">😂</span> Memes</a>
+            <a href="{{ '/gallery/videos/' | relative_url }}"><span class="dropdown-icon">🎬</span> Videos</a>
+            <a href="{{ '/gallery/videos/youtube/' | relative_url }}"><span class="dropdown-icon">▶️</span> YouTube</a>
           </div>
         </div>
 
