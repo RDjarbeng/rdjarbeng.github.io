@@ -10,6 +10,7 @@ image: /assets/images/haircut_in_kigali_cover.webp
 image_alt: Cover image for Haircut in Kigali-Danny the barber
 layout: personal
 ---
+
 Have you ever had a bad haircut abroad? For my haircuts in Kigali I've kept the same barber for more than 3 years. Before I get into the story of how that happened. Here are pictures of my favorite cuts he made.
 
 ![Closeup of a Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000060757.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
@@ -24,7 +25,7 @@ One of the problems faced by foreigners in Rwanda is that the barbers don't know
 
 ## My Worst Haircut Experience- a communication problem
 
-Here is an experience from one of my first haircuts in Kigali. The barber pointed at my beard and asked me one word, 'Cut?'. I looked at his fingers in the mirror and they looked like they were tracing the outline of my beard. So silly me assumed he meant a quick trim to shape it. With a smile I said yes.  My smile vanished as he shaved off the entire right sided of my beard and my smile disappeared. To my horror I now understood what he meant. I found a picture that I think represents the look on my face then.
+Here is an experience from one of my first haircuts in Kigali. The barber pointed at my beard and asked me one word, 'Cut?'. I looked at his fingers in the mirror and they looked like they were tracing the outline of my beard. So silly me assumed he meant a quick trim to shape it. With a smile I said yes.  My smile vanished as he shaved off the entire right side of my beard and my expression changed ☹️ . To my horror I now understood what he meant. I found a picture that best represents the look on my face then.
 
 ![Angry bird without a smile, this image captures my expression when my beard disappeared](/assets/images/d1b63370-a010-4671-8c6e-45a742ce1538-1_all_5977.jpg "This image captures my expression when my beard disappeared")
 
@@ -34,7 +35,7 @@ The damage was done. The barber glanced at me in the mirror, likely sensing the 
 
 After my haircut disaster, a housemate recommended a nearby barber shop. That’s where I met Danny, the first barber in Kigali to ask, “Boss, show me design.” Unlike my previous experience, Danny wanted my input from the start. In Ghana, barber shops display hairstyle posters for easy selection, like this:
 
-![Barber shop hairstyle grid showing different hairstyles for men to choose from ](/assets/images/barber_shop_samples.jpg "Barber shop hairstyle grid")
+![Barber shop hairstyle grid showing different hairstyles for men to choose from](/assets/images/barber_shop_samples.jpg "Barber shop hairstyle grid")
 
 Danny's shop didn't have any of those pictures. Now what do I do? Think... I take out my phone and search Google for haircuts for men and show him an example.  Now Danny is not done yet. He points out that the beard style in the sample I showed him  is very different from my current beard. So I tell him to just smooth out my current beard; the little I had managed to grow back.
 
@@ -42,13 +43,13 @@ He gets to work trying to get my hair as close to the image as he can. In the sa
 
 ![Danny taking a photo of Richard after his haircut](/assets/images/1000060759.jpg "Danny the barber taking a photo of Richard after his haircut")
 
-He doesn't have a beard himself but gives a good beard trimming though. Smiles are back 🙂. 
+He doesn't have a beard himself but gives a good beard trimming though. Smiles are back 🙂.
 
 For those looking for a visual experience, here's a timelapse video of one of my haircuts with Danny.
 
 <center>
   <iframe width="315" height="560" src="https://www.youtube.com/embed/NdC5q4fSS9M" title="Haircut in Kigali with Danny the barber" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 20px; margin-bottom: 20px;"></iframe>
-</center> 
+</center>
 
 ## Conclusion
 
@@ -56,6 +57,6 @@ For those looking for a visual experience, here's a timelapse video of one of my
 
 When getting a haircut in Kigali you can bring reference photos, or learn basic Kinyarwanda phrases for haircuts. Try to use recommendations from others when picking a hair salon for the best experience.
 
-**PS:** 
+**PS:**
 
 My barber Danny's number is +250780724956 also on WhatsApp . When I wrote this post his shop was at Kimironko, Kigali. You can have it on one condition that you don't steal my spot when I come for my haircut. I keep having to wait in line nowadays to get a haircut.
