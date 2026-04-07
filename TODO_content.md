@@ -11,6 +11,7 @@ This todo contains direction for content on this site rdjarbeng.com, areas to im
 
 ## Content Ideas & Drafts
 - [ ] **Ananse**: Finish Ananse website post.
+How many nines post? How many nines do current services have
 - [ ] **Review**: Food-Ghana vs Nigeria Jollof.
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
@@ -18,8 +19,10 @@ This todo contains direction for content on this site rdjarbeng.com, areas to im
 Add page for apps of interest, AI apps, image creators,video generators, I love pdf, ...
 - [ ] Comment from reddit I'd like to implement: "Then i switched things up and started automating all that research part, like it would handle the keyword stuff and competitor analysis automatically so i could just focus on making the actual content good, the weird part is it also optimized everything for those AI overview things that show up in google now and that's when my traffic actually started moving"
 
+- [ ] Create a gallery of videos, music from RRR, Playlists from Andrew Ng and Lex Fridman, my own collection of songs that require headphones, nigerian movies
 
 
+# linkedIn posts
 Random thoughts and discussions from LinkedIN unposted posts:
 
 
@@ -55,12 +58,12 @@ Review challenges and opportunities for air quality in Africa
 Air quality and energy, is there a link, is solar the only link due to dust
 Why doesn't Kenya and East Africa experience the harmattan? 
 
-### Quanta Magazine
+## Quanta Magazine
 About Quanta magazine, wonderful material
 It’s online and it’s free. Among other accolades it has received for its science journalism, Quanta won a 2022 Pulitzer Prize in Explanatory Reporting and a 2020 National Magazine Award for general excellence. 
 —
 
-### Arduino IDE - who cares?
+### Arduino IDE - who cares? - this post doesn't have a large audience
 Arduino IDE freeze -locked as too heated and limited conversation to collaborators on Mar 16, 2024
 
 ### Interesting questions
@@ -104,6 +107,12 @@ IshowSpeed
 JOnathan Bynoe (Bill withers )
 HMack
 KaeStrings
+TechWithTim
+TraversyMedia
+Fireship
+DevEd
+FreeCodeCamp
+CodeNinja
 Israel Obasola
 Nathaniel Bassey
 Dunsin Oyekan
