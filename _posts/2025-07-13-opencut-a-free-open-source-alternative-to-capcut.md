@@ -4,7 +4,7 @@ author: Richard
 category: Technology
 tags:
   - Capcut
-  - Open-Source
+  - open-source
   - Video editing
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png

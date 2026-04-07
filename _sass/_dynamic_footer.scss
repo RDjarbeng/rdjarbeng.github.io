@@ -15,7 +15,7 @@
     box-sizing: border-box;
 
     &.is-expanded {
-        min-height: 90vh; // Take up almost full screen
+        min-height: 90vh; // Take up 90% of screen as requested
         height: 90vh;
         background-color: var(--bg-color);
         padding: 40px 20px; // Restore padding when expanded
@@ -24,6 +24,7 @@
             opacity: 0;
             pointer-events: none;
             transform: translateY(-20px);
+            display: none; // completely remove from layout
         }
 
         .expanded-view {
@@ -113,19 +114,22 @@
         transition-delay: 0.1s;
         pointer-events: none;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start; // Align to top when expanded
         height: 100%;
-        padding: 40px 0;
+        padding: 20px 0 60px 0; // extra padding at bottom for scrolling
+        overflow-y: auto; // Ensure scrolling inside if form is too long
 
         @media (min-width: 768px) {
             flex-direction: row;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start; // Align to top
+            padding: 40px 0;
         }
     }
 
     .contact-main {
         flex: 1;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         @media (min-width: 768px) {
             margin-bottom: 0;
@@ -160,13 +164,64 @@
 
     .contact-details {
         flex: 1;
-        max-width: 400px;
-        font-size: 1.1rem;
-        line-height: 1.6;
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
         color: var(--text-color);
 
+        @media (min-width: 768px) {
+            max-width: 500px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
         p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        // Specifically style the contact form when inside the footer
+        .dynamic-footer-form-wrapper {
+            margin: 20px 0;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    font-size: 1rem;
+                    box-sizing: border-box;
+                    background: #fff;
+                }
+
+                textarea {
+                    min-height: 100px;
+                    resize: vertical;
+                }
+
+                input[type="submit"],
+                button[type="submit"] {
+                    background: #000;
+                    color: #fff;
+                    border: none;
+                    padding: 12px 20px;
+                    border-radius: 6px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    width: 100%;
+                }
+            }
         }
 
         .social-links {

@@ -1,0 +1,302 @@
+.videos-page {
+  // Scope global layout overrides
+  .page-content { 
+    padding: 0 
+  }
+  .wrapper { 
+    max-width: 100% ; 
+    padding: 0 ; 
+    margin: 0 ;
+  }
+
+  .videos-page-shell {
+    position: relative;
+    max-width: 100%; 
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+
+    --vid-accent: hsl(210, 60%, 17%);
+    --vid-glass: hsla(210, 36%, 96%, 0.7);
+    --vid-border: hsla(210, 31%, 89%, 0.8);
+    --vid-shadow: hsla(210, 42%, 16%, 0.08);
+
+    // ============================================
+    // Fixed 75px Sidebar (Desktop)
+    // ============================================
+    .video-filter-rail {
+      position: fixed;
+      left: 0;
+      top: 65px;
+      bottom: 0;
+      width: 75px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--card-border);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 0 20px 0; // Padding to clear main header
+      gap: 20px;
+      transition: width 0.3s ease;
+
+      .video-filter-rail-header {
+        font-size: 0.6rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--grey-text);
+        margin-bottom: 5px;
+        display: none; // Hide header in narrow mode
+      }
+
+      .video-filter-rail-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+      }
+
+      .vid-source-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        background: transparent;
+        color: var(--grey-text);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+        gap: 6px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.2s;
+        }
+
+        span {
+          font-size: 0.65rem;
+          font-weight: 600;
+          opacity: 0.8;
+          max-width: 65px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          color: var(--base-color);
+          svg { transform: scale(1.1); }
+          span { opacity: 1; }
+        }
+
+        &.active {
+          color: white !important;
+          box-shadow: 0 4px 12px var(--vid-shadow);
+          svg { opacity: 1; }
+          
+          &.youtube { background: #ff0000 !important; }
+          &.tiktok { background: #000000 !important; }
+          &.instagram { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888) !important; }
+          &.twitter { background: #1da1f2 !important; }
+          
+          // Fallback for others if no specific class matches but it's active
+          &:not(.youtube):not(.tiktok):not(.instagram):not(.twitter) {
+            background: var(--text-color);
+            color: var(--bg-color) !important;
+          }
+        }
+      }
+    }
+
+    // ============================================
+    // Main Content Area (Shifted by Sidebar)
+    // ============================================
+    .videos-grid-area {
+      flex: 1;
+      margin-left: 75px; // Reserve space for fixed sidebar
+      padding: 20px 40px;
+      max-width: calc(100% - 75px);
+    }
+
+    // ============================================
+    // Sticky Stack (Genres & Search)
+    // ============================================
+    .sticky-filter-stack {
+      position: sticky;
+      top: 0px;
+      z-index: 500; 
+      background: var(--bg-color); 
+      padding: 10px 0;
+      margin: 0 0 30px 0;
+      border-bottom: 1px solid var(--card-border);
+      width: 100%;
+
+      .genre-filter-row, 
+      .videos-search-bar {
+        background: var(--bg-color) ;
+        position: relative;
+        z-index: 501;
+      }
+    }
+
+    .genre-filter-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      padding: 5px 0;
+      scrollbar-width: none;
+      &::-webkit-scrollbar { display: none; }
+    }
+
+    .genre-chip {
+      padding: 8px 18px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: all 0.2s;
+      &:hover { background: var(--category-bg); }
+      &.active {
+        background: var(--text-color);
+        color: var(--bg-color);
+        border-color: var(--text-color);
+      }
+    }
+
+    .videos-search-bar {
+      position: relative;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 25px;
+      padding: 0 20px;
+      input {
+        flex: 1;
+        padding: 12px;
+        border: none;
+        background: transparent;
+        color: var(--text-color);
+        font-size: 0.95rem;
+        outline: none;
+      }
+      .search-icon { color: var(--grey-text); }
+    }
+
+    // ============================================
+    // Video Masonry
+    // ============================================
+    .video-masonry {
+      column-count: 3;
+      column-gap: 30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .video-masonry-item {
+      break-inside: avoid;
+      margin-bottom: 30px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      border: 1px solid var(--card-border);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+      display: inline-block;
+      width: 100%;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      }
+
+      .video-info {
+        padding: 20px;
+        h3 {
+          font-size: 1.1rem;
+          margin: 0 0 12px 0;
+          line-height: 1.5;
+          color: var(--text-color);
+          font-weight: 700;
+        }
+        .video-date {
+          font-size: 0.85rem;
+          color: var(--grey-text);
+        }
+        .video-genre {
+          font-size: 0.75rem;
+          color: var(--base-color);
+          text-transform: uppercase;
+          margin-top: 8px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  // ============================================
+  // Responsive Adjustments
+  // ============================================
+  @media (max-width: 1200px) {
+    .videos-page-shell .video-masonry { column-count: 2; }
+  }
+
+  @media (max-width: 860px) {
+    .videos-page-shell {
+      flex-direction: column;
+      
+      .video-filter-rail {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid var(--card-border);
+        flex-direction: column;
+
+        .video-filter-rail-actions {
+          flex-direction: row;
+          overflow-x: auto;
+          padding-bottom: 5px;
+          scrollbar-width: none;
+          &::-webkit-scrollbar { display: none; }
+          width: 100%;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .vid-source-btn {
+          width: auto;
+          padding: 8px 15px;
+          flex-direction: row;
+          background: var(--category-bg);
+          border-radius: 20px;
+          border: 1px solid var(--card-border);
+          
+          span { font-size: 0.75rem; max-width: none; }
+          &.active { border: 1px solid var(--base-color); }
+        }
+      }
+
+      .videos-grid-area {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      .video-masonry { column-count: 1; }
+    }
+  }
+}

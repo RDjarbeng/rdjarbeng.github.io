@@ -42,6 +42,33 @@ layout: default
       Explore a visual journey through my life and interests. This collection features cover images from my blog
       posts, AI-generated art, memes I enjoy, and videos from social media.
     </p>
+    <!-- Gallery Hub Sections -->
+  <div class="gallery-sections-hub">
+    <a href="{{ '/gallery/memes/' | relative_url }}" class="hub-card memes">
+      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/memes_card.png' | relative_url }}')"></div>
+      <div class="hub-card-content">
+        <span class="hub-card-tag">Collections</span>
+        <h2 class="hub-card-title">Meme Gallery</h2>
+        <p class="hub-card-desc">The best of the internet, curated.</p>
+      </div>
+    </a>
+    <a href="{{ '/gallery/videos/' | relative_url }}" class="hub-card videos">
+      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/videos_card.png' | relative_url }}')"></div>
+      <div class="hub-card-content">
+        <span class="hub-card-tag">Library</span>
+        <h2 class="hub-card-title">Video Library</h2>
+        <p class="hub-card-desc">Short-form gems and social finds.</p>
+      </div>
+    </a>
+    <a href="{{ '/gallery/videos/youtube/' | relative_url }}" class="hub-card youtube">
+      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/youtube_card.png' | relative_url }}')"></div>
+      <div class="hub-card-content">
+        <span class="hub-card-tag">Hub</span>
+        <h2 class="hub-card-title">YouTube Hub</h2>
+        <p class="hub-card-desc">Curated playlists and deep dives.</p>
+      </div>
+    </a>
+  </div>
     <nav class="gallery-nav">
       <button class="gallery-filter active" data-filter="all">All Items</button>
       <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
@@ -61,6 +88,8 @@ layout: default
       <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
     </div>
   </header>
+  
+  
 
   <!-- Dashboard View (Horizontal Scrolling) -->
   <div id="gallery-dashboard" class="gallery-dashboard">

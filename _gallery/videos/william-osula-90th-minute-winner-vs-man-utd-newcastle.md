@@ -9,6 +9,7 @@ thumbnail: assets/images/posts/covers/osula_time_flies_cover.jpg
 type: video
 genre: Sports
 category: videos
+genre: Other
 twitter_id: '2029346157336383832'
 ---
 

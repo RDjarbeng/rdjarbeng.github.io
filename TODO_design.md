@@ -23,6 +23,7 @@ This todo file contains design specifications and technical  directions for rdja
 - The nav search button is hidden on mobile once the user starts typing, needs a fix
 
 ## Low Priority
+- Css needs to be optimized, currently loads css for personal and video pages when not needed
 Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
 - Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
@@ -51,6 +52,7 @@ Gallery item titles need to be capitalized- possible use of jekyll capitalize fi
 
 The gallery section just looks uninteresting on mobile view, I think it's the layout, I'm not sure how to fix it, I'll have to look into it. Memes need to be scrollable
 
+- Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content)
 
 
 Possible improvements

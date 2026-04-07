@@ -9,6 +9,7 @@ thumbnail: ''
 type: video
 genre: Education
 category: videos
+genre: Education
 ---
 
 Veritasium On Why Democracy Is Mathematically Impossible

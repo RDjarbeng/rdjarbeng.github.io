@@ -4,7 +4,7 @@
         <div class="repo-top-section">
             {% if item.image %}
             <div class="repo-image-container">
-                <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="repo-screenshot">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="repo-screenshot" loading="lazy">
             </div>
             {% endif %}
             <div class="repo-header-info">

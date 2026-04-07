@@ -19,6 +19,10 @@
                 <p>I'm always looking for new and exciting projects and people to work with.</p>
                 <p>If you have an idea that you want to discuss, reach out to me!</p>
 
+                <div class="dynamic-footer-form-wrapper" style="margin: 30px 0;">
+                    {% include contact-form.html %}
+                </div>
+
                 <div class="social-links">
                     {% if site.author.github %}
                     <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">
@@ -57,6 +61,9 @@
         const THRESHOLD = 500; // Total scroll delta needed to expand
         const DECAY = 5; // How fast progress decays when not scrolling
 
+        let touchStartY = 0;
+        let lastTouchY = 0;
+
         // Ensure initial height is set correctly
         footer.style.height = '50px';
 
@@ -78,13 +85,45 @@
                 }
             } else {
                 // Expanded logic
-                if (e.deltaY < 0) {
+                const expandedContent = footer.querySelector('.expanded-view');
+                if (e.deltaY < 0 && expandedContent && expandedContent.scrollTop <= 0) {
                     // Scrolling up -> Collapse immediately
                     collapseFooter();
                     progress = 0;
                 }
             }
 
+            updateUI();
+        }, { passive: false });
+
+        // Touch handlers
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+            lastTouchY = touchStartY;
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+            const touchY = e.touches[0].clientY;
+            const deltaY = lastTouchY - touchY; // Positive if dragging UP
+            lastTouchY = touchY;
+
+            const scrollBottom = Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+
+            if (!isExpanded) {
+                if (scrollBottom && deltaY > 0) {
+                    if (e.cancelable) e.preventDefault();
+                    progress = Math.min(progress + (deltaY * 3), THRESHOLD);
+                    if (progress >= THRESHOLD) {
+                        expandFooter();
+                    }
+                }
+            } else {
+                const expandedContent = footer.querySelector('.expanded-view');
+                if (deltaY < 0 && expandedContent && expandedContent.scrollTop <= 0) {
+                    collapseFooter();
+                    progress = 0;
+                }
+            }
             updateUI();
         }, { passive: false });
 
