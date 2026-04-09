@@ -41,6 +41,8 @@ Experience in Frankfurt, no uber in Saarbrucken, the trains (day ticket, airport
 - [ ] Are there any studies on how the air quality changes after a plane flies past?
 - [ ] What is Shopify?
 
+What happens when you don't restart your PC for a while, windows (Pagefile.sys), Linux, macbook...
+Wiztree to see the size of folders, what's the biggest folder on my PC?
 
 Battery technologies – previous, current. Flat vs round, heating sand or molten salt. How do they pair with solar panels
 Lithium Ion vs lithium polymer, about batteries for use. Flat batteries for laptops what are they using to make them so flat? For solar panels which battery technologies

@@ -31,6 +31,7 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - videos page inline player is not obvious that video can play without navigating, perhaps set to play on hover or something
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 - The loading indicator for the contact dynamic footer for light mode isn't showing
+- Add a view related posts link for videos too so I can track media across the site
 ### Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
@@ -44,7 +45,7 @@ Implement jekyll-responsive-image to properly size images on mobile devices
 - [ ] Add authors page listing all the authors
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
 - [ ] Remove tiktok expander plugin if not necessary'
-Search needs to include gallery items, tags, categories
+Search needs to include gallery items, tags, categories - I've seen other websites use powered by Algolia or googlem need to see the tradeoff vs building search myself
 Tags and categories need to be added to personal posts, gallery images and videos
 
 ## Gallery improvements
