@@ -17,3 +17,5 @@ In this demonstration, you can see how "agentic" workflows differ from tradition
 The video beautifully showcases the practical applications of this technology. From manufacturing quality control to intelligent video analysis, the ability of an AI to autonomously reason about the visual data it processes reduces the need for massive amounts of labeled training data. It lowers the barrier to entry for companies seeking to implement computer vision solutions.
 
 If you are a developer, an AI researcher, or a tech enthusiast looking to understand the next wave of artificial intelligence, this demo is an essential watch. It offers a fascinating glimpse into the future of computer vision, where cameras don’t just "see," but actively "understand" the world around them.
+
+For a deeper breakdown of the technology, use cases, and hands-on findings, read the full post: [Agentic Object Detection and Document Extraction with Landing.ai](https://rdjarbeng.com/agentic-object-detection-and-document-extraction-with-landing.ai/)
