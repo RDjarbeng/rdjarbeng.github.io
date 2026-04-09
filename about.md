@@ -12,7 +12,7 @@ custom_css_class: about-page
 </div>
 <div class="about-section">
 <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
-Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. Currently, I am expanding my expertise in Deep Learning and building on AWS. Occasionally I write technical posts and personal reflections on this Blog.
+Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. AWS Certified Solutions Architect – Associate. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
 
@@ -95,13 +95,31 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
           <div class="skill-category-title">Cloud & AI</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud</span>
-              <!-- <span class="skill-item">AWS</span> -->
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS</span>
               <!-- <span class="skill-item">PyTorch</span> -->
               <!-- <span class="skill-item">TensorFlow</span> -->
               <span class="skill-item">Vertex AI</span>
               <span class="skill-item">BigQuery</span>
           </div>
       </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <h2 class="about-section-title">Certifications</h2>
+  <p class="about-section-subtitle">Professional credentials and verified achievements</p>
+  <div class="certifications-grid">
+    <a href="https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url" target="_blank" rel="noreferrer" class="certification-card" title="Verify AWS Certified Solutions Architect – Associate on Credly">
+      <div class="certification-badge">
+        <img src="/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png" alt="AWS Certified Solutions Architect – Associate badge" width="120" height="120">
+      </div>
+      <div class="certification-info">
+        <h3 class="certification-title">AWS Certified Solutions Architect</h3>
+        <p class="certification-level">Associate</p>
+        <p class="certification-issuer">Amazon Web Services (AWS)</p>
+        <span class="certification-verify">Verify on Credly →</span>
+      </div>
+    </a>
   </div>
 </div>
 
