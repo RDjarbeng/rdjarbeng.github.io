@@ -15,7 +15,7 @@ This video is especially for developers who are beginners and feel overwhelmed b
 
 Brad Traversy's advice: focus on learning the basics and gaining a deep understanding of the fundamentals of your tech stack. The hype cycle is not the measure of your progress.
 
-Our take at rdjarbeng.com is that you should also remember that not many people are programmers or developers in the first place. Most people still think AI is just ChatGPT.
+Our take at rdjarbeng.com is that you should also remember that not many people are programmers or developers in the first place. Most people still think AI is just ChatGPT and haven't even heard of claude code or started using it.
 
 One comment from the YouTube community that resonated in a thread about this:
 
