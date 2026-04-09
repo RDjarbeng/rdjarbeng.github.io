@@ -111,4 +111,4 @@ Promptly Adrian from Landing.ai confirmed to me via LinkedIn that the team is ad
 
 ![Landing ai thanks Richard for noticing issue](/assets/images/landing_adrian_linkedin.png "Linkedin -Landing ai thanks Richard for noticing issue")
 
-It seems fixed now—glad to help, and impressed by their proactive response!
+The issue seems fixed now. I'm glad to help, and impressed by their proactive response!
