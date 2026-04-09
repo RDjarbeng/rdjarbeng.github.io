@@ -1,21 +1,20 @@
 ---
 title: Particles Interactive Demo by RDjarbeng
+published: true
+date: 2026-01-09 10:59:00
 platform: twitter
-youtube_id: 'https://twitter.com/DjarbengRichard/status/2009641438536184245'
+youtube_id: https://twitter.com/DjarbengRichard/status/2009641438536184245
+embed_code: ''
 thumbnail: assets/images/videos/particles_rd_twitter_averycode-Cover.jpg
 type: video
-category: videos
 genre: Science & Technology
-date: 2026-01-09 10:59:00
-published: true
+category: videos
 twitter_id: '2009641438536184245'
 ---
 
-Tried out this cool computer vision app with my camera. Post made by @Avery on X/Twitter. I thought it was cool so decided to share.
+Tried out this cool computer vision app with my laptop webcam. This was from a [post ](https://x.com/DjarbengRichard/status/2009641438536184245)made by @Avery on X/Twitter. I thought it was cool and really fun so decided to share.
 
-https://x.com/DjarbengRichard/status/2009641438536184245
-
-TransScript:
+## Transcript:
 
 Check out this Interactive particle playground.
 
