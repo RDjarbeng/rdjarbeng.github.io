@@ -11,13 +11,12 @@ genre: Education
 category: videos
 ---
 
-This is especially for developers who are beginners and feel overwhelmed by the number of new tools and packages released every day. This is compounded by the AI hype with different IDEs and AI pair programming assistants being introduced. Then these are broadcast on Twitter by so many influencers. The sheer volume of information can be so much that you feel left out and ignorant.
+This video is especially for developers who are beginners and feel overwhelmed by the number of new tools and packages released every day. The AI hype compounds this further, with different IDEs and AI pair programming assistants launching constantly, all broadcast loudly by influencers on Twitter. The sheer volume of information can make you feel left out and ignorant.
 
-Brad Traversy emphasizes instead on learning the basics and gaining a deep understanding of fundamentals of your tech stack.
+Brad Traversy's advice: focus on learning the basics and gaining a deep understanding of the fundamentals of your tech stack. The hype cycle is not the measure of your progress.
 
-Our take at rdjarbeng.com is that, you also have to consider that not many people are programmmers/devs in the first place. Most people still think Al is just ChatGPT
+Our take at rdjarbeng.com is that you should also remember that not many people are programmers or developers in the first place. Most people still think AI is just ChatGPT.
 
-This is one sentiment you can agree with in the comments-
+One comment from the YouTube community that resonated in a thread about this:
 
-YouTube user @Mulegeta Gonfa:
-At this point, you basically need to be unemployed to keep up with AI
+> "At this point, you basically need to be unemployed to keep up with AI." — @Mulegeta Gonfa
