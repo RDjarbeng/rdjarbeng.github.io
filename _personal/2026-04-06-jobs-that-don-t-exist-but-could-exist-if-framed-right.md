@@ -19,3 +19,7 @@ Unsubscriber- goes through your subscriptions and removes the one's you are not 
 decliner- Want to quit your job but don't want to go look your go workers and boss in the eye, the decliner will show up and do it for you. And you get to pick how they do it. Invited for events you don't want to go to, that birthday party, that trip, but don't want to seem like a bad person the decliner shows up and does it for you, and no "my client won't be available next Tuesday either for your karaoke night"
 
 Hater - Professional haters are a core backbone in today's world. If you don't have any haters you aren't successful enough. This job is for those who hate on people for no reason. It should give you some motivation knowing that somebody hates you and doesn't want you to succeed. It has been shown, by sources unconfirmed, that people working to proof their haters wrong is actually beneficial to a country's GDP.
+
+Procrastinator - Job is to offer you insightful ways to avoid doing what you need to. They keep whispering in your ear why cleaning your cupboard and organizing the living room glasses is much better than putting in that application.
+
+Meeting Scheduler- Their job is to make sure you are in as many meetings as possible across the working day. Instead of working you'll be circling back to points made last week Tuesday. It's a hard job that only they can do.
