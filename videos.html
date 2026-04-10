@@ -140,7 +140,7 @@ body_class: videos-page
                 style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
                 <div class="video-info">
                     <h3>
-                        {{ item.title | escape }}
+                        {{ item.title | titleize | escape }}
                     </h3>
                     <div class="video-date">{{ item.date | date: "%B %-d, %Y" }}</div>
                     <div class="video-genre">{{ item.genre | default: item.category | default: "Other" }}</div>

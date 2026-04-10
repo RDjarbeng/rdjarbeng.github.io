@@ -207,12 +207,12 @@ layout: default
           <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
             <img
               src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
-              alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy">
+              alt="{{ item.title | titleize }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy">
           </div>
           <div style="padding: 15px;">
             <h4
               style="margin: 0; font-family: var(--font-family, inherit); font-weight: 600; font-size: 1rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">
-              {{ item.title }}</h4>
+              {{ item.title | titleize }}</h4>
             <span style="display:inline-block; margin-top: 8px; font-size: 0.8rem; padding: 2px 8px; border-radius: 10px;">{% if item.genre %}{{ item.genre | capitalize }}{% elsif item.category %}{{ item.category | capitalize }}{% elsif item.platform %}{{ item.platform | capitalize }}{% else %}Video{% endif %}</span>
           </div>
         </a>
@@ -231,12 +231,12 @@ layout: default
           <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
             <img
               src="{% if item.image %}{{ item.image }}{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
-              alt="{{ item.title }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+              alt="{{ item.title | titleize }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
           </div>
           <div style="padding: 15px;">
             <h4
               style="margin: 0; font-family: var(--font-family, inherit); font-weight: 600; font-size: 1rem; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">
-              {{ item.title }}</h4>
+              {{ item.title | titleize }}</h4>
             <span style="display:inline-block; margin-top: 8px; font-size: 0.8rem; background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 10px;">{% if item.category %}{{ item.category | capitalize }}{% else %}Image{% endif %}</span>
           </div>
         </a>

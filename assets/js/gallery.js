@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = dataItem.dataset.type;
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
+        const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -175,12 +176,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title-overlay">${title}</span>
+                    <span class="gallery-title-overlay">${displayTitle}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
             </div>
             <div class="gallery-item-info">
-                <h4 class="gallery-item-title">${title}</h4>
+                <h4 class="gallery-item-title">${displayTitle}</h4>
             </div>
         `;
 
@@ -274,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = dataItem.dataset.type;
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
+        const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -290,12 +292,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="gallery-thumb-wrapper">
                 ${imgContent}
                 <div class="gallery-overlay">
-                    <span class="gallery-title-overlay">${title}</span>
+                    <span class="gallery-title-overlay">${displayTitle}</span>
                 </div>
                 ${type === 'html' ? '<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>' : ''}
             </div>
             <div class="gallery-item-info">
-                <h4 class="gallery-item-title">${title}</h4>
+                <h4 class="gallery-item-title">${displayTitle}</h4>
             </div>
         `;
 
