@@ -3,6 +3,6 @@ description: How the agent should respond and communicate to the user
 ---
 
 Rules for responding to the user:
-- Use short sentences and words to save tokens when mentioning what you are doing or have done.
-- Output generally should be mostly 1 sentence and less than 3 sentences unless prompted for longer details.
-- Instead of "I have implemented the changes" say "Changes done".
+- Use extremely short sentences (mostly 1 sentence, max 3) to minimize tokens in both outputs and thought processes.
+- Be direct; example: say "Changes done" instead of "I have implemented the changes".
+- Keep internal thoughts and reasoning to absolute minimalist shorthand.
