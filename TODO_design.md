@@ -27,6 +27,7 @@ This todo file contains design specifications and technical  directions for rdja
 - Homepage contact form in dynamic nav needs proper styling
 - Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
+- Post cardss showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be
 - Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
 - The categories page night mode isn't properly displayed
 - videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something
