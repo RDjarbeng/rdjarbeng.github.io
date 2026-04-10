@@ -88,6 +88,8 @@ exclude:
   - vendor/ruby/
   - "*.bak"
   - "*.tmp"
+  - "*.py"
+  - "*.txt"
   - .git/
   - .gitignore
   - README.md
