@@ -14,7 +14,7 @@ This todo file contains design specifications and technical  directions for rdja
 # Enhancements & Infrastructure
 ## High Priority
 
-- Improve home page so that it shows the rich content of the site, currently shows a number of posts and contact info, not very impressive
+- Claps for post don't show on dark mode
 
 - Add a section for AI tools and AI projects
 
@@ -24,23 +24,25 @@ This todo file contains design specifications and technical  directions for rdja
 
 ## Low Priority
 - Css needs to be optimized, currently loads css for personal and video pages when not needed
-Implement jekyll-responsive-image to properly size images on mobile devices
+- Homepage contact form in dynamic nav needs proper styling
+- Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
 - Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
 - The categories page night mode isn't properly displayed
-- videos page inline player is not obvious that video can play without navigating, perhaps set to play on hover or something
+- videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
 - The loading indicator for the contact dynamic footer for light mode isn't showing
 - Add a view related posts link for videos too so I can track media across the site
+
 ### Enhancements & Infrastructure
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email.
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents.
 - [ ] add skeleton loader for images
 - [ ] **Cover Images**: Investigate how to position cover images so they are not cut off (maybe add adjust on upload feature). 270x200 might be good image size
-- [ ] **Card images**: Card images have a top padding that leaves a gray space
-- [ ] **Cards**: add category to cards
-- [ ] **Contact banner**: Contact banner at the bottom isn't expanding properly for mobile
+- [ ] **Card images**: Card images for post cards have a top padding that leaves a gray space
+- [ ] **Cards**: add category to cards on homepage, posts
+
 - [] Carousel: Try carousel design from apple site, book flipping carousel, story mode, carousel for categories with 3D animations
 - [ ] Add authors page listing all the authors
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
