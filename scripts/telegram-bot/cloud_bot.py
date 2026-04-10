@@ -258,6 +258,31 @@ def process_video_upload(chat_id, message_id, msg_id_key, genre):
     except Exception as e:
         bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", chat_id, message_id)
 
+def _get_file_text(repo, path):
+    try:
+        return repo.get_contents(path, ref="main").decoded_content.decode('utf-8')
+    except Exception:
+        return ""
+
+def _remove_line(content, line):
+    return '\n'.join([l for l in content.split('\n') if l != line])
+
+def process_todo_action(chat_id, message_id, text, target_file):
+    bot.edit_message_text(f"⏳ Appending to {target_file}...", chat_id, message_id)
+    try:
+        g = Github(GITHUB_TOKEN)
+        repo = g.get_repo(REPO_NAME)
+        existing_text = _get_file_text(repo, target_file)
+        
+        if existing_text and not existing_text.endswith('\n'):
+            existing_text += '\n'
+        new_content = existing_text + f"- {text}\n"
+        
+        commit_files_to_github({target_file: new_content}, f"Add TODO to {target_file}")
+        bot.edit_message_text(f"✅ Added to `{target_file}`!", chat_id, message_id, parse_mode="Markdown")
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed action: {e}", chat_id, message_id)
+
 @bot.message_handler(content_types=['document', 'photo'])
 def handle_media(message):
     if not is_authorized(message.from_user.id):
@@ -373,6 +398,19 @@ def handle_callback(call):
         process_video_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
         return
 
+    elif data.startswith("todo_"):
+        action = data.split("_", 1)[1]
+        text = payload.get('text')
+        uploads.pop(msg_id_key, None)
+        
+        if action == "cancel":
+            bot.edit_message_text("❌ TODO cancelled.", call.message.chat.id, call.message.message_id)
+        elif action == "content":
+            process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_content.md")
+        elif action == "design":
+            process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_design.md")
+        return
+
 @bot.message_handler(func=lambda message: True)
 def handle_text(message):
     if not is_authorized(message.from_user.id):
@@ -417,4 +455,14 @@ def handle_text(message):
                 return # Only handle the first supported URL
         return
 
-    bot.reply_to(message, "I didn't recognize any commands or mapped Video links.")
+    # Treat pure text as TODO by default
+    keyboard = [
+        [InlineKeyboardButton("TODO Content", callback_data="todo_content"), InlineKeyboardButton("TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
+    ]
+    status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
+    
+    uploads[str(status_msg.message_id)] = {
+        'text': text,
+        'state': 'todo'
+    }
