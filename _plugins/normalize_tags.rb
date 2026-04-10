@@ -8,7 +8,7 @@ module Jekyll
     priority :highest 
 
     def generate(site)
-      puts "\n\n***** NORMALIZE TAGS (GENERATOR) RUNNING *****\n\n"
+      puts "***** NORMALIZE TAGS (GENERATOR) RUNNING *****"
 
       # We need to process all documents that have tags.
       # Based on your redirector, this includes 'posts' and 'personal'.
@@ -33,7 +33,7 @@ module Jekyll
         end
       end
 
-      puts "\n\n***** NORMALIZE TAGS FINISHED *****\n\n"
+      puts "***** NORMALIZE TAGS FINISHED *****"
     end
   end
 end

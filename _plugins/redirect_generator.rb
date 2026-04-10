@@ -4,7 +4,7 @@ module Jekyll
     priority :highest
     
     def generate(site)
-      puts "\n\n***** REDIRECT GENERATOR RUNNING *****\n\n"
+      puts "***** REDIRECT GENERATOR RUNNING *****"
       
       # Handle personal posts
       if site.collections['personal']
@@ -37,7 +37,7 @@ module Jekyll
     #   puts "\n\nProcessing regular posts: #{site.posts.docs.length} posts"
       
       
-      puts "\n\n***** REDIRECT GENERATOR FINISHED *****\n\n"
+      puts "***** REDIRECT GENERATOR FINISHED *****"
     end
   end
 end
