@@ -48,8 +48,11 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Add authors page listing all the authors
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP)
 - [ ] Remove tiktok expander plugin if not necessary'
-Search needs to include gallery items, tags, categories - I've seen other websites use powered by Algolia or googlem need to see the tradeoff vs building search myself
-Tags and categories need to be added to personal posts, gallery images and videos
+Search needs to include gallery items, tags, categories 
+
+- I've seen other websites use powered by Algolia or google need to see the tradeoff vs building search myself
+
+- Tags and categories need to be added to personal posts, gallery images and videos
 
 ## Gallery improvements
 Gallery item titles need to be capitalized- possible use of jekyll capitalize filters
