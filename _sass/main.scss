@@ -1503,6 +1503,11 @@ a:hover {
   color: #111;
 }
 
+/* Clap button label - ensure visibility in dark mode */
+#clap-label {
+  color: var(--text-color);
+}
+
 /* --- End Post Tags --- */
 .post-container,
 .personal-container {
