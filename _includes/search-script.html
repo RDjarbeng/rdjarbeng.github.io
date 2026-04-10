@@ -74,4 +74,24 @@
       }
     }
   });
+
+  // Handle visibility of search browse sections on input
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const browseSections = document.getElementById('search-browse-sections');
+    const emptyHint = document.getElementById('search-empty-hint');
+
+    if (searchInput && (browseSections || emptyHint)) {
+      searchInput.addEventListener('input', function() {
+        const query = searchInput.value.trim();
+        if (query.length > 0) {
+          if (browseSections) browseSections.style.display = 'none';
+          if (emptyHint) emptyHint.style.display = 'none';
+        } else {
+          if (browseSections) browseSections.style.display = 'block';
+          if (emptyHint) emptyHint.style.display = 'block';
+        }
+      });
+    }
+  });
 </script>

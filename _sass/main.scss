@@ -2213,3 +2213,64 @@ h1, h2, h3, h4, h5, h6,
     transition: transform 0.3s;
   }
 }
+
+/* ── Search page enhancements ── */
+.search-page-intro {
+  color: var(--grey-text);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.search-empty-hint {
+  color: var(--grey-text);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1.5rem;
+  font-style: italic;
+}
+
+.search-browse-section {
+  margin-bottom: 1.5rem;
+}
+
+.search-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+  border-bottom: none;
+}
+
+.search-category-chips,
+.search-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.search-chip,
+.search-quick-link {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--category-bg);
+  border: 1px solid var(--card-border);
+  font-size: 0.875rem;
+  color: var(--link-color) !important;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--category-hover);
+    transform: translateY(-2px);
+    color: var(--link-hover-color) !important;
+    text-decoration: none;
+  }
+}
+
+.search-quick-link {
+  border-radius: 8px; /* Slightly more square for quick links */
+}
+
