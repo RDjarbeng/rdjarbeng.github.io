@@ -116,7 +116,7 @@ permalink: /gallery/videos/youtube/
                         style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
                         <div class="video-info" style="padding: 15px; height: 100%;">
                             <h3 style="font-size: 1.05rem; margin: 0 0 10px 0; line-height: 1.4; color: #102a43;">
-                                {{ item.title | escape }}
+                                {{ item.title | titleize | escape }}
                             </h3>
                             <div style="font-size: 0.85rem; color: #627d98;">{{ item.date | date: "%B %-d, %Y" }}</div>
                             <div

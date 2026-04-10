@@ -25,7 +25,7 @@ layout: default
                 // but "← Back" is generally understood.
             </script>
         </div>
-        <h1>{{ page.title | capitalize }}</h1>
+        <h1>{{ page.title | titleize }}</h1>
         <div class="author_date">
             <time datetime="{{ page.date | date_to_xmlschema }}" data-local="date">{{ page.date |
                 date: "%B %d, %Y" }}</time>
