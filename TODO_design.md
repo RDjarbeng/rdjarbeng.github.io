@@ -98,3 +98,4 @@ It's a magical CSS property
 
 content-visibility: auto.
 - Test todo: create the most awesome site
+- The gallery page doesn't have a way to browse all gallery items that is user friendly, in markdown using crawl4ai it shows a very long page for /gallery which shouldn't be
