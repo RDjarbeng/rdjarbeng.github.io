@@ -2,8 +2,7 @@
 date: 2026-01-05
 published: true
 author: Nathaniel
-categories:
-  - Finance
+category: Finance
 tags:
   - Investing
   - Ghana Stock Exchange
@@ -17,7 +16,10 @@ title: How To Invest On The Ghana Stock Exchange
 image: /assets/images/gse_article_nat/gse_cover.jpg
 image_alt: Illustration of Ghana Stock Exchange with bull market symbol and financial charts
 layout: post
+categories:
+  - Finance
 ---
+
 The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian investors to participate in the growth of the country's economy. As Ghana's primary stock market, the GSE provides access to publicly traded companies across various sectors including banking, telecommunications, mining, and consumer goods. Investing on the GSE allows you to become a partial owner in these companies and potentially benefit from their success through capital appreciation and dividends.
 
 Whether you're a complete beginner or have some investment experience, understanding the fundamentals of stock market investing is crucial before you start. This comprehensive guide will walk you through everything you need to know to begin your investment journey on the Ghana Stock Exchange.
@@ -65,7 +67,7 @@ Several reputable brokers operate in Ghana, including:
 
 - **IC Securities**: Popular platfrom with a convenient mobile app
 
-![IC Securities Mobile App Interface](/assets/images/gse_article_nat/ics.png "IC Securities Trading Platform")
+![IC Securities Mobile App logo](/assets/images/gse_article_nat/ics.png "IC Securities Trading Platform")
 
 - **BlackStar group**: modern platform with mobile apps for ease and convenience.
 
@@ -75,7 +77,7 @@ Several reputable brokers operate in Ghana, including:
 
 ![SIC Brokerage Logo](/assets/images/gse_article_nat/sic.png "SIC Brokerage")
 
-_Find the full list of registered brokers on the [GSE](https://gse.com.gh/licensed-dealing-members/) website._
+_Find the full list of registered brokers on the_ [_GSE_](https://gse.com.gh/licensed-dealing-members/) _website._
 
 Consider factors like commission rates (typically 1.5-2.5% per transaction), minimum investment requirements, trading platforms, and customer service when selecting a broker.
 
@@ -172,7 +174,7 @@ Diversification is key to managing risk. Don't put all your money in one stock o
 
 There is still much to cover in your investment journey. This is where platforms like [ISEDAN](https://isedan.netlify.app) come in.
 
-![ISEDAN Platform Logo](/assets/images/isedan_icon_small.png "ISEDAN Investment Platform")
+![ ISEDAN GSE stock tracker's  Platform Logo](/assets/images/isedan_icon_small.png "ISEDAN Investment Platform")
 
 **ISEDAN** is the leading GSE Tracker. It provides:
 
@@ -183,9 +185,9 @@ There is still much to cover in your investment journey. This is where platforms
 - **Performance Monitoring**: Detailed charts, gain/loss calculations, and historical portfolio comparisons
 - **Market News**: Curated GSE news and company announcements to stay informed
 
-![ISEDAN App Charts mobile view](/assets/images/gse_article_nat/isedan_charts_light_mobile.png "ISEDAN Real-time Charts")
+![Screenshot of ISEDAN GSE stock tracker's ISEDAN App mobile view showing stocks for MTN Ghana (Sancom PLC)](/assets/images/gse_article_nat/isedan_charts_light_mobile.png "ISEDAN Real-time Charts")
 
-![ISEDAN Web Dashboard](/assets/images/gse_article_nat/isedan_dashboard_light.png "ISEDAN Portfolio Dashboard")
+![Screenshot of ISEDAN GSE stock tracker's Web Dashboard](/assets/images/gse_article_nat/isedan_dashboard_light.png "ISEDAN Portfolio Dashboard")
 
 ## Frequently Asked Questions (FAQ)
 
