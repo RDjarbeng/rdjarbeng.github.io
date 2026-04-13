@@ -25,6 +25,11 @@ redirect_from:
   {% endfor %}
   {% assign sorted_tags = tags_list | sort | reverse %}
 
+  <p style="text-align: center; margin-bottom: 20px;">
+    <a href="/" class="about-link" style="margin-right: 10px;">Return Home🏠</a>
+    <a href="/categories/" class="about-link">View Categories 📃</a>
+  </p>
+
   <p style="text-align: center; margin-bottom: 20px;">Total Tags: {{ site.tags.size }}</p>
 
   <h2 class="section-title" style="text-align: center;">Top 4 Tags</h2>
