@@ -17,6 +17,11 @@ permalink: /categories/
   {% endfor %}
   {% assign sorted_categories = categories_list | sort | reverse %}
 
+  <p style="text-align: center; margin-bottom: 20px;">
+    <a href="/" class="about-link" style="margin-right: 10px;">Return Home🏠</a>
+    <a href="/tags/" class="about-link">View Tags 🏷️</a>
+  </p>
+
   <p style="text-align: center; margin-bottom: 20px;">Total Categories: {{ site.categories.size }}</p>
 
   <h2 class="section-title" style="text-align: center;">Top 4 Categories</h2>
@@ -28,7 +33,7 @@ permalink: /categories/
     <li>
       <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
         <span class="category-name">{{ cat_name }}</span>
-        <span class="category-count">{{ cat_size }} posts</span>
+        <span class="category-count">{{ cat_size }} post{% if cat_size != 1 %}s{% endif %}</span>
       </a>
     </li>
     {% endfor %}
@@ -43,7 +48,7 @@ permalink: /categories/
     <li>
       <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
         <span class="category-name">{{ cat_name }}</span>
-        <span class="category-count">{{ cat_items.size }} posts</span>
+        <span class="category-count">{{ cat_items.size }} post{% if cat_items.size != 1 %}s{% endif %}</span>
       </a>
     </li>
     {% endfor %}
