@@ -12,69 +12,58 @@ tags:
   - Gemini
   - Environment
 title: How Google Turned 5 Million News Articles into a Flash Flood Warning System
-image: '/assets/images/posts/covers/google_flood_cover.jpg'
-image_alt: 'Flat vector illustration of AI parsing news reports for flood warnings'
+image: /assets/images/posts/covers/google_flood_cover.jpg
+image_alt: Flat vector illustration of AI parsing news reports for flood warnings
 layout: post
 card_items:
-  - name: "Groundsource Dataset"
-    image: "/assets/images/posts/card_groundsource.jpg"
-    alt: "Groundsource flood events global map"
-    badge_1: "Open Data"
-    badge_2: "Dataset"
-    description: |
-      2.6 million geo-tagged flood events across 150+ countries, extracted from 5 million news articles using Gemini. Covers 2000 to present. Freely downloadable at 668 MB.
-    url: "https://zenodo.org/records/18647054"
-    link_text: "Download Dataset"
-
-  - name: "Google Flood Hub"
-    image: "/assets/images/posts/card_flood_hub.jpg"
-    alt: "Google Flood Hub flood forecasting platform"
-    badge_1: "Live Tool"
-    badge_2: "Forecasting"
-    description: |
-      Google's flood forecasting platform, now expanded with urban flash flood predictions for most of the world's population. Provides up to 24 hours advance warning.
-    url: "https://sites.research.google/floods/"
-    link_text: "Visit Flood Hub"
-
-  - name: "Flash Flood Forecasting Research Blog"
-    image: "/assets/images/posts/card_research_blog.jpg"
-    alt: "Google Research blog on flash flood forecasting"
-    badge_1: "Technical Deep Dive"
-    badge_2: "Google Research"
-    description: |
-      The full technical writeup from Google Research covering the model architecture, evaluation methodology, and global coverage maps.
-    url: "https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/"
-    link_text: "Read the Blog"
-
-  - name: "Groundsource Methodology Blog"
-    image: "/assets/images/posts/card_methodology_blog.jpg"
-    alt: "Google Research blog introducing the Groundsource methodology"
-    badge_1: "Methodology"
-    badge_2: "Google Research"
-    description: |
-      How Gemini was used to turn unstructured news text into structured scientific ground truth. Includes accuracy audits and a breakdown of the extraction pipeline.
-    url: "https://research.google/blog/introducing-groundsource-turning-news-reports-into-data-with-gemini/"
-    link_text: "Read the Blog"
-
-  - name: "EarthArxiv Preprint"
-    image: "/assets/images/posts/card_eartharxiv_paper.jpg"
-    alt: "EarthArxiv preprint on AI flash flood forecasting"
-    badge_1: "Not Peer Reviewed"
-    badge_2: "Research Paper"
-    description: |
-      The underlying scientific paper, submitted March 9, 2026. Not yet peer reviewed. Includes full model evaluation, precision and recall metrics by country, and Africa coverage notes.
-    url: "https://eartharxiv.org/repository/view/12082/"
-    link_text: "Read the Preprint"
+  - name: Groundsource Dataset
+    image: /assets/images/posts/card_groundsource.jpg
+    alt: Groundsource flood events global map
+    badge_1: Open Data
+    badge_2: Dataset
+    description: 2.6 million geo-tagged flood events across 150+ countries, extracted from 5 million news articles using Gemini. Covers 2000 to present. Freely downloadable at 668 MB.
+    url: https://zenodo.org/records/18647054
+    link_text: Download Dataset
+  - name: Google Flood Hub
+    image: /assets/images/posts/card_flood_hub.jpg
+    alt: Google Flood Hub flood forecasting platform
+    badge_1: Live Tool
+    badge_2: Forecasting
+    description: Google's flood forecasting platform, now expanded with urban flash flood predictions for most of the world's population. Provides up to 24 hours advance warning.
+    url: https://sites.research.google/floods/
+    link_text: Visit Flood Hub
+  - name: Flash Flood Forecasting Research Blog
+    image: /assets/images/posts/card_research_blog.jpg
+    alt: Google Research blog on flash flood forecasting
+    badge_1: Technical Deep Dive
+    badge_2: Google Research
+    description: The full technical writeup from Google Research covering the model architecture, evaluation methodology, and global coverage maps.
+    url: https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/
+    link_text: Read the Blog
+  - name: Groundsource Methodology Blog
+    image: /assets/images/posts/card_methodology_blog.jpg
+    alt: Google Research blog introducing the Groundsource methodology
+    badge_1: Methodology
+    badge_2: Google Research
+    description: How Gemini was used to turn unstructured news text into structured scientific ground truth. Includes accuracy audits and a breakdown of the extraction pipeline.
+    url: https://research.google/blog/introducing-groundsource-turning-news-reports-into-data-with-gemini/
+    link_text: Read the Blog
+  - name: EarthArxiv Preprint
+    image: /assets/images/posts/card_eartharxiv_paper.jpg
+    alt: EarthArxiv preprint on AI flash flood forecasting
+    badge_1: Not Peer Reviewed
+    badge_2: Research Paper
+    description: The underlying scientific paper, submitted March 9, 2026. Not yet peer reviewed. Includes full model evaluation, precision and recall metrics by country, and Africa coverage notes.
+    url: https://eartharxiv.org/repository/view/12082/
+    link_text: Read the Preprint
 ---
 
-# How Google Turned 5 Million News Articles into a Flash Flood Warning System
+Google just announced _(March 13th, 2026)_  that it can predict urban flash floods up to 24 hours in advance, for most of the world, without building a single physical sensor. The strange thing is they didn't use traditional means instead they used journalists and news reports as a starting point.  Here is how they did it, and what the limits are.
 
-Google just announced it can predict urban flash floods up to 24 hours in advance, for most of the world, without building a single physical sensor. Here is how they did it, and what the limits are.
-
-> **Sundar Pichai, Google CEO, [announced on X](https://x.com/sundarpichai/status/2032137438089658764?s=20):**
+> **Sundar Pichai, Google CEO,** [**announced on X**](https://x.com/sundarpichai/status/2032137438089658764?s=20)**:**
 > <blockquote class="twitter-tweet"><a href="https://twitter.com/sundarpichai/status/2032137438089658764"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
----
+***
 
 ## The Problem: Flash Floods Are Nearly Impossible to Predict at Scale
 
@@ -86,7 +75,7 @@ The existing global databases reflect this gap. The [Global Disaster Alert and C
 
 Google's response was to build the missing data from scratch, using a source that has been quietly recording disasters for decades: the news.
 
----
+***
 
 ## The Solution: Teaching an AI to Read 5 Million News Articles
 
@@ -104,7 +93,7 @@ For comparison, GDACS took years of coordinated international monitoring to buil
 
 Google is upfront about the accuracy tradeoffs. Manual audits found that 60% of extracted events were correct in both location and timing. 82% were accurate enough to be practically useful, for example correctly identifying the right district, or placing the event within a day of its actual peak. That 18% imprecision matters, and is part of why the underlying paper, currently a [preprint on EarthArxiv](https://eartharxiv.org/repository/view/12082/) and not yet peer reviewed, deserves scrutiny as independent scientists dig into it.
 
----
+***
 
 ## The Forecast: How Old News Predicts Tomorrow's Flood
 
@@ -120,7 +109,7 @@ The dataset being static is not a bug. A model trained on historical flood patte
 
 ![Training vs Inference pipeline](/assets/images/posts/google_flood_forecasting/diagram_training_pipeline.svg)
 
----
+***
 
 ## What It Covers, and Where the Gaps Are
 
@@ -129,7 +118,6 @@ The model currently operates at a 20x20 kilometre resolution and focuses on urba
 Google's evaluation showed the model achieving precision and recall in much of South America and Southeast Asia that is comparable to performance in wealthier countries with advanced sensor infrastructure. For context, the US National Weather Service Flash Flood Warning system, adjusted to the same 20x20 km grid and 24-hour window, showed 22% recall and 44% precision. Google's model reaches similar numbers in many of the countries most frequently affected by floods — which, given it runs without any physical sensors on the ground, is the central claim worth watching.
 
 Africa remains the clearest gap. As Google's own paper states directly: "Many countries in Africa are still lacking in ground truth beyond Groundsource, making it difficult to accurately estimate the accuracy of our model." In other words, the dataset built to fill the data gap happens to be the only data that exists for parts of Africa leaving no independent benchmark to check the model against for most African countries.
-
 
 ## Why the Method Matters More Than This One Dataset
 
@@ -141,7 +129,7 @@ That is the claim worth watching as peer review unfolds: not just whether the fl
 
 The forecasts are live now on Google's [Flood Hub](https://sites.research.google/floods/). The dataset is [freely downloadable](https://zenodo.org/records/18647054). And the methodology, if it passes scrutiny, could reshape how the world prepares for disasters it has never been able to see coming.
 
----
+***
 
 **Sources**
 
