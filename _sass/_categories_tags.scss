@@ -24,8 +24,9 @@
 }
 
 .category-card {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    
     border-radius: 12px;
     padding: 25px;
     width: 100%;
@@ -35,12 +36,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px var(--shadow-color);
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-color: #ddd;
+        box-shadow: 0 10px 20px var(--shadow-color);
+        border-color: var(--text-color);
         text-decoration: none;
     }
 
@@ -54,9 +55,9 @@
 
     .category-count {
         font-size: 0.9rem;
-        color: var(--grey-text);
+        color: var(--text-color);
         align-self: flex-end;
-        background: var(--category-bg);
+        background: var(--card-border);
         padding: 4px 10px;
         border-radius: 20px;
     }
@@ -84,11 +85,11 @@
 
 .tag-pill {
     display: inline-block;
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     padding: 8px 16px;
     border-radius: 50px;
-    color: #495057;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 0.95rem;
     transition: all 0.2s ease;
