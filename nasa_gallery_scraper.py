@@ -8,7 +8,7 @@ import time
 # Configuration
 GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
 CATEGORY_NAME = "Artemis II Mission"
-OUTPUT_DIR = "_gallery"
+OUTPUT_DIR = "_gallery/artemis-ii"
 
 def get_full_description(detail_url, headers):
     """Visits the image detail page to extract the untruncated description."""
@@ -113,7 +113,7 @@ date: {current_time}
 
 {full_description}
 
-_Image Credit: NASA_
+[_Image Credit: NASA_]({full_res_src})
 """
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(markdown_content)
