@@ -80,16 +80,33 @@ def scrape_and_generate():
             caption_div = item.find('div', class_='hds-gallery-item-caption')
             full_description = caption_div.text.strip() if caption_div else img_tag.get('alt', 'Artemis II Image').strip()
             
-        # Create a clean slug from the description
-        slug_base = re.sub(r'[^a-z0-9]+', '-', full_description.lower()[:45]).strip('-')
+        # --- NEW: TITLE PARSING ---
+        # Look for the closing parenthesis and a hyphen/dash to extract the real sentence
+        title_match = re.search(r'\)\s*[-–]\s*(.*)', full_description)
+        if title_match:
+            clean_title = title_match.group(1).strip()
+            # Cap the title at ~65 characters so it doesn't break your CMS layout
+            if len(clean_title) > 65:
+                clean_title = clean_title[:62].rsplit(' ', 1)[0] + '...'
+        else:
+            # Fallback if NASA didn't use their standard formatting on an image
+            clean_title = "Artemis II Return to Earth"
+
+        # --- NEW: SLUG PARSING ---
+        # Remove the leading ID (e.g., "art002e013367 ") before the parenthesis
+        slug_text = re.sub(r'^[a-zA-Z0-9_]+\s*(?=\()', '', full_description)
+        # Create a clean slug from the remaining text (which now starts with the date)
+        slug_base = re.sub(r'[^a-z0-9]+', '-', slug_text.lower()[:50]).strip('-')
+        
         if not slug_base:
-            slug_base = f"nasa-image-{count}"
+            slug_base = f"image-{count}"
             
-        filename = f"{OUTPUT_DIR}/artemis-ii-return-{slug_base}.md"
+        # --- NEW: FILENAME FORMATTING ---
+        filename = f"{OUTPUT_DIR}/artemis-ii-{slug_base}.md"
         
         # 4. Generate SveltiaCMS Markdown
         markdown_content = f"""---
-title: 'Artemis II: Return to Earth'
+title: '{clean_title.replace("'", "''")}'
 image: {full_res_src}
 image_alt: '{full_description.replace("'", "''")}'
 type: external
