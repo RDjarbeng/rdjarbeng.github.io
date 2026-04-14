@@ -7,7 +7,7 @@ import time
 
 # Configuration
 GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
-CATEGORY_NAME = "Artemis II Mission"
+CATEGORY_NAME = "Artemis II"
 OUTPUT_DIR = "_gallery/artemis-ii"
 
 def get_full_description(detail_url, headers):
