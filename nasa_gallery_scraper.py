@@ -131,4 +131,5 @@ date: {current_time}
     print(f"\nSuccessfully generated {count - 1} markdown files in {output_dir}/")
 
 if __name__ == "__main__":
-    scrape_and_generate()
+    target_url = sys.argv[1] if len(sys.argv) > 1 else GALLERY_URL
+    scrape_and_generate(target_url)
