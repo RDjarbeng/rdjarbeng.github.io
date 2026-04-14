@@ -1,5 +1,5 @@
 ---
-title: Aku from Samurain Jack standing up fully in front of the brightness
+title: Aku from Samurai Jack standing up fully in front of the brightness
 image: /assets/images/arku-standing-up-fully-in-fron-20260224_071013.jpg
 image_alt: ''
 type: external
