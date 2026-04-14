@@ -6,7 +6,7 @@ from datetime import datetime, timezone, timedelta
 import time
 
 # Configuration
-GALLERY_URL = "https://www.nasa.gov/gallery/artemis-ii-return-to-earth-gallery/" 
+GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
 CATEGORY_NAME = "Artemis II Mission"
 OUTPUT_DIR = "_gallery"
 
