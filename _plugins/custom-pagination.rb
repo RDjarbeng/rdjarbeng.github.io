@@ -24,8 +24,8 @@ module Jekyll
           index_page = HomeIndexPage.new(site, current_page)
           index_page.pager = pager
           site.pages << index_page
-          Jekyll.logger.info "My custom pagination:", "Paginating #{current_page} / #{total_pages}"
         end
+        Jekyll.logger.info "My custom pagination:", "Paginated home #{total_pages} / #{total_pages}"
       end
 
       def paginate_posts(site)
@@ -39,8 +39,8 @@ module Jekyll
           posts_page.pager = pager
           posts_page.data['pager'] = pager.to_liquid  # Make pager available to layout
           site.pages << posts_page
-          Jekyll.logger.info "My custom pagination:", "Paginating posts #{current_page} / #{total_pages}"
         end
+        Jekyll.logger.info "My custom pagination:", "Paginated posts #{total_pages} / #{total_pages}"
       end
 
       def paginate_personal(site)
@@ -50,7 +50,6 @@ module Jekyll
         end
         
         all_posts = site.collections['personal'].docs.sort_by { |p| p.date }.reverse
-        Jekyll.logger.info "My custom pagination:", "Found #{all_posts.size} personal posts."
         
         if all_posts.empty?
           Jekyll.logger.warn "My custom pagination:", "No posts found in personal collection."
@@ -84,7 +83,6 @@ module Jekyll
 
 
         (1..total_pages).each do |current_page|
-          Jekyll.logger.info "My custom pagination:", "Paginating personal #{current_page} / #{total_pages}"
           pager = Pager.new(site, current_page, all_posts, total_pages, paginate_size)
           
           # Create a new page
@@ -105,7 +103,7 @@ module Jekyll
           
           site.pages << personal_page
         end
-        Jekyll.logger.info "My custom pagination:", "Finished adding personal pages to site.pages."
+        Jekyll.logger.info "My custom pagination:", "Paginated personal #{total_pages} / #{total_pages}"
       end
     end
 
