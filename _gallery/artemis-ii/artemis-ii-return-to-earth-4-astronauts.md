@@ -15,4 +15,4 @@ NASA has announced coverage for the historic Artemis II crewed lunar flyby missi
 Key Coverage Details:
 Mission Goal: A 10-day, four-astronaut crewed flight test around the Moon (Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen)
 
-_Image Credit: NASA_
+[_Image Credit: NASA_](https://www.nasa.gov/wp-content/uploads/2026/03/suit-patch.jpg?w=1024)
