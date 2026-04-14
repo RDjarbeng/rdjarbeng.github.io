@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime, timezone, timedelta
 import time
+import sys
 
 # Configuration
 GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
@@ -35,17 +36,23 @@ def get_full_description(detail_url, headers):
     
     return None
 
-def scrape_and_generate():
-    # Extract the gallery slug from the URL (e.g., 'return-to-earth')
-    gallery_slug = GALLERY_URL.strip('/').split('/')[-1]
+def scrape_and_generate(gallery_url):
+    # Extract the gallery slug from the URL (e.g., 'return-to-earth' or 'lunar-flyby')
+    clean_url = gallery_url.strip('/')
+    parts = clean_url.split('/')
+    
+    if len(parts) >= 3 and parts[-2] == 'page':
+        gallery_slug = parts[-3]
+    else:
+        gallery_slug = parts[-1]
     
     # Create the dynamic output directory
     output_dir = f"{BASE_OUTPUT_DIR}/{gallery_slug}"
     os.makedirs(output_dir, exist_ok=True)
     
-    print(f"Fetching gallery grid: {GALLERY_URL}")
+    print(f"Fetching gallery grid: {gallery_url}")
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-    response = requests.get(GALLERY_URL, headers=headers)
+    response = requests.get(gallery_url, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     
     image_items = soup.find_all('div', class_=re.compile(r'hds-gallery-image'))
