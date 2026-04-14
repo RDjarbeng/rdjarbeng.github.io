@@ -9,8 +9,10 @@ layout: default
       Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d, %Y
         at %-I:%M %p" }}</time>
       {% assign author = site.authors | where: 'short_name', page.author | first %}
+      {% if page.last_modified_at %}
       Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
         page.last_modified_at | date: '%-d %B,%Y at %-I:%M %p' }}</time>
+      {% endif %}
 
       {% if author %}
       <div>

@@ -126,7 +126,11 @@ layout: default
 
   <!-- Hidden Data Source -->
   <div id="gallery-data" style="display: none;">
-    {% assign gallery_items = site.gallery | sort: "date" | reverse %}
+    {% if site.gallery %}
+      {% assign gallery_items = site.gallery | sort: "date" | reverse %}
+    {% else %}
+      {% assign gallery_items = "" | split: "" %}
+    {% endif %}
 
     {% for item in gallery_items %}
     {% assign computed_link = item.link %}
