@@ -1,0 +1,15 @@
+---
+title: 'In this view captured by the Artemis II crew on the Orion...'
+image: https://images-assets.nasa.gov/image/art002e010782/art002e010782~large.jpg
+image_alt: 'art002e010782 (April 6, 2026) - In this view captured by the Artemis II crew on the Orion spacecraft, a wedge of the Moon in nighttime is visible in the foreground, as the Sun is setting on the opposite side. This image captures the beginning of a total solar eclipse that astronauts were able to observe at the end of their lunar observation period during Orion’s closest approach to the Moon on April 6, 2026. Unlike minutes-long eclipses as viewed from Earth, the Artemis II crew witnessed the Sun hide behind the Moon for nearly an hour. Because the astronauts were so near the Moon, it appeared much larger than the Sun; because of this, it took longer for the Sun to make its transit across the Moon and peek out the other side. From Earth, in contrast, the Moon and Sun appear about the same size, so even small changes in their alignment quickly bring the Sun back into view, making totality much shorter. The bright rays of light, or streamers, that are running outward towards the bottom of the Moon disk are part of the Sun''s corona. The corona is the outermost layer of the Sun''s atmosphere and is only visible during a total solar eclipse. It is normally hidden by the bright light of the Sun''s surface. In addition, the jagged edge of the Moon visible in this image reveals the topography of backlit mountains on the horizon.'
+type: external
+link: ''
+category: Artemis II
+labels:
+  - Return to Earth
+date: 2026-04-14T15:07:21+02:00
+---
+
+art002e010782 (April 6, 2026) - In this view captured by the Artemis II crew on the Orion spacecraft, a wedge of the Moon in nighttime is visible in the foreground, as the Sun is setting on the opposite side. This image captures the beginning of a total solar eclipse that astronauts were able to observe at the end of their lunar observation period during Orion’s closest approach to the Moon on April 6, 2026. Unlike minutes-long eclipses as viewed from Earth, the Artemis II crew witnessed the Sun hide behind the Moon for nearly an hour. Because the astronauts were so near the Moon, it appeared much larger than the Sun; because of this, it took longer for the Sun to make its transit across the Moon and peek out the other side. From Earth, in contrast, the Moon and Sun appear about the same size, so even small changes in their alignment quickly bring the Sun back into view, making totality much shorter. The bright rays of light, or streamers, that are running outward towards the bottom of the Moon disk are part of the Sun's corona. The corona is the outermost layer of the Sun's atmosphere and is only visible during a total solar eclipse. It is normally hidden by the bright light of the Sun's surface. In addition, the jagged edge of the Moon visible in this image reveals the topography of backlit mountains on the horizon.
+
+[_Image Credit: NASA_](https://images-assets.nasa.gov/image/art002e010782/art002e010782~large.jpg)
