@@ -83,17 +83,29 @@ def scrape_and_generate(gallery_url):
             full_description = caption_div.text.strip() if caption_div else img_tag.get('alt', 'Artemis II Image').strip()
             
         # --- TITLE PARSING ---
+        # Look for the title after the date parentheses, e.g. "(Date) - Title"
         title_match = re.search(r'\)\s*[-–]\s*(.*)', full_description)
         if title_match:
             clean_title = title_match.group(1).strip()
-            # CMS title is capped for UI layout
+            # If the title is very long, we might still want it for alt but truncated for cms_title
             if len(clean_title) > 65:
                 cms_title = clean_title[:62].rsplit(' ', 1)[0] + '...'
             else:
                 cms_title = clean_title
         else:
+            # If no dash pattern, use the first sentence or first 60 chars
+            first_sent = full_description.split('.')[0].strip()
+            if len(first_sent) > 65:
+                cms_title = first_sent[:62].rsplit(' ', 1)[0] + '...'
+            else:
+                cms_title = first_sent if first_sent else "Artemis II Mission Image"
             clean_title = full_description
-            cms_title = "Artemis II Return to Earth"
+
+        # Ensure image_alt is descriptive
+        # If full_description is very short, use clean_title
+        image_alt_text = full_description if len(full_description) > 20 else clean_title
+        if not image_alt_text or image_alt_text.lower() == "artemis ii image":
+            image_alt_text = clean_title
 
         # --- DATE PARSING (For the slug) ---
         # Extracts text inside parentheses, e.g., "April 7, 2026"
@@ -114,7 +126,7 @@ def scrape_and_generate(gallery_url):
         markdown_content = f"""---
 title: '{cms_title.replace("'", "''")}'
 image: {full_res_src}
-image_alt: '{full_description.replace("'", "''")}'
+image_alt: '{image_alt_text.replace("'", "''")}'
 type: external
 link: ''
 category: {CATEGORY_NAME}
