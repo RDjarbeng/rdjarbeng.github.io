@@ -62,6 +62,12 @@ The gallery section just looks uninteresting on mobile view, I think it's the la
 - Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content)
 
 
+## Sitemap html page
+you can easily create a layout that simply loops through every single post and gallery entry you've ever published, grouping them by year or category on one single page. It achieves the exact same SEO and UX benefits as an HTML sitemap, but feels much more native to a personal blog.
+
+The "Flattening" SEO Benefit
+Search engines pass "link equity" from your homepage to your other pages. If an old blog post is buried under five pages of pagination (e.g., Homepage -> Blog -> Page 2 -> Page 3 -> Page 4 -> Post), it gets less SEO value. An HTML sitemap links to every page directly, meaning every single post on your site is only two clicks away from the homepage.
+
 Possible improvements
 - Here is the strategic roadmap:
 
