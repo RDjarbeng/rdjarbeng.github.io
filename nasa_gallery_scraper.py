@@ -8,7 +8,7 @@ import time
 # Configuration
 GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
 CATEGORY_NAME = "Artemis II"
-OUTPUT_DIR = "_gallery/artemis-ii"
+BASE_OUTPUT_DIR = "_gallery/artemis-ii"
 
 def get_full_description(detail_url, headers):
     """Visits the image detail page to extract the untruncated description."""
@@ -36,7 +36,12 @@ def get_full_description(detail_url, headers):
     return None
 
 def scrape_and_generate():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    # Extract the gallery slug from the URL (e.g., 'return-to-earth')
+    gallery_slug = GALLERY_URL.strip('/').split('/')[-1]
+    
+    # Create the dynamic output directory
+    output_dir = f"{BASE_OUTPUT_DIR}/{gallery_slug}"
+    os.makedirs(output_dir, exist_ok=True)
     
     print(f"Fetching gallery grid: {GALLERY_URL}")
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
@@ -97,7 +102,7 @@ def scrape_and_generate():
         # Combine: title + date + unique count to prevent overwriting
         slug_base = f"{title_slug}-{date_slug}-{count}"
             
-        filename = f"{OUTPUT_DIR}/artemis-ii-{slug_base}.md"
+        filename = f"{output_dir}/artemis-ii-{slug_base}.md"
         
         markdown_content = f"""---
 title: '{cms_title.replace("'", "''")}'
@@ -123,7 +128,7 @@ date: {current_time}
         
         time.sleep(1)
 
-    print(f"\nSuccessfully generated {count - 1} markdown files in {OUTPUT_DIR}/")
+    print(f"\nSuccessfully generated {count - 1} markdown files in {output_dir}/")
 
 if __name__ == "__main__":
     scrape_and_generate()
