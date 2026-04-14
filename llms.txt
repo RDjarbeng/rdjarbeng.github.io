@@ -10,11 +10,25 @@
 
 ## Content Collections
 
-- [Personal Blog](https://rdjarbeng.com/personal/) - Reflections and stories from real-life adventures.
-- [Posts](https://rdjarbeng.com/posts/) - Technical articles, blog posts about web development, AI, and IoT devices.
-- [Gallery](https://rdjarbeng.com/gallery/) - A collection of images, and other media.
-- [Memes](https://rdjarbeng.com/memes/) - A dedicated collection for tech and developer memes.
-- [Videos](https://rdjarbeng.com/videos/) - Short clips and video insights from rdjareng.com featuring videos from Youtube, X/Twitter and Tiktok.
+- [Personal Blog](https://rdjarbeng.com/personal/) - Reflections and stories from real-life adventures, covering:
+    - Life and travel in East Africa, USA, and Europe
+    - Career reflections and milestones
+    - Abstract thought experiments and ideas
+- [Posts](https://rdjarbeng.com/posts/) - In-depth technical articles and tutorials focused on:
+    - Artificial Intelligence & Machine Learning
+    - Web Development & Software Engineering
+    - Cloud Computing, IoT Devices, & Space Technology
+- [Gallery](https://rdjarbeng.com/gallery/) - A curated collection of images and visual media highlighting:
+    - Travel & Location Photography (Ghana, Rwanda, Artemis II mission, etc.)
+    - AI-Generated Art (Midjourney, Gemini, etc.)
+    - Hardware and tech captures
+- [Memes](https://rdjarbeng.com/memes/) - A dedicated collection for tech and developer memes, spanning:
+    - Developer struggles & coding humor
+    - Back-end vs. Front-end jokes
+    - AI hype and startup culture
+- [Videos](https://rdjarbeng.com/videos/) - Short clips and video insights featuring content from YouTube, X/Twitter, and TikTok on:
+    - Space Launches & Hardware showcases
+    - General Tech & Coding insights
 - [YouTube](https://rdjarbeng.com/youtube/) - Curated YouTube video embeds from rdjarbeng.com with multiple categories:
     - Film & Animation
     - Music
@@ -34,6 +48,6 @@
 
 ## Navigation and Discovery
 
-- [Search](https://rdjarbeng.com/search/) - Search through all posts and articles with dynamic UI and topic chips.
-- [Categories](https://rdjarbeng.com/categories/) - Browse content by category (e.g., Tech, AI).
-- [Tags](https://rdjarbeng.com/tags/) - Browse content by specific tags.
+- [Search](https://rdjarbeng.com/search/) - Search through all posts and articles with dynamic UI, Quick Links, and category filtering chips.
+- [Categories](https://rdjarbeng.com/categories/) - Browse all content cleanly segmented by overarching topics (e.g., Tech, Personal, AI).
+- [Tags](https://rdjarbeng.com/tags/) - Find highly specific groupings of posts via granular tags.
