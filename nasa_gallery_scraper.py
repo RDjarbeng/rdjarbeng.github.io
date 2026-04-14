@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime, timezone, timedelta
 
-# Configuration - Ensure this is the exact URL
-GALLERY_URL = "https://www.nasa.gov/gallery/return-to-earth/" 
+# Configuration 
+GALLERY_URL = "https://www.nasa.gov/gallery/artemis-ii-return-to-earth-gallery/" 
 CATEGORY_NAME = "Artemis II Mission"
 OUTPUT_DIR = "_gallery"
 
@@ -13,47 +13,43 @@ def scrape_and_generate():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     print(f"Fetching gallery: {GALLERY_URL}")
-    # Adding a User-Agent helps prevent the server from serving a stripped-down or blocked page
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     response = requests.get(GALLERY_URL, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Isolate the main content area to avoid sidebars, footers, and news widgets
-    main_content = soup.find('main') or soup
-    
-    # NASA typically wraps actual gallery images inside <figure> tags
-    figures = main_content.find_all('figure')
-    
-    images = []
-    for fig in figures:
-        img = fig.find('img')
-        # Ensure it has a source and is an uploaded image, not a UI icon
-        if img and img.get('src') and 'wp-content/uploads' in img.get('src'):
-            images.append(img)
-            
-    # Fallback just in case they aren't using <figure> tags on this specific page
-    if not images:
-        all_imgs = main_content.find_all('img', src=re.compile(r'wp-content/uploads'))
-        # Filter out obvious thumbnail sizes often used in news widgets
-        images = [img for img in all_imgs if not re.search(r'-\d+x\d+\.\w+$', img.get('src', ''))]
+    # Target images specifically hosted on NASA's image asset CDN
+    images = soup.find_all('img', src=re.compile(r'images-assets\.nasa\.gov/image/'))
 
+    # Set up Rwanda time (CAT, UTC+2) for the publish dates
     cat_timezone = timezone(timedelta(hours=2))
     current_time = datetime.now(cat_timezone).strftime('%Y-%m-%dT%H:%M:%S%z')
     current_time = current_time[:-2] + ':' + current_time[-2:]
 
     count = 0
     for img in images:
-        src = img.get('src')
+        raw_src = img.get('src', '')
+        
+        # Strip the query parameters to get the clean ~large.jpg URL
+        full_res_src = raw_src.split('?')[0]
+        
+        # Extract the caption. NASA puts the text inside the parent <a> tag.
+        parent_a = img.find_parent('a')
+        caption_text = ""
+        if parent_a:
+            # Get the text but remove the image filename that sometimes gets appended
+            caption_text = parent_a.text.strip()
+            
+        # Fallback to the alt attribute just in case
         alt_text = img.get('alt', '').strip()
         
-        # Strip thumbnail dimensions from the URL to get the full-res image
-        full_res_src = re.sub(r'-\d+x\d+(?=\.\w+$)', '', src)
+        # Use whichever string is longer/more descriptive
+        final_description = caption_text if len(caption_text) > len(alt_text) else alt_text
         
-        # Skip if there's no alt text or if the alt text indicates it's a UI element/logo
-        if not full_res_src or not alt_text or "logo" in alt_text.lower():
+        if not full_res_src or not final_description:
             continue
             
-        slug_base = re.sub(r'[^a-z0-9]+', '-', alt_text.lower()[:50]).strip('-')
+        # Create a clean slug from the first few words of the description
+        slug_base = re.sub(r'[^a-z0-9]+', '-', final_description.lower()[:45]).strip('-')
         if not slug_base:
             slug_base = f"nasa-image-{count}"
             
@@ -62,7 +58,7 @@ def scrape_and_generate():
         markdown_content = f"""---
 title: 'Artemis II: Return to Earth'
 image: {full_res_src}
-image_alt: '{alt_text.replace("'", "''")}'
+image_alt: '{final_description.replace("'", "''")}'
 type: external
 link: ''
 category: {CATEGORY_NAME}
@@ -71,7 +67,7 @@ labels:
 date: {current_time}
 ---
 
-{alt_text}
+{final_description}
 
 _Image Credit: NASA_
 """
