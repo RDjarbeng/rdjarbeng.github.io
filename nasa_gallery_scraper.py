@@ -3,62 +3,95 @@ import requests
 from bs4 import BeautifulSoup
 import re
 from datetime import datetime, timezone, timedelta
+import time
 
-# Configuration 
+# Configuration
 GALLERY_URL = "https://www.nasa.gov/gallery/artemis-ii-return-to-earth-gallery/" 
 CATEGORY_NAME = "Artemis II Mission"
 OUTPUT_DIR = "_gallery"
 
+def get_full_description(detail_url, headers):
+    """Visits the image detail page to extract the untruncated description."""
+    try:
+        response = requests.get(detail_url, headers=headers, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Strategy 1: Look for OpenGraph meta description (usually the cleanest full text)
+        meta_desc = soup.find('meta', property='og:description')
+        if meta_desc and meta_desc.get('content'):
+            return meta_desc.get('content').strip()
+            
+        # Strategy 2: Look for standard meta description
+        meta_desc_name = soup.find('meta', attrs={'name': 'description'})
+        if meta_desc_name and meta_desc_name.get('content'):
+            return meta_desc_name.get('content').strip()
+            
+        # Strategy 3: Fallback to finding the largest paragraph in the main content
+        main_content = soup.find('main') or soup
+        paragraphs = main_content.find_all('p')
+        if paragraphs:
+            # Assume the longest paragraph contains the full image caption
+            longest_p = max(paragraphs, key=lambda p: len(p.text))
+            return longest_p.text.strip()
+            
+    except Exception as e:
+        print(f"  -> Failed to fetch details: {e}")
+    
+    return None
+
 def scrape_and_generate():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    print(f"Fetching gallery: {GALLERY_URL}")
+    print(f"Fetching gallery grid: {GALLERY_URL}")
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     response = requests.get(GALLERY_URL, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Target images specifically hosted on NASA's image asset CDN
-    images = soup.find_all('img', src=re.compile(r'images-assets\.nasa\.gov/image/'))
+    # Target ONLY the image containers. This inherently skips 'hds-gallery-video'
+    image_items = soup.find_all('div', class_=re.compile(r'hds-gallery-image'))
 
-    # Set up Rwanda time (CAT, UTC+2) for the publish dates
+    # Set up Central Africa Time (UTC+2)
     cat_timezone = timezone(timedelta(hours=2))
     current_time = datetime.now(cat_timezone).strftime('%Y-%m-%dT%H:%M:%S%z')
     current_time = current_time[:-2] + ':' + current_time[-2:]
 
     count = 0
-    for img in images:
-        raw_src = img.get('src', '')
-        
-        # Strip the query parameters to get the clean ~large.jpg URL
-        full_res_src = raw_src.split('?')[0]
-        
-        # Extract the caption. NASA puts the text inside the parent <a> tag.
-        parent_a = img.find_parent('a')
-        caption_text = ""
-        if parent_a:
-            # Get the text but remove the image filename that sometimes gets appended
-            caption_text = parent_a.text.strip()
-            
-        # Fallback to the alt attribute just in case
-        alt_text = img.get('alt', '').strip()
-        
-        # Use whichever string is longer/more descriptive
-        final_description = caption_text if len(caption_text) > len(alt_text) else alt_text
-        
-        if not full_res_src or not final_description:
+    for item in image_items:
+        # 1. Get the Detail URL
+        link_tag = item.find('a', class_='hds-gallery-item-link')
+        if not link_tag or not link_tag.get('href'):
             continue
+        detail_url = link_tag.get('href')
+        
+        # 2. Get the High-Res Image Source
+        img_tag = item.find('img')
+        if not img_tag or not img_tag.get('src'):
+            continue
+        raw_src = img_tag.get('src')
+        full_res_src = raw_src.split('?')[0] # Strip the resizing parameters
+        
+        print(f"Diving into details for image {count + 1}...")
+        
+        # 3. Fetch the full description from the detail page
+        full_description = get_full_description(detail_url, headers)
+        
+        # Fallback to the truncated grid text if the deep dive fails for some reason
+        if not full_description:
+            caption_div = item.find('div', class_='hds-gallery-item-caption')
+            full_description = caption_div.text.strip() if caption_div else img_tag.get('alt', 'Artemis II Image').strip()
             
-        # Create a clean slug from the first few words of the description
-        slug_base = re.sub(r'[^a-z0-9]+', '-', final_description.lower()[:45]).strip('-')
+        # Create a clean slug from the description
+        slug_base = re.sub(r'[^a-z0-9]+', '-', full_description.lower()[:45]).strip('-')
         if not slug_base:
             slug_base = f"nasa-image-{count}"
             
         filename = f"{OUTPUT_DIR}/artemis-ii-return-{slug_base}.md"
         
+        # 4. Generate SveltiaCMS Markdown
         markdown_content = f"""---
 title: 'Artemis II: Return to Earth'
 image: {full_res_src}
-image_alt: '{final_description.replace("'", "''")}'
+image_alt: '{full_description.replace("'", "''")}'
 type: external
 link: ''
 category: {CATEGORY_NAME}
@@ -67,15 +100,18 @@ labels:
 date: {current_time}
 ---
 
-{final_description}
+{full_description}
 
 _Image Credit: NASA_
 """
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(markdown_content)
         
-        print(f"Created: {filename}")
+        print(f"  -> Created: {filename}")
         count += 1
+        
+        # Pause for 1 second to be polite to the server
+        time.sleep(1)
 
     print(f"\nSuccessfully generated {count} markdown files in {OUTPUT_DIR}/")
 
