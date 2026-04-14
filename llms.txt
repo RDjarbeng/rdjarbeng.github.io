@@ -1,20 +1,39 @@
 # Richard Djarbeng
 
-> Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe.
+> Richard Djarbeng's website with technical and personal posts. Tech blogs on AI, space, IoT, web development, software engineering, etc + real-life adventures in East Africa, USA and Europe. Supports Dark Mode. 
 
 ## Main Sections
 
 - [Home](https://rdjarbeng.com/) - Technical articles, blog posts about web development, AI, and IoT devices.
 - [About Me](https://rdjarbeng.com/about/) - Information about Richard Djarbeng, learning journey and reflections.
-- [Contact](https://rdjarbeng.com/contact/) - How to get in touch.
+- [Contact](https://rdjarbeng.com/contact/) - How to get in touch with contact form.
 
 ## Content Collections
 
 - [Personal Blog](https://rdjarbeng.com/personal/) - Reflections and stories from real-life adventures.
 - [Posts](https://rdjarbeng.com/posts/) - Technical articles, blog posts about web development, AI, and IoT devices.
-- [Gallery](https://rdjarbeng.com/gallery/) - A collection of images, videos and other media.
+- [Gallery](https://rdjarbeng.com/gallery/) - A collection of images, and other media.
+- [Memes](https://rdjarbeng.com/memes/) - A dedicated collection for tech and developer memes.
+- [Videos](https://rdjarbeng.com/videos/) - Short clips and video insights from rdjareng.com featuring videos from Youtube, X/Twitter and Tiktok.
+- [YouTube](https://rdjarbeng.com/youtube/) - Curated YouTube video embeds from rdjarbeng.com with multiple categories:
+    - Film & Animation
+    - Music
+    - Gaming
+    - Education
+    - Entertainment
+    - People & Blogs
+    - Science & Technology
+    - Travel & Events
+    - Comedy
+    - Sports
+    - Behind the Scenes
+    - Reviews & Reactions
+    - Memes & Highlights
+    - Interviews
+    - Tutorials
 
 ## Navigation and Discovery
 
-- [Search](https://rdjarbeng.com/search/) - Search through all posts and articles.
+- [Search](https://rdjarbeng.com/search/) - Search through all posts and articles with dynamic UI and topic chips.
+- [Categories](https://rdjarbeng.com/categories/) - Browse content by category (e.g., Tech, AI).
 - [Tags](https://rdjarbeng.com/tags/) - Browse content by specific tags.
