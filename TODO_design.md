@@ -14,8 +14,6 @@ This todo file contains design specifications and technical  directions for rdja
 # Enhancements & Infrastructure
 ## High Priority
 
-- Claps for post don't show on dark mode
-
 - Add a section for AI tools and AI projects
 
 - [ ] **Fix Gallery Titles**: Investigate why all gallery pages show the same title.
@@ -27,12 +25,10 @@ This todo file contains design specifications and technical  directions for rdja
 - Homepage contact form in dynamic nav needs proper styling
 - Implement jekyll-responsive-image to properly size images on mobile devices
 - Previews for posts on twitter aren't working for some reason
-- Post cardss showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be
+- Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be
 - Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/
-- The categories page night mode isn't properly displayed
 - videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something
 - THe last modified section for posts sometimes shows a wrong date on deployed site but not on local
-- The loading indicator for the contact dynamic footer for light mode isn't showing
 - Add a view related posts link for videos too so I can track media across the site
 
 ### Enhancements & Infrastructure
@@ -85,7 +81,7 @@ Live Interactive Demos: Instead of just screenshots, I would suggest embedding "
 Series-Based Architecture: Reorganize content into "Tracks" (e.g., The Autonomous Trading Track). At the end of every post, use a "Next in Series" prompt rather than just "Related Posts." This creates a "binge-reading" effect.
 Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000-word authoritative guides. Detailed tutorials with annotated code blocks and architectural diagrams (using the landscape screenshots you prefer) naturally keep users on the page longer.
 Readability UX: Improve the "In-App" feel by adding:
-Estimated Reading Time: Sets expectations.
+
 Table of Contents (Sticky): Allows users to jump to sections of interest without leaving.
 Code "Copy" and "Play" buttons: Increases interaction events within the page.
 
