@@ -95,6 +95,7 @@ exclude:
   - .git/
   - .gitignore
   - README.md
+  - ".ruby-lsp/"
 
 include:
   - redirects.json
