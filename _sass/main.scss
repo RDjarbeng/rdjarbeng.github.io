@@ -1118,12 +1118,8 @@ a:hover {
 }
 
 
-.toc-content {
-  opacity: 0.652;
-}
 
 .toc-content li :hover {
-  opacity: 1.0;
   background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
 }
 
@@ -1152,7 +1148,6 @@ a:hover {
 }
 
 .toc-content {
-  opacity: 0.652;
   max-width: 15vw;
 
 }
