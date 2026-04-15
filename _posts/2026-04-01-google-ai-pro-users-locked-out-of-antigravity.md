@@ -114,7 +114,7 @@ How long has this been going on? About three months. And yes, we brought receipt
 
 For a perfect summary of the community's current vibe, complete with Antigravity users being mocked by Claude Code and GitHub Copilot devs, this video from Richard Djarbeng's channel captures it perfectly:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="415" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
