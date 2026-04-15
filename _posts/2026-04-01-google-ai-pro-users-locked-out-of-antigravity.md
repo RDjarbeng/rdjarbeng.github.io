@@ -6,7 +6,7 @@ category: AI News
 tags:
   - AI
   - Antigravity
-title: Many Google AI Pro Users Are Locked Out of Antigravity IDE (And is the Bug Reporter Broken?)
+title: Before You Upgrade to Antigravity Google AI Pro, Read About This 5-Day Quota Glitch Locking Users Out of The IDE
 image: /assets/images/posts/covers/antigravity_lockout.jpg
 image_alt: Cover image showing an AI user locked out of the Antigravity IDE
 layout: post
@@ -34,15 +34,32 @@ card_items:
     link_text: Visit Aider
 ---
 
-**TL;DR:** Google’s agent-first IDE, **Antigravity**, promised a 5-hour quota reset but is currently locking AI Pro users out for up to **7 days**. Worse, the built-in bug reporter is also broken, leaving users stuck with zero support and a suggestion to upgrade to a $200/month plan.
+**TL;DR:** Google’s agent-first IDE, **Antigravity**, launched with massive promises (multi-model support, deep CLI/browser integration, and reasoning modes) along with a 5-hour quota reset. However, it is currently locking AI Pro users out for up to **7 days**, with Google instead offering a gentle nudge to upgrade to their $200/month Ultra plan.
 
 ***
 
 Google advertised AI coding with **5-hour reset limits** in its agent-first IDE, **Antigravity**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
 
-## The 120-Hour Reality Check
+## The Grand Promise vs. The 120-Hour Reality Check
 
-Instead of a quick reset, some antigravity users are facing lockouts upwards of **120 hours** (and in some cases, a full 7 days). Because the AI Pro plan was positioned as the sweet spot between the free tier and the Ultra plan, many users expected to supercharge their workflows, perhaps upgrading to Ultra later if the benefits were clear. 
+When Google first launched **Antigravity**, they promised a revolutionary, seamless AI coding experience. It wasn't just billed as a smart auto-complete tool; it was designed to be a full-fledged agentic workspace. Out of the gate, developers were promised:
+
+* **A Multi-Model Ecosystem:** The freedom to choose from a variety of top-tier models, including:
+- Gemini 3.1 (High & Low)
+- Gemini Flash
+- Claude Sonnet and Opus
+- GPT OSS models.
+
+* **Deep Tool & Workspace Integration:** Agents that hook seamlessly into most VSCode features, giving them the ability to review code, edit files, manage version control via Git, and execute commands directly in the CLI.
+* **Advanced Agentic Capabilities:** The power to launch a browser, autonomously interact with web pages, and even generate images directly within the workflow.
+* **Flexible Execution:** A toggle between a deep "Planning" (reasoning) mode for complex architectural problem-solving and a "Fast" mode for rapid iterations.
+
+Combined with an advertised **5-hour reset limit** for quotas, it was positioned as the ultimate daily driver for developers. But for those who actually signed up for the AI Pro plan, there is a very different reality setting in. 
+
+Instead of a quick 5-hour reset, users are getting hit with lockouts lasting **120 hours** _(~5 days)_, and in some cases, a full 7 days.
+
+### AI Pro Plan
+. 
 
 ![Cover image for post titled Many Google AI Pro Users Are Locked Out of Antigravity IDE](/assets/images/posts/covers/antigravity_lockout.jpg "Many Google AI Pro Users Are Locked Out of Antigravity IDE")
 
@@ -87,6 +104,12 @@ How long has this been going on? About three months. And yes, we brought receipt
 * **The Original Thread:** An open issue from January 25, 2026, with over 639 replies and 26.5k views. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686)
 * **The Active Issue:** A recent thread confirming the 6-day lockout bug is still very much active for Pro subscribers. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
-_P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google._
+##  Video: Locked Out Featuring Claude Code and Copilot Users
+
+For a perfect summary of the community's current vibe, complete with Antigravity users being mocked by Claude Code and GitHub Copilot devs, this video from Richard Djarbeng's channel captures it perfectly:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
+
+_P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google._
