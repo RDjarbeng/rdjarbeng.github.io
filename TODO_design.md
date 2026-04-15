@@ -106,3 +106,4 @@ content-visibility: auto.
 - Test todo: create the most awesome site
 - The gallery page doesn't have a way to browse all gallery items that is user friendly, in markdown using crawl4ai it shows a very long page for /gallery which shouldn't be
 - TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll  needs fix
+- Authors page needs a page for each author instead of a long scrolling page
