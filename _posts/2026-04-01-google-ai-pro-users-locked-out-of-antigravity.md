@@ -55,10 +55,9 @@ When Google first launched **Antigravity**, they promised a revolutionary, seaml
 
 Many users could run 2-4 agents at the same time concurrently and rarely run out of credits. Combined with an advertised **5-hour reset limit** for quotas, it was positioned as the ultimate daily driver for developers. 
 
-
 Around this time, in the early days of Antigravity, Claude Code and GitHub Copilot users _(competitors to Antigravity)_ were always complaining about quota limits. It was so terrible that some were reverting to the old era of copy-pasting code. Even more terrible, it was said that some had reverted to _typing code manually_ in the editor line-by-line like the ancient developers. These conditions seemed so primitive to Antigravity users.
 
-![Judgemental Volturi looking down whilst dressed in royal robes symbolizing antigravity users](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qlm9zotbfbpjf9k2d5bo.png "Judgemental look at whatever is beneath me meme for Antigravity users")
+![Judgemental Volturi looking down whilst dressed in royal robes symbolizing antigravity users](/assets/images/memes/king-judgemental-looks-down-on-others-meme-original.jpg "Judgemental look at whatever is beneath me meme for Antigravity users")
 
 In those days, Antigravity users looked down with disdain on these outdated developers who didn't have an agentic IDE at their disposal ... until the tables turned. Right now those who actually signed up for the AI Pro plan are facing a very different reality. 
 
