@@ -90,7 +90,6 @@ exclude:
   - "*.bak"
   - "*.tmp"
   - "*.py"
-  - "*.txt"
   - .git/
   - .gitignore
   - README.md
