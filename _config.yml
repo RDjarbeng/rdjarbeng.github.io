@@ -45,6 +45,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-toc
   - kramdown-math-katex
+  - jekyll-include-cache
 
 jekyll-archives:
   enabled:

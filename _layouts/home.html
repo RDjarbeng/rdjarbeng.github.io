@@ -122,7 +122,7 @@ layout: default
       {% include category-tags.html %}
       <div class="post-list" id="latest-posts-container">
         {% for post in site.posts limit:6 %}
-        {% include post-card.html post=post %}
+        {% include_cached post-card.html post=post %}
         {% endfor %}
       </div>
       <a href="{{ '/posts' | relative_url }}" class="about-link">View all posts <svg width="16" height="16"
@@ -163,7 +163,7 @@ layout: default
                 {% assign valid_sampled = t_posts | sample: 6 %}
                 {% for p in valid_sampled %}
                   {% unless latest_urls contains p.url %}
-                    {% include post-card.html post=p %}
+                    {% include_cached post-card.html post=p %}
                     {% assign valid_count = valid_count | plus: 1 %}
                     {% if valid_count == 2 %}{% break %}{% endif %}
                   {% endunless %}
@@ -185,7 +185,7 @@ layout: default
         {% assign rand_older = personal_older | sample: 3 %}
         {% assign personal_mixed = rand_recent | concat: rand_older | sample: 6 %}
         {% for personal in personal_mixed %}
-          {% include post-card.html post=personal %}
+          {% include_cached post-card.html post=personal %}
         {% endfor %}
       </div>
       <a href="{{ '/personal' | relative_url }}" class="about-link">All personal posts <svg width="16" height="16"

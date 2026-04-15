@@ -27,7 +27,7 @@ layout: default
 
 <div class="post-list">
   {% for post in posts_to_display %}
-  {% include post-card.html post=post truncate_words=45 %}
+  {% include_cached post-card.html post=post truncate_words=45 %}
   {% endfor %}
 </div>
 

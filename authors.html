@@ -82,7 +82,7 @@ permalink: /authors/
                 {% assign author_posts = site.posts | where: "author", author.short_name %}
                 {% if author_posts.size > 0 %}
                 {% for post in author_posts %}
-                {% include post-card.html post=post %}
+                {% include_cached post-card.html post=post %}
                 {% endfor %}
                 {% else %}
                 <p style="color: #627d98; font-style: italic; background: #f8fafc; padding: 20px; border-radius: 8px;">

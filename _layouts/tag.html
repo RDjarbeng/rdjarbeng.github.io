@@ -12,6 +12,6 @@ description: "This page lists all the posts for the tag -{{ page.title }} on Ric
 
 <div class="post-list">
   {% for post in page.posts %}
-    {% include post-card.html post=post %}
+    {% include_cached post-card.html post=post %}
   {% endfor %}
 </div>
