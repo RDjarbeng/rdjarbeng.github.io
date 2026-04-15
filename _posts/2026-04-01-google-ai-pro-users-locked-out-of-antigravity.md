@@ -61,7 +61,7 @@ Included below is a screenshot of the Antigravity model console for an AI Pro us
 
 To compound users' frustrations, the IDE has an internal issue-reporting feature designed to capture logs and send feedback. Naturally, users attempted to use this to report the lockouts, only to find that the issue submission tool itself is broken. The irony is palpable.
 
-![Screenshot of the antigravity issue submission error, saying an error occured while submitting your feedback please try again](/assets/images/20260401-175048.png "Antigravity bug reporter error")
+![Screenshot of the antigravity issue submission error, saying an error occured while submitting your feedback please try again](/assets/images/20260401-175048_anti.png "Antigravity bug reporter error")
 
 ## Will Upgrading Save You?
 
