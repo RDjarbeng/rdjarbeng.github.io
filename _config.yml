@@ -44,6 +44,7 @@ plugins:
   - jekyll-archives
   - jekyll-redirect-from
   - jekyll-toc
+  - jekyll-include-cache
 
 jekyll-archives:
   enabled:

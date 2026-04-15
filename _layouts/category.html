@@ -10,7 +10,7 @@ layout: default
 
 <div class="post-list">
   {% for post in page.posts %}
-    {% include post-card.html post=post %}
+    {% include_cached post-card.html post=post %}
   {% endfor %}
 </div>
 

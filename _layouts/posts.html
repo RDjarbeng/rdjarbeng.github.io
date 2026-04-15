@@ -36,7 +36,7 @@ title: Blog
 
 <div class="post-list">
   {% for post in posts_to_display %}
-  {% include post-card.html post=post %}
+  {% include_cached post-card.html post=post %}
   {% endfor %}
 </div>
 
