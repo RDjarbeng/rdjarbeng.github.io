@@ -45,20 +45,20 @@ Google advertised AI coding with **5-hour reset limits** in its agent-first IDE,
 When Google first launched **Antigravity**, they promised a revolutionary, seamless AI coding experience. It wasn't just billed as a smart auto-complete tool; it was designed to be a full-fledged agentic workspace. Out of the gate, developers were promised:
 
 * **A Multi-Model Ecosystem:** The freedom to choose from a variety of top-tier models, including:
-- Gemini 3.1 (High & Low)
-- Gemini Flash
-- Claude Sonnet and Opus
-- GPT OSS models.
-
+    - Gemini 3.1 (High & Low)
+    - Gemini Flash
+    - Claude Sonnet and Opus
+    - GPT OSS models.
 * **Deep Tool & Workspace Integration:** Agents that hook seamlessly into most VSCode features, giving them the ability to review code, edit files, manage version control via Git, and execute commands directly in the CLI.
 * **Advanced Agentic Capabilities:** The power to launch a browser, autonomously interact with web pages, and even generate images directly within the workflow.
 * **Flexible Execution:** A toggle between a deep "Planning" (reasoning) mode for complex architectural problem-solving and a "Fast" mode for rapid iterations.
 
 Combined with an advertised **5-hour reset limit** for quotas, it was positioned as the ultimate daily driver for developers. But for those who actually signed up for the AI Pro plan, there is a very different reality setting in. 
 
-Instead of a quick 5-hour reset, users are getting hit with lockouts lasting **120 hours** _(~5 days)_, and in some cases, a full 7 days.
+Instead of a quick 5-hour reset, users are getting hit with lockouts lasting **120 hours** _(\~5 days)_, and in some cases, a full 7 days.
 
 ### AI Pro Plan
+
 . 
 
 ![Cover image for post titled Many Google AI Pro Users Are Locked Out of Antigravity IDE](/assets/images/posts/covers/antigravity_lockout.jpg "Many Google AI Pro Users Are Locked Out of Antigravity IDE")
