@@ -42,7 +42,7 @@ Google advertised AI coding with **5-hour reset limits** in its agent-first IDE,
 
 ## The Grand Promise vs. The 120-Hour Reality Check
 
-When Google first launched **Antigravity**, they promised a revolutionary, seamless AI coding experience. It wasn't just billed as a smart auto-complete tool; it was designed to be a full-fledged agentic workspace. Out of the gate, developers were promised:
+When Google first launched **Antigravity**, they promised a revolutionary, seamless AI coding experience. It wasn't just billed as a smart auto-complete tool; it was designed to be a full-fledged agentic workspace. Out of the gate, developers were promised the following:
 
 * **A Multi-Model Ecosystem:** The freedom to choose from a variety of top-tier models, including:
     - Gemini 3.1 (High & Low)
@@ -53,7 +53,13 @@ When Google first launched **Antigravity**, they promised a revolutionary, seaml
 * **Advanced Agentic Capabilities:** The power to launch a browser, autonomously interact with web pages, and even generate images directly within the workflow.
 * **Flexible Execution:** A toggle between a deep "Planning" (reasoning) mode for complex architectural problem-solving and a "Fast" mode for rapid iterations.
 
-Combined with an advertised **5-hour reset limit** for quotas, it was positioned as the ultimate daily driver for developers. But for those who actually signed up for the AI Pro plan, there is a very different reality setting in. 
+Many users could run 2-4 agents at the same time concurrently and rarely run out of credits. Combined with an advertised **5-hour reset limit** for quotas, it was positioned as the ultimate daily driver for developers. 
+
+Around this time, in the early days of Antigravity, Claude Code and GitHub Copilot users _(competitors to Antigravity)_ were always complaining about quota limits. It was so terrible that some were reverting to the old era of copy-pasting code. Even more terrible, it was said that some had reverted to _typing code manually_ in the editor line-by-line like the ancient developers. These conditions seemed so primitive to Antigravity users.
+
+![Judgemental Volturi looking down whilst dressed in royal robes symbolizing antigravity users](/assets/images/memes/king-judgemental-looks-down-on-others-meme-original.jpg "Judgemental look at whatever is beneath me meme for Antigravity users")
+
+In those days, Antigravity users looked down with disdain on these outdated developers who didn't have an agentic IDE at their disposal ... until the tables turned. Right now those who actually signed up for the AI Pro plan are facing a very different reality. 
 
 Instead of a quick 5-hour reset, users are getting hit with lockouts lasting **120 hours** _(\~5 days)_, and in some cases, a full 7 days.
 
@@ -108,7 +114,7 @@ How long has this been going on? About three months. And yes, we brought receipt
 
 For a perfect summary of the community's current vibe, complete with Antigravity users being mocked by Claude Code and GitHub Copilot devs, this video from Richard Djarbeng's channel captures it perfectly:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="415" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
