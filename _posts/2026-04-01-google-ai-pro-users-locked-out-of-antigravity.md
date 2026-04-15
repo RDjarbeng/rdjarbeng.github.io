@@ -8,35 +8,35 @@ tags:
   - Antigravity
 title: Many Google AI Pro Users Are Locked Out of Antigravity IDE (And is the Bug Reporter Broken?)
 image: /assets/images/posts/covers/antigravity_lockout.jpg
-image_alt: 'Cover image showing an AI user locked out of the Antigravity IDE'
+image_alt: Cover image showing an AI user locked out of the Antigravity IDE
 layout: post
 card_items:
   - name: Antigravity
+    badge_1: Agent-First
+    badge_2: Google
     description: An agent-first, AI-native IDE from Google that features autonomous browser subagents and advanced coding agents for an agentic development experience.
     url: https://antigravity.google
     link_text: Visit Antigravity
-    badge_1: Agent-First
-    badge_2: Google
   - name: Claude Code
+    badge_1: CLI Agent
     description: Anthropic's command-line interface for AI-native coding, offering a powerful alternative to integrated IDE agents.
     url: https://www.anthropic.com/news/claude-code-cli-agent
     link_text: Visit Claude Code
-    badge_1: CLI Agent
   - name: Cline
+    badge_1: Open Source
     description: An open-source AI assistant that can use your CLI and editor, providing a flexible and transparent coding experience.
     url: https://github.com/cline/cline
     link_text: Visit Cline
-    badge_1: Open Source
   - name: Aider
+    badge_1: Popular
     description: A popular command-line chat tool that lets you write code with AI, known for its efficiency and strong editing capabilities.
     url: https://aider.chat/
     link_text: Visit Aider
-    badge_1: Popular
 ---
 
 **TL;DR:** Google’s agent-first IDE, **Antigravity**, promised a 5-hour quota reset but is currently locking AI Pro users out for up to **7 days**. Worse, the built-in bug reporter is also broken, leaving users stuck with zero support and a suggestion to upgrade to a $200/month plan.
 
----
+***
 
 Google advertised AI coding with **5-hour reset limits** in its agent-first IDE, **Antigravity**, but those who signed up for the AI Pro plan have been met with a reality that starkly contradicts those promises.
 
@@ -73,11 +73,12 @@ If you're thinking about biting the bullet and upgrading to the highest tier, th
 ## Alternatives to Antigravity
 
 We can't let you go without providing a few working alternatives. If you are looking to jump ship, consider these tools:
+
 * **Claude Code** (Anthropic)
 * **OpenAI Codex**
 * **Open-Source Tools:** Cline, Aider, and Continue.dev
 
----
+***
 
 ## References
 
@@ -86,4 +87,6 @@ How long has this been going on? About three months. And yes, we brought receipt
 * **The Original Thread:** An open issue from January 25, 2026, with over 639 replies and 26.5k views. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/google-ai-pro-subscription-antigravity-quota-not-working-as-advertised-10-day-lockout-instead-of-5-hour-reset/118505/686)
 * **The Active Issue:** A recent thread confirming the 6-day lockout bug is still very much active for Pro subscribers. [Read on discuss.ai.google.dev](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
-*P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google.*
+_P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UnSHshtxFUI?si=qAVrTopw-Gi1MTVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
