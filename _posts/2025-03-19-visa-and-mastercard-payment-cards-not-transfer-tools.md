@@ -99,7 +99,7 @@ Even if the charges were better than using a regular bank, many people might pre
 
 ## Why Transfers Differ from Payments
 
-Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha) to process the details. Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement. The point is that payments and transfers use different systems that were not built to work with each other even though the .
+Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha) to process the details. Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement. The point is that payments and transfers use different systems that were not built to work with each other even though the functionality is almost the same.
 
 ![Image shows two men with visa and MasterCard cards between them](/assets/images/visa_card_barrier3.jpg "Two men with visa and MasterCard cards between them")
 
