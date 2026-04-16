@@ -1,5 +1,5 @@
 ---
-title: Why Can I Pay for Netflix Instantly, But Not Send $5 To My Brother Abroad? Enter Revolut
+title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut
 image: /assets/images/revolut_sending_cross_border_cover.webp
 image_alt: ''
 type: cover
