@@ -23,7 +23,7 @@ rss: "RSS Feed"
 # Build settings
 markdown: kramdown
 kramdown:
-  toc_levels: 2..3 # Include headers from h2 to h3 in the TOC
+  toc_levels: 2..4 # Include headers from h2 to h3 in the TOC
   auto_ids: true # Automatically generate IDs for headers
   math_engine: katex
   input: GFM # Ensure GitHub Flavored Markdown is supported
@@ -44,6 +44,7 @@ plugins:
   - jekyll-archives
   - jekyll-redirect-from
   - jekyll-toc
+  - kramdown-math-katex
   - jekyll-include-cache
 
 jekyll-archives:
@@ -90,9 +91,11 @@ exclude:
   - "*.bak"
   - "*.tmp"
   - "*.py"
+  - "*.txt"
   - .git/
   - .gitignore
   - README.md
+  - ".ruby-lsp/"
 
 include:
   - redirects.json

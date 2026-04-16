@@ -1,13 +1,39 @@
 # _config_dev.yml
+# This configuration is optimized for fast local development.
+# It disables slow plugins like jekyll-sitemap and jekyll-last-modified-at.
+
+theme: minima
+
 plugins:
-  - jekyll-last-modified-at
+  - jekyll-feed
   - jekyll-seo-tag
-  # - jekyll-archives     # disabled locally
-  # - jekyll-toc          # disabled locally
-  # - jekyll-redirect-from
+  - jekyll-archives
+  - jekyll-toc
+  - jekyll-redirect-from
+  - kramdown-math-katex
+
+# Disable future posts processing for speed if desired (optional)
+# future: false
+
+# Collections
+collections:
+  authors:
+    output: true
+  personal:
+    output: true
+    permalink: /personal/:title/
+  gallery:
+    output: true
+    permalink: /gallery/:name/
+  category_info:
+    output: false
+  gallery_categories:
+    output: false
 
 minima:
   feed: false
 
 toc:
   enabled: false
+
+
