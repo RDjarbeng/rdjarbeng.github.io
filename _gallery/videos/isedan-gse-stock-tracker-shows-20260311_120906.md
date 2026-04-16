@@ -3,7 +3,7 @@ title: Isedan GSE stock tracker shows how to automate your GSE stock analysis
 published: true
 date: 2026-03-11T12:09:00+02:00
 platform: tiktok
-youtube_id: https://vt.tiktok.com/ZSuBBhw21/
+youtube_id: https://www.tiktok.com/@isedan.app/video/7595249453196397844/
 embed_code: ''
 thumbnail: ''
 type: video

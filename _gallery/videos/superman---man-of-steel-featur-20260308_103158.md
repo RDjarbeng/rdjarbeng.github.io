@@ -1,7 +1,7 @@
 ---
 title: Superman - Man of Steel Featurettes Behind Superman super speed VFX team
 platform: tiktok
-youtube_id: https://vt.tiktok.com/ZSuYuNjAr/
+youtube_id: https://www.tiktok.com/@mercury_dts/video/7594119444952059158/
 embed_code: ''
 thumbnail: ''
 type: video

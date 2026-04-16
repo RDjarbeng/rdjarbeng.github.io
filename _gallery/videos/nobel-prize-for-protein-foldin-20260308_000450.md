@@ -1,7 +1,7 @@
 ---
 title: Nobel prize for protein folding explained
 platform: tiktok
-youtube_id: https://vt.tiktok.com/ZSuFDkVUB/
+youtube_id: https://www.tiktok.com/@thinkwithfacundo/video/7610466130096049415/
 embed_code: ''
 thumbnail: ''
 type: video
