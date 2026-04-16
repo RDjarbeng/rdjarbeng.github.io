@@ -48,3 +48,29 @@ Who is affected?
 Certain phones, certain cards.
 
 Iphones with Visa cards. Mastercard has  a layer of asymmetric encryption that actually verifies a transaction and makes it difficult to tamper
+
+Yes, I do have the full transcript! You are completely right—in the previous response I focused heavily on the visual and technical breakdown of the hack, but I left out the entire corporate accountability segment at the end of the video.
+
+Here is the breakdown of those specific points you mentioned, directly from the video:
+
+**The Timeline of the Hack**
+
+You are very close on the dates. The video notes that Apple introduced the Express Transit feature in **2019**, which is what opened the door for this vulnerability. However, the cybersecurity professors officially made this specific hack public back in **2021** after privately warning both Apple and Visa. As Derek notes, this means people have known it is possible to steal money from locked phones for five years.
+
+The researchers mention that the limit is the amount of money the person has in their account potentially draining the person's entire account. The most likely case is that a locked iPhone is stolen but attackers are able to steal money through this method.
+
+**Apple's Response**
+
+Derek explicitly mentions that they reached out to Apple, but Apple declined to do an interview. Instead, they provided a written statement that essentially passed the buck to Visa:
+
+> _"This is a concern with the Visa system, but Visa does not believe this kind of fraud is likely to take place in the real world. Visa has made it clear that their cardholders are protected by Visa's zero liability policy."_
+
+**The Visa Interview**
+
+Veritasium did secure an interview with a representative from Visa. The representative argued that the vulnerability is highly unlikely to scale in the real world because their network defenses would detect an "endemic" issue. To back this up statistically, he noted that for in-person transactions, fraud only accounts for two cents out of every $100 spent.
+
+**Derek's Conclusion (The "Airplane" Analogy)**
+
+Derek pushes back on Visa's answer, noting that simply promising a refund isn't a satisfactory excuse for leaving a known loophole open. He compares it to the airline industry: statistically, you are more likely to crash driving to the airport than flying, but airlines don't accept a small number of crashes each year as an inevitable cost of doing business. They investigate and fix the root technical issue.
+
+He concludes by pointing out the massive real-world stress this causes: even if Visa eventually refunds a stolen $10,000, waking up to an empty bank account means missing rent, car payments, or medical bills in the meantime, arguing that consumers should expect better.
