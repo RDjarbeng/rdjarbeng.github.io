@@ -7,8 +7,8 @@ tags:
   - food
   - Kigali
   - cooking
-image: '/assets/images/personal/chinese-noodles-in-kigali-cover.png'
-image_alt: 'Chinese Noodles in Kigali cover image showing a steaming bowl of ramen noodles with beef, eggs and vegetables'
+image: /assets/images/personal/chinese-noodles-in-kigali-cover.png
+image_alt: Chinese Noodles in Kigali cover image showing a steaming bowl of ramen noodles with beef, eggs and vegetables
 layout: personal
 card_items: []
 ---
@@ -29,6 +29,8 @@ Before cooking, I ran the wrapper through Google Translate (via Google Lens) —
 
 ![Translated Chinese noodles packet on display showing Lao Tan Sauerkraut Beef Noodles (117g+toppings)](/assets/images/personal/chinese_noodles_translated_packet.jpg "Translated Chinese noodles packet")
 
+![3 Translated Chinese noodles smaller inner packet on display showing text: lao tan pickled cabbage buns, and ](/assets/images/personal/chinese-noodles-in-kigali-packets-translated.jpg "3 Translated Chinese noodles smaller inner packet on display showing translated texttext")
+
 Into boiling water they went. I added a marinated, steamed piece of beef and boiled a couple of eggs to go alongside. Fingers crossed.
 
 ## Serving
@@ -41,7 +43,7 @@ Here's a quick video of the end result — two bowls of rice and beef stew along
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/a58tfaF4zt8" title="Chinese noodles in Kigali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Chinese noodles in Kigali — shot by rdjarbeng*
+_Chinese noodles in Kigali — shot by rdjarbeng_
 
 ## Review
 
@@ -49,7 +51,7 @@ Solid noodles — held their shape, didn't go mushy, and lifted cleanly without 
 
 The sauce had a real kick — pepper hot, not temperature hot — but nothing close to unbearable. The sauerkraut tang gave it a depth that regular instant noodles don't have. Combined with the beef, eggs, and rice, it was a proper meal. **7/10.** Would buy again, especially for the vegetable sachets alone.
 
----
+***
 
 To close — this song has been circulating for years mislabelled as the "Samsung, Women Cheat" song. It's actually **Jin Sheng Yuan (Affinities Of This Life)**. Felt fitting to end on it.
 
