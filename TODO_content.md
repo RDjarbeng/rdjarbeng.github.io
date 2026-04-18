@@ -129,3 +129,6 @@ https://science.nasa.gov/earth/explore/earth-indicators/
 - [ ] Porsche has HD videos of each of their sports cars on their website, link to favorite video on GT3RS
 - [ ] Why is there a difference in sound quality across platforms and how does it work? Is it the file formats, equipment used, how does it compare to a live band
 - [ ] Fastai original paper tweet on Twitter convert to post
+- [ ] Footballers model on Hugging face and how to build
+- how to use a free background remover (modify for dev.to how to build)
+- Hackathon platforms- what is a Hackathon
