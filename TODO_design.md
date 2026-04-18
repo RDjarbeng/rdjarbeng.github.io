@@ -100,3 +100,4 @@ This todo file contains design specifications and technical  directions for rdja
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
+- [ ] Issue: Tables are not showing text properly on dark mode
