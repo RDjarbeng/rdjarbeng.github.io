@@ -127,3 +127,4 @@ CO2, methane, ice sheets, sea level, ocean warming
 https://science.nasa.gov/earth/explore/earth-indicators/
 - [ ] Post on Companies revolutionalizing energy, national security, transportation
 - [ ] Porsche has HD videos of each of their sports cars on their website, link to favorite video on GT3RS
+- [ ] Why is there a difference in sound quality across platforms and how does it work? Is it the file formats, equipment used, how does it compare to a live band
