@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="home-section" style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h1 class="page-heading" style="text-transform: capitalize;">{{ page.title | replace: "-", " " }}</h1>
+    <div style="margin-bottom: 20px;">
+        <a href="/gallery/" class="btn" style="text-decoration: none; color: #102a43; font-weight: bold;">&larr; Back to Gallery</a>
+    </div>
+
+    <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+        {% assign items = page.custom_pager.posts %}
+        {% for item in items %}
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="{{ item.url | relative_url }}" class="meme-card gallery-item" data-url="{{ item.url | relative_url }}" data-src="{{ item.image | relative_url }}" data-title="{{ item.title | escape }}" data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}" data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-date="{{ item.date | date_to_xmlschema }}"
+                style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; text-decoration: none; color: inherit; display: block;">
+                <div style="width: 100%; aspect-ratio: 16/10; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                    <img src="{% if item.thumbnail %}{{ item.thumbnail | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
+                </div>
+                <div style="padding: 15px; text-align: left;">
+                    <h3 style="font-size: 1.05rem; margin: 0; line-height: 1.3;">{{ item.title | titleize | escape }}</h3>
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{{ item.date | date: "%B %-d, %Y" }}</p>
+                </div>
+                <div class="gallery-caption-content" style="display:none;">{{ item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}</div>
+                {% if item.type == 'video' %}
+                <div class="gallery-html-content" style="display:none;">
+                    <template class="raw-embed-code">
+                        {{ item.embed_code | default: item.content }}
+                    </template>
+                </div>
+                {% endif %}
+            </a>
+            <div style="display: flex; gap: 10px; padding-bottom: 10px;">
+                <button class="btn quick-view-btn" style="flex: 1; padding: 6px; background: #e2e8f0; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; color: #333;" onclick="event.preventDefault(); document.querySelector('.meme-card[data-url=\'{{ item.url | relative_url }}\']').click();">Quick View</button>
+                <a href="{{ item.url | relative_url }}" class="btn" style="flex: 1; padding: 6px; background: #102a43; border: none; border-radius: 6px; font-weight: bold; text-align: center; color: white; text-decoration: none;">Full Post</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if page.custom_pager.total_pages > 1 %}
+    <div class="pagination" style="margin-top: 40px; display: flex; justify-content: center; gap: 10px;">
+        {% assign cat_path = page.url | split: '/page-' | first %}
+        {% if cat_path == page.url %}{% assign cat_path = page.url | append: '/' | replace: '//', '/' %}{% else %}{% assign cat_path = cat_path | append: '/' %}{% endif %}
+        
+        {% if page.custom_pager.previous_page %}
+        <a href="{% if page.custom_pager.previous_page == 1 %}{{ cat_path }}{% else %}{{ cat_path }}page-{{ page.custom_pager.previous_page }}{% endif %}" class="btn" style="padding: 8px 16px; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #333;">&laquo; Prev</a>
+        {% endif %}
+
+        <span style="padding: 8px 16px;">Page {{ page.custom_pager.current_page }} of {{ page.custom_pager.total_pages }}</span>
+
+        {% if page.custom_pager.next_page %}
+        <a href="{{ cat_path }}page-{{ page.custom_pager.next_page }}" class="btn next-page-btn" style="padding: 8px 16px; background: #f0f4f8; border-radius: 6px; text-decoration: none; color: #333;">Next &raquo;</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+{% include gallery_native_script.html %}

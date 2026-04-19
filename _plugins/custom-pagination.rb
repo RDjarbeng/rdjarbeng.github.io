@@ -8,6 +8,7 @@ module Jekyll
           if collection == 'posts'
             paginate_posts(site)
             paginate_personal(site)
+            paginate_gallery(site)
           else
             paginate(site)
           end
@@ -104,6 +105,78 @@ module Jekyll
           site.pages << personal_page
         end
         Jekyll.logger.info "My custom pagination:", "Paginated personal #{total_pages} / #{total_pages}"
+      end
+
+      def paginate_gallery(site)
+        if site.collections['gallery'].nil?
+          Jekyll.logger.warn "My custom pagination:", "Gallery collection not found!"
+          return
+        end
+        
+        all_gallery = site.collections['gallery'].docs.sort_by { |p| p.data['date'] || Time.at(0) }.reverse
+        paginate_size = site.config['custom_pagination']['paginate'].to_i || 12
+        
+        # Paginate specific gallery index pages we know exist:
+        # e.g., gallery/memes/index.html
+        
+        if site.collections['gallery_categories']
+          site.collections['gallery_categories'].docs.each do |cat|
+            cat_title = cat.data['title']
+            next if cat_title == 'None' || cat_title == 'Other'
+            
+            cat_slug = Jekyll::Utils.slugify(cat_title)
+            
+            cat_items = all_gallery.select { |item| 
+              cats = item.data['category'] || ''
+              labels_data = item.data['labels'] || []
+              labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
+              plat = item.data['platform'] || ''
+              type = item.data['type'] || ''
+              "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || (item.url && item.url.include?(cat_slug))
+            }
+            
+            if cat_items.any?
+              total_pages = (cat_items.size / paginate_size.to_f).ceil
+              # Check if manual index exists
+              index_page = site.pages.find { |p| p.path == "gallery/#{cat_slug}/index.html" || p.url.chomp('/') == "/gallery/#{cat_slug}" }
+              if index_page
+                site.pages.delete(index_page)
+              end
+              
+              (1..total_pages).each do |current_page|
+                pager = Pager.new(site, current_page, cat_items, total_pages, paginate_size)
+                page = GalleryCategoryIndexPage.new(site, current_page, cat_title, cat_slug, index_page)
+                page.pager = pager
+                page.data['custom_pager'] = pager.to_liquid
+                site.pages << page
+              end
+            end
+          end
+        end
+      end
+    end
+
+    class GalleryCategoryIndexPage < Page
+      def initialize(site, current_page, cat_title, cat_slug, original_page)
+        @site = site
+        @base = site.source
+        @dir = current_page == 1 ? "gallery/#{cat_slug}" : "gallery/#{cat_slug}/page-#{current_page}"
+        @name = "index.html"
+        self.process(@name)
+        
+        if original_page && current_page == 1
+          self.read_yaml(File.join(@base, '_layouts'), 'default.html')
+          self.content = original_page.content
+          self.data.merge!(original_page.data)
+        elsif original_page && current_page > 1
+          self.read_yaml(File.join(@base, '_layouts'), 'default.html')
+          # Remove layout wrapper content if it was injected with {{content}}
+          self.content = original_page.content.sub('{{ content }}', '')
+          self.data.merge!(original_page.data)
+        else
+          self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          self.data['title'] = cat_title
+        end
       end
     end
 
