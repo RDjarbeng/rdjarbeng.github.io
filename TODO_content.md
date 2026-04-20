@@ -133,3 +133,4 @@ https://science.nasa.gov/earth/explore/earth-indicators/
 - how to use a free background remover (modify for dev.to how to build)
 - Hackathon platforms- what is a Hackathon
 - [ ] Witness a master watchmaker assemble a complex tourbillon inside a microscopic glass sphere
+- [ ] Jet engine and aviation industry, what if I told you...
