@@ -30,7 +30,10 @@ Because apparently if you push the air in one direction it also pushes back in t
 
 What's more there are even more 'crazy' people who use this hot air to make a type of engine for a type of plane that can go past the speed of sound, you may know them as fighter jets used by the military. Then there's those who say 'we want a bigger explosion' and go way faster than the speed of sound, so they combine a large tank of two separate types of special fuel, turn our metal tube heavenwards, and do a dramatic countdown... 10,9,8... 3,2,1 🔥
 
-It looks a little bit like this. Some people call it a rocket. Apparently there's a science around this as well.
+It looks a little bit ike this. Some people call it a rocket. Apparently there's a science around this as well.
+
+![](/assets/images/1-rocket_launch.png)
+
 
 We use them to put pieces of electronic equipment outside our planet costing millions and billions, and position them to go around our planet (fancy term is orbit), then we leave them 
 
