@@ -96,12 +96,14 @@
         });
 
         document.addEventListener('click', function(e) {
-            const card = e.target.closest('.gallery-item');
-            if (card) {
-                if (e.ctrlKey || e.metaKey || e.button === 1) return;
+            const trigger = e.target.closest('.lightbox-trigger');
+            if (trigger) {
                 e.preventDefault();
+                e.stopPropagation();
                 updateVisibleItems();
-                openLightbox(visibleItems.indexOf(card));
+                const card = trigger.closest('.gallery-item');
+                if (card) openLightbox(visibleItems.indexOf(card));
+                return;
             }
 
             const nextBtn = e.target.closest('.next-page-btn');
@@ -131,6 +133,6 @@
                     })
                     .catch(() => window.location.href = nextUrl);
             }
-        });
+        }, true);
     });
 </script>

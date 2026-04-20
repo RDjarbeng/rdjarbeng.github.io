@@ -119,12 +119,25 @@ module Jekyll
         # Paginate specific gallery index pages we know exist:
         # e.g., gallery/memes/index.html
         
+        categories_to_process = []
         if site.collections['gallery_categories']
           site.collections['gallery_categories'].docs.each do |cat|
             cat_title = cat.data['title']
             next if cat_title == 'None' || cat_title == 'Other'
-            
             cat_slug = Jekyll::Utils.slugify(cat_title)
+            categories_to_process << { title: cat_title, slug: cat_slug }
+          end
+        end
+
+        # Add pseudo categories
+        pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
+        pseudo_cats.each do |cat_slug|
+          categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
+        end
+
+        categories_to_process.each do |cat_info|
+            cat_title = cat_info[:title]
+            cat_slug = cat_info[:slug]
             
             cat_items = all_gallery.select { |item| 
               cats = item.data['category'] || ''
@@ -150,11 +163,10 @@ module Jekyll
                 page.data['custom_pager'] = pager.to_liquid
                 site.pages << page
               end
-            end
-          end
-        end
-      end
-    end
+            end # ends if cat_items.any?
+          end # ends categories_to_process.each
+      end # ends def paginate_gallery
+    end # ends class Pagination
 
     class GalleryCategoryIndexPage < Page
       def initialize(site, current_page, cat_title, cat_slug, original_page)
@@ -173,6 +185,7 @@ module Jekyll
           # Remove layout wrapper content if it was injected with {{content}}
           self.content = original_page.content.sub('{{ content }}', '')
           self.data.merge!(original_page.data)
+          self.data.delete('permalink') # Prevent conflicting permalinks for paginated pages
         else
           self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
           self.data['title'] = cat_title

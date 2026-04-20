@@ -109,8 +109,20 @@ layout: default
 
   <!-- Dashboard View (Server Side) -->
   <div id="gallery-dashboard" class="gallery-dashboard">
-    {% assign active_cats = "ai-generations,memes,ghana,rwanda,external,cover-images,videos,youtube,twitter,instagram,tiktok" | split: "," %}
-    {% for cat_slug in active_cats %}
+    {% assign pseudo_cats = "cover-images,videos,youtube,twitter,instagram,tiktok,external" | split: "," %}
+    
+    {% assign all_hub_cats = "" | split: "" %}
+    {% for cat in site.gallery_categories %}
+      {% assign slug = cat.title | slugify %}
+      {% if slug != 'none' and slug != 'other' %}
+        {% assign all_hub_cats = all_hub_cats | push: slug %}
+      {% endif %}
+    {% endfor %}
+    {% for cat in pseudo_cats %}
+        {% assign all_hub_cats = all_hub_cats | push: cat %}
+    {% endfor %}
+
+    {% for cat_slug in all_hub_cats %}
         {% assign cat = site.gallery_categories | where: "title", cat_slug | first %}
         {% assign cat_title = cat.title | default: cat_slug | capitalize | replace: '-', ' ' %}
         {% if cat_slug == 'external' %}{% assign cat_title = "Gallery Images" %}{% endif %}
@@ -120,8 +132,9 @@ layout: default
         {% assign cat_items = "" | split: "" %}
         
         {% for item in site.gallery %}
-          {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type %}
-          {% if str contains cat_slug or item.url contains cat_slug %}
+          {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | slugify %}
+          {% assign safe_cat_slug = cat_slug | slugify %}
+          {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
             {% unless cat_items contains item %}
               {% assign cat_items = cat_items | push: item %}
             {% endunless %}
@@ -129,7 +142,7 @@ layout: default
         {% endfor %}
         
         {% if cat_items.size > 0 %}
-        <div class="dashboard-category">
+        <div class="dashboard-category" data-category-slug="{{ cat_slug }}">
           <div class="dashboard-category-header">
             <h3 class="dashboard-category-title">{{ cat_title }}</h3>
             <a class="view-all-link" href="/gallery/{{ cat_slug }}/">View All</a>
@@ -137,28 +150,20 @@ layout: default
           <div class="horizontal-scroll-container pb-3">
             {% for item in cat_items limit:6 %}
               <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
-                  <a href="{{ item.url | relative_url }}" class="gallery-item" data-url="{{ item.url | relative_url }}" data-src="{{ item.image | relative_url }}" data-title="{{ item.title | escape }}" data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}" data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-date="{{ item.date | date_to_xmlschema }}" style="text-decoration: none; color: inherit; display: block;">
-                      <div class="gallery-thumb-wrapper" style="aspect-ratio: 1/1; overflow:hidden; position:relative; background:#f9f9f9; display:flex; align-items:center; justify-content:center; border-radius: 8px;">
-                          <img src="{% if item.thumbnail %}{{ item.thumbnail | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}" alt="{{ item.title | escape }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                  <a href="{{ item.url | relative_url }}" class="gallery-item-link" data-title="{{ item.title | escape }}" style="text-decoration: none; color: inherit; display: block;">
+                      {% assign img_src = item.thumbnail | default: item.image | default: '/assets/images/webOrMobile.jpeg' %}
+                      <div class="gallery-thumb-wrapper gallery-item" data-url="{{ item.url | relative_url }}" data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ img_src | relative_url }}{% endif %}" data-title="{{ item.title | escape }}" data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}" data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-date="{{ item.date | date_to_xmlschema }}" style="aspect-ratio: 1/1; overflow:hidden; position:relative; background:#f9f9f9; display:flex; align-items:center; justify-content:center; border-radius: 8px;">
+                          <img src="{{ img_src | relative_url }}" alt="{{ item.title | escape }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg'; this.style.objectFit='cover';">
                           <div class="gallery-overlay"><span class="gallery-title-overlay">{{ item.title | titleize }}</span></div>
-                          {% if item.type == 'video' %}<div class="video-icon-wrapper"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:white;font-size:20px;">▶</span></div>{% endif %}
+                          {% if item.type == 'video' %}<div class="video-icon-wrapper" style="pointer-events:none;"><span class="gallery-type-icon" style="position:absolute;bottom:10px;right:10px;color:rgba(255,255,255,0.8);font-size:20px;">▶</span></div>{% endif %}
+                          <button class="lightbox-trigger" style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);" onclick="event.preventDefault();" title="Expand preview">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                          </button>
                       </div>
                       <div class="gallery-item-info">
                           <h4 class="gallery-item-title" style="margin: 5px 0 0 0; font-size: 0.9rem;">{{ item.title | titleize }}</h4>
                       </div>
-                      <div class="gallery-caption-content" style="display:none;">{{ item.content | strip_html | truncatewords: 20 }}</div>
-                      {% if item.type == 'video' %}
-                      <div class="gallery-html-content" style="display:none;">
-                          <template class="raw-embed-code">
-                              {{ item.embed_code | default: item.content }}
-                          </template>
-                      </div>
-                      {% endif %}
                   </a>
-                  <div style="display: flex; gap: 5px;">
-                      <button class="btn quick-view-btn" style="flex: 1; padding: 4px; background: #e2e8f0; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; color: #333; font-size: 0.75rem;" onclick="event.preventDefault(); this.parentElement.previousElementSibling.click();">Quick View</button>
-                      <a href="{{ item.url | relative_url }}" class="btn" style="flex: 1; padding: 4px; background: #102a43; border: none; border-radius: 4px; font-weight: bold; text-align: center; color: white; text-decoration: none; font-size: 0.75rem;">Full Post</a>
-                  </div>
               </div>
             {% endfor %}
             <a href="/gallery/{{ cat_slug }}/" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
@@ -171,5 +176,57 @@ layout: default
     {% endfor %}
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.gallery-filter');
+    const categories = document.querySelectorAll('.dashboard-category');
+    const searchInput = document.getElementById('gallery-search');
+
+    function filterDashboard() {
+        const activeFilterBtn = document.querySelector('.gallery-filter.active');
+        const activeFilter = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+        const query = searchInput ? searchInput.value.toLowerCase() : '';
+
+        categories.forEach(row => {
+            const rowCat = row.dataset.categorySlug;
+            // Does this row match the pill filter?
+            const matchesFilter = activeFilter === 'all' || rowCat === activeFilter;
+            
+            // Does this row have items matching the search query?
+            let hasVisibleItems = false;
+            const items = row.querySelectorAll('.dashboard-item:not(.dashboard-view-all-card)');
+            items.forEach(itemBox => {
+                const link = itemBox.querySelector('.gallery-item-link');
+                const title = link && link.dataset.title ? link.dataset.title.toLowerCase() : '';
+                if (title.includes(query) || query === '') {
+                    itemBox.style.display = 'flex';
+                    hasVisibleItems = true;
+                } else {
+                    itemBox.style.display = 'none';
+                }
+            });
+
+            if (matchesFilter && hasVisibleItems) {
+                row.style.display = 'block';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    filters.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            filters.forEach(f => f.classList.remove('active'));
+            e.target.classList.add('active');
+            filterDashboard();
+        });
+    });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterDashboard);
+    }
+});
+</script>
 
 {% include gallery_native_script.html %}

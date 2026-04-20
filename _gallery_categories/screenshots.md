@@ -1,3 +1,3 @@
 ---
-title: Sceenshots
+title: Screenshots
 ---
