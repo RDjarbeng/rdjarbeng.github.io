@@ -132,3 +132,4 @@ https://science.nasa.gov/earth/explore/earth-indicators/
 - [ ] Footballers model on Hugging face and how to build
 - how to use a free background remover (modify for dev.to how to build)
 - Hackathon platforms- what is a Hackathon
+- [ ] Witness a master watchmaker assemble a complex tourbillon inside a microscopic glass sphere
