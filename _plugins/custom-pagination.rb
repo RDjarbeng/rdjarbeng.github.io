@@ -35,9 +35,12 @@ module Jekyll
 
         (1..total_pages).each do |current_page|
           pager = Pager.new(site, current_page, all_posts, total_pages, paginate_size)
+          pager.previous_page_path = current_page > 1 ? (current_page == 2 ? '/posts/' : "/posts/page-#{current_page - 1}/") : nil
+          pager.next_page_path = current_page < total_pages ? "/posts/page-#{current_page + 1}/" : nil
           posts_page = PostsIndexPage.new(site, current_page)
           posts_page.pager = pager
           posts_page.data['pager'] = pager.to_liquid  # Make pager available to layout
+          posts_page.data['paginator'] = pager.to_liquid # Make available to jekyll-seo-tag
           site.pages << posts_page
           Jekyll.logger.info "My custom pagination:", "Paginating posts #{current_page} / #{total_pages}"
         end
@@ -86,11 +89,14 @@ module Jekyll
         (1..total_pages).each do |current_page|
           Jekyll.logger.info "My custom pagination:", "Paginating personal #{current_page} / #{total_pages}"
           pager = Pager.new(site, current_page, all_posts, total_pages, paginate_size)
+          pager.previous_page_path = current_page > 1 ? (current_page == 2 ? '/personal/' : "/personal/page-#{current_page - 1}/") : nil
+          pager.next_page_path = current_page < total_pages ? "/personal/page-#{current_page + 1}/" : nil
           
           # Create a new page
           personal_page = PersonalIndexPage.new(site, current_page)
           personal_page.pager = pager
           personal_page.data['custom_pager'] = pager.to_liquid
+          personal_page.data['paginator'] = pager.to_liquid
           personal_page.data['last_modified_at'] = Time.now
           
           # If we had an original index page, copy its metadata for the first page
@@ -111,6 +117,7 @@ module Jekyll
 
     class Pager
       attr_reader :current_page, :total_pages, :posts, :previous_page, :next_page, :total_posts, :per_page
+      attr_accessor :previous_page_path, :next_page_path
 
       def initialize(site, current_page, all_posts, total_pages, paginate_size)
         @current_page = current_page
@@ -131,7 +138,9 @@ module Jekyll
           'previous_page' => @previous_page,
           'next_page' => @next_page,
           'total_posts' => @total_posts,
-          'per_page' => @per_page
+          'per_page' => @per_page,
+          'previous_page_path' => @previous_page_path,
+          'next_page_path' => @next_page_path
         }
       end
     end
@@ -157,7 +166,8 @@ module Jekyll
         @name = "index.html"
         self.process(@name)
         self.read_yaml(File.join(@base, '_layouts'), 'posts.html')
-        self.data['title'] = 'Blog Posts'
+        self.data['title'] = current_page == 1 ? 'Blog Posts' : "Blog Posts - Page #{current_page}"
+        self.data['description'] = current_page == 1 ? "Explore technical and personal blog posts by Richard Djarbeng, covering Artificial Intelligence, Web Development, IoT, and more." : "Explore technical and personal blog posts by Richard Djarbeng - Page #{current_page}."
       end
     end
 
@@ -169,7 +179,8 @@ module Jekyll
         @name = "index.html"
         self.process(@name)
         self.read_yaml(File.join(@base, '_layouts'), 'personal_posts.html')
-        self.data['title'] = 'Personal Posts'
+        self.data['title'] = current_page == 1 ? 'Personal Posts' : "Personal Posts - Page #{current_page}"
+        self.data['description'] = current_page == 1 ? "Personal thoughts, adventures and experiences from Richard Djarbeng." : "Personal thoughts, adventures and experiences from Richard Djarbeng - Page #{current_page}."
       end
     end
 end
