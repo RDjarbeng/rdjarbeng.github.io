@@ -145,7 +145,7 @@ module Jekyll
               labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
               plat = item.data['platform'] || ''
               type = item.data['type'] || ''
-              "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || (item.url && item.url.include?(cat_slug))
+              "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type}").include?(cat_slug) || (item.url && item.url.include?(cat_slug))
             }
             
             if cat_items.any?
