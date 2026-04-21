@@ -104,6 +104,7 @@ collections:
   #   output: true
   authors:
     output: true
+    permalink: /authors/:slug/
   personal:
     output: true
     permalink: /personal/:title/
