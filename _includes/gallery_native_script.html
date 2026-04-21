@@ -1,4 +1,6 @@
 <script>
+    if (!window.LightboxInitialized) {
+        window.LightboxInitialized = true;
     document.addEventListener("DOMContentLoaded", function() {
         const modal = document.createElement('div');
         modal.id = 'gallery-modal';
@@ -43,12 +45,12 @@
             let dateFormatted = item.getAttribute('data-date') || '';
             if (dateFormatted) { dateFormatted = new Date(dateFormatted).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); }
 
-            document.querySelector('.lightbox-title').textContent = title;
-            document.querySelector('.lightbox-date').textContent = dateFormatted;
-            document.querySelector('.lightbox-caption').innerHTML = caption;
-            document.querySelector('.lightbox-full-post-btn').href = item.getAttribute('data-url') || '#';
+            modal.querySelector('.lightbox-title').textContent = title;
+            modal.querySelector('.lightbox-date').textContent = dateFormatted;
+            modal.querySelector('.lightbox-caption').innerHTML = caption;
+            modal.querySelector('.lightbox-full-post-btn').href = item.getAttribute('data-url') || '#';
 
-            const mediaContainer = document.getElementById('lightbox-media-container');
+            const mediaContainer = modal.querySelector('#lightbox-media-container');
             mediaContainer.innerHTML = '';
             
             if (item.getAttribute('data-type') === 'html') {
@@ -80,7 +82,7 @@
         function closeLightbox() {
             modal.classList.remove('active');
             document.body.style.overflow = '';
-            document.getElementById('lightbox-media-container').innerHTML = '';
+            modal.querySelector('#lightbox-media-container').innerHTML = '';
         }
 
         modal.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
@@ -96,7 +98,7 @@
         });
 
         document.addEventListener('click', function(e) {
-            const trigger = e.target.closest('.lightbox-trigger');
+            const trigger = e.target.closest('.lightbox-trigger-zone') || e.target.closest('.lightbox-trigger');
             if (trigger) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -135,4 +137,5 @@
             }
         }, true);
     });
+    }
 </script>
