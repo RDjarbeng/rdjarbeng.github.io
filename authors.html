@@ -39,9 +39,9 @@ permalink: /authors/
                 </div>
 
                 <div style="margin-top: auto; border-top: 1px solid #f0f4f8; padding-top: 15px;">
-                    <a href="#author-{{ author.short_name }}"
+                    <a href="{{ author.url | relative_url }}"
                         style="display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 10px; background: #f0f4f8; color: #007acc; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.2s;">
-                        View Profile & Posts
+                        View Full Profile
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px;">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -80,10 +80,19 @@ permalink: /authors/
 
             <div class="post-list">
                 {% assign author_posts = site.posts | where: "author", author.short_name %}
-                {% if author_posts.size > 0 %}
-                {% for post in author_posts %}
+                {% assign author_personal = site.personal | where: "author", author.short_name %}
+                {% assign all_author_posts = author_posts | concat: author_personal | sort: "date" | reverse %}
+                {% if all_author_posts.size > 0 %}
+                {% for post in all_author_posts limit:3 %}
                 {% include_cached post-card.html post=post %}
                 {% endfor %}
+                {% if all_author_posts.size > 3 %}
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="{{ author.url | relative_url }}" style="display: inline-block; padding: 12px 24px; background: #007acc; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s, background 0.2s;" onmouseover="this.style.background='#005a9c'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#007acc'; this.style.transform='translateY(0)'">
+                        View All {{ all_author_posts.size }} Posts by {{ author.display_name }} →
+                    </a>
+                </div>
+                {% endif %}
                 {% else %}
                 <p style="color: #627d98; font-style: italic; background: #f8fafc; padding: 20px; border-radius: 8px;">
                     No posts published by this author yet.</p>
