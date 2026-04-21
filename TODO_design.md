@@ -105,3 +105,7 @@ It's a magical CSS property
 content-visibility: auto.
 - Test todo: create the most awesome site
 - The gallery page doesn't have a way to browse all gallery items that is user friendly, in markdown using crawl4ai it shows a very long page for /gallery which shouldn't be
+
+-preview videos aren't playing
+- the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
+-single line gallery items have a line in the card, before the card border
