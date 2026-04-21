@@ -14,7 +14,8 @@ This todo file contains design specifications and technical  directions for rdja
 # To-Do List for rdjarbeng.com
 
 ## High Priority - Immediate Fixes & Critical Enhancements
-
+- Investigate security issues at https://securityheaders.com/?q=https%3A%2F%2Frdjarbeng.com&followRedirects=on 
+mentioned in https://github.com/anthropics/claude-code/issues/4928#issuecomment-4011769642
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 - [ ] Fix: Gallery Titles - Investigate why all gallery pages show the same title. (High Importance, Medium Complexity: Debugging Jekyll logic)
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
