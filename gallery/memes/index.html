@@ -17,47 +17,29 @@ permalink: /gallery/memes/
 
     <div class="meme-grid"
         style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
-        {% assign memes = page.custom_pager.posts | default: site.gallery | where: "category", "memes" %}
+        {% assign memes = site.gallery | where: "category", "memes" %}
 
-        {% if page.custom_pager %}
-            {% assign memes = page.custom_pager.posts %}
-        {% else %}
-            {% assign memes = site.gallery | where: "category", "memes" %}
+        {% for item in site.gallery %}
+        {% if item.url contains 'memes' %}
+        {% unless memes contains item %}
+        {% assign memes = memes | push: item %}
+        {% endunless %}
         {% endif %}
+        {% endfor %}
 
         {% for item in memes %}
-        <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="{{ item.url | relative_url }}" class="meme-card gallery-item-link" style="border: 1px solid rgba(128,128,128,0.1); border-radius: 12px; overflow: hidden; background: inherit; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; text-decoration: none; color: inherit; display: block;">
-                <div style="width: 100%; aspect-ratio: 1/1; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;" class="gallery-item" data-url="{{ item.url | relative_url }}" data-src="{{ item.image | default: '/assets/images/webOrMobile.jpeg' | relative_url }}" data-title="{{ item.title | escape }}" data-type="image" data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-date="{{ item.date | date_to_xmlschema }}">
-                    {% assign img_src = item.image | default: '/assets/images/webOrMobile.jpeg' %}
-                    <img src="{{ img_src | relative_url }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg'; this.style.objectFit='cover';">
-                    <button class="lightbox-trigger" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(4px);" onclick="event.preventDefault();" title="Expand preview">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                    </button>
-                    <div class="gallery-caption-content" style="display:none;">{{ item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}</div>
-                </div>
-                <div style="padding: 15px; text-align: left;">
-                    <h3 style="font-size: 1.05rem; margin: 0; line-height: 1.3;">{{ item.title | titleize | escape }}</h3>
-                    <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{{ item.date | date: "%B %-d, %Y" }}</p>
-                </div>
-            </a>
-        </div>
+        <a href="{{ item.url | relative_url }}" class="meme-card"
+            style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; text-decoration: none; color: inherit; display: block;">
+            <div
+                style="width: 100%; aspect-ratio: 1/1; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}"
+                    style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
+            </div>
+            <div style="padding: 15px; text-align: left;">
+                <h3 style="font-size: 1.05rem; margin: 0; line-height: 1.3;">{{ item.title | titleize | escape }}</h3>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{{ item.date | date: "%B %-d, %Y" }}</p>
+            </div>
+        </a>
         {% endfor %}
     </div>
-
-    {% if page.custom_pager.total_pages > 1 %}
-    <div class="pagination" style="margin-top: 40px; display: flex; justify-content: center; gap: 10px;">
-        {% if page.custom_pager.previous_page %}
-        <a href="{% if page.custom_pager.previous_page == 1 %}/gallery/memes/{% else %}/gallery/memes/page-{{ page.custom_pager.previous_page }}{% endif %}" class="btn" style="padding: 8px 16px; background: rgba(128,128,128,0.2); border-radius: 6px; text-decoration: none; color: inherit;">&laquo; Prev</a>
-        {% endif %}
-
-        <span style="padding: 8px 16px; color: inherit;">Page {{ page.custom_pager.current_page }} of {{ page.custom_pager.total_pages }}</span>
-
-        {% if page.custom_pager.next_page %}
-        <a href="/gallery/memes/page-{{ page.custom_pager.next_page }}" class="btn next-page-btn" style="padding: 8px 16px; background: rgba(128,128,128,0.2); border-radius: 6px; text-decoration: none; color: inherit;">Next &raquo;</a>
-        {% endif %}
-    </div>
-    {% endif %}
 </div>
-
-{% include gallery_native_script.html %}
