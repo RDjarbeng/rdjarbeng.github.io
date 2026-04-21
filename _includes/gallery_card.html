@@ -1,0 +1,75 @@
+{% assign img_src = '/assets/images/webOrMobile.jpeg' %}
+{% if include.item.thumbnail and include.item.thumbnail != '' %}
+  {% assign img_src = include.item.thumbnail %}
+{% elsif include.item.image and include.item.image != '' %}
+  {% assign img_src = include.item.image %}
+{% elsif include.item.platform == 'youtube' and include.item.youtube_id and include.item.youtube_id != '' %}
+  {% assign video_id = include.item.youtube_id %}
+  {% if include.item.youtube_id contains 'v=' %}
+    {% assign video_id = include.item.youtube_id | split: 'v=' | last | split: '&' | first %}
+  {% elsif include.item.youtube_id contains 'shorts/' %}
+    {% assign video_id = include.item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+  {% elsif include.item.youtube_id contains 'youtu.be/' %}
+    {% assign video_id = include.item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+  {% endif %}
+  {% assign img_src = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg' %}
+{% endif %}
+
+{% assign is_external = false %}
+{% if img_src contains 'http://' or img_src contains 'https://' %}
+  {% assign is_external = true %}
+{% endif %}
+
+<a href="{{ include.item.url | relative_url }}" class="gallery-card-link" data-title="{{ include.item.title | escape }}">
+    <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %}" 
+         data-url="{{ include.item.url | relative_url }}" 
+         data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
+         data-title="{{ include.item.title | escape }}" 
+         data-type="{% if include.item.type == 'video' %}html{% else %}image{% endif %}" 
+         data-caption="{{ include.item.content | strip_html | truncatewords: 50 | escape }}" 
+         data-date="{{ include.item.date | date_to_xmlschema }}">
+        
+        <img src="{% if is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
+             alt="{{ include.item.title | escape }}" 
+             loading="lazy" 
+             onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
+        
+        {% if include.is_dashboard %}
+        <div class="gallery-overlay"><span class="gallery-title-overlay">{{ include.item.title | titleize }}</span></div>
+        {% endif %}
+        
+        {% if include.item.type == 'video' %}
+        <div class="video-icon-wrapper">
+            <span class="gallery-type-icon">▶</span>
+        </div>
+        {% endif %}
+        
+        <div class="lightbox-trigger-zone" title="Expand preview">
+            <button class="lightbox-trigger">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </button>
+        </div>
+        
+        {% if include.item.type == 'video' and include.is_dashboard != true %}
+        <div class="gallery-html-content" style="display:none;">
+            <template class="raw-embed-code">
+                {{ include.item.embed_code | default: include.item.content }}
+            </template>
+        </div>
+        <div class="gallery-caption-content" style="display:none;">
+            {{ include.item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+        </div>
+        {% endif %}
+    </div>
+    
+    {% if include.is_dashboard != true %}
+    <div class="gallery-item-footer">
+        <h3>{{ include.item.title | titleize | escape }}</h3>
+        <p>{{ include.item.date | date: "%B %-d, %Y" }}</p>
+    </div>
+    {% else %}
+    <div class="gallery-dashboard-info">
+        <h4 class="gallery-dashboard-title">{{ include.item.title | titleize | escape }}</h4>
+    </div>
+    {% endif %}
+</a>
