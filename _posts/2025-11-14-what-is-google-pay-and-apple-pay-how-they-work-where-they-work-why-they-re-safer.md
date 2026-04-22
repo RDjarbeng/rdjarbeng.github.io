@@ -30,6 +30,18 @@ image: /assets/images/google_pay_and_apple_pay_cover.webp
 image_alt: A cover image for an article titled What is Google Pay and Apple Pay?. It shows an Android phone with the Google Wallet app and an iPhone with the Apple Pay app, side-by-side, in front of a glowing world map to illustrate global payments.
 layout: post
 card_items:
+  - name: "What is Google Pay?"
+    badge_1: "Digital Wallet"
+    description: "Google Pay (Google Wallet) is a mobile payment service allowing Android users to make secure, contactless purchases in stores and online by storing tokenized versions of their cards on their devices."
+  - name: "What is Apple Pay?"
+    badge_1: "Digital Wallet"
+    description: "Apple Pay is Apple's mobile payment service integrated natively into iOS. It allows users to make secure point-of-sale and online transactions using Face ID or Touch ID without revealing their actual card numbers."
+  - name: "What is Tokenization?"
+    badge_1: "Security Technology"
+    description: "Tokenization replaces a sensitive credit card number with a unique, one-time encrypted token for a transaction. This ensures the actual number is never shared with merchants, drastically minimizing fraud risk."
+  - name: "What is NFC?"
+    badge_1: "Wireless Tech"
+    description: "Near Field Communication (NFC) is a short-range wireless technology that allows communication between two devices (like a smartphone and a payment terminal) within a few centimeters. It powers the 'tap-to-pay' convenience."
   - name: "Why Can't I Just Send Money With My Visa Card?"
     image: "/assets/images/visa_locked_image.jpg"
     alt: "Cover image for Visa card limitations"

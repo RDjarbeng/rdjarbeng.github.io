@@ -38,6 +38,15 @@ layout: post
 video: ''
 image_alt: "Cover image for Why Can't I Just Send Money With My Visa Card?"
 card_items:
+  - name: "What is Visa?"
+    badge_1: "Payment Network"
+    description: "Visa is a global digital payments network connecting consumers, merchants, and banks. It doesn't issue cards, but provides the underlying payment rails that allow financial institutions to securely process credit and debit transactions."
+  - name: "What is Mastercard?"
+    badge_1: "Payment Network"
+    description: "Mastercard is a leading global payments technology company operating a network connecting banks, consumers, and businesses. Known for its extensive international acceptance, it powers debit, credit, and prepaid cards."
+  - name: "What are SWIFT and ACH?"
+    badge_1: "Bank Transfers"
+    description: "**SWIFT** is the global messaging network banks use securely to send cross-border money transfers. **ACH** (Automated Clearing House) is a localized U.S. electronic network used for domestic bank-to-bank transfers."
   - name: "Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
     image: "/assets/images/revolut_sending_cross_border_cover.webp"
     alt: "Cover image for Revolut post"
