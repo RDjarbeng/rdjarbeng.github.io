@@ -1,3 +1,7 @@
+<div class="cards-section-intro" style="margin-top: 2rem; margin-bottom: 1.5rem;">
+    <h3>Related Concepts & Posts</h3>
+    <p><em>The following cards provide further definitions of concepts discussed above, and possible links to related posts.</em></p>
+</div>
 <div class="repo-list">
     {% for item in page.card_items %}
     <div class="repo-item {% if item.image %}has-image{% endif %}">
@@ -22,7 +26,7 @@
         <div class="repo-body-section">
             <p class="repo-description">{{ item.description | markdownify }}</p>
             {% if item.url %}
-            <a href="{{ item.url }}" class="repo-link-btn" target="_blank" rel="noopener noreferrer">
+            <a href="{{ item.url }}" class="repo-link-btn" rel="noopener noreferrer">
                 {{ item.link_text | default: "Visit Link" }}
             </a>
             {% endif %}
