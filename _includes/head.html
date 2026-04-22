@@ -52,6 +52,12 @@
 
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
+  {%- if page.previous -%}
+  <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+  {%- endif -%}
+  {%- if page.next -%}
+  <link rel="next" href="{{ page.next.url | absolute_url }}">
+  {%- endif -%}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
   {%- include google-analytics.html -%}
