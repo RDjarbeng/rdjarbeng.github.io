@@ -134,3 +134,10 @@ https://science.nasa.gov/earth/explore/earth-indicators/
 - Hackathon platforms- what is a Hackathon
 - [ ] Witness a master watchmaker assemble a complex tourbillon inside a microscopic glass sphere
 - [ ] Jet engine and aviation industry, what if I told you...
+- [ ] LLM application safety:
+
+Resources
+
+Owasp top 10 LLM applications
+AI incident database
+AVID - vulnerability database
