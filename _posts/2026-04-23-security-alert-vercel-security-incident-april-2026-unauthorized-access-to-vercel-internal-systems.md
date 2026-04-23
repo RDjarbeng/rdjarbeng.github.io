@@ -59,6 +59,7 @@ Vercel has already identified and directly contacted a limited subset of custome
 
 **If Vercel has not contacted you, they currently have no reason to believe your personal data or credentials were compromised.** However, the investigation is still ongoing in partnership with **Mandiant**, industry peers, and law enforcement. Vercel services, including Next.js, Turbopack, the AI SDK, and all published npm packages, remain fully operational and were not affected.
 
+### Sources and Time of Discovery
 _Source:_ [_Official Vercel Security Bulletin_](https://vercel.com/kb/bulletin/vercel-april-2026-security-incident)
 
 First discovered: **April 19, 11:04 AM PST**
