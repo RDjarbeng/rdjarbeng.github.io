@@ -141,3 +141,4 @@ Resources
 Owasp top 10 LLM applications
 AI incident database
 AVID - vulnerability database
+- [ ] Compilation of 'mind your language' episodes on YouTube, pull the lever Kronk, YouTube Playlists
