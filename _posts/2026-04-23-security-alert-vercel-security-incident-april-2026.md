@@ -24,15 +24,15 @@ card_items:
     description: "A supply chain attack targets less-secure elements in the software or service ecosystem (vendors, third-party tools, or partners) to gain access to the primary target. The attacker compromises an upstream dependency rather than attacking the target directly."
   - name: "OAuth Token Theft"
     badge_1: "Authentication"
-    description: "OAuth tokens are credentials that grant applications access to a user's account without sharing a password. If an OAuth token is stolen, an attacker can impersonate the user and access connected services — without ever needing the real password."
+    description: "OAuth tokens are credentials that grant applications access to a user's account without sharing a password. If an OAuth token is stolen, an attacker can impersonate the user and access connected services, without ever needing the real password."
   - name: "Sensitive Environment Variables in Vercel"
     badge_1: "Vercel Feature"
-    description: "Vercel's 'sensitive' environment variable feature stores values encrypted in a way that prevents them from being read back — even by Vercel employees. Enabling this for secrets like API keys ensures they cannot be exposed even in an internal breach."
+    description: "Vercel's 'sensitive' environment variable feature stores values encrypted in a way that prevents them from being read back, even by Vercel employees. Enabling this for secrets like API keys ensures they cannot be exposed even in an internal breach."
     url: "https://vercel.com/docs/environment-variables/sensitive-environment-variables"
     link_text: "Vercel Docs"
   - name: "What is Google Workspace?"
     badge_1: "Productivity Suite"
-    description: "Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses — including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers."
+    description: "Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses, including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers."
 ---
 
 Vercel has disclosed a security incident involving unauthorized access to certain internal systems, which has led to the exposure of some customer environment variables.
