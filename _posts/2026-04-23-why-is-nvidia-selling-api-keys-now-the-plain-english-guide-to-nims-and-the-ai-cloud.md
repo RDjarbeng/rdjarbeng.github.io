@@ -79,6 +79,14 @@ It is natural to compare this to Amazon Web Services (AWS), Google Cloud, or Mic
 
 Traditional cloud providers like AWS provide a wide variety of services including website hosting, database storage, and general computing. Nvidia is not trying to replace all of those functions. Instead, they are building a specialized "AI Cloud" called **DGX Cloud**.
 
+| | **Traditional Cloud (AWS, Google, Azure)** | **Nvidia DGX Cloud** |
+|---|---|---|
+| **Primary Focus** | General-purpose computing | AI training and inference |
+| **Services Offered** | Hundreds (web hosting, databases, storage, networking, AI, and more) | Specialized AI workloads only |
+| **Hardware** | Mixed CPUs, GPUs, and custom chips from various vendors | Nvidia's own latest GPU clusters (H100, B200, GB200) |
+| **Data Centers** | Owned and operated globally | Hosted inside partner data centers (Google, Oracle) |
+| **Target User** | Any developer or business | AI researchers, ML engineers, and enterprises deploying AI at scale |
+
 Instead of building their own massive data centers in every city, Nvidia often places their specialized DGX supercomputers inside the data centers owned by Google or Oracle. Think of it like a high-end specialty kitchen operating inside a giant grocery store. The grocery store (AWS or Google) provides the space and power, while Nvidia provides the specialized tools for professional-grade AI development.
 
 ## Why Technical Readers Should Care: The Optimization Layer
