@@ -1,15 +1,35 @@
 ---
 date: 2026-04-23T22:33:00+02:00
-published: false
+published: true
 author: Richard
 category: AI
 tags:
   - Nvidia
+  - NIM
+  - AI Models
+  - API
+  - Machine Learning
+  - Computer Vision
+  - NLP
 title: "The AI Superstore: What You Can Actually Do With NVIDIA's Model Catalog"
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/nvidia_ai_superstore_cover.jpg
+image_alt: 'A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons including a brain, camera, speech bubble, and DNA helix'
 layout: post
-card_items: []
+card_items:
+  - name: "What is an AI Model?"
+    badge_1: "AI Fundamentals"
+    description: "An AI model is a program that has been trained on data to recognize patterns and make decisions. Different models are specialized for different tasks: some generate text, others recognize images, and others predict molecular structures."
+  - name: "What is OCR?"
+    badge_1: "Document Processing"
+    description: "Optical Character Recognition (OCR) is the technology that converts images of text (scanned documents, photos, PDFs) into machine-readable text data. Modern AI-powered OCR can handle handwriting, complex layouts, and multiple languages."
+  - name: "What is Protein Folding?"
+    badge_1: "Biotech"
+    description: "Protein folding is the process by which a chain of amino acids arranges itself into a specific 3D shape. Predicting this shape computationally (as models like OpenFold3 do) is critical for drug discovery, because a protein's shape determines its function."
+  - name: "What is an API?"
+    badge_1: "Developer Tools"
+    description: "An Application Programming Interface (API) is a set of rules that allows different software applications to communicate with each other. When you use an API key to access an AI model, your app sends a request to the model's server and receives a response, all without managing the model yourself."
+    url: "https://build.nvidia.com/explore/discover"
+    link_text: "NVIDIA Build Catalog"
 ---
 
 If you visit the [NVIDIA Build catalog](https://build.nvidia.com/models) today, you are greeted by a massive list of numbers, acronyms, and technical jargon. You will see names like "Nemotron," "Gemma," and "Mistral." For anyone without a technical background, it looks like a database meant only for software engineers.
@@ -17,6 +37,8 @@ If you visit the [NVIDIA Build catalog](https://build.nvidia.com/models) today, 
 However, this catalog is essentially an "app store" for artificial intelligence brains. NVIDIA has gathered the best AI models from around the world and hosted them on their own supercomputers. You do not need to buy expensive hardware to use them.
 
 Here are the actual superpowers these models give you, and exactly how you can take them from a free prototype to a commercial product.
+
+![A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons](/assets/images/posts/covers/nvidia_ai_superstore_cover.jpg "The AI Superstore: NVIDIA's Model Catalog")
 
 ## 1. The Hollywood Toolkit (Video and Image Magic)
 
@@ -31,7 +53,7 @@ We are entering an era where you cannot always trust what you see on a screen. N
 General chatbots like ChatGPT are great for writing emails, but they struggle with messy real-world business documents. The NVIDIA catalog has specialized models for heavy-duty office work.
 
 - **Understanding Messy Files:** Models like [Nemotron OCR](https://build.nvidia.com/nvidia/nemotron-ocr-v1) are designed to look at a scanned PDF or a photograph of a chart and instantly extract the data into a clean spreadsheet.
-- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://www.google.com/search?q=https://build.nvidia.com/black-forest-labs/flux.2-klein-4b) generate high-quality images from text descriptions in fractions of a second.
+- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://build.nvidia.com/black-forest-labs/flux.2-klein-4b) generate high-quality images from text descriptions in fractions of a second.
 - **Protecting Privacy:** The [GLiNER PII](https://build.nvidia.com/nvidia/gliner-pii) model automatically reads through documents and redacts personally identifiable information (like social security numbers or addresses) before you share them.
 
 ## 3. The Universal Translators (Voice and Audio)
@@ -48,36 +70,21 @@ Some of the most powerful tools on the platform have nothing to do with writing 
 - **Curing Diseases:** [OpenFold3](https://build.nvidia.com/openfold/openfold3) is a biomolecular foundation model. It predicts the 3D structures of proteins and DNA, which is the exact technology pharmaceutical companies use to discover new life-saving drugs.
 - **Autonomous Driving:** The [StreamPETR](https://build.nvidia.com/nvidia/streampetr) model acts as the "eyes" for self-driving cars. It processes video feeds to detect and track 3D objects on the road in real time.
 
-
-
-
 ## The "So What?": How to Actually Use and Commercialize These Models
 
 Reading about these models is one thing, but how do you actually put them to work? NVIDIA has structured this catalog so that you can move from a free experiment to a fully commercialized product without having to rewrite your underlying code.
 
-1
+### Step 1: Test in the Browser (Free)
 
-Test in the Browser (Free)
+No coding required. You do not need to be a developer to try these out. If you click on almost any model link above, you will see a chat box or an image upload interface directly on the page. You can test the AI using your own data immediately.
 
-No coding required
+### Step 2: Build a Prototype via API (Free Tier)
 
-You do not need to be a developer to try these out. If you click on almost any model link above, you will see a chat box or an image upload interface directly on the page. You can test the AI using your own data immediately.
+NVIDIA gives you a generous amount of free API credits when you sign up (often enough to generate thousands of responses). If you want to connect one of these models to your own app or website, NVIDIA provides an **API key**. This is a string of code that lets your software talk directly to NVIDIA's servers.
 
-2
+They use standard OpenAI-compatible formatting, meaning if your app was built to talk to ChatGPT, you can swap in an NVIDIA API key and it will instantly work with these new models.
 
-Build a Prototype via API (Free Tier)
-
-Generous free credits
-
-If you want to connect one of these models to your own app or website, NVIDIA provides an **API key**. This is a string of code that lets your software talk directly to NVIDIA's servers.
-
-When you sign up, NVIDIA gives you a generous amount of free API credits (often enough to generate thousands of responses). They use standard OpenAI-compatible formatting, meaning if your app was built to talk to ChatGPT, you can swap in an NVIDIA API key and it will instantly work with these new models.
-
-3
-
-Deploy and Commercialize
-
-Two paths for production
+### Step 3: Deploy and Commercialize
 
 Once you exhaust your free credits or want to launch a product to paying customers, you have two distinct options based on the model's licensing (which is listed on each model's page):
 
