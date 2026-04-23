@@ -14,7 +14,7 @@ tags:
   - Developer Tools
   - Cybersecurity
   - Incident Response
-title: 'Security Alert: Vercel Security Incident (April 2026) — Unauthorized Access to Internal Systems'
+title: 'Security Alert: Vercel Supply Chain Attack (April 2026)'
 image: /assets/images/vercel_security_incident_april_2026_cover.png
 image_alt: 'A dramatic dark-themed cover image showing a cracked security shield with the Vercel logo surrounded by digital chains and broken padlocks, representing the April 2026 supply-chain security incident. Text reads: SECURITY ALERT: VERCEL INCIDENT · APRIL 2026'
 layout: post
