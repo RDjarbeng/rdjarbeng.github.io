@@ -142,3 +142,11 @@ Owasp top 10 LLM applications
 AI incident database
 AVID - vulnerability database
 - [ ] Compilation of 'mind your language' episodes on YouTube, pull the lever Kronk, YouTube Playlists
+- [ ] ### System design 
+there are only like 5-6 tricks in systems - divide and conquer
+- caching
+- indirection
+- batching
+- redundancy
+- lazy eval
+and then you apply arbitrarily complicated variations of these in clever ways to build whatever you want
