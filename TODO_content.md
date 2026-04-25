@@ -150,3 +150,4 @@ there are only like 5-6 tricks in systems - divide and conquer
 - redundancy
 - lazy eval
 and then you apply arbitrarily complicated variations of these in clever ways to build whatever you want
+- [ ] Modelling plant growth and the weather using mathematics, from there determine expected yield of plant, eg, cocoa account for pther variables that may affect this  irrigation, disease
