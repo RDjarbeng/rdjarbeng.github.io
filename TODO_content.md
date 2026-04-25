@@ -156,3 +156,4 @@ and then you apply arbitrarily complicated variations of these in clever ways to
 accepted. For international transfers, please use the SWIFT details found above Otherwise, it will take up to 2 business days
 
  ( What is this rapid payments)
+- [ ] Market Flash crash of 2000s
