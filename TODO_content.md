@@ -157,3 +157,4 @@ accepted. For international transfers, please use the SWIFT details found above 
 
  ( What is this rapid payments)
 - [ ] Market Flash crash of 2000s
+- [ ] About the hugging face inference API
