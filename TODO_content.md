@@ -152,3 +152,7 @@ there are only like 5-6 tricks in systems - divide and conquer
 and then you apply arbitrarily complicated variations of these in clever ways to build whatever you want
 - [ ] Modelling plant growth and the weather using mathematics, from there determine expected yield of plant, eg, cocoa account for pther variables that may affect this  irrigation, disease
 - [ ] Biggest fumble  IBM rejects Renaissance technologies, passes up on $2 bn
+- [ ] Revolut says on the details for accounts for local US transfers: If the sending bank supports rapid payments, the payment will arrive in a few seconds. Only local transfers are
+accepted. For international transfers, please use the SWIFT details found above Otherwise, it will take up to 2 business days
+
+ ( What is this rapid payments)
