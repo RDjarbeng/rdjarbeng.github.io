@@ -7,7 +7,7 @@ youtube_id: https://youtu.be/7rzYDM6vMtI
 embed_code: ''
 thumbnail: ''
 type: video
-genre: Other
+genre: Science & Technology
 category: videos
 ---
 
