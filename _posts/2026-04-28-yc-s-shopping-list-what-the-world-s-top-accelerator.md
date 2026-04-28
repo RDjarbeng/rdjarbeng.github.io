@@ -5,7 +5,7 @@ author: Richard
 category: Technology
 tags:
   - Ycombinator
-title: "YC's Shopping List: What the World's Top Accelerator"
+title: "YC's Shopping List: What the World's Top Accelerator Is Begging You to Build in 2025"
 image: ''
 image_alt: ''
 layout: post
@@ -31,15 +31,15 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 2	
 3	> **A founder's field guide to Y Combinator's Request for Startups (RFS) — decoded, ranked, and mapped to real opportunities.**
 4	
-5	*Source: [ycombinator.com/rfs](https://www.ycombinator.com/rfs) | Analysis compiled April 2025*
+5	_Source:_ [_ycombinator.com/rfs_](https://www.ycombinator.com/rfs) _| Analysis compiled April 2025_
 6	
 7	---
 8	
 9	## TL;DR
 10	
-11	Y Combinator's Request for Startups (RFS) is their public wishlist — the ideas they *actively want* founders to pitch them. Think of it as a cheat code: you don't have to guess what YC wants to fund. They tell you outright.
+11	Y Combinator's Request for Startups (RFS) is their public wishlist — the ideas they _actively want_ founders to pitch them. Think of it as a cheat code: you don't have to guess what YC wants to fund. They tell you outright.
 12	
-13	The 2025 edition is the most AI-saturated in YC history (~70% of categories have an explicit AI component), but it's also the most *physical* — robotics, defense, energy, construction, and biotech all have dedicated slots. The message is clear: **software is eating the world, but AI is now eating software, and the next frontier is atoms, not just bits.**
+13	The 2025 edition is the most AI-saturated in YC history (\~70% of categories have an explicit AI component), but it's also the most _physical_ — robotics, defense, energy, construction, and biotech all have dedicated slots. The message is clear: **software is eating the world, but AI is now eating software, and the next frontier is atoms, not just bits.**
 14	
 15	This report breaks down every category, identifies who's already in the arena, maps the interdisciplinary sweet spots, and ranks each idea from "build an MVP this weekend" to "you'll need a PhD and a nuclear reactor."
 16	
@@ -83,7 +83,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 54	| 19 | Construction & Housing | Real Estate / Hardware | ✅ | Atoms |
 55	| 20 | Ambitious Moonshots | Multi-domain | ⚡ | Atoms |
 56	
-57	*✅ = AI is central to the thesis | ⚡ = AI is a supporting enabler | ❌ = Not AI-dependent*
+57	_✅ = AI is central to the thesis | ⚡ = AI is a supporting enabler | ❌ = Not AI-dependent_
 58	
 59	---
 60	
@@ -101,13 +101,13 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 72	- Inference optimization (lower latency, lower cost)
 73	- Synthetic data generation for training
 74	
-75	**Why this matters:** The LLM stack is far from settled. OpenAI, Anthropic, and Google dominate, but there's enormous space in the middleware — the tools that make models *usable* for enterprises.
+75	**Why this matters:** The LLM stack is far from settled. OpenAI, Anthropic, and Google dominate, but there's enormous space in the middleware — the tools that make models _usable_ for enterprises.
 76	
 77	---
 78	
 79	### 2. 🧠 AI Agents
 80	
-81	**What YC wants:** Software that *does things*, not just *answers things*. Autonomous agents that complete complex, multi-step tasks with minimal human babysitting. YC sees this as *the* defining startup opportunity of this era.
+81	**What YC wants:** Software that _does things_, not just _answers things_. Autonomous agents that complete complex, multi-step tasks with minimal human babysitting. YC sees this as _the_ defining startup opportunity of this era.
 82	
 83	**Key sub-ideas:**
 84	- Coding agents (autonomous software development)
@@ -141,7 +141,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 112	
 113	### 4. 🔒 AI Safety & Alignment
 114	
-115	**What YC wants:** Making AI systems reliably safe, interpretable, and aligned with human values — viewed as both a moral imperative *and* a massive commercial opportunity as enterprises demand trustworthy AI.
+115	**What YC wants:** Making AI systems reliably safe, interpretable, and aligned with human values — viewed as both a moral imperative _and_ a massive commercial opportunity as enterprises demand trustworthy AI.
 116	
 117	**Key sub-ideas:**
 118	- Interpretability and explainability tooling
@@ -185,7 +185,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 156	- Genomics and precision medicine
 157	- Remote patient monitoring
 158	
-159	**Why this matters:** US healthcare is a $4.5 trillion market with ~30% waste. AI can simultaneously improve outcomes and reduce costs — a rare alignment.
+159	**Why this matters:** US healthcare is a $4.5 trillion market with \~30% waste. AI can simultaneously improve outcomes and reduce costs — a rare alignment.
 160	
 161	---
 162	
@@ -289,7 +289,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 260	- Tokenization of real-world assets (RWA)
 261	- Consumer crypto wallets with great UX
 262	
-263	**Why this matters:** Stablecoins processed ~$10 trillion in transactions in 2024. This is real commerce, not speculation.
+263	**Why this matters:** Stablecoins processed \~$10 trillion in transactions in 2024. This is real commerce, not speculation.
 264	
 265	---
 266	
@@ -312,7 +312,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 283	
 284	### 14. 🏢 Future of Work & Vertical SaaS
 285	
-286	**What YC wants:** AI agents that replace entire categories of white-collar work, and vertical SaaS for underserved industries. The emphasis is on *agentic* workflows, not just dashboards.
+286	**What YC wants:** AI agents that replace entire categories of white-collar work, and vertical SaaS for underserved industries. The emphasis is on _agentic_ workflows, not just dashboards.
 287	
 288	**Key sub-ideas:**
 289	- AI employees for accounting/bookkeeping
@@ -379,7 +379,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 350	
 351	### 18. 🌍 Emerging Markets & Global South
 352	
-353	**What YC wants:** Companies building for the ~5 billion people in the developing world. AI makes it economically viable to serve lower-ARPU markets for the first time.
+353	**What YC wants:** Companies building for the \~5 billion people in the developing world. AI makes it economically viable to serve lower-ARPU markets for the first time.
 354	
 355	**Key sub-ideas:**
 356	- Financial services for the unbanked
@@ -482,7 +482,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 453	| **Energy** | Tesla Energy, Arcadia, Span.io, Form Energy, Commonwealth Fusion | Capital intensive | Customers: every utility company in America |
 454	| **Robotics** | Boston Dynamics, Figure AI, Agility Robotics, Locus Robotics, Bear Robotics | Pre-revenue mostly | The race to humanoid robots is ON |
 455	| **Defense** | Anduril, Palantir, Shield AI, L3Harris, Rebellion Defense, Primer | Rapidly growing | DoD wants startups; procurement is modernizing |
-456	| **GovTech** | Palantir, Govini, Mark43, CivicPlus, Socrata (Acquired by Tyler Tech) | Underpenetrated | Government IT spend is ~$100B/year |
+456	| **GovTech** | Palantir, Govini, Mark43, CivicPlus, Socrata (Acquired by Tyler Tech) | Underpenetrated | Government IT spend is \~$100B/year |
 
 457	| **Fintech** | Stripe, Plaid, Brex, Ramp, Mercury, Affirm, Marqeta | Mature | Look for gaps, not frontal attacks |
 458	| **Crypto/Stablecoins** | Circle (USDC), Tether, Bridge (acquired by Stripe), Paxos, MoonPay | Rapidly maturing | Stablecoins are crypto's killer app |
@@ -620,7 +620,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 590	| 28 | Small modular nuclear reactors | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 10 | NRC licensing takes 5-10 years |
 591	| 29 | Supersonic/hypersonic transport | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 10 | Aerodynamics + noise + FAA + economics |
 592	
-593	*⭐ = Easy | ⭐⭐⭐⭐⭐ = Extremely Difficult*
+593	_⭐ = Easy | ⭐⭐⭐⭐⭐ = Extremely Difficult_
 594	
 595	---
 596	
@@ -650,7 +650,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 620	Beyond Starlink — mesh networks, inter-satellite links, space-based edge computing. Could also serve the Emerging Markets category by connecting the unconnected.
 621	
 622	### 8. 🍽️ AI for Food Systems
-623	From farm to fork — crop optimization, food waste reduction, personalized nutrition, restaurant operations. Surprisingly absent from the RFS given its size (~$8T global market).
+623	From farm to fork — crop optimization, food waste reduction, personalized nutrition, restaurant operations. Surprisingly absent from the RFS given its size (\~$8T global market).
 624	
 625	### 9. 🏘️ Community Infrastructure / "Neighborhood OS"
 626	Local governance tools, community-owned energy grids, shared resource management, hyperlocal social networks. As remote work disperses populations, communities need new digital infrastructure.
@@ -667,7 +667,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 637	2. **Start with your unfair advantage.** Former nurse? Healthcare AI. Ex-military? Defense tech. Construction engineer? Building automation. Your background IS your moat.
 638	3. **Build the MVP first, pitch second.** YC funds traction over ideas. An ugly prototype with 5 paying customers beats a beautiful deck with zero.
 639	4. **Read the subtext.** When YC says "AI agents," they mean "replace a $60K/year employee with a $500/month subscription." Price accordingly.
-640	5. **Time your application.** YC batches run twice a year (Winter and Summer). The current RFS reflects what partners *want to see in the next batch*.
+640	5. **Time your application.** YC batches run twice a year (Winter and Summer). The current RFS reflects what partners _want to see in the next batch_.
 641	
 642	### ❌ Don't Do This:
 643	1. **Don't build a "ChatGPT wrapper."** YC explicitly wants infrastructure and vertical applications, not thin layers over OpenAI's API.
@@ -688,7 +688,7 @@ Actionable Do's and Don'ts — Practical advice for using the RFS as a founder
 658	
 659	---
 660	
-661	*Want to discuss any of these categories in depth? Drop a comment. And if you're building in any of these spaces, I'd love to hear about it.*
+661	_Want to discuss any of these categories in depth? Drop a comment. And if you're building in any of these spaces, I'd love to hear about it._
 662	
 663	---
 664	
