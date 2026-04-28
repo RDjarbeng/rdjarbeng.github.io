@@ -102,3 +102,4 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Memes don't show most recent first, layout needs improvement
 - [ ] Issue: Tables are not showing text properly on dark mode
 - [ ] Bug: Video page preview shows code instead of a proper description
+- [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
