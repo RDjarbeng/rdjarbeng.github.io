@@ -1,3 +1,4 @@
+{% if page.card_items and page.card_items.size > 0 %}
 <div class="cards-section-intro" style="margin-top: 2rem; margin-bottom: 1.5rem;">
     <h3>Related Concepts & Posts</h3>
     <p><em>The following cards provide further definitions of concepts discussed above, and possible links to related posts.</em></p>
@@ -34,3 +35,4 @@
     </div>
     {% endfor %}
 </div>
+{% endif %}
