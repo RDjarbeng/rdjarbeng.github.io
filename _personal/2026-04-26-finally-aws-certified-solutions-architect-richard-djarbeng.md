@@ -6,7 +6,16 @@ tags: [AWS, Cloud, Certification]
 image: /assets/images/rd/richard_aws_solutions_architect_with_badge_cmmrs.png
 image_alt: Richard Djarbeng looking up at a building with an AWS Certified Solutions Architect Associate badge overlaid
 layout: personal
-card_items: []
+card_items:
+  - name: "IAM (Identity and Access Management)"
+    badge_1: "Security"
+    description: "Think of IAM as the digital bouncer of your cloud environment. It strictly controls who (or what) is allowed to access your system and exactly what they are permitted to do once they are inside."
+  - name: "High Availability & Multi-AZ"
+    badge_1: "Resilience"
+    description: "High Availability ensures your app stays online. 'Multi-AZ' means running your servers across multiple separate physical data centers (Availability Zones). If one data center experiences a power outage, the others seamlessly take over."
+  - name: "Auto Scaling & Load Balancing"
+    badge_1: "Performance"
+    description: "**Auto Scaling** automatically adds more servers when your app gets busy and removes them when it's quiet. A **Load Balancer** acts like a traffic cop, evenly distributing users across those servers so none get overwhelmed."
 ---
 
 Glad to acquire my [Amazon Web Services (AWS)](https://www.linkedin.com/feed/update/urn:li:activity:7450603934706016256/#) Solutions Architect Associate Certification. It took many months of preparation and it was worth it.
