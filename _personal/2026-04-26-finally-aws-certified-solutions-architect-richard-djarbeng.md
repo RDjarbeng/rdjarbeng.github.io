@@ -13,55 +13,53 @@ Glad to acquire my [Amazon Web Services (AWS)](https://www.linkedin.com/feed/upd
 
 ![AWS Certified Solutions Architect Associate Badge](/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png)
 
-View the verified credential on credly: https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url
+[View the verified credential on Credly](https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url)
 
-Domains tested:
+## Domains tested:
 
 1. Designing Secure Architectures - 30%
-
-2. Designing Resilient Architectures- 26%
-
-3. Designing High Performing Architectures - 24%
-
-4. Designing cost-optimized Architectures-20%
+2. Designing Resilient Architectures - 26%
+3. Designing High-Performing Architectures - 24%
+4. Designing Cost-Optimized Architectures - 20%
 
 ---
 
 These four domains represent the core pillars of the AWS Certified Solutions Architect – Associate (SAA-C03) exam. Here is a breakdown of what those categories actually mean in the world of cloud engineering:
 
-1. Designing Secure Architectures (30%)
+### 1. Designing Secure Architectures (30%)
 
-The Goal: Protect data and infrastructure from unauthorized access.
+**The Goal:** Protect data and infrastructure from unauthorized access.
 
-What it covers: Managing permissions through IAM (Identity and Access Management), encrypting data "at rest" (in storage) and "in transit" (moving over the network), and setting up firewalls like Security Groups and Network ACLs.
+**What it covers:** Managing permissions through IAM (Identity and Access Management), encrypting data "at rest" (in storage) and "in transit" (moving over the network), and setting up firewalls like Security Groups and Network ACLs.
 
-Key Question: "How do we ensure only the right people can see this data?"
+**Key Question:** "How do we ensure only the right people can see this data?"
 
-2. Designing Resilient Architectures (26%)
+### 2. Designing Resilient Architectures (26%)
 
-The Goal: Ensure the system stays up even when things break.
+**The Goal:** Ensure the system stays up even when things break.
 
-What it covers: High Availability (HA) and Disaster Recovery (DR). This involves using Multi-AZ (Availability Zone) deployments so that if one data center loses power, another takes over. It also covers using Auto Scaling and Load Balancers to handle hardware failures automatically.
+**What it covers:** High Availability (HA) and Disaster Recovery (DR). This involves using Multi-AZ (Availability Zone) deployments so that if one data center loses power, another takes over. It also covers using Auto Scaling and Load Balancers to handle hardware failures automatically.
 
-Key Question: "If an entire data center goes underwater, will our website still work?"
+**Key Question:** "If an entire data center goes underwater, will our website still work?"
 
-3. Designing High-Performing Architectures (24%)
+### 3. Designing High-Performing Architectures (24%)
 
-The Goal: Make the system fast, responsive, and scalable.
+**The Goal:** Make the system fast, responsive, and scalable.
 
-What it covers: Choosing the right "size" for your servers and databases. It focuses on caching (using services like ElastiCache or CloudFront) to speed up delivery and selecting the best storage (SSD vs. HDD) for the specific workload.
+**What it covers:** Choosing the right "size" for your servers and databases. It focuses on caching (using services like ElastiCache or CloudFront) to speed up delivery and selecting the best storage (SSD vs. HDD) for the specific workload.
 
-Key Question: "How do we handle 1 million users at once without the app slowing down?"
+**Key Question:** "How do we handle 1 million users at once without the app slowing down?"
 
-4. Designing Cost-Optimized Architectures (20%)
+### 4. Designing Cost-Optimized Architectures (20%)
 
-The Goal: Get the most value for every dollar spent.
+**The Goal:** Get the most value for every dollar spent.
 
-What it covers: Eliminating "zombie" resources (unused servers), choosing the cheapest storage tier for old data (like S3 Glacier), and using Spot Instances or Savings Plans to get discounts on compute power.
+**What it covers:** Eliminating "zombie" resources (unused servers), choosing the cheapest storage tier for old data (like S3 Glacier), and using Spot Instances or Savings Plans to get discounts on compute power.
 
-Key Question: "Are we paying for more than we actually need?"
+**Key Question:** "Are we paying for more than we actually need?"
 
+## Media mentions
 
-Media mentions: Posted this on LinkedIn and got more attention than I could have expected. It's my most liked post (600+), even the AWS official account commented. Sweet!
+Posted this on LinkedIn and got more attention than I could have expected. It's my most liked post (600+), even the AWS official account commented. Sweet!
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7450237838882893824?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
