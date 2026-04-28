@@ -1,15 +1,17 @@
 ---
 title: Finally AWS Certified Solutions Architect- Richard Djarbeng
 date: 2026-04-26T17:34:00+02:00
-published: false
-tags: []
-image: ''
-image_alt: ''
+published: true
+tags: [AWS, Cloud, Certification]
+image: /assets/images/rd/richard_aws_solutions_architect_with_badge_cmmrs.png
+image_alt: Richard Djarbeng looking up at a building with an AWS Certified Solutions Architect Associate badge overlaid
 layout: personal
 card_items: []
 ---
 
 Glad to acquire my [Amazon Web Services (AWS)](https://www.linkedin.com/feed/update/urn:li:activity:7450603934706016256/#) Solutions Architect Associate Certification. It took many months of preparation and it was worth it.
+
+![AWS Certified Solutions Architect Associate Badge](/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png)
 
 View the verified credential on credly: https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url
 
