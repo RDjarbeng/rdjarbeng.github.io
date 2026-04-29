@@ -11,25 +11,25 @@ tags:
   - Machine Learning
   - Computer Vision
   - NLP
-title: "The AI Superstore: What You Can Actually Do With NVIDIA's Model Catalog"
+title: "Give Me 5 Minutes To Show What You Can Actually Do With NVIDIA's Model Catalog- The AI Superstore:"
 image: /assets/images/posts/covers/nvidia_ai_superstore_cover.jpg
-image_alt: 'A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons including a brain, camera, speech bubble, and DNA helix'
+image_alt: A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons including a brain, camera, speech bubble, and DNA helix
 layout: post
 card_items:
-  - name: "What is an AI Model?"
-    badge_1: "AI Fundamentals"
-    description: "An AI model is a program that has been trained on data to recognize patterns and make decisions. Different models are specialized for different tasks: some generate text, others recognize images, and others predict molecular structures."
-  - name: "What is OCR?"
-    badge_1: "Document Processing"
-    description: "Optical Character Recognition (OCR) is the technology that converts images of text (scanned documents, photos, PDFs) into machine-readable text data. Modern AI-powered OCR can handle handwriting, complex layouts, and multiple languages."
-  - name: "What is Protein Folding?"
-    badge_1: "Biotech"
-    description: "Protein folding is the process by which a chain of amino acids arranges itself into a specific 3D shape. Predicting this shape computationally (as models like OpenFold3 do) is critical for drug discovery, because a protein's shape determines its function."
-  - name: "What is an API?"
-    badge_1: "Developer Tools"
-    description: "An Application Programming Interface (API) is a set of rules that allows different software applications to communicate with each other. When you use an API key to access an AI model, your app sends a request to the model's server and receives a response, all without managing the model yourself."
-    url: "https://build.nvidia.com/explore/discover"
-    link_text: "NVIDIA Build Catalog"
+  - name: What is an AI Model?
+    badge_1: AI Fundamentals
+    description: 'An AI model is a program that has been trained on data to recognize patterns and make decisions. Different models are specialized for different tasks: some generate text, others recognize images, and others predict molecular structures.'
+  - name: What is OCR?
+    badge_1: Document Processing
+    description: Optical Character Recognition (OCR) is the technology that converts images of text (scanned documents, photos, PDFs) into machine-readable text data. Modern AI-powered OCR can handle handwriting, complex layouts, and multiple languages.
+  - name: What is Protein Folding?
+    badge_1: Biotech
+    description: Protein folding is the process by which a chain of amino acids arranges itself into a specific 3D shape. Predicting this shape computationally (as models like OpenFold3 do) is critical for drug discovery, because a protein's shape determines its function.
+  - name: What is an API?
+    badge_1: Developer Tools
+    description: An Application Programming Interface (API) is a set of rules that allows different software applications to communicate with each other. When you use an API key to access an AI model, your app sends a request to the model's server and receives a response, all without managing the model yourself.
+    url: https://build.nvidia.com/explore/discover
+    link_text: NVIDIA Build Catalog
 ---
 
 If you visit the [NVIDIA Build catalog](https://build.nvidia.com/models) today, you are greeted by a massive list of numbers, acronyms, and technical jargon. You will see names like "Nemotron," "Gemma," and "Mistral." For anyone without a technical background, it looks like a database meant only for software engineers.
@@ -45,6 +45,8 @@ Here are the actual superpowers these models give you, and exactly how you can t
 We are entering an era where you cannot always trust what you see on a screen. NVIDIA hosts several models dedicated entirely to manipulating and analyzing video.
 
 - **Fixing Bad Lighting:** The [Media Relighting](https://build.nvidia.com/nvidia/relighting) model can take a video of a person and completely change the lighting on their face and body to match a new background environment.
+![Nvidia relighting model example screenshot in the browser showing a person with different lighting styles applied](/assets/images/20260423-215827.png "Nvidia relighting model example screenshot ")
+
 - **Instant Dubbing:** The [LipSync](https://build.nvidia.com/nvidia/lipsync) model takes an audio track and automatically syncs the lips of a person in a video to match the new words.
 - **Spotting Fakes:** The [Synthetic Video Detector](https://build.nvidia.com/nvidia/synthetic-video-detector) is a tool built specifically to look at a video and tell you if it was generated by AI.
 
