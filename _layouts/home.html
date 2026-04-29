@@ -2,6 +2,23 @@
 layout: default
 ---
 
+<!-- Extend Jekyll SEO Tag's WebSite schema with Sitelinks Search Box -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ site.url }}/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 <div class="home">
   <h1>Richard Djarbeng's Blog</h1>
   {% include hero.html %}
