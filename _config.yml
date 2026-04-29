@@ -23,7 +23,9 @@ social:
     - https://github.com/RDjarbeng
     - https://linkedin.com/in/richarddjarbeng
 
-rss: "RSS Feed"
+# RSS feed configuration
+feed:
+  title: "Richard Djarbeng - Latest Posts RSS Feed"
 # Build settings
 markdown: kramdown
 kramdown:
