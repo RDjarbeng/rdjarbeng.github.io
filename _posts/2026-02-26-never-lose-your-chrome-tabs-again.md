@@ -7,7 +7,7 @@ tags:
   - chrome
   - windows
   - productivity
-title: 'Never Lose Your Chrome Tabs Again: How to Resume on Startup'
+title: 'Never Lose Your Chrome Tabs Again: Steps to Resume Tabs on Startup in 1 minute'
 image: /assets/images/resume_chrome_tabs_rd.webp
 image_alt: Resume Chrome Tabs Cover Image
 layout: post
