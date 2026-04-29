@@ -7,9 +7,9 @@ tags:
   - Email
   - How-to
   - Gmail
-title: How to Always Reply from Your Custom Domain Email in Gmail
-image: '/assets/images/posts/covers/gmail_custom_domain_reply.jpg'
-image_alt: 'Illustration of an email envelope with a custom domain logo interacting with the Gmail inbox interface'
+title: In 2 Minutes I'll Show You How to Always Reply from Your Custom Domain Email in Gmail
+image: /assets/images/posts/covers/gmail_custom_domain_reply.jpg
+image_alt: Illustration of an email envelope with a custom domain logo interacting with the Gmail inbox interface
 layout: post
 card_items: []
 ---
@@ -37,4 +37,4 @@ Here is the quick fix to ensure you always reply as the user who received the em
 
 Gmail saves this change automatically. From now on, whenever someone reaches out to your custom email address, hitting "Reply" will automatically set the "From" field to that exact address, perfectly isolating your professional correspondence. 
 
-Keep in mind that if you are composing a *brand new* email from scratch, Gmail will still default to your primary personal address unless you manually change it in the composer block. But for replies, this simple toggle ensures you maintain your professional presentation without having to think twice.
+Keep in mind that if you are composing a _brand new_ email from scratch, Gmail will still default to your primary personal address unless you manually change it in the composer block. But for replies, this simple toggle ensures you maintain your professional presentation without having to think twice.

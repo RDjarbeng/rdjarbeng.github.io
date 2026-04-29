@@ -14,25 +14,25 @@ tags:
   - Developer Tools
   - Cybersecurity
   - Incident Response
-title: 'Security Alert: Vercel Supply Chain Attack (April 2026)'
+title: 'Security Alert: Vercel Supply Chain Attack (April 2026) in 4 minutes'
 image: /assets/images/vercel_security_incident_april_2026_cover.png
 image_alt: 'A dramatic dark-themed cover image showing a cracked security shield with the Vercel logo surrounded by digital chains and broken padlocks, representing the April 2026 supply-chain security incident. Text reads: SECURITY ALERT: VERCEL INCIDENT · APRIL 2026'
 layout: post
 card_items:
-  - name: "What is a Supply Chain Attack?"
-    badge_1: "Cybersecurity"
-    description: "A supply chain attack targets less-secure elements in the software or service ecosystem (vendors, third-party tools, or partners) to gain access to the primary target. The attacker compromises an upstream dependency rather than attacking the target directly."
-  - name: "OAuth Token Theft"
-    badge_1: "Authentication"
-    description: "OAuth tokens are credentials that grant applications access to a user's account without sharing a password. If an OAuth token is stolen, an attacker can impersonate the user and access connected services, without ever needing the real password."
-  - name: "Sensitive Environment Variables in Vercel"
-    badge_1: "Vercel Feature"
-    description: "Vercel's 'sensitive' environment variable feature stores values encrypted in a way that prevents them from being read back, even by Vercel employees. Enabling this for secrets like API keys ensures they cannot be exposed even in an internal breach."
-    url: "https://vercel.com/docs/environment-variables/sensitive-environment-variables"
-    link_text: "Vercel Docs"
-  - name: "What is Google Workspace?"
-    badge_1: "Productivity Suite"
-    description: "Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses, including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers."
+  - name: What is a Supply Chain Attack?
+    badge_1: Cybersecurity
+    description: A supply chain attack targets less-secure elements in the software or service ecosystem (vendors, third-party tools, or partners) to gain access to the primary target. The attacker compromises an upstream dependency rather than attacking the target directly.
+  - name: OAuth Token Theft
+    badge_1: Authentication
+    description: OAuth tokens are credentials that grant applications access to a user's account without sharing a password. If an OAuth token is stolen, an attacker can impersonate the user and access connected services, without ever needing the real password.
+  - name: Sensitive Environment Variables in Vercel
+    badge_1: Vercel Feature
+    description: Vercel's 'sensitive' environment variable feature stores values encrypted in a way that prevents them from being read back, even by Vercel employees. Enabling this for secrets like API keys ensures they cannot be exposed even in an internal breach.
+    url: https://vercel.com/docs/environment-variables/sensitive-environment-variables
+    link_text: Vercel Docs
+  - name: What is Google Workspace?
+    badge_1: Productivity Suite
+    description: Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses, including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers.
 ---
 
 Vercel has disclosed a security incident involving unauthorized access to certain internal systems, which has led to the exposure of some customer environment variables.
@@ -60,6 +60,7 @@ Vercel has already identified and directly contacted a limited subset of custome
 **If Vercel has not contacted you, they currently have no reason to believe your personal data or credentials were compromised.** However, the investigation is still ongoing in partnership with **Mandiant**, industry peers, and law enforcement. Vercel services, including Next.js, Turbopack, the AI SDK, and all published npm packages, remain fully operational and were not affected.
 
 ### Sources and Time of Discovery
+
 _Source:_ [_Official Vercel Security Bulletin_](https://vercel.com/kb/bulletin/vercel-april-2026-security-incident)
 
 First discovered: **April 19, 11:04 AM PST**
@@ -97,7 +98,6 @@ This incident is a sharp reminder that your security posture is only as strong a
 
 For developers and engineering teams, the takeaway is clear: treat your OAuth grants like you treat your code dependencies. Audit them regularly, apply the principle of least privilege, and revoke access for anything you no longer actively use.
 
----
+***
 
 _For technical support or help rotating your secrets, contact Vercel through their help portal at_ [_vercel.com/help_](https://vercel.com/help)_._
-
