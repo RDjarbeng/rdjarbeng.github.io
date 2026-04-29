@@ -15,10 +15,14 @@ author:
   github: RDjarbeng
   linkedin: richarddjarbeng
 
-# Social profiles (legacy support)
-github_username: RDjarbeng
-twitter_username: DjarbengRichard
-linkedin_username: richarddjarbeng
+# Social links for SEO (generates sameAs in JSON-LD)
+social:
+  name: Richard Djarbeng
+  links:
+    - https://twitter.com/DjarbengRichard
+    - https://github.com/RDjarbeng
+    - https://linkedin.com/in/richarddjarbeng
+
 rss: "RSS Feed"
 # Build settings
 markdown: kramdown
