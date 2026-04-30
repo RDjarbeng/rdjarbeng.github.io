@@ -13,11 +13,11 @@ categories:
   - Technology
 ---
 
-\*\*Kayoola EV completes 13,700+ km journey from Uganda to South Africa\*\* 🇺🇬➡️🇿🇦
+**Kayoola EV completes 13,700+ km journey from Uganda to South Africa** 🇺🇬➡️🇿🇦
 
-In a historic feat for African innovation, Kiira Motors' \*\*Kayoola Electric Coach\*\* (the 13-metre 2025 model) has driven exactly \*\*13,784 km\*\* across six countries — Uganda, Tanzania, Zambia, Botswana, Eswatini, and South Africa — and back, under the banner \*\*"From the Pearl to the Cape"\*\*.
+In a historic feat for African innovation, Kiira Motors' **Kayoola Electric Coach** (the 13-metre 2025 model) has driven exactly **13,784 km** across six countries — Uganda, Tanzania, Zambia, Botswana, Eswatini, and South Africa — and back, under the banner **"From the Pearl to the Cape"**.
 
-A dedicated advance team scouted and set up charging spots along the route, as no existing public fast-charging network could reliably support a heavy-duty electric bus with a \*\*422 kWh\*\* Lithium Iron Phosphate (LFP) battery pack. The Kayoola demonstrated real-world capability with an impressive \~500 km range per charge and a remarkably low average consumption of \*\*0.79 kWh/km\*\*.
+A dedicated advance team scouted and set up charging spots along the route, as no existing public fast-charging network could reliably support a heavy-duty electric bus with a **422 kWh** Lithium Iron Phosphate (LFP) battery pack. The Kayoola demonstrated real-world capability with an impressive ~500 km range per charge and a remarkably low average consumption of **0.79 kWh/km**.
 
 Here's Eng. Fred Matovu sharing key challenges and opportunities in building Africa’s EV ecosystem midway through the 40-day expedition:
 
@@ -26,23 +26,19 @@ Here's Eng. Fred Matovu sharing key challenges and opportunities in building Afr
 This wasn't just a publicity run — it was a rigorous stress test of battery performance across varying altitudes (like the 2,300m Tanzanian highlands), thermal management in the Kalahari heat, and smart-connectivity monitored live in partnership with MTN. 
 
 The numbers speak for themselves:
+🔋 **Energy Consumed:** 10,904 kWh
+🛢️ **Fuel Saved:** 5,189 liters of diesel 
+💰 **Cost Savings:** ~UGX 14.4 million
+🌍 **Emissions Avoided:** Over 6 tonnes of CO2 
 
-🔋 \*\*Energy Consumed:\*\* 10,904 kWh
+The bus completed the expedition with only one minor safety incident, proving the unmatched reliability of Ugandan-engineered electric mobility. And the journey has already borne fruit: a major South African transport operator, Golden Arrow, signed a landmark deal reportedly worth around **$150 million for 450 Kayoola E-Coaches**. 
 
-🛢️ \*\*Fuel Saved:\*\* 5,189 liters of diesel 
-
-💰 \*\*Cost Savings:\*\* \~UGX 14.4 million
-
-🌍 \*\*Emissions Avoided:\*\* Over 6 tonnes of CO2 
-
-The bus completed the expedition with only one minor safety incident, proving the unmatched reliability of Ugandan-engineered electric mobility. And the journey has already borne fruit: a major South African transport operator, Golden Arrow, signed a landmark deal reportedly worth around \*\*$150 million for 450 Kayoola E-Coaches\*\*. 
-
-This is what \*\*Made in Africa\*\* looks like: solving African problems with African solutions while proving that our sustainable future is homegrown. 
+This is what **Made in Africa** looks like: solving African problems with African solutions while proving that our sustainable future is homegrown. 
 
 Drop a ⚡ in the comments if you are ready to see more electric buses on African roads!
 
 #WeBuiltTomorrow #FromThePearlToTheCape #KayoolaEV #AfricanInnovation #ElectricMobility #CleanTechAfrica
 
-\*\*\*
+***
 
 [13,700km Without Fuel: Uganda's Kayoola Electric Bus Full Expedition Story](https://www.youtube.com/watch?v=4It6oyPpcg0)
