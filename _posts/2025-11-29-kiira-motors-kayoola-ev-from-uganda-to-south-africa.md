@@ -31,24 +31,26 @@ In a historic feat for African innovation, Kiira Motors' **Kayoola Electric Coac
 
 ![Flat vector illustration of a Kayoola electric coach bus driving across an African road with a city in the background showcasing a modern electric coach driving down a well-paved highway leading into a bustling contemporary African metropolis.](/assets/images/posts/covers/kayoola_ev_expedition.jpg "Kayoola EV Expedition")
 
+### How was it charged through the journey?
 A dedicated advance team scouted and set up charging spots along the route, as no existing public fast-charging network could reliably support a heavy-duty electric bus with a **422 kWh** Lithium Iron Phosphate (LFP) battery pack. The Kayoola demonstrated real-world capability with an impressive ~500 km range per charge and a remarkably low average consumption of **0.79 kWh/km**.
 
-Here's a video featuring Eng. Fred Matovu sharing key challenges and opportunities in building Africa’s EV ecosystem midway through the 40-day expedition:
+Here's a video featuring Eng. Fred Matovu sharing key technical challenges in conducting this expedition midway through the 40-day expedition:
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">We’ve covered 2,370 km thanks to the charging infrastructure supporting our electric journey. <br>Eng. Fred Matovu <a href="https://twitter.com/fdxmat?ref_src=twsrc%5Etfw">@fdxmat</a> shares key challenges and opportunities in building Africa’s EV ecosystem. <a href="https://twitter.com/hashtag/WeBuiltTomorrow?src=hash&ref_src=twsrc%5Etfw">#WeBuiltTomorrow</a><a href="https://twitter.com/hashtag/FromThePearlToTheCape?src=hash&ref_src=twsrc%5Etfw">#FromThePearlToTheCape</a> <a href="https://t.co/mWhEg6agdj">pic.twitter.com/mWhEg6agdj</a></p>&mdash; 𝐊𝐢𝐢𝐫𝐚 𝐌𝐨𝐭𝐨𝐫𝐬 (@KiiraMotors) <a href="https://twitter.com/KiiraMotors/status/1994288162227511407?ref_src=twsrc%5Etfw">November 28, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ## Pushing the Limits of Electric Mobility
 
-This wasn't just a publicity run. It was a rigorous stress test of battery performance across varying altitudes (like the 2,300m Tanzanian highlands), thermal management in the Kalahari heat, and smart-connectivity monitored live in partnership with MTN. 
+The expedition was a rigorous stress test of battery performance across varying altitudes (like the 2,300m Tanzanian highlands), thermal management in varying climates, and smart-connectivity monitored live in partnership with MTN. 
 
 ## The Economics and Impact
 
 The numbers speak for themselves:
-🔋 **Energy Consumed:** 10,904 kWh
-🛢️ **Fuel Saved:** 5,189 liters of diesel 
-💰 **Cost Savings:** ~UGX 14.4 million (~$3,900 USD)
-🌍 **Emissions Avoided:** Over 6 tonnes of CO2 
+
+* 🔋 **Energy Consumed:** 10,904 kWh
+* 🛢️ **Fuel Saved:** 5,189 liters of diesel 
+* 💰 **Cost Savings:** ~UGX 14.4 million (~$3,900 USD)
+* 🌍 **Emissions Avoided:** Over 6 tonnes of CO2 
 
 ## A Landmark Deal for African EV Manufacturing
 
