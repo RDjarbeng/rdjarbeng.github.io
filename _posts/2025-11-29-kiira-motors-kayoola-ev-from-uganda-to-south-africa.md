@@ -25,9 +25,7 @@ card_items:
     description: "Uganda has been rapidly advancing in electric mobility, investing heavily in infrastructure and local manufacturing to produce vehicles like the Kayoola E-Coach that are built specifically for African roads and conditions."
 ---
 
-**Kayoola EV completes 13,700+ km journey from Uganda to South Africa** 🇺🇬➡️🇿🇦
-
-## The 13,700+ km Journey
+## The 13,700+ km Journey 🇺🇬➡️🇿🇦
 
 In a historic feat for African innovation, Kiira Motors' **Kayoola Electric Coach** (the 13-metre 2025 model) has driven exactly **13,784 km** across six countries (Uganda, Tanzania, Zambia, Botswana, Eswatini, and South Africa) and back, under the banner **"From the Pearl to the Cape"**.
 
