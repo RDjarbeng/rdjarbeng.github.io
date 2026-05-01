@@ -29,6 +29,8 @@ card_items:
 
 In a historic feat for African innovation, Kiira Motors' **Kayoola Electric Coach** (the 13-metre 2025 model) has driven exactly **13,784 km** across six countries (Uganda, Tanzania, Zambia, Botswana, Eswatini, and South Africa) and back, under the banner **"From the Pearl to the Cape"**.
 
+![Flat vector illustration of a Kayoola electric coach bus driving across an African road with a city in the background showcasing a modern electric coach driving down a well-paved highway leading into a bustling contemporary African metropolis.](/assets/images/posts/covers/kayoola_ev_expedition.jpg "Kayoola EV Expedition")
+
 A dedicated advance team scouted and set up charging spots along the route, as no existing public fast-charging network could reliably support a heavy-duty electric bus with a **422 kWh** Lithium Iron Phosphate (LFP) battery pack. The Kayoola demonstrated real-world capability with an impressive ~500 km range per charge and a remarkably low average consumption of **0.79 kWh/km**.
 
 Here's a video featuring Eng. Fred Matovu sharing key challenges and opportunities in building Africa’s EV ecosystem midway through the 40-day expedition:
