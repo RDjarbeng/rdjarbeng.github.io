@@ -123,10 +123,13 @@ body_class: videos-page
                         onerror="this.onerror=null; this.src='{{ fallback_image | relative_url }}'; this.style.objectFit='contain'; this.style.padding='2rem';">
 
                     <div
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                        <div style="width: 60px; height: 60px; background: rgba(0,0,0,0.75); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s, background 0.2s;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                        <span style="color: white; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 10px; backdrop-filter: blur(4px);">Click to play</span>
                     </div>
 
                     <!-- Platform Tag -->

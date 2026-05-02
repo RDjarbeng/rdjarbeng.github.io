@@ -414,6 +414,9 @@ iframe {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    padding: 0 !important;
+    /* Override global img padding that causes gray top gap */
+    margin: 0 !important;
   }
 }
 
@@ -603,6 +606,41 @@ a:hover {
 .post-navigation a:hover {
   text-decoration: underline;
   /* Optional hover effect */
+}
+
+/* Post navigation bottom padding fix */
+.post-navigation {
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+/* Post card category tags */
+.post-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.post-card-category-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: var(--category-bg);
+  color: var(--grey-text);
+  border: 1px solid var(--card-border);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--category-hover);
+    color: var(--link-color);
+    text-decoration: none;
+  }
 }
 
 /* Separator to add space between sections */
@@ -1233,6 +1271,16 @@ a:hover {
 .post-content td {
   min-width: 100px;
   /* Optional: Sets a minimum column width to prevent squishing; adjust as needed */
+  color: var(--text-color);
+  /* Fix: tables not showing text properly in dark mode */
+  border: 1px solid var(--card-border);
+  padding: 6px 10px;
+  background-color: var(--card-bg);
+}
+
+.post-content th {
+  font-weight: 700;
+  background-color: var(--category-bg);
 }
 
 .posts-page-intro,
@@ -1781,6 +1829,14 @@ a:hover {
   .header-search-form:hover .search-input,
   .header-search-form:focus-within .search-input {
     width: 140px;
+  }
+
+  /* Fix: search submit button hidden on mobile when typing */
+  .header-search-form .search-submit {
+    flex-shrink: 0;
+    min-width: 32px;
+    z-index: 3;
+    position: relative;
   }
 }
 

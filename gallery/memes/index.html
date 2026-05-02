@@ -27,17 +27,19 @@ permalink: /gallery/memes/
         {% endif %}
         {% endfor %}
 
+        {% assign memes = memes | sort: "date" | reverse %}
+
         {% for item in memes %}
         <a href="{{ item.url | relative_url }}" class="meme-card"
-            style="border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; text-decoration: none; color: inherit; display: block;">
+            style="border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; background: var(--card-bg); box-shadow: 0 2px 5px var(--shadow-color); cursor: pointer; transition: transform 0.2s; text-decoration: none; color: inherit; display: block;">
             <div
-                style="width: 100%; aspect-ratio: 1/1; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                style="width: 100%; aspect-ratio: 1/1; background: var(--category-bg); display: flex; align-items: center; justify-content: center; overflow: hidden;">
                 <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}"
                     style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy">
             </div>
             <div style="padding: 15px; text-align: left;">
-                <h3 style="font-size: 1.05rem; margin: 0; line-height: 1.3;">{{ item.title | titleize | escape }}</h3>
-                <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">{{ item.date | date: "%B %-d, %Y" }}</p>
+                <h3 style="font-size: 1.05rem; margin: 0; line-height: 1.3; color: var(--text-color);" title="{{ item.title | escape }}">{{ item.title | titleize | escape }}</h3>
+                <p style="font-size: 0.8rem; color: var(--grey-text); margin-top: 5px;">{{ item.date | date: "%B %-d, %Y" }}</p>
             </div>
         </a>
         {% endfor %}

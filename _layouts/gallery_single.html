@@ -169,7 +169,7 @@ layout: default
         {% endif %}
 
         {% for item in related_items limit:4 %}
-            <a href="{{ item.url | relative_url }}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eaeaea; transition: transform 0.2s, box-shadow 0.2s;">
+            <a href="{{ item.url | relative_url }}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--card-border); transition: transform 0.2s, box-shadow 0.2s;">
                 <div style="width: 100%; aspect-ratio: 16/9; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                     {% if item.thumbnail and item.thumbnail != '' %}
                         <img src="{{ item.thumbnail | relative_url }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
@@ -182,7 +182,7 @@ layout: default
                     {% endif %}
                 </div>
                 <div style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
-                    <h4 style="margin: 0 0 8px 0; font-size: 1.05rem; line-height: 1.4; color: #102a43;">{{ item.title | escape }}</h4>
+                    <h4 style="margin: 0 0 8px 0; font-size: 1.05rem; line-height: 1.4; color: var(--text-color);" title="{{ item.title | escape }}">{{ item.title | titleize | escape }}</h4>
                     <div style="font-size: 0.8rem; color: #ff0000; text-transform: uppercase; font-weight: bold; margin-top: auto;">{{ item.genre | default: item.category | default: "Other" }}</div>
                 </div>
             </a>
