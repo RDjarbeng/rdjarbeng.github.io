@@ -1232,7 +1232,15 @@ a:hover {
 .post-content th,
 .post-content td {
   min-width: 100px;
-  /* Optional: Sets a minimum column width to prevent squishing; adjust as needed */
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  padding: 6px 10px;
+  background-color: var(--card-bg);
+}
+
+.post-content th {
+  font-weight: 700;
+  background-color: var(--category-bg);
 }
 
 .posts-page-intro,
