@@ -95,8 +95,8 @@
     transition: all 0.2s ease;
 
     &:hover {
-        background: #000;
-        color: #fff;
+        background: var(--text-color);
+        color: var(--bg-color);
         border-color: var(--text-color);
         text-decoration: none;
     }
