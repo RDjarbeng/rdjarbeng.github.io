@@ -17,6 +17,13 @@
       {% assign words = include.post.content | number_of_words %}
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
+      {% unless include.show_excerpt == false %}
+      {% assign _excerpt_text = include.post.excerpt | strip_html | strip_newlines | truncate: 160 %}
+      {% if _excerpt_text.size > 0 %}
+      <p class="post-card-excerpt">{{ _excerpt_text }}</p>
+      {% endif %}
+      {% endunless %}
+
       <div class="post-meta-categories-container">
         <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
             include.post.date | date: "%B %-d, %Y" }}</time></div>

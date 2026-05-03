@@ -136,12 +136,12 @@ layout: default
 <div class="post-navigation">
   <div class="prev-post">
     {% if page.previous %}
-    « Previous post: {% include_cached post-card.html post=page.previous %}
+    « Previous post: {% include_cached post-card.html post=page.previous show_excerpt=false %}
     {% endif %}
   </div>
   <div class="next-post">
     {% if page.next %}
-    Next post»: {% include_cached post-card.html post=page.next %}
+    Next post»: {% include_cached post-card.html post=page.next show_excerpt=false %}
     {% endif %}
   </div>
 </div>
