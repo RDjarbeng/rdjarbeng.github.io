@@ -122,11 +122,13 @@ body_class: videos-page
                         loading="lazy"
                         onerror="this.onerror=null; this.src='{{ fallback_image | relative_url }}'; this.style.objectFit='contain'; this.style.padding='2rem';">
 
-                    <div
-                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0,0,0,0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-left: 4px;">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
+                    <div class="video-play-overlay">
+                        <div class="video-play-btn-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                        <span class="video-play-label">Click to play</span>
                     </div>
 
                     <!-- Platform Tag -->
@@ -136,8 +138,7 @@ body_class: videos-page
                     </div>
                 </a>
             </div>
-            <a href="{{ item.url | relative_url }}"
-                style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
+            <a href="{{ item.url | relative_url }}" class="video-card-link">
                 <div class="video-info">
                     <h3>
                         {{ item.title | titleize | escape }}
