@@ -2,8 +2,50 @@
 layout: default
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.author.uri }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | absolute_url }}"
+    }
+  }{% if page.image and page.image != '' %},
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | absolute_url }}"
+  }{% endif %},
+  "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }{% if page.categories.size > 0 %},
+  "articleSection": {{ page.categories | first | jsonify }}{% endif %}{% if page.tags.size > 0 %},
+  "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
+}
+</script>
+
 <div class="post-container">
   <div class="post-header">
+    {% if page.categories.size > 0 %}
+    <div class="post-header-categories">
+      {% for category in page.categories %}
+      <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}" class="post-header-category-tag">{{ category }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
     <h1>{{ page.title }}</h1>
     <div class="author_date">
       <div class="published_date">
@@ -55,14 +97,6 @@ layout: default
 
 <!-- Display categories and tags -->
 <div class="post-meta-footer">
-  <div class="categories-section">
-    <span class="meta-label">Categories:</span>
-    {% for category in page.categories %}
-    <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}">{{ category }}</a>{% unless forloop.last %},
-    {% endunless %}
-    {% endfor %}
-  </div>
-
   {% if page.tags.size > 0 %}
   <div class="tags-section">
     <span class="meta-label">Tagged In:</span>
@@ -136,12 +170,12 @@ layout: default
 <div class="post-navigation">
   <div class="prev-post">
     {% if page.previous %}
-    « Previous post: {% include_cached post-card.html post=page.previous %}
+    « Previous post: {% include_cached post-card.html post=page.previous show_excerpt=false %}
     {% endif %}
   </div>
   <div class="next-post">
     {% if page.next %}
-    Next post»: {% include_cached post-card.html post=page.next %}
+    Next post»: {% include_cached post-card.html post=page.next show_excerpt=false %}
     {% endif %}
   </div>
 </div>
