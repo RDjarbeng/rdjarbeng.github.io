@@ -160,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
         const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
+        const altText = title || 'Gallery image';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -167,9 +168,9 @@ document.addEventListener('DOMContentLoaded', function () {
             platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
                 platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
+            imgContent = `<img src="${src}" alt="${altText}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${altText}" loading="lazy">`;
         }
 
         item.innerHTML = `
@@ -276,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
         const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
+        const altText = title || 'Gallery image';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -283,9 +285,9 @@ document.addEventListener('DOMContentLoaded', function () {
             platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
                 platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
+            imgContent = `<img src="${src}" alt="${altText}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${altText}" loading="lazy">`;
         }
 
         item.innerHTML = `
@@ -532,7 +534,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (type === 'image') {
             const img = document.createElement('img');
             img.src = src;
-            img.alt = title;
+            img.alt = title || 'Gallery image';
             lightboxMediaContainer.appendChild(img);
         } else if (type === 'html') {
             const template = item.querySelector('.raw-embed-code');
