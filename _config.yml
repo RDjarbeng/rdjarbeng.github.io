@@ -79,7 +79,7 @@ seo:
 # Social media defaults
 twitter:
   username: DjarbengRichard
-  card: summary
+  card: summary_large_image
 
 # Default image for social sharing
 defaults_image: /assets/images/logo.jpeg
