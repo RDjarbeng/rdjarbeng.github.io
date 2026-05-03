@@ -2273,3 +2273,94 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 8px; /* Slightly more square for quick links */
 }
 
+
+
+// Memes Page
+.meme-page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meme-banner {
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.meme-description {
+  font-size: 1.1rem;
+  color: var(--grey-text);
+  margin-bottom: 30px;
+}
+
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.meme-card {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+}
+
+.meme-card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--category-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.meme-card-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.meme-card-title {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.meme-card-date {
+  font-size: 0.8rem;
+  color: var(--grey-text);
+  margin-top: 5px;
+  margin-bottom: 0;
+}
