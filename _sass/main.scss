@@ -451,12 +451,13 @@ iframe {
   font-weight: 600;
   line-height: 1.4;
   display: -webkit-box;
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
-  /* Limit to 2 lines like YT */
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  /* Show up to 3 lines; full title visible via title tooltip on hover */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: default;
 }
 
 
