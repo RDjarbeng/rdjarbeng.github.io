@@ -2273,3 +2273,33 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 8px; /* Slightly more square for quick links */
 }
 
+
+
+/* Post card category tags */
+.post-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.post-card-category-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: var(--category-bg);
+  color: var(--grey-text);
+  border: 1px solid var(--card-border);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--category-hover);
+    color: var(--link-color);
+    text-decoration: none;
+  }
+}
