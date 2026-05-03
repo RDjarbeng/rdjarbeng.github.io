@@ -2,41 +2,6 @@
 layout: default
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ page.title | jsonify }},
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
-    "url": "{{ site.author.uri }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ site.title | jsonify }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.logo | absolute_url }}"
-    }
-  }{% if page.image and page.image != '' %},
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ page.image | absolute_url }}"
-  }{% endif %},
-  "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
-  "url": "{{ page.url | absolute_url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  }{% if page.categories.size > 0 %},
-  "articleSection": {{ page.categories | first | jsonify }}{% endif %}{% if page.tags.size > 0 %},
-  "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
-}
-</script>
-
 <div class="post-container">
   <div class="post-header">
     {% if page.categories.size > 0 %}
