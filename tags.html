@@ -13,6 +13,16 @@ redirect_from:
 - /tags/animated-images/
 ---
 
+<style>
+  .top-tag-card .post-link:hover {
+    text-decoration: underline !important;
+  }
+  #show-more-tags:hover {
+    background: var(--text-color) !important;
+    color: var(--bg-color) !important;
+  }
+</style>
+
 <div class="tags-page">
   <h1>Tags</h1>
 
@@ -33,30 +43,93 @@ redirect_from:
   <p style="text-align: center; margin-bottom: 20px;">Total Tags: {{ site.tags.size }}</p>
 
   <h2 class="section-title" style="text-align: center;">Top 4 Tags</h2>
-  <ul class="tags-cloud">
+  <div class="top-tags-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left; margin-bottom: 40px;">
     {% for item in sorted_tags limit:4 %}
     {% assign parts = item | split: ":::" %}
     {% assign tag_size = parts[0] | plus: 0 %}
     {% assign tag_name = parts[1] %}
-    <li>
-      <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
-        {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
-      </a>
-    </li>
+    <div class="top-tag-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 5px var(--shadow-color);">
+      <div style="margin-bottom: 15px;">
+        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
+          {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
+        </a>
+      </div>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+        {% assign current_tag = site.tags[tag_name] %}
+        {% for post in current_tag limit:3 %}
+          <li style="margin-bottom: 8px;">
+            <a href="{{ post.url | relative_url }}" class="post-link" style="color: var(--text-color); text-decoration: none;">
+              &bull; {{ post.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 
-  <h2 class="section-title" style="text-align: center; margin-top: 40px;">Browse all tags</h2>
+  <h2 class="section-title" style="text-align: center; margin-top: 40px;">Browse Tags</h2>
   <ul class="tags-cloud">
     {% assign alpha_sorted_tags = site.tags | sort %}
     {% for tag in alpha_sorted_tags %}
     {% assign tag_name = tag[0] %}
     {% assign tag_items = tag[1] %}
+    {% if tag_items.size >= 2 %}
     <li>
       <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
         {{ tag_name }} <span class="tag-count">{{ tag_items.size }}</span>
       </a>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
+
+  <h2 class="section-title" style="text-align: center; margin-top: 40px;">Other Tags</h2>
+  <div id="other-tags-container">
+    <ul class="tags-cloud" id="visible-other-tags">
+      {% assign other_tags_count = 0 %}
+      {% for tag in alpha_sorted_tags %}
+      {% assign tag_name = tag[0] %}
+      {% assign tag_items = tag[1] %}
+      {% if tag_items.size < 2 %}
+        {% assign other_tags_count = other_tags_count | plus: 1 %}
+        <li class="other-tag-item" {% if other_tags_count > 15 %}style="display: none;"{% endif %}>
+          <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
+            {{ tag_name }} <span class="tag-count">{{ tag_items.size }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% if other_tags_count > 15 %}
+    <div style="text-align: center; margin-top: 30px;">
+      <button id="show-more-tags" style="cursor: pointer; background: transparent; border: 1px solid var(--text-color); padding: 8px 16px; border-radius: 50px; color: var(--text-color); transition: all 0.2s ease;">Show More Tags</button>
+    </div>
+    {% endif %}
+  </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var showMoreBtn = document.getElementById("show-more-tags");
+    if (showMoreBtn) {
+      var allItems = document.querySelectorAll(".other-tag-item");
+      var isExpanded = false;
+      showMoreBtn.addEventListener("click", function() {
+        if (!isExpanded) {
+          for (var i = 15; i < allItems.length; i++) {
+            allItems[i].style.display = "";
+          }
+          showMoreBtn.innerText = "Show Less Tags";
+          isExpanded = true;
+        } else {
+          for (var i = 15; i < allItems.length; i++) {
+            allItems[i].style.display = "none";
+          }
+          showMoreBtn.innerText = "Show More Tags";
+          isExpanded = false;
+        }
+      });
+    }
+  });
+</script>
