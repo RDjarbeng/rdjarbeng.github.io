@@ -1,9 +1,52 @@
 ---
 layout: default
 title: Videos
+description: "Browse Richard Djarbeng's curated video collection — music, science & technology, entertainment, travel, and more from YouTube, TikTok, and Instagram."
 permalink: /gallery/videos/
 body_class: videos-page
 ---
+
+<!-- JSON-LD: ItemList of videos for search engine discovery -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Richard Djarbeng Video Collection",
+  "description": "Curated videos across music, science, entertainment, travel, and more.",
+  "url": "{{ site.url }}/gallery/videos/",
+  "numberOfItems": {{ site.gallery | where: "type", "video" | size }},
+  "itemListElement": [
+    {% assign ld_videos = site.gallery | where: "type", "video" | sort: "date" | reverse | slice: 0, 20 %}
+    {% for item in ld_videos %}
+    {% assign ld_idx = forloop.index %}
+    {% assign ld_ytid = "" %}
+    {% if item.platform == 'youtube' and item.youtube_id %}
+      {% if item.youtube_id contains 'youtu.be/' %}{% assign ld_ytid = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+      {% elsif item.youtube_id contains 'v=' %}{% assign ld_ytid = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+      {% else %}{% assign ld_ytid = item.youtube_id %}{% endif %}
+    {% endif %}
+    {
+      "@type": "ListItem",
+      "position": {{ ld_idx }},
+      "item": {
+        "@type": "VideoObject",
+        "name": {{ item.title | jsonify }},
+        "description": {{ item.content | strip_html | strip_newlines | truncate: 200 | jsonify }},
+        "url": "{{ site.url }}{{ item.url }}",
+        "uploadDate": "{{ item.date | date_to_xmlschema }}"
+        {% if ld_ytid != "" %}
+        ,"thumbnailUrl": "https://img.youtube.com/vi/{{ ld_ytid }}/hqdefault.jpg"
+        ,"embedUrl": "https://www.youtube.com/embed/{{ ld_ytid }}"
+        {% elsif item.thumbnail and item.thumbnail != '' %}
+        ,"thumbnailUrl": "{{ item.thumbnail }}"
+        {% endif %}
+        {% if item.genre %} ,"genre": {{ item.genre | jsonify }}{% endif %}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
 
 <div class="videos-page-shell">
     <aside class="video-filter-rail" id="video-filter-rail" aria-label="Video source filters">
