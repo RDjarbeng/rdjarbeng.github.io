@@ -39,11 +39,6 @@
   {%- endif -%}
   {%- endif -%}
 
-  {%- unless jekyll.environment == 'production' -%}
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
-  {%- endunless -%}
-
   {%- if jekyll.environment == 'production' -%}
   {%- if page_has_video_thumbnail -%}
   {%- assign original_image = page.image -%}
