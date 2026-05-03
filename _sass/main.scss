@@ -1782,6 +1782,14 @@ a:hover {
   .header-search-form:focus-within .search-input {
     width: 140px;
   }
+
+  /* Fix: search submit button hidden on mobile when typing */
+  .header-search-form .search-submit {
+    flex-shrink: 0;
+    min-width: 32px;
+    z-index: 3;
+    position: relative;
+  }
 }
 
 /* Navbar Search Preview */
