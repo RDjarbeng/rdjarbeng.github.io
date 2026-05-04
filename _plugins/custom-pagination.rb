@@ -141,17 +141,36 @@ module Jekyll
           categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
         end
 
+        # Extract subfolders for nested pagination
+        all_gallery.each do |item|
+          parts = item.relative_path.split('/')
+          if parts.size >= 4
+            cat_slug = parts[1]
+            sub_slug = parts[2]
+            full_slug = "#{cat_slug}/#{sub_slug}"
+            sub_title = sub_slug.split('-').map(&:capitalize).join(' ')
+            
+            unless categories_to_process.any? { |c| c[:slug] == full_slug }
+              categories_to_process << { title: sub_title, slug: full_slug }
+            end
+          end
+        end
+
         categories_to_process.each do |cat_info|
             cat_title = cat_info[:title]
             cat_slug = cat_info[:slug]
             
             cat_items = all_gallery.select { |item| 
-              cats = item.data['category'] || ''
-              labels_data = item.data['labels'] || []
-              labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
-              plat = item.data['platform'] || ''
-              type = item.data['type'] || ''
-              "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type}").include?(cat_slug) || (item.url && item.url.include?(cat_slug))
+              if cat_slug.include?('/')
+                item.relative_path.include?("/#{cat_slug}/")
+              else
+                cats = item.data['category'] || ''
+                labels_data = item.data['labels'] || []
+                labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
+                plat = item.data['platform'] || ''
+                type = item.data['type'] || ''
+                "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type}").include?(cat_slug) || (item.url && item.url.include?(cat_slug))
+              end
             }
             
             if cat_items.any?

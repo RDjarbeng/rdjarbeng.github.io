@@ -147,17 +147,77 @@ layout: default
             <h3 class="dashboard-category-title">{{ cat_title }}</h3>
             <a class="view-all-link" href="/gallery/{{ cat_slug }}/">View All</a>
           </div>
-          <div class="horizontal-scroll-container pb-3">
-            {% for item in cat_items limit:6 %}
-                  <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
-                      {% include gallery_card.html item=item is_dashboard=true %}
-                  </div>
+
+          {% assign subfolders = "" | split: "" %}
+          {% for item in cat_items %}
+            {% assign parts = item.relative_path | split: "/" %}
+            {% if parts.size >= 4 and parts[1] == cat_slug %}
+                {% assign subfolder = parts[2] %}
+                {% unless subfolders contains subfolder %}
+                    {% assign subfolders = subfolders | push: subfolder %}
+                {% endunless %}
+            {% endif %}
+          {% endfor %}
+
+          {% if subfolders.size > 0 %}
+            {% for sub in subfolders %}
+              <div style="margin-top: 15px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; padding-right: 20px;">
+                <h4 style="margin: 0; font-size: 1.1rem; color: #486581; font-weight: normal; text-transform: capitalize;">{{ sub | replace: "-", " " }}</h4>
+                <a href="/gallery/{{ cat_slug }}/{{ sub }}/" style="font-size: 0.9rem; color: #007bff; text-decoration: none; font-weight: bold;">View All</a>
+              </div>
+              <div class="horizontal-scroll-container pb-3">
+                {% assign sub_items = "" | split: "" %}
+                {% for item in cat_items %}
+                  {% assign parts = item.relative_path | split: "/" %}
+                  {% if parts[2] == sub %}
+                    {% assign sub_items = sub_items | push: item %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% for item in sub_items limit:6 %}
+                      <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                          {% include gallery_card.html item=item is_dashboard=true %}
+                      </div>
+                {% endfor %}
+              </div>
             {% endfor %}
-            <a href="/gallery/{{ cat_slug }}/" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
-                <span class="view-all-icon" style="font-size: 2rem;">➜</span>
-                <span style="font-weight: bold; color: #102a43;">View All {{ cat_title }}</span>
-            </a>
-          </div>
+            
+            {% assign other_items = "" | split: "" %}
+            {% for item in cat_items %}
+              {% assign parts = item.relative_path | split: "/" %}
+              {% if parts.size < 4 or parts[1] != cat_slug %}
+                {% assign other_items = other_items | push: item %}
+              {% endif %}
+            {% endfor %}
+            
+            {% if other_items.size > 0 %}
+              <div style="margin-top: 15px; margin-bottom: 5px;">
+                <h4 style="margin: 0; font-size: 1.1rem; color: #486581; font-weight: normal; text-transform: capitalize;">Other {{ cat_title }}</h4>
+              </div>
+              <div class="horizontal-scroll-container pb-3">
+                {% for item in other_items limit:6 %}
+                      <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                          {% include gallery_card.html item=item is_dashboard=true %}
+                      </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          {% else %}
+            <div class="horizontal-scroll-container pb-3">
+              {% for item in cat_items limit:6 %}
+                    <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                        {% include gallery_card.html item=item is_dashboard=true %}
+                    </div>
+              {% endfor %}
+              {% if cat_items.size > 6 %}
+              <a href="/gallery/{{ cat_slug }}/" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
+                  <span class="view-all-icon" style="font-size: 2rem;">➜</span>
+                  <span style="font-weight: bold; color: #102a43;">View All {{ cat_title }}</span>
+              </a>
+              {% endif %}
+            </div>
+          {% endif %}
         </div>
         {% endif %}
     {% endfor %}
