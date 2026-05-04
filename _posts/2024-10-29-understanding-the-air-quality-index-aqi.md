@@ -4,10 +4,10 @@ author: Richard
 categories:
   - Environment
 tags:
-  - Air quality
+  - Air Quality
   - weather and air quality
   - Air quality index
-  - environmental monitoring
+  - Environmental Monitoring
   - PM2.5
   - AQI
   - Understanding AQI

@@ -4,7 +4,7 @@ author: Richard
 categories:
   - Research
 tags:
-  - Air quality
+  - Air Quality
   - Research papers
   - Real-Time PM Exposure in Mining
   - Mobile PM10 Hotspot Mapping
