@@ -102,3 +102,4 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Issue: Tables are not showing text properly on dark mode
 - [ ] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
+- the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
