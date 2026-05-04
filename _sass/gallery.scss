@@ -177,11 +177,10 @@
 .gallery-item,
 .dashboard-item {
     position: relative;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
     background: var(--card-bg);
     display: flex;
     flex-direction: column;
@@ -624,7 +623,7 @@ iframe[id^="twitter-widget-"] {
 
 .dashboard-item-small .gallery-item {
     aspect-ratio: 1 / 1;
-    border-radius: 8px;
+    border-radius: 0;
     contain-intrinsic-size: 150px 150px;
 }
 
@@ -673,7 +672,7 @@ iframe[id^="twitter-widget-"] {
     color: inherit;
     display: block;
     border: 1px solid rgba(128,128,128,0.1);
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     background: inherit;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -688,7 +687,7 @@ iframe[id^="twitter-widget-"] {
 
 .gallery-item.is-dashboard {
     aspect-ratio: 1 / 1;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .gallery-item.is-category {

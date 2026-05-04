@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         item.innerHTML = `
-            <div class="gallery-thumb-wrapper">
+            <div class="gallery-item is-category">
                 ${imgContent}
                 <div class="gallery-overlay">
                     <span class="gallery-title-overlay">${displayTitle}</span>
