@@ -8,7 +8,7 @@ module Jekyll
   # seamlessly into their native URL format without requiring manual scripts or
   # frontend javascript hacks.
   Jekyll::Hooks.register :documents, :pre_render do |doc|
-    return unless Jekyll.env == 'production'
+    next unless Jekyll.env == 'production'
     # Depending on how the collection is defined, typically _gallery or gallery
     if doc.relative_path.include?('_gallery/')
       ['youtube_id', 'link'].each do |field|
