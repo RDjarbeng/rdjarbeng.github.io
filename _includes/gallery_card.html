@@ -22,7 +22,6 @@
 
 <a href="{{ include.item.url | relative_url }}" class="gallery-card-link" data-title="{{ include.item.title | escape }}">
     <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %} {% if include.is_small %}is-small{% endif %}" 
-         style="content-visibility: auto; contain-intrinsic-size: {% if include.is_small %}150px 150px{% else %}200px 200px{% endif %};"
          data-url="{{ include.item.url | relative_url }}" 
          data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
          data-title="{{ include.item.title | escape }}" 
@@ -37,7 +36,7 @@
              onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
         
         {% if include.is_dashboard %}
-        <div class="gallery-overlay"><span class="gallery-title-overlay" {% if include.is_small %}style="font-size: 0.85rem;"{% endif %}>{{ include.item.title | titleize }}</span></div>
+        <div class="gallery-overlay"><span class="gallery-title-overlay">{{ include.item.title | titleize }}</span></div>
         {% endif %}
         
         {% if include.item.type == 'video' %}

@@ -43,26 +43,26 @@ layout: default
     {% if subfolders.size > 0 and is_subfolder_page == false %}
         <!-- Top Level Category Dashboard View -->
         {% for sub in subfolders %}
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 40px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px;">
-                <h2 style="margin: 0; text-align: left; text-transform: capitalize; font-size: 1.5rem; color: #102a43;">
-                    {{ page.title | replace: "-", " " }} &rsaquo; {{ sub | replace: "-", " " }}
-                </h2>
-                <a href="/gallery/{{ page.url | split: '/' | last }}/{{ sub }}/" style="font-size: 1rem; color: #007bff; text-decoration: none; font-weight: bold; padding-bottom: 3px;">View All</a>
-            </div>
-            
-            <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
-                {% assign sub_count = 0 %}
-                {% for item in all_category_items %}
-                    {% assign parts = item.relative_path | split: "/" %}
-                    {% if parts[2] == sub %}
-                        {% assign sub_count = sub_count | plus: 1 %}
-                        {% if sub_count <= 6 %}
-                        <div class="sub-item" style="display: flex; flex-direction: column; gap: 8px;">
-                            {% include gallery_card.html item=item is_dashboard=false %}
-                        </div>
+            <div class="subfolder-wrapper">
+                <div class="subfolder-header">
+                    <h4 style="font-size: 1.5rem;">{{ sub | replace: "-", " " }}</h4>
+                    <a href="/gallery/{{ page.url | split: '/' | last }}/{{ sub }}/" style="font-size: 1rem;">View All</a>
+                </div>
+                
+                <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
+                    {% assign sub_count = 0 %}
+                    {% for item in all_category_items %}
+                        {% assign parts = item.relative_path | split: "/" %}
+                        {% if parts[2] == sub %}
+                            {% assign sub_count = sub_count | plus: 1 %}
+                            {% if sub_count <= 6 %}
+                            <div class="sub-item" style="display: flex; flex-direction: column; gap: 8px;">
+                                {% include gallery_card.html item=item is_dashboard=false %}
+                            </div>
+                            {% endif %}
                         {% endif %}
-                    {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         {% endfor %}
         
