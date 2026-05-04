@@ -158,3 +158,4 @@ accepted. For international transfers, please use the SWIFT details found above 
  ( What is this rapid payments)
 - [ ] Market Flash crash of 2000s
 - [ ] About the hugging face inference API
+- [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning
