@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Artemis II astronaut Victor Glover is seen preparing for the Egress Fitness T...'
 image: https://images-assets.nasa.gov/image/jsc2026e001882/jsc2026e001882~large.jpg
 image_alt: 'Artemis II astronaut Victor Glover is seen preparing for the Egress Fitness Task Battery during the Artemis Spaceflight Standard Measures Test at NASA’s Johnson Space Center on Jan. 13, 2026. (NASA/Robert Markowitz)'
 type: external

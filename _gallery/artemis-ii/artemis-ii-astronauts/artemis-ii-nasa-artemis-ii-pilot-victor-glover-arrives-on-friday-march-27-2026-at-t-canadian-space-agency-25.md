@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'NASA Artemis II Pilot Victor Glover arrives on Friday, March 27, 2026, at the...'
 image: https://images-assets.nasa.gov/image/KSC-20260327-PH-KLS01_0111/KSC-20260327-PH-KLS01_0111~large.jpg
 image_alt: 'NASA Artemis II Pilot Victor Glover arrives on Friday, March 27, 2026, at the Launch and Landing Facility at the agency’s Kennedy Space Center in Florida in preparation for the Artemis II test flight. Glover, Commander Reid Wiseman, and Mission Specialist Christina Koch from NASA, and Mission Specialist Jeremy Hansen from the CSA (Canadian Space Agency) will launch on a 10-day journey around the Moon and back aboard the agency’s SLS (Space Launch System) rocket and Orion spacecraft from Launch Complex 39B no earlier than 6:24 p.m. EDT on Wednesday, April 1.'
 type: external

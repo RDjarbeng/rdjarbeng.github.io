@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'This image shows NASA’s SLS (Space Launch System) and Orion spacecraft rollin...'
 image: https://images-assets.nasa.gov/image/SLS_KSC_Artemis%20II%20Rollout%201172026_20/SLS_KSC_Artemis%20II%20Rollout%201172026_20~large.jpg
 image_alt: 'This image shows NASA’s SLS (Space Launch System) and Orion spacecraft rolling out of the Vehicle Assembly Building at NASA’s Kennedy Space Center. NASA''s massive Crawler-Transporter, upgraded for the Artemis program, carries the powerful SLS rocket and Orion spacecraft on the Mobile Launcher from the Vehicle Assembly Building to Launch Pad 39B at Kennedy Space Center in preparation for the Artemis II mission.'
 type: external

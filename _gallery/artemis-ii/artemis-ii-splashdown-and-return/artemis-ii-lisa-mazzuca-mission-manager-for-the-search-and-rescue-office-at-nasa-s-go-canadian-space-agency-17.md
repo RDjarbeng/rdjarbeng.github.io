@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Lisa Mazzuca, mission manager for the Search and Rescue Office at NASA’s Godd...'
 image: https://www.nasa.gov/wp-content/uploads/2026/04/55197019103-990dff0021-o.jpg
 image_alt: 'Lisa Mazzuca, mission manager for the Search and Rescue Office at NASA’s Goddard Space Flight Center, poses for a portrait on the bridge of USS John P. Murtha as teams prepare for the the return of the Artemis II crewmembers to Earth, Wednesday, April 8, 2026, in the Pacific Ocean off the coast of California. NASA’s Artemis II mission is taking NASA astronauts Reid Wiseman, commander; Victor Glover, pilot; Christina Koch, mission specialist; and CSA (Canadian Space Agency) astronaut Jeremy Hansen, mission specialist on a 10-day journey around the Moon and back aboard their Orion spacecraft. Wiseman, Glover, Koch, and Hansen are scheduled to splash down off the coast of San Diego at approximately 5:07 p.m. PDT (8:07 p.m. EDT) on Friday, April 10.'
 type: external

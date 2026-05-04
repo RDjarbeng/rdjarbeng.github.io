@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'A sliver of Earth is illuminated against the blackness of space in this photo...'
 image: https://images-assets.nasa.gov/image/art002e009166/art002e009166~large.jpg
 image_alt: 'A sliver of Earth is illuminated against the blackness of space in this photo taken by an Artemis II crew member through an Orion spacecraft window on the third day of the mission. Credit: NASA'
 type: external

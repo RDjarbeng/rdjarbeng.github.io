@@ -1,7 +1,7 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'NASA’s Orion spacecraft is seen as recovery teams work to secure the spacecra...'
 image: https://www.nasa.gov/wp-content/uploads/2026/04/55199787761-bd7dbc0290-o.jpg
-image_alt: 'NASA’s Orion spacecraft is seen as recovery teams work to secure the spacecraft ahead of transferring Artemis II crewmembers NASA astronauts Reid Wiseman, commander; Victor Glover, pilot; Christina Koch, mission specialist; and CSA (Canadian Space Agency) astronaut Jeremy Hansen, mission specialist to USS John P. Murtha in the Pacific Ocean off the coast of California, Friday, April 10, 2026. NASA’s Artemis II mission took Wiseman, Glover, Koch, and Hansen on a nearly 10-day journey around the Moon and back to Earth. Following a splashdown at 5:07 p.m. PDT (8:07 p.m. EDT), NASA, U.S. Navy, and U.S. Air Force teams are working to bring the crewmembers and Orion spacecraft aboard USS John P. Murtha.'
+image_alt: "NASA’s Orion spacecraft is seen as recovery teams work to secure the spacecraft ahead of transferring Artemis II crewmembers NASA astronauts Reid Wiseman, commander; Victor Glover, pilot; Christina Koch, mission specialist; and CSA (Canadian Space Agency) astronaut Jeremy Hansen, mission specialist to USS John P. Murtha in the Pacific Ocean off the coast of California, Friday, April 10, 2026. NASA’s Artemis II mission took Wiseman, Glover, Koch, and Hansen on a nearly 10-day journey around the Moon and back to Earth. Following a splashdown at 5:07 p.m. PDT (8:07 p.m. EDT), NASA, U.S. Navy, and U.S. Air Force teams are working to bring the crewmembers and Orion spacecraft aboard USS John P. Murtha."
 type: external
 link: ''
 category: Artemis II

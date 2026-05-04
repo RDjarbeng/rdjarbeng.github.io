@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'The Launch Abort System and the Orion Crew Module, also known as the Orion En...'
 image: https://images-assets.nasa.gov/image/GRC-2024-C-01143/GRC-2024-C-01143~large.jpg
 image_alt: 'The Launch Abort System and the Orion Crew Module, also known as the Orion Environmental Test Article (ETA), returned to NASA’s Neil Armstrong Test Facility in Sandusky, Ohio, in October 2023 through January 2024 and completed an 11-month test campaign necessary for the safety and success of Artemis II. Photo Credit: (NASA/Jordan Salkin)'
 type: external

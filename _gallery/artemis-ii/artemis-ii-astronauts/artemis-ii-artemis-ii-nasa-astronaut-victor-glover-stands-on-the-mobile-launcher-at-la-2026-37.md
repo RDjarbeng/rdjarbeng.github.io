@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Artemis II NASA astronaut Victor Glover stands on the mobile launcher at Laun...'
 image: https://www.nasa.gov/wp-content/uploads/2023/09/53204851972-0c93f9f0ff-o.jpg
 image_alt: 'Artemis II NASA astronaut Victor Glover stands on the mobile launcher at Launch Pad 39B as part of an integrated ground systems test at Kennedy Space Center in Florida on Wednesday, Sept. 20, 2023. The test ensures the ground systems team is ready to support the crew timeline on launch day.'
 type: external

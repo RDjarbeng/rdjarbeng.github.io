@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Technicians install four solar array wings on NASA’s Artemis II Orion spacecr...'
 image: https://images-assets.nasa.gov/image/KSC-20250303-PH-KLS01_0004/KSC-20250303-PH-KLS01_0004~large.jpg
 image_alt: 'Technicians install four solar array wings on NASA’s Artemis II Orion spacecraft inside the Neil A. Armstrong Operations and Checkout Building at NASA’s Kennedy Space Center in Florida on Monday, March 3, 2025. Each solar array is nearly 23 feet long and can turn on two axes to remain aligned with the Sun for maximum power. Orion’s solar arrays, manufactured and installed by ESA (European Space Agency) and its contractor Airbus, will deliver power to the service module that provides propulsion, thermal control, and electrical power to the spacecraft, as well as air and water for the crew.'
 type: external

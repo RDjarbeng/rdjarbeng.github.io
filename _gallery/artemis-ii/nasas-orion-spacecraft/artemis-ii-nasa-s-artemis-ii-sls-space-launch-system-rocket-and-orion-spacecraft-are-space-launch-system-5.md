@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'NASA’s Artemis II SLS (Space Launch System) rocket and Orion spacecraft are s...'
 image: https://images-assets.nasa.gov/image/NHQ20260116_admin_0001/NHQ20260116_admin_0001~large.jpg
 image_alt: 'NASA’s Artemis II SLS (Space Launch System) rocket and Orion spacecraft are seen, Friday, Jan. 16, 2026, inside the Vehicle Assembly Building at NASA’s Kennedy Space Center in Florida. Photo Credit: (NASA/John Kraus)'
 type: external

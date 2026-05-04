@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'NASA astronaut Reid Wiseman, commander waves to family and friends as he and ...'
 image: https://www.nasa.gov/wp-content/uploads/2023/09/55182423724-ef8f89def6-o.jpg
 image_alt: 'NASA astronaut Reid Wiseman, commander waves to family and friends as he and crew mates Victor Glover, pilot; Christina Koch, mission specialist; and CSA (Canadian Space Agency) astronaut Jeremy Hansen, mission specialist prepare to depart the Neil A. Armstrong Operations and Checkout Building to board their Orion spacecraft atop NASA’s Space Launch System (SLS) rocket at Launch Complex 39B, Wednesday, April 1, 2026, at NASA’s Kennedy Space Center in Florida. NASA’s Artemis II mission will take Wiseman, Glover, Koch, and Hansen on a 10-day journey around the Moon and back aboard their Orion spacecraft from Launch Complex 39B, with a two hour launch window opening at .'
 type: external

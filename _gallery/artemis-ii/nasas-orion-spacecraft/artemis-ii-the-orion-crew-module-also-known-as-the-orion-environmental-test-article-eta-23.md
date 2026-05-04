@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'The Orion Crew Module, also known as the Orion Environmental Test Article (ET...'
 image: https://images-assets.nasa.gov/image/GRC-2024-C-06045/GRC-2024-C-06045~large.jpg
 image_alt: 'The Orion Crew Module, also known as the Orion Environmental Test Article (ETA), prepares for testing by installing the Forward Bay Cover. The Crew Module returned to NASA’s Neil Armstrong Test Facility in Sandusky, Ohio, in January 2024 and completed an 11-month test campaign necessary for the safety and success of Artemis II. Photo Credit: (NASA/Jordan Salkin)'
 type: external

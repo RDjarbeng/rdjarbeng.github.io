@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'jsc2026e000848 --- Artemis lunar science team members, from left, Jacob Richa...'
 image: https://images-assets.nasa.gov/image/jsc2026e000848/jsc2026e000848~large.jpg
 image_alt: 'jsc2026e000848 --- Artemis lunar science team members, from left, Jacob Richardson, Marie Henderson, and Kiarre Dumes, monitor a lunar flyby simulation from the Science Evaluation Room (SER) at the NASA’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams. Credit: James Blair'
 type: external

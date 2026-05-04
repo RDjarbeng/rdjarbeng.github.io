@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'jsc2025e057254 --- NASA’s Artemis II lunar science team is pictured in the Sc...'
 image: https://images-assets.nasa.gov/image/jsc2025e057254/jsc2025e057254~large.jpg
 image_alt: 'jsc2025e057254 --- NASA’s Artemis II lunar science team is pictured in the Science Evaluation Room (SER) at the agency’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams.'
 type: external

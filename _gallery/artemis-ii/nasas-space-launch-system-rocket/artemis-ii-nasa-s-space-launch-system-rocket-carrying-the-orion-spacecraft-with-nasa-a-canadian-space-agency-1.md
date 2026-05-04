@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'NASA’s Space Launch System rocket carrying the Orion spacecraft with NASA ast...'
 image: https://www.nasa.gov/wp-content/uploads/2025/09/55181734322-4412611c5e-o.jpg
 image_alt: 'NASA’s Space Launch System rocket carrying the Orion spacecraft with NASA astronauts Reid Wiseman, commander; Victor Glover, pilot; Christina Koch, mission specialist; and CSA (Canadian Space Agency) astronaut Jeremy Hansen, mission specialist onboard launches on the Artemis II mission, Wednesday, April 1, 2026, from Launch Complex 39B at NASA’s Kennedy Space Center in Florida. NASA’s Artemis II mission will take Wiseman, Glover, Koch, and Hansen on a 10-day journey around the Moon and back aboard their Orion spacecraft. The quartet launched at 6:35 p.m. EDT, from Launch Complex 39B at the Kennedy Space Center.'
 type: external

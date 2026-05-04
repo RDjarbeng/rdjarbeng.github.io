@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'jsc2025e064769 --- An inflatable Moon is hoisted above the Orion mockup at NASA'
 image: https://images-assets.nasa.gov/image/jsc2025e064769/jsc2025e064769~large.jpg
 image_alt: 'jsc2025e064769 --- An inflatable Moon is hoisted above the Orion mockup at NASA''s Johnson Space Center in Houston. The Moon was used for crew lunar observation training ahead of the Artemis II mission.'
 type: external

@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'jsc2026e000831--- Artemis II Science Officers, Kelsey Young, foreground, and ...'
 image: https://images-assets.nasa.gov/image/jsc2026e000831/jsc2026e000831~large.jpg
 image_alt: 'jsc2026e000831--- Artemis II Science Officers, Kelsey Young, foreground, and Trevor Graff, work at the Science console in the Mission Control Center at NASA’s Johnson Space Center in Houston. The science officer will sit on console with other flight controllers in the flight control room of mission control during Artemis II. Credit: NASA/James Blair'
 type: external

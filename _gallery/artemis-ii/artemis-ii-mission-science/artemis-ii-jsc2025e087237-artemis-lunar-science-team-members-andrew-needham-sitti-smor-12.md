@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'jsc2025e087237 --- Artemis lunar science team members Andrew Needham, sitting...'
 image: https://images-assets.nasa.gov/image/jsc2025e087237/jsc2025e087237~large.jpg
 image_alt: 'jsc2025e087237 --- Artemis lunar science team members Andrew Needham, sitting, and David Hollibaugh work in the Science Mission Operations Room (SMOR) at NASA''s Johnson Space Center in Houston during a simulation of the Artemis II lunar flyby during which astronauts will document their observations through photographs and audio recordings to inform scientists’ understanding of the Moon. Credit: NASA/James Blair'
 type: external

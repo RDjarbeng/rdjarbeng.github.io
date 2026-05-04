@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'The AVATAR (A Virtual Astronaut Tissue Analog Response) investigation will us...'
 image: https://images-assets.nasa.gov/image/EMU_CHIP_GLOVE_DYE_L2/EMU_CHIP_GLOVE_DYE_L2~large.jpg
 image_alt: 'The AVATAR (A Virtual Astronaut Tissue Analog Response) investigation will use organ-on-a-chip devices, or organ chips, to study a effects of increased radiation and microgravity on human health. Artemis II AVATAR is a small experiment flying aboard Artemis II that could lead to big impacts in healthcare, both for astronauts in space and citizens on Earth. For more information on AVATAR: go.nasa.gov/4m5dGH9'
 type: external

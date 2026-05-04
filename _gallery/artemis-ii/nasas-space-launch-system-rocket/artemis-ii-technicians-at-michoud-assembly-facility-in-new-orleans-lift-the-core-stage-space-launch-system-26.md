@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Technicians at Michoud Assembly Facility in New Orleans lift the core stage t...'
 image: https://www.nasa.gov/wp-content/uploads/2025/09/maf-20240711-cs2-mptslift-md-11o.jpg
 image_alt: 'Technicians at Michoud Assembly Facility in New Orleans lift the core stage that will help launch the first crewed flight of NASA’s SLS (Space Launch System) rocket for the agency’s Artemis II mission.'
 type: external

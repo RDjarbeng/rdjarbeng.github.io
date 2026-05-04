@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Clouds and the Sun illuminate the sky on Wednesday, Jan'
 image: https://images-assets.nasa.gov/image/KSC-20260128-PH-CSH01-0009/KSC-20260128-PH-CSH01-0009~large.jpg
 image_alt: 'Clouds and the Sun illuminate the sky on Wednesday, Jan. 28, 2026, as NASA’s Artemis II SLS (Space Launch System) rocket and Orion spacecraft stand vertical at Launch Complex 39B at NASA’s Kennedy Space Center in Florida. The Artemis II test flight will take Commander Reid Wiseman, Pilot Victor Glover, and Mission Specialist Christina Koch from NASA and Mission Specialist Jeremy Hansen from the CSA (Canadian Space Agency), around the Moon and back to Earth no later than April 2026.'
 type: external

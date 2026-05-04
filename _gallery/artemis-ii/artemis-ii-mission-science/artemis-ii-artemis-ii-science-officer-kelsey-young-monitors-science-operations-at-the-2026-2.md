@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'Artemis II science officer Kelsey Young monitors science operations at the ne...'
 image: https://images-assets.nasa.gov/image/jsc2026e019596/jsc2026e019596~large.jpg
 image_alt: 'Artemis II science officer Kelsey Young monitors science operations at the new SCIENCE console in NASA''s Mission Control Center. Credits: NASA/Bill Stafford'
 type: external

@@ -1,5 +1,5 @@
 ---
-title: 'Artemis II Return to Earth'
+title: 'A worker is seen around crawler-transporter 2 as NASA’s Artemis II Space Laun...'
 image: https://images-assets.nasa.gov/image/NHQ202601170028/NHQ202601170028~large.jpg
 image_alt: 'A worker is seen around crawler-transporter 2 as NASA’s Artemis II Space Launch System (SLS) rocket and Orion spacecraft, secured to the mobile launcher, make the 4.2 mile journey toward Launch Pad 39B, Saturday, Jan. 17, 2026, at NASA’s Kennedy Space Center in Florida. NASA’s Artemis II test flight will take Commander Reid Wiseman, Pilot Victor Glover, and Mission Specialist Christina Koch from NASA, and Mission Specialist Jeremy Hansen from the CSA (Canadian Space Agency), around the Moon and back to Earth no later than April 2026. Photo Credit: (NASA/Keegan Barber)'
 type: external
