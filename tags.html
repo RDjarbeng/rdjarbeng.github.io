@@ -14,9 +14,6 @@ redirect_from:
 ---
 
 <style>
-  .top-tag-card .post-link:hover {
-    text-decoration: underline !important;
-  }
   #show-more-tags:hover {
     background: var(--text-color) !important;
     color: var(--bg-color) !important;
@@ -54,16 +51,12 @@ redirect_from:
           {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
         </a>
       </div>
-      <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+      <div class="top-tag-posts" style="display: grid; gap: 15px;">
         {% assign current_tag = site.tags[tag_name] %}
         {% for post in current_tag limit:3 %}
-          <li style="margin-bottom: 8px;">
-            <a href="{{ post.url | relative_url }}" class="post-link" style="color: var(--text-color); text-decoration: none;">
-              &bull; {{ post.title }}
-            </a>
-          </li>
+          {% include_cached post-card.html post=post %}
         {% endfor %}
-      </ul>
+      </div>
     </div>
     {% endfor %}
   </div>
