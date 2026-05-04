@@ -30,7 +30,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
 - [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
-- [ ] Fix: The last modified section for posts sometimes shows a wrong date on deployed site but not on local. (Medium Importance, Medium Complexity: Debugging Jekyll build/timezone)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
