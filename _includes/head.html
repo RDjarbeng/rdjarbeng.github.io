@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/jpeg" href="{{ '/assets/images/logo.jpeg' | relative_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
 
   <link rel="icon" href="{{ '/assets/images/logo.jpeg' | relative_url }}" type="image/jpeg">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.time | date: '%s' }}">
@@ -52,6 +52,12 @@
 
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
+  {%- if page.previous -%}
+  <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+  {%- endif -%}
+  {%- if page.next -%}
+  <link rel="next" href="{{ page.next.url | absolute_url }}">
+  {%- endif -%}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
   {%- include google-analytics.html -%}

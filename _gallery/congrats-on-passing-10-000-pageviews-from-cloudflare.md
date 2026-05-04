@@ -19,4 +19,6 @@ Getting to 10K is no easy task and we hope you continue to grow and we are glad 
 
 Small celebration: 🚀🎉
 
-Now back to work!
+---
+
+This was an unexpected milestone, I started this blog in mid-2025 just to have a place to write and share my thoughts. Also bonus was that building this made me learn some Ruby and Jekyll for building web applications. One more framework/language added.  Now back to work!

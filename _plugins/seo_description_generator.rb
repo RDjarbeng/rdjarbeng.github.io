@@ -4,6 +4,11 @@ module Jekyll
     priority :lowest
 
     def generate(site)
+      unless Jekyll.env == 'production'
+        # Jekyll.logger.info "SEO Auto-Generator:", "Skipping in non-production environment (#{Jekyll.env})."
+        return
+      end
+
       documents = site.pages + site.documents
       processed_count = 0
 

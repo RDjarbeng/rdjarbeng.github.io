@@ -37,6 +37,30 @@ image: /assets/images/visa_locked_image.jpg
 layout: post
 video: ''
 image_alt: "Cover image for Why Can't I Just Send Money With My Visa Card?"
+card_items:
+  - name: "What is Visa?"
+    badge_1: "Payment Network"
+    description: "Visa is a global digital payments network connecting consumers, merchants, and banks. It doesn't issue cards, but provides the underlying payment rails that allow financial institutions to securely process credit and debit transactions."
+  - name: "What is Mastercard?"
+    badge_1: "Payment Network"
+    description: "Mastercard is a leading global payments technology company operating a network connecting banks, consumers, and businesses. Known for its extensive international acceptance, it powers debit, credit, and prepaid cards."
+  - name: "What are SWIFT and ACH?"
+    badge_1: "Bank Transfers"
+    description: "**SWIFT** is the global messaging network banks use securely to send cross-border money transfers. **ACH** (Automated Clearing House) is a localized U.S. electronic network used for domestic bank-to-bank transfers."
+  - name: "Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
+    image: "/assets/images/revolut_sending_cross_border_cover.webp"
+    alt: "Cover image for Revolut post"
+    badge_1: "Cross-Border Payments"
+    description: "A look into how digital payments and international transfers differ."
+    url: "/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/"
+    link_text: "Read More"
+  - name: "What is Google Pay and Apple Pay?"
+    image: "/assets/images/google_pay_and_apple_pay_cover.webp"
+    alt: "Cover for Google Pay and Apple Pay post"
+    badge_1: "Digital Wallets"
+    description: "How they work, where they work, and why they're safer."
+    url: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/"
+    link_text: "Read More"
 ---
 Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders.
 This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.
@@ -99,7 +123,7 @@ Even if the charges were better than using a regular bank, many people might pre
 
 ## Why Transfers Differ from Payments
 
-Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha) to process the details. Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement. The point is that payments and transfers use different systems that were not built to work with each other even though the .
+Payments via Visa or Mastercard use a closed-loop system: cardholder to merchant, processed instantly through the card network. Transfers, however, involve moving funds between accounts, often across banks or borders, requiring infrastructure like SWIFT (handling $5 trillion daily, per SWIFT’s 2024 report) or ACH (68.1 billion transactions in 2023, per Nacha) to process the details. Cards lack direct access to these systems, limiting their role to payment initiation, not fund movement. The point is that payments and transfers use different systems that were not built to work with each other even though the functionality is almost the same.
 
 ![Image shows two men with visa and MasterCard cards between them](/assets/images/visa_card_barrier3.jpg "Two men with visa and MasterCard cards between them")
 

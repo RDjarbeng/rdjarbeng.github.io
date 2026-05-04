@@ -276,7 +276,7 @@ def process_todo_action(chat_id, message_id, text, target_file):
         
         if existing_text and not existing_text.endswith('\n'):
             existing_text += '\n'
-        new_content = existing_text + f"- {text}\n"
+        new_content = existing_text + f"- [ ] {text}\n"
         
         commit_files_to_github({target_file: new_content}, f"Add TODO to {target_file}")
         bot.edit_message_text(f"✅ Added to `{target_file}`!", chat_id, message_id, parse_mode="Markdown")

@@ -2,8 +2,7 @@
 date: 2025-10-19T14:35:00
 published: true
 author: Richard
-categories:
-  - Finance
+category: Finance
 tags:
   - Fintech
   - Cross-Border Payments
@@ -23,11 +22,35 @@ tags:
   - Banking
   - Money Transfers
   - Financial Technology
-title: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut
+title: Why Can I Pay for Netflix Instantly, But Not Send $5 To My Brother Abroad? Enter Revolut
 image: /assets/images/revolut_sending_cross_border_cover.webp
 image_alt: 'A split-screen image. On the left, a dark, chaotic scene depicts traditional banking obstacles: tangled chains, a rusted padlock, stone blocks labeled "FEES" and "DELAY," and small icons for banks and old money. On the right, a bright, clear scene shows a smartphone with the "revolut" app, connected by sleek lines to various country flags (UK, Germany, USA, Japan, Australia, Brazil, Singapore, Switzerland) and credit cards, all against a light blue map backdrop, symbolizing seamless global digital payments. The title "BEYOND THE BREEZE: IS REVOLUT THE ANSWER?" is prominently displayed across the top.'
 layout: post
+categories:
+  - Finance
+card_items:
+  - name: "What is Revolut?"
+    badge_1: "Fintech App"
+    description: "Revolut is a global financial technology company offering banking services, currency exchange, peer-to-peer payments, and cross-border transfers. It aims to simplify international money mobility without traditional bank fees."
+  - name: "Cross-Border Payments Explained"
+    badge_1: "International Finance"
+    description: "Cross-border payments involve moving money across different countries and currencies. They traditionally require intermediary 'correspondent banks' and rely on networks like SWIFT, often resulting in high fees and processing delays."
+  - name: "Why Can't I Just Send Money With My Visa Card?"
+    image: "/assets/images/visa_locked_image.jpg"
+    alt: "Cover image for Visa card limitations"
+    badge_1: "Payment Networks"
+    description: "Exploring the limitations of Visa and Mastercard for direct peer-to-peer transfers."
+    url: "/visa-and-mastercard-payment-cards-not-transfer-tools/"
+    link_text: "Read More"
+  - name: "What is Google Pay and Apple Pay?"
+    image: "/assets/images/google_pay_and_apple_pay_cover.webp"
+    alt: "Cover for Google Pay and Apple Pay post"
+    badge_1: "Digital Wallets"
+    description: "How they work, where they work, and why they're safer."
+    url: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/"
+    link_text: "Read More"
 ---
+
 In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I wrote about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.
 
 The old systems are broken. But as I mentioned, new solutions are emerging. I want to walk you through one of the biggest names I've been exploring: [**Revolut**](https://www.revolut.com/). Is this the "super-app" that finally fixes this mess? Or is it just another walled garden?

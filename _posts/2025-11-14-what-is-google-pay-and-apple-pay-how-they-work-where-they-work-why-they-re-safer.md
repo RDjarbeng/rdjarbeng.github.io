@@ -29,6 +29,33 @@ title: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why T
 image: /assets/images/google_pay_and_apple_pay_cover.webp
 image_alt: A cover image for an article titled What is Google Pay and Apple Pay?. It shows an Android phone with the Google Wallet app and an iPhone with the Apple Pay app, side-by-side, in front of a glowing world map to illustrate global payments.
 layout: post
+card_items:
+  - name: "What is Google Pay?"
+    badge_1: "Digital Wallet"
+    description: "Google Pay (Google Wallet) is a mobile payment service allowing Android users to make secure, contactless purchases in stores and online by storing tokenized versions of their cards on their devices."
+  - name: "What is Apple Pay?"
+    badge_1: "Digital Wallet"
+    description: "Apple Pay is Apple's mobile payment service integrated natively into iOS. It allows users to make secure point-of-sale and online transactions using Face ID or Touch ID without revealing their actual card numbers."
+  - name: "What is Tokenization?"
+    badge_1: "Security Technology"
+    description: "Tokenization replaces a sensitive credit card number with a unique, one-time encrypted token for a transaction. This ensures the actual number is never shared with merchants, drastically minimizing fraud risk."
+  - name: "What is NFC?"
+    badge_1: "Wireless Tech"
+    description: "Near Field Communication (NFC) is a short-range wireless technology that allows communication between two devices (like a smartphone and a payment terminal) within a few centimeters. It powers the 'tap-to-pay' convenience."
+  - name: "Why Can't I Just Send Money With My Visa Card?"
+    image: "/assets/images/visa_locked_image.jpg"
+    alt: "Cover image for Visa card limitations"
+    badge_1: "Payment Networks"
+    description: "Exploring the limitations of Visa and Mastercard for direct peer-to-peer transfers."
+    url: "/visa-and-mastercard-payment-cards-not-transfer-tools/"
+    link_text: "Read More"
+  - name: "Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
+    image: "/assets/images/revolut_sending_cross_border_cover.webp"
+    alt: "Cover image for Revolut post"
+    badge_1: "Cross-Border Payments"
+    description: "A look into how digital payments and international transfers differ."
+    url: "/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/"
+    link_text: "Read More"
 ---
 In a world where your phone is your wallet, **Google Pay** (also known as the [Google Wallet](https://wallet.google/)) and [**Apple Pay**](https://www.apple.com/apple-pay/) have become essential tools for millions. But what exactly are they? Are they like bank accounts? How do they differ from your regular bank account? And can you use them everywhere, including in Africa and Asia? Let's try and answer these questions and give some context to these services for android and iPhone Users.
 

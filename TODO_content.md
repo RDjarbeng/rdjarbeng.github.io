@@ -125,3 +125,37 @@ Comedy: Josh2funny,Trevor Noah
 - Unexpected datasets: Nasa earth indicators 
 CO2, methane, ice sheets, sea level, ocean warming
 https://science.nasa.gov/earth/explore/earth-indicators/
+- [ ] Post on Companies revolutionalizing energy, national security, transportation
+- [ ] Porsche has HD videos of each of their sports cars on their website, link to favorite video on GT3RS
+- [ ] Why is there a difference in sound quality across platforms and how does it work? Is it the file formats, equipment used, how does it compare to a live band
+- [ ] Fastai original paper tweet on Twitter convert to post
+- [ ] Footballers model on Hugging face and how to build
+- how to use a free background remover (modify for dev.to how to build)
+- Hackathon platforms- what is a Hackathon
+- [ ] Witness a master watchmaker assemble a complex tourbillon inside a microscopic glass sphere
+- [ ] Jet engine and aviation industry, what if I told you...
+- [ ] LLM application safety:
+
+Resources
+
+Owasp top 10 LLM applications
+AI incident database
+AVID - vulnerability database
+- [ ] Compilation of 'mind your language' episodes on YouTube, pull the lever Kronk, YouTube Playlists
+- [ ] ### System design 
+there are only like 5-6 tricks in systems - divide and conquer
+- caching
+- indirection
+- batching
+- redundancy
+- lazy eval
+and then you apply arbitrarily complicated variations of these in clever ways to build whatever you want
+- [ ] Modelling plant growth and the weather using mathematics, from there determine expected yield of plant, eg, cocoa account for pther variables that may affect this  irrigation, disease
+- [ ] Biggest fumble  IBM rejects Renaissance technologies, passes up on $2 bn
+- [ ] Revolut says on the details for accounts for local US transfers: If the sending bank supports rapid payments, the payment will arrive in a few seconds. Only local transfers are
+accepted. For international transfers, please use the SWIFT details found above Otherwise, it will take up to 2 business days
+
+ ( What is this rapid payments)
+- [ ] Market Flash crash of 2000s
+- [ ] About the hugging face inference API
+- [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning

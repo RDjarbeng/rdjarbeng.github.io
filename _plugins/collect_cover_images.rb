@@ -8,6 +8,11 @@
 # only cover/thumbnail images — leaving full-resolution in-post images alone.
 
 Jekyll::Hooks.register :site, :post_write do |site|
+  unless Jekyll.env == 'production'
+    # Jekyll.logger.info 'Cover Images:', "Skipping in non-production environment (#{Jekyll.env})."
+    next
+  end
+
   cover_images = []
 
   # Collect from all Jekyll collections (posts, personal, gallery, videos, etc.)

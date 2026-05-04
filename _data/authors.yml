@@ -1,12 +1,11 @@
-authors:
-  Richard:
-    name: Richard Djarbeng
-    display_name: Richard Djarbeng
-    email: rdjarbeng@rdjarbeng.com
-    web: https://rdjarbeng.com
-    twitter: DjarbengRichard
-    github: RDjarbeng
-    linkedin: richarddjarbeng
-    bio: Computer engineer specializing in web development, machine learning, and IoT devices. Master's degree in Electrical and Computer Engineering.
-    avatar: /assets/images/logo.jpeg
-    location: "East Africa, USA, Europe"
+Richard:
+  name: Richard Djarbeng
+  display_name: Richard Djarbeng
+  email: rdjarbeng@rdjarbeng.com
+  url: https://rdjarbeng.com
+  twitter: DjarbengRichard
+  github: RDjarbeng
+  linkedin: richarddjarbeng
+  bio: Computer engineer specializing in web development, machine learning, and IoT devices. Master's degree in Electrical and Computer Engineering.
+  avatar: /assets/images/logo.jpeg
+  location: "East Africa, USA, Europe"

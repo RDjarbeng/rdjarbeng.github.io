@@ -7,20 +7,12 @@ categories:
 tags:
   - HackerOne
   - Bug bounty
-  - White hat hacker
   - Security
   - Vulnerability
-  - Win money for finding bugs in software
-  - Bug Bounty Program
   - Ethical Hacking
   - Cybersecurity
-  - Vulnerability Disclosure
-  - Hacker-Powered Security
-  - GitHub Security
-  - PayPal Security
-  - Bug Bounty Rewards
-  - Digital Asset Protection
-  - Internet Security
+  - GitHub
+  - PayPal
 title: What is HackerOne and Their Bug Bounty Program?
 image: /assets/images/hackerone_bugbounty_rd.webp
 layout: post

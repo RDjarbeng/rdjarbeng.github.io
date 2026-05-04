@@ -1,7 +1,7 @@
 ---
 title: Bamboo band making music with bamboo instruments and wind I guess.
 platform: tiktok
-youtube_id: https://vt.tiktok.com/ZSugSBUxY/
+youtube_id: https://www.tiktok.com/@akueyessalin/video/7611911272531119380/
 embed_code: ''
 thumbnail: ''
 type: video

@@ -15,11 +15,17 @@ author:
   github: RDjarbeng
   linkedin: richarddjarbeng
 
-# Social profiles (legacy support)
-github_username: RDjarbeng
-twitter_username: DjarbengRichard
-linkedin_username: richarddjarbeng
-rss: "RSS Feed"
+# Social links for SEO (generates sameAs in JSON-LD)
+social:
+  name: Richard Djarbeng
+  links:
+    - https://twitter.com/DjarbengRichard
+    - https://github.com/RDjarbeng
+    - https://linkedin.com/in/richarddjarbeng
+
+# RSS feed configuration
+feed:
+  title: "Richard Djarbeng - Latest Posts RSS Feed"
 # Build settings
 markdown: kramdown
 kramdown:
@@ -91,7 +97,6 @@ exclude:
   - "*.bak"
   - "*.tmp"
   - "*.py"
-  - "*.txt"
   - .git/
   - .gitignore
   - README.md
@@ -105,6 +110,7 @@ collections:
   #   output: true
   authors:
     output: true
+    permalink: /authors/:slug/
   personal:
     output: true
     permalink: /personal/:title/
