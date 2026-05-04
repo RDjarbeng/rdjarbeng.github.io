@@ -40,15 +40,17 @@
   {%- endif -%}
 
   {%- if page.type == 'video' -%}
-  {%- assign _vd = page.excerpt | strip_html | strip_newlines | strip -%}
+  {%- assign _vd = page.description | default: page.excerpt | strip_html | strip_newlines | strip -%}
   {%- if _vd.size < 50 -%}
     {%- assign _vg = page.genre | default: page.platform | default: 'Video' -%}
-    {%- assign _vd = page.title | titleize | append: ' — ' | append: _vg | append: ' curated by Richard Djarbeng on rdjarbeng.com.' -%}
+    {%- assign _vd = page.title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
   {%- endif -%}
-  <meta name="description" content="{{ _vd | truncate: 155 | escape }}">
-  <meta property="og:description" content="{{ _vd | truncate: 200 | escape }}">
-  <meta name="twitter:description" content="{{ _vd | truncate: 200 | escape }}">
+  {%- assign page.description = _vd -%}
 {%- endif -%}
+
+  {%- unless page.description -%}
+  {%- assign page.description = site.description -%}
+  {%- endunless -%}
 
 {%- if jekyll.environment == 'production' -%}
   {%- if page_has_video_thumbnail -%}
