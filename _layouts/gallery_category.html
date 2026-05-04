@@ -23,7 +23,8 @@ layout: default
     {% assign safe_cat_slug = page.title | slugify %}
     {% assign all_category_items = "" | split: "" %}
     {% for item in site.gallery %}
-        {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | slugify %}
+        {% assign cats_str = item.categories | join: ' ' %}
+        {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | append: ' ' | append: cats_str | slugify %}
         {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
             {% assign all_category_items = all_category_items | push: item %}
         {% endif %}

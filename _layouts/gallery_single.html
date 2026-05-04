@@ -183,7 +183,8 @@ layout: default
                 </div>
                 <div style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
                     <h4 style="margin: 0 0 8px 0; font-size: 1.05rem; line-height: 1.4; color: #102a43;">{{ item.title | escape }}</h4>
-                    <div style="font-size: 0.8rem; color: #ff0000; text-transform: uppercase; font-weight: bold; margin-top: auto;">{{ item.genre | default: item.category | default: "Other" }}</div>
+                    {% assign display_cat = item.genre | default: item.category | default: item.categories.first | default: "Other" %}
+                    <div style="font-size: 0.8rem; color: #ff0000; text-transform: uppercase; font-weight: bold; margin-top: auto;">{{ display_cat }}</div>
                 </div>
             </a>
         {% endfor %}
