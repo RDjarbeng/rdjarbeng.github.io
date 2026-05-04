@@ -39,7 +39,20 @@
   {%- endif -%}
   {%- endif -%}
 
-  {%- if jekyll.environment == 'production' -%}
+  {%- if page.type == 'video' -%}
+  {%- assign _vd = page.description | default: page.excerpt | strip_html | strip_newlines | strip -%}
+  {%- if _vd.size < 50 -%}
+    {%- assign _vg = page.genre | default: page.platform | default: 'Video' -%}
+    {%- assign _vd = page.title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
+  {%- endif -%}
+  {%- assign page.description = _vd -%}
+{%- endif -%}
+
+  {%- unless page.description -%}
+  {%- assign page.description = site.description -%}
+  {%- endunless -%}
+
+{%- if jekyll.environment == 'production' -%}
   {%- if page_has_video_thumbnail -%}
   {%- assign original_image = page.image -%}
   {%- assign page.image = page_has_video_thumbnail -%}
