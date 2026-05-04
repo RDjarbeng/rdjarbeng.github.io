@@ -15,6 +15,11 @@
   {% assign img_src = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg' %}
 {% endif %}
 
+{% assign original_img_src = img_src %}
+{% if img_src contains 'images-assets.nasa.gov' %}
+  {% assign img_src = img_src | replace: '~large.jpg', '~small.jpg' | replace: '~orig.jpg', '~small.jpg' | replace: '~medium.jpg', '~small.jpg' %}
+{% endif %}
+
 {% assign is_external = false %}
 {% if img_src contains 'http://' or img_src contains 'https://' %}
   {% assign is_external = true %}
@@ -23,7 +28,7 @@
 <a href="{{ include.item.url | relative_url }}" class="gallery-card-link" data-title="{{ include.item.title | escape }}">
     <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %} {% if include.is_small %}is-small{% endif %}" 
          data-url="{{ include.item.url | relative_url }}" 
-         data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
+         data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ original_img_src }}{% else %}{{ original_img_src | relative_url }}{% endif %}" 
          data-title="{{ include.item.title | escape }}" 
          data-type="{% if include.item.type == 'video' %}html{% else %}image{% endif %}" 
          data-caption="{{ include.item.content | strip_html | truncatewords: 50 | escape }}" 
