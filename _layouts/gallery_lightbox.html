@@ -161,11 +161,11 @@ layout: default
 
           {% if subfolders.size > 0 %}
             {% for sub in subfolders %}
-              <div style="margin-top: 15px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; padding-right: 20px;">
-                <h4 style="margin: 0; font-size: 1.1rem; color: #486581; font-weight: normal; text-transform: capitalize;">{{ sub | replace: "-", " " }}</h4>
-                <a href="/gallery/{{ cat_slug }}/{{ sub }}/" style="font-size: 0.9rem; color: #007bff; text-decoration: none; font-weight: bold;">View All</a>
+              <div style="margin-top: 15px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; padding-left: 15px; border-left: 3px solid rgba(128,128,128,0.2); padding-right: 20px;">
+                <h4 style="margin: 0; font-size: 1rem; color: #486581; font-weight: normal; text-transform: capitalize;">{{ sub | replace: "-", " " }}</h4>
+                <a href="/gallery/{{ cat_slug }}/{{ sub }}/" style="font-size: 0.85rem; color: #007bff; text-decoration: none; font-weight: bold;">View All</a>
               </div>
-              <div class="horizontal-scroll-container pb-3">
+              <div class="horizontal-scroll-container pb-3" style="padding-left: 18px;">
                 {% assign sub_items = "" | split: "" %}
                 {% for item in cat_items %}
                   {% assign parts = item.relative_path | split: "/" %}
@@ -175,8 +175,8 @@ layout: default
                 {% endfor %}
                 
                 {% for item in sub_items limit:6 %}
-                      <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
-                          {% include gallery_card.html item=item is_dashboard=true %}
+                      <div class="dashboard-item" style="width: 150px; height: 185px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
+                          {% include gallery_card.html item=item is_dashboard=true is_small=true %}
                       </div>
                 {% endfor %}
               </div>
