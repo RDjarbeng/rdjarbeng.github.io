@@ -1,3 +1,5 @@
+<!-- how to run on different port
+ bundle exec jekyll serve --config _config.yml,_config_dev.yml --port 5000 -->
 This todo contains direction for content on this site rdjarbeng.com, areas to improve as well as possible future directions
 
 ## Post cover images to improve:
