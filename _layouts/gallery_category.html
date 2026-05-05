@@ -25,7 +25,18 @@ layout: default
     {% for item in site.gallery %}
         {% assign cats_str = item.categories | join: ' ' %}
         {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | append: ' ' | append: cats_str | slugify %}
+        
+        {% assign is_match = false %}
         {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
+            {% assign is_match = true %}
+        {% endif %}
+        
+        {% assign parts = item.relative_path | split: '/' %}
+        {% if safe_cat_slug == 'external' and parts.size > 2 %}
+            {% assign is_match = false %}
+        {% endif %}
+        
+        {% if is_match %}
             {% assign all_category_items = all_category_items | push: item %}
         {% endif %}
     {% endfor %}

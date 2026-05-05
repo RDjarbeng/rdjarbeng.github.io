@@ -109,12 +109,12 @@ layout: default
 
   <!-- Dashboard View (Server Side) -->
   <div id="gallery-dashboard" class="gallery-dashboard">
-    {% assign pseudo_cats = "cover-images,videos,youtube,twitter,instagram,tiktok,external" | split: "," %}
+    {% assign pseudo_cats = "cover-images,videos,youtube,twitter,instagram,tiktok,external,artemis-ii" | split: "," %}
     
     {% assign all_hub_cats = "" | split: "" %}
     {% for cat in site.gallery_categories %}
       {% assign slug = cat.title | slugify %}
-      {% if slug != 'none' and slug != 'other' %}
+      {% if slug != 'none' and slug != 'other' and slug != 'artemis-ii' %}
         {% assign all_hub_cats = all_hub_cats | push: slug %}
       {% endif %}
     {% endfor %}
@@ -135,7 +135,18 @@ layout: default
           {% assign cats_str = item.categories | join: ' ' %}
           {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | append: ' ' | append: cats_str | slugify %}
           {% assign safe_cat_slug = cat_slug | slugify %}
+          
+          {% assign is_match = false %}
           {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
+            {% assign is_match = true %}
+          {% endif %}
+          
+          {% assign parts = item.relative_path | split: '/' %}
+          {% if safe_cat_slug == 'external' and parts.size > 2 %}
+            {% assign is_match = false %}
+          {% endif %}
+          
+          {% if is_match %}
             {% unless cat_items contains item %}
               {% assign cat_items = cat_items | push: item %}
             {% endunless %}

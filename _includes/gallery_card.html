@@ -40,10 +40,7 @@
              decoding="async"
              onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
         
-        {% if include.is_dashboard %}
-        <div class="gallery-overlay"><span class="gallery-title-overlay">{{ include.item.title | titleize }}</span></div>
-        {% endif %}
-        
+
         {% if include.item.type == 'video' %}
         <div class="video-icon-wrapper">
             <span class="gallery-type-icon">▶</span>
@@ -66,16 +63,12 @@
             {{ include.item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
         </div>
         {% endif %}
+
+        <div class="gallery-item-info">
+            <h3 class="gallery-item-title">{{ include.item.title | titleize | escape }}</h3>
+            {% if include.is_dashboard != true %}
+            <p style="font-size: 0.8rem; margin: 5px 0 0; color: #ddd;">{{ include.item.date | date: "%B %-d, %Y" }}</p>
+            {% endif %}
+        </div>
     </div>
-    
-    {% if include.is_dashboard != true %}
-    <div class="gallery-item-footer">
-        <h3>{{ include.item.title | titleize | escape }}</h3>
-        <p>{{ include.item.date | date: "%B %-d, %Y" }}</p>
-    </div>
-    {% else %}
-    <div class="gallery-dashboard-info">
-        <h4 class="gallery-dashboard-title">{{ include.item.title | titleize | escape }}</h4>
-    </div>
-    {% endif %}
 </a>
