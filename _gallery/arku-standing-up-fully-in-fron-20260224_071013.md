@@ -4,7 +4,7 @@ image: /assets/images/arku-standing-up-fully-in-fron-20260224_071013.jpg
 image_alt: ''
 type: external
 link: ''
-category: From Movies & Animation
+category: From Movies and Animation
 labels:
   - Aku
   - Samurai Jack
