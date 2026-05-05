@@ -137,7 +137,8 @@ layout: default
           {% assign safe_cat_slug = cat_slug | slugify %}
           
           {% assign is_match = false %}
-          {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
+          {% assign url_match_str = '/' | append: safe_cat_slug | append: '/' %}
+          {% if str contains safe_cat_slug or item.url contains url_match_str %}
             {% assign is_match = true %}
           {% endif %}
           

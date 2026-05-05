@@ -53,10 +53,36 @@
             </button>
         </div>
         
-        {% if include.item.type == 'video' and include.is_dashboard != true %}
+        {% if include.item.type == 'video' %}
         <div class="gallery-html-content" style="display:none;">
             <template class="raw-embed-code">
-                {{ include.item.embed_code | default: include.item.content }}
+                {% if include.item.embed_code and include.item.embed_code != '' %}
+                    {{ include.item.embed_code }}
+                {% elsif include.item.platform == 'youtube' and video_id %}
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+                {% elsif include.item.platform == 'instagram' %}
+                    {% assign computed_ig = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_ig contains 'instagram.com/p/' %}
+                        {% assign computed_ig = computed_ig | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' | first %}
+                    {% elsif computed_ig contains 'instagram.com/reel/' %}
+                        {% assign computed_ig = computed_ig | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?' | first %}
+                    {% endif %}
+                    <iframe src="https://www.instagram.com/p/{{ computed_ig }}/embed" width="100%" height="100%" style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                {% elsif include.item.platform == 'tiktok' %}
+                    {% assign computed_tk = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_tk contains '/video/' %}
+                        {% assign computed_tk = computed_tk | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+                    {% endif %}
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk }}" data-video-id="{{ computed_tk }}" style="max-width: 605px;min-width: 325px;"><section></section></blockquote><script async src="https://www.tiktok.com/embed.js"></script>
+                {% elsif include.item.platform == 'twitter' %}
+                    {% assign computed_tt = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_tt contains '/status/' %}
+                        {% assign computed_tt = computed_tt | split: '/status/' | last | split: '?' | first | split: '/' | first %}
+                    {% endif %}
+                    <blockquote class="twitter-tweet" data-width="800" data-dnt="true" data-theme="dark"><a href="https://twitter.com/x/status/{{ computed_tt }}"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% else %}
+                    {{ include.item.content }}
+                {% endif %}
             </template>
         </div>
         <div class="gallery-caption-content" style="display:none;">
