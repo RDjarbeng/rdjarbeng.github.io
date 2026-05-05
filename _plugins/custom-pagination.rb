@@ -164,7 +164,7 @@ module Jekyll
               if cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
-                next false if cat_slug == 'external' && item.relative_path.include?('_gallery/artemis-ii/')
+                next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
                 cats = item.data['category'] || ''
                 labels_data = item.data['labels'] || []
                 labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
