@@ -8,6 +8,7 @@ module Jekyll
           if collection == 'posts'
             paginate_posts(site)
             paginate_personal(site)
+            paginate_gallery(site)
           else
             paginate(site)
           end
@@ -24,8 +25,8 @@ module Jekyll
           index_page = HomeIndexPage.new(site, current_page)
           index_page.pager = pager
           site.pages << index_page
-          Jekyll.logger.info "My custom pagination:", "Paginating #{current_page} / #{total_pages}"
         end
+        Jekyll.logger.info "My custom pagination:", "Paginated home #{total_pages} / #{total_pages}"
       end
 
       def paginate_posts(site)
@@ -42,8 +43,8 @@ module Jekyll
           posts_page.data['pager'] = pager.to_liquid  # Make pager available to layout
           posts_page.data['paginator'] = pager.to_liquid # Make available to jekyll-seo-tag
           site.pages << posts_page
-          Jekyll.logger.info "My custom pagination:", "Paginating posts #{current_page} / #{total_pages}"
         end
+        Jekyll.logger.info "My custom pagination:", "Paginated posts #{total_pages} / #{total_pages}"
       end
 
       def paginate_personal(site)
@@ -53,7 +54,6 @@ module Jekyll
         end
         
         all_posts = site.collections['personal'].docs.sort_by { |p| p.date }.reverse
-        Jekyll.logger.info "My custom pagination:", "Found #{all_posts.size} personal posts."
         
         if all_posts.empty?
           Jekyll.logger.warn "My custom pagination:", "No posts found in personal collection."
@@ -87,7 +87,6 @@ module Jekyll
 
 
         (1..total_pages).each do |current_page|
-          Jekyll.logger.info "My custom pagination:", "Paginating personal #{current_page} / #{total_pages}"
           pager = Pager.new(site, current_page, all_posts, total_pages, paginate_size)
           pager.previous_page_path = current_page > 1 ? (current_page == 2 ? '/personal/' : "/personal/page-#{current_page - 1}/") : nil
           pager.next_page_path = current_page < total_pages ? "/personal/page-#{current_page + 1}/" : nil
@@ -111,7 +110,112 @@ module Jekyll
           
           site.pages << personal_page
         end
-        Jekyll.logger.info "My custom pagination:", "Finished adding personal pages to site.pages."
+        Jekyll.logger.info "My custom pagination:", "Paginated personal #{total_pages} / #{total_pages}"
+      end
+
+      def paginate_gallery(site)
+        if site.collections['gallery'].nil?
+          Jekyll.logger.warn "My custom pagination:", "Gallery collection not found!"
+          return
+        end
+        
+        all_gallery = site.collections['gallery'].docs.sort_by { |p| p.data['date'] || Time.at(0) }.reverse
+        paginate_size = site.config['custom_pagination']['paginate'].to_i || 12
+        
+        # Paginate specific gallery index pages we know exist:
+        # e.g., gallery/memes/index.html
+        
+        categories_to_process = []
+        if site.collections['gallery_categories']
+          site.collections['gallery_categories'].docs.each do |cat|
+            cat_title = cat.data['title']
+            next if cat_title == 'None' || cat_title == 'Other'
+            cat_slug = Jekyll::Utils.slugify(cat_title)
+            categories_to_process << { title: cat_title, slug: cat_slug }
+          end
+        end
+
+        # Add pseudo categories
+        pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
+        pseudo_cats.each do |cat_slug|
+          categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
+        end
+
+        # Extract subfolders for nested pagination
+        all_gallery.each do |item|
+          parts = item.relative_path.split('/')
+          if parts.size >= 4
+            cat_slug = parts[1]
+            sub_slug = parts[2]
+            full_slug = "#{cat_slug}/#{sub_slug}"
+            sub_title = sub_slug.split('-').map(&:capitalize).join(' ')
+            
+            unless categories_to_process.any? { |c| c[:slug] == full_slug }
+              categories_to_process << { title: sub_title, slug: full_slug }
+            end
+          end
+        end
+
+        categories_to_process.each do |cat_info|
+            cat_title = cat_info[:title]
+            cat_slug = cat_info[:slug]
+            
+            cat_items = all_gallery.select { |item| 
+              if cat_slug.include?('/')
+                item.relative_path.include?("/#{cat_slug}/")
+              else
+                next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
+                cats = item.data['category'] || ''
+                labels_data = item.data['labels'] || []
+                labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
+                plat = item.data['platform'] || ''
+                type = item.data['type'] || ''
+                "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type}").include?(cat_slug) || (item.url && item.url.include?(cat_slug))
+              end
+            }
+            
+            if cat_items.any?
+              total_pages = (cat_items.size / paginate_size.to_f).ceil
+              # Check if manual index exists
+              index_page = site.pages.find { |p| p.path == "gallery/#{cat_slug}/index.html" || p.url.chomp('/') == "/gallery/#{cat_slug}" }
+              if index_page
+                site.pages.delete(index_page)
+              end
+              
+              (1..total_pages).each do |current_page|
+                pager = Pager.new(site, current_page, cat_items, total_pages, paginate_size)
+                page = GalleryCategoryIndexPage.new(site, current_page, cat_title, cat_slug, index_page)
+                page.pager = pager
+                page.data['custom_pager'] = pager.to_liquid
+                site.pages << page
+              end
+            end # ends if cat_items.any?
+          end # ends categories_to_process.each
+      end # ends def paginate_gallery
+    end # ends class Pagination
+
+    class GalleryCategoryIndexPage < Page
+      def initialize(site, current_page, cat_title, cat_slug, original_page)
+        @site = site
+        @base = site.source
+        @dir = current_page == 1 ? "gallery/#{cat_slug}" : "gallery/#{cat_slug}/page-#{current_page}"
+        @name = "index.html"
+        self.process(@name)
+        
+        if original_page && current_page == 1
+          self.read_yaml(File.join(@base, '_layouts'), 'default.html')
+          self.content = original_page.content
+          self.data.merge!(original_page.data)
+        elsif original_page && current_page > 1
+          self.read_yaml(File.join(@base, '_layouts'), 'default.html')
+          # Remove layout wrapper content if it was injected with {{content}}
+          self.content = original_page.content.sub('{{ content }}', '')
+          self.data.merge!(original_page.data)
+          self.data.delete('permalink') # Prevent conflicting permalinks for paginated pages
+        else
+          self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          self.data['title'] = cat_title
+        end
       end
     end
 

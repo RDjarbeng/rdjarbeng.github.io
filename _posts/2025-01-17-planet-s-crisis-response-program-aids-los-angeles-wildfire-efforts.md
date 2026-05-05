@@ -6,7 +6,7 @@ categories:
 tags:
   - Planet
   - Satellite data
-  - wildfires
+  - Wildfires
   - California
 title: Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts
 image: /assets/images/planet_california_wildfires.jpeg

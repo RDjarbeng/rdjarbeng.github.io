@@ -5,11 +5,11 @@ author: Richard
 categories:
   - Technology
 tags:
-  - machine learning
-  - python
+  - Machine Learning
+  - Python
   - complete machine learning
-  - tutorial
-  - getting started
+  - Tutorial
+  - Getting started
   - data analysis
   - data visualization
   - Jean de Dieu Nyandwi

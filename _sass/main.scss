@@ -1121,10 +1121,6 @@ a:hover {
 
 
 
-.toc-content li :hover {
-  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
-}
-
 .toc-header {
   display: flex;
   justify-content: space-between;
@@ -1164,17 +1160,29 @@ a:hover {
 }
 
 .toc-content a {
+  display: block;
+  padding: 4px 8px 4px 12px;
+  border-left: 2px solid transparent;
   color: $toc-link-color;
   font-size: 0.875rem;
   /* 14px if root is 16px; adjust to 0.9375rem (15px) if you want even subtler */
   line-height: 1.4;
   /* Slightly tighter for compact lists */
-  transition: color 0.3s ease;
+  transition: all 0.1s ease;
+  text-decoration: none;
 }
 
-.toc-content a:hover,
+.toc-content a:hover {
+  color: $link-hover-color;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.05));
+  border-left-color: var(--card-border);
+}
+
 .toc-content a.active {
   color: $link-hover-color;
+  font-weight: 700;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
+  border-left-color: $link-hover-color;
 }
 
 /* Nested TOC items */
@@ -1397,10 +1405,11 @@ a:hover {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
 
   //was 769
   .toc-sidebar {
+    margin-left: clamp(-23px, calc((1045px - 100vw) / 2), 0px);
     display: block;
     /* Ensure TOC is visible on desktop */
   }

@@ -4,7 +4,7 @@ author: Richard
 categories:
   - Air Quality
 tags:
-  - Air quality
+  - Air Quality
   - AAQS
   - Air pollution
   - West Africa

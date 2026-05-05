@@ -17,7 +17,7 @@ tags:
   - Norrsken East Africa
   - Norrsken House Kigali
   - Fintech
-  - Healthtech
+  - HealthTech
   - Clean Energy
   - Solar
   - E-commerce

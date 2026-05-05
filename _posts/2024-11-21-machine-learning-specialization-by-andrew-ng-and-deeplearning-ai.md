@@ -6,7 +6,7 @@ categories:
 tags:
   - Machine Learning
   - AI
-  - Deep learning
+  - Deep Learning
   - Andrew Ng
 title: Machine Learning Specialization by Andrew Ng and DeepLearning.AI
 image: /assets/images/andrew_ng_coursera.png

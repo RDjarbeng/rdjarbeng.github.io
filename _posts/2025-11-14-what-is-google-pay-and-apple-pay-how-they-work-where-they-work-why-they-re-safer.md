@@ -16,7 +16,7 @@ tags:
   - Apple Pay in Asia
   - Contactless Payments
   - NFC
-  - FinTech
+  - Fintech
   - Payment Security
   - Tokenization
   - Google Pay vs Apple Pay

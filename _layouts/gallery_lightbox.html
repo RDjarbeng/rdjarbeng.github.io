@@ -21,7 +21,7 @@ layout: default
       <div class="lightbox-caption"></div>
       <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
         <a class="lightbox-link btn" href="#" style="display: none;">Read Related Post</a>
-        <a class="lightbox-full-post-btn btn" href="#" style="display: none; background: #eee; color: #333;">Go to full
+        <a class="lightbox-full-post-btn btn" href="#" style="display: none;">Go to full
           post</a>
       </div>
       <div class="mobile-only-footer" style="display: none; margin-top: 3rem; padding-bottom: 2rem;">
@@ -69,12 +69,13 @@ layout: default
       </div>
     </a>
   </div>
-    <nav class="gallery-nav">
+    <nav class="gallery-nav" id="dynamic-gallery-nav">
       <button class="gallery-filter active" data-filter="all">All Items</button>
-      <button class="gallery-filter" data-filter="ai-generations">AI Generations</button>
-      <button class="gallery-filter" data-filter="memes">Memes</button>
-      <button class="gallery-filter" data-filter="ghana">Ghana</button>
-      <button class="gallery-filter" data-filter="rwanda">Rwanda</button>
+      {% for cat in site.gallery_categories %}
+      {% if cat.title != 'None' and cat.title != 'Other' %}
+      <button class="gallery-filter" data-filter="{{ cat.title | slugify }}">{{ cat.title }}</button>
+      {% endif %}
+      {% endfor %}
       <button class="gallery-filter" data-filter="external">Gallery Images</button>
       <button class="gallery-filter" data-filter="cover-images">Cover Images</button>
       <button class="gallery-filter" data-filter="videos">All Videos</button>
@@ -84,6 +85,21 @@ layout: default
       <button class="gallery-filter" data-filter="instagram">Instagram</button>
       <button class="gallery-filter" data-filter="tiktok">TikTok</button>
     </nav>
+    <script>
+      window.dynamicGalleryCategories = [
+        {% for cat in site.gallery_categories %}
+        {% if cat.title != 'None' and cat.title != 'Other' %}
+        {
+          id: "{{ cat.title | slugify }}",
+          title: "{{ cat.title }}",
+          filterStr: "{{ cat.title | slugify }}"
+        },
+        {% endif %}
+        {% endfor %}
+        { id: 'external', title: 'Gallery Images', filterStr: 'external' },
+        { id: 'cover-images', title: 'Cover Images', filterStr: 'cover-images' }
+      ];
+    </script>
     <div class="gallery-search-container">
       <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
     </div>
@@ -91,177 +107,187 @@ layout: default
   
   
 
-  <!-- Dashboard View (Horizontal Scrolling) -->
+  <!-- Dashboard View (Server Side) -->
   <div id="gallery-dashboard" class="gallery-dashboard">
-    <!-- Categories will be injected here by JS -->
-  </div>
+    {% assign pseudo_cats = "cover-images,videos,youtube,twitter,instagram,tiktok,external,artemis-ii" | split: "," %}
+    
+    {% assign all_hub_cats = "" | split: "" %}
+    {% for cat in site.gallery_categories %}
+      {% assign slug = cat.title | slugify %}
+      {% if slug != 'none' and slug != 'other' and slug != 'artemis-ii' %}
+        {% assign all_hub_cats = all_hub_cats | push: slug %}
+      {% endif %}
+    {% endfor %}
+    {% for cat in pseudo_cats %}
+        {% assign all_hub_cats = all_hub_cats | push: cat %}
+    {% endfor %}
 
-  <!-- Grid View (Paginated) -->
-  <div id="gallery-grid-view" class="gallery-grid-view" style="display: none;">
-    <div class="gallery-grid-header">
-      <button id="back-to-dashboard" class="back-btn">← Back to Gallery</button>
-      <h2 id="grid-category-title"></h2>
-    </div>
-    <div class="gallery-grid" id="gallery-grid">
-      <!-- Items will be injected here by JS -->
-    </div>
-    <div id="gallery-pagination" class="gallery-pagination"></div>
-  </div>
+    {% for cat_slug in all_hub_cats %}
+        {% assign cat = site.gallery_categories | where: "title", cat_slug | first %}
+        {% assign cat_title = cat.title | default: cat_slug | capitalize | replace: '-', ' ' %}
+        {% if cat_slug == 'external' %}{% assign cat_title = "Gallery Images" %}{% endif %}
+        {% if cat_slug == 'cover-images' %}{% assign cat_title = "Cover Images" %}{% endif %}
+        {% if cat_slug == 'videos' %}{% assign cat_title = "All Videos" %}{% endif %}
+        
+        {% assign cat_items = "" | split: "" %}
+        
+        {% for item in site.gallery %}
+          {% assign cats_str = item.categories | join: ' ' %}
+          {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | append: ' ' | append: cats_str | slugify %}
+          {% assign safe_cat_slug = cat_slug | slugify %}
+          
+          {% assign is_match = false %}
+          {% if str contains safe_cat_slug or item.url contains safe_cat_slug %}
+            {% assign is_match = true %}
+          {% endif %}
+          
+          {% assign parts = item.relative_path | split: '/' %}
+          {% if safe_cat_slug == 'external' and parts.size > 2 %}
+            {% assign is_match = false %}
+          {% endif %}
+          
+          {% if is_match %}
+            {% unless cat_items contains item %}
+              {% assign cat_items = cat_items | push: item %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if cat_items.size > 0 %}
+        <div class="dashboard-category" data-category-slug="{{ cat_slug }}">
+          <div class="dashboard-category-header">
+            <h3 class="dashboard-category-title">{{ cat_title }}</h3>
+            <a class="view-all-link" href="/gallery/{{ cat_slug }}/">View All</a>
+          </div>
 
-  <!-- Hidden Data Source -->
-  <div id="gallery-data" style="display: none;">
-    {% assign gallery_items = site.gallery | sort: "date" | reverse %}
+          {% assign subfolders = "" | split: "" %}
+          {% for item in cat_items %}
+            {% assign parts = item.relative_path | split: "/" %}
+            {% if parts.size >= 4 and parts[1] == cat_slug %}
+                {% assign subfolder = parts[2] %}
+                {% unless subfolders contains subfolder %}
+                    {% assign subfolders = subfolders | push: subfolder %}
+                {% endunless %}
+            {% endif %}
+          {% endfor %}
 
-    {% for item in gallery_items %}
-    {% assign computed_link = item.link %}
-    {% assign computed_ig_id = item.instagram_id %}
-    {% assign computed_tk_id = "" %}
-    {% assign computed_tt_id = "" %}
-
-    {% if item.platform == 'instagram' %}
-    {% if computed_link == blank or computed_link == nil %}
-    {% assign computed_link = item.youtube_id %}
-    {% endif %}
-
-    {% if computed_ig_id == blank or computed_ig_id == nil %}
-    {% if computed_link contains 'instagram.com/p/' %}
-    {% assign computed_ig_id = computed_link | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' |
-    first %}
-    {% elsif computed_link contains 'instagram.com/reel/' %}
-    {% assign computed_ig_id = computed_link | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?' |
-    first %}
-    {% else %}
-    {% assign computed_ig_id = computed_link %}
-    {% endif %}
-    {% endif %}
-
-    {% if computed_link == blank or computed_link == nil or computed_link == computed_ig_id %}
-    {% if computed_ig_id != blank and computed_ig_id != nil %}
-    {% assign computed_link = 'https://www.instagram.com/p/' | append: computed_ig_id | append: '/' %}
-    {% endif %}
-    {% endif %}
-    {% elsif item.platform == 'tiktok' %}
-    {% assign raw_tk_url = item.youtube_id %}
-    {% if raw_tk_url == blank or raw_tk_url == nil %}
-    {% assign raw_tk_url = item.link %}
-    {% endif %}
-    {% assign computed_tk_id = raw_tk_url %}
-    {% if computed_tk_id contains '/video/' %}
-    {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
-    {% endif %}
-    {% assign tk_is_shortlink = false %}
-    {% if computed_link == blank or computed_link == nil %}
-    {% if raw_tk_url contains 'http' %}
-    {% if raw_tk_url contains '/video/' %}
-    {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
-    {% else %}
-    {% assign computed_link = raw_tk_url %}
-    {% assign tk_is_shortlink = true %}
-    {% endif %}
-    {% else %}
-    {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
-    {% endif %}
-    {% endif %}
-    {% elsif item.platform == 'twitter' %}
-    {% assign raw_tt_url = item.youtube_id %}
-    {% if raw_tt_url == blank or raw_tt_url == nil %}
-    {% assign raw_tt_url = item.link %}
-    {% endif %}
-    {% assign computed_tt_id = raw_tt_url %}
-    {% if computed_tt_id contains '/status/' %}
-    {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first %}
-    {% endif %}
-    {% if computed_link == blank or computed_link == nil %}
-    {% if raw_tt_url contains 'http' %}
-    {% if raw_tt_url contains '/status/' %}
-    {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
-    {% else %}
-    {% assign computed_link = raw_tt_url %}
-    {% endif %}
-    {% else %}
-    {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
-    {% endif %}
-    {% endif %}
-    {% endif %}
-
-    <div class="gallery-data-item"
-      data-category="{% if item.type == 'cover' %}cover-images {% endif %}{% if item.type == 'video' %}videos {{ item.platform | downcase }} {% endif %}{% if item.type == 'external' %}external {% endif %}{{ item.category | downcase }} {{ item.labels | join: ' ' | downcase }}"
-      data-type="{% if item.type == 'video' %}html{% else %}image{% endif %}"
-      data-src="{% if item.type == 'video' %}{{ item.url | relative_url }}{% else %}{{ item.image | relative_url }}{% endif %}"
-      data-thumb="{% if item.type == 'video' and item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% elsif item.type == 'video' and item.platform == 'youtube' and item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.type == 'video' and computed_ig_id != blank and computed_ig_id != nil %}https://www.instagram.com/p/{{ computed_ig_id }}/media/?size=l{% elsif item.image %}{{ item.image | relative_url }}{% endif %}"
-      data-caption="{{ item.content | strip_html | truncatewords: 50 | escape }}" data-title="{{ item.title | titleize | escape }}"
-      data-date="{{ item.date | date_to_xmlschema }}" data-slug="{{ item.title | slugify }}"
-      data-url="{{ item.url | relative_url }}"
-      data-link="{% if computed_link and computed_link != '' %}{{ computed_link | relative_url }}{% endif %}"
-      data-video-id="{{ item.youtube_id }}" data-platform="{{ item.platform }}">
-
-      <div class="gallery-caption-content" style="display:none;">
-        {{ item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
-      </div>
-
-      {% if item.type == 'video' %}
-      <div class="gallery-html-content">
-        <template class="raw-embed-code">
-          <div class="video-container">
-            <div class="video-embed">
-              {% if item.platform == 'youtube' and item.youtube_id %}
-              {% assign video_id = item.youtube_id %}
-              {% if item.youtube_id contains 'youtube.com/watch' %}
-              {% assign video_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
-              {% elsif item.youtube_id contains 'youtube.com/shorts/' %}
-              {% assign video_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-              {% elsif item.youtube_id contains 'youtu.be/' %}
-              {% assign video_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+          {% if subfolders.size > 0 %}
+            {% for sub in subfolders %}
+              <div class="subfolder-wrapper">
+                <div class="subfolder-header">
+                  <h4>{{ sub | replace: "-", " " }}</h4>
+                  <a href="/gallery/{{ cat_slug }}/{{ sub }}/">View All</a>
+                </div>
+                <div class="horizontal-scroll-container pb-3 subfolder-scroll-container">
+                  {% assign sub_items = "" | split: "" %}
+                  {% for item in cat_items %}
+                    {% assign parts = item.relative_path | split: "/" %}
+                    {% if parts[2] == sub %}
+                      {% assign sub_items = sub_items | push: item %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  {% for item in sub_items limit:6 %}
+                        <div class="dashboard-item dashboard-item-small">
+                            {% include gallery_card.html item=item is_dashboard=true is_small=true %}
+                        </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+            
+            {% assign other_items = "" | split: "" %}
+            {% for item in cat_items %}
+              {% assign parts = item.relative_path | split: "/" %}
+              {% if parts.size < 4 or parts[1] != cat_slug %}
+                {% assign other_items = other_items | push: item %}
               {% endif %}
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}"
-                title="{{ item.title }}" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-              {% elsif item.platform == 'instagram' and computed_ig_id != blank and computed_ig_id != nil %}
-              <iframe src="https://www.instagram.com/p/{{ computed_ig_id }}/embed" width="100%" height="100%"
-                style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true"
-                allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-              {% elsif item.platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
-              {% if tk_is_shortlink %}
-              <blockquote class="tiktok-embed" cite="{{ computed_link }}" style="max-width: 605px;min-width: 325px;">
-                <section></section>
-              </blockquote>
-              {% else %}
-              <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk_id }}"
-                data-video-id="{{ computed_tk_id }}" style="max-width: 605px;min-width: 325px;">
-                <section></section>
-              </blockquote>
-              {% endif %}
-              <script async src="https://www.tiktok.com/embed.js"></script>
-              {% elsif item.platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
-              <blockquote class="twitter-tweet" data-width="800" data-dnt="true" data-theme="dark">
-                <a href="https://twitter.com/x/status/{{ computed_tt_id }}"></a>
-              </blockquote>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              {% else %}
-              {{ item.embed_code }}
+            {% endfor %}
+            
+            {% if other_items.size > 0 %}
+              <div style="margin-top: 15px; margin-bottom: 5px;">
+                <h4 style="margin: 0; font-size: 1.1rem; color: #486581; font-weight: normal; text-transform: capitalize;">Other {{ cat_title }}</h4>
+              </div>
+              <div class="horizontal-scroll-container pb-3">
+                {% for item in other_items limit:6 %}
+                      <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                          {% include gallery_card.html item=item is_dashboard=true %}
+                      </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+          {% else %}
+            <div class="horizontal-scroll-container pb-3">
+              {% for item in cat_items limit:6 %}
+                    <div class="dashboard-item" style="width: 200px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px;">
+                        {% include gallery_card.html item=item is_dashboard=true %}
+                    </div>
+              {% endfor %}
+              {% if cat_items.size > 6 %}
+              <a href="/gallery/{{ cat_slug }}/" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
+                  <span class="view-all-icon" style="font-size: 2rem;">➜</span>
+                  <span style="font-weight: bold; color: #102a43;">View All {{ cat_title }}</span>
+              </a>
               {% endif %}
             </div>
-          </div>
-        </template>
-      </div>
-      {% endif %}
-    </div>
+          {% endif %}
+        </div>
+        {% endif %}
     {% endfor %}
   </div>
 </div>
 
-<!-- Pagination Template (Hidden) -->
-<template id="pagination-template">
-  <div class="paginator">
-    <span class="first-page-btn disabled">First</span>
-    <span class="prev-page-btn disabled">Prev</span>
-    <div class="page-numbers">
-      <!-- Page numbers injected here -->
-    </div>
-    <span class="next-page-btn disabled">Next</span>
-    <span class="last-page-btn disabled">Last</span>
-  </div>
-</template>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.gallery-filter');
+    const categories = document.querySelectorAll('.dashboard-category');
+    const searchInput = document.getElementById('gallery-search');
 
-<script src="{{ '/assets/js/gallery.js' | relative_url }}"></script>
+    function filterDashboard() {
+        const activeFilterBtn = document.querySelector('.gallery-filter.active');
+        const activeFilter = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+        const query = searchInput ? searchInput.value.toLowerCase() : '';
+
+        categories.forEach(row => {
+            const rowCat = row.dataset.categorySlug;
+            // Does this row match the pill filter?
+            const matchesFilter = activeFilter === 'all' || rowCat === activeFilter;
+            
+            // Does this row have items matching the search query?
+            let hasVisibleItems = false;
+            const items = row.querySelectorAll('.dashboard-item:not(.dashboard-view-all-card)');
+            items.forEach(itemBox => {
+                const link = itemBox.querySelector('.gallery-item-link');
+                const title = link && link.dataset.title ? link.dataset.title.toLowerCase() : '';
+                if (title.includes(query) || query === '') {
+                    itemBox.style.display = 'flex';
+                    hasVisibleItems = true;
+                } else {
+                    itemBox.style.display = 'none';
+                }
+            });
+
+            if (matchesFilter && hasVisibleItems) {
+                row.style.display = 'block';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    filters.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            filters.forEach(f => f.classList.remove('active'));
+            e.target.classList.add('active');
+            filterDashboard();
+        });
+    });
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterDashboard);
+    }
+});
+</script>
+
+{% include gallery_native_script.html %}

@@ -442,6 +442,8 @@ collections:
   - name: "gallery"
     label: "General Gallery"
     folder: "_gallery"
+    nested:
+      depth: 3
     create: true
     slug: "{{slug}}"
     editor:

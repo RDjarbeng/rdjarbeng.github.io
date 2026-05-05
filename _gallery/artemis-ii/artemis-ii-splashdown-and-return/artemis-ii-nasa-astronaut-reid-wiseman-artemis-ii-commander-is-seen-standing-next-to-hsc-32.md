@@ -1,0 +1,15 @@
+---
+title: 'NASA astronaut Reid Wiseman, Artemis II commander is seen standing next to a ...'
+image: https://images-assets.nasa.gov/image/55199865911_c27eeeb9cf_o/55199865911_c27eeeb9cf_o~large.jpg
+image_alt: 'NASA astronaut Reid Wiseman, Artemis II commander is seen standing next to a Navy MH-60 Seahawk from Helicopter Sea Combat Squadron (HSC) 23 and talking with NASA Flight Surgeon Richard Scheuring on the flight deck of USS John P. Murtha after he and fellow crewmates NASA Astronauts Victor Glover, Christina Koch, and CSA (Canadian Space Agency) astronaut Jeremy Hansen, were extracted from their Orion spacecraft after splashdown, Friday, April 10, 2026, in the Pacific Ocean off the coast of California. NASA’s Artemis II mission took the quartet on a nearly 10-day journey around the Moon and back to Earth. Following a splashdown at 5:07 p.m. PDT (8:07 p.m. EDT), NASA, U.S. Navy, and U.S. Air Force teams are working to bring the Orion spacecraft aboard the recovery ship. Photo Credit: (NASA/Bill Ingalls)'
+type: external
+link: ''
+category: Artemis II
+labels:
+  - Return to Earth
+date: 2026-04-14T16:17:20+02:00
+---
+
+NASA astronaut Reid Wiseman, Artemis II commander is seen standing next to a Navy MH-60 Seahawk from Helicopter Sea Combat Squadron (HSC) 23 and talking with NASA Flight Surgeon Richard Scheuring on the flight deck of USS John P. Murtha after he and fellow crewmates NASA Astronauts Victor Glover, Christina Koch, and CSA (Canadian Space Agency) astronaut Jeremy Hansen, were extracted from their Orion spacecraft after splashdown, Friday, April 10, 2026, in the Pacific Ocean off the coast of California. NASA’s Artemis II mission took the quartet on a nearly 10-day journey around the Moon and back to Earth. Following a splashdown at 5:07 p.m. PDT (8:07 p.m. EDT), NASA, U.S. Navy, and U.S. Air Force teams are working to bring the Orion spacecraft aboard the recovery ship. Photo Credit: (NASA/Bill Ingalls)
+
+[_Image Credit: NASA_](https://images-assets.nasa.gov/image/55199865911_c27eeeb9cf_o/55199865911_c27eeeb9cf_o~large.jpg)
