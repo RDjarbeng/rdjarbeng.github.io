@@ -466,17 +466,21 @@ iframe {
 //   max-height: 40vh; 
 // }
 
-.post-excerpt,
-.post-card-excerpt {
+.excerpt-text {
   font-size: 0.88rem;
   padding-top: 4px;
   margin-bottom: 6px;
-  color: var(--grey-text);
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.post-excerpt,
+.post-card-excerpt {
+  @extend .excerpt-text;
+  color: var(--grey-text);
 }
 
 .post-meta-categories-container {
@@ -543,10 +547,7 @@ a {
   color: $link-color;
 }
 
-a:visited {
-  color: $link-color;
-  text-decoration: none; // This will keep the original color
-}
+
 
 a:hover {
   text-decoration: none;
@@ -554,9 +555,9 @@ a:hover {
 }
 
 .about-link {
-  &:visited {
-    color: $visited-color-white
-  }
+  // &:visited {
+  //   color: $visited-color-white
+  // }
 }
 
 .svg-icon {
