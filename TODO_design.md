@@ -16,7 +16,7 @@ This todo file contains design specifications and technical  directions for rdja
 ## High Priority - Immediate Fixes & Critical Enhancements
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
-- [ ] Fix: Gallery Titles - Investigate why all gallery pages show the same title. (High Importance, Medium Complexity: Debugging Jekyll logic)
+
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
@@ -31,7 +31,7 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. (Medium Importance, Trivial Complexity: CSS styling)
+- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
 - [ ] **Card images**: Card images for post cards have a top padding that leaves a gray space. (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] **Cards**: add category to cards on homepage, posts. (Medium Importance, Trivial Complexity: Jekyll layout modification)
@@ -105,3 +105,4 @@ This todo file contains design specifications and technical  directions for rdja
 - the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
+- Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
