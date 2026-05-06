@@ -7,14 +7,12 @@ categories:
 tags:
   - agentic object detection
   - document extraction
-  - Landing.ai
   - landingAI
   - Andrew Ng
   - AI technology
   - Computer Vision
   - OCR
-  - Bug Reporting and Feedback
-  - LandingAI and Andrew Ng
+  - Startup
 title: Agentic Object Detection and Document Extraction with Landing.ai
 image: /assets/images/agentic_obj_dection_landingai_cover.png
 layout: post

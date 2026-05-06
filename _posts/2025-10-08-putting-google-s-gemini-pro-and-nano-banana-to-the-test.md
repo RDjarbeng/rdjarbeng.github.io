@@ -7,18 +7,12 @@ categories:
 tags:
   - Gemini Pro
   - Nano Banana
-  - Richard Testing Out Nano Banana
+  - AI Image
+  - AI test
   - AI App Testing
-  - AI Image Generation
-  - Google AI
-  - Testing AI Image Generation
-  - Richard Djarbeng Testing AI Image Generation
   - Generative AI
-  - AI Test
-  - Prompt Engineering
   - Tech Review
   - Interior Design
-  - AI User Experience
   - Text-to-Image
   - Artificial Intelligence
 title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
