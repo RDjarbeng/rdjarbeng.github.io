@@ -128,7 +128,7 @@
     border-radius: 20px;
     border: 1px solid var(--card-border);
     font-size: 1rem;
-    background-color: var(--card-bg);
+    background-color: var(--input-bg);
     color: var(--text-color);
     outline: none;
     transition: border-color 0.2s ease;
@@ -151,8 +151,8 @@
 }
 
 .gallery-filter {
-    background: var(--card-bg);
-    border: none;
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
@@ -163,8 +163,9 @@
 
 .gallery-filter:hover,
 .gallery-filter.active {
-    background: #333;
-    color: #fff;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
 }
 
 .gallery-grid {

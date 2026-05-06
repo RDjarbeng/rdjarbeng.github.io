@@ -190,6 +190,9 @@ table {
   --input-bg: #ffffff;
   --input-border: #ccc;
   --input-text: #000000;
+  /* Pill/chip buttons — off-white so they're visible on the white page bg */
+  --pill-bg: #efefef;
+  --pill-border: #d8d8d8;
 }
 
 body {
