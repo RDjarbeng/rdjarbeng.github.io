@@ -1,3 +1,5 @@
+<!-- how to run on different port
+ bundle exec jekyll serve --config _config.yml,_config_dev.yml --port 5000 -->
 This todo contains direction for content on this site rdjarbeng.com, areas to improve as well as possible future directions
 
 ## Post cover images to improve:
@@ -158,3 +160,4 @@ accepted. For international transfers, please use the SWIFT details found above 
  ( What is this rapid payments)
 - [ ] Market Flash crash of 2000s
 - [ ] About the hugging face inference API
+- [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning

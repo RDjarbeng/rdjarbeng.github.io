@@ -6,7 +6,7 @@ categories:
   - Finance
 tags:
   - Visa
-  - Mastercard
+  - MasterCard
   - P2P Transfers
   - Money Transfer
   - Fintech

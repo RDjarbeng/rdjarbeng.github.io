@@ -5,7 +5,7 @@ author: Richard
 category: AI
 tags:
   - AI
-  - Openclaw
+  - OpenClaw
 title: OpenClaw surpasses React and Linux by stars on Github.
 image: ''
 image_alt: ''

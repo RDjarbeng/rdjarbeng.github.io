@@ -11,7 +11,7 @@ tags:
   - landingAI
   - Andrew Ng
   - AI technology
-  - Computer vision
+  - Computer Vision
   - OCR
   - Bug Reporting and Feedback
   - LandingAI and Andrew Ng

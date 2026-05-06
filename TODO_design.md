@@ -30,7 +30,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
 - [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
-- [ ] Fix: The last modified section for posts sometimes shows a wrong date on deployed site but not on local. (Medium Importance, Medium Complexity: Debugging Jekyll build/timezone)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
@@ -103,3 +102,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Issue: Tables are not showing text properly on dark mode
 - [ ] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
+- the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
+
+- the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card

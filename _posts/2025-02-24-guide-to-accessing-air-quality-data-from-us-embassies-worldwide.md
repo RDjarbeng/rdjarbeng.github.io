@@ -8,9 +8,7 @@ tags:
   - Air Quality
   - US embassies
   - EPA air quality
-  - US embassies air quality data
   - Airnow
-  - Global air quality data sources
   - AQI
 title: Guide to Accessing Air Quality Data from US Embassies Worldwide
 image: /assets/images/airnow_africa.png

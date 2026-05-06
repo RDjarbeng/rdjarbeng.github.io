@@ -32,14 +32,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentLightboxIndex = 0;
 
     // Categories Configuration
-    const imageCategories = [
-        { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
-        { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
-        { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
-        { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
-        { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
-        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
-    ];
+    const imageCategories = window.dynamicGalleryCategories
+        ? window.dynamicGalleryCategories.map(cat => ({
+            id: cat.id,
+            title: cat.title,
+            filter: item => item.dataset.category.includes(cat.filterStr)
+        }))
+        : [
+            { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
+            { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
+            { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
+            { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
+            { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
+            { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
+        ];
 
     const videoCategories = [
         { id: 'videos', title: 'All Videos', filter: item => item.dataset.category.includes('videos') },
@@ -289,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         item.innerHTML = `
-            <div class="gallery-thumb-wrapper">
+            <div class="gallery-item is-category">
                 ${imgContent}
                 <div class="gallery-overlay">
                     <span class="gallery-title-overlay">${displayTitle}</span>

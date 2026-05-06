@@ -11,10 +11,12 @@ layout: default
           %Y at %-I:%M %p" }}</time>
       </div>
       {% assign author = site.authors | where: 'short_name', page.author | first %}
+      {% if page.last_modified_at %}
       <div class="last_edited">
         Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
           page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
       </div>
+      {% endif %}
       {% if author %}
       <div>
         Author: <a href="{{ author.url | relative_url }}" class="author">{{ author.display_name }}</a>
@@ -104,23 +106,21 @@ layout: default
     {% assign max_related_counter = 0 %}
 
     {% for post in site.posts %}
-    {% assign same_tag_count = 0 %}
-    {% unless post.url == page.url %}
-    {% for tag in post.tags %}
-    {% if page.tags contains tag %}
-    {% assign same_tag_count = same_tag_count | plus: 1 %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
+      {% if post.url == page.url %}{% continue %}{% endif %}
+      {% assign same_tag_count = 0 %}
+      
+      {% for tag in post.tags %}
+        {% if page.tags contains tag %}
+          {% assign same_tag_count = 1 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
 
-    {% if same_tag_count >= min_common_tags %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% assign max_related_counter = max_related_counter | plus: 1 %}
-    {% if max_related_counter >= max_related %}
-    {% break %}
-    {% endif %}
-    {% endif %}
-    {% endunless %}
+      {% if same_tag_count > 0 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% assign max_related_counter = max_related_counter | plus: 1 %}
+        {% if max_related_counter >= max_related %}{% break %}{% endif %}
+      {% endif %}
     {% endfor %}
 
     {% if max_related_counter == 0 %}
