@@ -18,7 +18,7 @@
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
       {% unless include.show_excerpt == false %}
-      {% assign _excerpt_text = include.post.content | strip_html | truncatewords: 50 %}
+      {% assign _excerpt_text = include.post.content | markdownify | strip_html | truncatewords: 50 %}
       {% if _excerpt_text.size > 0 %}
       <p class="post-card-excerpt">{{ _excerpt_text }}</p>
       {% endif %}
