@@ -7,31 +7,22 @@ categories:
 tags:
   - Visa
   - MasterCard
-  - P2P Transfers
-  - Money Transfer
   - Fintech
   - Payment Networks
   - Bank Transfers
   - Cross-Border Payments
   - SWIFT
   - ACH
-  - Transaction Fees
-  - Cash Advance
   - Venmo
   - Zelle
   - Wise
   - PayPal
   - M-Pesa
-  - Mobile Money
+  - Mobile-Money
   - Remittance
   - Payments
-  - Digital Banking
   - Visa
   - MasterCard
-  - Revolut international transfers
-  - Wise international transfers with visa card
-  - Wise international transfers with visa or mastercard
-  - Revolut international transfers with visa or mastercard
 title: Why Can't I Just Send Money With My Visa Card?
 image: /assets/images/visa_locked_image.jpg
 layout: post
