@@ -110,6 +110,7 @@ section {
   display: block;
 }
 
+
 body {
   line-height: 1;
 }
@@ -134,6 +135,12 @@ table {
 
 /* basic reset */
 @import "minima";
+/* Neutralise Minima's a:visited colour change — visited links look the same as unvisited.
+   Placed here (after Minima, before all class rules) so any class defined below still wins. */
+a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
 @import "gallery";
 @import "personal";
 @import "dynamic_footer";
@@ -520,21 +527,27 @@ iframe {
   font-size: 21px;
 }
 
-.about-link {
+.about-link,
+.btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: var(--btn-bg);
-  /* Changed from #007bff to #0056b3 */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin-bottom: 1em;
 
+  /* Higher specificity (0,2,0) beats a:visited (0,1,0) — no browser quirk can override this */
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: var(--btn-hover);
-    /* You might want to adjust this as well */
+    color: white;
   }
 }
 
@@ -553,7 +566,7 @@ a {
   color: $link-color;
 }
 
-
+/* a:visited reset is now placed right after @import "minima" above */
 
 a:hover {
   text-decoration: none;
