@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let hasVisibleItems = false;
             const items = row.querySelectorAll('.dashboard-item:not(.dashboard-view-all-card)');
             items.forEach(itemBox => {
-                const link = itemBox.querySelector('.gallery-item-link');
+                const link = itemBox.querySelector('.gallery-card-link');
                 const title = link && link.dataset.title ? link.dataset.title.toLowerCase() : '';
                 if (title.includes(query) || query === '') {
                     itemBox.style.display = 'flex';
