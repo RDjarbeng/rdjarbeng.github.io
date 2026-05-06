@@ -1,0 +1,64 @@
+Configuration file: C:/Users/Richard/RD/myprojects/rdjarbeng-main/_config.yml
+
+
+***** Archive title (GENERATOR) RUNNING *****
+
+            Source: C:/Users/Richard/RD/myprojects/rdjarbeng-main
+       Destination: C:/Users/Richard/RD/myprojects/rdjarbeng-main/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+***** NORMALIZE TAGS (GENERATOR) RUNNING *****
+Normalizing tags for 162 total documents...
+***** NORMALIZE TAGS FINISHED *****
+***** REDIRECT GENERATOR RUNNING *****
+***** REDIRECT GENERATOR FINISHED *****
+My custom pagination: Paginated posts 11 / 11
+My custom pagination: Total pages: 3
+My custom pagination: Found existing index page at personal.md (URL: /personal/)
+My custom pagination: Removed original personal.md from site.pages
+My custom pagination: Paginated personal 3 / 3
+SEO Auto-Generator: Successfully generated unique descriptions for 1183 files.
+       Jekyll Feed: Generating feed for posts
+[TikTok Expander Plugin] Successfully checked/expanded URLs
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/gallery/memes/index.html[0m[0m
+[33m                     - gallery/memes/index.html[0m
+[33m                     - gallery/memes/page-2/index.html[0m
+[33m                     - gallery/memes/page-3/index.html[0m
+[33m                     - gallery/memes/page-4/index.html[0m
+[33m                     - gallery/memes/page-5/index.html[0m
+[33m                    [0m
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/tags/open-source/index.html[0m[0m
+[33m                     - tags/open-source/index.html[0m
+[33m                     - tags/open-source/index.html[0m
+[33m                    [0m
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/gallery/artemis-ii-return-to-earth-4-astronauts/index.html[0m[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii-return-to-earth-4-astronauts.md[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/return-to-earth/artemis-ii-return-to-earth-4-astronauts.md[0m
+[33m                    [0m
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/gallery/artemis-ii-the-artemis-ii-crew-clockwise-from-left-mission-specialist-christina-ko-april-7-2026-5/index.html[0m[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/artemis-ii-flight-day-highlights/artemis-ii-the-artemis-ii-crew-clockwise-from-left-mission-specialist-christina-ko-april-7-2026-5.md[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/return-to-earth/artemis-ii-the-artemis-ii-crew-clockwise-from-left-mission-specialist-christina-ko-april-7-2026-5.md[0m
+[33m                    [0m
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/gallery/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-4/index.html[0m[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/ground-systems/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-4.md[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/nasas-space-launch-system-rocket/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-4.md[0m
+[33m                    [0m
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36mC:/Users/Richard/RD/myprojects/rdjarbeng-main/_site/gallery/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-5/index.html[0m[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/ground-systems/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-5.md[0m
+[33m                     - C:/Users/Richard/RD/myprojects/rdjarbeng-main/_gallery/artemis-ii/nasas-space-launch-system-rocket/artemis-ii-nasa-s-space-launch-system-sls-rocket-and-orion-spacecraft-secured-to-th-sls-5.md[0m
+[33m                    [0m
+      Cover Images: Wrote 740 image paths to cover-images.txt
+                    done in 234.311 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

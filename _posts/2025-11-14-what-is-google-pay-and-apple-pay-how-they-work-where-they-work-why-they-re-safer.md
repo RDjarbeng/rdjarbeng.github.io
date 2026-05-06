@@ -10,21 +10,13 @@ tags:
   - Apple Pay
   - Google Wallet
   - Mobile Payments
-  - Google Pay in Africa
-  - Apple Pay in Africa
-  - Google Pay in Asia
-  - Apple Pay in Asia
   - Contactless Payments
   - NFC
-  - FinTech
+  - Fintech
   - Payment Security
   - Tokenization
-  - Google Pay vs Apple Pay
-  - How It Works
   - Online Payments
   - Travel Payments
-  - Payments in Africa
-  - Payments in Asia
 title: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're Safer
 image: /assets/images/google_pay_and_apple_pay_cover.webp
 image_alt: A cover image for an article titled What is Google Pay and Apple Pay?. It shows an Android phone with the Google Wallet app and an iPhone with the Apple Pay app, side-by-side, in front of a glowing world map to illustrate global payments.

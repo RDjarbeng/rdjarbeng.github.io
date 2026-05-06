@@ -7,7 +7,7 @@ categories:
 tags:
   - Singapore FinTech Festival
   - SFF 2025
-  - FinTech
+  - Fintech
   - Open Banking
   - UPI
   - PayNow

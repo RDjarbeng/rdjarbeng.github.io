@@ -16,7 +16,7 @@ This todo file contains design specifications and technical  directions for rdja
 ## High Priority - Immediate Fixes & Critical Enhancements
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
-- [ ] Fix: Gallery Titles - Investigate why all gallery pages show the same title. (High Importance, Medium Complexity: Debugging Jekyll logic)
+
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
@@ -25,14 +25,13 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Optimize CSS: Currently loads CSS for personal and video pages when not needed. (Medium Importance, Medium Complexity: Refactor CSS loading)
 - [ ] Style: Homepage contact form in dynamic nav needs proper styling. (Medium Importance, Trivial Complexity: CSS tweaks)
 - [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
-- [ ] Fix: Previews for posts on Twitter aren't working for some reason. (Medium Importance, Medium Complexity: Debugging meta tags)
+- [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
 - [ ] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Medium Importance, Trivial Complexity: CSS layout adjustment)
 - [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
 - [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
-- [ ] Fix: The last modified section for posts sometimes shows a wrong date on deployed site but not on local. (Medium Importance, Medium Complexity: Debugging Jekyll build/timezone)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. (Medium Importance, Trivial Complexity: CSS styling)
+- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
 - [ ] **Card images**: Card images for post cards have a top padding that leaves a gray space. (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] **Cards**: add category to cards on homepage, posts. (Medium Importance, Trivial Complexity: Jekyll layout modification)
@@ -103,3 +102,7 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Issue: Tables are not showing text properly on dark mode
 - [ ] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
+- the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
+
+- the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
+- Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?

@@ -8,18 +8,18 @@ tags:
   - data
   - open data
   - datasets
-  - data science
-  - machine learning
+  - Data Science
+  - Machine Learning
   - data repositories
   - AI
   - big data
   - data sources
   - Kaggle
-  - Hugging Face
+  - Hugging face
   - NLP
-  - computer vision
+  - Computer Vision
   - data analysis
-  - research
+  - Research
   - Google Dataset Search
   - AWS Open Data
   - UCI Repository
