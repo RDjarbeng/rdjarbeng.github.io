@@ -14,7 +14,7 @@
         <span class="carousel-category">{{ post.categories.first }}</span>
         {% endif %}
         <h2 class="carousel-title">{{ post.title }}</h2>
-        <p class="carousel-excerpt">{% include excerpt.html post=post %}</p>
+        <p class="carousel-excerpt">{% include_cached excerpt.html post=post %}</p>
         <a href="{{ post.url | relative_url }}" class="carousel-btn">Read the Post</a>
       </div>
     </div>
