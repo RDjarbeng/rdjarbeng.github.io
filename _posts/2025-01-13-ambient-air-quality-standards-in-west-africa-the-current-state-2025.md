@@ -5,7 +5,6 @@ categories:
   - Air Quality
 tags:
   - Air Quality
-  - AAQS
   - Air pollution
   - West Africa
   - Africa

@@ -9,7 +9,6 @@ tags:
   - Nano Banana
   - AI Image
   - AI test
-  - AI App Testing
   - Generative AI
   - Tech Review
   - Interior Design
