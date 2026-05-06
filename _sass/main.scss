@@ -466,11 +466,17 @@ iframe {
 //   max-height: 40vh; 
 // }
 
-.post-excerpt {
-  font-size: $post-excerpt-font-size;
-  padding-top: 5px;
+.post-excerpt,
+.post-card-excerpt {
+  font-size: 0.88rem;
+  padding-top: 4px;
+  margin-bottom: 6px;
   color: var(--grey-text);
-  text-overflow: ellipsis;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .post-meta-categories-container {
