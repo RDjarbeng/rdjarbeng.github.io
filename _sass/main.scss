@@ -163,6 +163,9 @@ table {
   --input-bg: #2a2a2a;
   --input-border: #444;
   --input-text: #e0e0e0;
+  /* Pill/chip buttons — distinct from card-bg so they're always visible */
+  --pill-bg: #2d2d2d;
+  --pill-border: #484848;
 }
 
 [data-theme="light"] {
