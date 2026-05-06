@@ -6,10 +6,6 @@ categories:
 tags:
   - Air Quality
   - Research papers
-  - Real-Time PM Exposure in Mining
-  - Mobile PM10 Hotspot Mapping
-  - Source-Specific & Modeling Advances for air quality
-  - Long-Term PM2.5 Monitoring
 title: 'This Week in Air Quality Research: Novel Insights and Sensor Advances (23-June-2025)'
 image: /assets/images/air_quality_sensors_city_background.jpg
 layout: post

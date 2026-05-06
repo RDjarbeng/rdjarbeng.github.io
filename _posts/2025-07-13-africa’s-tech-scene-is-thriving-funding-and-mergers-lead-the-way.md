@@ -11,11 +11,7 @@ tags:
   - Startup Funding
   - Venture Capital
   - Investments
-  - Mergers and Acquisitions
-  - M&A
   - Norrsken
-  - Norrsken East Africa
-  - Norrsken House Kigali
   - Fintech
   - HealthTech
   - Clean Energy
@@ -25,7 +21,6 @@ tags:
   - Rwanda
   - Nigeria
   - Egypt
-  - Africa/Week 2025
   - Innovation
   - Entrepreneurship
 title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Future
