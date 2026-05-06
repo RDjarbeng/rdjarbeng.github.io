@@ -8,25 +8,14 @@ tags:
   - data
   - open data
   - datasets
-  - Data Science
   - Machine Learning
-  - data repositories
   - AI
-  - big data
-  - data sources
   - Kaggle
   - Hugging face
   - NLP
   - Computer Vision
   - data analysis
   - Research
-  - Google Dataset Search
-  - AWS Open Data
-  - UCI Repository
-  - Papers With Code
-  - OpenML
-  - graph data
-  - Datasets for Datascience
 title: 'Where to Find Data: A Curated List of Free Datasets and Repositories'
 image: /assets/images/finding_your_data_fuel_cover.webp
 image_alt: "futuristic illustration of a glowing blue digital brain made of network connections and data icons, set between two server racks, with the text 'Finding Your Fuel: A Guide to Popular Open Data Repositories' and 'rdjarbeng.com' overlaid."
