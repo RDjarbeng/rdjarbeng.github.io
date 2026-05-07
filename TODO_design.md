@@ -108,3 +108,4 @@ This todo file contains design specifications and technical  directions for rdja
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
 - [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images)
 - [ ] Check access logs for user-agents see who's crawling, check for markdown content negotiation
+- [ ] Improve individual tags and categories page so that it's informative, currently a single tag page just links to the post it references, this isn't helping SEO.. Suggestions for improvement: we could link more posts in the category of the recommended posts or suggest popular posts on the site to make thenpage not look empty, or some other approach that's good for SEO
