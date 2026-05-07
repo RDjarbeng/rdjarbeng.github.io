@@ -1,6 +1,6 @@
 ---
 date: 2026-05-07T15:37:00+02:00
-published: false
+published: true
 author: Richard
 category: AI News
 tags:
@@ -8,41 +8,22 @@ tags:
   - AI
   - Elon Musk
 title: Anthropic Secures Exclusive Access to SpaceX's Colossus 1 Supercomputer
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/anthropic_spacex_colossus_cover.jpg
+image_alt: A flat vector illustration of a massive supercomputer data center with a rocket silhouette in the background.
 layout: post
 card_items: []
 ---
 
-Anthropic announced on May 6 a deal for exclusive access to Colossus 1, a Memphis data center supercomputer with over 300 megawatts of capacity—equivalent to more than 220,000 NVIDIA GPUs coming online this month. This immediately doubles rate limits for Claude Code on Pro, Max, Team, and Enterprise plans, eliminates peak-hour cuts, and boosts API limits for Opus models. Elon Musk approved the lease after meeting Anthropic's team, calling them competent and ethical, while hinting at future space-based AI compute ideas amid xAI's merger into SpaceX.
+Anthropic announced a major deal for exclusive access to Colossus 1, a massive supercomputer located in Memphis. This data center boasts over 300 megawatts of capacity, which is equivalent to more than 220,000 NVIDIA GPUs coming online this month. The partnership with SpaceX provides a significant boost to Anthropic's compute resources.
 
-Tweet from Anthropic [Claude @claudeai](https://x.com/claudeai)https://x.com/claudeai/status/2052060691893227611?s=20
-We’ve agreed to a partnership with 
+### Immediate Benefits for Users
+The new capacity translates to immediate improvements for Claude users. Anthropic is doubling Claude Code rate limits for Pro, Max, Team, and Enterprise plans. Peak-hour limit reductions are now gone for Pro and Max users. Developers using the Opus API will also see substantially higher rate limits.
 
-[@SpaceX](https://x.com/SpaceX)
-
- that will substantially increase our compute capacity.
-
-Additional information:
-
-Effective today, we are:
-
-1) Doubling Claude Code’s 5-hour rate limits for Pro, Max, and Team plans;
-
-2) Removing the peak hours limit reduction on Claude Code for Pro and Max plans; and
-
-3) Substantially raising our API rate limits for Opus models.
-
-Tweet about usage limits from claude dev twitter: https://x.com/ClaudeDevs/status/2052064938840228237?s=20
-
-
-
-Elon Musk confirms the deal. States that he met with Anthropic and they didn't set off his 'evil-meter'.  He also states that xAI was no longer using colossus 1 and so he was fine with this.
+### Elon Musk's Approval
+Elon Musk personally approved the lease after meeting with the Anthropic team. He described them as competent and ethical, noting they did not trigger his "evil-meter." This endorsement is notable given the competitive landscape of AI development.
 
 > "After that, I was ok leasing Colossus 1 to Anthropic, as SpaceXAI had already moved training to Colossus 2."
 
-## More News xAI is now a part of spaceX:
+### SpaceXAI Emergence
+In a related move, xAI is being dissolved as a separate entity and integrated directly into SpaceX. The new division, SpaceXAI, will handle all AI products for the aerospace company. SpaceXAI has already transitioned its training operations to the newer Colossus 2 facility, making Colossus 1 available for this partnership.
 
-According to Elon Musk via twitter/X:
-
-xAI will be dissolved as a separate company, so it will just be SpaceXAI, the AI products from SpaceX
