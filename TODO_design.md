@@ -107,3 +107,4 @@ This todo file contains design specifications and technical  directions for rdja
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
 - [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images)
+- [ ] Check access logs for user-agents see who's crawling, check for markdown content negotiation
