@@ -79,20 +79,6 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
   <div class="skills-container">
 
       <div class="skill-category">
-          <div class="skill-category-title">AI Tools &amp; Evaluation</div>
-          <div class="skill-list">
-              <span class="skill-item">Cursor</span>
-              <span class="skill-item">Claude Code</span>
-              <span class="skill-item">OpenAI Codex</span>
-              <span class="skill-item">Gemini</span>
-              <span class="skill-item">Antigravity</span>
-              <span class="skill-item">OpenClaw</span>
-              <span class="skill-item">AI-Assisted Dev Workflows</span>
-              <span class="skill-item">LLM Code Evaluation</span>
-          </div>
-      </div>
-
-      <div class="skill-category">
           <div class="skill-category-title">Languages</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
@@ -170,7 +156,6 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
               <span class="skill-item">SveltiaCMS</span>
               <span class="skill-item">Custom CMS Backends</span>
               <span class="skill-item">Headless CMS</span>
-              <span class="skill-item">Content Modelling</span>
           </div>
       </div>
 
@@ -205,6 +190,17 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
               <span class="skill-item">PR Review</span>
               <span class="skill-item">Test-Driven Development (TDD)</span>
               <span class="skill-item">Agile Methodologies</span>
+          </div>
+      </div>
+      <div class="skill-category">
+          <div class="skill-category-title">AI Tools &amp; Evaluation</div>
+          <div class="skill-list">
+              <span class="skill-item">Cursor</span>
+              <span class="skill-item">Gemini</span>
+              <span class="skill-item">Antigravity</span>
+              <span class="skill-item">OpenClaw</span>
+              <span class="skill-item">AI-Assisted Dev Workflows</span>
+              <span class="skill-item">LLM Code Evaluation</span>
           </div>
       </div>
 
