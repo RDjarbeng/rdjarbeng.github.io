@@ -172,3 +172,14 @@ Support is bank-by-bank. Here are a few examples:
 **Google Pay and Apple Pay aren’t replacements for your bank** — they’re **upgrades to your physical wallet**. They make payments faster, safer, and more convenient... _if_ your bank and region play along.
 
 > **Traveling soon?** Add your card to your phone's wallet _before_ you leave and test it with a small purchase at home. And **always** carry a physical backup card.
+
+---
+
+### Money Transfers & Banking Infrastructure Series
+This post is **Part 3** of a series on money transfers and the current finance/banking infrastructure on [rdjarbeng.com](https://rdjarbeng.com).
+
+*   [Part 1: Why Can't I Just Send Money With My Visa Card?](/visa-and-mastercard-payment-cards-not-transfer-tools/)
+*   [Part 2: Why Can I Pay for Netflix Instantly, But Not Send $5 To My Brother Abroad? Enter Revolut](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/)
+*   **Part 3: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're Safer** (Current)
+
+_Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._

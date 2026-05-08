@@ -167,4 +167,13 @@ Whether you're in a supported country or not, this shift in expectation is a goo
 
 Join me and over 50 million users who love Revolut. Sign up with my [link](https://revolut.com/referral/?referral-code=richarlnuq!OCT1-25-AR-US-REFBLOCK&geo-redirect)
 
+---
+
+### Money Transfers & Banking Infrastructure Series
+This post is **Part 2** of a series on money transfers and the current finance/banking infrastructure on [rdjarbeng.com](https://rdjarbeng.com).
+
+*   [Part 1: Why Can't I Just Send Money With My Visa Card?](/visa-and-mastercard-payment-cards-not-transfer-tools/)
+*   **Part 2: Why Can I Pay for Netflix Instantly, But Not Send $5 To My Brother Abroad? Enter Revolut** (Current)
+*   [Part 3: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're Safer](/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/)
+
 _Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._
