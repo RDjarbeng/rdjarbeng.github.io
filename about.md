@@ -421,7 +421,6 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
 
 <div class="about-section">
   <h2 class="about-section-title">Experience</h2>
-  <!-- <p class="about-section-subtitle">A blend of research excellence, industry innovation, and educational mentorship</p> -->
 
   <div class="experience-card">
     <div class="exp-header">
@@ -450,6 +449,10 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <span class="skill-pill">Environmental Tech</span>
     </div>
   </div>
+</div>
+
+<div class="about-section">
+  <h2 class="about-section-title">Education</h2>
 
   <div class="experience-card">
     <div class="exp-header">
