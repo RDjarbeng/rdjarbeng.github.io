@@ -11,7 +11,20 @@ title: Anthropic partners with SpaceX to Improve Compute Capacity with Colossus 
 image: /assets/images/posts/covers/anthropic_spacex_colossus_cover.jpg
 image_alt: A flat vector illustration for the blog post "Claude's Massive 2X Boost" featuring a supercomputer and rocket silhouette.
 layout: post
-card_items: []
+card_items:
+  - name: Anthropic
+    badge_1: AI Safety
+    badge_2: Claude
+    description: "The AI research company behind the Claude family of models, known for its focus on 'Constitutional AI' and safety."
+    url: "https://www.anthropic.com"
+  - name: Colossus Supercomputer
+    badge_1: Infrastructure
+    badge_2: 300MW+
+    description: "A massive supercomputer facility in Memphis, Tennessee, providing unprecedented compute power for training the next generation of AI."
+  - name: SpaceXAI
+    badge_1: Integration
+    badge_2: Aerospace
+    description: "The newly integrated AI division of SpaceX, combining high-performance computing with aerospace engineering."
 ---
 
 On 6th of May, 2026 Anthropic, the company behind Claude AI, announced a major deal for exclusive access to Colossus 1. This massive supercomputer facility, located in Memphis, represents a significant leap in available compute for the AI laboratory. The data center boasts over 300 megawatts of power capacity, which is equivalent to more than 220,000 NVIDIA GPUs coming online this month. This partnership with SpaceX provides a substantial foundation for Anthropic's future model development and deployment.
