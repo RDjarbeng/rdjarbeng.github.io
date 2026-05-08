@@ -66,42 +66,137 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
 <div class="about-section">
   <h2 class="about-section-title">Technical Skills</h2>
   <div class="skills-container">
+
+      <div class="skill-category">
+          <div class="skill-category-title">AI Tools &amp; Evaluation</div>
+          <div class="skill-list">
+              <span class="skill-item">Cursor</span>
+              <span class="skill-item">Claude Code</span>
+              <span class="skill-item">OpenAI Codex</span>
+              <span class="skill-item">Gemini</span>
+              <span class="skill-item">Antigravity</span>
+              <span class="skill-item">OpenClaw</span>
+              <span class="skill-item">AI-Assisted Dev Workflows</span>
+              <span class="skill-item">LLM Code Evaluation</span>
+          </div>
+      </div>
+
       <div class="skill-category">
           <div class="skill-category-title">Languages</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TS"> TypeScript</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python"> Python</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java"> Java</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++"> C++</span>
-              <!-- <span class="skill-item">SQL</span> -->
-              <!-- <span class="skill-item">HTML/CSS</span> -->
+              <span class="skill-item">C</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" alt="C#"> C#</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" alt="Dart"> Dart (Flutter)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+              <span class="skill-item">SQL</span>
           </div>
       </div>
 
       <div class="skill-category">
-          <div class="skill-category-title">Web & Mobile</div>
+          <div class="skill-category-title">Frontend</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React"> React.js</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
-              <!-- <span class="skill-item">Express.js</span> -->
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg" alt="Flutter"> Flutter</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" alt="Firebase"> Firebase</span>
-               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" alt="MySQL"> MySQL</span>
-              <!-- <span class="skill-item">PWA</span> -->
+              <span class="skill-item">GatsbyJS</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5"> HTML5</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3"> CSS3</span>
+              <span class="skill-item">PWAs</span>
+              <span class="skill-item">Performance Optimisation</span>
+              <span class="skill-item">Responsive Design</span>
           </div>
       </div>
 
       <div class="skill-category">
-          <div class="skill-category-title">Cloud & AI</div>
+          <div class="skill-category-title">Backend &amp; APIs</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS</span>
-              <!-- <span class="skill-item">PyTorch</span> -->
-              <!-- <span class="skill-item">TensorFlow</span> -->
-              <span class="skill-item">Vertex AI</span>
-              <span class="skill-item">BigQuery</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+              <span class="skill-item">Express.js</span>
+              <span class="skill-item">RESTful APIs</span>
+              <span class="skill-item">WebSockets</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
           </div>
       </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Machine Learning &amp; AI</div>
+          <div class="skill-list">
+              <span class="skill-item">PyTorch</span>
+              <span class="skill-item">Keras</span>
+              <span class="skill-item">FastAI</span>
+              <span class="skill-item">Computer Vision</span>
+              <span class="skill-item">Model Deployment</span>
+              <span class="skill-item">Hugging Face</span>
+              <span class="skill-item">Vertex AI</span>
+              <span class="skill-item">AWS ML</span>
+              <span class="skill-item">LLM Red-Teaming &amp; Evaluation</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Cloud &amp; DevOps</div>
+          <div class="skill-list">
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS (Solutions Architect)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud Platform</span>
+              <span class="skill-item">BigQuery</span>
+              <span class="skill-item">Dataflow</span>
+              <span class="skill-item">Netlify</span>
+              <span class="skill-item">Render</span>
+              <span class="skill-item">Hugging Face Spaces</span>
+              <span class="skill-item">CI/CD</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">CMS Platforms</div>
+          <div class="skill-list">
+              <span class="skill-item">DecapCMS (NetlifyCMS)</span>
+              <span class="skill-item">SveltiaCMS</span>
+              <span class="skill-item">Custom CMS Backends</span>
+              <span class="skill-item">Headless CMS</span>
+              <span class="skill-item">Content Modelling</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Data &amp; Analytics</div>
+          <div class="skill-list">
+              <span class="skill-item">Satellite Image Processing</span>
+              <span class="skill-item">BigQuery ML</span>
+              <span class="skill-item">Google Looker Studio</span>
+              <span class="skill-item">Data Visualisation</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Embedded &amp; IoT</div>
+          <div class="skill-list">
+              <span class="skill-item">C</span>
+              <span class="skill-item">C++</span>
+              <span class="skill-item">Raspberry Pi</span>
+              <span class="skill-item">Arduino</span>
+              <span class="skill-item">GSM Modules</span>
+              <span class="skill-item">Sensor Calibration</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Tools &amp; Practices</div>
+          <div class="skill-list">
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git"> Git</span>
+              <span class="skill-item">GitHub</span>
+              <span class="skill-item">Open-Source Maintenance</span>
+              <span class="skill-item">PR Review</span>
+              <span class="skill-item">Test-Driven Development (TDD)</span>
+              <span class="skill-item">Agile Methodologies</span>
+          </div>
+      </div>
+
   </div>
 </div>
 
