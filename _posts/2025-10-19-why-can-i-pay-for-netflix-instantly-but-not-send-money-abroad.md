@@ -83,7 +83,7 @@ This is one of the best parts of Revolut. It offers **virtual cards** (which you
 
 We've all been there: you sign up for a free trial for a service, forget to cancel, and then get that painful "Your card has been charged" notification. And of course, these apps make it as difficult as possible to unsubscribe.
 
-![Revolut cards on display with different colors. With text showing 'choose your spend'](/assets/images/revolut_cards_display.png "Revolut cards on display from the revolut website")
+![Revolut cards on display with different colors. With text showing 'Elevate your spend'](/assets/images/revolut_cards_display.png "Revolut cards on display from the revolut website")
 
 With Revolut, that problem is gone. You simply create a new virtual card for "Subscriptions," set a monthly spending limit of, say, $15, and use it to sign up for Netflix, Apple TV, etc. You are now _guaranteed_ to never be overcharged. This proactive control is a stark contrast to the old model, where you just get a painful notification _after_ the money is gone.
 
