@@ -113,3 +113,4 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
 - [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
+- [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
