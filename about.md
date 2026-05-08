@@ -30,20 +30,16 @@ Created a series on this on my blog exploring this phenomenon and potential solu
 
 I cover this in posts like [Complete Machine Learning Package — Learn by Doing](/complete-machine-learning-package-learn-by-doing/) and [Machine Learning Specialization by Andrew Ng and DeepLearning.AI](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/).
 
-### AI / Machine Learning
+### AI / Machine Learning:
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
 * How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
 
 ### Remote Sensing & GIS:
-**The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
-
-**Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
-
-How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
-
-How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
-
-What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
+* **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+* **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+* How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
+* How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
+* What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
 
 ***
 
