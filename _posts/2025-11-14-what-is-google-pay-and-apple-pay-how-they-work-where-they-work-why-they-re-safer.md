@@ -34,20 +34,22 @@ card_items:
   - name: "What is NFC?"
     badge_1: "Wireless Tech"
     description: "Near Field Communication (NFC) is a short-range wireless technology that allows communication between two devices (like a smartphone and a payment terminal) within a few centimeters. It powers the 'tap-to-pay' convenience."
-  - name: "Why Can't I Just Send Money With My Visa Card?"
+  - name: "Part 1: Why Can't I Just Send Money With My Visa Card?"
     image: "/assets/images/visa_locked_image.jpg"
     alt: "Cover image for Visa card limitations"
-    badge_1: "Payment Networks"
+    badge_1: "Series"
+    badge_2: "Payment Networks"
     description: "Exploring the limitations of Visa and Mastercard for direct peer-to-peer transfers."
     url: "/visa-and-mastercard-payment-cards-not-transfer-tools/"
-    link_text: "Read More"
-  - name: "Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
+    link_text: "Read Part 1"
+  - name: "Part 2: Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut"
     image: "/assets/images/revolut_sending_cross_border_cover.webp"
     alt: "Cover image for Revolut post"
-    badge_1: "Cross-Border Payments"
+    badge_1: "Series"
+    badge_2: "Cross-Border Payments"
     description: "A look into how digital payments and international transfers differ."
     url: "/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/"
-    link_text: "Read More"
+    link_text: "Read Part 2"
 ---
 In a world where your phone is your wallet, **Google Pay** (also known as the [Google Wallet](https://wallet.google/)) and [**Apple Pay**](https://www.apple.com/apple-pay/) have become essential tools for millions. But what exactly are they? Are they like bank accounts? How do they differ from your regular bank account? And can you use them everywhere, including in Africa and Asia? Let's try and answer these questions and give some context to these services for android and iPhone Users.
 
@@ -172,14 +174,5 @@ Support is bank-by-bank. Here are a few examples:
 **Google Pay and Apple Pay aren’t replacements for your bank** — they’re **upgrades to your physical wallet**. They make payments faster, safer, and more convenient... _if_ your bank and region play along.
 
 > **Traveling soon?** Add your card to your phone's wallet _before_ you leave and test it with a small purchase at home. And **always** carry a physical backup card.
-
----
-
-### Money Transfers & Banking Infrastructure Series
-This post is **Part 3** of a series on money transfers and the current finance/banking infrastructure on [rdjarbeng.com](https://rdjarbeng.com).
-
-*   [Part 1: Why Can't I Just Send Money With My Visa Card?](/visa-and-mastercard-payment-cards-not-transfer-tools/)
-*   [Part 2: Why Can I Pay for Netflix Instantly, But Not Send $5 To My Brother Abroad? Enter Revolut](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/)
-*   **Part 3: What is Google Pay and Apple Pay? How They Work, Where They Work, & Why They're Safer** (Current)
 
 _Disclaimer: The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial, legal or tax advice. The content of this post is solely the opinions of the writer who is not a licensed financial advisor or registered investment advisor._
