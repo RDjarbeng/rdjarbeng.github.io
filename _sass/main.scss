@@ -911,7 +911,7 @@ a:hover {
 .contact-section {
   margin: 40px auto;
   padding: 40px 20px;
-  background: linear-gradient(45deg, #5634ec, #e6f5ef);
+  // background: linear-gradient(45deg, #5634ec, #e6f5ef);
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
   border-radius: 12px;
@@ -934,7 +934,7 @@ a:hover {
 }
 
 .contact-container {
-  background: #fff;
+  background: var(--bg-color);
   padding: 30px;
   border-radius: 8px;
   max-width: 600px;
