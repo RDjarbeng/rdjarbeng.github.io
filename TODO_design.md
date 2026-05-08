@@ -112,3 +112,4 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Figure out how to structure pages so that even of it's jist a picture it's informative for the user, find out how X,Facebook, Instagram does this. Does adding details such as who posted this make a difference?
 - [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
+- [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
