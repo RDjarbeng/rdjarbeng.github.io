@@ -11,7 +11,7 @@ custom_css_class: about-page
   <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
 </div>
 <div class="about-section">
-<p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
+<p style="text-align: center; font-size: 1.1em; line-height: 1.6;">
 Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. AWS Certified Solutions Architect – Associate. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
