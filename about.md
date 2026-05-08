@@ -25,9 +25,10 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 Created a series on this on my blog exploring this phenomenon and potential solutions.
 
 ### Education:
-* What are the best ways to learn AI and machine learning and what are the recommended resources to use? 
-* Who are the key people in the field of AI and machine learning outside of the media hype about AI?
- Attempt to cover this in blogs about fastai and the open-source complete machine learning package.
+* What are the best ways to learn AI and machine learning, and what resources are recommended?
+* Who are the key people in the field of AI and machine learning, beyond the media hype?
+
+I cover this in posts like [Complete Machine Learning Package — Learn by Doing](/complete-machine-learning-package-learn-by-doing/) and [Machine Learning Specialization by Andrew Ng and DeepLearning.AI](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/).
 
 ### AI / Machine Learning
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
