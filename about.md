@@ -22,7 +22,7 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 ### Finance:
 * Why can I pay for Netflix instantly, but not send money to a friend abroad? 
 * Why are international payments slow, expensive, and opaque?
-Created a series on this on my blog exploring this phenomenon and potential solutions.
+Created a series on this on my blog exploring this phenomenon and potential solutions: [Part 1](/visa-and-mastercard-payment-cards-not-transfer-tools/), [Part 2](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/), [Part 3](/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/).
 
 ### Education:
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
@@ -32,6 +32,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
 
 ### AI / Machine Learning
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
+* How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
 
 ### Remote Sensing & GIS:
 **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
