@@ -161,3 +161,11 @@ accepted. For international transfers, please use the SWIFT details found above 
 - [ ] Market Flash crash of 2000s
 - [ ] About the hugging face inference API
 - [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning
+- [ ] Why Codecs Use YUV, Not RGB
+Video codecs separate brightness (Y) from color (U, V) because the human eye resolves brightness detail far better than color detail. 
+
+## Biological basis:
+ The retina has roughly 20 times more brightness-sensing rods than color-sensing cones. 
+
+## Chroma subsampling:
+ 4:2:0 stores color at one quarter the luma resolution, cutting file size with minimal visible loss.
