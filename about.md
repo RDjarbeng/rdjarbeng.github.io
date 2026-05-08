@@ -18,8 +18,21 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 
 ***
 
-Questions of interest:
+## Questions of interest:
+### Finance:
+* Why can I pay for Netflix instantly, but not send money to a friend abroad? 
+* Why are international payments slow, expensive, and opaque?
+Created a series on this on my blog exploring this phenomenon and potential solutions.
 
+### Education:
+* What are the best ways to learn AI and machine learning and what are the recommended resources to use? 
+* Who are the key people in the field of AI and machine learning outside of the media hype about AI?
+ Attempt to cover this in blogs about fastai and the open-source complete machine learning package.
+
+### AI / Machine Learning
+* What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
+
+### Remote Sensing & GIS:
 **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
 
 **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
