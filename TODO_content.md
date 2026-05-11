@@ -169,3 +169,4 @@ Video codecs separate brightness (Y) from color (U, V) because the human eye res
 
 ## Chroma subsampling:
  4:2:0 stores color at one quarter the luma resolution, cutting file size with minimal visible loss.
+- [ ] Tearable UI gallery to reveal your picture, make an app for users
