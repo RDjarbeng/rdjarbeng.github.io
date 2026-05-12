@@ -171,3 +171,12 @@ Video codecs separate brightness (Y) from color (U, V) because the human eye res
  4:2:0 stores color at one quarter the luma resolution, cutting file size with minimal visible loss.
 - [ ] Tearable UI gallery to reveal your picture, make an app for users
 - [ ] Check out hugging face inference api for converting trhe free background remover
+- [ ] Add content from groundsource
+ 
+Static Space Article
+🌐 rdjarbeng/groundsource-analysis
+
+A beautifully formatted static HTML article covering the complete analysis: dataset inspection, claim verification, the real-time forecasting architecture, Africa gap quantification, domain transferability analysis, and a hands-on tutorial. Accessible to anyone via direct URL.
+
+3. Markdown Blog Post
+A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. This is formatted with the YAML frontmatter required for the HF Community Blog.
