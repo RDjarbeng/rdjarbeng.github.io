@@ -180,3 +180,4 @@ A beautifully formatted static HTML article covering the complete analysis: data
 
 3. Markdown Blog Post
 A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. This is formatted with the YAML frontmatter required for the HF Community Blog.
+- [ ] Try tabFPN from zindi
