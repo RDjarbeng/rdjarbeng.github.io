@@ -181,3 +181,5 @@ A beautifully formatted static HTML article covering the complete analysis: data
 3. Markdown Blog Post
 A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. This is formatted with the YAML frontmatter required for the HF Community Blog.
 - [ ] Try tabFPN from zindi
+- [ ] Animate decade by decade evolution of AI- What is an AI winter?
+- use remotion or hyper frames to animate flight paths from country to Country, the country of origin should light up when the plane arrives
