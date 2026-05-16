@@ -183,3 +183,4 @@ A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. 
 - [ ] Try tabFPN from zindi
 - [ ] Animate decade by decade evolution of AI- What is an AI winter?
 - use remotion or hyper frames to animate flight paths from country to Country, the country of origin should light up when the plane arrives
+- [ ] I wonder if there's a benchmark that measures the runability of the code generated from these LLMs. For example I'm 60-80% sure code from claue will run on first try, 50-70% sure for GPT, about 40% sure for gemini
