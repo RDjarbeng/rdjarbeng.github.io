@@ -118,3 +118,4 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
 - the telegram bot needs to be updated on the new organization of the gallery
+- [ ] Link directly dev, coder legion posts manually to main site
