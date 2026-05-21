@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
         const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
-        const altText = title || 'Gallery image';
+        const altText = title || 'Gallery image on rdjarbeng.com';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
