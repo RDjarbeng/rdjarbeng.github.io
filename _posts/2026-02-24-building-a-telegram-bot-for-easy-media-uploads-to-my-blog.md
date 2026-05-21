@@ -5,7 +5,6 @@ author: Richard
 categories:
   - Technology
 tags:
-  - Richard Djarbeng's Blog
   - Automation
   - Python
   - Telegram Bot

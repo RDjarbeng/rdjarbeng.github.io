@@ -4,11 +4,10 @@ author: Richard
 categories:
   - AI
 tags:
-  - Reinforcement learning
+  - Reinforcement Learning
   - Game development
-  - ML in games
-  - AI agents
-  - expert systems
+  - Machine Learning
+  - AI 
 title: Why Isn't Reinforcement Learning Widely Used for Game AI Agents?
 image: /assets/images/reinforcement%20learning_in_games_grok.jpg
 video: ''

@@ -5,8 +5,8 @@ author: Richard
 categories:
   - Air Quality
 tags:
-  - IQair
-  - Air quality
+  - IQAir
+  - Air Quality
 title: 'The Hidden Cost of "Bad Air": Fact-Checking the Impact on Our Children'
 image: ''
 image_alt: ''

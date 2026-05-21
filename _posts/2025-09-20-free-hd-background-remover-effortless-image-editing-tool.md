@@ -8,8 +8,6 @@ tags:
   - Computer Vision
   - Background Remover
   - Free Background Remover
-  - Hugging face background remover
-  - Richard Djarbeng's background remover
   - background-removal
   - huggingface
   - gradio
@@ -17,12 +15,9 @@ tags:
   - ai-tools
   - image-segmentation
   - open-source
-  - open-source background removal
-  - machine learning
+  - Machine Learning
   - deployment
   - free-ai
-  - images with transparent background
-  - remove background and set to transparent
 title: 'Free HD Background Remover: Effortless Image Editing Tool'
 image: /assets/images/bg_remover_cover_rd.webp
 layout: post

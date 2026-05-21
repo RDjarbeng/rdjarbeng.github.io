@@ -10,15 +10,11 @@ tags:
   - Generative AI
   - AI Limitations
   - Text-to-Video
-  - AI Video Generation
+  - AI Video
   - AI Animation
   - Machine Learning
   - Bing Image Creator
-  - AI Fail
-  - Physics
-  - Bees
-  - Insects
-  - Animated-Images
+  - Generative AI
 title: Can AI bring images to life? Limits of Generative AI- Luma AI and Virtual Bees.
 image: /assets/images/bees_luma.jpeg
 image_alt: Cover image for Can AI bring images to life?

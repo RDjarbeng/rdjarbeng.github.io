@@ -11,24 +11,35 @@ custom_css_class: about-page
   <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
 </div>
 <div class="about-section">
-<p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
+<p style="text-align: center; font-size: 1.1em; line-height: 1.6;">
 Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. AWS Certified Solutions Architect – Associate. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
 
 ***
 
-Questions of interest:
+## Questions of interest:
+### Finance:
+* Why can I pay for Netflix instantly, but not send money to a friend abroad? 
+* Why are international payments slow, expensive, and opaque?
+Created a series on this on my blog exploring this phenomenon and potential solutions: [Part 1](/visa-and-mastercard-payment-cards-not-transfer-tools/), [Part 2](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/), [Part 3](/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/).
 
-**The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+### Education:
+* What are the best ways to learn AI and machine learning, and what resources are recommended?
+* Who are the key people in the field of AI and machine learning, beyond the media hype?
 
-**Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+I cover this in posts like [Complete Machine Learning Package — Learn by Doing](/complete-machine-learning-package-learn-by-doing/) and [Machine Learning Specialization by Andrew Ng and DeepLearning.AI](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/).
 
-How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
+### AI / Machine Learning:
+* What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
+* How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
 
-How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
-
-What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
+### Remote Sensing & GIS:
+* **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+* **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+* How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
+* How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
+* What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
 
 ***
 
@@ -66,42 +77,133 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
 <div class="about-section">
   <h2 class="about-section-title">Technical Skills</h2>
   <div class="skills-container">
+
       <div class="skill-category">
           <div class="skill-category-title">Languages</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TS"> TypeScript</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python"> Python</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java"> Java</span>
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++"> C++</span>
-              <!-- <span class="skill-item">SQL</span> -->
-              <!-- <span class="skill-item">HTML/CSS</span> -->
+              <span class="skill-item">C</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" alt="C#"> C#</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" alt="Dart"> Dart (Flutter)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+              <span class="skill-item">SQL</span>
           </div>
       </div>
 
       <div class="skill-category">
-          <div class="skill-category-title">Web & Mobile</div>
+          <div class="skill-category-title">Frontend</div>
           <div class="skill-list">
               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React"> React.js</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
-              <!-- <span class="skill-item">Express.js</span> -->
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg" alt="Flutter"> Flutter</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" alt="Firebase"> Firebase</span>
-               <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" alt="MySQL"> MySQL</span>
-              <!-- <span class="skill-item">PWA</span> -->
+              <span class="skill-item">GatsbyJS</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5"> HTML5</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3"> CSS3</span>
+              <span class="skill-item">PWAs</span>
+              <span class="skill-item">Performance Optimisation</span>
+              <span class="skill-item">Responsive Design</span>
           </div>
       </div>
 
       <div class="skill-category">
-          <div class="skill-category-title">Cloud & AI</div>
+          <div class="skill-category-title">Backend &amp; APIs</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS</span>
-              <!-- <span class="skill-item">PyTorch</span> -->
-              <!-- <span class="skill-item">TensorFlow</span> -->
-              <span class="skill-item">Vertex AI</span>
-              <span class="skill-item">BigQuery</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+              <span class="skill-item">Express.js</span>
+              <span class="skill-item">RESTful APIs</span>
+              <span class="skill-item">WebSockets</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
           </div>
       </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Machine Learning &amp; AI</div>
+          <div class="skill-list">
+              <span class="skill-item">PyTorch</span>
+              <span class="skill-item">Keras</span>
+              <span class="skill-item">FastAI</span>
+              <span class="skill-item">Computer Vision</span>
+              <span class="skill-item">Model Deployment</span>
+              <span class="skill-item">Hugging Face</span>
+              <span class="skill-item">Vertex AI</span>
+              <span class="skill-item">AWS ML</span>
+              <span class="skill-item">LLM Red-Teaming &amp; Evaluation</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Cloud &amp; DevOps</div>
+          <div class="skill-list">
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS (Solutions Architect)</span>
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud Platform</span>
+              <span class="skill-item">BigQuery</span>
+              <span class="skill-item">Dataflow</span>
+              <span class="skill-item">Netlify</span>
+              <span class="skill-item">Render</span>
+              <span class="skill-item">Hugging Face Spaces</span>
+              <span class="skill-item">CI/CD</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">CMS Platforms</div>
+          <div class="skill-list">
+              <span class="skill-item">DecapCMS (NetlifyCMS)</span>
+              <span class="skill-item">SveltiaCMS</span>
+              <span class="skill-item">Custom CMS Backends</span>
+              <span class="skill-item">Headless CMS</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Data &amp; Analytics</div>
+          <div class="skill-list">
+              <span class="skill-item">Satellite Image Processing</span>
+              <span class="skill-item">BigQuery ML</span>
+              <span class="skill-item">Google Looker Studio</span>
+              <span class="skill-item">Data Visualisation</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Embedded &amp; IoT</div>
+          <div class="skill-list">
+              <span class="skill-item">C</span>
+              <span class="skill-item">C++</span>
+              <span class="skill-item">Raspberry Pi</span>
+              <span class="skill-item">Arduino</span>
+              <span class="skill-item">GSM Modules</span>
+              <span class="skill-item">Sensor Calibration</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Tools &amp; Practices</div>
+          <div class="skill-list">
+              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git"> Git</span>
+              <span class="skill-item">GitHub</span>
+              <span class="skill-item">Open-Source Maintenance</span>
+              <span class="skill-item">PR Review</span>
+              <span class="skill-item">Test-Driven Development (TDD)</span>
+              <span class="skill-item">Agile Methodologies</span>
+          </div>
+      </div>
+      <div class="skill-category">
+          <div class="skill-category-title">AI Tools &amp; Evaluation</div>
+          <div class="skill-list">
+              <span class="skill-item">Cursor</span>
+              <span class="skill-item">Gemini</span>
+              <span class="skill-item">Antigravity</span>
+              <span class="skill-item">OpenClaw</span>
+              <span class="skill-item">AI-Assisted Dev Workflows</span>
+              <span class="skill-item">LLM Code Evaluation</span>
+          </div>
+      </div>
+
   </div>
 </div>
 
@@ -319,7 +421,6 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
 
 <div class="about-section">
   <h2 class="about-section-title">Experience</h2>
-  <!-- <p class="about-section-subtitle">A blend of research excellence, industry innovation, and educational mentorship</p> -->
 
   <div class="experience-card">
     <div class="exp-header">
@@ -348,6 +449,10 @@ What is the impact of advances in Internet of Things (IoT), AI and remote sensin
         <span class="skill-pill">Environmental Tech</span>
     </div>
   </div>
+</div>
+
+<div class="about-section">
+  <h2 class="about-section-title">Education</h2>
 
   <div class="experience-card">
     <div class="exp-header">

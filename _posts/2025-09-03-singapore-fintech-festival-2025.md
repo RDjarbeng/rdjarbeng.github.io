@@ -5,26 +5,12 @@ author: Richard
 categories:
   - Finance
 tags:
-  - Singapore FinTech Festival
-  - SFF 2025
-  - FinTech
+  - Fintech
   - Open Banking
-  - UPI
-  - PayNow
-  - SME Financing
-  - Digital Public Infrastructure
-  - Real-Time Payments
   - AI in Finance
-  - Tokenization
-  - Quantum Computing
-  - Financial Inclusion
   - Data Privacy
   - Cybercrime
-  - Sopnendu Mohanty
-  - Global Finance
-  - Cross-Border Payments
-  - Digital Assets
-  - API-Driven Architecture
+  - Cross-Border Payments  
 title: A Decade of Singapore FinTech Festival 2025-Decoding an Email
 image: /assets/images/sff_2025_cover_image.webp
 layout: post

@@ -5,7 +5,7 @@ author: Richard
 category: Help
 tags:
   - chrome
-  - windows
+  - Windows
   - productivity
 title: 'Never Lose Your Chrome Tabs Again: Steps to Resume Tabs on Startup in 1 minute'
 image: /assets/images/resume_chrome_tabs_rd.webp
