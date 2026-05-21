@@ -1,5 +1,5 @@
 ---
-title: Google Anti-gravity 2.0-agentic IDE for full-stack development
+title: Google Antigravity 2.0-agentic IDE for full-stack development
 published: true
 date: 2026-05-21T12:17:00+02:00
 platform: youtube
@@ -50,3 +50,58 @@ The AI doesn't just write text; it interacts with the physical environment of yo
 By introducing scheduled loops that run natively from the desktop menu bar, it transforms AI from a reactive tool (waiting for your prompt) into a proactive worker (running checks, compiling daily tasks, or scraping updates at 5:00 AM while you sleep).
 
 **In short:** It changes the role of a human from a line-by-line coder to a high-level product director. You provide the vision, voice comments, and security approvals, while an autonomous ecosystem of agents handles the heavy engineering lifting.
+
+While the official promotional video makes Anti-gravity 2.0 look like a groundbreaking leap into the future of software development, **the actual people using it—the developers—are absolutely furious.**
+
+If you just stumbled onto this page, here is a breakdown of the massive community backlash happening right now in the YouTube comments.
+
+---
+## Reactions from developers- Youtube edition
+The paragraphs above reflects what the antigravity IDE was supposed to deliver, however I was curious enough to check the comments and see what some users are actually saying.
+
+### The Big Controversy: "Where is the Code Editor?!"
+
+The overwhelming majority of comments are from angry developers shouting a variation of the exact same question: **"Where is the code editor?"**
+
+In version 1.0, Google Anti-gravity was a highly praised, "goated" software development environment (IDE) that developers used to actively write, view, and organize their code files. It looked like a fork of vscode with AI enhancements. In version 2.0, Google completely removed the traditional text editor view, transforming the entire app into a standalone, full-screen _AI chat assistant_.
+
+Developers are describing the update as:
+
+* **"Antigravity is the new Anti-Coding"**
+* **"The worst update in the history of any program."**
+* **"Catastrophic change... what a joke."**
+
+---
+
+### Why Are Developers So Mad?
+
+To a general observer, an automated AI agent building apps for you sounds amazing. But to real-world programmers, this update completely broke their daily workflows for a few critical reasons:
+
+* **Forced Adoption & Broken Setups:** The update was pushed automatically without warning. Some developers were caught mid-presentation to their teams when their workspace suddenly vanished. Others complained that the update wiped out their open projects, active extensions, and coding history.
+* **Loss of Basic Control:** Programmers don't want a "black box" where an AI does everything while hiding the actual code files. They need to see their file managers, terminals, and code runners. Now, they feel like they are being forced to "burn AI tokens" just to make basic edits they used to do manually for free.
+* **Corporate Metric Manipulation:** Several users feel Google forced this change simply to juice their user adoption metrics for Gemini, effectively holding a functional developer tool hostage to boost corporate KPIs.
+* **Bugs & Authentication Issues:** On top of the missing editor, the launch is plagued with bugs. Many users report the app completely hangs on the login screen, throwing backend errors and making it impossible to even submit an in-app bug report.
+
+---
+
+## Steps taken by Antigravity users after this update
+Let's look at what some users have done after seeing the release of Antigravity 2.0.
+
+### The Mass Exodus
+
+The immediate reaction from some in the community is a massive wave of uninstalls. Developers are openly quitting the platform and moving back to tried-and-true alternatives:
+
+> *"Thanks for the update. Switching back to VSCode + Claude code."*
+> *"Why would anyone go for this if I have Claude Code or Codex or even better Cursor?"*
+
+---
+
+### The Workarounds (How Developers are Fixing It)
+
+Tech communities always look for a fix. If you or someone you know got trapped in this update, the comments highlight a few community-discovered escape hatches:
+
+1. **The Double App Split:** On Mac, the update secretly splits the program into two apps. "Antigravity" is the new AI chat client, but a separate app called **"Antigravity IDE"** might still be in your applications folder containing the old editor interface. *(Note: Users report the new separate IDE app is broken for WSL/Linux workflows).*
+2. **The Website Scroll-Down:** If you go back to the official website and scroll past the main download buttons, Google has quietly left links to download the standalone "Antigravity IDE" and "Antigravity CLI" separately.
+3. **The Total Downgrade:** Savvy developers are completely uninstalling version 2.0, going to the "previous releases" archive on the website, downloading version 1.23.2, and immediately checking their settings to **turn off automatic updates**.
+
+> **The Takeaway:** Google tried to build an AI application of the future, but in doing so, they took away the core tool that engineers actually need to get their jobs done today. Would be interested in seeing how this unfolds.
