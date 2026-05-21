@@ -40,4 +40,4 @@ https://www.nasa.gov/gallery/artemis-ii-splashdown-and-return/page/2/
 https://www.nasa.gov/gallery/artemis-ii-splashdown-and-return/
 
 You can now enjoy much faster local builds using either: 
-bundle exec jekyll build --config _config_dev.yml or bundle exec jekyll serve --config _config.yml,_config_dev.yml
+bundle exec jekyll build --config _config.yml,_config_dev.yml or bundle exec jekyll serve --config _config.yml,_config_dev.yml
