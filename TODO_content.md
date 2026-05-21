@@ -1,3 +1,5 @@
+<!-- how to run on different port
+ bundle exec jekyll serve --config _config.yml,_config_dev.yml --port 5000 -->
 This todo contains direction for content on this site rdjarbeng.com, areas to improve as well as possible future directions
 
 ## Post cover images to improve:
@@ -158,3 +160,29 @@ accepted. For international transfers, please use the SWIFT details found above 
  ( What is this rapid payments)
 - [ ] Market Flash crash of 2000s
 - [ ] About the hugging face inference API
+- [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning
+- [ ] Why Codecs Use YUV, Not RGB
+Video codecs separate brightness (Y) from color (U, V) because the human eye resolves brightness detail far better than color detail. 
+
+## Biological basis:
+ The retina has roughly 20 times more brightness-sensing rods than color-sensing cones. 
+
+## Chroma subsampling:
+ 4:2:0 stores color at one quarter the luma resolution, cutting file size with minimal visible loss.
+- [ ] Tearable UI gallery to reveal your picture, make an app for users
+- [ ] Check out hugging face inference api for converting trhe free background remover
+- [ ] Add content from groundsource
+ 
+Static Space Article
+🌐 rdjarbeng/groundsource-analysis
+
+A beautifully formatted static HTML article covering the complete analysis: dataset inspection, claim verification, the real-time forecasting architecture, Africa gap quantification, domain transferability analysis, and a hands-on tutorial. Accessible to anyone via direct URL.
+
+3. Markdown Blog Post
+A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. This is formatted with the YAML frontmatter required for the HF Community Blog.
+- [ ] Try tabFPN from zindi
+- [ ] Animate decade by decade evolution of AI- What is an AI winter?
+- use remotion or hyper frames to animate flight paths from country to Country, the country of origin should light up when the plane arrives
+- [ ] I wonder if there's a benchmark that measures the runability of the code generated from these LLMs. For example I'm 60-80% sure code from claue will run on first try, 50-70% sure for GPT, about 40% sure for gemini
+- [ ] Future Africa investors
+- [ ] Write about product hunt and what it does

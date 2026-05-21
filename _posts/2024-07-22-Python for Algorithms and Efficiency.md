@@ -4,7 +4,7 @@ date: 2024-07-22
 author: Richard
 image: https://github.com/user-attachments/assets/7f4e6f80-cae3-4622-b1cf-4bc4825c3ba8
 categories: ["Software Engineering"]
-tags: [Python, algorithims, recommended algorithms resources]
+tags: [Python, algorithims]
 image_alt: "Cover image for Mastering Python for Algorithms and Efficiency"
 ---
 

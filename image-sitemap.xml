@@ -1,0 +1,44 @@
+---
+layout: none
+permalink: /image-sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  {%- comment -%}Posts with cover images{%- endcomment -%}
+  {%- for post in site.posts -%}
+  {%- if post.image and post.image != '' -%}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <image:image>
+      <image:loc>{{ post.image | absolute_url }}</image:loc>
+      <image:title>{{ post.title | xml_escape }}</image:title>
+      {%- if post.image_alt and post.image_alt != '' %}
+      <image:caption>{{ post.image_alt | xml_escape }}</image:caption>
+      {%- elsif post.excerpt %}
+      <image:caption>{{ post.excerpt | strip_html | strip_newlines | xml_escape | truncate: 300 }}</image:caption>
+      {%- endif %}
+    </image:image>
+  </url>
+  {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%}Gallery items with images (covers, AI art, external){%- endcomment -%}
+  {%- for item in site.gallery -%}
+  {%- if item.image and item.image != '' -%}
+  <url>
+    <loc>{{ item.url | absolute_url }}</loc>
+    <image:image>
+      <image:loc>{{ item.image | absolute_url }}</image:loc>
+      <image:title>{{ item.title | xml_escape }}</image:title>
+      {%- if item.content and item.content != '' %}
+      <image:caption>{{ item.content | strip_html | strip_newlines | xml_escape | truncate: 300 }}</image:caption>
+      {%- endif %}
+    </image:image>
+  </url>
+  {%- endif -%}
+  {%- endfor -%}
+
+</urlset>

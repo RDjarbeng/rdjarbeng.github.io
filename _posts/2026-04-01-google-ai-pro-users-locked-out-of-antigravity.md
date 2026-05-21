@@ -118,4 +118,8 @@ For a perfect summary of the community's current vibe, complete with Antigravity
 
 [](https://discuss.ai.google.dev/t/bug-antigravity-ide-critical-quota-error-6-day-lockout-for-google-ai-pro-subscriber/122780/8)
 
+### Media mentions:
+
+Also posted on [dev.to for Richard Djarbeng](https://dev.to/rdjarbeng/upgraded-to-google-ai-pro-and-got-locked-out-for-a-week-other-users-are-jumping-ship-4iha)
+
 _P.S. The writer is fully aware of the irony that this post was formatted using Gemini 3.1 Pro from Google._

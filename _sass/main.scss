@@ -110,6 +110,7 @@ section {
   display: block;
 }
 
+
 body {
   line-height: 1;
 }
@@ -134,6 +135,12 @@ table {
 
 /* basic reset */
 @import "minima";
+/* Neutralise Minima's a:visited colour change — visited links look the same as unvisited.
+   Placed here (after Minima, before all class rules) so any class defined below still wins. */
+a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
 @import "gallery";
 @import "personal";
 @import "dynamic_footer";
@@ -163,6 +170,9 @@ table {
   --input-bg: #2a2a2a;
   --input-border: #444;
   --input-text: #e0e0e0;
+  /* Pill/chip buttons — distinct from card-bg so they're always visible */
+  --pill-bg: #2d2d2d;
+  --pill-border: #484848;
 }
 
 [data-theme="light"] {
@@ -187,6 +197,9 @@ table {
   --input-bg: #ffffff;
   --input-border: #ccc;
   --input-text: #000000;
+  /* Pill/chip buttons — off-white so they're visible on the white page bg */
+  --pill-bg: #efefef;
+  --pill-border: #d8d8d8;
 }
 
 body {
@@ -414,6 +427,8 @@ iframe {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -464,17 +479,21 @@ iframe {
 //   max-height: 40vh; 
 // }
 
-.post-excerpt,
-.post-card-excerpt {
+.excerpt-text {
   font-size: 0.88rem;
   padding-top: 4px;
   margin-bottom: 6px;
-  color: var(--grey-text);
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.post-excerpt,
+.post-card-excerpt {
+  @extend .excerpt-text;
+  color: var(--grey-text);
 }
 
 .post-meta-categories-container {
@@ -508,21 +527,27 @@ iframe {
   font-size: 21px;
 }
 
-.about-link {
+.about-link,
+.btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: var(--btn-bg);
-  /* Changed from #007bff to #0056b3 */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin-bottom: 1em;
 
+  /* Higher specificity (0,2,0) beats a:visited (0,1,0) — no browser quirk can override this */
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: var(--btn-hover);
-    /* You might want to adjust this as well */
+    color: white;
   }
 }
 
@@ -541,10 +566,7 @@ a {
   color: $link-color;
 }
 
-a:visited {
-  color: $link-color;
-  text-decoration: none; // This will keep the original color
-}
+/* a:visited reset is now placed right after @import "minima" above */
 
 a:hover {
   text-decoration: none;
@@ -552,9 +574,9 @@ a:hover {
 }
 
 .about-link {
-  &:visited {
-    color: $visited-color-white
-  }
+  // &:visited {
+  //   color: $visited-color-white
+  // }
 }
 
 .svg-icon {
@@ -889,11 +911,11 @@ a:hover {
 .contact-section {
   margin: 40px auto;
   padding: 40px 20px;
-  background: linear-gradient(45deg, #5634ec, #e6f5ef);
+  // background: linear-gradient(45deg, #5634ec, #e6f5ef);
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   max-width: 800px;
 }
 
@@ -912,7 +934,7 @@ a:hover {
 }
 
 .contact-container {
-  background: #fff;
+  background: var(--bg-color);
   padding: 30px;
   border-radius: 8px;
   max-width: 600px;
@@ -1125,10 +1147,6 @@ a:hover {
 
 
 
-.toc-content li :hover {
-  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
-}
-
 .toc-header {
   display: flex;
   justify-content: space-between;
@@ -1168,17 +1186,29 @@ a:hover {
 }
 
 .toc-content a {
+  display: block;
+  padding: 4px 8px 4px 12px;
+  border-left: 2px solid transparent;
   color: $toc-link-color;
   font-size: 0.875rem;
   /* 14px if root is 16px; adjust to 0.9375rem (15px) if you want even subtler */
   line-height: 1.4;
   /* Slightly tighter for compact lists */
-  transition: color 0.3s ease;
+  transition: all 0.1s ease;
+  text-decoration: none;
 }
 
-.toc-content a:hover,
+.toc-content a:hover {
+  color: $link-hover-color;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.05));
+  border-left-color: var(--card-border);
+}
+
 .toc-content a.active {
   color: $link-hover-color;
+  font-weight: 700;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
+  border-left-color: $link-hover-color;
 }
 
 /* Nested TOC items */
@@ -1401,10 +1431,11 @@ a:hover {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
 
   //was 769
   .toc-sidebar {
+    margin-left: clamp(-23px, calc((1045px - 100vw) / 2), 0px);
     display: block;
     /* Ensure TOC is visible on desktop */
   }

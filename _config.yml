@@ -116,7 +116,7 @@ collections:
     permalink: /personal/:title/
   gallery:
     output: true
-    permalink: /gallery/:name/
+    permalink: /gallery/:path/
   category_info:
     output: false
   gallery_categories:
