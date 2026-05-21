@@ -120,3 +120,4 @@ This todo file contains design specifications and technical  directions for rdja
 - the telegram bot needs to be updated on the new organization of the gallery
 - [ ] Link directly dev, coder legion posts manually to main site
 - [ ] Add link to background remover amd and projects on the about page
+- [ ] Meme page text on cards for light mode have low contrast - need to fix
