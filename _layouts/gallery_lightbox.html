@@ -35,40 +35,9 @@ layout: default
   <button class="lightbox-nav next">&#10095;</button>
 </div>
 
-<div class="gallery-container">
-  <header class="gallery-header">
-    <h1>Gallery - Richard Djarbeng's Blog</h1>
-    <p class="gallery-description">
-      Explore a visual journey through my life and interests. This collection features cover images from my blog
-      posts, AI-generated art, memes I enjoy, and videos from social media.
-    </p>
-    <!-- Gallery Hub Sections -->
-  <div class="gallery-sections-hub">
-    <a href="{{ '/gallery/memes/' | relative_url }}" class="hub-card memes">
-      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/memes_card.png' | relative_url }}')"></div>
-      <div class="hub-card-content">
-        <span class="hub-card-tag">Collections</span>
-        <h2 class="hub-card-title">Meme Gallery</h2>
-        <p class="hub-card-desc">The best of the internet, curated.</p>
-      </div>
-    </a>
-    <a href="{{ '/gallery/videos/' | relative_url }}" class="hub-card videos">
-      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/videos_card.png' | relative_url }}')"></div>
-      <div class="hub-card-content">
-        <span class="hub-card-tag">Library</span>
-        <h2 class="hub-card-title">Video Library</h2>
-        <p class="hub-card-desc">Short-form gems and social finds.</p>
-      </div>
-    </a>
-    <a href="{{ '/gallery/videos/youtube/' | relative_url }}" class="hub-card youtube">
-      <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/youtube_card.png' | relative_url }}')"></div>
-      <div class="hub-card-content">
-        <span class="hub-card-tag">Hub</span>
-        <h2 class="hub-card-title">YouTube Hub</h2>
-        <p class="hub-card-desc">Curated playlists and deep dives.</p>
-      </div>
-    </a>
-  </div>
+<div class="gallery-page-shell">
+  <!-- Left filter rail — styled as fixed sidebar when body has class gallery-page -->
+  <aside class="gallery-filter-rail" aria-label="Gallery category filters">
     <nav class="gallery-nav" id="dynamic-gallery-nav">
       <button class="gallery-filter active" data-filter="all">All Items</button>
       {% for cat in site.gallery_categories %}
@@ -85,25 +54,62 @@ layout: default
       <button class="gallery-filter" data-filter="instagram">Instagram</button>
       <button class="gallery-filter" data-filter="tiktok">TikTok</button>
     </nav>
-    <script>
-      window.dynamicGalleryCategories = [
-        {% for cat in site.gallery_categories %}
-        {% if cat.title != 'None' and cat.title != 'Other' %}
-        {
-          id: "{{ cat.title | slugify }}",
-          title: "{{ cat.title }}",
-          filterStr: "{{ cat.title | slugify }}"
-        },
-        {% endif %}
-        {% endfor %}
-        { id: 'external', title: 'Gallery Images', filterStr: 'external' },
-        { id: 'cover-images', title: 'Cover Images', filterStr: 'cover-images' }
-      ];
-    </script>
-    <div class="gallery-search-container">
-      <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
-    </div>
-  </header>
+  </aside>
+
+  <div class="gallery-content-area">
+    <div class="gallery-container">
+      <header class="gallery-header">
+        <h1>Gallery - Richard Djarbeng's Blog</h1>
+        <p class="gallery-description">
+          Explore a visual journey through my life and interests. This collection features cover images from my blog
+          posts, AI-generated art, memes I enjoy, and videos from social media.
+        </p>
+        <!-- Gallery Hub Sections -->
+        <div class="gallery-sections-hub">
+          <a href="{{ '/gallery/memes/' | relative_url }}" class="hub-card memes">
+            <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/memes_card.png' | relative_url }}')"></div>
+            <div class="hub-card-content">
+              <span class="hub-card-tag">Collections</span>
+              <h2 class="hub-card-title">Meme Gallery</h2>
+              <p class="hub-card-desc">The best of the internet, curated.</p>
+            </div>
+          </a>
+          <a href="{{ '/gallery/videos/' | relative_url }}" class="hub-card videos">
+            <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/videos_card.png' | relative_url }}')"></div>
+            <div class="hub-card-content">
+              <span class="hub-card-tag">Library</span>
+              <h2 class="hub-card-title">Video Library</h2>
+              <p class="hub-card-desc">Short-form gems and social finds.</p>
+            </div>
+          </a>
+          <a href="{{ '/gallery/videos/youtube/' | relative_url }}" class="hub-card youtube">
+            <div class="hub-card-bg" style="background-image: url('{{ '/assets/images/gallery/youtube_card.png' | relative_url }}')"></div>
+            <div class="hub-card-content">
+              <span class="hub-card-tag">Hub</span>
+              <h2 class="hub-card-title">YouTube Hub</h2>
+              <p class="hub-card-desc">Curated playlists and deep dives.</p>
+            </div>
+          </a>
+        </div>
+        <script>
+          window.dynamicGalleryCategories = [
+            {% for cat in site.gallery_categories %}
+            {% if cat.title != 'None' and cat.title != 'Other' %}
+            {
+              id: "{{ cat.title | slugify }}",
+              title: "{{ cat.title }}",
+              filterStr: "{{ cat.title | slugify }}"
+            },
+            {% endif %}
+            {% endfor %}
+            { id: 'external', title: 'Gallery Images', filterStr: 'external' },
+            { id: 'cover-images', title: 'Cover Images', filterStr: 'cover-images' }
+          ];
+        </script>
+        <div class="gallery-search-container">
+          <input type="text" id="gallery-search" placeholder="Search gallery items..." class="gallery-search-input">
+        </div>
+      </header>
   
   
 
@@ -237,6 +243,8 @@ layout: default
         {% endif %}
     {% endfor %}
   </div>
+</div>
+</div>
 </div>
 
 <script>
