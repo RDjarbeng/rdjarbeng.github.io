@@ -5,7 +5,7 @@ categories:
   - Computer Vision
 tags:
   - AI
-  - computer vision
+  - Computer Vision
   - yolo
   - Machine Learning
 title: 'YOLO: Evolution, Applications, and Current Trends in Object Detection'

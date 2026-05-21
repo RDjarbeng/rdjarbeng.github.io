@@ -4,7 +4,9 @@ author: Richard
 categories:
   - Web
 tags:
-  - SveltiaCMS, CMS, Jekyll, Richard's Website, Website
+  - SveltiaCMS
+  - CMS
+  - Jekyll
 title: 'My Experience with SveltiaCMS: A Game-Changer for Website Management'
 image: /assets/images/sveltia-logo.svg
 layout: post

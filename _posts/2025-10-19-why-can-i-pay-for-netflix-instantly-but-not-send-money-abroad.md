@@ -35,20 +35,22 @@ card_items:
   - name: "Cross-Border Payments Explained"
     badge_1: "International Finance"
     description: "Cross-border payments involve moving money across different countries and currencies. They traditionally require intermediary 'correspondent banks' and rely on networks like SWIFT, often resulting in high fees and processing delays."
-  - name: "Why Can't I Just Send Money With My Visa Card?"
+  - name: "Part 1: Why Can't I Just Send Money With My Visa Card?"
     image: "/assets/images/visa_locked_image.jpg"
     alt: "Cover image for Visa card limitations"
-    badge_1: "Payment Networks"
+    badge_1: "Series"
+    badge_2: "Payment Networks"
     description: "Exploring the limitations of Visa and Mastercard for direct peer-to-peer transfers."
     url: "/visa-and-mastercard-payment-cards-not-transfer-tools/"
-    link_text: "Read More"
-  - name: "What is Google Pay and Apple Pay?"
+    link_text: "Read Part 1"
+  - name: "Part 3: What is Google Pay and Apple Pay?"
     image: "/assets/images/google_pay_and_apple_pay_cover.webp"
     alt: "Cover for Google Pay and Apple Pay post"
-    badge_1: "Digital Wallets"
+    badge_1: "Series"
+    badge_2: "Digital Wallets"
     description: "How they work, where they work, and why they're safer."
     url: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/"
-    link_text: "Read More"
+    link_text: "Read Part 3"
 ---
 
 In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I wrote about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.
@@ -81,7 +83,7 @@ This is one of the best parts of Revolut. It offers **virtual cards** (which you
 
 We've all been there: you sign up for a free trial for a service, forget to cancel, and then get that painful "Your card has been charged" notification. And of course, these apps make it as difficult as possible to unsubscribe.
 
-![Revolut cards on display with different colors. With text showing 'choose your spend'](/assets/images/revolut_cards_display.png "Revolut cards on display from the revolut website")
+![Revolut cards on display with different colors. With text showing 'Elevate your spend'](/assets/images/revolut_cards_display.png "Revolut cards on display from the revolut website")
 
 With Revolut, that problem is gone. You simply create a new virtual card for "Subscriptions," set a monthly spending limit of, say, $15, and use it to sign up for Netflix, Apple TV, etc. You are now _guaranteed_ to never be overcharged. This proactive control is a stark contrast to the old model, where you just get a painful notification _after_ the money is gone.
 
