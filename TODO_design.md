@@ -121,3 +121,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Link directly dev, coder legion posts manually to main site
 - [ ] Add link to background remover amd and projects on the about page
 - [ ] Meme page text on cards for light mode have low contrast - need to fix
+- [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
+
+The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
