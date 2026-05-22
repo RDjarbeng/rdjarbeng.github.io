@@ -93,7 +93,7 @@ def webhook():
 # ===============================
 # TELEGRAM BOT LOGIC
 # ===============================
-def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model="Gemini", gallery_cat="None"):
+def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model="Gemini", gallery_cat="None", screenshot_sub=None):
     if msg_id_key not in uploads:
         return
     payload = uploads.pop(msg_id_key)
@@ -121,6 +121,11 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     elif target_type == "gallery":
         media_rel_dir = "assets/images"
         collection_rel_dir = "_gallery"
+    elif target_type == "screenshot":
+        # screenshot_sub is a path segment like "twitter/ghana-twitter"
+        sub_path = screenshot_sub or "general"
+        media_rel_dir = f"assets/images/screenshots/{sub_path}"
+        collection_rel_dir = f"_gallery/screenshots/{sub_path}"
     elif target_type == "asset":
         media_rel_dir = "assets/images"
         collection_rel_dir = None
@@ -177,13 +182,13 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
             "type": "external",
             "category": "ai-generations"
         }
-    elif target_type == "gallery":
+    elif target_type in ("gallery", "screenshot"):
         frontmatter = {
             "title": title_text,
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "type": "external",
-            "category": gallery_cat,
+            "category": gallery_cat if target_type == "gallery" else "Screenshots",
             "date": datetime.now(CAT).isoformat(timespec="seconds")
         }
 
@@ -203,7 +208,14 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         bot.edit_message_text(f"❌ Failed to push files to GitHub: {e}", chat_id, message_id)
         return
 
-    label_text = f" ({gallery_cat})" if target_type == 'gallery' else (f" ({ai_model})" if target_type == 'ai' else "")
+    if target_type == 'gallery':
+        label_text = f" ({gallery_cat})"
+    elif target_type == 'ai':
+        label_text = f" ({ai_model})"
+    elif target_type == 'screenshot':
+        label_text = f" ({screenshot_sub or 'general'})"
+    else:
+        label_text = ""
     bot.edit_message_text(
         f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.",
         chat_id, message_id
@@ -321,7 +333,7 @@ def handle_media(message):
     keyboard = [
         [InlineKeyboardButton("Meme", callback_data="main_meme"), InlineKeyboardButton("Gallery", callback_data="main_gallery")],
         [InlineKeyboardButton("AI Gen", callback_data="main_ai"), InlineKeyboardButton("Asset Only", callback_data="main_asset")],
-        [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+        [InlineKeyboardButton("Screenshot", callback_data="main_screenshot"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     msg = bot.reply_to(message, "Where would you like this on GitHub? (Note: Cloud version has no timeouts)", reply_markup=reply_markup)
@@ -374,6 +386,16 @@ def handle_callback(call):
             ]
             bot.edit_message_text("Select a Category for this Gallery Entry:", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
             return
+
+        elif target_type == "screenshot":
+            payload['state'] = 'screenshot'
+            keyboard = [
+                [InlineKeyboardButton("🐦 Twitter / X", callback_data="scr_twitter")],
+                [InlineKeyboardButton("📷 General Screenshot", callback_data="scr_general")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Which type of screenshot?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+            return
             
         else:
             bot.edit_message_text("⏳ Pushing file directly to GitHub...", call.message.chat.id, call.message.message_id)
@@ -390,6 +412,29 @@ def handle_callback(call):
         bot.edit_message_text("⏳ Processing Gallery logic and sending to GitHub...", call.message.chat.id, call.message.message_id)
         gallery_cat = data.split("_", 1)[1]
         process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "gallery", gallery_cat=gallery_cat)
+        return
+
+    elif data.startswith("scr_"):
+        sub = data.split("_", 1)[1]  # e.g. "twitter", "general"
+        if sub == "twitter":
+            # Drill down to Twitter sub-categories
+            payload['state'] = 'screenshot_twitter'
+            keyboard = [
+                [InlineKeyboardButton("🇬🇭 Ghana Twitter", callback_data="scrtwt_twitter/ghana-twitter")],
+                [InlineKeyboardButton("💻 Tech Twitter", callback_data="scrtwt_twitter/tech-twitter")],
+                [InlineKeyboardButton("🐦 General Twitter", callback_data="scrtwt_twitter/general")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Which Twitter community?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        else:
+            bot.edit_message_text("⏳ Uploading screenshot to GitHub...", call.message.chat.id, call.message.message_id)
+            process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "screenshot", screenshot_sub=sub)
+        return
+
+    elif data.startswith("scrtwt_"):
+        screenshot_sub = data.split("_", 1)[1]  # e.g. "twitter/ghana-twitter"
+        bot.edit_message_text("⏳ Uploading screenshot to GitHub...", call.message.chat.id, call.message.message_id)
+        process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "screenshot", screenshot_sub=screenshot_sub)
         return
 
     elif data.startswith("vidgenre_"):
@@ -457,7 +502,7 @@ def handle_text(message):
 
     # Treat pure text as TODO by default
     keyboard = [
-        [InlineKeyboardButton("TODO Content", callback_data="todo_content"), InlineKeyboardButton("TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("TODO Content", callback_data="📝todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
         [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
     ]
     status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
