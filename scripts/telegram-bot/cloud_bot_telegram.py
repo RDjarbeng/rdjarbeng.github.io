@@ -502,7 +502,7 @@ def handle_text(message):
 
     # Treat pure text as TODO by default
     keyboard = [
-        [InlineKeyboardButton("TODO Content", callback_data="📝todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
         [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
     ]
     status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
