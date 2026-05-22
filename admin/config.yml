@@ -595,7 +595,7 @@ collections:
   # (Sveltia CMS doesn't support nested folders yet)
   # -------------------------------------------------------
   - name: "screenshots_twitter_general"
-    label: "Screenshots › Twitter › General"
+    label: "Twitter General [Screenshots]"
     folder: "_gallery/screenshots/twitter/general"
     media_folder: "../../../../assets/images/screenshots/twitter/general"
     public_folder: "/assets/images/screenshots/twitter/general"
@@ -613,7 +613,7 @@ collections:
       - { label: "Caption", name: "body", widget: "markdown", required: false }
 
   - name: "screenshots_twitter_ghana"
-    label: "Screenshots › Twitter › Ghana Twitter"
+    label: "Ghana Twitter [Screenshots]"
     folder: "_gallery/screenshots/twitter/ghana-twitter"
     media_folder: "../../../../assets/images/screenshots/twitter/ghana-twitter"
     public_folder: "/assets/images/screenshots/twitter/ghana-twitter"
@@ -631,7 +631,7 @@ collections:
       - { label: "Caption", name: "body", widget: "markdown", required: false }
 
   - name: "screenshots_twitter_tech"
-    label: "Screenshots › Twitter › Tech Twitter"
+    label: "Tech Twitter [Screenshots]"
     folder: "_gallery/screenshots/twitter/tech-twitter"
     media_folder: "../../../../assets/images/screenshots/twitter/tech-twitter"
     public_folder: "/assets/images/screenshots/twitter/tech-twitter"
@@ -652,7 +652,7 @@ collections:
   # ARTEMIS II – one collection per sub-folder
   # -------------------------------------------------------
   - name: "artemis_astronauts"
-    label: "Artemis II › Astronauts"
+    label: "Astronauts [Artemis II]"
     folder: "_gallery/artemis-ii/artemis-ii-astronauts"
     media_folder: "../../../../assets/images/artemis-ii/artemis-ii-astronauts"
     public_folder: "/assets/images/artemis-ii/artemis-ii-astronauts"
@@ -672,7 +672,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false, hint: "For cover images" }
 
   - name: "artemis_flight_day"
-    label: "Artemis II › Flight Day Highlights"
+    label: "Flight Day Highlights [Artemis II]"
     folder: "_gallery/artemis-ii/artemis-ii-flight-day-highlights"
     media_folder: "../../../../assets/images/artemis-ii/artemis-ii-flight-day-highlights"
     public_folder: "/assets/images/artemis-ii/artemis-ii-flight-day-highlights"
@@ -692,7 +692,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_launch"
-    label: "Artemis II › Launch"
+    label: "Launch [Artemis II]"
     folder: "_gallery/artemis-ii/artemis-ii-launch"
     media_folder: "../../../../assets/images/artemis-ii/artemis-ii-launch"
     public_folder: "/assets/images/artemis-ii/artemis-ii-launch"
@@ -712,7 +712,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_mission_science"
-    label: "Artemis II › Mission Science"
+    label: "Mission Science [Artemis II]"
     folder: "_gallery/artemis-ii/artemis-ii-mission-science"
     media_folder: "../../../../assets/images/artemis-ii/artemis-ii-mission-science"
     public_folder: "/assets/images/artemis-ii/artemis-ii-mission-science"
@@ -732,7 +732,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_splashdown"
-    label: "Artemis II › Splashdown & Return"
+    label: "Splashdown & Return [Artemis II]"
     folder: "_gallery/artemis-ii/artemis-ii-splashdown-and-return"
     media_folder: "../../../../assets/images/artemis-ii/artemis-ii-splashdown-and-return"
     public_folder: "/assets/images/artemis-ii/artemis-ii-splashdown-and-return"
@@ -752,7 +752,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_ground_systems"
-    label: "Artemis II › Ground Systems"
+    label: "Ground Systems [Artemis II]"
     folder: "_gallery/artemis-ii/ground-systems"
     media_folder: "../../../../assets/images/artemis-ii/ground-systems"
     public_folder: "/assets/images/artemis-ii/ground-systems"
@@ -772,7 +772,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_journey_moon"
-    label: "Artemis II › Journey to the Moon"
+    label: "Journey to Moon [Artemis II]"
     folder: "_gallery/artemis-ii/journey-to-the-moon"
     media_folder: "../../../../assets/images/artemis-ii/journey-to-the-moon"
     public_folder: "/assets/images/artemis-ii/journey-to-the-moon"
@@ -792,7 +792,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_lunar_flyby"
-    label: "Artemis II › Lunar Flyby"
+    label: "Lunar Flyby [Artemis II]"
     folder: "_gallery/artemis-ii/lunar-flyby"
     media_folder: "../../../../assets/images/artemis-ii/lunar-flyby"
     public_folder: "/assets/images/artemis-ii/lunar-flyby"
@@ -812,7 +812,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_orion"
-    label: "Artemis II › Orion Spacecraft"
+    label: "Orion Spacecraft [Artemis II]"
     folder: "_gallery/artemis-ii/nasas-orion-spacecraft"
     media_folder: "../../../../assets/images/artemis-ii/nasas-orion-spacecraft"
     public_folder: "/assets/images/artemis-ii/nasas-orion-spacecraft"
@@ -832,7 +832,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_sls"
-    label: "Artemis II › Space Launch System"
+    label: "SLS Rocket [Artemis II]"
     folder: "_gallery/artemis-ii/nasas-space-launch-system-rocket"
     media_folder: "../../../../assets/images/artemis-ii/nasas-space-launch-system-rocket"
     public_folder: "/assets/images/artemis-ii/nasas-space-launch-system-rocket"
@@ -852,7 +852,7 @@ collections:
       - { label: "Link", name: "link", widget: "string", required: false }
 
   - name: "artemis_return_earth"
-    label: "Artemis II › Return to Earth"
+    label: "Return to Earth [Artemis II]"
     folder: "_gallery/artemis-ii/return-to-earth"
     media_folder: "../../../../assets/images/artemis-ii/return-to-earth"
     public_folder: "/assets/images/artemis-ii/return-to-earth"
