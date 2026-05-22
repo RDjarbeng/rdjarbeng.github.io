@@ -186,3 +186,4 @@ A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. 
 - [ ] I wonder if there's a benchmark that measures the runability of the code generated from these LLMs. For example I'm 60-80% sure code from claue will run on first try, 50-70% sure for GPT, about 40% sure for gemini
 - [ ] Future Africa investors
 - [ ] Write about product hunt and what it does
+- [ ] Songs that sound differently with headphones- Emmanuel Ese for instance has a bass line and drum kick sound that is so much refined and noticeable on headphones
