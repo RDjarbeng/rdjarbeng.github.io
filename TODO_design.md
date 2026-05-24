@@ -126,3 +126,4 @@ This todo file contains design specifications and technical  directions for rdja
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
 - [ ] YouTube videos aren't showing most recently added first
 - [ ] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge
+- [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
