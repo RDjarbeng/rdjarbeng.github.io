@@ -1,5 +1,5 @@
 ---
-title: Official animated visualizer for "Aso Remix"
+title: Official animated visualizer for Kwabena Kwabena - ASO REMIX Stonebwoy x Kofi Kinaata
 published: true
 date: 2026-05-24T14:28:00+02:00
 platform: youtube
@@ -20,7 +20,7 @@ Here is the context and breakdown of the video in markdown format, based on its 
 
 ### 1. The Song & The Artists
 
-* **The Track:** The video is the official animated visualizer for **"Aso Remix."** * **The Original Classic:** "Aso" is originally a legendary, classic Ghanaian highlife song by **Kwabena Kwabena**, known for its deep themes of infidelity, betrayal, and intense heartbreak.
+* **The Track:** The video is the official animated visualizer for **"Aso Remix."** \* **The Original Classic:** "Aso" is originally a legendary, classic Ghanaian highlife song by **Kwabena Kwabena**, known for its deep themes of infidelity, betrayal, and intense heartbreak.
 * **The Feature Heavyweights:** This modern 2025 remix brings together three heavyweights of Ghanaian music: the original highlife legend **Kwabena Kwabena**, dancehall/Afrobeats superstar **Stonebwoy**, and highlife/hiplife rap star **Kofi Kinaata**.
 
 ### 2. The Animated Storyline (The Visual Context)
@@ -38,4 +38,4 @@ The animation (credited to creator/director Berimah Boateng and "Sobolo Made It"
 * **Kofi Kinaata:** Kinaata appears as the "doctor" diagnosing the heartbreak and later is seen chilling by a tree, delivering his signature Fante rap verses to comfort the protagonist.
 * **The Climax Concert:** The video concludes with a vibrant, neon-lit rooftop performance where Kwabena Kwabena (on guitar), Stonebwoy (on drums), and Kofi Kinaata (on keyboard) all jam together, turning the painful heartbreak into a massive collaborative hit.
 
-The nicest parts are the part where Stonebwoy says 'Ni3 3shi me kraa nis3 we got matching tattoos' and  also the parts where Kofi Kinaata says "You've fallen in love, but 3yaa stand in love kakraa"
+The nicest parts are the part where Stonebwoy says 'Niɛ ɛshi me kraa ni sɛ we got matching tattoos' and  also the parts where Kofi Kinaata says "You've fallen in love, but ɛyaa stand in love kakraa"
