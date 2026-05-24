@@ -11,8 +11,6 @@ genre: Science & Technology
 category: videos
 ---
 
-# 
-
 Google Anti-gravity 2.0 marks a major shift from a standard developer tool to a fully standalone, agent-first desktop application. Powered by Gemini 3.5 Flash, the application allows developers and non-developers alike to build complex, full-stack software applications simply by conversing with AI.
 
 ***
@@ -55,8 +53,10 @@ While the official promotional video makes Anti-gravity 2.0 look like a groundbr
 
 If you just stumbled onto this page, here is a breakdown of the massive community backlash happening right now in the YouTube comments.
 
----
+***
+
 ## Reactions from developers- Youtube edition
+
 The paragraphs above reflects what the antigravity IDE was supposed to deliver, however I was curious enough to check the comments and see what some users are actually saying.
 
 ### The Big Controversy: "Where is the Code Editor?!"
@@ -71,7 +71,7 @@ Developers are describing the update as:
 * **"The worst update in the history of any program."**
 * **"Catastrophic change... what a joke."**
 
----
+***
 
 ### Why Are Developers So Mad?
 
@@ -82,26 +82,31 @@ To a general observer, an automated AI agent building apps for you sounds amazin
 * **Corporate Metric Manipulation:** Several users feel Google forced this change simply to juice their user adoption metrics for Gemini, effectively holding a functional developer tool hostage to boost corporate KPIs.
 * **Bugs & Authentication Issues:** On top of the missing editor, the launch is plagued with bugs. Many users report the app completely hangs on the login screen, throwing backend errors and making it impossible to even submit an in-app bug report.
 
----
+***
 
 ## Steps taken by Antigravity users after this update
+
 Let's look at what some users have done after seeing the release of Antigravity 2.0.
 
 ### The Mass Exodus
 
 The immediate reaction from some in the community is a massive wave of uninstalls. Developers are openly quitting the platform and moving back to tried-and-true alternatives:
 
-> *"Thanks for the update. Switching back to VSCode + Claude code."*
-> *"Why would anyone go for this if I have Claude Code or Codex or even better Cursor?"*
+> _"Thanks for the update. Switching back to VSCode + Claude code."_
+> _"Why would anyone go for this if I have Claude Code or Codex or even better Cursor?"_
 
----
+***
 
 ### The Workarounds (How Developers are Fixing It)
 
 Tech communities always look for a fix. If you or someone you know got trapped in this update, the comments highlight a few community-discovered escape hatches:
 
-1. **The Double App Split:** On Mac, the update secretly splits the program into two apps. "Antigravity" is the new AI chat client, but a separate app called **"Antigravity IDE"** might still be in your applications folder containing the old editor interface. *(Note: Users report the new separate IDE app is broken for WSL/Linux workflows).*
+1. **The Double App Split:** On Mac, the update secretly splits the program into two apps. "Antigravity" is the new AI chat client, but a separate app called **"Antigravity IDE"** might still be in your applications folder containing the old editor interface. _(Note: Users report the new separate IDE app is broken for WSL/Linux workflows)._
 2. **The Website Scroll-Down:** If you go back to the official website and scroll past the main download buttons, Google has quietly left links to download the standalone "Antigravity IDE" and "Antigravity CLI" separately.
 3. **The Total Downgrade:** Savvy developers are completely uninstalling version 2.0, going to the "previous releases" archive on the website, downloading version 1.23.2, and immediately checking their settings to **turn off automatic updates**.
 
 > **The Takeaway:** Google tried to build an AI application of the future, but in doing so, they took away the core tool that engineers actually need to get their jobs done today. Would be interested in seeing how this unfolds.
+
+Additional context:
+
+This post is part of a series on the antigravity IDE by Google. Also published on this dev forum [here](https://dev.to/rdjarbeng/where-is-the-code-editor-reception-for-antigravity-20-3948)
