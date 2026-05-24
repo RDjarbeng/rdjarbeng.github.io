@@ -127,3 +127,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] YouTube videos aren't showing most recently added first
 - [ ] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
+- [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically
