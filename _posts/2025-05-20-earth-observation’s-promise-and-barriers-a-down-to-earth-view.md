@@ -8,7 +8,8 @@ tags:
   - Earth Observation
   - Geospatial data
   - European Space Agency
-  - Landsat, Sentinel
+  - Landsat
+  - Sentinel
   - Copernicus
   - Planet
   - NASA

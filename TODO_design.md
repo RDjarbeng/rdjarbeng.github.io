@@ -16,7 +16,7 @@ This todo file contains design specifications and technical  directions for rdja
 ## High Priority - Immediate Fixes & Critical Enhancements
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
-- [ ] Fix: Gallery Titles - Investigate why all gallery pages show the same title. (High Importance, Medium Complexity: Debugging Jekyll logic)
+
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
@@ -25,14 +25,13 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Optimize CSS: Currently loads CSS for personal and video pages when not needed. (Medium Importance, Medium Complexity: Refactor CSS loading)
 - [ ] Style: Homepage contact form in dynamic nav needs proper styling. (Medium Importance, Trivial Complexity: CSS tweaks)
 - [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
-- [ ] Fix: Previews for posts on Twitter aren't working for some reason. (Medium Importance, Medium Complexity: Debugging meta tags)
+- [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
 - [ ] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Medium Importance, Trivial Complexity: CSS layout adjustment)
 - [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
 - [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
-- [ ] Fix: The last modified section for posts sometimes shows a wrong date on deployed site but not on local. (Medium Importance, Medium Complexity: Debugging Jekyll build/timezone)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. (Medium Importance, Trivial Complexity: CSS styling)
+- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
 - [ ] **Card images**: Card images for post cards have a top padding that leaves a gray space. (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] **Cards**: add category to cards on homepage, posts. (Medium Importance, Trivial Complexity: Jekyll layout modification)
@@ -103,3 +102,25 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Issue: Tables are not showing text properly on dark mode
 - [ ] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
+- the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
+
+- the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
+- Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
+- [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images)
+- [ ] Check access logs for user-agents see who's crawling, check for markdown content negotiation
+- [ ] Improve individual tags and categories page so that it's informative, currently a single tag page just links to the post it references, this isn't helping SEO.. Suggestions for improvement: we could link more posts in the category of the recommended posts or suggest popular posts on the site to make thenpage not look empty, or some other approach that's good for SEO
+- [ ] Figure out how to structure pages so that even of it's jist a picture it's informative for the user, find out how X,Facebook, Instagram does this. Does adding details such as who posted this make a difference?
+- [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings
+- [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
+- [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
+- [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
+- [ ] [BUG] Clicking an item on the gallery card for the homepage takes you to the gallery page instead of the gallery item
+- [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
+
+- the telegram bot needs to be updated on the new organization of the gallery
+- [ ] Link directly dev, coder legion posts manually to main site
+- [ ] Add link to background remover amd and projects on the about page
+- [ ] Meme page text on cards for light mode have low contrast - need to fix
+- [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
+
+The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."

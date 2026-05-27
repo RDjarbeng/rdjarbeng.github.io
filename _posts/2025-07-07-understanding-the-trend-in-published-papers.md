@@ -7,9 +7,6 @@ tags:
   - Research
   - Papers
   - Academics
-  - Trends in Published Papers
-  - Nobel prize in Chemistry
-  - Research methods
 title: Understanding the Trend in Published Papers
 image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
