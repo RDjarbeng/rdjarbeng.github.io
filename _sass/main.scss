@@ -336,6 +336,7 @@ iframe {
 // Base card styles (shared)
 .post-card,
 .project-card {
+  position: relative;
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 0;
