@@ -5,7 +5,7 @@ author: Richard
 category: AI
 tags:
   - AI
-  - Open Source
+  - open-source
   - Automation
   - Agents
 title: How to Install OpenClaw with Installation Requirements

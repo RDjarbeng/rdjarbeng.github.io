@@ -6,11 +6,11 @@ categories:
 tags:
   - shell scripting
   - bash
-  - automation
+  - Automation
   - virtual environment
-  - raspberry pi
+  - Raspberry Pi
   - raspberry pi 4B
-  - linux
+  - Linux
 title: Automating Python Execution on a Raspberry Pi with a virtual environment
 image: /assets/images/just_start.png
 image_alt: "Cover image for Automating Python Execution on a Raspberry Pi with a virtual environment"

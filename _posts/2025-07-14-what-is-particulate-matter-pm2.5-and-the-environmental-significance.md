@@ -4,7 +4,7 @@ author: Richard
 categories:
   - Technology
 tags:
-  - Air quality
+  - Air Quality
   - Particulate matter
   - PM
   - PM2.5

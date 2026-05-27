@@ -9,9 +9,6 @@ tags:
   - TMobile
   - ElonMusk
   - SpaceX
-  - DisasterResponse
-  - SatelliteInternet
-  - Connectivity
 title: Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers
 image: /assets/images/elon_la_fire_dtc.png
 video: ''

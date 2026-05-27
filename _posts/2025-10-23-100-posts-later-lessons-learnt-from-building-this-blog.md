@@ -5,7 +5,6 @@ author: Richard
 categories:
   - Technology
 tags:
-  - Richard Djarbeng's Blog
   - Review
 title: 100 Posts Later - Lessons Learnt From Building This Blog
 image: /assets/images/100_posts_cover.jpg

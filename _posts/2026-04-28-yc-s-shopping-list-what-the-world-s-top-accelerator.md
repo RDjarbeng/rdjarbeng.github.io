@@ -18,19 +18,21 @@ card_items: []
 
 > **A founder's field guide to Y Combinator's Request for Startups — decoded, ranked, mapped to real opportunities, and tracked across 17 years of evolution.**
 
-*Primary Source: [ycombinator.com/rfs](https://www.ycombinator.com/rfs) — Summer 2026 Edition | Analysis compiled April 2026*
+_Primary Source:_ [_ycombinator.com/rfs_](https://www.ycombinator.com/rfs) _— Summer 2026 Edition | Analysis compiled April 2026_
 
----
+***
 
 ## TL;DR
 
-Y Combinator's Request for Startups (RFS) is their public wishlist — the ideas they *actively want* founders to pitch. Think of it as a cheat code: you don't have to guess what YC wants to fund. They tell you.
+Y Combinator's Request for Startups (RFS) is their public wishlist — the ideas they _actively want_ founders to pitch. Think of it as a cheat code: you don't have to guess what YC wants to fund. They tell you.
 
-The Summer 2026 edition marks a decisive shift. Gone are the broad sector labels ("Healthcare," "Defense," "Energy"). In their place: **16 hyper-specific bets** — each written by a named YC partner, each reading like a mini-thesis on exactly why *now* is the moment for *this* company to exist.
+If you don't want to read, but query the list  to see whether it has what you're looking for I built an app for that, because you're not the only lazy person.  You can just search for what you need. I'm implementing a chat functionality so you can simply discuss with an LLM. https://ycombinator-rfs.netlify.app/
+
+The Summer 2026 edition marks a decisive shift. Gone are the broad sector labels ("Healthcare," "Defense," "Energy"). In their place: **16 hyper-specific bets** — each written by a named YC partner, each reading like a mini-thesis on exactly why _now_ is the moment for _this_ company to exist.
 
 The message: **AI has stopped being a feature and started being the foundation. Now wire it into the physical world — silicon, agriculture, space, defense, and the operating system of every company on Earth.**
 
----
+***
 
 ## 📋 Table of Contents
 
@@ -44,12 +46,12 @@ The message: **AI has stopped being a feature and started being the foundation. 
 8. [Bonus: Ideas YC Didn't List But Should Have](#bonus-ideas-yc-didnt-list-but-should-have)
 9. [Final Thoughts: How to Actually Use This List](#final-thoughts)
 
----
+***
 
 ## The 16 Categories at a Glance
 
 | # | Category | YC Partner | Domain(s) | Atoms or Bits? |
-|---|----------|-----------|-----------|:--------------:|
+| --- | --- | --- | --- | --- |
 | 1 | AI for Low-Pesticide Agriculture | Garry Tan | AgTech / AI / Biotech | 🌾 Atoms |
 | 2 | AI-Native Service Companies | Gustaf Alströmer | Enterprise / AI | 💼 Bits |
 | 3 | AI Personalized Medicine | Ankit Gupta | Healthcare / Genomics / AI | 🧬 Both |
@@ -69,16 +71,18 @@ The message: **AI has stopped being a feature and started being the foundation. 
 
 **The count:** 15 named categories + an overarching thesis statement. 7 are atoms-heavy, 7 are bits-heavy, 1 straddles both.
 
----
+***
 
 ## Deep Dive: Every Category Explained
 
 ### 1. 🌾 AI for Low-Pesticide Agriculture
+
 **Partner:** Garry Tan (CEO) | **Domain:** AgTech × AI × Biotech × Robotics
 
-**The thesis:** Modern agriculture is trapped in a doom loop — spray more chemicals → pests adapt → spray even more → margins collapse. AI vision, cheap sensors, precision robotics, and biological alternatives (microbes, peptides, RNA-based solutions) have converged to break this cycle. The company that cuts pesticide use by 90% and *increases* yields isn't just a good business — it's a generational company.
+**The thesis:** Modern agriculture is trapped in a doom loop — spray more chemicals → pests adapt → spray even more → margins collapse. AI vision, cheap sensors, precision robotics, and biological alternatives (microbes, peptides, RNA-based solutions) have converged to break this cycle. The company that cuts pesticide use by 90% and _increases_ yields isn't just a good business — it's a generational company.
 
 **Key signals Garry highlights:**
+
 - AI can now identify individual weeds and pests in real time
 - Cameras and sensors are cheap enough to blanket fields
 - Robots can treat one plant instead of spraying entire fields
@@ -87,14 +91,16 @@ The message: **AI has stopped being a feature and started being the foundation. 
 
 **Why now:** The convergence of computer vision, cheap hardware, and biological engineering makes precision agriculture viable at scale for the first time.
 
----
+***
 
 ### 2. 💼 AI-Native Service Companies
+
 **Partner:** Gustaf Alströmer | **Domain:** Enterprise Services × AI
 
-**The thesis:** The evolution went: **Services → SaaS → AI Copilots → AI *does the work***. Most 2023–2025 startups built copilots (tools that *help* people). YC now wants companies that skip the tool and just *deliver the outcome*. Total spend on services dwarfs software spend, and outsourced services are the easiest to replace.
+**The thesis:** The evolution went: **Services → SaaS → AI Copilots → AI _does the work_**. Most 2023–2025 startups built copilots (tools that _help_ people). YC now wants companies that skip the tool and just _deliver the outcome_. Total spend on services dwarfs software spend, and outsourced services are the easiest to replace.
 
 **Target verticals YC calls out:**
+
 - Insurance brokerage
 - Accounting, tax, and audit
 - Compliance
@@ -102,25 +108,28 @@ The message: **AI has stopped being a feature and started being the foundation. 
 
 **Why now:** AI capabilities crossed the threshold where "replace the service entirely" is more practical than "make the human 20% faster."
 
----
+***
 
 ### 3. 🧬 AI Personalized Medicine
+
 **Partner:** Ankit Gupta | **Domain:** Healthcare × Genomics × AI Agents
 
 **The thesis:** Three revolutions are colliding: (1) AI agents can now analyze personalized health data with clinical-grade accuracy, (2) the cost of diagnostics (genome sequencing, biomarkers) is plummeting faster than Moore's Law, and (3) the cost of n-of-1 therapies (mRNA, gene therapies) is dropping while the FDA is becoming more open to letting patients try them.
 
-**The result:** Truly personalized care delivery — not "here's what works on average" but "here's what works *for you*, based on your genome, your wearables data, and your medical history."
+**The result:** Truly personalized care delivery — not "here's what works on average" but "here's what works _for you_, based on your genome, your wearables data, and your medical history."
 
 **Why now:** Agent harnesses like Claude Code can now analyze multi-modal health data. Genome sequencing costs have dropped below $200. FDA is signaling openness to personalized therapy pathways.
 
----
+***
 
 ### 4. 🧠 Company Brain
+
 **Partner:** Tom Bl
 
 ... (18,718 of 43,718 chars omitted, showing first 6,250 + last 18,750) ...
 Full output saved to /tmp/bash_output_r6qduu2u.txt — use the read tool with offset/limit to inspect specific sections.
 telligence — the full stack |
+
 | **AI Services × Enterprise Sales × AI OS** | 2 + 13 + 15 | Sell Fortune 100 companies an AI OS that replaces entire outsourced departments |
 | **Space Electronics × Industrial Moon Capabilities** | 7 + 9 | Chips designed to run 3D printing and electrolysis equipment on the lunar surface |
 | **AgTech × Dynamic Interfaces** | 1 + 6 | Precision farming software where each farmer's interface adapts to their specific crops, fields, and machinery |
@@ -128,22 +137,22 @@ telligence — the full stack |
 ### 🥉 Tier 3: Non-Obvious Combos Worth Exploring
 
 | Blend | Why It Could Work |
-|-------|-------------------|
+| --- | --- |
 | **Counter-Swarm Defense × AgTech** | Drone swarm tech (minus the weapons) applied to precision crop monitoring and pest management |
 | **Hardware Supply Chain × Space** | Fast-iteration manufacturing for space components instead of 18-month lead times |
 | **SaaS Challengers × Personalized Medicine** | Open-source the $500K/year EHR and rebuild it AI-native |
 | **Company Brain × Counter-Swarm Defense** | Military/defense organizations have the worst knowledge fragmentation — systematize institutional knowledge for DoD |
 
-> **Key insight:** Every S26 category was written by a *named* partner with a specific conviction. The interdisciplinary blends that span multiple partners' theses are the highest-signal opportunities — they have built-in advocates inside YC.
+> **Key insight:** Every S26 category was written by a _named_ partner with a specific conviction. The interdisciplinary blends that span multiple partners' theses are the highest-signal opportunities — they have built-in advocates inside YC.
 
----
+***
 
 ## Who's Already in the Arena
 
 For each S26 category: who's already building here (proving the market), who are potential customers, and where's the white space?
 
 | S26 Category | Existing Companies | Potential Customers | White Space |
-|--------------|-------------------|--------------------|----|
+| --- | --- | --- | --- |
 | **AI for Low-Pesticide Agriculture** | Carbon Robotics (LaserWeeder), Blue River Tech (acquired by John Deere), Inari Agriculture, Pivot Bio, AgriBotsAI, Sentera | Large ag operators (Cargill, ADM), mid-size farms, ag cooperatives | RNA-based pest solutions + AI targeting; bio-input manufacturing |
 | **AI-Native Service Companies** | Pilot (bookkeeping), Ramp (finance automation), EvenUp (legal), Bench (shut down) | Every company currently outsourcing back-office work; BPO industry ($280B) | Insurance brokerage AI (massive market, few AI players) |
 | **AI Personalized Medicine** | Tempus, 23andMe (struggling), Color Health, Grail (early cancer), Verily | Health systems, pharma companies, self-insured employers, DTC consumers | Agent-based health data analysis; n-of-1 mRNA therapy design |
@@ -160,22 +169,26 @@ For each S26 category: who's already building here (proving the market), who are
 | **Supply Chain 2.0 for Semiconductors** | SemiGraph, Resilinc, Fictiv (partially), SAP (poorly) | TSMC, Intel, Samsung, GlobalFoundries, CHIPS Act fabs, NVIDIA | Multi-tier real-time visibility; export compliance automation |
 | **AI Operating System for Companies** | Dust.tt, Athena Intelligence, various internal tools at YC companies | Every scaling startup; mid-market companies | Full closed-loop company intelligence (not just dashboards) |
 
----
+***
 
 ## Founder Backgrounds That Give You an Edge
 
 The S26 RFS is the most hardware/semiconductor-heavy in YC history. This changes who has the unfair advantage.
 
 ### 🔧 Semiconductor / Chip Design Engineers (NVIDIA, AMD, Qualcomm, Apple Silicon)
+
 **Your categories:**
-- Inference Chips for Agent Workflows (10) — *"If you understand both chip architecture and how agents actually execute"*
-- Electronics in Space (7) — *"If you are working at SpaceX or NVIDIA and doing chip design"*
-- Supply Chain 2.0 for Semiconductors (14) — *"You need to understand wafer allocation and packaging constraints at a deep level"*
+
+- Inference Chips for Agent Workflows (10) — _"If you understand both chip architecture and how agents actually execute"_
+- Electronics in Space (7) — _"If you are working at SpaceX or NVIDIA and doing chip design"_
+- Supply Chain 2.0 for Semiconductors (14) — _"You need to understand wafer allocation and packaging constraints at a deep level"_
 
 **Edge:** There are maybe 10,000 people in the world with both chip design expertise AND AI/agent understanding. If that's you, YC is literally calling you out by name.
 
 ### 🚀 Aerospace / SpaceX / Stoke Space Engineers
+
 **Your categories:**
+
 - Electronics in Space (7)
 - Industrial Capabilities in Space (9)
 - Hardware Supply Chain (8)
@@ -183,15 +196,19 @@ The S26 RFS is the most hardware/semiconductor-heavy in YC history. This changes
 **Edge:** Security clearances, launch manifests, and orbital mechanics knowledge. Pure software founders can't compete.
 
 ### 🎖️ Military / Defense / Intelligence Backgrounds
+
 **Your categories:**
-- Counter-Swarm Defense (5) — *"The winning companies will look more like Cloudflare than Raytheon"*
+
+- Counter-Swarm Defense (5) — _"The winning companies will look more like Cloudflare than Raytheon"_
 - Selling to Huge Companies (13) — DoD is a huge company
 
 **Edge:** Clearances, procurement knowledge, and understanding of operational requirements that civilians can't learn from blog posts.
 
 ### 💻 Software Engineers / Full-Stack Developers
+
 **Your categories:**
-- SaaS Challengers (11) — *"Go after chip design software, ERPs, industrial control systems"*
+
+- SaaS Challengers (11) — _"Go after chip design software, ERPs, industrial control systems"_
 - Software for Agents (12) — Rebuilding every SaaS category for agents
 - Company Brain (4) — Integration + AI + knowledge graphs
 - AI OS for Companies (15) — Stitching together the tool stack
@@ -200,20 +217,26 @@ The S26 RFS is the most hardware/semiconductor-heavy in YC history. This changes
 **Edge:** Speed. You can build an MVP in weeks. But the S26 RFS is telling you to aim higher than project management tools.
 
 ### 🌾 Agricultural Scientists / Agronomists + AI Skills
+
 **Your categories:**
-- AI for Low-Pesticide Agriculture (1) — *This one is YC's CEO personally championing it*
+
+- AI for Low-Pesticide Agriculture (1) — _This one is YC's CEO personally championing it_
 
 **Edge:** Garry Tan wrote this one himself. Domain expertise in biology + agronomy + AI is an extremely rare combination.
 
 ### 🏥 Doctors / Genomicists / Biotech Researchers
+
 **Your categories:**
+
 - AI Personalized Medicine (3)
 - AI-Native Service Companies (2) — Healthcare administration vertical
 
 **Edge:** Clinical credibility. FDA pathways. Understanding of diagnostic workflows.
 
 ### 💼 Enterprise Sales / Consulting (McKinsey, Bain, Accenture)
+
 **Your categories:**
+
 - Selling to Huge Companies (13) — You already have the Rolodex
 - AI-Native Service Companies (2) — You know which services are outsourced
 - Company Brain (4) — You've seen how broken internal knowledge is
@@ -221,13 +244,15 @@ The S26 RFS is the most hardware/semiconductor-heavy in YC history. This changes
 **Edge:** You've sold to F100 before. You know the buyers, the procurement process, and the pain points.
 
 ### 🏭 Manufacturing / Supply Chain Engineers
+
 **Your categories:**
+
 - Hardware Supply Chain (8)
 - Supply Chain 2.0 for Semiconductors (14)
 
 **Edge:** You know why the US supply chain is slow because you've lived it. You know what Shenzhen does differently.
 
----
+***
 
 ## The Build Difficulty Ranking: Weekend MVP to Moon Mission 🌙
 
@@ -236,7 +261,7 @@ Rated on **Technical Difficulty** (how hard to build?) and **Go-to-Market Diffic
 ### 🟢 Tier 1: "Ship an MVP in Weeks" (Lowest Barrier to Entry)
 
 | Rank | S26 Category | Tech | GTM | Total | Why Accessible |
-|------|-------------|:----:|:---:|:-----:|----------------|
+| --- | --- | --- | --- | --- | --- |
 | 1 | **Company Brain** | ⭐⭐ | ⭐⭐ | 4 | RAG + integrations + good knowledge graph design. Hard to perfect, easy to start. |
 | 2 | **SaaS Challengers** (software targets) | ⭐⭐ | ⭐⭐ | 4 | AI-code a clone, undercut 10×. Challenge is picking the right target. |
 | 3 | **Software for Agents** | ⭐⭐ | ⭐⭐ | 4 | Build agent-friendly APIs/MCPs for existing SaaS categories. |
@@ -248,7 +273,7 @@ Rated on **Technical Difficulty** (how hard to build?) and **Go-to-Market Diffic
 ### 🟡 Tier 2: "A Few Months and Deep Domain Knowledge" (Medium)
 
 | Rank | S26 Category | Tech | GTM | Total | Key Challenge |
-|------|-------------|:----:|:---:|:-----:|---------------|
+| --- | --- | --- | --- | --- | --- |
 | 8 | **SaaS Challengers** (hard targets: ERP, EDA) | ⭐⭐⭐ | ⭐⭐⭐ | 6 | 10M-line codebases are hard to replicate even with AI |
 | 9 | **AI Personalized Medicine** | ⭐⭐⭐ | ⭐⭐⭐⭐ | 7 | FDA regulatory navigation + HIPAA + clinical validation |
 | 10 | **Supply Chain 2.0 for Semiconductors** | ⭐⭐⭐⭐ | ⭐⭐⭐ | 7 | Need deep semiconductor domain knowledge + enterprise integration |
@@ -259,7 +284,7 @@ Rated on **Technical Difficulty** (how hard to build?) and **Go-to-Market Diffic
 ### 🔴 Tier 3: "Multi-Year Journey, Serious Capital Required" (Hard)
 
 | Rank | S26 Category | Tech | GTM | Total | Key Challenge |
-|------|-------------|:----:|:---:|:-----:|---------------|
+| --- | --- | --- | --- | --- | --- |
 | 14 | **Counter-Swarm Defense** (full stack: hardware + interceptors) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 9 | Building physical interceptors + defense certification |
 | 15 | **Inference Chips for Agent Workflows** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 9 | $50M+ to tape out; need compiler + chip co-design |
 | 16 | **Electronics in Space** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 9 | Rad-hard chip design + space qualification + limited customers |
@@ -267,12 +292,12 @@ Rated on **Technical Difficulty** (how hard to build?) and **Go-to-Market Diffic
 ### ⚫ Tier 4: "PhD + $100M+ + Decade of Patience" (Moon Mission — literally)
 
 | Rank | S26 Category | Tech | GTM | Total | Key Challenge |
-|------|-------------|:----:|:---:|:-----:|---------------|
+| --- | --- | --- | --- | --- | --- |
 | 17 | **Industrial Capabilities in Space** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 10 | Lunar regolith processing, electrolysis in vacuum, 3D printing on the moon. This is Apollo-level engineering. |
 
 ### Visual Summary
 
-```
+```plain
 EASY ──────────────────────────────────────────── HARD
  │                                                  │
  │  Company Brain        Semiconductor Supply Chain  │
@@ -289,68 +314,70 @@ EASY ─────────────────────────
 BITS ──────────────────────────────────────────── ATOMS
 ```
 
----
+***
 
 ## Bonus: Ideas YC Didn't List But Should Have
 
 Based on gaps in the S26 RFS, dropped themes that still matter, and emerging trends:
 
 ### 1. ⚡ AI for Energy / Grid Infrastructure
+
 The most glaring omission. Energy was on the RFS from Day 1 (2014) through S24, then vanished. Meanwhile AI data centers are creating the biggest energy demand surge in a generation. Grid management, energy storage, nuclear software, and permitting automation are all massive opportunities that YC inexplicably stopped asking for.
 
 ### 2. 🌍 Emerging Markets / Global South
+
 Five billion underserved people disappeared from the RFS in 2024. AI makes it economically viable to serve low-ARPU markets. Stablecoin-based banking for the unbanked, AI healthcare for low-resource settings, mobile-first tools for Africa and Southeast Asia — all still enormous opportunities.
 
 ### 3. 🎓 Education
+
 After returning briefly in Summer 2025 ("AI Personal Tutor for Everyone"), education is missing again from S26. Bloom's 2-sigma problem (1:1 tutoring is 2 standard deviations better than classroom instruction) is still unsolved at scale. AI tutors are the obvious fix.
 
 ### 4. 🧬 Longevity & Anti-Aging
+
 Present from 2018–2022, now absent. Sam Altman personally invested $180M in Retro Biosciences. Altos Labs raised $3B. The science is accelerating. YC dropping this from the RFS seems like an oversight, not a signal.
 
 ### 5. 🧑‍⚖️ AI for Legal Systems
+
 Courts are backed up by years. AI can automate case management, legal research, plea bargaining analytics, and access-to-justice tools. A natural blend of the "AI-Native Services" and "SaaS Challengers" categories.
 
 ### 6. 🎮 AI-Generated Interactive Entertainment
+
 Interactive films, personalized stories, AI game masters, procedurally generated worlds. Entertainment hasn't been meaningfully disrupted by AI yet. Huge consumer market.
 
 ### 7. 🔐 Post-Quantum Cryptography
-Quantum computers will break current encryption. Every government, bank, and tech company needs to migrate. The window is closing and the market is *mandatory* — not optional.
+
+Quantum computers will break current encryption. Every government, bank, and tech company needs to migrate. The window is closing and the market is _mandatory_ — not optional.
 
 ### 8. 🌊 Ocean Technology
+
 95% of the ocean floor is unmapped. Autonomous underwater vehicles, aquaculture tech, deep-sea mining, ocean health monitoring. Combines the "space-like" ambition YC loves with near-term commercial applications.
 
 ### 9. 🔄 AI for Circular Economy
+
 Waste tracking, recycling optimization, product lifecycle management. The $4.5T circular economy is almost entirely un-digitized. Natural SaaS Challenger territory.
 
 ### 10. 🏘️ Construction & Housing
+
 Was trending in earlier analyses, but absent from S26. The housing crisis hasn't gotten better. AI for construction project management, permitting automation, prefab housing — all still underserved.
 
----
+***
 
 ## Final Thoughts: How to Actually Use This List
 
 ### ✅ Do This
 
 1. **Read the named partner's conviction, not just the category title.** Tyler Bosmeny didn't just say "defense" — he said the winning companies look like Cloudflare, not Raytheon. Diana Hu didn't just say "chips" — she said the compiler is more important than the silicon. These specifics are the signal.
-
 2. **Pick the intersection.** The most defensible startups combine 2–3 S26 categories (see Interdisciplinary Sweet Spots). Counter-Swarm × Inference Chips × Agent Software is harder for anyone to replicate than any single category.
-
 3. **Start with what's dropped but still matters.** Energy, education, emerging markets, and longevity fell off the RFS but the problems didn't go away. Lower competition + real demand = opportunity.
-
 4. **Use the difficulty ranking to match your situation.** First-time founder with $0? Start with Company Brain or SaaS Challengers. SpaceX chip designer with $50M in VC conversations? Go build space inference silicon.
-
 5. **Notice the "Services → SaaS → Copilots → AI does the work" arc.** Gustaf Alströmer is telling you: don't build another copilot. Replace the service entirely. Price it as a fraction of the human cost.
 
 ### ❌ Don't Do This
 
 1. **Don't build another ChatGPT wrapper.** The S26 RFS has zero categories that can be satisfied by wrapping an LLM with a prompt.
-
-2. **Don't ignore the hardware shift.** ~50% of S26 categories involve atoms (chips, space, agriculture, defense hardware, supply chains). This is the biggest physical-world emphasis in RFS history.
-
+2. **Don't ignore the hardware shift.** \~50% of S26 categories involve atoms (chips, space, agriculture, defense hardware, supply chains). This is the biggest physical-world emphasis in RFS history.
 3. **Don't be a tourist.** YC can tell when you picked "counter-swarm defense" because it sounded cool vs. because you spent 10 years in the military thinking about this exact problem.
-
 4. **Don't start with an easy SaaS Challenger target.** Jared Friedman explicitly says: "Don't go after project management tools. Go after chip design software, ERPs, industrial control systems." The easy targets are crowded.
-
 5. **Don't confuse "hard to build" with "bad opportunity."** Moon manufacturing (literally) is the hardest category here. It's also where SpaceX-level outcomes hide.
 
 ### 📊 The Meta-Pattern
@@ -365,7 +392,7 @@ The companies building "AI copilots" were the 2023–2025 vintage. The 2026 vint
 
 Choose accordingly.
 
----
+***
 
 ### 📚 Sources
 
@@ -380,7 +407,8 @@ Choose accordingly.
 - [The Future Media — Inside YC's Summer 2025 RFS](https://thefuturemedia.eu/what-y-combinator-wants-to-fund-next-inside-the-summer-2025-requests-for-startups/)
 - [VC Cafe — Extended Requests for Startups 2025](https://www.vccafe.com/2025/02/06/extended-requests-for-startups-2025-list/)
 
----
+***
+
 # first draft
 
 What's Inside:

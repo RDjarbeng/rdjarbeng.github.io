@@ -10,8 +10,8 @@ tags:
   - Cloudflare
   - Free Limits
 title: How to Get a Free Professional Custom Domain Email in 2026 (Even If You Don't Own a Domain Yet)
-image: '/assets/images/free_professional_email_2026.jpg'
-image_alt: 'Free Custom Domain Email 2026'
+image: /assets/images/free_professional_email_2026.jpg
+image_alt: Free Custom Domain Email 2026
 layout: post
 card_items: []
 ---
@@ -183,6 +183,10 @@ No DKIM from this free setup — that's normal.
 This Cloudflare + Gmail trick is still one of the top free email hacks in 2026. Got it working? Share your custom email or any questions below!
 
 Happy emailing!
+
+### Media mentions:
+
+Also posted on [dev.to for Richard Djarbeng](https://dev.to/rdjarbeng/how-to-get-a-free-professional-custom-domain-email-steps-for-beginners-on-gmail-9pj)
 
 PS: Got this email, 5th March, 2026: 
 

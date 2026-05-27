@@ -94,6 +94,10 @@ Anthropic's valuation has skyrocketed to an eye-watering **$380 billion**, yet i
 
 Whatever your personal stance on the trajectory of artificial general intelligence might be, IBM’s bleeding stock chart just abruptly settled the immediate debate: **The era of the legacy technological moat is definitively over.**
 
+### Media mentions:
+
+Also posted on [dev.to for Richard Djarbeng](https://dev.to/rdjarbeng/is-the-cobol-moat-dead-a-single-ai-blog-post-just-wiped-30b-off-ibm-3hg1)
+
 ***
 
 ### **Sources:**

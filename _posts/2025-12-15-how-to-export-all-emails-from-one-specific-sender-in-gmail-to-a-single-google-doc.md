@@ -11,12 +11,12 @@ tags:
   - Gmail Archive
   - Google Drive
   - Automation
-  - Productivity
+  - productivity
   - Email Management
   - Google Workspace
   - Scripting
   - Tech Tutorial
-  - How To
+  - How-to
   - Email Threads
   - Data Export
   - Google Docs
