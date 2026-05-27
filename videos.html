@@ -293,7 +293,9 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
             
             // Update count
-            videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+            if (videoCount) {
+                videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+            }
         }
 
 
