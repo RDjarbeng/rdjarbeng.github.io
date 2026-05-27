@@ -3,25 +3,13 @@ title: 'Let There Be Memes: A Curated Collection of Internet Gold'
 date: 2025-04-17T13:15:00
 published: true
 tags:
-  - Memes from the internet
-  - Emotion vs logic owlturd
-  - Scientists vs engineers
-  - oreo website meme
-  - brute force prevention
-  - Forgotten documentation meme
-  - Everybody loves chatgpt
-  - Midvale school for the gifted
-  - Dilbert comic
+  - Memes
   - Dilbert
-  - Dilbert why nothing works
-  - Update your pc meme
-  - Never turn off your pc
-  - Flower smelling competition
-  - Frontend has become more complicated
 image: /assets/images/ChatGPT_meme.jpeg
+image_alt: 'Cover image for Let There Be Memes: A Curated Collection of Internet Gold'
 layout: personal
-image_alt: "Cover image for Let There Be Memes: A Curated Collection of Internet Gold"
 ---
+
 Welcome to my personal gallery of memes and pictures that have made me laugh, think, or just nod in solemn agreement. In the vast, chaotic landscape of the internet, these are a few of the gems I found... interesting
 Emotions vs logic
 
@@ -34,7 +22,7 @@ Brute force attack prevention
 Programmers vs scientists
 ![Programmers vs scientists](/assets/images/dontTouchitMeme.jpg "Programmers vs scientists")
 
----
+***
 
 And now we wait
 
@@ -43,15 +31,14 @@ And now we wait
 ----
 Forgotten documentation
 
-
 ![Forgotten documentation for programming languages after chatgpt launches, stack overflow still hanging on](/assets/images/ChatGPT_meme.jpeg "Forgotten documentation for programming languages after chatgpt launches, stack overflow still hanging on")
+
 ----
 
 Midvale school for the gifted
 
+***
 
-
----
 This particular strip, featuring a meeting to discuss why nothing works, is a painfully accurate summary of corporate inefficiency.
 
 Dilbert-a meeting about why nothing works
@@ -67,20 +54,20 @@ Stop and Smell the flowers by owlturd
 
 ![Stop and smell the flowers makes it a competition](/assets/images/smellTheFlowers.jpeg "Stop and smell the flowers makes it a competition")
 
----
+***
 
 A Moment of Absence: Buffett and Munger
 This one is less of a meme and more of a poignant moment. It shows Warren Buffett at a meeting after his longtime partner, Charlie Munger, had passed away. For decades, they sat side-by-side, and Buffett would turn to Charlie for his opinion. Here, he instinctively does so again. A powerful image about friendship, habit, and loss. Charlie was vice chairman of Berkshire Hathaway, the conglomerate controlled by Warren Buffett, from 1978 until his death in 2023.
 
 ![Warren Buffet accidentally calls Charlie's name at a meeting](https://pbs.twimg.com/media/GoiWj8VXUAAglL2?format=jpg&name=small "Warren Buffet accidentally calls Charlie's name at a meeting")
 
----
+***
 
 Senior dev versus junior dev after the code works
 
 ![Senior dev telling the junior dev it won't work and now it works, and he gets the eagle stare](https://pbs.twimg.com/media/GMaxXZBa0AEaS-g?format=jpg&name=small "Senior dev telling the junior dev it won't work and now it works, and he gets the eagle stare")
 
----
+***
 
 About modern Frontend  being so complicated, a meme.
 

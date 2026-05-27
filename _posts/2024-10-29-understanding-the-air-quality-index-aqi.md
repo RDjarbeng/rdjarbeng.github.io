@@ -4,20 +4,12 @@ author: Richard
 categories:
   - Environment
 tags:
-  - Air quality
+  - Air Quality
   - weather and air quality
   - Air quality index
-  - environmental monitoring
+  - Environmental Monitoring
   - PM2.5
   - AQI
-  - Understanding AQI
-  - Understanding the Air Quality Index (AQI)
-  - How to calculate the Air Quality Index
-  - How the AQI works
-  - Importance of the AQI
-  - Calculate the AQI from PM readings
-  - International AQI standards
-  - AQI across countries
 title: Understanding the Air Quality Index (AQI)
 image: /assets/images/air_quality/aqi.png
 layout: post

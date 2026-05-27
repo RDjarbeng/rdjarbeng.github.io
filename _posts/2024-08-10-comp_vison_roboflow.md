@@ -4,7 +4,7 @@ author: Richard
 date: 2024-08-10
 image: /assets/images/comp_vision_roboflow.jpeg
 categories: ["Computer Vision"]
-tags: [Roboflow, Artificial Intelligence, Machine Learning, cv with roboflow, lear to build cv models, yoloworld ]
+tags: [Computer Vision, Machine Learning, AI]
 image_alt: "Cover image for Learn to Build Computer Vision Models with Roboflow"
 ---
 

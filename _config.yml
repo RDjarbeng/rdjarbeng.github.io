@@ -79,7 +79,7 @@ seo:
 # Social media defaults
 twitter:
   username: DjarbengRichard
-  card: summary
+  card: summary_large_image
 
 # Default image for social sharing
 defaults_image: /assets/images/logo.jpeg
@@ -116,7 +116,7 @@ collections:
     permalink: /personal/:title/
   gallery:
     output: true
-    permalink: /gallery/:name/
+    permalink: /gallery/:path/
   category_info:
     output: false
   gallery_categories:
@@ -155,6 +155,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      body_class: post-page
       toc: true
       toc_sticky: true
       permalink: /:title/ # Set permalink for posts globally to /title/

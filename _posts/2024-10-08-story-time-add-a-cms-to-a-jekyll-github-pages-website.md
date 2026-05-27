@@ -6,7 +6,7 @@ image: /assets/images/static_site.jpeg
 video: ""
 layout: post
 categories: ["Software Engineering"]
-tags: [CMS, DecapCMS, Sveltia, Netlify, Software engineering, web development]
+tags: [CMS, DecapCMS, Sveltia, Netlify, Software engineering, Web Development]
 image_alt: "Cover image for Escaping CMS hell-DecapCMS, Netlify and Sveltia"
 ---
 # Add a CMS to a jekyll GitHub-pages website

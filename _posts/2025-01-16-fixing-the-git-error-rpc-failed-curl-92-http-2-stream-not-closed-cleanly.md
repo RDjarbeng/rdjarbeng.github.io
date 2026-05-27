@@ -5,7 +5,6 @@ categories:
   - Help
 tags:
   - Git
-  - Git Stream not closed
   - stackoverflow
   - git error
 title: 'Fixing the Git Error: RPC Failed; curl 92 HTTP/2 Stream Not Closed Cleanly'

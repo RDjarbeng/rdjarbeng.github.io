@@ -26,9 +26,22 @@ layout: default
             </script>
         </div>
         <h1>{{ page.title | titleize }}</h1>
-        <div class="author_date">
-            <time datetime="{{ page.date | date_to_xmlschema }}" data-local="date">{{ page.date |
-                date: "%B %d, %Y" }}</time>
+        
+        {% assign display_cat = page.category %}
+        {% if display_cat == nil or display_cat == 'None' %}
+            {% assign parts = page.relative_path | split: '/' %}
+            {% if parts.size >= 3 %}
+                {% assign display_cat = parts[1] %}
+            {% endif %}
+        {% endif %}
+        
+        <div class="author_date" style="display: flex; align-items: center; gap: 15px;">
+            {% if display_cat and display_cat != 'None' and display_cat != 'videos' %}
+                <span style="background-color: var(--button-bg, #102a43); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">
+                    <a href="/gallery/{{ display_cat | slugify }}/" style="color: white; text-decoration: none;">{{ display_cat | replace: '-', ' ' }}</a>
+                </span>
+            {% endif %}
+            <time datetime="{{ page.date | date_to_xmlschema }}" data-local="date">{{ page.date | date: "%B %d, %Y" }}</time>
         </div>
     </div>
 
@@ -125,7 +138,7 @@ layout: default
                 </div>
                 {% else %}
                 <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"
-                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    style="height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 {% endif %}
             </div>
 
@@ -183,7 +196,8 @@ layout: default
                 </div>
                 <div style="padding: 15px; flex-grow: 1; display: flex; flex-direction: column;">
                     <h4 style="margin: 0 0 8px 0; font-size: 1.05rem; line-height: 1.4; color: #102a43;">{{ item.title | escape }}</h4>
-                    <div style="font-size: 0.8rem; color: #ff0000; text-transform: uppercase; font-weight: bold; margin-top: auto;">{{ item.genre | default: item.category | default: "Other" }}</div>
+                    {% assign display_cat = item.genre | default: item.category | default: item.categories.first | default: "Other" %}
+                    <div style="font-size: 0.8rem; color: #ff0000; text-transform: uppercase; font-weight: bold; margin-top: auto;">{{ display_cat }}</div>
                 </div>
             </a>
         {% endfor %}
