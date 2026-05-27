@@ -1,0 +1,141 @@
+<script>
+    if (!window.LightboxInitialized) {
+        window.LightboxInitialized = true;
+    document.addEventListener("DOMContentLoaded", function() {
+        const modal = document.createElement('div');
+        modal.id = 'gallery-modal';
+        modal.className = 'lightbox';
+        modal.innerHTML = `
+          <span class="lightbox-close">&times;</span>
+          <button class="lightbox-nav prev">&#10094;</button>
+          <div class="lightbox-content-wrapper">
+            <div class="lightbox-media-column">
+              <div id="lightbox-media-container"></div>
+            </div>
+            <div class="lightbox-info-column">
+              <h2 class="lightbox-title"></h2>
+              <div class="lightbox-meta">
+                <span class="lightbox-date"></span>
+              </div>
+              <div class="lightbox-caption"></div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                <a class="lightbox-full-post-btn btn" href="#" >Go to full post</a>
+              </div>
+            </div>
+          </div>
+          <button class="lightbox-nav next">&#10095;</button>
+        `;
+        document.body.appendChild(modal);
+
+        let visibleItems = Array.from(document.querySelectorAll('.gallery-item'));
+        let currentIndex = 0;
+
+        function updateVisibleItems() {
+            visibleItems = Array.from(document.querySelectorAll('.gallery-item'));
+        }
+
+        function openLightbox(index) {
+            updateVisibleItems();
+            if (index < 0 || index >= visibleItems.length) return;
+            currentIndex = index;
+            const item = visibleItems[index];
+
+            const title = item.getAttribute('data-title') || '';
+            const caption = item.querySelector('.gallery-caption-content') ? item.querySelector('.gallery-caption-content').innerHTML : (item.getAttribute('data-caption') || '');
+            let dateFormatted = item.getAttribute('data-date') || '';
+            if (dateFormatted) { dateFormatted = new Date(dateFormatted).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); }
+
+            modal.querySelector('.lightbox-title').textContent = title;
+            modal.querySelector('.lightbox-date').textContent = dateFormatted;
+            modal.querySelector('.lightbox-caption').innerHTML = caption;
+            modal.querySelector('.lightbox-full-post-btn').href = item.getAttribute('data-url') || '#';
+
+            const mediaContainer = modal.querySelector('#lightbox-media-container');
+            mediaContainer.innerHTML = '';
+            
+            if (item.getAttribute('data-type') === 'html') {
+                const templ = item.querySelector('template.raw-embed-code');
+                if (templ) {
+                    const div = document.createElement('div');
+                    div.style.width = '100%'; div.style.height = '100%'; div.style.display = 'flex';
+                    div.style.justifyContent = 'center'; div.style.alignItems = 'center';
+                    div.appendChild(document.importNode(templ.content, true));
+                    mediaContainer.appendChild(div);
+                }
+            } else {
+                const img = document.createElement('img');
+                img.src = item.getAttribute('data-src');
+                img.alt = title;
+                mediaContainer.appendChild(img);
+            }
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Check if we need to load more
+            if (index >= visibleItems.length - 2) {
+                const nextBtn = document.querySelector('.next-page-btn:not(.loading)');
+                if (nextBtn) nextBtn.click();
+            }
+        }
+
+        function closeLightbox() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            modal.querySelector('#lightbox-media-container').innerHTML = '';
+        }
+
+        modal.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        modal.querySelector('.prev').addEventListener('click', (e) => { e.stopPropagation(); openLightbox((currentIndex - 1 + visibleItems.length) % visibleItems.length); });
+        modal.querySelector('.next').addEventListener('click', (e) => { e.stopPropagation(); openLightbox((currentIndex + 1) % visibleItems.length); });
+        modal.addEventListener('click', (e) => { if (e.target === modal || e.target.classList.contains('lightbox-content-wrapper')) closeLightbox(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') openLightbox((currentIndex + 1) % visibleItems.length);
+            if (e.key === 'ArrowLeft') openLightbox((currentIndex - 1 + visibleItems.length) % visibleItems.length);
+        });
+
+        document.addEventListener('click', function(e) {
+            const trigger = e.target.closest('.lightbox-trigger-zone') || e.target.closest('.lightbox-trigger');
+            if (trigger) {
+                e.preventDefault();
+                e.stopPropagation();
+                updateVisibleItems();
+                const card = trigger.closest('.gallery-item');
+                if (card) openLightbox(visibleItems.indexOf(card));
+                return;
+            }
+
+            const nextBtn = e.target.closest('.next-page-btn');
+            if (nextBtn && !nextBtn.classList.contains('loading')) {
+                e.preventDefault();
+                const nextUrl = nextBtn.href;
+                nextBtn.textContent = 'Loading...';
+                nextBtn.classList.add('loading');
+                
+                fetch(nextUrl)
+                    .then(res => res.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const newItems = doc.querySelectorAll('.meme-grid > div');
+                        const grid = document.querySelector('.meme-grid');
+                        if (grid) newItems.forEach(item => grid.appendChild(item));
+                        
+                        const newPagination = doc.querySelector('.pagination');
+                        const currentPagination = document.querySelector('.pagination');
+                        if (newPagination && currentPagination) {
+                            currentPagination.innerHTML = newPagination.innerHTML;
+                        } else if (currentPagination) {
+                            currentPagination.remove();
+                        }
+                        updateVisibleItems();
+                    })
+                    .catch(() => window.location.href = nextUrl);
+            }
+        }, true);
+    });
+    }
+</script>

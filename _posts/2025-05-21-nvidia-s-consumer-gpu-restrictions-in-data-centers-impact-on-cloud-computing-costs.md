@@ -4,7 +4,9 @@ author: Richard
 categories:
   - Technology
 tags:
-  - Nvidia, GPU, AI, datacenters
+  - Nvidia
+  - GPU
+  - AI
 title: "NVIDIA's Consumer GPU Restrictions in Data Centers: Impact on Cloud Computing Costs"
 image: /assets/images/douglas-county-servers.jpg
 video: ''

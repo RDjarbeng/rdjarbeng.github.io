@@ -17,12 +17,7 @@ tags:
   - Google
   - Geoffery Hinton
   - Ian Goodfellow
-  - Genarative Adversarial Networks
-  - Attention is all you need
-  - Chronological AI research
   - AI 101
-  - Introduction to AI
-  - Introduction to machine learning
   - Tesla
   - Nvidia
 title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'

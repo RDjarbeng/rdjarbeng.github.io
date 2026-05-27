@@ -7,14 +7,14 @@ categories:
 tags:
   - Ananse
   - Ghana
-  - West-Africa
-  - GenAi
+  - West Africa
+  - GenAI
   - Bing-image
   - Firefly
   - Spider
   - Character
   - AnanseTales
-  - ananse
+  - Ananse
   - ConceptArt
   - stablediffusion
   - AI

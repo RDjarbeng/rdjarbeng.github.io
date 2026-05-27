@@ -155,8 +155,8 @@
 
     .genre-chip {
       padding: 8px 18px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
       border-radius: 20px;
       font-size: 0.85rem;
       font-weight: 600;
@@ -271,10 +271,10 @@
           overflow-x: auto;
           padding-bottom: 5px;
           scrollbar-width: none;
-          &::-webkit-scrollbar { display: none; }
           width: 100%;
           justify-content: flex-start;
           gap: 10px;
+          &::-webkit-scrollbar { display: none; }
         }
 
         .vid-source-btn {
