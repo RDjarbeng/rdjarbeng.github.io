@@ -129,3 +129,6 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
 - [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically
 - [ ] Video collections need a nicer transition
+- [ ] Video page collections don't play without redirecting, would be nice to have them play
+
+- Video page needs to organize videos so it's not an endless scrolling list
