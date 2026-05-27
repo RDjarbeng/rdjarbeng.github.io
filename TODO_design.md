@@ -132,3 +132,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Video page collections don't play without redirecting, would be nice to have them play
 
 - Video page needs to organize videos so it's not an endless scrolling list
+- [ ] Text in Gallery sidebar looks faint in light mode
