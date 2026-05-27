@@ -45,7 +45,7 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal)
 - [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Jekyll logic)
 - [ ] Gallery item titles need to be capitalized - possible use of jekyll capitalize filters. (Medium Importance, Trivial Complexity: Jekyll filter application)
-- [ ] Add pages: authors page, meme page, videos page, youtube page specifically for youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
+- [ ] Add pages: authors page, youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
 - [ ] Authors page needs a page for each author instead of a long scrolling page. (Medium Importance, Significant Complexity: Jekyll collection/layout restructuring)
 
 ## Future Enhancements & Strategic Roadmap
@@ -120,7 +120,7 @@ This todo file contains design specifications and technical  directions for rdja
 - the telegram bot needs to be updated on the new organization of the gallery
 - [ ] Link directly dev, coder legion posts manually to main site
 - [ ] Add link to background remover amd and projects on the about page
-- [ ] Meme page text on cards for light mode have low contrast - need to fix
+
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
