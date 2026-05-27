@@ -23,21 +23,22 @@
       <p class="post-card-excerpt">{% include_cached excerpt.html post=include.post %}</p>
       {% endunless %}
 
-      {% if include.post.categories.size > 0 %}
-      <div class="post-card-categories">
-        {% for cat in include.post.categories limit:2 %}
-        <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-
       <div class="post-meta-categories-container">
-        <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
-            include.post.date | date: "%B %-d, %Y" }}</time></div>
-        <div class="post-meta-dot">·</div>
-        <div class="post-meta-card">
-          {{ minutes }} min read
+        <div class="post-meta-left">
+          <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
+              include.post.date | date: "%B %-d, %Y" }}</time></div>
+          <div class="post-meta-dot">·</div>
+          <div class="post-meta-card">
+            {{ minutes }} min read
+          </div>
         </div>
+        {% if include.post.categories.size > 0 %}
+        <div class="post-card-categories">
+          {% for cat in include.post.categories limit:2 %}
+          <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
