@@ -11,7 +11,7 @@ tags:
   - Uganda
   - Sustainable Mobility
 title: Kiira Motors Kayoola EV completes 13,700+ km journey from Uganda to South Africa.
-image: assets/images/posts/covers/kayoola_ev_expedition.jpg
+image: /assets/images/posts/covers/kayoola_ev_expedition.jpg
 image_alt: Flat vector illustration of a Kayoola electric coach bus driving across an African landscape
 layout: post
 card_items:

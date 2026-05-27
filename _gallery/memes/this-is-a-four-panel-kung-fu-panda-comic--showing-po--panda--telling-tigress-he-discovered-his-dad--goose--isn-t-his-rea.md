@@ -1,10 +1,8 @@
 ---
-title: This is a four-panel Kung Fu Panda comic, showing Po (Panda) telling Tigress
-  he discovered his dad (Goose) isn't his real dad.
-date: '2026-04-30T14:42:05+02:00'
+title: Kung Fu Panda comic, showing Po (Panda) telling Tigress his discovery
+date: 2026-04-30T14:42:00+02:00
 image: /assets/images/memes/this-is-a-four-panel-kung-fu-panda-comic--showing-po--panda--telling-tigress-he-discovered-his-dad--goose--isn-t-his-rea.jpg
-image_alt: This is a four-panel Kung Fu Panda comic, showing Po (Panda) telling Tigress
-  he discovered his dad (Goose) isn't his real dad.
+image_alt: This is a four-panel Kung Fu Panda comic, showing Po (Panda) telling Tigress he discovered his dad (Goose) isn't his real dad.
 type: external
 category: memes
 ---

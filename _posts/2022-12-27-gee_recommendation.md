@@ -5,7 +5,7 @@ layout: post
 author: Richard
 image: https://github.com/user-attachments/assets/213b0937-d8b0-4b12-82fc-9220c977fd39
 categories: ["GIS"]
-tags: [Google Earth Engine, satellite, satellite imagery,GEE]
+tags: [Google Earth Engine, Satellite, satellite imagery,GEE]
 image_alt: "Cover image for Google Earth Engine: A Useful Tool for Satellite Imagery"
 ---
 

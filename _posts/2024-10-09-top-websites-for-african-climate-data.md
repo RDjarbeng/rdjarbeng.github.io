@@ -6,7 +6,7 @@ image: /assets/images/weather_post/wunderground.png
 video: ""
 layout: post
 categories: ["Environment"]
-tags: [Climate data, africa, data for climate, websites for environmental data, climate data in Africa]
+tags: [Climate data, Africa, data for climate, websites for environmental data, climate data in Africa]
 image_alt: "Cover image for Top Websites for African Climate Data"
 card_items:
   - name: "TAHMO (Trans-African Hydro-Meteorological Observatory)"
