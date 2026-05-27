@@ -187,3 +187,6 @@ A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. 
 - [ ] Future Africa investors
 - [ ] Write about product hunt and what it does
 - [ ] Songs that sound differently with headphones- Emmanuel Ese for instance has a bass line and drum kick sound that is so much refined and noticeable on headphones
+- [ ] This post needs more content
+
+spacex-did-it-again-precision-engineering-on-display/
