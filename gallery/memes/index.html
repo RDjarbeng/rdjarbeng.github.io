@@ -14,13 +14,10 @@ permalink: /gallery/memes/
     <p class="meme-description">A collection of memes and funny snippets from across the internet.</p>
 
     <div class="meme-grid">
-        {% assign memes = site.gallery | where: "category", "memes" %}
-
+        {% assign memes = "" | split: "" %}
         {% for item in site.gallery %}
-        {% if item.url contains 'memes' %}
-        {% unless memes contains item %}
+        {% if item.category == 'memes' or item.url contains 'memes' %}
         {% assign memes = memes | push: item %}
-        {% endunless %}
         {% endif %}
         {% endfor %}
 
