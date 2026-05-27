@@ -29,6 +29,16 @@ When writing or editing posts for this website, follow these rules:
    - Technical posts: Clear, instructive tone.
    - Personal reflection posts: Conversational but still statement-driven.
 
+3. **Expand, Don't Summarize**: When completing a post, unless explicitly told to summarize, add more information and detail to make the post longer and more comprehensive. Improve the wording while keeping all original details.
+
+## Media Embedding
+
+1. **Embed Tweets**: If a post contains links to X (formerly Twitter) posts, embed them using the standard HTML blockquote format. Ensure the `widgets.js` script is included.
+   - Example: `<blockquote class="twitter-tweet"><a href="URL"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
+
+2. **Embed YouTube Videos**: If a post contains YouTube links, embed them using an `<iframe>`.
+   - Example: `<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>`
+
 ## Checklist Before Publishing
 
 - [ ] No em dashes (`—`) or en dashes (`–`) in the text

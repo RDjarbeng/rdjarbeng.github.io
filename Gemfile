@@ -9,16 +9,18 @@ gem "minima", "~> 2.5"
 # end
 
 group :jekyll_plugins do
-  gem "jekyll-last-modified-at"
   gem "kramdown-math-katex"
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
   gem 'jekyll-archives'
   gem 'jekyll-redirect-from'
   gem 'jekyll-toc'
   gem 'jekyll-include-cache'
 end
+
+# Plugins controlled via _config.yml (Slow plugins)
+gem "jekyll-sitemap"
+gem "jekyll-last-modified-at"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

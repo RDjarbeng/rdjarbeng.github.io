@@ -16,17 +16,24 @@
 
     /**
      * Format a Date object as a human-friendly local date+time string.
-     * e.g. "March 5, 2026 at 3:00 PM"
+     * e.g. "March 5, 2026 at 3:00 PM" (or "March 5 at 3:00 PM" if current year)
      */
     function formatLocalDateTime(date) {
+        var currentYear = new Date().getFullYear();
+        var dateYear = date.getFullYear();
+        
         var options = {
-            year: 'numeric',
             month: 'long',
             day: 'numeric',
             hour: 'numeric',
             minute: '2-digit',
             hour12: true
         };
+        
+        if (dateYear !== currentYear) {
+            options.year = 'numeric';
+        }
+
         // Intl.DateTimeFormat gives us locale-aware formatting
         var formatted = date.toLocaleString(undefined, options);
         return formatted;
@@ -34,14 +41,21 @@
 
     /**
      * Format a Date object as a human-friendly local date-only string.
-     * e.g. "March 5, 2026"
+     * e.g. "March 5, 2026" (or "March 5" if current year)
      */
     function formatLocalDate(date) {
+        var currentYear = new Date().getFullYear();
+        var dateYear = date.getFullYear();
+
         var options = {
-            year: 'numeric',
             month: 'long',
             day: 'numeric'
         };
+
+        if (dateYear !== currentYear) {
+            options.year = 'numeric';
+        }
+
         return date.toLocaleDateString(undefined, options);
     }
 

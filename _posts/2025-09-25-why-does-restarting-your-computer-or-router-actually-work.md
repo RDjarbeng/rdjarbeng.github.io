@@ -7,7 +7,7 @@ categories:
 tags:
   - Repair
   - IT
-  - tech
+  - Tech
   - computers
   - restarting
   - troubleshooting
