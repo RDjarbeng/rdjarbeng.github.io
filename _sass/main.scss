@@ -509,6 +509,11 @@ iframe {
   padding-top: 5px;
 }
 
+.post-meta-left {
+  display: flex;
+  align-items: center;
+}
+
 .post-meta,
 .post-meta-card {
   font-size: 0.85rem;
@@ -2459,7 +2464,7 @@ h1, h2, h3, h4, h5, h6,
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   position: relative;
   z-index: 2;
 }
