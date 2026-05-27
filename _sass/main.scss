@@ -2227,13 +2227,13 @@ h1, h2, h3, h4, h5, h6,
       transform: none;
       // Display as a wrapping row of pill chips
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 4px;
 
       a {
         display: inline-block;
-        padding: 5px 12px;
+        padding: 4px 8px;
         border-bottom: none;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         opacity: 0.95;
         background: var(--card-bg, rgba(255,255,255,0.08));
         border: 1px solid var(--card-border);
