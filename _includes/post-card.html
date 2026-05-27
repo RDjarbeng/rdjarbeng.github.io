@@ -1,5 +1,5 @@
 <div class="post-card">
-  <a class="post-link" href="{{ include.post.url | relative_url }}">
+  <div class="post-link">
     {% if include.post.image and include.post.image.size > 0 %}
     <div class="post-card-image">
       <img src="{{ include.post.image }}"
@@ -10,7 +10,9 @@
 
     <div class="post-card-content">
       <h4 title="{{ include.post.title | escape }}">
-        {{ include.post.title | escape }}
+        <a href="{{ include.post.url | relative_url }}" class="post-card-title-link">
+          {{ include.post.title | escape }}
+        </a>
       </h4>
 
       {% assign words_per_minute = 180 %}
@@ -38,5 +40,5 @@
         </div>
       </div>
     </div>
-  </a>
+  </div>
 </div>
