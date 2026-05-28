@@ -21,9 +21,44 @@ ALLOWED_USER_ID = os.getenv("ALLOWED_USER_ID")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO_NAME = os.getenv("GITHUB_REPO", "RDjarbeng/rdjarbeng.github.io")
 
+import time
+from functools import wraps
+import requests
+from telebot import apihelper
+
+# Increase timeout and try to mitigate proxy issues
+apihelper.SESSION = requests.Session()
+apihelper.SESSION.proxies = {}  # Sometimes helps
+apihelper.RETRY_ON_ERROR = True
+
 # Initialize Telegram Bot (TeleBot must be synchronous for WSGI Webhooks)
 bot = telebot.TeleBot(TOKEN, threaded=False)
 app = Flask(__name__)
+
+def telegram_retry(max_retries=5, backoff=1.5):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(max_retries):
+                try:
+                    return func(*args, **kwargs)
+                except (requests.exceptions.ProxyError, requests.exceptions.ConnectionError, OSError) as e:
+                    if attempt == max_retries - 1:
+                        raise
+                    wait = backoff ** attempt
+                    print(f"Proxy error, retrying in {wait:.1f}s... (Attempt {attempt+1}/{max_retries})")
+                    time.sleep(wait)
+            return None
+        return wrapper
+    return decorator
+
+# Monkey patch bot methods with retry logic
+bot.reply_to = telegram_retry()(bot.reply_to)
+bot.send_message = telegram_retry()(bot.send_message)
+bot.edit_message_text = telegram_retry()(bot.edit_message_text)
+bot.answer_callback_query = telegram_retry()(bot.answer_callback_query)
+bot.get_file = telegram_retry()(bot.get_file)
+bot.download_file = telegram_retry()(bot.download_file)
 
 # Very simple in-memory state. In a multi-worker setup on PythonAnywhere, 
 # this can theoretically reset between requests, but for a free account with 1 worker, it usually persists well enough for brief menus.
@@ -505,9 +540,19 @@ def handle_text(message):
         [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
         [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
     ]
-    status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
     
-    uploads[str(status_msg.message_id)] = {
-        'text': text,
-        'state': 'todo'
-    }
+    try:
+        status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
+        if status_msg:
+            uploads[str(status_msg.message_id)] = {
+                'text': text,
+                'state': 'todo'
+            }
+    except Exception as e:
+        print(f"Failed to send TODO menu: {e}")
+        try:
+            fallback_msg = bot.send_message(message.chat.id, "✅ Received. I'll treat this as a TODO (Content).")
+            if fallback_msg:
+                process_todo_action(message.chat.id, fallback_msg.message_id, text, "TODO_content.md")
+        except Exception:
+            pass
