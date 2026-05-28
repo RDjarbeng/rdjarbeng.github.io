@@ -1,5 +1,5 @@
 ---
-title: Revolutionizing Healthcare in Developing Nations Through Data
+title: "Cover image for post - Revolutionizing Healthcare in Developing Nations Through Data"
 date: 2024-12-02 12:00:00
 image: /assets/images/hr_constraints_africa.png
 type: cover

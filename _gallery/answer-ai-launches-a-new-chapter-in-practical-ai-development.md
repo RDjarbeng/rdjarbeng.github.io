@@ -1,5 +1,5 @@
 ---
-title: 'Answer.AI Launches: A New Chapter in Practical AI Development'
+title: "Cover image for post - Answer.AI Launches: A New Chapter in Practical AI Development"
 date: 2024-11-26 12:00:00
 image: /assets/images/answer_ai.jpg
 type: cover

@@ -1,5 +1,5 @@
 ---
-title: Navigating Kigali- motorbikes and an accent
+title: "Cover image for post - Navigating Kigali- motorbikes and an accent"
 date: 2025-12-28 22:55:10
 image: /assets/images/kigali_bustop_motor.jpg
 type: cover

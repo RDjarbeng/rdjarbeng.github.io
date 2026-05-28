@@ -1,5 +1,5 @@
 ---
-title: DNS Root Servers
+title: "Cover image for post - DNS Root Servers"
 date: 2026-02-02 14:15:00
 image: /assets/images/dns_root_servers_cover.jpg
 type: cover

@@ -1,5 +1,5 @@
 ---
-title: 'Ambient Air Quality Standards in West Africa: The Current State (2025)'
+title: "Cover image for post - Ambient Air Quality Standards in West Africa: The Current State (2025)"
 date: 2025-01-13 12:00:00
 image: /assets/images/brightglobe_in_africa.jpg
 type: cover

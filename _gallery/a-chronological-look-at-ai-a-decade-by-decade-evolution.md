@@ -1,5 +1,5 @@
 ---
-title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
+title: "Cover image for post - A Chronological Look At AI: A Decade-by-Decade Evolution"
 date: 2025-09-22 12:00:00
 image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 type: cover

@@ -1,5 +1,5 @@
 ---
-title: 'StackBlitz: A Full-IDE in Your Browser'
+title: "Cover image for post - StackBlitz: A Full-IDE in Your Browser"
 date: 2025-04-10 12:00:00
 image: /assets/images/stackblitz_logo.jpeg
 type: cover

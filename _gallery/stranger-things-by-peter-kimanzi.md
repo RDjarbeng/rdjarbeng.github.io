@@ -1,5 +1,5 @@
 ---
-title: Stranger Things by Peter Kimanzi
+title: "Cover image for post - Stranger Things by Peter Kimanzi"
 date: 2022-10-17 12:00:00
 image: /assets/images/stranger_things.png
 type: cover

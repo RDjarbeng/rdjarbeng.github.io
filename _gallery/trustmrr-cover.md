@@ -1,5 +1,5 @@
 ---
-title: TrustMRR Verified Startup Revenues
+title: "Cover image for post - TrustMRR Verified Startup Revenues"
 date: 2026-02-02 12:00:00
 image: /assets/images/trustmrr_revenue_leaderboard_cover.jpg
 type: cover

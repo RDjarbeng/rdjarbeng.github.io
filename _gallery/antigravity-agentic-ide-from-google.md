@@ -1,5 +1,5 @@
 ---
-title: 'Review: Google Antigravity License Agreement and First Impressions'
+title: "Cover image for post - Review: Google Antigravity License Agreement and First Impressions"
 date: 2025-11-22 12:00:00
 image: /assets/images/antigravity_cover_image.webp
 type: cover

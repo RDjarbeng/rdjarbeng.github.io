@@ -1,5 +1,5 @@
 ---
-title: Designing ananse a generative AI approach
+title: "Cover image for post - Designing ananse a generative AI approach"
 date: 2025-09-14 12:00:00
 image: /assets/images/ananse_design_cover_rdjarbeng.JPG
 type: cover

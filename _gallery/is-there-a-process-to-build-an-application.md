@@ -1,5 +1,5 @@
 ---
-title: Is There a Process to Build an Application?
+title: "Cover image for post - Is There a Process to Build an Application?"
 date: 2024-11-20 12:00:00
 image: /assets/images/light bulb.jpg
 type: cover

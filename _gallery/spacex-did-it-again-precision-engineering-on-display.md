@@ -1,5 +1,5 @@
 ---
-title: SpaceX Did It Again-Precision Engineering on Display
+title: "Cover image for post - SpaceX Did It Again-Precision Engineering on Display"
 date: 2025-01-17 12:00:00
 image: /assets/images/booster_catch.png
 type: cover

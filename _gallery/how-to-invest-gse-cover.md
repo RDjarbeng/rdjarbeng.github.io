@@ -1,5 +1,5 @@
 ---
-title: How To Invest On The Ghana Stock Exchange Cover
+title: "Cover image for post - How To Invest On The Ghana Stock Exchange Cover"
 date: 2026-01-05 18:30:00
 image: /assets/images/gse_article_nat/gse_cover.jpg
 type: cover

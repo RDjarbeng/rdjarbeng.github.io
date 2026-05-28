@@ -1,5 +1,5 @@
 ---
-title: Explore the Fascinating World of Satellite Orbits with Keeptrack.space
+title: "Cover image for post - Explore the Fascinating World of Satellite Orbits with Keeptrack.space"
 date: 2025-05-03 12:00:00
 image: /assets/images/keeptrack.png
 type: cover

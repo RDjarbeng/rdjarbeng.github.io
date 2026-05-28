@@ -1,5 +1,5 @@
 ---
-title: Cover image for Spotlight on Peter Kimanzi- Developer from Nairobi
+title: "Cover image for post - Cover image for Spotlight on Peter Kimanzi- Developer from Nairobi"
 image: /assets/images/peterKimanziPortfolio.png
 image_alt: ''
 type: cover

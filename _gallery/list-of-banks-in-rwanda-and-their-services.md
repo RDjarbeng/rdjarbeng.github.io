@@ -1,5 +1,5 @@
 ---
-title: List of Banks in Rwanda and Their Services
+title: "Cover image for post - List of Banks in Rwanda and Their Services"
 date: 2025-05-24 12:00:00
 image: /assets/images/1000189531.jpg
 type: cover

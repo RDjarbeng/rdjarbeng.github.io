@@ -1,5 +1,5 @@
 ---
-title: Learn to Build Computer Vision Models with Roboflow
+title: "Cover image for post - Learn to Build Computer Vision Models with Roboflow"
 date: 2024-08-10 12:00:00
 image: /assets/images/comp_vision_roboflow.jpeg
 type: cover

@@ -1,5 +1,5 @@
 ---
-title: 'Interrupted Romance: Sunset, Cynicism And Love birds In Kigali'
+title: "Cover image for post - Interrupted Romance: Sunset, Cynicism And Love birds In Kigali"
 date: 2025-12-28 22:55:10
 image: /assets/images/loverbirds_cover_rdjarbeng.webp
 type: cover

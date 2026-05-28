@@ -1,5 +1,5 @@
 ---
-title: Google Rich Results Testing
+title: "Cover image for post - Google Rich Results Testing"
 date: 2026-02-02 12:05:00
 image: /assets/images/google_rich_results_cover.jpg
 type: cover

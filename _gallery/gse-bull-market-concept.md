@@ -1,5 +1,5 @@
 ---
-title: Ghana Stock Exchange Concept Art
+title: "Cover image for post - Ghana Stock Exchange Concept Art"
 date: 2026-01-05 18:00:00
 image: /assets/images/gse_article_nat/gse_concept_art.jpg
 type: cover

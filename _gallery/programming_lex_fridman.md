@@ -1,5 +1,5 @@
 ---
-title: Why Not Stick to One Programming Language for Everything?
+title: "Cover image for post - Why Not Stick to One Programming Language for Everything?"
 date: 2024-08-26 12:00:00
 image: /assets/images/programming_language.png
 type: cover

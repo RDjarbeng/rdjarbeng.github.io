@@ -1,5 +1,5 @@
 ---
-title: Kolors Virtual Try-On:Nobody's Gonna Know
+title: "Cover image for post - Kolors Virtual Try-On:Nobody's Gonna Know"
 date: 2025-04-20 12:00:00
 image: /assets/images/kolors_try_on-ezgif.com-optimize.webp
 type: cover

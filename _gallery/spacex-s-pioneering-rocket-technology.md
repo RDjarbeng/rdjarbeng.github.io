@@ -1,5 +1,5 @@
 ---
-title: SpaceX Pioneering Rocket Technology
+title: "Cover image for post - SpaceX Pioneering Rocket Technology"
 date: 2025-01-17 12:00:00
 image: /assets/images/space_x_gallery.avif
 type: cover

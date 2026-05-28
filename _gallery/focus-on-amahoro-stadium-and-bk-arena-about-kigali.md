@@ -1,5 +1,5 @@
 ---
-title: 'Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View'
+title: "Cover image for post - Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View"
 date: 2025-12-28 22:55:10
 image: /assets/images/amahoro_stadium_outside_cover_rdjarbeng.webp
 type: cover

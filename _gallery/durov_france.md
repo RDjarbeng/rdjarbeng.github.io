@@ -1,5 +1,5 @@
 ---
-title: Cover image for Is this where Durov's French journey began
+title: "Cover image for post - Cover image for Is this where Durov's French journey began"
 image: /assets/images/durov_mountains.jpg
 image_alt: Pavel Durov Telegram CEO in black sports wear outside
 type: cover

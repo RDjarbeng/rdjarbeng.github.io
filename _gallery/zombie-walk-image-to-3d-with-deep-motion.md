@@ -1,5 +1,5 @@
 ---
-title: 'Zombie Walk: Turning an Image into a 3D Model with DeepMotion'
+title: "Cover image for post - Zombie Walk: Turning an Image into a 3D Model with DeepMotion"
 date: 2025-04-07 12:00:00
 image: /assets/images/deepmotion_walking.png
 type: cover
