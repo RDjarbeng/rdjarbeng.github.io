@@ -3,7 +3,7 @@ title: EnilArt On Twitter- This Guy From Ghana Draws People Whilst in a Bus-Trot
 date: 2026-01-07 12:00:00
 platform: twitter
 youtube_id: 'https://twitter.com/Enilart/status/2008876696255279287'
-thumbnail: ''
+thumbnail: 'https://jf.x.com/images/media-preview/2008876696255279287'
 type: video
 category: videos
 genre: Other

@@ -4,7 +4,7 @@ title: "In Ben-Hur: Judah (Charlton Heston), exhausted in the desert, is silentl
 platform: twitter
 youtube_id: https://x.com/AlexTran677026/status/2051060229840978014?s=20
 embed_code: ''
-thumbnail: ''
+thumbnail: 'https://jf.x.com/images/media-preview/2051060229840978014'
 type: video
 genre: Film & Animation
 category: videos

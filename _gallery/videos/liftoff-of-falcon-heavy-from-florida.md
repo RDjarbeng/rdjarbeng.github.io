@@ -3,7 +3,7 @@ title: Liftoff of Falcon Heavy from Florida
 platform: twitter
 youtube_id: https://x.com/SpaceX/status/2049492378499633469?s=20
 embed_code: ''
-thumbnail: ''
+thumbnail: 'https://jf.x.com/images/media-preview/2049492378499633469'
 type: video
 genre: Science & Technology
 category: videos
