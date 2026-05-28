@@ -3,7 +3,7 @@ title: Pushing Changes to  Production on Friday- What Could Possibly Go Wrong
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=WlBsKo-RMH4
 embed_code: ''
-thumbnail: assets/images/videos/pushing_to_prod_cover.png
+thumbnail: /assets/images/videos/pushing_to_prod_cover.png
 type: video
 category: videos
 genre: Entertainment

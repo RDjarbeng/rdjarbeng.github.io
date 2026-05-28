@@ -1,7 +1,7 @@
 ---
 title: Lebron James Tribute- A Mosaic of Career Highlights
 date: 2026-02-18T10:00:00+00:00
-image: assets/images/ai/Lebron_james_sports_cover_gem.png
+image: /assets/images/ai/Lebron_james_sports_cover_gem.png
 image_alt: A digital graphic of basketball player LeBron James jumping with a basketball held high in his right hand. The silhouette of his body and uniform is entirely filled with a collage of smaller photographs showing various moments from his career. The background is a textured white surface. The name LEBRON JAMES appears in the top left corner
 labels: Gemini
 type: external

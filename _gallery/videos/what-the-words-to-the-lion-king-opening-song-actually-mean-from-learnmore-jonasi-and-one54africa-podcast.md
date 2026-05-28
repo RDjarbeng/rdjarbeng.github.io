@@ -4,7 +4,7 @@ published: true
 date: 2026-02-28T22:16:00
 platform: twitter
 youtube_id: 'https://twitter.com/RealDonKeith/status/2027369068731195677'
-thumbnail: assets/images/videos/1000369980.jpg
+thumbnail: /assets/images/videos/1000369980.jpg
 type: video
 category: videos
 genre: Reviews & Reactions

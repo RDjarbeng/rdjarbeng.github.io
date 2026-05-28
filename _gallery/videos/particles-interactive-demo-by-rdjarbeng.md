@@ -5,7 +5,7 @@ date: 2026-01-09 10:59:00
 platform: twitter
 youtube_id: https://twitter.com/DjarbengRichard/status/2009641438536184245
 embed_code: ''
-thumbnail: assets/images/videos/particles_rd_twitter_averycode-Cover.jpg
+thumbnail: /assets/images/videos/particles_rd_twitter_averycode-Cover.jpg
 type: video
 genre: Science & Technology
 category: videos

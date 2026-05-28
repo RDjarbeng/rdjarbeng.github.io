@@ -5,7 +5,7 @@ published: true
 date: 2026-02-19 18:22:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7588642614572797240'
-thumbnail: assets/images/videos/transition_chrisvic_defedefeto_kumama_-Cover.jpg
+thumbnail: /assets/images/videos/transition_chrisvic_defedefeto_kumama_-Cover.jpg
 type: video
 category: videos
 genre: Music

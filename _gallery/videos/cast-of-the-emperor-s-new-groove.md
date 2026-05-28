@@ -82,7 +82,7 @@ embed_code: '<blockquote class="instagram-media" data-instgrm-permalink="https:/
   shared by Disney (@disney)</a></p></div></blockquote>
 
   <script async src="//www.instagram.com/embed.js"></script>'
-thumbnail: assets/images/videos/emperors_new_groove_gallery_cover_instagram.png
+thumbnail: /assets/images/videos/emperors_new_groove_gallery_cover_instagram.png
 type: video
 category: videos
 genre: Entertainment

@@ -5,7 +5,7 @@ date: 2026-03-08T00:04:00+02:00
 platform: tiktok
 youtube_id: https://www.tiktok.com/@thinkwithfacundo/video/7610466130096049415/
 embed_code: ''
-thumbnail: assets/images/videos/pasted-image-1779882688569.png
+thumbnail: /assets/images/videos/pasted-image-1779882688569.png
 type: video
 genre: Science & Technology
 category: videos

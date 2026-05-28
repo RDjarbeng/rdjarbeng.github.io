@@ -1,7 +1,7 @@
 ---
 title: Just Read The Documentation -fall of stack overflow
 date: 2026-05-06T20:22:00+02:00
-image: assets/images/memes/stackoverflow_tom_pi.png
+image: /assets/images/memes/stackoverflow_tom_pi.png
 image_alt: Tom from Tom and Jerry getting pied in the face in response to stackoverflow question
 type: external
 category: memes

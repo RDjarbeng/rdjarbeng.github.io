@@ -1,7 +1,7 @@
 ---
 title: Samurai Jack and Professor
 date: 2025-12-28T22:55:00+02:00
-image: assets/images/memes/samurai_jack_and_professor.png
+image: /assets/images/memes/samurai_jack_and_professor.png
 image_alt: A side-by-side meme comparing the animated characters Samurai Jack and Professor Utonium from The Powerpuff Girls. Both characters share strikingly similar facial features, including a sharp, rectangular jawline and identical black, blocky hairstyles, highlighting their visual resemblance
 type: external
 category: memes

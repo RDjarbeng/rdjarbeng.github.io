@@ -5,7 +5,7 @@ date: 2026-04-30T14:28:00+02:00
 platform: twitter
 youtube_id: https://x.com/nyoomtm/status/2049556288657305693
 embed_code: ''
-thumbnail: assets/images/videos/pasted-image-1780001072791.png
+thumbnail: /assets/images/videos/falcon-heavy-launch-spacex.png
 type: video
 genre: Science & Technology
 category: videos
