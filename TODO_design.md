@@ -135,3 +135,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Text in Gallery sidebar looks faint in light mode
 - [ ] Need to integrate the site woth other sotes and services so it's useful to people and agents
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
+- [ ] The text on gallery recommendations on a single post for a gallery item in dark mode don't have enough contrast
