@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:24:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7604161341040987412'
-thumbnail: ''
+thumbnail: 'https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/oIEZuTIgc1AFrE2aqxRVehfWuhDzBBpIEAHp7H~tplv-tiktokx-origin.image?dr=9636&x-expires=1780174800&x-signature=J9hPha%2B1k5RNZ8JCAlCEgQqcvoc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8'
 type: video
 category: videos
 genre: Entertainment
