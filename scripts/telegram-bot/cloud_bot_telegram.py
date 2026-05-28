@@ -3,16 +3,21 @@ import re
 import yaml
 import urllib.request
 import html
+import time
+import base64
+import requests
 from datetime import datetime, timezone, timedelta
+from functools import wraps
 from dotenv import load_dotenv
+
+import telebot
+from telebot import apihelper
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from flask import Flask, request, abort
+from github import Github, InputGitTreeElement
 
 # CAT timezone (Central Africa Time, UTC+2)
 CAT = timezone(timedelta(hours=2))
-
-import telebot
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
-from flask import Flask, request, abort
-from github import Github
 
 load_dotenv(os.path.join('/home/rdjarbeng/mysite', '.env'))
 
@@ -20,11 +25,6 @@ TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 ALLOWED_USER_ID = os.getenv("ALLOWED_USER_ID")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO_NAME = os.getenv("GITHUB_REPO", "RDjarbeng/rdjarbeng.github.io")
-
-import time
-from functools import wraps
-import requests
-from telebot import apihelper
 
 # Increase timeout and try to mitigate proxy issues
 apihelper.SESSION = requests.Session()
@@ -88,8 +88,6 @@ def extract_youtube_id(url):
 
 def commit_files_to_github(files_dict, message):
     """Pushes multiple files to the GitHub repository in a single atomic commit"""
-    import base64
-    from github import InputGitTreeElement
     
     g = Github(GITHUB_TOKEN)
     repo = g.get_repo(REPO_NAME)
