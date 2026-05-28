@@ -137,3 +137,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
 - [ ] The text on gallery recommendations on a single post for a gallery item in dark mode don't have enough contrast
 - [ ] Did an import from medium and the cards at the bottom of the posts weren't imported correctly. It shows 'related concepts and posts' but the card content was not included
+- [ ] Video collections are in the way, so the user can't see the difference when they filter by a source like Twitter on the video page until they scroll down
