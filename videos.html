@@ -83,6 +83,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
               {% assign grp_yt_id = "" %}
               {% if item.platform == 'youtube' and item.youtube_id %}
                 {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                {% elsif item.youtube_id contains 'shorts/' %}{% assign grp_yt_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
                 {% elsif item.youtube_id contains 'v=' %}{% assign grp_yt_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
                 {% else %}{% assign grp_yt_id = item.youtube_id %}{% endif %}
               {% endif %}
