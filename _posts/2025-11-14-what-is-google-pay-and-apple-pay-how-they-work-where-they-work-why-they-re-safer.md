@@ -69,12 +69,12 @@ In a world where your phone is your wallet, **Google Pay** (also known as the [G
 
 | Feature | Bank Account | Google Pay / Apple Pay |
 | --- | --- | --- |
-| Holds money? | Yes | No (except [Apple Cash](https://support.apple.com/en-us/102290) in US) |
-| [FDIC insured](https://www.fdic.gov/resources/deposit-insurance/)? | Yes | No |
+| Holds money? | Yes | No (except Apple Cash in US) |
+| FDIC insured? | Yes | No |
 | Earns interest? | Sometimes | No |
 | Direct deposit? | Yes | No |
 | Physical card? | Yes | Uses your phone |
-| Security | PIN, 2FA | **[Tokenization](https://en.wikipedia.org/wiki/Tokenization_(data_security))** + biometrics |
+| Security | PIN, 2FA | Tokenization + biometrics |
 
 **Tokenization** is the key. It means your real card number is **never shared** with merchants. A unique, one-time code is generated for each transaction, making it **significantly safer than swiping your physical card**.
 
