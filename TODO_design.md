@@ -134,3 +134,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - Video page needs to organize videos so it's not an endless scrolling list
 - [ ] Text in Gallery sidebar looks faint in light mode
 - [ ] Need to integrate the site woth other sotes and services so it's useful to people and agents
+- [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
