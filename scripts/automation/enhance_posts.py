@@ -55,7 +55,7 @@ def process_file(model, file_path):
         print(f"Failed to parse YAML for {file_path}")
         return False
 
-    if data.get('enhanced') == True:
+    if data.get('enhanced_by_bot') == True or data.get('enhanced') == True:
         print(f"Skipping {file_path}, already enhanced.")
         return False
         
@@ -98,7 +98,7 @@ def process_file(model, file_path):
         
         if new_alt and new_content:
             data['image_alt'] = new_alt
-            data['enhanced'] = True
+            data['enhanced_by_bot'] = True
             
             # Reconstruct file
             new_frontmatter = yaml.dump(data, sort_keys=False, allow_unicode=True)
