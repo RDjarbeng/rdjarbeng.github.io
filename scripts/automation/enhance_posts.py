@@ -32,8 +32,8 @@ def setup_gemini():
         print("Error: GEMINI_API_KEY environment variable not set.")
         return None
     genai.configure(api_key=api_key)
-    # Using gemini-1.5-flash as it's fast and supports multimodal (text + image)
-    return genai.GenerativeModel('gemini-1.5-flash', system_instruction=SYSTEM_INSTRUCTION)
+    # Using gemini-3.1-flash-lite due to 500 RPD limits, perfect for a backlog
+    return genai.GenerativeModel('gemini-3.1-flash-lite', system_instruction=SYSTEM_INSTRUCTION)
 
 def process_file(model, file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
