@@ -4,8 +4,9 @@ import yaml
 import json
 import argparse
 from pathlib import Path
-import google.generativeai as genai
 from PIL import Image
+from google import genai
+from google.genai import types
 
 # Setup the prompt for Gemini
 SYSTEM_INSTRUCTION = """
@@ -31,11 +32,10 @@ def setup_gemini():
     if not api_key:
         print("Error: GEMINI_API_KEY environment variable not set.")
         return None
-    genai.configure(api_key=api_key)
     # Using gemini-3.1-flash-lite due to 500 RPD limits, perfect for a backlog
-    return genai.GenerativeModel('gemini-3.1-flash-lite', system_instruction=SYSTEM_INSTRUCTION)
+    return genai.Client(api_key=api_key)
 
-def process_file(model, file_path):
+def process_file(client, file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -85,9 +85,11 @@ def process_file(model, file_path):
         
         prompt = f"Title: {title}\nOriginal Caption: {original_caption}\n\nPlease analyze this image and the original text. Provide an improved alt text and an expanded, engaging body content in JSON format."
         
-        response = model.generate_content(
-            [img, prompt],
-            generation_config=genai.GenerationConfig(
+        response = client.models.generate_content(
+            model='gemini-3.1-flash-lite',
+            contents=[img, prompt],
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_INSTRUCTION,
                 response_mime_type="application/json",
             )
         )
@@ -122,8 +124,8 @@ def main():
     parser.add_argument("--max", type=int, default=10, help="Maximum number of files to process per run.")
     args = parser.parse_args()
 
-    model = setup_gemini()
-    if not model:
+    client = setup_gemini()
+    if not client:
         return
 
     # Find all markdown files in _gallery
@@ -135,7 +137,7 @@ def main():
             print(f"Reached maximum process limit ({args.max}). Stopping.")
             break
             
-        if process_file(model, file_path):
+        if process_file(client, file_path):
             processed_count += 1
 
     print(f"Finished processing {processed_count} files.")
