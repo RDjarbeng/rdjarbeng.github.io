@@ -531,8 +531,6 @@ def handle_text(message):
                     'state': 'video_genre'
                 }
                 return # Only handle the first supported URL
-        return
-
     # Treat pure text as TODO by default
     keyboard = [
         [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
