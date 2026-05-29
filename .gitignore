@@ -13,3 +13,4 @@ generate_tags_gemini.rb
 *.log
 .env
 !llms.txt
+crawls_from_web/*.md
