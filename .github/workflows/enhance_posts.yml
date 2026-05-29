@@ -1,0 +1,43 @@
+name: Enhance Gallery Posts
+
+on:
+  push:
+    paths:
+      - '_gallery/**/*.md'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  enhance-posts:
+    runs-on: ubuntu-latest
+    
+    # Needs read/write permissions for committing code back
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # Ensure we fetch the whole history for git-auto-commit
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip' # Optional but speeds up runs
+
+      - name: Install dependencies
+        run: pip install -r scripts/automation/requirements.txt
+
+      - name: Run post enhancer
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/automation/enhance_posts.py --max 15
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-enhance gallery posts with Gemini"
+          file_pattern: "_gallery/**/*.md"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
