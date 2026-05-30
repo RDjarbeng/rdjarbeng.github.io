@@ -148,6 +148,8 @@ def main():
 
     # Find all markdown files in _gallery
     gallery_files = glob.glob('_gallery/**/*.md', recursive=True)
+    # Filter out videos directory completely to avoid spamming the logs
+    gallery_files = [f for f in gallery_files if not f.replace('\\', '/').startswith('_gallery/videos/')]
     
     # Sort by git commit time, newest first to prioritize recently pushed telegram posts
     # GitHub Actions checkouts reset mtime, so os.path.getmtime doesn't work correctly.
