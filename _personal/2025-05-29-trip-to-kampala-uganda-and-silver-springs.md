@@ -5,20 +5,7 @@ published: true
 tags:
   - Kampala
   - Kigali
-  - Kigali-Kampala
-  - Kigali to Kampala
-  - Kigali to Kampala by bus
-  - Richard Djarbeng's trip to Kampala
-  - Kampala to Kigali by Bus
-  - Ghanaians in Uganda
-  - Trinity bus service from Kigali to Kampala
-  - Passenger left at the border
-  - Crossing Rwanda-Uganda border
-  - Welcome to Rwanda
-  - Welcome to Uganda
-  - Rwanda to Uganda
-  - part one from Rwanda to Uganda
-  - part one from Kigali to Kampala
+  - Kampala
 image: /assets/images/rd_silver_springs_stare_at_statue_cover.webp
 image_alt: Cover image for Trip to Uganda- Kampala & silver springs
 layout: personal
