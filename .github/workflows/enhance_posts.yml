@@ -13,6 +13,7 @@ jobs:
     # Needs read/write permissions for committing code back
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout Repository
@@ -36,8 +37,15 @@ jobs:
         run: python scripts/automation/enhance_posts.py --max 15
 
       - name: Commit and Push Changes
+        id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-enhance gallery posts with Gemini"
           file_pattern: "_gallery/"
           commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
+      - name: Trigger Deploy
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run jekyll.yml --ref main
