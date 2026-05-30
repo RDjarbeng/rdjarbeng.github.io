@@ -1,7 +1,7 @@
 ---
 title: "Kigali to Kampala: 11 Hours, 3 Currencies, and One Missing Passenger"
 published: true
-date: 2025-05-30T12:50:00+02:00
+date: 2026-05-30T12:50:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/Hte0uurGh7k
 embed_code: ''
