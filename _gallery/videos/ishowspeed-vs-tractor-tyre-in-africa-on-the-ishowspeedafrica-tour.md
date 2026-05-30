@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:30:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7600488058949061906'
-thumbnail: assets/images/videos/IshowSpeed_carrying_a_tractor_tyre(1)-Cover.jpg
+thumbnail: /assets/images/videos/IshowSpeed_carrying_a_tractor_tyre(1)-Cover.jpg
 type: video
 category: videos
 genre: Travel & Events

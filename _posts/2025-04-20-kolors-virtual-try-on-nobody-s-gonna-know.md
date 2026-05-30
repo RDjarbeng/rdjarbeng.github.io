@@ -4,7 +4,7 @@ published: true
 author: Richard
 tags:
   - AI
-  - Computer vision
+  - Computer Vision
   - Kolors
   - Virtual try-on
   - Hugging face

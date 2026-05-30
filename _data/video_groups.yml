@@ -1,0 +1,42 @@
+# Video groups displayed as horizontal rails on the /gallery/videos/ page.
+# Each group matches videos by genre OR by title keywords (or both).
+# match_by: "genre" | "keywords" | "genre_and_keywords"
+
+- name: "Gospel & Worship"
+  description: "Uplifting choral and worship music"
+  icon: "🎵"
+  match_by: "keywords"
+  keywords:
+    - gospel
+    - worship
+    - bless
+    - lord
+    - praise
+    - medley
+    - anthem
+    - hymn
+    - choir
+
+- name: "Science & Tech Picks"
+  description: "Technology, AI, and scientific breakthroughs"
+  icon: "🔬"
+  match_by: "genre"
+  genre: "Science & Technology"
+
+- name: "Entertainment Highlights"
+  description: "Fun moments, movies, and pop culture"
+  icon: "🎬"
+  match_by: "genre"
+  genre: "Entertainment"
+
+- name: "Travel Diaries"
+  description: "Beautiful places and travel experiences"
+  icon: "✈️"
+  match_by: "genre"
+  genre: "Travel & Events"
+
+- name: "Music Collection"
+  description: "Songs, performances, and musical moments"
+  icon: "🎶"
+  match_by: "genre"
+  genre: "Music"

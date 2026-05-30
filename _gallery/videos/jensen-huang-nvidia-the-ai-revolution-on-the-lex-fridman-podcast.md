@@ -5,13 +5,11 @@ date: 2026-04-28T21:33:00+02:00
 platform: youtube
 youtube_id: https://youtube.com/watch?v=vif8NQcjVf0
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_vif8NQcjVf0.jpg'
 type: video
 genre: People & Blogs
 category: videos
 ---
-
-# 
 
 In this deep-dive interview, Jensen Huang discusses the incredible evolution of NVIDIA, the future of artificial intelligence, and the engineering marvels that power today's computing ecosystem. He outlines how NVIDIA transitioned from simply building GPUs to orchestrating entire "AI factories."
 
@@ -45,9 +43,6 @@ When asked what protects NVIDIA from competitors, Huang points directly to CUDA'
 ### 6. The Future of Work and Coding
 
 Addressing anxieties around AI automating jobs, Huang argues that AI will elevate human potential. He separates the _purpose_ of a job from its _tasks_. While AI will automate repetitive tasks, the human purpose—such as diagnosing disease or solving complex problems—will only grow. He predicts that the number of programmers won't decrease; rather, by turning coding into natural-language specification, we are expanding the programmer pool from 30 million to potentially 1 billion people worldwide [[02:02:16](http://www.youtube.com/watch?v=vif8NQcjVf0&t=7336)].
-
-
-
 
 **Final Thought from Jensen:**
 

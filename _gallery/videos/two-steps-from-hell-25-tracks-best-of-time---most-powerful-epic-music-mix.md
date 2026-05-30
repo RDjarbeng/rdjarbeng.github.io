@@ -3,7 +3,7 @@ title: Two Steps From Hell 25 Tracks Best of Time | Most Powerful Epic Music Mix
 platform: youtube
 youtube_id: https://youtu.be/9O4_awEHh1g
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_9O4_awEHh1g.jpg'
 type: video
 genre: Music
 category: videos

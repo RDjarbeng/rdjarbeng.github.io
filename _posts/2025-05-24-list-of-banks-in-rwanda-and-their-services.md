@@ -8,15 +8,7 @@ tags:
   - Finance
   - Banking
   - Rwanda
-  - List of Banks in Rwanda
-  - Ecobank Rwanda
-  - I&M Bank Rwanda
-  - Equity Bank Rwanda
-  - Bank of Kigali
-  - BPR Bank Rwanda (Part of Atlas Mara)
-  - Choosing banks in Rwanda
-  - USD vs RWF accounts
-  - What banks offer USD accounts in Kigali
+  - USD vs RWF
 title: List of Banks in Rwanda and Their Services
 image: /assets/images/1000189531.jpg
 layout: post
