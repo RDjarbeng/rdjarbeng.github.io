@@ -40,6 +40,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/automation/enhance_posts.py --max 15
 
+      - name: Sync with remote to avoid push conflicts
+        run: |
+          git config pull.rebase true
+          git config rebase.autoStash true
+          git pull origin main
+
       - name: Commit and Push Changes
         id: auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
