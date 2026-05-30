@@ -3,7 +3,7 @@ title: The Timeless Message of Tim McGraw's "Humble And Kind"
 platform: youtube
 youtube_id: http://www.youtube.com/watch?v=awzNHuGqoMc
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_awzNHuGqoMc.jpg'
 type: video
 genre: Music
 category: videos

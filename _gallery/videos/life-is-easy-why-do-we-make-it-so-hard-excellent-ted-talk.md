@@ -5,7 +5,7 @@ date: 2026-03-31T10:14:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/21j_OCNLuYg
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_21j_OCNLuYg.jpg'
 type: video
 genre: People & Blogs
 category: videos

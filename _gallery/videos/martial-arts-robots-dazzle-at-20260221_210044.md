@@ -3,7 +3,7 @@ title: 'Martial arts robots dazzle at 2026 Spring Festival Gala #CoolChina #sp'
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=mUmlv814aJo
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_mUmlv814aJo.jpg'
 type: video
 category: videos
 genre: Science & Technology

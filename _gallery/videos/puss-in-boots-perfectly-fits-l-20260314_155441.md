@@ -3,7 +3,7 @@ title: Puss in Boots perfectly fits Like a Prayer by Madonna (Choir version)
 platform: youtube
 youtube_id: https://youtu.be/gy_XVasxRyY
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_gy_XVasxRyY.jpg'
 type: video
 category: videos
 date: '2026-03-14T15:54:41+02:00'

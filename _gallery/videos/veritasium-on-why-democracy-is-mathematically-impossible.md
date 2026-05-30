@@ -5,7 +5,7 @@ date: 2026-03-04T11:51:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=qf7ws2DF-zk
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_qf7ws2DF-zk.jpg'
 type: video
 genre: Education
 category: videos

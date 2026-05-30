@@ -5,7 +5,7 @@ date: 2026-05-24T14:28:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/CScehagPi2I
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_CScehagPi2I.jpg'
 type: video
 genre: Music
 category: videos

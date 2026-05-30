@@ -5,7 +5,7 @@ date: 2026-03-14T12:27:00+02:00
 platform: youtube
 youtube_id: https://youtube.com/shorts/Grj3M79NYmo
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_Grj3M79NYmo.jpg'
 type: video
 genre: Interviews
 category: videos

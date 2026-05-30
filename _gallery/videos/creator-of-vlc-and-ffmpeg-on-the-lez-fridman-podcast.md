@@ -3,7 +3,7 @@ title: Creator of VLC and FFmpeg on the Lez Fridman podcast
 platform: youtube
 youtube_id: https://youtu.be/nepKKz-MzFM
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_nepKKz-MzFM.jpg'
 type: video
 genre: Science & Technology
 category: videos

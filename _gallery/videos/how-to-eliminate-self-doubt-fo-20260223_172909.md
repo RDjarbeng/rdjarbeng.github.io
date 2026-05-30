@@ -5,7 +5,7 @@ date: 2026-02-23T17:29:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=v1ojZKWfShQ
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_v1ojZKWfShQ.jpg'
 type: video
 genre: Entertainment
 category: videos

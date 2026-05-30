@@ -5,7 +5,7 @@ date: 2026-02-23T13:50:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=8-BsuzhV2t8
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_8-BsuzhV2t8.jpg'
 type: video
 genre: Food & Recipes
 category: videos

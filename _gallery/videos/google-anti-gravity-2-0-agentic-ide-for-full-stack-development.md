@@ -5,7 +5,7 @@ date: 2026-05-21T12:17:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=6C0FjHoN3qE
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_6C0FjHoN3qE.jpg'
 type: video
 genre: Science & Technology
 category: videos
