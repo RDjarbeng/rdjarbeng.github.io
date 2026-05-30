@@ -17,7 +17,7 @@ Here’s **part one** of my journey to the East-African country of Uganda. This 
 
 Here's Uganda on a map of africa taken from Wikipedia
 
-![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%2528-mini_map_-rivers%2529.png "Uganda in Africa ")
+![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%28-mini_map_-rivers%29.png "Uganda in Africa ")
 
 ## The beginning - Kigali
 
@@ -73,7 +73,7 @@ The coach continued down the dark road; the road from Kigali had  streetlights u
 
 ## Video Summary
 
-Here is a short, 11-scene video narrative summarizing this journey:
+Here is a short, 11-scene video narrative summarizing this journey (you can also view the scene narrative breakdown in the [Video Gallery](/gallery/videos/kigali-to-kampala-11-hours-3-currencies-and-one-missing-passenger/)):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Hte0uurGh7k" title="Kigali to Kampala Video Summary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
