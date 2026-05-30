@@ -5,10 +5,20 @@ import json
 import argparse
 import urllib.parse
 import subprocess
+import datetime
 from pathlib import Path
 from PIL import Image
 from google import genai
 from google.genai import types
+
+class NoAliasDumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):
+        return True
+
+def datetime_representer(dumper, data):
+    return dumper.represent_scalar('tag:yaml.org,2002:timestamp', data.isoformat())
+
+yaml.add_representer(datetime.datetime, datetime_representer, Dumper=NoAliasDumper)
 
 # Setup the prompt for Gemini
 SYSTEM_INSTRUCTION = """
@@ -106,9 +116,6 @@ def process_file(client, file_path):
             data['enhanced_by_bot'] = True
             
             # Reconstruct file
-            class NoAliasDumper(yaml.SafeDumper):
-                def ignore_aliases(self, data):
-                    return True
             new_frontmatter = yaml.dump(data, Dumper=NoAliasDumper, sort_keys=False, allow_unicode=True, width=float("inf"), default_flow_style=False)
             
             # Append new content instead of replacing
