@@ -1,5 +1,5 @@
 ---
-title: Comparison of Static Site Hosting Options
+title: "Cover image for post - Comparison of Static Site Hosting Options"
 date: 2024-08-01 12:00:00
 image: /assets/images/static_site.jpeg
 type: cover

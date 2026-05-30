@@ -1,131 +1,183 @@
-.home-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-    border-radius: 16px;
-    overflow: hidden;
-    color: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 0;
-    min-height: 400px;
-
-    @media (max-width: 800px) {
-        flex-direction: column;
-        min-height: auto;
-    }
+// Hero Carousel
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.hero-content {
-    flex: 1;
-    padding: 40px;
-    z-index: 2;
-
-    @media (max-width: 800px) {
-        order: 2;
-        padding: 30px;
-    }
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.hero-label {
-    display: inline-block;
-    background: #ce1126;
-    /* Ghana Red */
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    min-height: 260px;
+  }
 }
 
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #fff !important;
-    border: none !important;
-    padding: 0 !important;
+.carousel-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 
-    @media (max-width: 600px) {
-        font-size: 1.8rem;
-    }
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ccc !important;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.hero-btn {
-    display: inline-block;
-    background: #fcd116;
-    /* Ghana Gold */
-    color: var(--text-color) !important;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 15px rgba(252, 209, 22, 0.3);
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(252, 209, 22, 0.4);
-        text-decoration: none;
-    }
-}
-
-.hero-image {
-    flex: 1;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-
-    @media (max-width: 800px) {
-        order: 1;
-        width: 100%;
-        height: 300px;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 20%);
-
-        @media (max-width: 800px) {
-            background: linear-gradient(to top, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0) 20%);
-        }
-    }
-}
-
-/* Add a subtle green accent somewhere to complete the Ghana flag colors */
-.home-hero::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  img {
     width: 100%;
-    height: 4px;
-    background: #006b3f;
-    /* Ghana Green */
-    z-index: 3;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+  }
 }
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.42) 55%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+
+  @media (max-width: 600px) {
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+.carousel-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 50px;
+  max-width: 65%;
+  color: #fff;
+
+  @media (max-width: 800px) {
+    max-width: 80%;
+    padding: 28px 30px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    padding: 22px 20px;
+  }
+}
+
+.carousel-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: var(--base-color, #2ecc71);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 0;
+
+  @media (max-width: 600px) {
+    font-size: 1.25rem;
+  }
+}
+
+.page-content .carousel-excerpt {
+  @extend .excerpt-text;
+  color: #fff;
+  margin-bottom: 22px;
+  -webkit-line-clamp: 3;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.carousel-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background: var(--base-color, #2ecc71);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, width 0.25s, border-radius 0.25s;
+
+  &.active {
+    background: #fff;
+    width: 22px;
+    border-radius: 4px;
+  }
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 50%;
+  z-index: 3;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }

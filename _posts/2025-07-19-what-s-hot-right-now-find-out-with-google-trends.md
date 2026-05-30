@@ -8,8 +8,8 @@ tags:
   - trends
   - googletrends
   - marketing
-  - business
-  - datascience
+  - Business
+  - DataScience
   - artificialintelligence
   - data
   - interest

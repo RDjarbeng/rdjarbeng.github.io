@@ -1,5 +1,5 @@
 ---
-title: 'The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word'
+title: "Cover image for post - The Good Kind of Tired: Why “Happily Exhausted” Deserves Its Own Word"
 date: 2025-12-28 22:55:10
 image: /assets/images/happily_exhausted_cover_image.webp
 type: cover

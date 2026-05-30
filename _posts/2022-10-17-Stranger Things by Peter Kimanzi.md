@@ -5,7 +5,7 @@ layout: post
 author: Richard
 image: /assets/images/stranger_things.png
 categories: ["Software Engineering"]
-tags: [Stranger Things, Peter Kimanzi, animation, apps, creatures]
+tags: [Stranger Things, Peter Kimanzi, Animation, apps, creatures]
 image_alt: "Cover image for Stranger Things by Peter Kimanzi"
 ---
 

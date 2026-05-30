@@ -30,7 +30,7 @@ Here’s **part one** of my journey to the East-African country of Uganda. This 
 
 Here's Uganda on a map of africa taken from Wikipedia
 
-![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%2528-mini_map_-rivers%2529.svg "Uganda in Africa ")
+![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%2528-mini_map_-rivers%2529.png "Uganda in Africa ")
 
 ## The beginning - Kigali
 

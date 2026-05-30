@@ -5,7 +5,7 @@ date: 2026-03-17T10:06:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/shorts/ViO1rPsJD6s
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_ViO1rPsJD6s.jpg'
 type: video
 genre: Comedy
 category: videos
