@@ -141,3 +141,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Need to paginate the videos page to prevent endless scrolling
 - [ ] Seems some links in posts, and the category in posts have low contrast need to improve this
 - [ ] Part of footer os is hidden on videos page by the sidebar
+- [ ] YouTube hub doesn't have a footer
