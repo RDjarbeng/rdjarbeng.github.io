@@ -3,7 +3,7 @@ title: Team Eternity Ghana Defe Defe led by Naana Asiedu
 platform: youtube
 youtube_id: https://youtu.be/KgSIbnegeSQ
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_KgSIbnegeSQ.jpg'
 type: video
 category: videos
 genre: Music

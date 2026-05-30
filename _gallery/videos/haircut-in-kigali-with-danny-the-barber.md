@@ -3,7 +3,7 @@ title: Haircut in Kigali with Danny the barber.
 platform: youtube
 youtube_id: https://youtube.com/shorts/NdC5q4fSS9M?feature=share
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_NdC5q4fSS9M.jpg'
 type: video
 genre: People & Blogs
 category: videos

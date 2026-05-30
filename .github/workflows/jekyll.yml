@@ -3,6 +3,8 @@ name: Deploy Jekyll site to Pages with Decap CMS
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - 'TODO*.md'
   workflow_dispatch:
 
 permissions:

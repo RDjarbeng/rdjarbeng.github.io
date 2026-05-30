@@ -3,7 +3,7 @@ title: Kronk being an iconic legend for 5 mins straight
 platform: youtube
 youtube_id: https://youtu.be/d2deFQyEk2g
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_d2deFQyEk2g.jpg'
 type: video
 genre: Film & Animation
 category: videos

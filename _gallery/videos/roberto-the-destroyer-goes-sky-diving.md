@@ -4,7 +4,7 @@ date: 2025-11-15 12:00:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=JZvSoi4v-_Y
 embed_code: ''
-thumbnail: assets/images/videos/roberto_the_destroyer(1)-Cover.jpg
+thumbnail: /assets/images/videos/roberto_the_destroyer(1)-Cover.jpg
 type: video
 category: videos
 genre: Entertainment

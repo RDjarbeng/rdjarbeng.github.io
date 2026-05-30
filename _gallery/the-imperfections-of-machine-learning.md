@@ -1,5 +1,5 @@
 ---
-title: The Imperfections of Machine Learning
+title: "Cover image for post - The Imperfections of Machine Learning"
 date: 2025-02-19 12:00:00
 image: /assets/images/ml_false positive_cropped_charger_rd.jpg
 type: cover

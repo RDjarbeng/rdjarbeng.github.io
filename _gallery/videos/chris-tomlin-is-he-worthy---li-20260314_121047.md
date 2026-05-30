@@ -5,7 +5,7 @@ date: 2026-03-14T12:10:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/FkRiYsTN7KY
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_FkRiYsTN7KY.jpg'
 type: video
 category: videos
 ---

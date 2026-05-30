@@ -1,5 +1,5 @@
 ---
-title: Top Websites for African Climate Data
+title: "Cover image for post - Top Websites for African Climate Data"
 date: 2024-10-09 12:00:00
 image: /assets/images/weather_post/wunderground.png
 type: cover

@@ -3,7 +3,7 @@ title: The black Night Tis but a scratch-Monty Python and the Holy Grail
 platform: twitter
 youtube_id: https://x.com/TheCinesthetic/status/2049169283624616148?s=20
 embed_code: ''
-thumbnail: ''
+thumbnail: 'https://jf.x.com/images/media-preview/2049169283624616148'
 type: video
 genre: Film & Animation
 category: videos

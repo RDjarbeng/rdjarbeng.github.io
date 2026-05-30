@@ -32,14 +32,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentLightboxIndex = 0;
 
     // Categories Configuration
-    const imageCategories = [
-        { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
-        { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
-        { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
-        { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
-        { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
-        { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
-    ];
+    const imageCategories = window.dynamicGalleryCategories
+        ? window.dynamicGalleryCategories.map(cat => ({
+            id: cat.id,
+            title: cat.title,
+            filter: item => item.dataset.category.includes(cat.filterStr)
+        }))
+        : [
+            { id: 'ai-generations', title: 'AI Generations', filter: item => item.dataset.category.includes('ai-generations') },
+            { id: 'memes', title: 'Memes', filter: item => item.dataset.category.includes('memes') },
+            { id: 'ghana', title: 'Ghana', filter: item => item.dataset.category.includes('ghana') },
+            { id: 'rwanda', title: 'Rwanda', filter: item => item.dataset.category.includes('rwanda') },
+            { id: 'external', title: 'Gallery Images', filter: item => item.dataset.category.includes('external') },
+            { id: 'cover-images', title: 'Cover Images', filter: item => item.dataset.category.includes('cover-images') },
+        ];
 
     const videoCategories = [
         { id: 'videos', title: 'All Videos', filter: item => item.dataset.category.includes('videos') },
@@ -160,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
         const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
+        const altText = title || 'Gallery image on rdjarbeng.com';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -167,9 +174,9 @@ document.addEventListener('DOMContentLoaded', function () {
             platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
                 platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
+            imgContent = `<img src="${src}" alt="${altText}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${altText}" loading="lazy">`;
         }
 
         item.innerHTML = `
@@ -276,6 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = dataItem.dataset.thumb || dataItem.dataset.src;
         const title = dataItem.dataset.title;
         const displayTitle = title ? title.charAt(0).toUpperCase() + title.slice(1) : '';
+        const altText = title || 'Gallery image';
 
         let imgContent;
         const platform = dataItem.dataset.platform;
@@ -283,13 +291,13 @@ document.addEventListener('DOMContentLoaded', function () {
             platform === 'instagram' ? INSTAGRAM_THUMBNAIL :
                 platform === 'twitter' ? TWITTER_THUMBNAIL : DEFAULT_THUMBNAIL;
         if (src && src.trim() !== '') {
-            imgContent = `<img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
+            imgContent = `<img src="${src}" alt="${altText}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';">`;
         } else {
-            imgContent = `<img src="${fallback}" alt="${title}" loading="lazy">`;
+            imgContent = `<img src="${fallback}" alt="${altText}" loading="lazy">`;
         }
 
         item.innerHTML = `
-            <div class="gallery-thumb-wrapper">
+            <div class="gallery-item is-category">
                 ${imgContent}
                 <div class="gallery-overlay">
                     <span class="gallery-title-overlay">${displayTitle}</span>
@@ -532,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (type === 'image') {
             const img = document.createElement('img');
             img.src = src;
-            img.alt = title;
+            img.alt = title || 'Gallery image';
             lightboxMediaContainer.appendChild(img);
         } else if (type === 'html') {
             const template = item.querySelector('.raw-embed-code');

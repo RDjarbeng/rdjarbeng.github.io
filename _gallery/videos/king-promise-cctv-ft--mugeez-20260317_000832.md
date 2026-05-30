@@ -3,7 +3,7 @@ title: King Promise CCTV ft. Mugeez & Sarkodie (Official Video) with Lyrics
 platform: youtube
 youtube_id: https://youtu.be/QEFvjxeQxqk
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_QEFvjxeQxqk.jpg'
 type: video
 genre: Music
 category: videos

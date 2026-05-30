@@ -2,7 +2,8 @@
 date: 2025-05-04T18:18:00
 author: Richard
 categories: []
-tags: []
+tags:
+    - satellite
 title: 'Copernicus: Powering Earth Observation with Sentinel Satellites'
 image: /assets/images/copernicus_airq_new_delhi.png
 video: ''

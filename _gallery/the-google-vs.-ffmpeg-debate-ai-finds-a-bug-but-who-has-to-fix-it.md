@@ -1,5 +1,5 @@
 ---
-title: 'The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?'
+title: "Cover image for post - The Google vs. FFmpeg Debate: AI Finds a Bug, But Who Has to Fix It?"
 date: 2025-11-08 12:00:00
 image: /assets/images/google_vs_ffmpeg_cover.webp
 type: cover
