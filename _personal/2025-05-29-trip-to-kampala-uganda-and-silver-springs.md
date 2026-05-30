@@ -84,6 +84,12 @@ In our travelling experience, we were used to some kind of announcement that a b
 
 The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I sometimes wonder what happened to that passenger, probably standing at the border checkpoint watching their bus rumble into the night.
 
+## Video Summary
+
+Here is a short, 11-scene video narrative summarizing this journey:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hte0uurGh7k" title="Kigali to Kampala Video Summary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon.
 
 In part two, I hope to share the vibrant sights, sounds and food of Kampala, the Silver Springs hotel and a suburb called Bugulobi. See you soon.
