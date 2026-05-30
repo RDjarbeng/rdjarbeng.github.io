@@ -168,13 +168,17 @@ def main():
         # Append any untracked or missed files to the end
         gallery_files_normalized = [f.replace('\\', '/') for f in gallery_files]
         untracked = [f for f in gallery_files_normalized if f not in git_sorted_files]
-        gallery_files = git_sorted_files + untracked
+        # Filter git_sorted_files to only those that actually exist on disk
+        existing_git_files = [f for f in git_sorted_files if os.path.exists(f)]
+        gallery_files = existing_git_files + untracked
     except Exception as e:
         print(f"Warning: Failed to sort by git history: {e}")
         gallery_files.sort(key=os.path.getmtime, reverse=True)
     
     processed_count = 0
     for file_path in gallery_files:
+        if not os.path.exists(file_path):
+            continue
         if processed_count >= args.max:
             print(f"Reached maximum process limit ({args.max}). Stopping.")
             break
