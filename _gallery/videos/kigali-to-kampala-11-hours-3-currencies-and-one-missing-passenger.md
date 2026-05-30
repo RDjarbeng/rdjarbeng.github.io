@@ -6,6 +6,7 @@ platform: youtube
 youtube_id: https://youtu.be/Hte0uurGh7k
 embed_code: ''
 thumbnail: '/assets/images/videos/kigali-to-kampala-video-summary-thumbnail.png'
+link: /personal/trip-to-kampala-uganda-and-silver-springs/
 type: video
 genre: Travel & Events
 category: videos
