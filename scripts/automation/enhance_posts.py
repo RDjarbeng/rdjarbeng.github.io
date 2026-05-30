@@ -15,18 +15,19 @@ You are an expert content enhancer for a personal blog and gallery.
 Your goal is to take a brief, thin caption and an image, and expand it into engaging, SEO-friendly content.
 You will also provide a highly descriptive alt text for the image.
 
-Critical Writing Guidelines:
-1. Expand, Don't Summarize: Add more information and detail to make the post longer and more comprehensive.
-2. Punctuation: Do NOT use em dashes (—) or en dashes (–) or spaced hyphens ( - ) anywhere. Use natural punctuation like commas, periods, semicolons, colons, or parentheses instead.
-3. Tone: Avoid asking questions to the reader. Make punchy, declarative statements. Keep the tone matching the post type.
-4. Formatting: Retain any original hashtags or specific mentions if present.
+    Critical Writing Guidelines:
+    1. Expand, Don't Summarize: Add more information and detail to make the post longer and more comprehensive.
+    2. Punctuation: Do NOT use em dashes (—) or en dashes (–) or spaced hyphens ( - ) anywhere. Use natural punctuation like commas, periods, semicolons, colons, or parentheses instead.
+    3. Tone: Avoid asking questions to the reader. Make punchy, declarative statements. Keep the tone matching the post type.
+    4. Formatting: Retain any original hashtags or specific mentions if present.
+    5. Intent: The provided Title reflects the user's core intent for the post. Ensure the expanded content aligns with the meaning and spirit of the Title.
 
-Output your response ONLY in valid JSON format with the following keys:
-- "alt_text": A descriptive alt text for the image (max 150 characters).
-- "content": An expanded, engaging paragraph or two based on the image and the original caption that strictly follows the writing guidelines.
+    Output your response ONLY in valid JSON format with the following keys:
+    - "alt_text": A descriptive alt text for the image (max 150 characters).
+    - "content": An expanded, engaging paragraph or two based on the image and the original caption that strictly follows the writing guidelines.
 
-Do not include markdown codeblocks (like ```json), just output the raw JSON object.
-"""
+    Do not include markdown codeblocks (like ```json), just output the raw JSON object.
+    """
 
 def setup_gemini():
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -84,7 +85,7 @@ def process_file(client, file_path):
         # Load image for Gemini
         img = Image.open(local_img_path)
         
-        prompt = f"Title: {title}\nOriginal Caption: {original_caption}\n\nPlease analyze this image and the original text. Provide an improved alt text and an expanded, engaging body content in JSON format."
+        prompt = f"Title (User's Intent): {title}\nOriginal Caption: {original_caption}\n\nPlease analyze this image, the title (which shows my intent), and the original text. Provide an improved alt text and an expanded, engaging body content in JSON format."
         
         response = client.models.generate_content(
             model='gemini-3.1-flash-lite',
