@@ -6,6 +6,10 @@ on:
       - '_gallery/**/*.md'
   workflow_dispatch: # Allow manual trigger
 
+concurrency:
+  group: "enhance-posts"
+  cancel-in-progress: false
+
 jobs:
   enhance-posts:
     runs-on: ubuntu-latest
