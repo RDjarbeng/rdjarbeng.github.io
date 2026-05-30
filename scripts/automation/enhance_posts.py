@@ -104,8 +104,16 @@ def process_file(client, file_path):
             data['enhanced_by_bot'] = True
             
             # Reconstruct file
-            new_frontmatter = yaml.dump(data, sort_keys=False, allow_unicode=True)
-            new_file_content = f"---\n{new_frontmatter}---\n\n{new_content}\n"
+            class NoAliasDumper(yaml.SafeDumper):
+                def ignore_aliases(self, data):
+                    return True
+            new_frontmatter = yaml.dump(data, Dumper=NoAliasDumper, sort_keys=False, allow_unicode=True, width=float("inf"), default_flow_style=False)
+            
+            # Append new content instead of replacing
+            if original_caption:
+                new_file_content = f"---\n{new_frontmatter}---\n\n{original_caption}\n\n{new_content}\n"
+            else:
+                new_file_content = f"---\n{new_frontmatter}---\n\n{new_content}\n"
             
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_file_content)
