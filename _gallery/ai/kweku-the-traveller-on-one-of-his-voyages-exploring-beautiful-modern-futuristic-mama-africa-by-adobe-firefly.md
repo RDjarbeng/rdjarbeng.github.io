@@ -1,6 +1,6 @@
 ---
 title: Kweku the traveller on one of his voyages exploring beautiful, Modern, futuristic Mama Africa by Adobe Firefly
-date: 2026-02-27 13:00:00+00:00
+date: 2026-02-27T13:00:00+00:00
 image: /assets/images/ai/Firefly Kweku the traveller on one of his voyages exploring beautiful, Modern, futuristic Mama Afric.jpg
 image_alt: A stylized digital portrait of a young Black man with locs and a backpack standing in a vibrant, futuristic African landscape during sunset.
 labels: Grok

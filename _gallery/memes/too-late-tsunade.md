@@ -1,6 +1,6 @@
 ---
 title: Should Have Dated Him While He Was Alive - Too late Tsunade, Jiraiya's dead
-date: 2026-02-10 12:40:00+02:00
+date: 2026-02-10T12:40:00+02:00
 image: /assets/images/memes/jiraiya_tsunade_dated_him_when_he_was_alive.jpg
 image_alt: A two panel meme featuring Tsunade crying in the top panel with the caption I should have dated him when he was alive and a man sitting in a coffin.
 type: external

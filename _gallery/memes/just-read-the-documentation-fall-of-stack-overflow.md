@@ -1,6 +1,6 @@
 ---
 title: Just Read The Documentation -fall of stack overflow
-date: 2026-05-06 20:22:00+02:00
+date: 2026-05-06T20:22:00+02:00
 image: /assets/images/memes/stackoverflow_tom_pi.png
 image_alt: A six panel meme featuring Tom from Tom and Jerry getting hit in the face with yellow custard after searching for programming help online.
 type: external
