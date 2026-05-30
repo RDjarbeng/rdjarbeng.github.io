@@ -143,3 +143,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Part of footer os is hidden on videos page by the sidebar
 - [ ] YouTube hub doesn't have a footer
 - [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
+- [ ] Bug: Thumbnails for TikTok video on the videos page shows a blue background behind ot instead pf filling the page,
