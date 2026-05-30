@@ -190,3 +190,6 @@ A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. 
 - [ ] This post needs more content
 
 spacex-did-it-again-precision-engineering-on-display/
+- [ ] This post needs a more descriptive message:
+
+https://rdjarbeng.com/gallery/videos/y-combinator-request-for-startups-visualizer-by-rdjarbeng/
