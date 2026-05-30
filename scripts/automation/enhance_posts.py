@@ -120,7 +120,7 @@ def process_file(client, file_path):
             
             # Append new content instead of replacing
             if original_caption:
-                new_file_content = f"---\n{new_frontmatter}---\n\n{original_caption}\n\n{new_content}\n"
+                new_file_content = f"---\n{new_frontmatter}---\n\n{original_caption}\n\n**Additional comments:**\n\n{new_content}\n"
             else:
                 new_file_content = f"---\n{new_frontmatter}---\n\n{new_content}\n"
             
