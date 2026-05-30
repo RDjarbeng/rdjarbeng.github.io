@@ -5,6 +5,8 @@ on:
     paths:
       - '_gallery/**/*.md'
   workflow_dispatch: # Allow manual trigger
+  schedule:
+    - cron: '0 * * * *' # Runs at minute 0 of every hour
 
 concurrency:
   group: "enhance-posts"
