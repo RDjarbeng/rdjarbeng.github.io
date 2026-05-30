@@ -46,7 +46,7 @@ for root, dirs, files in os.walk(gallery_dir):
 posts.sort(key=lambda x: x["date"], reverse=True)
 
 # Process top 15
-for post in posts[:50]:
+for post in posts[:15]:
     yt_url = post["youtube_id"]
     
     # Extract video ID
