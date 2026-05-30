@@ -3,6 +3,7 @@ import glob
 import yaml
 import json
 import argparse
+import urllib.parse
 from pathlib import Path
 from PIL import Image
 from google import genai
@@ -68,10 +69,10 @@ def process_file(client, file_path):
         print(f"Skipping {file_path}, no image found.")
         return False
 
-    # Convert /assets/images/... to relative path assets/images/...
-    local_img_path = image_path_url.lstrip('/')
+    # Convert /assets/images/... to relative path assets/images/... and unquote URL encoding
+    local_img_path = urllib.parse.unquote(image_path_url).lstrip('/')
     if not os.path.exists(local_img_path):
-        print(f"Image not found on disk: {local_img_path}")
+        print(f"❌ Image not found on disk: {local_img_path}")
         return False
 
     title = data.get('title', 'Untitled')
