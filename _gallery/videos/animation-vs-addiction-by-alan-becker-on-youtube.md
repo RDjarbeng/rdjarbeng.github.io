@@ -5,7 +5,7 @@ date: 2026-02-18 00:11:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=KoB2cqmYZNg
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_KoB2cqmYZNg.jpg'
 type: video
 category: videos
 genre: Film & Animation

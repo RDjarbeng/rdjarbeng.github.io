@@ -1,5 +1,5 @@
 <div class="post-card">
-  <a class="post-link" href="{{ include.post.url | relative_url }}">
+  <div class="post-link">
     {% if include.post.image and include.post.image.size > 0 %}
     <div class="post-card-image">
       <img src="{{ include.post.image }}"
@@ -10,29 +10,45 @@
 
     <div class="post-card-content">
       <h4 title="{{ include.post.title | escape }}">
-        {{ include.post.title | escape }}
+        <a href="{{ include.post.url | relative_url }}" class="post-card-title-link">
+          {{ include.post.title | escape }}
+        </a>
       </h4>
 
       {% assign words_per_minute = 180 %}
       {% assign words = include.post.content | number_of_words %}
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
-      {% if include.post.categories.size > 0 %}
-      <div class="post-card-categories">
-        {% for cat in include.post.categories limit:2 %}
-        <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
+      {% unless include.show_excerpt == false %}
+      <p class="post-card-excerpt">{% include_cached excerpt.html post=include.post %}</p>
+      {% endunless %}
 
       <div class="post-meta-categories-container">
-        <div class="post-meta-card"><time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{
-            include.post.date | date: "%B %-d, %Y" }}</time></div>
-        <div class="post-meta-dot">·</div>
-        <div class="post-meta-card">
-          {{ minutes }} min read
+        <div class="post-meta-left">
+          <div class="post-meta-card">
+            {% assign current_year = site.time | date: "%Y" %}
+            {% assign post_year = include.post.date | date: "%Y" %}
+            <time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">
+              {% if post_year == current_year %}
+                {{ include.post.date | date: "%B %-d" }}
+              {% else %}
+                {{ include.post.date | date: "%B %-d, %Y" }}
+              {% endif %}
+            </time>
+          </div>
+          <div class="post-meta-dot">·</div>
+          <div class="post-meta-card">
+            {{ minutes }} min read
+          </div>
         </div>
+        {% if include.post.categories.size > 0 %}
+        <div class="post-card-categories">
+          {% for cat in include.post.categories limit:2 %}
+          <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </div>
-  </a>
+  </div>
 </div>

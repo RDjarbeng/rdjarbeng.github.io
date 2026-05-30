@@ -3,7 +3,7 @@ title: Interactive face animation
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=xsSTf1fn0Zw
 embed_code: ''
-thumbnail: assets/images/videos/face_animation_cover.png
+thumbnail: /assets/images/videos/face_animation_cover.png
 type: video
 category: videos
 genre: Film & Animation

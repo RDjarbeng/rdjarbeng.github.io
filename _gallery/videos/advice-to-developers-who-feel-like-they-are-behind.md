@@ -5,7 +5,7 @@ date: 2026-04-08T09:31:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/Wr3Sw8KwznE
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_Wr3Sw8KwznE.jpg'
 type: video
 genre: Education
 category: videos
@@ -24,3 +24,7 @@ Our take at rdjarbeng.com is that you should also remember that not many people 
 One comment from the YouTube community that resonated in a thread about this:
 
 > "At this point, you basically need to be unemployed to keep up with AI." — @Mulegeta Gonfa
+
+### Media mentions:
+
+Also posted on [dev.to for Richard Djarbeng](https://dev.to/rdjarbeng/to-the-developer-who-feels-left-behind-right-now-in-the-age-of-ai-1g4k)

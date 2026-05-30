@@ -110,6 +110,7 @@ section {
   display: block;
 }
 
+
 body {
   line-height: 1;
 }
@@ -134,6 +135,12 @@ table {
 
 /* basic reset */
 @import "minima";
+/* Neutralise Minima's a:visited colour change — visited links look the same as unvisited.
+   Placed here (after Minima, before all class rules) so any class defined below still wins. */
+a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+}
 @import "gallery";
 @import "personal";
 @import "dynamic_footer";
@@ -163,6 +170,9 @@ table {
   --input-bg: #2a2a2a;
   --input-border: #444;
   --input-text: #e0e0e0;
+  /* Pill/chip buttons — distinct from card-bg so they're always visible */
+  --pill-bg: #2d2d2d;
+  --pill-border: #484848;
 }
 
 [data-theme="light"] {
@@ -187,6 +197,9 @@ table {
   --input-bg: #ffffff;
   --input-border: #ccc;
   --input-text: #000000;
+  /* Pill/chip buttons — off-white so they're visible on the white page bg */
+  --pill-bg: #efefef;
+  --pill-border: #d8d8d8;
 }
 
 body {
@@ -323,6 +336,7 @@ iframe {
 // Base card styles (shared)
 .post-card,
 .project-card {
+  position: relative;
   border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 0;
@@ -414,9 +428,8 @@ iframe {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    padding: 0 !important;
-    /* Override global img padding that causes gray top gap */
-    margin: 0 !important;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -454,12 +467,13 @@ iframe {
   font-weight: 600;
   line-height: 1.4;
   display: -webkit-box;
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
-  /* Limit to 2 lines like YT */
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  /* Show up to 3 lines; full title visible via title tooltip on hover */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: default;
 }
 
 
@@ -467,11 +481,21 @@ iframe {
 //   max-height: 40vh; 
 // }
 
-.post-excerpt {
-  font-size: $post-excerpt-font-size;
-  padding-top: 5px;
+.excerpt-text {
+  font-size: 0.88rem;
+  padding-top: 4px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-excerpt,
+.post-card-excerpt {
+  @extend .excerpt-text;
   color: var(--grey-text);
-  text-overflow: ellipsis;
 }
 
 .post-meta-categories-container {
@@ -483,6 +507,11 @@ iframe {
   margin-top: auto;
   /* Pushes this section to the bottom of the card if needed */
   padding-top: 5px;
+}
+
+.post-meta-left {
+  display: flex;
+  align-items: center;
 }
 
 .post-meta,
@@ -505,21 +534,27 @@ iframe {
   font-size: 21px;
 }
 
-.about-link {
+.about-link,
+.btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background-color: var(--btn-bg);
-  /* Changed from #007bff to #0056b3 */
   color: white;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin-bottom: 1em;
 
+  /* Higher specificity (0,2,0) beats a:visited (0,1,0) — no browser quirk can override this */
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: var(--btn-hover);
-    /* You might want to adjust this as well */
+    color: white;
   }
 }
 
@@ -538,10 +573,7 @@ a {
   color: $link-color;
 }
 
-a:visited {
-  color: $link-color;
-  text-decoration: none; // This will keep the original color
-}
+/* a:visited reset is now placed right after @import "minima" above */
 
 a:hover {
   text-decoration: none;
@@ -549,9 +581,9 @@ a:hover {
 }
 
 .about-link {
-  &:visited {
-    color: $visited-color-white
-  }
+  // &:visited {
+  //   color: $visited-color-white
+  // }
 }
 
 .svg-icon {
@@ -582,6 +614,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   margin-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .post-navigation a {
@@ -921,11 +955,11 @@ a:hover {
 .contact-section {
   margin: 40px auto;
   padding: 40px 20px;
-  background: linear-gradient(45deg, #5634ec, #e6f5ef);
+  // background: linear-gradient(45deg, #5634ec, #e6f5ef);
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   max-width: 800px;
 }
 
@@ -944,7 +978,7 @@ a:hover {
 }
 
 .contact-container {
-  background: #fff;
+  background: var(--bg-color);
   padding: 30px;
   border-radius: 8px;
   max-width: 600px;
@@ -1157,10 +1191,6 @@ a:hover {
 
 
 
-.toc-content li :hover {
-  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
-}
-
 .toc-header {
   display: flex;
   justify-content: space-between;
@@ -1200,17 +1230,29 @@ a:hover {
 }
 
 .toc-content a {
+  display: block;
+  padding: 4px 8px 4px 12px;
+  border-left: 2px solid transparent;
   color: $toc-link-color;
   font-size: 0.875rem;
   /* 14px if root is 16px; adjust to 0.9375rem (15px) if you want even subtler */
   line-height: 1.4;
   /* Slightly tighter for compact lists */
-  transition: color 0.3s ease;
+  transition: all 0.1s ease;
+  text-decoration: none;
 }
 
-.toc-content a:hover,
+.toc-content a:hover {
+  color: $link-hover-color;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.05));
+  border-left-color: var(--card-border);
+}
+
 .toc-content a.active {
   color: $link-hover-color;
+  font-weight: 700;
+  background-color: var(--card-hover-bg, rgba(100, 100, 255, 0.15));
+  border-left-color: $link-hover-color;
 }
 
 /* Nested TOC items */
@@ -1270,9 +1312,7 @@ a:hover {
 .post-content th,
 .post-content td {
   min-width: 100px;
-  /* Optional: Sets a minimum column width to prevent squishing; adjust as needed */
   color: var(--text-color);
-  /* Fix: tables not showing text properly in dark mode */
   border: 1px solid var(--card-border);
   padding: 6px 10px;
   background-color: var(--card-bg);
@@ -1281,7 +1321,14 @@ a:hover {
 .post-content th {
   font-weight: 700;
   background-color: var(--category-bg);
+  color: var(--text-color);
+  /* Fix: tables not showing text properly in dark mode */
+  border: 1px solid var(--card-border);
+  padding: 6px 10px;
+  background-color: var(--card-bg);
 }
+
+
 
 .posts-page-intro,
 .personal-page-intro,
@@ -1443,10 +1490,11 @@ a:hover {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width:1000px) {
 
   //was 769
   .toc-sidebar {
+    margin-left: clamp(-23px, calc((1045px - 100vw) / 2), 0px);
     display: block;
     /* Ensure TOC is visible on desktop */
   }
@@ -1611,6 +1659,7 @@ a:hover {
 
 @import "gallery";
 @import "videos";
+@import "sticky-sidebars";
 @import "../assets/css/contact";
 
 /* Repository List Styles */
@@ -1825,6 +1874,12 @@ a:hover {
 
 /* Mobile responsive check */
 @media (max-width: 600px) {
+  .header-search-form {
+    display: flex;
+    width: calc(100% - 30px);
+    margin: 10px 15px;
+    justify-content: flex-end;
+  }
 
   .header-search-form:hover .search-input,
   .header-search-form:focus-within .search-input {
@@ -1874,15 +1929,19 @@ a:hover {
 /* Mobile search results: position below the search input */
 @media screen and (max-width: 600px) {
   .header-search-form {
+    position: static;
+  }
+
+  .site-nav .trigger {
     position: relative;
   }
 
   .nav-search-results {
     position: absolute;
     top: 100%;
+    left: 0;
     right: 0;
-    left: auto;
-    width: 85vw;
+    width: 100%;
     max-height: 50vh;
     border-radius: 0 0 10px 10px;
     margin-top: 2px;
@@ -2085,11 +2144,14 @@ h1, h2, h3, h4, h5, h6,
       display: none !important;
     }
 
+    
+
     .trigger {
       background-color: var(--header-bg) !important;
       border: 1px solid var(--border-color) !important;
       box-shadow: 0 4px 15px var(--shadow-color) !important;
       z-index: 100;
+      min-width: 84vw;
 
       // Hide the desktop theme toggle inside .trigger on mobile
       .theme-toggle {
@@ -2230,13 +2292,13 @@ h1, h2, h3, h4, h5, h6,
       transform: none;
       // Display as a wrapping row of pill chips
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 4px;
 
       a {
         display: inline-block;
-        padding: 5px 12px;
+        padding: 4px 8px;
         border-bottom: none;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         opacity: 0.95;
         background: var(--card-bg, rgba(255,255,255,0.08));
         border: 1px solid var(--card-border);
@@ -2329,3 +2391,260 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 8px; /* Slightly more square for quick links */
 }
 
+
+
+// Gallery Recommended Section
+.recommended-section {
+  max-width: 1200px;
+  margin: 4rem auto 2rem auto;
+  padding: 0 20px;
+}
+
+.recommended-heading {
+  margin-bottom: 1.5rem;
+  border-top: 1px solid var(--card-border);
+  padding-top: 2rem;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.recommended-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+}
+
+.recommended-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+
+    &.img-contain {
+      object-fit: contain;
+    }
+
+    &.logo-placeholder {
+      padding: 2rem;
+    }
+  }
+}
+
+.recommended-card-body {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-card-title {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.recommended-card-genre {
+  font-size: 0.8rem;
+  color: var(--base-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* Post header category pills */
+.post-header-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.post-header-category-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background-color: var(--category-bg);
+  color: var(--base-color);
+  border: 1px solid var(--card-border);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--category-hover);
+    color: var(--link-color);
+    text-decoration: none;
+  }
+}
+
+// Memes Page
+.meme-page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meme-banner {
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.meme-description {
+  font-size: 1.1rem;
+  color: var(--grey-text);
+  margin-bottom: 30px;
+}
+
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.meme-card {
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+}
+
+.meme-card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--category-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.meme-card-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.meme-card-title {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.meme-card-date {
+  font-size: 0.8rem;
+  color: var(--grey-text);
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* Post card category tags and stretched link pattern */
+.post-card-title-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.post-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.post-card-category-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: var(--category-bg);
+  color: var(--grey-text);
+  border: 1px solid var(--card-border);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--category-hover);
+    color: var(--link-color);
+    text-decoration: none;
+  }
+}

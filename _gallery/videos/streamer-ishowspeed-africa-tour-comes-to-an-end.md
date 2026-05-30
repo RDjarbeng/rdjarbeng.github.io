@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:26:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7602006473924709652'
-thumbnail: assets/images/videos/ishowspeed_africa_tour_conclusion(1)-Cover.jpg
+thumbnail: /assets/images/videos/ishowspeed_africa_tour_conclusion(1)-Cover.jpg
 type: video
 category: videos
 genre: Entertainment

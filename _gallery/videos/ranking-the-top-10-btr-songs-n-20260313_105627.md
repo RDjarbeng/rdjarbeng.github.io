@@ -3,7 +3,7 @@ title: Ranking The Top 10 BTR Songs-Nick Rewind
 platform: youtube
 youtube_id: https://youtu.be/agaTlK3sbCU
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_agaTlK3sbCU.jpg'
 type: video
 category: videos
 genre: Music

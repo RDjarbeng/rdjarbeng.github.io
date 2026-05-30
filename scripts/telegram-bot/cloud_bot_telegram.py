@@ -1,0 +1,554 @@
+import os
+import re
+import yaml
+import urllib.request
+import html
+import time
+import base64
+import requests
+from datetime import datetime, timezone, timedelta
+from functools import wraps
+from dotenv import load_dotenv
+
+import telebot
+from telebot import apihelper
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from flask import Flask, request, abort
+from github import Github, InputGitTreeElement
+
+# CAT timezone (Central Africa Time, UTC+2)
+CAT = timezone(timedelta(hours=2))
+
+load_dotenv(os.path.join('/home/rdjarbeng/mysite', '.env'))
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+ALLOWED_USER_ID = os.getenv("ALLOWED_USER_ID")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+REPO_NAME = os.getenv("GITHUB_REPO", "RDjarbeng/rdjarbeng.github.io")
+
+# Increase timeout and try to mitigate proxy issues
+apihelper.SESSION = requests.Session()
+apihelper.SESSION.proxies = {}  # Sometimes helps
+apihelper.RETRY_ON_ERROR = True
+
+# Initialize Telegram Bot (TeleBot must be synchronous for WSGI Webhooks)
+bot = telebot.TeleBot(TOKEN, threaded=False)
+app = Flask(__name__)
+
+def telegram_retry(max_retries=5, backoff=1.5):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(max_retries):
+                try:
+                    return func(*args, **kwargs)
+                except (requests.exceptions.ProxyError, requests.exceptions.ConnectionError, OSError) as e:
+                    if attempt == max_retries - 1:
+                        raise
+                    wait = backoff ** attempt
+                    print(f"Proxy error, retrying in {wait:.1f}s... (Attempt {attempt+1}/{max_retries})")
+                    time.sleep(wait)
+            return None
+        return wrapper
+    return decorator
+
+# Monkey patch bot methods with retry logic
+bot.reply_to = telegram_retry()(bot.reply_to)
+bot.send_message = telegram_retry()(bot.send_message)
+bot.edit_message_text = telegram_retry()(bot.edit_message_text)
+bot.answer_callback_query = telegram_retry()(bot.answer_callback_query)
+bot.get_file = telegram_retry()(bot.get_file)
+bot.download_file = telegram_retry()(bot.download_file)
+
+# Very simple in-memory state. In a multi-worker setup on PythonAnywhere, 
+# this can theoretically reset between requests, but for a free account with 1 worker, it usually persists well enough for brief menus.
+uploads = {}
+group_captions = {}
+
+def is_authorized(user_id):
+    if not ALLOWED_USER_ID:
+        return True
+    return str(user_id) == str(ALLOWED_USER_ID)
+
+def get_page_title(url):
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        response = urllib.request.urlopen(req, timeout=5)
+        html_content = response.read().decode('utf-8', errors='ignore')
+        match = re.search(r'<title>(.*?)</title>', html_content, re.IGNORECASE | re.DOTALL)
+        if match:
+            return html.unescape(match.group(1).replace('- YouTube', '').strip())
+    except Exception:
+        pass
+    return ""
+
+def extract_youtube_id(url):
+    match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
+    return match.group(1) if match else None
+
+def commit_files_to_github(files_dict, message):
+    """Pushes multiple files to the GitHub repository in a single atomic commit"""
+    
+    g = Github(GITHUB_TOKEN)
+    repo = g.get_repo(REPO_NAME)
+    
+    master_ref = repo.get_git_ref("heads/main")
+    master_sha = master_ref.object.sha
+    base_tree = repo.get_git_tree(master_sha)
+    
+    element_list = []
+    for path, content in files_dict.items():
+        if isinstance(content, bytes):
+            blob = repo.create_git_blob(base64.b64encode(content).decode('utf-8'), "base64")
+            element = InputGitTreeElement(path=path, mode="100644", type="blob", sha=blob.sha)
+        else:
+            element = InputGitTreeElement(path=path, mode="100644", type="blob", content=content)
+        element_list.append(element)
+    
+    tree = repo.create_git_tree(element_list, base_tree)
+    parent = repo.get_git_commit(master_sha)
+    commit = repo.create_git_commit(message, tree, [parent])
+    master_ref.edit(commit.sha)
+
+# ===============================
+# WEBHOOK ROUTE FOR PYTHONANYWHERE
+# ===============================
+@app.route('/' + TOKEN, methods=['POST'])
+def webhook():
+    if request.headers.get('content-type') == 'application/json':
+        json_string = request.get_data().decode('utf-8')
+        update = telebot.types.Update.de_json(json_string)
+        bot.process_new_updates([update])
+        return '', 200
+    else:
+        abort(403)
+
+# ===============================
+# TELEGRAM BOT LOGIC
+# ===============================
+def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model="Gemini", gallery_cat="None", screenshot_sub=None):
+    if msg_id_key not in uploads:
+        return
+    payload = uploads.pop(msg_id_key)
+    file_id = payload['file_id']
+    caption = payload['caption']
+
+    full_caption = payload['caption'].strip() if payload.get('caption') else "Untitled"
+    parts = full_caption.split('\n', 1)
+    title_text = parts[0].strip()
+    body_text = parts[1].strip() if len(parts) > 1 else ""
+
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title_text[:120].lower()]).strip("-")
+    if not safe_title:
+        safe_title = "image"
+        
+    filename = safe_title
+    
+    if target_type == "meme":
+        media_rel_dir = "assets/images/memes"
+        collection_rel_dir = "_gallery/memes"
+    elif target_type == "ai":
+        media_rel_dir = "assets/images/ai"
+        collection_rel_dir = "_gallery/ai"
+    elif target_type == "gallery":
+        media_rel_dir = "assets/images"
+        collection_rel_dir = "_gallery"
+    elif target_type == "screenshot":
+        # screenshot_sub is a path segment like "twitter/ghana-twitter"
+        sub_path = screenshot_sub or "general"
+        media_rel_dir = f"assets/images/screenshots/{sub_path}"
+        collection_rel_dir = f"_gallery/screenshots/{sub_path}"
+    elif target_type == "asset":
+        media_rel_dir = "assets/images"
+        collection_rel_dir = None
+    elif target_type == "grouped":
+        media_rel_dir = "assets/images/grouped"
+        collection_rel_dir = None
+    else:
+        return
+
+    try:
+        # 1. Download image from Telegram servers to memory
+        file_info = bot.get_file(file_id)
+        image_bytes = bot.download_file(file_info.file_path)
+        
+        valid_exts = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
+        _, ext = os.path.splitext(file_info.file_path.lower())
+        if ext not in valid_exts:
+            ext = ".jpg"
+            
+        image_filename = f"{filename}{ext}"
+        image_path = f"{media_rel_dir}/{image_filename}"
+        
+        if target_type in ["asset", "grouped"]:
+            # Single file push for asset
+            commit_files_to_github({image_path: image_bytes}, f"Add image {image_filename} via Cloud Bot")
+            bot.edit_message_text(
+                f"✅ Image saved directly to GitHub!\n\n📄 File: {image_filename}\n"
+                f"🔗 Markdown path: `/{media_rel_dir}/{image_filename}`",
+                chat_id, message_id
+            )
+            return
+            
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to download or upload image to GitHub: {e}", chat_id, message_id)
+        return
+
+    # 3. Create Markdown Frontmatter
+    alt_text_fallback = title_text if title_text and title_text != "Untitled" else f"Image {safe_title}"
+    if target_type == "meme":
+        frontmatter = {
+            "title": title_text,
+            "date": datetime.now(CAT).isoformat(timespec="seconds"),
+            "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
+            "type": "external",
+            "category": "memes"
+        }
+    elif target_type == "ai":
+        frontmatter = {
+            "title": title_text,
+            "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
+            "labels": ai_model,
+            "type": "external",
+            "category": "ai-generations"
+        }
+    elif target_type in ("gallery", "screenshot"):
+        frontmatter = {
+            "title": title_text,
+            "image": f"/{media_rel_dir}/{image_filename}",
+            "image_alt": alt_text_fallback,
+            "type": "external",
+            "category": gallery_cat if target_type == "gallery" else "Screenshots",
+            "date": datetime.now(CAT).isoformat(timespec="seconds")
+        }
+
+    md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    if full_caption and full_caption != "Untitled":
+        md_content += f"\n{full_caption}\n"
+        
+    md_path = f"{collection_rel_dir}/{filename}.md"
+
+    try:
+        # 3. Push Both Files in One Single Commit
+        commit_files_to_github({
+            image_path: image_bytes,
+            md_path: md_content
+        }, f"Add post {filename} + image via Cloud Bot")
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to push files to GitHub: {e}", chat_id, message_id)
+        return
+
+    if target_type == 'gallery':
+        label_text = f" ({gallery_cat})"
+    elif target_type == 'ai':
+        label_text = f" ({ai_model})"
+    elif target_type == 'screenshot':
+        label_text = f" ({screenshot_sub or 'general'})"
+    else:
+        label_text = ""
+    bot.edit_message_text(
+        f"✅ Live in Production GitHub {target_type}{label_text}!\n\n📄 File: {filename}.md\n🖼 Image: {image_filename}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.",
+        chat_id, message_id
+    )
+
+def process_video_upload(chat_id, message_id, msg_id_key, genre):
+    if msg_id_key not in uploads:
+        bot.edit_message_text("❌ Session expired.", chat_id, message_id)
+        return
+    payload = uploads.pop(msg_id_key)
+    url = payload.get('url')
+    text = payload.get('text')
+    platform = payload.get('platform', 'unknown')
+
+    text_without_url = text.replace(url, '').strip()
+    if text_without_url:
+        parts = text_without_url.split('\n', 1)
+        title = parts[0].strip()
+        caption = parts[1].strip() if len(parts) > 1 else ""
+    else:
+        title = "Video Update"
+        caption = ""
+    
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
+    if not safe_title:
+        safe_title = f"video-{timestamp}"
+    filename = safe_title
+    
+    frontmatter = {
+        "title": title,
+        "platform": platform,
+        "youtube_id": url,
+        "embed_code": "",
+        "thumbnail": "",
+        "type": "video",
+        "genre": genre,
+        "category": "videos",
+        "date": datetime.now(CAT).isoformat(timespec="seconds"),
+        "published": True
+    }
+    
+    md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    if caption:
+        md_content += f"\n{caption}\n"
+        
+    md_path = f"_gallery/videos/{filename}.md"
+    
+    try:
+        commit_files_to_github({md_path: md_content}, f"Add Video {filename}.md")
+        bot.edit_message_text(f"✅ Auto-Committed to GitHub!\n📄 File: {filename}.md\n📝 Title: {title}\n🎭 Genre: {genre}\n\n💡 Tip: Line 1 of your message becomes the Title. Anything else becomes the Caption.", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", chat_id, message_id)
+
+def _get_file_text(repo, path):
+    try:
+        return repo.get_contents(path, ref="main").decoded_content.decode('utf-8')
+    except Exception:
+        return ""
+
+def _remove_line(content, line):
+    return '\n'.join([l for l in content.split('\n') if l != line])
+
+def process_todo_action(chat_id, message_id, text, target_file):
+    bot.edit_message_text(f"⏳ Appending to {target_file}...", chat_id, message_id)
+    try:
+        g = Github(GITHUB_TOKEN)
+        repo = g.get_repo(REPO_NAME)
+        existing_text = _get_file_text(repo, target_file)
+        
+        if existing_text and not existing_text.endswith('\n'):
+            existing_text += '\n'
+        new_content = existing_text + f"- [ ] {text}\n"
+        
+        commit_files_to_github({target_file: new_content}, f"Add TODO to {target_file}")
+        bot.edit_message_text(f"✅ Added to `{target_file}`!", chat_id, message_id, parse_mode="Markdown")
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed action: {e}", chat_id, message_id)
+
+@bot.message_handler(content_types=['document', 'photo'])
+def handle_media(message):
+    if not is_authorized(message.from_user.id):
+        return
+        
+    if message.document:
+        if not message.document.mime_type or not message.document.mime_type.startswith('image/'):
+            bot.reply_to(message, "Please send an image file.")
+            return
+        file_id = message.document.file_id
+        caption = message.caption or ""
+    elif message.photo:
+        file_id = message.photo[-1].file_id
+        caption = message.caption or ""
+    else:
+        return
+
+    # Keep track of album captions
+    if message.media_group_id:
+        if message.caption:
+            group_captions[message.media_group_id] = message.caption
+            caption = message.caption
+        else:
+            caption = group_captions.get(message.media_group_id, "")
+            
+        status_msg = bot.reply_to(message, "⏳ Committing grouped image to GitHub...")
+        msg_id_key = str(status_msg.message_id)
+        uploads[msg_id_key] = {
+            'file_id': file_id,
+            'caption': caption,
+            'state': 'main'
+        }
+        process_image_upload(message.chat.id, status_msg.message_id, msg_id_key, "grouped")
+        return
+
+    keyboard = [
+        [InlineKeyboardButton("Meme", callback_data="main_meme"), InlineKeyboardButton("Gallery", callback_data="main_gallery")],
+        [InlineKeyboardButton("AI Gen", callback_data="main_ai"), InlineKeyboardButton("Asset Only", callback_data="main_asset")],
+        [InlineKeyboardButton("Screenshot", callback_data="main_screenshot"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    msg = bot.reply_to(message, "Where would you like this on GitHub? (Note: Cloud version has no timeouts)", reply_markup=reply_markup)
+    
+    uploads[str(msg.message_id)] = {
+        'file_id': file_id,
+        'caption': caption,
+        'state': 'main'
+    }
+
+@bot.callback_query_handler(func=lambda call: True)
+def handle_callback(call):
+    if not is_authorized(call.from_user.id):
+        bot.answer_callback_query(call.id, "Unauthorized")
+        return
+
+    data = call.data
+    msg_id_key = str(call.message.message_id)
+    if msg_id_key not in uploads:
+        bot.edit_message_text("❌ Session expired. Re-upload Image.", call.message.chat.id, call.message.message_id)
+        return
+    
+    payload = uploads[msg_id_key]
+
+    if data.startswith("main_"):
+        target_type = data.split("_")[1]
+        
+        if target_type == "cancel":
+            uploads.pop(msg_id_key)
+            bot.edit_message_text("❌ Upload cancelled.", call.message.chat.id, call.message.message_id)
+            return
+        
+        if target_type == "ai":
+            payload['state'] = 'ai'
+            keyboard = [
+                [InlineKeyboardButton("Gemini", callback_data="ai_Gemini"), InlineKeyboardButton("Grok", callback_data="ai_Grok")],
+                [InlineKeyboardButton("Midjourney", callback_data="ai_Midjourney"), InlineKeyboardButton("DALL-E", callback_data="ai_DALL-E")],
+                [InlineKeyboardButton("Stable Diffusion", callback_data="ai_Stable Diffusion"), InlineKeyboardButton("Other", callback_data="ai_Other")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Which AI Model generated this?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+            return
+            
+        elif target_type == "gallery":
+            payload['state'] = 'gallery'
+            keyboard = [
+                [InlineKeyboardButton("Ghana", callback_data="gal_Ghana"), InlineKeyboardButton("Rwanda", callback_data="gal_Rwanda")],
+                [InlineKeyboardButton("None", callback_data="gal_None"), InlineKeyboardButton("Other", callback_data="gal_Other")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Select a Category for this Gallery Entry:", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+            return
+
+        elif target_type == "screenshot":
+            payload['state'] = 'screenshot'
+            keyboard = [
+                [InlineKeyboardButton("🐦 Twitter / X", callback_data="scr_twitter")],
+                [InlineKeyboardButton("📷 General Screenshot", callback_data="scr_general")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Which type of screenshot?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+            return
+            
+        else:
+            bot.edit_message_text("⏳ Pushing file directly to GitHub...", call.message.chat.id, call.message.message_id)
+            process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, target_type)
+            return
+
+    elif data.startswith("ai_"):
+        bot.edit_message_text("⏳ Processing AI configuration and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        ai_model = data.split("_", 1)[1]
+        process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "ai", ai_model=ai_model)
+        return
+
+    elif data.startswith("gal_"):
+        bot.edit_message_text("⏳ Processing Gallery logic and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        gallery_cat = data.split("_", 1)[1]
+        process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "gallery", gallery_cat=gallery_cat)
+        return
+
+    elif data.startswith("scr_"):
+        sub = data.split("_", 1)[1]  # e.g. "twitter", "general"
+        if sub == "twitter":
+            # Drill down to Twitter sub-categories
+            payload['state'] = 'screenshot_twitter'
+            keyboard = [
+                [InlineKeyboardButton("🇬🇭 Ghana Twitter", callback_data="scrtwt_twitter/ghana-twitter")],
+                [InlineKeyboardButton("💻 Tech Twitter", callback_data="scrtwt_twitter/tech-twitter")],
+                [InlineKeyboardButton("🐦 General Twitter", callback_data="scrtwt_twitter/general")],
+                [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+            ]
+            bot.edit_message_text("Which Twitter community?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        else:
+            bot.edit_message_text("⏳ Uploading screenshot to GitHub...", call.message.chat.id, call.message.message_id)
+            process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "screenshot", screenshot_sub=sub)
+        return
+
+    elif data.startswith("scrtwt_"):
+        screenshot_sub = data.split("_", 1)[1]  # e.g. "twitter/ghana-twitter"
+        bot.edit_message_text("⏳ Uploading screenshot to GitHub...", call.message.chat.id, call.message.message_id)
+        process_image_upload(call.message.chat.id, call.message.message_id, msg_id_key, "screenshot", screenshot_sub=screenshot_sub)
+        return
+
+    elif data.startswith("vidgenre_"):
+        bot.edit_message_text("⏳ Processing Video and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        genre = data.split("_", 1)[1]
+        process_video_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
+        return
+
+    elif data.startswith("todo_"):
+        action = data.split("_", 1)[1]
+        text = payload.get('text')
+        uploads.pop(msg_id_key, None)
+        
+        if action == "cancel":
+            bot.edit_message_text("❌ TODO cancelled.", call.message.chat.id, call.message.message_id)
+        elif action == "content":
+            process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_content.md")
+        elif action == "design":
+            process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_design.md")
+        return
+
+@bot.message_handler(func=lambda message: True)
+def handle_text(message):
+    if not is_authorized(message.from_user.id):
+        return
+
+    text = message.text
+    
+    # Simple regex to catch most URLs
+    url_pattern = r'(https?://[^\s]+)'
+    urls = re.findall(url_pattern, text)
+    
+    if urls:
+        for url in urls:
+            platform = "unknown"
+            if "youtube.com" in url or "youtu.be" in url:
+                platform = "youtube"
+            elif "twitter.com" in url or "x.com" in url:
+                platform = "twitter"
+            elif "tiktok.com" in url:
+                platform = "tiktok"
+            elif "instagram.com" in url:
+                platform = "instagram"
+            
+            if platform != "unknown":
+                keyboard = [
+                    [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
+                    [InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming"), InlineKeyboardButton("Education", callback_data="vidgenre_Education")],
+                    [InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment"), InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology")],
+                    [InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
+                    [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
+                    [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+                ]
+                reply_markup = InlineKeyboardMarkup(keyboard)
+                status_msg = bot.reply_to(message, f"Select a genre for the {platform.capitalize()} Video:", reply_markup=reply_markup)
+                
+                uploads[str(status_msg.message_id)] = {
+                    'url': url,
+                    'text': text,
+                    'platform': platform,
+                    'state': 'video_genre'
+                }
+                return # Only handle the first supported URL
+    # Treat pure text as TODO by default
+    keyboard = [
+        [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
+    ]
+    
+    try:
+        status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
+        if status_msg:
+            uploads[str(status_msg.message_id)] = {
+                'text': text,
+                'state': 'todo'
+            }
+    except Exception as e:
+        print(f"Failed to send TODO menu: {e}")
+        try:
+            fallback_msg = bot.send_message(message.chat.id, "✅ Received. I'll treat this as a TODO (Content).")
+            if fallback_msg:
+                process_todo_action(message.chat.id, fallback_msg.message_id, text, "TODO_content.md")
+        except Exception:
+            pass

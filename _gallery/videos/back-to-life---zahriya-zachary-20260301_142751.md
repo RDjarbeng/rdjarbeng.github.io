@@ -3,7 +3,7 @@ title: Back To Life - Zahriya Zachary Music video
 platform: youtube
 youtube_id: https://youtu.be/uQOa5g9nPaw
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_uQOa5g9nPaw.jpg'
 type: video
 category: videos
 genre: Music

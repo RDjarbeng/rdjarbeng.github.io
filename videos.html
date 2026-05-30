@@ -3,6 +3,7 @@ layout: default
 title: Videos
 permalink: /gallery/videos/
 body_class: videos-page
+description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explore carefully selected video content covering technology, AI, space, entertainment, and more from Richard Djarbeng's collection."
 ---
 
 <div class="videos-page-shell">
@@ -35,6 +36,96 @@ body_class: videos-page
 
     <!-- Debug: Gallery Size: {{ site.gallery | size }} | Videos Found: {{ site.gallery | where: "type", "video" | size }} -->
     <div class="videos-grid-area">
+    <!-- ── Video Groups (horizontal rails) ── -->
+    {% if site.data.video_groups %}
+    <div class="video-groups-container" id="video-groups-container">
+      <div class="video-groups-header">
+        <h2 class="video-groups-title">Browse by Collection</h2>
+        <button class="video-groups-toggle" id="video-groups-toggle" aria-expanded="true">
+          Hide collections &#8963;
+        </button>
+      </div>
+
+      {% assign all_vids = site.gallery | where: "type", "video" | sort: "date" | reverse %}
+
+      {% for group in site.data.video_groups %}
+        {% assign grp_videos = "" | split: "" %}
+
+        {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
+          {% assign genre_matches = all_vids | where: "genre", group.genre %}
+          {% assign grp_videos = grp_videos | concat: genre_matches %}
+        {% endif %}
+
+        {% if group.match_by == "keywords" or group.match_by == "genre_and_keywords" %}
+          {% for kw in group.keywords %}
+            {% assign kw_lower = kw | downcase %}
+            {% for vid in all_vids %}
+              {% assign vtl = vid.title | downcase %}
+              {% if vtl contains kw_lower %}
+                {% assign grp_videos = grp_videos | push: vid %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          {% assign grp_videos = grp_videos | uniq %}
+        {% endif %}
+
+        {% if grp_videos.size > 0 %}
+        <section class="video-group-rail-section">
+          <div class="video-group-rail-header">
+            {% if group.icon %}<span class="video-group-icon">{{ group.icon }}</span>{% endif %}
+            <div>
+              <h3 class="video-group-rail-title">{{ group.name }}</h3>
+              {% if group.description %}<p class="video-group-rail-desc">{{ group.description }}</p>{% endif %}
+            </div>
+          </div>
+          <div class="video-group-rail" role="list">
+            {% for item in grp_videos limit:10 %}
+              {% assign grp_yt_id = "" %}
+              {% if item.platform == 'youtube' and item.youtube_id %}
+                {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                {% elsif item.youtube_id contains 'shorts/' %}{% assign grp_yt_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                {% elsif item.youtube_id contains 'v=' %}{% assign grp_yt_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+                {% else %}{% assign grp_yt_id = item.youtube_id %}{% endif %}
+              {% endif %}
+              <a href="{{ item.url | relative_url }}" class="video-rail-card" role="listitem"
+                 title="{{ item.title | escape }}">
+                <div class="video-rail-thumb">
+                  <img
+                    src="{% if item.thumbnail and item.thumbnail != '' %}{{ item.thumbnail }}{% elsif grp_yt_id != '' %}https://img.youtube.com/vi/{{ grp_yt_id }}/hqdefault.jpg{% else %}/assets/images/logo-small.png{% endif %}"
+                    alt="{{ item.title | escape }}"
+                    loading="lazy">
+                  <div class="video-rail-play">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+                <div class="video-rail-info">
+                  <p class="video-rail-title">{{ item.title | titleize | truncate: 60 }}</p>
+                  <span class="video-rail-genre">{{ item.genre | default: item.category | default: "Video" }}</span>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <script>
+    (function(){
+      var toggle = document.getElementById('video-groups-toggle');
+      var container = document.getElementById('video-groups-container');
+      if (!toggle) return;
+      toggle.addEventListener('click', function(){
+        var groups = container.querySelectorAll('.video-group-rail-section');
+        var isHidden = groups[0] && groups[0].style.display === 'none';
+        groups.forEach(function(g){ g.style.display = isHidden ? '' : 'none'; });
+        toggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        toggle.textContent = isHidden ? 'Hide collections ⌃' : 'Show collections ⌄';
+      });
+    }());
+    </script>
+    {% endif %}
+
         <div class="sticky-filter-stack">
             <div class="genre-filter-row" id="genre-filter-scroll">
                 <button class="genre-chip active" data-genre="all">All</button>
@@ -206,7 +297,9 @@ body_class: videos-page
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
             
             // Update count
-            videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+            if (videoCount) {
+                videoCount.textContent = `${visibleCount} video${visibleCount !== 1 ? 's' : ''}`;
+            }
         }
 
 

@@ -5,7 +5,7 @@ date: 2025-12-28 22:55:00
 platform: tiktok
 youtube_id: https://www.tiktok.com/@richmanrd/video/7578451243920674060
 embed_code: ''
-thumbnail: assets/images/videos/1000325810.jpg
+thumbnail: /assets/images/videos/1000325810.jpg
 type: video
 genre: Entertainment
 ---

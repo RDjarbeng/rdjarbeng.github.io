@@ -3,7 +3,7 @@ title: Change your mindset, change the game Dr. Alia Crum at TEDXTraverseCity
 platform: youtube
 youtube_id: https://youtu.be/0tqq66zwa7g
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_0tqq66zwa7g.jpg'
 type: video
 genre: People & Blogs
 category: videos

@@ -12,7 +12,7 @@ tags:
   - 2D avatar
   - React project
   - RDjarbeng's project
-  - animation
+  - Animation
   - virtual head
 title: Roboface-an Interactive Face Animation Tracker
 image: /assets/images/face_animation_cover.webp

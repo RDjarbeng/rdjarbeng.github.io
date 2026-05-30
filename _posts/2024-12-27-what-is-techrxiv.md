@@ -5,8 +5,8 @@ categories:
   - Research
 tags:
   - Research
-  - academics
-  - papers
+  - Academics
+  - Papers
 title: What is TechRxiv?
 image: /assets/images/techrxiv/techrxiv_screenshot_good.png
 video: ''

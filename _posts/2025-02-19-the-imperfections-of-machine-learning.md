@@ -9,7 +9,7 @@ tags:
   - Machine Learning
   - ML5
   - AI
-  - Javascript
+  - JavaScript
   - Imperfections
 title: The Imperfections of Machine Learning
 image: /assets/images/ml_false positive_cropped_charger_rd.jpg

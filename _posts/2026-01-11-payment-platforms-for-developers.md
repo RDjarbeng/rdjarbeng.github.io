@@ -3,7 +3,7 @@ date: 2026-01-11T12:00:00
 published: true
 author: Richard
 tags:
-  - payments
+  - Payments
   - stripe
   - lemonsqueezy
   - paddle

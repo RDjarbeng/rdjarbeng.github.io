@@ -7,7 +7,7 @@ categories:
 tags:
   - Air Quality
   - IQAir
-  - IoT
+  - IOT
   - Africa
   - Sensors
   - Environmental Monitoring

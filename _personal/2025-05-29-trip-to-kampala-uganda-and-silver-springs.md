@@ -5,20 +5,7 @@ published: true
 tags:
   - Kampala
   - Kigali
-  - Kigali-Kampala
-  - Kigali to Kampala
-  - Kigali to Kampala by bus
-  - Richard Djarbeng's trip to Kampala
-  - Kampala to Kigali by Bus
-  - Ghanaians in Uganda
-  - Trinity bus service from Kigali to Kampala
-  - Passenger left at the border
-  - Crossing Rwanda-Uganda border
-  - Welcome to Rwanda
-  - Welcome to Uganda
-  - Rwanda to Uganda
-  - part one from Rwanda to Uganda
-  - part one from Kigali to Kampala
+  - Kampala
 image: /assets/images/rd_silver_springs_stare_at_statue_cover.webp
 image_alt: Cover image for Trip to Uganda- Kampala & silver springs
 layout: personal
@@ -30,7 +17,7 @@ Here’s **part one** of my journey to the East-African country of Uganda. This 
 
 Here's Uganda on a map of africa taken from Wikipedia
 
-![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%2528-mini_map_-rivers%2529.svg "Uganda in Africa ")
+![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%28-mini_map_-rivers%29.png "Uganda in Africa ")
 
 ## The beginning - Kigali
 
@@ -83,6 +70,12 @@ The other passengers started murmuring something about the unfortunate person us
 In our travelling experience, we were used to some kind of announcement that a bus was departing and perhaps a last minute check from the driver to make sure that everyone was accounted for to make sure no one was left behind at a stop.  Apparently none of that was standard for this trip and you either made it on time or were left behind in a country you may be visiting for the first time.  There was a sign at the border checkpoint prohibiting honking but it still does not excuse what appears to be the hurried rush from the driver to depart without accounting for all passengers. _End personal note_
 
 The coach continued down the dark road; the road from Kigali had  streetlights up to the border, the road to Kampala from the border had no streetlights so we sped off into the darkness. I sometimes wonder what happened to that passenger, probably standing at the border checkpoint watching their bus rumble into the night.
+
+## Video Summary
+
+Here is a short, 11-scene video narrative summarizing this journey (you can also view the scene narrative breakdown in the [Video Gallery](/gallery/videos/kigali-to-kampala-11-hours-3-currencies-and-one-missing-passenger/)):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hte0uurGh7k" title="Kigali to Kampala Video Summary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Hope to work on a part 2 _tomorrow_, no this week ... _sigh_... soon.
 

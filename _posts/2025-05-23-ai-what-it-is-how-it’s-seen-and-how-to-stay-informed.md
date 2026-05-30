@@ -6,7 +6,6 @@ categories:
 tags:
   - AI
   - Machine Learning
-  - Hype
   - Elon Musk
   - Mark Zuckerberg
   - ChatGPT

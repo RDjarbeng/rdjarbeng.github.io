@@ -5,7 +5,7 @@ date: 2026-03-01T08:05:00
 platform: youtube
 youtube_id: https://youtu.be/GibiNy4d4gc
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_GibiNy4d4gc.jpg'
 type: video
 category: videos
 genre: Music

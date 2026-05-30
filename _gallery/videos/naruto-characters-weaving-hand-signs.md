@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:48:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7578501485969870092'
-thumbnail: ''
+thumbnail: 'https://p19-common-sign.tiktokcdn-us.com/tos-maliva-p-0068/ocvIQKF2ouJTAySsBADAQyLqRApQPBEEeDE2fX~tplv-tiktokx-origin.image?dr=9636&x-expires=1780174800&x-signature=8WjJGRZxXxcZxZd4e2tVjWSFuDI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast8'
 type: video
 category: videos
 genre: Entertainment

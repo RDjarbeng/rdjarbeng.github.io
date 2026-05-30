@@ -1,0 +1,100 @@
+{% assign img_src = '/assets/images/webOrMobile.jpeg' %}
+{% if include.item.thumbnail and include.item.thumbnail != '' %}
+  {% assign img_src = include.item.thumbnail %}
+{% elsif include.item.image and include.item.image != '' %}
+  {% assign img_src = include.item.image %}
+{% elsif include.item.platform == 'youtube' and include.item.youtube_id and include.item.youtube_id != '' %}
+  {% assign video_id = include.item.youtube_id %}
+  {% if include.item.youtube_id contains 'v=' %}
+    {% assign video_id = include.item.youtube_id | split: 'v=' | last | split: '&' | first %}
+  {% elsif include.item.youtube_id contains 'shorts/' %}
+    {% assign video_id = include.item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+  {% elsif include.item.youtube_id contains 'youtu.be/' %}
+    {% assign video_id = include.item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+  {% endif %}
+  {% assign img_src = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg' %}
+{% endif %}
+
+{% assign original_img_src = img_src %}
+{% if img_src contains 'images-assets.nasa.gov' %}
+  {% assign img_src = img_src | replace: '~large.jpg', '~small.jpg' | replace: '~orig.jpg', '~small.jpg' | replace: '~medium.jpg', '~small.jpg' %}
+{% endif %}
+
+{% assign is_external = false %}
+{% if img_src contains 'http://' or img_src contains 'https://' %}
+  {% assign is_external = true %}
+{% endif %}
+
+<a href="{{ include.item.url | relative_url }}" class="gallery-card-link" data-title="{{ include.item.title | escape }}">
+    <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %} {% if include.is_small %}is-small{% endif %}" 
+         data-url="{{ include.item.url | relative_url }}" 
+         data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ original_img_src }}{% else %}{{ original_img_src | relative_url }}{% endif %}" 
+         data-title="{{ include.item.title | escape }}" 
+         data-type="{% if include.item.type == 'video' %}html{% else %}image{% endif %}" 
+         data-caption="{{ include.item.content | strip_html | truncatewords: 50 | escape }}" 
+         data-date="{{ include.item.date | date_to_xmlschema }}">
+        
+        <img src="{% if is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
+             alt="{{ include.item.title | escape }}" 
+             loading="lazy" 
+             decoding="async"
+             onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
+        
+
+        {% if include.item.type == 'video' %}
+        <div class="video-icon-wrapper">
+            <span class="gallery-type-icon">▶</span>
+        </div>
+        {% endif %}
+        
+        <div class="lightbox-trigger-zone" title="Expand preview">
+            <button class="lightbox-trigger">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </button>
+        </div>
+        
+        {% if include.item.type == 'video' %}
+        <div class="gallery-html-content" style="display:none;">
+            <template class="raw-embed-code">
+                {% if include.item.embed_code and include.item.embed_code != '' %}
+                    {{ include.item.embed_code }}
+                {% elsif include.item.platform == 'youtube' and video_id %}
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+                {% elsif include.item.platform == 'instagram' %}
+                    {% assign computed_ig = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_ig contains 'instagram.com/p/' %}
+                        {% assign computed_ig = computed_ig | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' | first %}
+                    {% elsif computed_ig contains 'instagram.com/reel/' %}
+                        {% assign computed_ig = computed_ig | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?' | first %}
+                    {% endif %}
+                    <iframe src="https://www.instagram.com/p/{{ computed_ig }}/embed" width="100%" height="100%" style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no" allowtransparency="true" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                {% elsif include.item.platform == 'tiktok' %}
+                    {% assign computed_tk = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_tk contains '/video/' %}
+                        {% assign computed_tk = computed_tk | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+                    {% endif %}
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk }}" data-video-id="{{ computed_tk }}" style="max-width: 605px;min-width: 325px;"><section></section></blockquote><script async src="https://www.tiktok.com/embed.js"></script>
+                {% elsif include.item.platform == 'twitter' %}
+                    {% assign computed_tt = include.item.youtube_id | default: include.item.link %}
+                    {% if computed_tt contains '/status/' %}
+                        {% assign computed_tt = computed_tt | split: '/status/' | last | split: '?' | first | split: '/' | first %}
+                    {% endif %}
+                    <blockquote class="twitter-tweet" data-width="800" data-dnt="true" data-theme="dark"><a href="https://twitter.com/x/status/{{ computed_tt }}"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% else %}
+                    {{ include.item.content }}
+                {% endif %}
+            </template>
+        </div>
+        <div class="gallery-caption-content" style="display:none;">
+            {{ include.item.content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+        </div>
+        {% endif %}
+
+        <div class="gallery-item-info">
+            <h3 class="gallery-item-title">{{ include.item.title | titleize | escape }}</h3>
+            {% if include.is_dashboard != true %}
+            <p style="font-size: 0.8rem; margin: 5px 0 0; color: #ddd;">{{ include.item.date | date: "%B %-d, %Y" }}</p>
+            {% endif %}
+        </div>
+    </div>
+</a>
