@@ -1,6 +1,6 @@
 ---
 title: A Cat That Has Published 3 Physics Papers -Felis Domesticus Chester Willard
-date: 2026-03-16 14:35:00+02:00
+date: 2026-03-16T14:35:00+02:00
 image: /assets/images/memes/20260316-143605.png
 type: external
 category: memes
