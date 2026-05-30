@@ -144,3 +144,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] YouTube hub doesn't have a footer
 - [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
 - [ ] Bug: Thumbnails for TikTok video on the videos page shows a blue background behind ot instead pf filling the page,
+- [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
