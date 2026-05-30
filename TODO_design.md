@@ -142,3 +142,4 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Seems some links in posts, and the category in posts have low contrast need to improve this
 - [ ] Part of footer os is hidden on videos page by the sidebar
 - [ ] YouTube hub doesn't have a footer
+- [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
