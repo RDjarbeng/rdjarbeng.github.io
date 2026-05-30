@@ -131,6 +131,8 @@ def main():
 
     # Find all markdown files in _gallery
     gallery_files = glob.glob('_gallery/**/*.md', recursive=True)
+    # Sort by modification time, newest first to prioritize recently pushed telegram posts
+    gallery_files.sort(key=os.path.getmtime, reverse=True)
     
     processed_count = 0
     for file_path in gallery_files:
