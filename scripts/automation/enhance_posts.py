@@ -4,6 +4,7 @@ import yaml
 import json
 import argparse
 import urllib.parse
+import subprocess
 from pathlib import Path
 from PIL import Image
 from google import genai
@@ -140,8 +141,30 @@ def main():
 
     # Find all markdown files in _gallery
     gallery_files = glob.glob('_gallery/**/*.md', recursive=True)
-    # Sort by modification time, newest first to prioritize recently pushed telegram posts
-    gallery_files.sort(key=os.path.getmtime, reverse=True)
+    
+    # Sort by git commit time, newest first to prioritize recently pushed telegram posts
+    # GitHub Actions checkouts reset mtime, so os.path.getmtime doesn't work correctly.
+    try:
+        result = subprocess.run(
+            ['git', 'log', '--name-only', '--pretty=format:', '_gallery'],
+            capture_output=True, text=True, check=True
+        )
+        git_sorted_files = []
+        for line in result.stdout.splitlines():
+            line = line.strip()
+            if line.endswith('.md') and line.startswith('_gallery'):
+                # normalize path separators
+                line = line.replace('\\', '/')
+                if line not in git_sorted_files:
+                    git_sorted_files.append(line)
+                    
+        # Append any untracked or missed files to the end
+        gallery_files_normalized = [f.replace('\\', '/') for f in gallery_files]
+        untracked = [f for f in gallery_files_normalized if f not in git_sorted_files]
+        gallery_files = git_sorted_files + untracked
+    except Exception as e:
+        print(f"Warning: Failed to sort by git history: {e}")
+        gallery_files.sort(key=os.path.getmtime, reverse=True)
     
     processed_count = 0
     for file_path in gallery_files:
