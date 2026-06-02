@@ -193,3 +193,15 @@ spacex-did-it-again-precision-engineering-on-display/
 - [ ] This post needs a more descriptive message:
 
 https://rdjarbeng.com/gallery/videos/y-combinator-request-for-startups-visualizer-by-rdjarbeng/
+- [ ] A brief intro to energy storage systems, battery packs, we're talking AH, not mAH
+
+Power systems (also portable power systems
+Eg: Chinese companies ALL top
+
+Example projects: Malaysia, Tanzania, China, Ethiopia
+
+What's an offgrid inverter? 
+State of solar pumps are they reliable? What about solar led lights? Are they still expensive?
+
+Solar has been misconstrued as not being powerful enough, limited to lights and small appliances let's see if that assumption still holds.
+What are the heaviest loads that we can find running solar? Can it power my ACs off-grid in the Saudi desert? What about my trucks?
