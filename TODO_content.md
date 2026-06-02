@@ -205,3 +205,4 @@ State of solar pumps are they reliable? What about solar led lights? Are they st
 
 Solar has been misconstrued as not being powerful enough, limited to lights and small appliances let's see if that assumption still holds.
 What are the heaviest loads that we can find running solar? Can it power my ACs off-grid in the Saudi desert? What about my trucks?
+- [ ] One of the memorable scenes in animation, I told them I would ASK in ratatouille
