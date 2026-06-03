@@ -118,7 +118,7 @@ This todo file contains design specifications and technical  directions for rdja
 
 - the telegram bot needs to be updated on the new organization of the gallery
 - [ ] Link directly dev, coder legion posts manually to main site
-- [ ] Add link to background remover amd and projects on the about page
+- [ ] Add link to background remover and projects on the about page
 
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
