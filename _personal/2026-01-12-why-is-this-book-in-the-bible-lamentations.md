@@ -26,7 +26,7 @@ However in chapter 3 there is one big turning point with a big BUT.
 > 
 > This I recall to my mind, Therefore I have hope. Through the LORD’s mercies we are not consumed, Because His compassions fail not. They are new every morning; Great is Your faithfulness. “The LORD is my portion,” says my soul, “Therefore I hope in Him!” The LORD is good to those who wait for Him, To the soul who seeks Him. It is good that one should hope and wait quietly For the salvation of the LOR It is good for a man to bear The yoke in his youth. Let him sit alone and keep silent, Because God has laid it on himD. \~Lamentations 3:21-28 [NKJV](https://www.bible.com/bible/114/LAM.3.21-28)
 
-From verse 21 the scene changes from despair to hope. In one verse the whole book is  now put into  context. From the author Jeremaiah's perspective all the sufferings and complaints mentioned previously are negated by the fact that the Lord's mercies still remain. 
+From verse 21 the scene changes from despair to hope. In one verse the whole book is  now put into  context. From the author, believed to be the prophet Jeremiah, his perspective is that all the sufferings and complaints mentioned previously are negated by the fact that the Lord's mercies still remain. They are as sure as the sunrise.
 
 Many Christians draw encouragement from this verse that sits in the midst of wailing and complaining. One very popular song that I think takes from this goes:
 
@@ -41,3 +41,5 @@ The steadfast love of the LORD, never ceases
 > Great is your faithfulness O Lord
 
 > Great is your faithfulness
+
+I'll try and include a video of the song below if I find it on youtube.
