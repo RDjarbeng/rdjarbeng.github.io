@@ -34,6 +34,13 @@
             visibleItems = Array.from(document.querySelectorAll('.gallery-item'));
         }
 
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .replace(/[^a-z0-9]/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-|-$/g, '');
+        }
+
         function openLightbox(index) {
             updateVisibleItems();
             if (index < 0 || index >= visibleItems.length) return;
@@ -72,6 +79,11 @@
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
             
+            // Update URL query parameter
+            const url = new URL(window.location);
+            url.searchParams.set('item', slugify(title));
+            window.history.replaceState({}, title, url.pathname + url.search);
+            
             // Check if we need to load more
             if (index >= visibleItems.length - 2) {
                 const nextBtn = document.querySelector('.next-page-btn:not(.loading)');
@@ -83,6 +95,11 @@
             modal.classList.remove('active');
             document.body.style.overflow = '';
             modal.querySelector('#lightbox-media-container').innerHTML = '';
+            
+            // Clear URL query parameter
+            const url = new URL(window.location);
+            url.searchParams.delete('item');
+            window.history.replaceState({}, document.title, url.pathname + url.search);
         }
 
         modal.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
@@ -96,6 +113,83 @@
             if (e.key === 'ArrowRight') openLightbox((currentIndex + 1) % visibleItems.length);
             if (e.key === 'ArrowLeft') openLightbox((currentIndex - 1 + visibleItems.length) % visibleItems.length);
         });
+
+        // Deep linking check on load
+        const params = new URLSearchParams(window.location.search);
+        const itemSlug = params.get('item');
+        if (itemSlug) {
+            updateVisibleItems();
+            
+            // 1. Try to find the item in the local DOM (fast path)
+            const index = visibleItems.findIndex(item => {
+                const title = item.getAttribute('data-title') || '';
+                const url = item.getAttribute('data-url') || '';
+                return slugify(title) === itemSlug || url === itemSlug || url.replace(/\/$/, '') === itemSlug.replace(/\/$/, '');
+            });
+            
+            if (index !== -1) {
+                openLightbox(index);
+            } else if (itemSlug.startsWith('/') || itemSlug.includes('/')) {
+                // 2. Fallback: Fetch item HTML from individual page dynamically
+                fetch(itemSlug)
+                    .then(res => {
+                        if (!res.ok) throw new Error("Failed to fetch page");
+                        return res.text();
+                    })
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        
+                        const titleEl = doc.querySelector('h1');
+                        const title = titleEl ? titleEl.textContent.trim() : '';
+                        
+                        const dateEl = doc.querySelector('.author_date time') || doc.querySelector('time');
+                        const dateText = dateEl ? dateEl.textContent.trim() : '';
+                        
+                        const captionEl = doc.querySelector('.gallery-caption') || doc.querySelector('.gallery-body');
+                        const caption = captionEl ? captionEl.innerHTML : '';
+                        
+                        const mediaEl = doc.querySelector('.gallery-item-media');
+                        if (!mediaEl) return;
+                        
+                        // Populate lightbox elements
+                        modal.querySelector('.lightbox-title').textContent = title;
+                        modal.querySelector('.lightbox-date').textContent = dateText;
+                        modal.querySelector('.lightbox-caption').innerHTML = caption;
+                        
+                        const fullPostBtn = modal.querySelector('.lightbox-full-post-btn');
+                        if (fullPostBtn) {
+                            fullPostBtn.href = itemSlug;
+                            fullPostBtn.style.display = 'inline-block';
+                        }
+                        
+                        const mediaContainer = modal.querySelector('#lightbox-media-container');
+                        mediaContainer.innerHTML = mediaEl.innerHTML;
+                        
+                        // Re-evaluate script tags inside the dynamic content
+                        Array.from(mediaContainer.querySelectorAll('script')).forEach(oldScript => {
+                            const newScript = document.createElement('script');
+                            Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                            if (oldScript.innerHTML) {
+                                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                            }
+                            oldScript.parentNode.replaceChild(newScript, oldScript);
+                        });
+                        
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                        
+                        // Update URL parameter
+                        const url = new URL(window.location);
+                        url.searchParams.set('item', itemSlug);
+                        window.history.replaceState({}, title, url.pathname + url.search);
+                    })
+                    .catch(err => {
+                        console.error("Error loading deep-linked item dynamically:", err);
+                    });
+            }
+        }
+
 
         document.addEventListener('click', function(e) {
             const trigger = e.target.closest('.lightbox-trigger-zone') || e.target.closest('.lightbox-trigger');

@@ -114,7 +114,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
 - [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
 - [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
-- [ ] [BUG] Clicking an item on the gallery card for the homepage takes you to the gallery page instead of the gallery item
 - [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
 - the telegram bot needs to be updated on the new organization of the gallery
@@ -124,6 +123,7 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
+- Youtube page was supposed to be styled differently but now looks more like the videos page
 - [ ] YouTube videos aren't showing most recently added first
 - [ ] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
@@ -143,6 +143,11 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Part of footer os is hidden on videos page by the sidebar
 - [ ] YouTube hub doesn't have a footer
 - [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
-- [ ] Bug: Thumbnails for TikTok video on the videos page shows a blue background behind ot instead pf filling the page,
+- [BUG] Thumbnails for TikTok video on the videos page shows a blue background behind it instead of filling the page,
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer
+- [ ] Reduce the number of Artemis II Items shown on the gallery page
+
+- Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format
+
+- The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview

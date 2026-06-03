@@ -212,3 +212,4 @@ Its time to look at companies working on these problems
 
 
 Tokens/sec by groq, fastest LLM responses ever
+- [ ] Let's look at how the rembg package works. Is this AI that's so good you don't even notice it? What about the other models being used in my background remover package how do those work?
