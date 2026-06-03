@@ -51,8 +51,8 @@ Then the next verse goes:
 
 **_Yet hope returns when I remember this one thing_**: The LORD's unfailing love and mercy still continue, Fresh as the morning, as sure as the sunrise. \~Lamentations 3:21 [GNT](https://www.bible.com/bible/68/LAM.3.21-24.GNT)
 
-> The New King James Version (NKJV) says:
-> 
+The New King James Version (NKJV) says:
+
 > This I recall to my mind, Therefore I have hope. Through the LORD’s mercies we are not consumed, Because His compassions fail not. They are new every morning; Great is Your faithfulness. “The LORD is my portion,” says my soul, “Therefore I hope in Him!” The LORD is good to those who wait for Him, To the soul who seeks Him. It is good that one should hope and wait quietly For the salvation of the LOR It is good for a man to bear The yoke in his youth. Let him sit alone and keep silent, Because God has laid it on himD. \~Lamentations 3:21-28 [NKJV](https://www.bible.com/bible/114/LAM.3.21-28)
 
 ![stick figure drawing of a person in a red shirt with thick black marker outlines stares into the horizon with the sunrise illuminating the water and casting a shadow](/assets/images/stick-figure-staring-at-the-sunrise-hope-returns.jpg "stick figure stares at the sunrise")
