@@ -6,7 +6,7 @@ tags:
   - Bible
   - Hope
 image: /assets/images/posts/covers/why_is_this_book_in_the_bible_lamentations_cover.jpg
-image_alt: Why is Lamentations in the Bible Cover Image
+image_alt: Stick figure in a red shirt staring at a sunrise over water, with the overlay text 'Why is Lamentations in the Bible?'
 layout: personal
 ---
 
