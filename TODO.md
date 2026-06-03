@@ -9,4 +9,4 @@ TODO_content.md: Todos related to content
 TODO_design.md: Todos related to design and technical site building 
 
 Current focus:
-Working on the videos page now
+Fixing bugs
