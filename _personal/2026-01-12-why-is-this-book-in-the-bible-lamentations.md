@@ -18,7 +18,11 @@ It starts off with some very unpleasant ideas and continues in despair.
 
 > How lonely sits the city that was full of people! How like a widow is she, who was great among the nations! The princess among the provinces has become a slave! \~ Lamentations 1:1
 
-This is not something one would expect to find in the bible when you are looking for an encouraging word. You even begin to wonder what the point of this book being included in the bible for Christians who follow Jesus. Certainly it's not compatible with the message of Salvation and the redemption of God's people? Or so I thought. For 2 chapters there is no encouraging word about God or hope for his children as the book continues with words so heavy and despairing. Just take a look at these verses:
+![stick figure drawing of a person in a red shirt with thick black marker outlines stares into the horizon with no light](/assets/images/stick-figure-looking-at-the-horizon-original.jpg "stick figure stares into the horizon")
+
+This is not something one would expect to find in the bible when you are looking for an encouraging word. You even begin to wonder what the point of this book being included in the bible for Christians who follow Jesus. Certainly it's not compatible with the message of Salvation and the redemption of God's people? Or so I thought.
+
+ For 2 chapters there is no encouraging word about God or hope for his children as the book continues with words so heavy and despairing. Just take a look at these verses:
 
 > Without pity the Lord has swallowed up
 >     all the dwellings of Jacob;
@@ -51,7 +55,11 @@ Then the next verse goes:
 > 
 > This I recall to my mind, Therefore I have hope. Through the LORD’s mercies we are not consumed, Because His compassions fail not. They are new every morning; Great is Your faithfulness. “The LORD is my portion,” says my soul, “Therefore I hope in Him!” The LORD is good to those who wait for Him, To the soul who seeks Him. It is good that one should hope and wait quietly For the salvation of the LOR It is good for a man to bear The yoke in his youth. Let him sit alone and keep silent, Because God has laid it on himD. \~Lamentations 3:21-28 [NKJV](https://www.bible.com/bible/114/LAM.3.21-28)
 
+![stick figure drawing of a person in a red shirt with thick black marker outlines stares into the horizon with the sunrise illuminating the water and casting a shadow](/assets/images/stick-figure-staring-at-the-sunrise-hope-returns.jpg "stick figure stares at the sunrise")
+
 From verse 21 the scene changes from despair to hope. In a few verses the tone of the whole book is now transformed. From the author Jeremaiah's perspective all the sufferings and complaints mentioned previously are negated by the fact that the Lord's mercies still remain. 
+
+![a picture of hope in the misdst of other text: war, fear, anxiety, pain, panic](/assets/images/a-picture-of-hope-lamentations-steadfast-love.jpg "a picture of hope")
 
 Many Christians draw encouragement from this verse that sits in the midst of wailing and complaining. One very popular song that I think takes from this goes:
 
