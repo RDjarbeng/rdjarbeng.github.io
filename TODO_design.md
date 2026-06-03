@@ -146,3 +146,8 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [BUG] Thumbnails for TikTok video on the videos page shows a blue background behind it instead of filling the page,
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer
+- [ ] Reduce the number of Artemis II Items shown on the gallery page
+
+- Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format
+
+- The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview
