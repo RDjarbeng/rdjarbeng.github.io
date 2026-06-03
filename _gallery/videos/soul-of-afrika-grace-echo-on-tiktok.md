@@ -1,12 +1,13 @@
 ---
 title: Soul of Afrika- Grace Echo on Tiktok
+date: 2026-02-07T19:44:00+02:00
 platform: tiktok
-youtube_id: 'https://www.tiktok.com/@richmanrd/video/7598195934585015563'
-thumbnail: ''
+youtube_id: https://www.tiktok.com/@richmanrd/video/7598195934585015563
+embed_code: ''
+thumbnail: /assets/images/cover-image-grace-echo-by-rdjarbeng.jpg
 type: video
-category: videos
 genre: Entertainment
-date: 2026-02-07 19:44:16
+category: videos
 ---
 
 "Grace Echo," the powerful new song by Nigerian gospel choir Soul of Afrika, is rapidly gaining massive traction on YouTube, bringing its uplifting message to thousands. Having amassed over 200,000 views in just its first 3 weeks, the track is quickly becoming a staple in the modern African gospel scene. 
