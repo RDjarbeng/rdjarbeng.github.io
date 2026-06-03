@@ -225,14 +225,14 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                 style="width: 100%; position: relative; background: #102a43; display: flex; align-items: center; justify-content: center; aspect-ratio: {% if item.platform == 'tiktok' or item.platform == 'instagram' %}9/16{% else %}16/9{% endif %}; overflow: hidden;">
 
                 <a href="javascript:void(0);" class="inline-play-btn"
-                    style="display: block; width: 100%; height: 100%;">
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;">
                     <!-- If it's a known thumbnail, inject it immediately. -->
                     <img class="robust-thumbnail" data-platform="{{ item.platform }}"
                         data-tiktok-id="{{ computed_tk_id }}" data-instagram-id="{{ computed_ig_id }}"
                         data-fallback="{{ fallback_image | relative_url }}"
                         src="{{ thumb_src }}"
                         alt="{{ item.title | escape }}"
-                        style="width: 100%; height: 100%; object-fit: {{ thumb_fit }}; opacity: 0.8; transition: opacity 0.3s;"
+                        style="width: 100%; height: 100%; object-fit: {{ thumb_fit }}; opacity: 0.8; transition: opacity 0.3s; padding: 0; margin: 0;"
                         loading="lazy"
                         onerror="this.onerror=null; this.src='{{ fallback_image | relative_url }}'; this.style.objectFit='contain'; this.style.padding='2rem';">
 
