@@ -1,6 +1,6 @@
 ---
 title: Lamentations is Just Complaining  and Wailing, Why is It Even In The Bible
-date: 2026-06-03T13:48:41+02:00
+date: 2026-06-03T13:48:00+02:00
 published: true
 tags:
   - Bible
@@ -43,8 +43,11 @@ This is not something one would expect to find in the bible when you are looking
 This sorrowful tone continues into chapter 3 as well. However in this chapter there is one big turning point with a big BUT.  Not at the beginning because even up to verse 20 it says:
 
 > I remember my affliction and my wandering,
+> 
 >     the bitterness and the gall.
-> **20**  I well remember them,
+> 
+> I well remember them,
+> 
 >     and my soul is downcast within me. \~ Lamentations 3:20
 
 Then the next verse goes:
