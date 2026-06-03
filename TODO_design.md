@@ -114,7 +114,6 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
 - [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
 - [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
-- [ ] [BUG] Clicking an item on the gallery card for the homepage takes you to the gallery page instead of the gallery item
 - [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
 - the telegram bot needs to be updated on the new organization of the gallery
