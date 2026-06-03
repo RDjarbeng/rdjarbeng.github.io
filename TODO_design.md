@@ -124,6 +124,7 @@ This todo file contains design specifications and technical  directions for rdja
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
+- Youtube page was supposed to be styled differently but now looks more like the videos page
 - [ ] YouTube videos aren't showing most recently added first
 - [ ] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
@@ -143,6 +144,6 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Part of footer os is hidden on videos page by the sidebar
 - [ ] YouTube hub doesn't have a footer
 - [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
-- [ ] Bug: Thumbnails for TikTok video on the videos page shows a blue background behind ot instead pf filling the page,
+- [BUG] Thumbnails for TikTok video on the videos page shows a blue background behind it instead of filling the page,
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer

@@ -34,6 +34,13 @@
             visibleItems = Array.from(document.querySelectorAll('.gallery-item'));
         }
 
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .replace(/[^a-z0-9]/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-|-$/g, '');
+        }
+
         function openLightbox(index) {
             updateVisibleItems();
             if (index < 0 || index >= visibleItems.length) return;
@@ -72,6 +79,11 @@
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
             
+            // Update URL query parameter
+            const url = new URL(window.location);
+            url.searchParams.set('item', slugify(title));
+            window.history.replaceState({}, title, url.pathname + url.search);
+            
             // Check if we need to load more
             if (index >= visibleItems.length - 2) {
                 const nextBtn = document.querySelector('.next-page-btn:not(.loading)');
@@ -83,6 +95,11 @@
             modal.classList.remove('active');
             document.body.style.overflow = '';
             modal.querySelector('#lightbox-media-container').innerHTML = '';
+            
+            // Clear URL query parameter
+            const url = new URL(window.location);
+            url.searchParams.delete('item');
+            window.history.replaceState({}, document.title, url.pathname + url.search);
         }
 
         modal.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
@@ -96,6 +113,20 @@
             if (e.key === 'ArrowRight') openLightbox((currentIndex + 1) % visibleItems.length);
             if (e.key === 'ArrowLeft') openLightbox((currentIndex - 1 + visibleItems.length) % visibleItems.length);
         });
+
+        // Deep linking check on load
+        const params = new URLSearchParams(window.location.search);
+        const itemSlug = params.get('item');
+        if (itemSlug) {
+            updateVisibleItems();
+            const index = visibleItems.findIndex(item => {
+                const title = item.getAttribute('data-title') || '';
+                return slugify(title) === itemSlug;
+            });
+            if (index !== -1) {
+                openLightbox(index);
+            }
+        }
 
         document.addEventListener('click', function(e) {
             const trigger = e.target.closest('.lightbox-trigger-zone') || e.target.closest('.lightbox-trigger');
