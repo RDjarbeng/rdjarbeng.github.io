@@ -151,3 +151,8 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format
 
 - The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview
+- [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images 
+
+-Need to show the visual hierarchy for the Gallery page, images first then the  categories for the gallery image such as AI, then videos.
+
+Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
