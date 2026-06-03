@@ -43,11 +43,8 @@ This is not something one would expect to find in the bible when you are looking
 This sorrowful tone continues into chapter 3 as well. However in this chapter there is one big turning point with a big BUT.  Not at the beginning because even up to verse 20 it says:
 
 > I remember my affliction and my wandering,
-> 
 >     the bitterness and the gall.
-> 
 > I well remember them,
-> 
 >     and my soul is downcast within me. \~ Lamentations 3:20
 
 Then the next verse goes:
@@ -66,16 +63,11 @@ From verse 21 the scene changes from despair to hope. In a few verses the tone o
 
 Many Christians draw encouragement from this verse that sits in the midst of wailing and complaining. One very popular song that I think takes from this goes:
 
-The steadfast love of the LORD, never ceases
-
+> The steadfast love of the LORD, never ceases
 > His mercies never come to an end
-
 > They are New, every morning
-
 > New every morning
-
 > Great is your faithfulness O Lord
-
 > Great is your faithfulness
 
 Here is a video of the song "The Steadfast Love of the Lord", which beautifully captures the essence of these verses, showing how Jeremiah's words of hope continue to inspire worship and comfort hearts today:
