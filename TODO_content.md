@@ -213,3 +213,4 @@ Its time to look at companies working on these problems
 
 Tokens/sec by groq, fastest LLM responses ever
 - [ ] Let's look at how the rembg package works. Is this AI that's so good you don't even notice it? What about the other models being used in my background remover package how do those work?
+- [ ] You as a developer and AI. Let's try and get a high level overview. There's some projects that might require some level of AI use. Some could just be an API call (comes with tradeoffs woth cost) , others might involve building a small machine learning model, others might use AI on a way that's agnostic to you, you probably just import a package and don't think about it. Let's look at it example scenarios with progressing levels  from no AI, to some AI, to fully AI powered app and things in between
