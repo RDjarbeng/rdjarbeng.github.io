@@ -1,5 +1,5 @@
 ---
-title: Lamentations is Just Complaining  and Wailing Why is This Book In The Bible -
+title: Lamentations is Just Complaining  and Wailing, Why is It Even In The Bible
 date: 2026-01-12T13:09:00
 published: false
 tags:
