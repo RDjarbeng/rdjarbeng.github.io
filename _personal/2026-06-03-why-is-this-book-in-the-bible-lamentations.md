@@ -1,12 +1,12 @@
 ---
 title: Lamentations is Just Complaining  and Wailing, Why is It Even In The Bible
-date: 2026-01-12T13:09:00
-published: false
+date: 2026-06-03T13:48:41
+published: true
 tags:
   - Bible
   - Hope
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/why_is_this_book_in_the_bible_lamentations_cover.jpg
+image_alt: Why is Lamentations in the Bible Cover Image
 layout: personal
 ---
 
@@ -75,4 +75,6 @@ The steadfast love of the LORD, never ceases
 
 > Great is your faithfulness
 
-I'll try and include a video of the song below if I find it on youtube.
+Here is a video of the song "The Steadfast Love of the Lord", which beautifully captures the essence of these verses, showing how Jeremiah's words of hope continue to inspire worship and comfort hearts today:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EnOFh9WFe6k" frameborder="0" allowfullscreen></iframe>
