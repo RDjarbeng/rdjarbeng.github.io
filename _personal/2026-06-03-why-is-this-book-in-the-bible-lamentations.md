@@ -16,7 +16,9 @@ The book literally says lamentations which in simple term can be called complain
 
 It starts off with some very unpleasant ideas and continues in despair. 
 
-> How lonely sits the city that was full of people! How like a widow is she, who was great among the nations! The princess among the provinces has become a slave! \~ Lamentations 1:1
+> How lonely sits the city that was full of people!
+> How like a widow is she, who was great among the nations!
+>  The princess among the provinces has become a slave! \~ Lamentations 1:1
 
 ![stick figure drawing of a person in a red shirt with thick black marker outlines stares into the horizon with no light](/assets/images/stick-figure-looking-at-the-horizon-original.jpg "stick figure stares into the horizon")
 
