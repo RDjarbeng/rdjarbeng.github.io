@@ -1,6 +1,6 @@
 ---
 title: Lamentations is Just Complaining  and Wailing, Why is It Even In The Bible
-date: 2026-06-03T13:48:41
+date: 2026-06-03T13:48:41+02:00
 published: true
 tags:
   - Bible
