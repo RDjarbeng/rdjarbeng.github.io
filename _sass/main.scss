@@ -2073,6 +2073,23 @@ body {
   padding: 0 20px;
 }
 
+blockquote {
+  border-left: 3px solid var(--link-color, #888);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+    white-space: pre-wrap; /* honours soft line breaks */
+  }
+
+  & + blockquote {
+    margin-top: 0.25rem;
+  }
+}
+
 /* Post Cards Typography Overrides */
 div.post-card {
 
