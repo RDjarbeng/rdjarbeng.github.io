@@ -38,8 +38,6 @@ However, this catalog is essentially an "app store" for artificial intelligence 
 
 Here are the actual superpowers these models give you, and exactly how you can take them from a free prototype to a commercial product.
 
-![A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons](/assets/images/posts/covers/nvidia_ai_superstore_cover.jpg "The AI Superstore: NVIDIA's Model Catalog")
-
 ## 1. The Hollywood Toolkit (Video and Image Magic)
 
 We are entering an era where you cannot always trust what you see on a screen. NVIDIA hosts several models dedicated entirely to manipulating and analyzing video.
@@ -55,16 +53,37 @@ General chatbots like ChatGPT are great for writing emails, but they struggle wi
 
 - **Understanding Messy Files:** Models like [Nemotron OCR](https://build.nvidia.com/nvidia/nemotron-ocr-v1) are designed to look at a scanned PDF or a photograph of a chart and instantly extract the data into a clean spreadsheet.
 For example here is an image of a document so scan: ![Screenshot of Example from nvidia showing document from a Parish with details that are written on a white page. On the page is a form with text](/assets/images/20260506-122315.png "Example image for nvidia nemotron ocr showing document")![Screenshot of Example Document from a Parish with details of detected text highlighted by nemotron OCR and numbered](/assets/images/20260506-122625.png "Screenshot of Example Document from a Parish with details of detected text highlighted by nemotron OCR with numbers")![Screenshot of detected text by nemotron OCR on a black backgound  and numbered white text showing  a table with first row with text and confidence score with 8 items showing](/assets/images/20260506-122651.png "Screenshot of detected text by nemotron OCR on a black backgound  and numbered white text showing  a table with first row with text and confidence score with 8 items showing")
-- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://build.nvidia.com/black-forest-labs/flux_2-klein-4b) generate high-quality images from text descriptions in fractions of a second. This Flux model in particular is downloadable but can also be deployed on Nvidia Cloud Infrastructure.
+- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://build.nvidia.com/black-forest-labs/flux_2-klein-4b) generate high-quality images from text descriptions in fractions of a second. This Flux model in particular is downloadable but can also be deployed on Nvidia Cloud Infrastructure. The picture of the 
 ![a bottle of perfume on a clean backdrop, surrounded by fragrant white flowers, product photography, minimalistic, natural light](/assets/images/20260604-141513.png "Image of a bottle of perfume from Black Forest Labs flux.2-klein-4b")
-- **Protecting Privacy:** The [GLiNER PII](https://build.nvidia.com/nvidia/gliner-pii) model automatically reads through documents and redacts personally identifiable information (like social security numbers or addresses) before you share them.
+-  **Protecting Privacy:** The [GLiNER PII](https://build.nvidia.com/nvidia/gliner-pii) model automatically reads through documents and redacts personally identifiable information (like social security numbers or addresses) before you share them. The screenshot you see is a demo of the model in action on the Nvidia models page.
+
+ ![](/assets/images/20260604-142214.png)
+The input text includes Personally Identifiable Information (PII) from a Dr. Jordan wells. 
+
+> Senior Systems Architect Dr. Jordan Wells lives at 2901 Connecticut Ave NW, Washington, DC 20008. His account 90012234 (Swift: WFBIUS6S) was flagged at 09:42 AM.
+
+The model output hightlights the PII found and the number of Detected Elements: 10. 
 
 ## 3. The Universal Translators (Voice and Audio)
 
 Voice assistants are moving beyond simple commands and becoming real-time conversational partners.
 
 - **Real-Time Conversations:** [Nemotron Voicechat](https://build.nvidia.com/nvidia/nemotron-voicechat) allows you to build voice interfaces that understand spoken English instantly without the awkward pauses you usually get with smart speakers.
-- **Instant Translation:** The [Riva Translate](https://build.nvidia.com/nvidia/riva-translate-4b-instruct-v1_1) model can translate spoken or written text across 12 different languages with incredible accuracy.
+- **Instant Translation:** The [Riva Translate](https://build.nvidia.com/nvidia/riva-translate-4b-instruct-v1_1) model can translate spoken or written text across 12 different languages with incredible accuracy. This specific model riva-translate-4b-instruct-v1_1 is avaiable as a free endpoint translation model with few-shots example prompts capability.
+Demo example of Riva translate: 
+Source Language:
+English (en)
+Target Language:
+French (fr)
+
+System prompt:
+> You are an expert at translating text from English to French.
+Input: 
+> Riva translation uses Nemotron model to translate text from source language to target language.
+Output:
+> Riva Translation utilise le modèle Nemotron pour traduire du texte d'une langue source vers une langue cible.
+
+I don't speak French at the moment but this looks like a French translation to me.
 
 ## 4. The Mad Scientists (Healthcare and Physics)
 
