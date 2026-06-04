@@ -62,7 +62,7 @@ The input text includes Personally Identifiable Information (PII) from a Dr. Jor
 
 > Senior Systems Architect Dr. Jordan Wells lives at 2901 Connecticut Ave NW, Washington, DC 20008. His account 90012234 (Swift: WFBIUS6S) was flagged at 09:42 AM.
 
-The model output hightlights the PII found and the number of Detected Elements: 10. 
+The model output hightlights the PII found and the number of Detected Elements: 10 all color coded with their confidence intervals in the screenshot. 
 
 ## 3. The Universal Translators (Voice and Audio)
 
@@ -77,13 +77,16 @@ Target Language:
 French (fr)
 
 System prompt:
+
 > You are an expert at translating text from English to French.
-Input: 
+> Input: 
 > Riva translation uses Nemotron model to translate text from source language to target language.
-Output:
+> Output:
 > Riva Translation utilise le modèle Nemotron pour traduire du texte d'une langue source vers une langue cible.
 
-I don't speak French at the moment but this looks like a French translation to me.
+I don't speak French at the moment but this looks like a French translation to me see screenshot to see how the demo looks like on Nvidia build.
+
+![  Riva Translate model can translate spoken or written text, it's shown translating text from English to French after a menu with different options are selected.](/assets/images/20260604-151202.png "Translating English to French. Riva Translate model can translate spoken or written text")
 
 ## 4. The Mad Scientists (Healthcare and Physics)
 
