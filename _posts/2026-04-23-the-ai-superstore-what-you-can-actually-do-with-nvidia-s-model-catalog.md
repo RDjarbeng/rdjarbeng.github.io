@@ -55,10 +55,8 @@ General chatbots like ChatGPT are great for writing emails, but they struggle wi
 
 - **Understanding Messy Files:** Models like [Nemotron OCR](https://build.nvidia.com/nvidia/nemotron-ocr-v1) are designed to look at a scanned PDF or a photograph of a chart and instantly extract the data into a clean spreadsheet.
 For example here is an image of a document so scan: ![Screenshot of Example from nvidia showing document from a Parish with details that are written on a white page. On the page is a form with text](/assets/images/20260506-122315.png "Example image for nvidia nemotron ocr showing document")![Screenshot of Example Document from a Parish with details of detected text highlighted by nemotron OCR and numbered](/assets/images/20260506-122625.png "Screenshot of Example Document from a Parish with details of detected text highlighted by nemotron OCR with numbers")![Screenshot of detected text by nemotron OCR on a black backgound  and numbered white text showing  a table with first row with text and confidence score with 8 items showing](/assets/images/20260506-122651.png "Screenshot of detected text by nemotron OCR on a black backgound  and numbered white text showing  a table with first row with text and confidence score with 8 items showing")
-
-
-
-- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://build.nvidia.com/black-forest-labs/flux.2-klein-4b) generate high-quality images from text descriptions in fractions of a second.
+- **Lightning Fast Creativity:** If you need images for a presentation, models like [Flux 2 Klein 4B](https://build.nvidia.com/black-forest-labs/flux_2-klein-4b) generate high-quality images from text descriptions in fractions of a second. This Flux model in particular is downloadable but can also be deployed on Nvidia Cloud Infrastructure.
+![a bottle of perfume on a clean backdrop, surrounded by fragrant white flowers, product photography, minimalistic, natural light](/assets/images/20260604-141513.png "Image of a bottle of perfume from Black Forest Labs flux.2-klein-4b")
 - **Protecting Privacy:** The [GLiNER PII](https://build.nvidia.com/nvidia/gliner-pii) model automatically reads through documents and redacts personally identifiable information (like social security numbers or addresses) before you share them.
 
 ## 3. The Universal Translators (Voice and Audio)
