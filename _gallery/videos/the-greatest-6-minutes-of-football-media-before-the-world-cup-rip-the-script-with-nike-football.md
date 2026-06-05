@@ -1,5 +1,5 @@
 ---
-title: 'The Greatest 6 minutes of football media before the World Cup: Rip The Script with Nike Football'
+title: 'The Greatest 6 minutes of football: Rip The Script with Nike Football'
 published: true
 date: 2026-06-05T12:47:00+02:00
 platform: youtube
