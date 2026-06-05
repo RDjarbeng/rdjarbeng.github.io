@@ -226,3 +226,4 @@ The analogy I use for this kind of scenario is a highly skilled mechanic, could 
 Marina Amaral is a digital colorist who specializes in manually adding color to black and white photographs and “breathing life into the past”. 
 https://marinamaral.com/about/
 - [ ] Improve the Nvidia build catalog post, most people don't even know what the Nvidia build catalog is
+- [ ] A plant that grows with the equation of a logarithmic equation
