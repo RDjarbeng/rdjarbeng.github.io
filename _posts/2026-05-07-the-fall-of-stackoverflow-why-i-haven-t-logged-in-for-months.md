@@ -55,6 +55,17 @@ Maybe I’ve become "entitled," or maybe I’m just evolving as an engineer, but
 
 Or maybe it’s not that I'm entitled; it’s that my time is better spent solving high-level problems than debugging a forum user's 2014 syntax.
 
+## Opinions and Graphs from twitter
+According to Twitter/X user **frye**:
+> stackoverflow is a ghost town now. it’s like walking through an abandoned liminal space. the top question from the past month has 78 upvotes and is titled “how can i avoid using LLMs as a software developer”
+
+<blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr">stackoverflow is a ghost town now. it’s like walking through an abandoned liminal space. the top question from the past month has 78 upvotes and is titled “how can i avoid using LLMs as a software developer”</p>&mdash; frye (@___frye) <a href="https://x.com/___frye/status/2062340903755514287?ref_src=twsrc%5Etfw">June 4, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+According to Twitter/X user **Pranesh Prakash**: 
+>LLMs have brought with them the decline of Stack Overflow. Here is also an interesting graph that shows the decline of stackoverflow: From the introduction of ChatGPT and the mainstream adoption of LLMs.
+
+<blockquote class="twitter-tweet" data-conversation="none" data-theme="dark"><p lang="en" dir="ltr">LLMs have brought with them the decline of Stack Overflow. <a href="https://t.co/yC9dflppNm">pic.twitter.com/yC9dflppNm</a></p>&mdash; Pranesh Prakash (@pranesh) <a href="https://x.com/pranesh/status/2051905496995725617?ref_src=twsrc%5Etfw">May 6, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
 ## Conclusion
 
 Stack Overflow will always be a legendary archive of human knowledge, but as a daily tool? It feels like a relic. Perhaps we are moving toward a more conversational, integrated way of building software.
