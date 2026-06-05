@@ -1171,24 +1171,6 @@ a:hover {
   }
 }
 
-/* --- REPLACED .toc-sidebar rule --- */
-.toc-sidebar {
-  position: sticky;
-  top: 80px;
-  /* Adjust this! This is the space from the top to clear your header */
-
-  flex: 0 0 205px;
-  /* Don't grow, don't shrink, 205px wide */
-  margin-right: 20px;
-  /* Adds a gap between ToC and content */
-  /* --- Internal Scrolling for long ToCs --- */
-  /* We leave 80px for the top offset and 20px for a bottom margin */
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  border-radius: 8px;
-  opacity: 0.952;
-}
-
 
 
 .toc-header {
@@ -1231,7 +1213,7 @@ a:hover {
 
 .toc-content a {
   display: block;
-  padding: 4px 8px 4px 12px;
+  padding: 4px 1px 4px 12px;
   border-left: 2px solid transparent;
   color: $toc-link-color;
   font-size: 0.875rem;
