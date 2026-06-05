@@ -7,30 +7,30 @@ tags:
   - StackOverflow
 title: "The fall of stackoverflow: Why I Haven't Logged In for Months"
 image: /assets/images/posts/covers/the_fall_of_stackoverflow_cover.jpg
-image_alt: 'A flat vector illustration showing the Stack Overflow logo being overshadowed by a modern AI assistant bot.'
+image_alt: A flat vector illustration showing the Stack Overflow logo being overshadowed by a modern AI assistant bot.
 layout: post
 card_items:
   - name: Stack Overflow
     badge_1: Knowledge Base
     badge_2: Community
-    description: "The legendary Q&A platform that defined developer collaboration for a decade, now facing a transition in the AI era."
-    url: "https://stackoverflow.com"
-    link_text: "Visit Stack Overflow"
+    description: The legendary Q&A platform that defined developer collaboration for a decade, now facing a transition in the AI era.
+    url: https://stackoverflow.com
+    link_text: Visit Stack Overflow
   - name: Agentic AI IDEs
     badge_1: Future of Work
     badge_2: Automation
-    description: "Modern development environments like Antigravity that use autonomous agents to write, debug, and refactor code directly."
+    description: Modern development environments like Antigravity that use autonomous agents to write, debug, and refactor code directly.
   - name: ChatGPT
     badge_1: Disruptor
     badge_2: AI Chat
-    description: "The tool that changed everything, moving developers from searching for answers to synthesizing them instantly."
+    description: The tool that changed everything, moving developers from searching for answers to synthesizing them instantly.
 ---
 
 I just realized I haven't been on Stack Overflow in a while. 
 
 Before writing this I found a [post ](https://dev.to/abdulbasithh/why-devs-are-quietly-leaving-stack-overflow-in-2025-368d)by dev user @abdulbasithh from 2025 and it's still true today.
 
-According to Google AI (ironic I know) 
+According to Google AI _(ironic, I know)_ 
 
 > "Stack Overflow has experienced a significant decline in user engagement and traffic since the rise of generative AI tools like ChatGPT."
 
@@ -65,7 +65,7 @@ PS: There is an even more forgotten _relic_ When was the last time you read the 
 
 ![Everybody focused on ChatGPT, stack overflow struggling, documentation forgotten](/assets/images/ChatGPT_meme.jpeg "Everybody focused on ChatGPT AI, forgotten about documentation")
 
----
+***
 
 ### Media mentions:
 
