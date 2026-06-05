@@ -13,7 +13,12 @@
     {% assign video_id = include.item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
   {% endif %}
   {% assign img_src = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg' %}
+{% elsif include.item.platform == 'tiktok' %}
+  {% assign img_src = '/assets/images/tiktok_placeholder_thumb.png' %}
+{% elsif include.item.platform == 'instagram' %}
+  {% assign img_src = '/assets/images/instagram_placeholder_thumb.png' %}
 {% endif %}
+
 
 {% assign original_img_src = img_src %}
 {% if img_src contains 'images-assets.nasa.gov' %}

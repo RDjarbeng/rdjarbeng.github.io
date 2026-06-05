@@ -186,9 +186,13 @@ layout: default
                     {% if item.thumbnail and item.thumbnail != '' %}
                         <img src="{{ item.thumbnail | relative_url }}" alt="{{ item.title | escape }}">
                     {% elsif item.image %}
-                        <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" class="{% if item.platform == 'tiktok' or item.platform == 'instagram' %}img-contain{% else %}img-cover{% endif %}">
+                        <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" class="img-cover">
                     {% elsif item.platform == 'youtube' and item.youtube_id and item.youtube_id != '' %}
                         <img src="https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg">
+                    {% elsif item.platform == 'tiktok' %}
+                        <img src="{{ '/assets/images/tiktok_placeholder_thumb.png' | relative_url }}" alt="{{ item.title | escape }}">
+                    {% elsif item.platform == 'instagram' %}
+                        <img src="{{ '/assets/images/instagram_placeholder_thumb.png' | relative_url }}" alt="{{ item.title | escape }}">
                     {% else %}
                         <img src="{{ '/assets/images/logo-small.png' | relative_url }}" class="img-contain logo-placeholder">
                     {% endif %}

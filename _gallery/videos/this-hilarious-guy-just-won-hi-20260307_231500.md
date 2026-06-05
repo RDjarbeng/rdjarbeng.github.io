@@ -3,7 +3,7 @@ title: This hilarious guy just won himself all expenses paid Comedy Special R
 platform: tiktok
 youtube_id: https://www.tiktok.com/@ficusttk/video/7598940959765826838
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/this-hilarious-guy-just-won-hi-20260307_231500-cover.jpg'
 type: video
 category: videos
 genre: Science & Technology

@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:41:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7598195934585015563'
-thumbnail: ''
+thumbnail: '/assets/images/videos/song-for-today-soul-of-afrika-grace-echo-cover.jpg'
 type: video
 category: videos
 genre: Music

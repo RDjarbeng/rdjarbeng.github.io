@@ -4,7 +4,7 @@ published: true
 date: 2026-02-19 18:23:00
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@richmanrd/video/7605633989918887188'
-thumbnail: 'https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/o8CKBiwXEn0AYZBvIBMA0UiAvx10ogPl8yAhFe~tplv-photomode-video-share-card:630:630:20.jpeg?dr=9616&refresh_token=ac9f39fc&x-expires=1811538000&x-signature=otkRdNEuhNiyemA90X9QD7iKgjQ%3D&t=4d5b0474&ps=13740610&shp=55bbe6a9&shcp=f07906a3&idc=useast5&ftpl=1'
+thumbnail: '/assets/images/videos/ttikok-shorts-with-ray-william-johnson-the-storyteller-cover.jpg'
 type: video
 category: videos
 genre: Entertainment

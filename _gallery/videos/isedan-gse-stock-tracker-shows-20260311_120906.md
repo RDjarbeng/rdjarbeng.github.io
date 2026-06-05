@@ -5,7 +5,7 @@ date: 2026-03-11T12:09:00+02:00
 platform: tiktok
 youtube_id: https://www.tiktok.com/@isedan.app/video/7595249453196397844/
 embed_code: ''
-thumbnail: 'https://p16-common-sign.tiktokcdn-us.com/tos-alisg-p-0037/okAGeXXb5zzmMfUGr8NC3KEIA4QlDMQARSeCBB~tplv-tiktokx-origin.image?dr=9636&x-expires=1780174800&x-signature=7vgPj5RMpTynWgB%2FACPIQNole8c%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=useast5'
+thumbnail: '/assets/images/videos/isedan-gse-stock-tracker-shows-20260311_120906-cover.jpg'
 type: video
 category: videos
 genre: Tutorials
