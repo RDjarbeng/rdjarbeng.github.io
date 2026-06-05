@@ -222,3 +222,6 @@ The analogy I use for this kind of scenario is a highly skilled mechanic, could 
 - [ ] All the world cup songs combined
 - [ ] The history of wire transfers from a tech perspective
 - [ ] A note about tourism, it starts from the airline, the airport they land in, and continues to the officer will face greet the tourists to the airport pickup by this time the tourist has already made up his mind on first impressions
+- [ ] An interesting wordpress website, beautiful
+Marina Amaral is a digital colorist who specializes in manually adding color to black and white photographs and “breathing life into the past”. 
+https://marinamaral.com/about/
