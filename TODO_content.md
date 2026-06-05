@@ -220,3 +220,4 @@ Interesting seeing the top models fighting it out on the leaderboard, some of th
 
 The analogy I use for this kind of scenario is a highly skilled mechanic, could probably spend days fixing and diagnosing an issue with a car part, perhaps machine a custom part that elegantly fixes the problem, but that isn't necessarily what the customer wants. "Just fix my Toyota bro" says the customer when you try to explain this entire process. At this point it's easier to source a replacement part for the damaged part, install and bill the customer and it would still be a working solution. But by all means if you are working on an F1 🏎️ car where you're trying to squeeze every possible performance boost you can gp crazy on the maintenance. But since most people don't drive an f1 car, 'Just fix my Toyota bro'
 - [ ] All the world cup songs combined
+- [ ] The history of wire transfers from a tech perspective
