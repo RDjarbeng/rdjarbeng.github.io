@@ -36,9 +36,27 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 0 20px 0; // Padding to clear main header
+      padding: 12px 0 20px 0;
       gap: 20px;
       transition: width 0.3s ease;
+      overflow-y: auto;
+
+      // Expand to fill navbar gap once it scrolls out of view
+      @supports (animation-timeline: scroll()) {
+        animation: sidebar-fill-nav-gap linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0px 65px;
+      }
+
+      // Elegant thin scrollbar
+      scrollbar-width: thin;
+      scrollbar-color: var(--card-border) transparent;
+      &::-webkit-scrollbar { width: 4px; }
+      &::-webkit-scrollbar-track { background: transparent; }
+      &::-webkit-scrollbar-thumb {
+        background: var(--card-border);
+        border-radius: 4px;
+      }
 
       .video-filter-rail-header {
         font-size: 0.6rem;
