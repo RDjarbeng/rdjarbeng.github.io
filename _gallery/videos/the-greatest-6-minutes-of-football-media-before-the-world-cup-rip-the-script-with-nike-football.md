@@ -5,7 +5,7 @@ date: 2026-06-05T12:47:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=IyZ1WIua_1s
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_IyZ1WIua_1s.jpg'
 type: video
 genre: Sports
 category: videos

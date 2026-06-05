@@ -160,6 +160,8 @@ layout: default
           {% endif %}
         {% endfor %}
         
+        {% assign cat_items = cat_items | sort: "date" | reverse %}
+        
         {% if cat_items.size > 0 %}
         <div class="dashboard-category" data-category-slug="{{ cat_slug }}">
           <div class="dashboard-category-header">

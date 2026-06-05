@@ -3,7 +3,7 @@ title: Joel Anaman shares Perspective on Jobs for Ghanaian Youth In this Podcast
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=2MlmPWfe-No
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_2MlmPWfe-No.jpg'
 type: video
 category: videos
 genre: Interviews

@@ -3,7 +3,7 @@ title: Keeptrack -3D satellite Visualization in the Browser
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=qkQSz1UA_PY
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_qkQSz1UA_PY.jpg'
 type: video
 category: videos
 genre: Other

@@ -3,7 +3,7 @@ title: Image to 3D with Deepmotion
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=7ELLY7xnZvI
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_7ELLY7xnZvI.jpg'
 type: video
 category: videos
 genre: Science & Technology

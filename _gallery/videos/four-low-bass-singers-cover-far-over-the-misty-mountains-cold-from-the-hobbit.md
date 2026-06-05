@@ -5,7 +5,7 @@ date: 2026-02-07 19:26:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=Erkv1-_xR7U
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_Erkv1-_xR7U.jpg'
 type: video
 genre: Music
 category: videos

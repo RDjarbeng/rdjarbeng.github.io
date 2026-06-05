@@ -42,6 +42,8 @@ layout: default
         {% endif %}
     {% endfor %}
 
+    {% assign all_category_items = all_category_items | sort: "date" | reverse %}
+
     {% assign subfolders = "" | split: "" %}
     {% for item in all_category_items %}
         {% assign parts = item.relative_path | split: "/" %}

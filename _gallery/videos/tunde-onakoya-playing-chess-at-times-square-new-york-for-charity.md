@@ -3,7 +3,7 @@ title: Tunde Onakoya Playing Chess at Times Square New York for Charity
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=-e8N0Wledrk
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_-e8N0Wledrk.jpg'
 type: video
 category: videos
 genre: Other
