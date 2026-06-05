@@ -60,6 +60,16 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       animation-range: 0px #{$_rail-top};
     }
 
+    // Elegant thin scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: var(--card-border) transparent;
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--card-border);
+      border-radius: 4px;
+    }
+
     // Stretch nav to fill remaining height so short TOCs don't scroll
     .toc-content {
       flex: 1;
@@ -295,7 +305,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     border-right: 1px solid var(--card-border);
     z-index: 100;
     overflow-y: auto;
-    padding: 80px 0 20px 0;
+    padding: 12px 0 20px 0;
     display: flex;
     flex-direction: column;
 
@@ -304,6 +314,16 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       animation: sidebar-fill-nav-gap linear both;
       animation-timeline: scroll(root);
       animation-range: 0px #{$_rail-top};
+    }
+
+    // Elegant thin scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: var(--card-border) transparent;
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-track { background: transparent; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--card-border);
+      border-radius: 4px;
     }
 
     .yt-sidebar-heading {
