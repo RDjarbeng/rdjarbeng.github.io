@@ -1,11 +1,11 @@
 ---
-title: Google Antigravity 2.0-agentic IDE for full-stack development
+title: Where is the IDE? Google Antigravity 2.0-agentic IDE for full-stack development
 published: true
 date: 2026-05-21T12:17:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=6C0FjHoN3qE
 embed_code: ''
-thumbnail: '/assets/images/videos/youtube_6C0FjHoN3qE.jpg'
+thumbnail: /assets/images/videos/youtube_6C0FjHoN3qE.jpg
 type: video
 genre: Science & Technology
 category: videos
@@ -58,6 +58,8 @@ If you just stumbled onto this page, here is a breakdown of the massive communit
 ## Reactions from developers- Youtube edition
 
 The paragraphs above reflects what the antigravity IDE was supposed to deliver, however I was curious enough to check the comments and see what some users are actually saying.
+
+![Screaming flower with toungue out](assets/images/videos/https%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F4gmscpsauqxnssby8pnb.png "Screaming flower ")
 
 ### The Big Controversy: "Where is the Code Editor?!"
 

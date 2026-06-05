@@ -156,3 +156,5 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 -Need to show the visual hierarchy for the Gallery page, images first then the  categories for the gallery image such as AI, then videos.
 
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
+- [ ] Could create an option like this for guest posts on my blog:
+https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
