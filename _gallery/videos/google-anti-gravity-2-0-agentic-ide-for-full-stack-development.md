@@ -59,7 +59,7 @@ If you just stumbled onto this page, here is a breakdown of the massive communit
 
 The paragraphs above reflects what the antigravity IDE was supposed to deliver, however I was curious enough to check the comments and see what some users are actually saying.
 
-![Screaming flower with toungue out](assets/images/videos/https%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F4gmscpsauqxnssby8pnb.png "Screaming flower ")
+![Screaming flower with toungue out](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4gmscpsauqxnssby8pnb.png "Screaming flower ")
 
 ### The Big Controversy: "Where is the Code Editor?!"
 
