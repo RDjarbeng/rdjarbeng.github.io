@@ -1,11 +1,11 @@
 ---
-title: Official animated visualizer for Kwabena Kwabena - ASO REMIX Stonebwoy x Kofi Kinaata
+title: ASO REMIX - Kwabena Kwabena ft Stonebwoy x Kofi Kinaata- Official animated visualizer for
 published: true
 date: 2026-05-24T14:28:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/CScehagPi2I
 embed_code: ''
-thumbnail: '/assets/images/videos/youtube_CScehagPi2I.jpg'
+thumbnail: /assets/images/videos/youtube_CScehagPi2I.jpg
 type: video
 genre: Music
 category: videos
@@ -13,6 +13,8 @@ category: videos
 
 This video by Kwabena Kwabena - ASO REMIX
 Stonebwoy x Kofi Kinaata (Visualizer) was published on December 6, 2026. It already has 1.3 Million Views and counting on YouTube. 
+
+> Language disclaimer: This commentary is a mix of English and Twi
 
 Kwabena Kwabena featuring dancehall/Afrobeats superstar Stonebwoy, and highlife/hiplife rap star Kofi Kinaata.
 
@@ -38,4 +40,4 @@ The animation (credited to creator/director Berimah Boateng and "Sobolo Made It"
 * **Kofi Kinaata:** Kinaata appears as the "doctor" diagnosing the heartbreak and later is seen chilling by a tree, delivering his signature Fante rap verses to comfort the protagonist.
 * **The Climax Concert:** The video concludes with a vibrant, neon-lit rooftop performance where Kwabena Kwabena (on guitar), Stonebwoy (on drums), and Kofi Kinaata (on keyboard) all jam together, turning the painful heartbreak into a massive collaborative hit.
 
-The nicest parts are the part where Stonebwoy says 'Niɛ ɛshi me kraa ni sɛ we got matching tattoos' and  also the parts where Kofi Kinaata says "You've fallen in love, but ɛyaa stand in love kakraa"
+The nicest parts are the part where Stonebwoy says 'Niɛ ɛshi me kraa ni sɛ we got matching tattoos' and  also the parts where Kofi Kinaata says "You've fallen in love, but sometimes stand in love kakraa"
