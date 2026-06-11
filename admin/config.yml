@@ -304,6 +304,7 @@ collections:
           name: "description",
           widget: "markdown",
           required: false,
+          hint: "Add an informative description for the category page to improve SEO.",
         }
       - {
           label: "Publish Date",
