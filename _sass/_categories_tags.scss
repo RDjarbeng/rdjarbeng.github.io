@@ -117,3 +117,20 @@
         margin-bottom: 30px;
     }
 }
+
+// Category page description
+.category-description {
+    margin: 20px 0 30px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    
+    p {
+        margin-bottom: 0;
+    }
+}
