@@ -45,21 +45,37 @@
         text-decoration: none;
     }
 
-    .category-name {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: var(--text-color);
-        text-transform: capitalize;
+    .category-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 12px;
+
+        .category-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-color);
+            text-transform: capitalize;
+        }
+
+        .category-count {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            background: var(--pill-bg);
+            border: 1px solid var(--pill-border);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
     }
 
-    .category-count {
+    .category-card-desc {
         font-size: 0.9rem;
-        color: var(--text-color);
-        align-self: flex-end;
-        background: var(--card-border);
-        padding: 4px 10px;
-        border-radius: 20px;
+        line-height: 1.4;
+        color: var(--grey-text);
+        margin: 0;
+        text-align: left;
     }
 }
 
