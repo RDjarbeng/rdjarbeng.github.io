@@ -31,10 +31,16 @@ description: "Browse all blog post categories on Richard Djarbeng's website. Fin
     {% assign parts = item | split: ":::" %}
     {% assign cat_size = parts[0] | plus: 0 %}
     {% assign cat_name = parts[1] %}
+    {% assign cat_info = site.category_info | where: "category_name", cat_name | first %}
     <li>
       <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
-        <span class="category-name">{{ cat_name }}</span>
-        <span class="category-count">{{ cat_size }} post{% if cat_size != 1 %}s{% endif %}</span>
+        <div class="category-card-header">
+          <span class="category-name">{{ cat_name }}</span>
+          <span class="category-count">{{ cat_size }} post{% if cat_size != 1 %}s{% endif %}</span>
+        </div>
+        {% if cat_info.description %}
+          <p class="category-card-desc">{{ cat_info.description | strip_html | truncate: 120 }}</p>
+        {% endif %}
       </a>
     </li>
     {% endfor %}
@@ -46,10 +52,16 @@ description: "Browse all blog post categories on Richard Djarbeng's website. Fin
     {% for category in alpha_sorted_categories %}
     {% assign cat_name = category[0] %}
     {% assign cat_items = category[1] %}
+    {% assign cat_info = site.category_info | where: "category_name", cat_name | first %}
     <li>
       <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
-        <span class="category-name">{{ cat_name }}</span>
-        <span class="category-count">{{ cat_items.size }} post{% if cat_items.size != 1 %}s{% endif %}</span>
+        <div class="category-card-header">
+          <span class="category-name">{{ cat_name }}</span>
+          <span class="category-count">{{ cat_items.size }} post{% if cat_items.size != 1 %}s{% endif %}</span>
+        </div>
+        {% if cat_info.description %}
+          <p class="category-card-desc">{{ cat_info.description | strip_html | truncate: 120 }}</p>
+        {% endif %}
       </a>
     </li>
     {% endfor %}
