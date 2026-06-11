@@ -2,7 +2,7 @@
 date: 2026-02-25T19:37:00
 published: true
 author: Richard
-category: Technology
+category: Web
 tags:
   - Email Hosting
   - Custom Domain
