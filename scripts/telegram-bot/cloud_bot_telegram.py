@@ -209,6 +209,7 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
     elif target_type == "ai":
         frontmatter = {
             "title": title_text,
+            "date": datetime.now(CAT).isoformat(timespec="seconds"),
             "image": f"/{media_rel_dir}/{image_filename}",
             "image_alt": alt_text_fallback,
             "labels": ai_model,
