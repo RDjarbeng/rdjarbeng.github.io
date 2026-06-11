@@ -1,11 +1,11 @@
 ---
-title: Chinese song- the affinities of life -mistaken for Samsung song
+title: Chinese song- the affinities of life - often mistaken for Samsung song
 published: true
 date: 2026-04-17T14:09:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=NQLvnin2bxs
 embed_code: ''
-thumbnail: '/assets/images/videos/youtube_NQLvnin2bxs.jpg'
+thumbnail: /assets/images/videos/youtube_NQLvnin2bxs.jpg
 type: video
 genre: Music
 category: videos
