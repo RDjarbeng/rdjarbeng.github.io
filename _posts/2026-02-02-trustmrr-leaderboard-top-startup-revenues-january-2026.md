@@ -2,7 +2,7 @@
 layout: post
 title: "TrustMRR reveals which startups are actually making money in 2026"
 date: 2026-02-02
-categories: [Startups, Business, SaaS]
+category: Entrepreneurship
 tags: [TrustMRR, Revenue, Startups, AI, SaaS, Marc Lou]
 image: /assets/images/trustmrr_revenue_leaderboard_cover.jpg
 image_alt: "TrustMRR Verified Revenue Leaderboard Cover"
