@@ -404,6 +404,13 @@ collections:
           widget: "hidden",
           default: "ai-generations",
         }
+      - {
+          label: "Enhanced by Bot",
+          name: "enhanced_by_bot",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
 
   - name: "memes"
     label: "Memes"
@@ -438,6 +445,13 @@ collections:
           name: "category",
           widget: "hidden",
           default: "memes",
+        }
+      - {
+          label: "Enhanced by Bot",
+          name: "enhanced_by_bot",
+          widget: "boolean",
+          required: false,
+          default: false,
         }
 
   - name: "gallery"
@@ -503,6 +517,13 @@ collections:
           widget: "datetime",
           format: "YYYY-MM-DDTHH:mm:ssZ",
           default: "{{now}}",
+        }
+      - {
+          label: "Enhanced by Bot",
+          name: "enhanced_by_bot",
+          widget: "boolean",
+          required: false,
+          default: false,
         }
 
   - name: "gallery_videos"
