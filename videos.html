@@ -263,7 +263,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                         {{ item.title | titleize | escape }}
                     </h3>
                     <div class="video-meta" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 0.85rem; color: #a0aec0;">
-                        <span class="video-platform-icon">
+                        <span class="video-platform-icon" style="display: flex; align-items: center; line-height: 1;">
                             {% if item.platform == 'youtube' %}
                             <svg width="14" height="14" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" fill="currentColor"/></svg>
                             {% elsif item.platform == 'tiktok' %}
@@ -276,7 +276,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                         </span>
                         <div class="video-date">{{ item.date | date: "%b %-d, %Y" }}</div>
                         <div>&bull;</div>
-                        <div class="video-genre">{{ item.genre | default: item.category | default: "Other" }}</div>
+                        <a href="{{ '/gallery/videos/' | append: (item.genre | default: item.category | default: 'Other' | slugify) | append: '/' | relative_url }}" class="video-genre" style="text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--base-color)'">{{ item.genre | default: item.category | default: "Other" }}</a>
                     </div>
                     {% assign description = item.content | strip_html | strip_newlines | truncatewords: 15 %}
                     {% if description != "" %}

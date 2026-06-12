@@ -43,6 +43,17 @@ def fetch_playlist_items(playlist_id)
   items
 end
 
+def fetch_playlist_title(playlist_id)
+  url = "https://www.googleapis.com/youtube/v3/playlists?part=snippet&id=#{playlist_id}&key=#{API_KEY}"
+  uri = URI(url)
+  response = Net::HTTP.get_response(uri)
+  if response.is_a?(Net::HTTPSuccess)
+    data = JSON.parse(response.body)
+    return data['items'][0]['snippet']['title'] if data['items'] && data['items'].any?
+  end
+  nil
+end
+
 def extract_playlist_id(url)
   return nil unless url
   # Matches ?list=ID or &list=ID
@@ -80,7 +91,9 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
     playlist_id = extract_playlist_id(playlist_url)
     
     if playlist_id
-      puts "Syncing playlist: #{front_matter['title']} (#{playlist_id})"
+      fetched_title = fetch_playlist_title(playlist_id)
+      genre = fetched_title || front_matter['genre'] || 'Other'
+      puts "Syncing playlist: #{front_matter['title']} (#{playlist_id}) -> Genre: #{genre}"
       
       items = fetch_playlist_items(playlist_id)
       
