@@ -6,7 +6,7 @@ platform: youtube
 youtube_id: "2cyzCReoNgU"
 thumbnail: "https://i.ytimg.com/vi/2cyzCReoNgU/maxresdefault.jpg"
 type: video
-genre: "My YouTube Playlist"
+genre: "Music of RRR"
 category: videos
 ---
 
