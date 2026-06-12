@@ -229,3 +229,6 @@ https://marinamaral.com/about/
 - [ ] A plant that grows with the equation of a logarithmic equation
 - [ ] There's a man who dedicated his time to making cheap sanitary pads for women. Motivated after he saw his wife using rags for pads
 - [ ] The battle against Malaria and mosquitoes, are we winning?
+- [ ] The emperor who preferred daughters to sons, shout-out to Genghis Khan
+- [ ] The Tech CEO who hand delivers hardware - a story with Mr Jensen
+- [ ] A random collection of songs from Africa, starting with Contribution from Ntando
