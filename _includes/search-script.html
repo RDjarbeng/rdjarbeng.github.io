@@ -1,90 +1,108 @@
-<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css" integrity="sha256-11fIktPq9Wz4tHlT8PdtB/3zD9tS2QjMvN0O6L8gZ48=" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs/UB6g6u8O78880XyXs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.2/dist/instantsearch.production.min.js" integrity="sha256-tG020R//OIK17R0+SChd5Qp2y19NInhB4zBvJ9GvEhw=" crossorigin="anonymous"></script>
+
+<style>
+.ais-SearchBox-input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border, #eaeaea);
+  background: var(--card-bg, #fff);
+  color: var(--text-color, #333);
+  font-size: 1.1rem;
+}
+.ais-Hits-item {
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.ais-Hits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* Ensure dark mode works for the input */
+@media (prefers-color-scheme: dark) {
+  body.dark-mode .ais-SearchBox-input {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+  }
+}
+</style>
 
 <script>
-  var sjs = null;
-  var navSjs = null;
+  const searchClient = algoliasearch('IS96FR2E65', '244c316912077b528a2583b21970d464');
 
-  if (document.getElementById('search-input')) {
-    sjs = SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '{{ "/search.json" | relative_url }}',
-      searchResultTemplate: '<div class="post-card"><a class="post-link" href="{url}">{image_html}<div class="post-card-content"><h4 title="{title}">{title}</h4><div class="post-meta-categories-container"><div class="post-meta-card">{date}</div><div class="post-meta-dot">·</div><div class="post-meta-card">{read_time}</div></div></div></a></div>',
-      noResultsText: '<p>No results found</p>',
-      limit: 10
-    });
-  }
-
-  // Only initialize navbar search if main search is NOT active to avoid conflicts
-  if (document.getElementById('nav-search-input') && !sjs) {
-    var navSearchInput = document.getElementById('nav-search-input');
-    var navSearchResults = document.getElementById('nav-search-results');
-
-    navSjs = SimpleJekyllSearch({
-      searchInput: navSearchInput,
-      resultsContainer: navSearchResults,
-      json: '{{ "/search.json" | relative_url }}',
-      searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{display_type} • {date}</span></div></a></div>',
-      noResultsText: '<div class="nav-search-item" style="padding: 10px;">No results found</div>',
-      limit: 5
-    });
-
-    // Hide results when clicking outside
-    document.addEventListener('click', function (e) {
-      if (e.target !== navSearchInput && !navSearchResults.contains(e.target)) {
-        navSearchResults.style.display = 'none';
-      }
-    });
-
-    // Show results again when focusing the input if there is text
-    navSearchInput.addEventListener('focus', function () {
-      if (navSearchInput.value.length > 0) {
-        navSearchResults.style.display = '';
-        // Trigger search again to ensure fresh results if needed
-        if (navSearchResults.innerHTML.trim() === '') {
-          navSearchInput.dispatchEvent(new Event('input'));
-        }
-      }
-    });
-
-    // Ensure display is reset on input
-    navSearchInput.addEventListener('input', function () {
-      if (navSearchInput.value.length > 0) {
-        navSearchResults.style.display = '';
-      }
-    });
-  }
-
-  // Handle query parameter for search
-  window.addEventListener('load', function () {
+  if (document.getElementById('searchbox')) {
+    // Read the q parameter from the navbar search form
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q');
-    if (query) {
-      // Prioritize the main search input if it exists
-      const searchInput = document.getElementById('search-input');
-      if (searchInput) {
-        searchInput.value = query;
-        // Trigger input event to start search
-        // Wait a bit for the JSON to be fetched and processed
-        setTimeout(function () {
-          searchInput.dispatchEvent(new Event('input'));
-          // Also trigger keyup as some libraries listen to that
-          searchInput.dispatchEvent(new Event('keyup'));
-        }, 500);
-      }
-    }
-  });
+    const initialQuery = urlParams.get('q') || '';
 
-  // Handle visibility of search browse sections on input
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('search-input');
+    const search = instantsearch({
+      indexName: 'rdjarbeng_index',
+      searchClient,
+      routing: true,
+      initialUiState: {
+        rdjarbeng_index: {
+          query: initialQuery,
+        },
+      },
+    });
+
+    search.addWidgets([
+      instantsearch.widgets.searchBox({
+        container: '#searchbox',
+        placeholder: 'Search posts and articles...',
+        showReset: true,
+        showSubmit: false,
+      }),
+      instantsearch.widgets.hits({
+        container: '#results-container',
+        templates: {
+          empty(results, { html }) {
+            return html`<p>No results found for <q>${results.query}</q></p>`;
+          },
+          item(hit, { html, components }) {
+            // Check if there is an image URL
+            const imageHtml = hit.image ? html`<div class="post-card-image" style="background-image: url(${hit.image})"></div>` : '';
+            const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : '';
+            const date = hit.date ? new Date(hit.date * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+
+            return html`
+              <div class="post-card">
+                <a class="post-link" href="${hit.url}" style="text-decoration: none; color: inherit;">
+                  ${imageHtml}
+                  <div class="post-card-content">
+                    <h4 title="${hit.title}" style="margin: 0 0 10px 0;">${components.Highlight({ hit, attribute: 'title' })}</h4>
+                    <div class="post-meta-categories-container" style="display: flex; gap: 8px; color: var(--grey-text); font-size: 0.85rem;">
+                      <div class="post-meta-card">${date}</div>
+                      ${readTime}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            `;
+          },
+        },
+      })
+    ]);
+
+    search.start();
+    
+    // Hide browse sections when searching
+    const searchboxInput = document.querySelector('#searchbox');
     const browseSections = document.getElementById('search-browse-sections');
     const emptyHint = document.getElementById('search-empty-hint');
-
-    if (searchInput && (browseSections || emptyHint)) {
-      searchInput.addEventListener('input', function() {
-        const query = searchInput.value.trim();
-        if (query.length > 0) {
+    
+    if (searchboxInput && (browseSections || emptyHint)) {
+      // Monitor changes in instantsearch state
+      search.on('render', () => {
+        const query = search.helper.state.query;
+        if (query && query.length > 0) {
           if (browseSections) browseSections.style.display = 'none';
           if (emptyHint) emptyHint.style.display = 'none';
         } else {
@@ -93,5 +111,5 @@
         }
       });
     }
-  });
+  }
 </script>

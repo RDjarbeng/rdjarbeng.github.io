@@ -137,7 +137,14 @@ module Jekyll
 
         # Add pseudo categories
         pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
-        pseudo_cats.each do |cat_slug|
+        
+        # Extract unique genres
+        all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
+        all_genres.each do |genre|
+          pseudo_cats << Jekyll::Utils.slugify(genre)
+        end
+
+        pseudo_cats.uniq.each do |cat_slug|
           categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
         end
 
@@ -170,7 +177,8 @@ module Jekyll
                 labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
                 plat = item.data['platform'] || ''
                 type = item.data['type'] || ''
-                "#{cats} #{labels} #{plat} #{type}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type}").include?(cat_slug) || (item.url && item.url.include?("/#{cat_slug}/"))
+                genre = item.data['genre'] || ''
+                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type} #{genre}").include?(cat_slug) || (item.url && item.url.include?("/#{cat_slug}/"))
               end
             }
             

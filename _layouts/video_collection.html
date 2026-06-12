@@ -69,12 +69,15 @@ layout: default
                 <a href="{{ item.url | relative_url }}" style="text-decoration: none; color: inherit; display: block; flex-grow: 1;">
                     <div class="video-info">
                         <h3>{{ item.title | titleize | escape }}</h3>
-                        <div class="video-meta" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 0.85rem; color: #a0aec0;">
+                        {% assign description = item.content | strip_html | strip_newlines | truncatewords: 15 %}
+                        <p class="video-excerpt" style="font-size: 0.95rem; color: var(--grey-text); line-height: 1.5; margin-bottom: 8px;">{{ description }}</p>
+                        <div class="video-meta" style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #a0aec0; margin-bottom: 8px;">
                             <div class="video-date">{{ item.date | date: "%B %-d, %Y" }}</div>
+                            <div>&bull;</div>
                             {% assign fallback_genre = item.genre | default: item.category | default: "Other" %}
                             {% assign genre_slug = fallback_genre | slugify %}
                             {% assign genre_url = '/gallery/videos/' | append: genre_slug | append: '/' | relative_url %}
-                            <a href="{{ genre_url }}" class="video-genre" style="text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--base-color)'">{{ fallback_genre }}</a>
+                            <a href="{{ genre_url }}" class="video-genre" style="text-decoration: none; transition: color 0.2s; font-weight: 600; text-transform: uppercase;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--base-color)'">{{ fallback_genre }}</a>
                         </div>
                     </div>
                 </a>
