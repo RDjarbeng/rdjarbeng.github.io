@@ -1,4 +1,5 @@
 ---
 category_name: "Web"
 date: 2026-01-22T21:23:39.889895
+description: "Building for the modern internet. Tutorials, frameworks, performance optimizations, and design patterns for modern web applications."
 ---

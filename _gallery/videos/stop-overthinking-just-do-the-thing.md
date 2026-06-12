@@ -6,7 +6,7 @@ date: 2026-02-15 18:32:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=980YJeoORAc
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_980YJeoORAc.jpg'
 type: video
 category: videos
 genre: Entertainment

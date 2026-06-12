@@ -3,7 +3,7 @@ title: Stadium or Donut With Blender3D
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=jFql2WcUoAw
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_jFql2WcUoAw.jpg'
 type: video
 category: videos
 genre: Science & Technology

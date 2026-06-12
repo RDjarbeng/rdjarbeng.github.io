@@ -3,7 +3,7 @@ title: The Emperor's New Groove Pull the Lever, Kronk- WRONG LEVER!!
 platform: youtube
 youtube_id: https://youtu.be/HfIxMNm7roU
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_HfIxMNm7roU.jpg'
 type: video
 genre: Film & Animation
 category: videos

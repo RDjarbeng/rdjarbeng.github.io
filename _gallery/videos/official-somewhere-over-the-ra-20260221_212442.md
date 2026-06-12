@@ -3,7 +3,7 @@ title: OFFICIAL Somewhere over the Rainbow - Israel "IZ" Kamakawiwoʻole
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=V1bFr2SWP1I
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_V1bFr2SWP1I.jpg'
 type: video
 category: videos
 genre: Music

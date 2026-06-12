@@ -3,7 +3,7 @@ title: Having a Girlfriend Nowadays Be Like-Damelio Animation
 platform: tiktok
 youtube_id: https://www.tiktok.com/@damelio.animation/video/7601625252476652823
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/girlfriend-nowadays-be-like-damelio-animation-20260307_211006-cover.jpg'
 type: video
 category: videos
 genre: Entertainment

@@ -1,3 +1,5 @@
+<!-- how to run on different port
+ bundle exec jekyll serve --config _config.yml,_config_dev.yml --port 5000 -->
 This todo contains direction for content on this site rdjarbeng.com, areas to improve as well as possible future directions
 
 ## Post cover images to improve:
@@ -159,3 +161,74 @@ accepted. For international transfers, please use the SWIFT details found above 
 - [ ] Market Flash crash of 2000s
 - [ ] About the hugging face inference API
 - [ ] A way to visualize countries amd highlight them, might be an interesting project, like that country dashboard in mission impossible, final reckoning
+- [ ] Why Codecs Use YUV, Not RGB
+Video codecs separate brightness (Y) from color (U, V) because the human eye resolves brightness detail far better than color detail. 
+
+## Biological basis:
+ The retina has roughly 20 times more brightness-sensing rods than color-sensing cones. 
+
+## Chroma subsampling:
+ 4:2:0 stores color at one quarter the luma resolution, cutting file size with minimal visible loss.
+- [ ] Tearable UI gallery to reveal your picture, make an app for users
+- [ ] Check out hugging face inference api for converting trhe free background remover
+- [ ] Add content from groundsource
+ 
+Static Space Article
+🌐 rdjarbeng/groundsource-analysis
+
+A beautifully formatted static HTML article covering the complete analysis: dataset inspection, claim verification, the real-time forecasting architecture, Africa gap quantification, domain transferability analysis, and a hands-on tutorial. Accessible to anyone via direct URL.
+
+3. Markdown Blog Post
+A ready-to-publish markdown version (blog_post.md) is stored in the Space repo. This is formatted with the YAML frontmatter required for the HF Community Blog.
+- [ ] Try tabFPN from zindi
+- [ ] Animate decade by decade evolution of AI- What is an AI winter?
+- use remotion or hyper frames to animate flight paths from country to Country, the country of origin should light up when the plane arrives
+- [ ] I wonder if there's a benchmark that measures the runability of the code generated from these LLMs. For example I'm 60-80% sure code from claue will run on first try, 50-70% sure for GPT, about 40% sure for gemini
+- [ ] Future Africa investors
+- [ ] Write about product hunt and what it does
+- [ ] Songs that sound differently with headphones- Emmanuel Ese for instance has a bass line and drum kick sound that is so much refined and noticeable on headphones
+- [ ] This post needs more content
+
+spacex-did-it-again-precision-engineering-on-display/
+- [ ] This post needs a more descriptive message:
+
+https://rdjarbeng.com/gallery/videos/y-combinator-request-for-startups-visualizer-by-rdjarbeng/
+- [ ] A brief intro to energy storage systems, battery packs, we're talking AH, not mAH
+
+Power systems (also portable power systems
+Eg: Chinese companies ALL top
+
+Example projects: Malaysia, Tanzania, China, Ethiopia
+
+What's an offgrid inverter? 
+State of solar pumps are they reliable? What about solar led lights? Are they still expensive?
+
+Solar has been misconstrued as not being powerful enough, limited to lights and small appliances let's see if that assumption still holds.
+What are the heaviest loads that we can find running solar? Can it power my ACs off-grid in the Saudi desert? What about my trucks?
+- [ ] One of the memorable scenes in animation, I told them I would ASK in ratatouille
+- [ ] Jensen Huang on the Lex Fridman podcast spoke about the token/watt/second
+
+Its time to look at companies working on these problems
+
+
+Tokens/sec by groq, fastest LLM responses ever
+- [ ] Let's look at how the rembg package works. Is this AI that's so good you don't even notice it? What about the other models being used in my background remover package how do those work?
+- [ ] You as a developer and AI. Let's try and get a high level overview. There's some projects that might require some level of AI use. Some could just be an API call (comes with tradeoffs woth cost) , others might involve building a small machine learning model, others might use AI on a way that's agnostic to you, you probably just import a package and don't think about it. Let's look at it example scenarios with progressing levels  from no AI, to some AI, to fully AI powered app and things in between
+- [ ] Kaggle benchmarks https://www.kaggle.com/benchmarks
+Interesting seeing the top models fighting it out on the leaderboard, some of the scores are abysmal 14% and all but still interesting. I wonder if there's a benchmark that evaluates the chance of the generated code running
+- [ ] Sometimes there's some ML projects, for example a computer vision focused problem that my initial approach to build it would be to implement a custom model. However sometimes I just want a simple demo to show a prospective client and I find it's usually much simpler to use an existing model from one of the tech companies, Gemini (Google)  GPT (openai), Landing AI, etc
+
+The analogy I use for this kind of scenario is a highly skilled mechanic, could probably spend days fixing and diagnosing an issue with a car part, perhaps machine a custom part that elegantly fixes the problem, but that isn't necessarily what the customer wants. "Just fix my Toyota bro" says the customer when you try to explain this entire process. At this point it's easier to source a replacement part for the damaged part, install and bill the customer and it would still be a working solution. But by all means if you are working on an F1 🏎️ car where you're trying to squeeze every possible performance boost you can gp crazy on the maintenance. But since most people don't drive an f1 car, 'Just fix my Toyota bro'
+- [ ] All the world cup songs combined
+- [ ] The history of wire transfers from a tech perspective
+- [ ] A note about tourism, it starts from the airline, the airport they land in, and continues to the officer will face greet the tourists to the airport pickup by this time the tourist has already made up his mind on first impressions
+- [ ] An interesting wordpress website, beautiful
+Marina Amaral is a digital colorist who specializes in manually adding color to black and white photographs and “breathing life into the past”. 
+https://marinamaral.com/about/
+- [ ] Improve the Nvidia build catalog post, most people don't even know what the Nvidia build catalog is
+- [ ] A plant that grows with the equation of a logarithmic equation
+- [ ] There's a man who dedicated his time to making cheap sanitary pads for women. Motivated after he saw his wife using rags for pads
+- [ ] The battle against Malaria and mosquitoes, are we winning?
+- [ ] The emperor who preferred daughters to sons, shout-out to Genghis Khan
+- [ ] The Tech CEO who hand delivers hardware - a story with Mr Jensen
+- [ ] A random collection of songs from Africa, starting with Contribution from Ntando

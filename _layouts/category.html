@@ -8,6 +8,13 @@ layout: default
 </div>
 <h1>Posts in Category: {{ page.title }}  ({{ page.posts | size }})</h1>
 
+{% assign current_category = site.category_info | where: "category_name", page.title | first %}
+{% if current_category.description %}
+<div class="category-description">
+  {{ current_category.description | markdownify }}
+</div>
+{% endif %}
+
 <div class="post-list">
   {% for post in page.posts %}
     {% include_cached post-card.html post=post %}

@@ -7,6 +7,12 @@
 
   <link rel="icon" href="{{ '/assets/images/logo.jpeg' | relative_url }}" type="image/jpeg">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  
+  <!-- Preconnect to external image domains to speed up gallery load times -->
+  <link rel="preconnect" href="https://images-assets.nasa.gov">
+  <link rel="preconnect" href="https://www.nasa.gov">
+  <link rel="preconnect" href="https://img.youtube.com">
+  
   {% if page.layout == 'post' or page.layout == 'personal' %}
   <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
   <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
@@ -39,16 +45,34 @@
   {%- endif -%}
   {%- endif -%}
 
-  {%- if jekyll.environment == 'production' -%}
-  {%- if page_has_video_thumbnail -%}
-  {%- assign original_image = page.image -%}
-  {%- assign page.image = page_has_video_thumbnail -%}
-  {%- seo -%}
-  {%- assign page.image = original_image -%}
-  {%- else -%}
-  {%- seo -%}
+  {%- if page.type == 'video' -%}
+  {%- assign _vd = page.description | default: page.excerpt | strip_html | strip_newlines | strip -%}
+  {%- if _vd.size < 50 -%}
+    {%- assign _vg = page.genre | default: page.platform | default: 'Video' -%}
+    {%- assign _vd = page.title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
   {%- endif -%}
+  {%- assign page.description = _vd -%}
+{%- endif -%}
+
+  {%- unless page.description -%}
+  {%- assign page.description = site.description -%}
+  {%- endunless -%}
+
+{%- if jekyll.environment == 'production' -%}
+  {%- seo -%}
+  
+  {%- if page.type == 'video' -%}
+    {%- if page_has_video_thumbnail -%}
+    <!-- Manual OG Image Injection for Videos -->
+    <meta property="og:image" content="{{ page_has_video_thumbnail | absolute_url }}" />
+    <meta name="twitter:image" content="{{ page_has_video_thumbnail | absolute_url }}" />
+    {%- endif -%}
+    
+    <!-- Manual Description Override for Videos -->
+    <meta property="og:description" content="{{ _vd | truncate: 150 | escape }}" />
+    <meta name="description" content="{{ _vd | truncate: 150 | escape }}" />
   {%- endif -%}
+{%- endif -%}
 
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->

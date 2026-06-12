@@ -13,7 +13,7 @@ layout: personal
 card_items: []
 ---
 
-Finding Chinese noodles in Kigali isn't something you'd expect — but here we are. I picked up a packet of **Lao Tan Sauerkraut Beef Noodles (117g + toppings)** from the Chinese shop at Nyarutarama, whose name I can't particularly remember, and decided to see what Chinese instant noodles are actually like compared to the go-to Indomie that's everywhere in the city.
+Finding Chinese noodles in Kigali isn't something you'd expect, but here we are. I picked up a packet of **Lao Tan Sauerkraut Beef Noodles (117g + toppings)** from the Chinese shop at Nyarutarama, whose name I can't particularly remember, and decided to see what Chinese instant noodles are actually like compared to the go-to Indomie that's everywhere in the city.
 
 The flavor: Lao Tan Sauerkraut Beef Noodles (117g+toppings)
 
@@ -25,21 +25,21 @@ Inside the packet were 3 smaller sachets. I probably should have translated the 
 
 ## Decoding the packet
 
-Before cooking, I ran the wrapper through Google Translate (via Google Lens) — turns out knowing what you're eating matters. Confirmed: Beef noodles. Also confirmed: Sauerkraut, which is basically fermented cabbage. Nothing too wild — explains the slightly tangy base flavour.
+Before cooking, I ran the wrapper through Google Translate (via Google Lens) because it turns out knowing what you're eating matters. Confirmed: Beef noodles. Also confirmed: Sauerkraut, which is basically fermented cabbage. Nothing too wild, this also explains the slightly tangy base flavour.
 
 ![Translated Chinese noodles packet on display showing Lao Tan Sauerkraut Beef Noodles (117g+toppings)](/assets/images/personal/chinese_noodles_translated_packet.jpg "Translated Chinese noodles packet")
 
-![3 Translated Chinese noodles smaller inner packet on display showing text: lao tan pickled cabbage buns, and ](/assets/images/personal/chinese-noodles-in-kigali-packets-translated.jpg "3 Translated Chinese noodles smaller inner packet on display showing translated texttext")
+![3 Translated Chinese noodles smaller inner packet on display showing text: lao tan pickled cabbage buns, and](/assets/images/personal/chinese-noodles-in-kigali-packets-translated.jpg "3 Translated Chinese noodles smaller inner packet on display showing translated texttext")
 
 Into boiling water they went. I added a marinated, steamed piece of beef and boiled a couple of eggs to go alongside. Fingers crossed.
 
 ## Serving
 
-Done. Plated it up with microwaved rice, beef stew, boiled eggs, and a proper piece of beef (not from the packet 🙂). The noodles came with their own vegetables from the sachets — which was a first for me. Indomie, the default noodle in Kigali, is all spice, no veg. These had actual dehydrated greens in there, which is a noticeable step up.
+Done. Plated it up with microwaved rice, beef stew, boiled eggs, and a proper piece of beef (not from the packet 🙂). The noodles came with their own vegetables in the sachets which was a first for me. Indomie, the default noodle in Kigali, is all spice, no veg. These had actual dehydrated greens in there, which is a noticeable step up.
 
 ![Serving of chinese noodles in 2 bowls showing noodles and rice and boiled eggs](/assets/images/personal/chinese-noodles-in-kigali-serving.jpg "Serving of chinese noodles in 2 bowls showing noodles and rice and boiled eggs")
 
-Here's a quick video of the end result — two bowls of rice and beef stew alongside the Chinese noodles with eggs and beef:
+Here's a quick video of the end result: two bowls of rice and beef stew alongside the Chinese noodles with eggs and beef.
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/a58tfaF4zt8" title="Chinese noodles in Kigali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -47,12 +47,14 @@ _Chinese noodles in Kigali — shot by rdjarbeng_
 
 ## Review
 
-Solid noodles — held their shape, didn't go mushy, and lifted cleanly without a fork full of mush. (No chopsticks. Don't judge me.)
+Solid noodles, they held their shape, didn't go mushy, and lifted cleanly without a fork full of mush. (No chopsticks. Don't judge me.)
 
-The sauce had a real kick — pepper hot, not temperature hot — but nothing close to unbearable. The sauerkraut tang gave it a depth that regular instant noodles don't have. Combined with the beef, eggs, and rice, it was a proper meal. **7/10.** Would buy again, especially for the vegetable sachets alone.
+The sauce had a real kick , pepper hot, but nothing close to unbearable. The sauerkraut tang gave it a depth that regular instant noodles don't have. Combined with the beef, eggs, and rice, it was a proper meal. **7/10.** Would buy again, especially for the vegetable sachets alone.
 
 ***
 
-To close — this song has been circulating for years mislabelled as the "Samsung, Women Cheat" song. It's actually **Jin Sheng Yuan (Affinities Of This Life)**. Felt fitting to end on it.
+## Ending with a Chinese song
+
+ This song has been circulating for years mislabelled as the "Samsung, Women Cheat" song. It's actually **Jin Sheng Yuan (Affinities Of This Life)**. Felt fitting to end on it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NQLvnin2bxs" title="Jin Sheng Yuan (Affinities Of This Life)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

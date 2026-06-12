@@ -2,7 +2,7 @@
 title: EricolSith Acapella Cover of Wathcha Say on Tiktok
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@ericolsith/video/7567431982561414413'
-thumbnail: ''
+thumbnail: '/assets/images/videos/ericolsith-acapella-cover-of-wathcha-say-on-tiktok-cover.jpg'
 type: video
 category: videos
 genre: Music

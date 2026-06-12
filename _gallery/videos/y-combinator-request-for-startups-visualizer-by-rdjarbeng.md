@@ -3,7 +3,7 @@ title: Y-combinator request for startups visualizer by rdjarbeng
 platform: youtube
 youtube_id: https://youtu.be/YbvBLGJRyNQ
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_YbvBLGJRyNQ.jpg'
 type: video
 genre: Other
 category: videos

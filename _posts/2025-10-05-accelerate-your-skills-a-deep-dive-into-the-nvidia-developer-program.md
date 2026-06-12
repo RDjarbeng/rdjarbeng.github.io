@@ -5,7 +5,7 @@ author: Richard
 categories:
   - Technology
 tags:
-  - NVIDIA
+  - Nvidia
   - Developer Program
   - NVIDIA Developer Program
   - AI

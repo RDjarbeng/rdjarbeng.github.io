@@ -4,7 +4,7 @@ date: 2024-08-01
 author: Richard
 image: /assets/images/static_site.jpeg
 categories: ["Software development"]
-tags: [Software engineering, dev ops, cloud hosting, hosting providers, comparison]
+tags: [Software engineering, dev ops, cloud hosting]
 image_alt: "Cover image for Comparison of Static Site Hosting Options"
 ---
 

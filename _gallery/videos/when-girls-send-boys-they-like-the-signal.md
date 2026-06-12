@@ -3,11 +3,12 @@ title: When Girls Send Signals to Boys They Like
 published: true
 date: 2026-02-19 18:43:00
 platform: tiktok
-youtube_id: 'https://www.tiktok.com/@richmanrd/video/7583794358592343308'
-thumbnail: ''
+youtube_id: https://www.tiktok.com/@richmanrd/video/7583794358592343308
+embed_code: ''
+thumbnail: /assets/images/cover-image-boys-seeing-the-signal.jpg
 type: video
-category: videos
 genre: Entertainment
+category: videos
 ---
 
 Have you ever wondered what happens when girls send signals to boys they like? This funny TikTok clip playfully illustrates the classic dating dilemma where guys completely miss the romance hints! It's a hilarious take on the timeless struggle of communication between genders, especially during the confusing stages of early attraction.

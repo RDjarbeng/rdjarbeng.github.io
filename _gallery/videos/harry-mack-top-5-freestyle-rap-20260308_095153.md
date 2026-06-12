@@ -3,7 +3,7 @@ title: Harry Mack top 5 freestyle rap videos of 2025
 platform: tiktok
 youtube_id: https://www.tiktok.com/@harrymackofficial/video/7589682844717354270/
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/harry-mack-top-5-freestyle-rap-20260308_095153-cover.jpg'
 type: video
 category: videos
 genre: Entertainment

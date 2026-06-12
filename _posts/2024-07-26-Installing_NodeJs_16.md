@@ -4,7 +4,7 @@ date: 2024-07-26
 author: Richard
 image: /assets/images/nodejs_2024.png
 categories: ["IoT"]
-tags: [Nodejs, installation, raspberry pi, raspberry pi 4B, linux]
+tags: [NodeJs, installation, Raspberry Pi, raspberry pi 4B, Linux]
 image_alt: "Cover image for Installing and removing Node.js on linux-based Systems-for raspberry pi 4B "
 ---
 

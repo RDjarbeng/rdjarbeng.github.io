@@ -1,27 +1,56 @@
-{% assign spotlight_post = site.personal | where: "title", "Ghana, an Introduction- All That Glitters is Still Gold" |
-first %}
-<div class="home-hero">
-    <div class="hero-content">
-        <div class="hero-label">Occasion Spotlight</div>
-        <h2 class="hero-title">Ghana, an Introduction- All That Glitters is Still Gold</h2>
-        <p class="hero-description">
-            Celebrating the 69th Independence Day of Ghana. Explore the rich culture, history, and golden opportunities
-            of the first sub-Saharan nation to gain independence.
-        </p>
-        <div class="hero-actions">
-            <a href="{{ spotlight_post.url | relative_url }}" class="hero-btn">Read the
-                Post</a>
-        </div>
+{% assign carousel_posts = site.posts | where_exp: "p", "p.image != nil and p.image != ''" | slice: 0, 6 %}
+{% if carousel_posts.size > 0 %}
+<div class="hero-carousel">
+  <div class="carousel-track" id="carousel-track">
+    {% for post in carousel_posts %}
+    <div class="carousel-slide">
+      <div class="carousel-bg">
+        <img src="{{ post.image }}" alt="{{ post.title | escape }}"
+          loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+        <div class="carousel-overlay"></div>
+      </div>
+      <div class="carousel-content">
+        {% if post.categories.size > 0 %}
+        <span class="carousel-category">{{ post.categories.first }}</span>
+        {% endif %}
+        <h2 class="carousel-title">{{ post.title }}</h2>
+        <p class="carousel-excerpt">{% include_cached excerpt.html post=post %}</p>
+        <a href="{{ post.url | relative_url }}" class="carousel-btn">Read the Post</a>
+      </div>
     </div>
-    <div class="hero-image">
-        <picture>
-            <source srcset="{{ '/assets/images/posts/happy_indepence_ghana_post_cover_400w.webp' | relative_url }} 400w,
-                            {{ '/assets/images/posts/happy_indepence_ghana_post_cover.webp' | relative_url }} 640w"
-                    sizes="(max-width: 768px) 100vw, 390px"
-                    type="image/webp">
-            <img src="{{ '/assets/images/posts/happy_indepence_ghana_post_cover.png' | relative_url }}"
-                 alt="Happy 69th Independence Day Ghana"
-                 style="width: 100%; height: auto; object-fit: cover;">
-        </picture>
-    </div>
+    {% endfor %}
+  </div>
+  <div class="carousel-dots">
+    {% for post in carousel_posts %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}"
+      aria-label="Go to slide {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+  <button class="carousel-arrow carousel-prev" aria-label="Previous slide">&#8249;</button>
+  <button class="carousel-arrow carousel-next" aria-label="Next slide">&#8250;</button>
 </div>
+<script>
+(function () {
+  var track = document.querySelector('.carousel-track');
+  var dots  = document.querySelectorAll('.carousel-dot');
+  var total = dots.length;
+  var cur   = 0;
+  var timer;
+
+  function show(n) {
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+  }
+
+  function startAuto() { timer = setInterval(function () { show(cur + 1); }, 5000); }
+  function resetAuto() { clearInterval(timer); startAuto(); }
+
+  document.querySelector('.carousel-prev').addEventListener('click', function () { show(cur - 1); resetAuto(); });
+  document.querySelector('.carousel-next').addEventListener('click', function () { show(cur + 1); resetAuto(); });
+  dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i); resetAuto(); }); });
+
+  startAuto();
+}());
+</script>
+{% endif %}

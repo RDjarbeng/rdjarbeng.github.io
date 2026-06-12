@@ -2,7 +2,7 @@
 title: Harry Mack Does Freestyle Rap For SEC Legends
 platform: tiktok
 youtube_id: 'https://www.tiktok.com/@harrymackofficial/video/7597525696826723614'
-thumbnail: ''
+thumbnail: '/assets/images/videos/harry-mack-does-freestyle-rap-for-sec-legends-cover.jpg'
 type: video
 category: videos
 genre: Entertainment

@@ -5,7 +5,6 @@ categories:
   - Technology
 tags:
   - Sound
-  - Data with sound
   - GitHub
   - Projects
 title: 'Chirp: Transmitting Data Through Sound'

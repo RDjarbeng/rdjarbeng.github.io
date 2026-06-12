@@ -1,0 +1,134 @@
+---
+layout: default
+---
+<div class="home-section" style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <h1 class="page-heading" style="text-transform: capitalize;">{{ page.title | replace: "-", " " }}</h1>
+    <div style="margin-bottom: 20px;">
+        <a href="/gallery/" class="btn">&larr; Back to Gallery</a>
+    </div>
+
+    {% assign is_subfolder_page = false %}
+    {% if page.url contains '/' %}
+        {% assign url_parts = page.url | split: '/' %}
+        {% if url_parts.size >= 4 and url_parts[3] != blank %}
+            {% unless url_parts[3] contains 'page-' %}
+                {% assign is_subfolder_page = true %}
+            {% endunless %}
+        {% endif %}
+        {% if url_parts.size >= 5 %}
+            {% assign is_subfolder_page = true %}
+        {% endif %}
+    {% endif %}
+
+    {% assign safe_cat_slug = page.title | slugify %}
+    {% assign all_category_items = "" | split: "" %}
+    {% for item in site.gallery %}
+        {% assign cats_str = item.categories | join: ' ' %}
+        {% assign str = item.category | append: ' ' | append: item.platform | append: ' ' | append: item.type | append: ' ' | append: cats_str | slugify %}
+        
+        {% assign is_match = false %}
+        {% assign url_match_str = '/' | append: safe_cat_slug | append: '/' %}
+        {% if str contains safe_cat_slug or item.url contains url_match_str %}
+            {% assign is_match = true %}
+        {% endif %}
+        
+        {% assign parts = item.relative_path | split: '/' %}
+        {% if safe_cat_slug == 'external' and parts.size > 2 %}
+            {% assign is_match = false %}
+        {% endif %}
+        
+        {% if is_match %}
+            {% assign all_category_items = all_category_items | push: item %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign all_category_items = all_category_items | sort: "date" | reverse %}
+
+    {% assign subfolders = "" | split: "" %}
+    {% for item in all_category_items %}
+        {% assign parts = item.relative_path | split: "/" %}
+        {% if parts.size >= 4 %}
+            {% assign subfolder = parts[2] %}
+            {% unless subfolders contains subfolder %}
+                {% assign subfolders = subfolders | push: subfolder %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+
+    {% if subfolders.size > 0 and is_subfolder_page == false %}
+        <!-- Top Level Category Dashboard View -->
+        {% for sub in subfolders %}
+            <div class="subfolder-wrapper">
+                <div class="subfolder-header">
+                    <h4 style="font-size: 1.5rem;">{{ sub | replace: "-", " " }}</h4>
+                    <a href="/gallery/{{ page.url | split: '/' | last }}/{{ sub }}/" style="font-size: 1rem;">View All</a>
+                </div>
+                
+                <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
+                    {% assign sub_count = 0 %}
+                    {% for item in all_category_items %}
+                        {% assign parts = item.relative_path | split: "/" %}
+                        {% if parts[2] == sub %}
+                            {% assign sub_count = sub_count | plus: 1 %}
+                            {% if sub_count <= 6 %}
+                            <div class="sub-item" style="display: flex; flex-direction: column; gap: 8px;">
+                                {% include gallery_card.html item=item is_dashboard=false %}
+                            </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        
+        {% assign other_items = "" | split: "" %}
+        {% for item in all_category_items %}
+            {% assign parts = item.relative_path | split: "/" %}
+            {% if parts.size < 4 %}
+                {% assign other_items = other_items | push: item %}
+            {% endif %}
+        {% endfor %}
+        
+        {% if other_items.size > 0 %}
+            <h2 style="text-align: left; margin-top: 40px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; text-transform: capitalize; font-size: 1.5rem; color: #102a43;">
+                Other {{ page.title | replace: "-", " " }} Items
+            </h2>
+            <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
+                {% assign sub_count = 0 %}
+                {% for item in other_items %}
+                    {% assign sub_count = sub_count | plus: 1 %}
+                    {% if sub_count <= 6 %}
+                    <div class="sub-item" style="display: flex; flex-direction: column; gap: 8px;">
+                        {% include gallery_card.html item=item is_dashboard=false %}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <!-- Hide standard pagination when using nested top-level view -->
+        <style>.pagination-wrapper, .paginator { display: none !important; }</style>
+
+    {% else %}
+        <!-- Standard Flat View (Paginated) -->
+        {% assign items = page.custom_pager.posts %}
+        <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
+            {% for item in items %}
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                {% include gallery_card.html item=item is_dashboard=false %}
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if page.custom_pager.total_pages > 1 %}
+        {% assign cat_path = page.url | split: '/page-' | first %}
+        {% if cat_path == page.url %}{% assign cat_path = page.url | append: '/' | replace: '//', '/' %}{% else %}{% assign cat_path = cat_path | append: '/' %}{% endif %}
+        
+        <div style="margin-top: 40px;">
+            {% include pagination.html paginator=page.custom_pager base_url=cat_path %}
+        </div>
+    {% endif %}
+</div>
+
+{% include gallery_native_script.html %}

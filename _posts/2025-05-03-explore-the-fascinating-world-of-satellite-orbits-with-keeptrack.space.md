@@ -4,16 +4,14 @@ author: Richard
 categories:
   - Satellite
 tags:
-  - Satellite Orbits
-  - Space Exploration
+  - Satellite
+  - Space
   - Astrodynamics
   - Keeptrack.space
   - Artificial Intelligence
-  - Orbital Analysis
   - United States Space Force
   - Satellite Visualization
   - TypeScript
-  - Space Technology
 title: Explore the Fascinating World of Satellite Orbits with Keeptrack.space
 image: /assets/images/keeptrack.png
 video: ''

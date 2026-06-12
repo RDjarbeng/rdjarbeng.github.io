@@ -1,0 +1,62 @@
+name: Enhance Gallery Posts
+
+on:
+  push:
+    paths:
+      - '_gallery/**/*.md'
+  workflow_dispatch: # Allow manual trigger
+
+
+concurrency:
+  group: "enhance-posts"
+  cancel-in-progress: false
+
+jobs:
+  enhance-posts:
+    runs-on: ubuntu-latest
+    
+    # Needs read/write permissions for committing code back
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # Ensure we fetch the whole history for git-auto-commit
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip' # Optional but speeds up runs
+
+      - name: Install dependencies
+        run: pip install -r scripts/automation/requirements.txt
+
+      - name: Run post enhancer
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/automation/enhance_posts.py --max 15
+
+      - name: Sync with remote to avoid push conflicts
+        run: |
+          git config pull.rebase true
+          git config rebase.autoStash true
+          git pull origin main
+
+      - name: Commit and Push Changes
+        id: auto-commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-enhance gallery posts with Gemini"
+          file_pattern: "_gallery/"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+
+      - name: Trigger Deploy
+        if: steps.auto-commit.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run jekyll.yml --ref main

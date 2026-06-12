@@ -2,9 +2,10 @@
 title: For the Lord is a jealous God
 date: 2026-03-30T17:35:00+02:00
 image: /assets/images/memes/for-the-lord-is-a-jealous-god.jpg
-image_alt: For the Lord is a jealous God showing Sketch of Jesus with Exodus 20:5. The image portrays Jesus wrapping a person in his robe, saying "Mine".
+image_alt: A whimsical cartoon illustration by artist Miran Davis depicting Jesus holding a person securely in his arms with the speech bubble Mine written above.
 type: external
 category: memes
+enhanced_by_bot: true
 ---
 
 For the Lord is a jealous God. I like this drawing because it shows the emotions that we would normally ascribe to a jealous person. Wish I could credit the artist directly, the image shows artist Miran Davis.
@@ -27,3 +28,7 @@ In the Bible, the statement that the Lord is a "**jealous God**" is a recurring 
 - **Righteous Zeal**: The Hebrew word often translated as "jealous" (_qanna_) can also mean "**zealous**". It signifies a fervent commitment to protecting what is rightfully His—His honor and the spiritual well-being of His people.
 - **Protection vs. Envy**: Scholars distinguish this from "envy," which is wanting what belongs to someone else. God's jealousy is about maintaining what already belongs to Him: the praise and loyalty of His creation.
 - **For Human Benefit**: Many interpretations suggest God’s jealousy is for our own good, as it steers people away from empty idols that cannot save or fulfill them and back toward the true source of life.
+
+**Additional comments:**
+
+The concept of a jealous God often feels complex when viewed through a human lens. In this charming illustration by Miran Davis, the divine attribute of jealousy is softened into a relatable, protective embrace. It captures the essence of a love that is intensely focused, singular, and deeply possessive in the best possible way. This image reminds us that divine jealousy is not about pettiness or insecurity. Instead, it represents a righteous and holy passion for our well being. God desires our exclusive devotion because He knows that true fulfillment is found only in Him. By stepping away from the distractions of temporary idols, we align ourselves with the One who protects our hearts with a fervent, fatherly grip. This visual serves as a gentle nudge to remember that we are held securely by a love that refuses to share us with anything that could lead us away from our true purpose.

@@ -3,7 +3,7 @@ title: When you are made to keep the phones on the pitch
 platform: instagram
 youtube_id: https://www.instagram.com/p/DXAC5ENiGkx/
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/when-you-are-made-to-keep-the-phones-on-the-pitch-cover.jpg'
 type: video
 genre: Comedy
 category: videos

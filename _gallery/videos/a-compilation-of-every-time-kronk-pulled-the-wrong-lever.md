@@ -5,7 +5,7 @@ date: 2026-03-20T13:29:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/i3s_kyeDzgg?si=XzEDKPD1ueBRQZ63
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_i3s_kyeDzgg.jpg'
 type: video
 genre: Film & Animation
 category: videos

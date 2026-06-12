@@ -3,7 +3,7 @@ title: No matter what you do they will still judge you - Denzel Washington
 platform: instagram
 youtube_id: https://www.instagram.com/reel/DT98elkE_oC/?l=1
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/no-matter-what-you-do-they-wil-20260312_145633-cover.jpg'
 type: video
 category: videos
 genre: Entertainment

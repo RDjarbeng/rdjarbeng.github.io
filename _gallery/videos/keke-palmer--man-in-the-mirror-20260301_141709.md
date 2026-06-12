@@ -3,7 +3,7 @@ title: Keke Palmer "Man in the Mirror"
 platform: youtube
 youtube_id: https://youtu.be/6VEGDleRugc
 embed_code: ''
-thumbnail: ''
+thumbnail: '/assets/images/videos/youtube_6VEGDleRugc.jpg'
 type: video
 category: videos
 genre: Music

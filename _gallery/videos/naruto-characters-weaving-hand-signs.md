@@ -3,11 +3,12 @@ title: Naruto Characters Weaving Hand Signs Transition
 published: true
 date: 2026-02-19 18:48:00
 platform: tiktok
-youtube_id: 'https://www.tiktok.com/@richmanrd/video/7578501485969870092'
-thumbnail: ''
+youtube_id: https://www.tiktok.com/@richmanrd/video/7578501485969870092
+embed_code: ''
+thumbnail: /assets/images/cover-image-naruto-hand-signs-tiktok.jpg
 type: video
-category: videos
 genre: Entertainment
+category: videos
 ---
 
 Anime fans, wait for it! This highly creative video edit showcases a seamless, unexpected transition from classic Tom and Jerry animation into the intense world of Naruto. Watch as the characters expertly weave complex jutsu hand signs, perfectly synchronized to a hard-hitting musical beat. 
