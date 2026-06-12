@@ -1,6 +1,6 @@
 ---
 title: "Music of RRR"
-description: "A playlist synced from YouTube"
+description: "The best music videos from the hit movie RRR featuring Nacho, Komuram Bheemudo"
 icon: "▶️"
 match_by: "genre"
 genre: "Music of RRR"
