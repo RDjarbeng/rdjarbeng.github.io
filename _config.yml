@@ -52,6 +52,7 @@ plugins:
   - jekyll-toc
   - kramdown-math-katex
   - jekyll-include-cache
+  - jekyll-algolia
 
 jekyll-archives:
   enabled:
@@ -121,6 +122,9 @@ collections:
     output: false
   gallery_categories:
     output: false
+  video_collections:
+    output: true
+    permalink: /gallery/videos/:title/
 
 sass:
   sass_dir: _sass
@@ -175,3 +179,16 @@ pagination:
   paginate: 12 # Number of posts per page
   collection: "posts" # Target the posts collection
 
+algolia:
+  application_id: 'IS96FR2E65'
+  index_name: 'rdjarbeng_index'
+  search_only_api_key: '244c316912077b528a2583b21970d464'
+  nodes_to_index: 'p, h1, h2, h3, h4, h5, h6, li, blockquote'
+  files_to_exclude:
+    - index.html
+    - posts.md
+    - personal.md
+    - gallery.md
+    - search.md
+    - videos.html
+    - 404.html

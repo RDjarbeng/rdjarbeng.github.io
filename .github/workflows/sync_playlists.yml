@@ -1,0 +1,42 @@
+name: Sync YouTube Playlists
+
+on:
+  schedule:
+    # Run at 00:00 every day
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual triggers
+  push:
+    paths:
+      - '_video_collections/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Sync Playlists
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: ruby .github/scripts/sync_youtube_playlists.rb
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add _gallery/videos/
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No new videos to sync."
+          else
+            git commit -m "Auto-sync YouTube playlists [skip ci]"
+            git push
+          fi

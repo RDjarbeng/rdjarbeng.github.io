@@ -145,8 +145,7 @@
     // Sticky Stack (Genres & Search)
     // ============================================
     .sticky-filter-stack {
-      position: sticky;
-      top: 0px;
+      position: relative;
       z-index: 500; 
       background: var(--bg-color); 
       padding: 10px 0;
