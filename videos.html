@@ -276,7 +276,10 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                         </span>
                         <div class="video-date">{{ item.date | date: "%b %-d, %Y" }}</div>
                         <div>&bull;</div>
-                        <a href="{{ '/gallery/videos/' | append: (item.genre | default: item.category | default: 'Other' | slugify) | append: '/' | relative_url }}" class="video-genre" style="text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--base-color)'">{{ item.genre | default: item.category | default: "Other" }}</a>
+                        {% assign fallback_genre = item.genre | default: item.category | default: "Other" %}
+                        {% assign genre_slug = fallback_genre | slugify %}
+                        {% assign genre_url = '/gallery/videos/' | append: genre_slug | append: '/' | relative_url %}
+                        <a href="{{ genre_url }}" class="video-genre" style="text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--base-color)'">{{ fallback_genre }}</a>
                     </div>
                     {% assign description = item.content | strip_html | strip_newlines | truncatewords: 15 %}
                     {% if description != "" %}
