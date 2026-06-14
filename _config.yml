@@ -76,6 +76,10 @@ seo:
   logo: "/assets/images/logo.jpeg"
   image: "/assets/images/logo.jpeg"
   theme_color: "#999"
+  type:
+    - personal
+    - gallery
+    - video_collections
 
 # Social media defaults
 twitter:
