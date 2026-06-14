@@ -20,9 +20,24 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 
 ## Questions of interest:
 ### Finance:
-* Why can I pay for Netflix instantly, but not send money to a friend abroad? 
-* Why are international payments slow, expensive, and opaque?
-Created a series on this on my blog exploring this phenomenon and potential solutions: [Part 1](/visa-and-mastercard-payment-cards-not-transfer-tools/), [Part 2](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/), [Part 3](/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/).
+Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  <a href="/visa-and-mastercard-payment-cards-not-transfer-tools/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 1: Payment Cards</h3>
+      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Visa and Mastercard are payment cards, not transfer tools. Exploring the fundamentals of cross-border payments.</p>
+  </a>
+
+  <a href="/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 2: The Transfer Dilemma</h3>
+      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Why international money transfers are slow, expensive, and opaque compared to instant domestic payments.</p>
+  </a>
+
+  <a href="/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 3: Digital Wallets</h3>
+      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Google Pay and Apple Pay: How they work under the hood, where they work, and why they're safer.</p>
+  </a>
+</div>
 
 ### Education:
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
@@ -299,7 +314,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Real-Time Taxi Fleet Management</h3>
         <p class="project-desc">Designed a streaming data pipeline using Google Cloud Dataflow and BigQuery to ingest and analyze real-time taxi data, displaying live metrics on Looker Studio.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View Details</a> -->
+          <a href="/categories/data-science/" target="_blank">View Details <span>&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -315,7 +330,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Free Background Remover</h3>
         <p class="project-desc">Deployed a semantic segmentation model on Hugging Face to remove image backgrounds automatically. Uses `rembg` and U2Net models for high-quality segmentation.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View App</a> -->
+          <a href="/free-hd-background-remover-effortless-image-editing-tool" target="_blank">View App <span>&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -331,7 +346,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Predicting Loan Risk</h3>
         <p class="project-desc">Built and deployed a loan default risk prediction model using Google Cloud Vertex AI AutoML, showcasing rigorous feature engineering and model evaluation.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View Details</a> -->
+          <a href="/categories/machine-learning/" target="_blank">View Details <span>&rarr;</span></a>
         </div>
       </div>
     </div>
