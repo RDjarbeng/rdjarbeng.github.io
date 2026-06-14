@@ -1,5 +1,5 @@
 ---
-title: 'Do Something New: James Simons at MIT speaking about his life and career'
+title: 'Do Something New: James Simons at MIT Speaking About His Life and Career'
 published: true
 date: 2026-06-12T11:18:00+02:00
 platform: youtube
