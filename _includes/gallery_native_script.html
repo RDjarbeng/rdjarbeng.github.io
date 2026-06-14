@@ -48,7 +48,7 @@
             const item = visibleItems[index];
 
             const title = item.getAttribute('data-title') || '';
-            const caption = item.querySelector('.gallery-caption-content') ? item.querySelector('.gallery-caption-content').innerHTML : (item.getAttribute('data-caption') || '');
+            const caption = item.getAttribute('data-caption') || '';
             let dateFormatted = item.getAttribute('data-date') || '';
             if (dateFormatted) { dateFormatted = new Date(dateFormatted).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }); }
 

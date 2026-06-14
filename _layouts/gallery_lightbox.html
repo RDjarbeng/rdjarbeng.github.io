@@ -61,8 +61,7 @@ layout: default
       <header class="gallery-header">
         <h1>Gallery - Richard Djarbeng's Blog</h1>
         <p class="gallery-description">
-          Explore a visual journey through my life and interests. This collection features cover images from my blog
-          posts, AI-generated art, memes I enjoy, and videos from social media.
+          Welcome to the Gallery! Navigate using the sidebar to explore different collections. At the top level, you'll find general <strong>Images</strong> and <strong>Cover Images</strong> from my blog posts. Below that, dive into specialized subcategories like <strong>AI Generations</strong>, <strong>Memes</strong>, and <strong>Artemis II</strong> content. Finally, the bottom section houses my <strong>Videos</strong> collection, including curated YouTube, Twitter, and TikTok finds. Use the search bar or hub cards below to quickly jump into specific areas.
         </p>
         <!-- Gallery Hub Sections -->
         <div class="gallery-sections-hub">
@@ -115,16 +114,18 @@ layout: default
 
   <!-- Dashboard View (Server Side) -->
   <div id="gallery-dashboard" class="gallery-dashboard">
-    {% assign pseudo_cats = "cover-images,videos,youtube,twitter,instagram,tiktok,external,artemis-ii" | split: "," %}
+    {% assign all_hub_cats = "external,cover-images" | split: "," %}
     
-    {% assign all_hub_cats = "" | split: "" %}
     {% for cat in site.gallery_categories %}
       {% assign slug = cat.title | slugify %}
       {% if slug != 'none' and slug != 'other' and slug != 'artemis-ii' %}
         {% assign all_hub_cats = all_hub_cats | push: slug %}
       {% endif %}
     {% endfor %}
-    {% for cat in pseudo_cats %}
+    {% assign all_hub_cats = all_hub_cats | push: "artemis-ii" %}
+    
+    {% assign video_cats = "videos,youtube,twitter,instagram,tiktok" | split: "," %}
+    {% for cat in video_cats %}
         {% assign all_hub_cats = all_hub_cats | push: cat %}
     {% endfor %}
 
@@ -134,6 +135,7 @@ layout: default
         {% if cat_slug == 'external' %}{% assign cat_title = "Gallery Images" %}{% endif %}
         {% if cat_slug == 'cover-images' %}{% assign cat_title = "Cover Images" %}{% endif %}
         {% if cat_slug == 'videos' %}{% assign cat_title = "All Videos" %}{% endif %}
+        {% if cat_slug == 'artemis-ii' %}{% assign cat_title = "Artemis II" %}{% endif %}
         
         {% assign cat_items = "" | split: "" %}
         
@@ -181,7 +183,11 @@ layout: default
           {% endfor %}
 
           {% if subfolders.size > 0 %}
-            {% for sub in subfolders %}
+            {% assign display_subfolders = subfolders %}
+            {% if cat_slug == 'artemis-ii' %}
+                {% assign display_subfolders = subfolders | slice: 0, 2 %}
+            {% endif %}
+            {% for sub in display_subfolders %}
               <div class="subfolder-wrapper">
                 <div class="subfolder-header">
                   <h4>{{ sub | replace: "-", " " }}</h4>
