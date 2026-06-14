@@ -215,13 +215,20 @@ layout: default
       <!-- Gallery Videos Section -->
       <br>
       <h2 class="section-title" id="gallery-videos" style="scroll-margin-top: 80px;">Latest Gallery Videos</h2>
-      <div class="home-gallery-wrapper"
-        style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
-        {% assign recent_videos = site.gallery | where_exp: "item", "item.type == 'video'" | sort: 'date' | reverse %}
+      <style>
+        .home-gallery-wrapper::-webkit-scrollbar { display: none; }
+        .gallery-scroll-btn { transition: transform 0.2s, background 0.2s; }
+        .gallery-scroll-btn:hover { transform: scale(1.1); background: var(--border-color, #f0f0f0); }
+      </style>
+      <div style="position: relative; display: flex; align-items: center;">
+        <button class="gallery-scroll-btn left" aria-label="Scroll left" onclick="this.nextElementSibling.scrollBy({left: -320, behavior: 'smooth'})" style="position: absolute; left: -15px; z-index: 10; background: var(--card-bg, #fff); border: 1px solid var(--card-border, #eaeaea); border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: var(--text-color);">&#8592;</button>
+        <div class="home-gallery-wrapper"
+          style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; width: 100%;">
+          {% assign recent_videos = site.gallery | where_exp: "item", "item.type == 'video'" | sort: 'date' | reverse %}
         {% for item in recent_videos limit:8 %}
         <a href="{{ '/gallery' | relative_url }}?item={{ item.url | relative_url }}" class="gallery-thumbnail-card"
           style="display: inline-block; margin-right: 15px; width: 300px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
-          <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
+          <div style="width: 100%; height: 200px; overflow: hidden;">
             <img
               src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail }}{% elsif item.youtube_id != '' and item.youtube_id != nil %}https://img.youtube.com/vi/{% if item.youtube_id contains 'v=' %}{{ item.youtube_id | split: 'v=' | last | split: '&' | first }}{% elsif item.youtube_id contains 'shorts/' %}{{ item.youtube_id | split: 'shorts/' | last | split: '?' | first }}{% elsif item.youtube_id contains 'youtu.be/' %}{{ item.youtube_id | split: 'youtu.be/' | last | split: '?' | first }}{% else %}{{ item.youtube_id }}{% endif %}/hqdefault.jpg{% elsif item.instagram_id != '' and item.instagram_id != nil %}https://www.instagram.com/p/{{ item.instagram_id }}/media/?size=l{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
               alt="{{ item.title | titleize }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;" loading="lazy">
@@ -234,18 +241,22 @@ layout: default
           </div>
         </a>
         {% endfor %}
+        </div>
+        <button class="gallery-scroll-btn right" aria-label="Scroll right" onclick="this.previousElementSibling.scrollBy({left: 320, behavior: 'smooth'})" style="position: absolute; right: -15px; z-index: 10; background: var(--card-bg, #fff); border: 1px solid var(--card-border, #eaeaea); border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: var(--text-color);">&#8594;</button>
       </div>
       
       <!-- Gallery Images Section -->
       <br>
       <h2 class="section-title" id="gallery-images" style="scroll-margin-top: 80px;">Latest Gallery Images</h2>
-      <div class="home-gallery-wrapper"
-        style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch;">
-        {% assign recent_images = site.gallery | where_exp: "item", "item.type != 'video'" | sort: 'date' | reverse %}
+      <div style="position: relative; display: flex; align-items: center;">
+        <button class="gallery-scroll-btn left" aria-label="Scroll left" onclick="this.nextElementSibling.scrollBy({left: -320, behavior: 'smooth'})" style="position: absolute; left: -15px; z-index: 10; background: var(--card-bg, #fff); border: 1px solid var(--card-border, #eaeaea); border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: var(--text-color);">&#8592;</button>
+        <div class="home-gallery-wrapper"
+          style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px; margin-bottom: 30px; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none; width: 100%;">
+          {% assign recent_images = site.gallery | where_exp: "item", "item.type != 'video'" | sort: 'date' | reverse %}
         {% for item in recent_images limit:8 %}
         <a href="{{ '/gallery' | relative_url }}?item={{ item.url | relative_url }}" class="gallery-thumbnail-card"
           style="display: inline-block; margin-right: 15px; width: 300px; vertical-align: top; white-space: normal; text-decoration: none; color: inherit; background: var(--card-bg, #f4f4f4); border: 1px solid var(--card-border, #eaeaea); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px var(--shadow-color, rgba(0,0,0,0.1));">
-          <div style="width: 100%; height: 200px; background-color: #000; overflow: hidden;">
+          <div style="width: 100%; height: 200px; overflow: hidden;">
             <img
               src="{% if item.image %}{{ item.image }}{% else %}/assets/images/webOrMobile.jpeg{% endif %}"
               alt="{{ item.title | titleize }}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
@@ -258,6 +269,8 @@ layout: default
           </div>
         </a>
         {% endfor %}
+        </div>
+        <button class="gallery-scroll-btn right" aria-label="Scroll right" onclick="this.previousElementSibling.scrollBy({left: 320, behavior: 'smooth'})" style="position: absolute; right: -15px; z-index: 10; background: var(--card-bg, #fff); border: 1px solid var(--card-border, #eaeaea); border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: var(--text-color);">&#8594;</button>
       </div>
       
       <a href="{{ '/gallery' | relative_url }}" class="about-link btn" style="display: block; text-align: right;">Go to full Gallery
