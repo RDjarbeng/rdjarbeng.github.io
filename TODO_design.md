@@ -166,3 +166,4 @@ https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
 https://sveltiacms.app/en/docs/media/internal#asset-collections
 Eg from docs:
 width: 2048 # default: original size height: 2048 # default: original size svg:
+- [ ] Add the list of links in navigation and pages on the site to the footer so it's easier to navigate
