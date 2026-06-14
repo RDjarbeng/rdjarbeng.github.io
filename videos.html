@@ -108,7 +108,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                         {{ item.title | titleize | escape }}
                     </h3>
                     {% assign description = item.content | strip_html | strip_newlines | truncatewords: 15 %}
-                    <p class="video-excerpt" style="font-size: 0.95rem; color: var(--grey-text); line-height: 1.5; margin-bottom: 8px;">{{ description }}</p>
+                    <p class="video-excerpt" style="font-size: 0.95rem; color: var(--text-color); opacity: 0.8; line-height: 1.5; margin-bottom: 8px;">{{ description }}</p>
                     <div class="video-meta" style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #a0aec0; margin-bottom: 8px;">
                         <div class="video-date">{{ item.date | date: "%b %-d, %Y" }}</div>
                         <div>&bull;</div>
@@ -149,7 +149,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
             allCards.forEach(card => {
                 const title = (card.getAttribute('data-title') || '').toLowerCase();
                 if (title.includes(activeSearch)) {
-                    card.style.display = 'block';
+                    card.style.display = 'inline-block';
                     matchedCards++;
                 } else {
                     card.style.display = 'none';
