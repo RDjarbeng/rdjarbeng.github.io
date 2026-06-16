@@ -232,3 +232,5 @@ https://marinamaral.com/about/
 - [ ] The emperor who preferred daughters to sons, shout-out to Genghis Khan
 - [ ] The Tech CEO who hand delivers hardware - a story with Mr Jensen
 - [ ] A random collection of songs from Africa, starting with Contribution from Ntando
+- [ ] Write about Project Glasswing: Securing critical software for the AI era \ Anthropic
+https://www.anthropic.com/glasswing
