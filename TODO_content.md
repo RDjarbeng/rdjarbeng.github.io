@@ -234,3 +234,4 @@ https://marinamaral.com/about/
 - [ ] A random collection of songs from Africa, starting with Contribution from Ntando
 - [ ] Write about Project Glasswing: Securing critical software for the AI era \ Anthropic
 https://www.anthropic.com/glasswing
+- [ ] Look at these companies from a commerce and tech perspective, a look at Dutch influence in e-commerce : alyen, booking. Com, we transfer, startup Hears, dorie & Rose, Picnic, Naduvi
