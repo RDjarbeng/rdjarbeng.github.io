@@ -138,14 +138,17 @@ module Jekyll
         # Add pseudo categories
         pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
         
-        # Extract unique genres
-        all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
-        all_genres.each do |genre|
-          pseudo_cats << Jekyll::Utils.slugify(genre)
-        end
-
         pseudo_cats.uniq.each do |cat_slug|
           categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
+        end
+
+        # Extract unique genres and map to videos/<genre_slug>
+        all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
+        all_genres.each do |genre|
+          if genre != nil && genre != ""
+            genre_slug = Jekyll::Utils.slugify(genre)
+            categories_to_process << { title: genre, slug: "videos/#{genre_slug}" }
+          end
         end
 
         # Extract subfolders for nested pagination
@@ -168,7 +171,12 @@ module Jekyll
             cat_slug = cat_info[:slug]
             
             cat_items = all_gallery.select { |item| 
-              if cat_slug.include?('/')
+              if cat_slug.start_with?('videos/')
+                # It's a video genre!
+                genre_name = cat_slug.sub('videos/', '')
+                item_genre = item.data['genre'] || item.data['category'] || ''
+                Jekyll::Utils.slugify(item_genre) == genre_name && item.data['type'] == 'video'
+              elsif cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
                 next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
