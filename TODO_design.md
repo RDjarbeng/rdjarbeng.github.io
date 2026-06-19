@@ -177,3 +177,4 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Need to format quotes for famous people posts like this image. Need it to work for light and dark mode 
 
 🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
+- [ ] The Tick Tock cars on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video
