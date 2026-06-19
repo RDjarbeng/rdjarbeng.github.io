@@ -1,7 +1,7 @@
 ---
 title: "Sholay (Full Video)-from RRR on Youtube"
 published: true
-date: 2025-12-19T15:22:02Z
+date: 2026-03-14T15:22:02Z
 platform: youtube
 youtube_id: "2cyzCReoNgU"
 thumbnail: "https://i.ytimg.com/vi/2cyzCReoNgU/maxresdefault.jpg"

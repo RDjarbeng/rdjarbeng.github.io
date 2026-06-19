@@ -1,7 +1,7 @@
 ---
 title: "Phil Collins - You'll Be in My Heart /Tarzan(ターザン)"
 published: true
-date: 2025-12-19T14:37:57Z
+date: 2026-03-14T14:37:57Z
 platform: youtube
 youtube_id: "MfrX4IOjCz0"
 thumbnail: "https://i.ytimg.com/vi/MfrX4IOjCz0/hqdefault.jpg"
