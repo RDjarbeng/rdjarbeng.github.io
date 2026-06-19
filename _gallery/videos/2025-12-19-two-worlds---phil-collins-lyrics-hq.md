@@ -10,6 +10,7 @@ genre: "Songs from tarzan soundtrack -Phil colins"
 category: videos
 ---
 
+## Lyrics for Two worlds One Family
 Put your faith in what you most believe in
 Two worlds, one family
 Trust your heart
@@ -50,8 +51,3 @@ To guide these lives we see
 
 Lyrics taken from: http://www.lyricsfreak.com/p/phil+collins/two+worlds_20108083.html
 
--=-=-=-=-DISCLAIMER-=-=-=-=- =-
-
-Song Used: Two Worlds - Phil Collins
-
-All the songs in these videos are not created by me they are created by their performer, consider this, free advertising.
