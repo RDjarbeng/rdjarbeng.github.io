@@ -173,3 +173,4 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - The video collections start with Behind the scenes in alphabetical order, need to find a better way
 - Video collections should animate on scroll
 -Need to show the subcategories visually for the navigation on the gallery homepage
+- [ ] Add a navigation for the Artemis II page in '/gallery/Artemis-ii/'
