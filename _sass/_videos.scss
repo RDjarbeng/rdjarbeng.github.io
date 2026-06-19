@@ -136,8 +136,11 @@
     // ============================================
     .videos-grid-area {
       flex: 1;
-      margin-left: 75px; // Reserve space for fixed sidebar
-      padding: 20px 40px;
+      margin-left: 65px; // Reserve space for fixed sidebar
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      padding-left: 25px;
       max-width: calc(100% - 75px);
     }
 
