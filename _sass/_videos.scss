@@ -242,6 +242,10 @@
 
       .video-info {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
         h3 {
           font-size: 1.1rem;
           margin: 0 0 12px 0;
@@ -249,17 +253,50 @@
           color: var(--text-color);
           font-weight: 700;
         }
-        .video-date {
-          font-size: 0.85rem;
+
+        .video-excerpt {
+          font-size: 0.95rem;
           color: var(--grey-text);
+          line-height: 1.5;
+          margin-bottom: 8px;
         }
-        .video-genre {
-          font-size: 0.75rem;
-          color: var(--base-color);
-          text-transform: uppercase;
-          margin-top: 0px;
-          font-weight: 700;
-          letter-spacing: 0.5px;
+
+        .video-meta {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 0.85rem;
+          color: #a0aec0;
+          margin-top: auto;
+          margin-bottom: 0;
+
+          .video-date {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            margin: 0;
+          }
+
+          .video-bullet {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            line-height: 1;
+            display: inline-block;
+          }
+
+          .video-genre {
+            font-size: 0.75rem;
+            color: var(--base-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            margin: 0;
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--text-color);
+            }
+          }
         }
       }
     }
