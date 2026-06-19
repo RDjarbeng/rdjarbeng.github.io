@@ -129,8 +129,9 @@ module Jekyll
         if site.collections['gallery_categories']
           site.collections['gallery_categories'].docs.each do |cat|
             cat_title = cat.data['title']
-            next if cat_title == 'None' || cat_title == 'Other'
+            next if cat_title == 'None' || cat_title == 'Other' || cat_title.to_s.strip == ''
             cat_slug = Jekyll::Utils.slugify(cat_title)
+            next if cat_slug == nil || cat_slug == ''
             categories_to_process << { title: cat_title, slug: cat_slug }
           end
         end
@@ -145,9 +146,12 @@ module Jekyll
         # Extract unique genres and map to videos/<genre_slug>
         all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
         all_genres.each do |genre|
-          if genre != nil && genre != ""
-            genre_slug = Jekyll::Utils.slugify(genre)
-            categories_to_process << { title: genre, slug: "videos/#{genre_slug}" }
+          genre_stripped = genre.to_s.strip
+          if genre_stripped != ""
+            genre_slug = Jekyll::Utils.slugify(genre_stripped)
+            if genre_slug != nil && genre_slug != ""
+              categories_to_process << { title: genre_stripped, slug: "videos/#{genre_slug}" }
+            end
           end
         end
 
@@ -175,7 +179,12 @@ module Jekyll
                 # It's a video genre!
                 genre_name = cat_slug.sub('videos/', '')
                 item_genre = item.data['genre'] || item.data['category'] || ''
-                Jekyll::Utils.slugify(item_genre) == genre_name && item.data['type'] == 'video'
+                item_genre_stripped = item_genre.to_s.strip
+                item_genre_slug = ""
+                if item_genre_stripped != ""
+                  item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
+                end
+                item_genre_slug == genre_name && item.data['type'] == 'video'
               elsif cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
@@ -186,7 +195,15 @@ module Jekyll
                 plat = item.data['platform'] || ''
                 type = item.data['type'] || ''
                 genre = item.data['genre'] || ''
-                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type} #{genre}").include?(cat_slug) || (item.url && item.url.include?("/#{cat_slug}/"))
+                combined = "#{cats} #{labels} #{plat} #{type} #{genre}".strip
+                matches_comb = false
+                if combined != ""
+                  slugified_comb = Jekyll::Utils.slugify(combined)
+                  if slugified_comb != nil && slugified_comb != ""
+                    matches_comb = slugified_comb.include?(cat_slug)
+                  end
+                end
+                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || matches_comb || (item.url && item.url.include?("/#{cat_slug}/"))
               end
             }
             
