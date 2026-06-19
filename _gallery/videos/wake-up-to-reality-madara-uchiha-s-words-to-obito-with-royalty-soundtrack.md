@@ -3,7 +3,7 @@ title: WAKE UP TO REALITY! Nothing Ever Goes as Planned- Madara Uchiha's Words T
 published: true
 date: 2026-03-19T17:16:00+02:00
 platform: youtube
-youtube_id: https://www.youtube.com/watch?v=H4K7sPdpy1I
+youtube_id: https://www.youtube.com/watch?v=hgTLtOVujAE
 embed_code: ''
 thumbnail: /assets/images/madara-uchiha-speech-wake-up-t-20260319_165721.jpg
 type: video
