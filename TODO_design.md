@@ -169,3 +169,7 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Add the list of links in navigation and pages on the site to the footer so it's easier to navigate
 - [ ] Add icon to the minutes to read on the post cards for homepage
 - [ ] Need a way to distinguish the videos from the images in the gallery recommended section on single posts. The icon could help
+- [ ] Navigating back from a video collection takes you to the top of the videos page, needs to be fixed
+- The video collections start with Behind the scenes in alphabetical order, need to find a better way
+- Video collections should animate on scroll
+-Need to show the subcategories visually for the navigation on the gallery homepage
