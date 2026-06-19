@@ -174,3 +174,6 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - Video collections should animate on scroll
 -Need to show the subcategories visually for the navigation on the gallery homepage
 - [ ] Add a navigation for the Artemis II page in '/gallery/Artemis-ii/'
+- [ ] Need to format quotes for famous people posts like this image. Need it to work for light and dark mode 
+
+🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
