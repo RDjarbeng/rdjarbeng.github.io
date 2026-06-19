@@ -263,8 +263,9 @@
 
         .video-meta {
           display: flex;
+          flex-wrap: nowrap;
           align-items: center;
-          gap: 8px;
+          gap: 6px;
           font-size: 0.85rem;
           color: #a0aec0;
           margin-top: auto;
@@ -274,13 +275,15 @@
             font-size: 0.85rem;
             color: var(--grey-text);
             margin: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
           }
 
           .video-bullet {
             font-size: 0.85rem;
             color: #a0aec0;
             line-height: 1;
-            display: inline-block;
+            flex-shrink: 0;
           }
 
           .video-genre {
