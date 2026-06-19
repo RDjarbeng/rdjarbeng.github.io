@@ -10,7 +10,13 @@ description: "Curated Instagram videos covering technology, space, travel, and l
     <aside class="video-filter-rail" id="video-filter-rail" aria-label="Video source filters">
         <div class="video-filter-rail-header">Source</div>
         <div class="video-filter-rail-actions" id="source-filter-list">
-            <a href="/gallery/videos/" class="vid-source-btn {% if page.url == '/gallery/videos/' or (page.url contains '/gallery/videos/' and page.url contains '/videos/youtube/' == false and page.url contains '/videos/tiktok/' == false and page.url contains '/videos/instagram/' == false and page.url contains '/videos/twitter/' == false) %}active{% endif %}">
+            {% assign is_all_active = false %}
+            {% if page.url contains '/gallery/videos/' %}
+              {% unless page.url contains '/videos/youtube/' or page.url contains '/videos/tiktok/' or page.url contains '/videos/instagram/' or page.url contains '/videos/twitter/' %}
+                {% assign is_all_active = true %}
+              {% endunless %}
+            {% endif %}
+            <a href="/gallery/videos/" class="vid-source-btn {% if is_all_active %}active{% endif %}">
                 <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" fill="none"/></svg>
                 <span>All</span>
             </a>
