@@ -137,10 +137,11 @@ module Jekyll
         end
 
         # Add pseudo categories
-        pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
+        pseudo_cats = ['videos', 'videos/youtube', 'videos/tiktok', 'videos/instagram', 'videos/twitter', 'external', 'cover-images']
         
         pseudo_cats.uniq.each do |cat_slug|
-          categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
+          title = cat_slug.split('/').last.capitalize.gsub('-', ' ')
+          categories_to_process << { title: title, slug: cat_slug }
         end
 
         # Extract unique genres and map to videos/<genre_slug>
@@ -176,7 +177,7 @@ module Jekyll
             
             cat_items = all_gallery.select { |item| 
               if cat_slug.start_with?('videos/')
-                # It's a video genre!
+                # It's a video genre or platform!
                 genre_name = cat_slug.sub('videos/', '')
                 item_genre = item.data['genre'] || item.data['category'] || ''
                 item_genre_stripped = item_genre.to_s.strip
@@ -184,7 +185,7 @@ module Jekyll
                 if item_genre_stripped != ""
                   item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
                 end
-                item_genre_slug == genre_name && item.data['type'] == 'video'
+                item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
               elsif cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
