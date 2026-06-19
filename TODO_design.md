@@ -179,3 +179,4 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
 - [ ] The Tick Tock cars on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video
 - [ ] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page
+- [ ] When I frame for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
