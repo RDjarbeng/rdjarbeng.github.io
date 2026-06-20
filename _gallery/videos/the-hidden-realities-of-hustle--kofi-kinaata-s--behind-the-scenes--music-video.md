@@ -1,6 +1,7 @@
 ---
-title: 'The Hidden Realities of Hustle: Kofi Kinaata''s "Behind The Scenes" Music
-  Video'
+title: 'The Hidden Realities of Hustle: Kofi Kinaata''s "Behind The Scenes" Music Video'
+published: true
+date: 2026-06-20T13:57:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/Kt6Fb9RnSnU
 embed_code: ''
@@ -8,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Music
 category: videos
-date: '2026-06-20T13:57:31+02:00'
-published: true
 ---
 
 Ghanaian music sensation Kofi Kinaata has always been known for his profound songwriting and ability to tackle real world issues. With the official video for "Behind The Scenes," he takes a poignant look at the untold struggles, silent battles, and sheer perseverance that fuel the journey to success. 
@@ -17,8 +16,9 @@ Ghanaian music sensation Kofi Kinaata has always been known for his profound son
 ## Favorite parts
 
 The part where he says
+
 >  'me de ma sam nyinaa ama Onyame, Nyame na wɔ yɛ nsɛnkyrɛrɛni..' that part is excellent 
-Also I didn't really here this part that says that even if it's easy then soldiers would be guarding it. I think it's the strong Fante; I had to be told the meaning from someone who speaks Fante. 
+> Also I didn't really here this part that says that even if it's easy then soldiers would be guarding it. I think it's the strong Fante; I had to be told the meaning from someone who speaks Fante. 
 
 > Sɛ oda fom' mpo aa nka soldier fo na wɔle guard no oo
 
@@ -79,3 +79,34 @@ Sesei kɔ hwɛ me krom
 Wɔ kekã dɛ m'enya bi na m'ennkai hɔn oo
 W'onnyim dɛ ɔnnda fom'
 S3 oda fom' mpo aa nka soldier fo na wɔle guard no oo
+Yaayyy!!
+Awɔw ooooo
+Obi man so ooo aw)w oooo
+Yaaayyy!!
+Yɛɛbrɛ ooo
+Yaayy!!
+Yɛɛbrɛ ooo
+Ntsi
+Mɛ mma atanfo nnya nserew hɛn
+Mɛ mma ma yesuro no mmba hɛn do
+Mɛ mma wɔnnka dɛ Nyame aa yɛ som no no ɔwɔ hen oo
+Ɔko yi dze ɔnnyɛ hɛn ko
+Ma ɛhwehwɛ abɛyɛ wɔ ha biaa nka m'aayɛ no long time
+Mese mɛ hwehwɛ abɛ fa wɔ ha biaa nka m'aafa no long time
+Brɛda mp hwehwɛ abɛ yɛ wɔ ha no wɔyɛ aaa nanka m'aayɛ dadaw
+Mese mɛ hwehwɛ abɛ fa wɔ ha no ɔgow aa na nka m'aafa dadaw
+Naaso sesei kɔ hwɛ me krom hɔ
+Wɔ kekã dɛ menya bi na m'ennkai hɔn oo
+W'onnyim dɛ ɔnnda fom' oo ɔhen eii
+Travel and See oo!!!
+Naaso sesei kɔ hwɛ me krom
+Wɔ keka dɛ menya bi na m'ennkai hɔn oo
+Nso w'onnyim d3 ɔnnda fom
+Sɛ oda fom' mpo aa nka soldier fo na wɔle guard no oo
+Sesei kɔ hw3 me krom
+Wɔ kekã d m'enya bi na m'ennkai hɔn oo
+W'onnyim dɛ ɔnnda fom'Sɛ oda fom' mpo
+Aa nka soldier fo na wɔle guard no oo
+Sɛ oda fom' mpo
+Aa nka soldier fo na wɔle guard no oo
+Source: [LyricFind] (https://lyrics.lyricfind.com/)
