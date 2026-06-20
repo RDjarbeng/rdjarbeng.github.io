@@ -1,5 +1,7 @@
 ---
-title: Sarkodie on Gboza with actor Dabo on YouTube
+title: Sarkodie on Music video Gboza with actor Dabo on YouTube
+published: true
+date: 2026-06-18T19:33:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/mH12ARUz2Ig
 embed_code: ''
@@ -7,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Music
 category: videos
-date: '2026-06-18T19:33:57+02:00'
-published: true
 ---
 
 The music video for Gboza by Ghanaian rapper Sarkodie sang in Twi. 
