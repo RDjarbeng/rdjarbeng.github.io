@@ -11,7 +11,13 @@ genre: Music
 category: videos
 ---
 
-Some songs have a rhythm that transcends language, and Magic System's massive hit "Premier Gaou" is undeniably one of them. Hailing from Côte d'Ivoire, the group crafted a track that not only dominated African airwaves but became a global dancefloor staple.
+Some songs have a rhythm that transcends language, and Magic System's massive hit "Premier Gaou" is undeniably one of them. Hailing from Côte d'Ivoire, the group crafted a track that not only dominated African airwaves but became a global dancefloor staple. The somg is sang mostly in French but don't worry the video contains English subtitles and I've put the English lyrics beneath this post.
+
+Before we dive in I just want to say that what Antou did wasn't a good thing at all. However, we wouldn't have received this banger song. 
+
+## One of the most recognizable Song Intros 
+
+The intro melody 🎶 for Premier Gaou is easily recognizable the moment ot starts playing. It's played on the guitar, by the time the first bar is done the audience should recognize the song. 
 
 ## The Story Behind the Beat
 
