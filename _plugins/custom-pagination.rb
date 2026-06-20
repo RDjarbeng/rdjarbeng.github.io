@@ -137,7 +137,7 @@ module Jekyll
         end
 
         # Add pseudo categories
-        pseudo_cats = ['videos', 'videos/youtube', 'videos/tiktok', 'videos/instagram', 'videos/twitter', 'external', 'cover-images']
+        pseudo_cats = ['videos', 'videos/tiktok', 'videos/instagram', 'videos/twitter', 'external', 'cover-images']
         
         pseudo_cats.uniq.each do |cat_slug|
           title = cat_slug.split('/').last.capitalize.gsub('-', ' ')
