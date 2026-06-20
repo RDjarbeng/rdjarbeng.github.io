@@ -1,0 +1,370 @@
+---
+layout: default
+title: YouTube Hub
+permalink: /gallery/videos/youtube/
+description: "Explore curated YouTube content featuring technology, AI, space, education, and entertainment videos from content creators worldwide. Handpicked videos by Richard Djarbeng."
+body_class: youtube-page
+---
+
+<div class="yt-page-shell">
+
+  <aside class="yt-sidebar" aria-label="Genre filters">
+    <p class="yt-sidebar-heading">Genres</p>
+    <ul id="yt-category-list">
+      <li><button class="yt-cat-btn active" data-filter="all">All Videos</button></li>
+      <li><button class="yt-cat-btn" data-filter="playlist">📺 Playlists</button></li>
+      {% assign all_yt_vids = site.gallery | where: "type", "video" | where: "platform", "youtube" %}
+      {% assign yt_genres = all_yt_vids | map: "genre" | compact | uniq | sort %}
+      {% for genre in yt_genres %}
+        {% assign genre_slug = genre | downcase | replace: " & ", "-" | replace: " ", "-" %}
+        <li><button class="yt-cat-btn" data-filter="{{ genre_slug }}">{{ genre }}</button></li>
+      {% endfor %}
+    </ul>
+    <div class="yt-random-wrap">
+      <button id="yt-random-btn" class="btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 3h5v5" />
+          <path d="M4 20L21 3" />
+          <path d="M21 16v5h-5" />
+          <path d="M15 15l6 6" />
+          <path d="M4 4l5 5" />
+        </svg>
+        Random Video
+      </button>
+    </div>
+  </aside>
+
+  <div class="yt-content-area">
+    <!-- Back link to videos page -->
+    <div style="margin-top: 1rem; margin-bottom: 1rem;">
+        <a href="/gallery/videos/" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--grey-text); text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--grey-text)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to all videos
+        </a>
+    </div>
+
+    <header class="yt-page-header">
+      <h1>YouTube Hub</h1>
+      <p>Curated YouTube content, from Music and Entertainment to specific Playlists.</p>
+    </header>
+
+    {% assign all_yt_vids = site.gallery | where: "type", "video" | where: "platform", "youtube" | sort: "date" | reverse %}
+
+    {% assign has_playlists = false %}
+    {% for col in site.video_collections %}
+      {% if col.youtube_playlist_url and col.youtube_playlist_url != "" %}
+        {% assign has_playlists = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_playlists %}
+    <div id="youtube-playlists-section" style="margin-bottom: 3.5rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff0000"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            YouTube Playlists
+        </h3>
+
+        {% for group in site.video_collections %}
+          {% if group.youtube_playlist_url and group.youtube_playlist_url != "" %}
+            {% assign grp_videos = "" | split: "" %}
+            {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
+              {% assign genre_matches = all_yt_vids | where: "genre", group.genre %}
+              {% assign grp_videos = grp_videos | concat: genre_matches %}
+            {% endif %}
+            {% if group.match_by == "keywords" or group.match_by == "genre_and_keywords" %}
+              {% for kw in group.keywords %}
+                {% assign kw_lower = kw | downcase %}
+                {% for vid in all_yt_vids %}
+                  {% assign vtl = vid.title | downcase %}
+                  {% if vtl contains kw_lower %}{% assign grp_videos = grp_videos | push: vid %}{% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% assign grp_videos = grp_videos | uniq %}
+            {% endif %}
+            {% if group.match_by == "manual" or group.videos %}
+              {% for slug in group.videos %}
+                {% for vid in all_yt_vids %}
+                  {% assign vid_file = vid.path | split: "/" | last | replace: ".md", "" %}
+                  {% if vid_file == slug or vid.title == slug %}{% assign grp_videos = grp_videos | push: vid %}{% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% assign grp_videos = grp_videos | uniq %}
+            {% endif %}
+
+            <section style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--card-border);">
+              <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem;">
+                {% if group.icon %}<span style="font-size: 1.4rem; flex-shrink: 0; line-height: 1;">{{ group.icon }}</span>{% endif %}
+                <div style="flex: 1; min-width: 0;">
+                  <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;">
+                    <a href="{{ group.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                      <h4 style="margin: 0; font-size: 1.05rem; font-weight: 600; display: inline;">{{ group.title }}</h4>
+                    </a>
+                    <span style="font-size: 0.65rem; font-weight: 700; background: rgba(255,0,0,0.12); color: #ff3333; border: 1px solid rgba(255,0,0,0.25); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0;">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                      YouTube Playlist
+                    </span>
+                  </div>
+                  {% if group.description %}<p style="margin: 0; font-size: 0.85rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
+                </div>
+                <a href="{{ group.youtube_playlist_url }}" target="_blank" rel="noopener" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: #ff3333; text-decoration: none; border: 1px solid rgba(255,0,0,0.3); border-radius: 6px; padding: 6px 12px; background: rgba(255,0,0,0.06); transition: all 0.2s; white-space: nowrap;" onmouseover="this.style.background='rgba(255,0,0,0.12)'" onmouseout="this.style.background='rgba(255,0,0,0.06)'">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                  View on YouTube
+                </a>
+              </div>
+
+              {% if grp_videos.size > 0 %}
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                {% for item in grp_videos limit:8 %}
+                  {% assign grp_yt_id = "" %}
+                  {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                  {% elsif item.youtube_id contains 'shorts/' %}{% assign grp_yt_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                  {% elsif item.youtube_id contains 'v=' %}{% assign grp_yt_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+                  {% else %}{% assign grp_yt_id = item.youtube_id %}{% endif %}
+                  <a href="{{ item.url | relative_url }}" title="{{ item.title | escape }}" style="text-decoration: none; color: inherit; display: block; width: 100%;">
+                    <div style="width: 100%; aspect-ratio: 16/9; background: #111; position: relative; overflow: hidden; border-radius: 8px; margin-bottom: 8px;">
+                      <img src="{% if item.thumbnail and item.thumbnail != '' %}{{ item.thumbnail }}{% elsif grp_yt_id != '' %}https://img.youtube.com/vi/{{ grp_yt_id }}/hqdefault.jpg{% else %}/assets/images/webOrMobile.jpeg{% endif %}" alt="{{ item.title | escape }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; display: block;">
+                      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.65); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                    <p style="margin: 0 0 2px; font-size: 0.85rem; font-weight: 500; line-height: 1.3; color: var(--text-color);">{{ item.title | titleize | truncate: 55 }}</p>
+                    <span style="font-size: 0.75rem; color: var(--grey-text); text-transform: uppercase;">{{ item.genre | default: "Music" }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="{{ group.url | relative_url }}" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; padding: 9px 20px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--card-bg); text-decoration: none; color: inherit; transition: all 0.2s;">
+                  Browse collection page &rarr;
+                </a>
+              </div>
+              {% else %}
+              <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; margin-top: 4px;">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="#ff0000" style="flex-shrink: 0; opacity: 0.8;"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                <div>
+                  <p style="margin: 0 0 4px; font-size: 0.9rem; color: var(--grey-text);">This playlist lives on YouTube. Click below to watch all videos.</p>
+                  <a href="{{ group.youtube_playlist_url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 700; color: #ff3333; text-decoration: none;">
+                    Open full playlist on YouTube &rarr;
+                  </a>
+                </div>
+              </div>
+              {% endif %}
+            </section>
+          {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% assign has_regular_cols = false %}
+    {% for col in site.video_collections %}
+      {% unless col.youtube_playlist_url and col.youtube_playlist_url != "" %}
+        {% assign has_regular_cols = true %}
+      {% endunless %}
+    {% endfor %}
+
+    {% if has_regular_cols %}
+    <div id="youtube-collections-section" style="margin-bottom: 3rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem;">Collections</h3>
+
+        {% for group in site.video_collections %}
+          {% unless group.youtube_playlist_url and group.youtube_playlist_url != "" %}
+            {% assign grp_videos = "" | split: "" %}
+            {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
+              {% assign genre_matches = all_yt_vids | where: "genre", group.genre %}
+              {% assign grp_videos = grp_videos | concat: genre_matches %}
+            {% endif %}
+            {% if group.match_by == "keywords" or group.match_by == "genre_and_keywords" %}
+              {% for kw in group.keywords %}
+                {% assign kw_lower = kw | downcase %}
+                {% for vid in all_yt_vids %}
+                  {% assign vtl = vid.title | downcase %}
+                  {% if vtl contains kw_lower %}{% assign grp_videos = grp_videos | push: vid %}{% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% assign grp_videos = grp_videos | uniq %}
+            {% endif %}
+            {% if group.match_by == "manual" or group.videos %}
+              {% for slug in group.videos %}
+                {% for vid in all_yt_vids %}
+                  {% assign vid_file = vid.path | split: "/" | last | replace: ".md", "" %}
+                  {% if vid_file == slug or vid.title == slug %}{% assign grp_videos = grp_videos | push: vid %}{% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% assign grp_videos = grp_videos | uniq %}
+            {% endif %}
+
+            {% if grp_videos.size > 0 %}
+            <section style="margin-bottom: 2rem;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.1rem;">
+                {% if group.icon %}<span style="font-size: 1.3rem;">{{ group.icon }}</span>{% endif %}
+                <div>
+                  <a href="{{ group.url | relative_url }}" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <h4 style="margin: 0; font-size: 1rem; font-weight: 600; display: inline;">{{ group.title }}</h4>
+                    <span style="font-size: 0.65rem; font-weight: 700; background: rgba(0,123,255,0.08); color: #007bff; border: 1px solid rgba(0,123,255,0.22); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Collection</span>
+                  </a>
+                  {% if group.description %}<p style="margin: 3px 0 0; font-size: 0.82rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                {% for item in grp_videos limit:8 %}
+                  {% assign grp_yt_id = "" %}
+                  {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                  {% elsif item.youtube_id contains 'shorts/' %}{% assign grp_yt_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                  {% elsif item.youtube_id contains 'v=' %}{% assign grp_yt_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
+                  {% else %}{% assign grp_yt_id = item.youtube_id %}{% endif %}
+                  <a href="{{ item.url | relative_url }}" title="{{ item.title | escape }}" style="text-decoration: none; color: inherit; display: block; width: 100%;">
+                    <div style="width: 100%; aspect-ratio: 16/9; background: #111; position: relative; overflow: hidden; border-radius: 8px; margin-bottom: 8px;">
+                      <img src="{% if item.thumbnail and item.thumbnail != '' %}{{ item.thumbnail }}{% elsif grp_yt_id != '' %}https://img.youtube.com/vi/{{ grp_yt_id }}/hqdefault.jpg{% else %}/assets/images/webOrMobile.jpeg{% endif %}" alt="{{ item.title | escape }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; display: block;">
+                      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.65); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                    <p style="margin: 0 0 2px; font-size: 0.85rem; font-weight: 500; line-height: 1.3; color: var(--text-color);">{{ item.title | titleize | truncate: 55 }}</p>
+                    <span style="font-size: 0.75rem; color: var(--grey-text); text-transform: uppercase;">{{ item.genre | default: "Video" }}</span>
+                  </a>
+                {% endfor %}
+              </div>
+              <a href="{{ group.url | relative_url }}" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; padding: 9px 20px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--card-bg); text-decoration: none; color: inherit; transition: all 0.2s;">
+                Browse collection: {{ group.title }} &rarr;
+              </a>
+            </section>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div style="margin-bottom: 1.5rem; margin-top: 2rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; margin: 0;">All YouTube Videos</h3>
+    </div>
+
+    <div class="yt-grid" id="yt-video-grid">
+      {% assign yt_videos = site.gallery | where: "platform", "youtube" | sort: "date" | reverse %}
+      {% for item in yt_videos %}
+      {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ", "-" | replace: " ", "-" %}
+      {% assign has_playlist = false %}
+      {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
+
+      {% assign yt_vid_id = "" %}
+      {% assign yt_list_id = "" %}
+      {% if has_playlist %}
+      {% assign yt_list_id = item.youtube_id | split: "list=" | last | split: "&" | first %}
+      {% endif %}
+
+      {% if item.youtube_id contains "v=" %}
+      {% assign yt_vid_id = item.youtube_id | split: "v=" | last | split: "&" | first %}
+      {% elsif item.youtube_id contains "youtu.be/" %}
+      {% assign yt_vid_id = item.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
+      {% elsif item.youtube_id contains "shorts/" %}
+      {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
+      {% assign item_gen = "shorts" %}
+      {% else %}
+      {% assign yt_vid_id = item.youtube_id %}
+      {% endif %}
+
+      <div class="yt-card" data-genre="{{ item_gen }} {% if has_playlist %}playlist{% endif %}">
+        <div class="video-thumbnail inline-play-container" data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}">
+          <a href="javascript:void(0);" class="inline-play-btn" style="position: relative; display: block;">
+            <img
+              src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{{ yt_vid_id }}/hqdefault.jpg{% endif %}"
+              alt="{{ item.title | escape }}"
+              loading="lazy">
+            <div class="play-btn-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            {% if has_playlist %}
+            <div class="playlist-badge">PLAYLIST</div>
+            {% endif %}
+          </a>
+        </div>
+        <a href="{{ item.url | relative_url }}" class="video-info-link">
+          <div class="video-info">
+            <h3>{{ item.title | titleize | escape }}</h3>
+            <div class="video-meta">
+              <div class="video-date">{{ item.date | date: "%b %-d, %Y" }}</div>
+              <div class="video-bullet">&bull;</div>
+              <div class="video-genre">{{ item.genre | default: item.category | default: "Other" }}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll('.yt-cat-btn');
+    const randomBtn = document.getElementById('yt-random-btn');
+    const allCards = Array.from(document.querySelectorAll('.yt-card'));
+
+    function applyFilter(val) {
+      allCards.forEach(card => {
+        const genres = card.getAttribute('data-genre').toLowerCase();
+        if (val === 'all' || genres.includes(val)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        applyFilter(this.getAttribute('data-filter'));
+      });
+    });
+
+    randomBtn.addEventListener('click', function () {
+      const visibleCards = allCards.filter(card => card.style.display !== 'none');
+      if (visibleCards.length > 0) {
+        const randomCard = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+        const thumb = randomCard.querySelector('.video-thumbnail');
+        if (thumb) {
+          thumb.querySelector('.inline-play-btn').click();
+          randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryQuery = urlParams.get('category');
+    if (categoryQuery) {
+      const targetBtn = Array.from(filterBtns).find(b => b.getAttribute('data-filter') === categoryQuery);
+      if (targetBtn) targetBtn.click();
+    }
+
+    document.querySelectorAll('.inline-play-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const container = this.closest('.inline-play-container');
+        const vidId = container.getAttribute('data-vid');
+        const listId = container.getAttribute('data-list');
+
+        let src = `https://www.youtube.com/embed/${vidId}?autoplay=1`;
+        if (listId) {
+          src = `https://www.youtube.com/embed/videoseries?list=${listId}&autoplay=1`;
+          if (vidId) src += `&v=${vidId}`;
+        }
+
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.setAttribute('src', src);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', 'true');
+        iframe.className = 'yt-inline-iframe';
+
+        container.innerHTML = '';
+        container.appendChild(iframe);
+      });
+    });
+  });
+</script>
