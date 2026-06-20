@@ -1,5 +1,5 @@
 ---
-title: A Canadian called Kwame Ahoɔfɛ
+title: A Canadian called Kwame Ahoɔfɛ at the Fifa World Cup
 published: true
 date: 2026-06-18T19:11:00+02:00
 platform: twitter
