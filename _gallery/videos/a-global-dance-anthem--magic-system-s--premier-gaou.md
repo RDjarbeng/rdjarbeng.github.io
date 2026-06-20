@@ -1,5 +1,7 @@
 ---
-title: '## A Global Dance Anthem: Magic System''s "Premier Gaou"'
+title: 'Magic System''s "Premier Gaou" with English lyrics: Global Dance Anthem'
+published: true
+date: 2026-06-20T10:39:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/ZxVoKFIM8tw
 embed_code: ''
@@ -7,12 +9,9 @@ thumbnail: ''
 type: video
 genre: Music
 category: videos
-date: '2026-06-20T10:39:29+02:00'
-published: true
 ---
 
 Some songs have a rhythm that transcends language, and Magic System's massive hit "Premier Gaou" is undeniably one of them. Hailing from Côte d'Ivoire, the group crafted a track that not only dominated African airwaves but became a global dancefloor staple.
-
 
 ## The Story Behind the Beat
 
@@ -85,3 +84,5 @@ Emile is a fool, Honoré is a fool
 I tell you to dance
 Look out for yourself
 And dance
+
+Lyrics by [Ziki African Music Project](https://zikiafricanmusicproject.blogspot.com/2011/06/translation-premier-gaou-magic-system.html?m=1)
