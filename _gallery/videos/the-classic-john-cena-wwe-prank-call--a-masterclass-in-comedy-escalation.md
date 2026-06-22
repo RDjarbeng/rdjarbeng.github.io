@@ -1,5 +1,5 @@
 ---
-title: 'The Classic John Cena WWE Prank Call: A Masterclass in Comedy Escalation'
+title: The Classic John Cena WWE Prank Call
 published: true
 date: 2026-06-12T13:25:00+02:00
 platform: youtube
