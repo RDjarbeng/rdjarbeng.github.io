@@ -1,14 +1,14 @@
 ---
 title: Earthen Vessel by Theophilus Sunday, Spirit Pray ministration
+published: true
+date: 2026-06-22T12:42:00+02:00
 platform: youtube
-youtube_id: https://youtu.be/uUq59iPVCMM.
+youtube_id: https://youtu.be/uUq59iPVCMM
 embed_code: ''
 thumbnail: ''
 type: video
 genre: Music
 category: videos
-date: '2026-06-22T12:42:46+02:00'
-published: true
 ---
 
 This video, titled Earthen Vessel by Theophilus Sunday, is a worship-focused session centered on the theme of the human body acting as a vessel for the Holy Spirit. The ministry emphasizes the concept of being a dwelling place or temple for God.
