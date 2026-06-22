@@ -237,3 +237,4 @@ https://www.anthropic.com/glasswing
 - [ ] Look at these companies from a commerce and tech perspective, a look at Dutch influence in e-commerce : alyen, booking. Com, we transfer, startup Hears, dorie & Rose, Picnic, Naduvi
 - [ ] How do we automate forex, hoe about an account that automatically forwards based on the amount received? I'm able to query the current exchange rate. I send say 200 USD to a certain account say for USD/EUR or USD/GHS, then include info on how to receive the second pair currency. For example bank account or mobile money.
 The automated account verifies the amount received and sends the second currency pair based on info the user provided. No human needed
+- [ ] What is galamsey, overview of illegal mining in Ghana
