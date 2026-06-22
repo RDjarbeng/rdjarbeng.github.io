@@ -93,28 +93,30 @@ body_class: youtube-page
             {% endif %}
 
             <section style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--card-border);">
-              <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem;">
-                {% if group.icon %}<span style="font-size: 1.4rem; flex-shrink: 0; line-height: 1;">{{ group.icon }}</span>{% endif %}
-                <div style="flex: 1; min-width: 0;">
-                  <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;">
-                    <a href="{{ group.url | relative_url }}" style="text-decoration: none; color: inherit;">
-                      <h4 style="margin: 0; font-size: 1.05rem; font-weight: 600; display: inline;">{{ group.title }}</h4>
-                    </a>
-                    <span style="font-size: 0.65rem; font-weight: 700; background: rgba(255,0,0,0.12); color: #ff3333; border: 1px solid rgba(255,0,0,0.25); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0;">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                      YouTube Playlist
-                    </span>
+              <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <div style="display: flex; flex: 1 1 min(100%, 400px); align-items: flex-start; gap: 12px; min-width: 0;">
+                  {% if group.icon %}<span style="font-size: 1.4rem; flex-shrink: 0; line-height: 1;">{{ group.icon }}</span>{% endif %}
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;">
+                      <a href="{{ group.url | relative_url }}" style="text-decoration: none; color: inherit;">
+                        <h4 style="margin: 0; font-size: 1.05rem; font-weight: 600; display: inline;">{{ group.title }}</h4>
+                      </a>
+                      <span style="font-size: 0.65rem; font-weight: 700; background: rgba(255,0,0,0.12); color: #ff3333; border: 1px solid rgba(255,0,0,0.25); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0;">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        YouTube Playlist
+                      </span>
+                    </div>
+                    {% if group.description %}<p style="margin: 0; font-size: 0.85rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
                   </div>
-                  {% if group.description %}<p style="margin: 0; font-size: 0.85rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
                 </div>
-                <a href="{{ group.youtube_playlist_url }}" target="_blank" rel="noopener" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: #ff3333; text-decoration: none; border: 1px solid rgba(255,0,0,0.3); border-radius: 6px; padding: 6px 12px; background: rgba(255,0,0,0.06); transition: all 0.2s; white-space: nowrap;" onmouseover="this.style.background='rgba(255,0,0,0.12)'" onmouseout="this.style.background='rgba(255,0,0,0.06)'">
+                <a href="{{ group.youtube_playlist_url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: #ff3333; text-decoration: none; border: 1px solid rgba(255,0,0,0.3); border-radius: 6px; padding: 6px 12px; background: rgba(255,0,0,0.06); transition: all 0.2s; white-space: nowrap;" onmouseover="this.style.background='rgba(255,0,0,0.12)'" onmouseout="this.style.background='rgba(255,0,0,0.06)'">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                   View on YouTube
                 </a>
               </div>
 
               {% if grp_videos.size > 0 %}
-              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+              <div class="responsive-collection-grid">
                 {% for item in grp_videos limit:8 %}
                   {% assign grp_yt_id = "" %}
                   {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
@@ -205,7 +207,7 @@ body_class: youtube-page
                   {% if group.description %}<p style="margin: 3px 0 0; font-size: 0.82rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
                 </div>
               </div>
-              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+              <div class="responsive-collection-grid">
                 {% for item in grp_videos limit:8 %}
                   {% assign grp_yt_id = "" %}
                   {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
@@ -234,7 +236,7 @@ body_class: youtube-page
     </div>
     {% endif %}
 
-    <div style="margin-bottom: 1.5rem; margin-top: 2rem;">
+    <div id="all-yt-header" style="margin-bottom: 1.5rem; margin-top: 2rem;">
         <h3 style="font-size: 1.1rem; font-weight: 700; margin: 0;">All YouTube Videos</h3>
     </div>
 
@@ -302,6 +304,10 @@ body_class: youtube-page
     const randomBtn = document.getElementById('yt-random-btn');
     const allCards = Array.from(document.querySelectorAll('.yt-card'));
 
+    const playlistsSection = document.getElementById('youtube-playlists-section');
+    const collectionsSection = document.getElementById('youtube-collections-section');
+    const allVideosHeader = document.getElementById('all-yt-header');
+
     function applyFilter(val) {
       allCards.forEach(card => {
         const genres = card.getAttribute('data-genre').toLowerCase();
@@ -311,6 +317,17 @@ body_class: youtube-page
           card.style.display = 'none';
         }
       });
+      
+      // Hide collections when filtering so the grid is visible at the top
+      if (val === 'all') {
+        if (playlistsSection) playlistsSection.style.display = 'block';
+        if (collectionsSection) collectionsSection.style.display = 'block';
+        if (allVideosHeader) allVideosHeader.style.display = 'block';
+      } else {
+        if (playlistsSection) playlistsSection.style.display = 'none';
+        if (collectionsSection) collectionsSection.style.display = 'none';
+        if (allVideosHeader) allVideosHeader.style.display = 'none';
+      }
     }
 
     filterBtns.forEach(btn => {
@@ -318,6 +335,12 @@ body_class: youtube-page
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         applyFilter(this.getAttribute('data-filter'));
+        
+        // Scroll to top of grid on mobile so user sees the change
+        if (window.innerWidth <= 768) {
+           const grid = document.getElementById('yt-video-grid');
+           if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
 
