@@ -130,7 +130,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                   {% if group.description %}<p class="video-group-rail-desc" style="margin: 4px 0 0; font-size: 0.85rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
                 </div>
               </div>
-              <div class="video-group-grid" role="list" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+              <div class="responsive-collection-grid" role="list">
                 {% for item in grp_videos limit:10 %}
                   {% assign grp_yt_id = "" %}
                   {% if item.platform == 'youtube' and item.youtube_id %}
