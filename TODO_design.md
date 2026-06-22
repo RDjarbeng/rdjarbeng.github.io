@@ -181,3 +181,4 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page
 - [ ] When I frame for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
 - [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
+- [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
