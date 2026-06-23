@@ -242,3 +242,4 @@ The automated account verifies the amount received and sends the second currency
 
 Asec+April+2026+Newsletter.pdf
 https://static1.squarespace.com/static/67e7df08beca793d9f3911dd/t/6a188d827a75f60b91e3aee0/1779993986359/Asec+April+2026+Newsletter.pdf
+- [ ] Germany USA Mexico in Argentina are the ones who are so far qualified and confirm their place in the knockout stages of the World Cup
