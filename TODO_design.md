@@ -182,3 +182,4 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] When I frame for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
 - [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
 - [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
+- [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
