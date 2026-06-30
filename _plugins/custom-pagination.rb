@@ -144,7 +144,8 @@ module Jekyll
           categories_to_process << { title: title, slug: cat_slug }
         end
 
-        # Extract unique genres and map to videos/<genre_slug>
+        # Extract unique genres and map to videos/<genre_slug> and videos/<platform>/<genre_slug>
+        platforms = ['youtube', 'tiktok', 'instagram', 'twitter']
         all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
         all_genres.each do |genre|
           genre_stripped = genre.to_s.strip
@@ -152,6 +153,9 @@ module Jekyll
             genre_slug = Jekyll::Utils.slugify(genre_stripped)
             if genre_slug != nil && genre_slug != ""
               categories_to_process << { title: genre_stripped, slug: "videos/#{genre_slug}" }
+              platforms.each do |plat|
+                categories_to_process << { title: genre_stripped, slug: "videos/#{plat}/#{genre_slug}" }
+              end
             end
           end
         end
@@ -178,14 +182,24 @@ module Jekyll
             cat_items = all_gallery.select { |item| 
               if cat_slug.start_with?('videos/')
                 # It's a video genre or platform!
-                genre_name = cat_slug.sub('videos/', '')
+                parts = cat_slug.split('/')
                 item_genre = item.data['genre'] || item.data['category'] || ''
                 item_genre_stripped = item_genre.to_s.strip
                 item_genre_slug = ""
                 if item_genre_stripped != ""
                   item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
                 end
-                item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
+                
+                if parts.size == 3
+                  # e.g. videos/youtube/entertainment
+                  plat_name = parts[1]
+                  genre_name = parts[2]
+                  item.data['type'] == 'video' && item.data['platform'] && item.data['platform'].downcase == plat_name && item_genre_slug == genre_name
+                else
+                  # e.g. videos/entertainment or videos/youtube
+                  genre_name = parts[1]
+                  item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
+                end
               elsif cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
