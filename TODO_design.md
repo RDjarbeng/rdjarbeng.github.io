@@ -190,3 +190,8 @@ ARTEMIS II
 https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-splashdown-and-return/artemis-ii-nasa-astronaut-reid-wiseman-artemis-ii-commander-is-assisted-off-the-fligh-nasa-bill-ingalls-8/
 
 Image doesn't load here
+- [ ] jsc2025e087854 --- Artemis lunar science team members Jacob Richardson, left,...
+ARTEMIS II
+https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
+
+Remove jsc.. Make title informative
