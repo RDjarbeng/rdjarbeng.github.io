@@ -185,3 +185,8 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
 https://rdjarbeng.com/gallery/screenshots/ this page
+- [ ] NASA astronaut Reid Wiseman, Artemis II commander is assisted off the flight ...
+ARTEMIS II
+https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-splashdown-and-return/artemis-ii-nasa-astronaut-reid-wiseman-artemis-ii-commander-is-assisted-off-the-fligh-nasa-bill-ingalls-8/
+
+Image doesn't load here
