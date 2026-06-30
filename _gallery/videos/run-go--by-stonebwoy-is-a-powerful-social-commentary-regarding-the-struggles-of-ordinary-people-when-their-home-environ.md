@@ -1,9 +1,9 @@
 ---
-title: '"Run Go" by Stonebwoy about the Simple life'
+title: '"Run Go" by Stonebwoy with Lyrics about the Simple life'
 published: true
 date: 2026-06-30T06:31:00+02:00
 platform: youtube
-youtube_id: https://youtu.be/udGxZOEX7Lc
+youtube_id: https://youtu.be/YgTsOgdw5zw
 embed_code: ''
 thumbnail: ''
 type: video
