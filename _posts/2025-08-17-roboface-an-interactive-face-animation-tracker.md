@@ -2,8 +2,7 @@
 date: 2025-08-17T21:19:00
 published: true
 author: Richard
-categories:
-  - Technology
+category: Technology
 tags:
   - Human Robot Interaction
   - Face animation
@@ -14,11 +13,14 @@ tags:
   - RDjarbeng's project
   - Animation
   - virtual head
-title: Roboface-an Interactive Face Animation Tracker
+title: Roboface-an Interactive Face Animation Tracker for the Mouse Pointer
 image: /assets/images/face_animation_cover.webp
+image_alt: Cover image for Roboface-an Interactive Face Animation Tracker
 layout: post
-image_alt: "Cover image for Roboface-an Interactive Face Animation Tracker"
+categories:
+  - Technology
 ---
+
 I want you to imagine a character that tracks your mouse and expresses emotions based on how you interact with it. Emotions range from happy, surprised, bored, or neutral. The character in this case is a 2D face, a playful experiment to build something that feels alive. See it [on GitHub](https://github.com/RDjarbeng/interactive_face_animation) or try the [live demo](https://roboface.netlify.app/).
 
 ![Face animation gif with mouse](/assets/images/face_animation2.gif "Face animation gif with mouse")
@@ -55,7 +57,7 @@ To document the experience I made a video showing the progress from version 0 to
 
 <iframe width="560" height="475" src="https://www.youtube.com/embed/xsSTf1fn0Zw" frameborder="0" allowfullscreen></iframe>
 
----
+***
 
 ## 🧠  Human-Robot Interaction: project Inspiration
 
@@ -72,7 +74,7 @@ HRI concepts in the project:
 
 > _Note_: It feels alive, but it’s just pixels driven by code.
 
----
+***
 
 ## 🌟 Other Projects
 
