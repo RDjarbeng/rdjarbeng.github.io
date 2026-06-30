@@ -7,7 +7,7 @@ youtube_id: https://www.tiktok.com/@mercury_dts/video/7594119444952059158/
 embed_code: ''
 thumbnail: ''
 type: video
-genre: Behind the Scenes
+genre: Behind the Scenes (BTS)
 category: videos
 ---
 
