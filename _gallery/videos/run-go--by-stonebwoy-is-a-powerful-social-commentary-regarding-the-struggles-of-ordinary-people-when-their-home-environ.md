@@ -1,7 +1,7 @@
 ---
-title: '"Run Go" by Stonebwoy is a powerful social commentary regarding the struggles
-  of ordinary people when their home environment becomes unsustainable. Here is a
-  summary of the song''s key themes:'
+title: '"Run Go" by Stonebwoy about the Simple life'
+published: true
+date: 2026-06-30T06:31:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/udGxZOEX7Lc
 embed_code: ''
@@ -9,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Music
 category: videos
-date: '2026-06-30T06:31:42+02:00'
-published: true
 ---
 
 The Desire for a Simple Life: Throughout the song, particularly around the 30-second mark and again near the 1-minute 30-second mark, Stonebwoy expresses that people simply want a dignified existence. This is defined by basic human needs: food, clothing, love, and shelter.
