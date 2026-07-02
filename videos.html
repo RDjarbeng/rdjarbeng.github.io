@@ -77,6 +77,10 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
           {% assign all_vids = site.gallery | where: "type", "video" | sort: "date" | reverse %}
 
           {% for group in site.video_collections %}
+            {% if group.youtube_playlist_url and group.youtube_playlist_url != "" %}
+              {% continue %}
+            {% endif %}
+
             {% assign grp_videos = "" | split: "" %}
 
             {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
