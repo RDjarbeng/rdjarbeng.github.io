@@ -8,3 +8,4 @@ Rules for responding to the user:
 - Keep internal thoughts and reasoning to absolute minimalist shorthand.
 - Do not check out branches or commit code. Propose edits and commands for the user to execute instead.
 - **NEVER** modify markdown frontmatter fields (adding or changing keys) without first checking the SveltiaCMS config (`admin/config.yml`) and verifying if the collection schema allows it. Doing so breaks the site and CMS.
+- **Always prioritize SEO and scalable, long-term architecture:** Prefer server-side rendering, static generation, and real HTML links over client-side Javascript hacks (like `display: none` for "Load More" or hiding content). If a quick fix harms SEO or scalability, propose a robust architectural solution instead.

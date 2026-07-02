@@ -1,7 +1,7 @@
 ---
 title: "Two Worlds - Phil Collins Lyrics [HQ]"
 published: true
-date: 2025-12-19T14:38:25Z
+date: 2026-03-14T14:38:25Z
 platform: youtube
 youtube_id: "cJlyoDbm5YA"
 thumbnail: "https://i.ytimg.com/vi/cJlyoDbm5YA/hqdefault.jpg"
@@ -10,6 +10,7 @@ genre: "Songs from tarzan soundtrack -Phil colins"
 category: videos
 ---
 
+## Lyrics for Two worlds One Family
 Put your faith in what you most believe in
 Two worlds, one family
 Trust your heart
@@ -50,8 +51,3 @@ To guide these lives we see
 
 Lyrics taken from: http://www.lyricsfreak.com/p/phil+collins/two+worlds_20108083.html
 
--=-=-=-=-DISCLAIMER-=-=-=-=- =-
-
-Song Used: Two Worlds - Phil Collins
-
-All the songs in these videos are not created by me they are created by their performer, consider this, free advertising.

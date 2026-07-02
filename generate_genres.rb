@@ -23,7 +23,25 @@ end
 
 genres = genres.uniq.compact
 
+existing_genres = []
+Dir.glob('_video_collections/*.md').each do |file|
+  begin
+    content = File.read(file)
+    if content =~ /\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m
+      front_matter = YAML.safe_load($1)
+      if front_matter && front_matter['genre']
+        existing_genres << front_matter['genre'].downcase.strip
+      end
+    end
+  rescue => e
+    puts "Error reading #{file}: #{e}"
+  end
+end
+
 genres.each do |genre|
+  genre_clean = genre.downcase.strip
+  next if existing_genres.include?(genre_clean)
+
   slug = slugify(genre)
   file_path = "_video_collections/#{slug}.md"
   
@@ -35,6 +53,7 @@ genres.each do |genre|
       description: "A collection of videos in the #{genre} genre."
       match_by: genre
       genre: "#{genre}"
+      layout: video_collection
       ---
     YAML
     File.write(file_path, content)

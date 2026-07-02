@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Videos
-permalink: /gallery/videos/
+title: Twitter Videos
+permalink: /gallery/videos/twitter/
 body_class: videos-page
-description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explore carefully selected video content covering technology, AI, space, entertainment, and more from Richard Djarbeng's collection."
+description: "Curated Twitter videos covering space, news, technology, and sports from Richard Djarbeng's collection."
 ---
 
 <div class="videos-page-shell">
@@ -42,12 +42,12 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
     <div class="videos-grid-area">
         <div class="sticky-filter-stack">
             <div class="genre-filter-row" id="genre-filter-scroll">
-                <a href="/gallery/videos/" class="genre-chip {% if page.url == '/gallery/videos/' %}active{% endif %}">All</a>
+                <a href="/gallery/videos/" class="genre-chip">All</a>
                 {% assign genres = site.gallery | where: "type", "video" | map: "genre" | uniq | compact | sort %}
                 {% for genre in genres %}
                 {% if genre != nil and genre != "" %}
                 {% assign genre_slug = genre | slugify %}
-                <a href="{{ '/gallery/videos/' | append: genre_slug | append: '/' | relative_url }}" class="genre-chip {% if page.url contains genre_slug %}active{% endif %}">{{ genre }}</a>
+                <a href="{{ '/gallery/videos/' | append: genre_slug | append: '/' | relative_url }}" class="genre-chip">{{ genre }}</a>
                 {% endif %}
                 {% endfor %}
             </div>
@@ -57,148 +57,20 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
-                <input type="text" id="video-search-input" placeholder="Search videos by title...">
+                <input type="text" id="video-search-input" placeholder="Search Twitter videos by title...">
             </div>
         </div>
 
-        {% assign show_collections = true %}
-        {% if page.custom_pager and page.custom_pager.current_page > 1 %}
-          {% assign show_collections = false %}
-        {% endif %}
-        {% if show_collections and site.video_collections %}
-        <div class="video-groups-container" id="video-groups-container" style="margin-top: 1rem;">
-          <div class="video-groups-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2 class="video-groups-title" style="font-size: 1.5rem; margin: 0;">Browse by Collection</h2>
-            <button class="video-groups-toggle" id="video-groups-toggle" aria-expanded="true" style="background: none; border: none; color: var(--text-color); cursor: pointer; font-size: 0.9rem; font-weight: 500;">
-              Hide collections &#8963;
-            </button>
-          </div>
-
-          {% assign all_vids = site.gallery | where: "type", "video" | sort: "date" | reverse %}
-
-          {% for group in site.video_collections %}
-            {% if group.youtube_playlist_url and group.youtube_playlist_url != "" %}
-              {% continue %}
-            {% endif %}
-
-            {% assign grp_videos = "" | split: "" %}
-
-            {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
-              {% assign genre_matches = all_vids | where: "genre", group.genre %}
-              {% assign grp_videos = grp_videos | concat: genre_matches %}
-            {% endif %}
-
-            {% if group.match_by == "keywords" or group.match_by == "genre_and_keywords" %}
-              {% for kw in group.keywords %}
-                {% assign kw_lower = kw | downcase %}
-                {% for vid in all_vids %}
-                  {% assign vtl = vid.title | downcase %}
-                  {% if vtl contains kw_lower %}
-                    {% assign grp_videos = grp_videos | push: vid %}
-                  {% endif %}
-                {% endfor %}
-              {% endfor %}
-              {% assign grp_videos = grp_videos | uniq %}
-            {% endif %}
-
-            {% if group.match_by == "manual" or group.videos %}
-              {% for slug in group.videos %}
-                {% for vid in all_vids %}
-                  {% assign vid_file = vid.path | split: "/" | last | replace: ".md", "" %}
-                  {% if vid_file == slug or vid.title == slug %}
-                    {% assign grp_videos = grp_videos | push: vid %}
-                  {% endif %}
-                {% endfor %}
-              {% endfor %}
-              {% assign grp_videos = grp_videos | uniq %}
-            {% endif %}
-
-            {% if grp_videos.size > 0 %}
-            <section class="video-group-rail-section" style="margin-bottom: 2rem;">
-              <div class="video-group-rail-header" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
-                {% if group.icon %}<span class="video-group-icon" style="font-size: 1.5rem;">{{ group.icon }}</span>{% endif %}
-                <div>
-                  <a href="{{ group.url | relative_url }}" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                    <h3 class="video-group-rail-title" style="margin: 0; font-size: 1.15rem; font-weight: 600;">{{ group.title }}</h3>
-                    {% if group.youtube_playlist_url %}
-                      <span class="youtube-playlist-badge" style="font-size: 0.65rem; font-weight: 700; background: rgba(255, 0, 0, 0.15); color: #ff3333; border: 1px solid rgba(255, 0, 0, 0.3); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px; line-height: 1;">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                        YouTube Playlist
-                      </span>
-                    {% else %}
-                      <span class="collection-badge" style="font-size: 0.65rem; font-weight: 700; background: rgba(0, 123, 255, 0.1); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.25); padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px; line-height: 1;">
-                        Collection
-                      </span>
-                    {% endif %}
-                  </a>
-                  {% if group.description %}<p class="video-group-rail-desc" style="margin: 4px 0 0; font-size: 0.85rem; color: var(--grey-text);">{{ group.description }}</p>{% endif %}
-                </div>
-              </div>
-              <div class="responsive-collection-grid" role="list">
-                {% for item in grp_videos limit:10 %}
-                  {% assign grp_yt_id = "" %}
-                  {% if item.platform == 'youtube' and item.youtube_id %}
-                    {% if item.youtube_id contains 'youtu.be/' %}{% assign grp_yt_id = item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
-                    {% elsif item.youtube_id contains 'shorts/' %}{% assign grp_yt_id = item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-                    {% elsif item.youtube_id contains 'v=' %}{% assign grp_yt_id = item.youtube_id | split: 'v=' | last | split: '&' | first %}
-                    {% else %}{% assign grp_yt_id = item.youtube_id %}{% endif %}
-                  {% endif %}
-                  <a href="{{ item.url | relative_url }}" class="video-rail-card" role="listitem" title="{{ item.title | escape }}" style="flex: 0 0 200px; text-decoration: none; color: inherit; display: block;">
-                    <div class="video-rail-thumb" style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative; overflow: hidden; border-radius: 8px; margin-bottom: 8px;">
-                      <img src="{% if item.thumbnail and item.thumbnail != '' %}{{ item.thumbnail }}{% elsif grp_yt_id != '' %}https://img.youtube.com/vi/{{ grp_yt_id }}/hqdefault.jpg{% else %}/assets/images/webOrMobile.jpeg{% endif %}" alt="{{ item.title | escape }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: opacity 0.3s; display: block;">
-                      <div class="video-rail-play" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); border-radius: 50%; padding: 8px; display: flex;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-                      </div>
-                    </div>
-                    <div class="video-rail-info">
-                      <p class="video-rail-title" style="margin: 0 0 4px; font-size: 0.9rem; font-weight: 500; line-height: 1.3;">{{ item.title | titleize | truncate: 60 }}</p>
-                      <span class="video-rail-genre" style="font-size: 0.75rem; color: var(--grey-text); text-transform: uppercase;">{{ item.genre | default: item.category | default: "Video" }}</span>
-                    </div>
-                  </a>
-                {% endfor %}
-              </div>
-              <div style="display: flex; justify-content: center;">
-                <a href="{{ group.url | relative_url }}" class="vid-source-btn" style="text-decoration: none; font-size: 0.9rem; padding: 10px 24px; border-radius: 6px; border: 1px solid var(--card-border); background: var(--card-bg); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
-                  {% if group.youtube_playlist_url %}
-                    Browse all videos in playlist: {{ group.title }} &rarr;
-                  {% else %}
-                    Browse all videos in collection: {{ group.title }} &rarr;
-                  {% endif %}
-                </a>
-              </div>
-            </section>
-            {% endif %}
-          {% endfor %}
-        </div>
-
-        <script>
-        (function(){
-          var toggle = document.getElementById('video-groups-toggle');
-          var container = document.getElementById('video-groups-container');
-          if (!toggle) return;
-          toggle.addEventListener('click', function(){
-            var groups = container.querySelectorAll('.video-group-rail-section');
-            var isHidden = groups[0] && groups[0].style.display === 'none';
-            groups.forEach(function(g){ g.style.display = isHidden ? '' : 'none'; });
-            toggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-            toggle.textContent = isHidden ? 'Hide collections ⌃' : 'Show collections ⌄';
-          });
-        }());
-        </script>
-        {% endif %}
-
-        {% if show_collections %}
         <div class="all-videos-transition" style="margin-top: 2rem; margin-bottom: 2rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">All Videos</h2>
-            <p style="color: var(--grey-text); font-size: 0.9rem;">Explore the full collection of videos across all platforms.</p>
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Twitter Hub</h2>
+            <p style="color: var(--grey-text); font-size: 0.9rem;">Explore Twitter videos in Richard Djarbeng's collection.</p>
         </div>
-        {% endif %}
 
         <div class="video-masonry" id="video-masonry">
             {% if page.custom_pager %}
               {% assign videos = page.custom_pager.posts %}
             {% else %}
-              {% assign videos = site.gallery | where: "type", "video" | sort: "date" | reverse %}
+              {% assign videos = site.gallery | where: "type", "video" | where: "platform", "twitter" | sort: "date" | reverse %}
             {% endif %}
             {% for item in videos %}
         <!-- Computing Thumbnails -->
@@ -340,7 +212,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
 
     {% if page.custom_pager and page.custom_pager.total_pages > 1 %}
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/' %}
+            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/twitter/' %}
         </div>
     {% endif %}
 
@@ -367,7 +239,7 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
             allCards.forEach(card => {
                 const title = (card.getAttribute('data-title') || '').toLowerCase();
                 if (title.includes(activeSearch)) {
-                    card.style.display = 'inline-block';
+                    card.style.display = 'block';
                     matchedCards++;
                 } else {
                     card.style.display = 'none';
@@ -393,19 +265,6 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                 }, 200);
             });
         }
-
-        // Sidebar open/close behavior (Removed as it's no longer a drawer)
-        /*
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.add('open');
-            sidebarOverlay.classList.add('active');
-        });
-
-        sidebarOverlay.addEventListener('click', () => {
-            sidebar.classList.remove('open');
-            sidebarOverlay.classList.remove('active');
-        });
-        */
 
         // Initialize count
         updateVisibility();
