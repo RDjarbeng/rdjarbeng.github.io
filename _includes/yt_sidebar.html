@@ -1,0 +1,26 @@
+  <aside class="yt-sidebar" aria-label="Genre filters">
+    <p class="yt-sidebar-heading">Genres</p>
+    <ul id="yt-category-list">
+      <li><a href="/gallery/videos/youtube/" class="yt-cat-btn {% if page.url == '/gallery/videos/youtube/' %}active{% endif %}">All Videos</a></li>
+      <li><a href="/gallery/videos/youtube/#youtube-playlists-section" class="yt-cat-btn">📺 Playlists</a></li>
+      {% assign all_yt_vids = site.gallery | where: "type", "video" | where: "platform", "youtube" %}
+      {% assign yt_genres = all_yt_vids | map: "genre" | compact | uniq | sort %}
+      {% for genre in yt_genres %}
+        {% assign genre_slug = genre | slugify %}
+        <li><a href="{{ '/gallery/videos/youtube/' | append: genre_slug | append: '/' | relative_url }}" class="yt-cat-btn {% if page.url contains genre_slug %}active{% endif %}">{{ genre }}</a></li>
+      {% endfor %}
+    </ul>
+    <div class="yt-random-wrap">
+      <button id="yt-random-btn" class="btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 3h5v5" />
+          <path d="M4 20L21 3" />
+          <path d="M21 16v5h-5" />
+          <path d="M15 15l6 6" />
+          <path d="M4 4l5 5" />
+        </svg>
+        Random Video
+      </button>
+    </div>
+  </aside>
