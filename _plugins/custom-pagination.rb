@@ -261,7 +261,12 @@ module Jekyll
           self.data.merge!(original_page.data)
           self.data.delete('permalink') # Prevent conflicting permalinks for paginated pages
         else
-          self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          if cat_slug.start_with?('videos/youtube/')
+            self.read_yaml(File.join(@base, '_layouts'), 'youtube_category.html')
+            self.data['body_class'] = 'youtube-page'
+          else
+            self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          end
           self.data['title'] = cat_title
         end
       end
