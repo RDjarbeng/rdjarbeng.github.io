@@ -195,3 +195,4 @@ ARTEMIS II
 https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
 
 Remove jsc.. Make title informative
+Need to implement algolia search for the site to make site wide search work
