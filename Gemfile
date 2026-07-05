@@ -16,6 +16,7 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-toc'
   gem 'jekyll-include-cache'
+  gem 'jekyll-algolia'
 end
 
 # Plugins controlled via _config.yml (Slow plugins)

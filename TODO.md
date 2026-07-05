@@ -9,4 +9,19 @@ TODO_content.md: Todos related to content
 TODO_design.md: Todos related to design and technical site building 
 
 Current focus:
-Fixing bugs
+
+I want to improve the videos page on '/videos' the goal is to make it easier to navigate as a new user that get's sent the link. The video page should be organised in an interesting and useful way that can be easily navigated and the user should be able to find what they are looking for easily.
+
+Current problems with the video page:
+
+* main page has a long list that keeps scrolling.
+
+* The list of collections don't disappear when the user starts searching.
+
+*The videos content and collections don't show up in the site search,
+
+*Apart from the video link and the linked video the video card is not very informative on first load
+
+Okay, now I also want to consider making the different collections have their own pages, let's discuss how scalable this is. The collections are basically groupings of existing videos already uploaded. I had an implementation for youtube playlists but I'm not sure how scalable that would be especially if it can sync with youtube when the playlist is updated, mostly additions will be made to the playlist on youtube and I don't want the playlist on the site to fall behind.
+
+For improving the search, even across the entire site, I'm open to using tools such as algolia.

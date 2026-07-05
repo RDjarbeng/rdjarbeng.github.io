@@ -14,9 +14,7 @@ keywords: search, AI, web development, IoT, technology, security, education, Ric
     Use the search box below or browse by topic.
   </p>
 
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search posts and articles..." class="search-box" aria-label="Search posts and articles">
-  </div>
+  <div id="searchbox"></div>
 
   <div id="search-empty-hint" class="search-empty-hint">
     Start typing to search posts and articles&hellip;

@@ -1,0 +1,49 @@
+      {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ", "-" | replace: " ", "-" %}
+      {% assign has_playlist = false %}
+      {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
+
+      {% assign yt_vid_id = "" %}
+      {% assign yt_list_id = "" %}
+      {% if has_playlist %}
+      {% assign yt_list_id = item.youtube_id | split: "list=" | last | split: "&" | first %}
+      {% endif %}
+
+      {% if item.youtube_id contains "v=" %}
+      {% assign yt_vid_id = item.youtube_id | split: "v=" | last | split: "&" | first %}
+      {% elsif item.youtube_id contains "youtu.be/" %}
+      {% assign yt_vid_id = item.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
+      {% elsif item.youtube_id contains "shorts/" %}
+      {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
+      {% assign item_gen = "shorts" %}
+      {% else %}
+      {% assign yt_vid_id = item.youtube_id %}
+      {% endif %}
+
+      <div class="yt-card" data-genre="{{ item_gen }} {% if has_playlist %}playlist{% endif %}">
+        <div class="video-thumbnail inline-play-container" data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}">
+          <a href="javascript:void(0);" class="inline-play-btn" style="position: relative; display: block;">
+            <img
+              src="{% if item.thumbnail != '' and item.thumbnail != nil %}{{ item.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{{ yt_vid_id }}/hqdefault.jpg{% endif %}"
+              alt="{{ item.title | escape }}"
+              loading="lazy">
+            <div class="play-btn-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            {% if has_playlist %}
+            <div class="playlist-badge">PLAYLIST</div>
+            {% endif %}
+          </a>
+        </div>
+        <a href="{{ item.url | relative_url }}" class="video-info-link">
+          <div class="video-info">
+            <h3>{{ item.title | titleize | escape }}</h3>
+            <div class="video-meta">
+              <div class="video-date">{{ item.date | date: "%b %-d, %Y" }}</div>
+              <div class="video-bullet">&bull;</div>
+              <div class="video-genre">{{ item.genre | default: item.category | default: "Other" }}</div>
+            </div>
+          </div>
+        </a>
+      </div>

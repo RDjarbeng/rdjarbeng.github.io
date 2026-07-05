@@ -136,8 +136,11 @@
     // ============================================
     .videos-grid-area {
       flex: 1;
-      margin-left: 75px; // Reserve space for fixed sidebar
-      padding: 20px 40px;
+      margin-left: 65px; // Reserve space for fixed sidebar
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      padding-left: 25px;
       max-width: calc(100% - 75px);
     }
 
@@ -145,8 +148,7 @@
     // Sticky Stack (Genres & Search)
     // ============================================
     .sticky-filter-stack {
-      position: sticky;
-      top: 0px;
+      position: relative;
       z-index: 500; 
       background: var(--bg-color); 
       padding: 10px 0;
@@ -156,7 +158,7 @@
 
       .genre-filter-row, 
       .videos-search-bar {
-        background: var(--bg-color) ;
+        background: var(--bg-color);
         position: relative;
         z-index: 501;
       }
@@ -240,6 +242,10 @@
 
       .video-info {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
         h3 {
           font-size: 1.1rem;
           margin: 0 0 12px 0;
@@ -247,17 +253,53 @@
           color: var(--text-color);
           font-weight: 700;
         }
-        .video-date {
-          font-size: 0.85rem;
+
+        .video-excerpt {
+          font-size: 0.95rem;
           color: var(--grey-text);
+          line-height: 1.5;
+          margin-bottom: 8px;
         }
-        .video-genre {
-          font-size: 0.75rem;
-          color: var(--base-color);
-          text-transform: uppercase;
-          margin-top: 8px;
-          font-weight: 700;
-          letter-spacing: 0.5px;
+
+        .video-meta {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.85rem;
+          color: #a0aec0;
+          margin-top: auto;
+          margin-bottom: 0;
+
+          .video-date {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            margin: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+
+          .video-bullet {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            line-height: 1;
+            flex-shrink: 0;
+          }
+
+          .video-genre {
+            font-size: 0.75rem;
+            color: var(--base-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            margin: 0;
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--text-color);
+            }
+          }
         }
       }
     }
@@ -277,6 +319,7 @@
       .video-filter-rail {
         position: relative;
         top: 0;
+        animation: none;
         width: 100%;
         height: auto;
         padding: 15px;
@@ -382,24 +425,23 @@
   color: var(--grey-text);
 }
 
-.video-group-rail {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--card-border) transparent;
+.responsive-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
 
-  &::-webkit-scrollbar {
-    height: 4px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--card-border);
-    border-radius: 2px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; // hide scrollbar on mobile
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

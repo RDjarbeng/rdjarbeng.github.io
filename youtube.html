@@ -45,18 +45,43 @@ body_class: youtube-page
     </div>
   </aside>
 
-  <div class="yt-content-area">
-    <header class="yt-page-header">
-      <h1>YouTube Hub</h1>
-      <p>Curated YouTube content, from Music and Entertainment to specific Playlists.</p>
-    </header>
+        <!-- Video Grid -->
+        <div style="flex: 3; min-width: 300px; padding-bottom: 50px;">
+                {% assign yt_videos = site.gallery | where: "platform", "youtube" | sort: "date" | reverse %}
+                {% assign featured_vid = yt_videos | first %}
+                {% assign remaining_vids = yt_videos | shift %}
+                
+                {% if featured_vid %}
+                <!-- Featured Video Section -->
+                <div class="featured-video-container" style="margin-bottom: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid var(--card-border);">
+                  <div class="video-thumbnail" data-vid="{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}" style="aspect-ratio: 21/9; max-height: 500px;">
+                    <a href="javascript:void(0);" class="inline-play-btn" style="width: 100%; height: 100%; display: block; position: relative;">
+                      <img src="{% if featured_vid.thumbnail != '' and featured_vid.thumbnail != nil %}{{ featured_vid.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}/maxresdefault.jpg{% endif %}" alt="{{ featured_vid.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://img.youtube.com/vi/{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}/hqdefault.jpg'">
+                      <div class="play-btn-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform 0.2s; box-shadow: 0 0 20px rgba(255,0,0,0.5);">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="white">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                      <div class="featured-badge" style="position: absolute; top: 20px; left: 20px; background: var(--text-color); color: var(--bg-color); padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">Featured</div>
+                    </a>
+                  </div>
+                  <div class="featured-info" style="padding: 25px; background: var(--card-bg);">
+                    <h2 style="margin: 0 0 10px 0; font-size: 1.8rem;">{{ featured_vid.title | titleize | escape }}</h2>
+                    <div style="color: var(--grey-text); font-size: 0.95rem; margin-bottom: 15px;">{{ featured_vid.date | date: "%B %-d, %Y" }} &bull; <span style="color: #ff0000; font-weight: 600;">{{ featured_vid.genre | default: featured_vid.category | default: "Other" | upcase }}</span></div>
+                    <p style="margin: 0; line-height: 1.6;">{{ featured_vid.description | truncatewords: 40 }}</p>
+                    <a href="{{ featured_vid.url | relative_url }}" class="btn" style="display: inline-block; margin-top: 15px; padding: 8px 20px; background: #ff0000; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">View Details</a>
+                  </div>
+                </div>
+                {% endif %}
 
-    <div class="yt-grid" id="yt-video-grid">
-      {% assign yt_videos = site.gallery | where: "platform", "youtube" | sort: "date" | reverse %}
-      {% for item in yt_videos %}
-      {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ", "-" | replace: " ", "-" %}
-      {% assign has_playlist = false %}
-      {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px;">More Videos</h3>
+            <div class="yt-grid" id="yt-video-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;">
+                {% for item in remaining_vids %}
+                {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ",
+                "-" | replace: " ", "-" %}
+                {% assign has_playlist = false %}
+                {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
 
       {% assign yt_vid_id = "" %}
       {% assign yt_list_id = "" %}
