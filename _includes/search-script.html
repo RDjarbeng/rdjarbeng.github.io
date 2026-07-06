@@ -186,27 +186,13 @@ body.dark-mode .ais-Highlight-highlighted {
               dateStr = dateObj.toLocaleDateString('en-US', opts);
             }
 
-            return html`
-              <div class="post-card">
-                <div class="post-link">
-                  ${hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null}
-                  <div class="post-card-content">
-                    <h4 title="${hit.title}">
-                      <a href="${hit.url}" class="post-card-title-link">
-                        ${components.Highlight({ hit, attribute: 'title' })}
-                      </a>
-                    </h4>
+            const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null;
+            const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null;
+            const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : null;
+            const categoriesHtml = (hit.categories && hit.categories.length > 0) ? html`<div class="post-card-categories">${hit.categories.slice(0, 2).map(cat => html`<a href="/categories/${cat.toLowerCase().replace(/ /g, '-')}" class="post-card-category-tag">${cat}</a>`)}</div>` : null;
 
-                    <div class="post-meta-categories-container">
-                      <div class="post-meta-left">
-                        ${dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null}
-                        ${hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : null}
-                      </div>
-                      ${hit.categories && hit.categories.length > 0 ? html`<div class="post-card-categories">${hit.categories.slice(0, 2).map(cat => html`<a href="/categories/${cat.toLowerCase().replace(/ /g, '-')}" class="post-card-category-tag">${cat}</a>`)}</div>` : null}
-                    </div>
-                  </div>
-                </div>
-              </div>
+            return html`
+              {% include post-card.html is_js_template=true show_excerpt=true %}
             `;
           },
         },
