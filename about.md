@@ -23,27 +23,32 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
 
 <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
-  <a href="/visa-and-mastercard-payment-cards-not-transfer-tools/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 1: Payment Cards</h3>
-      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Visa and Mastercard are payment cards, not transfer tools. Exploring the fundamentals of cross-border payments.</p>
-  </a>
+  {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
+  {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
 
-  <a href="/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 2: The Transfer Dilemma</h3>
-      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Why international money transfers are slow, expensive, and opaque compared to instant domestic payments.</p>
-  </a>
+  {% assign p2 = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first %}
+  {% if p2 %}{% include post-card.html post=p2 %}{% endif %}
 
-  <a href="/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/" class="experience-card" style="text-decoration: none; padding: 20px; display: block; border-left: 4px solid #007acc; transition: transform 0.2s; color: inherit;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-      <h3 style="margin-top:0; font-size: 1.1rem; margin-bottom: 10px;">Part 3: Digital Wallets</h3>
-      <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--text-color, #333); opacity: 0.85;">Google Pay and Apple Pay: How they work under the hood, where they work, and why they're safer.</p>
-  </a>
+  {% assign p3 = site.posts | where: "slug", "what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer" | first %}
+  {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
 </div>
 
 ### Education:
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
 * Who are the key people in the field of AI and machine learning, beyond the media hype?
 
-I cover this in posts like [Complete Machine Learning Package — Learn by Doing](/complete-machine-learning-package-learn-by-doing/) and [Machine Learning Specialization by Andrew Ng and DeepLearning.AI](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/).
+I cover this in posts like Complete Machine Learning Package — Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
+  {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
+
+  {% assign ml2 = site.posts | where: "slug", "machine-learning-specialization-by-andrew-ng-and-deeplearning-ai" | first %}
+  {% if ml2 %}{% include post-card.html post=ml2 %}{% endif %}
+
+  {% assign ml3 = site.posts | where: "slug", "machine-learning-experts-to-follow" | first %}
+  {% if ml3 %}{% include post-card.html post=ml3 %}{% endif %}
+</div>
 
 ### AI / Machine Learning:
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
