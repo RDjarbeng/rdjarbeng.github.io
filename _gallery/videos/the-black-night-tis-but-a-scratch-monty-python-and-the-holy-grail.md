@@ -1,14 +1,14 @@
 ---
-title: The black Night Tis but a scratch-Monty Python and the Holy Grail
+title: The Black Knight Tis But A Scratch-Monty Python and the Holy Grail
+published: true
+date: 2026-04-30T14:35:00+02:00
 platform: twitter
 youtube_id: https://x.com/TheCinesthetic/status/2049169283624616148?s=20
 embed_code: ''
-thumbnail: 'https://jf.x.com/images/media-preview/2049169283624616148'
+thumbnail: https://jf.x.com/images/media-preview/2049169283624616148
 type: video
 genre: Film & Animation
 category: videos
-date: '2026-04-30T14:35:02+02:00'
-published: true
 ---
 
 The Black Knight is one of the most iconic and hilarious characters in *Monty Python and the Holy Grail* (1975). He's played by John Cleese and appears in a memorable early scene where King Arthur (Graham Chapman) tries to cross a tiny bridge over a small stream in the forest.
