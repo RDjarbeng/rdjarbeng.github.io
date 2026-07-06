@@ -3,6 +3,9 @@
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.2/dist/instantsearch.production.min.js" crossorigin="anonymous"></script>
 
 <style>
+.ais-SearchBox-form {
+  background: transparent !important;
+}
 .ais-SearchBox-input {
   width: 100%;
   padding: 12px 20px 12px 40px !important;
@@ -30,14 +33,16 @@
 #results-container .ais-Hits-item {
   box-shadow: none;
   padding: 0;
-  background: transparent;
   width: 100%;
-  margin-bottom: 0;
-  display: flex; /* So the inner card stretches */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 /* Make the inner post-card take full width */
-#results-container .ais-Hits-item .post-card {
+#results-container .ais-Hits-item .post-card,
+#results-container .ais-Hits-item .yt-card {
   width: 100%;
+  height: 100%;
 }
 
 /* Nav search dropdown styling */
@@ -174,7 +179,7 @@ body.dark-mode .ais-Highlight-highlighted {
             return html`<p>No results found for <q>${results.query}</q></p>`;
           },
           item(hit, { html, components }) {
-            const cleanUrl = hit.image ? hit.image.replace(/&quot;|"/g, '') : '';
+            const cleanUrl = hit.image ? hit.image.replace(/&quot;|"/g, '') : (hit.thumbnail ? hit.thumbnail.replace(/&quot;|"/g, '') : '');
             
             const dateObj = hit.date ? new Date(hit.date * 1000) : null;
             let dateStr = '';
@@ -186,10 +191,73 @@ body.dark-mode .ais-Highlight-highlighted {
               dateStr = dateObj.toLocaleDateString('en-US', opts);
             }
 
+            const tagsAndCats = [];
+            if (hit.categories) hit.categories.forEach(c => tagsAndCats.push({ name: c, type: 'categories' }));
+            if (hit.tags) hit.tags.forEach(t => tagsAndCats.push({ name: t, type: 'tags' }));
+            
+            const uniqueTagsAndCats = [];
+            const seenNames = new Set();
+            for (const tc of tagsAndCats) {
+              if (!seenNames.has(tc.name)) {
+                seenNames.add(tc.name);
+                uniqueTagsAndCats.push(tc);
+              }
+            }
+            
+            
+            const categoriesHtml = uniqueTagsAndCats.length > 0 
+                ? html`<div class="post-card-categories">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type}/${tc.name.toLowerCase().replace(/ /g, '-')}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
+                : null;
+
+            let badgeHtml = null;
+            if (hit.type === 'video' || hit.youtube_id) {
+              badgeHtml = html`<div class="card-type-badge badge-video">Video</div>`;
+            } else if (hit.collection === 'personal') {
+              badgeHtml = html`<div class="card-type-badge badge-personal">Personal</div>`;
+            } else if (hit.collection === 'gallery') {
+              badgeHtml = html`<div class="card-type-badge badge-gallery">Gallery</div>`;
+            } else if (hit.collection === 'posts') {
+              badgeHtml = html`<div class="card-type-badge badge-post">Post</div>`;
+            }
+
+
+            const isVideo = hit.type === 'video' || hit.youtube_id;
+            if (isVideo) {
+                const genreStr = hit.genre || hit.category || "Other";
+                let itemGen = genreStr.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+                
+                let hasPlaylist = false;
+                let ytVidId = "";
+                let ytListId = "";
+                
+                if (hit.youtube_id) {
+                    if (hit.youtube_id.includes("list=")) {
+                        hasPlaylist = true;
+                        ytListId = hit.youtube_id.split("list=")[1].split("&")[0];
+                    }
+                    
+                    if (hit.youtube_id.includes("v=")) {
+                        ytVidId = hit.youtube_id.split("v=")[1].split("&")[0];
+                    } else if (hit.youtube_id.includes("youtu.be/")) {
+                        ytVidId = hit.youtube_id.split("youtu.be/")[1].split("?")[0];
+                    } else if (hit.youtube_id.includes("shorts/")) {
+                        ytVidId = hit.youtube_id.split("shorts/")[1].split("?")[0];
+                        itemGen = "shorts";
+                    } else {
+                        ytVidId = hit.youtube_id;
+                    }
+                }
+                
+                const thumbnailUrl = hit.thumbnail ? hit.thumbnail : (ytVidId ? `https://img.youtube.com/vi/${ytVidId}/hqdefault.jpg` : cleanUrl);
+                
+                return html`
+                    {% include yt_card.html is_js_template=true %}
+                `;
+            }
+
             const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null;
             const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null;
             const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : null;
-            const categoriesHtml = (hit.categories && hit.categories.length > 0) ? html`<div class="post-card-categories">${hit.categories.slice(0, 2).map(cat => html`<a href="/categories/${cat.toLowerCase().replace(/ /g, '-')}" class="post-card-category-tag">${cat}</a>`)}</div>` : null;
 
             return html`
               {% include post-card.html is_js_template=true show_excerpt=true %}

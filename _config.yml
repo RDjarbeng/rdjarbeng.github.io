@@ -198,8 +198,10 @@ algolia:
       - title
       - headings
       - unordered(content)
-      - collection,categories,tags
+      - collection,categories,tags,genre
       - unordered(categories)
+      - unordered(tags)
+      - unordered(genre)
   files_to_exclude:
     - index.html
     - posts.md

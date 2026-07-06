@@ -1,13 +1,25 @@
 <div class="post-card">
   <div class="post-link">
     {% if include.is_js_template %}
+      ${badgeHtml}
       ${imageHtml}
-    {% elsif include.post.image and include.post.image.size > 0 %}
-    <div class="post-card-image">
-      <img src="{{ include.post.image }}"
-        alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
-        title="{{ include.post.title | escape }}" class="post-image" width="800" height="450" loading="lazy">
-    </div>
+    {% else %}
+      {% assign col = include.post.collection %}
+      {% if col == 'personal' %}
+        <div class="card-type-badge badge-personal">Personal</div>
+      {% elsif col == 'gallery' %}
+        <div class="card-type-badge badge-gallery">Gallery</div>
+      {% elsif col == 'posts' %}
+        <div class="card-type-badge badge-post">Post</div>
+      {% endif %}
+      
+      {% if include.post.image and include.post.image.size > 0 %}
+      <div class="post-card-image">
+        <img src="{{ include.post.image }}"
+          alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
+          title="{{ include.post.title | escape }}" class="post-image" width="800" height="450" loading="lazy">
+      </div>
+      {% endif %}
     {% endif %}
 
     <div class="post-card-content">
@@ -68,10 +80,20 @@
         
         {% if include.is_js_template %}
         ${categoriesHtml}
-        {% elsif include.post.categories.size > 0 %}
+        {% elsif include.post.categories.size > 0 or include.post.tags.size > 0 %}
         <div class="post-card-categories">
-          {% for cat in include.post.categories limit:2 %}
-          <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
+          {% assign items_shown = 0 %}
+          {% for cat in include.post.categories %}
+            {% if items_shown < 2 %}
+            <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}/" class="post-card-category">{{ cat }}</a>
+            {% assign items_shown = items_shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% for tag in include.post.tags %}
+            {% if items_shown < 2 %}
+            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="post-card-tag">#{{ tag }}</a>
+            {% assign items_shown = items_shown | plus: 1 %}
+            {% endif %}
           {% endfor %}
         </div>
         {% endif %}

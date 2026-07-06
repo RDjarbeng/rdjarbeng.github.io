@@ -1,3 +1,32 @@
+{% if include.is_js_template %}
+      <div class="yt-card" style="position: relative;" data-genre="${itemGen}">
+        ${badgeHtml}
+        <div class="video-thumbnail inline-play-container" data-vid="${ytVidId}" data-list="${ytListId}">
+          <a href="javascript:void(0);" class="inline-play-btn" style="position: relative; display: block;">
+            <img
+              src="${thumbnailUrl}"
+              alt="${hit.title}"
+              loading="lazy" />
+            <div class="play-btn-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            ${hasPlaylist ? html`<div class="playlist-badge">PLAYLIST</div>` : null}
+          </a>
+        </div>
+        <a href="${hit.url}" class="video-info-link">
+          <div class="video-info">
+            <h3>${components.Highlight({ hit, attribute: 'title' })}</h3>
+            <div class="video-meta">
+              <div class="video-date">${dateStr}</div>
+              <div class="video-bullet">&bull;</div>
+              <div class="video-genre">${genreStr}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+{% else %}
       {% assign item_gen = item.genre | default: item.category | default: "Other" | downcase | replace: " & ", "-" | replace: " ", "-" %}
       {% assign has_playlist = false %}
       {% if item.youtube_id contains "list=" %}{% assign has_playlist = true %}{% endif %}
@@ -19,7 +48,8 @@
       {% assign yt_vid_id = item.youtube_id %}
       {% endif %}
 
-      <div class="yt-card" data-genre="{{ item_gen }} {% if has_playlist %}playlist{% endif %}">
+      <div class="yt-card" style="position: relative;" data-genre="{{ item_gen }} {% if has_playlist %}playlist{% endif %}">
+        <div class="card-type-badge badge-video">Video</div>
         <div class="video-thumbnail inline-play-container" data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}">
           <a href="javascript:void(0);" class="inline-play-btn" style="position: relative; display: block;">
             <img
@@ -47,3 +77,4 @@
           </div>
         </a>
       </div>
+{% endif %}
