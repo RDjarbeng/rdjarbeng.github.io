@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="yt-page-shell">
+  {% include yt_sidebar.html %}
+
+  <div class="yt-content-area">
+    <div style="margin-top: 1rem; margin-bottom: 1rem;">
+        <a href="/gallery/videos/youtube/" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--grey-text); text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--text-color)'" onmouseout="this.style.color='var(--grey-text)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to YouTube Hub
+        </a>
+    </div>
+
+    <header class="yt-page-header">
+      <h1 style="text-transform: capitalize;">YouTube {{ page.title | replace: "-", " " }} Videos</h1>
+      <p>Explore curated {{ page.title | replace: "-", " " }} videos on YouTube.</p>
+    </header>
+
+    <div class="yt-grid" id="yt-video-grid" style="text-align: left;">
+      {% assign items = page.custom_pager.posts %}
+      {% for item in items %}
+        {% include yt_card.html item=item %}
+      {% endfor %}
+    </div>
+
+    {% if page.custom_pager.total_pages > 1 %}
+        {% assign cat_path = page.url | split: '/page-' | first %}
+        {% if cat_path == page.url %}{% assign cat_path = page.url | append: '/' | replace: '//', '/' %}{% else %}{% assign cat_path = cat_path | append: '/' %}{% endif %}
+        
+        <div style="margin-top: 40px; margin-bottom: 40px;">
+            {% include pagination.html paginator=page.custom_pager base_url=cat_path %}
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const randomBtn = document.getElementById('yt-random-btn');
+    const allCards = Array.from(document.querySelectorAll('.yt-card'));
+
+    if (randomBtn) {
+      randomBtn.addEventListener('click', function () {
+        if (allCards.length > 0) {
+          const randomCard = allCards[Math.floor(Math.random() * allCards.length)];
+          const thumb = randomCard.querySelector('.video-thumbnail');
+          if (thumb) {
+            thumb.querySelector('.inline-play-btn').click();
+            randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    }
+  });
+</script>

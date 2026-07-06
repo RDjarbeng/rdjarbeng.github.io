@@ -128,7 +128,7 @@ collections:
     output: false
   video_collections:
     output: true
-    permalink: /gallery/videos/:title/
+    permalink: /gallery/videos/collections/:title/
 
 sass:
   sass_dir: _sass
@@ -167,6 +167,11 @@ defaults:
       toc: true
       toc_sticky: true
       permalink: /:title/ # Set permalink for posts globally to /title/
+  - scope:
+      path: ""
+      type: "video_collections"
+    values:
+      layout: "video_collection"
   - scope:
       path: ""
     values:

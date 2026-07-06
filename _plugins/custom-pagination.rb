@@ -129,23 +129,35 @@ module Jekyll
         if site.collections['gallery_categories']
           site.collections['gallery_categories'].docs.each do |cat|
             cat_title = cat.data['title']
-            next if cat_title == 'None' || cat_title == 'Other'
+            next if cat_title == 'None' || cat_title == 'Other' || cat_title.to_s.strip == ''
             cat_slug = Jekyll::Utils.slugify(cat_title)
+            next if cat_slug == nil || cat_slug == ''
             categories_to_process << { title: cat_title, slug: cat_slug }
           end
         end
 
         # Add pseudo categories
-        pseudo_cats = ['videos', 'youtube', 'tiktok', 'instagram', 'twitter', 'external', 'cover-images']
+        pseudo_cats = ['videos', 'videos/youtube', 'videos/tiktok', 'videos/instagram', 'videos/twitter', 'external', 'cover-images']
         
-        # Extract unique genres
-        all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
-        all_genres.each do |genre|
-          pseudo_cats << Jekyll::Utils.slugify(genre)
+        pseudo_cats.uniq.each do |cat_slug|
+          title = cat_slug.split('/').last.capitalize.gsub('-', ' ')
+          categories_to_process << { title: title, slug: cat_slug }
         end
 
-        pseudo_cats.uniq.each do |cat_slug|
-          categories_to_process << { title: cat_slug.capitalize.gsub('-', ' '), slug: cat_slug }
+        # Extract unique genres and map to videos/<genre_slug> and videos/<platform>/<genre_slug>
+        platforms = ['youtube', 'tiktok', 'instagram', 'twitter']
+        all_genres = all_gallery.map { |i| i.data['genre'] }.compact.uniq
+        all_genres.each do |genre|
+          genre_stripped = genre.to_s.strip
+          if genre_stripped != ""
+            genre_slug = Jekyll::Utils.slugify(genre_stripped)
+            if genre_slug != nil && genre_slug != ""
+              categories_to_process << { title: genre_stripped, slug: "videos/#{genre_slug}" }
+              platforms.each do |plat|
+                categories_to_process << { title: genre_stripped, slug: "videos/#{plat}/#{genre_slug}" }
+              end
+            end
+          end
         end
 
         # Extract subfolders for nested pagination
@@ -168,7 +180,27 @@ module Jekyll
             cat_slug = cat_info[:slug]
             
             cat_items = all_gallery.select { |item| 
-              if cat_slug.include?('/')
+              if cat_slug.start_with?('videos/')
+                # It's a video genre or platform!
+                parts = cat_slug.split('/')
+                item_genre = item.data['genre'] || item.data['category'] || ''
+                item_genre_stripped = item_genre.to_s.strip
+                item_genre_slug = ""
+                if item_genre_stripped != ""
+                  item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
+                end
+                
+                if parts.size == 3
+                  # e.g. videos/youtube/entertainment
+                  plat_name = parts[1]
+                  genre_name = parts[2]
+                  item.data['type'] == 'video' && item.data['platform'] && item.data['platform'].downcase == plat_name && item_genre_slug == genre_name
+                else
+                  # e.g. videos/entertainment or videos/youtube
+                  genre_name = parts[1]
+                  item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
+                end
+              elsif cat_slug.include?('/')
                 item.relative_path.include?("/#{cat_slug}/")
               else
                 next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
@@ -178,7 +210,15 @@ module Jekyll
                 plat = item.data['platform'] || ''
                 type = item.data['type'] || ''
                 genre = item.data['genre'] || ''
-                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || Jekyll::Utils.slugify("#{cats} #{labels} #{plat} #{type} #{genre}").include?(cat_slug) || (item.url && item.url.include?("/#{cat_slug}/"))
+                combined = "#{cats} #{labels} #{plat} #{type} #{genre}".strip
+                matches_comb = false
+                if combined != ""
+                  slugified_comb = Jekyll::Utils.slugify(combined)
+                  if slugified_comb != nil && slugified_comb != ""
+                    matches_comb = slugified_comb.include?(cat_slug)
+                  end
+                end
+                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || matches_comb || (item.url && item.url.include?("/#{cat_slug}/"))
               end
             }
             
@@ -221,7 +261,12 @@ module Jekyll
           self.data.merge!(original_page.data)
           self.data.delete('permalink') # Prevent conflicting permalinks for paginated pages
         else
-          self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          if cat_slug.start_with?('videos/youtube/')
+            self.read_yaml(File.join(@base, '_layouts'), 'youtube_category.html')
+            self.data['body_class'] = 'youtube-page'
+          else
+            self.read_yaml(File.join(@base, '_layouts'), 'gallery_category.html')
+          end
           self.data['title'] = cat_title
         end
       end

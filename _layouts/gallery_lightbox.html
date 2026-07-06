@@ -181,7 +181,11 @@ layout: default
           {% endfor %}
 
           {% if subfolders.size > 0 %}
-            {% for sub in subfolders %}
+            {% assign display_subs = subfolders %}
+            {% if cat_slug == 'artemis-ii' %}
+              {% assign display_subs = subfolders | slice: 0, 2 %}
+            {% endif %}
+            {% for sub in display_subs %}
               <div class="subfolder-wrapper">
                 <div class="subfolder-header">
                   <h4>{{ sub | replace: "-", " " }}</h4>

@@ -17,6 +17,7 @@ This todo file contains design specifications and technical  directions for rdja
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
+- [ ] search is broken fix sync with algolia
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
@@ -158,5 +159,43 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
-- [ ] Finance series on the blog about page needs a series of cards instead of current format
-- [ ] Click to play for videos should mot display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
+- [x] Finance series on the blog about page needs a series of cards instead of current format
+- [ ] Click to play should mot display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
+- [ ] The sveltia cms docs has transformations for webp images for width and height, let's see if it can help solve the issue of cover images not being the same size
+
+
+https://sveltiacms.app/en/docs/media/internal#asset-collections
+Eg from docs:
+width: 2048 # default: original size height: 2048 # default: original size svg:
+- [ ] Add the list of links in navigation and pages on the site to the footer so it's easier to navigate
+- [ ] Add icon to the minutes to read on the post cards for homepage
+- [ ] Need a way to distinguish the videos from the images in the gallery recommended section on single posts. The icon could help
+- [ ] Navigating back from a video collection takes you to the top of the videos page, needs to be fixed
+- The video collections start with Behind the scenes in alphabetical order, need to find a better way
+- Video collections should animate on scroll
+-Need to show the subcategories visually for the navigation on the gallery homepage
+- [ ] Add a navigation for the Artemis II page in '/gallery/Artemis-ii/'
+- [ ] Need to format quotes for famous people posts like this image. Need it to work for light and dark mode 
+
+🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
+- [ ] The Tick Tock cars on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video
+- [ ] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page
+- [ ] When I frame for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
+- [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
+- [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
+- [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
+- [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
+https://rdjarbeng.com/gallery/screenshots/ this page
+- [ ] NASA astronaut Reid Wiseman, Artemis II commander is assisted off the flight ...
+ARTEMIS II
+https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-splashdown-and-return/artemis-ii-nasa-astronaut-reid-wiseman-artemis-ii-commander-is-assisted-off-the-fligh-nasa-bill-ingalls-8/
+
+Image doesn't load here
+- [ ] jsc2025e087854 --- Artemis lunar science team members Jacob Richardson, left,...
+ARTEMIS II
+https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
+
+Remove jsc.. Make title informative
+Need to implement algolia search for the site to make site wide search work
+- [ ] Add a horizontal navbar to the about page to Skip sections
+- [ ] References section for the free background remover post is not properly formatted-fix this
