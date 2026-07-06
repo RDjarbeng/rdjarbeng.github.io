@@ -158,7 +158,7 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
-- [ ] Finance series on the blog about page needs a series of cards instead of current format
+- [x] Finance series on the blog about page needs a series of cards instead of current format
 - [ ] Click to play should mot display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
 - [ ] The sveltia cms docs has transformations for webp images for width and height, let's see if it can help solve the issue of cover images not being the same size
 
