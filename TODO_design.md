@@ -17,6 +17,7 @@ This todo file contains design specifications and technical  directions for rdja
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
+- [ ] search is broken fix sync with algolia
 - [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
