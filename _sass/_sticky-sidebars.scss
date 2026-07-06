@@ -35,20 +35,20 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
 
   .toc-sidebar {
     position: fixed;
-    left: 0;
-    top: $_rail-top;
-    bottom: 0;
+    left: 20px;
+    top: calc(#{$_rail-top} + 20px);
+    bottom: 20px;
     width: $_toc-rail-width;
     background: var(--card-bg);
-    border-right: 1px solid var(--card-border);
+    border: 1px solid var(--card-border);
     z-index: 100;
     overflow-y: auto;
     padding: 12px 1px 30px 20px;
     margin-right: 0;
     max-height: none;
     flex: none;
-    border-radius: 0;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -77,9 +77,13 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
   }
 
   .post-container {
-    margin-left: $_toc-rail-width + 10px;
-    max-width: calc(100% - #{$_toc-rail-width + 20px});
+    margin-left: $_toc-rail-width + 40px;
+    max-width: calc(100% - #{$_toc-rail-width + 40px});
     width: auto;
+  }
+  
+  .post-header h1 {
+    padding-right: 40px;
   }
 
   .content-wrapper {
@@ -205,7 +209,8 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       justify-content: flex-start;
       border: 1px solid transparent;
       background: transparent;
-      color: var(--grey-text);
+      color: var(--text-color);
+      opacity: 0.85;
       cursor: pointer;
       transition: all 0.2s ease;
 
@@ -213,6 +218,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
         background: var(--text-color);
         color: var(--bg-color);
         border-color: var(--text-color);
+        opacity: 1;
       }
     }
   }
@@ -293,6 +299,10 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
   .yt-page-shell {
     display: flex;
     min-height: 100vh;
+  }
+
+  .site-footer {
+    margin-left: $_yt-rail-width;
   }
 
   .yt-sidebar {
@@ -486,16 +496,45 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       color: var(--text-color);
     }
 
-    .video-date {
+    .video-meta {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 6px;
       font-size: 0.85rem;
-      color: var(--grey-text);
-    }
+      color: #a0aec0;
+      margin-top: auto;
+      margin-bottom: 0;
 
-    .video-genre {
-      font-size: 0.75rem;
-      color: #ff0000;
-      margin-top: 5px;
-      text-transform: uppercase;
+      .video-date {
+        font-size: 0.85rem;
+        color: var(--grey-text);
+        margin: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .video-bullet {
+        font-size: 0.85rem;
+        color: #a0aec0;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .video-genre {
+        font-size: 0.75rem;
+        color: #ff0000;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        margin: 0;
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--text-color);
+        }
+      }
     }
   }
 
@@ -505,8 +544,6 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       width: 100%;
       border-right: none;
       border-bottom: 1px solid var(--card-border);
-      overflow-x: auto;
-      overflow-y: visible;
       height: auto;
       padding: 10px 0;
 
@@ -542,9 +579,13 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       flex-direction: column;
     }
 
+    .site-footer {
+      margin-left: 0;
+    }
+
     .yt-grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
 }

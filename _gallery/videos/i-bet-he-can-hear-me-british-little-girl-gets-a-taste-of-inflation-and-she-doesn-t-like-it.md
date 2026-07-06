@@ -1,11 +1,11 @@
 ---
-title: I Bet He Can Hear Me- British Little girl gets a taste of inflation and she doesn't like it
+title: I Bet He Can Hear Me | Little British girl gets a taste of Inflation And Doesn't Like It
 published: true
 date: 2026-03-17T10:06:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/shorts/ViO1rPsJD6s
 embed_code: ''
-thumbnail: '/assets/images/videos/youtube_ViO1rPsJD6s.jpg'
+thumbnail: /assets/images/videos/youtube_ViO1rPsJD6s.jpg
 type: video
 genre: Comedy
 category: videos

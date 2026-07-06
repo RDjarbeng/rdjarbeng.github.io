@@ -515,11 +515,17 @@ def handle_text(message):
             
             if platform != "unknown":
                 keyboard = [
-                    [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
-                    [InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming"), InlineKeyboardButton("Education", callback_data="vidgenre_Education")],
-                    [InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment"), InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology")],
-                    [InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
-                    [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
+                    [InlineKeyboardButton("Autos & Vehicles", callback_data="vidgenre_Autos & Vehicles"), InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy")],
+                    [InlineKeyboardButton("Education", callback_data="vidgenre_Education"), InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment")],
+                    [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming")],
+                    [InlineKeyboardButton("Howto & Style", callback_data="vidgenre_Howto & Style"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
+                    [InlineKeyboardButton("News & Politics", callback_data="vidgenre_News & Politics"), InlineKeyboardButton("Nonprofits & Activism", callback_data="vidgenre_Nonprofits & Activism")],
+                    [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Pets & Animals", callback_data="vidgenre_Pets & Animals")],
+                    [InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
+                    [InlineKeyboardButton("Travel & Events", callback_data="vidgenre_Travel & Events"), InlineKeyboardButton("Food & Recipes", callback_data="vidgenre_Food & Recipes")],
+                    [InlineKeyboardButton("BTS", callback_data="vidgenre_Behind the Scenes (BTS)"), InlineKeyboardButton("Reviews & Reactions", callback_data="vidgenre_Reviews & Reactions")],
+                    [InlineKeyboardButton("Memes & Highlights", callback_data="vidgenre_Memes & Highlights"), InlineKeyboardButton("Interviews", callback_data="vidgenre_Interviews")],
+                    [InlineKeyboardButton("Tutorials", callback_data="vidgenre_Tutorials"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
                     [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
                 ]
                 reply_markup = InlineKeyboardMarkup(keyboard)

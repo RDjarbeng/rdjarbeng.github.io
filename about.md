@@ -20,15 +20,35 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
 
 ## Questions of interest:
 ### Finance:
-* Why can I pay for Netflix instantly, but not send money to a friend abroad? 
-* Why are international payments slow, expensive, and opaque?
-Created a series on this on my blog exploring this phenomenon and potential solutions: [Part 1](/visa-and-mastercard-payment-cards-not-transfer-tools/), [Part 2](/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/), [Part 3](/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/).
+Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
+  {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
+
+  {% assign p2 = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first %}
+  {% if p2 %}{% include post-card.html post=p2 %}{% endif %}
+
+  {% assign p3 = site.posts | where: "slug", "what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer" | first %}
+  {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
+</div>
 
 ### Education:
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
 * Who are the key people in the field of AI and machine learning, beyond the media hype?
 
-I cover this in posts like [Complete Machine Learning Package — Learn by Doing](/complete-machine-learning-package-learn-by-doing/) and [Machine Learning Specialization by Andrew Ng and DeepLearning.AI](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/).
+I cover this in posts like Complete Machine Learning Package — Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
+  {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
+
+  {% assign ml2 = site.posts | where: "slug", "machine-learning-specialization-by-andrew-ng-and-deeplearning-ai" | first %}
+  {% if ml2 %}{% include post-card.html post=ml2 %}{% endif %}
+
+  {% assign ml3 = site.posts | where: "slug", "machine-learning-experts-to-follow" | first %}
+  {% if ml3 %}{% include post-card.html post=ml3 %}{% endif %}
+</div>
 
 ### AI / Machine Learning:
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
@@ -299,7 +319,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Real-Time Taxi Fleet Management</h3>
         <p class="project-desc">Designed a streaming data pipeline using Google Cloud Dataflow and BigQuery to ingest and analyze real-time taxi data, displaying live metrics on Looker Studio.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View Details</a> -->
+          <a href="/categories/data-science/" target="_blank">View Details <span>&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -315,7 +335,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Free Background Remover</h3>
         <p class="project-desc">Deployed a semantic segmentation model on Hugging Face to remove image backgrounds automatically. Uses `rembg` and U2Net models for high-quality segmentation.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View App</a> -->
+          <a href="/free-hd-background-remover-effortless-image-editing-tool" target="_blank">View App <span>&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -331,7 +351,7 @@ I cover this in posts like [Complete Machine Learning Package — Learn by Doing
         <h3 class="project-title">Predicting Loan Risk</h3>
         <p class="project-desc">Built and deployed a loan default risk prediction model using Google Cloud Vertex AI AutoML, showcasing rigorous feature engineering and model evaluation.</p>
         <div class="project-links">
-          <!-- <a href="#" target="_blank">View Details</a> -->
+          <a href="/categories/machine-learning/" target="_blank">View Details <span>&rarr;</span></a>
         </div>
       </div>
     </div>
