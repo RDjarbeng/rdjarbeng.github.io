@@ -1,6 +1,7 @@
 ---
-title: This video follows content creator Taxman Visuals as he embarks on an ambitious
-  tour across East Africa, beginning with his arrival in Kigali, Rwanda.
+title: Follow content creator Taxman Visuals as he embarks on an ambitious tour across East Africa, beginning with his arrival in Kigali-Rwanda
+published: true
+date: 2026-06-21T14:03:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/qo12GiwlkEg
 embed_code: ''
@@ -8,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Travel & Events
 category: videos
-date: '2026-06-21T14:03:21+02:00'
-published: true
 ---
 
 Key highlights of the journey:
