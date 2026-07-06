@@ -213,96 +213,7 @@
       .search-icon { color: var(--grey-text); }
     }
 
-    // ============================================
-    // Video Masonry
-    // ============================================
-    .video-masonry {
-      column-count: 3;
-      column-gap: 30px;
-      position: relative;
-      z-index: 10;
-    }
 
-    .video-masonry-item {
-      break-inside: avoid;
-      margin-bottom: 30px;
-      background: var(--card-bg);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      border: 1px solid var(--card-border);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
-      display: inline-block;
-      width: 100%;
-
-      &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-      }
-
-      .video-info {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-
-        h3 {
-          font-size: 1.1rem;
-          margin: 0 0 12px 0;
-          line-height: 1.5;
-          color: var(--text-color);
-          font-weight: 700;
-        }
-
-        .video-excerpt {
-          font-size: 0.95rem;
-          color: var(--grey-text);
-          line-height: 1.5;
-          margin-bottom: 8px;
-        }
-
-        .video-meta {
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          gap: 6px;
-          font-size: 0.85rem;
-          color: #a0aec0;
-          margin-top: auto;
-          margin-bottom: 0;
-
-          .video-date {
-            font-size: 0.85rem;
-            color: var(--grey-text);
-            margin: 0;
-            white-space: nowrap;
-            flex-shrink: 0;
-          }
-
-          .video-bullet {
-            font-size: 0.85rem;
-            color: #a0aec0;
-            line-height: 1;
-            flex-shrink: 0;
-          }
-
-          .video-genre {
-            font-size: 0.75rem;
-            color: var(--base-color);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-            margin: 0;
-            transition: color 0.2s;
-
-            &:hover {
-              color: var(--text-color);
-            }
-          }
-        }
-      }
-    }
   }
 
   // ============================================
@@ -517,7 +428,106 @@
   color: var(--text-color);
 }
 
-.video-rail-genre {
-  font-size: 0.75rem;
-  color: var(--grey-text);
-}
+  .video-rail-genre {
+    font-size: 0.75rem;
+    color: var(--grey-text);
+  }
+  
+  // ============================================
+  // Global Video Masonry Elements
+  // ============================================
+  .video-masonry {
+    column-count: 3;
+    column-gap: 30px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .video-masonry-item {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+    display: inline-block;
+    width: 100%;
+  
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+  
+    .video-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+  
+      h3 {
+        font-size: 1.1rem;
+        margin: 0 0 12px 0;
+        line-height: 1.5;
+        color: var(--text-color);
+        font-weight: 700;
+      }
+  
+      .video-excerpt {
+        font-size: 0.95rem;
+        color: var(--grey-text);
+        line-height: 1.5;
+        margin-bottom: 8px;
+      }
+  
+      .video-meta {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        color: #a0aec0;
+        margin-top: auto;
+        margin-bottom: 0;
+  
+        .video-date {
+          font-size: 0.85rem;
+          color: var(--grey-text);
+          margin: 0;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+  
+        .video-bullet {
+          font-size: 0.85rem;
+          color: #a0aec0;
+          line-height: 1;
+          flex-shrink: 0;
+        }
+  
+        .video-genre {
+          font-size: 0.75rem;
+          color: var(--base-color);
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          text-decoration: none;
+          margin: 0;
+          transition: color 0.2s;
+  
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+  }
+  
+  // Media Queries for Global Masonry
+  @media (max-width: 1200px) {
+    .video-masonry { column-count: 2; }
+  }
+  @media (max-width: 860px) {
+    .video-masonry { column-count: 1; }
+  }

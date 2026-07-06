@@ -47,7 +47,7 @@ redirect_from:
     {% assign tag_name = parts[1] %}
     <div class="top-tag-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 5px var(--shadow-color);">
       <div style="margin-bottom: 15px;">
-        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
+        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
           {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
         </a>
       </div>
@@ -69,7 +69,7 @@ redirect_from:
     {% assign tag_items = tag[1] %}
     {% if tag_items.size >= 2 %}
     <li>
-      <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
+      <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
         {{ tag_name }} <span class="tag-count">{{ tag_items.size }}</span>
       </a>
     </li>
@@ -87,7 +87,7 @@ redirect_from:
       {% if tag_items.size < 2 %}
         {% assign other_tags_count = other_tags_count | plus: 1 %}
         <li class="other-tag-item" {% if other_tags_count > 15 %}style="display: none;"{% endif %}>
-          <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}" class="tag-pill">
+          <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
             {{ tag_name }} <span class="tag-count">{{ tag_items.size }}</span>
           </a>
         </li>

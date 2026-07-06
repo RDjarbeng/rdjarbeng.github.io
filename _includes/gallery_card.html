@@ -1,3 +1,39 @@
+{% if include.is_js_template %}
+<a href="${hit.url}" class="gallery-card-link" data-title="${hit.title}">
+    <div class="gallery-item is-category" 
+         data-url="${hit.url}" 
+         data-src="${cleanUrl}" 
+         data-title="${hit.title}" 
+         data-type="${hit.type === 'video' || hit.youtube_id ? 'html' : 'image'}" 
+         data-caption="" 
+         data-date="${dateStr}">
+        
+        <img src="${cleanUrl}" 
+             alt="${hit.title}" 
+             loading="lazy" 
+             decoding="async"
+             onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
+        
+        ${(hit.type === 'video' || hit.youtube_id) ? html`
+        <div class="video-icon-wrapper">
+            <span class="gallery-type-icon">▶</span>
+        </div>
+        ` : null}
+        
+        <div class="lightbox-trigger-zone" title="Expand preview">
+            <button class="lightbox-trigger" onclick="event.preventDefault();">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </button>
+        </div>
+
+        <div class="gallery-item-info">
+            <h3 class="gallery-item-title">${components.Highlight({ hit, attribute: 'title' })}</h3>
+            <p style="font-size: 0.8rem; margin: 5px 0 0; color: #ddd;">${dateStr}</p>
+            ${categoriesHtml}
+        </div>
+    </div>
+</a>
+{% else %}
 {% assign img_src = '/assets/images/webOrMobile.jpeg' %}
 {% if include.item.thumbnail and include.item.thumbnail != '' %}
   {% assign img_src = include.item.thumbnail %}
@@ -103,3 +139,5 @@
         </div>
     </div>
 </a>
+
+{% endif %}

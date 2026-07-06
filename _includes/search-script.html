@@ -37,12 +37,21 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: transparent !important;
 }
 /* Make the inner post-card take full width */
 #results-container .ais-Hits-item .post-card,
-#results-container .ais-Hits-item .yt-card {
+#results-container .ais-Hits-item .video-masonry-item,
+#results-container .ais-Hits-item .gallery-item {
   width: 100%;
   height: 100%;
+}
+#results-container .ais-Hits-item .video-masonry-item {
+  display: flex;
+  flex-direction: column;
+}
+#results-container .ais-Hits-item .video-masonry-item .video-thumbnail {
+  flex-shrink: 0;
 }
 
 /* Nav search dropdown styling */
@@ -204,24 +213,56 @@ body.dark-mode .ais-Highlight-highlighted {
               }
             }
             
-            
-            const categoriesHtml = uniqueTagsAndCats.length > 0 
-                ? html`<div class="post-card-categories">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type}/${tc.name.toLowerCase().replace(/ /g, '-')}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
-                : null;
+const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
-            let badgeHtml = null;
-            if (hit.type === 'video' || hit.youtube_id) {
-              badgeHtml = html`<div class="card-type-badge badge-video">Video</div>`;
-            } else if (hit.collection === 'personal') {
-              badgeHtml = html`<div class="card-type-badge badge-personal">Personal</div>`;
-            } else if (hit.collection === 'gallery') {
-              badgeHtml = html`<div class="card-type-badge badge-gallery">Gallery</div>`;
-            } else if (hit.collection === 'posts') {
-              badgeHtml = html`<div class="card-type-badge badge-post">Post</div>`;
+            if (hit.url === '/tags/') {
+                let plainText = hit.content || '';
+                if (hit._snippetResult && hit._snippetResult.content && hit._snippetResult.content.value) {
+                    plainText = hit._snippetResult.content.value.replace(/<[^>]*>?/gm, '');
+                }
+                const match = plainText.match(/^(.+?)\s+\d+$/);
+                if (match) {
+                    const tagName = match[1];
+                    hit.url = `/tags/${slugify(tagName)}/`;
+                    hit.title = `Tag: ${tagName}`;
+                    if (hit._highlightResult && hit._highlightResult.title) {
+                        hit._highlightResult.title.value = `Tag: ${tagName}`;
+                    }
+                    hit.content = `View all posts tagged with #${tagName}`;
+                    if (hit._snippetResult && hit._snippetResult.content) {
+                        hit._snippetResult.content.value = hit.content;
+                    }
+                }
             }
 
-
             const isVideo = hit.type === 'video' || hit.youtube_id;
+            const isGallery = hit.collection === 'gallery' && !isVideo;
+
+            let badgeHtml = null;
+            let badgeText = '';
+            let badgeColor = 'var(--base-color)';
+
+            if (hit.collection === 'personal') {
+                badgeText = 'Personal';
+            } else if (hit.collection === 'posts') {
+                badgeText = 'Post';
+                badgeColor = 'var(--btn-bg)';
+            } else if (isGallery) {
+                badgeText = 'Gallery › Cover Image';
+                badgeColor = 'var(--category-bg)';
+            } else if (isVideo) {
+                badgeText = 'Video';
+                badgeColor = 'var(--pill-border)';
+            }
+
+            if (badgeText) {
+                badgeHtml = html`<div style="position: absolute; top: 12px; left: 12px; background: ${badgeColor}; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.65rem; font-weight: bold; z-index: 10; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">${badgeText}</div>`;
+            }
+
+            const categoriesHtml = uniqueTagsAndCats.length > 0 
+                ? html`<div class="post-card-categories" style="margin-top: 8px;">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type === 'tags' ? 'tags' : 'categories'}/${slugify(tc.name)}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
+                : null;
+
             if (isVideo) {
                 const genreStr = hit.genre || hit.category || "Other";
                 let itemGen = genreStr.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
@@ -248,12 +289,32 @@ body.dark-mode .ais-Highlight-highlighted {
                     }
                 }
                 
+                let computedIgId = hit.instagram_id || "";
+                if (hit.platform === 'instagram' && !computedIgId) {
+                    if (hit.link && hit.link.includes('instagram.com/p/')) {
+                        computedIgId = hit.link.split('instagram.com/p/')[1].split('/')[0].split('?')[0];
+                    } else if (hit.link && hit.link.includes('instagram.com/reel/')) {
+                        computedIgId = hit.link.split('instagram.com/reel/')[1].split('/')[0].split('?')[0];
+                    }
+                }
+
+                let computedTkId = "";
+                if (hit.platform === 'tiktok') {
+                    let rawTkUrl = hit.youtube_id || hit.link || "";
+                    computedTkId = rawTkUrl;
+                    if (computedTkId.includes('/video/')) {
+                        computedTkId = computedTkId.split('/video/')[1].split('?')[0].split('/')[0];
+                    }
+                }
+
                 const thumbnailUrl = hit.thumbnail ? hit.thumbnail : (ytVidId ? `https://img.youtube.com/vi/${ytVidId}/hqdefault.jpg` : cleanUrl);
                 
                 return html`
-                    {% include yt_card.html is_js_template=true %}
+                    {% include video_card.html is_js_template=true %}
                 `;
             }
+
+
 
             const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null;
             const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null;
