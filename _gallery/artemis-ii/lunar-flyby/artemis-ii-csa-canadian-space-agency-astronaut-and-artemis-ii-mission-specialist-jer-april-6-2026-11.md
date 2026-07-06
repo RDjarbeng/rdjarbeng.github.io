@@ -10,6 +10,6 @@ labels:
 date: 2026-04-14T15:08:29+02:00
 ---
 
-art002e009292 (April 6, 2026) – CSA (Canadian Space Agency) astronaut and Artemis II Mission Specialist Jeremy Hansen is seen taking images through the Orion spacecraft window early in the Artemis II lunar flyby. Hansen and his fellow crewmates spent approximately seven hours taking turns at the Orion windows capturing science data to share with their team back on Earth.
+ (April 6, 2026) – CSA (Canadian Space Agency) astronaut and Artemis II Mission Specialist Jeremy Hansen is seen taking images through the Orion spacecraft window early in the Artemis II lunar flyby. Hansen and his fellow crewmates spent approximately seven hours taking turns at the Orion windows capturing science data to share with their team back on Earth.
 
 [_Image Credit: NASA_](https://images-assets.nasa.gov/image/art002e009292/art002e009292~large.jpg)

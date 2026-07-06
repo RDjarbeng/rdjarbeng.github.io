@@ -1,7 +1,7 @@
 ---
-title: 'jsc2026e000849 --- The Artemis II Lunar Science Team works in the Science Eva...'
+title: ' The Artemis II Lunar Science Team works in the Science Eva...'
 image: https://images-assets.nasa.gov/image/jsc2026e000849/jsc2026e000849~large.jpg
-image_alt: 'jsc2026e000849 --- The Artemis II Lunar Science Team works in the Science Evaluation Room (SER) at the NASA’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams. Credit: James Blair'
+image_alt: ' The Artemis II Lunar Science Team works in the Science Evaluation Room (SER) at the NASA’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams. Credit: James Blair'
 type: external
 link: ''
 category: Artemis II
@@ -10,6 +10,6 @@ labels:
 date: 2026-04-14T15:35:09+02:00
 ---
 
-jsc2026e000849 --- The Artemis II Lunar Science Team works in the Science Evaluation Room (SER) at the NASA’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams. Credit: James Blair
+ The Artemis II Lunar Science Team works in the Science Evaluation Room (SER) at the NASA’s Johnson Space Center in Houston. Located in the Christopher C. Kraft Jr. Mission Control Center, the SER supports the mission’s main flight control room for lunar science and planetary observations. Built specifically for Artemis missions with these science priorities in mind, the SER is equipped to support rapid data interpretation, collaborative analysis, real-time decision making, and seamless coordination between the science and operations teams. Credit: James Blair
 
 [_Image Credit: NASA_](https://images-assets.nasa.gov/image/jsc2026e000849/jsc2026e000849~large.jpg)

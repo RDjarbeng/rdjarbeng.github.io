@@ -10,6 +10,6 @@ labels:
 date: 2026-04-14T15:07:21+02:00
 ---
 
-art002e016354 (April 8, 2026) The Artemis II crew captures a thin lunar crescent as they travel back to Earth.
+ (April 8, 2026) The Artemis II crew captures a thin lunar crescent as they travel back to Earth.
 
 [_Image Credit: NASA_](https://images-assets.nasa.gov/image/art002e016354/art002e016354~large.jpg)
