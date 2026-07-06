@@ -2,3 +2,4 @@ Sitemap: https://rdjarbeng.com/sitemap.xml
 
 User-agent: *
 Allow: /
+# Algolia-Crawler-Verif: 074B94407700AF86

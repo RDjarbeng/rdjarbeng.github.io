@@ -496,16 +496,45 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       color: var(--text-color);
     }
 
-    .video-date {
+    .video-meta {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 6px;
       font-size: 0.85rem;
-      color: var(--grey-text);
-    }
+      color: #a0aec0;
+      margin-top: auto;
+      margin-bottom: 0;
 
-    .video-genre {
-      font-size: 0.75rem;
-      color: #ff0000;
-      margin-top: 5px;
-      text-transform: uppercase;
+      .video-date {
+        font-size: 0.85rem;
+        color: var(--grey-text);
+        margin: 0;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .video-bullet {
+        font-size: 0.85rem;
+        color: #a0aec0;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .video-genre {
+        font-size: 0.75rem;
+        color: #ff0000;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        margin: 0;
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--text-color);
+        }
+      }
     }
   }
 
@@ -515,8 +544,6 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       width: 100%;
       border-right: none;
       border-bottom: 1px solid var(--card-border);
-      overflow-x: auto;
-      overflow-y: visible;
       height: auto;
       padding: 10px 0;
 
@@ -557,8 +584,8 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     }
 
     .yt-grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
 }

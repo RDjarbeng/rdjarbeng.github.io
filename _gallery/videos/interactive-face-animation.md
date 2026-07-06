@@ -1,13 +1,14 @@
 ---
-title: Interactive face animation
+title: Interactive face animation following the mouse across the screen
+published: true
+date: 2025-12-28T22:55:00+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?v=xsSTf1fn0Zw
 embed_code: ''
 thumbnail: /assets/images/videos/face_animation_cover.png
 type: video
-category: videos
 genre: Film & Animation
-date: 2025-12-28 22:55:10
+category: videos
 ---
 
 Is this face alive? How does it seamlessly know exactly where the mouse pointer is? Step into the fascinating world of interactive digital art with this captivating YouTube demonstration of an interactive face animation. This creative coding project beautifully showcases how code can be used to breathe life into seemingly static web elements, creating an engaging user experience.

@@ -584,22 +584,21 @@ collections:
           widget: "select",
           options:
             [
-              "Film & Animation",
-              "Music",
-              "Gaming",
+              "Autos & Vehicles",
+              "Comedy",
               "Education",
               "Entertainment",
+              "Film & Animation",
+              "Gaming",
+              "Howto & Style",
+              "Music",
+              "News & Politics",
+              "Nonprofits & Activism",
               "People & Blogs",
+              "Pets & Animals",
               "Science & Technology",
-              "Travel & Events",
-              "Comedy",
               "Sports",
-              "Food & Recipes",
-              "Behind the Scenes (BTS)",
-              "Reviews & Reactions",
-              "Memes & Highlights",
-              "Interviews",
-              "Tutorials",
+              "Travel & Events",
               "Other",
             ],
           default: "Other",
@@ -623,9 +622,21 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Icon", name: "icon", widget: "string", required: false, hint: "Emoji or text icon" }
-      - { label: "Match By", name: "match_by", widget: "select", options: ["genre", "keywords", "genre_and_keywords"], default: "keywords" }
+      - { label: "Match By", name: "match_by", widget: "select", options: ["genre", "keywords", "genre_and_keywords", "manual"], default: "keywords" }
       - { label: "Genre", name: "genre", widget: "string", required: false }
       - { label: "Keywords", name: "keywords", widget: "list", required: false }
+      - {
+          label: "Selected Videos",
+          name: "videos",
+          widget: "relation",
+          collection: "gallery_videos",
+          search_fields: ["title"],
+          value_field: "{{slug}}",
+          display_fields: ["title"],
+          multiple: true,
+          required: false,
+          hint: "Select videos manually for this collection (Only used if Match By is 'manual')"
+        }
       - { label: "YouTube Playlist URL", name: "youtube_playlist_url", widget: "string", required: false, hint: "Paste a YouTube playlist URL here. A GitHub Action will automatically fetch videos and add them to the videos collection." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "video_collection" }
 
