@@ -52,6 +52,6 @@ keywords: search, AI, web development, IoT, technology, security, education, Ric
     </section>
   </div>
 
-  <div id="results-container" class="post-list" style="margin-top: 20px;"></div>
+  <div id="results-container" style="margin-top: 20px;"></div>
 </div>
 

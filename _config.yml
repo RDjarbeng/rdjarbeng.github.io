@@ -192,7 +192,14 @@ algolia:
   application_id: 'IS96FR2E65'
   index_name: 'rdjarbeng_index'
   search_only_api_key: '244c316912077b528a2583b21970d464'
-  nodes_to_index: 'p, h1, h2, h3, h4, h5, h6, li, blockquote'
+  nodes_to_index: 'p, h1, h2, h3, h4, h5, h6, li'
+  settings:
+    searchableAttributes:
+      - title
+      - headings
+      - unordered(content)
+      - collection,categories,tags
+      - unordered(categories)
   files_to_exclude:
     - index.html
     - posts.md

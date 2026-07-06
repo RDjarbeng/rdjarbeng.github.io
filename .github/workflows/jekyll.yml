@@ -41,6 +41,11 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Push index to Algolia
+        run: bundle exec jekyll algolia
+        env:
+          JEKYLL_ENV: production
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - name: Install ImageMagick
         run: sudo apt-get install -y imagemagick
       - name: Optimize cover images and thumbnails

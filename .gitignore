@@ -7,6 +7,15 @@ vendor
 /assets/scripts/*.py
 .gemini_key
 auto-tag-all.rb
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+/assets/images/*.py
+/assets/scripts/*.py
+.gemini_key
+auto-tag-all.rb
 external_links.txt
 generate_tags_gemini.rb
 # *.txt
@@ -14,3 +23,4 @@ generate_tags_gemini.rb
 .env
 !llms.txt
 crawls_from_web/*.md
+node_modules/  

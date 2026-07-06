@@ -760,31 +760,7 @@ a:hover {
   border-radius: 5px;
 }
 
-/* Style for search results container */
-#results-container {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-/* Style for each search result */
-#results-container li {
-  background-color: var(--category-bg);
-  /* Light background color */
-  border: 1px solid var(--card-border);
-  /* Light border */
-  padding: 15px;
-  margin-bottom: 10px;
-}
-
-/* Hover effect on search results */
-#results-container li a {
-  text-decoration: none;
-}
-
-#results-container li a:hover {
-  text-decoration: underline;
-}
+/* Removed legacy search container styles */
 
 /* Highlighted search term (optional) */
 .highlighted {

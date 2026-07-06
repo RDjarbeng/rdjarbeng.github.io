@@ -1,65 +1,172 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css" integrity="sha256-11fIktPq9Wz4tHlT8PdtB/3zD9tS2QjMvN0O6L8gZ48=" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs/UB6g6u8O78880XyXs=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.2/dist/instantsearch.production.min.js" integrity="sha256-tG020R//OIK17R0+SChd5Qp2y19NInhB4zBvJ9GvEhw=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.2/dist/instantsearch.production.min.js" crossorigin="anonymous"></script>
 
 <style>
 .ais-SearchBox-input {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 40px !important;
   border-radius: 8px;
   border: 1px solid var(--card-border, #eaeaea);
   background: var(--card-bg, #fff);
   color: var(--text-color, #333);
   font-size: 1.1rem;
 }
-.ais-Hits-item {
+/* Clean up the main search page results to be a grid like .post-list */
+#results-container .ais-Hits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  #results-container .ais-Hits-list {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+}
+#results-container .ais-Hits-item {
   box-shadow: none;
   padding: 0;
   background: transparent;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 0;
+  display: flex; /* So the inner card stretches */
 }
-.ais-Hits-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* Make the inner post-card take full width */
+#results-container .ais-Hits-item .post-card {
+  width: 100%;
+}
+
+/* Nav search dropdown styling */
+.nav-search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--card-border, #eaeaea);
+  border-radius: 0 0 8px 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px var(--shadow-color, rgba(0,0,0,0.1));
+  display: none;
+}
+html[data-theme="dark"] .nav-search-results-dropdown,
+body.dark-mode .nav-search-results-dropdown {
+  background: var(--card-bg, #1e1e1e);
+  border-color: var(--card-border, #444);
+}
+.nav-search-results-dropdown .ais-Hits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+}
+.nav-search-results-dropdown .ais-Hits-item {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--card-border, #eaeaea);
+  background: transparent !important;
+  box-shadow: none !important;
+}
+html[data-theme="dark"] .nav-search-results-dropdown .ais-Hits-item,
+body.dark-mode .nav-search-results-dropdown .ais-Hits-item {
+  border-bottom-color: var(--card-border, #444);
+}
+.nav-search-results-dropdown .ais-Hits-item:last-child {
+  border-bottom: none;
+}
+.nav-search-hit {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-color, #333);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+html[data-theme="dark"] .nav-search-hit,
+body.dark-mode .nav-search-hit {
+  color: var(--text-color, #e0e0e0);
+}
+.nav-search-hit:hover {
+  background: var(--category-hover, #f5f5f5);
+  text-decoration: none;
+}
+html[data-theme="dark"] .nav-search-hit:hover,
+body.dark-mode .nav-search-hit:hover {
+  background: var(--category-hover, #3d3d3d);
+}
+.nav-search-empty {
+  padding: 15px;
+  color: var(--grey-text, #999);
+  text-align: center;
+  font-size: 0.95rem;
 }
 /* Ensure dark mode works for the input */
-@media (prefers-color-scheme: dark) {
-  body.dark-mode .ais-SearchBox-input {
-    background: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--card-border);
-  }
+html[data-theme="dark"] .ais-SearchBox-input,
+body.dark-mode .ais-SearchBox-input {
+  background: var(--card-bg, #1e1e1e);
+  color: var(--text-color, #e0e0e0);
+  border-color: var(--card-border, #444);
+}
+
+/* High contrast highlight style for search queries */
+.ais-Highlight-highlighted {
+  background-color: rgba(255, 215, 0, 0.4);
+  color: var(--text-color, inherit);
+  border-radius: 2px;
+  padding: 0 2px;
+  font-weight: bold;
+}
+html[data-theme="dark"] .ais-Highlight-highlighted,
+body.dark-mode .ais-Highlight-highlighted {
+  background-color: rgba(255, 215, 0, 0.3);
+  color: #fff;
+}
+
+/* Hide the ugly reset button in satellite-min theme */
+.ais-SearchBox-reset {
+  display: none !important;
+}
+.header-search-form {
+  position: relative;
 }
 </style>
 
 <script>
   const searchClient = algoliasearch('IS96FR2E65', '244c316912077b528a2583b21970d464');
 
-  if (document.getElementById('searchbox')) {
-    // Read the q parameter from the navbar search form
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialQuery = urlParams.get('q') || '';
+  const mainSearchbox = document.getElementById('searchbox');
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialQuery = urlParams.get('q') || '';
 
-    const search = instantsearch({
-      indexName: 'rdjarbeng_index',
-      searchClient,
-      routing: true,
-      initialUiState: {
-        rdjarbeng_index: {
-          query: initialQuery,
-        },
+  const search = instantsearch({
+    indexName: 'rdjarbeng_index',
+    searchClient,
+    routing: !!mainSearchbox, // Only enable routing on main search page
+    initialUiState: {
+      rdjarbeng_index: {
+        query: initialQuery,
       },
-    });
+    },
+  });
 
-    search.addWidgets([
+  const widgets = [];
+
+  // 1. Main Search Page logic
+  if (mainSearchbox) {
+    widgets.push(
       instantsearch.widgets.searchBox({
         container: '#searchbox',
         placeholder: 'Search posts and articles...',
-        showReset: true,
-        showSubmit: false,
-      }),
+        showReset: false,
+        showSubmit: true,
+      })
+    );
+    widgets.push(
       instantsearch.widgets.hits({
         container: '#results-container',
         templates: {
@@ -67,8 +174,8 @@
             return html`<p>No results found for <q>${results.query}</q></p>`;
           },
           item(hit, { html, components }) {
-            // Check if there is an image URL
-            const imageHtml = hit.image ? html`<div class="post-card-image" style="background-image: url(${hit.image})"></div>` : '';
+            const cleanUrl = hit.image ? hit.image.replace(/&quot;|"/g, '') : '';
+            const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="${hit.title}" title="${hit.title}" class="post-image" loading="lazy"></div>` : '';
             const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : '';
             const date = hit.date ? new Date(hit.date * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
 
@@ -89,17 +196,13 @@
           },
         },
       })
-    ]);
+    );
 
-    search.start();
-    
-    // Hide browse sections when searching
-    const searchboxInput = document.querySelector('#searchbox');
+    // Hide browse sections when searching on main page
     const browseSections = document.getElementById('search-browse-sections');
     const emptyHint = document.getElementById('search-empty-hint');
     
-    if (searchboxInput && (browseSections || emptyHint)) {
-      // Monitor changes in instantsearch state
+    if (browseSections || emptyHint) {
       search.on('render', () => {
         const query = search.helper.state.query;
         if (query && query.length > 0) {
@@ -112,4 +215,84 @@
       });
     }
   }
+
+  // 2. Navbar Dropdown logic
+  const navInput = document.getElementById('nav-search-input');
+  const navResultsContainer = document.getElementById('nav-search-results');
+  
+  if (navInput && navResultsContainer) {
+    navResultsContainer.classList.add('nav-search-results-dropdown');
+    
+    // Custom SearchBox connector to bind to existing nav input
+    const connectSearchBox = instantsearch.connectors.connectSearchBox(
+      (renderOptions, isFirstRender) => {
+        const { query, refine, widgetParams } = renderOptions;
+
+        if (isFirstRender) {
+          widgetParams.input.addEventListener('input', event => {
+            refine(event.target.value);
+            if (event.target.value.length > 0) {
+              widgetParams.container.style.display = 'block';
+            } else {
+              widgetParams.container.style.display = 'none';
+            }
+          });
+          
+          widgetParams.input.addEventListener('focus', event => {
+            if (event.target.value.length > 0) {
+              widgetParams.container.style.display = 'block';
+            }
+          });
+
+          // Click outside to hide
+          document.addEventListener('click', (e) => {
+            if (!widgetParams.container.contains(e.target) && e.target !== widgetParams.input) {
+              widgetParams.container.style.display = 'none';
+            }
+          });
+        }
+        
+        // Sync input value if changed from elsewhere (e.g. main search box)
+        if (widgetParams.input.value !== query) {
+          widgetParams.input.value = query;
+        }
+      }
+    );
+
+    widgets.push(
+      connectSearchBox({
+        input: navInput,
+        container: navResultsContainer
+      })
+    );
+
+    widgets.push(
+      instantsearch.widgets.hits({
+        container: '#nav-search-results',
+        templates: {
+          empty(results, { html }) {
+            if (!results.query) return html``;
+            return html`<div class="nav-search-empty">No results for "${results.query}"</div>`;
+          },
+          item(hit, { html, components }) {
+            const tags = hit.tags ? hit.tags.join(', ') : '';
+            const category = (hit.categories && hit.categories.length > 0) ? hit.categories[0] : (hit.collection || 'Post');
+            
+            return html`
+              <a href="${hit.url}" class="nav-search-hit">
+                <div class="nav-search-hit-title">${components.Highlight({ hit, attribute: 'title' })}</div>
+                <div class="nav-search-hit-meta" style="font-size: 0.8em; color: var(--grey-text); margin-top: 4px;">
+                  <span style="display: inline-block; padding: 2px 6px; background: var(--category-bg, #eee); border-radius: 4px; border: 1px solid var(--card-border);">${category}</span>
+                  ${tags ? html`<span style="margin-left: 6px;">· ${tags}</span>` : ''}
+                </div>
+              </a>
+            `;
+          }
+        }
+      })
+    );
+  }
+
+  search.addWidgets(widgets);
+  search.start();
 </script>
