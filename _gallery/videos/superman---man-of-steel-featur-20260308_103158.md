@@ -10,8 +10,6 @@ type: video
 genre: Behind the Scenes (BTS)
 category: videos
 genre: Film & Animation
-date: '2026-03-08T10:31:58+02:00'
-published: true
 ---
 
 You know, I've always thought that Henry Cavill was American 🇺🇸 , turns out he's British 🇬🇧 instead. 
