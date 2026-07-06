@@ -1,6 +1,8 @@
 <div class="post-card">
   <div class="post-link">
-    {% if include.post.image and include.post.image.size > 0 %}
+    {% if include.is_js_template %}
+      ${imageHtml}
+    {% elsif include.post.image and include.post.image.size > 0 %}
     <div class="post-card-image">
       <img src="{{ include.post.image }}"
         alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
@@ -9,22 +11,43 @@
     {% endif %}
 
     <div class="post-card-content">
+      {% if include.is_js_template %}
+      <h4 title="${hit.title}">
+        <a href="${hit.url}" class="post-card-title-link">
+          ${components.Highlight({ hit, attribute: 'title' })}
+        </a>
+      </h4>
+      {% else %}
       <h4 title="{{ include.post.title | escape }}">
         <a href="{{ include.post.url | relative_url }}" class="post-card-title-link">
           {{ include.post.title | escape }}
         </a>
       </h4>
+      {% endif %}
 
       {% assign words_per_minute = 180 %}
-      {% assign words = include.post.content | number_of_words %}
+      {% if include.is_js_template %}
+        {% assign words = 0 %}
+      {% else %}
+        {% assign content_str = include.post.content | default: "" %}
+        {% assign words = content_str | number_of_words %}
+      {% endif %}
       {% assign minutes = words | divided_by: words_per_minute | ceil %}
 
       {% unless include.show_excerpt == false %}
+      {% if include.is_js_template %}
+      <p class="post-card-excerpt">${components.Snippet({ hit, attribute: 'content' })}</p>
+      {% else %}
       <p class="post-card-excerpt">{% include_cached excerpt.html post=include.post %}</p>
+      {% endif %}
       {% endunless %}
 
       <div class="post-meta-categories-container">
         <div class="post-meta-left">
+          {% if include.is_js_template %}
+          ${dateHtml}
+          ${readTime}
+          {% else %}
           <div class="post-meta-card">
             {% assign current_year = site.time | date: "%Y" %}
             {% assign post_year = include.post.date | date: "%Y" %}
@@ -40,8 +63,12 @@
           <div class="post-meta-card">
             {{ minutes }} min read
           </div>
+          {% endif %}
         </div>
-        {% if include.post.categories.size > 0 %}
+        
+        {% if include.is_js_template %}
+        ${categoriesHtml}
+        {% elsif include.post.categories.size > 0 %}
         <div class="post-card-categories">
           {% for cat in include.post.categories limit:2 %}
           <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}" class="post-card-category-tag">{{ cat }}</a>
