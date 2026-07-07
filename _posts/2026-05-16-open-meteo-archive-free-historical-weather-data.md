@@ -19,7 +19,13 @@ card_items:
   - name: "How is Data Collected?"
     badge_1: "Aggregator"
     badge_2: "2+ Terabytes Daily"
-    description: "Open-Meteo doesn't run its own weather stations. Instead, it aggregates over 2 terabytes of raw data daily from major national services like NOAA and ECMWF, processes it, and serves it through a simple API. [[1](https://open-meteo.com/)]"
+    description: "Open-Meteo doesn't run its own weather stations. Instead, it aggregates over 2 terabytes of raw data daily from major national services like NOAA and ECMWF, processes it, and serves it through a simple API. Source: [[1](https://open-meteo.com/en/about)]"
+  - name: "Commercial & Free Tiers"
+    badge_1: "Free Non-Commercial"
+    badge_2: "From €29/mo"
+    description: "Non-commercial use is free up to 10,000 daily API calls with no API key or credit card required (CC BY 4.0 attribution). Commercial plans with dedicated capacity start at €29/month."
+    url: "https://open-meteo.com/en/pricing"
+    link_text: "View Pricing"
   - name: "Who Uses This Data?"
     badge_1: "Researchers"
     badge_2: "Developers"
@@ -42,6 +48,8 @@ card_items:
     description: "Access essential weather metrics like temperature, relative humidity, precipitation (rain and snow), and wind speed/direction from global models."
 ---
 
+![Open Meteo Archive: Free Historical Weather Data](/assets/images/posts/covers/open_meteo_cover.jpg)
+
 Have you ever wondered what the weather was exactly like on the day you were born? Or maybe you're building an app that needs to know how much it rained last summer? Weather data isn't just for meteorologists. Whether you are a farmer trying to understand seasonal shifts, a developer building a new weather app, a student studying climate change, or simply a curious hobbyist, having access to reliable past weather data is incredibly useful. 
 
 The problem is that finding good, free historical weather data can be a massive headache. That's where the **Open-Meteo Archive** comes in. In this post, I'm going to introduce you to this amazing free resource that makes climate data accessible to everyone. We will talk about what makes it so special, the types of weather data you can track, and where you can go to start building with it.
@@ -56,6 +64,12 @@ Here are the key features that make it stand out:
 - **Tools for Machine Learning:** They offer a dedicated Historical Forecast API. This is designed specifically for checking past forecasts or training machine learning models by continuously recording daily high-resolution weather model outputs.
 - **Recent Past at a Glance:** It integrates short-term historical forecast runs (up to 16 days back) so you can easily compare what was predicted recently with what actually happened.
 
+## How Does Open-Meteo Collect Its Data?
+
+You might assume they run thousands of weather stations, but Open-Meteo actually acts as an enormous data aggregator. Every single day, it pulls in over 2 terabytes of raw data files from the biggest national weather services across the globe. 
+
+Instead of you having to download massive, complex binary files, Open-Meteo processes and normalizes all of this raw data into a clean, unified format. As new model runs are published, the system continuously stitches them together, ensuring a seamless stream of historical weather data without any gaps. 
+
 ## What Kind of Weather Can You Track?
 
 You might be wondering if it only tracks temperature. The answer is no! Open-Meteo seamlessly integrates data from dozens of global weather models (like the European Centre for Medium-Range Weather Forecasts [ECMWF], the National Oceanic and Atmospheric Administration [NOAA], and the German Meteorological Service [DWD]) to ensure there are no frustrating gaps in the timeline. 
@@ -65,6 +79,12 @@ Here is a glimpse of the metrics you can get your hands on:
 - **Core Variables:** Temperature, relative humidity, precipitation (rain and snow), and wind speed/direction.
 - **Atmospheric Details:** Pressure, solar radiation, CAPE (Convective Available Potential Energy), and soil moisture.
 - **Aggregated Formats:** Data can be queried natively in JSON via HTTP requests or downloaded using Python and R integrations. [[1](https://github.com/AntoinePinto/weather-data)]
+
+## Free Tier & Commercial Options
+
+If you are a hobbyist or researcher, the API is available for non-commercial use at absolutely no cost. There is no API key, no sign-up, and no credit card required. You get up to 10,000 daily API calls for free (though attribution is required under the CC BY 4.0 data licence). Despite being free of charge, the forecast accuracy is top-notch, utilizing a vast array of local weather models with rapid updates to ensure precise forecasts for any location globally.
+
+However, if your project grows or you need to use the data for business purposes, they also provide an API for commercial use. Starting at €29 per month, these plans offer a commercial use licence, dedicated API capacity, and direct support. You can check out all the details on their [pricing page](https://open-meteo.com/en/pricing).
 
 ## Documentation and Tools
 
