@@ -243,3 +243,7 @@ The automated account verifies the amount received and sends the second currency
 Asec+April+2026+Newsletter.pdf
 https://static1.squarespace.com/static/67e7df08beca793d9f3911dd/t/6a188d827a75f60b91e3aee0/1779993986359/Asec+April+2026+Newsletter.pdf
 - [ ] Germany USA Mexico in Argentina are the ones who are so far qualified and confirm their place in the knockout stages of the World Cup
+- [ ] Announcing the Monetization Gateway: charge for any resource behind Cloudflare via x402
+https://blog.cloudflare.com/monetization-gateway/?utm_campaign=cf_blog&utm_content=20260701&utm_medium=organic_social&utm_source=twitter
+
+Cloudflare pay per crawl
