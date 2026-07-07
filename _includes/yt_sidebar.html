@@ -10,6 +10,50 @@
         <li><a href="{{ '/gallery/videos/youtube/' | append: genre_slug | append: '/' | relative_url }}" class="yt-cat-btn {% if page.url contains genre_slug %}active{% endif %}">{{ genre }}</a></li>
       {% endfor %}
     </ul>
+
+    <p class="yt-sidebar-heading" style="margin-top: 25px;">Collections</p>
+    <ul id="yt-collections-list" style="list-style: none; padding: 0; margin: 0;">
+      {% for group in site.video_collections %}
+        {% assign is_yt_collection = false %}
+        {% if group.youtube_playlist_url %}
+          {% assign is_yt_collection = true %}
+        {% else %}
+          {% assign grp_vids = "" | split: "" %}
+          {% if group.match_by == "genre" or group.match_by == "genre_and_keywords" %}
+            {% assign genre_matches = all_yt_vids | where: "genre", group.genre %}
+            {% assign grp_vids = grp_vids | concat: genre_matches %}
+          {% endif %}
+          {% if group.match_by == "keywords" or group.match_by == "genre_and_keywords" %}
+            {% for kw in group.keywords %}
+              {% assign kw_lower = kw | downcase %}
+              {% for vid in all_yt_vids %}
+                {% assign vtl = vid.title | downcase %}
+                {% if vtl contains kw_lower %}
+                  {% assign grp_vids = grp_vids | push: vid %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+          {% if group.match_by == "manual" or group.videos %}
+            {% for slug in group.videos %}
+              {% for vid in all_yt_vids %}
+                {% assign vid_file = vid.path | split: "/" | last | replace: ".md", "" %}
+                {% if vid_file == slug or vid.title == slug %}
+                  {% assign grp_vids = grp_vids | push: vid %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+          {% if grp_vids.size > 0 %}
+            {% assign is_yt_collection = true %}
+          {% endif %}
+        {% endif %}
+
+        {% if is_yt_collection %}
+          <li><a href="{% if group.youtube_playlist_url %}{{ group.youtube_playlist_url }}{% else %}{{ group.url | relative_url }}{% endif %}" target="{% if group.youtube_playlist_url %}_blank{% else %}_self{% endif %}" class="yt-cat-btn {% if page.url == group.url %}active{% endif %}">{{ group.icon }} {{ group.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
     <div class="yt-random-wrap">
       <button id="yt-random-btn" class="btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
