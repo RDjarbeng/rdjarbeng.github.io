@@ -16,6 +16,10 @@ card_items:
     description: "Open-Meteo is a free platform that provides weather forecasts and historical climate data. Anyone can access it easily without needing to create an account or sign up."
     url: "https://open-meteo.com/"
     link_text: "Learn More"
+  - name: "How is Data Collected?"
+    badge_1: "Aggregator"
+    badge_2: "2+ Terabytes Daily"
+    description: "Open-Meteo doesn't run its own weather stations. Instead, it aggregates over 2 terabytes of raw data daily from major national services like NOAA and ECMWF, processes it, and serves it through a simple API. [[1](https://open-meteo.com/)]"
   - name: "Who Uses This Data?"
     badge_1: "Researchers"
     badge_2: "Developers"
@@ -68,7 +72,7 @@ If you're eager to get your hands dirty, they make it incredibly straightforward
 
 ## Wrapping Up
 
-To put it simply, the Open-Meteo Archive is a powerful, completely free tool that unlocks decades of weather data for anyone who needs it. We’ve covered how it provides a continuous history dating back to 1979, the vast array of basic and advanced weather variables available, and how easily you can plug it into your own projects. By combining data from major global models into one accessible platform, Open-Meteo removes the headaches usually associated with climate research. Whether you need temperature trends from 1980 or yesterday's solar radiation levels, this resource has you covered—without ever asking for an account login.
+To put it simply, the Open-Meteo Archive is a powerful, completely free tool that unlocks decades of weather data for anyone who needs it. We’ve covered how it provides a continuous history dating back to 1979, the vast array of basic and advanced weather variables available, and how easily you can plug it into your own projects. By combining data from major global models into one accessible platform, Open-Meteo removes the headaches usually associated with climate research. Whether you need temperature trends from 1980 or yesterday's solar radiation levels, this resource has you covered, without ever asking for an account login.
 
 ## Similar Weather Posts
 
