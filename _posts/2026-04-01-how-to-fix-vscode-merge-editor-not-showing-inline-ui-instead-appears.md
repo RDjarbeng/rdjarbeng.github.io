@@ -6,7 +6,7 @@ category: Help
 tags:
   - Vscode
   - IDE
-title: How To Fix vscode merge editor not showing, inline ui instead appears in 1 minute
+title: How To Fix vscode merge editor not showing in 1 minute
 image: ''
 image_alt: ''
 layout: post
