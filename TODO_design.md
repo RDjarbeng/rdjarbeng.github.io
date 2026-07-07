@@ -205,3 +205,4 @@ https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website
 - [ ] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page
+- [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
