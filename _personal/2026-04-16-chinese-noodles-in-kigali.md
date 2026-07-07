@@ -7,8 +7,8 @@ tags:
   - food
   - Kigali
   - cooking
-image: /assets/images/personal/chinese-noodles-in-kigali-cover.png
-image_alt: Chinese Noodles in Kigali cover image showing a steaming bowl of ramen noodles with beef, eggs and vegetables
+image: /assets/images/posts/covers/chinese_noodles_kigali_cover_richard_pointing.png
+image_alt: A man on a stage smiling and gesturing with both hands toward a large blue screen behind him. The screen displays the bold white text 'CHINESE NOODLES IN KIGALI' above a vibrant photograph of a steaming bowl of spicy noodles. Below the image, smaller white text reads 'rdjarbeng.com/personal/chinese-noodles-in-kigali'. This image is modeled by Richard Djarbeng
 layout: personal
 card_items: []
 ---
