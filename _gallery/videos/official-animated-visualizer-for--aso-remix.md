@@ -41,3 +41,125 @@ The animation (credited to creator/director Berimah Boateng and "Sobolo Made It"
 * **The Climax Concert:** The video concludes with a vibrant, neon-lit rooftop performance where Kwabena Kwabena (on guitar), Stonebwoy (on drums), and Kofi Kinaata (on keyboard) all jam together, turning the painful heartbreak into a massive collaborative hit.
 
 The nicest parts are the part where Stonebwoy says 'Niɛ ɛshi me kraa ni sɛ we got matching tattoos' and  also the parts where Kofi Kinaata says "You've fallen in love, but sometimes stand in love kakraa"
+
+## Lyrics:
+
+> Ɔnyɔnko a mene wo bɔkosua tafre
+> Wone bɛɛbi da
+> Na wosan nni kaprɛ
+> Nti papa a meyɛ wo yi nyina ara
+> m’aseda ni?
+> Aso medɔfo pa na w’ayɛ me sei
+> I got it so wrong
+> Na me dwen sɛ woyɛ ɔbaa sima
+> Even if, ebe that bad
+> Ɛnyɛ wo ne me nyɔkopa
+> M’asua me lesson
+> Mintumi newo ntena
+> Megye me kawa , megye me safoa
+> Megye me car
+> Gyae me life ma me aa
+> Mintumi newo ntena
+> Megye me kawa , megye me safoa
+> Megye me car
+> Gyae me life ma me oo oo
+> Pen pen wosi no pen pen
+> Afei mati nkensen
+> Aso yɛto nkwanta a y’apae
+> Yɛto nkwanta a y’apae ooo
+> Pen pen wosi no pen pen
+> Afei mati nkensen
+> Aso yɛto nkwanta a y’apae
+> Aso ayɛ me adze o dzo dzo dzo dzo
+
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> Aso endi nokware ooo
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+
+> I gave my heart to you
+> You thought I loose the screw
+> Deɛ ɛshi me koraa ne sɛ
+> We got matching tatoos
+> Na red flag no a
+> Mehunu yɛ miyi m’ani no
+> Watiw m’akoma, it's too late
+> Even though I did my duty
+> Even when you never need it
+> Could’ve been somebody not my best friend
+> Mentumi ntena naa naa
+> Wonti me kɔ psycha
+> Wokuruwa no ayɛ ma
+> Aso yɛto nkwanta a y’apae
+> Penpen wosi no penpen
+> Gyen gyen ɔdɔ ebu me gyen
+> Aso yɛto nkwanta a y’apae
+> Yɛto nkwanta a y’apae oo ebei
+> Penpen wosi no penpen
+> Gyen gyen ɔdɔ ebu me gyen
+> Aso yɛto nkwanta a y’apa
+> Aso ayɛ me adze oooooo
+
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> Aso endi nokware ooo
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+
+> One man down
+> Call me Kofi Kinata
+> Abadze mpo.
+> Na you for fall in love but
+> Sometimes stand in love kakra
+> Na awo nshwɛ babiara
+> Ehuru pɛ na ekɔ tɔ ɔdɔ mu tsɔn
+> Sɛ ahu dɛ ɔka kitikit na aka erebɔ dam
+> Sacrifice na dededede
+> Nenyina ara agye gɔn
+> Ode nenyinara kɔ
+> Ma ana ekɛgye wo car key
+> M’aware afa no world cup no
+> Gbee bi nfee party
+> Ma yɔnko bɛka biara
+> Meka dze kyerɛ wo entei
+> Ma enyim a yɛ Aso
+> Sɛ ahu ayɛ wo downfall
+> Ma yɔnko bɛka biara
+> Meka dze kyerɛ wo entei oo
+> Aso Aso ɔdze Raggae adan wo Dancehall
+> Mapepre meho agye maniso oo
+> Opanin ni hwi koraa no ɔwɔ abakyer
+> Yɛ kaa yɛ oo na mantie ee
+> Aso ayɛ m’adze oo
+> Wayɛ Saa ama minsa esi fɔm
+> Yɛ kaa yɛ oo Yɛ kaa yɛ ooo
+> Aso ayɛ m’adze oo
+> Wayɛ Saa ama minsa esi fɔm
+> Yɛse bɛɛma nsu ooo
+> So so Aso ayɛme adze
+> Wayɛ saa ama mati nisuo
+> Attaa nyonmɔ eee ( Nyunmɔ eee)
+> Moko abahele mie mingbo ee
+> Minbgo hee
+> Aso ayɛ m’adze ooo
+
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> Aso enni nokware ooo
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adze
+> W’ayɛ me adz
+
+Source lyrics attribution: Lyrics updated from [NotJustOk](https://notjustok.com/lyrics/aso-ii-lyrics-kwabena-kwabena-ft-stonebwoy-kofi-kinaata/).
