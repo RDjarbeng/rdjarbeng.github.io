@@ -43,7 +43,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     border: 1px solid var(--card-border);
     z-index: 100;
     overflow-y: auto;
-    padding: 12px 1px 30px 20px;
+    padding: 12px 1px 30px 5px;
     margin-right: 0;
     max-height: none;
     flex: none;
@@ -299,6 +299,25 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
   .yt-page-shell {
     display: flex;
     min-height: 100vh;
+    transition: all 0.3s ease;
+
+    &.sidebar-collapsed {
+      @media (min-width: 769px) {
+        .yt-sidebar {
+          width: 60px;
+          #yt-category-list, #yt-collections-list, .yt-sidebar-heading, .yt-random-wrap {
+            display: none !important;
+          }
+        }
+        .yt-content-area {
+          margin-left: 60px;
+          max-width: calc(100% - 60px);
+        }
+        .site-footer {
+          margin-left: 60px;
+        }
+      }
+    }
   }
 
   .site-footer {
@@ -318,6 +337,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     padding: 12px 0 20px 0;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, width 0.3s ease;
 
     // Expand to fill the navbar gap once it scrolls out of view
     @supports (animation-timeline: scroll()) {
@@ -393,6 +413,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     margin-left: $_yt-rail-width;
     max-width: calc(100% - #{$_yt-rail-width});
     padding: 15px;
+    transition: margin-left 0.3s ease, max-width 0.3s ease;
   }
 
   .yt-page-header {
@@ -427,7 +448,8 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
       height: auto;
       padding: 10px 0;
 
-      #yt-category-list {
+      #yt-category-list, #yt-collections-list {
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;

@@ -47,7 +47,7 @@ body_class: youtube-page
         {% endif %}
         <!-- Featured Video Section -->
         <div class="featured-video-container" style="margin-bottom: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid var(--card-border);">
-          <div class="video-thumbnail" data-vid="{{ featured_vid_id }}" style="aspect-ratio: 21/9; max-height: 500px;">
+          <div class="video-thumbnail" data-vid="{{ featured_vid_id }}" style="max-height: 500px;">
             <a href="javascript:void(0);" class="inline-play-btn" style="width: 100%; height: 100%; display: block; position: relative;">
               <img src="{% if featured_vid.thumbnail != '' and featured_vid.thumbnail != nil %}{{ featured_vid.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{{ featured_vid_id }}/maxresdefault.jpg{% endif %}" alt="{{ featured_vid.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://img.youtube.com/vi/{{ featured_vid_id }}/hqdefault.jpg'">
               <div class="play-btn-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform 0.2s; box-shadow: 0 0 20px rgba(255,0,0,0.5);">
@@ -61,7 +61,7 @@ body_class: youtube-page
           <div class="featured-info" style="padding: 25px; background: var(--card-bg);">
             <h2 style="margin: 0 0 10px 0; font-size: 1.8rem;">{{ featured_vid.title | titleize | escape }}</h2>
             <div style="color: var(--grey-text); font-size: 0.95rem; margin-bottom: 15px;">{{ featured_vid.date | date: "%B %-d, %Y" }} &bull; <span style="color: #ff0000; font-weight: 600;">{{ featured_vid.genre | default: featured_vid.category | default: "Other" | upcase }}</span></div>
-            <p style="margin: 0; line-height: 1.6;">{{ featured_vid.description | truncatewords: 40 }}</p>
+            <p style="margin: 0; line-height: 1.6;">{{ featured_vid.description | default: featured_vid.content | strip_html | truncatewords: 35 }}</p>
             <a href="{{ featured_vid.url | relative_url }}" class="btn" style="display: inline-block; margin-top: 15px; padding: 8px 20px; background: #ff0000; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">View Details</a>
           </div>
         </div>
@@ -70,7 +70,15 @@ body_class: youtube-page
 
     {% if show_featured and site.video_collections %}
       <div class="video-groups-container" id="youtube-playlists-section" style="margin-bottom: 3rem;">
-        <h2 class="video-groups-title" style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--card-border);">Featured Playlists</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;">
+          <h2 class="video-groups-title" style="font-size: 1.5rem; margin: 0;">Featured Playlists</h2>
+          <button class="video-groups-toggle" onclick="
+            var groups = this.closest('.video-groups-container').querySelectorAll('.video-group-rail-section');
+            var isHidden = groups[0] && groups[0].style.display === 'none';
+            groups.forEach(function(g){ g.style.display = isHidden ? '' : 'none'; });
+            this.textContent = isHidden ? 'Hide ⌃' : 'Show ⌄';
+          " style="background: none; border: none; color: var(--text-color); cursor: pointer; font-size: 0.9rem; font-weight: 500;">Hide ⌃</button>
+        </div>
         
         {% assign all_vids = site.gallery | where: "type", "video" | where: "platform", "youtube" | sort: "date" | reverse %}
 
@@ -160,7 +168,15 @@ body_class: youtube-page
       </div>
 
       <div class="video-groups-container" id="youtube-collections-section" style="margin-bottom: 3rem;">
-        <h2 class="video-groups-title" style="font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--card-border);">Featured Collections</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;">
+          <h2 class="video-groups-title" style="font-size: 1.5rem; margin: 0;">Featured Collections</h2>
+          <button class="video-groups-toggle" onclick="
+            var groups = this.closest('.video-groups-container').querySelectorAll('.video-group-rail-section');
+            var isHidden = groups[0] && groups[0].style.display === 'none';
+            groups.forEach(function(g){ g.style.display = isHidden ? '' : 'none'; });
+            this.textContent = isHidden ? 'Hide ⌃' : 'Show ⌄';
+          " style="background: none; border: none; color: var(--text-color); cursor: pointer; font-size: 0.9rem; font-weight: 500;">Hide ⌃</button>
+        </div>
         
         {% for group in site.video_collections %}
           {% unless group.youtube_playlist_url %}

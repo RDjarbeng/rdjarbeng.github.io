@@ -1,19 +1,36 @@
   <aside class="yt-sidebar" aria-label="Genre filters">
+    <div class="sidebar-desktop-toggle-wrapper d-none d-md-flex" style="padding: 0 16px 12px 16px; border-bottom: 1px solid var(--card-border); margin-bottom: 12px; justify-content: flex-start;">
+      <button onclick="document.querySelector('.yt-page-shell').classList.toggle('sidebar-collapsed')" style="background: none; border: none; cursor: pointer; color: var(--text-color); padding: 4px; display: flex; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
     <p class="yt-sidebar-heading">Genres</p>
     <ul id="yt-category-list">
       <li><a href="/gallery/videos/youtube/" class="yt-cat-btn {% if page.url == '/gallery/videos/youtube/' %}active{% endif %}">All Videos</a></li>
       <li><a href="/gallery/videos/youtube/#youtube-playlists-section" class="yt-cat-btn">📺 Playlists</a></li>
       {% assign all_yt_vids = site.gallery | where: "type", "video" | where: "platform", "youtube" %}
       {% assign yt_genres = all_yt_vids | map: "genre" | compact | uniq | sort %}
+      {% assign collection_titles = site.video_collections | map: "title" %}
       {% for genre in yt_genres %}
+        {% assign is_also_collection = false %}
+        {% for ct in collection_titles %}
+          {% if ct == genre %}
+            {% assign is_also_collection = true %}
+          {% endif %}
+        {% endfor %}
+        {% if is_also_collection %}
+          {% continue %}
+        {% endif %}
         {% assign genre_slug = genre | slugify %}
         <li><a href="{{ '/gallery/videos/youtube/' | append: genre_slug | append: '/' | relative_url }}" class="yt-cat-btn {% if page.url contains genre_slug %}active{% endif %}">{{ genre }}</a></li>
       {% endfor %}
     </ul>
 
     <p class="yt-sidebar-heading" style="margin-top: 25px;">Collections</p>
+    {% assign rendered_collections = "" | split: "" %}
     <ul id="yt-collections-list" style="list-style: none; padding: 0; margin: 0;">
       {% for group in site.video_collections %}
+        {% unless rendered_collections contains group.title %}
         {% assign is_yt_collection = false %}
         {% if group.youtube_playlist_url %}
           {% assign is_yt_collection = true %}
@@ -51,7 +68,9 @@
 
         {% if is_yt_collection %}
           <li><a href="{% if group.youtube_playlist_url %}{{ group.youtube_playlist_url }}{% else %}{{ group.url | relative_url }}{% endif %}" target="{% if group.youtube_playlist_url %}_blank{% else %}_self{% endif %}" class="yt-cat-btn {% if page.url == group.url %}active{% endif %}">{{ group.icon }} {{ group.title }}</a></li>
+          {% assign rendered_collections = rendered_collections | push: group.title %}
         {% endif %}
+        {% endunless %}
       {% endfor %}
     </ul>
     <div class="yt-random-wrap">

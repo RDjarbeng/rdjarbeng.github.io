@@ -1482,7 +1482,7 @@ a:hover {
 .post-meta-footer {
   max-width: 800px;
   /* Matches your .post-content and .related-posts width */
-  margin: 2em auto;
+  margin: 1em auto;
   /* Adds space above and below */
   padding: 0 20px;
   /* Matches your .post-content padding for alignment */
@@ -1638,7 +1638,7 @@ a:hover {
   box-shadow: 0 4px 15px var(--shadow-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 0.9rem;
 
   &:hover {
     transform: translateY(-4px);
