@@ -1,5 +1,5 @@
 ---
-date: 2026-05-16T13:54:00+02:00
+date: 2026-07-07T16:54:00+02:00
 published: true
 author: Richard
 category: Research
