@@ -200,3 +200,7 @@ Need to implement algolia search for the site to make site wide search work
 - [ ] Add a horizontal navbar to the about page to Skip sections
 - [ ] References section for the free background remover post is not properly formatted-fix this
 - [ ] YouTube page layout is broken needs a fix
+- [ ] Music of RRR | Richard Djarbeng
+https://rdjarbeng.com/gallery/videos/music-of-rrr/
+
+How to put something underneath this post that shows that this is a playlist under a video collection for this website
