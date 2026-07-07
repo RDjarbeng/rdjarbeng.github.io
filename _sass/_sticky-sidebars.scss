@@ -377,11 +377,13 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     border-radius: 4px;
 
     &:hover {
-      background: var(--category-bg);
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff0000;
     }
 
     &.active {
-      background: var(--category-bg);
+      background: #ff0000;
+      color: #ffffff;
       font-weight: 700;
     }
   }
@@ -390,7 +392,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     flex: 1;
     margin-left: $_yt-rail-width;
     max-width: calc(100% - #{$_yt-rail-width});
-    padding: 40px;
+    padding: 15px;
   }
 
   .yt-page-header {
