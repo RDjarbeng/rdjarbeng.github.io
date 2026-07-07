@@ -1,11 +1,10 @@
 ---
 title: Cover image for post - Chinese Noodles in Kigali
-date: 2026-07-07T11:05:47+02:00
+date: 2026-07-07T11:05:47
 image: /assets/images/posts/covers/chinese_noodles_kigali_cover_richard_pointing.png
 type: cover
 link: /personal/chinese-noodles-in-kigali
 image_alt: A man gestures toward a large digital screen displaying a steaming bowl of Chinese noodles with text reading Chinese Noodles in Kigali.
-category: None
 enhanced_by_bot: true
 ---
 
