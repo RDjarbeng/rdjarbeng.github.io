@@ -46,7 +46,7 @@ body_class: youtube-page
   </aside>
 
         <!-- Video Grid -->
-        <div style="flex: 3; min-width: 300px; padding-bottom: 50px;">
+        <div class="yt-content-area">
                 {% assign yt_videos = site.gallery | where: "platform", "youtube" | sort: "date" | reverse %}
                 {% assign featured_vid = yt_videos | first %}
                 {% assign remaining_vids = yt_videos | shift %}
