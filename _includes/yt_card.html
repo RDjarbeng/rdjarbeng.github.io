@@ -23,7 +23,7 @@
               <div class="video-bullet">&bull;</div>
               <div class="video-genre">${genreStr}</div>
             </div>
-            ${hit.description ? html`<p class="video-excerpt" style="font-size: 0.85rem; color: var(--grey-text); margin: 8px 0 0 0; line-height: 1.4;">${hit.description.length > 100 ? hit.description.substring(0, 100) + '...' : hit.description}</p>` : ''}
+            ${hit.description ? html`<p class="video-excerpt" style="font-size: 0.85rem; color: var(--text-color); opacity: 0.75; margin: 8px 0 0 0; line-height: 1.4;">${hit.description.length > 100 ? hit.description.substring(0, 100) + '...' : hit.description}</p>` : ''}
           </div>
         </a>
       </div>
@@ -75,8 +75,8 @@
               <div class="video-bullet">&bull;</div>
               <div class="video-genre">{{ item.genre | default: item.category | default: "Other" }}</div>
             </div>
-            <p class="video-excerpt" style="font-size: 0.85rem; color: var(--grey-text); margin: 8px 0 0 0; line-height: 1.4;">
-              {{ item.description | default: item.content | strip_html | truncatewords: 15 }}
+            <p class="video-excerpt" style="font-size: 0.85rem; color: var(--text-color); opacity: 0.75; margin: 8px 0 0 0; line-height: 1.4;">
+              {{ item.description | default: item.content | strip_html | truncatewords: 35 }}
             </p>
           </div>
         </a>
