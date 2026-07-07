@@ -21,6 +21,16 @@ body_class: youtube-page
       {% assign show_featured = true %}
     {% endif %}
 
+    {% if show_featured == false and page.custom_pager %}
+      <div class="pagination-context-header" style="margin-bottom: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--card-border); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h1 style="margin: 0 0 0.25rem 0; font-size: 1.5rem;">YouTube Archives on RDjarbeng.com </h1>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--grey-text);">Browsing page {{ page.custom_pager.current_page }} of {{ page.custom_pager.total_pages }}</p>
+        </div>
+        <a href="/gallery/videos/youtube/" class="btn" style="padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; text-decoration: none; border: 1px solid var(--card-border);">&larr; Back to Start</a>
+      </div>
+    {% endif %}
+
     {% if show_featured %}
       {% assign featured_vid = remaining_vids | first %}
       {% assign remaining_vids = remaining_vids | shift %}
