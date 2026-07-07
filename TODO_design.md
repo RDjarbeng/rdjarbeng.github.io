@@ -41,8 +41,7 @@ Possible future implementation:
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
-- [ ] search is broken fix sync with algolia
-- [ ] Fix: The nav search button is hidden on mobile once the user starts typing. (High Importance, Trivial Complexity: CSS/JavaScript fix)
+- [ ] search is working sync with algolia, need to fix search for gallery and videos page
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
 
@@ -133,7 +132,7 @@ Possible future implementation:
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
 - [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images)
 - [ ] Check access logs for user-agents see who's crawling, check for markdown content negotiation
-- [ ] Improve individual tags and categories page so that it's informative, currently a single tag page just links to the post it references, this isn't helping SEO.. Suggestions for improvement: we could link more posts in the category of the recommended posts or suggest popular posts on the site to make thenpage not look empty, or some other approach that's good for SEO
+
 - [ ] Figure out how to structure pages so that even of it's jist a picture it's informative for the user, find out how X,Facebook, Instagram does this. Does adding details such as who posted this make a difference?
 - [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
