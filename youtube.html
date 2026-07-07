@@ -52,11 +52,21 @@ body_class: youtube-page
                 {% assign remaining_vids = yt_videos | shift %}
                 
                 {% if featured_vid %}
+                {% assign featured_vid_id = "" %}
+                {% if featured_vid.youtube_id contains "v=" %}
+                {% assign featured_vid_id = featured_vid.youtube_id | split: "v=" | last | split: "&" | first %}
+                {% elsif featured_vid.youtube_id contains "youtu.be/" %}
+                {% assign featured_vid_id = featured_vid.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
+                {% elsif featured_vid.youtube_id contains "shorts/" %}
+                {% assign featured_vid_id = featured_vid.youtube_id | split: "shorts/" | last | split: "?" | first %}
+                {% else %}
+                {% assign featured_vid_id = featured_vid.youtube_id %}
+                {% endif %}
                 <!-- Featured Video Section -->
                 <div class="featured-video-container" style="margin-bottom: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid var(--card-border);">
-                  <div class="video-thumbnail" data-vid="{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}" style="aspect-ratio: 21/9; max-height: 500px;">
+                  <div class="video-thumbnail" data-vid="{{ featured_vid_id }}" style="aspect-ratio: 21/9; max-height: 500px;">
                     <a href="javascript:void(0);" class="inline-play-btn" style="width: 100%; height: 100%; display: block; position: relative;">
-                      <img src="{% if featured_vid.thumbnail != '' and featured_vid.thumbnail != nil %}{{ featured_vid.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}/maxresdefault.jpg{% endif %}" alt="{{ featured_vid.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://img.youtube.com/vi/{% if featured_vid.youtube_id contains 'v=' %}{{ featured_vid.youtube_id | split: 'v=' | last | split: '&' | first }}{% else %}{{ featured_vid.youtube_id }}{% endif %}/hqdefault.jpg'">
+                      <img src="{% if featured_vid.thumbnail != '' and featured_vid.thumbnail != nil %}{{ featured_vid.thumbnail | relative_url }}{% else %}https://img.youtube.com/vi/{{ featured_vid_id }}/maxresdefault.jpg{% endif %}" alt="{{ featured_vid.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://img.youtube.com/vi/{{ featured_vid_id }}/hqdefault.jpg'">
                       <div class="play-btn-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; pointer-events: none; transition: transform 0.2s; box-shadow: 0 0 20px rgba(255,0,0,0.5);">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="white">
                           <path d="M8 5v14l11-7z" />
