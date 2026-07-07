@@ -5,6 +5,30 @@ This todo file contains design specifications and technical  directions for rdja
 - Blog posts are rarely written, but often read
 - Most of the website is purely static files, 
 - Caching must be implemented where possible
+
+## Understanding the layout and reason for certain pages
+
+
+
+## Understanding the structure of the website
+
+The website is divided into several sections:
+- Homepage
+- About page
+- Technical Posts
+- Personal Posts
+- Gallery
+    - Images
+    - Videos
+    - Special collections such as Artemis II
+- Videos (dedicated videos page) combines data from multiple sources
+    -Youtube
+    -Instagram 
+    -TikTok
+    Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are  a strength of youtube.
+- Other minor pages 'search, tags, categories, contact... etc'
+
+Possible future implementation:
 - the rest is a dynamic REST API- todo
 - Any new users that subscribes should receive a welcome email- todo
 - Email newsletter - todo
