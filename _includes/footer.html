@@ -1,39 +1,83 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ " /" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author.name -%}
-            {{ site.author.name | escape }}
-            {%- elsif site.author -%}
-            {{ site.author | escape }}
-            {%- else -%}
-            {{ site.title | escape }}
-            {%- endif -%}
-          </li>
-          {%- if site.email -%}
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {%- endif -%}
-          <li><a class="u-email" href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
-        </ul>
-        <div>&copy; {{ site.time | date: "%Y" }}</div>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <!-- Brand / About Section -->
+    <div class="footer-brand">
+      <a class="footer-title" href="{{ '/' | relative_url }}">
+        {%- if site.author.name -%}
+          {{ site.author.name | escape }}
+        {%- else -%}
+          {{ site.title | escape }}
+        {%- endif -%}
+      </a>
+      <p class="footer-bio">
+        {{- site.description | escape -}}
+      </p>
+      <div class="footer-social-links">
+        {% if site.author.github %}
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </a>
+        {% endif %}
+        {% if site.author.linkedin %}
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M3.36 14.28H.64V5.12h2.72v9.16zM2 3.86a1.57 1.57 0 110-3.14 1.57 1.57 0 010 3.14zM15.36 14.28h-2.72v-4.43c0-1.06-.02-2.42-1.48-2.42-1.48 0-1.7 1.15-1.7 2.34v4.51H6.74V5.12h2.6v1.25h.04c.36-.68 1.25-1.4 2.56-1.4 2.74 0 3.25 1.8 3.25 4.14v5.17z"></path></svg>
+        </a>
+        {% endif %}
+        {% if site.author.twitter %}
+        <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M15.969 3.058a6.516 6.516 0 0 1-1.88.515 3.292 3.292 0 0 0 1.44-1.815 6.557 6.557 0 0 1-2.078.795 3.275 3.275 0 0 0-5.58 2.986 9.288 9.288 0 0 1-6.745-3.418 3.275 3.275 0 0 0 1.014 4.37 3.259 3.259 0 0 1-1.485-.41v.041a3.277 3.277 0 0 0 2.628 3.21 3.284 3.284 0 0 1-1.478.056 3.279 3.279 0 0 0 3.06 2.274 6.574 6.574 0 0 1-4.066 1.4 6.643 6.643 0 0 1-.78-.046 9.255 9.255 0 0 0 5.01 1.468c6.012 0 9.3-4.981 9.3-9.3 0-.142-.003-.283-.01-.424a6.666 6.666 0 0 0 1.634-1.693z"></path></svg>
+        </a>
+        {% endif %}
       </div>
     </div>
 
+    <!-- Pages Links -->
+    <nav class="footer-nav-col" aria-label="Pages Links">
+      <h3 class="footer-heading">Pages</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/posts' | relative_url }}">Technical Posts</a></li>
+        <li><a href="{{ '/personal' | relative_url }}">Personal Posts</a></li>
+        <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
+        <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
+        <li><a href="{{ '/categories/' | relative_url }}">Categories</a></li>
+      </ul>
+    </nav>
+
+    <!-- Gallery & Media Links -->
+    <nav class="footer-nav-col" aria-label="Gallery and Media Links">
+      <h3 class="footer-heading">Gallery & Media</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/gallery/' | relative_url }}">Gallery Overview</a></li>
+        <li><a href="{{ '/gallery/videos/' | relative_url }}">All Videos</a></li>
+        <li><a href="{{ '/gallery/videos/youtube/' | relative_url }}">YouTube Videos</a></li>
+        <li><a href="{{ '/gallery/videos/instagram/' | relative_url }}">Instagram Videos</a></li>
+        <li><a href="{{ '/gallery/videos/tiktok/' | relative_url }}">TikTok Videos</a></li>
+        <li><a href="{{ '/gallery/artemis-ii/' | relative_url }}">Artemis II Collection</a></li>
+      </ul>
+    </nav>
+
+    <!-- Connect Links -->
+    <nav class="footer-nav-col" aria-label="Connect Links">
+      <h3 class="footer-heading">Connect</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
+        {%- if site.email -%}
+        <li><a href="mailto:{{ site.email }}">Email Me</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
   </div>
 
+  <div class="footer-bottom">
+    <div class="copyright">
+      &copy; {{ site.time | date: "%Y " }}
+      {%- if site.author.name -%}
+        {{ site.author.name | escape }}
+      {%- else -%}
+        {{ site.title | escape }}
+      {%- endif -%}. All rights reserved.
+    </div>
+  </div>
 </footer>
