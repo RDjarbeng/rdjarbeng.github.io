@@ -249,3 +249,7 @@ https://blog.cloudflare.com/monetization-gateway/?utm_campaign=cf_blog&utm_conte
 Cloudflare pay per crawl
 - [ ] Evolution of tap to pay and why nobody should use magnetic strips on credit cards anymore. How we went from no digital to some-digital to barely going to the bank on payday. Tap to pay is also faster in a queue compared to pin and magnetic strip.
 Sometimes it's a little unsettling, just tapping and the money is gone (see video from MKBHD), takes a bit of getting used to when your default is POS and pin
+- [ ] CaCTüS – Computation and Cognition Tübingen Summer Internship
+https://www.projects.tuebingen.mpg.de/
+
+Could be a recurring program that good to highlight
