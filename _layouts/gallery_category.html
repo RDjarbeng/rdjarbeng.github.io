@@ -3,6 +3,14 @@ layout: default
 ---
 <div class="home-section" style="max-width: 900px; margin: 0 auto; text-align: center;">
     <h1 class="page-heading" style="text-transform: capitalize;">{{ page.title | replace: "-", " " }}</h1>
+    
+    {% assign cat_meta = site.gallery_categories | where: "title", page.title | first %}
+    {% if cat_meta and cat_meta.content and cat_meta.content != "" %}
+    <div class="category-description" style="margin-bottom: 30px; text-align: left; font-size: 1.1rem; line-height: 1.6;">
+        {{ cat_meta.content | markdownify }}
+    </div>
+    {% endif %}
+
     <div style="margin-bottom: 20px;">
         <a href="/gallery/" class="btn">&larr; Back to Gallery</a>
     </div>
