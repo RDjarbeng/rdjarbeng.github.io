@@ -247,3 +247,5 @@ https://static1.squarespace.com/static/67e7df08beca793d9f3911dd/t/6a188d827a75f6
 https://blog.cloudflare.com/monetization-gateway/?utm_campaign=cf_blog&utm_content=20260701&utm_medium=organic_social&utm_source=twitter
 
 Cloudflare pay per crawl
+- [ ] Evolution of tap to pay and why nobody should use magnetic strips on credit cards anymore. How we went from no digital to some-digital to barely going to the bank on payday. Tap to pay is also faster in a queue compared to pin and magnetic strip.
+Sometimes it's a little unsettling, just tapping and the money is gone (see video from MKBHD), takes a bit of getting used to when your default is POS and pin
