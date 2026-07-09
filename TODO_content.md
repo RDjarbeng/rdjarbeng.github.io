@@ -253,3 +253,5 @@ Sometimes it's a little unsettling, just tapping and the money is gone (see vide
 https://www.projects.tuebingen.mpg.de/
 
 Could be a recurring program that good to highlight
+- [ ] What is this programming thing?and what's the big deal. 
+- What is a coding interview?
