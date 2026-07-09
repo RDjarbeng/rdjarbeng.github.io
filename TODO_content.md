@@ -257,3 +257,6 @@ Could be a recurring program that good to highlight
 - What is a coding interview?
 - [ ] A guide for graduate school and academic programs. What is important and what isn't, Grades, internships, academic success, Hackathons, scholarships, extra curricula activities, languages
 - [ ] Guide to shopping for milk 1%, 3%, whole milk which is just milk
+- [ ] This and the 23 hilbert problems could be good content:  In 2000, the Clay Mathematics Institute issued another list of problems, known as the Millennium Problems, that they deemed the most important open questions in the field. Each problem has a $1 million bounty on its head. The statements of these problems are watertight and precise. There is no room for interpretation. With $1 million at stake for each, there can be no debate about what would count as a solution.
+
+https://www.simonsfoundation.org/2026/06/18/hilberts-23-problems-at-icm-2026-where-are-we-now/?utm_source=Simons+Foundation&utm_campaign=2924e3f2ff-SF_MONTHLY_NEWSLETTER_JULY_2026&utm_medium=email&utm_term=0_-3984777585-746582298
