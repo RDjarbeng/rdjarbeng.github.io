@@ -255,3 +255,4 @@ https://www.projects.tuebingen.mpg.de/
 Could be a recurring program that good to highlight
 - [ ] What is this programming thing?and what's the big deal. 
 - What is a coding interview?
+- [ ] A guide for graduate school and academic programs. What is important and what isn't, Grades, internships, academic success, Hackathons, scholarships, extra curricula activities, languages
