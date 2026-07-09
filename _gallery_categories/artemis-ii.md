@@ -7,6 +7,6 @@ In April 2026, humanity returned to the Moon. Artemis II was NASA’s first crew
 
 ## Artemis II: Engineering the Next Era of Spaceflight
 
-Artemis II was the ultimate stress test of modern aerospace engineering. Launched in April 2026, it was the first crewed flight of the Space Launch System (SLS) rocket and the Orion spacecraft. The mission carried astronauts Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen further into space than any human has ever traveled—shattering the record set by Apollo 13.
+Artemis II was the ultimate stress test of modern aerospace engineering. Launched in April 2026, it was the first crewed flight of the Space Launch System (SLS) rocket and the Orion spacecraft. The mission carried astronauts Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen further into space than any human has ever traveled, shattering the record set by Apollo 13.
 
 Beyond the stunning visuals of the lunar far side, this gallery highlights the hardware that made it possible: the launchpad infrastructure, the solar array wings capturing Earthsets in 4K, and the heat shield that endured 5,000°F temperatures during atmospheric reentry.
