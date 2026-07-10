@@ -4,7 +4,7 @@ image: /assets/images/peterKimanziPortfolio.png
 image_alt: A sleek portfolio website screenshot for Peter Kimanzi featuring a dark mode UI with project thumbnails for Sokowatch and Twiga.
 type: cover
 link: /Spotlight on Peter Kimanzi
-date: 2022-10-10T12:00:00
+date: 2025-05-18 12:00:00
 enhanced_by_bot: true
 ---
 
