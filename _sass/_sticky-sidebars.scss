@@ -300,22 +300,22 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     display: flex;
     min-height: 100vh;
     transition: all 0.3s ease;
+  }
 
-    &.sidebar-collapsed {
-      @media (min-width: 769px) {
-        .yt-sidebar {
-          width: 60px;
-          #yt-category-list, #yt-collections-list, .yt-sidebar-heading, .yt-random-wrap {
-            display: none !important;
-          }
+  &.sidebar-collapsed {
+    @media (min-width: 769px) {
+      .yt-sidebar {
+        width: 60px;
+        #yt-category-list, #yt-collections-list, .yt-sidebar-heading, .yt-random-wrap {
+          display: none !important;
         }
-        .yt-content-area {
-          margin-left: 60px;
-          max-width: calc(100% - 60px);
-        }
-        .site-footer {
-          margin-left: 60px;
-        }
+      }
+      .yt-content-area {
+        margin-left: 60px;
+        max-width: calc(100% - 60px);
+      }
+      .site-footer {
+        margin-left: 60px;
       }
     }
   }
