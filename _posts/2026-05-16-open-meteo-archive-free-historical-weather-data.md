@@ -96,5 +96,5 @@ To put it simply, the Open-Meteo Archive is a powerful, completely free tool tha
 
 ## Similar Weather Posts
 
-- [Top Websites for African Climate Data]({% post_url 2024-10-09-top-websites-for-african-climate-data %})
-- [How Google forecasts Weather and Air Quality Data]({% post_url 2024-10-28-how-google-forecasts-weather-and-air-quality-data %})
+- [Top Websites for African Climate Data]({% post_url 2025-10-09-top-websites-for-african-climate-data %})
+- [How Google forecasts Weather and Air Quality Data]({% post_url 2025-10-28-how-google-forecasts-weather-and-air-quality-data %})
