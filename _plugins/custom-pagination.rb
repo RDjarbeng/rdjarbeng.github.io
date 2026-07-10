@@ -179,48 +179,57 @@ module Jekyll
             cat_title = cat_info[:title]
             cat_slug = cat_info[:slug]
             
-            cat_items = all_gallery.select { |item| 
-              if cat_slug.start_with?('videos/')
-                # It's a video genre or platform!
-                parts = cat_slug.split('/')
-                item_genre = item.data['genre'] || item.data['category'] || ''
-                item_genre_stripped = item_genre.to_s.strip
-                item_genre_slug = ""
-                if item_genre_stripped != ""
-                  item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
-                end
-                
-                if parts.size == 3
-                  # e.g. videos/youtube/entertainment
-                  plat_name = parts[1]
-                  genre_name = parts[2]
-                  item.data['type'] == 'video' && item.data['platform'] && item.data['platform'].downcase == plat_name && item_genre_slug == genre_name
-                else
-                  # e.g. videos/entertainment or videos/youtube
-                  genre_name = parts[1]
-                  item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
-                end
-              elsif cat_slug.include?('/')
-                item.relative_path.include?("/#{cat_slug}/")
-              else
-                next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
-                cats = item.data['category'] || ''
-                labels_data = item.data['labels'] || []
-                labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
-                plat = item.data['platform'] || ''
-                type = item.data['type'] || ''
-                genre = item.data['genre'] || ''
-                combined = "#{cats} #{labels} #{plat} #{type} #{genre}".strip
-                matches_comb = false
-                if combined != ""
-                  slugified_comb = Jekyll::Utils.slugify(combined)
-                  if slugified_comb != nil && slugified_comb != ""
-                    matches_comb = slugified_comb.include?(cat_slug)
+            if cat_slug == 'cover-images'
+              cat_items = all_gallery.select { |item|
+                cats_data = item.data['categories'] || item.data['category'] || ''
+                cats = cats_data.is_a?(Array) ? cats_data.join(' ') : cats_data.to_s
+                cats.downcase.include?('cover-images') || (item.url && item.url.include?('/cover-images/')) || item.data['type'] == 'cover'
+              }.sort_by { |p| p.data['date'] || Time.at(0) }.reverse
+            else
+              cat_items = all_gallery.select { |item| 
+                if cat_slug.start_with?('videos/')
+                  # It's a video genre or platform!
+                  parts = cat_slug.split('/')
+                  item_genre = item.data['genre'] || item.data['category'] || ''
+                  item_genre_stripped = item_genre.to_s.strip
+                  item_genre_slug = ""
+                  if item_genre_stripped != ""
+                    item_genre_slug = Jekyll::Utils.slugify(item_genre_stripped)
                   end
+                  
+                  if parts.size == 3
+                    # e.g. videos/youtube/entertainment
+                    plat_name = parts[1]
+                    genre_name = parts[2]
+                    item.data['type'] == 'video' && item.data['platform'] && item.data['platform'].downcase == plat_name && item_genre_slug == genre_name
+                  else
+                    # e.g. videos/entertainment or videos/youtube
+                    genre_name = parts[1]
+                    item.data['type'] == 'video' && (item_genre_slug == genre_name || (item.data['platform'] && item.data['platform'].downcase == genre_name))
+                  end
+                elsif cat_slug.include?('/')
+                  item.relative_path.include?("/#{cat_slug}/")
+                else
+                  next false if cat_slug == 'external' && item.relative_path.split('/').size > 2
+                  cats_data = item.data['categories'] || item.data['category'] || ''
+                  cats = cats_data.is_a?(Array) ? cats_data.join(' ') : cats_data.to_s
+                  labels_data = item.data['labels'] || []
+                  labels = labels_data.is_a?(Array) ? labels_data.join(' ') : labels_data.to_s
+                  plat = item.data['platform'] || ''
+                  type = item.data['type'] || ''
+                  genre = item.data['genre'] || ''
+                  combined = "#{cats} #{labels} #{plat} #{type} #{genre}".strip
+                  matches_comb = false
+                  if combined != ""
+                    slugified_comb = Jekyll::Utils.slugify(combined)
+                    if slugified_comb != nil && slugified_comb != ""
+                      matches_comb = slugified_comb.include?(cat_slug)
+                    end
+                  end
+                  "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || matches_comb || (item.url && item.url.include?("/#{cat_slug}/"))
                 end
-                "#{cats} #{labels} #{plat} #{type} #{genre}".downcase.include?(cat_slug) || matches_comb || (item.url && item.url.include?("/#{cat_slug}/"))
-              end
-            }
+              }
+            end
             
             if cat_items.any?
               total_pages = (cat_items.size / paginate_size.to_f).ceil
