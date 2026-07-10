@@ -7,12 +7,9 @@ tags:
   - Rwanda
   - Gasabo
   - Giant Basket
-  - Basket In Gasabo
+  - Basket In Kigali
   - Landmark in Kigali
-  - Huge Basket in Kigali
-  - What's that Basket for in Kigali
   - Rwanda and Baskets
-  - Richard Discusses Giant Basket in Kigali
 image: /assets/images/gasabo_cropped.jpg
 image_alt: Cover image for Why is There a Giant Basket on This Building in Kigali?
 layout: personal
