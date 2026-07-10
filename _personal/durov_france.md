@@ -1,6 +1,6 @@
 ---
 title: 'The Joke That Aged Poorly: Did Pavel Durov Predict His Own Arrest?'
-date: 2024-08-26
+date: 2025-08-26
 published: true
 tags:
   - Pavel Durov

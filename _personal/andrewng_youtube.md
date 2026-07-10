@@ -2,7 +2,7 @@
 layout: personal
 title: "Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 image: /assets/images/andrewng_youtube.png
-date: 2024-08-05
+date: 2025-08-05
 image_alt: "Cover image for Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 ---
 

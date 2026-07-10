@@ -2,7 +2,7 @@
 layout: personal
 title: "My First Personal Post"
 published: false
-date: 2024-07-30
+date: 2025-07-30
 image_alt: "Cover image for My First Personal Post"
 ---
 

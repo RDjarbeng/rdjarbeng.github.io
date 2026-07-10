@@ -1,6 +1,6 @@
 ---
 title: Why is There a Giant Basket on This Building in Kigali?
-date: 2024-08-05
+date: 2025-08-05
 published: true
 tags:
   - Kigali
