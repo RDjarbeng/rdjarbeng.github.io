@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Can AI bring images to life?
-date: 2024-08-16T12:00:00
+date: 2025-08-16T12:00:00
 image: /assets/images/bees_luma.jpeg
 type: cover
 link: /lumalabs_genai

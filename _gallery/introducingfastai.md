@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Introducing fastai-Practical deep learning without a PhD
-date: 2024-08-01T12:00:00
+date: 2025-08-01T12:00:00
 image: /assets/images/fastaibook.webp
 type: cover
 link: /introducingfastai

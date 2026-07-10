@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Machine Learning Specialization by Andrew Ng and DeepLearning.AI
-date: 2024-11-21T12:00:00
+date: 2025-11-21T12:00:00
 image: /assets/images/andrew_ng_coursera.png
 type: cover
 link: /machine-learning-specialization-by-andrew-ng-and-deeplearning-ai

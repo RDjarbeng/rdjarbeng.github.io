@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Automating Python Execution on a Raspberry Pi with a virtual environment
-date: 2024-09-04T12:00:00
+date: 2025-09-04T12:00:00
 image: /assets/images/just_start.png
 type: cover
 link: /automating-rpi_python

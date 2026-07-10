@@ -1,6 +1,6 @@
 ---
 title: Why You Should Consider Publishing in arXiv
-date: 2024-10-14T12:19:00
+date: 2025-10-14T12:19:00
 author: Richard
 image: /assets/images/academic_paper.jpeg
 video: ""

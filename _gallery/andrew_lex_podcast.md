@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Lex Fridman and Andrew Ng on Deep learning - Lex Podcast
-date: 2024-09-15T12:00:00
+date: 2025-09-15T12:00:00
 image: /assets/images/andrewng_lex.png
 type: cover
 link: /andrew_lex_podcast

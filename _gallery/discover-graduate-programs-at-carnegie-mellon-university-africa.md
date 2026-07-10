@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Discover Graduate Programs at Carnegie Mellon University Africa
-date: 2024-11-26T12:00:00
+date: 2025-11-26T12:00:00
 image: /assets/images/CMU_africa_brochure.png
 type: cover
 link: /discover-graduate-programs-at-carnegie-mellon-university-africa

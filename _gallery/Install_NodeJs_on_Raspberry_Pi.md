@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Install-NodeJs-on-Raspberry-Pi
-date: 2023-10-25T12:00:00
+date: 2025-10-25T12:00:00
 image: /assets/images/old_node_js.png
 type: cover
 link: /Install_NodeJs_on_Raspberry_Pi

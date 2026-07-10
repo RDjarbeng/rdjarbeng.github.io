@@ -1,6 +1,6 @@
 ---
 title: 'Cover image for post - Installing and removing Node.js on linux-based Systems-for raspberry pi 4B '
-date: 2024-07-26T12:00:00
+date: 2025-07-26T12:00:00
 image: /assets/images/nodejs_2024.png
 type: cover
 link: /Installing_NodeJs_16

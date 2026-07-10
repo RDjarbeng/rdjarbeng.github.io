@@ -1,6 +1,6 @@
 ---
 title: 'Cover image for post - Kaggle competitions: Gateway to Data Science Success'
-date: 2024-12-11 12:00:00
+date: 2025-12-11 12:00:00
 image: /assets/images/kaggle_competitions.png
 type: cover
 link: /kaggle-competitions-gateway-to-data-science-success

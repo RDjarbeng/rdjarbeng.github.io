@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Resolving SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED' Error
-date: 2024-07-26T12:00:00
+date: 2025-07-26T12:00:00
 image: /assets/images/error_image.webp
 type: cover
 link: /resolving_ssh_error

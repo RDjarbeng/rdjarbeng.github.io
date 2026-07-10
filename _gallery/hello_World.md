@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Hello World -Skynet is Self aware
-date: 2024-07-21T12:00:00
+date: 2025-07-21T12:00:00
 image: /assets/images/servers.jpeg
 type: cover
 link: /hello_World

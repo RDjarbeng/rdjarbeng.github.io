@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Introducing GitHub Models
-date: 2024-08-07T12:00:00
+date: 2025-08-07T12:00:00
 image: /assets/images/github_models_pic.png
 type: cover
 link: /github_models

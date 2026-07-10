@@ -1,6 +1,6 @@
 ---
 title: 'Cover image for post - Answer.AI Launches: A New Chapter in Practical AI Development'
-date: 2024-11-26T12:00:00
+date: 2025-11-26T12:00:00
 image: /assets/images/answer_ai.jpg
 type: cover
 link: /answer-ai-launches-a-new-chapter-in-practical-ai-development

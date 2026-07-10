@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - How AI Could Empower Any Business - Andrew Ng
-date: 2024-08-02T12:00:00
+date: 2025-08-02T12:00:00
 image: /assets/images/andrew_ng_ai_talk.png
 type: cover
 link: /andrewng_ted

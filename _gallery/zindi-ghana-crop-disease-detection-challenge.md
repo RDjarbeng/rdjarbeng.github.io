@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Zindi -Ghana Crop Disease Detection Challenge
-date: 2024-10-19 12:00:00
+date: 2025-10-19 12:00:00
 image: /assets/images/zindi_crop_disease.png
 type: cover
 link: /zindi-ghana-crop-disease-detection-challenge

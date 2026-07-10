@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Automating Script Execution on a Raspberry Pi
-date: 2024-09-04T12:00:00
+date: 2025-09-04T12:00:00
 image: /assets/images/raspberrypi.png
 type: cover
 link: /automating-rpi

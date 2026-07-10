@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Is There a Process to Build an Application?
-date: 2024-11-20T12:00:00
+date: 2025-11-20T12:00:00
 image: /assets/images/light bulb.jpg
 type: cover
 link: /is-there-a-process-to-build-an-application

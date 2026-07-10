@@ -1,6 +1,6 @@
 ---
 title: Cover image for post - Learn to Build Computer Vision Models with Roboflow
-date: 2024-08-10T12:00:00
+date: 2025-08-10T12:00:00
 image: /assets/images/comp_vision_roboflow.jpeg
 type: cover
 link: /comp_vison_roboflow
