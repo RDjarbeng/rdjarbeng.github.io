@@ -1,5 +1,5 @@
 ---
-title: Chinese Noodles In Kigali
+title: Finding Chinese Noodles In Kigali
 date: 2026-04-16T16:19:00+02:00
 published: true
 tags:

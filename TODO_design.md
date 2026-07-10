@@ -230,3 +230,8 @@ How to put something underneath this post that shows that this is a playlist und
 - [ ] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page
 - [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
+- [ ] Improve stack blitz post by dividing it into sections
+- [ ] https://rdjarbeng.com/gallery/cover-images/
+
+Cover images path is showing page not found
+- [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
