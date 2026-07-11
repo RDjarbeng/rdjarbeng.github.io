@@ -237,3 +237,4 @@ Cover images path is showing page not found
 - [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
 - [ ] Search page needs work, for light mode especially
 - [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
+- [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
