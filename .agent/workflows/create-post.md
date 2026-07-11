@@ -30,6 +30,9 @@ Every post should have a cover image. You must choose one of the following two a
 - Overlay the post title and relevant UI elements using the empty space in the avatar, or reposition the avatar so the text fits properly to make it a proper cover image.
 - Save this modified image as a `.jpg` in `assets/images/posts/covers/` and link that new image in the frontmatter.
 
+**Image Placement Rule**
+- If the post does not contain any other images, you MUST embed the cover image inside the post body (e.g., after the first paragraph) so the post isn't just a wall of text. Use standard markdown `![Alt Text](/path/to/image.jpg)`.
+
 ## 4. Create the File
 - Create the markdown file in the `_posts/` directory.
 - Use the naming convention `YYYY-MM-DD-slug.md`.
