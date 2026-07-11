@@ -238,3 +238,4 @@ Cover images path is showing page not found
 - [ ] Search page needs work, for light mode especially
 - [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
 - [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
+- [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
