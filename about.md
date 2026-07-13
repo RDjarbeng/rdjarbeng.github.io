@@ -79,7 +79,7 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
 
    <h3 style="text-align:center; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Download Resumes</h3>
    <div class="resume-section">
-      <a href="/assets/documents/Richard_resume_SE_ats.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
+      <a href="/assets/documents/Richard_Resume_SE_july13_26.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         Software Engineering CV
       </a>
