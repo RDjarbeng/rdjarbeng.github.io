@@ -240,3 +240,8 @@ Cover images path is showing page not found
 - [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
 - [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
 - add a random movie picker, implement for nigerian movies, christian movies
+- [ ] https:// youtube.com/@rdjarbengweb
+
+
+
+Add YouTube channel to contact
