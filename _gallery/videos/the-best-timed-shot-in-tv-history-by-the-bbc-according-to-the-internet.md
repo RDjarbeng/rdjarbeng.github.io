@@ -3,9 +3,9 @@ title: The Best Timed Shot in TV History by the BBC- According to the Internet
 published: true
 date: 2026-04-28T21:30:00+02:00
 platform: youtube
-youtube_id: Https://youtube.com/shorts/_jQ5JjvDtKA
+youtube_id: https://youtu.be/2WoDQBhJCVQ?si=xps3H1hGO6aYeQEr
 embed_code: ''
-thumbnail: '/assets/images/videos/youtube__jQ5JjvDtKA.jpg'
+thumbnail: /assets/images/videos/youtube__jQ5JjvDtKA.jpg
 type: video
 genre: Science & Technology
 category: videos
@@ -13,7 +13,9 @@ category: videos
 
 This short clip features legendary science broadcaster James Burke in what is widely considered one of the most perfectly timed television shots of all time.
 
-**Channel:** BBC Archive
+**Channel:** [MoonEyes Plays](https://www.youtube.com/@mooneyesplays7)
+
+Taken from Connections(1978), Episode 8, "Eat, Drink and be Merry". Copyright BBC, starring James Burke.
 
 ### Video Summary
 
