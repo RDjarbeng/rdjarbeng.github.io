@@ -245,3 +245,4 @@ Cover images path is showing page not found
 
 
 Add YouTube channel to contact
+- [ ] Do a section listing featuring, Featured YouTube channels I've posted about
