@@ -266,3 +266,7 @@ entire industries that are built on power law distributions and 2014 private equ
 - [ ] On Netflix brand we see a similar pattern play out on streaming platforms on Netflix. The top 6 percent of shows account for over half of all viewing hours on the platform on YouTube. Less than 4% of videos ever reached 10,000 views for those videos. Account for over 93% of all views all
 - [ ] The top companies in Africa - let's see who the leaders in Africa are and what are the sectors they operate in
 - [ ] Write about these datasets: https://github.com/awesomedata/awesome-public-datasets
+- [ ] Lucy - Live AI Video Editing by Decart
+https://decart.ai/lucy
+
+Real time AI video editing lucy
