@@ -271,3 +271,4 @@ https://decart.ai/lucy
 
 Real time AI video editing lucy
 - [ ] MCP for automation with agents -means your agent can use the tool in an easier well defined way
+- [ ] The biggest winners at the fifa world cup. Who's making money, Google with ads changed their homepage, X/Twitter had a summary from the beginning, DRC fan even made an advert, who else is getting paid
