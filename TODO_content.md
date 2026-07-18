@@ -270,3 +270,4 @@ entire industries that are built on power law distributions and 2014 private equ
 https://decart.ai/lucy
 
 Real time AI video editing lucy
+- [ ] MCP for automation with agents -means your agent can use the tool in an easier well defined way
