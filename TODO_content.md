@@ -264,3 +264,12 @@ https://www.simonsfoundation.org/2026/06/18/hilberts-23-problems-at-icm-2026-whe
 
 entire industries that are built on power law distributions and 2014 private equity firm Horsley bridge invested in 7,000 different startups and over half of their investments actually lost money but the top 6% more than 10x in value and generated 60% of the firm's overall profit. In fact, the best venture Capital firms often have more investments that lose money. They just have a few crazy outliers that show extraordinary growth. A few outliers that carry the entire performance of their return out of the 280 startups they invested in a world that depends on taking risks
 - [ ] On Netflix brand we see a similar pattern play out on streaming platforms on Netflix. The top 6 percent of shows account for over half of all viewing hours on the platform on YouTube. Less than 4% of videos ever reached 10,000 views for those videos. Account for over 93% of all views all
+- [ ] The top companies in Africa - let's see who the leaders in Africa are and what are the sectors they operate in
+- [ ] Write about these datasets: https://github.com/awesomedata/awesome-public-datasets
+- [ ] Lucy - Live AI Video Editing by Decart
+https://decart.ai/lucy
+
+Real time AI video editing lucy
+- [ ] MCP for automation with agents -means your agent can use the tool in an easier well defined way
+- [ ] The biggest winners at the fifa world cup. Who's making money, Google with ads changed their homepage, X/Twitter had a summary from the beginning, DRC fan even made an advert, who else is getting paid
+- [ ] Apparently ASML is a Dutch company, who knew?
