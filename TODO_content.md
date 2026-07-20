@@ -277,3 +277,5 @@ Real time AI video editing lucy
 https://apply.cis.mpg.de/register/internship
 
 Max-Planck internship
+- [ ] 2027 Max Planck Internships in Germany (Bachelors & Masters) | Fully Funded | Scholarship Region
+https://www.scholarshipregion.com/max-planck-internships-in-germany/
