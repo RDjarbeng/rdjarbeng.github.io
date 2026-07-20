@@ -273,3 +273,7 @@ Real time AI video editing lucy
 - [ ] MCP for automation with agents -means your agent can use the tool in an easier well defined way
 - [ ] The biggest winners at the fifa world cup. Who's making money, Google with ads changed their homepage, X/Twitter had a summary from the beginning, DRC fan even made an advert, who else is getting paid
 - [ ] Apparently ASML is a Dutch company, who knew?
+- [ ] Register - Application System - Computer and Information Science @ Max Planck Society
+https://apply.cis.mpg.de/register/internship
+
+Max-Planck internship
