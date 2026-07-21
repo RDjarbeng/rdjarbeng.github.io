@@ -38,14 +38,23 @@ List of todos is split across two files:
 TODO_content.md: Todos related to content 
 TODO_design.md: Todos related to design and technical site building 
 
-Current focus:
+## Current focus
 
-I want to improve the videos page on '/videos' the goal is to make it easier to navigate as a new user that get's sent the link. The video page should be organised in an interesting and useful way that can be easily navigated and the user should be able to find what they are looking for easily.
+This is the short, curated list of work currently being pursued. It should normally contain no more than three outcomes.
 
-Current problems with the video page:
+- [ ] Make `/videos/` easy to understand and navigate for a first-time visitor.
+- [ ] Extend the existing Algolia search architecture to gallery and YouTube content.
+- [ ] Define a scalable video-collection model, including how YouTube playlist updates are synchronized.
 
-* The list of collections don't disappear when the user starts searching.
+## Current known issue
 
- Okay, now I also want to consider making the different collections have their own pages, let's discuss how scalable this is. The collections are basically groupings of existing videos already uploaded. I had an implementation for youtube playlists but I'm not sure how scalable that would be especially if it can sync with youtube when the playlist is updated, mostly additions will be made to the playlist on youtube and I don't want the playlist on the site to fall behind.
+- [ ] Hide or replace the video collection list when a visitor starts a search.
 
-For improving the search, even across the entire site, I'm open to using tools such as algolia.
+## Decision queue
+
+- Should each video collection have a standalone landing page?
+- Should YouTube remain the source of truth for playlist membership, with the website synchronized from it?
+
+## Note workflow
+
+Raw Telegram notes now go to [TODO_inbox.md](TODO_inbox.md). During triage, move a deduplicated, actionable version to `TODO_content.md` or `TODO_design.md`. Keep only active outcomes here.
