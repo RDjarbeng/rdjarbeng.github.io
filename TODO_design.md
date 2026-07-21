@@ -246,3 +246,10 @@ Cover images path is showing page not found
 
 Add YouTube channel to contact
 - [ ] Do a section listing featuring, Featured YouTube channels I've posted about
+- [ ] Investigate no cookie for YouTube if it makes a difference
+
+It messes with the formatting, can't see the replies, and changes the url, but it works youtube-nocookie.com/embed/-ZRwlYtA.
+
+ Or then adda hyphen after www.yout in the url.
+(yout-ube.com/watch?....)
+yout-ube.com/watch
