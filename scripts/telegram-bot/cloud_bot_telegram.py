@@ -322,7 +322,11 @@ def process_todo_action(chat_id, message_id, text, target_file):
         
         if existing_text and not existing_text.endswith('\n'):
             existing_text += '\n'
-        new_content = existing_text + f"- [ ] {text}\n"
+        if target_file == "TODO_inbox.md":
+            received_at = datetime.now(CAT).strftime("%Y-%m-%d %H:%M CAT")
+            new_content = existing_text + f"- [ ] {received_at} | {text}\n"
+        else:
+            new_content = existing_text + f"- [ ] {text}\n"
         
         commit_files_to_github({target_file: new_content}, f"Add TODO to {target_file}")
         bot.edit_message_text(f"✅ Added to `{target_file}`!", chat_id, message_id, parse_mode="Markdown")
@@ -488,6 +492,8 @@ def handle_callback(call):
             process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_content.md")
         elif action == "design":
             process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_design.md")
+        elif action == "inbox":
+            process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_inbox.md")
         return
 
 @bot.message_handler(func=lambda message: True)
@@ -541,6 +547,7 @@ def handle_text(message):
     # Treat pure text as TODO by default
     keyboard = [
         [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("Notes Inbox", callback_data="todo_inbox")],
         [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
     ]
     
@@ -556,6 +563,6 @@ def handle_text(message):
         try:
             fallback_msg = bot.send_message(message.chat.id, "✅ Received. I'll treat this as a TODO (Content).")
             if fallback_msg:
-                process_todo_action(message.chat.id, fallback_msg.message_id, text, "TODO_content.md")
+                process_todo_action(message.chat.id, fallback_msg.message_id, text, "TODO_inbox.md")
         except Exception:
             pass
