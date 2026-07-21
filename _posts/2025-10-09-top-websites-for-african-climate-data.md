@@ -89,7 +89,36 @@ card_items:
     description: "Offers global climate data, including for Africa. It's an official website of the United States government and a gold standard for climate research."
     link_text: "Visit NOAA"
 ---
-When working on climate research or environmental projects in Africa, having access to reliable weather and climate data is essential. Fortunately, there are several websites where you can find both historical and current climate data for Africa. Below are some of the top resources to help you access this valuable information.
+When working on climate research or environmental projects in Africa, having access to reliable weather and climate data is essential. The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate data crucial for agriculture, infrastructure, and academic research. Fortunately, there are several websites where you can find both historical and current climate data specifically tailored for African regions. Below is a comprehensive list of top resources to help you access this valuable information.
 
+## TAHMO (Trans-African Hydro-Meteorological Observatory)
+TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa. The platform aims to build a robust climate data infrastructure across the continent, which is vital for precise weather forecasting and agricultural planning. It offers a convenient API for easy data integration into custom applications. Data available includes rainfall, temperature, humidity, wind speed, and solar radiation. **[Visit TAHMO](https://tahmo.org/climate-data/)**
 
-These websites offer valuable insights for those needing detailed climate data for Africa I hope you find them useful.
+## African Mountain Research Foundation
+The African Mountain Research Foundation focuses on high-elevation environments. Data here is currently limited to Southern Africa, but it provides crucial insights into mountainous climates. You can find daily data by selecting the specific country, station, year, and month. Data available includes temperature, mean pressure, relative humidity, mean visibility, and wind direction and speed. **[Visit Website](https://www.africanmountainresearch.com/)**
+
+## Weather Underground
+Weather Underground is a globally recognized platform that aggregates data from local weather stations, providing extensive global coverage that includes many African countries. You can access daily weather data for specific stations, countries, and time periods. Data available includes temperature, mean pressure, relative humidity, mean visibility, average dew point, and wind direction and speed. **[Visit Weather Underground](https://www.wunderground.com/)**
+
+## Tutiempo
+Tutiempo is an excellent resource for historical climate data and long-term records. The platform provides monthly data over an average year, and some African weather stations even offer daily data spanning fifty years. This long-term perspective is invaluable for studying climate trends in Africa. Data available includes temperature, mean sea level pressure, relative humidity, rainfall, visibility, wind speed, and various weather occurrences. **[Visit Tutiempo](https://en.tutiempo.net/climate/africa.html)**
+
+## IRI Data Library
+The IRI Data Library, maintained by Columbia University, is a detailed resource widely used in academic research. It provides in-depth datasets for temperature and precipitation data across Africa. This platform is highly recommended for researchers needing rigorous data sets for African climate modeling. Data available includes temperature, rainfall, wet days, and ground frost. **[Visit IRI Data Library](http://iridl.ldeo.columbia.edu/)**
+
+## All Met Sat
+All Met Sat provides METAR updates and airport data, which are standard formats for reporting weather information. While the website interface is not always perfectly responsive and may have empty sections on large screens, it remains a useful tool for specific aviation and localized weather data. Note that some stations may not provide complete data sets. Data available includes temperature, rainfall, wet days, and ground frost. **[Visit All Met Sat](http://fr.allmetsat.com/climat/afrique.php)**
+
+## Weatherbase
+Weatherbase is a popular site for travel planning and reviewing city-level climate averages. It offers comprehensive data that can help you understand the general climate of different African cities, though some local stations may have incomplete records. Data available includes temperature, rainfall, ground frost, relative humidity, average dew point, and wind speed. **[Visit Weatherbase](http://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa)**
+
+## UN Data (WMO)
+The World Meteorological Organization (WMO), accessible through UN Data, provides a very complete and authoritative data set for climate normals and official statistics. This is an educational and highly reliable source for baseline climate information across African nations, ensuring you are working with globally recognized standards. **[Visit UN Data](http://data.un.org/Explorer.aspx?d=CLINO)**
+
+## AQUASTAT Climate Information Tool
+AQUASTAT, managed by the FAO, focuses heavily on water resources and agriculture. It often features more extensive rainfall data compared to other platforms. While datasets might not be frequently updated, the tool uses interpolation from nearby weather stations to provide data estimates for virtually any location in Africa. Data available includes temperature, humidity, rainfall, sunlight hours, and more. **[Visit AQUASTAT](http://www.fao.org/aquastat/en/climate-info-tool/)**
+
+## NOAA (National Oceanic and Atmospheric Administration)
+NOAA is an official website of the United States government and is considered a gold standard for climate research globally. It offers extensive global climate data, including robust datasets for Africa. Accessing NOAA ensures you are utilizing some of the most scientifically rigorous and well-maintained climate records available. **[Visit NOAA](https://www.noaa.gov/)**
+
+These websites offer valuable insights for anyone needing detailed African climate data or weather records. Utilizing these resources will significantly enhance any environmental analysis or project focused on the African continent.
