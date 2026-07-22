@@ -89,7 +89,7 @@ System prompt:
 > Output:
 > Riva Translation utilise le modèle Nemotron pour traduire du texte d'une langue source vers une langue cible.
 
-I don't speak French at the moment but this looks like a French translation to me see screenshot to see how the demo looks like on Nvidia build.
+I don't speak French at the moment but this looks like a French translation to me. See the screenshot below to see how the demo looks like on Nvidia build.
 
 ![Riva Translate model can translate spoken or written text, it's shown translating text from English to French after a menu with different options are selected.](/assets/images/20260604-151202.png "Translating English to French. Riva Translate model can translate spoken or written text")
 
