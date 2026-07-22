@@ -5,45 +5,45 @@ layout: default
 <div class="home-section" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
     <div class="author-profile-header" style="text-align: center; margin-bottom: 50px;">
         <div class="author-avatar"
-             style="width: 150px; height: 150px; border-radius: 50%; background: #fff; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #007acc; font-weight: bold; border: 4px solid #fff; box-shadow: 0 8px 16px rgba(0,0,0,0.1); overflow: hidden;">
+             style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #007acc, #005a9c); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #ffffff; font-weight: bold; border: 4px solid var(--card-bg, #fff); box-shadow: 0 8px 16px rgba(0,0,0,0.1); overflow: hidden;">
             {% if page.avatar and page.avatar != "" %}
             <img src="{{ page.avatar | relative_url }}" alt="{{ page.display_name }}"
                  style="width: 100%; height: 100%; object-fit: cover;">
             {% else %}
             {% assign initials = page.display_name | split: ' ' %}
-            {{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}
+            <span style="color: #ffffff;">{{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}</span>
             {% endif %}
         </div>
         
-        <h1 class="page-heading" style="margin-bottom: 10px; font-size: 2.8rem; color: #102a43;">{{ page.display_name }}</h1>
+        <h1 class="page-heading" style="margin-bottom: 10px; font-size: 2.8rem; color: var(--text-color, #111111); font-weight: 700;">{{ page.display_name }}</h1>
         
         {% if page.position %}
-        <h2 style="margin: 0 0 20px 0; color: #627d98; font-size: 1.2rem; font-weight: 500;">{{ page.position }}</h2>
+        <h2 style="margin: 0 0 20px 0; color: var(--text-color-light, #555555); font-size: 1.2rem; font-weight: 500;">{{ page.position }}</h2>
         {% endif %}
 
         {% if page.linkedin or page.twitter or page.github %}
         <div class="author-social-links" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
             {% if page.linkedin %}
-            <a href="{{ page.linkedin }}" target="_blank" rel="noopener noreferrer" style="color: #007acc; text-decoration: none; padding: 8px 16px; border-radius: 20px; background: #f0f4f8; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;" onmouseover="this.style.background='#e1e8f0'" onmouseout="this.style.background='#f0f4f8'">LinkedIn</a>
+            <a href="{{ page.linkedin }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #007acc); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">LinkedIn</a>
             {% endif %}
             {% if page.twitter %}
-            <a href="{{ page.twitter }}" target="_blank" rel="noopener noreferrer" style="color: #1da1f2; text-decoration: none; padding: 8px 16px; border-radius: 20px; background: #f0f4f8; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;" onmouseover="this.style.background='#e1e8f0'" onmouseout="this.style.background='#f0f4f8'">Twitter</a>
+            <a href="{{ page.twitter }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #1da1f2); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">Twitter</a>
             {% endif %}
             {% if page.github %}
-            <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer" style="color: #333; text-decoration: none; padding: 8px 16px; border-radius: 20px; background: #f0f4f8; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;" onmouseover="this.style.background='#e1e8f0'" onmouseout="this.style.background='#f0f4f8'">GitHub</a>
+            <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #333); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">GitHub</a>
             {% endif %}
         </div>
         {% endif %}
 
-        <div class="author-bio" style="color: #486581; font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+        <div class="author-bio" style="color: var(--text-color, #222222); font-size: 1.1rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
             {{ content }}
         </div>
     </div>
 
-    <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #f0f4f8;">
-        <h2 style="margin-bottom: 30px; color: #102a43; display: flex; align-items: center; justify-content: space-between;">
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--border-color, #eaeaea);">
+        <h2 style="margin-bottom: 30px; color: var(--text-color, #111111); font-weight: 700; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
             <span>Posts by {{ page.display_name }}</span>
-            <a href="/authors/" style="font-size: 1rem; color: #007acc; text-decoration: none;">← All Authors</a>
+            <a href="{{ '/authors/' | relative_url }}" style="font-size: 1rem; color: #007acc; text-decoration: none; font-weight: 600;">← All Authors</a>
         </h2>
         
         <div class="post-list">
@@ -56,7 +56,7 @@ layout: default
             {% include_cached post-card.html post=post %}
             {% endfor %}
             {% else %}
-            <p style="color: #627d98; font-style: italic; background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center;">This author hasn't published any posts yet.</p>
+            <p style="color: var(--text-color-light, #555); font-style: italic; background: var(--card-bg, #f8fafc); border: 1px solid var(--border-color, #eaeaea); padding: 20px; border-radius: 8px; text-align: center;">This author hasn't published any posts yet.</p>
             {% endif %}
         </div>
     </div>
