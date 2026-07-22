@@ -4,25 +4,45 @@ title: Authors
 permalink: /authors/
 ---
 
+{% assign sorted_author_strings = "" | split: "" %}
+{% for author in site.authors %}
+  {% assign a_posts = site.posts | where: "author", author.short_name %}
+  {% assign a_personal = site.personal | where: "author", author.short_name %}
+  {% assign a_total = a_posts.size | plus: a_personal.size %}
+  {% assign count_padded = a_total | prepend: '000000' | slice: -6, 6 %}
+  {% assign author_str = count_padded | append: ":::" | append: author.short_name %}
+  {% assign sorted_author_strings = sorted_author_strings | push: author_str %}
+{% endfor %}
+
+{% assign sorted_author_strings = sorted_author_strings | sort | reverse %}
+
+{% assign sorted_authors = "" | split: "" %}
+{% for str in sorted_author_strings %}
+  {% assign s_name = str | split: ":::" | last %}
+  {% assign match_author = site.authors | where: "short_name", s_name | first %}
+  {% if match_author %}
+    {% assign sorted_authors = sorted_authors | push: match_author %}
+  {% endif %}
+{% endfor %}
+
 <div class="home-section" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
     <h1 class="page-heading" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Authors</h1>
 
     <div class="authors-grid"
         style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
-        {% for author in site.authors %}
+        {% for author in sorted_authors %}
         <div class="author-card"
             style="background: #fff; border: 1px solid var(--border-color, #eaeaea); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease;">
             <div
                 style="background: linear-gradient(135deg, #f0f4f8, #d9e2ec); padding: 30px 20px; text-align: center; border-bottom: 1px solid #eaeaea;">
                 <div class="author-avatar"
-                    style="width: 100px; height: 100px; border-radius: 50%; background: #fff; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #007acc; font-weight: bold; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+                    style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #007acc, #005a9c); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #fff; font-weight: bold; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
                     {% if author.avatar and author.avatar != "" %}
                     <img src="{{ author.avatar | relative_url }}" alt="{{ author.display_name }}"
                         style="width: 100%; height: 100%; object-fit: cover;">
                     {% else %}
-                    <!-- Initials Fallback -->
                     {% assign initials = author.display_name | split: ' ' %}
-                    {{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}
+                    <span style="color: #ffffff;">{{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}</span>
                     {% endif %}
                 </div>
                 <h2 style="margin: 0; font-size: 1.4rem; color: #102a43;">{{ author.display_name }}</h2>
@@ -55,22 +75,22 @@ permalink: /authors/
     </div>
 
     <div style="margin-top: 60px;">
-        {% for author in site.authors %}
+        {% for author in sorted_authors %}
         <div id="author-{{ author.short_name }}" class="author-detail-section"
             style="margin-bottom: 60px; padding-top: 40px; border-top: 2px solid #f0f4f8;">
             <div style="display: flex; align-items: center; margin-bottom: 20px; gap: 20px;">
                 <div
-                    style="width: 60px; height: 60px; border-radius: 50%; background: #d9e2ec; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #007acc; font-weight: bold; overflow: hidden;">
+                    style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #007acc, #005a9c); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff; font-weight: bold; overflow: hidden; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
                     {% if author.avatar and author.avatar != "" %}
                     <img src="{{ author.avatar | relative_url }}" alt="{{ author.display_name }}"
                         style="width: 100%; height: 100%; object-fit: cover;">
                     {% else %}
                     {% assign initials = author.display_name | split: ' ' %}
-                    {{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}
+                    <span style="color: #ffffff;">{{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}</span>
                     {% endif %}
                 </div>
                 <div>
-                    <h2 style="margin: 0;">{{ author.display_name }}'s Posts</h2>
+                    <h2 style="margin: 0; color: #102a43;">{{ author.display_name }}'s Posts</h2>
                 </div>
             </div>
 
