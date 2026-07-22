@@ -6,7 +6,7 @@ date: 2025-08-26
 image_alt: "Cover image for Ronaldo Hits Gold in Less Than 24 Hours!"
 ---
 
-Cristiano Ronaldo recently launched his YouTube channel with an announcement on Twitter (or X) on August 21st.
+Cristiano Ronaldo recently launched his YouTube channel with an announcement on Twitter (or X) on August 21st,2025.
 
 ![Screenshot of Ronaldo's YouTube tweet](/assets/images/ronaldo_youtube_original_screenshot.png)
 
@@ -24,4 +24,4 @@ For the Ronaldo fans, here's a link to his YouTube channel: [@cristiano](https:/
 
 Edit: As of the time of writing this post, he's now surpassed 43 million subscribers! Siuuu!!
 
-#ronaldo #football #cristiano
+
