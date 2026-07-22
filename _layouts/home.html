@@ -88,6 +88,8 @@ layout: default
               </ul>
           </li>
           
+          <li><a href="#guest-posts" class="toc-link" style="padding-left: 20px;">Guest Authors</a></li>
+          
           <li style="margin-top: 15px;"><a href="#personal-posts" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
           
           <li style="margin-top: 15px; font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">Latest from the Gallery</li>
@@ -124,10 +126,10 @@ layout: default
     <!-- Main Content Area -->
     <main class="home-main" style="flex-grow: 1; min-width: 0; width: 100%;">
       
-      <!-- Mobile TOC -->
       <nav class="mobile-toc">
          <a href="#latest-posts" class="mobile-toc-link">Latest Posts</a>
          <a href="#featured-posts" class="mobile-toc-link">Featured Posts</a>
+         <a href="#guest-posts" class="mobile-toc-link">Guest Authors</a>
          <a href="#personal-posts" class="mobile-toc-link">Personal Posts</a>
          <a href="#gallery-videos" class="mobile-toc-link">Latest Gallery Videos</a>
          <a href="#gallery-images" class="mobile-toc-link">Latest Gallery Images</a>
@@ -190,6 +192,36 @@ layout: default
           {% endfor %}
         </div>
       </div>
+
+      <!-- Guest Authors Section -->
+      <br>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; margin-top: 10px;">
+        <h2 class="section-title" id="guest-posts" style="scroll-margin-top: 80px; margin-bottom: 0;">Guest Authors</h2>
+        <span style="font-size: 0.95rem; color: var(--text-color-light, #666); margin-top: 5px;">Posts contributed by guest authors</span>
+      </div>
+
+      {% assign guest_tech = site.posts | where_exp: "item", "item.author != nil and item.author != '' and item.author != 'Richard' and item.author != 'richard'" %}
+      {% assign guest_personal = site.personal | where_exp: "item", "item.author != nil and item.author != '' and item.author != 'Richard' and item.author != 'richard'" %}
+      {% assign all_guest_posts = guest_tech | concat: guest_personal | sort: 'date' | reverse %}
+
+      {% if all_guest_posts.size > 0 %}
+        <div class="post-list" id="guest-posts-container" style="margin-top: 15px;">
+          {% for guest_post in all_guest_posts limit:6 %}
+            {% include_cached post-card.html post=guest_post show_author=true %}
+          {% endfor %}
+        </div>
+        <div style="margin-top: 15px;">
+          <a href="{{ '/authors' | relative_url }}" class="about-link btn">
+            Meet all authors
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      {% else %}
+        <p style="color: #666; font-style: italic; margin-top: 15px;">No guest posts published yet.</p>
+      {% endif %}
 
       <!-- Personal Posts Section -->
       <br>
@@ -306,6 +338,7 @@ layout: default
         const sections = [
           document.getElementById('latest-posts'),
           document.getElementById('featured-posts'),
+          document.getElementById('guest-posts'),
           document.getElementById('personal-posts'),
           document.getElementById('gallery-videos'),
           document.getElementById('gallery-images'),
