@@ -18,3 +18,4 @@ The Telegram bot captures notes. Agents own their organization and movement betw
 
 - [ ] 2026-07-21 15:26 CAT | Now let's see
 - [ ] 2026-07-22 12:12 CAT | Some of the tags and categories overlap so I need to find a way to ensure when they're displayed on the homepage, to make sure that an example such as 'security' doesn't have two sections at once on the homepage
+- Need to see how I can implement i8n from SveltiaCMS into this site, https://sveltiacms.app/en/docs/i18n targeting french and maybe chinese
