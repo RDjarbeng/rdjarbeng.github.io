@@ -12,13 +12,39 @@ tags:
   - AI
   - Africa
 title: Africa Has the ML Talent But Missing the GPUs.
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/africa_ml_talent_gpus_cover.jpg
+image_alt: Flat vector illustration of African machine learning researchers at computers with an empty GPU slot
 layout: post
-card_items: []
+card_items:
+  - name: GPU (Graphics Processing Unit)
+    badge_1: Hardware
+    badge_2: Concept
+    description: A GPU is a specialized chip originally built for rendering graphics, now widely used to train machine learning models because it can run thousands of calculations at once. Deep learning tasks that would take days on a regular computer processor can often run in hours on a GPU.
+    url: https://en.wikipedia.org/wiki/Graphics_processing_unit
+    link_text: Learn More
+  - name: Google Colab
+    badge_1: Platform
+    badge_2: Free Tier
+    description: Google Colab is a free, cloud-based notebook environment that gives users temporary access to GPUs for running Python code, popular with students because no local hardware or setup is required. It has usage limits and can disconnect during long-running tasks.
+    url: https://colab.research.google.com/
+    link_text: Visit Colab
+  - name: Kaggle Notebooks
+    badge_1: Platform
+    badge_2: Free Tier
+    description: Kaggle is a data science community that also offers free notebooks with GPU access, similar to Google Colab. It is commonly used for machine learning competitions, datasets, and experimentation.
+    url: https://www.kaggle.com/
+    link_text: Visit Kaggle
+  - name: HPC (High-Performance Computing)
+    badge_1: Infrastructure
+    badge_2: Concept
+    description: HPC refers to clusters of powerful, interconnected computers used to run large-scale computations far beyond what a single machine can handle. Universities and research labs with HPC access can train larger models and run more experiments in parallel.
+    url: https://en.wikipedia.org/wiki/High-performance_computing
+    link_text: Learn More
 ---
 
 One challenge I have noticed throughout my academic journey and as a TA is that access to computing resources, especially GPUs, has become a major bottleneck for many students especially here in Africa and young researchers working on machine learning.
+
+![Flat vector illustration of African machine learning researchers at computers with an empty GPU slot](/assets/images/posts/covers/africa_ml_talent_gpus_cover.jpg)
 
 This challenge is very visible in fields like computer vision, where training and experimenting with deep learning models can require significant computational power. Many students have great ideas and strong technical skills, but when it comes to the experimental phase of their thesis or research projects, they are often forced to reduce the number of experiments, use smaller models, or rely on heuristic analysis, not because those approaches are scientifically ideal, but because the required computing resources are simply out of reach.
 
