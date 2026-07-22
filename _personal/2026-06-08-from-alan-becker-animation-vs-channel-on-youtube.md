@@ -1,8 +1,9 @@
 ---
-title: From Alan Becker Animation vs channel on Youtube
+title: A Message From Alan Becker Animation vs channel on Youtube
 date: 2026-06-08T21:05:00+02:00
 published: true
-tags: []
+tags:
+  - YouTube
 image: /assets/images/pasted-image-1780945885973.webp
 image_alt: ''
 layout: personal
