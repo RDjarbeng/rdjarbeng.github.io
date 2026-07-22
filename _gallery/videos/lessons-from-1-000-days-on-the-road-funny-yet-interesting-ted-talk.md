@@ -1,5 +1,7 @@
 ---
-title: Lessons from 1,000 Days on the Road funny yet interesting TED talk
+title: Lessons from 1,000 Days on the Road, A Funny yet interesting TED talk
+published: true
+date: 2026-07-01T18:40:00+02:00
 platform: youtube
 youtube_id: https://youtu.be/R7vmHGAshi8
 embed_code: ''
@@ -7,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Travel & Events
 category: videos
-date: '2026-07-01T18:40:45+02:00'
-published: true
 ---
 
 In this inspiring talk, former stockbroker Tomislav Perko shares his journey of traveling the world with almost no money following the 2008 financial crisis. He explains that travel is accessible to everyone if you prioritize experiences over traditional luxury, and he outlines several practical strategies to minimize costs:
