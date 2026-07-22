@@ -16,6 +16,24 @@
     {% endif %}
 
     <div class="post-card-content">
+      {% unless include.is_js_template %}
+        {% if include.show_author or (include.post.author and include.post.author != "" and include.post.author != "Richard" and include.post.author != "richard") %}
+          {% assign card_author = site.authors | where: "short_name", include.post.author | first %}
+          {% assign author_display_name = card_author.display_name | default: card_author.short_name | default: include.post.author %}
+          <div class="post-card-author" style="margin-bottom: 8px; font-size: 0.85rem; font-weight: 500; color: var(--text-color-light, #555); display: flex; align-items: center; gap: 8px;">
+            {% if card_author.avatar and card_author.avatar != "" %}
+              <img src="{{ card_author.avatar | relative_url }}" alt="{{ author_display_name }}" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover; flex-shrink: 0; opacity: 0.9;">
+            {% else %}
+              {% assign initials = author_display_name | split: ' ' %}
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: #64748b; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0; text-transform: uppercase;">
+                {{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}
+              </span>
+            {% endif %}
+            <span style="line-height: 1.2;">By {{ author_display_name }}</span>
+          </div>
+        {% endif %}
+      {% endunless %}
+
       {% if include.is_js_template %}
       <h4 title="${hit.title}">
         <a href="${hit.url}" class="post-card-title-link">
