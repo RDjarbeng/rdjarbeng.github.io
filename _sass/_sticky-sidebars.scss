@@ -34,7 +34,7 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
   }
 
   .toc-sidebar {
-    position: fixed;
+    // position: fixed;
     left: 20px;
     top: calc(#{$_rail-top} + 20px);
     bottom: 20px;
