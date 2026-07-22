@@ -2,7 +2,7 @@
 title: Top Websites for African Climate Data
 date: 2025-10-09 12:12:00
 author: Richard
-image: /assets/images/weather_post/wunderground.png
+image: /assets/images/weather_post/wunderground.webp
 video: ""
 layout: post
 categories: ["Environment"]
@@ -26,7 +26,7 @@ card_items:
     link_text: "Visit Website"
 
   - name: "Weather Underground"
-    image: "/assets/images/weather_post/wunderground.png"
+    image: "/assets/images/weather_post/wunderground.webp"
     url: "https://www.wunderground.com/"
     badge_1: "Local Weather Stations"
     badge_2: "Global Coverage"
@@ -102,7 +102,7 @@ TAHMO operates a dense network of weather stations, particularly focused on impr
 The African Mountain Research Foundation focuses on high-elevation environments. Data here is currently limited to Southern Africa, but it provides crucial insights into mountainous climates. You can find daily data by selecting the specific country, station, year, and month. Data available includes temperature, mean pressure, relative humidity, mean visibility, and wind direction and speed. **[Visit Website](https://www.africanmountainresearch.com/)**
 
 ## Weather Underground
-![Weather Underground](/assets/images/weather_post/wunderground.png)
+![Weather Underground](/assets/images/weather_post/wunderground.webp)
 
 Weather Underground is a globally recognized platform that aggregates data from local weather stations, providing extensive global coverage that includes many African countries. You can access daily weather data for specific stations, countries, and time periods. Data available includes temperature, mean pressure, relative humidity, mean visibility, average dew point, and wind direction and speed. **[Visit Weather Underground](https://www.wunderground.com/)**
 
