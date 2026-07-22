@@ -1,4 +1,6 @@
 Sitemap: https://rdjarbeng.com/sitemap.xml
+Sitemap: https://rdjarbeng.com/image-sitemap.xml
+
 
 User-agent: *
 Allow: /
