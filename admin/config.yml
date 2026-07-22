@@ -287,7 +287,7 @@ collections:
     fields:
       - { label: "Short Name", name: "short_name", widget: "string" }
       - { label: "Display Name", name: "display_name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Position", name: "position", widget: "string", default: "Writer" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "category_info"
