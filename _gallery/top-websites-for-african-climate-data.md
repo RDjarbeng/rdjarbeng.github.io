@@ -1,7 +1,7 @@
 ---
 title: Cover image for post - Top Websites for African Climate Data
 date: 2025-10-09T12:00:00
-image: /assets/images/weather_post/wunderground.png
+image: /assets/images/weather_post/wunderground.webp
 type: cover
 link: /top-websites-for-african-climate-data
 image_alt: Digital weather map interface showing precipitation radar and wind patterns across Uganda and Lake Victoria region on a computer screen.
