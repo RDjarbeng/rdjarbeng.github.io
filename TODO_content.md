@@ -280,3 +280,4 @@ Max-Planck internship
 - [ ] 2027 Max Planck Internships in Germany (Bachelors & Masters) | Fully Funded | Scholarship Region
 https://www.scholarshipregion.com/max-planck-internships-in-germany/
 - [ ] AI solves Jacobian Conjectures - List of solved problems that AI has proved should be an interesting post
+- [ ] Nvidia signs letter supporting open models- content
