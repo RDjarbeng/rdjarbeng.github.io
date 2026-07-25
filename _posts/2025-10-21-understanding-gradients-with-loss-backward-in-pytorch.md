@@ -1,16 +1,26 @@
 ---
-title: Understanding Gradients with loss.backward() in PyTorch
 date: 2025-10-21T13:00:00
 author: Richard
+tags:
+  - Machine Learning
+  - gradients
+  - Python
+  - pytorch
+  - loss calculation
+  - loss.backward
+title: Understanding Gradients with loss.backward() in PyTorch
 image: /assets/images/math_science.jpeg
-video: ""
+image_alt: Cover image for Understanding Gradients with loss.backward() in PyTorch
 layout: post
-categories: ["AI"]
-tags: [Machine Learning, gradients, Python, pytorch, loss calculation, loss.backward]
-image_alt: "Cover image for Understanding Gradients with loss.backward() in PyTorch"
+video: ''
+categories:
+  - AI
 ---
+
+_Note: We have noted formatting issue with this post layout on mobile, and rest assured the team is working on this. For the time being, switch to light mode to view the code properly_
+
 In this post, let us take a closer look at how gradients are calculated in PyTorch, particularly focusing on the interaction between the `loss.backward()` function and a variable’s `.grad` attribute. If you've ever wondered how PyTorch handles gradients under the hood or why specific operations return the gradients as they do, then this post is for you.
-![man holding glowing test tube background with math equations ](/assets/images/math_science.jpeg)
+![man holding glowing test tube background with math equations](/assets/images/math_science.jpeg)
 
 ## Setting the Scene
 
@@ -137,14 +147,14 @@ Let's break it down into steps:
    This gives us the predicted values for each sample based on the current parameter values.
 2. **Loss**: We then calculate the **Mean Absolute Error (MAE)**:
    $$ \text{loss} = \frac{1}{N} \sum_i \left| \text{preds}_i - \text{targets}_i \right| $$
-   where \( N \) is the number of samples.
+   where ( N ) is the number of samples.
 3. **Gradient of MAE**: The derivative of the MAE with respect to each prediction is given by:
    $$ \frac{\partial \text{loss}}{\partial \text{preds}_i} = \frac{1}{N} \cdot \text{sign}(\text{preds}_i - \text{targets}_i) $$
-   This is because the derivative of the absolute value function \( |x| \) is \( \text{sign}(x) \), where:
+   This is because the derivative of the absolute value function ( |x| ) is ( \text{sign}(x) ), where:
    $$ \text{sign}(x) = 
    \begin{cases} 
-   1 & \text{if } x > 0 \\ 
-   -1 & \text{if } x < 0 \\ 
+   1 & \text{if } x > 0 \ 
+   -1 & \text{if } x < 0 \ 
    0 & \text{if } x = 0 
    \end{cases} $$
 4. **Chain Rule**: Using the chain rule, we propagate this gradient back to the parameters:
@@ -154,9 +164,9 @@ Let's break it down into steps:
    $$ \frac{\partial \text{loss}}{\partial \text{params}_j} = \frac{1}{N} \sum_i \text{sign}(\text{preds}_i - \text{targets}_i) \cdot \text{inputs}_{ij} $$
    This gradient gets stored in `params.grad` after calling `loss.backward()`.
 
-## Why Divide by \( N \)?
+## Why Divide by ( N )?
 
-You may have noticed the division by \( N \). This happens because we’re calculating the **mean** of the absolute errors, not just the sum. By dividing by \( N \), we ensure that the gradient reflects the averaging in the loss calculation, keeping the gradient magnitudes consistent regardless of the dataset size.
+You may have noticed the division by ( N ). This happens because we’re calculating the **mean** of the absolute errors, not just the sum. By dividing by ( N ), we ensure that the gradient reflects the averaging in the loss calculation, keeping the gradient magnitudes consistent regardless of the dataset size.
 
 ## Example in Code
 
