@@ -24,3 +24,48 @@ https://rdjarbeng.com/understanding-gradients-with-loss-backward-in-pytorch/
 
 
 This post's formatting on mobile isn't clear, also does horizontal scrolling which is a no-no
+- [ ] 2026-07-28 09:49 CAT | Algolia
+ 
+
+Weekly report
+Plan usage
+For billing period: July 12, 2026 to August 11, 2026
+
+ 
+Records
+9.53K / 1M
+
+
+ 
+Search Requests
+6.06K / 10K
+
+
+ 
+Recommend Requests
+0 / 10K
+
+
+ 
+Crawls
+0 / 10K
+
+
+ 
+Guides
+0 / 1
+
+View usage details 
+
+Analytics
+Search activity on your application's top searched index:
+rdjarbeng_index
+1.52K
+Total searches
+ 
+923
+Total users
+ 
+0.13%
+No-result rate
+Index icon
