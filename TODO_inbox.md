@@ -72,3 +72,4 @@ Index icon
 - [ ] 2026-07-28 13:59 CAT | Consider building an app that can record transactions from Mobile money details in SMS or some other form
 - [ ] 2026-07-28 17:16 CAT | AI data center capex-625B, verify these numbers
 - [ ] 2026-07-28 17:17 CAT | What is batching of prompts, that changes the cost of prompting from dollars to cents
+- [ ] 2026-07-28 17:29 CAT | Agent tool calls are endogenous, what does it mean. Forecasting a method or tool that rewrites as you forecast it?
