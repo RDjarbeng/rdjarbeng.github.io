@@ -11,8 +11,9 @@ Before creating the file, check `admin/config.yml` (specifically the `posts` col
 - DO NOT add or change frontmatter keys that are not supported by the schema.
 - Required/Common fields typically include: `layout: post`, `title`, `date` (format `YYYY-MM-DDTHH:mm:ssZ`), `published`, `author`, `category`, `tags`, `image`, and `image_alt`.
 
-## 2. Follow Writing and Communication Rules
-- Write the post content adhering to the guidelines in the `/writing-style` workflow (if applicable).
+## 2. Follow Writing, Humanization, and Communication Rules
+- Write the post content adhering to the guidelines in the `/writing-style` and `/humanizer` workflows.
+- Apply the `/humanizer` rules to scrub AI writing patterns (cutting buzzwords, em dashes, copulas, and false ranges while preserving technical depth).
 - DO NOT dumb down technical content. Retain technical depth while making the structure readable.
 - Ensure SEO best practices and proper markdown formatting.
 
