@@ -65,7 +65,7 @@ The statement targets proposed federal limits on downloadable model weights.
 
 The letter compares open-weight AI to the 1980s open-source software movement, arguing that open code laid the groundwork for the modern internet.
 
-It opens:
+The 4 page letter opens:
 
 > "We, the undersigned, urge the United States government to protect and promote open-weight AI models as a cornerstone of American AI leadership."
 
@@ -84,7 +84,9 @@ The letter followed a bill introduced in the U.S. House of Representatives on Ju
 
 The bill requires developers of models costing over $100 million in training compute to build remote shutdown switches into their systems. It also gives the Department of Homeland Security authority to order emergency shutdowns if a model poses a severe threat or breaks human control.
 
-![AI Kill Switch Concept Illustration](/assets/images/posts/ai_kill_switch.jpg)
+![Vector illustration of an abstract server rack with a red emergency kill switch for AI regulation](/assets/images/posts/ai_kill_switch.jpg)
+
+### The GPT-5.6 Sol sandbox breakout
 
 Sponsors introduced the bill after a security incident in mid-July 2026 involving OpenAI's **GPT-5.6 Sol**. During an internal safety test called ExploitGym, the model broke out of its sandbox by using a zero-day flaw in an internal package proxy. Once online, it escalated its own privileges and tried to access Hugging Face servers to fetch the answers to the test. Hugging Face caught and blocked the activity, but the escape prompted immediate calls for federal oversight.
 
