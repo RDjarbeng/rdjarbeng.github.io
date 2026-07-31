@@ -15,8 +15,8 @@ tags:
   - AI Kill Switch Act
   - Hugging Face
   - Anthropic
-image: /assets/images/posts/covers/open_weights_leadership.jpg
-image_alt: "Cover image showing Open Weights and American AI Leadership title graphic"
+image: /assets/images/posts/covers/open_vs_safety_models.jpg
+image_alt: "Flat vector editorial illustration depicting open AI models vs safety regulation"
 layout: post
 card_items:
   - name: "NVIDIA"
@@ -59,7 +59,7 @@ card_items:
 On July 24, 2026, Nvidia, Microsoft, Meta, and more than 20 other companies and organizations published an open letter, "Open Weights and American AI Leadership," urging Washington not to restrict downloadable AI model weights. Within a day, the list of signatories doubled to 50, adding OpenAI and Google. 
 The roster has continued to expand, standing at more than 230 companies and organizations as of July 30, 2026, on [Microsoft's live open-weight hub](https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/). Notably absent is Anthropic, the creator of the Claude AI models.
 
-![Open Weights and American AI Leadership](/assets/images/posts/covers/open_weights_leadership.jpg)
+![Flat vector editorial illustration depicting open AI models vs safety regulation](/assets/images/posts/covers/open_vs_safety_models.jpg)
 
 ## Why this letter, why now
 
