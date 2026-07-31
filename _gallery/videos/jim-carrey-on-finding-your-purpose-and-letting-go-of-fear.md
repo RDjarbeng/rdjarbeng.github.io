@@ -1,14 +1,14 @@
 ---
 title: Jim Carrey on Finding Your Purpose and Letting Go of Fear
+published: true
+date: 2026-07-07T09:17:00+02:00
 platform: youtube
-youtube_id: https://youtu.be/RrOGQD4Z9A4
+youtube_id: https://youtu.be/42QjAxty_1o
 embed_code: ''
 thumbnail: ''
 type: video
 genre: Entertainment
 category: videos
-date: '2026-07-07T09:17:37+02:00'
-published: true
 ---
 
 This video features actor and artist Jim Carrey delivering an inspiring message about overcoming fear, defining personal purpose, and choosing love over fear in life's journey.
