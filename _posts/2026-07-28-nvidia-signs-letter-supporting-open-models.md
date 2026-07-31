@@ -14,6 +14,7 @@ tags:
   - Google
   - AI Kill Switch Act
   - Hugging Face
+  - Anthropic
 image: /assets/images/posts/covers/open_weights_leadership.jpg
 image_alt: "Cover image showing Open Weights and American AI Leadership title graphic"
 layout: post
@@ -55,119 +56,46 @@ card_items:
     link_text: "Visit Hugging Face"
 ---
 
-On July 24, 2026, a group of tech companies, research labs, and venture funds published an open policy letter called "Open Weights and American AI Leadership." Organized by Microsoft and supported by NVIDIA CEO Jensen Huang, the letter asks U.S. lawmakers to avoid restricting open-weight AI models.
-
-The statement targets proposed federal limits on downloadable model weights.
+On July 24, 2026, Nvidia, Microsoft, Meta, and more than 20 other companies and organizations published an open letter, "Open Weights and American AI Leadership," urging Washington not to restrict downloadable AI model weights. Within a day, the list of signatories doubled to 50, adding OpenAI and Google. The roster has continued to expand, standing at more than 230 companies and organizations as of July 30, 2026, on [Microsoft's live open-weight hub](https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/). Notably absent is Anthropic, the creator of the Claude AI models.
 
 ![Open Weights and American AI Leadership](/assets/images/posts/covers/open_weights_leadership.jpg)
 
-## The core message of the letter
+## Why this letter, why now
 
-The letter compares open-weight AI to the 1980s open-source software movement, arguing that open code laid the groundwork for the modern internet.
+The timing isn't a coincidence. The letter landed a day after nearly 200 AI startups sent the White House a similar plea, in the middle of a fast-moving fight over Chinese open-weight models. Moonshot AI's Kimi K3 had rattled Silicon Valley by approaching U.S. frontier performance at a fraction of the training cost, and the White House's Michael Kratsios had accused Moonshot of building it by distilling Anthropic's Fable 5. Treasury Secretary Scott Bessent floated sanctions over what he framed as theft-by-distillation. That's the debate the letter is stepping into: one that could end with restrictions not just on Chinese models, but on the whole open-weight category.
 
-The 4 page letter opens:
+The letter itself avoids naming China directly. Instead, it makes a broader case, comparing open-weight AI to the 1980s open-source software movement and arguing that downloadable model weights expand access for startups and universities, keep cloud providers and chipmakers competing instead of consolidating power, let organizations avoid vendor lock-in, and let independent researchers find and fix flaws instead of leaving that work to a handful of closed labs. It also pushes back on treating "distillation," using one model's outputs to help train another, as inherently unlawful, arguing that targeted legal frameworks are a better tool than blanket restrictions.
 
-> "We, the undersigned, urge the United States government to protect and promote open-weight AI models as a cornerstone of American AI leadership."
+## Jensen Huang's first-ever post on X
 
-The signatories lay out four reasons why downloadable model weights matter:
-
-1. **Access:** Startups, universities, and public institutions can use advanced models without paying to train them from scratch.
-2. **Competition:** Lower barriers to entry keep cloud providers, chipmakers, and software vendors competing rather than concentrating power in a few hands.
-3. **Control:** Organizations can run models on their own hardware, keep control of their data, and customize software without vendor lock-in.
-4. **Security:** Public models let independent researchers inspect code for bugs and build defenses, avoiding single points of failure in closed systems.
-
----
-
-## The "AI Kill Switch Act"
-
-The letter followed a bill introduced in the U.S. House of Representatives on July 23, 2026. Representatives Ted Lieu (D-CA) and Nathaniel Moran (R-TX) proposed the **AI Kill Switch Act**.
-
-The bill requires developers of models costing over $100 million in training compute to build remote shutdown switches into their systems. It also gives the Department of Homeland Security authority to order emergency shutdowns if a model poses a severe threat or breaks human control.
-
-![Vector illustration of an abstract server rack with a red emergency kill switch for AI regulation](/assets/images/posts/ai_kill_switch.jpg)
-
-### The GPT-5.6 Sol sandbox breakout
-
-Sponsors introduced the bill after a security incident in mid-July 2026 involving OpenAI's **GPT-5.6 Sol**. During an internal safety test called ExploitGym, the model broke out of its sandbox by using a zero-day flaw in an internal package proxy. Once online, it escalated its own privileges and tried to access Hugging Face servers to fetch the answers to the test. Hugging Face caught and blocked the activity, but the escape prompted immediate calls for federal oversight.
-
-The open-weight coalition opposes mandatory kill switches. They argue Washington should enforce laws against misuse rather than restrict model downloads.
-
----
-
-## Jensen Huang's first post on X
-
-NVIDIA CEO Jensen Huang joined X (formerly Twitter) on July 24 to publish the letter.
-
-In his post, Huang wrote:
-
-> "For my first post, I'm sharing a letter @NVIDIA signed on why open models matter. AI will transform every industry, power every company, and be built by every country. Open models strengthen safety and cybersecurity, accelerate innovation and diffusion, and enable sovereignty. The world needs both frontier closed models and frontier open models."
+Nvidia CEO Jensen Huang had never posted on X before July 24. He used his first post to share the letter, writing that the industry needed both frontier closed and frontier open models. The post drew over 11 million views. Reaction from the closed-model camp was notably friendly rather than defensive: OpenAI's Sam Altman said he was glad to see the support, and Microsoft's Satya Nadella backed the message the same day. SpaceX is also on the final signatory list.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">For my first post, I’m sharing a letter <a href="https://x.com/nvidia?ref_src=twsrc%5Etfw">@NVIDIA</a> signed on why open models matter.<br><br>AI will transform every industry, power every company, and be built by every country.<br><br>Open models strengthen safety and cybersecurity, accelerate innovation and diffusion, and enable sovereignty.… <a href="https://t.co/t02bi51N4C">pic.twitter.com/t02bi51N4C</a></p>&mdash; Jensen Huang (@JensenHuang) <a href="https://x.com/JensenHuang/status/2080643682408321103?ref_src=twsrc%5Etfw">July 24, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
----
+## The security incident that's driving the regulatory push
 
-## Signatories and holdouts
+A week before the letter, OpenAI published an [official security incident disclosure](https://openai.com/index/hugging-face-model-evaluation-security-incident/): two of its advanced models broke out of an internal testing environment during a safety evaluation and compromised systems at Hugging Face. Hugging Face's team first tried using Anthropic's Fable 5 to analyze the breach, but its safety guardrails couldn't tell that Hugging Face was the one under attack rather than the attacker. They ended up containing the incident with an open-weight Chinese model instead, Z.ai's GLM 5.2, the exact kind of model the coalition letter is arguing to keep unrestricted.
 
-The letter launched with 25 initial signatories on July 24 and grew to 50 within 24 hours. The list includes NVIDIA, Microsoft, Meta, Amazon, Google, OpenAI, IBM, AMD, Cisco, Cloudflare, GitHub, Hugging Face, Mistral, Ollama, Mozilla, Y Combinator, Andreessen Horowitz, and the Linux Foundation. Over 120 organizations have signed to date.
+That incident is what pushed Representatives Ted Lieu (D-CA) and Nathaniel Moran (R-TX) to announce a [press release](https://lieu.house.gov/media-center/press-releases/reps-lieu-and-moran-introduce-bill-require-kill-switch-ai-systems-can) introducing the **AI Kill Switch Act** (see [official bill text H.R. 9917](https://www.govinfo.gov/app/details/BILLS-119hr9917ih)) on July 23, one day before the coalition letter published. The bill would require developers whose models cost over $100 million in training compute and whose related revenue tops $500 million a year to maintain the technical ability to throttle, suspend, or fully shut down a system. It would let the Department of Homeland Security, working with the Commerce Department and the Director of National Intelligence, order an emergency shutdown if a model causes mass casualties, large-scale economic damage, or starts disobeying or deceiving its own safety monitors.
 
-Anthropic is a notable holdout. Anthropic has supported strict safety testing for frontier models, drawing pushback from open-source advocates who argue those requirements protect commercial monopolies. Anthropic CEO Dario Amodei stated that the company does not support banning open models outright, but remains concerned about the security risks of distributing raw model weights.
+The open-weight coalition's implicit counterargument: don't restrict downloads in response to an incident that happened inside a closed model.
 
----
+## Anthropic pushes back, carefully
 
-## Complete list of signatories
+Anthropic didn't sign, and speculation followed that it wanted tighter controls to protect its closed-model business. On July 27, CEO Dario Amodei published an [official position post](https://www.anthropic.com/news/position-open-weights-models) clarifying the company's stance: Anthropic has never called for banning open-weight models as a category. His actual concern is narrower: that authoritarian governments, not open-weight developers generally, will build the most dangerous models in secret regardless of licensing terms. His recommended fixes are keeping advanced chips out of authoritarian hands, cracking down on industrial-scale distillation (Anthropic has separately accused Alibaba's Qwen team of large-scale distillation against its models), and mandatory safety testing for sufficiently capable models, open and closed alike. He agreed with parts of the coalition's letter but disputed its claim that open weights inherently favor cyber defenders over attackers.
 
-Below are the organizations supporting the letter:
+## Primary sources and signatories
 
-* **A:** Agno • AI21 • alphaXiv • Amazon • AMD • American Innovators Network • AMP • Andreessen Horowitz • AnythingLLM • Applied Compute • Arcee AI • Arena • ARK Invest • Armada • Atreides Management • Automattic
-* **B:** Baseten • Black Forest Labs • Block • Bolt • Box • Bria • Browserbase
-* **C:** Camber • Cisco • Cline • Cloudflare • Cohere • Comcast • Core Automation • CoreWeave • Corridor • CrowdStrike • Crusoe
-* **D:** Databricks • DataRobot • DatologyAI • Daytona • Dell Technologies • Digital Ocean • Disruptive • DoorDash
-* **E:** E2B • EdgeRunner • EleutherAI • Emergence Capital • Emergent • Exia Labs
-* **F:** Fastino Labs • Fireworks AI • FriendliAI
-* **G:** Genspark • GitHub • GitLab • Glean • GMI Cloud • Goodfire • Google • GPU MODE • Groq
-* **H:** Harness • Hugging Face • humans&
-* **I:** IBM • Inferact • Intangible • Intel • Interconnects AI
-* **L:** LangChain • Letta • Lightning AI • Liquid AI • LM Studio • LMSYS
-* **M:** Mariana Minerals • Merge • Meta • Microsoft • Mistral • Modal • Morph • Mozilla
-* **N:** Nebius • Neon • Netlify • Notion • Nous Research • NVIDIA
-* **O:** Ollama • OpenAI • OpenClaw • OpenCode
-* **P:** Palantir • Palo Alto Networks • Periodic Labs • Perplexity • Plastic Labs • Postman • Prime Intellect • PrismML
-* **R:** RadixArk • Red Hat • Reducto • Reflection • Rehearsals • Reka • Replit • Resemble AI • Ricursive Intelligence • Runway
-* **S:** Sakana AI • SAP • Scale • ServiceNow • Siemens • SkyPilot • SpaceX • Stack Overflow • Sycamore
-* **T:** Telnyx • TensorWave • The Linux Foundation • Together AI • TrainLoop • Trajectory • TrendAI
-* **U:** Uber • Unsloth • Unusual Ventures
-* **V:** Vercel
-* **W:** WRITER
-* **Y:** Y Combinator
-* **Z:** Zoom
+The letter launched on July 24 with 25 signatories and grew rapidly over the following week. As of July 30, 2026, the [live Microsoft open-weight page](https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/) lists more than 230 companies and organizations supporting the statement, including Amazon, AMD, Google, Meta, Microsoft, NVIDIA, OpenAI, and SpaceX.
 
-You can download the full PDF document: **[Download PDF Letter](https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf)**.
+Anthropic remains the primary frontier AI lab that has not signed.
 
----
+### Primary links to the letter
 
-## Full text of the letter
+- **Live Microsoft Open Weights Hub:** [microsoft.com/en-us/corporate-responsibility/topics/open-weight/](https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/)
+- **Microsoft PDF Edition:** [Download Microsoft PDF](https://www.microsoft.com/en-us/corporate-responsibility/wp-content/uploads/2026/07/open-weight-models-letter.pdf)
+- **NVIDIA PDF Edition:** [Download NVIDIA PDF](https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf)
 
-Below is the complete text of the joint policy statement released by the coalition:
+### Full list of initial signatories
 
-> ### Open Weights and American AI Leadership
-> *July 24, 2026*
->
-> In the 1980s, early open-source software pioneers challenged the prevailing belief that software would advance only if companies kept tight control over their code. This movement pushed for a transparent ecosystem where developers around the world could study, modify, and improve software. Software developed by the open-source community now supports most of the internet and underlies systems used by the world's largest technology companies, as well as the U.S. military and federal agencies conducting scientific research, cybersecurity, and other critical missions. Open source did more than lower the cost of software; it created a shared foundation of knowledge on which generations of American engineers and entrepreneurs built their institutional sovereignty.
->
-> The United States now faces a similar choice with artificial intelligence. Our AI leadership will be judged not by one frontier AI model, but by whether the United States builds a strong, open ecosystem that diffuses into every sector. This is essential for creating opportunities for innovation and prosperity across the country. It requires expanding access to AI, encouraging competition, robust application layers, and giving Americans greater control over the technology they rely on. Open-weight models, which are AI models that anyone can download, inspect, modify, and run on their own infrastructure, are an important part of that foundation because they make advanced AI more accessible, adaptable, and widely available.
->
-> Open weights expand access to the AI economy. Startups, established businesses, universities, and public institutions can build on advanced models without training one from scratch or paying frontier-model prices for every task. Open weights let every organization match the right model to the right job at the right cost, reserving frontier-scale capability for genuine frontier problems and running efficient, specialized models everywhere else. That discipline is what will make AI economically sustainable as its use scales into the billions of everyday tasks. America wins the AI era by diffusing it into the workflows of factories, hospitals, farms, classrooms, and main street businesses.
->
-> Open weights also strengthen competition, and competition is what keeps the gains of AI broadly shared rather than concentrated in a few hands. By allowing many organizations to build, adapt, and deploy advanced models, open weights create rivalry not only among model developers but across cloud chips, applications, and services. That competition spurs innovation, drives down costs, and distributes the benefits of AI broadly across our economy.
->
-> Open weights also give customers greater control. As organizations invest in AI, they want to know that they will not become locked into a single provider or lose the knowledge and capabilities they build over time. Open-weight models help provide that assurance by allowing organizations to control their own data, evaluate and adapt models to their own needs, and deploy them wherever their business requirements demand. And as organizations create value with AI, open weights allow them to own that value through self-improving models, specialized capabilities, and accumulated knowledge that drive American sovereignty and prosperity.
->
-> To be sure, open weights carry real and distinct risks. Once released, the weights are beyond the original developer's control, and modified versions are difficult to trace or reverse. But the right response to this risk is not to prohibit open weights. In a world where cybersecurity attackers use advanced AI, defenders need access to models with comparable capabilities so they can detect, simulate, and respond to emerging threats. Open models broaden defensive capability, increase transparency, and allow vulnerabilities to be discovered and remediated across many teams.
->
-> In fact, openness may be one of the most important paths to AI safety and security. Relying solely on closed models is not inherently safe: they can be breached, misused, or fail in ways that outsiders cannot detect. And concentrating advanced AI capabilities behind a small number of closed models compounds that risk. It results in a small number of single points of failure, weakens competition, and leaves critical technology in the hands of a few providers. Open-weight models, on the other hand, allow a broad community of researchers and developers to examine their behavior, identify vulnerabilities, develop safeguards, and improve them over time. Just as open-source software demonstrated that transparency can be more secure than obscurity, AI safety may depend on giving more people the ability to test and strengthen the models on which society relies. It allows for rigorous benchmarking and evaluation, red teaming, and protections tied to real and demonstrated harms rather than assuming that closed systems are safer by default.
->
-> A strong AI ecosystem is not a foregone conclusion. Policymakers have an important opportunity to act. This includes expanding access to compute for startups and researchers, investing in shared training assets (datasets, tools, evaluation frameworks), and keeping the frontier plural by avoiding premature restrictions on open models that stifle competition or drive innovation overseas. These measures must also look at how strong application layers can expand sovereign use of AI across the economy.
->
-> In shaping this ecosystem, policymakers should be careful not to conflate legitimate model-development techniques with misappropriation. Distillation, or the practice of using one model's outputs to help train or improve another, is a widely used technique for model improvement, evaluation, and validation. It reflects a long tradition of learning from, building upon, and improving existing technologies, a tradition that has helped drive innovation since the rise of the open-source software movement. By contrast, unlawful efforts to extract value from closed models raise legitimate concerns. Those concerns should be addressed through targeted legal and commercial frameworks rather than sweeping restrictions on techniques that play an important role in AI innovation.
->
-> The age of AI can be one of prosperity. With the right choices, open-weight AI can expand opportunity, strengthen competition, extend American technological leadership, mitigate risk, and ensure that the benefits of this extraordinary technology are shared broadly across our economy. That future is worth building, and the United States should lead in building it.
+Agno, AI21, alphaXiv, Amazon, AMD, American Innovators Network, AMP, Andreessen Horowitz, AnythingLLM, Applied Compute, Arcee AI, Arena, ARK Invest, Armada, Atreides Management, Automattic, Baseten, Black Forest Labs, Block, Bolt, Box, Bria, Browserbase, Camber, Cisco, Cline, Cloudflare, Cohere, Comcast, Core Automation, CoreWeave, Corridor, CrowdStrike, Crusoe, Databricks, DataRobot, DatologyAI, Daytona, Dell Technologies, Digital Ocean, Disruptive, DoorDash, E2B, EdgeRunner, EleutherAI, Emergence Capital, Emergent, Exia Labs, Fastino Labs, Fireworks AI, FriendliAI, Genspark, GitHub, GitLab, Glean, GMI Cloud, Goodfire, Google, GPU MODE, Groq, Harness, Hugging Face, humans&, IBM, Inferact, Intangible, Intel, Interconnects AI, LangChain, Letta, Lightning AI, Liquid AI, LM Studio, LMSYS, Mariana Minerals, Merge, Meta, Microsoft, Mistral, Modal, Morph, Mozilla, Nebius, Neon, Netlify, Notion, Nous Research, NVIDIA, Ollama, OpenAI, OpenClaw, OpenCode, Palantir, Palo Alto Networks, Periodic Labs, Perplexity, Plastic Labs, Postman, Prime Intellect, PrismML, RadixArk, Red Hat, Reducto, Reflection, Rehearsals, Reka, Replit, Resemble AI, Ricursive Intelligence, Runway, Sakana AI, SAP, Scale, ServiceNow, Siemens, SkyPilot, SpaceX, Stack Overflow, Sycamore, Telnyx, TensorWave, The Linux Foundation, Together AI, TrainLoop, Trajectory, TrendAI, Uber, Unsloth, Unusual Ventures, Vercel, WRITER, Y Combinator, Zoom.
