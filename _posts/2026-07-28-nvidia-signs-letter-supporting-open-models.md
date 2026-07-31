@@ -1,5 +1,5 @@
 ---
-title: "AI Companies Want to Keep Free AI Models Legal. The Company Behind Claude Wants a Safety Net First."
+title: "AI Companies Want to Keep Free AI Models Legal But The Company Behind Claude Wants a Safety Net First."
 date: 2026-07-28T17:50:00+02:00
 published: true
 author: Richard
