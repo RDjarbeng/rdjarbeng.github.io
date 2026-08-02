@@ -281,3 +281,4 @@ Max-Planck internship
 https://www.scholarshipregion.com/max-planck-internships-in-germany/
 - [ ] AI solves Jacobian Conjectures - List of solved problems that AI has proved should be an interesting post
 - [ ] Nvidia signs letter supporting open models- content
+- [ ] Which one drains more battery, Mobile network or wifi? Should start with a preview
