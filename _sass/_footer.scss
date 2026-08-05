@@ -12,8 +12,8 @@
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr 1fr;
-  gap: 40px;
+  grid-template-columns: 2fr 1fr 1.2fr 1.1fr 1fr;
+  gap: 30px;
 }
 
 .footer-brand {
@@ -97,7 +97,14 @@
   }
 }
 
-/* Mobile Adjustments */
+/* Mobile & Tablet Adjustments */
+@media (max-width: 992px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .site-footer {
     padding: 40px 0 20px;
