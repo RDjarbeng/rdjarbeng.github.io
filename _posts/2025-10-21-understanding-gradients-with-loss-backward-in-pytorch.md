@@ -17,8 +17,6 @@ categories:
   - AI
 ---
 
-_Note: We have noted formatting issue with this post layout on mobile, and rest assured the team is working on this. For the time being, switch to light mode to view the code properly_
-
 In this post, let us take a closer look at how gradients are calculated in PyTorch, particularly focusing on the interaction between the `loss.backward()` function and a variable’s `.grad` attribute. If you've ever wondered how PyTorch handles gradients under the hood or why specific operations return the gradients as they do, then this post is for you.
 ![man holding glowing test tube background with math equations](/assets/images/math_science.jpeg)
 
@@ -92,7 +90,7 @@ To understand how calling `loss.backward()` affects the `coeffs` variable and ho
    When you call `coeffs.requires_grad_()`, you’re telling PyTorch: “I want to compute gradients with respect to `coeffs`.” Now, PyTorch will keep track of all operations that involve `coeffs`.
 
 ```python
-   coeffs.requires_grad_()
+coeffs.requires_grad_()
 ```
 
 2. **Loss computation (`calc_loss`)**:
@@ -101,7 +99,7 @@ To understand how calling `loss.backward()` affects the `coeffs` variable and ho
 - You then compute the absolute differences between these predictions and the true dependent values `t_dep`, followed by taking the mean to get the loss.
 
 ```python
-   loss = calc_loss(coeffs, t_indep, t_dep)
+loss = calc_loss(coeffs, t_indep, t_dep)
 ```
 
    Since `coeffs` was involved in this computation, PyTorch knows it needs to compute gradients with respect to `coeffs`.
@@ -113,14 +111,14 @@ To understand how calling `loss.backward()` affects the `coeffs` variable and ho
 - These gradients are stored in `coeffs.grad`.
 
 ```python
-   loss.backward()
+loss.backward()
 ```
 
 4. **Accessing the gradient**:
    After calling `loss.backward()`, you can access the gradient with `coeffs.grad`. This tells you how much `loss` would change with small changes in `coeffs`. PyTorch accumulates these gradients in `coeffs.grad`, and this is how you know how to adjust `coeffs` to minimize the loss.
 
 ```python
-   coeffs.grad  # Gradients of loss w.r.t. coeffs
+coeffs.grad  # Gradients of loss w.r.t. coeffs
 ```
 
 So the guess I made at the beginning that the two variables were connected somehow was in the right direction. 
