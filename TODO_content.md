@@ -282,3 +282,10 @@ https://www.scholarshipregion.com/max-planck-internships-in-germany/
 - [ ] AI solves Jacobian Conjectures - List of solved problems that AI has proved should be an interesting post
 - [ ] Nvidia signs letter supporting open models- content
 - [ ] Which one drains more battery, Mobile network or wifi? Should start with a preview
+- [ ] Many important breakthroughs are made in research and industry by folks
+without a PhD, such as the paper “Unsupervised Representation Learning with Deep
+Convolutional Generative Adversarial Networks”—one of the most influential papers
+of the last decade, with over 5,000 citations—which was written by Alec Radford when he was an undergraduate.
+https://arxiv.org/abs/1511.06434
+
+This paper could be good for paper review
