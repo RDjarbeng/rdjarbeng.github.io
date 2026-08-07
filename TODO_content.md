@@ -289,3 +289,4 @@ of the last decade, with over 5,000 citations—which was written by Alec Radfor
 https://arxiv.org/abs/1511.06434
 
 This paper could be good for paper review
+- [ ] Why do OTP expire after a while, brute force, how do you manage continuously wrong logins and endpoints
