@@ -173,13 +173,14 @@ Computer Engineer and Machine Learning Enthusiast with a passion for Internet of
       <div class="skill-category">
           <div class="skill-category-title">AI Tools &amp; Evaluation</div>
           <div class="skill-list">
-              <span class="skill-item">Cursor</span>
-              <span class="skill-item">Gemini</span>
-              <span class="skill-item">Antigravity</span>
-              <span class="skill-item">OpenClaw</span>
               <span class="skill-item">Hugging Face Agents CLI</span>
               <span class="skill-item">AI-Assisted Dev Workflows</span>
               <span class="skill-item">LLM Code Evaluation</span>
+              <span class="skill-item">Red-Teaming LLMs</span>
+              <span class="skill-item">OpenClaw</span>
+              <span class="skill-item">Cursor</span>
+              <span class="skill-item">Gemini</span>
+              <span class="skill-item">Antigravity</span>
           </div>
       </div>
 
