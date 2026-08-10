@@ -1,26 +1,32 @@
 ---
-layout: none
+layout: null
 ---
 [
-  {% assign all_searchable = site.posts | concat: site.personal %}
+  {% assign all_searchable = site.posts | concat: site.personal | concat: site.gallery %}
   {% for post in all_searchable %}
     {% assign words = post.content | number_of_words %}
     {% assign minutes = words | divided_by: 180 | ceil %}
     {% capture image_html %}
       {% if post.image %}
         <div class="post-card-image">
-          <img src="{{ post.image }}" alt="{{ post.title | escape }}" class="post-image">
+          <img src="{{ post.image }}" alt="{{ post.title | escape }}" class="post-image" loading="lazy">
+        </div>
+      {% elsif post.thumbnail %}
+        <div class="post-card-image">
+          <img src="{{ post.thumbnail }}" alt="{{ post.title | escape }}" class="post-image" loading="lazy">
         </div>
       {% endif %}
     {% endcapture %}
     {
-      "title"     : {{ post.title | jsonify }},
-      "url"       : {{ post.url | relative_url | jsonify }},
-      "date"      : {{ post.date | date: "%B %-d, %Y" | jsonify }},
-      "read_time" : "{{ minutes }} min read",
-      "image_html": {{ image_html | strip | jsonify }},
-      "excerpt"   : {{ post.excerpt | strip_html | strip_newlines | jsonify }},
-      "type"      : {{ post.collection | default: "posts" | jsonify }},
+      "title"       : {{ post.title | jsonify }},
+      "url"         : {{ post.url | relative_url | jsonify }},
+      "date"        : {{ post.date | date: "%B %-d, %Y" | jsonify }},
+      "read_time"   : "{{ minutes }} min read",
+      "image_html"  : {{ image_html | strip | jsonify }},
+      "excerpt"     : {{ post.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
+      "categories"  : {{ post.categories | join: ", " | jsonify }},
+      "tags"        : {{ post.tags | join: ", " | jsonify }},
+      "type"        : {{ post.collection | default: "posts" | jsonify }},
       "display_type": {{ post.collection | default: "post" | capitalize | jsonify }}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}

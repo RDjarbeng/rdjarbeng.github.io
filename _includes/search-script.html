@@ -1,57 +1,24 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/satellite-min.css" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.74.2/dist/instantsearch.production.min.js" crossorigin="anonymous"></script>
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
 
 <style>
-.ais-SearchBox-form {
-  background: transparent !important;
-}
-.ais-SearchBox-input {
-  width: 100%;
-  padding: 12px 20px 12px 40px !important;
-  border-radius: 8px;
-  border: 1px solid var(--card-border, #eaeaea);
-  background: var(--card-bg, #fff);
-  color: var(--text-color, #333);
-  font-size: 1.1rem;
-}
-/* Clean up the main search page results to be a grid like .post-list */
-#results-container .ais-Hits-list {
+#results-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
-@media (max-width: 1000px) {
-  #results-container .ais-Hits-list {
+@media (max-width: 600px) {
+  #results-container {
     grid-template-columns: 1fr;
-    gap: 1.5em;
   }
 }
-#results-container .ais-Hits-item {
-  box-shadow: none;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: transparent !important;
-}
-/* Make the inner post-card take full width */
-#results-container .ais-Hits-item .post-card,
-#results-container .ais-Hits-item .video-masonry-item,
-#results-container .ais-Hits-item .gallery-item {
-  width: 100%;
-  height: 100%;
-}
-#results-container .ais-Hits-item .video-masonry-item {
-  display: flex;
-  flex-direction: column;
-}
-#results-container .ais-Hits-item .video-masonry-item .video-thumbnail {
-  flex-shrink: 0;
+
+.search-results-none {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 30px;
+  color: var(--text-color-light, #666);
+  font-size: 1.1rem;
 }
 
 /* Nav search dropdown styling */
@@ -62,367 +29,124 @@
   right: 0;
   background: var(--card-bg, #fff);
   border: 1px solid var(--card-border, #eaeaea);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 12px 12px;
   max-height: 400px;
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: 0 4px 12px var(--shadow-color, rgba(0,0,0,0.1));
-  display: none;
+  box-shadow: 0 8px 24px var(--shadow-color, rgba(0,0,0,0.12));
 }
-html[data-theme="dark"] .nav-search-results-dropdown,
-body.dark-mode .nav-search-results-dropdown {
-  background: var(--card-bg, #1e1e1e);
-  border-color: var(--card-border, #444);
-}
-.nav-search-results-dropdown .ais-Hits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: transparent !important;
-}
-.nav-search-results-dropdown .ais-Hits-item {
-  padding: 0;
-  margin: 0;
+
+.nav-search-item {
   border-bottom: 1px solid var(--card-border, #eaeaea);
-  background: transparent !important;
-  box-shadow: none !important;
 }
-html[data-theme="dark"] .nav-search-results-dropdown .ais-Hits-item,
-body.dark-mode .nav-search-results-dropdown .ais-Hits-item {
-  border-bottom-color: var(--card-border, #444);
-}
-.nav-search-results-dropdown .ais-Hits-item:last-child {
+.nav-search-item:last-child {
   border-bottom: none;
 }
-.nav-search-hit {
+.nav-search-link {
   display: block;
-  padding: 10px 15px;
+  padding: 12px 16px;
   color: var(--text-color, #333);
   text-decoration: none;
   font-size: 0.95rem;
+  transition: background 0.15s ease;
 }
-html[data-theme="dark"] .nav-search-hit,
-body.dark-mode .nav-search-hit {
-  color: var(--text-color, #e0e0e0);
-}
-.nav-search-hit:hover {
-  background: var(--category-hover, #f5f5f5);
+.nav-search-link:hover {
+  background: var(--border-color, #f5f5f5);
   text-decoration: none;
 }
-html[data-theme="dark"] .nav-search-hit:hover,
-body.dark-mode .nav-search-hit:hover {
-  background: var(--category-hover, #3d3d3d);
+.nav-search-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
-.nav-search-empty {
-  padding: 15px;
-  color: var(--grey-text, #999);
-  text-align: center;
-  font-size: 0.95rem;
-}
-/* Ensure dark mode works for the input */
-html[data-theme="dark"] .ais-SearchBox-input,
-body.dark-mode .ais-SearchBox-input {
-  background: var(--card-bg, #1e1e1e);
-  color: var(--text-color, #e0e0e0);
-  border-color: var(--card-border, #444);
-}
-
-/* High contrast highlight style for search queries */
-.ais-Highlight-highlighted {
-  background-color: rgba(255, 215, 0, 0.4);
-  color: var(--text-color, inherit);
-  border-radius: 2px;
-  padding: 0 2px;
-  font-weight: bold;
-}
-html[data-theme="dark"] .ais-Highlight-highlighted,
-body.dark-mode .ais-Highlight-highlighted {
-  background-color: rgba(255, 215, 0, 0.3);
-  color: #fff;
-}
-
-/* Hide the ugly reset button in satellite-min theme */
-.ais-SearchBox-reset {
-  display: none !important;
-}
-.header-search-form {
-  position: relative;
+.nav-search-date {
+  font-size: 0.8rem;
+  color: var(--text-color-light, #777);
 }
 </style>
 
 <script>
-  const searchClient = algoliasearch('IS96FR2E65', '244c316912077b528a2583b21970d464');
+(function() {
+  var sjs = null;
+  var navSjs = null;
+  var mainInput = document.getElementById('search-input');
+  var resultsContainer = document.getElementById('results-container');
+  var browseSections = document.getElementById('search-browse-sections');
+  var emptyHint = document.getElementById('search-empty-hint');
 
-  const mainSearchbox = document.getElementById('searchbox');
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialQuery = urlParams.get('q') || '';
+  if (mainInput && resultsContainer) {
+    sjs = SimpleJekyllSearch({
+      searchInput: mainInput,
+      resultsContainer: resultsContainer,
+      json: '{{ "/search.json" | relative_url }}',
+      searchResultTemplate: '<div class="post-card"><a class="post-link" href="{url}" style="text-decoration: none; color: inherit;">{image_html}<div class="post-card-content" style="padding: 16px;"><span class="post-card-category" style="display:inline-block; margin-bottom: 6px; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; background: var(--border-color, #eee);">{display_type}</span><h3 title="{title}" style="font-size: 1.1rem; margin: 0 0 8px; font-weight: 700; line-height: 1.3;">{title}</h3><p style="font-size: 0.9rem; color: var(--text-color-light, #666); line-height: 1.4; margin-bottom: 10px; -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">{excerpt}</p><div class="post-meta-categories-container" style="font-size: 0.8rem; color: #888;"><span>{date}</span> · <span>{read_time}</span></div></div></a></div>',
+      noResultsText: '<div class="search-results-none"><p>No results found for your query.</p></div>',
+      limit: 20
+    });
 
-  const search = instantsearch({
-    indexName: 'rdjarbeng_index',
-    searchClient,
-    routing: !!mainSearchbox, // Only enable routing on main search page
-    initialUiState: {
-      rdjarbeng_index: {
-        query: initialQuery,
-      },
-    },
-  });
-
-  const widgets = [];
-
-  // 1. Main Search Page logic
-  if (mainSearchbox) {
-    widgets.push(
-      instantsearch.widgets.searchBox({
-        container: '#searchbox',
-        placeholder: 'Search posts and articles...',
-        showReset: false,
-        showSubmit: true,
-      })
-    );
-    widgets.push(
-      instantsearch.widgets.hits({
-        container: '#results-container',
-        templates: {
-          empty(results, { html }) {
-            return html`<p>No results found for <q>${results.query}</q></p>`;
-          },
-          item(hit, { html, components }) {
-            const cleanUrl = hit.image ? hit.image.replace(/&quot;|"/g, '') : (hit.thumbnail ? hit.thumbnail.replace(/&quot;|"/g, '') : '');
-            
-            const dateObj = hit.date ? new Date(hit.date * 1000) : null;
-            let dateStr = '';
-            if (dateObj) {
-              const currentYear = new Date().getFullYear();
-              const opts = dateObj.getFullYear() === currentYear 
-                ? { month: 'long', day: 'numeric' } 
-                : { month: 'long', day: 'numeric', year: 'numeric' };
-              dateStr = dateObj.toLocaleDateString('en-US', opts);
-            }
-
-            const tagsAndCats = [];
-            if (hit.categories) hit.categories.forEach(c => tagsAndCats.push({ name: c, type: 'categories' }));
-            if (hit.tags) hit.tags.forEach(t => tagsAndCats.push({ name: t, type: 'tags' }));
-            
-            const uniqueTagsAndCats = [];
-            const seenNames = new Set();
-            for (const tc of tagsAndCats) {
-              if (!seenNames.has(tc.name)) {
-                seenNames.add(tc.name);
-                uniqueTagsAndCats.push(tc);
-              }
-            }
-            
-const slugify = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-            if (hit.url === '/tags/') {
-                let plainText = hit.content || '';
-                if (hit._snippetResult && hit._snippetResult.content && hit._snippetResult.content.value) {
-                    plainText = hit._snippetResult.content.value.replace(/<[^>]*>?/gm, '');
-                }
-                const match = plainText.match(/^(.+?)\s+\d+$/);
-                if (match) {
-                    const tagName = match[1];
-                    hit.url = `/tags/${slugify(tagName)}/`;
-                    hit.title = `Tag: ${tagName}`;
-                    if (hit._highlightResult && hit._highlightResult.title) {
-                        hit._highlightResult.title.value = `Tag: ${tagName}`;
-                    }
-                    hit.content = `View all posts tagged with #${tagName}`;
-                    if (hit._snippetResult && hit._snippetResult.content) {
-                        hit._snippetResult.content.value = hit.content;
-                    }
-                }
-            }
-
-            const isVideo = hit.type === 'video' || hit.youtube_id;
-            const isGallery = hit.collection === 'gallery' && !isVideo;
-
-            let badgeHtml = null;
-            let badgeText = '';
-            let badgeColor = 'var(--base-color)';
-
-            if (hit.collection === 'personal') {
-                badgeText = 'Personal';
-            } else if (hit.collection === 'posts') {
-                badgeText = 'Post';
-                badgeColor = 'var(--btn-bg)';
-            } else if (isGallery) {
-                badgeText = 'Gallery › Cover Image';
-                badgeColor = 'var(--category-bg)';
-            } else if (isVideo) {
-                badgeText = 'Video';
-                badgeColor = 'var(--pill-border)';
-            }
-
-            if (badgeText) {
-                badgeHtml = html`<div style="position: absolute; top: 12px; left: 12px; background: ${badgeColor}; color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.65rem; font-weight: bold; z-index: 10; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">${badgeText}</div>`;
-            }
-
-            const categoriesHtml = uniqueTagsAndCats.length > 0 
-                ? html`<div class="post-card-categories" style="margin-top: 8px;">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type === 'tags' ? 'tags' : 'categories'}/${slugify(tc.name)}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
-                : null;
-
-            if (isVideo) {
-                const genreStr = hit.genre || hit.category || "Other";
-                let itemGen = genreStr.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
-                
-                let hasPlaylist = false;
-                let ytVidId = "";
-                let ytListId = "";
-                
-                if (hit.youtube_id) {
-                    if (hit.youtube_id.includes("list=")) {
-                        hasPlaylist = true;
-                        ytListId = hit.youtube_id.split("list=")[1].split("&")[0];
-                    }
-                    
-                    if (hit.youtube_id.includes("v=")) {
-                        ytVidId = hit.youtube_id.split("v=")[1].split("&")[0];
-                    } else if (hit.youtube_id.includes("youtu.be/")) {
-                        ytVidId = hit.youtube_id.split("youtu.be/")[1].split("?")[0];
-                    } else if (hit.youtube_id.includes("shorts/")) {
-                        ytVidId = hit.youtube_id.split("shorts/")[1].split("?")[0];
-                        itemGen = "shorts";
-                    } else {
-                        ytVidId = hit.youtube_id;
-                    }
-                }
-                
-                let computedIgId = hit.instagram_id || "";
-                if (hit.platform === 'instagram' && !computedIgId) {
-                    if (hit.link && hit.link.includes('instagram.com/p/')) {
-                        computedIgId = hit.link.split('instagram.com/p/')[1].split('/')[0].split('?')[0];
-                    } else if (hit.link && hit.link.includes('instagram.com/reel/')) {
-                        computedIgId = hit.link.split('instagram.com/reel/')[1].split('/')[0].split('?')[0];
-                    }
-                }
-
-                let computedTkId = "";
-                if (hit.platform === 'tiktok') {
-                    let rawTkUrl = hit.youtube_id || hit.link || "";
-                    computedTkId = rawTkUrl;
-                    if (computedTkId.includes('/video/')) {
-                        computedTkId = computedTkId.split('/video/')[1].split('?')[0].split('/')[0];
-                    }
-                }
-
-                const thumbnailUrl = hit.thumbnail ? hit.thumbnail : (ytVidId ? `https://img.youtube.com/vi/${ytVidId}/hqdefault.jpg` : cleanUrl);
-                
-                return html`
-                    {% include video_card.html is_js_template=true %}
-                `;
-            }
-
-
-
-            const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null;
-            const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null;
-            const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : null;
-
-            return html`
-              {% include post-card.html is_js_template=true show_excerpt=true %}
-            `;
-          },
-        },
-      })
-    );
-
-    // Hide browse sections when searching on main page
-    const browseSections = document.getElementById('search-browse-sections');
-    const emptyHint = document.getElementById('search-empty-hint');
-    
-    if (browseSections || emptyHint) {
-      search.on('render', () => {
-        const query = search.helper.state.query;
-        if (query && query.length > 0) {
-          if (browseSections) browseSections.style.display = 'none';
-          if (emptyHint) emptyHint.style.display = 'none';
-        } else {
-          if (browseSections) browseSections.style.display = 'block';
-          if (emptyHint) emptyHint.style.display = 'block';
-        }
-      });
-    }
-  }
-
-  // 2. Navbar Dropdown logic
-  const navInput = document.getElementById('nav-search-input');
-  const navResultsContainer = document.getElementById('nav-search-results');
-  
-  if (navInput && navResultsContainer) {
-    navResultsContainer.classList.add('nav-search-results-dropdown');
-    
-    // Custom SearchBox connector to bind to existing nav input
-    const connectSearchBox = instantsearch.connectors.connectSearchBox(
-      (renderOptions, isFirstRender) => {
-        const { query, refine, widgetParams } = renderOptions;
-
-        if (isFirstRender) {
-          widgetParams.input.addEventListener('input', event => {
-            refine(event.target.value);
-            if (event.target.value.length > 0) {
-              widgetParams.container.style.display = 'block';
-            } else {
-              widgetParams.container.style.display = 'none';
-            }
-          });
-          
-          widgetParams.input.addEventListener('focus', event => {
-            if (event.target.value.length > 0) {
-              widgetParams.container.style.display = 'block';
-            }
-          });
-
-          // Click outside to hide
-          document.addEventListener('click', (e) => {
-            if (!widgetParams.container.contains(e.target) && e.target !== widgetParams.input) {
-              widgetParams.container.style.display = 'none';
-            }
-          });
-        }
-        
-        // Sync input value if changed from elsewhere (e.g. main search box)
-        if (widgetParams.input.value !== query) {
-          widgetParams.input.value = query;
-        }
+    function toggleBrowse() {
+      var q = mainInput.value.trim();
+      if (q.length > 0) {
+        if (browseSections) browseSections.style.display = 'none';
+        if (emptyHint) emptyHint.style.display = 'none';
+      } else {
+        if (browseSections) browseSections.style.display = 'block';
+        if (emptyHint) emptyHint.style.display = 'block';
+        resultsContainer.innerHTML = '';
       }
-    );
+    }
 
-    widgets.push(
-      connectSearchBox({
-        input: navInput,
-        container: navResultsContainer
-      })
-    );
-
-    widgets.push(
-      instantsearch.widgets.hits({
-        container: '#nav-search-results',
-        templates: {
-          empty(results, { html }) {
-            if (!results.query) return html``;
-            return html`<div class="nav-search-empty">No results for "${results.query}"</div>`;
-          },
-          item(hit, { html, components }) {
-            const tags = hit.tags ? hit.tags.join(', ') : '';
-            const category = (hit.categories && hit.categories.length > 0) ? hit.categories[0] : (hit.collection || 'Post');
-            
-            return html`
-              <a href="${hit.url}" class="nav-search-hit">
-                <div class="nav-search-hit-title">${components.Highlight({ hit, attribute: 'title' })}</div>
-                <div class="nav-search-hit-meta" style="font-size: 0.8em; color: var(--grey-text); margin-top: 4px;">
-                  <span style="display: inline-block; padding: 2px 6px; background: var(--category-bg, #eee); border-radius: 4px; border: 1px solid var(--card-border);">${category}</span>
-                  ${tags ? html`<span style="margin-left: 6px;">· ${tags}</span>` : ''}
-                </div>
-              </a>
-            `;
-          }
-        }
-      })
-    );
+    mainInput.addEventListener('input', toggleBrowse);
+    mainInput.addEventListener('keyup', toggleBrowse);
   }
 
-  search.addWidgets(widgets);
-  search.start();
+  var navSearchInput = document.getElementById('nav-search-input');
+  var navSearchResults = document.getElementById('nav-search-results');
+
+  if (navSearchInput && navSearchResults) {
+    navSearchResults.classList.add('nav-search-results-dropdown');
+
+    navSjs = SimpleJekyllSearch({
+      searchInput: navSearchInput,
+      resultsContainer: navSearchResults,
+      json: '{{ "/search.json" | relative_url }}',
+      searchResultTemplate: '<div class="nav-search-item"><a class="nav-search-link" href="{url}"><div class="nav-search-content"><span class="nav-search-title">{title}</span><span class="nav-search-date">{display_type} • {date}</span></div></a></div>',
+      noResultsText: '<div class="nav-search-item" style="padding: 12px 16px; color: #888;">No results found</div>',
+      limit: 6
+    });
+
+    document.addEventListener('click', function (e) {
+      if (e.target !== navSearchInput && !navSearchResults.contains(e.target)) {
+        navSearchResults.style.display = 'none';
+      }
+    });
+
+    navSearchInput.addEventListener('focus', function () {
+      if (navSearchInput.value.length > 0) {
+        navSearchResults.style.display = 'block';
+      }
+    });
+
+    navSearchInput.addEventListener('input', function () {
+      if (navSearchInput.value.length > 0) {
+        navSearchResults.style.display = 'block';
+      } else {
+        navSearchResults.style.display = 'none';
+      }
+    });
+  }
+
+  // Handle URL query parameter `?q=...` (Google Sitelinks Searchbox)
+  window.addEventListener('DOMContentLoaded', function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var query = urlParams.get('q');
+    if (query && mainInput) {
+      mainInput.value = query;
+      setTimeout(function () {
+        mainInput.dispatchEvent(new Event('input', { bubbles: true }));
+        mainInput.dispatchEvent(new Event('keyup', { bubbles: true }));
+      }, 300);
+    }
+  });
+})();
 </script>
