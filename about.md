@@ -473,7 +473,7 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
       <span class="exp-date">2023 - 2024</span>
     </div>
     <span class="exp-org">Center for Atmospheric Particle Studies (CAPS) - CMU</span>
-    <p class="exp-desc">Collaborated with Prof Albert Presto to develop computer vision models for classifying pollution sources from Particulate Matter (PM) filters using smartphone images.</p>
+    <p class="exp-desc">Worked with Prof Albert Presto's group through the CMU-Africa student exchange. Contributed to a smartphone-based method for measuring black carbon, analyzing photos of Aethalometer samples across multiple wavelength channels to identify the presence of fossil-fuel from wood-smoke pollution.</p>
       <div class="exp-skills">
         <span class="skill-pill">Computer Vision</span>
         <span class="skill-pill">Machine Learning</span>
