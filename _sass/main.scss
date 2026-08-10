@@ -1603,16 +1603,37 @@ a:hover {
   overflow-wrap: break-word;
 }
 
-/* Fix for pre and code blocks */
+/* Fix for pre and code blocks — prevent horizontal page scroll on mobile */
+
+/* The .highlight div wraps every fenced code block from Rouge/Jekyll */
+.post-content .highlight,
+.post-content figure.highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+}
+
 .post-content pre {
   overflow-x: auto;
   max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .post-content code {
   word-wrap: break-word;
   overflow-wrap: break-word;
   background: inherit;
+}
+
+/* Code blocks inside ordered/unordered list items */
+.post-content li > .highlight,
+.post-content li > figure.highlight,
+.post-content li > div.language-python,
+.post-content li > div[class*="language-"] {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @import "gallery";
@@ -2787,4 +2808,15 @@ h1, h2, h3, h4, h5, h6,
 .post-card-tag:hover {
     border-color: var(--link-color);
     color: var(--link-color);
+}
+
+/* ── Mobile: contain KaTeX math blocks so they don't widen the page ── */
+/* overflow-x: auto lets wide equations scroll within their own box,
+   rather than widening the whole page. */
+.post-content .katex-display,
+.post-content .math,
+.post-content .katex {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
