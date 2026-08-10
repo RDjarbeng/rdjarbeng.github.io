@@ -8,65 +8,23 @@ custom_css_class: about-page
 <div class="about-intro">
   <h1>Richard Djarbeng</h1>
   <p>Software Engineer | Machine Learning Researcher | IoT Innovator</p>
-  <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
+  <div class="contact-links">
+    <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
+    <span class="contact-separator">•</span>
+    <a href="#contact-form" class="contact-form-link">Contact Form ↓</a>
+  </div>
 </div>
 <div class="about-section">
-<p style="text-align: center; font-size: 1.1em; line-height: 1.6;">
+<p class="about-summary-text">
 Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world impact. AWS Certified Solutions Architect – Associate. Occasionally I write technical posts and personal reflections on this Blog.
 </p>
 </div>
 
 ***
 
-## Questions of interest:
-### Finance:
-Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
-
-<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
-  {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
-  {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
-
-  {% assign p2 = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first %}
-  {% if p2 %}{% include post-card.html post=p2 %}{% endif %}
-
-  {% assign p3 = site.posts | where: "slug", "what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer" | first %}
-  {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
-</div>
-
-### Education:
-* What are the best ways to learn AI and machine learning, and what resources are recommended?
-* Who are the key people in the field of AI and machine learning, beyond the media hype?
-
-I cover this in posts like Complete Machine Learning Package — Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
-
-<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
-  {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
-  {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
-
-  {% assign ml2 = site.posts | where: "slug", "machine-learning-specialization-by-andrew-ng-and-deeplearning-ai" | first %}
-  {% if ml2 %}{% include post-card.html post=ml2 %}{% endif %}
-
-  {% assign ml3 = site.posts | where: "slug", "machine-learning-experts-to-follow" | first %}
-  {% if ml3 %}{% include post-card.html post=ml3 %}{% endif %}
-</div>
-
-### AI / Machine Learning:
-* What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
-* How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
-
-### Remote Sensing & GIS:
-* **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
-* **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
-* How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
-* How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
-* What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
-
-***
-
-<hr class="post-separator">
 
 <div class="about-section">
-  <h2 class="about-section-title">Professional Summary</h2>
+  <!-- <h2 class="about-section-title">Professional Summary</h2>
    <div class="experience-card" style="border-left: 4px solid #007acc;">
     <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
         <li>Specialized in <strong>Web Development</strong>, <strong>Machine Learning</strong>, and <strong>IoT devices</strong> (Raspberry Pi, Arduino).</li>
@@ -75,7 +33,7 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
         <li>Active open-source contributor, including the <a href="https://github.com/Nyandwi/machine_learning_complete/">Machine Learning Complete</a> package.</li>
         <li>Passionate about democratizing technology through low-cost sensor deployment and accessible education.</li>
     </ul>
-   </div>
+   </div> -->
 
    <h3 style="text-align:center; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Download Resumes</h3>
    <div class="resume-section">
@@ -245,6 +203,57 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
     </a>
   </div>
 </div>
+
+## Areas of interest:
+### Education:
+* What are the best ways to learn AI and machine learning, and what resources are recommended?
+* Who are the key people in the field of AI and machine learning, beyond the media hype?
+
+I cover this in posts like Complete Machine Learning Package — Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
+  {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
+
+  {% assign ml2 = site.posts | where: "slug", "machine-learning-specialization-by-andrew-ng-and-deeplearning-ai" | first %}
+  {% if ml2 %}{% include post-card.html post=ml2 %}{% endif %}
+
+  {% assign ml3 = site.posts | where: "slug", "machine-learning-experts-to-follow" | first %}
+  {% if ml3 %}{% include post-card.html post=ml3 %}{% endif %}
+</div>
+
+### AI / Machine Learning:
+* What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
+* How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
+* Computer vision: What are the latest advances in computer vision and in what areas can they be applied?
+
+### Remote Sensing & GIS:
+* **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
+* **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
+* How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
+* How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
+* What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
+
+### Finance:
+Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
+
+<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+  {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
+  {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
+
+  {% assign p2 = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first %}
+  {% if p2 %}{% include post-card.html post=p2 %}{% endif %}
+
+  {% assign p3 = site.posts | where: "slug", "what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer" | first %}
+  {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
+</div>
+
+
+
+***
+
+<hr class="post-separator">
+
 
 <div class="about-section">
   <h2 class="about-section-title">Projects</h2>
