@@ -42,7 +42,8 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Push index to Algolia
-        run: bundle exec jekyll algolia
+        run: bundle exec jekyll algolia || echo "Algolia indexing skipped (quota or credit limit reached)"
+        continue-on-error: true
         env:
           JEKYLL_ENV: production
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
