@@ -192,7 +192,7 @@ algolia:
   application_id: 'IS96FR2E65'
   index_name: 'rdjarbeng_index'
   search_only_api_key: '244c316912077b528a2583b21970d464'
-  nodes_to_index: 'p, h1, h2, h3, h4, h5, h6, li'
+  nodes_to_index: 'h1, h2, h3'
   settings:
     searchableAttributes:
       - title
@@ -210,3 +210,8 @@ algolia:
     - search.md
     - videos.html
     - 404.html
+    - categories/**/*.html
+    - tags/**/*.html
+    - gallery/**/*.html
+    - feed.xml
+    - sitemap.xml
