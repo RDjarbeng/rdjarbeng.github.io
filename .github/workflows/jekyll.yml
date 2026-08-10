@@ -42,7 +42,13 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Push index to Algolia
-        run: bundle exec jekyll algolia || echo "Algolia indexing skipped (quota or credit limit reached)"
+        run: |
+          if git rev-parse HEAD~1 >/dev/null 2>&1 && git diff --name-only HEAD~1 HEAD | grep -E "^(_posts/|_personal/|_gallery/|_authors/|_video_collections/|about\.md)"; then
+            echo "Content changes detected. Running Algolia index sync..."
+            bundle exec jekyll algolia || echo "Algolia indexing skipped (quota or credit limit reached)"
+          else
+            echo "No content files changed. Skipping Algolia indexing."
+          fi
         continue-on-error: true
         env:
           JEKYLL_ENV: production
