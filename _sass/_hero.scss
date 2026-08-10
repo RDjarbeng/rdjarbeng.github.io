@@ -181,3 +181,51 @@
 
 .carousel-prev { left: 12px; }
 .carousel-next { right: 12px; }
+
+// About Snippet Section
+.about-snippet {
+  background: var(--card-bg, #f9f9f9);
+  border: 1px solid var(--card-border, #eaeaea);
+  padding: 24px 30px;
+  border-radius: 16px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+  scroll-margin-top: 80px;
+
+  .about-snippet-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    border-bottom: none;
+    text-align: center;
+    color: var(--text-color, #222);
+  }
+
+  .about-snippet-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 16px;
+    color: var(--text-color, #555);
+  }
+
+  .about-snippet-btn {
+    display: inline-block;
+    padding: 8px 22px;
+    border-radius: 30px;
+    border: 1px solid var(--text-color, #333);
+    color: var(--text-color, #333);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--text-color, #333);
+      color: var(--card-bg, #fff);
+      text-decoration: none;
+    }
+  }
+}
+
