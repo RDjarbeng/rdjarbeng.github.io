@@ -482,6 +482,17 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
     </div>
     <span class="exp-org">Carnegie Mellon University</span>
     <p class="exp-desc">Specialized in Machine Learning and Software Engineering. Served as Club President for the Internet of Things (IoT) club.</p>
+    <div class="exp-sub-section">
+      <strong class="exp-label">Breadth Areas:</strong>
+      <div class="exp-skills">
+        <span class="skill-pill">Algorithms/Complexity/Programming Languages</span>
+        <span class="skill-pill">Artificial Intelligence, Robotics and Control</span>
+        <span class="skill-pill">Circuits</span>
+        <span class="skill-pill">Computer Hardware Engineering</span>
+        <span class="skill-pill">Signal Processing and Communications</span>
+        <span class="skill-pill">Software Systems and Computer Networking</span>
+      </div>
+    </div>
   </div>
 
   <div class="experience-card">
