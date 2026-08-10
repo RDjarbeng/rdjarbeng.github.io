@@ -332,12 +332,37 @@
     }
 }
 
-.contact-email {
+.contact-links {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-email,
+.contact-form-link {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--link-color);
-    margin-top: 10px;
     display: inline-block;
+
+    &:hover {
+        color: var(--link-hover-color);
+        text-decoration: underline;
+    }
+}
+
+.contact-separator {
+    color: var(--grey-text);
+    font-size: 1rem;
+}
+
+.about-summary-text {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .project-card-about .project-content {
