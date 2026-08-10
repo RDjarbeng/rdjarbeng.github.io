@@ -21,6 +21,17 @@ layout: default
 
 <div class="home">
   <h1>Richard Djarbeng's Blog</h1>
+
+  <div id="about-me" class="about-snippet">
+    <h2 class="about-snippet-title">About Me</h2>
+    <p class="about-snippet-text">
+      I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI
+      applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world
+      impact. Currently, I am expanding my expertise in Deep Learning and building on AWS.
+    </p>
+    <a href="{{ '/about/' | relative_url }}" class="about-snippet-btn">Visit My About Page</a>
+  </div>
+
   {% include hero.html %}
 
   {% assign latest_urls = "" | split: "" %}
@@ -74,7 +85,8 @@ layout: default
     <!-- Sidebar TOC -->
     <aside class="desktop-toc" style="position: sticky; top: 45px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg); padding: 8px 10px; border-radius: 12px; border: 1px solid var(--card-border); z-index: 10; font-weight: 500; overflow-y: auto;">
        <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;" class="toc-list">
-          <li style="font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">Blog</li>
+          <li style="margin-bottom: 5px;"><a href="#about-me" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">About Me</a></li>
+          <li style="font-size: 1.15rem; font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: var(--text-color);">Blog</li>
           <li style="font-size: 1.05rem; font-weight: bold; color: var(--text-color); padding-left: 10px; margin-bottom: 5px;">Technical posts</li>
           <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
           <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
@@ -97,8 +109,6 @@ layout: default
             <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
             <li><a href="#gallery-images" class="toc-link" style="padding-left: 10px;">Images</a></li>
           </div>
-          
-          <li style="margin-top: 15px;"><a href="#about-me" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 20px;">About Me</a></li>
        </ul>
     </aside>
 
@@ -127,13 +137,13 @@ layout: default
     <main class="home-main" style="flex-grow: 1; min-width: 0; width: 100%;">
       
       <nav class="mobile-toc">
+         <a href="#about-me" class="mobile-toc-link">About Me</a>
          <a href="#latest-posts" class="mobile-toc-link">Latest Posts</a>
          <a href="#featured-posts" class="mobile-toc-link">Featured Posts</a>
          <a href="#guest-posts" class="mobile-toc-link">Guest Authors</a>
          <a href="#personal-posts" class="mobile-toc-link">Personal Posts</a>
          <a href="#gallery-videos" class="mobile-toc-link">Latest Gallery Videos</a>
          <a href="#gallery-images" class="mobile-toc-link">Latest Gallery Images</a>
-         <a href="#about-me" class="mobile-toc-link">About Me</a>
       </nav>
       
       <!-- Latest Posts Section -->
@@ -313,20 +323,7 @@ layout: default
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg></a>
 
-      <br>
-      <div id="about-me" class="about-snippet"
-        style="background: var(--card-bg, #f9f9f9); border: 1px solid var(--card-border, #eaeaea); padding: 30px; border-radius: 12px; margin-bottom: 40px; text-align: center; scroll-margin-top: 80px;">
-        <h2 class="section-title" style="border-bottom: none; margin-bottom: 10px; text-align: center;">About Me</h2>
-        <p style="font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto; color: var(--text-color, #555);">
-          I am a Computer Engineer and Machine Learning Enthusiast with a passion for Internet of Things (IoT) and AI
-          applications. I specialize in building data-driven solutions and deploying low-cost technologies for real-world
-          impact. Currently, I am expanding my expertise in Deep Learning and building on AWS.
-        </p>
-        <br>
-        <a href="/about/" class="btn"
-          style="display: inline-block; padding: 10px 20px; border-radius: 30px; border: 1px solid var(--text-color, #333); color: var(--text-color, #333); text-decoration: none; font-weight: bold;">Visit My About Page</a>
-      </div>
-      
+
     </main>
   </div>
 
