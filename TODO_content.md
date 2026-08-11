@@ -290,3 +290,4 @@ https://arxiv.org/abs/1511.06434
 
 This paper could be good for paper review
 - [ ] Why do OTP expire after a while, brute force, how do you manage continuously wrong logins and endpoints
+- [ ] A game to simulate the docking at a space station. Sending power to the engines to boost towards the port rather enlarges the orbit and causes the docking to fail, instead you have to do the counter intuitive method of slowing down to get closer
