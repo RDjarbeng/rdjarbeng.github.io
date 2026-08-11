@@ -1,4 +1,4 @@
----
+﻿---
 layout: about
 title: About Richard Djarbeng
 permalink: /about/
@@ -30,7 +30,7 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
     </div>
     <span class="exp-org">Carnegie Mellon University Africa</span>
     <p class="exp-desc">Worked with Prof Edwin Mugume on a project building low-cost weather sensors, focusing on the deployment and maintenance of these solutions across East Africa.</p>
-    <details class="exp-tech-details">
+    <details class="exp-tech-details" open>
       <summary>Technical details</summary>
       <ul>
         <li>3D radiation shield design in Fusion 360 for environmental sensor nodes</li>
@@ -111,7 +111,7 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
         <span class="skill-pill">Software Systems and Computer Networking</span>
       </div>
     </div>
-    <details class="exp-tech-details">
+    <details class="exp-tech-details" open>
       <summary>Selected graduate coursework</summary>
       <ul>
         <li><strong>Autonomous Driving</strong> (18-744): sensing, perception, localization, driving behaviors, planning, control, and fault management across a full autonomous vehicle stack</li>
@@ -129,12 +129,12 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
     </div>
     <span class="exp-org">University of Ghana</span>
     <p class="exp-desc"> Gained a solid foundation in computer engineering principles and practices.</p>
-    <details class="exp-tech-details">
+    <details class="exp-tech-details" open>
       <summary>Electives</summary>
       <ul>
-        <li>Computer Graphics — practical projects in Unity3D</li>
-        <li>Software Engineering — projects in PHP, JavaScript, Java, and JavaFX, with SQL across Postgres, OracleDB, and SQLite</li>
-        <li>Computer Aided Design — 3D modeling with Solid Edge (Siemens)</li>
+        <li>Computer Graphics, with hands-on projects in Unity3D</li>
+        <li>Software Engineering, with projects in PHP, JavaScript, Java, and JavaFX across Postgres, OracleDB, and SQLite</li>
+        <li>Computer Aided Design, with 3D modeling in Solid Edge (Siemens)</li>
       </ul>
     </details>
   </div>
@@ -148,12 +148,12 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
     </div>
 <span class="exp-org">Self-directed study</span>
     <p class="exp-desc">Independent study focused on deep learning and computer vision, building models and writing up the process on the blog as I go.</p>
-    <details class="exp-tech-details">
+    <details class="exp-tech-details" open>
       <summary>Technical areas I've been studying</summary>
       <ul>
-        <li>Deep learning: CNNs, transfer learning (PyTorch, FastAI)</li>
-        <li>Computer vision: object detection, semantic segmentation, video understanding</li>
-        <li>Supervised learning and classification, including time-series analysis</li>
+        <li>CNNs and transfer learning, using PyTorch and FastAI</li>
+        <li>Object detection, semantic segmentation, and video understanding</li>
+        <li>Supervised learning and classification, plus time-series analysis</li>
         <li>Reinforcement learning</li>
         <li>Computational linear algebra</li>
       </ul>
@@ -266,7 +266,7 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
       </div>
       <div class="project-content">
         <h3 class="project-title">Predicting Loan Risk</h3>
-        <p class="project-desc">Built and deployed a loan default risk prediction model using Google Cloud Vertex AI AutoML, showing rigorous feature engineering and model evaluation. Evaluated with precision/recall and ROC curves plus Explainable AI for feature importance.</p>
+        <p class="project-desc">Built and deployed a loan default risk prediction model on Google Cloud Vertex AI AutoML. I evaluated it with precision/recall and ROC curves, and checked feature importance to understand the contribution of each predictor .</p>
       </div>
     </div>
 
@@ -400,8 +400,8 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
 
 <div class="about-section">
   <h2 class="about-section-title">Technical Skills</h2>
-  <p class="exp-desc">I work across Python, JavaScript/TypeScript, and C++ — using PyTorch, Keras, and FastAI for machine learning, React for the web, and deploying models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
-  <details class="exp-tech-details">
+  <p class="exp-desc">I work in Python, JavaScript/TypeScript, and C++. I use PyTorch, Keras, and FastAI for machine learning, React for the web, and I deploy models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
+  <details class="exp-tech-details" open>
     <summary>In more depth</summary>
     <ul>
       <li>Classification and supervised learning: from logistic regression to CNNs (ResNet) and transfer learning; ROC/PR evaluation; feature engineering.</li>
