@@ -1,4 +1,4 @@
-﻿---
+---
 layout: about
 title: About Richard Djarbeng
 permalink: /about/
