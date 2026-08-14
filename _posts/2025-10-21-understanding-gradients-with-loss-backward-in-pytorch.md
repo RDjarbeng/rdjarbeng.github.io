@@ -145,26 +145,26 @@ Let's break it down into steps:
    This gives us the predicted values for each sample based on the current parameter values.
 2. **Loss**: We then calculate the **Mean Absolute Error (MAE)**:
    $$ \text{loss} = \frac{1}{N} \sum_i \left| \text{preds}_i - \text{targets}_i \right| $$
-   where ( N ) is the number of samples.
+   where $N$ is the number of samples.
 3. **Gradient of MAE**: The derivative of the MAE with respect to each prediction is given by:
    $$ \frac{\partial \text{loss}}{\partial \text{preds}_i} = \frac{1}{N} \cdot \text{sign}(\text{preds}_i - \text{targets}_i) $$
-   This is because the derivative of the absolute value function ( |x| ) is ( \text{sign}(x) ), where:
+   This is because the derivative of the absolute value function $|x|$ is $\text{sign}(x)$, where:
    $$ \text{sign}(x) = 
    \begin{cases} 
-   1 & \text{if } x > 0 \ 
-   -1 & \text{if } x < 0 \ 
+   1 & \text{if } x > 0 \\ 
+   -1 & \text{if } x < 0 \\ 
    0 & \text{if } x = 0 
    \end{cases} $$
 4. **Chain Rule**: Using the chain rule, we propagate this gradient back to the parameters:
    $$ \frac{\partial \text{loss}}{\partial \text{params}_j} = \sum_i \frac{\partial \text{loss}}{\partial \text{preds}_i} \cdot \frac{\partial \text{preds}_i}{\partial \text{params}_j} $$
-   Here, $$ \frac{\partial \text{preds}_i}{\partial \text{params}_j} = \text{inputs}_{ij} $$, since each prediction is a linear combination of the input features and the parameters.
+   Here, $ \frac{\partial \text{preds}_i}{\partial \text{params}_j} = \text{inputs}_{ij} $, since each prediction is a linear combination of the input features and the parameters.
 5. **Final Gradient**: The final gradient for each parameter is:
    $$ \frac{\partial \text{loss}}{\partial \text{params}_j} = \frac{1}{N} \sum_i \text{sign}(\text{preds}_i - \text{targets}_i) \cdot \text{inputs}_{ij} $$
    This gradient gets stored in `params.grad` after calling `loss.backward()`.
 
-## Why Divide by ( N )?
+## Why Divide by $N$?
 
-You may have noticed the division by ( N ). This happens because we’re calculating the **mean** of the absolute errors, not just the sum. By dividing by ( N ), we ensure that the gradient reflects the averaging in the loss calculation, keeping the gradient magnitudes consistent regardless of the dataset size.
+You may have noticed the division by $N$. This happens because we’re calculating the **mean** of the absolute errors, not just the sum. By dividing by $N$, we ensure that the gradient reflects the averaging in the loss calculation, keeping the gradient magnitudes consistent regardless of the dataset size.
 
 ## Example in Code
 
