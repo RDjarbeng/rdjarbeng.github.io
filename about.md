@@ -220,8 +220,8 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
         <span class="project-type-badge">Computer Vision</span>
       </div>
       <div class="project-content">
-        <h3 class="project-title">Pollution Source Classification</h3>
-        <p class="project-desc">Developed computer vision models to classify pollution sources from PM filters using smartphone imagery, facilitating low-cost air quality analysis and source apportionment.</p>
+        <h3 class="project-title">Mapping Filter Imagery to PM Values</h3>
+        <p class="project-desc">Built models to map image data of particulate matter filters, captured across wavelengths, to PM values, providing a low-cost alternative to laboratory analysis for black carbon estimation.</p>
         <div class="project-links">
           <a href="https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html" target="_blank">Read Article <span>&rarr;</span></a>
         </div>
