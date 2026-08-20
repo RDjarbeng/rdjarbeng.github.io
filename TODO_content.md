@@ -291,3 +291,9 @@ https://arxiv.org/abs/1511.06434
 This paper could be good for paper review
 - [ ] Why do OTP expire after a while, brute force, how do you manage continuously wrong logins and endpoints
 - [ ] A game to simulate the docking at a space station. Sending power to the engines to boost towards the port rather enlarges the orbit and causes the docking to fail, instead you have to do the counter intuitive method of slowing down to get closer
+- [ ] Apparently you can travel East Africa with a working visa
+- [ ] AI hall of fame - Geoffrey Hinton, Andrew Ng, Yann Le Cun, Ian deepfellow, Andrej Karparthy,.... Maybe add 3blue1brown
+- [ ] The unevolved ship of Theseus vs the evolved ship of Theseus
+- [ ] https://ioai-official.org/republic-of-kazakhstan
+
+International olympiad in AI what is that about?
