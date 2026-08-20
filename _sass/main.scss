@@ -1317,7 +1317,14 @@ a:hover {
 
   .content-wrapper {
     flex-direction: column;
-    /* Stack ToC on top of content */
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .post-with-toc {
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
   }
 
   .toc-sidebar {
