@@ -1,4 +1,4 @@
----
+﻿---
 layout: about
 title: About Richard Djarbeng
 permalink: /about/
@@ -500,6 +500,20 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
               <span class="skill-item">BigQuery ML</span>
               <span class="skill-item">Google Looker Studio</span>
               <span class="skill-item">Data Visualisation</span>
+          </div>
+      </div>
+
+      <div class="skill-category">
+          <div class="skill-category-title">Robotics</div>
+          <div class="skill-list">
+              <span class="skill-item">ROS (C++)</span>
+              <span class="skill-item">CRAM Cognitive Architecture</span>
+              <span class="skill-item">Robot Manipulation</span>
+              <span class="skill-item">Pick-and-Place</span>
+              <span class="skill-item">Gazebo &amp; Bullet Simulators</span>
+              <span class="skill-item">Homogeneous Transforms &amp; Quaternions</span>
+              <span class="skill-item">A* Pathfinding</span>
+              <span class="skill-item">Unity3D</span>
           </div>
       </div>
 
