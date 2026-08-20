@@ -1610,37 +1610,106 @@ a:hover {
   overflow-wrap: break-word;
 }
 
-/* Fix for pre and code blocks — prevent horizontal page scroll on mobile */
+/* ===================================================
+   SYNTAX HIGHLIGHTING & CODE BLOCKS (LIGHT & DARK MODE)
+   =================================================== */
 
-/* The .highlight div wraps every fenced code block from Rouge/Jekyll */
-.post-content .highlight,
-.post-content figure.highlight {
+/* Container & Pre / Code Base Styles */
+.highlight,
+.highlighter-rouge,
+figure.highlight,
+div[class*="language-"] {
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-radius: 4px;
+  border-radius: 8px;
+  margin: 1.2em 0;
+  box-sizing: border-box;
 }
 
+.post-content pre,
+.highlight pre {
+  margin: 0;
+  padding: 16px 20px;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content code,
+.highlight code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* Inline code pills (e.g. `loss.backward()`) */
+:not(pre) > code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.88em;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* --- DARK MODE CODE BLOCK STYLES (Default / data-theme="dark") --- */
+.highlight,
+.highlighter-rouge pre,
 .post-content pre {
-  overflow-x: auto;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.post-content code {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  background: inherit;
+:not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #79c0ff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Code blocks inside ordered/unordered list items */
-.post-content li > .highlight,
-.post-content li > figure.highlight,
-.post-content li > div.language-python,
-.post-content li > div[class*="language-"] {
-  max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+/* Dark Mode Token Colors (GitHub Dark Theme) */
+.highlight {
+  .c, .c1, .ch, .cm, .cp, .cpf, .cs { color: #8b949e !important; font-style: italic; } /* Comments */
+  .k, .kd, .kn, .kp, .kr, .kt { color: #ff7b72 !important; font-weight: 600; } /* Keywords */
+  .nf, .fm, .nc, .nd { color: #d2a8ff !important; font-weight: 600; } /* Functions & Classes */
+  .nb, .bp { color: #79c0ff !important; } /* Builtins */
+  .s, .s1, .s2, .se, .sh, .si, .sx, .sd, .sb, .sc { color: #a5d6ff !important; } /* Strings */
+  .m, .mf, .mh, .mi, .mo, .il { color: #79c0ff !important; } /* Numbers */
+  .o, .ow { color: #ff7b72 !important; } /* Operators */
+  .na, .nv, .vc, .vg, .vi { color: #ffa657 !important; } /* Variables & Attributes */
+  .nn { color: #e6edf3 !important; } /* Namespaces */
+}
+
+/* --- LIGHT MODE CODE BLOCK STYLES (data-theme="light") --- */
+[data-theme="light"] {
+  .highlight,
+  .highlighter-rouge pre,
+  .post-content pre {
+    background-color: #f6f8fa !important;
+    color: #24292f !important;
+    border: 1px solid #d0d7de;
+  }
+
+  :not(pre) > code {
+    background-color: #afb8c133 !important;
+    color: #0969da !important;
+    border: 1px solid #d0d7de;
+  }
+
+  /* Light Mode Token Colors (GitHub Light Theme) */
+  .highlight {
+    .c, .c1, .ch, .cm, .cp, .cpf, .cs { color: #6e7781 !important; font-style: italic; }
+    .k, .kd, .kn, .kp, .kr, .kt { color: #cf222e !important; font-weight: 600; }
+    .nf, .fm, .nc, .nd { color: #8250df !important; font-weight: 600; }
+    .nb, .bp { color: #0550ae !important; }
+    .s, .s1, .s2, .se, .sh, .si, .sx, .sd, .sb, .sc { color: #0a3069 !important; }
+    .m, .mf, .mh, .mi, .mo, .il { color: #0550ae !important; }
+    .o, .ow { color: #cf222e !important; }
+    .na, .nv, .vc, .vg, .vi { color: #953800 !important; }
+    .nn { color: #24292f !important; }
+  }
 }
 
 @import "gallery";
@@ -2818,12 +2887,17 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ── Mobile: contain KaTeX math blocks so they don't widen the page ── */
-/* overflow-x: auto lets wide equations scroll within their own box,
-   rather than widening the whole page. */
-.post-content .katex-display,
-.post-content .math,
-.post-content .katex {
+.post-content .katex-display {
+  display: block;
+  width: 100%;
   max-width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+  margin: 1em 0;
+}
+
+.post-content .katex {
+  max-width: 100%;
 }
