@@ -7,7 +7,7 @@ custom_css_class: about-page
 
 <div class="about-intro">
   <h1>Richard Djarbeng</h1>
-  <p>ML Researcher | Environmental Sensing | Software Engineer</p>
+  <p>Software Engineer | ML Engineer | Robotics &amp; Embedded Systems</p>
   <div class="contact-links">
     <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
     <span class="contact-separator">•</span>
