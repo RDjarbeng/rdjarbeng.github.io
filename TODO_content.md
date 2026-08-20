@@ -294,3 +294,6 @@ This paper could be good for paper review
 - [ ] Apparently you can travel East Africa with a working visa
 - [ ] AI hall of fame - Geoffrey Hinton, Andrew Ng, Yann Le Cun, Ian deepfellow, Andrej Karparthy,.... Maybe add 3blue1brown
 - [ ] The unevolved ship of Theseus vs the evolved ship of Theseus
+- [ ] https://ioai-official.org/republic-of-kazakhstan
+
+International olympiad in AI what is that about?
