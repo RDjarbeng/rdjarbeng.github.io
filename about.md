@@ -217,8 +217,8 @@ ML researcher and software engineer with an MSc in Electrical and Computer Engin
     <div class="project-card-about" data-category="ml iot research">
       <div class="project-image-container">
         <!-- Used relevant existing asset -->
-        <img src="/assets/images/comp_vision_roboflow.jpeg" alt="Pollution Classification">
-        <span class="project-type-badge">Computer Vision</span>
+        <img src="/assets/images/comp_vision_roboflow.jpeg" alt="Filter Imagery to PM Values">
+        <span class="project-type-badge">Machine Learning</span>
       </div>
       <div class="project-content">
         <h3 class="project-title">Mapping Filter Imagery to PM Values</h3>
