@@ -129,6 +129,10 @@ collections:
   video_collections:
     output: true
     permalink: /gallery/videos/collections/:title/
+  book_categories:
+    output: false
+  books:
+    output: false
 
 sass:
   sass_dir: _sass
