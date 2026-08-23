@@ -1,0 +1,216 @@
+---
+layout: default
+title: Enlighten - Free Tech Books Online
+permalink: /enlighten/
+body_class: enlighten-page
+description: "Project Enlighten: a curated collection of genuinely good tech books that are legally available to read free online - machine learning, data science, computer vision, programming and IT."
+categories:
+  - name: "Machine Learning & AI"
+    icon: "🤖"
+  - name: "Data Science"
+    icon: "📊"
+  - name: "Computer Vision"
+    icon: "👁️"
+  - name: "Programming"
+    icon: "💻"
+  - name: "IT & Career"
+    icon: "💼"
+books:
+  - title: "Practical Deep Learning for Coders"
+    author: "Jeremy Howard & Sylvain Gugger"
+    url: "https://course.fast.ai/"
+    category: "Machine Learning & AI"
+    format: "Course + Book"
+    desc: "fast.ai's legendary top-down deep learning course. The full companion book, Deep Learning for Coders with fastai & PyTorch, is free online as runnable Jupyter notebooks."
+  - title: "Dive into Deep Learning"
+    author: "Zhang, Lipton, Li & Smola"
+    url: "https://d2l.ai/"
+    category: "Machine Learning & AI"
+    format: "Interactive"
+    desc: "An interactive, code-first deep learning textbook with runnable examples in PyTorch, TensorFlow and JAX. Adopted at over 500 universities."
+  - title: "Deep Learning"
+    author: "Ian Goodfellow, Yoshua Bengio & Aaron Courville"
+    url: "https://www.deeplearningbook.org/"
+    category: "Machine Learning & AI"
+    format: "HTML"
+    desc: "The theoretical bible of deep learning, written by pioneers of the field. Free HTML edition courtesy of MIT Press."
+  - title: "Reinforcement Learning: An Introduction"
+    author: "Richard Sutton & Andrew Barto"
+    url: "http://incompleteideas.net/book/the-book.html"
+    category: "Machine Learning & AI"
+    format: "PDF"
+    desc: "The definitive reinforcement learning text, officially shared free by the authors themselves."
+  - title: "Speech and Language Processing"
+    author: "Dan Jurafsky & James Martin"
+    url: "https://web.stanford.edu/~jurafsky/slp3/"
+    category: "Machine Learning & AI"
+    format: "PDF Draft"
+    desc: "The standard NLP textbook, continuously updated - now covering transformers, pretraining and large language models."
+  - title: "Python for Data Analysis"
+    author: "Wes McKinney"
+    url: "https://wesmckinney.com/book/"
+    category: "Data Science"
+    format: "HTML"
+    desc: "Open-access third edition from the creator of pandas. The essential guide to NumPy, pandas, Jupyter and practical data wrangling."
+  - title: "An Introduction to Statistical Learning"
+    author: "James, Witten, Hastie, Tibshirani & Taylor"
+    url: "https://www.statlearning.com/"
+    category: "Data Science"
+    format: "PDF"
+    desc: "The classic gentle introduction to statistical machine learning, free in both R and Python editions."
+  - title: "Foundations of Computer Vision"
+    author: "Torralba, Isola & Freeman"
+    url: "https://visionbook.mit.edu/"
+    category: "Computer Vision"
+    format: "HTML"
+    desc: "MIT's modern computer vision text - image formation, filters, CNNs, transformers, geometry and generative models, straight from MIT faculty."
+  - title: "Automate the Boring Stuff with Python"
+    author: "Al Sweigart"
+    url: "https://automatetheboringstuff.com/"
+    category: "Programming"
+    format: "HTML"
+    desc: "Practical Python for beginners - automate spreadsheets, files, web scraping, emails and other tedious tasks."
+  - title: "Crafting Interpreters"
+    author: "Robert Nystrom"
+    url: "https://craftinginterpreters.com/"
+    category: "Programming"
+    format: "HTML"
+    desc: "Build two complete interpreters from scratch and finally understand how programming languages actually work. Beautifully written."
+  - title: "Pro Git"
+    author: "Scott Chacon & Ben Straub"
+    url: "https://git-scm.com/book/en/v2"
+    category: "Programming"
+    format: "HTML + ePub"
+    desc: "The official Git book, maintained by the Git project and translated into dozens of languages."
+  - title: "The Linux Command Line"
+    author: "William Shotts"
+    url: "http://linuxcommand.org/tlcl.php"
+    category: "Programming"
+    format: "PDF"
+    desc: "The best introduction to the shell, offered free by the author. Take full control of your terminal."
+  - title: "Confessions of an IT Manager"
+    author: "Phil Factor"
+    url: "https://www.red-gate.com/simple-talk/wp-content/uploads/RedGateBooks/PhilFactor/Confessions_eBook.pdf"
+    category: "IT & Career"
+    format: "PDF"
+    desc: "Anarchic humour wrapped around hard-won wisdom about software projects, hiring, firing and surviving life in IT."
+---
+
+<style>
+  .enlighten-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .enlighten-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .enlighten-intro h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .enlighten-intro p {
+    color: var(--text-color-light, #666);
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+  .enlighten-section {
+    margin-bottom: 2.5rem;
+  }
+  .enlighten-section h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--card-border, #e0e0e0);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .enlighten-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    text-decoration: none;
+    color: var(--text-color, #222);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: var(--text-color, #222);
+  }
+  .book-card h3 {
+    font-size: 1.05rem;
+    margin: 0.35rem 0 0.25rem;
+    line-height: 1.35;
+  }
+  .book-author {
+    font-size: 0.85rem;
+    color: var(--text-color-light, #666);
+    margin: 0 0 0.5rem;
+  }
+  .book-desc {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    flex-grow: 1;
+    margin: 0 0 0.9rem;
+  }
+  .book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .book-format {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: rgba(100, 116, 139, 0.12);
+    color: var(--text-color-light, #555);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+  .book-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+</style>
+
+<div class="enlighten-wrap">
+  <div class="enlighten-intro">
+    <h1>📚 Enlighten</h1>
+    <p>A curated shelf of genuinely good tech books that are legally available to read free online. No paywalls, no sketchy downloads - just authors and publishers doing right by readers.</p>
+  </div>
+
+  {% for cat in page.categories %}
+  <section class="enlighten-section">
+    <h2>{{ cat.icon }} {{ cat.name }}</h2>
+    <div class="enlighten-grid">
+      {% for book in page.books %}
+      {% if book.category == cat.name %}
+      <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-card">
+        <span class="book-format">{{ book.format }}</span>
+        <h3>{{ book.title }}</h3>
+        <p class="book-author">{{ book.author }}</p>
+        <p class="book-desc">{{ book.desc }}</p>
+        <div class="book-footer">
+          <span></span>
+          <span class="book-cta">Read online →</span>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
