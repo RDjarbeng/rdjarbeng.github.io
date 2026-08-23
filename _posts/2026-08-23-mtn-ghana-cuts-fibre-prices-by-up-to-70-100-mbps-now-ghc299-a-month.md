@@ -10,7 +10,23 @@ title: 'MTN Ghana cuts fibre prices by up to 70%: 100 Mbps Now GH¢299 a Month'
 image: '/assets/images/posts/covers/2026-08-23-mtn-ghana-cuts-fibre-prices-by-up-to-70-100-mbps-now-ghc299-a-month.jpg'
 image_alt: 'MTN Ghana cuts fibre broadband prices by up to 70%'
 layout: post
-card_items: []
+card_items:
+  - name: "MTN Ghana Fibre Broadband"
+    badge_1: "Telecom / ISP"
+    badge_2: "41% Market Share"
+    description: "MTN Ghana's fixed-line broadband service providing high-speed optical fibre internet to residential households and businesses across Ghana. MTN leads the residential fixed internet segment."
+  - name: "National Communications Authority (NCA)"
+    badge_1: "Regulatory Body"
+    badge_2: "Ghana"
+    description: "The statutory regulatory body responsible for licensing, regulating, and monitoring telecommunications, spectrum usage, and electronic communications services across Ghana."
+  - name: "Telecel Broadband"
+    badge_1: "Competitor ISP"
+    badge_2: "Ghana"
+    description: "Formerly Vodafone Ghana Broadband, Telecel is the major telecommunications competitor offering fixed-line fibre broadband services, starting at GH¢129 monthly."
+  - name: "Starlink"
+    badge_1: "Satellite Internet"
+    badge_2: "Global / SpaceX"
+    description: "SpaceX's low-Earth orbit (LEO) satellite constellation offering high-speed, low-latency internet globally. In Ghana, standard residential plans cost GH¢770 per month."
 ---
 
 Ghanaians complaining about expensive home broadband got substantial relief when MTN Ghana announced a major reduction in home fibre prices, with the revised tariffs taking effect on Wednesday, June 17, 2026. The price of the 100 Mbps unlimited monthly fibre package dropped from GH¢987 to GH¢299, representing a 70 percent reduction. MTN also expanded its high-speed offerings by introducing a 300 Mbps package at GH¢444 per month and a 500 Mbps tier at GH¢999 per month.
