@@ -602,6 +602,10 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         Research CV
       </a>
+      <a href="/assets/documents/robotics_cv_richard_main.pdf" target="_blank" class="resume-btn" title="Download Robotics Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Robotics CV
+      </a>
    </div>
 </div>
 
