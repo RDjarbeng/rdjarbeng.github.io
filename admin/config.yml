@@ -640,6 +640,71 @@ collections:
       - { label: "YouTube Playlist URL", name: "youtube_playlist_url", widget: "string", required: false, hint: "Paste a YouTube playlist URL here. A GitHub Action will automatically fetch videos and add them to the videos collection." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "video_collection" }
 
+  - name: "book_categories"
+    label: "Enlighten Categories"
+    folder: "_book_categories"
+    create: true
+    slug: "{{name}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Icon", name: "icon", widget: "string", required: false, hint: "Emoji shown next to the section heading, e.g. 🤖" }
+      - { label: "Order", name: "weight", widget: "number", required: false, hint: "Lower numbers appear first on the page" }
+      - { label: "Description", name: "description", widget: "text", required: false, hint: "Short line shown under the section heading" }
+
+  - name: "books"
+    label: "Enlighten Books"
+    folder: "_books"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    sortable_fields: [title, author, category, format]
+    view_filters:
+      - { label: "Machine Learning & AI", field: "category", pattern: "Machine Learning & AI" }
+      - { label: "Data Science", field: "category", pattern: "Data Science" }
+      - { label: "Computer Vision", field: "category", pattern: "Computer Vision" }
+      - { label: "Programming", field: "category", pattern: "Programming" }
+      - { label: "IT & Career", field: "category", pattern: "IT & Career" }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author(s)", name: "author", widget: "string" }
+      - { label: "Online URL", name: "url", widget: "string", hint: "Link to the legal free online version of the book" }
+      - label: "Category"
+        name: "category"
+        widget: "relation"
+        collection: "book_categories"
+        display_fields: [name]
+        search_fields: [name]
+        value_field: "name"
+        required: true
+      - {
+          label: "Format Badge",
+          name: "format",
+          widget: "select",
+          options: ["HTML", "PDF", "Interactive", "Course + Book", "HTML + ePub"],
+          default: "HTML",
+          required: false,
+          hint: "Small badge shown at the top of the card",
+        }
+      - {
+          label: "Author Credential",
+          name: "known_for",
+          widget: "string",
+          required: false,
+          hint: "Why these authors are credible, e.g. 'Creator of pandas' or '2024 Turing Award winner'",
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: [],
+          required: false,
+          hint: "Topics the book covers, e.g. Python, pandas, Deep Learning",
+        }
+      - { label: "Description", name: "description", widget: "text", required: false }
+
   # -------------------------------------------------------
   # SCREENSHOTS – one collection per sub-folder
   # (Sveltia CMS doesn't support nested folders yet)
