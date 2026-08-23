@@ -16,7 +16,7 @@ custom_css_class: about-page
 </div>
 <div class="about-section">
 <p class="about-summary-text">
-ML researcher and software engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I build low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision, time-series modeling, and data engineering, and I am currently preparing PhD applications centered on machine learning for environmental sensing and air quality. AWS Certified Solutions Architect. I also write technical posts and personal reflections on this blog.
+I am a software engineer and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I build low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision, time-series modeling, and data engineering, and I am currently preparing PhD applications centered on machine learning for environmental sensing and air quality. AWS Certified Solutions Architect. I also write technical posts and personal reflections on this blog.
 </p>
 </div>
 
