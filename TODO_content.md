@@ -299,3 +299,4 @@ This paper could be good for paper review
 International olympiad in AI what is that about?
 - [ ] Finding the flight data for airports in Africa as a dataset and looking at if it can predict something such as as GDP, tourism. Any outliers?
 - [ ] What are the top 50 or 100 biggest companies in Africa, are they public or private. Who can invest and where?
+- [ ] An innovative art design that illustrates  'find time'
