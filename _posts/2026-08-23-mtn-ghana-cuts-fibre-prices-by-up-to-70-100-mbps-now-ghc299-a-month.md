@@ -1,36 +1,50 @@
 ---
 date: 2026-08-23T19:18:00+02:00
-published: false
+published: true
 author: Richard
 category: Technology
 tags:
   - Ghana
   - Internet
 title: 'MTN Ghana cuts fibre prices by up to 70%: 100 Mbps Now GH¢299 a Month'
-image: ''
-image_alt: ''
+image: '/assets/images/posts/covers/2026-08-23-mtn-ghana-cuts-fibre-prices-by-up-to-70-100-mbps-now-ghc299-a-month.jpg'
+image_alt: 'MTN Ghana cuts fibre broadband prices by up to 70%'
 layout: post
 card_items: []
 ---
 
-Ghanaians complaining about expensive home broadband got some relief in mid-June 2026. MTN Ghana announced a reduction in fibre broadband prices, with revised tariffs taking effect on Wednesday, June 17, 2026. The 100 Mbps unlimited monthly fibre package dropped from GH¢987 to GH¢299, and the company introduced a 300 Mbps unlimited package at GH¢444 and a 500 Mbps unlimited package at GH¢999.
+Ghanaians complaining about expensive home broadband got substantial relief when MTN Ghana announced a major reduction in home fibre prices, with the revised tariffs taking effect on Wednesday, June 17, 2026. The price of the 100 Mbps unlimited monthly fibre package dropped from GH¢987 to GH¢299, representing a 70 percent reduction. MTN also expanded its high-speed offerings by introducing a 300 Mbps package at GH¢444 per month and a 500 Mbps tier at GH¢999 per month.
 
-You can switch plans through the MyMTN App, MTN's website, or by dialling *5057#.
+![MTN Ghana cuts fibre broadband prices by up to 70%](/assets/images/posts/covers/2026-08-23-mtn-ghana-cuts-fibre-prices-by-up-to-70-100-mbps-now-ghc299-a-month.jpg)
 
-**Why now?**
+Subscribers can change plans or upgrade through the MyMTN App, the MTN Ghana website, or by dialling *5057# on an active line.
 
-This wasn't purely a business call. Reacting to the revised prices, the Minister of Communication, Digital Technology and Innovations, Samuel Nartey George, posted a statement on social media, writing: "You demanded. We engaged. MTN Ghana has responded." He said the changes followed discussions between the Ministry and MTN on the cost and reliability of fibre broadband services.
-Here is an embedded post of the tweet here:
+## Government engagement and market context
+
+The price cuts followed negotiations between state regulators and telecom executives. Reacting to the announcement, the Minister of Communication, Digital Technology and Innovations, Samuel Nartey George, posted on social media detailing the context behind the tariff changes.
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">You demanded. We engaged. <a href="https://x.com/MTNGhana?ref_src=twsrc%5Etfw">@MTNGhana</a> has responded. <br><br>Effective today, fibre broadband prices have crashed!<br><br>Previously, for a month of unlimited 100 Mbps broadband, you paid GHS 987. Today, for the same 100 Mbps, you pay GHS 299.<br><br>For GHS999, you get a 500 Mbps unlimited… <a href="https://t.co/P7bY8jw2ZN">pic.twitter.com/P7bY8jw2ZN</a></p>&mdash; Sam &#39;Dzata&#39; George 🦁🇬🇭 (@samgeorgegh) <a href="https://x.com/samgeorgegh/status/2067225780904464468?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-MTN's fibre had been on the pricier end of the market. MTN Ghana controlled around 41 percent of the country's residential fibre market, the largest share of any single provider, according to first-quarter 2026 National Communications Authority data. Rival Telecel Broadband had already introduced a GH¢129 plan in April 2026, and at GH¢987 MTN had been the most expensive fibre option in the market by a wide margin.
+According to the Minister, the price reductions came after direct discussions between the Ministry and MTN Ghana regarding consumer complaints over the high cost of fixed broadband relative to average household income in Ghana.
 
-**What about Starlink?**
+MTN Ghana held approximately 41 percent of the national residential fibre market in the first quarter of 2026, according to data from the National Communications Authority (NCA). Despite leading in coverage and subscriber numbers, MTN had remained the most expensive provider on the market. Competitors like Telecel Broadband had already introduced lower-cost entry packages, including a GH¢129 monthly plan launched in April 2026. MTN's GH¢987 entry tier for 100 Mbps had created a steep barrier for residential users seeking high-speed internet.
 
-Probably not the main driver. Starlink's Standard residential plan in Ghana is priced at GH¢770 per month for unlimited data, which is still more than MTN's new fibre rates for most people in cities and towns that already have fibre coverage. Starlink makes more sense in rural areas or as a backup connection.
+| Package | Speed | Previous Price | New Price |
+| :--- | :--- | :--- | :--- |
+| Entry Tier | 100 Mbps | GH¢987 | GH¢299 |
+| Mid Tier | 300 Mbps | New Plan | GH¢444 |
+| High Tier | 500 Mbps | New Plan | GH¢999 |
 
-**What changes for users**
+## Competition with satellite providers
 
-The reduction is expected to ease internet costs for households, businesses, content creators and remote workers. Whether it holds up long-term depends on things the price tag doesn't show: how consistent the speeds are, what "unlimited" turns out to mean day to day, and how good installation and support end up being.
+The price reduction also positions MTN more competitively against satellite operators like Starlink. Starlink's Standard residential plan in Ghana costs GH¢770 per month for unlimited data, alongside upfront hardware costs. 
 
-If you've been putting off getting fibre because of the price, it might be worth checking what's available where you live.
+For residents in urban centers and suburban neighborhoods with existing fibre infrastructure, MTN's revised rates offer significantly lower monthly costs and lower latency compared to satellite connections. Starlink remains relevant primarily for rural locations, peri-urban zones without fibre rollout, or enterprise fallback connections.
+
+## Expected impact on residential users
+
+The lower pricing lowers the cost of internet access for home offices, remote software developers, content creators, and small businesses operating from residential locations. 
+
+The real test of the new tariffs will depend on service delivery factors beyond the sticker price. Key factors to watch include sustained throughput during peak hours, peak-time congestion management, fair usage policy (FUP) thresholds on "unlimited" tiers, and responsiveness of technical support teams for fiber cut repairs.
+
+Households considering a switch can check coverage availability in their neighborhood before initiating a migration via the MyMTN App or shortcode *5057#.
