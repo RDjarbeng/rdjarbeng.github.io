@@ -27,7 +27,7 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     font-size: 1.05rem;
   }
   .enlighten-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.75rem;
   }
   .enlighten-section h2 {
     font-size: 1.4rem;
@@ -35,9 +35,14 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     padding-bottom: 0.5rem;
     margin-bottom: 1.25rem;
   }
+  .enlighten-section .section-desc {
+    color: var(--text-color-light, #666);
+    font-size: 0.9rem;
+    margin: -0.75rem 0 1.25rem;
+  }
   .enlighten-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
   }
   .book-card {
@@ -45,39 +50,24 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     flex-direction: column;
     background: var(--card-bg, #ffffff);
     border: 1px solid var(--card-border, #e0e0e0);
-    border-radius: 10px;
-    padding: 1.1rem 1.2rem;
+    border-radius: 12px;
+    padding: 1.15rem 1.25rem;
     text-decoration: none;
     color: var(--text-color, #222);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   }
   .book-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
+    border-color: rgba(100, 116, 139, 0.45);
     text-decoration: none;
     color: var(--text-color, #222);
   }
-  .book-card h3 {
-    font-size: 1.05rem;
-    margin: 0.35rem 0 0.25rem;
-    line-height: 1.35;
-  }
-  .book-author {
-    font-size: 0.85rem;
-    color: var(--text-color-light, #666);
-    margin: 0 0 0.5rem;
-  }
-  .book-desc {
-    font-size: 0.88rem;
-    line-height: 1.45;
-    flex-grow: 1;
-    margin: 0 0 0.9rem;
-  }
-  .book-footer {
+  .book-card-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    margin-bottom: 0.4rem;
   }
   .book-format {
     display: inline-block;
@@ -87,8 +77,64 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     letter-spacing: 0.03em;
     background: rgba(100, 116, 139, 0.12);
     color: var(--text-color-light, #555);
-    padding: 0.15rem 0.5rem;
+    padding: 0.15rem 0.55rem;
     border-radius: 999px;
+  }
+  .book-card h3 {
+    font-size: 1.08rem;
+    margin: 0 0 0.25rem;
+    line-height: 1.35;
+  }
+  .book-author {
+    font-size: 0.86rem;
+    color: var(--text-color-light, #666);
+    margin: 0 0 0.35rem;
+  }
+  .book-known {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-color-light, #666);
+    background: rgba(234, 179, 8, 0.09);
+    border-left: 3px solid rgba(234, 179, 8, 0.55);
+    padding: 0.3rem 0.55rem;
+    border-radius: 0 6px 6px 0;
+    margin: 0 0 0.7rem;
+  }
+  .book-known::before {
+    content: "★";
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+  .book-desc {
+    font-size: 0.89rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin: 0 0 0.85rem;
+  }
+  .book-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.85rem;
+  }
+  .book-tag {
+    font-size: 0.72rem;
+    line-height: 1;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--card-border, #e0e0e0);
+    color: var(--text-color-light, #666);
+    background: transparent;
+    white-space: nowrap;
+  }
+  .book-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: auto;
   }
   .book-cta {
     font-size: 0.85rem;
@@ -102,25 +148,39 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     <p>A curated shelf of genuinely good tech books that are legally available to read free online. No paywalls, no sketchy downloads - just authors and publishers doing right by readers.</p>
   </div>
 
-  {% for cat in page.categories %}
+  {% assign cats = site.book_categories | sort: "weight" %}
+  {% for cat in cats %}
+  {% assign cat_books = site.books | where: "category", cat.name %}
+  {% if cat_books.size > 0 %}
   <section class="enlighten-section">
     <h2>{{ cat.icon }} {{ cat.name }}</h2>
+    {% if cat.description %}
+    <p class="section-desc">{{ cat.description }}</p>
+    {% endif %}
     <div class="enlighten-grid">
-      {% for book in page.books %}
-      {% if book.category == cat.name %}
+      {% for book in cat_books %}
       <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-card">
-        <span class="book-format">{{ book.format }}</span>
+        <div class="book-card-top">
+          {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
+        </div>
         <h3>{{ book.title }}</h3>
         <p class="book-author">{{ book.author }}</p>
-        <p class="book-desc">{{ book.desc }}</p>
+        {% if book.known_for %}
+        <p class="book-known">{{ book.known_for }}</p>
+        {% endif %}
+        <p class="book-desc">{{ book.description }}</p>
+        {% if book.tags and book.tags.size > 0 %}
+        <div class="book-tags">
+          {% for tag in book.tags %}<span class="book-tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
         <div class="book-footer">
-          <span></span>
           <span class="book-cta">Read online →</span>
         </div>
       </a>
-      {% endif %}
       {% endfor %}
     </div>
   </section>
+  {% endif %}
   {% endfor %}
 </div>
