@@ -297,3 +297,4 @@ This paper could be good for paper review
 - [ ] https://ioai-official.org/republic-of-kazakhstan
 
 International olympiad in AI what is that about?
+- [ ] Finding the flight data for airports in Africa as a dataset and looking at if it can predict something such as as GDP, tourism. Any outliers?
