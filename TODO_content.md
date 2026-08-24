@@ -301,3 +301,4 @@ International olympiad in AI what is that about?
 - [ ] What are the top 50 or 100 biggest companies in Africa, are they public or private. Who can invest and where?
 - [ ] An innovative art design that illustrates  'find time'
 - [ ] Project enlighten, link to books that are available on the internet
+- [ ] RLHF for fine-tuning, needs a clarifier post
