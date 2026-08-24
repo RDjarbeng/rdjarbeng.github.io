@@ -355,6 +355,39 @@ I am a software engineer and machine learning engineer with an MSc in Electrical
   </div>
 </div>
 
+<div class="about-section">
+  <h2 class="about-section-title">Notable Open-Source Contributions</h2>
+  <p class="about-section-subtitle">Selected contributions to open-source projects</p>
+
+  <div class="experience-card">
+    <div class="exp-header">
+      <h3 class="exp-title"><a href="https://github.com/Nyandwi/machine_learning_complete" target="_blank" rel="noreferrer">Machine Learning Complete</a></h3>
+      <span class="exp-date">PR merged September 2023</span>
+    </div>
+    <span class="exp-org">by Nyandwi &middot; ~5k stars &middot; 800+ forks</span>
+    <p class="exp-desc">Merged <a href="https://github.com/Nyandwi/machine_learning_complete/pull/9" target="_blank" rel="noreferrer">pull request #9</a>: added a curated collection of freely accessible Python learning resources (books, online courses, and videos) to the introductory chapter, verifying each resource was genuinely free before inclusion.</p>
+    <div class="exp-skills">
+        <span class="skill-pill">Open Source</span>
+        <span class="skill-pill">Curation</span>
+        <span class="skill-pill">Python</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="exp-header">
+      <h3 class="exp-title"><a href="https://github.com/sveltia/sveltia-cms" target="_blank" rel="noreferrer">SveltiaCMS</a></h3>
+      <span class="exp-date">Contributor</span>
+    </div>
+    <span class="exp-org">Git-based headless CMS (Decap CMS alternative)</span>
+    <p class="exp-desc">Reported and followed through on <a href="https://github.com/sveltia/sveltia-cms/issues?q=is%3Aissue%20state%3Aclosed%20author%3ARDjarbeng" target="_blank" rel="noreferrer">several closed issues</a> during development. This website's content workflow also runs on SveltiaCMS.</p>
+    <div class="exp-skills">
+        <span class="skill-pill">Open Source</span>
+        <span class="skill-pill">Issue Triage</span>
+        <span class="skill-pill">Jamstack</span>
+    </div>
+  </div>
+</div>
+
 ## Areas of interest:
 ### Education:
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
