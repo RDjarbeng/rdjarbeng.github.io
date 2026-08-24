@@ -670,7 +670,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author(s)", name: "author", widget: "string" }
-      - { label: "Online URL", name: "url", widget: "string", hint: "Link to the legal free online version of the book" }
+      - { label: "Online URL", name: "link", widget: "string", hint: "Link to the legal free online version of the book. Use 'link' (not 'url') because Jekyll reserves 'url' on collection documents." }
       - label: "Category"
         name: "category"
         widget: "relation"
@@ -704,6 +704,13 @@ collections:
           hint: "Topics the book covers, e.g. Python, pandas, Deep Learning",
         }
       - { label: "Description", name: "description", widget: "text", required: false }
+      - {
+          label: "Personal Note",
+          name: "note",
+          widget: "text",
+          required: false,
+          hint: "Your short recommendation - why you personally vouch for this book",
+        }
 
   # -------------------------------------------------------
   # SCREENSHOTS – one collection per sub-folder
