@@ -311,3 +311,6 @@ Example of how Maxwell withdrew 5k RWF and was charged 112 GH¢
 - [ ] How do Africans measure value among their currencies. Currently we can try to change to USD and then tp the target currency. But this isn't a good system/generalization in terms of buying power. What can $5 get you in Accra and will that be the same in South Africa or Nairobi? What about rent in Lagos vs KIGALI? how can you compare these without using the USD?
 - [ ] What are the biggest milk producers in Africa, and where is the imported milk from?
 - [ ] What are the biggest salt producers in Africa, and where is the imported salt from?
+- [ ] How do you move money now if you're moving continents? Wait and create a bank account for the destination country?
+
+What if you're constantly on the move? Rely on your home country bank/default bank using their visa card? But cards can expire and some banks have policy of in-person pickup or mail to existing address. Of care is not taken your money can be cutoff till you can travel back to your country
