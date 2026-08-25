@@ -315,3 +315,8 @@ Example of how Maxwell withdrew 5k RWF and was charged 112 GH¢
 
 What if you're constantly on the move? Rely on your home country bank/default bank using their visa card? But cards can expire and some banks have policy of in-person pickup or mail to existing address. Of care is not taken your money can be cutoff till you can travel back to your country
 - [ ] Africa accounts for only 2% of global aor traffic - RwandAir Ceo
+- [ ] Removing roaming charges for traveling across east Africa? The travel time from 21 days to 4 daus from Mombasa to Kigali for goods
+
+Africa reset forum, people were placed in trucks to observe what the delays were at the border and report back
+
+Led to reforms in insurance across EAC, tracking of goods, payment of goods was from country of entry and exit only. Which meeting was this?
