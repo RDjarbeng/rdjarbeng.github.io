@@ -305,3 +305,6 @@ International olympiad in AI what is that about?
 - [ ] Add this book to enlighten books project: https://pages.cs.wisc.edu/~remzi/OSTEP/#book-chaptersOperating Systems: Three Easy Pieces
 - [ ] Add https://gameprogrammingpatterns.com/ Game Programming Patterns to books
 - [ ] African visa openness report from the ASG mindset reset forum
+- [ ] Does Africa have a payment system fpr travel across the continent?
+
+Example of how Maxwell withdrew 5k RWF and was charged 112 GH¢
