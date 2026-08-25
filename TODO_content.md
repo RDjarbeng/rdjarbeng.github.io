@@ -314,3 +314,4 @@ Example of how Maxwell withdrew 5k RWF and was charged 112 GH¢
 - [ ] How do you move money now if you're moving continents? Wait and create a bank account for the destination country?
 
 What if you're constantly on the move? Rely on your home country bank/default bank using their visa card? But cards can expire and some banks have policy of in-person pickup or mail to existing address. Of care is not taken your money can be cutoff till you can travel back to your country
+- [ ] Africa accounts for only 2% of global aor traffic - RwandAir Ceo
