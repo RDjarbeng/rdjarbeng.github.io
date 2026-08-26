@@ -324,3 +324,4 @@ Led to reforms in insurance across EAC, tracking of goods, payment of goods was 
 - [ ] If you're processing lithium, what's the next step?
 
 Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? What is needed from this in energy, infrastructure, factories? Let's look at the lithium processing pipeline
+- [ ] How do other countries handle processing of minerals/resources outside of them and still make a profit?
