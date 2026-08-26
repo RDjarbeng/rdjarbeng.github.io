@@ -55,11 +55,19 @@ This is confirmed ([electrive.com](https://www.electrive.com/2026/02/26/zimbabwe
 
 Following the steps of Indonesia's  mineral export restrictions traced back to its 2009 Mining Law, with the actual ban on raw nickel ore exports first implemented in January 2014, then fully enforced from January 2020 ([USITC](https://www.usitc.gov/publications/332/working_papers/ermm_indonesia_export_ban_of_nickel.pdf)). 2010 was simply the year Indonesia became China's top source of raw nickel ore, not when any ban took effect ([UNCTAD](https://unctad.org/system/files/non-official-document/suc2017d8_en.pdf)). Zimbabwe's move echoes Indonesia's broader resource-nationalist strategy of banning raw exports to force local processing, just on a different timeline than I first cited.
 
-Update at 12:35
+## Update at 12:35 - Youth takeover, influencers and an unexpected guest 
 
 We just had a session for the youth and a take-over by the influencers. 
 
-By the way:
+### Give the Microphone to the youth
+
+Some of my memorable moments from this forum are the parts where the microphone is given to the young people to speak their mind
+
+![Lady speaking her mind when given the microphone](/assets/images/youth-microphone-session.jpg "Lady speaking her mind")
+
+I
+
+By the way, I noticed someone coming up the stairs in my section, a familiar face and smile:
 
 ### Wode Maya is in the building😍
 
