@@ -326,3 +326,6 @@ Led to reforms in insurance across EAC, tracking of goods, payment of goods was 
 Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? What is needed from this in energy, infrastructure, factories? Let's look at the lithium processing pipeline
 - [ ] How do other countries handle processing of minerals/resources outside of them and still make a profit?
 - [ ] What other countries have done this upstream processing. Indonesia for instance with downstream nickel processing. How did this work in 2010 vs now? Which companies are involved in this refining process, any multi national cross country ones?
+- [ ] 5/6 country that are 50% of Africa's GDP.
+
+Let's try and see if we can make a simulation how much it costs ti travel between them
