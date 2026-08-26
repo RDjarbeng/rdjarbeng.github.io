@@ -321,3 +321,6 @@ Africa reset forum, people were placed in trucks to observe what the delays were
 
 Led to reforms in insurance across EAC, tracking of goods, payment of goods was from country of entry and exit only. Which meeting was this?
 - [ ] COMESA stands for the Common Market for Eastern and Southern Africa, a large regional economic community in Africa.OverviewFounding: Formed in December 1994 to replace an earlier Preferential Trade Area.Headquarters: Lusaka, Zambia.Member States: 21 countries across Eastern and Southern Africa, including Rwanda.Population: Represents a combined market of over 600 million people.Key GoalsFree Trade: Promotes a lower-tariff and duty-free trading bloc among member nations.Economic Growth: Encourages joint development in trade, agriculture, infrastructure, and industry.Regional Integration: Harmonizes monetary and economic policies to ease cross-border business.If you'd like, I can provide information on:The list of member countriesCOMESA Free Trade Area rules
+- [ ] If you're processing lithium, what's the next step?
+
+Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? What is needed from this in energy, infrastructure, factories? Let's look at the lithium processing pipeline
