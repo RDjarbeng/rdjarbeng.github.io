@@ -1,9 +1,9 @@
 ---
-title: Africa mindset Reset Forum
+title: Africa mindset Reset Forum - Reported by RDjarbeng
 date: 2026-08-26T10:44:00+02:00
-published: false
+published: true
 tags: []
-image: ''
+image: /assets/images/1000525267.jpg
 image_alt: ''
 layout: personal
 card_items: []
@@ -13,7 +13,7 @@ Reporting from the Africa Mindset reset forum.  This post shall be used as my lo
 
 Since yesterday, (August 25th I've been at the Africa Mindset Reset forum hosted by the African School of Governance. 
 
-![Africa reset forum stage featuring orange and white theme at the Kigali Convention Center Auditorium ](/assets/images/1000525267.jpg "Africa reset forum stage at the Kigali Convention Center Auditorium ")
+![Africa reset forum stage featuring orange and white theme at the Kigali Convention Center Auditorium](/assets/images/1000525267.jpg "Africa reset forum stage at the Kigali Convention Center Auditorium")
 
 A series of questions have come up in the discussions. 
 
