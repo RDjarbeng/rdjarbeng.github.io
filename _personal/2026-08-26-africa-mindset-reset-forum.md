@@ -4,14 +4,14 @@ date: 2026-08-26T10:44:00+02:00
 published: true
 tags: []
 image: /assets/images/1000525267.jpg
-image_alt: ''
+image_alt: Africa reset forum stage featuring orange and white theme at the Kigali Convention Center Auditorium
 layout: personal
 card_items: []
 ---
 
 Reporting from the Africa Mindset reset forum.  This post shall be used as my log of events as they happen. 
 
-Since yesterday, (August 25th I've been at the Africa Mindset Reset forum hosted by the African School of Governance. 
+Since yesterday, (August 25th I've been at the Africa Mindset Reset forum hosted by the African School of Governance. This event is happening at the Kigali Convention Center in Rwanda, East Africa. We have over 22 countries represented here. 
 
 ![Africa reset forum stage featuring orange and white theme at the Kigali Convention Center Auditorium](/assets/images/1000525267.jpg "Africa reset forum stage at the Kigali Convention Center Auditorium")
 
