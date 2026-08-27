@@ -75,6 +75,4 @@ By the way, I noticed someone coming up the stairs in my section, a familiar fac
 
 Some pictures:
 
-![Wode](/assets/images/WodeMaya_upstairs.jpg)
-
-![](/assets/images/wodemayaandfan.jpg)
+![Wode Maya at the Kigali Convention Center taking a picture](/assets/images/1000525369.jpg)
