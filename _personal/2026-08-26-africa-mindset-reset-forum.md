@@ -65,7 +65,9 @@ Some of my memorable moments from this forum are the parts where the microphone 
 
 ![Lady speaking her mind when given the microphone](/assets/images/youth-microphone-session.jpg "Lady speaking her mind")
 
-I
+I love these so much because you get to hear what the young people are thinking and it breaks the pattern of multiple panel sessions. 
+
+![](/assets/images/ethiopian-influencer-mic-larry.jpg)
 
 By the way, I noticed someone coming up the stairs in my section, a familiar face and smile:
 
