@@ -329,3 +329,4 @@ Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? Wh
 - [ ] 5/6 country that are 50% of Africa's GDP.
 
 Let's try and see if we can make a simulation how much it costs ti travel between them
+- [ ] Samson's riddle, out of the eater came something to eat
