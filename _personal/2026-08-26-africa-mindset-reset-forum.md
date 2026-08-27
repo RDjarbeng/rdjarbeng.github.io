@@ -75,4 +75,12 @@ By the way, I noticed someone coming up the stairs in my section, a familiar fac
 
 Some pictures:
 
-![Wode Maya at the Kigali Convention Center taking a picture](/assets/images/1000525369.jpg)
+![Wode Maya at the Kigali Convention Center taking a picture](/assets/images/1000525369.jpg "Wode Maya at the KCC")
+
+About 2 hours later during the lunch break, I tried to get a photo with Wode Maya. However there were so many people trying to get to him.
+
+I noticed a companion of his in a Ghana football association jersey. This person seemed to follow him around wherever he went. I had a brief chat woth with him and found Wode Maya was his mentor. We told him we're Ghanaians and we wanted to take a picture. Well, long story short he was able to speak to Wode Maya got a picture 
+
+![Richard Djarbeng meets Wode Maya and takes a selfie with him, showing Wode Maya in White attire on the right](/assets/images/rdjarbengandwode-maya.jpg "Richard Djarbeng meets Wode Maya, Africa's biggest YouTuber, at the Kigali Convention Center")
+
+This was an unexpected encounter.
