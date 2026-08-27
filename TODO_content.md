@@ -330,3 +330,8 @@ Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? Wh
 
 Let's try and see if we can make a simulation how much it costs ti travel between them
 - [ ] Samson's riddle, out of the eater came something to eat
+- [ ] How To Scale Your Model
+https://jax-ml.github.io/scaling-book/
+
+Five years ago ML had a colorful landscape of architectures — ConvNets, LSTMs, MLPs, Transformers — but now we mostly just have the Transformer
+. We strongly believe it’s worth understanding every piece of the Transformer architecture:
