@@ -343,3 +343,4 @@ From Africa reset forum
 - [ ] What do you do when you miss your flight?
 - [ ] What countries in Africa have nomad/visitor visa? What about skilled workers, remote workers who can just stay?
 - [ ] Is there a nomad index that measures how well a country is to live in without having to worry about basic needs
+- [ ] Does it matter the day you renew your subscription, days before, vs the day ot expires vs waiting for it to expire
