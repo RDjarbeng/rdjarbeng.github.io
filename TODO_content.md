@@ -340,3 +340,4 @@ Five years ago ML had a colorful landscape of architectures — ConvNets, LSTMs,
 
 From Africa reset forum
 - [ ] What do you do when you sleep past the meal on a plane?
+- [ ] What do you do when you miss your flight?
