@@ -345,3 +345,5 @@ From Africa reset forum
 - [ ] Is there a nomad index that measures how well a country is to live in without having to worry about basic needs
 - [ ] Does it matter the day you renew your subscription, days before, vs the day ot expires vs waiting for it to expire
 - [ ] Alkebulan experimens - another name for African experiment
+- [ ] What stope communities from Africa from taking charge of their own development, roads, water, electricity?
+What is the current policy on fixing roads yourself
