@@ -350,3 +350,6 @@ What is the current policy on fixing roads yourself
 - [ ] Why do you need a passport to travel? Seems like a stupid question till you think about it.
 - [ ] RwandAir boss speaks out on why flying in Africa is expensive - The New Times
 https://www.newtimes.co.rw/article/38468/news/aviation/rwandair-boss-speaks-out-on-why-flying-in-africa-is-expensive
+- [ ] Add book
+
+https://github.com/stas00/ml-engineering
