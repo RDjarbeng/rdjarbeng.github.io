@@ -339,3 +339,4 @@ Five years ago ML had a colorful landscape of architectures — ConvNets, LSTMs,
 - [ ] Why does it cost $300 to travel from Uganda to Rwanda? - good post
 
 From Africa reset forum
+- [ ] What do you do when you sleep past the meal on a plane?
