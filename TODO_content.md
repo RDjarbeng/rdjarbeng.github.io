@@ -336,3 +336,6 @@ https://jax-ml.github.io/scaling-book/
 Five years ago ML had a colorful landscape of architectures — ConvNets, LSTMs, MLPs, Transformers — but now we mostly just have the Transformer
 . We strongly believe it’s worth understanding every piece of the Transformer architecture:
 - [ ] Add the to-do above on the scaling book to the enlighten project
+- [ ] Why does it cost $300 to travel from Uganda to Rwanda? - good post
+
+From Africa reset forum
