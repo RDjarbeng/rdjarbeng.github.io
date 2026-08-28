@@ -355,3 +355,6 @@ https://www.newtimes.co.rw/article/38468/news/aviation/rwandair-boss-speaks-out-
 https://github.com/stas00/ml-engineering
 - [ ] Let's find African experts who are the best in their field now, subjective but it could work. Neurosurgeons, robotics, mechanical engineering, science...
 - [ ] Y-combinator founders who made it after pivoting ideas
+- [ ] Applying for PhD programs in computer science, add to resources:
+
+https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf
