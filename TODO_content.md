@@ -347,3 +347,4 @@ From Africa reset forum
 - [ ] Alkebulan experimens - another name for African experiment
 - [ ] What stope communities from Africa from taking charge of their own development, roads, water, electricity?
 What is the current policy on fixing roads yourself
+- [ ] Why do you need a passport to travel? Seems like a stupid question till you think about it.
