@@ -15,4 +15,4 @@ I recently got hands-on with ArenaXR, an open-source platform out of CMU's Mixed
 
 The same tracking and anchoring problem behind a game like this shows up anywhere you want digital objects to stay put in physical space: remote collaboration, walking someone through a 3D model for teaching, showing a client through a building before it exists, or training a robot in a shared environment. Getting the anchoring right is most of what makes any of that usable.
 
-The video is set to an upbeat soundtrack by Nathaniel Nyakotey, and it's a quick look at where WebXR development stands right now. If you build with WebXR, study human-computer interaction, or just find mixed reality interesting, it's worth a few minutes.
+The video is set to an upbeat piano instrumental soundtrack by [Nathaniel Nyakotey](https://rdjarbeng.com/authors/nathaniel/), and it's a quick look at where WebXR development stands right now. If you build with WebXR, study human-computer interaction, or just find mixed reality interesting, it's worth a few minutes.
