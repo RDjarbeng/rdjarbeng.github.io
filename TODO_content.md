@@ -360,3 +360,5 @@ https://github.com/stas00/ml-engineering
 https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf
 - [ ] Model a small aerial vehicle that doesn't use propellers or exposed blades, that is safe to move around and is now used as the transportation of the future for personal travel. How do we handle the flight problems can there be an augmented pathway for east-west travel vs North-South.
 How is this thing propelled tiny rockets or wind currents?
+- [ ] Creating a blog with eleventy,tutorial, handling pages, navigating, posts, 
+images, categories and tags. Extra stuff, search, XML feeds, site maps, anything else for modern blogs
