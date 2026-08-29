@@ -301,3 +301,62 @@ International olympiad in AI what is that about?
 - [ ] What are the top 50 or 100 biggest companies in Africa, are they public or private. Who can invest and where?
 - [ ] An innovative art design that illustrates  'find time'
 - [ ] Project enlighten, link to books that are available on the internet
+- [ ] RLHF for fine-tuning, needs a clarifier post
+- [ ] Add this book to enlighten books project: https://pages.cs.wisc.edu/~remzi/OSTEP/#book-chaptersOperating Systems: Three Easy Pieces
+- [ ] Add https://gameprogrammingpatterns.com/ Game Programming Patterns to books
+- [ ] African visa openness report from the ASG mindset reset forum
+- [ ] Does Africa have a payment system fpr travel across the continent?
+
+Example of how Maxwell withdrew 5k RWF and was charged 112 GH¢
+- [ ] How do Africans measure value among their currencies. Currently we can try to change to USD and then tp the target currency. But this isn't a good system/generalization in terms of buying power. What can $5 get you in Accra and will that be the same in South Africa or Nairobi? What about rent in Lagos vs KIGALI? how can you compare these without using the USD?
+- [ ] What are the biggest milk producers in Africa, and where is the imported milk from?
+- [ ] What are the biggest salt producers in Africa, and where is the imported salt from?
+- [ ] How do you move money now if you're moving continents? Wait and create a bank account for the destination country?
+
+What if you're constantly on the move? Rely on your home country bank/default bank using their visa card? But cards can expire and some banks have policy of in-person pickup or mail to existing address. Of care is not taken your money can be cutoff till you can travel back to your country
+- [ ] Africa accounts for only 2% of global aor traffic - RwandAir Ceo
+- [ ] Removing roaming charges for traveling across east Africa? The travel time from 21 days to 4 daus from Mombasa to Kigali for goods
+
+Africa reset forum, people were placed in trucks to observe what the delays were at the border and report back
+
+Led to reforms in insurance across EAC, tracking of goods, payment of goods was from country of entry and exit only. Which meeting was this?
+- [ ] COMESA stands for the Common Market for Eastern and Southern Africa, a large regional economic community in Africa.OverviewFounding: Formed in December 1994 to replace an earlier Preferential Trade Area.Headquarters: Lusaka, Zambia.Member States: 21 countries across Eastern and Southern Africa, including Rwanda.Population: Represents a combined market of over 600 million people.Key GoalsFree Trade: Promotes a lower-tariff and duty-free trading bloc among member nations.Economic Growth: Encourages joint development in trade, agriculture, infrastructure, and industry.Regional Integration: Harmonizes monetary and economic policies to ease cross-border business.If you'd like, I can provide information on:The list of member countriesCOMESA Free Trade Area rules
+- [ ] If you're processing lithium, what's the next step?
+
+Seen Zimbabwe stop export of raw lithium (verify this) ? What does this mean? What is needed from this in energy, infrastructure, factories? Let's look at the lithium processing pipeline
+- [ ] How do other countries handle processing of minerals/resources outside of them and still make a profit?
+- [ ] What other countries have done this upstream processing. Indonesia for instance with downstream nickel processing. How did this work in 2010 vs now? Which companies are involved in this refining process, any multi national cross country ones?
+- [ ] 5/6 country that are 50% of Africa's GDP.
+
+Let's try and see if we can make a simulation how much it costs ti travel between them
+- [ ] Samson's riddle, out of the eater came something to eat
+- [ ] How To Scale Your Model
+https://jax-ml.github.io/scaling-book/
+
+Five years ago ML had a colorful landscape of architectures — ConvNets, LSTMs, MLPs, Transformers — but now we mostly just have the Transformer
+. We strongly believe it’s worth understanding every piece of the Transformer architecture:
+- [ ] Add the to-do above on the scaling book to the enlighten project
+- [ ] Why does it cost $300 to travel from Uganda to Rwanda? - good post
+
+From Africa reset forum
+- [ ] What do you do when you sleep past the meal on a plane?
+- [ ] What do you do when you miss your flight?
+- [ ] What countries in Africa have nomad/visitor visa? What about skilled workers, remote workers who can just stay?
+- [ ] Is there a nomad index that measures how well a country is to live in without having to worry about basic needs
+- [ ] Does it matter the day you renew your subscription, days before, vs the day ot expires vs waiting for it to expire
+- [ ] Alkebulan experimens - another name for African experiment
+- [ ] What stope communities from Africa from taking charge of their own development, roads, water, electricity?
+What is the current policy on fixing roads yourself
+- [ ] Why do you need a passport to travel? Seems like a stupid question till you think about it.
+- [ ] RwandAir boss speaks out on why flying in Africa is expensive - The New Times
+https://www.newtimes.co.rw/article/38468/news/aviation/rwandair-boss-speaks-out-on-why-flying-in-africa-is-expensive
+- [ ] Add book
+
+https://github.com/stas00/ml-engineering
+- [ ] Let's find African experts who are the best in their field now, subjective but it could work. Neurosurgeons, robotics, mechanical engineering, science...
+- [ ] Y-combinator founders who made it after pivoting ideas
+- [ ] Applying for PhD programs in computer science, add to resources:
+
+https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf
+- [ ] Model a small aerial vehicle that doesn't use propellers or exposed blades, that is safe to move around and is now used as the transportation of the future for personal travel. How do we handle the flight problems can there be an augmented pathway for east-west travel vs North-South.
+How is this thing propelled tiny rockets or wind currents?
