@@ -362,3 +362,4 @@ https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf
 How is this thing propelled tiny rockets or wind currents?
 - [ ] Creating a blog with eleventy,tutorial, handling pages, navigating, posts, 
 images, categories and tags. Extra stuff, search, XML feeds, site maps, anything else for modern blogs
+- [ ] Fonio, Ghana food movement, chef Abiro
