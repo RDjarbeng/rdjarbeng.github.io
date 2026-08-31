@@ -6,9 +6,9 @@ category: Education
 tags:
   - Algorithm
   - Python
-title: Finding the Mean, Median and Mode in Python - TensorTonic
+title: Coding the Mean, Median and Mode in Python - TensorTonic
 image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
-image_alt: Finding the Mean, Median and Mode in Python cover image
+image_alt: Coding the Mean, Median and Mode in Python cover image
 layout: post
 card_items:
   - name: TensorTonic Problem
