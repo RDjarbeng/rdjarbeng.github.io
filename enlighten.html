@@ -1,190 +1,21 @@
 ---
 layout: default
-title: Enlighten - Free Tech Books Online
+title: Enlighten - Free Tech Books Online By RDjarbeng
 permalink: /enlighten/
 body_class: enlighten-page
 description: "Project Enlighten: a curated collection of genuinely good tech books that are legally available to read free online - machine learning, data science, computer vision, programming and IT."
-categories:
-  - name: "Machine Learning & AI"
-    icon: "🤖"
-  - name: "Data Science"
-    icon: "📊"
-  - name: "Computer Vision"
-    icon: "👁️"
-  - name: "Programming"
-    icon: "💻"
-  - name: "IT & Career"
-    icon: "💼"
-books:
-  - title: "Practical Deep Learning for Coders"
-    author: "Jeremy Howard & Sylvain Gugger"
-    url: "https://course.fast.ai/"
-    category: "Machine Learning & AI"
-    format: "Course + Book"
-    desc: "fast.ai's legendary top-down deep learning course. The full companion book, Deep Learning for Coders with fastai & PyTorch, is free online as runnable Jupyter notebooks."
-  - title: "Dive into Deep Learning"
-    author: "Zhang, Lipton, Li & Smola"
-    url: "https://d2l.ai/"
-    category: "Machine Learning & AI"
-    format: "Interactive"
-    desc: "An interactive, code-first deep learning textbook with runnable examples in PyTorch, TensorFlow and JAX. Adopted at over 500 universities."
-  - title: "Deep Learning"
-    author: "Ian Goodfellow, Yoshua Bengio & Aaron Courville"
-    url: "https://www.deeplearningbook.org/"
-    category: "Machine Learning & AI"
-    format: "HTML"
-    desc: "The theoretical bible of deep learning, written by pioneers of the field. Free HTML edition courtesy of MIT Press."
-  - title: "Reinforcement Learning: An Introduction"
-    author: "Richard Sutton & Andrew Barto"
-    url: "http://incompleteideas.net/book/the-book.html"
-    category: "Machine Learning & AI"
-    format: "PDF"
-    desc: "The definitive reinforcement learning text, officially shared free by the authors themselves."
-  - title: "Speech and Language Processing"
-    author: "Dan Jurafsky & James Martin"
-    url: "https://web.stanford.edu/~jurafsky/slp3/"
-    category: "Machine Learning & AI"
-    format: "PDF Draft"
-    desc: "The standard NLP textbook, continuously updated - now covering transformers, pretraining and large language models."
-  - title: "Python for Data Analysis"
-    author: "Wes McKinney"
-    url: "https://wesmckinney.com/book/"
-    category: "Data Science"
-    format: "HTML"
-    desc: "Open-access third edition from the creator of pandas. The essential guide to NumPy, pandas, Jupyter and practical data wrangling."
-  - title: "An Introduction to Statistical Learning"
-    author: "James, Witten, Hastie, Tibshirani & Taylor"
-    url: "https://www.statlearning.com/"
-    category: "Data Science"
-    format: "PDF"
-    desc: "The classic gentle introduction to statistical machine learning, free in both R and Python editions."
-  - title: "Foundations of Computer Vision"
-    author: "Torralba, Isola & Freeman"
-    url: "https://visionbook.mit.edu/"
-    category: "Computer Vision"
-    format: "HTML"
-    desc: "MIT's modern computer vision text - image formation, filters, CNNs, transformers, geometry and generative models, straight from MIT faculty."
-  - title: "Automate the Boring Stuff with Python"
-    author: "Al Sweigart"
-    url: "https://automatetheboringstuff.com/"
-    category: "Programming"
-    format: "HTML"
-    desc: "Practical Python for beginners - automate spreadsheets, files, web scraping, emails and other tedious tasks."
-  - title: "Crafting Interpreters"
-    author: "Robert Nystrom"
-    url: "https://craftinginterpreters.com/"
-    category: "Programming"
-    format: "HTML"
-    desc: "Build two complete interpreters from scratch and finally understand how programming languages actually work. Beautifully written."
-  - title: "Pro Git"
-    author: "Scott Chacon & Ben Straub"
-    url: "https://git-scm.com/book/en/v2"
-    category: "Programming"
-    format: "HTML + ePub"
-    desc: "The official Git book, maintained by the Git project and translated into dozens of languages."
-  - title: "The Linux Command Line"
-    author: "William Shotts"
-    url: "http://linuxcommand.org/tlcl.php"
-    category: "Programming"
-    format: "PDF"
-    desc: "The best introduction to the shell, offered free by the author. Take full control of your terminal."
-  - title: "Confessions of an IT Manager"
-    author: "Phil Factor"
-    url: "https://www.red-gate.com/simple-talk/wp-content/uploads/RedGateBooks/PhilFactor/Confessions_eBook.pdf"
-    category: "IT & Career"
-    format: "PDF"
-    desc: "Anarchic humour wrapped around hard-won wisdom about software projects, hiring, firing and surviving life in IT."
 ---
 
-<style>
-  .enlighten-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  .enlighten-intro {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  .enlighten-intro h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .enlighten-intro p {
-    color: var(--text-color-light, #666);
-    max-width: 640px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-  }
-  .enlighten-section {
-    margin-bottom: 2.5rem;
-  }
-  .enlighten-section h2 {
-    font-size: 1.4rem;
-    border-bottom: 2px solid var(--card-border, #e0e0e0);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.25rem;
-  }
-  .enlighten-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1rem;
-  }
-  .book-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--card-bg, #ffffff);
-    border: 1px solid var(--card-border, #e0e0e0);
-    border-radius: 10px;
-    padding: 1.1rem 1.2rem;
-    text-decoration: none;
-    color: var(--text-color, #222);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .book-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    text-decoration: none;
-    color: var(--text-color, #222);
-  }
-  .book-card h3 {
-    font-size: 1.05rem;
-    margin: 0.35rem 0 0.25rem;
-    line-height: 1.35;
-  }
-  .book-author {
-    font-size: 0.85rem;
-    color: var(--text-color-light, #666);
-    margin: 0 0 0.5rem;
-  }
-  .book-desc {
-    font-size: 0.88rem;
-    line-height: 1.45;
-    flex-grow: 1;
-    margin: 0 0 0.9rem;
-  }
-  .book-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-  }
-  .book-format {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    background: rgba(100, 116, 139, 0.12);
-    color: var(--text-color-light, #555);
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-  }
-  .book-cta {
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-</style>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "VMNzpaX75utVJ3RFH",
+        });
+    })();
+</script>
+
+
 
 <div class="enlighten-wrap">
   <div class="enlighten-intro">
@@ -192,25 +23,205 @@ books:
     <p>A curated shelf of genuinely good tech books that are legally available to read free online. No paywalls, no sketchy downloads - just authors and publishers doing right by readers.</p>
   </div>
 
-  {% for cat in page.categories %}
-  <section class="enlighten-section">
-    <h2>{{ cat.icon }} {{ cat.name }}</h2>
-    <div class="enlighten-grid">
-      {% for book in page.books %}
-      {% if book.category == cat.name %}
-      <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-card">
-        <span class="book-format">{{ book.format }}</span>
-        <h3>{{ book.title }}</h3>
-        <p class="book-author">{{ book.author }}</p>
-        <p class="book-desc">{{ book.desc }}</p>
-        <div class="book-footer">
-          <span></span>
-          <span class="book-cta">Read online →</span>
-        </div>
+  <div class="learning-path" id="start-here">
+    <h2>🧭 Start here: a suggested learning path</h2>
+    <p class="path-desc">New to tech or levelling up? These five, in this order, take you from zero to modern AI.</p>
+    <div class="path-steps">
+      {% assign path_slugs = "automate-the-boring-stuff python-for-data-analysis practical-deep-learning-for-coders dive-into-deep-learning foundations-of-computer-vision" | split: " " %}
+      {% for slug in path_slugs %}
+      {% assign pbook = site.books | where: "slug", slug | first %}
+      {% if pbook %}
+      <a class="path-step" href="{{ pbook.link }}" target="_blank" rel="noopener" title="{{ pbook.title }} - {{ pbook.author }}">
+        <span class="path-num">{{ forloop.index }}</span>
+        {{ pbook.title }}
       </a>
+      {% unless forloop.last %}<span class="path-arrow">→</span>{% endunless %}
       {% endif %}
       {% endfor %}
     </div>
+  </div>
+
+  {% assign all_tags = site.books | map: "tags" | join: "," | split: "," | uniq | sort %}
+  <div class="tag-filter-bar" id="tag-filter-bar">
+    <span class="tag-filter-label">Filter:</span>
+    <button class="tag-chip active" data-tag="">All</button>
+    {% for t in all_tags %}
+    {% assign tt = t | strip %}
+    {% if tt != "" %}
+    <button class="tag-chip" data-tag="{{ tt }}">{{ tt }}</button>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  {% assign cats = site.book_categories | sort: "weight" %}
+  {% for cat in cats %}
+  {% assign cat_books = site.books | where: "category", cat.name %}
+  {% if cat_books.size > 0 %}
+  <section class="enlighten-section" data-section="{{ cat.name | slugify }}">
+    <h2>{{ cat.icon }} {{ cat.name }}</h2>
+    {% if cat.description %}
+    <p class="section-desc">{{ cat.description }}</p>
+    {% endif %}
+    <div class="enlighten-grid">
+      {% for book in cat_books %}
+      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card"
+         data-tags="{% for tag in book.tags %}{{ tag | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+        <div class="book-card-top">
+          {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
+        </div>
+        <h3>{{ book.title }}</h3>
+        <p class="book-author">{{ book.author }}</p>
+        {% if book.known_for %}
+        <p class="book-known">{{ book.known_for }}</p>
+        {% endif %}
+        <p class="book-desc">{{ book.description }}</p>
+        {% if book.note %}
+        <p class="book-note">{{ book.note }}</p>
+        {% endif %}
+        {% if book.tags and book.tags.size > 0 %}
+        <div class="book-tags">
+          {% for tag in book.tags %}<span class="book-tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <div class="book-footer">
+          <span class="book-cta">Read online →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
   </section>
+  {% endif %}
   {% endfor %}
+
+  <section class="suggest-section" id="suggest-a-book">
+    <div class="suggest-box">
+      <h2>💡 Suggest a book</h2>
+      <p>Know a great tech book that's legally free online? Send it my way - if it's good, it joins the shelf (with credit to you if you like).</p>
+      <form id="enlighten-suggest-form" class="suggest-form">
+        <div class="form-group" style="display: none;">
+          <label for="suggest-website-url">Website</label>
+          <input type="text" id="suggest-website-url" name="website_url" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="book_title">Book title* <small>(Required)</small></label>
+          <input type="text" id="book_title" name="book_title" required placeholder="e.g. The Missing README">
+        </div>
+        <div class="form-group">
+          <label for="book_author">Author(s)* <small>(Required)</small></label>
+          <input type="text" id="book_author" name="book_author" required placeholder="Who wrote it?">
+        </div>
+        <div class="form-group">
+          <label for="book_link">Link to the free version</label>
+          <input type="url" id="book_link" name="book_link" placeholder="https:// ...">
+        </div>
+        <div class="form-group">
+          <label for="reason">Why do you recommend it?</label>
+          <textarea id="reason" name="reason" placeholder="What makes it worth reading?"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="user_name">Your name <small>(so I can credit you)</small></label>
+          <input type="text" id="user_name" name="user_name" placeholder="Optional">
+        </div>
+        <div class="form-group">
+          <label for="user_email">Your email</label>
+          <input type="email" id="user_email" name="user_email" placeholder="Optional - if you'd like a reply">
+        </div>
+        <input type="submit" value="Send Suggestion" class="submit-btn">
+        <p id="suggest-form-message" style="display: none;"></p>
+        <div id="suggest-loading-indicator" style="display: none;">
+          <p>Sending your suggestion...</p>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var chips = document.querySelectorAll("#tag-filter-bar .tag-chip");
+    function applyFilter(tag) {
+        document.querySelectorAll(".book-card").forEach(function (card) {
+            var tags = (card.getAttribute("data-tags") || "").split(",").map(function (s) { return s.trim(); });
+            card.style.display = (!tag || tags.indexOf(tag) !== -1) ? "" : "none";
+        });
+        document.querySelectorAll(".enlighten-section").forEach(function (section) {
+            var visible = Array.prototype.some.call(section.querySelectorAll(".book-card"), function (c) {
+                return c.style.display !== "none";
+            });
+            section.style.display = visible ? "" : "none";
+            if (visible) section.classList.add("has-visible");
+        });
+    }
+    chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+            var wasActive = chip.classList.contains("active");
+            chips.forEach(function (c) { c.classList.remove("active"); });
+            if (wasActive) {
+                chip.classList.add("active");
+                applyFilter("");
+            } else {
+                chip.classList.add("active");
+                applyFilter(chip.getAttribute("data-tag"));
+            }
+        });
+    });
+
+    var form = document.getElementById("enlighten-suggest-form");
+    if (!form) return;
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var honeypot = document.getElementById("suggest-website-url");
+        if (honeypot && honeypot.value) { return; }
+
+        var formMessage = document.getElementById("suggest-form-message");
+        var loadingIndicator = document.getElementById("suggest-loading-indicator");
+
+        var parts = [];
+        parts.push("Book: " + (form.book_title.value || "(not given)"));
+        parts.push("Author(s): " + (form.book_author.value || "(not given)"));
+        parts.push("Link: " + (form.book_link.value || "(none provided)"));
+        parts.push("");
+        parts.push("Why they recommend it: " + (form.reason.value || "(not given)"));
+        var from = [];
+        if (form.user_name.value) { from.push(form.user_name.value); }
+        if (form.user_email.value) { from.push("<" + form.user_email.value + ">"); }
+        if (from.length > 0) { parts.push(""); parts.push("Suggested by: " + from.join(" ")); }
+        var msgField = document.createElement("input");
+        msgField.type = "hidden";
+        msgField.name = "message";
+        msgField.value = parts.join("\n");
+        form.appendChild(msgField);
+
+        var subjectField = document.createElement("input");
+        subjectField.type = "hidden";
+        subjectField.name = "subject";
+        subjectField.value = "Enlighten: Book Suggestion";
+        form.appendChild(subjectField);
+
+        loadingIndicator.style.display = "block";
+        formMessage.style.display = "none";
+        formMessage.className = "";
+
+        emailjs.sendForm("contact_service", "contact_form", form)
+            .then(function () {
+                loadingIndicator.style.display = "none";
+                formMessage.textContent = "Thanks! Your suggestion has been sent.";
+                formMessage.className = "success-message";
+                formMessage.style.display = "block";
+                form.reset();
+            })
+            .catch(function (error) {
+                loadingIndicator.style.display = "none";
+                formMessage.textContent = "Failed to send your suggestion. Please try again.";
+                formMessage.className = "error-message";
+                formMessage.style.display = "block";
+                console.error("EmailJS Error:", error);
+            })
+            .finally(function () {
+                msgField.remove();
+                subjectField.remove();
+            });
+    });
+});
+</script>

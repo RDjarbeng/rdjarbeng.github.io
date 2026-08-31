@@ -23,62 +23,40 @@ image: /assets/images/why_does_restarting_work_rdjarbeng_cover.webp
 layout: post
 image_alt: "Cover image for Why Does Restarting Your Computer (or Router) Actually Work?"
 ---
-Ever stared at your frozen screen, shrugged, and hit restart? Same with that finicky WiFi router. What _exactly_ does it do? Spoiler: Nobody really knows. It's the tech equivalent of turning off the light switch and back on to "fix" the bulb; except it works almost _every time_.
 
-_(Insert classic "Engineers vs. Scientists" meme here: The engineer says, "If it works, don't touch it," while the scientist demands a full explanation. Because why overthink a win?)_
+A frozen screen, an app that refuses to open, WiFi that has decided it no longer knows your password. The reliable first move is often a restart. It sounds like an IT-support cliché because it works across phones, computers, servers, routers, and plenty of other devices. A restart is not magic, and it is not only a Windows trick. It clears temporary state, stops software that is stuck, and gives the device a fresh chance to initialize the services it needs.
 
-![Meme panel of 4 pictures,The engineer says, "If it works, don't touch it," while the scientist demands a full explanation.](/assets/images/dontTouchitMeme.jpg "The engineer says, 'If it works, don't touch it,' while the scientist demands a full explanation.")
+![Meme panel of four pictures. The engineer says, "If it works, don't touch it," while the scientist demands a full explanation.](/assets/images/dontTouchitMeme.jpg "The engineer says, 'If it works, don't touch it,' while the scientist demands a full explanation.")
 
-## An appeal to logic
+## A restart clears a crowded temporary state
 
-We love to rationalize it, though. Maybe restarting clears the cache, flushes out temporary files, or gives your system a fresh start like a good night's sleep. Perhaps a software update was waiting for a restart and fixed the problem.  Or perhaps the IT folks at the support desk have a secret decoder ring for your PC's woes. You might say,
+Every device builds up state while it runs. Applications allocate memory, keep files open, cache data, start background workers, connect to networks, and talk to drivers. Most of that state is useful. Some of it goes wrong. A process can leak memory, a service can wait forever for something that never arrives, a driver can get into a bad state, or a connection can expire without recovering cleanly. Restarting stops those processes and services, releases the memory they were using, and starts a new operating-system session.
 
->  The guys at the support desk probably know exactly what's wrong with my PC
+This is a general operating-system idea, not a Microsoft-specific explanation. Linux systems using systemd shut down by terminating remaining processes, disabling swap devices, and preparing storage before rebooting. [The systemd shutdown documentation](https://www.freedesktop.org/software/systemd/man/254/systemd-halt.service.html) describes that sequence. On a Mac, Apple provides a standard restart action and separately warns that a forced power-off can lose unsaved work. [Apple's Mac restart guidance](https://support.apple.com/en-gb/guide/mac-help/-mchlp2522/mac) makes the same distinction that every platform does: a normal restart is preferred, while a forced shutdown is for an unresponsive machine.
 
-Spoiler again: Most likely not. Computers are gloriously complex beasts—a thousand-and-one gremlins could be at play. Even if you squashed every single one, who could guarantee that it would boot up smoothly? Add that to the many different versions of operating systems and apps running at a given time and you have something akin to a ball of tangled knitting thread. You could spend the whole day trying to untangle it and still fail woefully. Enter the nuclear option: **restart your machine**.
+## Windows has one extra reason to use Restart
 
-![A scene in a lab with a giant glowing power button with small gremlins scientist goes but why does it work, however engineer says, If it works, don't touch it](/assets/images/why_does_restarting_work_rdjarbeng_cover.PNG " scientist goes, but why does it work, however engineer says, If it works, don't touch it")
+Windows adds a useful wrinkle. On many modern Windows devices, choosing **Shut down** can use Fast Startup. It logs out the user but preserves the kernel session and loaded drivers in a hibernation file so that the next start is quicker. Selecting **Restart** performs a fuller reset, which is why Restart can solve a driver or kernel-session problem that a normal shutdown and power-on does not. [Microsoft's power-state documentation](https://learn.microsoft.com/en-us/windows/win32/power/system-power-states) explains the difference. It is an example of a broader point: the labels on buttons do not always describe exactly how much state the device is keeping.
 
-The magic? We often can't pinpoint _what_ changed, just that it _wasn't working_ before and _is_ now. It's the ultimate reset button for life's digital curveballs.
+Memory is part of the story, but the usual explanation that a restart simply "clears RAM" is incomplete. Operating systems deliberately manage memory, caches, and virtual memory while they run. Windows can move inactive pages to its page file when RAM is under pressure, for example. [Microsoft's page-file overview](https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/introduction-to-the-page-file) explains that the page file supports virtual-memory commitments and crash dumps. Restarting can relieve a runaway application or an exhausted system, but it does not repair the bug that caused the pressure in the first place.
 
-## What the Internet Says About the Restart Mystery
+## Routers need the same reset, with different symptoms
 
-While writing this post I dug around and found plenty of articles explaining the "why" (mostly involving clearing RAM, resetting processes, and fixing memory leaks), plus some hilarious X/Twitter posts riffing on it.
+A home router is a compact computer running network software. It keeps track of connected devices, addresses, WiFi sessions, DNS lookups, and its connection to the modem or internet provider. When one part of that state becomes stale, a reboot can restore normal connectivity without erasing the configuration. NETGEAR's support guidance explicitly presents rebooting as a remedy for basic connectivity problems and notes that WiFi settings remain saved. [Its router reboot instructions](https://kb.netgear.com/000061793/How-do-I-power-cycle-or-reboot-my-NETGEAR-router) also distinguish a reboot from a factory reset.
 
-### Articles and Posts
+That distinction matters. A reboot is a low-risk reset. A factory reset removes configuration, including the settings that may be needed to reconnect to the provider. Restart the router first. Escalate only when the fault persists and there is a reason to suspect configuration or hardware.
 
-- [A Reddit ELI5 thread dives into how restarting resets the system's state, forcing processes to start fresh and clearing out temporary glitches](https://www.reddit.com/r/explainlikeimfive/comments/wixxfn/eli5_why_does_restarting_the_computer_usually_fix/). It's got over 1,000 comments debating everything from buffer overflows to why it feels like magic.
-- [Super User's classic Q&A from 2009 breaks it down technically: Restarting flushes RAM, resolves deadlocks, and restarts hung services—basically, it's the ultimate "off and on again" for software gremlins](https://superuser.com/questions/2467/why-does-restarting-a-computer-fix-things).
-- [Lifewire's recent piece (from 2024) warns that while restarts fix occasional hiccups by reloading drivers and apps, frequent needs might signal hardware issues like overheating](https://www.lifewire.com/why-restarting-fixes-computer-problems-8733211). Solid read if you're troubleshooting.
-- [A LinkedIn article by a tech pro explains how reboots clear resource leaks and apply updates that couldn't run before—echoing that "if it works, don't touch it" engineer vibe](https://www.linkedin.com/pulse/why-does-rebooting-fix-so-many-pc-problems-dean-mcintyre).
+## The useful diagnostic part
 
-### X/Twitter Posts
+Restarting does more than occasionally fix a device. It narrows the problem. If a restart solves an issue once, the cause may have been temporary state. If the same issue returns every day, the restart has exposed a persistent problem such as a memory leak, faulty driver, failing storage, overheating, bad cable, unstable internet service, or a broken application update.
 
-- [@daltonc (Dalton Caldwell, YC partner) muses on the universal confusion](https://twitter.com/daltonc/status/1728845041379250566): It's sparked 151 replies and racked up 1.2 million views since 2023—proof the confusion is universal.
+The practical routine is simple:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I wonder what % of people know that the way to fix a lot of devices is to reboot them, but have no mental model for _why_ this works.</p>&mdash; Dalton Caldwell (@daltonc) <a href="https://twitter.com/daltonc/status/1728845041379250566?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+- Save work before restarting. A forced shutdown can lose unsaved changes.
+- Restart the affected device first. Restarting every device at once makes the problem harder to isolate.
+- Note the error, time, affected app, and whether another device has the same fault if the problem returns.
+- Check updates, cables, storage space, and device logs before repeating the same restart indefinitely.
 
-- [@maybeshalinii teases a thread on the tech behind it](https://twitter.com/maybeshalinii/status/1876503911659663647)
+The classic cases still deserve their reputation. A keyboard that has stopped responding, a game that will not launch, an app that has just been updated, a computer that has been running for weeks, or a router with one stubborn device are all reasonable restart candidates. A traffic jam is not.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did you know why restarting your computer actually fixes most problems?<br><br>Let's see why:</p>&mdash; Shalini Tewari (@maybeshalinii) <a href="https://twitter.com/maybeshalinii/status/1876503911659663647?ref_src=twsrc%5Etfw">January 7, 2025</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-- [@tunguz (Bojan Tunguz, ML expert) declares it solves 99% of tech woes](https://twitter.com/tunguz/status/1867925333221208121): Straight-up bold, with 25,000 views and a nod from the data science crowd in late 2024.
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Restarting your machine(s) solves about 99% of the issues in tech.</p>&mdash; Bojan Tunguz (@tunguz) <a href="https://twitter.com/tunguz/status/1867925333221208121?ref_src=twsrc%5Etfw">December 14, 2024</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-### Just restart it
-
-Now that we have discussed the potential causes, let us look at some scenarios where you might have to restart your PC.  Here are some classic "just restart it" moments:
-
-- **Keyboard gone rogue?** Restart your machine.
-- **Microsoft app glitching?** Restart your machine.
-- **Email won't load, but every other site is fine?** Restart your machine.
-- **Your game refuses to launch?** Restart your machine.
-- **Freshly installed an app and it's acting shady?** Restart your machine.
-- **Stuck in traffic?** Okay, _don't_ restart your machine for that one. (But hey, points for creativity.)
-
-One day, some tech wizard will crack the code—maybe even launch a startup dedicated to "Restart: The App That Explains Itself." Until then, this humble ritual remains the unsung hero of IT support, solving more headaches than any fancy diagnostic tool ever could. So next time it saves the day? Give your power button a nod of respect.
-
-Let's close with this meme for people who don't restart their PC at all.
-
-![A meme about never restarting your pc even when there is an update featuring a man and a watercannon](/assets/images/meme_never_update_pc.png "A meme about never restarting your pc even when there is an update featuring a man and a watercannon")
+![A meme about never restarting a PC even when an update is waiting, featuring a man and a water cannon.](/assets/images/meme_never_update_pc.png "A meme about never restarting a PC even when an update is waiting, featuring a man and a water cannon.")
