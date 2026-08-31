@@ -197,3 +197,230 @@ This completely satisfies the tie-breaking condition without needing negative ke
 All three versions spit out the same mean, median, and mode and the output never changes. What's being shown here is a smaller habit: noticing when you're looping over the same data twice, and finding a way to collapse that into one pass.
 
 The tuple trick that makes this possible, where Python checks the first value and only falls back to the second if there's a tie, isn't specific to finding a mode. It shows up anywhere you're sorting or picking "by this, then by that": ranking search results, or breaking a tie between two players. The mode calculation is just a small, contained place to notice it and practice it.
+
+## Extra information for the reader - Measures of central Tendency
+The rest of this post is optional but helpful for those who want to learn more about the concepts used in the solution from a theory perspective.
+
+
+Central tendency describes where the "center" of a dataset lies. The three most common measures are:
+
+- **Mean:** The arithmetic average
+- **Median:** The middle value when data is sorted
+- **Mode:** The most frequently occurring value
+
+Each measure has different properties and is appropriate in different situations.
+
+---
+
+## The Mean (Arithmetic Average)
+
+The mean is the sum of all values divided by the count:
+
+$$
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i = \frac{x_1 + x_2 + ... + x_n}{n}
+$$
+
+**Properties:**
+- Uses all data points
+- Sensitive to outliers
+- Minimizes sum of squared deviations
+- Has nice mathematical properties (unbiased estimator of population mean)
+
+---
+
+## Computing the Mean: Example
+
+**Data:** [4, 8, 6, 5, 3, 9, 7]
+
+**Step 1:** Sum the values
+
+$$
+4 + 8 + 6 + 5 + 3 + 9 + 7 = 42
+$$
+
+**Step 2:** Count the values
+
+$$
+n = 7
+$$
+
+**Step 3:** Divide
+
+$$
+\bar{x} = \frac{42}{7} = 6
+$$
+
+The mean is 6.
+
+---
+
+## The Median
+
+The median is the middle value when data is sorted in order:
+
+**For odd $n$:** The median is the value at position $\frac{n+1}{2}$.
+
+**For even $n$:** The median is the average of values at positions $\frac{n}{2}$ and $\frac{n}{2} + 1$.
+
+**Properties:**
+- Robust to outliers
+- Minimizes sum of absolute deviations
+- Good for skewed distributions
+- 50th percentile
+
+---
+
+## Computing the Median: Odd $n$
+
+**Data:** [4, 8, 6, 5, 3, 9, 7]
+
+**Step 1:** Sort the data
+
+$$
+[3, 4, 5, 6, 7, 8, 9]
+$$
+
+**Step 2:** Find the middle position
+
+$$
+\text{position} = \frac{n+1}{2} = \frac{7+1}{2} = 4
+$$
+
+**Step 3:** The median is the 4th value
+
+$$
+\text{median} = 6
+$$
+
+---
+
+## Computing the Median: Even $n$
+
+**Data:** [4, 8, 6, 5, 3, 9]
+
+**Step 1:** Sort the data
+
+$$
+[3, 4, 5, 6, 8, 9]
+$$
+
+**Step 2:** Find the two middle positions
+
+$$
+\text{positions} = \frac{n}{2} \text{ and } \frac{n}{2} + 1 = 3 \text{ and } 4
+$$
+
+**Step 3:** Average the 3rd and 4th values
+
+$$
+\text{median} = \frac{5 + 6}{2} = 5.5
+$$
+
+---
+
+## The Mode
+
+The mode is the value that appears most frequently:
+
+**Properties:**
+- Can be used with categorical data
+- May not exist (if all values are unique)
+- May not be unique (multimodal distributions)
+- Not affected by outliers
+
+---
+
+## Computing the Mode: Example 1
+
+**Data:** [4, 8, 6, 5, 3, 6, 7, 6, 9]
+
+**Count occurrences:**
+- 3 appears 1 time
+- 4 appears 1 time
+- 5 appears 1 time
+- 6 appears 3 times
+- 7 appears 1 time
+- 8 appears 1 time
+- 9 appears 1 time
+
+**Mode = 6** (appears most frequently)
+
+---
+
+## Computing the Mode: No Mode
+
+**Data:** [4, 8, 6, 5, 3, 9, 7]
+
+Each value appears exactly once. There is **no mode** (or we say all values are modes).
+
+---
+
+## Computing the Mode: Multiple Modes
+
+**Data:** [4, 8, 6, 5, 3, 6, 8, 9]
+
+**Count occurrences:**
+- 6 appears 2 times
+- 8 appears 2 times
+- All others appear 1 time
+
+**Modes = 6 and 8** (bimodal distribution)
+
+---
+
+## Comparison: Mean vs Median
+
+**Symmetric distributions:**
+- Mean $\approx$ Median
+- Either measure works well
+
+**Right-skewed distributions (long right tail):**
+- Mean > Median
+- Median is often preferred
+
+**Left-skewed distributions (long left tail):**
+- Mean < Median
+- Median is often preferred
+
+**With outliers:**
+- Mean is pulled toward outliers
+- Median is robust to outliers
+
+---
+
+## Effect of Outliers: Example
+
+**Data without outlier:** [10, 12, 11, 13, 12, 11, 14]
+
+Mean = $(10+12+11+13+12+11+14)/7 = 83/7 = 11.86$
+
+Median = 12 (middle of sorted [10, 11, 11, 12, 12, 13, 14])
+
+**Data with outlier:** [10, 12, 11, 13, 12, 11, 100]
+
+Mean = $(10+12+11+13+12+11+100)/7 = 169/7 = 24.14$
+
+Median = 12 (middle of sorted [10, 11, 11, 12, 12, 13, 100])
+
+The outlier dramatically affects the mean but not the median.
+
+---
+
+## When to Use Each Measure
+
+**Use Mean when:**
+- Data is roughly symmetric
+- No significant outliers
+- You need to use the value in further calculations
+- You want to account for all values
+
+**Use Median when:**
+- Data is skewed
+- Outliers are present
+- Reporting "typical" values (e.g., income, house prices)
+- Working with ordinal data
+
+**Use Mode when:**
+- Data is categorical
+- You want the most common value
+- Describing distribution shape (number of peaks)
