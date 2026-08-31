@@ -65,61 +65,44 @@ def mean_median_mode(x):
 
 When passing a tuple to Python's `max()` function, it compares the first items. If they tie, it proceeds to the second items. The lambda `lambda k: (counts[k], -k)` maximizes the frequency count first. If counts tie, it maximizes the negative value of the key, which effectively selects the smallest original number.
 
-To understand why this lambda function is so clever, we have to look at how Python compares **tuples**.
+### Why this is better:
 
+1. **It's faster (O(N) instead of 2 \* O(N)):** Instead of traversing the unique values once for `max()` and a second time for the list comprehension, `max()` iterates through the keys exactly once.
+2. **It saves memory:** It doesn't need to create and store the intermediate `modes` list in memory.
+3. **It's highly "Pythonic":** Using a tuple `(primary_sort, secondary_sort)` in a lambda function is the standard Python way to handle tie-breakers.
+
+To understand why this lambda function is so clever, we have to look at how Python compares **tuples**.
 
 When you give Python a tuple like `(A, B)`, and ask it to find the maximum, it looks at the first item (`A`) first. If there is a tie, it looks at the second item (`B`) to break the tie.
 
-
 Here is the exact breakdown of how `lambda k: (counts[k], -k)` uses that behavior to find the mode and handle ties in one swoop.
 
-
-
-
-### 1. `counts` (What we are iterating over)
+#### 1. `counts` (What we are iterating over)
 
 When you call `max(counts, ...)`, Python iterates over the **keys** of the `Counter` dictionary. So `k` represents the actual numbers from your original array.
 
-
-
-
-### 2. `counts[k]` (The Primary Sort: Find the most frequent)
+#### 2. `counts[k]` (The Primary Sort: Find the most frequent)
 
 The first part of the tuple is `counts[k]`, which is the **frequency** of the number `k`.
 
 Because `max()` wants the largest value, Python will first look for the key that has the highest count. If one number appears more than any other, it wins immediately, and Python ignores the second part of the tuple.
 
-
-
-
-### 3. `-k` (The Secondary Sort: Break the tie)
+#### 3. `-k` (The Secondary Sort: Break the tie)
 
 If two numbers have the exact same frequency, Python moves to the second item in the tuple to break the tie.
 
 We want to return the **smallest** number when there's a tie, but `max()` is hardwired to look for the **largest** value.
 
-
-
-
 By making the key negative (`-k`), we trick `max()` into doing what we want:
-
-
-
 
 - Mathematically, `-2` is greater than `-5`.
 - So, if the numbers `2` and `5` are tied, `max()` will see `-2` as the "larger" tie-breaker, and it will declare `2` the winner.
 
-### Let's walk through a concrete example
+#### Let's walk through a concrete example
 
 Imagine your array is `x = [8, 8, 3, 3, 1]`. Both `8` and `3` appear twice. We want the mode to be `3` (the smaller of the tied values).
 
-
-
-
 Here is what the lambda function calculates behind the scenes for each key:
-
-
-
 
 - For `k = 1`: Count is 1. Tuple is **`(1, -1)`**
 - For `k = 8`: Count is 2. Tuple is **`(2, -8)`**
@@ -127,18 +110,12 @@ Here is what the lambda function calculates behind the scenes for each key:
 
 Now, Python's `max()` function compares those tuples:
 
-
-
-
 1. It instantly eliminates `1` because its primary value (`1`) is smaller than the others (`2`).
 2. It compares `(2, -8)` and `(2, -3)`.
 3. Since the `2`s tie, it compares `-8` and `-3`.
 4. Because `-3` is greater than `-8`, the tuple `(2, -3)` wins.
 
 The original key that generated that winning tuple was `3`. Therefore, `max()` returns `3`.
-
-
-
 
 It is a brilliant, highly efficient way to tell Python: _"Give me the item with the highest frequency, but if they tie, give me the one with the smallest numeric value."_
 
