@@ -12,7 +12,7 @@ image_alt: Finding the Mean, Median and Mode in Python cover image
 layout: post
 card_items:
   - name: TensorTonic Problem
-    description: The official Mean, Median, Mode challenge on TensorTonic.
+    description: TensorTonic is widely described as the LeetCode of machine learning, allowing developers to practice algorithms and build ML skills through interactive challenges.
     badge_1: Problem
     badge_2: TensorTonic
     url: https://www.tensortonic.com/problems/mean-median-mode
@@ -30,6 +30,10 @@ card_items:
     url: https://docs.python.org/3/library/collections.html#collections.Counter
     link_text: View Python Docs
 ---
+
+For anyone unfamiliar with [TensorTonic](https://www.tensortonic.com/), it is often described as the "LeetCode of machine learning", a platform designed for developers to practice algorithms, refine data science techniques, and build machine learning skills through hands-on coding challenges.
+
+## The problem statement
 
 The [Mean, Median, Mode problem on TensorTonic](https://www.tensortonic.com/problems/mean-median-mode) asks you to compute these three statistical metrics for a 1D numeric array. The updated requirements specify returning the results as a dictionary. If multiple values share the highest frequency, the mode must be the smallest of those values.
 
@@ -63,7 +67,7 @@ Output: {"mean": 2.5, "median": 2.5, "mode": 1.0}
 
 ## The Standard Approach
 
-Computing the mean and median is straightforward using NumPy. For the mode, the standard method tallies frequencies using `collections.Counter`, finds the highest frequency, filters all numbers sharing that frequency, and extracts the smallest one.
+Computing the mean and median is straightforward using NumPy. For the mode, the standard method tallies frequencies using `collections.Counter`, finds the highest frequency, filters all numbers sharing that frequency, and extracts the smallest one. The code below is from the solution on TensorTonic.
 
 ```python
 import numpy as np
