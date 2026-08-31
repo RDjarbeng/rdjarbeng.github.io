@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let filteredItems = categoryDef ? allItems.filter(categoryDef.filter) : allItems;
 
         // Apply Search Filter
-        const searchTerm = searchInput.value.toLowerCase().trim();
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
         if (searchTerm !== '') {
             filteredItems = filteredItems.filter(item => {
                 const title = item.dataset.title.toLowerCase();
