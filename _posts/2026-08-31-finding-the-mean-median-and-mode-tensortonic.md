@@ -17,6 +17,30 @@ The [Mean, Median, Mode problem on TensorTonic](https://www.tensortonic.com/prob
 
 The time limit is 300ms, and you are permitted to use NumPy and the standard collections library.
 
+![tensortonic mean median mode screenshot in landscape format](/assets/images/20260831-171420.png "tensortonic mean median mode")
+
+Compute three measures of a nonempty one-dimensional numeric dataset. The mean is:
+
+xˉ=1n∑i=1nxi_x_ˉ=_n_1​_i_=1∑_n_​_xi_​
+
+The median is the middle sorted value, or the average of the two middle values when n_n_ is even. The mode is the most frequent value. If several values share the highest frequency, choose the smallest. Return mean, median, and mode in a dictionary of Python floats.
+
+### Examples
+
+Input: x = [1, 2, 3, 4, 5]
+
+Output: {"mean": 3.0, "median": 3.0, "mode": 1.0}
+
+Explanation: Every value appears once, so the smallest value wins the mode tie.
+
+Input: x = [1, 2, 2, 3, 4]
+
+Output: {"mean": 2.4, "median": 2.0, "mode": 2.0}
+
+Input: x = [1, 2, 3, 4]
+
+Output: {"mean": 2.5, "median": 2.5, "mode": 1.0}
+
 ## The Standard Approach
 
 Computing the mean and median is straightforward using NumPy. For the mode, the standard method tallies frequencies using `collections.Counter`, finds the highest frequency, filters all numbers sharing that frequency, and extracts the smallest one.
