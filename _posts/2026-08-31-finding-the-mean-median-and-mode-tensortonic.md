@@ -1,16 +1,34 @@
 ---
 date: 2026-08-31T17:00:00+02:00
-published: false
+published: true
 author: Richard
 category: Education
 tags:
   - Algorithm
   - Python
 title: Finding the Mean, Median and Mode in Python - TensorTonic
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
+image_alt: Finding the Mean, Median and Mode in Python cover image
 layout: post
-card_items: []
+card_items:
+  - name: TensorTonic Problem
+    description: The official Mean, Median, Mode challenge on TensorTonic.
+    badge_1: Problem
+    badge_2: TensorTonic
+    url: https://www.tensortonic.com/problems/mean-median-mode
+    link_text: Solve Challenge
+  - name: NumPy Statistics Docs
+    description: Official NumPy reference for statistical functions like mean and median.
+    badge_1: Documentation
+    badge_2: NumPy
+    url: https://numpy.org/doc/stable/reference/routines.statistics.html
+    link_text: View NumPy Docs
+  - name: Python Counter Docs
+    description: Python standard library documentation for collections.Counter.
+    badge_1: Documentation
+    badge_2: Python
+    url: https://docs.python.org/3/library/collections.html#collections.Counter
+    link_text: View Python Docs
 ---
 
 The [Mean, Median, Mode problem on TensorTonic](https://www.tensortonic.com/problems/mean-median-mode) asks you to compute these three statistical metrics for a 1D numeric array. The updated requirements specify returning the results as a dictionary. If multiple values share the highest frequency, the mode must be the smallest of those values.
@@ -19,11 +37,13 @@ The time limit is 300ms, and you are permitted to use NumPy and the standard col
 
 ![tensortonic mean median mode screenshot in landscape format](/assets/images/20260831-171420.png "tensortonic mean median mode")
 
+Here is the problem description as given on [TensorTonic](https://www.tensortonic.com/problems/mean-median-mode):
+
 Compute three measures of a nonempty one-dimensional numeric dataset. The mean is:
 
-xˉ=1n∑i=1nxi_x_ˉ=_n_1​_i_=1∑_n_​_xi_​
+$$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
 
-The median is the middle sorted value, or the average of the two middle values when n_n_ is even. The mode is the most frequent value. If several values share the highest frequency, choose the smallest. Return mean, median, and mode in a dictionary of Python floats.
+The median is the middle sorted value, or the average of the two middle values when $n$ is even. The mode is the most frequent value. If several values share the highest frequency, choose the smallest. Return mean, median, and mode in a dictionary of Python floats.
 
 ### Examples
 
@@ -45,9 +65,7 @@ Output: {"mean": 2.5, "median": 2.5, "mode": 1.0}
 
 Computing the mean and median is straightforward using NumPy. For the mode, the standard method tallies frequencies using `collections.Counter`, finds the highest frequency, filters all numbers sharing that frequency, and extracts the smallest one.
 
-Python
-
-```plain
+```python
 import numpy as np
 from collections import Counter
 
@@ -70,9 +88,7 @@ This functions correctly, but it traverses the unique values twice: first to fin
 
 You can find the smallest mode in a single pass by providing a custom lambda function to Python's built-in `max()` function.
 
-Python
-
-```plain
+```python
 import numpy as np
 from collections import Counter
 
@@ -91,7 +107,7 @@ When passing a tuple to Python's `max()` function, it compares the first items. 
 
 ### Why this is better:
 
-1. **It's faster (O(N) instead of 2 \* O(N)):** Instead of traversing the unique values once for `max()` and a second time for the list comprehension, `max()` iterates through the keys exactly once.
+1. **It's faster ($O(N)$ instead of $2 \times O(N)$):** Instead of traversing the unique values once for `max()` and a second time for the list comprehension, `max()` iterates through the keys exactly once.
 2. **It saves memory:** It doesn't need to create and store the intermediate `modes` list in memory.
 3. **It's highly "Pythonic":** Using a tuple `(primary_sort, secondary_sort)` in a lambda function is the standard Python way to handle tie-breakers.
 
@@ -147,9 +163,7 @@ It is a brilliant, highly efficient way to tell Python: _"Give me the item with 
 
 The TensorTonic problem provides a hint suggesting the use of `min()`. You can invert the logic of the previous optimization to use `min()` instead, which reads highly intuitively for this specific constraint.
 
-Python
-
-```plain
+```python
 import numpy as np
 from collections import Counter
 
@@ -171,7 +185,7 @@ By passing `lambda k: (-count[k], k)` to `min()`, Python evaluates the sequence 
 
 This completely satisfies the tie-breaking condition without needing negative key trickery on the secondary sort, making it an optimal, one-line solution for the mode.
 
-## So what's the point? 
+## So what's the point?
 
 All three versions spit out the same mean, median, and mode and the output never changes. What's being shown here is a smaller habit: noticing when you're looping over the same data twice, and finding a way to collapse that into one pass.
 
