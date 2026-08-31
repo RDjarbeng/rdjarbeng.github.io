@@ -201,7 +201,6 @@ The tuple trick that makes this possible, where Python checks the first value an
 ## Extra information for the reader - Measures of central Tendency
 The rest of this post is optional but helpful for those who want to learn more about the concepts used in the solution from a theory perspective.
 
-
 Central tendency describes where the "center" of a dataset lies. The three most common measures are:
 
 - **Mean:** The arithmetic average
@@ -424,3 +423,17 @@ The outlier dramatically affects the mean but not the median.
 - Data is categorical
 - You want the most common value
 - Describing distribution shape (number of peaks)
+
+### Further Study
+
+More detail can be found in the [markdown file here](https://github.com/RDjarbeng/TensorTonic-Solutions/blob/main/mean-median-mode/mean-median-mode.md), where we cover:
+
+* Relationship in Different Distributions
+* Weighted Mean
+* Trimmed Mean
+* Geometric Mean
+* Harmonic Mean
+* Relationship Between Means
+* Central Tendency in Machine Learning
+* Population vs Sample Notation
+* Computational Considerations
