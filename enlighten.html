@@ -6,6 +6,15 @@ body_class: enlighten-page
 description: "Project Enlighten: a curated collection of genuinely good tech books that are legally available to read free online - machine learning, data science, computer vision, programming and IT."
 ---
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "VMNzpaX75utVJ3RFH",
+        });
+    })();
+</script>
+
 <style>
   .enlighten-wrap {
     max-width: 1100px;
@@ -14,7 +23,7 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
   }
   .enlighten-intro {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
   .enlighten-intro h1 {
     font-size: 2.2rem;
@@ -26,6 +35,102 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     margin: 0 auto;
     font-size: 1.05rem;
   }
+
+  .learning-path {
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1.5rem;
+    margin-bottom: 2.25rem;
+  }
+  .learning-path h2 {
+    font-size: 1.15rem;
+    margin: 0 0 0.35rem;
+  }
+  .learning-path .path-desc {
+    color: var(--text-color-light, #666);
+    font-size: 0.88rem;
+    margin: 0 0 1rem;
+  }
+  .path-steps {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .path-step {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem 0.45rem 0.45rem;
+    color: var(--text-color, #222);
+    font-size: 0.85rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .path-step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: var(--text-color, #222);
+  }
+  .path-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(100, 116, 139, 0.14);
+    color: var(--text-color-light, #555);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .path-arrow {
+    align-self: center;
+    color: var(--text-color-light, #888);
+    font-size: 1rem;
+  }
+
+  .tag-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 2.25rem;
+  }
+  .tag-filter-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-color-light, #666);
+    margin-right: 0.35rem;
+  }
+  .tag-chip {
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.78rem;
+    line-height: 1;
+    padding: 0.38rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--card-border, #e0e0e0);
+    background: var(--card-bg, #ffffff);
+    color: var(--text-color-light, #666);
+    transition: all 0.15s ease;
+  }
+  .tag-chip:hover {
+    border-color: rgba(100, 116, 139, 0.5);
+  }
+  .tag-chip.active {
+    background: var(--text-color, #222);
+    color: var(--bg-color, #ffffff);
+    border-color: var(--text-color, #222);
+  }
+
   .enlighten-section {
     margin-bottom: 2.75rem;
   }
@@ -111,8 +216,20 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
   .book-desc {
     font-size: 0.89rem;
     line-height: 1.5;
-    flex-grow: 1;
-    margin: 0 0 0.85rem;
+    margin: 0 0 0.6rem;
+  }
+  .book-note {
+    font-size: 0.84rem;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--text-color-light, #666);
+    margin: 0 0 0.75rem;
+    padding-left: 0.65rem;
+    border-left: 2px solid var(--card-border, #e0e0e0);
+  }
+  .book-note::before {
+    content: "💬 ";
+    font-style: normal;
   }
   .book-tags {
     display: flex;
@@ -140,6 +257,73 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     font-size: 0.85rem;
     font-weight: 600;
   }
+
+  .suggest-section {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--card-border, #e0e0e0);
+  }
+  .suggest-box {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+  }
+  .suggest-box h2 {
+    font-size: 1.3rem;
+    margin: 0 0 0.4rem;
+    text-align: center;
+  }
+  .suggest-box > p {
+    color: var(--text-color-light, #666);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+  .suggest-form .form-group {
+    margin-bottom: 1rem;
+  }
+  .suggest-form label {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .suggest-form input,
+  .suggest-form textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.92rem;
+    border: 1px solid var(--card-border, #e0e0e0);
+    border-radius: 8px;
+    background: var(--bg-color, #ffffff);
+    color: var(--text-color, #222);
+    box-sizing: border-box;
+  }
+  .suggest-form textarea {
+    min-height: 90px;
+    resize: vertical;
+  }
+  .suggest-form .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: var(--text-color, #222);
+    color: var(--bg-color, #ffffff);
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+  .suggest-form .submit-btn:hover {
+    opacity: 0.85;
+  }
+  .success-message { color: #16a34a; }
+  .error-message { color: #dc2626; }
 </style>
 
 <div class="enlighten-wrap">
@@ -148,18 +332,49 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     <p>A curated shelf of genuinely good tech books that are legally available to read free online. No paywalls, no sketchy downloads - just authors and publishers doing right by readers.</p>
   </div>
 
+  <div class="learning-path" id="start-here">
+    <h2>🧭 Start here: a suggested learning path</h2>
+    <p class="path-desc">New to tech or levelling up? These five, in this order, take you from zero to modern AI.</p>
+    <div class="path-steps">
+      {% assign path_slugs = "automate-the-boring-stuff python-for-data-analysis practical-deep-learning-for-coders dive-into-deep-learning foundations-of-computer-vision" | split: " " %}
+      {% for slug in path_slugs %}
+      {% assign pbook = site.books | where: "slug", slug | first %}
+      {% if pbook %}
+      <a class="path-step" href="{{ pbook.link }}" target="_blank" rel="noopener" title="{{ pbook.title }} - {{ pbook.author }}">
+        <span class="path-num">{{ forloop.index }}</span>
+        {{ pbook.title }}
+      </a>
+      {% unless forloop.last %}<span class="path-arrow">→</span>{% endunless %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% assign all_tags = site.books | map: "tags" | join: "," | split: "," | uniq | sort %}
+  <div class="tag-filter-bar" id="tag-filter-bar">
+    <span class="tag-filter-label">Filter:</span>
+    <button class="tag-chip active" data-tag="">All</button>
+    {% for t in all_tags %}
+    {% assign tt = t | strip %}
+    {% if tt != "" %}
+    <button class="tag-chip" data-tag="{{ tt }}">{{ tt }}</button>
+    {% endif %}
+    {% endfor %}
+  </div>
+
   {% assign cats = site.book_categories | sort: "weight" %}
   {% for cat in cats %}
   {% assign cat_books = site.books | where: "category", cat.name %}
   {% if cat_books.size > 0 %}
-  <section class="enlighten-section">
+  <section class="enlighten-section" data-section="{{ cat.name | slugify }}">
     <h2>{{ cat.icon }} {{ cat.name }}</h2>
     {% if cat.description %}
     <p class="section-desc">{{ cat.description }}</p>
     {% endif %}
     <div class="enlighten-grid">
       {% for book in cat_books %}
-      <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-card">
+      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card"
+         data-tags="{% for tag in book.tags %}{{ tag | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}">
         <div class="book-card-top">
           {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
         </div>
@@ -169,6 +384,9 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
         <p class="book-known">{{ book.known_for }}</p>
         {% endif %}
         <p class="book-desc">{{ book.description }}</p>
+        {% if book.note %}
+        <p class="book-note">{{ book.note }}</p>
+        {% endif %}
         {% if book.tags and book.tags.size > 0 %}
         <div class="book-tags">
           {% for tag in book.tags %}<span class="book-tag">{{ tag }}</span>{% endfor %}
@@ -183,4 +401,136 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
   </section>
   {% endif %}
   {% endfor %}
+
+  <section class="suggest-section" id="suggest-a-book">
+    <div class="suggest-box">
+      <h2>💡 Suggest a book</h2>
+      <p>Know a great tech book that's legally free online? Send it my way - if it's good, it joins the shelf (with credit to you if you like).</p>
+      <form id="enlighten-suggest-form" class="suggest-form">
+        <div class="form-group" style="display: none;">
+          <label for="suggest-website-url">Website</label>
+          <input type="text" id="suggest-website-url" name="website_url" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="book_title">Book title* <small>(Required)</small></label>
+          <input type="text" id="book_title" name="book_title" required placeholder="e.g. The Missing README">
+        </div>
+        <div class="form-group">
+          <label for="book_author">Author(s)* <small>(Required)</small></label>
+          <input type="text" id="book_author" name="book_author" required placeholder="Who wrote it?">
+        </div>
+        <div class="form-group">
+          <label for="book_link">Link to the free version</label>
+          <input type="url" id="book_link" name="book_link" placeholder="https:// ...">
+        </div>
+        <div class="form-group">
+          <label for="reason">Why do you recommend it?</label>
+          <textarea id="reason" name="reason" placeholder="What makes it worth reading?"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="user_name">Your name <small>(so I can credit you)</small></label>
+          <input type="text" id="user_name" name="user_name" placeholder="Optional">
+        </div>
+        <div class="form-group">
+          <label for="user_email">Your email</label>
+          <input type="email" id="user_email" name="user_email" placeholder="Optional - if you'd like a reply">
+        </div>
+        <input type="submit" value="Send Suggestion" class="submit-btn">
+        <p id="suggest-form-message" style="display: none;"></p>
+        <div id="suggest-loading-indicator" style="display: none;">
+          <p>Sending your suggestion...</p>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var chips = document.querySelectorAll("#tag-filter-bar .tag-chip");
+    function applyFilter(tag) {
+        document.querySelectorAll(".book-card").forEach(function (card) {
+            var tags = (card.getAttribute("data-tags") || "").split(",").map(function (s) { return s.trim(); });
+            card.style.display = (!tag || tags.indexOf(tag) !== -1) ? "" : "none";
+        });
+        document.querySelectorAll(".enlighten-section").forEach(function (section) {
+            var visible = Array.prototype.some.call(section.querySelectorAll(".book-card"), function (c) {
+                return c.style.display !== "none";
+            });
+            section.style.display = visible ? "" : "none";
+            if (visible) section.classList.add("has-visible");
+        });
+    }
+    chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+            var wasActive = chip.classList.contains("active");
+            chips.forEach(function (c) { c.classList.remove("active"); });
+            if (wasActive) {
+                chip.classList.add("active");
+                applyFilter("");
+            } else {
+                chip.classList.add("active");
+                applyFilter(chip.getAttribute("data-tag"));
+            }
+        });
+    });
+
+    var form = document.getElementById("enlighten-suggest-form");
+    if (!form) return;
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var honeypot = document.getElementById("suggest-website-url");
+        if (honeypot && honeypot.value) { return; }
+
+        var formMessage = document.getElementById("suggest-form-message");
+        var loadingIndicator = document.getElementById("suggest-loading-indicator");
+
+        var parts = [];
+        parts.push("Book: " + (form.book_title.value || "(not given)"));
+        parts.push("Author(s): " + (form.book_author.value || "(not given)"));
+        parts.push("Link: " + (form.book_link.value || "(none provided)"));
+        parts.push("");
+        parts.push("Why they recommend it: " + (form.reason.value || "(not given)"));
+        var from = [];
+        if (form.user_name.value) { from.push(form.user_name.value); }
+        if (form.user_email.value) { from.push("<" + form.user_email.value + ">"); }
+        if (from.length > 0) { parts.push(""); parts.push("Suggested by: " + from.join(" ")); }
+        var msgField = document.createElement("input");
+        msgField.type = "hidden";
+        msgField.name = "message";
+        msgField.value = parts.join("\n");
+        form.appendChild(msgField);
+
+        var subjectField = document.createElement("input");
+        subjectField.type = "hidden";
+        subjectField.name = "subject";
+        subjectField.value = "Enlighten: Book Suggestion";
+        form.appendChild(subjectField);
+
+        loadingIndicator.style.display = "block";
+        formMessage.style.display = "none";
+        formMessage.className = "";
+
+        emailjs.sendForm("contact_service", "contact_form", form)
+            .then(function () {
+                loadingIndicator.style.display = "none";
+                formMessage.textContent = "Thanks! Your suggestion has been sent.";
+                formMessage.className = "success-message";
+                formMessage.style.display = "block";
+                form.reset();
+            })
+            .catch(function (error) {
+                loadingIndicator.style.display = "none";
+                formMessage.textContent = "Failed to send your suggestion. Please try again.";
+                formMessage.className = "error-message";
+                formMessage.style.display = "block";
+                console.error("EmailJS Error:", error);
+            })
+            .finally(function () {
+                msgField.remove();
+                subjectField.remove();
+            });
+    });
+});
+</script>
