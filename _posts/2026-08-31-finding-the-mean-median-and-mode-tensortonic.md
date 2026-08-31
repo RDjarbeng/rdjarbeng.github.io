@@ -8,7 +8,7 @@ tags:
   - Python
 title: Coding the Mean, Median and Mode in Python - TensorTonic
 image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
-image_alt: Coding the Mean, Median and Mode in Python cover image
+image_alt: Coding the Mean, Median and Mode in Python by rdjarbeng for rdjarbeng.com cover image
 layout: post
 card_items:
   - name: TensorTonic Problem
