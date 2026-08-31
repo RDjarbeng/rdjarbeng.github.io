@@ -1640,6 +1640,20 @@ div[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
 
+.post-content pre code,
+.post-content pre span,
+.highlight pre code,
+.highlight pre span,
+pre.highlight code,
+pre.highlight span,
+.highlighter-rouge pre code,
+.highlighter-rouge pre span {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .post-content code,
 .highlight code {
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
