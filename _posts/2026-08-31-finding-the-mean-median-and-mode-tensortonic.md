@@ -33,6 +33,8 @@ card_items:
 
 For anyone unfamiliar with [TensorTonic](https://www.tensortonic.com/), it is often described as the "LeetCode of machine learning", a platform designed for developers to practice algorithms, refine data science techniques, and build machine learning skills through hands-on coding challenges.
 
+![Finding the Mean, Median and Mode in Python](/assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg "Finding the Mean, Median and Mode in Python")
+
 ## The problem statement
 
 The [Mean, Median, Mode problem on TensorTonic](https://www.tensortonic.com/problems/mean-median-mode) asks you to compute these three statistical metrics for a 1D numeric array. The updated requirements specify returning the results as a dictionary. If multiple values share the highest frequency, the mode must be the smallest of those values.
