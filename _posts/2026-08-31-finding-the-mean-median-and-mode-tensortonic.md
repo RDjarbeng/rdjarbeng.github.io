@@ -49,7 +49,7 @@ Compute three measures of a nonempty one-dimensional numeric dataset. The mean i
 
 $$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
 
-The median is the middle sorted value, or the average of the two middle values when $n$ is even. The mode is the most frequent value. If several values share the highest frequency, choose the smallest. Return mean, median, and mode in a dictionary of Python floats.
+The median is the middle sorted value, or the average of the two middle values when $$n$$ is even. The mode is the most frequent value. If several values share the highest frequency, choose the smallest. Return mean, median, and mode in a dictionary of Python floats.
 
 ### Examples
 
@@ -116,7 +116,7 @@ When passing a tuple to Python's `max()` function, it compares the first items. 
 
 ### Why this is better:
 
-1. **It's faster ($O(N)$ instead of $2 \times O(N)$):** Instead of traversing the unique values once for `max()` and a second time for the list comprehension, `max()` iterates through the keys exactly once.
+1. **It's faster ($$O(N)$$ instead of $$2 \times O(N)$$):** Instead of traversing the unique values once for `max()` and a second time for the list comprehension, `max()` iterates through the keys exactly once.
 2. **It saves memory:** It doesn't need to create and store the intermediate `modes` list in memory.
 3. **It's highly "Pythonic":** Using a tuple `(primary_sort, secondary_sort)` in a lambda function is the standard Python way to handle tie-breakers.
 
@@ -259,9 +259,9 @@ The mean is 6.
 
 The median is the middle value when data is sorted in order:
 
-**For odd $n$:** The median is the value at position $\frac{n+1}{2}$.
+**For odd $$n$$:** The median is the value at position $$\frac{n+1}{2}$$.
 
-**For even $n$:** The median is the average of values at positions $\frac{n}{2}$ and $\frac{n}{2} + 1$.
+**For even $$n$$:** The median is the average of values at positions $$\frac{n}{2}$$ and $$\frac{n}{2} + 1$$.
 
 **Properties:**
 - Robust to outliers
@@ -271,7 +271,7 @@ The median is the middle value when data is sorted in order:
 
 ---
 
-## Computing the Median: Odd $n$
+## Computing the Median: Odd $$n$$
 
 **Data:** [4, 8, 6, 5, 3, 9, 7]
 
@@ -295,7 +295,7 @@ $$
 
 ---
 
-## Computing the Median: Even $n$
+## Computing the Median: Even $$n$$
 
 **Data:** [4, 8, 6, 5, 3, 9]
 
@@ -372,7 +372,7 @@ Each value appears exactly once. There is **no mode** (or we say all values are 
 ## Comparison: Mean vs Median
 
 **Symmetric distributions:**
-- Mean $\approx$ Median
+- Mean $$\approx$$ Median
 - Either measure works well
 
 **Right-skewed distributions (long right tail):**
@@ -393,13 +393,13 @@ Each value appears exactly once. There is **no mode** (or we say all values are 
 
 **Data without outlier:** [10, 12, 11, 13, 12, 11, 14]
 
-Mean = $(10+12+11+13+12+11+14)/7 = 83/7 = 11.86$
+$$\text{Mean} = \frac{10+12+11+13+12+11+14}{7} = \frac{83}{7} \approx 11.86$$
 
 Median = 12 (middle of sorted [10, 11, 11, 12, 12, 13, 14])
 
 **Data with outlier:** [10, 12, 11, 13, 12, 11, 100]
 
-Mean = $(10+12+11+13+12+11+100)/7 = 169/7 = 24.14$
+$$\text{Mean} = \frac{10+12+11+13+12+11+100}{7} = \frac{169}{7} \approx 24.14$$
 
 Median = 12 (middle of sorted [10, 11, 11, 12, 12, 13, 100])
 
