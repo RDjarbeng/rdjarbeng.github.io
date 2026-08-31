@@ -65,6 +65,9 @@ Input: x = [1, 2, 3, 4]
 
 Output: {"mean": 2.5, "median": 2.5, "mode": 1.0}
 
+## Code samples
+In case you just want the code, you can find them on my [GitHub](https://github.com/RDjarbeng/TensorTonic-Solutions/tree/main/mean-median-mode) here.
+
 ## The Standard Approach
 
 Computing the mean and median is straightforward using NumPy. For the mode, the standard method tallies frequencies using `collections.Counter`, finds the highest frequency, filters all numbers sharing that frequency, and extracts the smallest one. The code below is from the solution on TensorTonic.
