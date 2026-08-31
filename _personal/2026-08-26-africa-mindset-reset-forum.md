@@ -72,12 +72,16 @@ I love these so much because you get to hear what the young people are thinking 
 By the way, I noticed someone coming up the stairs in my section, a familiar face and smile:
 
 ### Wode Maya is in the building😍
+<iframe width="315" height="560" src="https://www.youtube.com/embed/4crJe76bBQg" title="Wode Maya at Kigali Convention Center" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+The video shows Wode Maya (Africa's most followed youtuber) coming up the stairs at the African Reset Forum. 
+#### Who is Wode Maya?
+Wode Maya is widely acclaimed as one of Africa's top, most followed, and most influential content creators, often described as the continent's biggest or most popular vlogger. He surpassed 2 million subscribers on Wode Maya YouTube and was notably issued a diplomatic passport by Ghana in recognition of his promotional impact
 
 Some pictures:
 
 ![Wode Maya at the Kigali Convention Center taking a picture](/assets/images/1000525369.jpg "Wode Maya at the KCC")
 
-About 2 hours later during the lunch break, I tried to get a photo with Wode Maya. However there were so many people trying to get to him.
+About 2 hours later during the lunch break, I tried to get a photo with him. However there were so many people trying to get to him.
 
 I noticed a companion of his in a Ghana football association jersey. This person seemed to follow him around wherever he went. I had a brief chat woth with him and found Wode Maya was his mentor. We told him we're Ghanaians and we wanted to take a picture. Well, long story short he was able to speak to Wode Maya got a picture 
 
