@@ -146,3 +146,9 @@ By passing `lambda k: (-count[k], k)` to `min()`, Python evaluates the sequence 
 2. `k`: If there is a tie in frequencies (the negative counts match), `min()` looks at the original numeric value `k` and simply selects the smallest one.
 
 This completely satisfies the tie-breaking condition without needing negative key trickery on the secondary sort, making it an optimal, one-line solution for the mode.
+
+## So what's the point? 
+
+All three versions spit out the same mean, median, and mode and the output never changes. What's being shown here is a smaller habit: noticing when you're looping over the same data twice, and finding a way to collapse that into one pass.
+
+The tuple trick that makes this possible, where Python checks the first value and only falls back to the second if there's a tie, isn't specific to finding a mode. It shows up anywhere you're sorting or picking "by this, then by that": ranking search results, or breaking a tie between two players. The mode calculation is just a small, contained place to notice it and practice it.
