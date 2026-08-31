@@ -13,9 +13,6 @@ layout: personal
 
 ![Cover image for The Man Who Can - Editorial illustration on determination and mindset](/assets/images/posts/covers/the_man_who_can_cover.jpg "The Man Who Can")
 
-For readers who prefer to listen:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m5HKMfRzEgM" frameborder="0" allowfullscreen></iframe>
 
 > **Thinking**
 
@@ -40,6 +37,11 @@ For readers who prefer to listen:
 > Is the man **WHO THINKS HE CAN**.
 
 ---
+
+For readers who prefer to listen:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m5HKMfRzEgM" frameborder="0" allowfullscreen></iframe>
+
 
 *Credit: These lines are from the famous motivational poem "Thinking" by Walter D. Wintle. The version given is the earliest recorded version, taken from a 1905 publication for the Unity Tract Society (Unity School of Christianity).*
 
