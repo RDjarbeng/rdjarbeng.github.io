@@ -39,9 +39,24 @@ When writing or editing posts for this website, follow these rules:
 2. **Embed YouTube Videos**: If a post contains YouTube links, embed them using an `<iframe>`.
    - Example: `<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>`
 
+## Math & KaTeX Formatting (STRICT)
+
+1. **Inline Math MUST use double dollars `$$...$$`**:
+   - ❌ `$O(N)$` or `$n$` (Kramdown/Jekyll does NOT parse single `$`, rendering raw text like `$O(N)$` on the page).
+   - ✅ `$$O(N)$$` or `$$n$$` or `$$2 \times O(N)$$`
+
+2. **Display Math MUST use `$$` on separate lines**:
+   - ✅
+     ```markdown
+     $$
+     \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+     $$
+     ```
+
 ## Checklist Before Publishing
 
 - [ ] No em dashes (`—`) or en dashes (`–`) in the text
 - [ ] No spaced hyphens used as dash substitutes (` - `)
 - [ ] No unnecessary questions directed at the reader
 - [ ] Tone matches the post type
+- [ ] All inline math uses double dollar signs (`$$math$$`) - NEVER single `$`
