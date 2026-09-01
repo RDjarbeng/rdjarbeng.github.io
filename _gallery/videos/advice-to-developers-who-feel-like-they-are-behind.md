@@ -1,5 +1,5 @@
 ---
-title: Advice to developers who feel like they are behind
+title: Advice to developers who feel like they are behind from Brad Traversy
 published: true
 date: 2026-04-08T09:31:00+02:00
 platform: youtube
