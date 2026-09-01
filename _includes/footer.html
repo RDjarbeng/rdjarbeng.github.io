@@ -35,15 +35,15 @@
     <nav class="footer-nav-col" aria-label="Pages Links">
       <h3 class="footer-heading">Pages</h3>
       <ul class="footer-links">
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li><a href="{{ '/authors/' | relative_url }}">Authors</a></li>
-        <li><a href="{{ '/posts' | relative_url }}">Technical Posts</a></li>
-        <li><a href="{{ '/personal' | relative_url }}">Personal Posts</a></li>
+        <li><a href="{{ '/' | relative_url }}" title="Go to homepage - Richard Djarbeng's blog and portfolio" aria-label="Home page">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}" title="Learn more about Richard Djarbeng, background, and work" aria-label="About page">About</a></li>
+        <li><a href="{{ '/authors/' | relative_url }}" title="Browse posts by authors and contributors" aria-label="Authors page">Authors</a></li>
+        <li><a href="{{ '/posts' | relative_url }}" title="Explore technical articles, tutorials, and guides on AI, machine learning, and cloud" aria-label="Technical Posts">Technical Posts</a></li>
+        <li><a href="{{ '/personal' | relative_url }}" title="Read personal stories, reflections, and travel logs" aria-label="Personal Posts">Personal Posts</a></li>
         <li><a href="{{ '/enlighten/' | relative_url }}" title="Free tech books you can read legally online - machine learning, data science, computer vision, programming & IT" aria-label="Enlighten - free online tech books">&#128218; Enlighten</a></li>
-        <li><a href="{{ '/search/' | relative_url }}">Search</a></li>
-        <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
-        <li><a href="{{ '/categories/' | relative_url }}">Categories</a></li>
+        <li><a href="{{ '/search/' | relative_url }}" title="Search articles, tutorials, and media across the site" aria-label="Search site content">Search</a></li>
+        <li><a href="{{ '/tags/' | relative_url }}" title="Browse articles grouped by tags" aria-label="Tags overview">Tags</a></li>
+        <li><a href="{{ '/categories/' | relative_url }}" title="Browse articles grouped by categories" aria-label="Categories overview">Categories</a></li>
       </ul>
     </nav>
 
@@ -51,12 +51,12 @@
     <nav class="footer-nav-col" aria-label="Gallery and Media Links">
       <h3 class="footer-heading">Gallery & Media</h3>
       <ul class="footer-links">
-        <li><a href="{{ '/gallery/' | relative_url }}">Gallery Overview</a></li>
-        <li><a href="{{ '/gallery/videos/' | relative_url }}">All Videos</a></li>
-        <li><a href="{{ '/gallery/videos/youtube/' | relative_url }}">YouTube Videos</a></li>
-        <li><a href="{{ '/gallery/videos/instagram/' | relative_url }}">Instagram Videos</a></li>
-        <li><a href="{{ '/gallery/videos/tiktok/' | relative_url }}">TikTok Videos</a></li>
-        <li><a href="{{ '/gallery/artemis-ii/' | relative_url }}">Artemis II Media Collection</a></li>
+        <li><a href="{{ '/gallery/' | relative_url }}" title="Explore curated images, memes, AI art, and video gallery" aria-label="Gallery Overview">Gallery Overview</a></li>
+        <li><a href="{{ '/gallery/videos/' | relative_url }}" title="Watch all embedded videos and video collections" aria-label="All Videos gallery">All Videos</a></li>
+        <li><a href="{{ '/gallery/videos/youtube/' | relative_url }}" title="Browse curated YouTube videos and playlists" aria-label="YouTube Videos collection">YouTube Videos</a></li>
+        <li><a href="{{ '/gallery/videos/instagram/' | relative_url }}" title="Watch curated Instagram video highlights" aria-label="Instagram Videos collection">Instagram Videos</a></li>
+        <li><a href="{{ '/gallery/videos/tiktok/' | relative_url }}" title="Watch curated TikTok videos and shorts" aria-label="TikTok Videos collection">TikTok Videos</a></li>
+        <li><a href="{{ '/gallery/artemis-ii/' | relative_url }}" title="Explore photos, videos, and highlights from the Artemis II lunar mission" aria-label="Artemis II Media Collection">Artemis II Media Collection</a></li>
       </ul>
     </nav>
 
@@ -64,9 +64,9 @@
     <nav class="footer-nav-col" aria-label="Feeds and Sitemaps">
       <h3 class="footer-heading">Feeds & Sitemaps</h3>
       <ul class="footer-links">
-        <li><a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>
-        <li><a href="{{ '/sitemap.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">XML Sitemap</a></li>
-        <li><a href="{{ '/image-sitemap.xml' | relative_url }}" target="_blank" rel="noopener noreferrer">Image Sitemap</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer" title="Subscribe to the site RSS feed for latest updates" aria-label="RSS Feed">RSS Feed</a></li>
+        <li><a href="{{ '/sitemap.xml' | relative_url }}" target="_blank" rel="noopener noreferrer" title="View the XML site map for search engine indexing" aria-label="XML Sitemap">XML Sitemap</a></li>
+        <li><a href="{{ '/image-sitemap.xml' | relative_url }}" target="_blank" rel="noopener noreferrer" title="View the image sitemap for media indexing" aria-label="Image Sitemap">Image Sitemap</a></li>
       </ul>
     </nav>
 
@@ -74,9 +74,9 @@
     <nav class="footer-nav-col" aria-label="Connect Links">
       <h3 class="footer-heading">Connect</h3>
       <ul class="footer-links">
-        <li><a href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" title="Get in touch with Richard Djarbeng via the contact form" aria-label="Contact page">Contact Me</a></li>
         {%- if site.email -%}
-        <li><a href="mailto:{{ site.email }}">Email Me</a></li>
+        <li><a href="mailto:{{ site.email }}" title="Send an email to Richard Djarbeng" aria-label="Email Richard Djarbeng">Email Me</a></li>
         {%- endif -%}
       </ul>
     </nav>
