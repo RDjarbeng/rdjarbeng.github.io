@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}" title="Richard Djarbeng Homepage" aria-label="Home page">
       <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Site Logo"
         style="vertical-align: middle; margin-left: 10px; width: 32px; height: auto; padding: 2px 0;">
       <!-- {{ site.title | escape }} -->
@@ -29,11 +29,11 @@
           <svg class="moon-icon" style="display: none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
-        <a class="page-link" href="{{ '/posts' | relative_url }}">Posts</a>
-        <a class="page-link" href="{{ '/personal' | relative_url }}">Personal</a>
+        <a class="page-link" href="{{ '/posts' | relative_url }}" title="Explore technical articles and tutorials" aria-label="Technical Posts">Posts</a>
+        <a class="page-link" href="{{ '/personal' | relative_url }}" title="Read personal stories and reflections" aria-label="Personal Posts">Personal</a>
         <div class="nav-dropdown">
           <input type="checkbox" id="gallery-dropdown-toggle" class="gallery-dropdown-toggle" />
-          <a class="page-link" href="{{ '/gallery' | relative_url }}" aria-label="Gallery">
+          <a class="page-link" href="{{ '/gallery' | relative_url }}" title="Explore photos, memes, and videos curated by RDjarbeng" aria-label="Gallery">
             <svg style="vertical-align: middle; margin-right: 4px;" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -45,14 +45,14 @@
           </a>
           <label for="gallery-dropdown-toggle" class="gallery-dropdown-label" aria-label="Toggle gallery submenu"></label>
           <div class="nav-dropdown-content">
-            <a href="{{ '/gallery' | relative_url }}"><span class="dropdown-icon">🖼️</span> Overview</a>
-            <a href="{{ '/gallery/memes/' | relative_url }}"><span class="dropdown-icon">😂</span> Memes</a>
-            <a href="{{ '/gallery/videos/' | relative_url }}"><span class="dropdown-icon">🎬</span> Videos</a>
-            <a href="{{ '/gallery/videos/youtube/' | relative_url }}"><span class="dropdown-icon">▶️</span> YouTube</a>
+            <a href="{{ '/gallery' | relative_url }}" title="Gallery Overview" aria-label="Gallery Overview"><span class="dropdown-icon">🖼️</span> Overview</a>
+            <a href="{{ '/gallery/memes/' | relative_url }}" title="Browse meme collection" aria-label="Memes Gallery"><span class="dropdown-icon">😂</span> Memes</a>
+            <a href="{{ '/gallery/videos/' | relative_url }}" title="Browse video collection" aria-label="Videos Gallery"><span class="dropdown-icon">🎬</span> Videos</a>
+            <a href="{{ '/gallery/videos/youtube/' | relative_url }}" title="Browse YouTube videos" aria-label="YouTube Videos Gallery"><span class="dropdown-icon">▶️</span> YouTube</a>
           </div>
         </div>
 
-        <a class="page-link" href="{{ '/about' | relative_url }}">About</a>
+        <a class="page-link" href="{{ '/about' | relative_url }}" title="Learn more about Richard Djarbeng" aria-label="About page">About</a>
         <form action="{{ '/search/' | relative_url }}" method="get" class="header-search-form">
 
           <input type="text" id="nav-search-input" name="q" class="search-input" placeholder="Search"
