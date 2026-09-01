@@ -363,3 +363,19 @@ How is this thing propelled tiny rockets or wind currents?
 - [ ] Creating a blog with eleventy,tutorial, handling pages, navigating, posts, 
 images, categories and tags. Extra stuff, search, XML feeds, site maps, anything else for modern blogs
 - [ ] Fonio, Ghana food movement, chef Abiro
+- [ ] is there an esim that offers unlimited data
+Yes, multiple travel eSIM providers offer unlimited data plans.
+Popular eSIM Providers with Unlimited Data
+Holafly: Offers unlimited data packages across hundreds of destinations and regional plans, though heavy usage may involve a fair usage policy or speed throttling after high daily volumes. [1]
+Airalo: Provides unlimited data options for select destinations, typically offering a set amount of high-speed data per day (such as 3GB) before reducing speeds to a lower, continuous browsing rate. [1]
+Maya Mobile: Offers daily unlimited data plans across multiple countries. [1]
+Truely: Sells daily unlimited data options with high-speed thresholds and a feature to pause unused days in their app. [1]
+Things to Know Before Buying
+Fair Usage Policies (FUP): "Unlimited" rarely means entirely unrestricted maximum speed. Most providers throttle speeds (e.g., down to 1 Mbps) after you use a specific threshold of high-speed data per day. [1]
+Hotspot Limits: Some unlimited providers restrict or cap personal hotspot/tethering sharing, while others allow it up to a daily limit. [1]
+Data-Only vs. Calls: Most unlimited travel eSIMs are data-only, meaning you will need VoIP apps like WhatsApp or FaceTime for voice calls. [1]
+
+
+Editors note: wish there was an esim that does calls and data unlimited no matter where you are especially if it's not a very strange or vague place. 
+
+Current solutions vary by country and may not have both data and call
