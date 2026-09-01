@@ -379,3 +379,4 @@ Data-Only vs. Calls: Most unlimited travel eSIMs are data-only, meaning you will
 Editors note: wish there was an esim that does calls and data unlimited no matter where you are especially if it's not a very strange or vague place. 
 
 Current solutions vary by country and may not have both data and call
+- [ ] Rising star in the AI space fal.Ai
