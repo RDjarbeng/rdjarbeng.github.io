@@ -380,3 +380,4 @@ Editors note: wish there was an esim that does calls and data unlimited no matte
 
 Current solutions vary by country and may not have both data and call
 - [ ] Rising star in the AI space fal.Ai
+- [ ] Songs from Genesis, or books pf the bible, each book or verse matched to the contemporary song
