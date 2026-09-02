@@ -1,6 +1,6 @@
 ---
-date: 2026-07-07T10:15:00+02:00
-published: false
+date: 2026-09-02T10:10:00+02:00
+published: true
 author: Richard
 category: Technology
 tags:
@@ -43,15 +43,15 @@ The tangible results of this cross-disciplinary approach are visible in two flag
 
 The Iris lunar rover represents a breakthrough in ultra-lightweight space hardware. Weighing less than 2 kilograms and fitting within a shoebox-sized envelope, Iris was engineered by a multidisciplinary team of over 300 CMU students across several years.
 
- * **The Engineering:** The rover features a custom carbon-fiber composite chassis engineered to withstand violent launch vibrations and extreme thermal swings on the lunar surface. Its bespoke wheel geometry was developed specifically to traverse fine, abrasive lunar regolith where standard tires would get trapped.
- * **The Milestone:** Launched in early 2024 aboard Astrobotic's [Peregrine Mission One](https://en.wikipedia.org/wiki/Peregrine_Mission_One), Iris achieved a historic milestone as the first student-built carbon-fiber rover to communicate from deep space.
+* **The Engineering:** The rover features a custom carbon-fiber composite chassis engineered to withstand violent launch vibrations and extreme thermal swings on the lunar surface. Its bespoke wheel geometry was developed specifically to traverse fine, abrasive lunar regolith where standard tires would get trapped.
+* **The Milestone:** Launched in early 2024 aboard Astrobotic's [Peregrine Mission One](https://en.wikipedia.org/wiki/Peregrine_Mission_One), Iris achieved a historic milestone as the first student-built carbon-fiber rover to communicate from deep space.
 
 ### 2. The MoonRanger Rover
 
 The MoonRanger rover represents the next tier of planetary mobility: a suitcase-sized autonomous rover developed by CMU and Astrobotic under a contract with [NASA's Commercial Lunar Payload Services (CLPS)](https://www.nasa.gov/commercial-lunar-payload-services/) initiative.
 
- * **The Mission:** MoonRanger is targeted for the Moon's south pole to search for water ice and volatile compounds in permanently shadowed craters.
- * **The Autonomy Advantage:** Unlike traditional planetary rovers that rely on step-by-step commands sent from ground control on Earth, MoonRanger is designed for extreme independence.
+* **The Mission:** MoonRanger is targeted for the Moon's south pole to search for water ice and volatile compounds in permanently shadowed craters.
+* **The Autonomy Advantage:** Unlike traditional planetary rovers that rely on step-by-step commands sent from ground control on Earth, MoonRanger is designed for extreme independence.
 
 ## The Core Technical Challenge: Absolute Autonomy
 
@@ -59,18 +59,18 @@ Operating near the lunar south pole exposes vehicles to severe operational const
 
 To survive and accomplish its mission, MoonRanger relies on a sophisticated onboard autonomous navigation architecture:
 
- * **Real-Time 3D Mapping:** Utilizing onboard stereo cameras and computer vision algorithms, the rover continuously constructs high-resolution three-dimensional elevation maps of the surrounding terrain.
- * **Edge-Computed Hazard Avoidance:** Onboard processors analyze 3D point clouds in real time to detect steep drops, sharp boulders, and soft dust traps without waiting for instructions from Earth.
- * **Dynamic Path Planning:** Navigation algorithms plot optimal trajectories through unmapped terrain, executing instant course corrections to avoid hazards independently.
+* **Real-Time 3D Mapping:** Utilizing onboard stereo cameras and computer vision algorithms, the rover continuously constructs high-resolution three-dimensional elevation maps of the surrounding terrain.
+* **Edge-Computed Hazard Avoidance:** Onboard processors analyze 3D point clouds in real time to detect steep drops, sharp boulders, and soft dust traps without waiting for instructions from Earth.
+* **Dynamic Path Planning:** Navigation algorithms plot optimal trajectories through unmapped terrain, executing instant course corrections to avoid hazards independently.
 
 ## Building Space-Grade Systems Without Aerospace Credentials
 
 The success of these missions demonstrates that modern space hardware relies on a broad software and engineering stack. Building a lunar rover requires:
 
- * **Robotics Systems Architecture:** Designing mechanical suspension and motor control systems optimized for low gravity and vacuum conditions.
- * **Fault-Tolerant Software:** Developing software architectures capable of recovering from radiation-induced bit flips in deep space.
- * **Embedded Power Management:** Optimizing computer vision algorithms to run within strict power budgets under 20 watts.
- * **Advanced Materials:** Utilizing high-strength carbon composites to meet restrictive payload mass limits.
+* **Robotics Systems Architecture:** Designing mechanical suspension and motor control systems optimized for low gravity and vacuum conditions.
+* **Fault-Tolerant Software:** Developing software architectures capable of recovering from radiation-induced bit flips in deep space.
+* **Embedded Power Management:** Optimizing computer vision algorithms to run within strict power budgets under 20 watts.
+* **Advanced Materials:** Utilizing high-strength carbon composites to meet restrictive payload mass limits.
 
 ## Final Thoughts
 
@@ -78,9 +78,9 @@ Observing lunar hardware inside a university laboratory underscores how accessib
 
 ## References & Documentation
 
- * [Carnegie Mellon University School of Computer Science](https://www.cs.cmu.edu/)
- * [Carnegie Mellon University Robotics Institute](https://www.ri.cmu.edu/)
- * [Dr. William "Red" Whittaker (Biography & History)](https://en.wikipedia.org/wiki/Red_Whittaker)
- * [Astrobotic Technology (Official Site)](https://www.astrobotic.com/)
- * [Peregrine Mission One Flight Details](https://en.wikipedia.org/wiki/Peregrine_Mission_One)
- * [NASA Commercial Lunar Payload Services (CLPS) Program](https://www.nasa.gov/commercial-lunar-payload-services/)
+* [Carnegie Mellon University School of Computer Science](https://www.cs.cmu.edu/)
+* [Carnegie Mellon University Robotics Institute](https://www.ri.cmu.edu/)
+* [Dr. William "Red" Whittaker (Biography & History)](https://en.wikipedia.org/wiki/Red_Whittaker)
+* [Astrobotic Technology (Official Site)](https://www.astrobotic.com/)
+* [Peregrine Mission One Flight Details](https://en.wikipedia.org/wiki/Peregrine_Mission_One)
+* [NASA Commercial Lunar Payload Services (CLPS) Program](https://www.nasa.gov/commercial-lunar-payload-services/)
