@@ -721,9 +721,11 @@ module.exports = function (eleventyConfig) {
 
 # Part 2: Optional Enhancements
 
-Everything below builds on top of the working blog from Part 1. Add only the pieces you actually want, most are independent of each other, and each section says clearly what it needs.
+Part 1 gives you a fully functional, production-ready static blog. Part 2 is an optional menu of features you can add to tailor the site to your needs. Every section below is self-contained: pick the features that fit your workflow, implement them in any order, and skip whatever you don't need.
 
-## 1. A Separate Post Type: Gallery Collection
+***
+
+## 1. A Separate Content Type: Gallery Collection
 
 Same mechanism as posts, different folder and a different `tags` value, which makes it a fully separate collection.
 
