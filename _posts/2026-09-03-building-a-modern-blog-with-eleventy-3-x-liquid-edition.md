@@ -727,9 +727,13 @@ Part 1 gives you a fully functional, production-ready static blog. Part 2 is an 
 
 ## 1. A Separate Content Type: Gallery Collection
 
-Same mechanism as posts, different folder and a different `tags` value, which makes it a fully separate collection.
+Most blogs eventually need more than just standard text articles. You might want to publish photo journals, project portfolios, podcasts, or book reviews. In Eleventy, creating a second content type is as simple as creating a new folder and tagging its items with a different collection name.
 
-`src/gallery/gallery.json`:
+Instead of writing custom JavaScript queries or database schemas, Eleventy relies on its **Data Cascade** to handle folder-level defaults.
+
+**Step 1: Set folder-wide defaults with `src/gallery/gallery.json`.**
+
+Create a JSON file inside `src/gallery/` with the exact name `gallery.json`. In Eleventy, a JSON file named after its parent directory acts as a **directory data file**, automatically applying its properties to every template inside that folder:
 
 ```json
 {
@@ -739,20 +743,34 @@ Same mechanism as posts, different folder and a different `tags` value, which ma
 }
 ```
 
-`src/_includes/layouts/gallery.liquid`:
+- `"layout": "layouts/gallery.liquid"` ensures every markdown file inside `src/gallery/` automatically uses the gallery layout without needing to declare it in every post's front matter.
+- `"tags": ["gallery"]` adds every item in this directory to `collections.gallery`. Because these files carry the `gallery` tag instead of `posts`, they will not appear in your main blog listing or blog RSS feed unless you explicitly query them.
+- `"permalink": "/gallery/{{ page.fileSlug }}/"` forces custom URLs starting with `/gallery/` instead of `/posts/` or raw file paths.
+
+**Step 2: Build the individual gallery layout.**
+
+Create `src/_includes/layouts/gallery.liquid`:
 
 ```liquid
 ---
 layout: layouts/base.liquid
 ---
-<article>
+<article class="gallery-item">
   <h1>{{ title }}</h1>
-  {% image image, title %}
-  {{ content }}
+  {% if image %}
+    {% image image, title %}
+  {% endif %}
+  <div class="gallery-content">
+    {{ content }}
+  </div>
 </article>
 ```
 
-`src/gallery/sunset-hike.md`:
+This layout inherits from `base.liquid`, meaning it keeps your site header, navigation menu, and footer intact while wrapping your gallery item in custom HTML markup. Notice how we pass the front matter `image` field straight to the `{% image %}` shortcode we built in Part 1.
+
+**Step 3: Create a sample gallery item.**
+
+Create `src/gallery/sunset-hike.md`:
 
 ```markdown
 ---
@@ -760,10 +778,14 @@ title: Sunset at Half Dome
 date: 2026-02-01
 image: ./src/images/gallery/sunset-hike.jpg
 ---
-A short caption about the hike and the view.
+A short photo log from our evening hike up the peak. The weather held up perfectly right until sunset.
 ```
 
-`src/gallery.liquid` (index page, sitting as a sibling _file_ next to the `gallery/` _folder_, which is fine since they're different filesystem entries):
+Because of `gallery.json`, this page automatically joins `collections.gallery`, gets the URL `/gallery/sunset-hike/`, and uses `gallery.liquid` as its layout.
+
+**Step 4: Create the Gallery index page.**
+
+Create `src/gallery.liquid` at `src/gallery.liquid` (note that this file sits inside `src/` right next to the `gallery/` folder):
 
 ```liquid
 ---
@@ -773,27 +795,37 @@ eleventyNavigation:
   key: Gallery
   order: 4
 ---
-<h1>Gallery</h1>
-<ul class="gallery-grid">
+<h1>Photo Gallery</h1>
+<div class="gallery-grid">
   {% for item in collections.gallery reversed %}
-  <li>
-    <a href="{{ item.url }}"><h2>{{ item.data.title }}</h2></a>
-  </li>
+  <div class="gallery-card">
+    <a href="{{ item.url }}">
+      {% if item.data.image %}
+        {% image item.data.image, item.data.title %}
+      {% endif %}
+      <h2>{{ item.data.title }}</h2>
+    </a>
+  </div>
   {% endfor %}
-</ul>
+</div>
 ```
 
 Because these files are tagged `gallery` instead of `posts`, they live in `collections.gallery`, entirely separate from `collections.posts`, your RSS feed, and your blog index, unless you explicitly pull them in. This same pattern works for any other content type you want to add later (notes, projects, recipes).
 
-Docs: [Collections](https://www.11ty.dev/docs/collections/), [Template & Directory Data Files](https://www.11ty.dev/docs/data-template-dir/)
+`collections.gallery` gives you an array of all items tagged `gallery`. Adding `reversed` displays the newest photos first. This pattern can be repeated for any content type you want to introduce, such as `/projects/` or `/notes/`.
+
+Docs: [Collections](https://www.11ty.dev/docs/collections/), [Directory Data Files](https://www.11ty.dev/docs/data-template-dir/)
 
 ***
 
-## 2. Computed Data & Drafts
+## 2. Computed Data & Draft Posts
 
-**Computed data** lets you calculate a value with a small JavaScript function instead of hardcoding it, so it can depend on other data (like whether a post is marked as a draft) and gets recalculated correctly every time the site builds.
+When writing articles, you often want to save unfinished drafts in your project folder without having them published to the live site. 
 
-Now that `posts.11tydata.js` is a JS file, level it up to support draft posts that don't get built:
+Eleventy provides a feature called **Computed Data** (`eleventyComputed`), which lets you dynamically calculate front matter properties using JavaScript functions at build time. **Computed data** lets you calculate a value with a small JavaScript function instead of hardcoding it, so it can depend on other data (like whether a post is marked as a draft) and gets recalculated correctly every time the site builds.
+ We can use this to inspect a `draft: true` flag in a post's front matter and tell Eleventy not to output the file.
+
+Open `src/posts/posts.11tydata.js` and update it to the following:
 
 ```js
 module.exports = {
@@ -801,76 +833,112 @@ module.exports = {
   tags: ["posts"],
   eleventyComputed: {
     permalink: (data) => {
+      // If draft is set to true in front matter, suppress page output
       if (data.draft) {
-        return false; // false means "don't build this page"
+        return false;
       }
       return `/blog/${data.page.fileSlug}/`;
+    },
+    eleventyExcludeFromCollections: (data) => {
+      // If draft is true, also exclude it from all collections (feed, sitemap, listings)
+      if (data.draft) {
+        return true;
+      }
+      return data.eleventyExcludeFromCollections;
     },
   },
 };
 ```
 
-Add `draft: true` to any post's front matter and it stops appearing in the built site (and consequently in collections, RSS, sitemap, everywhere) without deleting the file.
+**How this works under the hood:**
+
+- Setting `permalink: false` tells Eleventy: "Do not write an HTML file for this document into the `_site` directory."
+- Returning `eleventyExcludeFromCollections: true` tells Eleventy: "Do not include this document in `collections.all`, `collections.posts`, or any tag listings."
+
+Now, whenever you start a new post, just add `draft: true` to its front matter:
+
+```markdown
+---
+title: Working on a New Feature
+date: 2026-03-10
+draft: true
+---
+This post is still a work in progress. It won't be built into `_site` or appear in your RSS feed.
+```
+
+When you are ready to publish, either remove the `draft` line or set `draft: false`.
 
 Docs: [Computed Data](https://www.11ty.dev/docs/data-computed/), [Data Cascade](https://www.11ty.dev/docs/data-cascade/)
 
 ***
 
-## 3. RSS Feed
+## 3. RSS & Atom Web Feeds
 
-An **RSS** (or **Atom**) feed is a standardized file, not meant for a person to read directly, that feed-reader apps (Feedly, NetNewsWire, many podcast apps, and so on) can subscribe to. Whenever you publish something new, anyone subscribed finds out automatically, without needing to revisit your site to check.
+An **RSS** or **Atom** feed is an XML file that lets readers subscribe to your blog using news reader applications like Feedly, Inoreader, or NetNewsWire. Whenever you publish a new article, feed readers fetch this file and notify your audience automatically.
 
-Eleventy 3's RSS plugin has a Virtual Template mode: a few lines of config, no hand-written feed file.
+Eleventy 3 provides an official RSS plugin with a **Virtual Template** feature. Instead of hand-coding complex XML loops, the plugin generates a compliant feed file directly from your configuration.
+
+**Step 1: Install the RSS plugin.**
 
 ```bash
 npm install @11ty/eleventy-plugin-rss
 ```
 
+**Step 2: Register the plugin in `eleventy.config.js`.**
+
 ```js
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
-eleventyConfig.addPlugin(feedPlugin, {
-  type: "atom", // or "rss", "json"
-  outputPath: "/feed.xml",
-  collection: {
-    name: "posts", // iterates collections.posts
-    limit: 10, // 0 means no limit
-  },
-  metadata: {
-    language: "en",
-    title: "My Blog",
-    subtitle: "Thoughts on code and coffee.",
-    base: "https://example.com/",
-    author: {
-      name: "Your Name",
+module.exports = function (eleventyConfig) {
+  // Register the RSS/Atom feed plugin
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom", // Options: "atom", "rss", or "json"
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts", // Collects items from collections.posts
+      limit: 10,     // Only include the 10 most recent posts (0 = no limit)
     },
-  },
-});
+    metadata: {
+      language: "en",
+      title: "My Blog",
+      subtitle: "Thoughts on code, web development, and technology.",
+      base: "https://example.com/",
+      author: {
+        name: "Your Name",
+      },
+    },
+  });
+};
 ```
 
-This alone produces a working `/feed.xml`, Eleventy generates and renders the feed for you behind the scenes, no template file to write or maintain yourself.
+**Step 3: Enable feed auto-discovery in `base.liquid`.**
 
-Once it's in place, link to it from `base.liquid` so browsers and feed readers can discover it, and add a visible link in the footer too:
+Add an auto-discovery `<link>` tag inside the `<head>` section of `src/_includes/layouts/base.liquid`:
 
 ```liquid
 <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title }}">
 ```
 
+Feed reader apps and browser extensions check for this tag when a user enters your website URL, allowing one-click subscriptions. You can also add a visible RSS link in your page footer:
+
 ```liquid
-<p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. <a href="/feed.xml">RSS</a></p>
+<footer>
+  <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. <a href="/feed.xml">RSS Feed</a></p>
+</footer>
 ```
 
 If you need full control over the markup instead, the docs also cover a Manual Template method where you hand-author the XML yourself: [RSS plugin docs](https://www.11ty.dev/docs/plugins/rss/).
 
 ***
 
-## 4. XML Sitemap
+## 4. XML Sitemap for Search Engines
 
 An **XML sitemap** is a single file listing every page on your site along with its own address. Search engines like Google read this file so they reliably know about, and can properly index, every page on your site, especially useful for pages that aren't well linked to from anywhere else.
 
-No official Eleventy plugin here. A hand-rolled template is a handful of lines:
+No official Eleventy plugin here. 
+Unlike feeds, an XML sitemap is best generated with a simple Liquid template iterating over `collections.all`.
 
-`src/sitemap.liquid`:
+Create `src/sitemap.liquid`:
 
 ```liquid
 ---
@@ -880,27 +948,46 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for entry in collections.all %}
-  <url>
-    <loc>{{ site.url }}{{ entry.url }}</loc>
-    {% if entry.date %}<lastmod>{{ entry.date | date: "%Y-%m-%d" }}</lastmod>{% endif %}
-  </url>
+    {% unless entry.data.draft %}
+    <url>
+      <loc>{{ site.url }}{{ entry.url }}</loc>
+      {% if entry.date %}
+      <lastmod>{{ entry.date | date: "%Y-%m-%d" }}</lastmod>
+      {% endif %}
+    </url>
+    {% endunless %}
   {% endfor %}
 </urlset>
 ```
 
-`collections.all` already excludes anything marked `eleventyExcludeFromCollections: true` (like this sitemap page itself, and the RSS feed), so no extra filtering is needed. Validate the output against the [sitemap protocol](https://www.sitemaps.org/protocol.html) once it's live.
+**Why this works cleanly:**
+
+- `permalink: /sitemap.xml` ensures the output is saved to the root of your built site.
+- `eleventyExcludeFromCollections: true` prevents the sitemap itself from being listed inside `collections.all`.
+- `collections.all` grabs every generated page (posts, static pages, tag archives).
+- `{% unless entry.data.draft %}` ensures no draft URLs leak into search engines.
+
+Once your site is deployed, you can submit `https://yourdomain.com/sitemap.xml` to Google Search Console.
+
+Docs: [Sitemaps Protocol](https://www.sitemaps.org/protocol.html)
 
 ***
 
-## 5. Client-Side Search with Pagefind
+## 5. Client-Side On-Site Search with Pagefind
 
-Pagefind indexes your already-built `_site/` output after the fact, no server required.
+Traditional dynamic blogs rely on server databases (like MySQL) to execute SQL queries for on-site search. Static sites don't have a backend database running, but you can achieve instant, zero-server search using **Pagefind**.
+
+Pagefind is a static search library built specifically for static site generators. After Eleventy finishes building your static HTML files into `_site/`, Pagefind scans the compiled HTML, builds a compressed WebAssembly search index, and provides a pre-styled search UI widget.
+
+**Step 1: Install Pagefind.**
 
 ```bash
 npm install --save-dev pagefind
 ```
 
-Update the build script in `package.json` to index after building:
+**Step 2: Update your build command in `package.json`.**
+
+Modify your `"build"` script inside `package.json` so Pagefind indexes `_site` right after Eleventy finishes building:
 
 ```json
 {
@@ -911,96 +998,161 @@ Update the build script in `package.json` to index after building:
 }
 ```
 
-Add the search UI to a page (or globally in `base.liquid`):
+**Step 3: Add the search interface to your site.**
 
-```html
+You can create a dedicated search page at `src/search.liquid` or embed search directly into a sidebar or modal:
+
+```liquid
+---
+title: Search
+layout: layouts/base.liquid
+eleventyNavigation:
+  key: Search
+  order: 5
+---
+<h1>Search Articles</h1>
+
+<!-- Pagefind styles and UI bundle -->
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
+
+<div id="search-container"></div>
+
 <script>
   window.addEventListener("DOMContentLoaded", () => {
-    new PagefindUI({ element: "#search" });
+    new PagefindUI({
+      element: "#search-container",
+      showImages: false,
+      resetFilters: true
+    });
   });
 </script>
 ```
 
-Caveat worth knowing: the `/pagefind/` folder is only generated by the `pagefind` step after a full `npm run build`, so search won't work while running the plain `npm start` dev server, only against a built site.
+**Important Dev Server Note:** Pagefind runs during `npm run build` when indexing the compiled static files. While developing locally with `npm start`, Pagefind's index is not regenerated on every file save. To test search locally, run `npm run build` first.
+
+Docs: [Pagefind Documentation](https://pagefind.app/)
 
 ***
 
-## 6. Related Posts
+## 6. Related Posts Algorithm
 
-A small custom filter that scores posts by shared tags:
+Keep readers engaged by showing a list of related articles at the end of each post based on shared tags.
+
+We can implement this by adding a custom JavaScript filter to `eleventy.config.js`.
+
+**Step 1: Register the `relatedPosts` filter in `eleventy.config.js`.**
 
 ```js
-eleventyConfig.addFilter("relatedPosts", function (posts, currentUrl, currentTags, limit) {
-  limit = limit || 3;
-  const tagSet = new Set((currentTags || []).filter((t) => t !== "posts"));
+module.exports = function (eleventyConfig) {
+  // Custom filter to find articles with matching tags
+  eleventyConfig.addFilter("relatedPosts", function (allPosts, currentUrl, currentTags, limit = 3) {
+    if (!currentTags || !Array.isArray(currentTags)) return [];
 
-  return posts
-    .filter((post) => post.url !== currentUrl)
-    .map((post) => {
-      const shared = (post.data.tags || []).filter((t) => tagSet.has(t));
-      return { post, score: shared.length };
-    })
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map((entry) => entry.post);
-});
+    // Ignore generic organizational tags
+    const ignoredTags = new Set(["posts", "all", "nav", "gallery"]);
+    const activeTags = new Set(currentTags.filter((tag) => !ignoredTags.has(tag)));
+
+    if (activeTags.size === 0) return [];
+
+    return allPosts
+      .filter((post) => post.url !== currentUrl && !post.data.draft)
+      .map((post) => {
+        const postTags = post.data.tags || [];
+        const matchCount = postTags.filter((tag) => activeTags.has(tag)).length;
+        return { post, score: matchCount };
+      })
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map((item) => item.post);
+  });
+};
 ```
 
-In `post.liquid`, right after the tags list:
+**Step 2: Render related posts in `src/_includes/layouts/post.liquid`.**
+
+Add this section near the bottom of your post layout:
 
 ```liquid
 {% assign related = collections.posts | relatedPosts: page.url, tags, 3 %}
+
 {% if related.size > 0 %}
-<aside>
-  <h2>Related posts</h2>
+<section class="related-posts">
+  <h3>Related Articles</h3>
   <ul>
-    {% for post in related %}
-    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% for item in related %}
+    <li>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%B %d, %Y' }}</time>
+    </li>
     {% endfor %}
   </ul>
-</aside>
+</section>
 {% endif %}
 ```
 
-Note this passes `page.url` and the post's own `tags` (both available directly inside the template) rather than trying to reconstruct a "current post" object, since Liquid's `page` variable only carries page metadata, not front matter data.
+The filter compares the current article's tags against all other posts, calculates an overlap score, orders the matches by relevance, and displays up to 3 recommendations.
+
+Docs: [Custom Filters](https://www.11ty.dev/docs/filters/)
 
 ***
 
-## 7. SEO & JSON-LD
+## 7. Search Engine Optimization (SEO) & JSON-LD
 
-**SEO** stands for **Search Engine Optimization**, the general practice of structuring your site so search engines can understand and rank it well.
+Good SEO ensures your blog posts display attractive preview cards when shared on Twitter, LinkedIn, or messaging apps, and helps search engines understand your content structure.
 
-`eleventy-plugin-seo` handles the common, well-understood parts: the `<title>` tag, meta description, canonical URL, and two metadata formats that control how your page looks when someone shares its link on social media or in a chat app (the preview image, title, and description shown in the card), called **Open Graph** and **Twitter Card**. This is the same territory `jekyll-seo-tag` covers, minus one thing:
+We can combine **Open Graph metadata** with **JSON-LD Structured Data**.
+
+### Part A: Social Meta Tags with `eleventy-plugin-seo`
+
+Install the plugin:
 
 ```bash
 npm install eleventy-plugin-seo
 ```
 
+Register it in `eleventy.config.js`:
+
 ```js
 const pluginSEO = require("eleventy-plugin-seo");
+const siteData = require("./src/_data/site.json");
 
-eleventyConfig.addPlugin(pluginSEO, require("./src/_data/site.json"));
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginSEO, {
+    title: siteData.title,
+    description: siteData.description,
+    url: siteData.url,
+    author: siteData.author,
+    twitter: siteData.twitterHandle || "",
+  });
+};
 ```
 
-Add this right before `</head>` in `base.liquid`:
+Include the `{% seo %}` tag inside the `<head>` section of `src/_includes/layouts/base.liquid`:
 
 ```liquid
-{% seo %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 ```
 
-**JSON-LD** is the piece this plugin doesn't cover. The name stands for "JSON for Linking Data": it's a small block of structured data, written in JSON, that you embed in a page but that's invisible to human visitors. Search engines read it to understand exactly what kind of content a page is (a blog post, a recipe, an event), who wrote it, and when it was published. Doing this well can make a page show up in search results with extra detail, an author name or publish date, instead of just a plain link. The `"@context": "https://schema.org"` line you'll see below points at [schema.org](https://schema.org/), the shared vocabulary search engines agreed on for these type and field names (like `"BlogPosting"` or `"datePublished"`).
+This tag generates your page `<title>`, `<meta name="description">`, `<link rel="canonical">`, Open Graph tags (`og:title`, `og:image`), and Twitter Card meta tags automatically.
 
-No widely used Eleventy plugin generates this, so it's worth a tiny custom include. First, register a `jsonify` filter, since Liquid doesn't ship one:
+### Part B: JSON-LD Structured Data for Google
+
+JSON-LD (JavaScript Object Notation for Linked Data) is a standardized format that provides search engines with explicit information about a page's type (e.g., a news article, blog post, or recipe).
+
+First, register a JSON serialization filter in `eleventy.config.js`:
 
 ```js
 eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
 ```
 
-`src/_includes/partials/jsonld.liquid`:
+Next, create `src/_includes/partials/jsonld.liquid`:
 
 ```liquid
 <script type="application/ld+json">
@@ -1008,72 +1160,133 @@ eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": {{ title | jsonify }},
+  "description": {{ description | default: site.description | jsonify }},
   "datePublished": "{{ date | date: '%Y-%m-%dT%H:%M:%S%z' }}",
   "author": {
     "@type": "Person",
-    "name": {{ site.author | jsonify }}
+    "name": {{ author | default: site.author | jsonify }}
   },
   "url": "{{ site.url }}{{ page.url }}"
 }
 </script>
 ```
 
-Include it in `post.liquid`:
+Include this partial inside `src/_includes/layouts/post.liquid`:
 
 ```liquid
 {% include "partials/jsonld.liquid" %}
 ```
 
-Docs: [Filters](https://www.11ty.dev/docs/filters/)
+Search engines inspect this block to display rich snippets, author names, and publish dates directly in Google Search results.
+
+Docs: [Schema.org BlogPosting](https://schema.org/BlogPosting)
 
 ***
 
-## 8. Syntax Highlighting (Optional, for Dev-Focused Blogs)
+## 8. Build-Time Syntax Highlighting for Code Blocks
+
+If you write about code, you want fenced code blocks (````python ... ````) to display clean syntax colors.
+
+Rather than loading heavy client-side JavaScript libraries (like Highlight.js or Rainbow.js) in the reader's browser, Eleventy can perform syntax highlighting at **build time** using Prism.js. The generated HTML contains static color spans, resulting in zero performance overhead for visitors.
+
+**Step 1: Install the official syntax highlighting plugin.**
 
 ```bash
 npm install --save-dev @11ty/eleventy-plugin-syntaxhighlight
 ```
 
-```js
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-eleventyConfig.addPlugin(syntaxHighlight);
-```
-
-Fenced code blocks in Markdown posts get zero-JS highlighting automatically. Add a Prism theme stylesheet to `src/css/` to style the output.
-
-Docs: [Syntax Highlighting plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
-
-***
-
-## 9. Deployment
-
-Pick a host, point its build command at `npm run build`, and its publish directory at `_site`. That's the whole story for Netlify, Vercel, GitHub Pages, and Cloudflare Pages alike; specifics differ mainly in where you set those two values.
-
-Docs: [Deployment & Hosting](https://www.11ty.dev/docs/deployment/)
-
-***
-
-## The Full `eleventy.config.js`
-
-Everything from both parts, assembled into one file:
+**Step 2: Register the plugin in `eleventy.config.js`.**
 
 ```js
-// --- Part 1 ---
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const Image = require("@11ty/eleventy-img");
-
-// --- Part 2 ---
-const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
-const pluginSEO = require("eleventy-plugin-seo");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
-  // Plugins (Part 1)
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  // Plugins (Part 2)
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/site.json"));
+};
+```
+
+**Step 3: Add a Prism CSS theme.**
+
+Download any standard Prism CSS theme (such as Prism Tomorrow Dark) or include a stylesheet link in `base.liquid`:
+
+```liquid
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+```
+
+Now, any fenced code block in Markdown posts formats automatically:
+
+```markdown
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```
+```
+
+Docs: [Eleventy Syntax Highlighting Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
+
+***
+
+## 9. Deploying Your Site to Production
+
+Because Eleventy compiles your source files into flat static HTML, CSS, and assets inside the `_site/` directory, you can host your site anywhere without needing a Node.js server environment.
+
+### Deployment Configuration Summary
+
+For almost all modern hosting platforms (GitHub Pages, Netlify, Vercel, Cloudflare Pages), the configuration requires only two settings:
+
+- **Build Command:** `npm run build`
+- **Output Directory:** `_site`
+
+### Platform Setup Guides
+
+#### Option A: GitHub Pages (Free)
+
+1. Push your project to a GitHub repository.
+2. In your repository settings, navigate to **Pages**.
+3. Under **Source**, select **GitHub Actions**.
+4. Choose the default **Static HTML** or **Eleventy** workflow template. GitHub will automatically build and publish your `_site` directory every time you push code to `main`.
+
+#### Option B: Netlify
+
+1. Connect your GitHub repository to Netlify.
+2. Set Build Command to `npm run build`.
+3. Set Publish Directory to `_site`.
+4. Click **Deploy Site**.
+
+#### Option C: Vercel
+
+1. Import your GitHub repository into Vercel.
+2. Vercel automatically detects Eleventy.
+3. Verify that the Output Directory is set to `_site` and click **Deploy**.
+
+***
+
+## The Complete `eleventy.config.js` File
+
+Here is the complete, production-ready `eleventy.config.js` file combining all configuration options from both Part 1 and Part 2:
+
+```js
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const Image = require("@11ty/eleventy-img");
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const pluginSEO = require("eleventy-plugin-seo");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const siteData = require("./src/_data/site.json");
+
+module.exports = function (eleventyConfig) {
+  // -------------------------------------------------------------
+  // PLUGINS
+  // -------------------------------------------------------------
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(pluginSEO, {
+    title: siteData.title,
+    description: siteData.description,
+    url: siteData.url,
+    author: siteData.author,
+  });
 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
@@ -1081,23 +1294,30 @@ module.exports = function (eleventyConfig) {
     collection: { name: "posts", limit: 10 },
     metadata: {
       language: "en",
-      title: "My Blog",
-      subtitle: "Thoughts on code and coffee.",
-      base: "https://example.com/",
-      author: { name: "Your Name" },
+      title: siteData.title,
+      subtitle: siteData.description,
+      base: siteData.url,
+      author: { name: siteData.author },
     },
   });
 
-  // Passthrough copy (Part 1)
+  // -------------------------------------------------------------
+  // PASSTHROUGH COPY (Static Assets)
+  // -------------------------------------------------------------
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
 
-  // Images (Part 1)
+  // -------------------------------------------------------------
+  // SHORTCODES (Responsive Images)
+  // -------------------------------------------------------------
   eleventyConfig.addAsyncShortcode(
     "image",
     async function (src, alt, sizes = "100vw") {
-      if (!alt) throw new Error(`Missing \`alt\` text for image: ${src}`);
+      if (!alt) {
+        throw new Error(`Missing \`alt\` text for image: ${src}`);
+      }
+
       return Image(src, {
         widths: [400, 800, 1200],
         formats: ["avif", "webp", "jpeg"],
@@ -1111,7 +1331,9 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  // Collections (Part 1)
+  // -------------------------------------------------------------
+  // CUSTOM COLLECTIONS
+  // -------------------------------------------------------------
   eleventyConfig.addCollection("tagList", function (collectionApi) {
     const tagSet = new Set();
     collectionApi.getAll().forEach((item) => {
@@ -1121,24 +1343,35 @@ module.exports = function (eleventyConfig) {
     return [...tagSet];
   });
 
-  // Filters (Part 2)
+  // -------------------------------------------------------------
+  // CUSTOM FILTERS
+  // -------------------------------------------------------------
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value));
 
-  eleventyConfig.addFilter("relatedPosts", function (posts, currentUrl, currentTags, limit) {
-    limit = limit || 3;
-    const tagSet = new Set((currentTags || []).filter((t) => t !== "posts"));
-    return posts
-      .filter((post) => post.url !== currentUrl)
+  eleventyConfig.addFilter("relatedPosts", function (allPosts, currentUrl, currentTags, limit = 3) {
+    if (!currentTags || !Array.isArray(currentTags)) return [];
+
+    const ignoredTags = new Set(["posts", "all", "nav", "gallery"]);
+    const activeTags = new Set(currentTags.filter((tag) => !ignoredTags.has(tag)));
+
+    if (activeTags.size === 0) return [];
+
+    return allPosts
+      .filter((post) => post.url !== currentUrl && !post.data.draft)
       .map((post) => {
-        const shared = (post.data.tags || []).filter((t) => tagSet.has(t));
-        return { post, score: shared.length };
+        const postTags = post.data.tags || [];
+        const matchCount = postTags.filter((tag) => activeTags.has(tag)).length;
+        return { post, score: matchCount };
       })
-      .filter((entry) => entry.score > 0)
+      .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, limit)
-      .map((entry) => entry.post);
+      .map((item) => item.post);
   });
 
+  // -------------------------------------------------------------
+  // DIRECTORY CONFIGURATION
+  // -------------------------------------------------------------
   return {
     dir: {
       input: "src",
@@ -1154,11 +1387,12 @@ module.exports = function (eleventyConfig) {
 
 ## Wrap-Up
 
-Part 1 gets you a real, working blog. Part 2 is a pick-list on top of it, add the pieces that matter to you and skip the rest, nothing in Part 2 depends on anything else in Part 2 except the final consolidated config file above, which assumes you added all of it.
+You now have a fast, fully customized static blog powered by Eleventy 3.x and Liquid. By keeping your site static, your blog loads instantaneously, costs practically nothing to host, and remains simple to maintain for years to come.
 
 ***
 
 ## Appendix: A Note on Nunjucks
 
-Everything in this tutorial uses Liquid, and you never need to write a line of Nunjucks to follow it. That said, you'll likely run into the name if you go poking around Eleventy's ecosystem: Nunjucks is another template language Eleventy supports, and a few plugins use it internally for their own default output, most relevantly, the RSS plugin's Virtual Template method from Part 2 renders its feed using Nunjucks behind the scenes. You never see or touch that template yourself, so it doesn't affect anything here. If you ever want template features Liquid doesn't have (named/keyword arguments in shortcodes, reusable macros), Nunjucks is the natural next thing to look at, but it's outside the scope of this tutorial.
+Throughout this guide, we used **Liquid** as our template engine. Eleventy also supports **Nunjucks** (another popular templating engine derived from Jinja2). While Liquid is standard across Jekyll and Shopify themes, Nunjucks offers advanced features like template macros and keyword arguments in shortcodes. If your project grows to require complex layout logic, switching or combining Nunjucks templates in Eleventy is seamless.
 {% endraw %}
+
