@@ -10,8 +10,7 @@ tags:
   - Image Processing
   - Deep Learning
   - Geometry
-note: "Reads like MIT office hours: intuition first, then the math. Worth it for the visualizations alone.
-"
+note: "Reads like MIT office hours: intuition first, then the math. Worth it for the visualizations alone."
 description: MIT's modern computer vision text - image formation, filters, CNNs, transformers, geometry and generative models, straight from the people who shaped the field.
 ---
 
