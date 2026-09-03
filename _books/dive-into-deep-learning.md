@@ -9,8 +9,7 @@ tags:
   - Deep Learning
   - PyTorch
   - TensorFlow
-note: "Perfect second pass at deep learning: every equation comes with runnable code that makes it finally click.
-"
+note: "Perfect second pass at deep learning: every equation comes with runnable code that makes it finally click"
 description: An interactive, code-first deep learning textbook with runnable examples in PyTorch, TensorFlow and JAX. Adopted by hundreds of universities worldwide.
 ---
 
