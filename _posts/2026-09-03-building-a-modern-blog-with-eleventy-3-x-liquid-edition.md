@@ -12,9 +12,27 @@ layout: post
 card_items: []
 ---
 
-# 
+This is a complete, hands-on guide to building a real blog with [Eleventy](https://www.11ty.dev/) (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates, some data, and turns them into a finished set of HTML pages you can host anywhere. There's no database and no server-side code running once it's built, just files, which makes the result fast and simple to deploy.
 
-This tutorial is split into two parts. **Part 1** gets you a complete, working blog: pages, posts, navigation, images, categories. **Part 2** is a menu of optional add-ons (RSS feeds, search, SEO tags, and more) you can pick from afterward, or skip entirely. It uses **Liquid** as the template language throughout, and matches Eleventy **3.1.6**.
+By the end of this tutorial you'll have an actual working blog, built in two parts.
+
+**Part 1** gets you a complete, working site:
+
+- A homepage and an about page
+- A blog section with working post URLs
+- A navigation menu
+- Images
+- Tag/category pages
+
+**Part 2** is a menu of optional add-ons you can pick from afterward, or skip entirely:
+
+- An RSS feed
+- A sitemap
+- On-site search
+- SEO tags (including JSON-LD)
+- A couple of smaller extras
+
+Every command and every file is explained as it comes up, so you're not just copy-pasting, you'll know what each piece is doing and why it's there. It uses **Liquid** as the template language throughout (more on what that means once we get there), and matches Eleventy **3.1.6**, the current stable release.
 
 Here's the full project structure you'll have by the end of Part 2, for reference. Part 1 alone only needs a subset of this, we'll point out what's optional as we go:
 
@@ -1014,7 +1032,7 @@ Docs: [Deployment & Hosting](https://www.11ty.dev/docs/deployment/)
 
 Everything from both parts, assembled into one file:
 
-```markdown
+```js
 // --- Part 1 ---
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
