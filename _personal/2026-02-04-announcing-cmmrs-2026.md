@@ -6,7 +6,7 @@ tags:
   - CMMRS
   - Summer School
   - Research
-image: /assets/images/20260204-111129.png
+image: /assets/images/posts/covers/cmmrs_2026_cover.jpg
 image_alt: Official announcement banner for CMMRS 2026 in Saarbrücken, Germany
 layout: personal
 ---
