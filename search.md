@@ -14,9 +14,7 @@ keywords: search, AI, web development, IoT, technology, security, education, Ric
     Use the search box below or browse by topic.
   </p>
 
-  <div id="searchbox">
-    <input type="text" id="search-input" class="search-page-input" placeholder="Search posts, personal articles, gallery..." style="width: 100%; padding: 14px 20px; border-radius: 12px; border: 1px solid var(--card-border, #eaeaea); background: var(--card-bg, #fff); color: var(--text-color, #333); font-size: 1.1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);" autofocus>
-  </div>
+  <div id="searchbox"></div>
 
   <div id="search-empty-hint" class="search-empty-hint">
     Start typing to search posts and articles&hellip;
