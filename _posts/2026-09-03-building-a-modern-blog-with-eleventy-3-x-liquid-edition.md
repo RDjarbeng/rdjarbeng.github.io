@@ -1,18 +1,41 @@
 ---
 date: 2026-09-03T14:29:00+02:00
-published: false
+published: true
 author: Richard
 category: Web
 tags:
   - Blog
+  - Eleventy
+  - JavaScript
 title: Building a Modern Blog with Eleventy 3.x (Liquid Edition)
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg
+image_alt: Building a Modern Blog with Eleventy 3.x Liquid Edition cover image
 layout: post
-card_items: []
+card_items:
+  - name: Eleventy Official Site
+    description: Official documentation and guides for Eleventy (11ty) static site generator.
+    badge_1: Documentation
+    badge_2: Eleventy
+    url: https://www.11ty.dev/
+    link_text: Visit 11ty.dev
+  - name: Liquid Template Engine
+    description: Official reference for Liquid markup language used throughout this guide.
+    badge_1: Documentation
+    badge_2: Templates
+    url: https://shopify.github.io/liquid/
+    link_text: View Liquid Docs
+  - name: Pagefind Search
+    description: Fast, zero-config static search library used for client-side search.
+    badge_1: Search
+    badge_2: Tool
+    url: https://pagefind.app/
+    link_text: Visit Pagefind
 ---
 
+{% raw %}
 This is a complete, hands-on guide to building a real blog with [Eleventy](https://www.11ty.dev/) (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates, some data, and turns them into a finished set of HTML pages you can host anywhere. There's no database and no server-side code running once it's built, just files, which makes the result fast and simple to deploy.
+
+![Building a Modern Blog with Eleventy 3.x](/assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg "Building a Modern Blog with Eleventy 3.x")
 
 By the end of this tutorial you'll have an actual working blog, built in two parts.
 
@@ -1136,3 +1159,4 @@ Part 1 gets you a real, working blog. Part 2 is a pick-list on top of it, add th
 ## Appendix: A Note on Nunjucks
 
 Everything in this tutorial uses Liquid, and you never need to write a line of Nunjucks to follow it. That said, you'll likely run into the name if you go poking around Eleventy's ecosystem: Nunjucks is another template language Eleventy supports, and a few plugins use it internally for their own default output, most relevantly, the RSS plugin's Virtual Template method from Part 2 renders its feed using Nunjucks behind the scenes. You never see or touch that template yourself, so it doesn't affect anything here. If you ever want template features Liquid doesn't have (named/keyword arguments in shortcodes, reusable macros), Nunjucks is the natural next thing to look at, but it's outside the scope of this tutorial.
+{% endraw %}
