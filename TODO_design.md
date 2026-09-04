@@ -50,26 +50,21 @@ Possible future implementation:
 - [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
 - [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
 - [x] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Resolved)
-- [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
 - [x] Fix: The categories page night mode isn't properly displayed. (Resolved)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
+- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.  NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
-- [ ] **Card images**: Card images for post cards have a top padding that leaves a gray space. (Medium Importance, Trivial Complexity: CSS styling)
-- [ ] **Cards**: add category to cards on homepage, posts. (Medium Importance, Trivial Complexity: Jekyll layout modification)
 - [ ] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Medium Importance, Medium Complexity: JavaScript debugging)
 
 ### Content & Data Structure
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email. (High Importance, Significant Complexity: Backend integration/email service)
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents. (Medium Importance, Medium Complexity: TOC generation logic)
-- [ ] Add authors page listing all the authors. (Medium Importance, Medium Complexity: New Jekyll layout/data iteration)
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
 - [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal)
 - [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Jekyll logic)
 - [ ] Gallery item titles need to be capitalized - possible use of jekyll capitalize filters. (Medium Importance, Trivial Complexity: Jekyll filter application)
-- [ ] Add pages: authors page, youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
-- [ ] Authors page needs a page for each author instead of a long scrolling page. (Medium Importance, Significant Complexity: Jekyll collection/layout restructuring)
+- [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
 
 ## Future Enhancements & Strategic Roadmap
 
@@ -85,7 +80,7 @@ Possible future implementation:
 - [ ] The gallery page doesn't have a way to browse all gallery items that is user friendly, in markdown using crawl4ai it shows a very long page for /gallery which shouldn't be. (High Importance, Significant Complexity: Re-thinking gallery navigation/pagination)
 
 ### Search & Discovery
-- [ ] Search needs to include gallery items, tags, categories. (High Importance, Significant Complexity: Search engine integration or custom build)
+- [ ] Search needs to include gallery items, tags, categories. (High Importance, Significant Complexity: Search engine integration or custom build) - partially completed with algolia
 
 ### Overall Strategic Goals
 - [ ] **Strategic Goal: Doubling Daily Active Users (2x DAU)**
@@ -97,8 +92,8 @@ Possible future implementation:
     - [ ] Live Interactive Demos: Embed "Lite" versions of your projects directly in the posts.
     - [ ] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track").
     - [ ] Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000+ word authoritative guides with annotated code blocks and architectural diagrams.
-    - [ ] Readability UX: Improve the "In-App" feel by adding Estimated Reading Time.
-    - [ ] Readability UX: Improve the "In-App" feel by adding Table of Contents (Sticky).
+    - [x] Readability UX: Improve the "In-App" feel by adding Estimated Reading Time.
+    - [x] Readability UX: Improve the "In-App" feel by adding Table of Contents (Sticky).
     - [ ] Readability UX: Improve the "In-App" feel by adding Code "Copy" and "Play" buttons.
     - [ ] Position the site so agents consider it as a source of information such as when users are asked what is the latest AI news this site shows up
 
@@ -115,7 +110,7 @@ Possible future implementation:
 - **Sitemap HTML Page Context**: This section provides the detailed explanation and benefits behind creating an HTML sitemap, which is crucial context.
     - "you can easily create a layout that simply loops through every single post and gallery entry you've ever published, grouping them by year or category on one single page. It achieves the exact same SEO and UX benefits as an HTML sitemap, but feels much more native to a personal blog."
     - "**The "Flattening" SEO Benefit** Search engines pass "link equity" from your homepage to your other pages. If an old blog post is buried under five pages of pagination (e.g., Homepage -> Blog -> Page 2 -> Page 3 -> Page 4 -> Post), it gets less SEO value. An HTML sitemap links to every page directly, meaning every single post on your site is only two clicks away from the homepage."
-- **Search Solution Considerations**: "I've seen other websites use powered by Algolia or Google; need to see the tradeoff vs building search myself." (Research idea for search implementation)
+- **Search Solution Considerations**: "I've seen other websites use powered by Algolia or Google; need to see the tradeoff vs building search myself." (Research idea for search implementation) currently testing the algolia search, seems to do well, especially when the user mistypes, searching and off by one character will also bring up results for that search
 - **CSS optimization insight from Victor @vponamariov**: "You know what kills your site performance? Rendering 3000px of content when the user can only see 900px. And there is an easy fix for that. It's a magical CSS property `content-visibility: auto`." (Research note/idea for CSS optimization)
 
 
@@ -129,13 +124,13 @@ Possible future implementation:
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
-- [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images)
+- [ ] All items on the media gallery are not searchable. The search on the nav bar only applies to the posts and personal posts- doesn't include the media gallery. the gallery search only searches the homepage items displayed instead of the entire gallery (videos +images) -partly fixed with algolia
 - [ ] Check access logs for user-agents see who's crawling, check for markdown content negotiation
 
 - [ ] Figure out how to structure pages so that even of it's jist a picture it's informative for the user, find out how X,Facebook, Instagram does this. Does adding details such as who posted this make a difference?
-- [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings
-- [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page
-- [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows
+- [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings- need a nice way to implement this though
+- [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page- might consider changing from the 2 column layout after moving to 11ty
+- [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows -depends on mobile or desktop
 - [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
 - [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
