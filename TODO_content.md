@@ -382,3 +382,4 @@ Current solutions vary by country and may not have both data and call
 - [ ] Rising star in the AI space fal.Ai
 - [ ] Songs from Genesis, or books pf the bible, each book or verse matched to the contemporary song
 - [ ] Why do customer care lines not go through sometimes was it not made to be always on. My experience sometimes the call isn't even connected to hear that automated welcome message. It behaves as if the number is invalid. Can having multiple support numbers improve this?
+- [ ] How tech has been used in the financial sector, from 'come to our bank branch' vs 'call our branch' vs just do it in the app. Some people go full digital, eg: mosy people on revolut have never met their banker physically
