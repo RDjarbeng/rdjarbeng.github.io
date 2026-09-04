@@ -133,6 +133,10 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
 // GALLERY PAGE — Filter rail fixed on left screen edge
 // ===================================================
 .gallery-page {
+  .site-footer {
+    margin-left: $_gallery-rail-width;
+  }
+
   .page-content {
     padding: 0;
   }
@@ -283,6 +287,10 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
 
     .gallery-page-shell {
       flex-direction: column;
+    }
+
+    .site-footer {
+      margin-left: 0;
     }
   }
 }
