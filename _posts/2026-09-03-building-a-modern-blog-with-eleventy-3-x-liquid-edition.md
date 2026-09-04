@@ -32,11 +32,11 @@ card_items:
     link_text: Visit Pagefind
 ---
 
-{% raw %}
 This is a complete, hands-on guide to building a real blog with [Eleventy](https://www.11ty.dev/) (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates, some data, and turns them into a finished set of HTML pages you can host anywhere. There's no database and no server-side code running once it's built, just files, which makes the result fast and simple to deploy.
 
 ![Building a Modern Blog with Eleventy 3.x](/assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg "Building a Modern Blog with Eleventy 3.x")
 
+{% raw %}
 By the end of this tutorial you'll have an actual working blog, built in two parts.
 
 **Part 1** gets you a complete, working site:
