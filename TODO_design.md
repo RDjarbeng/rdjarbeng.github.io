@@ -50,9 +50,9 @@ Possible future implementation:
 - [ ] Style: Homepage contact form in dynamic nav needs proper styling. (Medium Importance, Trivial Complexity: CSS tweaks)
 - [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
 - [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
-- [ ] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Medium Importance, Trivial Complexity: CSS layout adjustment)
+- [x] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Resolved)
 - [ ] Fix: Code on this post doesn't show up nicely on mobile https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/. (Medium Importance, Trivial Complexity: CSS for code blocks)
-- [ ] Fix: The categories page night mode isn't properly displayed. (Medium Importance, Trivial Complexity: CSS for dark mode)
+- [x] Fix: The categories page night mode isn't properly displayed. (Resolved)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
 - [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
@@ -123,8 +123,8 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- [ ] Issue: Tables are not showing text properly on dark mode
-- [ ] Bug: Video page preview shows code instead of a proper description
+- [x] Issue: Tables are not showing text properly on dark mode (Resolved)
+- [x] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
 - the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
 
@@ -149,7 +149,7 @@ Possible future implementation:
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
 - Youtube page was supposed to be styled differently but now looks more like the videos page
 - [ ] YouTube videos aren't showing most recently added first
-- [ ] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge
+- [x] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge (Resolved)
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
 - [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically
 - [ ] Video collections need a nicer transition
@@ -219,7 +219,7 @@ ARTEMIS II
 https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
 
 Remove jsc.. Make title informative
-Need to implement algolia search for the site to make site wide search work
+- [x] Need to implement algolia search for the site to make site wide search work (Resolved)
 - [ ] Add a horizontal navbar to the about page to Skip sections
 - [ ] References section for the free background remover post is not properly formatted-fix this
 - [ ] YouTube page layout is broken needs a fix
@@ -227,7 +227,7 @@ Need to implement algolia search for the site to make site wide search work
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website
-- [ ] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page
+- [x] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page (Resolved)
 - [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
 - [ ] Improve stack blitz post by dividing it into sections
