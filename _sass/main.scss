@@ -1462,7 +1462,6 @@ a:hover {
 
   //was 769
   .toc-sidebar {
-    margin-left: clamp(-23px, calc((1045px - 100vw) / 2), 0px);
     display: block;
     /* Ensure TOC is visible on desktop */
   }
