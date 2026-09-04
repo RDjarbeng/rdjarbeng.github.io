@@ -1,4 +1,4 @@
-This todo file contains design specifications and technical  directions for rdjarbeng.com, possible issues and possible future implementations
+This todo file contains design specifications and technical directions for rdjarbeng.com, possible issues and possible future implementations
 
 # Specifications
 - This website is deployed on Github pages at rdjarbeng.com and should scale globally
@@ -25,7 +25,7 @@ The website is divided into several sections:
     -Youtube
     -Instagram 
     -TikTok
-    Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are  a strength of youtube.
+    Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are a strength of youtube.
 - Other minor pages 'search, tags, categories, contact... etc'
 
 Possible future implementation:
@@ -49,11 +49,9 @@ Possible future implementation:
 - [ ] Optimize CSS: Currently loads CSS for personal and video pages when not needed. (Medium Importance, Medium Complexity: Refactor CSS loading)
 - [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
 - [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
-- [x] Fix: Post cards showing previous and next post are overflowing the bottom and making the padding at the bottom smaller than it needs to be. (Resolved)
-- [x] Fix: The categories page night mode isn't properly displayed. (Resolved)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom.  NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
+- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
 - [ ] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Medium Importance, Medium Complexity: JavaScript debugging)
 
@@ -92,8 +90,6 @@ Possible future implementation:
     - [ ] Live Interactive Demos: Embed "Lite" versions of your projects directly in the posts.
     - [ ] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track").
     - [ ] Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000+ word authoritative guides with annotated code blocks and architectural diagrams.
-    - [x] Readability UX: Improve the "In-App" feel by adding Estimated Reading Time.
-    - [x] Readability UX: Improve the "In-App" feel by adding Table of Contents (Sticky).
     - [ ] Readability UX: Improve the "In-App" feel by adding Code "Copy" and "Play" buttons.
     - [ ] Position the site so agents consider it as a source of information such as when users are asked what is the latest AI news this site shows up
 
@@ -117,8 +113,6 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- [x] Issue: Tables are not showing text properly on dark mode (Resolved)
-- [x] Bug: Video page preview shows code instead of a proper description
 - [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
 - the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
 
@@ -141,23 +135,13 @@ Possible future implementation:
 The inspected URL is known to Bing but has some issues which are preventing us from serving it to our users. We recommend you to follow Bing Webmaster Guidelines."
 - Youtube page was supposed to be styled differently but now looks more like the videos page
 - [ ] YouTube videos aren't showing most recently added first
-- [x] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge (Resolved)
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
 - [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically- this is broken, search is disabled for now
 - [ ] Video collections need a nicer transition, too much whitespace currently between collections
 - [ ] Video page collections don't play without redirecting, would be nice to have them play
-- [x] Video page needs to organize videos so it's not an endless scrolling list
-- [x] Text in Gallery sidebar looks faint in light mode
 - [ ] Need to integrate the site with other sites and services so it's useful to people and agents
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
-- [x] The text on gallery recommendations on a single post for a gallery item in dark mode don't have enough contrast
 - [ ] Did an import from medium and the cards at the bottom of the posts weren't imported correctly. It shows 'related concepts and posts' but the card content was not included
-- [x] Video collections are in the way, so the user can't see the difference when they filter by a source like Twitter on the video page until they scroll down-resolved- created own pages for each source
-- [x] Need to paginate the videos page to prevent endless scrolling
-- [x] Seems some links in posts, and the category in posts have low contrast need to improve this
-- [ ] Part of the footer is hidden on videos page by the sidebar-thought I solved this, but still appears on the live site for just the gallery homepage
-- [x] YouTube hub doesn't have a footer
-- [x] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
 - [BUG] Thumbnails for TikTok video on the videos page shows a black background behind it instead of filling the page- a bit complicated because of different video sizes and difficulty knowing beforehand from the embed if the space is enough-better to have more space than for the video to be cutoff
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer
@@ -168,12 +152,11 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview -DISABLED THE PREVIEW
 - [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images-partial implementation 
 
--Need to show the visual hierarchy for the Gallery page, images first then the  categories for the gallery image such as AI, then videos-partially implemented with toc
+-Need to show the visual hierarchy for the Gallery page, images first then the categories for the gallery image such as AI, then videos-partially implemented with toc
 
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
-- [x] Finance series on the blog about page needs a series of cards instead of current format
 - [ ] Click to play should not display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
 - [ ] The sveltia cms docs has transformations for webp images for width and height, let's see if it can help solve the issue of cover images not being the same size
 
@@ -200,31 +183,14 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
 https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know when you are at teh end of the screenshot
-- [x] NASA astronaut Reid Wiseman, Artemis II commander is assisted off the flight ...
-ARTEMIS II
-https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-splashdown-and-return/artemis-ii-nasa-astronaut-reid-wiseman-artemis-ii-commander-is-assisted-off-the-fligh-nasa-bill-ingalls-8/
-
-Image doesn't load here
-- [x] jsc2025e087854 --- Artemis lunar science team members Jacob Richardson, left,...
-ARTEMIS II
-https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
-
-Remove jsc.. Make title informative
-- [x] Need to implement algolia search for the site to make site wide search work (Resolved)
 - [ ] Add a horizontal navbar to the about page to Skip sections-needed most on mobile
 - [ ] References section for the free background remover post is not properly formatted-fix this
-- [x ] YouTube page layout is broken needs a fix
 - [] Music of RRR | Richard Djarbeng
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website- partial
-- [x] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page (Resolved)
 - [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
-- [x] Improve stack blitz post by dividing it into sections
-- [x] https://rdjarbeng.com/gallery/cover-images/
-
-Cover images path is showing page not found
 - [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
 - [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
 - [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
