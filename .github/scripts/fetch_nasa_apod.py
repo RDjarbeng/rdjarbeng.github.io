@@ -37,23 +37,28 @@ def main():
         print("Invalid APOD response: missing date.")
         sys.exit(1)
 
-    title = data.get("title", "NASA Picture of the Day")
+    raw_title = data.get("title", "Astronomy Picture of the Day").strip()
     explanation = data.get("explanation", "").strip()
     media_type = data.get("media_type", "image")
     raw_url = data.get("hdurl") or data.get("url", "")
     copyright_info = data.get("copyright", "").strip().replace("\n", " ")
     
     date_formatted = datetime.strptime(date_str, "%Y-%m-%d")
+    try:
+        short_date = date_formatted.strftime("%b %#d, %y")
+        readable_date = date_formatted.strftime("%B %#d, %Y")
+    except ValueError:
+        short_date = date_formatted.strftime("%b %d, %y").replace(" 0", " ")
+        readable_date = date_formatted.strftime("%B %d, %Y").replace(" 0", " ")
+        
     yymmdd = date_formatted.strftime("%y%m%d")
     apod_page_link = f"https://apod.nasa.gov/apod/ap{yymmdd}.html"
+
+    # Title with short date (e.g. Sep 4, 26)
+    display_title = f"NASA Picture of the Day: {raw_title} ({short_date})"
     
-    slug = slugify(title)
-    filename = f"{date_str}-{slug}.md"
+    filename = f"{date_str}-{slugify(raw_title)}.md"
     file_path = os.path.join(GALLERY_DIR, filename)
-    
-    if os.path.exists(file_path):
-        print(f"APOD entry for {date_str} already exists at {file_path}. Skipping.")
-        return
 
     extra_fields = ""
     if media_type == "image":
@@ -74,13 +79,14 @@ def main():
 
     iso_date = f"{date_str}T00:00:00+00:00"
     copyright_line = f"\n\n*Credit & Copyright: {copyright_info}*" if copyright_info else ""
-    escaped_title = title.replace('"', '\\"')
+    escaped_display_title = display_title.replace('"', '\\"')
+    escaped_raw_title = raw_title.replace('"', '\\"')
 
     md_content = f"""---
-title: "{escaped_title}"
+title: "{escaped_display_title}"
 date: {iso_date}
 image: "{image_url}"
-image_alt: "NASA Picture of the Day - {escaped_title}"
+image_alt: "NASA Picture of the Day - {escaped_raw_title} ({short_date})"
 type: {item_type}
 category: NASA APOD
 labels:
@@ -90,8 +96,13 @@ labels:
 link: "{apod_page_link}"
 {extra_fields}---
 
+> 🌌 **NASA Picture of the Day — {readable_date}**
+> 
+> **{raw_title}**
+
 {explanation}{copyright_line}
 
+---
 *Source: [NASA Astronomy Picture of the Day]({apod_page_link})*
 """
 
