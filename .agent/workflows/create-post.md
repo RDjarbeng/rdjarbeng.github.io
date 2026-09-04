@@ -15,6 +15,7 @@ Before creating the file, check `admin/config.yml` (specifically the `posts` col
 - Write the post content adhering to the guidelines in the `/writing-style` and `/humanizer` workflows.
 - Apply the `/humanizer` rules to scrub AI writing patterns (cutting buzzwords, em dashes, copulas, and false ranges while preserving technical depth).
 - DO NOT dumb down technical content. Retain technical depth while making the structure readable.
+- For technical posts, define 2-4 `card_items` in the frontmatter to explain key concepts or link to related resources.
 - Ensure SEO best practices and proper markdown formatting.
 
 ## 3. Handle the Cover Image
