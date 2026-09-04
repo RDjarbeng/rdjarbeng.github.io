@@ -59,9 +59,9 @@ Possible future implementation:
 - [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email. (High Importance, Significant Complexity: Backend integration/email service)
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents. (Medium Importance, Medium Complexity: TOC generation logic)
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
-- [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal)
+- [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal) - seems necessary till proven otherwise
 - [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Jekyll logic)
-- [ ] Gallery item titles need to be capitalized - possible use of jekyll capitalize filters. (Medium Importance, Trivial Complexity: Jekyll filter application)
+- [x] Gallery item titles need to be capitalized - possible use of jekyll capitalize filters. (Medium Importance, Trivial Complexity: Jekyll filter application)
 - [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
 
 ## Future Enhancements & Strategic Roadmap
@@ -113,7 +113,7 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- [ ] Long titles are cut off on the third line, full title should show on tool tip on hover
+- [x] Long titles are cut off on the third line, full title should show on tool tip on hover
 - the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
@@ -197,6 +197,7 @@ How to put something underneath this post that shows that this is a playlist und
 - [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
 - add a random movie picker, implement for nigerian movies, christian movies
 - [ ] https:// youtube.com/@rdjarbengwebAdd YouTube channel to contact or footer
+- [ ] add a way to collapse sidebar for main gallery
 - [ ] Do a section listing featuring, Featured YouTube channels I've posted about
 - [ ] Investigate no cookie for YouTube if it makes a difference
 
