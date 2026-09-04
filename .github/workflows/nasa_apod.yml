@@ -1,0 +1,36 @@
+name: Sync NASA Picture of the Day
+
+on:
+  schedule:
+    # Run daily at 01:00 UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  sync-apod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Fetch NASA APOD
+        run: python .github/scripts/fetch_nasa_apod.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add _gallery/nasa-apod/ _gallery_categories/nasa-apod.md
+          if git diff --staged --quiet; then
+            echo "No new APOD entry to commit."
+          else
+            git commit -m "Auto-add NASA Picture of the Day [skip ci]"
+            git push
+          fi

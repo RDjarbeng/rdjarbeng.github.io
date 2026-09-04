@@ -526,6 +526,25 @@ collections:
           default: false,
         }
 
+  - name: "nasa_apod"
+    label: "NASA APOD"
+    folder: "_gallery/nasa-apod"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image URL", name: "image", widget: "string" }
+      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "hidden", default: "external" }
+      - { label: "Category", name: "category", widget: "hidden", default: "NASA APOD" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
+      - { label: "Labels", name: "labels", widget: "list", default: ["NASA", "APOD"] }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
+
+
   - name: "gallery_videos"
     label: "Videos"
     folder: "_gallery/videos"
