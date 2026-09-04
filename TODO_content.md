@@ -386,3 +386,4 @@ Current solutions vary by country and may not have both data and call
 - [ ] Where do the borders come from, America, Canada, Mexico
 
 Within Europe, South East Asia. How was Africa's borders drawn
+- [ ] Add a visualization for the YouTube page on what each YouTube channel has as their timeline of videos listing videos by year as cards so the user can scroll through them and see a timeline of the Youtubers channel and how they are doing
