@@ -33,7 +33,14 @@ image: /assets/images/cover.png
 image_alt: "Description of cover image"
 description: "A short summary for SEO"
 layout: post
+card_items:
+  - name: "Concept Name"
+    badge_1: "Topic"
+    description: "Explanation of the concept or term."
+    url: "https://example.com" # Optional
+    link_text: "Learn More" # Optional
 ---
+
 ```
 
 ## 4. Categories
