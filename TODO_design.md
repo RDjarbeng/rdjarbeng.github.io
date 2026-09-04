@@ -131,12 +131,10 @@ Possible future implementation:
 - [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings- need a nice way to implement this though
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page- might consider changing from the 2 column layout after moving to 11ty
 - [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows -depends on mobile or desktop
-- [ ] The gallery cards on the homepage have a black border on the images which is not needed need to fix this so that the images occupy more space
+- [ ] The gallery cards on the homepage have a white space above the image leaving a white line uptop
 - [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
-- the telegram bot needs to be updated on the new organization of the gallery
 - [ ] Link directly dev, coder legion posts manually to main site
-- [ ] Add link to background remover and projects on the about page
 
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
@@ -145,39 +143,38 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] YouTube videos aren't showing most recently added first
 - [x] TOC Sidebar on individual posts needs some left space aeay from the screen edge. Title for posts needs space on the right away from screen edge (Resolved)
 - [ ] Artemis II gallery is a lot, show only two collections on the main gallery page and the rest when the reader clicks to view all
-- [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically
-- [ ] Video collections need a nicer transition
+- [ ] The search on the videos page doesn't display results in the grid similar to the homepage but instead does it vertically- this is broken, search is disabled for now
+- [ ] Video collections need a nicer transition, too much whitespace currently between collections
 - [ ] Video page collections don't play without redirecting, would be nice to have them play
-
-- Video page needs to organize videos so it's not an endless scrolling list
-- [ ] Text in Gallery sidebar looks faint in light mode
-- [ ] Need to integrate the site woth other sotes and services so it's useful to people and agents
+- [x] Video page needs to organize videos so it's not an endless scrolling list
+- [x] Text in Gallery sidebar looks faint in light mode
+- [ ] Need to integrate the site with other sites and services so it's useful to people and agents
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
-- [ ] The text on gallery recommendations on a single post for a gallery item in dark mode don't have enough contrast
+- [x] The text on gallery recommendations on a single post for a gallery item in dark mode don't have enough contrast
 - [ ] Did an import from medium and the cards at the bottom of the posts weren't imported correctly. It shows 'related concepts and posts' but the card content was not included
-- [ ] Video collections are in the way, so the user can't see the difference when they filter by a source like Twitter on the video page until they scroll down
-- [ ] Need to paginate the videos page to prevent endless scrolling
-- [ ] Seems some links in posts, and the category in posts have low contrast need to improve this
-- [ ] Part of footer os is hidden on videos page by the sidebar
-- [ ] YouTube hub doesn't have a footer
-- [ ] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
-- [BUG] Thumbnails for TikTok video on the videos page shows a blue background behind it instead of filling the page,
+- [x] Video collections are in the way, so the user can't see the difference when they filter by a source like Twitter on the video page until they scroll down-resolved- created own pages for each source
+- [x] Need to paginate the videos page to prevent endless scrolling
+- [x] Seems some links in posts, and the category in posts have low contrast need to improve this
+- [ ] Part of the footer is hidden on videos page by the sidebar-thought I solved this, but still appears on the live site for just the gallery homepage
+- [x] YouTube hub doesn't have a footer
+- [x] Instagram  and TikTok videos don't play on click in the video page, need to remove the play button from those
+- [BUG] Thumbnails for TikTok video on the videos page shows a black background behind it instead of filling the page- a bit complicated because of different video sizes and difficulty knowing beforehand from the embed if the space is enough-better to have more space than for the video to be cutoff
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer
-- [ ] Reduce the number of Artemis II Items shown on the gallery page
+- [ ] Reduce the number of Artemis II Items shown on the gallery page - there are repititions
 
 - Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format
 
-- The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview
-- [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images 
+- The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview -DISABLED THE PREVIEW
+- [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images-partial implementation 
 
--Need to show the visual hierarchy for the Gallery page, images first then the  categories for the gallery image such as AI, then videos.
+-Need to show the visual hierarchy for the Gallery page, images first then the  categories for the gallery image such as AI, then videos-partially implemented with toc
 
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
 - [x] Finance series on the blog about page needs a series of cards instead of current format
-- [ ] Click to play should mot display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
+- [ ] Click to play should not display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
 - [ ] The sveltia cms docs has transformations for webp images for width and height, let's see if it can help solve the issue of cover images not being the same size
 
 
@@ -191,54 +188,49 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - The video collections start with Behind the scenes in alphabetical order, need to find a better way
 - Video collections should animate on scroll
 -Need to show the subcategories visually for the navigation on the gallery homepage
-- [ ] Add a navigation for the Artemis II page in '/gallery/Artemis-ii/'
+- [ ] Add a navigation for the Artemis II page in '/gallery/Artemis-ii/
 - [ ] Need to format quotes for famous people posts like this image. Need it to work for light and dark mode 
 
 🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
-- [ ] The Tick Tock cars on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video
+- [ ] The TikTok cards on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video for desktop, especially for mobile
 - [ ] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page
-- [ ] When I frame for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
+- [ ] When iframe for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
 - [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
 - [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
 - [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
-https://rdjarbeng.com/gallery/screenshots/ this page
-- [ ] NASA astronaut Reid Wiseman, Artemis II commander is assisted off the flight ...
+https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know when you are at teh end of the screenshot
+- [x] NASA astronaut Reid Wiseman, Artemis II commander is assisted off the flight ...
 ARTEMIS II
 https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-splashdown-and-return/artemis-ii-nasa-astronaut-reid-wiseman-artemis-ii-commander-is-assisted-off-the-fligh-nasa-bill-ingalls-8/
 
 Image doesn't load here
-- [ ] jsc2025e087854 --- Artemis lunar science team members Jacob Richardson, left,...
+- [x] jsc2025e087854 --- Artemis lunar science team members Jacob Richardson, left,...
 ARTEMIS II
 https://rdjarbeng.com/gallery/artemis-ii/artemis-ii-mission-science/artemis-ii-jsc2025e087854-artemis-lunar-science-team-members-jacob-richardson-lef-ser-25/
 
 Remove jsc.. Make title informative
 - [x] Need to implement algolia search for the site to make site wide search work (Resolved)
-- [ ] Add a horizontal navbar to the about page to Skip sections
+- [ ] Add a horizontal navbar to the about page to Skip sections-needed most on mobile
 - [ ] References section for the free background remover post is not properly formatted-fix this
-- [ ] YouTube page layout is broken needs a fix
-- [ ] Music of RRR | Richard Djarbeng
+- [x ] YouTube page layout is broken needs a fix
+- [] Music of RRR | Richard Djarbeng
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
-How to put something underneath this post that shows that this is a playlist under a video collection for this website
+How to put something underneath this post that shows that this is a playlist under a video collection for this website- partial
 - [x] The post TOC overlaps the footer below, it should stop in thd post content and scroll with the rest of the page (Resolved)
 - [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
-- [ ] Improve stack blitz post by dividing it into sections
-- [ ] https://rdjarbeng.com/gallery/cover-images/
+- [x] Improve stack blitz post by dividing it into sections
+- [x] https://rdjarbeng.com/gallery/cover-images/
 
 Cover images path is showing page not found
 - [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
-- [ ] Search page needs work, for light mode especially
 - [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
 - [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
 - [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
 - add a random movie picker, implement for nigerian movies, christian movies
-- [ ] https:// youtube.com/@rdjarbengweb
-
-
-
-Add YouTube channel to contact
+- [ ] https:// youtube.com/@rdjarbengwebAdd YouTube channel to contact or footer
 - [ ] Do a section listing featuring, Featured YouTube channels I've posted about
 - [ ] Investigate no cookie for YouTube if it makes a difference
 
