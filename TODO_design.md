@@ -253,3 +253,4 @@ It messes with the formatting, can't see the replies, and changes the url, but i
  Or then adda hyphen after www.yout in the url.
 (yout-ube.com/watch?....)
 yout-ube.com/watch
+- [ ] Add the enlighten project as a section on the homepage
