@@ -390,3 +390,7 @@ Within Europe, South East Asia. How was Africa's borders drawn
 - [ ] How to know when you've got development right? What are the measures, for a country
 - [ ] Is there a way to access messages on your phone when it has no signal, or receive calls. The way I'm thinking is that there is a server or endpoint that holds these messages and calls, so taking advantage of the internet you can ensure that you are going to remain online  and can still receive messages even when you ɔr phone has no signal. For authentication you can ensure that the owner of that number is the only one who can access that particular web account
 - [ ] AI company spotlight DeepMind, OpenAI, FAIR, AI2
+- [ ] Check if this is an annual event, if yes, mark it as recurring and add to opportunities page 
+
+Microsoft Research Data Science Summer School - Microsoft Research
+https://www.microsoft.com/en-us/research/academic-program/data-science-summer-school/program-details/
