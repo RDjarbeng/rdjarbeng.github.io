@@ -401,3 +401,4 @@ https://www.microsoft.com/en-us/research/academic-program/data-science-summer-sc
 - another takes to space, venturing beyond the atmosphere, into places no man has been trying to reach the stars, they invent capsules that can reach tremendous speed to break the hold of gravity and carry enough supplies for their galactic journey 
 
 Now none of these three types of explorers are necessarily in a race neither should they be put on a scale to measure and compare them
+- [ ] What on earth is dynamic programming - CLRS book
