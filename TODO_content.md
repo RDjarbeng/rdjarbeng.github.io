@@ -403,3 +403,4 @@ https://www.microsoft.com/en-us/research/academic-program/data-science-summer-sc
 Now none of these three types of explorers are necessarily in a race neither should they be put on a scale to measure and compare them
 - [ ] What on earth is dynamic programming - CLRS book
 - [ ] Create a Github repo specifically for the enlighten project, mostly a readme of the current books listed
+- [ ] Why does everyone want you to install their app, even if you're in the browser and it works fine, they keep suggest the app to you
