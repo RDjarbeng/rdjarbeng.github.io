@@ -406,3 +406,4 @@ Now none of these three types of explorers are necessarily in a race neither sho
 - [ ] Why does everyone want you to install their app, even if you're in the browser and it works fine, they keep suggest the app to you
 - [ ] I wonder which companies are guilty of this, app is almost the aane as web version or wherever you were, (looking at you quora) vs the ones that genuinely have a better experience in the app or need you to be in the app to access certain features
 - [ ] Book thinking fast and slow
+- [ ] About creating software artifacts that can function at large scales woth high throughput, low latency, fundamental work tied to backend engineering thinking
