@@ -394,3 +394,4 @@ Within Europe, South East Asia. How was Africa's borders drawn
 
 Microsoft Research Data Science Summer School - Microsoft Research
 https://www.microsoft.com/en-us/research/academic-program/data-science-summer-school/program-details/
+- [ ] Spotlight people in AI: Demis Hassabis, Shane Legg, Marcus Hutter, F. Chollet, Murray Shanahan.
