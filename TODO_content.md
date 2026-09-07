@@ -395,3 +395,9 @@ Within Europe, South East Asia. How was Africa's borders drawn
 Microsoft Research Data Science Summer School - Microsoft Research
 https://www.microsoft.com/en-us/research/academic-program/data-science-summer-school/program-details/
 - [ ] Spotlight people in AI: Demis Hassabis, Shane Legg, Marcus Hutter, F. Chollet, Murray Shanahan.
+- [ ] Three explorers - sometimes the advent of companies in a particular sector, it seems to be a race but sometimes I like to look at it as separate branches of exploration 
+- one explorer goes to distant lands that may or may not exist expecting to find people and new civilisations, the horizon calls them, and they want to see where it will lead them and how far it goes, they invent new, faster ways of traveling and bigger vessels to stay exploring for longer 
+ - another goes beneath the seas in search of whatever they may fond underneath the deep expanse of the ocean, not satisfied with the surface view of water and the horizon, to venture underneath to see what's hidden in the deep, they create vessels that can survive the pressures and extreme temperatures, and devices to record their encounters at such depths 
+- another takes to space, venturing beyond the atmosphere, into places no man has been trying to reach the stars, they invent capsules that can reach tremendous speed to break the hold of gravity and carry enough supplies for their galactic journey 
+
+Now none of these three types of explorers are necessarily in a race neither should they be put on a scale to measure and compare them
