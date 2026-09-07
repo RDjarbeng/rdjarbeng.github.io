@@ -389,3 +389,4 @@ Within Europe, South East Asia. How was Africa's borders drawn
 - [ ] Add a visualization for the YouTube page on what each YouTube channel has as their timeline of videos listing videos by year as cards so the user can scroll through them and see a timeline of the Youtubers channel and how they are doing
 - [ ] How to know when you've got development right? What are the measures, for a country
 - [ ] Is there a way to access messages on your phone when it has no signal, or receive calls. The way I'm thinking is that there is a server or endpoint that holds these messages and calls, so taking advantage of the internet you can ensure that you are going to remain online  and can still receive messages even when you ɔr phone has no signal. For authentication you can ensure that the owner of that number is the only one who can access that particular web account
+- [ ] AI company spotlight DeepMind, OpenAI, FAIR, AI2
