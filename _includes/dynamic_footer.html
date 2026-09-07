@@ -1,4 +1,4 @@
-<div class="dynamic-footer">
+<div class="dynamic-footer" data-footer-bg="{% assign apod_items = site.gallery | where: 'category', 'NASA APOD' | sort: 'date' | reverse %}{% for item in apod_items %}{% if item.image %}{{ item.image | strip }}{% break %}{% endif %}{% endfor %}" data-footer-bg-alt="{% for item in apod_items %}{% if item.image %}{{ item.image_alt | default: item.title | strip | escape }}{% break %}{% endif %}{% endfor %}">
     <div class="progress-bar-container">
         <div class="progress-bar"></div>
     </div>
@@ -56,8 +56,10 @@
         const progressBar = document.querySelector('.progress-bar');
         let progress = 0;
         let isExpanded = false;
-        const THRESHOLD = 500; // Total scroll delta needed to expand
-        const DECAY = 5; // How fast progress decays when not scrolling
+        // Snap-open: the first scroll intent at the bottom opens the footer
+        // immediately and fully (end of scroll). Tiny threshold, no decay.
+        const THRESHOLD = 60; // Total scroll delta needed to expand
+        const DECAY = 0; // No decay: intent, once shown, is kept
 
         let touchStartY = 0;
         let lastTouchY = 0;
@@ -67,8 +69,9 @@
 
         // Wheel event handler
         window.addEventListener('wheel', (e) => {
-            // Check if we are at the bottom of the page (with a small buffer)
-            const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
+            // Near the bottom of the page (generous buffer: lazy-loaded
+            // content keeps extending the page, so exact-bottom rarely holds)
+            const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 300;
 
             if (!isExpanded) {
                 if (scrollBottom && e.deltaY > 0) {
@@ -105,7 +108,7 @@
             const deltaY = lastTouchY - touchY; // Positive if dragging UP
             lastTouchY = touchY;
 
-            const scrollBottom = Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+            const scrollBottom = Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300;
 
             if (!isExpanded) {
                 if (scrollBottom && deltaY > 0) {
@@ -125,15 +128,38 @@
             updateUI();
         }, { passive: false });
 
+        // Preload the footer background (latest NASA APOD) and reveal it only
+        // after it decodes, so it never pops in mid-transition (glitch-free).
+        // If loading fails, the footer keeps its plain theme background.
+        (function preloadFooterBg() {
+            var bg = footer.getAttribute('data-footer-bg');
+            if (!bg) return;
+            var img = new Image();
+            img.decoding = 'async';
+            img.src = bg;
+            var show = function () {
+                footer.style.setProperty('--footer-bg-image', 'url("' + bg + '")');
+                footer.classList.add('has-bg');
+            };
+            if (typeof img.decode === 'function') {
+                img.decode().then(show).catch(function () { /* keep plain bg */ });
+            } else {
+                img.onload = show;
+            }
+        })();
+
         function expandFooter() {
             isExpanded = true;
             footer.classList.add('is-expanded');
             footer.style.height = ''; // Remove inline height to let CSS take over (90vh)
 
-            // Auto-scroll to the bottom to reveal content
+            // After the expand transition finishes (~0.8s desktop, 0.4s
+            // mobile), jump to the true page bottom so the whole expanded
+            // sheet lands in view. Scrolling mid-transition (or smooth)
+            // strands the viewport halfway down the sheet, looking part-open.
             setTimeout(() => {
-                footer.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            }, 100);
+                window.scrollTo(0, document.body.scrollHeight);
+            }, 900);
         }
 
         function collapseFooter() {

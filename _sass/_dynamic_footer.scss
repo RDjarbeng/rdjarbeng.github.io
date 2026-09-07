@@ -6,19 +6,68 @@
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     height: 50px; // Forced small initial height
     min-height: 50px; // Ensure it doesn't collapse further
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // NOTE: block (not flex): a row-flex container with centered content
+    // mis-sizes the percentage-width content column in Chrome. Auto margins
+    // center it identically.
+    display: block;
     overflow: hidden;
     position: relative;
     border-top: 1px solid var(--card-border);
     box-sizing: border-box;
+
+    // Background graphic layer (latest NASA APOD, set from data-footer-bg).
+    // Fades in only after the image decodes (see .has-bg), so it never
+    // pops in late or mid-transition.
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: var(--footer-bg-image, none);
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        pointer-events: none;
+    }
+
+    // Readability scrim between the graphic and the text.
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom,
+            var(--footer-scrim-top, rgba(0, 0, 0, 0.55)),
+            var(--footer-scrim-bottom, rgba(0, 0, 0, 0.75)));
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        pointer-events: none;
+    }
+
+    // Graphic + scrim appear ONLY in the expanded state. While minimized,
+    // the bar keeps its plain theme background so no image sliver shows
+    // above "Get in touch / Scroll to expand" before expansion completes.
+    &.is-expanded.has-bg {
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+
+        // Keep text above the graphic + scrim layers.
+        .dynamic-footer-content,
+        .progress-bar-container {
+            position: relative;
+            z-index: 1;
+        }
+    }
 
     &.is-expanded {
         min-height: 90vh; // Take up 90% of screen as requested
         height: 90vh;
         background-color: var(--bg-color);
         padding: 40px 20px; // Restore padding when expanded
+        // Snap, don't animate: the sheet must land fully open instantly.
+        // (Content inside still fades in via its own transitions.)
+        transition-property: background-color, padding;
 
         .minimized-view {
             opacity: 0;
@@ -60,6 +109,7 @@
     .dynamic-footer-content {
         max-width: 1200px;
         width: 100%;
+        margin: 0 auto; // Centered (footer itself is block layout)
         position: relative;
         height: 100%;
         display: flex;
@@ -121,14 +171,26 @@
 
         @media (min-width: 768px) {
             flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start; // Align to top
+            justify-content: center;
+            align-items: center; // Vertically center both columns, no dead middle
+            gap: 80px;
             padding: 40px 0;
+        }
+
+        // Medium screens: the email + details row is wider than the viewport,
+        // so tighten the gap and cap the email size before columns touch.
+        @media (min-width: 768px) and (max-width: 1150px) {
+            gap: 32px;
+
+            .contact-main .email-link {
+                font-size: clamp(1.4rem, 3.4vw, 2.4rem);
+            }
         }
     }
 
     .contact-main {
-        flex: 1;
+        flex: 0 1 auto;
+        min-width: 0; // Let the column shrink instead of overflowing the row
         margin-bottom: 20px;
 
         @media (min-width: 768px) {
@@ -144,7 +206,11 @@
         }
 
         .email-link {
-            font-size: 2rem; // Reduced to fit on one line
+            // Fluid size: full presence on desktop, never overflows the row
+            // (nowrap would otherwise push the details column off-screen).
+            // Fluid size capped so the address column plus the 560px details
+            // column plus the gap always fit the 1200px container.
+            font-size: clamp(1.6rem, 4vw, 2.5rem);
             font-weight: 900;
             color: var(--text-color); // Black
             text-decoration: none;
@@ -152,9 +218,13 @@
             white-space: nowrap; // Prevent wrapping
             font-family: serif; // More elegant look like the reference
 
-            @media (min-width: 768px) {
-                font-size: 4rem; // Cap size
+            @media (max-width: 767px) {
+                // Tighter cap on small screens
+                font-size: clamp(1.3rem, 7vw, 2rem);
             }
+
+            // NOTE: no fixed desktop size here; the fluid clamp() above covers
+            // all widths so the address can never overflow its column.
 
             &:hover {
                 color: var(--grey-text); // Dark gray on hover
@@ -163,14 +233,15 @@
     }
 
     .contact-details {
-        flex: 1;
-        max-width: 100%;
+        flex: 0 1 auto;
+        min-width: 0; // Let text wrap instead of pushing the column off-screen
+        max-width: 520px;
         font-size: 1rem;
         line-height: 1.5;
         color: var(--text-color);
 
         @media (min-width: 768px) {
-            max-width: 500px;
+            max-width: 520px;
             font-size: 1.1rem;
             line-height: 1.6;
         }
@@ -246,6 +317,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; // Never clip: wrap gracefully on narrow columns
+            gap: 8px 16px;
             margin-top: 40px;
             font-size: 0.9rem;
             color: var(--grey-text);
@@ -256,10 +329,36 @@
                 color: var(--text-color);
                 font-weight: 600;
                 text-decoration: none;
+                white-space: nowrap; // Keep each link on one line
 
                 &:hover {
                     text-decoration: underline;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    // Mobile: shorter sheet, tighter padding, no dead space underneath.
+    // A fixed 90vh sheet with short content leaves a gap; auto height with a
+    // smaller minimum keeps the sheet snug. Background-position top keeps the
+    // graphic's subject visible in the cropped band (most images won't fit a
+    // narrow viewport fully). Height animation shortened to reduce jank.
+    .dynamic-footer {
+        transition-duration: 0.4s;
+
+        &::before {
+            background-position: center top;
+        }
+
+        &.is-expanded {
+            height: auto;
+            min-height: 70vh;
+            padding: 24px 16px;
+
+            .expanded-view {
+                padding: 8px 0 24px 0;
             }
         }
     }
