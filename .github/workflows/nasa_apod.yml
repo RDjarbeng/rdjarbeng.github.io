@@ -9,6 +9,9 @@ on:
 jobs:
   sync-apod:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants write access so git push succeeds
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,6 +34,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new APOD entry to commit."
           else
-            git commit -m "Auto-add NASA Picture of the Day [skip ci]"
+            git commit -m "Auto-add NASA Picture of the Day"
             git push
           fi

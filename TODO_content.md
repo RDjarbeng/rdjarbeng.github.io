@@ -387,3 +387,23 @@ Current solutions vary by country and may not have both data and call
 
 Within Europe, South East Asia. How was Africa's borders drawn
 - [ ] Add a visualization for the YouTube page on what each YouTube channel has as their timeline of videos listing videos by year as cards so the user can scroll through them and see a timeline of the Youtubers channel and how they are doing
+- [ ] How to know when you've got development right? What are the measures, for a country
+- [ ] Is there a way to access messages on your phone when it has no signal, or receive calls. The way I'm thinking is that there is a server or endpoint that holds these messages and calls, so taking advantage of the internet you can ensure that you are going to remain online  and can still receive messages even when you ɔr phone has no signal. For authentication you can ensure that the owner of that number is the only one who can access that particular web account
+- [ ] AI company spotlight DeepMind, OpenAI, FAIR, AI2
+- [ ] Check if this is an annual event, if yes, mark it as recurring and add to opportunities page 
+
+Microsoft Research Data Science Summer School - Microsoft Research
+https://www.microsoft.com/en-us/research/academic-program/data-science-summer-school/program-details/
+- [ ] Spotlight people in AI: Demis Hassabis, Shane Legg, Marcus Hutter, F. Chollet, Murray Shanahan.
+- [ ] Three explorers - sometimes the advent of companies in a particular sector, it seems to be a race but sometimes I like to look at it as separate branches of exploration 
+- one explorer goes to distant lands that may or may not exist expecting to find people and new civilisations, the horizon calls them, and they want to see where it will lead them and how far it goes, they invent new, faster ways of traveling and bigger vessels to stay exploring for longer 
+ - another goes beneath the seas in search of whatever they may fond underneath the deep expanse of the ocean, not satisfied with the surface view of water and the horizon, to venture underneath to see what's hidden in the deep, they create vessels that can survive the pressures and extreme temperatures, and devices to record their encounters at such depths 
+- another takes to space, venturing beyond the atmosphere, into places no man has been trying to reach the stars, they invent capsules that can reach tremendous speed to break the hold of gravity and carry enough supplies for their galactic journey 
+
+Now none of these three types of explorers are necessarily in a race neither should they be put on a scale to measure and compare them
+- [ ] What on earth is dynamic programming - CLRS book
+- [ ] Create a Github repo specifically for the enlighten project, mostly a readme of the current books listed
+- [ ] Why does everyone want you to install their app, even if you're in the browser and it works fine, they keep suggest the app to you
+- [ ] I wonder which companies are guilty of this, app is almost the aane as web version or wherever you were, (looking at you quora) vs the ones that genuinely have a better experience in the app or need you to be in the app to access certain features
+- [ ] Book thinking fast and slow
+- [ ] About creating software artifacts that can function at large scales woth high throughput, low latency, fundamental work tied to backend engineering thinking
