@@ -407,3 +407,4 @@ Now none of these three types of explorers are necessarily in a race neither sho
 - [ ] I wonder which companies are guilty of this, app is almost the aane as web version or wherever you were, (looking at you quora) vs the ones that genuinely have a better experience in the app or need you to be in the app to access certain features
 - [ ] Book thinking fast and slow
 - [ ] About creating software artifacts that can function at large scales woth high throughput, low latency, fundamental work tied to backend engineering thinking
+- [ ] Stock Exchanges in Africa, Joburg, Nigeria, Botswana, Ghana. Problem with the ones that are not liquid, is it because they are owned by pension funds?
