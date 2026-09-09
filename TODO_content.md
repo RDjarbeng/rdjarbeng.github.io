@@ -413,3 +413,4 @@ Now none of these three types of explorers are necessarily in a race neither sho
 https:// youtu.be/ DOWDNBu9DkU
 - [ ] The concept of a super-model that controls other models, the nice thing about this is that the supermodel remains available instead of being stuck 
 Like a garage, before you will have to buy and sell different cars as the times change but you were stuck during the change, but this time you have a range of cars to choose from but the garage stays open, like a delivery service, instead of doing each delivery yourself
+- [ ] If you assembled all the cars in the world over the ocean, what area would they cover, would it be bigger than Madagascar?
