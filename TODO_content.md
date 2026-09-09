@@ -409,3 +409,5 @@ Now none of these three types of explorers are necessarily in a race neither sho
 - [ ] About creating software artifacts that can function at large scales woth high throughput, low latency, fundamental work tied to backend engineering thinking
 - [ ] Stock Exchanges in Africa, Joburg, Nigeria, Botswana, Ghana. Problem with the ones that are not liquid, is it because they are owned by pension funds?
 - [ ] If someone has a product in Accra that is desired of in Nairobi how can they deliver to their customer's door?
+- [ ] Mark Rober on Zipline and their operations in Rwanda 
+https:// youtu.be/ DOWDNBu9DkU
