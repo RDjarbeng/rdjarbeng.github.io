@@ -10,4 +10,4 @@ genre: Other
 twitter_id: '2008876696255279287'
 ---
 
-Serious artist and his talent needs to be appreciated
+Showcase of Ghanaian visual artist EnilArt, who sketches expressive quick portraits of unsuspecting fellow passengers aboard Accra bustling trotro minibuses, capturing everyday Ghanaian urban life on paper with remarkable speed and detail.

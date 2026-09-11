@@ -10,4 +10,5 @@ genre: Music
 date: 2026-03-01 14:17:09
 published: true
 ---
-From Joyful Noise
+
+Keke Palmer soulful gospel and choral rendition of Michael Jackson 'Man in the Mirror' from the 2012 musical comedy-drama Joyful Noise. Backed by a full gospel choir, the performance builds into an uplifting anthem on personal responsibility and making positive community change.

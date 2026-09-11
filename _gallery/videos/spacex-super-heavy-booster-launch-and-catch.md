@@ -13,4 +13,4 @@ category: videos
 genre: Science & Technology
 ---
 
-SpaceX super heavy booster launch and catch on the mechazilla platform - October 13th, 2024
+SpaceX Starship Flight 5 Super Heavy booster launch and historic mid-air catch by the launch tower chopstick arms at Starbase, Texas on October 13, 2024. This breakthrough marked the first time an orbital-class rocket booster returned directly to the launch pad and was caught out of the sky, demonstrating rapid rocket reusability.

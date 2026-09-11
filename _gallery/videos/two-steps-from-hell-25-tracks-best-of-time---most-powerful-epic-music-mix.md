@@ -11,4 +11,4 @@ date: '2026-03-30T17:38:46+02:00'
 published: true
 ---
 
-Orchestra music for when you need some long duration work done
+Curated orchestral compilation featuring 25 iconic cinematic tracks from Two Steps From Hell, composed by Thomas Bergersen and Nick Phoenix. A staple background soundtrack for deep work sessions, long programming sprints, and high-focus creative tasks with expansive brass, choir, and driving percussion.

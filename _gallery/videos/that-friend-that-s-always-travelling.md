@@ -9,4 +9,5 @@ type: video
 category: videos
 genre: Travel & Events
 ---
-Taken from instagram, the friend that's always travelling
+
+Humorous relatable sketch depicting the friend whose social media feed is permanently on an international airport tarmac or remote scenic destination while everyone else is clocking into routine workdays.

@@ -89,4 +89,4 @@ date: 2026-01-22 22:51:00
 published: true
 ---
 
-
+Night drives through Kigali, Rwanda, highlighting the city clean, modern urban infrastructure, illuminated roundabouts, and serene evening streetscape. Kigali has earned global recognition as one of Africa cleanest and safest capital cities, featuring well-maintained arterial roadways, green corridors, and efficient municipal transit.

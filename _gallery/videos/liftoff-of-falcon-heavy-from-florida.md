@@ -11,5 +11,4 @@ date: '2026-04-30T14:46:45+02:00'
 published: true
 ---
 
-Posted by SpaceX on Twitter/X on April 29th, 2026
-The video animations on the spaceship parameters are sublime.
+SpaceX Falcon Heavy launch sequence from Launch Complex 39A at NASA Kennedy Space Center in Florida. The footage captures the synchronized staging of the triple-booster core, real-time telemetry graphics displaying vehicle speed and chamber pressure, and the spectacular atmospheric ascent into orbit.

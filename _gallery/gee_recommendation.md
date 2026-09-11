@@ -6,4 +6,4 @@ type: cover
 link: /gee_recommendation
 ---
 
-Cover image for Google Earth Engine: A Useful Tool for Satellite Imagery
+Cover image for the post "Google Earth Engine: A Useful Tool for Satellite Imagery". Google Earth Engine (GEE) brings together multi-petabyte catalogs of satellite imagery and geospatial datasets with planetary-scale cloud computational capabilities. This illustration highlights how environmental researchers, data analysts, and software engineers can access Sentinel, Landsat, and climate datasets to track environmental change, surface water dynamics, and urban growth without downloading massive rasters locally.

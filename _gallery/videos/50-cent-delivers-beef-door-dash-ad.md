@@ -11,4 +11,4 @@ category: videos
 genre: Entertainment
 ---
 
-50 cent Delivers Beef- Door Dash AD
+Humorous DoorDash commercial featuring 50 Cent playing on the double meaning of 'delivering beef'. Drawing on his legendary hip-hop reputation and witty television persona, the commercial playfully turns everyday grocery delivery and restaurant orders into a comedic high-stakes delivery run.

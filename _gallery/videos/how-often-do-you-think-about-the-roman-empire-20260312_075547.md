@@ -11,4 +11,4 @@ date: '2026-03-12T07:55:47+02:00'
 published: true
 ---
 
-Imperial Roman Triumph from Ben-Hur. Music and scene from Ben-Hur (1959)
+The iconic Imperial Roman Triumph sequence from William Wyler 1959 cinematic masterpiece Ben-Hur, scored by composer Miklos Rozsa. Featuring grand parade choreography, imperial Roman legions, and triumphal chariot fanfare, capturing the grandeur of ancient classical history.
