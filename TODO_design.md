@@ -56,7 +56,7 @@ Possible future implementation:
 - [ ] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Medium Importance, Medium Complexity: JavaScript debugging)
 
 ### Content & Data Structure
-- [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. Automated reply should come from website email. (High Importance, Significant Complexity: Backend integration/email service)
+- [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. (High Importance, Significant Complexity: Backend integration/email service)
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents. (Medium Importance, Medium Complexity: TOC generation logic)
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
 - [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal) - seems necessary till proven otherwise
