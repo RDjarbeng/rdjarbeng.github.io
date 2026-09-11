@@ -74,6 +74,9 @@ University labs lost their lead when researchers showed that models got better a
 
 A standard university research grant of $500,000 cannot pay for a $50 million training run. Researchers who wanted to work on the largest systems moved to the companies that owned the computers, and the numbers in Figure 2 shifted into the private sector.
 
+![The Shift in Frontier AI Research: Academia vs. Industry (2003–2023)](/assets/images/posts/academic-vs-industry-ml-models-2003-2023.png)
+*Figure 3: The shifting institutional balance in notable AI systems from 2003 to 2023. Industry output overtook universities in 2014, and by 2023 accounts for over 75 percent of notable models.*
+
 **So what does this mean?**
 The early period of machine learning was an exception. When research depended on algorithmic ideas, any university lab could lead the field. Once performance depended on hardware scale, control moved to corporate balance sheets.
 
