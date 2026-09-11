@@ -4,6 +4,8 @@ description: Write blog sections that flow into each other so the reader is led 
 
 # Narrative Flow Workflow
 
+Subordinate to `writing-style` and `humanizer`: if anything here conflicts with those, those win. In particular, handoffs are never questions directed at the reader.
+
 One step in the post pipeline (after facts/draft are in hand, alongside image creation, tagging, etc.). Category is pre-set by the author but describes topic, not shape — classify type from the draft itself.
 
 ## 0. Classify type
@@ -38,8 +40,8 @@ If two signals tie (e.g. it explains a mechanism *and* argues a position) — as
 
 ## 4. Story (strict — this is the original flow)
 - Open with hook + stakes + one roadmap sentence.
-- Spine: 3-6 questions, each answer raising the next.
-- Handoff rule (strict): every section but the last ends on a forward-pointer (open question/tension); every section but the first opens with an echo of the prior section's closing line. No bare-definition opens, no dead-end closes.
+- Spine: 3-6 beats, each beat setting up the next (a result needing explanation, a limit needing solving, a claim needing grounding).
+- Handoff rule (strict): every section but the last ends on a forward-pointer phrased as a STATEMENT (unresolved tension, promised payoff, consequence) — never a question aimed at the reader; every section but the first opens with an echo of the prior section's closing line. No bare-definition opens, no dead-end closes.
 - Close: restate the mental model in one breath + point to related posts/tools.
 
 ## 5. Argument
