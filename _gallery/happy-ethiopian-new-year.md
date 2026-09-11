@@ -12,8 +12,6 @@ date: 2026-09-11T13:40:00+02:00
 enhanced_by_bot: true
 ---
 
-Happy Ethiopian new year
-
 It's currently 2019 in Ethiopia 🇪🇹.
 
 Happy new year to all Ethiopians, it's now 2019 on the Ethiopian calendar
