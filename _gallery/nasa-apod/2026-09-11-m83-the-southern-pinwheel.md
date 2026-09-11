@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: M83: The Southern Pinwheel (Sep 11, 26)"
 date: 2026-09-11T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/M83_Final2_1x.jpg"
+image: "https://apod.nasa.gov/apod/image/2609/M83_Final2_1x1024.jpg"
 image_alt: "NASA Picture of the Day - M83: The Southern Pinwheel (Sep 11, 26)"
 type: external
 category: NASA APOD

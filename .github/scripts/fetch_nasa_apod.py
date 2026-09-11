@@ -17,10 +17,6 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
 
-def get_youtube_id(url):
-    match = re.search(r'(?:v=|\/embed\/|\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})', url)
-    return match.group(1) if match else None
-
 def fetch_from_api(retries=3, delay=5):
     req = urllib.request.Request(
         APOD_API_URL,
@@ -119,6 +115,11 @@ def main():
     explanation = data.get("explanation", "").strip()
     media_type = data.get("media_type", "image")
     raw_url = data.get("url") or data.get("hdurl", "")
+
+    if media_type != "image" or raw_url.lower().endswith((".mp4", ".webm", ".ogg", ".mov")):
+        print(f"NASA APOD for {date_str} is a video ({raw_url}). Skipping entry creation.")
+        sys.exit(0)
+
     copyright_info = data.get("copyright", "").strip().replace("\n", " ")
     
     date_formatted = datetime.strptime(date_str, "%Y-%m-%d")
@@ -138,22 +139,8 @@ def main():
     filename = f"{date_str}-{slugify(raw_title)}.md"
     file_path = os.path.join(GALLERY_DIR, filename)
 
-    extra_fields = ""
-    if media_type == "image":
-        item_type = "external"
-        image_url = raw_url
-    elif media_type == "video":
-        yt_id = get_youtube_id(raw_url)
-        if yt_id:
-            item_type = "video"
-            image_url = f"https://img.youtube.com/vi/{yt_id}/hqdefault.jpg"
-            extra_fields = f"platform: youtube\nyoutube_id: '{yt_id}'\n"
-        else:
-            item_type = "external"
-            image_url = raw_url
-    else:
-        item_type = "external"
-        image_url = raw_url
+    item_type = "external"
+    image_url = raw_url
 
     iso_date = f"{date_str}T00:00:00+00:00"
     copyright_line = f"\n\n*Credit & Copyright: {copyright_info}*" if copyright_info else ""
@@ -172,7 +159,7 @@ labels:
   - APOD
   - Space
 link: "{apod_page_link}"
-{extra_fields}---
+---
 
 > 🌌 **NASA Picture of the Day — {readable_date}**
 > 
