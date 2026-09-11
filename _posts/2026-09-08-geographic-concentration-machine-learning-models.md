@@ -79,25 +79,25 @@ The early period of machine learning was an exception. When research depended on
 
 ## The arithmetic behind the hardware cost
 
-The shift from universities to corporate data centers comes down to one equation:
+The shift from universities to corporate data centers comes down to an equation originally popularized in [Kaplan et al.'s scaling paper](https://arxiv.org/abs/2001.08361) and documented across [Epoch AI's compute accounting framework](https://epochai.org/blog/how-to-estimate-training-compute):
 
 $$
 C \approx 6 N D
 $$
 
-Here $C$ is the total floating point operations needed to train a model, $N$ is the parameter count, and $D$ is the number of tokens (words or word fragments) in the training dataset.
+Here $$C$$ is the total floating point operations needed to train a model, $$N$$ is the parameter count, and $$D$$ is the number of tokens (words or word fragments) in the training dataset.
 
 The factor of 6 comes from the arithmetic of neural network training:
 
-1. **Forward pass ($2N$ operations per token):**
+1. **Forward pass ($$2N$$ operations per token):**
    The model processes an input vector through its weights. Each weight requires one multiplication and one addition, so each parameter performs two operations per token.
 
-2. **Backward pass ($4N$ operations per token):**
-   The computer calculates two sets of numbers: the errors passed back through the layers ($2N$) and the adjustments made to each weight ($2N$). That makes the backward pass twice as large as the forward pass.
+2. **Backward pass ($$4N$$ operations per token):**
+   The computer calculates two sets of numbers: the errors passed back through the layers ($$2N$$) and the adjustments made to each weight ($$2N$$). That makes the backward pass twice as large as the forward pass.
 
-Combining the forward and backward passes gives $6N$ operations per token. For an entire dataset of $D$ tokens, training costs $6ND$ operations.
+Combining the forward and backward passes gives $$6N$$ operations per token. For an entire dataset of $$D$$ tokens, training costs $$6ND$$ operations.
 
-Modern numbers make the scale clear. [Meta's Llama 3 405B](https://ai.meta.com/blog/meta-llama-3/) has 405 billion parameters ($N = 405 \times 10^9$) and trained on 15 trillion tokens ($D = 15 \times 10^{12}$):
+Modern numbers make the scale clear. [Meta's Llama 3 405B](https://ai.meta.com/blog/meta-llama-3/) has 405 billion parameters ($$N = 405 \times 10^9$$) and trained on 15 trillion tokens ($$D = 15 \times 10^{12}$$):
 
 $$
 C \approx 6 \times (405 \times 10^9) \times (15 \times 10^{12}) \approx 3.64 \times 10^{26} \text{ FLOPs}
@@ -113,9 +113,9 @@ Training compute across model generations:
   Llama 3 (2024):  405B params  ×   15T tokens   -->   ~3.6 × 10^26 FLOPs
 ```
 
-In 2022, DeepMind published the [Chinchilla scaling laws (Hoffmann et al.)](https://arxiv.org/abs/2203.15556). An earlier [2020 paper by Kaplan et al.](https://arxiv.org/abs/2001.08361) suggested that model size $N$ should grow faster than data size $D$. Hoffmann showed that to get the most capability out of a given compute budget, parameters and tokens must grow together in equal proportion ($N \propto C^{0.5}, D \propto C^{0.5}$). 
+In 2022, DeepMind published the [Chinchilla scaling laws (Hoffmann et al.)](https://arxiv.org/abs/2203.15556). An earlier [2020 paper by Kaplan et al.](https://arxiv.org/abs/2001.08361) suggested that model size $$N$$ should grow faster than data size $$D$$. Hoffmann showed that to get the most capability out of a given compute budget, parameters and tokens must grow together in equal proportion ($$N \propto C^{0.5}, D \propto C^{0.5}$$). 
 
-To finish $10^{26}$ operations in three months, thousands of specialized chips must run side by side without stopping.
+To finish $$10^{26}$$ operations in three months, thousands of specialized chips must run side by side without stopping.
 
 **So what does this mean?**
 You cannot make up for missing hardware with clever code alone. Until someone finds a way to train models without this volume of arithmetic, frontier model creation remains tied to organizations that can run tens of thousands of processors at once.
@@ -212,7 +212,7 @@ Open weights and efficient architectures let people fine-tune and run models any
 
 ## The current map
 
-The geographic split in Figure 2 is the result of capital costs, power supplies, and network physics. As long as frontier models require septillions of operations ($C \approx 6ND$), and as long as training requires microsecond-level connections between chips, frontier development stays where money, silicon, and electricity meet.
+The geographic split in Figure 2 is the result of capital costs, power supplies, and network physics. As long as frontier models require septillions of operations ($$C \approx 6ND$$), and as long as training requires microsecond-level connections between chips, frontier development stays where money, silicon, and electricity meet.
 
 Today the field has settled into three groups:
 
@@ -222,7 +222,3 @@ Today the field has settled into three groups:
 
 Until someone develops an architecture that learns without massive matrix arithmetic, the distribution in Figure 2 will persist. The map of artificial intelligence is drawn by electrical grids, chip manufacturing, and corporate capital.
 
-### Primary sources and data
-- [Epoch AI Notable AI Models Database](https://epochai.org/data/notable-ai-models): Hardware logs and training FLOP counts for models from 1950 to the present.
-- [Stanford AI Index Report](https://aiindex.stanford.edu/report/): Annual data on model origins, corporate spending, and national investments.
-- [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556): Hoffmann et al. on parameter-token scaling ratios.
