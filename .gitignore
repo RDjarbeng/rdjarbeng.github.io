@@ -24,3 +24,5 @@ generate_tags_gemini.rb
 !llms.txt
 crawls_from_web/*.md
 node_modules/  
+**/__pycache__/
+**/__pycache__/*
