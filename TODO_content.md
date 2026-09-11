@@ -415,3 +415,6 @@ https:// youtu.be/ DOWDNBu9DkU
 Like a garage, before you will have to buy and sell different cars as the times change but you were stuck during the change, but this time you have a range of cars to choose from but the garage stays open, like a delivery service, instead of doing each delivery yourself
 - [ ] If you assembled all the cars in the world over the ocean, what area would they cover, would it be bigger than Madagascar?
 - [ ] Rapid animations, template I feel like shouting, extendable
+- [ ] https://github.com/TrenTorch/TrenTorch
+
+Trentorch for learning ML
