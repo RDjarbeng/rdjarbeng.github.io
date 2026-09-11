@@ -325,6 +325,13 @@
             border-top: 1px solid #eee;
             padding-top: 20px;
 
+            .footer-bottom-links {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
             .about-link-footer {
                 color: var(--text-color);
                 font-weight: 600;
@@ -333,6 +340,46 @@
 
                 &:hover {
                     text-decoration: underline;
+                }
+            }
+
+            .apod-info-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                color: var(--text-color);
+                background: rgba(128, 128, 128, 0.15);
+                border: 1px solid rgba(128, 128, 128, 0.3);
+                text-decoration: none;
+                transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+                flex-shrink: 0;
+                line-height: 1;
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    stroke: currentColor;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background: var(--link-color, #0070f3);
+                    border-color: var(--link-color, #0070f3);
+                    transform: scale(1.15);
+                    box-shadow: 0 2px 8px rgba(0, 112, 243, 0.35);
+
+                    svg {
+                        transform: scale(1.05);
+                    }
+                }
+
+                &:focus-visible {
+                    outline: 2px solid var(--link-color, #0070f3);
+                    outline-offset: 2px;
                 }
             }
         }
