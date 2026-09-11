@@ -418,3 +418,8 @@ Like a garage, before you will have to buy and sell different cars as the times 
 - [ ] https://github.com/TrenTorch/TrenTorch
 
 Trentorch for learning ML
+- [ ] https://epoch.ai/
+
+Investigating the trajectory of AI for the benefit of society.
+
+They've got some really cool visualizations and graphs on how AI is growing and changing
