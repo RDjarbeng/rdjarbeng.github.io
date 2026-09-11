@@ -70,7 +70,7 @@ Post-2017: Industrial clusters
   Constraint: Electrical substations, chip supplies, capital
 ```
 
-University labs lost their lead when researchers showed that models got better as computers got bigger. By 2014, private company labs matched university output. By 2022, corporate labs produced 32 notable models while independent university labs produced only 3. In 2023, industry produced 51 notable models, joint industry-university partnerships built 21, and universities working alone built 15.
+University labs lost their lead when researchers showed that models got better as computers got bigger. According to [Epoch AI's institutional analysis](https://epochai.org/blog/tracking-ai-trends-industry-vs-academia), private company labs matched university output by 2014. By 2022, corporate labs produced 32 notable models while independent university labs produced only 3. In 2023, industry produced 51 notable models, joint industry-university partnerships built 21, and universities working alone built 15.
 
 A standard university research grant of $500,000 cannot pay for a $50 million training run. Researchers who wanted to work on the largest systems moved to the companies that owned the computers, and the numbers in Figure 2 shifted into the private sector.
 
@@ -145,7 +145,7 @@ These facilities run into electrical and cooling limits:
 
 Air cooling no longer works on racks drawing 40 to 140 kilowatts. Operators pump liquid coolant through copper plates directly against the silicon dies.
 
-Connecting that much power takes time. In transmission regions like PJM in the eastern United States and ERCOT in Texas, power companies have queues of four to seven years to hook up new high-voltage substations. In Europe, municipal governments in Dublin, Amsterdam, and Frankfurt have restricted new data center power connections to protect local grids.
+Connecting that much power takes time. According to the [Lawrence Berkeley National Laboratory](https://emp.lbl.gov/queues), transmission regions like PJM in the eastern United States face queues of four to seven years to connect new high-voltage substations. In Europe, municipal authorities in Dublin, Amsterdam, and Frankfurt have [curbed new data center power connections](https://www.reuters.com/technology/data-centres-face-curbs-europe-over-power-strain-2024-03-20/) to protect local electrical grids.
 
 To secure power, American cloud companies have made deals directly with power plants:
 
@@ -153,7 +153,7 @@ To secure power, American cloud companies have made deals directly with power pl
 - Amazon Web Services purchased the [Cumulus data center campus](https://www.reuters.com/technology/amazon-buys-nuclear-powered-data-center-cumulus-650-mln-2024-03-04/), located beside the Susquehanna nuclear station in Pennsylvania.
 - Google signed an agreement with [Kairos Power](https://blog.google/outreach-initiatives/sustainability/google-kairos-power-nuclear-energy/) to purchase electricity from seven small modular nuclear reactors by 2035.
 
-Microsoft, Alphabet, Amazon, and Meta each spend $30 billion to $50 billion annually on capital expenses. Few companies or national governments can match that spending.
+According to [financial reporting by the Wall Street Journal](https://www.wsj.com/tech/ai/big-tech-ai-spending-capex-f914b4bb), Microsoft, Alphabet, Amazon, and Meta each spend $30 billion to $50 billion annually on capital expenses. Few companies or national governments can match that spending.
 
 **So what does this mean?**
 The bottleneck in AI is now physical infrastructure. When training requires city-scale electrical capacity and billion-dollar budgets, the geography of AI follows the balance sheets of a few large companies.
@@ -164,17 +164,17 @@ Because most frontier capacity sits in the United States and China, computing po
 
 The [Bureau of Industry and Security (BIS)](https://www.bis.doc.gov/) at the U.S. Department of Commerce used export rules to restrict chip sales:
 
-1. **October 2022 rules:** The BIS restricted exports of high-end accelerators (Nvidia A100 and H100) to China based on interconnect speeds and throughput, and prohibited foundries using American tools from making advanced chips designed by Chinese firms.
-2. **October 2023 updates:** After Nvidia released modified chips for the Chinese market (the A800 and H800), the BIS updated the rules with performance density limits, restricting those models as well.
+1. **October 2022 rules:** The BIS published [interim final export rules](https://www.federalregister.gov/documents/2022/10/13/2022-21658/implementation-of-additional-export-controls-certain-advanced-computing-and-semiconductor) restricting exports of high-end accelerators (Nvidia A100 and H100) to China based on interconnect speeds and throughput, and prohibited foundries using American tools from making advanced chips designed by Chinese firms.
+2. **October 2023 updates:** After Nvidia released modified chips for the Chinese market (the A800 and H800), the BIS issued [updated controls](https://www.federalregister.gov/documents/2023/10/25/2023-23055/implementation-of-additional-export-controls-certain-advanced-computing-items-supercomputer-and) with performance density limits, restricting those models as well.
 
-China funded domestic manufacturing in response. Semiconductor Manufacturing International Corporation (SMIC) manufactured the Huawei Ascend 910B processor using deep ultraviolet lithography. The chip reaches roughly 70 to 80 percent of an Nvidia A100's performance in 16-bit math, but SMIC reports lower wafer yields (around 30 to 50 percent compared to over 90 percent at TSMC), which raises the cost per working chip. Chinese cloud operators also have to write custom software to replace Nvidia's CUDA platform and build larger networks to offset chip communication speeds.
+China funded domestic manufacturing in response. Semiconductor Manufacturing International Corporation (SMIC) manufactured the Huawei Ascend 910B processor using deep ultraviolet lithography. According to [analysis by the Center for Strategic and International Studies (CSIS)](https://www.csis.org/analysis/chinas-semiconductor-breakthrough-analysis-and-implications) and hardware teardowns by [TechInsights](https://www.techinsights.com/blog/huawei-mate-60-pro-and-hi-silicon-kirin-9000s), the chip reaches roughly 70 to 80 percent of an Nvidia A100's performance in 16-bit math, but SMIC reports lower wafer yields (around 30 to 50 percent compared to over 90 percent at TSMC), which raises the cost per working chip. Chinese cloud operators also have to write custom software to replace Nvidia's CUDA platform and build larger networks to offset chip communication speeds.
 
 Other governments realized that depending entirely on American cloud services meant losing control over their own data and technological capability. Several started national programs:
 
 - **United Kingdom:** Put £300 million into the AI Research Resource to build [Isambard-AI at the University of Bristol](https://www.bristol.ac.uk/news/2023/november/isambard-ai.html), using 5,448 Nvidia GH200 processors, alongside the Dawn supercomputer at Cambridge.
-- **France:** Supported Paris-based [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) to build independent models, alongside the speech research lab Kyutai.
-- **United Arab Emirates:** Funded the Falcon model series through the Technology Innovation Institute in Abu Dhabi.
-- **Japan:** Subsidized Sakura Internet and SoftBank to build domestic GPU clusters for Japanese language models.
+- **France:** Supported Paris-based [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) to build independent models, alongside the speech research lab [Kyutai](https://kyutai.org/).
+- **United Arab Emirates:** Funded the Falcon model series through the [Technology Innovation Institute in Abu Dhabi](https://falconllm.tii.ae/).
+- **Japan:** [Subsidized Sakura Internet and SoftBank](https://www.meti.go.jp/english/press/2024/0419_002.html) through the Ministry of Economy, Trade, and Industry to build domestic GPU clusters for Japanese language models.
 - **European Union:** Set up the [EuroHPC AI Factories](https://eurohpc-ju.europa.eu/) program to add GPU partitions to public supercomputers like LUMI in Finland, Leonardo in Italy, and MareNostrum 5 in Spain.
 
 **So what does this mean?**
@@ -185,18 +185,18 @@ A national cluster of 5,000 GPUs cannot match a 100,000-GPU private data center.
 Researchers without massive budgets have focused on making architectures more efficient:
 
 1. **Sparse Mixture of Experts (MoE):**
-   In a dense model, every parameter runs for every token. Mixture of Experts models route each token to a small subset of specialized sub-networks. Mistral's Mixtral 8x7B has 46.7 billion total parameters, but activates only 12.9 billion per token, reducing the compute needed during inference.
+   In a dense model, every parameter runs for every token. Mixture of Experts models route each token to a small subset of specialized sub-networks. Mistral's [Mixtral 8x7B (Jiang et al.)](https://arxiv.org/abs/2401.04088) has 46.7 billion total parameters, but activates only 12.9 billion per token, reducing the compute needed during inference.
 
 2. **Memory optimizations (FlashAttention):**
    Graphics processors are often held up by the time it takes to move data between off-chip memory and on-chip cache. Tri Dao's [FlashAttention](https://arxiv.org/abs/2205.14135) calculates attention directly in on-chip SRAM, cutting memory read/write cycles and speeding up attention layers by two to four times.
 
 3. **Lower precision formats:**
-   Using 8-bit (FP8) and 4-bit (FP4) formats instead of 16-bit floats reduces memory requirements and increases throughput on modern tensor cores. Methods like AWQ and bitsandbytes let researchers run models on smaller hardware.
+   Using 8-bit (FP8) and 4-bit (FP4) formats instead of 16-bit floats reduces memory requirements and increases throughput on modern tensor cores. Methods like [AWQ (Lin et al.)](https://arxiv.org/abs/2306.00978) and [bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes) let researchers run models on smaller hardware.
 
 4. **Open-weights releases:**
-   When Meta released weights for [Llama 3](https://ai.meta.com/blog/meta-llama-3/), and teams like Mistral, Qwen, and DeepSeek published theirs, they separated model training from model use. A developer in Nairobi, Warsaw, or Tokyo does not need $100 million to train a base model. They can download existing weights and fine-tune them on a single machine using parameter-efficient methods like LoRA.
+   When Meta released weights for [Llama 3](https://ai.meta.com/blog/meta-llama-3/), and teams like Mistral, Qwen, and DeepSeek published theirs, they separated model training from model use. A developer in Nairobi, Warsaw, or Tokyo does not need $100 million to train a base model. They can download existing weights and fine-tune them on a single machine using parameter-efficient methods like [LoRA (Hu et al.)](https://arxiv.org/abs/2106.09685).
 
-Some have suggested training frontier models by connecting consumer PCs across the internet, similar to Folding@home. Network speeds prevent this for initial pre-training:
+Some have suggested training frontier models by connecting consumer PCs across the internet, similar to [Folding@home](https://foldingathome.org/). Network speeds prevent this for initial pre-training:
 
 | Metric | Datacenter fabric (NVLink / InfiniBand) | Home broadband internet | Difference |
 | :--- | :--- | :--- | :--- |
