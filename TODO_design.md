@@ -51,7 +51,6 @@ Possible future implementation:
 - [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
-- [ ] **Contact Overlay**: Implement background for the contact overlay at the bottom. NASA picture of the day or media in the site gallery will be nice (Medium Importance, Trivial Complexity: CSS styling)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
 - [ ] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Medium Importance, Medium Complexity: JavaScript debugging)
 
@@ -61,7 +60,6 @@ Possible future implementation:
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
 - [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal) - seems necessary till proven otherwise
 - [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Jekyll logic)
-- [x] Gallery item titles need to be capitalized - possible use of jekyll capitalize filters. (Medium Importance, Trivial Complexity: Jekyll filter application)
 - [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
 
 ## Future Enhancements & Strategic Roadmap
@@ -113,7 +111,6 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- [x] Long titles are cut off on the third line, full title should show on tool tip on hover
 - the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
