@@ -65,7 +65,7 @@ def fetch_from_web():
     # Parse media URL & type
     media_type = "image"
     raw_url = ""
-    m_img = re.search(r'<a\s+href=[\'"]?(image/[^\'">\s]+)[\'"]?>', html, re.I)
+    m_img = re.search(r'<IMG\s+SRC=[\'"]?(image/[^\'">\s]+)[\'"]?', html, re.I) or re.search(r'<a\s+href=[\'"]?(image/[^\'">\s]+)[\'"]?>', html, re.I)
     if m_img:
         raw_url = f"https://apod.nasa.gov/apod/{m_img.group(1)}"
     else:
@@ -118,7 +118,7 @@ def main():
     raw_title = data.get("title", "Astronomy Picture of the Day").strip()
     explanation = data.get("explanation", "").strip()
     media_type = data.get("media_type", "image")
-    raw_url = data.get("hdurl") or data.get("url", "")
+    raw_url = data.get("url") or data.get("hdurl", "")
     copyright_info = data.get("copyright", "").strip().replace("\n", " ")
     
     date_formatted = datetime.strptime(date_str, "%Y-%m-%d")

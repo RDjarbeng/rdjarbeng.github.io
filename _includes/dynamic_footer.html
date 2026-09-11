@@ -1,4 +1,12 @@
-<div class="dynamic-footer" data-footer-bg="{% assign apod_items = site.gallery | where: 'category', 'NASA APOD' | sort: 'date' | reverse %}{% for item in apod_items %}{% if item.image %}{{ item.image | strip }}{% break %}{% endif %}{% endfor %}" data-footer-bg-alt="{% for item in apod_items %}{% if item.image %}{{ item.image_alt | default: item.title | strip | escape }}{% break %}{% endif %}{% endfor %}">
+{% assign apod_items = site.gallery | where: 'category', 'NASA APOD' | sort: 'date' | reverse %}
+{% assign latest_apod = nil %}
+{% for item in apod_items %}
+    {% if item.image %}
+        {% assign latest_apod = item %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+<div class="dynamic-footer" data-footer-bg="{{ latest_apod.image | strip }}" data-footer-bg-alt="{{ latest_apod.image_alt | default: latest_apod.title | strip | escape }}">
     <div class="progress-bar-container">
         <div class="progress-bar"></div>
     </div>
@@ -42,8 +50,9 @@
 
                 <div class="footer-bottom">
                     <span> &copy; {{ site.time | date: "%Y" }}  {{ site.author.name }}</span>
-                    <a href="{{ '/about' | relative_url }}" class="about-link-footer">About Me</a>
-                    <a href="{{ '/contact/' | relative_url }}" class="about-link-footer">Contact</a>
+                    <div class="footer-bottom-links">
+                        <a href="{{ '/about' | relative_url }}" class="about-link-footer">About Me</a>
+                        <a href="{{ '/contact/' | relative_url }}" class="about-link-footer">Contact</a>
                         {% if latest_apod %}
                         <a href="{{ latest_apod.url | relative_url }}" class="apod-info-btn" title="NASA Astronomy Picture of the Day: {{ latest_apod.title | escape }}" aria-label="NASA Astronomy Picture of the Day: {{ latest_apod.title | escape }}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -140,21 +149,60 @@
 
         // Preload the footer background (latest NASA APOD) and reveal it only
         // after it decodes, so it never pops in mid-transition (glitch-free).
-        // If loading fails, the footer keeps its plain theme background.
-        (function preloadFooterBg() {
-            var bg = footer.getAttribute('data-footer-bg');
-            if (!bg) return;
-            var img = new Image();
-            img.decoding = 'async';
-            img.src = bg;
-            var show = function () {
-                footer.style.setProperty('--footer-bg-image', 'url("' + bg + '")');
-                footer.classList.add('has-bg');
-            };
-            if (typeof img.decode === 'function') {
-                img.decode().then(show).catch(function () { /* keep plain bg */ });
+        // Uses wsrv.nl CDN to resize and convert multi-megabyte APOD images to ~60KB WebP.
+        (function initFooterBg() {
+            var rawBg = footer.getAttribute('data-footer-bg');
+            if (!rawBg) return;
+
+            var loaded = false;
+            function loadBg() {
+                if (loaded) return;
+                loaded = true;
+
+                // Optimize raw NASA APOD images with WebP edge compression
+                var targetUrl = rawBg;
+                if (rawBg.indexOf('apod.nasa.gov') !== -1) {
+                    targetUrl = 'https://wsrv.nl/?url=' + encodeURIComponent(rawBg) + '&w=1400&q=80&output=webp';
+                }
+
+                var img = new Image();
+                img.decoding = 'async';
+                var applyBg = function (url) {
+                    footer.style.setProperty('--footer-bg-image', 'url("' + url + '")');
+                    footer.classList.add('has-bg');
+                };
+
+                img.onload = function () {
+                    applyBg(targetUrl);
+                };
+                img.onerror = function () {
+                    if (targetUrl !== rawBg) {
+                        applyBg(rawBg);
+                    }
+                };
+
+                if (typeof img.decode === 'function') {
+                    img.src = targetUrl;
+                    img.decode().then(function () {
+                        applyBg(targetUrl);
+                    }).catch(function () {
+                        img.src = rawBg;
+                    });
+                } else {
+                    img.src = targetUrl;
+                }
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    if (entries[0].isIntersecting) {
+                        observer.disconnect();
+                        loadBg();
+                    }
+                }, { rootMargin: '800px' });
+                observer.observe(footer);
             } else {
-                img.onload = show;
+                loadBg();
             }
         })();
 
