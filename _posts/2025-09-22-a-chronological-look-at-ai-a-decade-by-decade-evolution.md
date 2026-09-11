@@ -90,14 +90,15 @@ The next decade brought two major triumphs that hinted at AI's future power. In 
 - **LSTM Invention**: A key breakthrough for sequence modeling in neural networks. [Read the 1997 paper](https://en.wikipedia.org/wiki/Long_short-term_memory).
 - **Nvidia's Founding**: In **1993**, Jensen Huang and his team founded **Nvidia**, a company that would eventually create the hardware engine for the entire AI industry. [Nvidia company history](https://www.nvidia.com/en-us/about-nvidia/corporate-timeline/).
 
-### 2006: The Deep Learning Revival
+### 2003-2006: The Deep Learning Revival and Neural Language Models
 
-The mid-2000s marked the dawn of the true deep learning revolution. This era was defined by three key ingredients: **big data**, massive **computational power**, and renewed focus on **neural network research**. The launch of **Amazon Web Services (AWS)** in **2006** democratized access to scalable computing, while Fei-Fei Li's **ImageNet** project provided the massive, labeled dataset needed to train robust computer vision models.
+The mid-2000s marked the dawn of the true deep learning revolution, driven by academic tenacity during the tail end of the AI winter. The Canadian Institute for Advanced Research (CIFAR) Neural Computation program funded foundational work when other institutions had walked away.
 
-- **Hinton's Deep Belief Nets**: A breakthrough that showed deep nets were viable. [Read the 2006 paper](https://en.wikipedia.org/wiki/Deep_belief_network).
-- **AWS Public Launch**: Amazon's cloud service enabled scalable AI training. [AWS history](https://aws.amazon.com/about-aws/our-origins/).
-- **ImageNet Begins**: Fei-Fei Li's dataset that would fuel the vision AI boom. [Project site](https://www.image-net.org/).
-- **Google Translate Launch**: Google's early ML-powered tool to automate language barriers. [Google Blog](https://blog.google/technology/ai/google-ai-ml-timeline/).
+- **Neural Language Modeling (2003)**: Yoshua Bengio, Réjean Ducharme, Pascal Vincent, and Christian Jauvin at Université de Montréal published their neural probabilistic language model, introducing distributed word representations that paved the way for modern language embeddings. [Read the 2003 paper](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf).
+- **Hinton's Deep Belief Nets (2006)**: Geoffrey Hinton, Simon Osindero, and Yee-Whye Teh introduced greedy layer-wise pre-training for Deep Belief Networks, demonstrating that multi-layered deep neural networks could be optimized effectively. [Read the 2006 paper](https://en.wikipedia.org/wiki/Deep_belief_network).
+- **AWS Public Launch (2006)**: Amazon Web Services debuted, inaugurating on-demand scalable cloud infrastructure that would later host large-scale training. [AWS history](https://aws.amazon.com/about-aws/our-origins/).
+- **ImageNet Initiative (2009)**: Fei-Fei Li and colleagues at Princeton and Stanford organized over 14 million hand-annotated images across 20,000 synsets, creating the benchmark scale needed to evaluate deep visual models. [Project site](https://www.image-net.org/).
+- **GPU Breakthroughs in Vision (2010-2011)**: At IDSIA in Lugano, Dan Ciresan and Jürgen Schmidhuber deployed multi-column convolutional neural networks on graphics processors, achieving superhuman recognition accuracy on benchmark digit and traffic datasets.
 
 -----
 
@@ -105,21 +106,29 @@ The mid-2000s marked the dawn of the true deep learning revolution. This era was
 
 ### 2012: The AlexNet Breakthrough 💥
 
-The year **2012** is a pivotal turning point in the history of artificial intelligence. At the annual ImageNet Large Scale Visual Recognition Challenge (ILSVRC), a team led by Geoffrey Hinton unleashed **AlexNet**, a deep convolutional neural network (CNN) that shattered all previous records. It achieved a top-5 error rate of just 15.3%, a staggering improvement over the previous year's best of 26.2%.
+The year **2012** is a monumental turning point in the history of artificial intelligence. At the annual ImageNet Large Scale Visual Recognition Challenge (ILSVRC), Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton unveiled **AlexNet**, an 8-layer deep convolutional neural network that shattered all previous records. It achieved a top-5 error rate of just 15.3%, outclassing the second-place entry of 26.2% based on hand-crafted SIFT and Fisher vector features.
 
-This wasn't just another incremental win; it was a **paradigm shift**. AlexNet's success, powered by **Nvidia GPUs**, demonstrated that deep learning wasn't just a theoretical curiosity but a practical, scalable approach to solving real-world problems. Its victory unleashed a frenzy of research and investment, making CNNs the de facto standard for computer vision. Without this moment, the generative AI boom of the 2020s might have been delayed by years. **Google** amplified the momentum with its **Knowledge Graph**, an AI-driven semantic web that enhanced search understanding.
+AlexNet's success rested on a software and hardware co-design: Krizhevsky wrote hand-optimized C++ and CUDA kernels to parallelize convolutional layers across two consumer Nvidia GeForce GTX 580 GPUs (each with 3 GB of memory), slashing training time from months to five days. This proved that deep networks could scale with massive datasets when paired with graphics accelerators.
 
-- **AlexNet Victory**: 15% error reduction on ImageNet via CNNs. [Read the 2012 paper](https://www.pinecone.io/learn/series/image-search/imagenet/).
+The breakthrough triggered immediate corporate realignment across Silicon Valley:
+- In March 2013, Google acquired Hinton, Krizhevsky, and Sutskever's startup DNNresearch for 44 million dollars at a Lake Tahoe auction.
+- In December 2013, Facebook recruited Yann LeCun to build Facebook AI Research (FAIR).
+- In January 2014, Google acquired DeepMind Technologies in London for approximately 500 million dollars.
+- In December 2015, an investor syndicate pledged 1 billion dollars to establish OpenAI.
+
+- **AlexNet Victory**: 15% error reduction on ImageNet via GPU-accelerated CNNs. [Read the 2012 paper](https://www.pinecone.io/learn/series/image-search/imagenet/).
 - **Google Knowledge Graph**: Semantic AI boosts search relevance. [Google Blog](https://blog.google/technology/ai/google-ai-ml-timeline/).
 
-### 2014-2016: Generative Models and Go Mastery
+### 2013-2016: Embeddings, Generative Models, and Go Mastery
 
-- **2014**: The invention of **Generative Adversarial Networks (GANs)** by Ian Goodfellow opened the door to a new era of generative AI, allowing two neural networks to "compete" to create more realistic images and data. In a major strategic move, **Google acquired DeepMind**, bringing its deep learning and reinforcement learning expertise in-house. That same year, **Tesla** rolled out its first Autopilot beta, marking AI's entry into consumer vehicles.
+- **2013**: Tomas Mikolov and his team at Google released **Word2Vec**, showing that neural embeddings could perform algebraic semantic relationships like $$\vec{v}_{\text{king}} - \vec{v}_{\text{man}} + \vec{v}_{\text{woman}} \approx \vec{v}_{\text{queen}}$$. [Read the paper](https://arxiv.org/abs/1301.3781).
+- **2014**: Ian Goodfellow and fellow researchers at Université de Montréal introduced **Generative Adversarial Networks (GANs)**, pitting a generator against a discriminator in a zero-sum game to synthesize realistic images. Meanwhile, Ilya Sutskever, Oriol Vinyals, and Quoc Le at Google introduced Sequence to Sequence learning with neural networks, establishing recurrent encoder-decoder models for translation.
     - **GAN Invention**: Goodfellow's adversarial training for images. [Read the 2014 paper](https://en.wikipedia.org/wiki/Generative_adversarial_network).
-    - **Google Acquires DeepMind**: Brings RL and deep learning firepower. [Google AI Journey](https://ai.google/our-ai-journey/).
+    - **Google Acquires DeepMind**: Brings RL and deep learning talent in-house. [Google AI Journey](https://ai.google/our-ai-journey/).
     - **Tesla Autopilot Launch**: AI-assisted driving debuts in Model S. [Forbes](https://www.forbes.com/sites/qai/2022/09/29/tesla-a-history-of-innovation-and-headaches/).
-- **2016**: DeepMind’s **AlphaGo** stunned the world by defeating the human Go champion, Lee Sedol. Unlike Deep Blue, which relied on brute-force calculation, AlphaGo used a blend of deep learning and reinforcement learning, showcasing an almost **intuition-like** style of play.
-    - **AlphaGo vs. Lee Sedol**: A 4-1 win via Monte Carlo Tree Search + DL. [Match coverage](https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol).
+- **2015**: Kaiming He and researchers at Microsoft Research Asia introduced **ResNet (Deep Residual Networks)**, utilizing identity skip connections to train 152 layers stably, surpassing human-level accuracy on ImageNet with a 3.57% error rate. [Read the ResNet paper](https://arxiv.org/abs/1512.03385).
+- **2016**: DeepMind's **AlphaGo** defeated 18-time world Go champion Lee Sedol 4-1 in Seoul by uniting deep neural policy and value networks with Monte Carlo Tree Search across 1,920 CPUs and 280 GPUs.
+    - **AlphaGo vs. Lee Sedol**: Landmark victory in Seoul. [Match coverage](https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol).
     - **Tesla Autopilot 2.0**: Neural nets for vision-based autonomy. [Analytics Vidhya](https://www.analyticsvidhya.com/blog/2025/07/tesla-ai-cars-and-manufacturing/).
 
 ### 2017: Transformers and the NLP Revolution
