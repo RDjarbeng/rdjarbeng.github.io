@@ -4,28 +4,54 @@ description: Write blog sections that flow into each other so the reader is led 
 
 # Narrative Flow Workflow
 
-Use this on every post, after the facts are gathered and before the draft is considered done. Objective: hold the reader's attention from hook to takeaway so they finish feeling they obtained something worthwhile.
+One step in the post pipeline (after facts/draft are in hand, alongside image creation, tagging, etc.). Category is pre-set by the author but describes topic, not shape — classify type from the draft itself.
 
-## 1. Open with hook, stakes, and roadmap
-- First paragraph: a concrete hook (a surprising number, a news event, a relatable pain) plus what is at stake.
-- End the opening with one roadmap sentence stating what the post will deliver and in what order.
-- Example (flood post): news hook (Google predicts flash floods 24h ahead with no sensors) + "Here is how they did it, and what the limits are."
+## 0. Classify type
 
-## 2. Build one narrative spine before writing sections
-- Write the spine as a chain of 3-6 questions where each answer raises the next question (e.g. Problem -> why naive approaches fail -> the key insight -> the mechanism -> how to use it -> why it matters).
-- Each H2 section owns exactly one link of the chain. If a section does not answer the previous section's closing question, restructure instead of forcing a bridge.
+Check the draft for these signals, in order, and stop at the first match:
 
-## 3. Handoff rule (STRICT)
-- Every section except the last MUST end with a forward-pointer: the unresolved question, tension, or curiosity the NEXT section resolves.
-- Every section except the first MUST open with an echo: repeat a word or concept from the previous section's last sentence in its first sentence.
-- No section may open with a bare definition. No section may close shut (a conclusion that points nowhere).
-- Good closings raise questions ("What if brightness and color did not have to travel together at all?"). Good openings pick up the thread ("Splitting brightness and color into separate streams is exactly what...").
+1. Numbered steps/commands the reader follows, long or multi-milestone → **Build**
+2. Numbered steps/commands, short, one specific fix → **Fix-It**
+3. First paragraph leads with a date/announcement/"X happened" → **News**
+4. Draft argues for or against a position → **Argument**
+5. Draft explains a mechanism/discovery for its own sake, no reader task, no side taken → **Story**
 
-## 4. Close with takeaway and next steps
-- Final paragraph restates the complete picture in one breath: the mental model plus what the reader can now do.
-- Point outward: links to tools, datasets, docs, or related posts the reader should open next.
+If two signals tie (e.g. it explains a mechanism *and* argues a position) — ask which shape it's meant to be; don't guess on a long post. For short posts (Fix-It vs. News), proceed with a stated assumption.
 
-## 5. Verify flow before finishing
-- Read the post aloud. Every stumble marks a missing transition.
-- Check each H2 boundary: can you state the handoff (closing question -> opening echo) in one line per section? If not, rewrite the boundary.
-- Report the handoffs (one line per section) when the draft is reviewed.
+## 1. Fix-It
+- Open with the exact symptom, first sentence. No hook-building.
+- Fix before explanation — impatient readers stop at the fix.
+- No handoff rule; steps can be flat.
+- Close: one line on root cause + link to docs/issue if one exists.
+
+## 2. News
+- Open with the fact itself (what/who/when), first sentence. Take comes after.
+- Inverted pyramid: most important fact → detail → context → implication.
+- Light echo between paragraphs is enough; no strict handoff needed.
+- Close: what the reader should actually do, not a philosophical takeaway.
+
+## 3. Build
+- Open with hook + what you'll have built + rough time/skill ask.
+- Spine = build order. Each H2 = one milestone, can depend directly on the last ("with X installed, now...").
+- Sections may open by naming reader's current state rather than echoing exact wording; ending on "you should now see Z" is fine.
+- Close: recap what's built, link the result, suggest one extension.
+
+## 4. Story (strict — this is the original flow)
+- Open with hook + stakes + one roadmap sentence.
+- Spine: 3-6 questions, each answer raising the next.
+- Handoff rule (strict): every section but the last ends on a forward-pointer (open question/tension); every section but the first opens with an echo of the prior section's closing line. No bare-definition opens, no dead-end closes.
+- Close: restate the mental model in one breath + point to related posts/tools.
+
+## 5. Argument
+- Open by stating the position/tension within two sentences.
+- Spine: claim → strongest evidence → strongest real counter-argument → where you land and why.
+- Sections end by naming the tension carried forward, not a cliffhanger; openings engage the prior claim directly.
+- Include a genuine counter-argument, not a strawman.
+- Close: plain stance + what would change your mind.
+
+## 6. Always (any type)
+- Final paragraph restates the takeaway — one sentence for Fix-It/News, the full mental model for Story/Argument.
+- Point outward to relevant links.
+- Read aloud; every stumble = missing transition.
+- Story/Argument: report the per-section handoffs when reviewed.
+- Fix-It/News/Build: confirm a skim of just H2s + bolded fixes/steps still delivers the core value.
