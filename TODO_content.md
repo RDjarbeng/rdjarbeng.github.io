@@ -423,3 +423,6 @@ Trentorch for learning ML
 Investigating the trajectory of AI for the benefit of society.
 
 They've got some really cool visualizations and graphs on how AI is growing and changing
+- [ ] Connection the raspberry pi  to a network when you have just a keyboard. Use Ctrl+alt+T
+
+To open the terminal, then nmtui to open the network manager TUI
