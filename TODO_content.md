@@ -442,3 +442,4 @@ Romain Murenzi - Current Academic Role
 - [ ] Building cost-models for businesses as an engineer
 
  - Auditors report for Ghana, is it available online
+- [ ] Elon Musk bought Glenco?
