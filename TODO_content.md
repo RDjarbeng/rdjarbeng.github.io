@@ -426,3 +426,8 @@ They've got some really cool visualizations and graphs on how AI is growing and 
 - [ ] Connection the raspberry pi  to a network when you have just a keyboard. Use Ctrl+alt+T
 
 To open the terminal, then nmtui to open the network manager TUI
+- [ ] 42 fortune 500 companies came from his lab, guy from one university - find him
+
+- recycling silicon for use in photovoltaic systems-investigate the idea
+
+- Anne makene moved from Oxford to Rwanda
