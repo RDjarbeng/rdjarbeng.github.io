@@ -439,3 +439,6 @@ To open the terminal, then nmtui to open the network manager TUI
 Romain Murenzi - Current Academic Role
 ​Worcester Polytechnic Institute (WPI): Joined WPI as a full Professor in the Department of Physics in January 2024.  
 ​Research Focus: His scientific work focuses on wavelets, group theory, phase space representations, coherent states, and multidimensional signal processing
+- [ ] Building cost-models for businesses as an engineer
+
+ - Auditors report for Ghana, is it available online
