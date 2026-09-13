@@ -446,3 +446,4 @@ Romain Murenzi - Current Academic Role
 - [ ] ​Cobalt Offtake Contracts: In 2020, Tesla signed a long-term supply agreement with Glencore to purchase up to 6,000 tons of cobalt annually from its industrial mining operations (principally in the Democratic Republic of the Congo) to supply Tesla battery factories in Shanghai and Berlin
 - [ ] Musk has consistently pointed out that the macro bottleneck for electrifying transport and expanding AI data centers is the power transmission infrastructure.  
 ​He has warned about a coming collision between AI compute demand and the physical grid: transformers, substations, and high-voltage transmission lines require immense amounts of copper and electrical steel, but manufacturing lead times for large-scale transformers stretch between two to five years.
+- [ ] Marcus Beuhlerh - civil engineering but does more materials engineering
