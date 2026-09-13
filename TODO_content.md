@@ -443,3 +443,4 @@ Romain Murenzi - Current Academic Role
 
  - Auditors report for Ghana, is it available online
 - [ ] Elon Musk bought Glenco?
+- [ ] ​Cobalt Offtake Contracts: In 2020, Tesla signed a long-term supply agreement with Glencore to purchase up to 6,000 tons of cobalt annually from its industrial mining operations (principally in the Democratic Republic of the Congo) to supply Tesla battery factories in Shanghai and Berlin
