@@ -433,3 +433,4 @@ To open the terminal, then nmtui to open the network manager TUI
 - Anne makene moved from Oxford to Rwanda
 - [ ] Accelerators - reduce the number of years to market-who are they what do they do-connected to the military as well
 - [ ] Book: startup nation
+- [ ] 2025 Nobel prize on chemistry Omer Yagi, Charles Liber father of nano technology
