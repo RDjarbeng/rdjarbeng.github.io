@@ -451,3 +451,4 @@ Romain Murenzi - Current Academic Role
 - [ ] Carol dweck - growth mindset
 - [ ] Post on AI generated songs you thought were real - Yes, the viral song "I Speak Blessings" and its credited artist, Delana Hope, are
 entirely AI-generated
+- [ ] For the dynamic footer, in light mode when the text is black and the background is dark it's very hard to see
