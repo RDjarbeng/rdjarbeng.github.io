@@ -449,3 +449,5 @@ Romain Murenzi - Current Academic Role
 - [ ] Marcus Beuhlerh - civil engineering but does more materials engineering
 - [ ] Institute Professor Robert Langer at MIT. Highest level of MIT Source: Koch Insti tute for
 - [ ] Carol dweck - growth mindset
+- [ ] Post on AI generated songs you thought were real - Yes, the viral song "I Speak Blessings" and its credited artist, Delana Hope, are
+entirely AI-generated
