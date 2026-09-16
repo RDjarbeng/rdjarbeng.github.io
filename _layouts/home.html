@@ -103,6 +103,8 @@ layout: default
           
           <li style="margin-top: 15px;"><a href="#personal-posts" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">Personal posts</a></li>
           
+          <li style="margin-top: 15px;"><a href="#enlighten-project" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">📚 Enlighten</a></li>
+          
           <li style="margin-top: 15px; font-size: 1.15rem; font-weight: bold; margin-bottom: 5px; color: var(--text-color);">Latest from the Gallery</li>
           <div style="margin-left: 10px; border-left: 2px solid rgba(150, 150, 150, 0.4); padding-top: 5px; padding-bottom: 5px;">
             <li><a href="#gallery-videos" class="toc-link" style="padding-left: 10px;">Videos</a></li>
@@ -141,6 +143,7 @@ layout: default
          <a href="#featured-posts" class="mobile-toc-link">Featured Posts</a>
          <a href="#guest-posts" class="mobile-toc-link">Guest Authors</a>
          <a href="#personal-posts" class="mobile-toc-link">Personal Posts</a>
+         <a href="#enlighten-project" class="mobile-toc-link">📚 Enlighten</a>
          <a href="#gallery-videos" class="mobile-toc-link">Latest Gallery Videos</a>
          <a href="#gallery-images" class="mobile-toc-link">Latest Gallery Images</a>
       </nav>
@@ -253,6 +256,49 @@ layout: default
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg></a>
 
+      <!-- Enlighten Project Section -->
+      <br>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; margin-top: 10px;">
+        <h2 class="section-title" id="enlighten-project" style="scroll-margin-top: 80px; margin-bottom: 0;">📚 Project Enlighten</h2>
+        <span style="font-size: 0.95rem; color: var(--text-color-light, #666); margin-top: 5px;">Curated, legal, and free tech books online</span>
+      </div>
+      <p style="color: var(--text-color-light, #666); font-size: 0.95rem; margin-top: 8px; margin-bottom: 16px;">
+        A hand-picked collection of genuinely great books on machine learning, deep learning, Python, and computer vision that authors and publishers have made permanently free to read online.
+      </p>
+      <div class="enlighten-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+        {% assign featured_books = site.books | where_exp: "b", "b.known_for != nil" | slice: 0, 3 %}
+        {% if featured_books.size == 0 %}
+          {% assign featured_books = site.books | slice: 0, 3 %}
+        {% endif %}
+        {% for book in featured_books %}
+        <a class="book-card" href="{{ book.link }}" target="_blank" rel="noopener">
+          <div class="book-card-top">
+            <span class="book-format">{{ book.format | default: "Online" }}</span>
+            <span style="font-size: 0.78rem; color: var(--text-color-light, #666);">{{ book.category }}</span>
+          </div>
+          <h3>{{ book.title }}</h3>
+          <p class="book-author">by {{ book.author }}</p>
+          {% if book.known_for %}
+          <div class="book-known">{{ book.known_for }}</div>
+          {% endif %}
+          <p class="book-desc">{{ book.description | truncate: 120 }}</p>
+          <div class="book-footer">
+            <span class="book-cta">Read free online →</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div style="margin-top: 15px;">
+        <a href="{{ '/enlighten/' | relative_url }}" class="about-link btn">
+          Explore all {{ site.books.size }} books in Enlighten
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
       <!-- Gallery Videos Section -->
       <br>
       <h2 class="section-title" id="gallery-videos" style="scroll-margin-top: 80px;">Latest Gallery Videos</h2>
@@ -337,6 +383,7 @@ layout: default
           document.getElementById('featured-posts'),
           document.getElementById('guest-posts'),
           document.getElementById('personal-posts'),
+          document.getElementById('enlighten-project'),
           document.getElementById('gallery-videos'),
           document.getElementById('gallery-images'),
           document.getElementById('about-me'),
