@@ -265,25 +265,6 @@ layout: default
       <p style="color: var(--text-color-light, #666); font-size: 0.95rem; margin-top: 8px; margin-bottom: 16px;">
         A hand-picked collection of genuinely great books on machine learning, deep learning, Python, and computer vision that authors and publishers have made permanently free to read online.
       </p>
-
-      <div class="learning-path" style="margin-bottom: 1.5rem;">
-        <h3 style="font-size: 1.05rem; margin: 0 0 0.35rem;">🧭 Suggested Learning Path</h3>
-        <p class="path-desc" style="margin-bottom: 0.85rem;">From zero to modern AI, in five recommended reads:</p>
-        <div class="path-steps">
-          {% assign path_slugs = "automate-the-boring-stuff python-for-data-analysis practical-deep-learning-for-coders dive-into-deep-learning foundations-of-computer-vision" | split: " " %}
-          {% for slug in path_slugs %}
-          {% assign pbook = site.books | where: "slug", slug | first %}
-          {% if pbook %}
-          <a class="path-step" href="{{ pbook.link }}" target="_blank" rel="noopener" title="{{ pbook.title }} - {{ pbook.author }}">
-            <span class="path-num">{{ forloop.index }}</span>
-            {{ pbook.title }}
-          </a>
-          {% unless forloop.last %}<span class="path-arrow">→</span>{% endunless %}
-          {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-
       <div class="enlighten-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
         {% assign featured_books = site.books | where_exp: "b", "b.known_for != nil" | slice: 0, 3 %}
         {% if featured_books.size == 0 %}
