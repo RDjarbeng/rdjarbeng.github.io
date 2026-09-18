@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 # Force rebuild
 backend:
   name: github
@@ -18,6 +19,7 @@ slug:
 collections:
   - name: "posts"
     label: "Posts"
+    icon: "article"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -156,6 +158,7 @@ collections:
 
   - name: "personal"
     label: "Personal"
+    icon: "person_pin"
     folder: "_personal"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -277,88 +280,13 @@ collections:
             }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
 
-  - name: "authors"
-    label: "Authors"
-    folder: "_authors"
-    create: true
-    slug: "{{short_name}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Short Name", name: "short_name", widget: "string" }
-      - { label: "Display Name", name: "display_name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string", default: "Writer" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "category_info"
-    label: "Category Info"
-    folder: "_category_info"
-    create: true
-    slug: "{{category_name}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Category Name", name: "category_name", widget: "string" }
-      - {
-          label: "Category Description",
-          name: "description",
-          widget: "markdown",
-          required: false,
-          hint: "Add an informative description for the category page to improve SEO.",
-        }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ",
-          default: "{{now}}",
-        }
-
-  - name: "gallery_categories"
-    label: "Gallery Categories"
-    folder: "_gallery_categories"
-    create: true
-    slug: "{{title}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-
-  - label: About
-    name: about_page
-    files:
-      - name: "about"
-        label: "About Page"
-        file: "about.md"
-        create: false
-        editor:
-          preview: false
-        fields:
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "about",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Permalink",
-              name: "permalink",
-              widget: "hidden",
-              default: "/about/",
-            }
-          - {
-              label: "Custom CSS Class",
-              name: "custom_css_class",
-              widget: "string",
-              default: "about-page",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+  - divider: true
 
   - name: "ai_generations"
     label: "AI Generations"
+    icon: "smart_toy"
     folder: "_gallery/ai"
-    media_folder: "../../assets/images/ai"
+    media_folder: "/assets/images/ai"
     public_folder: "/assets/images/ai"
     create: true
     slug: "{{slug}}"
@@ -414,8 +342,9 @@ collections:
 
   - name: "memes"
     label: "Memes"
+    icon: "mood"
     folder: "_gallery/memes"
-    media_folder: "../../assets/images/memes"
+    media_folder: "/assets/images/memes"
     public_folder: "/assets/images/memes"
     create: true
     slug: "{{slug}}"
@@ -456,6 +385,7 @@ collections:
 
   - name: "gallery"
     label: "General Gallery"
+    icon: "photo_library"
     folder: "_gallery"
     nested:
       depth: 3
@@ -528,6 +458,7 @@ collections:
 
   - name: "nasa_apod"
     label: "NASA APOD"
+    icon: "planet"
     folder: "_gallery/nasa-apod"
     create: true
     slug: "{{slug}}"
@@ -547,8 +478,9 @@ collections:
 
   - name: "gallery_videos"
     label: "Videos"
+    icon: "smart_display"
     folder: "_gallery/videos"
-    media_folder: "../../assets/images/videos"
+    media_folder: "/assets/images/videos"
     public_folder: "/assets/images/videos"
     create: true
     slug: "{{slug}}"
@@ -632,6 +564,7 @@ collections:
 
   - name: "video_collections"
     label: "Video Collections (Playlists)"
+    icon: "playlist_play"
     folder: "_video_collections"
     create: true
     slug: "{{slug}}"
@@ -659,8 +592,54 @@ collections:
       - { label: "YouTube Playlist URL", name: "youtube_playlist_url", widget: "string", required: false, hint: "Paste a YouTube playlist URL here. A GitHub Action will automatically fetch videos and add them to the videos collection." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "video_collection" }
 
+  - name: "screenshots"
+    label: "Screenshots"
+    icon: "screenshot_monitor"
+    folder: "_gallery/screenshots"
+    nested:
+      depth: 3
+    media_folder: "/assets/images/screenshots"
+    public_folder: "/assets/images/screenshots"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "hidden", default: "external" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
+      - { label: "Enhanced by Bot", name: "enhanced_by_bot", widget: "boolean", required: false, default: false }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
+
+  - name: "artemis_ii"
+    label: "Artemis II"
+    icon: "rocket_launch"
+    folder: "_gallery/artemis-ii"
+    nested:
+      depth: 2
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
+      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
+      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false, hint: "For cover images" }
+
+  - divider: true
+
   - name: "book_categories"
     label: "Enlighten Categories"
+    icon: "category"
     folder: "_book_categories"
     create: true
     slug: "{{name}}"
@@ -674,6 +653,7 @@ collections:
 
   - name: "books"
     label: "Enlighten Books"
+    icon: "menu_book"
     folder: "_books"
     create: true
     slug: "{{slug}}"
@@ -735,306 +715,96 @@ collections:
   # SCREENSHOTS – one collection per sub-folder
   # (Sveltia CMS doesn't support nested folders yet)
   # -------------------------------------------------------
-  - name: "screenshots_general"
-    label: "General [Screenshots]"
-    folder: "_gallery/screenshots/general"
-    media_folder: "../../../assets/images/screenshots/general"
-    public_folder: "/assets/images/screenshots/general"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Enhanced by Bot", name: "enhanced_by_bot", widget: "boolean", required: false, default: false }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
 
-  - name: "screenshots_twitter_general"
-    label: "Twitter General [Screenshots]"
-    folder: "_gallery/screenshots/twitter/general"
-    media_folder: "../../../../assets/images/screenshots/twitter/general"
-    public_folder: "/assets/images/screenshots/twitter/general"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
+  - divider: true
 
-  - name: "screenshots_twitter_ghana"
-    label: "Ghana Twitter [Screenshots]"
-    folder: "_gallery/screenshots/twitter/ghana-twitter"
-    media_folder: "../../../../assets/images/screenshots/twitter/ghana-twitter"
-    public_folder: "/assets/images/screenshots/twitter/ghana-twitter"
+  - name: "authors"
+    label: "Authors"
+    icon: "group"
+    folder: "_authors"
     create: true
-    slug: "{{slug}}"
+    slug: "{{short_name}}"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
+      - { label: "Short Name", name: "short_name", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string", default: "Writer" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "screenshots_twitter_tech"
-    label: "Tech Twitter [Screenshots]"
-    folder: "_gallery/screenshots/twitter/tech-twitter"
-    media_folder: "../../../../assets/images/screenshots/twitter/tech-twitter"
-    public_folder: "/assets/images/screenshots/twitter/tech-twitter"
+  - name: "category_info"
+    label: "Category Info"
+    icon: "label"
+    folder: "_category_info"
     create: true
-    slug: "{{slug}}"
+    slug: "{{category_name}}"
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
+      - { label: "Category Name", name: "category_name", widget: "string" }
+      - {
+          label: "Category Description",
+          name: "description",
+          widget: "markdown",
+          required: false,
+          hint: "Add an informative description for the category page to improve SEO.",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          default: "{{now}}",
+        }
 
-  # -------------------------------------------------------
-  # ARTEMIS II – one collection per sub-folder
-  # -------------------------------------------------------
-  - name: "artemis_astronauts"
-    label: "Astronauts [Artemis II]"
-    folder: "_gallery/artemis-ii/artemis-ii-astronauts"
-    media_folder: "../../../../assets/images/artemis-ii/artemis-ii-astronauts"
-    public_folder: "/assets/images/artemis-ii/artemis-ii-astronauts"
+  - name: "gallery_categories"
+    label: "Gallery Categories"
+    icon: "collections_bookmark"
+    folder: "_gallery_categories"
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false, hint: "For cover images" }
 
-  - name: "artemis_flight_day"
-    label: "Flight Day Highlights [Artemis II]"
-    folder: "_gallery/artemis-ii/artemis-ii-flight-day-highlights"
-    media_folder: "../../../../assets/images/artemis-ii/artemis-ii-flight-day-highlights"
-    public_folder: "/assets/images/artemis-ii/artemis-ii-flight-day-highlights"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_launch"
-    label: "Launch [Artemis II]"
-    folder: "_gallery/artemis-ii/artemis-ii-launch"
-    media_folder: "../../../../assets/images/artemis-ii/artemis-ii-launch"
-    public_folder: "/assets/images/artemis-ii/artemis-ii-launch"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_mission_science"
-    label: "Mission Science [Artemis II]"
-    folder: "_gallery/artemis-ii/artemis-ii-mission-science"
-    media_folder: "../../../../assets/images/artemis-ii/artemis-ii-mission-science"
-    public_folder: "/assets/images/artemis-ii/artemis-ii-mission-science"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_splashdown"
-    label: "Splashdown & Return [Artemis II]"
-    folder: "_gallery/artemis-ii/artemis-ii-splashdown-and-return"
-    media_folder: "../../../../assets/images/artemis-ii/artemis-ii-splashdown-and-return"
-    public_folder: "/assets/images/artemis-ii/artemis-ii-splashdown-and-return"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_ground_systems"
-    label: "Ground Systems [Artemis II]"
-    folder: "_gallery/artemis-ii/ground-systems"
-    media_folder: "../../../../assets/images/artemis-ii/ground-systems"
-    public_folder: "/assets/images/artemis-ii/ground-systems"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_journey_moon"
-    label: "Journey to Moon [Artemis II]"
-    folder: "_gallery/artemis-ii/journey-to-the-moon"
-    media_folder: "../../../../assets/images/artemis-ii/journey-to-the-moon"
-    public_folder: "/assets/images/artemis-ii/journey-to-the-moon"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_lunar_flyby"
-    label: "Lunar Flyby [Artemis II]"
-    folder: "_gallery/artemis-ii/lunar-flyby"
-    media_folder: "../../../../assets/images/artemis-ii/lunar-flyby"
-    public_folder: "/assets/images/artemis-ii/lunar-flyby"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_orion"
-    label: "Orion Spacecraft [Artemis II]"
-    folder: "_gallery/artemis-ii/nasas-orion-spacecraft"
-    media_folder: "../../../../assets/images/artemis-ii/nasas-orion-spacecraft"
-    public_folder: "/assets/images/artemis-ii/nasas-orion-spacecraft"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_sls"
-    label: "SLS Rocket [Artemis II]"
-    folder: "_gallery/artemis-ii/nasas-space-launch-system-rocket"
-    media_folder: "../../../../assets/images/artemis-ii/nasas-space-launch-system-rocket"
-    public_folder: "/assets/images/artemis-ii/nasas-space-launch-system-rocket"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
-
-  - name: "artemis_return_earth"
-    label: "Return to Earth [Artemis II]"
-    folder: "_gallery/artemis-ii/return-to-earth"
-    media_folder: "../../../../assets/images/artemis-ii/return-to-earth"
-    public_folder: "/assets/images/artemis-ii/return-to-earth"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false }
+  - label: "About"
+    name: "about_page"
+    icon: "info"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "about.md"
+        create: false
+        editor:
+          preview: false
+        fields:
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "about",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Permalink",
+              name: "permalink",
+              widget: "hidden",
+              default: "/about/",
+            }
+          - {
+              label: "Custom CSS Class",
+              name: "custom_css_class",
+              widget: "string",
+              default: "about-page",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
 
 singletons:
 
   - name: "config"
     label: "config"
+    icon: "tune"
     file: "admin/config-b.yml"
     editor:
       preview: false
