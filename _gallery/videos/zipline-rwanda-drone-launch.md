@@ -89,4 +89,4 @@ date: 2026-01-22 22:53:00
 published: true
 ---
 
-
+Autonomous electric drone launch by Zipline in Rwanda. Zipline designs, manufactures, and operates an autonomous drone delivery logistics network providing on-demand delivery of vital medical supplies, blood plasma, and vaccines to remote health facilities across Rwanda and Ghana within minutes.

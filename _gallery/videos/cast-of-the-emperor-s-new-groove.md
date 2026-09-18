@@ -88,4 +88,4 @@ category: videos
 genre: Entertainment
 ---
 
-Strange this is my first time seeing Yzma's voice actor
+Behind-the-scenes recording booth footage featuring the voice cast of Disney animated classic The Emperor's New Groove (2000), including Eartha Kitt's legendary performance as the villainous Yzma alongside David Spade as Kuzco, John Goodman as Pacha, and Patrick Warburton as Kronk.

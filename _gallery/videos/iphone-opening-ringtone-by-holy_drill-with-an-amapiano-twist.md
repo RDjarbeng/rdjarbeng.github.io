@@ -11,4 +11,4 @@ category: videos
 genre: Science & Technology
 ---
 
-Remix of the iphone opening ringtone by Holy Drill with an amapiano twist. Cynthia leave him alone
+Creative audio production by Holy Drill reimagining Apple default iPhone Opening ringtone with heavy log drums, syncopated shakers, and infectious South African Amapiano groove patterns, blending familiar mobile interface chimes with contemporary African club beats.

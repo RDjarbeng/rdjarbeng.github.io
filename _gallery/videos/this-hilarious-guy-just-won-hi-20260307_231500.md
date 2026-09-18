@@ -11,6 +11,4 @@ date: '2026-03-07T23:15:00+02:00'
 published: true
 ---
 
-Comedian: De Preacher
-
-It's not about dying, the question is can your family afford your burial
+Stand-up comedy performance by De Preacher delivering sharp observational humor on the financial absurdities and family politics surrounding elaborate funeral ceremonies versus everyday living expenses.

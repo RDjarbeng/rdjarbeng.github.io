@@ -10,4 +10,4 @@ type: video
 category: videos
 ---
 
-Why you must stop wearing belts by YouTube channel @AskOkeyInc
+Sartorial styling advice from tailoring expert AskOkey explaining why braces and suspenders create a cleaner, unbroken trouser line compared to belts when wearing tailored suits. Suspenders allow the waistband to drape naturally from the shoulders without bunching the fabric or interrupting the silhouette.

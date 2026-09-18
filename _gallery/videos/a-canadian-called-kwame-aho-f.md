@@ -11,6 +11,4 @@ genre: Other
 category: videos
 ---
 
-I’m called Kwame Ahoɔfɛ. I’m Canadian, but I once lived and worked in Ghana
-
-From Twitter during the 2026 world cup
+Viral video encounter with a Canadian football fan nicknamed Kwame Ahoofe during the World Cup, recounting his memories of living and working in Ghana and proudly speaking Ghanaian Twi with infectious warmth and cultural enthusiasm.

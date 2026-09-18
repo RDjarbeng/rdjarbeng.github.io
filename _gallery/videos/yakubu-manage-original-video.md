@@ -10,4 +10,4 @@ category: videos
 genre: Other
 ---
 
-I finally found the  “Yakubu Manage” video
+The viral comedic Ghanaian street interview clip featuring the widely referenced phrase 'Yakubu Manage'. An entertaining look into local street culture, spontaneous interviews, and the humor that fuels social media trends across West Africa.

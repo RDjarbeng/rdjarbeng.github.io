@@ -10,3 +10,5 @@ genre: Entertainment
 date: '2026-03-08T09:51:53+02:00'
 published: true
 ---
+
+Compilation of the top five multi-syllabic freestyle rap performances of 2025 by Harry Mack. Known for his Guerilla Bars series and impromptu street cyphers, Harry Mack weaves audience-submitted prompt words seamlessly into intricate rhyme schemes, internal rhymes, and complex cadence shifts live without pauses.

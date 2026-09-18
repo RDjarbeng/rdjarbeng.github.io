@@ -11,4 +11,4 @@ genre: Entertainment
 category: videos
 ---
 
-If boondocks was in Ga
+Creative voice-over dub by The GaBrit reimagining Aaron McGruder animated satire The Boondocks into the Ghanaian Ga language, blending American urban animation with witty local Ga cultural idioms, slang, and inflection.

@@ -11,4 +11,4 @@ date: '2026-03-20T11:32:07+02:00'
 published: true
 ---
 
-Graduation speech about the fact that you could fail but you can always try again
+Inspiring commencement speech excerpt drawing on aviation metaphors: when an approach to landing is unstable, a pilot can always throttle up and go around. A grounded reminder that encountering obstacles or failure in life and career is simply a cue to re-evaluate, circle back, and try again with clearer vision.

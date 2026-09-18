@@ -11,4 +11,4 @@ date: '2026-04-15T20:20:30+02:00'
 published: true
 ---
 
-After the game everybody comes to you asking for their mobile phone. You better have all the phones accounted for No words needed here
+Relatable comedy skit on the high-pressure responsibility of being entrusted with every teammate smartphone and valuables by the sideline during an amateur football match, and the chaos of returning them after the final whistle.

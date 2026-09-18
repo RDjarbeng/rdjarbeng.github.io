@@ -11,4 +11,4 @@ category: videos
 genre: Entertainment
 ---
 
-part 1
+Satirical narrative sketch by TikTok creator storyt1meguy exploring the comedic ironies and absurd justifications of a corrupt politician maneuvering through public scandals and campaign pledges.

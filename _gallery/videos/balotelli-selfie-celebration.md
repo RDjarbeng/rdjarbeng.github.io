@@ -10,3 +10,5 @@ type: video
 category: videos
 genre: Sports
 ---
+
+Mario Balotelli's iconic smartphone selfie goal celebration for Olympique de Marseille against Saint-Etienne in Ligue 1. After volleying home from a corner kick, Balotelli retrieved his phone from a pitchside cameraman to take an instant video celebration with teammates and posted it directly to his Instagram story from the pitch.

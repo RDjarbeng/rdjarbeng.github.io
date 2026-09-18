@@ -6,4 +6,4 @@ type: cover
 link: /my-countdown-app-journey
 ---
 
-Cover image for The Evolution of a Side Project: My Countdown App
+Cover image for the developer retrospective "The Evolution of a Side Project: My Countdown App". Building a dedicated utility app teaches core lessons in UI layout, persistent local storage, responsive interaction design, and lifecycle management. This visual depicts the progression from an initial wireframe and simple countdown timer mechanism to a refined mobile and desktop application with fluid notifications and milestone tracking.

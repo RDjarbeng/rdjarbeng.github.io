@@ -12,4 +12,4 @@ genre: Science & Technology
 date: 2026-02-07 19:44:16
 ---
 
- An experiment combining football/soccer ⚽ and meta segment anything models. Modeled and created by Richard Djarbeng.
+Computer vision experiment combining real-world football and soccer footage with Meta Segment Anything Model (SAM). Modeled and tested by Richard Djarbeng, this demo explores zero-shot instance segmentation and pixel-level tracking on fast-moving sports balls, player silhouettes, and pitch boundaries.

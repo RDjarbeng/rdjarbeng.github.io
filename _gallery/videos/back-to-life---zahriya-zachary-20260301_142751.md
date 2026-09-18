@@ -11,5 +11,4 @@ date: 2026-03-01 14:27:51
 published: true
 ---
 
-Just like Lazarus, \nYou brought me back to life\nThe enemy thought he had\
-  \ me but Jesus said you are mine
+Uplifting contemporary gospel and worship anthem 'Back To Life' performed by Zahriya Zachary for Bethel Music. Drawing on the biblical narrative of Lazarus, the song delivers themes of spiritual renewal, deliverance, and hope.

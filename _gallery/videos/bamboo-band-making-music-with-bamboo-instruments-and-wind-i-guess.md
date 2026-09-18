@@ -11,4 +11,4 @@ genre: Music
 category: videos
 ---
 
-Nice beat and an example of unconventional music
+Acoustic and percussive rhythm performance using handcrafted natural bamboo tubes, resonating flutes, and percussion instruments. Demonstrates the acoustic resonance, tonal depth, and polyrhythmic possibilities achieved with natural organic materials.
