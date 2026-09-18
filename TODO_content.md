@@ -474,3 +474,4 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] SpaceX successful launches vs failures/explosions visualization
 - [ ] Why machine learning works - CMU
 - [ ] 👆 It's a thesis I found on the CMU website
+- [ ] Google timesfm for timeseries forecasts
