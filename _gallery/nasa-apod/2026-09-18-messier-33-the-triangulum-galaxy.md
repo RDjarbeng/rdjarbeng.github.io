@@ -1,0 +1,24 @@
+---
+title: "NASA Picture of the Day: Messier 33: The Triangulum Galaxy (Sep 18, 26)"
+date: 2026-09-18T00:00:00+00:00
+image: "https://apod.nasa.gov/apod/image/2609/m33m14_rasa3NM1024.jpg"
+image_alt: "NASA Picture of the Day - Messier 33: The Triangulum Galaxy (Sep 18, 26)"
+type: external
+category: NASA APOD
+labels:
+  - NASA
+  - APOD
+  - Space
+link: "https://apod.nasa.gov/apod/ap260918.html"
+---
+
+> 🌌 **NASA Picture of the Day — September 18, 2026**
+> 
+> **Messier 33: The Triangulum Galaxy**
+
+The small, northern constellation Triangulum harbors this magnificent face-on spiral galaxy, Messier 33. Its popular names include the Pinwheel Galaxy or just the Triangulum Galaxy. M33 is over 50,000 light-years in diameter, third largest in the Local Group of galaxies after the Andromeda Galaxy (M31), and our own Milky Way. About 3 million light-years from the Milky Way, M33 is itself thought to be a satellite of the Andromeda Galaxy and astronomers in these two galaxies would likely have spectacular views of each other's grand spiral star systems. As for the view from the Milky Way, this sharp telescopic image shows off M33's blue star clusters and pinkish star forming regions along the galaxy's loosely wound spiral arms. In fact, the cavernous NGC 604 is the brightest star forming region, seen here at about the 5 o'clock position from the galaxy center. Like M31, M33's population of well-measured variable stars have helped make this nearby spiral a cosmic yardstick for establishing the distance scale of the Universe.  APOD's main NASA site is moving: From apod.nasa.gov to science.nasa.gov/apod
+
+*Credit & Copyright: George Chatzifrantzis*
+
+---
+*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260918.html)*

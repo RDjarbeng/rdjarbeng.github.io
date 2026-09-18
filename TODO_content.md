@@ -471,3 +471,7 @@ It proves that AI is moving from being a passive consultant to an active partici
 The ultimate takeaway is that the operating system itself is becoming invisible. We are entering an era where human intent is the only input required to operate a computer.
 
 When AI can seamlessly connect your local files to a complex 3D engine and handle your calendar scheduling in the background, the premium is no longer on knowing *how* to use specific software. The real value is now on knowing exactly *what* you want to create. This drastically reduces the time between having a concept and holding a finished product, leveling the playing field for anyone with an idea.
+- [ ] SpaceX successful launches vs failures/explosions visualization
+- [ ] Why machine learning works - CMU
+- [ ] 👆 It's a thesis I found on the CMU website
+- [ ] Google timesfm for timeseries forecasts
