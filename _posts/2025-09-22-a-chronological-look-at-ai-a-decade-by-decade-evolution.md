@@ -208,4 +208,4 @@ The journey of artificial intelligence is a testament to human curiosity and tec
 
 To write this post it is only fair that some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini decided the placement of images and videos within the post. Meta AI was used to create some images but they did not make it to the final draft because the chief editor, editor generated the cover image for this post by itself. Here's an imperfection, If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. 
 
-Reader, this looks like a nice spot to let you go after telling you all the great advances AI has made, albeit with a warning. You can see that AI models keep improving but are not yet perfect as illustrated in this very post.
+Reader, this looks like a nice spot to let you go after telling you all the great advances AI has made (this paragraph is hand-written), albeit with a warning. You can see that AI models keep improving but are not yet perfect as illustrated in this very post.
