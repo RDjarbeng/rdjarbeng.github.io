@@ -475,3 +475,4 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] Why machine learning works - CMU
 - [ ] 👆 It's a thesis I found on the CMU website
 - [ ] Google timesfm for timeseries forecasts
+- [ ] Comparing the Stanford AI report 2026-2025
