@@ -282,6 +282,80 @@ collections:
 
   - divider: true
 
+  - name: "gallery"
+    label: "Gallery"
+    icon: "photo_library"
+    folder: "_gallery"
+    nested:
+      depth: 4
+      subfolders: false
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Image"
+        name: "image"
+        widget: "image"
+      - {
+          label: "Image Alt Text",
+          name: "image_alt",
+          widget: "string",
+          required: false,
+          hint: "Alt text for the cover image",
+        }
+
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Cover Image", value: "cover" }
+          - { label: "External Image", value: "external" }
+        default: "external"
+
+      - { label: "Caption", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Link",
+          name: "link",
+          widget: "string",
+          required: false,
+          hint: "For Cover Images",
+        }
+
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "gallery_categories",
+          display_fields: [title],
+          search_fields: [title],
+          value_field: "title",
+          required: true,
+          default: "None",
+        }
+      - {
+          label: "Labels",
+          name: "labels",
+          widget: "list",
+          default: [],
+          required: false,
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          default: "{{now}}",
+        }
+      - {
+          label: "Enhanced by Bot",
+          name: "enhanced_by_bot",
+          widget: "boolean",
+          required: false,
+          default: false,
+        }
+
   - name: "ai_generations"
     label: "AI Generations"
     icon: "smart_toy"
@@ -374,79 +448,6 @@ collections:
           name: "category",
           widget: "hidden",
           default: "memes",
-        }
-      - {
-          label: "Enhanced by Bot",
-          name: "enhanced_by_bot",
-          widget: "boolean",
-          required: false,
-          default: false,
-        }
-
-  - name: "gallery"
-    label: "General Gallery"
-    icon: "photo_library"
-    folder: "_gallery"
-    nested:
-      depth: 3
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Image"
-        name: "image"
-        widget: "image"
-      - {
-          label: "Image Alt Text",
-          name: "image_alt",
-          widget: "string",
-          required: false,
-          hint: "Alt text for the cover image",
-        }
-
-      - label: "Type"
-        name: "type"
-        widget: "select"
-        options:
-          - { label: "Cover Image", value: "cover" }
-          - { label: "External Image", value: "external" }
-        default: "external"
-
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - {
-          label: "Link",
-          name: "link",
-          widget: "string",
-          required: false,
-          hint: "For Cover Images",
-        }
-
-      - {
-          label: "Category",
-          name: "category",
-          widget: "relation",
-          collection: "gallery_categories",
-          display_fields: [title],
-          search_fields: [title],
-          value_field: "title",
-          required: true,
-          default: "None",
-        }
-      - {
-          label: "Labels",
-          name: "labels",
-          widget: "list",
-          default: [],
-          required: false,
-        }
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          format: "YYYY-MM-DDTHH:mm:ssZ",
-          default: "{{now}}",
         }
       - {
           label: "Enhanced by Bot",
@@ -591,49 +592,6 @@ collections:
         }
       - { label: "YouTube Playlist URL", name: "youtube_playlist_url", widget: "string", required: false, hint: "Paste a YouTube playlist URL here. A GitHub Action will automatically fetch videos and add them to the videos collection." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "video_collection" }
-
-  - name: "screenshots"
-    label: "Screenshots"
-    icon: "screenshot_monitor"
-    folder: "_gallery/screenshots"
-    nested:
-      depth: 3
-    media_folder: "/assets/images/screenshots"
-    public_folder: "/assets/images/screenshots"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "hidden", default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Screenshots" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Enhanced by Bot", name: "enhanced_by_bot", widget: "boolean", required: false, default: false }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-
-  - name: "artemis_ii"
-    label: "Artemis II"
-    icon: "rocket_launch"
-    folder: "_gallery/artemis-ii"
-    nested:
-      depth: 2
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "string", hint: "URL or path" }
-      - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
-      - { label: "Type", name: "type", widget: "select", options: ["external", "cover"], default: "external" }
-      - { label: "Category", name: "category", widget: "hidden", default: "Artemis II" }
-      - { label: "Labels", name: "labels", widget: "list", default: [], required: false }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", default: "{{now}}" }
-      - { label: "Caption", name: "body", widget: "markdown", required: false }
-      - { label: "Link", name: "link", widget: "string", required: false, hint: "For cover images" }
 
   - divider: true
 
