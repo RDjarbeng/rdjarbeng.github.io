@@ -110,13 +110,13 @@ This Space is built on the `rembg` library, which draws on the following researc
   }
   ```
 
-- [IS-Net: Deep Interactive Segmentation Network](https://arxiv.org/abs/2203.03041)
+- [Highly Accurate Dichotomous Image Segmentation](https://arxiv.org/abs/2203.03041)
 
   ```bibtex
-  @article{qin2022isnet,
+  @article{qin2022highly,
     title={Highly Accurate Dichotomous Image Segmentation},
-    author={Qin, Xuebin and Fan, Deng-Ping and Huang, Chenyang and Di, Deng and Zhang, Zichen and Zaiane, Osmar R and Jagersand, Martin and Van Gool, Luc},
-    journal={arXiv preprint arXiv:2202.13085},
+    author={Qin, Xuebin and Dai, Hang and Hu, Xiaobin and Fan, Deng-Ping and Shao, Ling and Van Gool, Luc},
+    journal={arXiv preprint arXiv:2203.03041},
     year={2022}
   }
   ```
