@@ -67,6 +67,8 @@ The following decades saw a clash of paradigms. Frank Rosenblatt's **Perceptron*
 - **ELIZA Chatbot**: Weizenbaum's **1966** program mimicked conversation. [Learn about the code](https://en.wikipedia.org/wiki/ELIZA).
 - **Shakey the Robot**: SRI's **1969** mobile robot that integrated vision and planning. [See Shakey in action](https://en.wikipedia.org/wiki/Shakey_the_robot).
 
+![Shakey the Robot developed at SRI International (1966–1972), the first mobile robot to combine artificial intelligence, computer vision, and logical reasoning](/assets/images/ai/shakey_the_robot_1969.jpg "Shakey the Robot (1969) - Early Embodied AI and Logical Planning")
+
 However, a significant critique in **1969** by Minsky and Papert's book _Perceptrons_ highlighted the limitations of simple neural networks, leading to the first of several **"AI winters"**; periods of reduced funding and interest in the field. This moment explains why neural network research went dormant for decades, only to re-emerge stronger later on.
 
 -----
@@ -90,6 +92,8 @@ The next decade brought two major triumphs that hinted at AI's future power. In 
 - **LSTM Invention**: A key breakthrough for sequence modeling in neural networks. [Read the 1997 paper](https://en.wikipedia.org/wiki/Long_short-term_memory).
 - **Nvidia's Founding**: In **1993**, Jensen Huang and his team founded **Nvidia**, a company that would eventually create the hardware engine for the entire AI industry. [Nvidia company history](https://www.nvidia.com/en-us/about-nvidia/corporate-timeline/).
 
+![The IBM Deep Blue supercomputer rack, which defeated world chess champion Garry Kasparov in May 1997](/assets/images/ai/ibm_deep_blue_1997.jpg "IBM Deep Blue Supercomputer (1997)")
+
 ### 2003-2006: The Deep Learning Revival and Neural Language Models
 
 The mid-2000s marked the dawn of the true deep learning revolution, driven by academic tenacity during the tail end of the AI winter. The Canadian Institute for Advanced Research (CIFAR) Neural Computation program funded foundational work when other institutions had walked away.
@@ -109,6 +113,8 @@ The mid-2000s marked the dawn of the true deep learning revolution, driven by ac
 The year **2012** is a monumental turning point in the history of artificial intelligence. At the annual ImageNet Large Scale Visual Recognition Challenge (ILSVRC), Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton unveiled **AlexNet**, an 8-layer deep convolutional neural network that shattered all previous records. It achieved a top-5 error rate of just 15.3%, outclassing the second-place entry of 26.2% based on hand-crafted SIFT and Fisher vector features.
 
 AlexNet's success rested on a software and hardware co-design: Krizhevsky wrote hand-optimized C++ and CUDA kernels to parallelize convolutional layers across two consumer Nvidia GeForce GTX 580 GPUs (each with 3 GB of memory), slashing training time from months to five days. This proved that deep networks could scale with massive datasets when paired with graphics accelerators.
+
+![AlexNet convolutional neural network architecture diagram illustrating layer splitting across two parallel Nvidia GTX 580 GPUs](/assets/images/ai/alexnet_architecture_2012.png "AlexNet Architecture (2012) - Dual-GPU Convolutional Neural Network")
 
 The breakthrough triggered immediate corporate realignment across Silicon Valley:
 - In March 2013, Google acquired Hinton, Krizhevsky, and Sutskever's startup DNNresearch for 44 million dollars at a Lake Tahoe auction.
@@ -137,6 +143,8 @@ The breakthrough triggered immediate corporate realignment across Silicon Valley
     - **Transformer Model**: The paper that enabled scalable NLP. [Read the 2017 paper](https://en.wikipedia.org/wiki/Transformer_\(deep_learning_architecture\)).
     - **Meta PyTorch Release**: Flexible DL framework for researchers. [Meta AI](https://en.wikipedia.org/wiki/Meta_AI).
     - **AWS SageMaker**: Cloud ML service for large models. [Launch announcement](https://aws.amazon.com/blogs/machine-learning/category/post-types/announcements/).
+
+![The original Transformer encoder-decoder architecture diagram from the seminal 2017 Google paper Attention Is All You Need](/assets/images/ai/transformer_architecture_2017.png "The Transformer Architecture (2017) - Attention Is All You Need")
 
 ### 2018-2021: Scaling and Generative Creativity
 
@@ -206,6 +214,6 @@ The journey of artificial intelligence is a testament to human curiosity and tec
 
 ### How AI was used to write this post:
 
-To write this post it is only fair that some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini decided the placement of images and videos within the post. Meta AI was used to create some images but they did not make it to the final draft because the chief editor, editor generated the cover image for this post by itself. Here's an imperfection, If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. 
+To write this post it is only fair that some amount of AI was involved. Grok from xAI wrote the first draft of this post and Gemini AI from Google acted as the chief editor to refine the final post. Gemini decided the placement of images and videos within the post. Meta AI was used to create some images but they did not make it to the final draft because the chief editor Gemini generated the cover image for this post by itself. Here's an imperfection, If you look closely at the cover image at the top of this post you should notice some spelling mistakes that are not immediately evident. 
 
 Reader, this looks like a nice spot to let you go after telling you all the great advances AI has made (this paragraph is hand-written), albeit with a warning. You can see that AI models keep improving but are not yet perfect as illustrated in this very post.
