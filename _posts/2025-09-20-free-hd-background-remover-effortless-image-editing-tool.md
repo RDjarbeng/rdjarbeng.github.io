@@ -23,83 +23,84 @@ image: /assets/images/bg_remover_cover_rd.webp
 layout: post
 image_alt: "Cover image for Free HD Background Remover: Effortless Image Editing Tool"
 ---
-Need to remove the background from an image while preserving full HD quality? This web app makes it simple; no sign-ups, subscriptions, or hidden fees. Just upload your photo, tweak a few options, and download the result as a crisp PNG. For instance, you can easily replace a brown background with white or opt for a transparent one for use in designs, profiles, or presentations.
+Need to remove the background from a photo without losing HD quality? I built a free web app for that. Upload your image, adjust a few options, and download a full resolution PNG. There's no sign-up, no subscription, and no watermark. You can swap a brown background for white, or make it transparent for designs, profiles, or presentations.
 
-Try it now on Hugging face: [Free Background Remover](https://huggingface.co/spaces/rdjarbeng/free-background-remover)
+Try it on Hugging Face: [Free Background Remover](https://huggingface.co/spaces/rdjarbeng/free-background-remover)
 
 ![Screenshot of background remover by Richard Djarbeng on hugging face showing the original image before and the background image removed after](/assets/images/bg_hugginface_remover_screenshot.png "Screenshot of background remover by Richard Djarbeng on hugging face")
 
-## How It Works
+## Why I built it
 
-The app uses the \`rembg\` library under the hood, integrating state-of-the-art image segmentation models via a Gradio interface. Deployed on Hugging Face, it's accessible from any browser without installation. Processing happens server-side, so you get professional results in seconds.
+I wanted to change the background of my LinkedIn profile picture. My professional headshot had a grey background and I wanted a white one. I searched online for tools that remove backgrounds and found some, but none of them let me export the picture in HD without paying.
 
-### Example usage
+Then I thought, hold on a minute. I had just spent six months working with computer vision applications from Carnegie Mellon, so surely I could write a script that does this. I found the `rembg` package, which already removes backgrounds. All that was left was filling the empty pixels with a color of my choice.
 
-For an example on how you can use this application, I used this app to change my professional headshot background from gray to white. In the end the quality
+Here is the headshot with the grey and white backgrounds side by side:
 
 ![White background versus gray background image comparison for Richard Djarbeng](/assets/images/richard_picture_comparison_background_remover.png "White background versus gray background image comparison for Richard Djarbeng")
 
-I'll add a screenshot from my LinkedIn profile in case it changes by the time you read this post.
+The script worked on my PC, but plenty of people don't have access to a tool like that, so I decided to host it online. I deployed it on Hugging Face as the Free Background Remover. Later I added more models in case the default one isn't good enough for a particular image, and I added options for other kinds of portraits, such as 2D anime characters used as profile pictures. I also added transparent output.
+
+Did it work? Look at my LinkedIn profile picture and see whether the headshot has a white background. I've also added a screenshot of my profile below, in case the picture changes by the time you read this.
 
 ![Screenshot of Richard Djarbeng's linkedIn profile page with profile picture of a white background](/assets/images/Screenshot 2025-09-20 224125.png "Screenshot of Richard Djarbeng's linkedIn profile page with profile picture of a white background")
 
-## Impact and Recognition
+## How it works
 
-This tool democratizes high-quality image editing, making AI-powered features available to everyone. It demonstrates effective deployment of machine learning in a user-centric way, with real-time feedback and customization to fit diverse workflows.
+The app uses the `rembg` library to run the segmentation models, with a Gradio interface on top. It's deployed on Hugging Face, so it works in any browser without installation. Processing happens on the server and takes a few seconds.
 
-### Community Buzz
+## How people use it
 
-Shared on X (formerly Twitter), the app gained traction—including a repost from Hugging Face CEO Clément Delangue (@ClementDelangue). Here's the original post:
+I've found that many users change the background of their photos when an application requires a specific one, such as blue or green. That saves them from finding a matching backdrop and retaking the photo. It's also popular with people who want transparent images, for one reason or another.
+
+## Community buzz
+
+I shared the app on X (formerly Twitter), and it got a repost from Hugging Face CEO Clément Delangue (@ClementDelangue). Here's the original post:
 
 > Deployed this background remover on Hugging face some time ago.  
 > Used it to change my profile picture background without losing quality. Other sites required payment to maintain the original image quality.  
 > [Before/after image attached]  
-> — Richard Djarbeng (@DjarbengRichard), Dec 12, 2024  
+> Richard Djarbeng (@DjarbengRichard), Dec 12, 2024  
 > [Link to post](https://x.com/DjarbengRichard/status/1867171545233133982)
 
-The visibility boosted its reach within the AI and open-source communities. I don't have a way of tracking how popular the app is, however one clear indicator of sustained popularity is that the space hasn't hibernated since launch. Before I posted it, extended inactivity would trigger a boot-up delay on access. Now, it loads seamlessly every time, perhaps pointing to a growing base of regular users keeping it active.
+I don't have a way to track how many people use the app, but there is one hint. Before I posted about it, the space would go idle after a stretch of inactivity, and the next visitor had to wait for it to boot. It hasn't hibernated since launch and now loads right away every time, which may mean regular users are keeping it awake.
 
-## Technical  details and Features
+## Technical details and features
 
-Powered by advanced AI models, the app offers a straightforward interface to handle background removal with precision:
+You drag and drop an image (JPG, PNG, and other common formats). For the background, you can pick a solid color, such as white (#FFFFFF), or choose transparent to have no background at all. Transparent is handy for presentations. You can also enable alpha matting for smoother edges, post-process the mask, or extract only the mask. The preview updates in real time, and to save the result you right-click the output and download it as a PNG at full resolution. There are no watermarks or paywalls.
 
-- **Upload and Process**: Drag-and-drop your image (supports common formats like JPG, PNG).
-- **Background Options**: Choose a solid color of your choice (e.g., white #FFFFFF) or transparent backgrounds to have no background; this is very useful for adding images to presentations.
-- **Model Selection**: Pick from specialized pre-trained models for optimal results:
-- **u2net**: General-purpose default for everyday use.
-- **isnet-general-use**: Enhanced accuracy for broad scenarios.
-- **isnet-anime**: Tailored for anime-style characters.
-- **silueta**: Compact 43MB version of u2net for faster processing.
-- **unet**: Lightweight general segmentation.
-- **u2netp**: Efficient variant for quick results.
-- **u2net_human_seg**: Focused on human subjects.
-- **u2net_cloth_seg**: Ideal for clothing in portraits.
-- **Advanced Tweaks**: Enable alpha matting for smoother edges, post-process the mask for refinements, or extract only the mask.
-- **Real-Time Preview**: See changes instantly before downloading.
-- **Free HD Export**: Right-click the output to save as PNG—full resolution, no watermarks or paywalls.
+You can also choose between several pre-trained models:
 
-No matter your need, product photos, social media avatars, or creative projects one of these models should deliver spot-on segmentation.
+- u2net: the general-purpose default
+- isnet-general-use: better accuracy across a broad range of images
+- isnet-anime: built for anime-style characters
+- silueta: a 43MB version of u2net that processes faster
+- unet: a lightweight general segmentation model
+- u2netp: a lighter variant for quick results
+- u2net_human_seg: focused on human subjects
+- u2net_cloth_seg: for clothing in portraits
 
-**License:** This project is licensed under the Apache License 2.0 
+**License:** This project is licensed under the Apache License 2.0.
 
-## Potential Enhancements
+## Limitations
 
-A current limitation is handling complex logos; segmentation can sometimes leave overlaps or artifacts especially in between the letters of the logo. Suggestions for better logo-specific models are welcome!
+The app struggles with complex logos. Segmentation can leave overlaps or artifacts, especially between the letters. If you know of a model that handles logos better, I'd like to hear about it.
 
-## Related Projects
+## Related projects
 
-Explore more in this space with [ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG), which integrates background removal into ComfyUI pipelines.
-### 🔗 Alternative Tools
+[ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) brings background removal into ComfyUI pipelines.
 
-If you need more features, consider these alternatives:
-- [Adobe Express Background Remover](https://www.adobe.com/express/feature/image/remove-background/transparent) (requires Adobe account)
+If you need more features, there are alternatives:
+
+- [Adobe Express Background Remover](https://www.adobe.com/express/feature/image/remove-background/transparent) (requires an Adobe account)
 - [Remove.bg](https://www.remove.bg/) (limited free usage)
 
-## 📚 References
+## References
 
-This Space is built using the `rembg` library, which leverages the following research papers:
+This Space is built on the `rembg` library, which draws on the following research papers:
 
 - [U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection](https://arxiv.org/abs/2005.09007)
+
   ```bibtex
   @article{qin2020u2net,
     title={U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection},
@@ -107,23 +108,26 @@ This Space is built using the `rembg` library, which leverages the following res
     journal={arXiv preprint arXiv:2005.09007},
     year={2020}
   }
-- [IS-Net: Deep Interactive Segmentation Network])(https://arxiv.org/abs/2203.03041)
+  ```
 
+- [IS-Net: Deep Interactive Segmentation Network](https://arxiv.org/abs/2203.03041)
 
+  ```bibtex
   @article{qin2022isnet,
-  title={Highly Accurate Dichotomous Image Segmentation},
-  author={Qin, Xuebin and Fan, Deng-Ping and Huang, Chenyang and Di, Deng and Zhang, Zichen and Zaiane, Osmar R and Jagersand, Martin and Van Gool, Luc},
-  journal={arXiv preprint arXiv:2202.13085},
-  year={2022}
-}
-Made with ❤️ for the open-source community.
+    title={Highly Accurate Dichotomous Image Segmentation},
+    author={Qin, Xuebin and Fan, Deng-Ping and Huang, Chenyang and Di, Deng and Zhang, Zichen and Zaiane, Osmar R and Jagersand, Martin and Van Gool, Luc},
+    journal={arXiv preprint arXiv:2202.13085},
+    year={2022}
+  }
+  ```
 
+Made for the open-source community.
 
-## Recent Update for Windows users(September, 2025)
+## Update for Windows users (September 2025)
 
-The Windows Photos-Designer app now features built-in background removal for easier editing. As more tools adopt this natively, it validates the push for free, quality-preserving options. Originally built to bypass paid HD exports, the app remains live on Hugging Face for ongoing use and inspiration.
+The Windows Photos-Designer app now has built-in background removal. I originally built this app to get around paid HD exports, and it's still live on Hugging Face.
 
-Embed the app directly:
+You can also embed the app directly:
 
 <iframe
     src="https://rdjarbeng-free-background-remover.hf.space"
