@@ -18,7 +18,7 @@ tags:
   - Machine Learning
   - deployment
   - free-ai
-title: 'Free HD Background Remover: Effortless Image Editing Tool'
+title: 'Why I Built a Free HD Background Remover (and What People Use It For)'
 image: /assets/images/bg_remover_cover_rd.webp
 layout: post
 image_alt: "Cover image for Free HD Background Remover: Effortless Image Editing Tool"
