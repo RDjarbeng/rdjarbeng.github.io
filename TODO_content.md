@@ -477,3 +477,4 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] Google timesfm for timeseries forecasts
 - [ ] Comparing the Stanford AI report 2026-2025
 - [ ] Destocked getty images alternative: https://www.destockd.com/#/
+- [ ] Summarize the terms of service for these AI companies for anything un particular that the user might want to know about
