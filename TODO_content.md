@@ -479,3 +479,4 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] Destocked getty images alternative: https://www.destockd.com/#/
 - [ ] Summarize the terms of service for these AI companies for anything un particular that the user might want to know about
 - [ ] About high school in Ghana and why it's a big deal
+- [ ] All the stages of a Healthcare system, from most basic to most advanced. What separates Healthcare systems in Europe, Africa, ASIA, Americas
