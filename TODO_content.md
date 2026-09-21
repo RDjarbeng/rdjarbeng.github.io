@@ -487,3 +487,4 @@ Grok is good at this, updating it's knowledge based on currently available infor
 
 It feels like you have a teacher/coach showing you how to do a certain task
 - [ ] Reason why my website is moving to 11ty
+- [ ] Smallest AI model to largest model
