@@ -486,3 +486,4 @@ Sometimes it's outdated or not available so what I've found useful is to find th
 Grok is good at this, updating it's knowledge based on currently available information. Gemini is also good for expanding steps to perform a task into the simplest set, especially for those who are not tech savvy.
 
 It feels like you have a teacher/coach showing you how to do a certain task
+- [ ] Reason why my website is moving to 11ty
