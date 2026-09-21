@@ -480,3 +480,9 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] Summarize the terms of service for these AI companies for anything un particular that the user might want to know about
 - [ ] About high school in Ghana and why it's a big deal
 - [ ] All the stages of a Healthcare system, from most basic to most advanced. What separates Healthcare systems in Europe, Africa, ASIA, Americas
+- [ ] Sometimes instead of looking through the instructions or docs of some software to find the thing I'm looking for, I will just ask an AI model about it.
+
+Sometimes it's outdated or not available so what I've found useful is to find the docs/tutorial and point the model at it to update it's knowledge.
+Grok is good at this, updating it's knowledge based on currently available information. Gemini is also good for expanding steps to perform a task into the simplest set, especially for those who are not tech savvy.
+
+It feels like you have a teacher/coach showing you how to do a certain task
