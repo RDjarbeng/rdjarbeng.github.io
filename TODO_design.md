@@ -204,3 +204,4 @@ It messes with the formatting, can't see the replies, and changes the url, but i
 (yout-ube.com/watch?....)
 yout-ube.com/watch
 - [ ] Add the enlighten project as a section on the homepage
+- [ ] Add hackathons participated in Zindi and Kaggle to about sections, as well as that Kaggle notebook on SAM
