@@ -502,3 +502,5 @@ https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engine
 
 
 https://gordicaleksa.medium.com/get-started-with-ai-and-machine-learning-in-3-months-5236d5e0f230
+- [ ] Big players in AI at the moment companies and people
+OpenAI Grok Anthropic  meta Zuckerberg Elon Musk Dario Amodei Sam Altman Jensen Huang Karparthy, Yann Le Cunn, Nvidia, AMD, Intel, Microsoft, Google, Tesla, XAI, SpaceX Deepseek (China), honorable mention Mistral, Cohere
