@@ -493,3 +493,4 @@ It feels like you have a teacher/coach showing you how to do a certain task
 Now what I'm asking is that can we find a better way to do this? Is there a way to have a scalable way of building models that can be excellent at a task of interest, and be able to switch to another task or field and do excellently there as well. This might seem like a general purpose model all over again where a model does averagely across a set of tasks, but I'm asking you what of its not just another general purpose model?
 - [ ] Papers: Training language models to follow instructions with human feedback
 - [ ] Book: Thinking fast and slow
+- [ ] Books: crushing it
