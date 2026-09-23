@@ -494,3 +494,11 @@ Now what I'm asking is that can we find a better way to do this? Is there a way 
 - [ ] Papers: Training language models to follow instructions with human feedback
 - [ ] Book: Thinking fast and slow
 - [ ] Books: crushing it
+- [ ] Good links from Aleksa Gordić 👇 medium page 
+https://gordicaleksa.medium.com/5-tips-to-boost-your-learning-d6eb5edfe6d
+
+https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de
+
+
+
+https://gordicaleksa.medium.com/get-started-with-ai-and-machine-learning-in-3-months-5236d5e0f230
