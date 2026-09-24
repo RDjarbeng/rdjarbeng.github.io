@@ -267,7 +267,7 @@ Run this in your terminal, stop the server first with Ctrl+c (Cmd+c for Mac user
 ```bash
 npm install --save-dev @11ty/eleventy-navigation
 ```
-2. Add it to `eleventy.config.js`:
+2. Replace the content in `eleventy.config.js` with this:
 
 ```js
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
@@ -405,19 +405,15 @@ Docs: [Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)
 ***
 
 ## 7. CSS, JS, and Static Assets
+Right now the site is without style and formatting. Let's add that now.
 
-It's easy to assume that once you write `<link rel="stylesheet" href="/css/style.css">` in your HTML, you're done, the browser knows where the file is, so surely it just works. That link tag, though, only tells the _browser_ where to fetch the file from once your page loads; it doesn't tell _Eleventy_ to put that file there in the first place.
+It's easy to assume that once you write `<link rel="stylesheet" href="/css/style.css">` in base.liquid, you're done, the browser knows where the file is, so surely it just works. That link tag, though, only tells the _browser_ where to fetch the file from once your page loads; it doesn't tell _Eleventy_ to put that file there in the first place.
 
 Here's the actual mental model: when Eleventy builds your site, it walks through everything in `src/`, and for each file, it asks "is this one of my recognized template types (`.liquid`, `.md`, and so on)?" If yes, it processes that file and writes the result into `_site/`. If no, and you haven't said anything else about it, Eleventy just ignores it entirely, it never gets copied anywhere. A plain `.css` or `.js` file isn't a template Eleventy knows how to process, so left alone, it simply never makes it into `_site/`. Your `<link>` tag would end up pointing at a URL that returns a 404, both in your local preview and once deployed, because nothing ever created that file in the output folder.
 
-**Passthrough copy is the fix**: it tells Eleventy "don't process this, just copy it into the output folder as-is." Add these lines to `eleventy.config.js`:
-
-```js
-eleventyConfig.addPassthroughCopy("src/css");
-eleventyConfig.addPassthroughCopy("src/js");
-eleventyConfig.addPassthroughCopy("src/images");
-```
-
+**Passthrough copy is the fix**: it tells Eleventy "don't process this, just copy it into the output folder as-is." 
+Create the folders `src/css`, `src/js`, `src/images` and add the respective files.
+First we create the file:
 `src/css/style.css` (a small starting point):
 
 ```css
@@ -449,33 +445,102 @@ nav ul {
 }
 ```
 
-`src/js/main.js` can stay empty for now, just wired up for later.
+Now, Add these lines to `eleventy.config.js`:
 
-**Optional: Sass.** Eleventy doesn't compile Sass by default, but you can register `.scss` as a first-class template language:
+```js
+eleventyConfig.addPassthroughCopy("src/css");
+eleventyConfig.addPassthroughCopy("src/js");
+eleventyConfig.addPassthroughCopy("src/images");
+```
+
+Eleventy 3 automatically detects changes to eleventy.config.js and reloads, but restarting (Ctrl+C then npm start) is recommended whenever adding passthrough copies so the file watchers bind cleanly.
+
+Also, make sure the addPassthroughCopy calls are placed inside the function before the return statement, rather than outside at the bottom where eleventyConfig is undefined. Your config should look like this:
+
+```js
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  return {
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site",
+    },
+  };
+};
+```
+
+
+Also create an empty file:
+`src/js/main.js` it can stay empty for now, just wired up for later.
+
+**Optional step: Sass.** Eleventy doesn't compile Sass by default, but you can register `.scss` as a first-class template language:
 
 ```bash
 npm install sass
 ```
 
+Add this to your `eleventy.config.js` (this is an addition to what you already have):
+
+Put the require statements (sass and node:path) to the top of the file.
+
 ```js
 const sass = require("sass");
 const path = require("node:path");
-
-eleventyConfig.addTemplateFormats("scss");
-eleventyConfig.addExtension("scss", {
-  outputFileExtension: "css",
-  compile: function (inputContent, inputPath) {
-    let parsed = path.parse(inputPath);
-    if (parsed.name.startsWith("_")) return; // skip partials like _variables.scss
-
-    let result = sass.compileString(inputContent, {
-      loadPaths: [parsed.dir || ".", this.config.dir.includes],
-    });
-
-    return () => result.css;
-  },
-});
 ```
+
+Add addTemplateFormats and addExtension lines after addPassthroughCopy. Your config should look like this:
+
+```js
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const sass = require("sass");
+const path = require("node:path");
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/images");
+
+  // Sass compilation
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    compile: function (inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+      if (parsed.name.startsWith("_")) return; // skip partials like _variables.scss
+
+      let result = sass.compileString(inputContent, {
+        loadPaths: [parsed.dir || ".", this.config.dir.includes],
+      });
+
+      return () => result.css;
+    },
+  });
+
+  return {
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site",
+    },
+  };
+};
+
+```
+After this change when you start the server the css should apply and the site should look like this:
+
+![Eleventy starter screenshot after CSS](eleventy _starter_after_css.png)
 
 Docs: [Copy Files to Output](https://www.11ty.dev/docs/copy/), [Sass](https://www.11ty.dev/docs/languages/sass/)
 
