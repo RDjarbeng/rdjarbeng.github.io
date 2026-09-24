@@ -476,3 +476,40 @@ When AI can seamlessly connect your local files to a complex 3D engine and handl
 - [ ] 👆 It's a thesis I found on the CMU website
 - [ ] Google timesfm for timeseries forecasts
 - [ ] Comparing the Stanford AI report 2026-2025
+- [ ] Destocked getty images alternative: https://www.destockd.com/#/
+- [ ] Summarize the terms of service for these AI companies for anything un particular that the user might want to know about
+- [ ] About high school in Ghana and why it's a big deal
+- [ ] All the stages of a Healthcare system, from most basic to most advanced. What separates Healthcare systems in Europe, Africa, ASIA, Americas
+- [ ] Sometimes instead of looking through the instructions or docs of some software to find the thing I'm looking for, I will just ask an AI model about it.
+
+Sometimes it's outdated or not available so what I've found useful is to find the docs/tutorial and point the model at it to update it's knowledge.
+Grok is good at this, updating it's knowledge based on currently available information. Gemini is also good for expanding steps to perform a task into the simplest set, especially for those who are not tech savvy.
+
+It feels like you have a teacher/coach showing you how to do a certain task
+- [ ] Reason why my website is moving to 11ty
+- [ ] Smallest AI model to largest model
+- [ ] Smallest computer to largest computer
+- [ ] A paradigm for AI model use, general models do averagely on tasks, but when fine tuned for a particular task such as coding for example they do excellent. So the desire becomes building a model that's good at a particular thing. So the coder gets their tuned model, the biologist gets their tuned model, the materials engineer gets their tuned model, but can every field get their own model (perhaps that is a potential business opportunity), however that seems to be almost a step back to classical machine learning where we built models for each task instead of using one model that can generalize across a series of tasks. The disadvantage of the old classical  way is that the model will be almost useless for the other task. For example the biologist's model could be of little use to the materials engineer. 
+Now what I'm asking is that can we find a better way to do this? Is there a way to have a scalable way of building models that can be excellent at a task of interest, and be able to switch to another task or field and do excellently there as well. This might seem like a general purpose model all over again where a model does averagely across a set of tasks, but I'm asking you what of its not just another general purpose model?
+- [ ] Papers: Training language models to follow instructions with human feedback
+- [ ] Book: Thinking fast and slow
+- [ ] Books: crushing it
+- [ ] Good links from Aleksa Gordić 👇 medium page 
+https://gordicaleksa.medium.com/5-tips-to-boost-your-learning-d6eb5edfe6d
+
+https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de
+
+
+
+https://gordicaleksa.medium.com/get-started-with-ai-and-machine-learning-in-3-months-5236d5e0f230
+- [ ] Big players in AI at the moment companies and people
+OpenAI Grok Anthropic  meta Zuckerberg Elon Musk Dario Amodei Sam Altman Jensen Huang Karparthy, Yann Le Cunn, Nvidia, AMD, Intel, Microsoft, Google, Tesla, XAI, SpaceX Deepseek (China), honorable mention Mistral, Cohere
+- [ ] Cybersecurity Datasets for Deep LearningO
+ne of the most widely used datasets for intrusion detection is the Knowledge Discovery andD
+issemination (KDD) 1999 dataset [57]. This dataset was created for the KDD Cup challenge in 1999a
+nd is composed of more than 4 million network traffic records.
+
+From: A Survey of Deep Learning Methods for
+Cyber Security
+Daniel S. Berman
+- [ ] Met my first person from Mozambique at the Agrismat summer school. So they speak Portuguese and have a coast line, what else can be said about them. Let's do a country spotlight
