@@ -62,7 +62,7 @@
         <p>Have a question or want to connect? Please add a way to contact you.</p>
         <form id="rdjarbeng-website-contact-form">
             <!-- Honeypot field (hidden from users) -->
-            <div class="form-group" style="display: none;">
+            <div class="form-group form-honeypot">
                 <label for="website-url">Website</label>
                 <input type="text" id="website-url" name="website_url" tabindex="-1" autocomplete="off">
             </div>
@@ -78,6 +78,18 @@
             </div>
 
             <div class="form-group">
+                <label for="inquiry-reason">Reason for Inquiry</label>
+                <select id="inquiry-reason" name="inquiry_reason">
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Project Collaboration">Project Collaboration</option>
+                    <option value="Consulting / Advice">Consulting / Advice</option>
+                    <option value="Speaking / Mentorship">Speaking / Mentorship</option>
+                    <option value="Feedback / Suggestion">Feedback / Suggestion</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
             </div>
@@ -90,8 +102,8 @@
             <input type="submit" value="Send" class="submit-btn">
 
             <!-- Success and error message containers -->
-            <p id="form-message" style="display: none;"></p>
-            <div id="loading-indicator" style="display: none;">
+            <p id="form-message"></p>
+            <div id="loading-indicator">
                 <p>Sending your message...</p>
             </div>
         </form>
