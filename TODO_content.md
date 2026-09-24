@@ -504,3 +504,11 @@ https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engine
 https://gordicaleksa.medium.com/get-started-with-ai-and-machine-learning-in-3-months-5236d5e0f230
 - [ ] Big players in AI at the moment companies and people
 OpenAI Grok Anthropic  meta Zuckerberg Elon Musk Dario Amodei Sam Altman Jensen Huang Karparthy, Yann Le Cunn, Nvidia, AMD, Intel, Microsoft, Google, Tesla, XAI, SpaceX Deepseek (China), honorable mention Mistral, Cohere
+- [ ] Cybersecurity Datasets for Deep LearningO
+ne of the most widely used datasets for intrusion detection is the Knowledge Discovery andD
+issemination (KDD) 1999 dataset [57]. This dataset was created for the KDD Cup challenge in 1999a
+nd is composed of more than 4 million network traffic records.
+
+From: A Survey of Deep Learning Methods for
+Cyber Security
+Daniel S. Berman
