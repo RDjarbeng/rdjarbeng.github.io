@@ -99,27 +99,29 @@ If you need more features, there are alternatives:
 
 This Space is built on the `rembg` library, which draws on the following research papers:
 
-- [U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection](https://arxiv.org/abs/2005.09007)
+### 1. U2-Net: Salient Object Detection
+Paper: [U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection](https://arxiv.org/abs/2005.09007)
 
-  ```bibtex
-  @article{qin2020u2net,
-    title={U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection},
-    author={Qin, Xuebin and Zhang, Zichen and Huang, Chenyang and Dehghan, Masood and Zaiane, Osmar R and Jagersand, Martin},
-    journal={arXiv preprint arXiv:2005.09007},
-    year={2020}
-  }
-  ```
+```bibtex
+@article{qin2020u2net,
+  title={U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection},
+  author={Qin, Xuebin and Zhang, Zichen and Huang, Chenyang and Dehghan, Masood and Zaiane, Osmar R and Jagersand, Martin},
+  journal={arXiv preprint arXiv:2005.09007},
+  year={2020}
+}
+```
 
-- [Highly Accurate Dichotomous Image Segmentation](https://arxiv.org/abs/2203.03041)
+### 2. DIS: Dichotomous Image Segmentation
+Paper: [Highly Accurate Dichotomous Image Segmentation](https://arxiv.org/abs/2203.03041)
 
-  ```bibtex
-  @article{qin2022highly,
-    title={Highly Accurate Dichotomous Image Segmentation},
-    author={Qin, Xuebin and Dai, Hang and Hu, Xiaobin and Fan, Deng-Ping and Shao, Ling and Van Gool, Luc},
-    journal={arXiv preprint arXiv:2203.03041},
-    year={2022}
-  }
-  ```
+```bibtex
+@article{qin2022highly,
+  title={Highly Accurate Dichotomous Image Segmentation},
+  author={Qin, Xuebin and Dai, Hang and Hu, Xiaobin and Fan, Deng-Ping and Shao, Ling and Van Gool, Luc},
+  journal={arXiv preprint arXiv:2203.03041},
+  year={2022}
+}
+```
 
 Made for the open-source community.
 
