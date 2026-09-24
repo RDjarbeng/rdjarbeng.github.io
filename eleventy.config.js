@@ -108,21 +108,32 @@ module.exports = function(eleventyConfig) {
         const img = page.image || page.thumbnail || siteData.logo;
         const imgUrl = img ? (img.startsWith("http") ? img : `https://rdjarbeng.com${img.startsWith("/") ? "" : "/"}${img}`) : "";
 
+        const twitterHandle = siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard";
+        const twitterCard = siteData.twitter ? siteData.twitter.card || "summary_large_image" : "summary_large_image";
+
         return `
-<!-- SEO Tag -->
+<!-- SEO & Social Meta Tags -->
 <title>${title}</title>
-<meta name="generator" content="Eleventy" />
-<meta property="og:title" content="${title}" />
-<meta property="og:locale" content="${siteData.lang || "en"}" />
+<meta name="generator" content="Eleventy 3.1.6" />
 <meta name="description" content="${desc}" />
-<meta property="og:description" content="${desc}" />
 <link rel="canonical" href="${canonical}" />
+
+<!-- OpenGraph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="${title}" />
+<meta property="og:description" content="${desc}" />
 <meta property="og:url" content="${canonical}" />
 <meta property="og:site_name" content="${siteData.title}" />
-${imgUrl ? `<meta property="og:image" content="${imgUrl}" />\n<meta name="twitter:image" content="${imgUrl}" />` : ""}
-<meta name="twitter:card" content="${siteData.twitter ? siteData.twitter.card || "summary_large_image" : "summary_large_image"}" />
-<meta property="twitter:title" content="${title}" />
-<meta name="twitter:site" content="@${siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard"}" />
+<meta property="og:locale" content="${siteData.lang || "en"}" />
+${imgUrl ? `<meta property="og:image" content="${imgUrl}" />\n<meta property="og:image:alt" content="${title}" />` : ""}
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="${twitterCard}" />
+<meta name="twitter:site" content="@${twitterHandle}" />
+<meta name="twitter:creator" content="@${twitterHandle}" />
+<meta name="twitter:title" content="${title}" />
+<meta name="twitter:description" content="${desc}" />
+${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitter:image:alt" content="${title}" />` : ""}
 `;
       },
     };

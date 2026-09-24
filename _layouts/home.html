@@ -50,14 +50,19 @@ layout: default
     {% assign all_topics_raw = all_topics_raw | push: tag_str %}
   {% endfor %}
   
-  {% assign top_topics = all_topics_raw | sort | reverse | slice: 0, 30 %}
-  {% assign featured_topics_raw = top_topics | sample: 4 %}
+  {% assign top_topics = all_topics_raw | sort | reverse | slice: 0, 40 %}
+  {% assign featured_topics_raw = top_topics | sample: 10 %}
 
   {% assign featured_topics = "" | split: "" %}
+  {% assign seen_topic_names = "" | split: "" %}
   {% for topic in featured_topics_raw %}
     {% assign parts = topic | split: ":::" %}
     {% assign t_type = parts[1] %}
     {% assign t_name = parts[2] %}
+    {% assign t_name_lower = t_name | downcase %}
+    {% if seen_topic_names contains t_name_lower %}
+      {% continue %}
+    {% endif %}
     {% if t_type == 'category' %}
       {% assign t_posts = site.categories[t_name] %}
     {% else %}
@@ -75,6 +80,10 @@ layout: default
     
     {% if has_valid %}
       {% assign featured_topics = featured_topics | push: topic %}
+      {% assign seen_topic_names = seen_topic_names | push: t_name_lower %}
+      {% if featured_topics.size == 4 %}
+        {% break %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 

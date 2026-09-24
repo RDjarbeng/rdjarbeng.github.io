@@ -13,27 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Highlight active section on scroll
   function highlightActiveSection() {
-    let scrollPosition = window.scrollY + 100; // Offset for better accuracy
+    const scrollPosition = window.scrollY + 120; // Offset for header
+    let currentHeader = null;
 
     headers.forEach(header => {
-      const sectionId = header.id;
-      const tocLink = document.querySelector(`#toc-content a[href="#${sectionId}"]`);
+      if (!header.id) return;
       const rect = header.getBoundingClientRect();
       const offsetTop = window.pageYOffset + rect.top;
-
-      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + header.offsetHeight + 100) {
-        tocLinks.forEach(link => link.classList.remove('active'));
-        if (tocLink) tocLink.classList.add('active');
+      if (scrollPosition >= offsetTop) {
+        currentHeader = header;
       }
     });
+
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if (currentHeader) {
+      const activeLink = document.querySelector(`#toc-content a[href="#${currentHeader.id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
   }
 
-  // Debounce scroll event
-  let debounceTimeout;
+  // Smooth scroll listener via requestAnimationFrame
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(highlightActiveSection, 100);
-  });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        highlightActiveSection();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Initial check
   highlightActiveSection();

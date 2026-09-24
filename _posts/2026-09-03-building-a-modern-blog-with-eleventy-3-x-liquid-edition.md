@@ -383,7 +383,7 @@ eleventyNavigation:
 ***
 
 Start the server with `npm start`. You should see a basic menu with Home and About.
-![Screenshot of the Eleventy starter site with menu showing Home and About](/assets/images/eleventy_starter_screenshot.png)
+![Screenshot of the Eleventy starter site with menu showing Home and About](/assets/images/eleventy-tutorial/eleventy_starter_screenshot.png)
 
 ## 6. How the Navigation Works
 
@@ -648,7 +648,7 @@ You already saw the custom permalink pattern in the previous section, the `perma
 
 Blog should now look like this in the browser:
 
-![Eleventy starter screenshot after prev/next links](eleventy_starter_after_navigation_prev_next.png)
+![Eleventy starter screenshot after prev/next links](/assets/images/eleventy-tutorial/eleventy_starter_after_navigation.png)
 
 **Pagination**, meaning splitting a long list of posts across several pages instead of one giant page, replacing the simple listing in `blog.liquid` with a paginated one (10 posts per page). Replace `src/blog.liquid` with this code:
 
