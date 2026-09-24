@@ -197,7 +197,17 @@ These are just nicknames for longer commands. `npx @11ty/eleventy` runs the copy
 npm start
 ```
 
-Leave that running, and open `http://localhost:8080/` in your browser. Every time you save a file in your editor, this will rebuild the site and refresh automatically. Come back to the terminal only when you need to install a new package or stop the server (Ctrl+C).
+If it is successful you should see the build command expand to the command we gave in the package.json. It should look like this:
+ npm start
+```
+> my-blog@1.0.0 start
+> npx @11ty/eleventy --serve
+
+[11ty] Wrote 0 files in 0.11 seconds (v3.1.6)
+[11ty] Watching…
+[11ty] Server at http://localhost:8080/
+```
+ Leave that running, and open `http://localhost:8080/` in your browser or whatever url appears in case you use a different port. Every time you save a file in your editor, this will rebuild the site and refresh automatically. Come back to the terminal only when you need to install a new package or stop the server (Ctrl+C).
 
 ***
 
