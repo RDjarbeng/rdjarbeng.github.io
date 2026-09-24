@@ -54,7 +54,7 @@ jobs:
           JEKYLL_ENV: production
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - name: Install ImageMagick
-        run: sudo apt-get install -y imagemagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Optimize cover images and thumbnails
         run: |
           echo "Optimizing cover images and thumbnails listed in cover-images.txt ..."
