@@ -8,10 +8,12 @@ description: "This page lists all the posts for the tag -{{ page.title }} on Ric
   <a href="/categories/">All Categories</a> |
   <a href="/tags/">All Tags</a>
 </div>
-<h1>Posts Tagged with: {{ page.title }} ({{ page.posts | size }})</h1>
+{% assign tag_posts = page.posts | default: posts %}
+{% assign tag_title = page.title | default: title %}
+<h1>Posts Tagged with: {{ tag_title }} ({{ tag_posts | size }})</h1>
 
 <div class="post-list">
-  {% for post in page.posts %}
-    {% include_cached post-card.html post=post %}
+  {% for post in tag_posts %}
+    {% include post-card.html post=post %}
   {% endfor %}
 </div>

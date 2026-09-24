@@ -1,0 +1,29 @@
+---
+permalink: /feed.xml
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.lang }}">
+  <generator uri="https://www.11ty.dev/" version="3.1.6">Eleventy</generator>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}/" rel="alternate" type="text/html" hreflang="{{ site.lang }}" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}/feed.xml</id>
+  <title type="html">{{ site.title }}</title>
+  <subtitle>{{ site.description | escape }}</subtitle>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+    <uri>{{ site.author.uri }}</uri>
+  </author>
+  {% for post in collections.posts limit:20 %}
+  <entry>
+    <title type="html">{{ post.data.title | escape }}</title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.data.title | escape }}" />
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <content type="html" xml:base="{{ site.url }}{{ post.url }}"><![CDATA[{{ post.content }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>

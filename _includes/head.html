@@ -51,12 +51,10 @@
     {%- assign _vg = page.genre | default: page.platform | default: 'Video' -%}
     {%- assign _vd = page.title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
   {%- endif -%}
-  {%- assign page.description = _vd -%}
-{%- endif -%}
-
-  {%- unless page.description -%}
-  {%- assign page.description = site.description -%}
-  {%- endunless -%}
+  {%- assign page_description = _vd -%}
+  {%- else -%}
+  {%- assign page_description = page.description | default: site.description -%}
+  {%- endif -%}
 
 {%- if jekyll.environment == 'production' -%}
   {%- seo -%}

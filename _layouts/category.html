@@ -6,9 +6,11 @@ layout: default
   <a href="/categories/">All Categories</a>|
   <a href="/tags/">All Tags</a>
 </div>
-<h1>Posts in Category: {{ page.title }}  ({{ page.posts | size }})</h1>
+{% assign cat_posts = page.posts | default: posts %}
+{% assign cat_title = page.title | default: title %}
+<h1>Posts in Category: {{ cat_title }} ({{ cat_posts | size }})</h1>
 
-{% assign current_category = site.category_info | where: "category_name", page.title | first %}
+{% assign current_category = site.category_info | where: "category_name", cat_title | first %}
 {% if current_category.description %}
 <div class="category-description">
   {{ current_category.description | markdownify }}
@@ -16,8 +18,8 @@ layout: default
 {% endif %}
 
 <div class="post-list">
-  {% for post in page.posts %}
-    {% include_cached post-card.html post=post %}
+  {% for post in cat_posts %}
+    {% include post-card.html post=post %}
   {% endfor %}
 </div>
 

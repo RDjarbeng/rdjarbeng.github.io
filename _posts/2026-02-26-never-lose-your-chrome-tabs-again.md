@@ -1,5 +1,5 @@
 ---
-date: 2026-02-26 15:15:00 +0200
+date: 2026-02-26T15:15:00+02:00
 published: true
 author: Richard
 category: Help

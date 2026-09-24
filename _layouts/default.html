@@ -5,7 +5,7 @@
 
 <body class="{{ page.body_class }}">
 
-  {%- include_cached header.html -%}
+  {%- include header.html -%}
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
@@ -13,10 +13,10 @@
     </div>
   </main>
 
-  {%- include_cached footer.html -%}
+  {%- include footer.html -%}
 
   {%- if page.layout == 'home' -%}
-  {%- include_cached dynamic_footer.html -%}
+  {%- include dynamic_footer.html -%}
   {%- endif -%}
 
   {%- include search-script.html -%}

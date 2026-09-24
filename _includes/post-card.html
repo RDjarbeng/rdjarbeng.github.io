@@ -17,7 +17,12 @@
 
     <div class="post-card-content">
       {% unless include.is_js_template %}
-        {% if include.show_author or (include.post.author and include.post.author != "" and include.post.author != "Richard" and include.post.author != "richard") %}
+        {% assign post_author = include.post.author %}
+        {% assign is_guest = false %}
+        {% if post_author and post_author != "" and post_author != "Richard" and post_author != "richard" %}
+          {% assign is_guest = true %}
+        {% endif %}
+        {% if include.show_author or is_guest %}
           {% assign card_author = site.authors | where: "short_name", include.post.author | first %}
           {% assign author_display_name = card_author.display_name | default: card_author.short_name | default: include.post.author %}
           <div class="post-card-author" style="margin-bottom: 8px; font-size: 0.85rem; font-weight: 500; color: var(--text-color-light, #555); display: flex; align-items: center; gap: 8px;">

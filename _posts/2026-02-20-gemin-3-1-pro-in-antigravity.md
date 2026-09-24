@@ -1,5 +1,5 @@
 ---
-date: 2026-02-26 13:20:00 +0200
+date: 2026-02-26T13:20:00+02:00
 published: true
 author: Richard
 category: Technology

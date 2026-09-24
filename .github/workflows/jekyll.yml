@@ -28,30 +28,30 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          ruby-version: "3.2.0"
-          bundler-cache: true
-          cache-version: 0
+          node-version: "20"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Build with Eleventy
+        run: npm run build
         env:
-          JEKYLL_ENV: production
+          ELEVENTY_ENV: production
       - name: Push index to Algolia
         run: |
           if git rev-parse HEAD~1 >/dev/null 2>&1 && git diff --name-only HEAD~1 HEAD | grep -E "^(_posts/|_personal/|_gallery/|_authors/|_video_collections/|about\.md)"; then
             echo "Content changes detected. Running Algolia index sync..."
-            bundle exec jekyll algolia || echo "Algolia indexing skipped (quota or credit limit reached)"
+            npm run sync:algolia || echo "Algolia indexing skipped (quota or credit limit reached)"
           else
             echo "No content files changed. Skipping Algolia indexing."
           fi
         continue-on-error: true
         env:
-          JEKYLL_ENV: production
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - name: Install ImageMagick
         run: sudo apt-get update && sudo apt-get install -y imagemagick

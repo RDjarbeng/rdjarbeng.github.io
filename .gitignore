@@ -26,3 +26,4 @@ crawls_from_web/*.md
 node_modules/  
 **/__pycache__/
 **/__pycache__/*
+*.map
