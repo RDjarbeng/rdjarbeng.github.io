@@ -552,7 +552,7 @@ A **collection** is Eleventy's word for a group of related pages you can loop ov
 
 One more term worth defining before we go further: a **permalink** is simply the final web address (URL) a page will live at once your site is built, for example `https://yoursite.com/blog/my-first-post/`. By default, Eleventy works this out automatically from where a file sits inside your `src` folder (a file at `src/posts/my-first-post.md` would normally become `/posts/my-first-post/`). You can override that default and hand Eleventy an exact URL pattern to use instead, that's what the `permalink` field you'll see below does: it tells every post in this folder to use `/blog/...` instead of the automatic `/posts/...`.
 
-Now, the setup. Create `src/posts/posts.11tydata.js`, a **directory data file**, a small settings file that automatically applies to every file inside its own folder, through something Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) (settings can be defined at different levels, global, folder, or individual page, and more specific settings override broader ones). We're using a `.js` file here instead of `.json` so it can carry more advanced logic later on:
+Now, the setup. Create `src/posts/posts.11tydata.js`, a **directory data file**, a small settings file that automatically applies to every file inside its own folder, through something Eleventy calls the [Data Cascade](https://www.11ty.dev/docs/data-cascade/) (settings can be defined at different levels, global, folder, or individual page, and more specific settings override broader ones). We're using a `.js` file here instead of `.json` so it can carry more advanced logic later on. Inside of it add this code:
 
 ```js
 module.exports = {
@@ -563,6 +563,7 @@ module.exports = {
 ```
 
 Change that `permalink` pattern once, here, and every post in the folder updates, no per-file edits needed. The `tags` value merges with whatever tags an individual post adds (Eleventy treats `tags` as a special, mergeable key across the cascade), so posts can add their own category tags without losing `posts`.
+Create the file:
 
 `src/posts/my-first-post.md`:
 
@@ -613,6 +614,18 @@ eleventyNavigation:
 </ul>
 ```
 
+`src/blog.liquid` creates a new page at `http://localhost:8080/blog/`
+
+The only difference on the root page is in the navigation menu, which now includes a Blog link between Home and About because order: 2 places it in the middle.
+
+Click Blog in the menu or navigate to `http://localhost:8080/blog/` to view the post listing.
+
+**Caution:** On Windows, Eleventy's watcher often misses newly created files until a restart. While testing this tutorial on Windows, I experience a bug where `blog` didn't show up in the navigation even aftr a hard refresh until I restarted the server.
+
+
+
+Next, we'll make that listing paginated, adding page 2, page 3, etc., automatically once the list grows long enough. But before we do, here are the links for the official docs:
+
 Docs: [Collections](https://www.11ty.dev/docs/collections/), [Content Dates](https://www.11ty.dev/docs/dates/)
 
 ***
@@ -621,7 +634,7 @@ Docs: [Collections](https://www.11ty.dev/docs/collections/), [Content Dates](htt
 
 You already saw the custom permalink pattern in the previous section, the `permalink` field in `posts.11tydata.js`. Every post in `src/posts/` picks it up automatically.
 
-**Previous/Next links**, added inside `post.liquid`:
+**Previous/Next links**, added inside `src\_includes\layouts\post.liquid` at the bottom of the file:
 
 ```liquid
 {% assign nextPost = collections.posts | getNextCollectionItem: page %}
@@ -633,7 +646,11 @@ You already saw the custom permalink pattern in the previous section, the `perma
 </nav>
 ```
 
-**Pagination**, meaning splitting a long list of posts across several pages instead of one giant page, replacing the simple listing in `blog.liquid` with a paginated one (10 posts per page):
+Blog should now look like this in the browser:
+
+![Eleventy starter screenshot after prev/next links](eleventy_starter_after_navigation_prev_next.png)
+
+**Pagination**, meaning splitting a long list of posts across several pages instead of one giant page, replacing the simple listing in `blog.liquid` with a paginated one (10 posts per page). Replace `src/blog.liquid` with this code:
 
 ```liquid
 ---
@@ -661,13 +678,17 @@ pagination:
 </nav>
 ```
 
-Left without a custom `permalink` of its own, Eleventy paginates using this template's own path automatically: `/blog/`, `/blog/1/`, `/blog/2/`, and so on.
+**Note on testing pagination:** Because we only have two posts right now, both fit within `size: 10`. Eleventy only renders the "Newer posts" and "Older posts" links when there is an actual next or previous page, so the `<nav class="pager">` block will appear empty for now. To test and see the pagination links immediately, temporarily change `size: 10` to `size: 1` so each post gets its own page.
+
+Left without a custom `permalink` of its own, Eleventy paginates using this template's own path automatically: `/blog/`, `/blog/1/`, `/blog/2/`, and so on. You'll see this in action after we add more posts.
 
 Docs: [Permalinks](https://www.11ty.dev/docs/permalinks/), [Pagination](https://www.11ty.dev/docs/pagination/), [`get*CollectionItem` filters](https://www.11ty.dev/docs/filters/collection-items/)
 
 ***
 
 ## 10. Images
+
+Run this command to install the plugin:
 
 ```bash
 npm install --save-dev @11ty/eleventy-img
