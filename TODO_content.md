@@ -513,3 +513,4 @@ From: A Survey of Deep Learning Methods for
 Cyber Security
 Daniel S. Berman
 - [ ] Met my first person from Mozambique at the Agrismat summer school. So they speak Portuguese and have a coast line, what else can be said about them. Let's do a country spotlight
+- [ ] Company spotlight Crane AI - building high quality African language data
