@@ -159,7 +159,7 @@ Unlike `package.json`, this file does _not_ get created for you, you write it by
 module.exports = function (eleventyConfig) {
   return {
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       data: "_data",
       output: "_site",
@@ -169,6 +169,8 @@ module.exports = function (eleventyConfig) {
 ```
 
 Eleventy automatically looks for a file with this exact name when it runs, so naming matters here. What this particular config says: look for your source files in a folder called `src` (which doesn't exist yet either, you'll create it as you add pages), and write the finished, built website out to a folder called `_site`. The `includes` and `data` lines tell Eleventy where, _inside_ `src`, to find your layout/partial files and your global data files respectively, we'll create both of those folders shortly.
+
+* Create a folder called `src` in your project root `my-blog/`.
 
 **Step 6: Add shortcut commands to `package.json`.**
 
@@ -207,13 +209,19 @@ If it is successful you should see the build command expand to the command we ga
 [11ty] Watching…
 [11ty] Server at http://localhost:8080/
 ```
- Leave that running, and open `http://localhost:8080/` in your browser or whatever url appears in case you use a different port. Every time you save a file in your editor, this will rebuild the site and refresh automatically. Come back to the terminal only when you need to install a new package or stop the server (Ctrl+C).
+ Leave that running, and open `http://localhost:8080/` in your browser or whatever url appears in case you use a different port.
+ It should show an empty page with an error message
+  ```
+  Cannot GET /
+  ```
+  This is expected because we haven't created any pages yet, it simply means there is no page to display at our current location. 
+  Every time you save a file in your editor, this will rebuild the site and refresh automatically. Come back to the terminal only when you need to install a new package or stop the server with (Ctrl+C for windows or Cmd+C for Mac users).
 
 ***
 
 ## 3. Global Site Data
 
-Just like `eleventy.config.js`, this next file is one you create yourself, Eleventy doesn't generate it. In your editor, inside your `src` folder (create `src` now if you haven't yet), create a folder called `_data`, and inside that, a file called `site.json`:
+Just like `eleventy.config.js`, this next file is one you create yourself, Eleventy doesn't generate it. In your editor, inside your `src` folder (create `src` now if you haven't yet), create a folder called `_data`, and inside that, a file called `site.json` with 4 fields; title, description, url, and author:
 
 ```json
 {
@@ -226,13 +234,13 @@ Just like `eleventy.config.js`, this next file is one you create yourself, Eleve
 
 Here's the mechanism: back in `eleventy.config.js`, we set `data: "_data"`, which tells Eleventy "look inside `src/_data/` for global data files." Eleventy then takes every file it finds in there and makes it available in _every_ template automatically, using the filename (minus the extension) as the variable name. Since this file is called `site.json`, everything inside it becomes reachable as `site.title`, `site.description`, `site.url`, and `site.author` in any page or layout you write, no importing required. Adding a second file, say `nav.json`, would similarly become available as `nav.*`.
 
-Docs: [Global Data Files](https://www.11ty.dev/docs/data-global/)
+If you need more info later you can check Docs: [Global Data Files](https://www.11ty.dev/docs/data-global/)
 
 ***
 
 ## A Note on File Types: HTML, Liquid, and Markdown
 
-Before writing your first page, it's worth clearing up something that trips a lot of people up: which file extension goes where, and whether they're interchangeable.
+This section is optional and gives context. Before writing your first page, it's worth clearing up something that trips a lot of people up: which file extension goes where, and whether they're interchangeable.
 
 **`.liquid` and `.html` are effectively the same thing here.** Eleventy pre-processes plain `.html` files using the Liquid engine by default, the same engine that processes `.liquid` files. That means every `{{ }}` and `{% %}` tag you'll see in this tutorial would work identically if you renamed `base.liquid` to `base.html`. We use the `.liquid` extension throughout mainly for clarity, so it's visually obvious at a glance that a file contains template logic and front matter, not because Eleventy requires it.
 
@@ -245,41 +253,42 @@ Before writing your first page, it's worth clearing up something that trips a lo
 
 ***
 
-## 4. Your First Pages
 
-`src/index.liquid`:
 
-The block between the two `---` lines below is called **front matter**, a small chunk of YAML (a simple, indentation-based data format) that sets metadata for this specific page: its title, which layout wraps it, and so on. Everything after the closing `---` is the page's actual visible content.
 
-```liquid
----
-title: Home
-layout: layouts/base.liquid
-eleventyNavigation:
-  key: Home
-  order: 1
----
-<h1>Welcome to my blog</h1>
-<p>This is the home page.</p>
+
+
+
+## 4. Navigation and Layouts 
+
+1. Install the navigation plugin
+Run this in your terminal, stop the server first with Ctrl+c (Cmd+c for Mac users):
+
+```bash
+npm install --save-dev @11ty/eleventy-navigation
+```
+2. Add it to `eleventy.config.js`:
+
+```js
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  return {
+    dir: {
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site",
+    },
+  };
+};
 ```
 
-`src/about.liquid`:
 
-```liquid
----
-title: About
-layout: layouts/base.liquid
-eleventyNavigation:
-  key: About
-  order: 3
----
-<h1>About</h1>
-<p>A bit about who writes this blog.</p>
-```
 
-***
-
-## 5. Layouts
+Now create these files.
 
 `src/_includes/layouts/base.liquid`:
 
@@ -339,36 +348,57 @@ Docs: [Layouts](https://www.11ty.dev/docs/layouts/), [Liquid](https://www.11ty.d
 
 ***
 
-## 6. Navigation
+## 5. Your First Pages
 
-```bash
-npm install --save-dev @11ty/eleventy-navigation
+`src/index.liquid`:
+
+The block between the two `---` lines below is called **front matter**, a small chunk of YAML (a simple, indentation-based data format) that sets metadata for this specific page: its title, which layout wraps it, and so on. Everything after the closing `---` is the page's actual visible content.
+
+```liquid
+---
+title: Home
+layout: layouts/base.liquid
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<h1>Welcome to my blog</h1>
+<p>This is the home page.</p>
 ```
 
-Add it to `eleventy.config.js`:
+`src/about.liquid`:
 
-```js
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  return {
-    dir: {
-      input: "src",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
-    },
-  };
-};
+```liquid
+---
+title: About
+layout: layouts/base.liquid
+eleventyNavigation:
+  key: About
+  order: 3
+---
+<h1>About</h1>
+<p>A bit about who writes this blog.</p>
 ```
 
-Any page can join the menu with an `eleventyNavigation` block in front matter (we already added this to `index.liquid` and `about.liquid` above). The `base.liquid` layout renders the whole tree in one line:
+***
+
+Start the server with `npm start`. You should see a basic menu with Home and About.
+![Screenshot of the Eleventy starter site with menu showing Home and About](/assets/images/eleventy_starter_screenshot.png)
+
+## 6. How the Navigation Works
+
+You already set up the navigation in the previous steps. When you click between Home and About in your browser, notice that the menu stays visible at the top of each page.
+
+Here is the two-step mechanism that makes this work:
+
+1. **Pages register themselves**: You do not build menus by manually hardcoding HTML links. Instead, when you add an `eleventyNavigation` block in its front matter (as we did in `index.liquid` and `about.liquid`). That registers the page into Eleventy's internal navigation list.
+2. **The layout renders the menu**: In `src/_includes/layouts/base.liquid`, this single line inside `<nav>` automatically reads all registered pages and converts them into HTML `<ul>` and `<li>` links:
 
 ```liquid
 {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
 ```
+
+Remember that `base.liquid` is a shell layout template, not a page you visit directly in your browser. Because `index.liquid` and `about.liquid` both use `layout: layouts/base.liquid`, Eleventy wraps their content with this shell during the build, giving every page the exact same menu automatically.
 
 Docs: [Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)
 
