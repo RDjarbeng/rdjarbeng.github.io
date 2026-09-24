@@ -33,47 +33,94 @@ The graphic above highlights that progression, showing how earlier symbolic mach
 
 ## Part I: The foundational decades (1940s-1970s)
 
-The theoretical foundation of artificial intelligence formed before digital computers were widespread. In the post-war era, mathematicians and neurophysiologists began asking whether biological brain functions could be translated into formal logical circuits.
+To understand modern artificial intelligence, it helps to start before digital computers were common. During the 1940s and 1950s, researchers were not trying to build consumer apps or conversational assistants. They were asking a foundational question: can the electrical activity of a living brain be translated into mathematical formulas and executed on a machine?
 
-### 1943: The McCulloch-Pitts neuron
+That question divided early computer science into two competing philosophies. One group believed machines should learn from scratch using artificial brain cells, an approach called connectionism. The rival group believed machines should be programmed with explicit human rules, logic, and symbols, an approach called symbolic AI. The tension between these two ideas defined the first thirty years of artificial intelligence.
 
-In 1943, neurophysiologist Warren McCulloch and logician Walter Pitts published a model of artificial neurons as simplified threshold logic units. This was the first mathematical model of a neural network. Around the same time, Norbert Wiener formulated cybernetics, studying feedback loops in animals and machines that influenced early control systems.
+### 1943: The McCulloch-Pitts neuron and the math of thought
 
-- **McCulloch-Pitts Neuron Model**: The first mathematical model of neural activity. [Read the original paper](https://en.wikipedia.org/wiki/McCulloch%E2%80%93Pitts_neuron). In this model, the neuron calculates a weighted sum of inputs and passes it to a threshold activation function.
-- **Cybernetics**: Norbert Wiener's work on feedback systems. [Explore Wiener's legacy](https://en.wikipedia.org/wiki/Cybernetics).
+The starting point of artificial intelligence was not a piece of software, but a biology paper. In 1943, neurophysiologist Warren McCulloch and logician Walter Pitts published a mathematical model of an artificial brain cell. At the time, human thought was viewed as an intangible mystery. McCulloch and Pitts proposed that an individual brain cell could be understood as an electrical logic switch.
 
-The diagram below shows the basic mechanics of this artificial neuron. Inputs ($x_1, x_2, \dots, x_m$) are multiplied by corresponding weights ($w_1, w_2, \dots, w_m$), summed together with a bias term, and passed through an activation function $f$ to produce an output $y$. If the sum crosses a defined threshold, the neuron outputs a 1; otherwise, it outputs a 0. That formulation remains the base arithmetic unit of modern deep neural networks.
+In their model, an artificial neuron receives multiple incoming data signals, multiplies each signal by an assigned weight, adds them together, and checks whether the total crosses a threshold. If the total crosses the threshold, the neuron fires (outputs a 1). If it falls short, it stays silent (outputs a 0).
+
+In mathematical notation, this threshold process is written as:
+
+$$
+y = f\left(\sum_{i=1}^{m} w_i x_i + b\right)
+$$
+
+Here, the inputs $$x_1, x_2, \dots, x_m$$ represent the incoming data, the weights $$w_1, w_2, \dots, w_m$$ represent the importance or strength of each input, $$b$$ is an adjustable bias value that sets the firing threshold, and $$f$$ is the activation function that produces the final output $$y$$.
+
+The diagram below shows this flow in visual form:
 
 ![Artificial neuron structure showing inputs, weights, summation, and activation function](/assets/images/1280px-Artificial_neuron_structure.svg.png "McCulloch-Pitts Neuron Model")
 
-### 1948-1950: Turing's test and machine learning foundations
+- **Why it is included**: It proved that thought could be translated into arithmetic. By demonstrating that networks of simple switches could calculate basic logical functions like AND, OR, and NOT, McCulloch and Pitts showed that thinking could theoretically be performed by a machine. [Read the original paper](https://en.wikipedia.org/wiki/McCulloch%E2%80%93Pitts_neuron).
+- **The significance**: It established that intelligence does not require organic biology. Simple, non-living parts can simulate reasoning if connected properly.
+- **What it influences later**: This single formula remains the fundamental arithmetic unit of modern deep learning. When a computer runs a modern system like GPT-4 or an autonomous vehicle vision model, it is executing billions of these weighted sums stacked in layers.
+- **Cybernetics connection**: Around the same time, mathematician Norbert Wiener developed cybernetics, studying how animals and machines control themselves through feedback loops. [Explore Wiener's legacy](https://en.wikipedia.org/wiki/Cybernetics). This introduced the idea that machines could automatically correct their own errors.
 
-In his 1950 paper, Alan Turing proposed the Imitation Game (now called the Turing Test) to replace philosophical arguments about machine consciousness with an empirical benchmark: can a computer converse well enough to pass as human?
+Having established that an artificial brain cell was mathematically possible, researchers needed a way to measure whether a complete machine was actually thinking.
 
-- **Computing Machinery and Intelligence**: Turing's paper framing machine intelligence. [Read the full paper](https://en.wikipedia.org/wiki/Computing_Machinery_and_Intelligence).
-- **First Neural Net (1951)**: Marvin Minsky and Dean Edmonds built the SNARC (Stochastic Neural Analog Reinforcement Calculator), the first artificial neural network machine, using 3,000 vacuum tubes to simulate 40 neurons. [See SNARC details](https://en.wikipedia.org/wiki/SNARC).
-- **First Machine Learning Program (1952)**: Arthur Samuel's checkers program at IBM improved its game by learning from positions, demonstrating that computers could learn beyond explicit instructions. [Learn about Samuel's work](http://www.incompleteideas.net/book/ebook/node109.html).
+### 1948-1952: The Turing test and early learning programs
 
-### 1956: The Dartmouth workshop
+In 1950, British mathematician Alan Turing published "Computing Machinery and Intelligence." Rather than getting trapped in debates about machine consciousness, Turing proposed an operational benchmark called the Imitation Game (now known as the Turing Test). If an interrogator communicates with an unseen entity through text and cannot reliably tell whether they are talking to a human or a computer, the machine passes the test.
 
-In the summer of 1956, John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon organized a workshop at Dartmouth College that coined the term "artificial intelligence." During this meeting, Allen Newell, Herbert Simon, and Cliff Shaw demonstrated the Logic Theorist, an automated program that proved 38 of the first 52 theorems in Whitehead and Russell's *Principia Mathematica*.
+Turing shifted the benchmark from abstract philosophy to observable behavior. Engineers immediately set out to see if hardware could learn on its own.
 
-- **Dartmouth Workshop**: Coined the term artificial intelligence. [Read the proposal text](https://en.wikipedia.org/wiki/Dartmouth_workshop).
-- **Logic Theorist**: The first automated theorem-proving program. [Explore the original demo](https://en.wikipedia.org/wiki/Logic_Theorist).
+- **SNARC (1951)**: Marvin Minsky and Dean Edmonds built the Stochastic Neural Analog Reinforcement Calculator (SNARC). Using 3,000 vacuum tubes and surplus military equipment, it simulated a network of 40 artificial neurons that learned to navigate a virtual maze through trial and error. [See SNARC details](https://en.wikipedia.org/wiki/SNARC).
+- **Arthur Samuel's Checkers Program (1952)**: Working at IBM, Arthur Samuel wrote a program that played checkers. Samuel did not write code telling the computer how to respond to every board state. Instead, he created a scoring formula that rewarded board advantages and penalized mistakes, enabling the program to play against itself and improve with experience. [Learn about Samuel's work](http://www.incompleteideas.net/book/ebook/node109.html).
 
-### 1958-1969: Perceptrons, symbolic AI, and the first winter
+- **Why it is included**: Samuel coined the term "machine learning" during this work. He showed that computers did not need programmers to anticipate every move. A system could learn rules on its own through trial and error.
+- **The significance**: It challenged the assumption that computers could only perform explicit instructions written by human programmers.
+- **What it influences later**: Samuel's self-play method was the first working demonstration of reinforcement learning. Decades later, this same self-play principle enabled DeepMind's AlphaGo to master the game of Go, and it forms the foundation of the reinforcement learning from human feedback (RLHF) used to train modern chatbots.
 
-Research split into two rival camps during the 1960s: connectionism (learning from data via neural models) and symbolism (manipulating rules and symbols). Frank Rosenblatt built the Mark I Perceptron at Cornell, while John McCarthy developed Lisp, which became the standard language for symbolic programming and early expert systems.
+With evidence that computers could learn rules through practice, researchers organized to turn these scattered experiments into a unified field.
 
-- **Perceptron Invention**: Rosenblatt's single-layer neural network trained on punch cards and optical sensors. [Read the paper](https://en.wikipedia.org/wiki/Perceptron).
-- **ELIZA Chatbot (1966)**: Joseph Weizenbaum created a pattern-matching script that simulated a Rogerian psychotherapist, surprising observers with how easily users attributed genuine empathy to simple rule substitutions. [Learn about the code](https://en.wikipedia.org/wiki/ELIZA).
-- **Shakey the Robot (1969)**: Built at SRI International, Shakey was the first mobile robot to integrate computer vision, natural language commands, and automated planning via the STRIPS algorithm. [See Shakey in action](https://en.wikipedia.org/wiki/Shakey_the_robot).
+### 1956: The Dartmouth workshop and the birth of AI
 
-The photograph below shows Shakey in the SRI laboratory with its main components labeled. It carried an onboard television camera, a triangulating optical rangefinder, and bump detectors, all linked by radio to an SDS-940 mainframe computer in the next room. Because the computer evaluated floor plans and recalculated paths between every motion, moving across a small room often took over an hour.
+In the summer of 1956, mathematicians, engineers, and psychologists gathered at Dartmouth College in New Hampshire. Organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, the gathering's written proposal introduced the term "artificial intelligence" for the first time.
 
-![Shakey the Robot at SRI International with callouts indicating its TV camera, range finder, and antenna link](/assets/images/ai/shakey_the_robot_1969.jpg "Shakey the Robot (1969) - Early Embodied AI and Logical Planning")
+The researchers made a clear wager: every aspect of learning and intelligence could be described with enough mathematical precision that a machine could simulate it. During the workshop, Allen Newell, Herbert Simon, and Cliff Shaw demonstrated the Logic Theorist, a program that proved 38 mathematical theorems from Whitehead and Russell's *Principia Mathematica*.
 
-Shakey showed the potential of 1960s symbolic robotics, but its sluggish performance highlighted how fragile rule-based reasoning was in physical environments. That fragility became a broader problem in 1969 when Marvin Minsky and Seymour Papert published *Perceptrons*. Their mathematical proof demonstrated that single-layer perceptrons could not solve linearly non-separable problems like XOR. DARPA and other funders pulled research grants, triggering the first AI winter.
+- **Why it is included**: It officially named the field and established artificial intelligence as an independent research discipline, separate from traditional mathematics and computer engineering. [Read the proposal text](https://en.wikipedia.org/wiki/Dartmouth_workshop).
+- **The significance**: The Logic Theorist proved that computers were not just numeric calculators for military artillery tables. They could manipulate abstract symbols to solve logical puzzles. [Explore the original demo](https://en.wikipedia.org/wiki/Logic_Theorist).
+- **What it influences later**: The workshop committed early research to the symbolic AI approach, which assumed that intelligence is primarily a matter of following rules and manipulating symbols. This led directly to the expert systems boom of the 1980s, computer algebra systems, and modern search engine knowledge graphs.
+
+The success of symbolic logic sparked a rivalry with researchers who believed machines should learn from sensory data instead.
+
+### 1958-1969: Perceptrons, chatbots, and physical bottlenecks
+
+The 1960s pitted the two competing philosophies against each other.
+
+In 1958, Frank Rosenblatt built the Mark I Perceptron at the Cornell Aeronautical Laboratory. While the earlier McCulloch-Pitts neuron had fixed settings, Rosenblatt's Perceptron adjusted its own internal weights automatically when shown image cards through a camera. The New York Times reported it as the foundation of future machines expected to walk, talk, and see. [Read the paper](https://en.wikipedia.org/wiki/Perceptron).
+
+Meanwhile, symbolic AI produced two famous demonstrations that illustrated both the promise and the fragility of rule-based programming:
+
+- **ELIZA (1966)**: Joseph Weizenbaum at MIT wrote a script that simulated a psychotherapist. [Learn about the code](https://en.wikipedia.org/wiki/ELIZA). ELIZA had no internal understanding of human thoughts. It simply identified keywords in the user's sentence and inserted them into canned template responses. Despite this simplicity, users formed personal attachments and believed the software possessed real empathy.
+- **Shakey the Robot (1969)**: Engineers at SRI International built Shakey, the first mobile robot to combine computer vision, natural language commands, and automated logical planning using the STRIPS algorithm. [See Shakey in action](https://en.wikipedia.org/wiki/Shakey_the_robot).
+
+The photograph below shows Shakey in the SRI laboratory with its primary components labeled:
+
+![Shakey the Robot at SRI International with callouts indicating its TV camera, range finder, and antenna link](/assets/images/ai/shakey_the_robot_1969.jpg "Shakey the Robot (1969): Early Embodied AI and Logical Planning")
+
+Shakey carried an onboard television camera, an optical rangefinder, and bump sensors, connected by radio to an SDS-940 mainframe computer in the next room. Because the computer had to recalculate full floor plans and update symbolic logic tables before every movement, pushing a block across a small room often took over an hour.
+
+- **Why it is included**: These projects demonstrated the real-world limits of early AI. ELIZA exposed the human tendency to mistake pattern matching for genuine intelligence. Shakey showed that trying to navigate the messy physical world using pure deductive logic creates a massive computing bottleneck.
+- **The significance**: They proved that solving clean academic puzzles does not translate cleanly to messy real-world environments.
+- **What it influences later**: ELIZA serves as the earliest case study in chatbot psychology and user trust, issues that dominate conversations around modern AI companions. Shakey produced the A* pathfinding algorithm, which is still used today in GPS mapping software, robotics, and video game navigation.
+
+Despite these engineering milestones, the entire field was about to hit a theoretical wall.
+
+### 1969: The XOR wall and the first AI winter
+
+In 1969, Marvin Minsky and Seymour Papert published a mathematical study titled *Perceptrons*. Their analysis proved that single-layer neural networks like Rosenblatt's Perceptron were mathematically incapable of solving non-linear logic problems, including the simple exclusive OR (XOR) function.
+
+An XOR operation produces a 1 if either input is true, but produces a 0 if both inputs are true or both are false. A single layer of artificial neurons can only draw a single straight boundary line through data, which cannot separate the diagonal classes of an XOR problem. Minsky and Papert noted that solving complex problems required multi-layer networks, but no researcher at the time knew how to calculate errors and adjust weights inside the hidden middle layers.
+
+The book stalled neural network research. Because symbolic systems like Shakey were too brittle for practical adoption and neural networks hit a mathematical ceiling, funding agencies like DARPA grew tired of unfulfilled claims and canceled research grants. The field entered its first prolonged funding drought, known as the first AI winter.
+
+Neural networks remained largely sidelined until researchers in the 1980s proved that an optimization technique called backpropagation could train multiple layers at once.
 
 -----
 
@@ -122,7 +169,7 @@ In 2012, Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton entered AlexNet in
 
 AlexNet's success rested on a software and hardware co-design. Krizhevsky wrote custom C++ and CUDA routines to parallelize convolutional layers across two consumer Nvidia GeForce GTX 580 GPUs. The diagram below illustrates why:
 
-![AlexNet convolutional neural network architecture diagram illustrating layer splitting across two parallel Nvidia GTX 580 GPUs](/assets/images/ai/alexnet_architecture_2012.png "AlexNet Architecture (2012) - Dual-GPU Convolutional Neural Network")
+![AlexNet convolutional neural network architecture diagram illustrating layer splitting across two parallel Nvidia GTX 580 GPUs](/assets/images/ai/alexnet_architecture_2012.png "AlexNet Architecture (2012): Dual-GPU Convolutional Neural Network")
 
 The top and bottom halves of the diagram represent the two GPUs. Because a consumer GTX 580 card in 2012 had only 3 GB of memory, a network with 60 million parameters and 650,000 neurons could not fit onto a single card. Krizhevsky divided the feature maps across both GPUs, allowing them to train in parallel and communicate only at specific layers (such as layer 3 and the fully connected layers). Slashing training time from months to five days demonstrated that graphics cards could handle large-scale deep learning.
 
@@ -139,7 +186,9 @@ The breakthrough triggered industry acquisitions across tech companies:
 
 - **2013**: Tomas Mikolov and his team at Google released **Word2Vec**, showing that neural embeddings could perform algebraic semantic relationships:
 
-$$\vec{v}_{\text{king}} - \vec{v}_{\text{man}} + \vec{v}_{\text{woman}} \approx \vec{v}_{\text{queen}}$$
+$$
+\vec{v}_{\text{king}} - \vec{v}_{\text{man}} + \vec{v}_{\text{woman}} \approx \vec{v}_{\text{queen}}
+$$
 
 This equation captures the central breakthrough of vector embeddings. Traditional natural language processing treated words as isolated, arbitrary symbols (like "king" = index #412 and "queen" = index #903), which gave algorithms no way to calculate how words related to each other. Word2Vec mapped every word into a continuous vector space based on the contexts in which it appeared. In that space, geometric direction and distance correspond to meaning. 
 
@@ -164,7 +213,7 @@ In 2017, a team at Google published "Attention Is All You Need," introducing the
 
 The diagram below, from the original paper, illustrates the encoder-decoder structure:
 
-![The original Transformer encoder-decoder architecture diagram from the seminal 2017 Google paper Attention Is All You Need](/assets/images/ai/transformer_architecture_2017.png "The Transformer Architecture (2017) - Attention Is All You Need")
+![The original Transformer encoder-decoder architecture diagram from the seminal 2017 Google paper Attention Is All You Need](/assets/images/ai/transformer_architecture_2017.png "The Transformer Architecture (2017): Attention Is All You Need")
 
 The left stack is the encoder, which converts input text into high-dimensional numerical representations. The right stack is the decoder, which generates the output text token by token. Instead of reading text word-by-word like recurrent networks, the Multi-Head Attention blocks look at every word in a sequence simultaneously. This self-attention mechanism weights how relevant every word is to every other word, regardless of distance. By removing recurrence, models could be trained across hundreds of GPUs in parallel, enabling the massive parameter scaling seen in modern LLMs.
 
