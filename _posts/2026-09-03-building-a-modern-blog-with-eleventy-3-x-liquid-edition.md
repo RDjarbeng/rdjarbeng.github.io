@@ -159,7 +159,7 @@ Unlike `package.json`, this file does _not_ get created for you, you write it by
 module.exports = function (eleventyConfig) {
   return {
     dir: {
-      input: "src",
+      input: ".",
       includes: "_includes",
       data: "_data",
       output: "_site",
