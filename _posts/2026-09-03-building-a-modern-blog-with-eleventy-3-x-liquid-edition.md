@@ -181,12 +181,12 @@ Open `package.json` in your editor. You'll see a `"scripts"` section that npm ge
 
 replace it with:
 ```json
-{
+
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   }
-}
+
 ```
 
 These are just nicknames for longer commands. `npx @11ty/eleventy` runs the copy of Eleventy that lives in your `node_modules` folder (rather than requiring you to type out that whole path). The `--serve` flag additionally starts a local preview server and rebuilds the site automatically whenever you save a file. Because these are named `"start"` and `"build"` inside the `"scripts"` section, you get to type the short version from your terminal: `npm start` or `npm run build`.
