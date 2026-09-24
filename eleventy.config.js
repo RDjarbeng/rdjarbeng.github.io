@@ -248,21 +248,21 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
 
   // 8. Collections & Site Bridge
   eleventyConfig.addCollection("posts", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md").sort((a, b) => b.date - a.date);
-    siteData.posts = posts;
-    return posts;
+    return collectionApi.getFilteredByGlob("_posts/**/*.md")
+      .filter((p) => p.data.published !== false)
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("personal", (collectionApi) => {
-    const personal = collectionApi.getFilteredByGlob("_personal/**/*.md").sort((a, b) => b.date - a.date);
-    siteData.personal = personal;
-    return personal;
+    return collectionApi.getFilteredByGlob("_personal/**/*.md")
+      .filter((p) => p.data.published !== false)
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("gallery", (collectionApi) => {
-    const gallery = collectionApi.getFilteredByGlob("_gallery/**/*.md").sort((a, b) => b.date - a.date);
-    siteData.gallery = gallery;
-    return gallery;
+    return collectionApi.getFilteredByGlob("_gallery/**/*.md")
+      .filter((p) => p.data.published !== false)
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("searchable", (collectionApi) => {

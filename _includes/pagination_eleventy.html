@@ -1,0 +1,75 @@
+{% assign current_page = include.pagination.pageNumber | plus: 1 %}
+{% assign total_pages = include.pagination.pages.size %}
+{% if total_pages > 1 %}
+<div class="paginator">
+    <!-- First Page Link -->
+    {% if current_page > 1 %}
+    <a href="{{ include.pagination.href.first }}" class="first">First</a>
+    {% else %}
+    <span class="first disabled">First</span>
+    {% endif %}
+
+    <!-- Previous Page Link -->
+    <span class="previous">
+        {% if include.pagination.href.previous %}
+        <a href="{{ include.pagination.href.previous }}">Prev</a>
+        {% else %}
+        <span class="disabled">Prev</span>
+        {% endif %}
+    </span>
+
+    <!-- Page Numbers with Ellipses -->
+    <div class="page-numbers">
+        {% assign trail = 2 %}
+        {% assign range_start = current_page | minus: trail %}
+        {% assign range_end = current_page | plus: trail %}
+
+        {% if range_start < 1 %}{% assign range_start = 1 %}{% endif %}
+        {% if range_end > total_pages %}{% assign range_end = total_pages %}{% endif %}
+
+        <!-- Always show first page -->
+        {% if range_start > 1 %}
+        <a href="{{ include.pagination.href.first }}">1</a>
+        {% if range_start > 2 %}
+        <span class="ellipsis">...</span>
+        {% endif %}
+        {% endif %}
+
+        {% for href in include.pagination.hrefs %}
+        {% assign page_num = forloop.index %}
+        {% if page_num >= range_start and page_num <= range_end %}
+            {% if page_num == current_page %}
+            <span class="current-page">{{ page_num }}</span>
+            {% else %}
+            <a href="{{ href }}">{{ page_num }}</a>
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        <!-- Always show last page -->
+        {% if range_end < total_pages %}
+        {% assign penultimate = total_pages | minus: 1 %}
+        {% if range_end < penultimate %}
+        <span class="ellipsis">...</span>
+        {% endif %}
+        <a href="{{ include.pagination.href.last }}">{{ total_pages }}</a>
+        {% endif %}
+    </div>
+
+    <!-- Next Page Link -->
+    <span class="next">
+        {% if include.pagination.href.next %}
+        <a href="{{ include.pagination.href.next }}">Next</a>
+        {% else %}
+        <span class="disabled">Next</span>
+        {% endif %}
+    </span>
+
+    <!-- Last Page Link -->
+    {% if current_page < total_pages %}
+    <a href="{{ include.pagination.href.last }}" class="last">Last</a>
+    {% else %}
+    <span class="last disabled">Last</span>
+    {% endif %}
+</div>
+{% endif %}

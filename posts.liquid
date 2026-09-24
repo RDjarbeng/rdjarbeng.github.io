@@ -2,7 +2,7 @@
 layout: posts
 title: Blog
 pagination:
-  data: collections.posts
+  data: site.posts
   size: 12
   alias: paged_posts
 permalink: "{% if pagination.pageNumber == 0 %}/posts/{% else %}/posts/page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}"

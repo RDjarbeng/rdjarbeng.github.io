@@ -15,7 +15,14 @@ title: Blog
   <!-- DEBUG: page.pager: {{ page.pager | inspect }} -->
   <!-- DEBUG: page keys: {{ page | inspect }} -->
 
-  {% if page.pager %}
+  {% if paged_posts %}
+  {% assign posts_to_display = paged_posts %}
+  {% assign total_posts = site.posts | size %}
+  {% assign current_page = pagination.pageNumber | plus: 1 %}
+  {% assign per_page = pagination.size | default: 12 %}
+  {% assign start_index = pagination.pageNumber | times: per_page | plus: 1 %}
+  {% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
+  {% elsif page.pager %}
   {% assign posts_to_display = page.pager.posts %}
   {% assign total_posts = page.pager.total_posts %}
   {% assign current_page = page.pager.current_page %}
@@ -40,6 +47,8 @@ title: Blog
   {% endfor %}
 </div>
 
-{% if page.pager %}
+{% if pagination.pages.size > 1 %}
+{% include pagination_eleventy.html pagination=pagination base_url="/posts/" %}
+{% elsif page.pager %}
 {% include pagination.html paginator=page.pager base_url="/posts/" %}
 {% endif %}

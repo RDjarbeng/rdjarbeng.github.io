@@ -2,7 +2,7 @@
 layout: personal_posts
 title: Personal Posts
 pagination:
-  data: collections.personal
+  data: site.personal
   size: 12
   alias: paged_posts
 permalink: "{% if pagination.pageNumber == 0 %}/personal/{% else %}/personal/page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}"

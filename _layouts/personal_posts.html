@@ -7,7 +7,14 @@ layout: default
 </div>
 <h2 class="section-title">({{ site.personal | size }}) Personal Posts </h2>
 
-{% if page.custom_pager %}
+{% if paged_posts %}
+{% assign posts_to_display = paged_posts %}
+{% assign total_posts = site.personal | size %}
+{% assign current_page = pagination.pageNumber | plus: 1 %}
+{% assign per_page = pagination.size | default: 12 %}
+{% assign start_index = pagination.pageNumber | times: per_page | plus: 1 %}
+{% assign end_index = start_index | plus: posts_to_display.size | minus: 1 %}
+{% elsif page.custom_pager %}
 {% assign posts_to_display = page.custom_pager.posts %}
 {% assign total_posts = page.custom_pager.total_posts %}
 {% assign current_page = page.custom_pager.current_page %}
@@ -31,6 +38,8 @@ layout: default
   {% endfor %}
 </div>
 
-{% if page.custom_pager %}
+{% if pagination.pages.size > 1 %}
+{% include pagination_eleventy.html pagination=pagination base_url="/personal/" %}
+{% elsif page.custom_pager %}
 {% include pagination.html paginator=page.custom_pager base_url="/personal/" %}
 {% endif %}
