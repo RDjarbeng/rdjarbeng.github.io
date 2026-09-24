@@ -2,13 +2,16 @@ This todo file contains design specifications and technical  directions for rdja
 
 # Specifications
 - This website is deployed on Github pages at rdjarbeng.com and should scale globally
+- Built with **Eleventy (11ty) 3.x** using LiquidJS, Dart Sass, and Node scripts (migrated from legacy Jekyll)
 - Blog posts are rarely written, but often read
-- Most of the website is purely static files, 
+- Most of the website is purely static files
+- Fast build times (~25-30s full build for 2,100+ pages)
 - Caching must be implemented where possible
 
-## Understanding the layout and reason for certain pages
-
-
+## Local Development & Build Commands
+- `npm start` - Starts local Eleventy development server with live reload (`http://localhost:8080`)
+- `npm run build` - Full production build compiling Sass and outputting to `_site/`
+- `node scripts/algolia-sync.js` - Syncs posts and pages with Algolia search index
 
 ## Understanding the structure of the website
 
@@ -22,28 +25,28 @@ The website is divided into several sections:
     - Videos
     - Special collections such as Artemis II
 - Videos (dedicated videos page) combines data from multiple sources
-    -Youtube
-    -Instagram 
-    -TikTok
-    Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are  a strength of youtube.
-- Other minor pages 'search, tags, categories, contact... etc'
+    - Youtube
+    - Instagram 
+    - TikTok
+    Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are a strength of youtube.
+- Other minor pages (search, tags, categories, contact... etc)
 
 # Developer To-Do List & Notes
 
 This file tracks issues, bugs, and future improvements for the [rdjarbeng.com](https://rdjarbeng.com) codebase.
 
-This repo is a blog that's being built as well as being filled with content concurrently
+This repo is a blog that's being built as well as being filled with content concurrently.
 
 List of todos is split across two files:
-TODO_content.md: Todos related to content 
-TODO_design.md: Todos related to design and technical site building 
+- [TODO_content.md](TODO_content.md): Todos related to content
+- [TODO_design.md](TODO_design.md): Todos related to design and technical site building
 
 ## Current focus
 
 This is the short, curated list of work currently being pursued. It should normally contain no more than three outcomes.
 
 - [ ] Make `/videos/` easy to understand and navigate for a first-time visitor.
-- [ ] Extend the existing Algolia search architecture to gallery and YouTube content.
+- [ ] Extend the existing Algolia search architecture (`scripts/algolia-sync.js`) to gallery and YouTube content.
 - [ ] Define a scalable video-collection model, including how YouTube playlist updates are synchronized.
 
 ## Current known issue
