@@ -813,6 +813,7 @@ a:hover {
 
 #rdjarbeng-website-contact-form input[type="text"],
 #rdjarbeng-website-contact-form input[type="email"],
+#rdjarbeng-website-contact-form select,
 #rdjarbeng-website-contact-form textarea {
   width: 100%;
   padding: 10px;
@@ -845,8 +846,13 @@ a:hover {
   background-color: var(--btn-bg);
 }
 
+.form-honeypot {
+  display: none !important;
+}
+
 /* Style for success/error message */
 #form-message {
+  display: none;
   margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
@@ -862,6 +868,7 @@ a:hover {
 }
 
 #loading-indicator {
+  display: none;
   margin-top: 15px;
   text-align: center;
   color: #007bff;
