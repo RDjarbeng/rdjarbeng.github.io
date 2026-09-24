@@ -20,10 +20,15 @@ function slugify(str) {
 function titleize(input) {
   if (!input) return "";
   const smallWords = new Set(["a", "an", "the", "at", "by", "for", "in", "of", "on", "to", "up", "and", "as", "but", "if", "or", "nor"]);
+  const romanNumerals = new Set(["ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii"]);
   const words = input.toString().split(/(\s+)/);
   for (let i = 0; i < words.length; i++) {
     const word = words[i];
     if (/^\s+$/.test(word)) continue;
+    if (romanNumerals.has(word.toLowerCase())) {
+      words[i] = word.toUpperCase();
+      continue;
+    }
     if (/[A-Z]/.test(word.slice(1))) continue;
     const isFirst = i === 0;
     const isLast = i === words.length - 1;
