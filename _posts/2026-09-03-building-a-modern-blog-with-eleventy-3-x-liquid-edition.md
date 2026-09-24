@@ -172,8 +172,14 @@ Eleventy automatically looks for a file with this exact name when it runs, so na
 
 **Step 6: Add shortcut commands to `package.json`.**
 
-Open `package.json` in your editor. You'll see a `"scripts"` section that npm generated with a placeholder in it; replace it with:
+Open `package.json` in your editor. You'll see a `"scripts"` section that npm generated with a placeholder in it. Mine looks like this:
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  ```
 
+replace it with:
 ```json
 {
   "scripts": {
