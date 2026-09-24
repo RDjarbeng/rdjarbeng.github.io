@@ -2,13 +2,11 @@ This todo file contains design specifications and technical directions for rdjar
 
 # Specifications
 - This website is deployed on Github pages at rdjarbeng.com and should scale globally
+- Built with **Eleventy (11ty) 3.x** using LiquidJS, Dart Sass, and Node scripts (migrated from legacy Jekyll)
 - Blog posts are rarely written, but often read
-- Most of the website is purely static files, 
+- Most of the website is purely static files
+- Fast build times (~25-30s full build for 2,100+ pages)
 - Caching must be implemented where possible
-
-## Understanding the layout and reason for certain pages
-
-
 
 ## Understanding the structure of the website
 
@@ -22,11 +20,11 @@ The website is divided into several sections:
     - Videos
     - Special collections such as Artemis II
 - Videos (dedicated videos page) combines data from multiple sources
-    -Youtube
-    -Instagram 
-    -TikTok
+    - Youtube
+    - Instagram 
+    - TikTok
     Each of the dedicated social media pages have their own strengths that distinguish it from the combined videos page. Youtube playlists for instance are a strength of youtube.
-- Other minor pages 'search, tags, categories, contact... etc'
+- Other minor pages (search, tags, categories, contact... etc)
 
 Possible future implementation:
 - the rest is a dynamic REST API- todo
@@ -47,20 +45,20 @@ Possible future implementation:
 
 ### Styling & Layout
 - [ ] Optimize CSS: Currently loads CSS for personal and video pages when not needed. (Medium Importance, Medium Complexity: Refactor CSS loading)
-- [ ] Implement `jekyll-responsive-image` to properly size images on mobile devices. (Medium Importance, Medium Complexity: Plugin integration)
-- [ ] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Medium Importance, Medium Complexity: Debugging meta tags)
+- [ ] Implement responsive images (via `@11ty/eleventy-img`) to properly size images on mobile devices. (Medium Importance, Medium Complexity: Eleventy image plugin integration)
+- [x] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Fixed: Comprehensive Twitter card and OpenGraph meta tags implemented in eleventy.config.js)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
-- [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Jekyll layout/logic)
+- [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Eleventy layout/logic)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
-- [ ] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Medium Importance, Medium Complexity: JavaScript debugging)
+- [x] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Fixed: assets/js/toc.js updated with requestAnimationFrame and persistent section tracking)
 
 ### Content & Data Structure
-- [ ] **Contact Form**: Add dropdown to website contact form to append reason for user's query. (High Importance, Significant Complexity: Backend integration/email service)
+- [x] **Contact Form**: Add dropdown to website contact form to append reason for user's query. (Fixed: Added inquiry_reason dropdown in _includes/contact-form.html and styled in _sass/main.scss)
 - [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents. (Medium Importance, Medium Complexity: TOC generation logic)
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
-- [ ] Remove tiktok expander plugin if not necessary. (Low Importance, Trivial Complexity: Plugin removal) - seems necessary till proven otherwise
-- [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Jekyll logic)
-- [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Jekyll layouts, YouTube API integration)
+- [x] Remove tiktok expander plugin if not necessary. (Completed: Legacy Jekyll plugins eliminated during Eleventy 3.x migration)
+- [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Eleventy data cascade)
+- [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Eleventy layouts, YouTube API integration)
 
 ## Future Enhancements & Strategic Roadmap
 
@@ -88,7 +86,7 @@ Possible future implementation:
     - [ ] Live Interactive Demos: Embed "Lite" versions of your projects directly in the posts.
     - [ ] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track").
     - [ ] Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000+ word authoritative guides with annotated code blocks and architectural diagrams.
-    - [ ] Readability UX: Improve the "In-App" feel by adding Code "Copy" and "Play" buttons.
+    - [x] Readability UX: Improve the "In-App" feel by adding Code "Copy" button. (Implemented in assets/js/copy-code.js and styled in _sass/main.scss)
     - [ ] Position the site so agents consider it as a source of information such as when users are asked what is the latest AI news this site shows up
 
 ## Notes to Self & Research Ideas
@@ -144,7 +142,7 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Set certain tags as series on the website, such as money transfer
 - [ ] Reduce the number of Artemis II Items shown on the gallery page - there are repititions
 
-- Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format
+- [x] Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format (Fixed: updated titleize filter in eleventy.config.js and category metadata files)
 
 - The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview -DISABLED THE PREVIEW
 - [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images-partial implementation 
@@ -181,7 +179,7 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
 https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know when you are at teh end of the screenshot
 - [ ] Add a horizontal navbar to the about page to Skip sections-needed most on mobile
-- [ ] References section for the free background remover post is not properly formatted-fix this
+- [x] References section for the free background remover post is not properly formatted-fix this (Fixed: formatted research citations and bibtex cleanly in _posts/2025-09-20-free-hd-background-remover-effortless-image-editing-tool.md)
 - [] Music of RRR | Richard Djarbeng
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 

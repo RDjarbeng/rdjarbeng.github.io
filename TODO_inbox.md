@@ -17,7 +17,7 @@ The Telegram bot captures notes. Agents own their organization and movement betw
 ## Untriaged notes
 
 - [ ] 2026-07-21 15:26 CAT | Now let's see
-- [ ] 2026-07-22 12:12 CAT | Some of the tags and categories overlap so I need to find a way to ensure when they're displayed on the homepage, to make sure that an example such as 'security' doesn't have two sections at once on the homepage
+- [x] 2026-07-22 12:12 CAT | Some of the tags and categories overlap so I need to find a way to ensure when they're displayed on the homepage, to make sure that an example such as 'security' doesn't have two sections at once on the homepage (Fixed in _layouts/home.html with seen_topic_names deduplication)
 - Need to see how I can implement i8n from SveltiaCMS into this site, https://sveltiacms.app/en/docs/i18n targeting french and maybe chinese
 - [ ] 2026-07-25 12:42 CAT | Understanding Gradients with loss.backward() in PyTorch | Richard Djarbeng
 https://rdjarbeng.com/understanding-gradients-with-loss-backward-in-pytorch/
