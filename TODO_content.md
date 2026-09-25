@@ -510,3 +510,4 @@ From: A Survey of Deep Learning Methods for Cyber Security - Daniel S. Berman
 Published Post: [_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md](file:///c:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md)
 - [ ] Met my first person from Mozambique at the Agrismat summer school. So they speak Portuguese and have a coast line, what else can be said about them. Let's do a country spotlight
 - [ ] Company spotlight Crane AI - building high quality African language data
+- [ ] How do you engineer a tank so that it does not need cleaning and deposits don't form in it, it should remain clean. Is this impossible or will there always be dirt at the bottom of the tank?
