@@ -244,6 +244,8 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   eleventyConfig.ignores.add(".ruby-lsp/**");
   eleventyConfig.ignores.add("node_modules/**");
   eleventyConfig.ignores.add("_sass/**");
+  eleventyConfig.ignores.add(".agent/**");
+  eleventyConfig.ignores.add(".agents/**");
   eleventyConfig.ignores.add("_site/**");
 
   // 8. Collections & Site Bridge
@@ -364,12 +366,13 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
       ...(siteData.gallery || []),
     ];
     for (const doc of allDocs) {
-      const data = doc.data || {};
-      if (data.image && typeof data.image === "string") {
-        coverImages.add(data.image.replace(/^\//, ""));
+      const img = doc.image || (doc.data && doc.data.image);
+      const thumb = doc.thumbnail || (doc.data && doc.data.thumbnail);
+      if (img && typeof img === "string") {
+        coverImages.add(img.replace(/^\//, ""));
       }
-      if (data.thumbnail && typeof data.thumbnail === "string") {
-        coverImages.add(data.thumbnail.replace(/^\//, ""));
+      if (thumb && typeof thumb === "string") {
+        coverImages.add(thumb.replace(/^\//, ""));
       }
     }
     const outputPath = path.join(dir.output, "cover-images.txt");

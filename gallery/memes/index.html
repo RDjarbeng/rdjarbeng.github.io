@@ -13,10 +13,13 @@ permalink: /gallery/memes/
 
     <p class="meme-description">A collection of memes and funny snippets from across the internet.</p>
 
+
     <div class="meme-grid">
+        {% assign gallery_items = site.gallery | default: collections.gallery %}
         {% assign memes = "" | split: "" %}
-        {% for item in site.gallery %}
-        {% if item.category == 'memes' or item.url contains 'memes' %}
+        {% for item in gallery_items %}
+        {% assign cat = item.category | default: item.data.category %}
+        {% if cat == 'memes' or item.url contains 'memes' %}
         {% assign memes = memes | push: item %}
         {% endif %}
         {% endfor %}
@@ -24,13 +27,16 @@ permalink: /gallery/memes/
         {% assign memes = memes | sort: "date" | reverse %}
 
         {% for item in memes %}
+        {% assign m_img = item.image | default: item.data.image | default: item.thumbnail | default: item.data.thumbnail %}
+        {% assign m_title = item.title | default: item.data.title %}
+        {% assign m_date = item.date | default: item.data.date %}
         <a href="{{ item.url | relative_url }}" class="meme-card">
             <div class="meme-card-media">
-                <img src="{{ item.image | relative_url }}" alt="{{ item.title | escape }}" loading="lazy">
+                <img src="{{ m_img | relative_url }}" alt="{{ m_title | escape }}" loading="lazy">
             </div>
             <div class="meme-card-info">
-                <h3 class="meme-card-title" title="{{ item.title | escape }}">{{ item.title | titleize | escape }}</h3>
-                <p class="meme-card-date">{{ item.date | date: "%B %-d, %Y" }}</p>
+                <h3 class="meme-card-title" title="{{ m_title | escape }}">{{ m_title | titleize | escape }}</h3>
+                <p class="meme-card-date">{{ m_date | date: "%B %-d, %Y" }}</p>
             </div>
         </a>
         {% endfor %}
