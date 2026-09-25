@@ -512,3 +512,4 @@ Published Post: [_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from
 - [ ] Company spotlight Crane AI - building high quality African language data
 - [ ] How do you engineer a tank so that it does not need cleaning and deposits don't form in it, it should remain clean. Is this impossible or will there always be dirt at the bottom of the tank?
 - [ ] Need an analytics dashboard for this site so I can see the percentage of categories for posts, gallery items, progression of posts, the paths in the sitemap, how long it takes to load the site,.. Etc
+- [ ] Found out that the man in the music group Bonney M, with the afro wasn't actually singing but was lip syncing
