@@ -270,6 +270,14 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   eleventyConfig.ignores.add("TODO*.md");
   eleventyConfig.ignores.add("index_old.md");
   eleventyConfig.ignores.add("posts.md.bak");
+  eleventyConfig.ignores.add(".replit");
+  eleventyConfig.ignores.add(".replit/**");
+  eleventyConfig.ignores.add("replit.md");
+  eleventyConfig.ignores.add(".github/**");
+  eleventyConfig.ignores.add(".vscode/**");
+  eleventyConfig.ignores.add(".jekyll-cache/**");
+  eleventyConfig.ignores.add(".sass-cache/**");
+  eleventyConfig.ignores.add("_plugins/**");
   eleventyConfig.ignores.add("crawls_from_web/**");
   eleventyConfig.ignores.add("misc_files_plans/**");
   eleventyConfig.ignores.add("vendor/**");
@@ -281,6 +289,16 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   eleventyConfig.ignores.add(".agent/**");
   eleventyConfig.ignores.add(".agents/**");
   eleventyConfig.ignores.add("_site/**");
+  eleventyConfig.ignores.add("*.rb");
+  eleventyConfig.ignores.add("Gemfile*");
+  eleventyConfig.ignores.add("_config*.yml");
+  eleventyConfig.ignores.add("*.log");
+  eleventyConfig.ignores.add("build_logs_final.txt");
+  eleventyConfig.ignores.add("dropdownlists.txt");
+  eleventyConfig.ignores.add("kroki_urls.txt");
+  eleventyConfig.ignores.add("yt_card_styles.txt");
+  eleventyConfig.ignores.add("lighthouse.json");
+  eleventyConfig.ignores.add("*.png");
 
   // 8. Collections & Site Bridge
   eleventyConfig.addCollection("posts", (collectionApi) => {

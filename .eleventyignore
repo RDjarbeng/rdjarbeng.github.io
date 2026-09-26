@@ -1,0 +1,48 @@
+# Environments, IDEs, and tools
+.git/
+.github/**
+.vscode/**
+.replit
+.replit/**
+replit.md
+.agent/**
+.agents/**
+.bundle/**
+.ruby-lsp/**
+.jekyll-cache/**
+.sass-cache/**
+node_modules/**
+_site/**
+
+# Documentation, scratch, and plans
+README.md
+TODO*.md
+index_old.md
+posts.md.bak
+crawls_from_web/**
+misc_files_plans/**
+vendor/**
+scripts/**
+_sass/**
+_plugins/**
+
+# Legacy Jekyll and Ruby files
+*.rb
+Gemfile*
+_config*.yml
+.ruby-version
+
+# Logs, scratch data, and root screenshots
+*.log
+build_logs_final.txt
+dropdownlists.txt
+kroki_urls.txt
+yt_card_styles.txt
+lighthouse.json
+/*.png
+
+# Dotfiles
+.bashrc
+.editorconfig
+.gitattributes
+.gitignore
