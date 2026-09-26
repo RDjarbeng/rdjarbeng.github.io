@@ -42,10 +42,10 @@
   },
   "scripts": {
     "build:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps",
-    "build:11ty": "eleventy --quiet",
+    "build:11ty": "eleventy",
     "build": "run-s build:sass build:11ty",
     "serve:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --watch",
-    "serve:11ty": "eleventy --serve --quiet",
+    "serve:11ty": "eleventy --serve",
     "start": "run-p serve:sass serve:11ty",
     "sync:algolia": "node scripts/algolia-sync.js",
     "test": "echo \"Error: no test specified\" && exit 1"

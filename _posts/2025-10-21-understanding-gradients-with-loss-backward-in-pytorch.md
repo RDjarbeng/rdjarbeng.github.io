@@ -157,7 +157,7 @@ Let's break it down into steps:
    \end{cases} $$
 4. **Chain Rule**: Using the chain rule, we propagate this gradient back to the parameters:
    $$ \frac{\partial \text{loss}}{\partial \text{params}_j} = \sum_i \frac{\partial \text{loss}}{\partial \text{preds}_i} \cdot \frac{\partial \text{preds}_i}{\partial \text{params}_j} $$
-   Here, $ \frac{\partial \text{preds}_i}{\partial \text{params}_j} = \text{inputs}_{ij} $, since each prediction is a linear combination of the input features and the parameters.
+   Here, $\frac{\partial \text{preds}_i}{\partial \text{params}_j} = \text{inputs}_{ij}$, since each prediction is a linear combination of the input features and the parameters.
 5. **Final Gradient**: The final gradient for each parameter is:
    $$ \frac{\partial \text{loss}}{\partial \text{params}_j} = \frac{1}{N} \sum_i \text{sign}(\text{preds}_i - \text{targets}_i) \cdot \text{inputs}_{ij} $$
    This gradient gets stored in `params.grad` after calling `loss.backward()`.
@@ -201,8 +201,14 @@ print("Gradients:", coeffs.grad)
 Here’s what happens step-by-step:
 
 **Calculate Predictions:**
-For the first row of t_indep: $$ (1.0 \times 0.5) + (2.0 \times 0.5) = 1.5 $$
-For the second row of t_indep: $$ (3.0 \times 0.5) + (4.0 \times 0.5) = 3.5 $$
+
+For the first row of t_indep:
+
+$$ (1.0 \times 0.5) + (2.0 \times 0.5) = 1.5 $$
+
+For the second row of t_indep:
+
+$$ (3.0 \times 0.5) + (4.0 \times 0.5) = 3.5 $$
 
 **Compute Loss (MAE):**
 The loss is the mean absolute error:
