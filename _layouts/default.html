@@ -3,7 +3,7 @@
 
 {%- include head.html -%}
 
-<body class="{{ page.body_class }}">
+<body class="{{ body_class | default: page.body_class }}">
 
   {%- include header.html -%}
 
@@ -15,7 +15,7 @@
 
   {%- include footer.html -%}
 
-  {%- if page.layout == 'home' -%}
+  {%- if layout == 'home' or page.layout == 'home' -%}
   {%- include dynamic_footer.html -%}
   {%- endif -%}
 
