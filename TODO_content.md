@@ -525,3 +525,4 @@ Our claims may sound too good to be true, but the bitterest lesson in AI is that
 May your intelligence be ever reliable,
 
 Signatures of Diogo, Erik, and Sasha
+- [ ] What does this mean to the average person: Smart Cities, the Smart Power Grid, Smart Manufacturing, Smart Healthcare, green cloud computing, and Industry 4.0.
