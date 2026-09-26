@@ -513,3 +513,15 @@ Published Post: [_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from
 - [ ] How do you engineer a tank so that it does not need cleaning and deposits don't form in it, it should remain clean. Is this impossible or will there always be dirt at the bottom of the tank?
 - [ ] Need an analytics dashboard for this site so I can see the percentage of categories for posts, gallery items, progression of posts, the paths in the sitemap, how long it takes to load the site,.. Etc
 - [ ] Found out that the man in the music group Bonney M, with the afro wasn't actually singing but was lip syncing
+- [ ] Meet Jev
+Our first (public) System One model
+
+We’re excited to share with you a new class of AI models optimized for programmatic (inside code) use. Think: Smart if-statements.
+
+Welcome message for Jev for typesafe AI For the last two years, we’ve been researching a new training algorithm that we’ve dubbed RLCD (Reinforcement Learning for Calibrated Decisions) to overcome issues such as mode dropping, hallucinations, and lack of reliability inherent to RLHF, the method used to train modern-day LLMs.
+
+Our claims may sound too good to be true, but the bitterest lesson in AI is that optimizing for the right task gets you an unfair advantage.
+
+May your intelligence be ever reliable,
+
+Signatures of Diogo, Erik, and Sasha
