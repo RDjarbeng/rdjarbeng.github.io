@@ -1,6 +1,6 @@
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItKatex = require("markdown-it-katex");
+const markdownItKatex = require("./scripts/markdown-it-katex.js");
 const pluginTOC = require("eleventy-plugin-toc");
 const siteData = require("./_data/site.js");
 const fs = require("fs");
@@ -203,8 +203,29 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
     if (!Array.isArray(arr)) return [];
     return arr.filter((item) => {
       const v = item && item.data ? item.data[key] : item ? item[key] : undefined;
-      return val === undefined ? !!v : v === val;
+      if (val === undefined) return !!v;
+      if (v === val) return true;
+      if (typeof v === "string" && typeof val === "string" && v.toLowerCase() === val.toLowerCase()) return true;
+      return false;
     });
+  });
+  eleventyConfig.addFilter("getPrevPost", function(currentUrl, collection) {
+    const list = Array.isArray(collection) ? collection : siteData.posts;
+    const cleanUrl = (currentUrl || "").replace(/\/+$/, "") + "/";
+    const idx = list.findIndex(p => ((p && p.url) || "").replace(/\/+$/, "") + "/" === cleanUrl);
+    if (idx !== -1 && idx + 1 < list.length) {
+      return list[idx + 1];
+    }
+    return null;
+  });
+  eleventyConfig.addFilter("getNextPost", function(currentUrl, collection) {
+    const list = Array.isArray(collection) ? collection : siteData.posts;
+    const cleanUrl = (currentUrl || "").replace(/\/+$/, "") + "/";
+    const idx = list.findIndex(p => ((p && p.url) || "").replace(/\/+$/, "") + "/" === cleanUrl);
+    if (idx !== -1 && idx - 1 >= 0) {
+      return list[idx - 1];
+    }
+    return null;
   });
   const expCache = new Map();
   eleventyConfig.addFilter("where_exp", function(arr, keyOrItem, exp) {

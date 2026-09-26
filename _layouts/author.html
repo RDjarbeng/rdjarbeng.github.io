@@ -2,35 +2,43 @@
 layout: default
 ---
 
+{% assign a_name = display_name | default: page.display_name %}
+{% assign a_short = short_name | default: page.short_name %}
+{% assign a_pos = position | default: page.position %}
+{% assign a_avatar = avatar | default: page.avatar %}
+{% assign a_linkedin = linkedin | default: page.linkedin %}
+{% assign a_twitter = twitter | default: page.twitter %}
+{% assign a_github = github | default: page.github %}
+
 <div class="home-section" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
     <div class="author-profile-header" style="text-align: center; margin-bottom: 50px;">
         <div class="author-avatar"
              style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #007acc, #005a9c); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #ffffff; font-weight: bold; border: 4px solid var(--card-bg, #fff); box-shadow: 0 8px 16px rgba(0,0,0,0.1); overflow: hidden;">
-            {% if page.avatar and page.avatar != "" %}
-            <img src="{{ page.avatar | relative_url }}" alt="{{ page.display_name }}"
+            {% if a_avatar and a_avatar != "" %}
+            <img src="{{ a_avatar | relative_url }}" alt="{{ a_name }}"
                  style="width: 100%; height: 100%; object-fit: cover;">
             {% else %}
-            {% assign initials = page.display_name | split: ' ' %}
+            {% assign initials = a_name | split: ' ' %}
             <span style="color: #ffffff;">{{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}</span>
             {% endif %}
         </div>
         
-        <h1 class="page-heading" style="margin-bottom: 10px; font-size: 2.8rem; color: var(--text-color, #111111); font-weight: 700;">{{ page.display_name }}</h1>
+        <h1 class="page-heading" style="margin-bottom: 10px; font-size: 2.8rem; color: var(--text-color, #111111); font-weight: 700;">{{ a_name }}</h1>
         
-        {% if page.position %}
-        <h2 style="margin: 0 0 20px 0; color: var(--text-color-light, #555555); font-size: 1.2rem; font-weight: 500;">{{ page.position }}</h2>
+        {% if a_pos %}
+        <h2 style="margin: 0 0 20px 0; color: var(--text-color-light, #555555); font-size: 1.2rem; font-weight: 500;">{{ a_pos }}</h2>
         {% endif %}
 
-        {% if page.linkedin or page.twitter or page.github %}
+        {% if a_linkedin or a_twitter or a_github %}
         <div class="author-social-links" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
-            {% if page.linkedin %}
-            <a href="{{ page.linkedin }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #007acc); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">LinkedIn</a>
+            {% if a_linkedin %}
+            <a href="{{ a_linkedin }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #007acc); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">LinkedIn</a>
             {% endif %}
-            {% if page.twitter %}
-            <a href="{{ page.twitter }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #1da1f2); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">Twitter</a>
+            {% if a_twitter %}
+            <a href="{{ a_twitter }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #1da1f2); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">Twitter</a>
             {% endif %}
-            {% if page.github %}
-            <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #333); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">GitHub</a>
+            {% if a_github %}
+            <a href="{{ a_github }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-color, #333); text-decoration: none; padding: 8px 16px; border-radius: 20px; background: var(--card-bg, #f0f4f8); border: 1px solid var(--border-color, #d0d7de); font-weight: 600; font-size: 0.9rem; transition: all 0.2s;">GitHub</a>
             {% endif %}
         </div>
         {% endif %}
@@ -42,13 +50,13 @@ layout: default
 
     <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--border-color, #eaeaea);">
         <h2 style="margin-bottom: 30px; color: var(--text-color, #111111); font-weight: 700; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <span>Posts by {{ page.display_name }}</span>
+            <span>Posts by {{ a_name }}</span>
             <a href="{{ '/authors/' | relative_url }}" style="font-size: 1rem; color: #007acc; text-decoration: none; font-weight: 600;">← All Authors</a>
         </h2>
         
         <div class="post-list">
-            {% assign author_posts = site.posts | where: "author", page.short_name %}
-            {% assign author_personal = site.personal | where: "author", page.short_name %}
+            {% assign author_posts = site.posts | where: "author", a_short %}
+            {% assign author_personal = site.personal | where: "author", a_short %}
             {% assign all_author_posts = author_posts | concat: author_personal | sort: "date" | reverse %}
             
             {% if all_author_posts.size > 0 %}

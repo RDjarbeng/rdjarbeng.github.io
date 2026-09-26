@@ -60,7 +60,8 @@
         {% assign content_str = include.post.content | default: "" %}
         {% assign words = content_str | number_of_words %}
       {% endif %}
-      {% assign minutes = words | divided_by: words_per_minute | ceil %}
+      {% assign raw_minutes = words | divided_by: words_per_minute %}
+      {% assign minutes = raw_minutes | round %}
 
       {% unless include.show_excerpt == false %}
       {% if include.is_js_template %}
@@ -89,7 +90,7 @@
           </div>
           <div class="post-meta-dot">·</div>
           <div class="post-meta-card">
-            {{ minutes }} min read
+            {% if minutes < 1 %}Less than a minute{% else %}{{ minutes }} min read{% endif %}
           </div>
           {% endif %}
         </div>

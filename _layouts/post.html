@@ -18,28 +18,30 @@ body_class: post-page
         Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d,
           %Y at %-I:%M %p" }}</time>
       </div>
-      {% assign author = site.authors | where: 'short_name', page.author | first %}
+      {% assign post_author = author | default: page.author | default: "Richard" %}
+      {% assign author_obj = site.authors | where: 'short_name', post_author | first %}
       {% if page.last_modified_at %}
       <div class="last_edited">
         Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
           page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
       </div>
       {% endif %}
-      {% if author %}
+      {% if author_obj %}
       <div>
-        Author: <a href="{{ author.url | relative_url }}" class="author">{{ author.display_name }}</a>
+        Author: <a href="{{ author_obj.url | relative_url }}" class="author">{{ author_obj.display_name }}</a>
       </div>
       {% endif %}
 
       {% assign words_per_minute = 180 %}
       {% assign words = content | number_of_words %}
-      {% assign minutes = words | divided_by: words_per_minute %}
-      {% if minutes < 1 %} <div class="reading-time">Less than a 1 min read
+      {% assign raw_minutes = words | divided_by: words_per_minute %}
+      {% assign minutes = raw_minutes | round %}
+      {% if minutes < 1 %}
+      <div class="reading-time">Less than a minute</div>
+      {% else %}
+      <div class="reading-time">{{ minutes }} min read</div>
+      {% endif %}
     </div>
-    {% else %}
-    <div class="reading-time">{{ minutes }} min read</div>
-    {% endif %}
-  </div>
 </div>
 <div class="content-wrapper">
   <!-- Table of Contents Sidebar (moved outside post-container) -->
@@ -134,14 +136,16 @@ body_class: post-page
 </div>
 <hr class="post-separator">
 <div class="post-navigation">
+  {% assign prev_post = page.url | getPrevPost: site.posts %}
+  {% assign next_post = page.url | getNextPost: site.posts %}
   <div class="prev-post">
-    {% if page.previous %}
-    « Previous post: {% include_cached post-card.html post=page.previous show_excerpt=false %}
+    {% if prev_post %}
+    « Previous post: {% include_cached post-card.html post=prev_post show_excerpt=false %}
     {% endif %}
   </div>
   <div class="next-post">
-    {% if page.next %}
-    Next post»: {% include_cached post-card.html post=page.next show_excerpt=false %}
+    {% if next_post %}
+    Next post»: {% include_cached post-card.html post=next_post show_excerpt=false %}
     {% endif %}
   </div>
 </div>
