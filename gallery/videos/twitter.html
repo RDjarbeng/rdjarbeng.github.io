@@ -58,8 +58,9 @@ description: "Curated Twitter videos covering space, news, technology, and sport
         </div>
 
         <div class="video-masonry" id="video-masonry">
-            {% if page.custom_pager %}
-              {% assign videos = page.custom_pager.posts %}
+            {% assign tw_pager = custom_pager | default: page.custom_pager %}
+            {% if tw_pager %}
+              {% assign videos = tw_pager.posts %}
             {% else %}
               {% assign videos = site.gallery | where: "type", "video" | where: "platform", "twitter" | sort: "date" | reverse %}
             {% endif %}
@@ -201,9 +202,9 @@ description: "Curated Twitter videos covering space, news, technology, and sport
         {% endfor %}
     </div>
 
-    {% if page.custom_pager and page.custom_pager.total_pages > 1 %}
+    {% if tw_pager and tw_pager.total_pages > 1 %}
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/twitter/' %}
+            {% include pagination.html paginator=tw_pager base_url='/gallery/videos/twitter/' %}
         </div>
     {% endif %}
 

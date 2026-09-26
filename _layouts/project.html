@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+{% assign project_title = title | default: page.title %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ project_title }}</title>
 </head>
 <body>
-    <h1>{{ page.title }}</h1>
+    <h1>{{ project_title }}</h1>
     <div>
         {{ content }}
     </div>

@@ -58,8 +58,9 @@ description: "Curated TikTok videos covering music, entertainment, lifestyle, an
         </div>
 
         <div class="video-masonry" id="video-masonry">
-            {% if page.custom_pager %}
-              {% assign videos = page.custom_pager.posts %}
+            {% assign tk_pager = custom_pager | default: page.custom_pager %}
+            {% if tk_pager %}
+              {% assign videos = tk_pager.posts %}
             {% else %}
               {% assign videos = site.gallery | where: "type", "video" | where: "platform", "tiktok" | sort: "date" | reverse %}
             {% endif %}
@@ -201,9 +202,9 @@ description: "Curated TikTok videos covering music, entertainment, lifestyle, an
         {% endfor %}
     </div>
 
-    {% if page.custom_pager and page.custom_pager.total_pages > 1 %}
+    {% if tk_pager and tk_pager.total_pages > 1 %}
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/tiktok/' %}
+            {% include pagination.html paginator=tk_pager base_url='/gallery/videos/tiktok/' %}
         </div>
     {% endif %}
 

@@ -1,10 +1,13 @@
 ---
 layout: default
 ---
+{% assign cat_title = title | default: page.title %}
+{% assign cat_pager = custom_pager | default: page.custom_pager %}
+
 <div class="home-section" style="max-width: 900px; margin: 0 auto; text-align: center;">
-    <h1 class="page-heading" style="text-transform: capitalize;">{{ page.title | replace: "-", " " }}</h1>
+    <h1 class="page-heading" style="text-transform: capitalize;">{{ cat_title | replace: "-", " " }}</h1>
     
-    {% assign cat_meta = site.gallery_categories | where: "title", page.title | first %}
+    {% assign cat_meta = site.gallery_categories | where: "title", cat_title | first %}
     {% if cat_meta and cat_meta.content and cat_meta.content != "" %}
     <div class="category-description" style="margin-bottom: 30px; text-align: left; font-size: 1.1rem; line-height: 1.6;">
         {{ cat_meta.content | markdownify }}
@@ -28,7 +31,7 @@ layout: default
         {% endif %}
     {% endif %}
 
-    {% assign safe_cat_slug = page.title | slugify %}
+    {% assign safe_cat_slug = cat_title | slugify %}
     {% assign all_category_items = "" | split: "" %}
     {% for item in site.gallery %}
         {% assign cats_str = item.categories | join: ' ' %}
@@ -99,7 +102,7 @@ layout: default
         
         {% if other_items.size > 0 %}
             <h2 style="text-align: left; margin-top: 40px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px; text-transform: capitalize; font-size: 1.5rem; color: #102a43;">
-                Other {{ page.title | replace: "-", " " }} Items
+                Other {{ cat_title | replace: "-", " " }} Items
             </h2>
             <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
                 {% assign sub_count = 0 %}
@@ -119,7 +122,7 @@ layout: default
 
     {% else %}
         <!-- Standard Flat View (Paginated) -->
-        {% assign items = page.custom_pager.posts %}
+        {% assign items = cat_pager.posts %}
         <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
             {% for item in items %}
             <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -129,12 +132,12 @@ layout: default
         </div>
     {% endif %}
 
-    {% if page.custom_pager.total_pages > 1 %}
+    {% if cat_pager.total_pages > 1 %}
         {% assign cat_path = page.url | split: '/page-' | first %}
         {% if cat_path == page.url %}{% assign cat_path = page.url | append: '/' | replace: '//', '/' %}{% else %}{% assign cat_path = cat_path | append: '/' %}{% endif %}
         
         <div style="margin-top: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url=cat_path %}
+            {% include pagination.html paginator=cat_pager base_url=cat_path %}
         </div>
     {% endif %}
 </div>

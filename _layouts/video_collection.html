@@ -2,10 +2,18 @@
 layout: default
 body_class: videos-page
 ---
+{% assign col_icon = icon | default: page.icon %}
+{% assign col_title = title | default: page.title %}
+{% assign col_description = description | default: page.description %}
+{% assign col_match_by = match_by | default: page.match_by %}
+{% assign col_genre = genre | default: page.genre %}
+{% assign col_keywords = keywords | default: page.keywords %}
+{% assign col_videos = videos | default: page.videos %}
+
 <div class="videos-page-shell" style="padding: 2rem;">
     <header class="video-collection-header" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 1rem;">
-        <h1>{{ page.icon }} {{ page.title }}</h1>
-        <p>{{ page.description }}</p>
+        <h1>{{ col_icon }} {{ col_title }}</h1>
+        <p>{{ col_description }}</p>
         <a href="{{ '/gallery/videos/' | relative_url }}" class="vid-source-btn" style="display: inline-block; margin-top: 1rem; text-decoration: none;">&larr; Back to all videos</a>
     </header>
 
@@ -13,13 +21,13 @@ body_class: videos-page
         {% assign all_vids = site.gallery | where: "type", "video" | sort: "date" | reverse %}
         {% assign collection_vids = "" | split: "" %}
 
-        {% if page.match_by == "genre" or page.match_by == "genre_and_keywords" %}
-          {% assign genre_matches = all_vids | where: "genre", page.genre %}
+        {% if col_match_by == "genre" or col_match_by == "genre_and_keywords" %}
+          {% assign genre_matches = all_vids | where: "genre", col_genre %}
           {% assign collection_vids = collection_vids | concat: genre_matches %}
         {% endif %}
 
-        {% if page.match_by == "keywords" or page.match_by == "genre_and_keywords" %}
-          {% for kw in page.keywords %}
+        {% if col_match_by == "keywords" or col_match_by == "genre_and_keywords" %}
+          {% for kw in col_keywords %}
             {% assign kw_lower = kw | downcase %}
             {% for vid in all_vids %}
               {% assign vtl = vid.title | downcase %}
@@ -31,11 +39,11 @@ body_class: videos-page
           {% assign collection_vids = collection_vids | uniq %}
         {% endif %}
 
-        {% if page.match_by == "manual" or page.videos %}
+        {% if col_match_by == "manual" or col_videos %}
           {% for vid in all_vids %}
             {% assign file_name = vid.path | split: "/" | last | split: "\" | last %}
             {% assign file_slug = file_name | replace: ".md", "" %}
-            {% if page.videos contains file_slug or page.videos contains vid.title %}
+            {% if col_videos contains file_slug or col_videos contains vid.title %}
               {% assign collection_vids = collection_vids | push: vid %}
             {% endif %}
           {% endfor %}

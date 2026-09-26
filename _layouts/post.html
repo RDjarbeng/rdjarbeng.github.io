@@ -3,16 +3,22 @@ layout: default
 body_class: post-page
 ---
 
+{% assign post_title = title | default: page.title %}
+{% assign post_categories = categories | default: page.categories %}
+{% assign post_tags = tags | default: page.tags %}
+{% assign post_card_items = card_items | default: page.card_items %}
+{% assign post_last_modified_at = last_modified_at | default: page.last_modified_at %}
+
 <div class="post-container">
   <div class="post-header">
-    {% if page.categories.size > 0 %}
+    {% if post_categories.size > 0 %}
     <div class="post-header-categories">
-      {% for category in page.categories %}
+      {% for category in post_categories %}
       <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}" class="post-header-category-tag">{{ category }}</a>
       {% endfor %}
     </div>
     {% endif %}
-    <h1>{{ page.title }}</h1>
+    <h1>{{ post_title }}</h1>
     <div class="author_date">
       <div class="published_date">
         Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d,
@@ -20,10 +26,10 @@ body_class: post-page
       </div>
       {% assign post_author = author | default: page.author | default: "Richard" %}
       {% assign author_obj = site.authors | where: 'short_name', post_author | first %}
-      {% if page.last_modified_at %}
+      {% if post_last_modified_at %}
       <div class="last_edited">
-        Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
-          page.last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
+        Last edited: <time datetime="{{ post_last_modified_at | date_to_xmlschema }}" data-local="time">{{
+          post_last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
       </div>
       {% endif %}
       {% if author_obj %}
@@ -58,7 +64,7 @@ body_class: post-page
   <div class="post-with-toc">
     <div class="post-content">
       {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
-      {% if page.card_items %}
+      {% if post_card_items %}
       {% include card_list.html %}
       {% endif %}
     </div>
@@ -67,11 +73,11 @@ body_class: post-page
 
 <!-- Display categories and tags -->
 <div class="post-meta-footer">
-  {% if page.tags.size > 0 %}
+  {% if post_tags.size > 0 %}
   <div class="tags-section">
     <span class="meta-label">Tagged In:</span>
     <div class="tags-container">
-      {% for tag in page.tags %}
+      {% for tag in post_tags %}
       <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </div>
@@ -112,7 +118,7 @@ body_class: post-page
       {% assign same_tag_count = 0 %}
       
       {% for tag in post.tags %}
-        {% if page.tags contains tag %}
+        {% if post_tags contains tag %}
           {% assign same_tag_count = 1 %}
           {% break %}
         {% endif %}

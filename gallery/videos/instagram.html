@@ -58,8 +58,9 @@ description: "Curated Instagram videos covering technology, space, travel, and l
         </div>
 
         <div class="video-masonry" id="video-masonry">
-            {% if page.custom_pager %}
-              {% assign videos = page.custom_pager.posts %}
+            {% assign ig_pager = custom_pager | default: page.custom_pager %}
+            {% if ig_pager %}
+              {% assign videos = ig_pager.posts %}
             {% else %}
               {% assign videos = site.gallery | where: "type", "video" | where: "platform", "instagram" | sort: "date" | reverse %}
             {% endif %}
@@ -201,9 +202,9 @@ description: "Curated Instagram videos covering technology, space, travel, and l
         {% endfor %}
     </div>
 
-    {% if page.custom_pager and page.custom_pager.total_pages > 1 %}
+    {% if ig_pager and ig_pager.total_pages > 1 %}
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/instagram/' %}
+            {% include pagination.html paginator=ig_pager base_url='/gallery/videos/instagram/' %}
         </div>
     {% endif %}
 

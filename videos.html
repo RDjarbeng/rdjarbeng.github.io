@@ -52,8 +52,9 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
                 {% endfor %}
             </div>
 
+        {% assign vids_pager = custom_pager | default: page.custom_pager %}
         {% assign show_collections = true %}
-        {% if page.custom_pager and page.custom_pager.current_page > 1 %}
+        {% if vids_pager and vids_pager.current_page > 1 %}
           {% assign show_collections = false %}
         {% endif %}
         {% if show_collections and site.video_collections %}
@@ -186,8 +187,8 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
         {% endif %}
 
         <div class="video-masonry" id="video-masonry">
-            {% if page.custom_pager %}
-              {% assign videos = page.custom_pager.posts %}
+            {% if vids_pager %}
+              {% assign videos = vids_pager.posts %}
             {% else %}
               {% assign videos = site.gallery | where: "type", "video" | sort: "date" | reverse %}
             {% endif %}
@@ -196,9 +197,9 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
 {% endfor %}
     </div>
 
-    {% if page.custom_pager and page.custom_pager.total_pages > 1 %}
+    {% if vids_pager and vids_pager.total_pages > 1 %}
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url='/gallery/videos/' %}
+            {% include pagination.html paginator=vids_pager base_url='/gallery/videos/' %}
         </div>
     {% endif %}
 

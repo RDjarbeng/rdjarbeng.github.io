@@ -6,8 +6,8 @@ layout: default
   <a href="/categories/">All Categories</a>|
   <a href="/tags/">All Tags</a>
 </div>
-{% assign cat_posts = page.posts | default: posts %}
-{% assign cat_title = page.title | default: title %}
+{% assign cat_posts = posts | default: page.posts %}
+{% assign cat_title = title | default: category | default: page.title %}
 <h1>Posts in Category: {{ cat_title }} ({{ cat_posts | size }})</h1>
 
 {% assign current_category = site.category_info | where: "category_name", cat_title | first %}

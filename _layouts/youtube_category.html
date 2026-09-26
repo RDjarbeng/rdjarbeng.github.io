@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% assign cat_title = title | default: page.title %}
+{% assign cat_pager = custom_pager | default: page.custom_pager %}
+
 <div class="yt-page-shell">
   {% include yt_sidebar.html %}
 
@@ -13,23 +16,23 @@ layout: default
     </div>
 
     <header class="yt-page-header">
-      <h1 style="text-transform: capitalize;">YouTube {{ page.title | replace: "-", " " }} Videos</h1>
-      <p>Explore curated {{ page.title | replace: "-", " " }} videos on YouTube.</p>
+      <h1 style="text-transform: capitalize;">YouTube {{ cat_title | replace: "-", " " }} Videos</h1>
+      <p>Explore curated {{ cat_title | replace: "-", " " }} videos on YouTube.</p>
     </header>
 
     <div class="yt-grid" id="yt-video-grid" style="text-align: left;">
-      {% assign items = page.custom_pager.posts %}
+      {% assign items = cat_pager.posts %}
       {% for item in items %}
         {% include yt_card.html item=item %}
       {% endfor %}
     </div>
 
-    {% if page.custom_pager.total_pages > 1 %}
+    {% if cat_pager.total_pages > 1 %}
         {% assign cat_path = page.url | split: '/page-' | first %}
         {% if cat_path == page.url %}{% assign cat_path = page.url | append: '/' | replace: '//', '/' %}{% else %}{% assign cat_path = cat_path | append: '/' %}{% endif %}
         
         <div style="margin-top: 40px; margin-bottom: 40px;">
-            {% include pagination.html paginator=page.custom_pager base_url=cat_path %}
+            {% include pagination.html paginator=cat_pager base_url=cat_path %}
         </div>
     {% endif %}
   </div>

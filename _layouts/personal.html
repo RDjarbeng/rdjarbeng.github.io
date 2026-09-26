@@ -1,18 +1,22 @@
 ---
 layout: default
 ---
+{% assign post_title = title | default: page.title %}
+{% assign post_card_items = card_items | default: page.card_items %}
+{% assign post_last_modified_at = last_modified_at | default: page.last_modified_at %}
+
 <div class="personal-container">
   <div class="post-header">
-    <h1>{{ page.title }}</h1>
+    <h1>{{ post_title }}</h1>
     <div class="author_date">
       <!-- Display full date with time if the time is provided, otherwise just the date -->
       Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d, %Y
         at %-I:%M %p" }}</time>
       {% assign post_author = author | default: page.author | default: "Richard" %}
       {% assign author_obj = site.authors | where: 'short_name', post_author | first %}
-      {% if page.last_modified_at %}
-      Last edited: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" data-local="time">{{
-        page.last_modified_at | date: '%-d %B,%Y at %-I:%M %p' }}</time>
+      {% if post_last_modified_at %}
+      Last edited: <time datetime="{{ post_last_modified_at | date_to_xmlschema }}" data-local="time">{{
+        post_last_modified_at | date: '%-d %B,%Y at %-I:%M %p' }}</time>
       {% endif %}
 
       {% if author_obj %}
@@ -25,7 +29,7 @@ layout: default
 
   <!-- Something's here {{page.author}} -->
   {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
-  {% if page.card_items %}
+  {% if post_card_items %}
   {% include card_list.html %}
   {% endif %}
 

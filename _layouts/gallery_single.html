@@ -1,6 +1,19 @@
 ---
 layout: default
 ---
+{% assign item_title = title | default: page.title %}
+{% assign item_category = category | default: page.category %}
+{% assign item_type = type | default: page.type %}
+{% assign item_link = link | default: page.link %}
+{% assign item_platform = platform | default: page.platform %}
+{% assign item_youtube_id = youtube_id | default: page.youtube_id %}
+{% assign item_instagram_id = instagram_id | default: page.instagram_id %}
+{% assign item_image = image | default: page.image %}
+{% assign item_caption = caption | default: page.caption %}
+{% assign item_genre = genre | default: page.genre %}
+{% assign item_embed_code = embed_code | default: page.embed_code %}
+{% assign item_rel_path = relative_path | default: page.relative_path | default: page.inputPath %}
+
 <div class="post-container">
     <div class="post-header">
         <div style="margin-bottom: 1rem;">
@@ -13,23 +26,20 @@ layout: default
                     } else {
                         {% if page.url contains '/memes/' %}
                         window.location.href = "{{ '/gallery/memes/' | relative_url }}";
-                        {% elsif page.type == 'video' %}
+                        {% elsif item_type == 'video' %}
                         window.location.href = "{{ '/videos/' | relative_url }}";
                         {% else %}
                         window.location.href = "{{ '/gallery/' | relative_url }}";
                         {% endif %}
                     }
                 }
-
-                // Optional: Update text to be more specific based on referrer if desired, 
-                // but "← Back" is generally understood.
             </script>
         </div>
-        <h1>{{ page.title | titleize }}</h1>
+        <h1>{{ item_title | titleize }}</h1>
         
-        {% assign display_cat = page.category %}
+        {% assign display_cat = item_category %}
         {% if display_cat == nil or display_cat == 'None' %}
-            {% assign parts = page.relative_path | split: '/' %}
+            {% assign parts = item_rel_path | split: '/' %}
             {% if parts.size >= 3 %}
                 {% assign display_cat = parts[1] %}
             {% endif %}
@@ -46,106 +56,104 @@ layout: default
     </div>
 
     <div class="content-wrapper">
-        {% assign computed_link = page.link %}
-        {% assign computed_ig_id = page.instagram_id %}
+        {% assign computed_link = item_link %}
+        {% assign computed_ig_id = item_instagram_id %}
         {% assign computed_tk_id = "" %}
         {% assign computed_tt_id = "" %}
 
-        {% if page.platform == 'instagram' %}
-        {% if computed_link == blank or computed_link == nil %}
-        {% assign computed_link = page.youtube_id %}
+        {% if item_platform == 'instagram' %}
+            {% if computed_link == blank or computed_link == nil %}
+                {% assign computed_link = item_youtube_id %}
+            {% endif %}
+
+            {% if computed_ig_id == blank or computed_ig_id == nil %}
+                {% if computed_link contains 'instagram.com/p/' %}
+                    {% assign computed_ig_id = computed_link | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' | first %}
+                {% elsif computed_link contains 'instagram.com/reel/' %}
+                    {% assign computed_ig_id = computed_link | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?' | first %}
+                {% else %}
+                    {% assign computed_ig_id = computed_link %}
+                {% endif %}
+            {% endif %}
+
+            {% if computed_link == blank or computed_link == nil or computed_link == computed_ig_id %}
+                {% if computed_ig_id != blank and computed_ig_id != nil %}
+                    {% assign computed_link = 'https://www.instagram.com/p/' | append: computed_ig_id | append: '/' %}
+                {% endif %}
+            {% endif %}
+        {% elsif item_platform == 'tiktok' %}
+            {% assign computed_tk_id = item_youtube_id %}
+            {% if computed_tk_id == blank or computed_tk_id == nil %}
+                {% assign computed_tk_id = item_link %}
+            {% endif %}
+            {% if computed_tk_id contains '/video/' %}
+                {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
+            {% endif %}
+            {% if computed_link == blank or computed_link == nil %}
+                {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
+            {% endif %}
+        {% elsif item_platform == 'twitter' %}
+            {% assign computed_tt_id = item_youtube_id %}
+            {% if computed_tt_id == blank or computed_tt_id == nil %}
+                {% assign computed_tt_id = item_link %}
+            {% endif %}
+            {% if computed_tt_id contains '/status/' %}
+                {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first %}
+            {% endif %}
+            {% if computed_link == blank or computed_link == nil %}
+                {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
+            {% endif %}
         {% endif %}
 
-        {% if computed_ig_id == blank or computed_ig_id == nil %}
-        {% if computed_link contains 'instagram.com/p/' %}
-        {% assign computed_ig_id = computed_link | split: 'instagram.com/p/' | last | split: '/' | first | split: '?' |
-        first %}
-        {% elsif computed_link contains 'instagram.com/reel/' %}
-        {% assign computed_ig_id = computed_link | split: 'instagram.com/reel/' | last | split: '/' | first | split: '?'
-        | first %}
-        {% else %}
-        {% assign computed_ig_id = computed_link %}
-        {% endif %}
-        {% endif %}
-
-        {% if computed_link == blank or computed_link == nil or computed_link == computed_ig_id %}
-        {% if computed_ig_id != blank and computed_ig_id != nil %}
-        {% assign computed_link = 'https://www.instagram.com/p/' | append: computed_ig_id | append: '/' %}
-        {% endif %}
-        {% endif %}
-        {% elsif page.platform == 'tiktok' %}
-        {% assign computed_tk_id = page.youtube_id %}
-        {% if computed_tk_id == blank or computed_tk_id == nil %}
-        {% assign computed_tk_id = page.link %}
-        {% endif %}
-        {% if computed_tk_id contains '/video/' %}
-        {% assign computed_tk_id = computed_tk_id | split: '/video/' | last | split: '?' | first | split: '/' | first %}
-        {% endif %}
-        {% if computed_link == blank or computed_link == nil %}
-        {% assign computed_link = 'https://www.tiktok.com/@a/video/' | append: computed_tk_id %}
-        {% endif %}
-        {% elsif page.platform == 'twitter' %}
-        {% assign computed_tt_id = page.youtube_id %}
-        {% if computed_tt_id == blank or computed_tt_id == nil %}
-        {% assign computed_tt_id = page.link %}
-        {% endif %}
-        {% if computed_tt_id contains '/status/' %}
-        {% assign computed_tt_id = computed_tt_id | split: '/status/' | last | split: '?' | first | split: '/' | first
-        %}
-        {% endif %}
-        {% if computed_link == blank or computed_link == nil %}
-        {% assign computed_link = 'https://twitter.com/x/status/' | append: computed_tt_id %}
-        {% endif %}
-        {% endif %}
         <div class="post-content">
             <!-- Media Display -->
             <div class="gallery-item-media" style="margin-bottom: 2rem;">
-                {% if page.type == 'video' %}
+                {% if item_type == 'video' %}
                 <div class="video-container"
-                    style="{% if page.platform == 'youtube' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%; min-height: 550px;{% endif %} overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    {% if page.platform == 'youtube' and page.youtube_id %}
-                    {% assign video_id = page.youtube_id %}
-                    {% if page.youtube_id contains 'youtube.com/watch' %}
-                    {% assign video_id = page.youtube_id | split: 'v=' | last | split: '&' | first %}
-                    {% elsif page.youtube_id contains 'youtube.com/shorts/' %}
-                    {% assign video_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first %}
-                    {% elsif page.youtube_id contains 'youtu.be/' %}
-                    {% assign video_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+                    style="{% if item_platform == 'youtube' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%; min-height: 550px;{% endif %} overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    {% if item_platform == 'youtube' and item_youtube_id %}
+                    {% assign video_id = item_youtube_id %}
+                    {% if item_youtube_id contains 'youtube.com/watch' %}
+                    {% assign video_id = item_youtube_id | split: 'v=' | last | split: '&' | first %}
+                    {% elsif item_youtube_id contains 'youtube.com/shorts/' %}
+                    {% assign video_id = item_youtube_id | split: 'shorts/' | last | split: '?' | first %}
+                    {% elsif item_youtube_id contains 'youtu.be/' %}
+                    {% assign video_id = item_youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
                     {% endif %}
-                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ page.title }}" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ item_title }}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     </iframe>
-                    {% elsif page.platform == 'instagram' and computed_ig_id != blank and computed_ig_id != nil %}
+                    {% elsif item_platform == 'instagram' and computed_ig_id != blank and computed_ig_id != nil %}
                     <iframe src="https://www.instagram.com/p/{{ computed_ig_id }}/embed" width="100%" height="100%"
                         style="min-height: 550px; max-width: 500px;" frameborder="0" scrolling="no"
                         allowtransparency="true" allow="autoplay; encrypted-media; picture-in-picture"
                         allowfullscreen></iframe>
-                    {% elsif page.platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
+                    {% elsif item_platform == 'tiktok' and computed_tk_id != blank and computed_tk_id != nil %}
                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a/video/{{ computed_tk_id }}"
                         data-video-id="{{ computed_tk_id }}" style="max-width: 605px;min-width: 325px;">
                         <section></section>
                     </blockquote>
                     <script async src="https://www.tiktok.com/embed.js"></script>
-                    {% elsif page.platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
+                    {% elsif item_platform == 'twitter' and computed_tt_id != blank and computed_tt_id != nil %}
                     <blockquote class="twitter-tweet" data-width="800" data-dnt="true" data-theme="dark">
                         <a href="https://twitter.com/x/status/{{ computed_tt_id }}"></a>
                     </blockquote>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     {% else %}
-                    {{ page.embed_code }}
+                    {{ item_embed_code }}
                     {% endif %}
                 </div>
                 {% else %}
-                <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}"
+                <img src="{{ item_image | relative_url }}" alt="{{ item_title | escape }}"
                     style="height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 {% endif %}
             </div>
 
             <!-- Caption & Content -->
-            {% if page.caption %}
+            {% if item_caption %}
             <div class="gallery-caption">
-                {{ page.caption | markdownify | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+                {{ item_caption | markdownify | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
             </div>
             {% endif %}
 
@@ -159,6 +167,7 @@ layout: default
                     style="display: inline-block; padding: 0.5rem 1rem; border: 1px solid currentColor; border-radius: 4px; text-decoration: none;"
                     target="_blank">View
                     Related Post / Source</a>
+            </div>
             {% endif %}
         </div>
     </div>
@@ -169,15 +178,15 @@ layout: default
     <h3 class="recommended-heading">Recommended Further Browsing</h3>
     <div class="recommended-grid">
         {% if page.url contains '/memes/' %}
-            {% assign related_items = site.gallery | where: 'category', 'memes' | where_exp: "item", "item.title != page.title" | sample: 4 %}
-        {% elsif page.genre %}
-            {% assign related_items = site.gallery | where: 'genre', page.genre | where_exp: "item", "item.title != page.title" | sample: 4 %}
+            {% assign related_items = site.gallery | where: 'category', 'memes' | where_exp: "item", "item.title != item_title" | sample: 4 %}
+        {% elsif item_genre %}
+            {% assign related_items = site.gallery | where: 'genre', item_genre | where_exp: "item", "item.title != item_title" | sample: 4 %}
             {% if related_items.size < 4 %}
-                {% assign fallback = site.gallery | where: 'type', 'video' | where_exp: "item", "item.title != page.title" | sample: 4 %}
+                {% assign fallback = site.gallery | where: 'type', 'video' | where_exp: "item", "item.title != item_title" | sample: 4 %}
                 {% assign related_items = related_items | concat: fallback | uniq | slice: 0, 4 %}
             {% endif %}
         {% else %}
-            {% assign related_items = site.gallery | where_exp: "item", "item.title != page.title" | sample: 4 %}
+            {% assign related_items = site.gallery | where_exp: "item", "item.title != item_title" | sample: 4 %}
         {% endif %}
 
         {% for item in related_items limit:4 %}

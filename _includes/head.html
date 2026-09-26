@@ -18,25 +18,35 @@
   <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
   {% endif %}
 
-  {% if page.noindex %}
+  {% assign is_noindex = noindex | default: page.noindex %}
+  {% if is_noindex %}
   <meta name="robots" content="noindex, follow">
   {% endif %}
 
-  {%- if page.type == 'video' -%}
-  {%- assign vid_thumbnail = page.thumbnail -%}
+  {% assign head_type = type | default: page.type %}
+  {% assign head_platform = platform | default: page.platform %}
+  {% assign head_yt_id = youtube_id | default: page.youtube_id %}
+  {% assign head_ig_id = instagram_id | default: page.instagram_id %}
+  {% assign head_thumbnail = thumbnail | default: page.thumbnail %}
+  {% assign head_title = title | default: page.title %}
+  {% assign head_description = description | default: page.description %}
+  {% assign head_genre = genre | default: page.genre %}
+
+  {%- if head_type == 'video' -%}
+  {%- assign vid_thumbnail = head_thumbnail -%}
   {%- if vid_thumbnail == nil or vid_thumbnail == '' -%}
-  {%- if page.platform == 'youtube' and page.youtube_id -%}
-  {%- assign yt_id = page.youtube_id -%}
-  {%- if page.youtube_id contains 'v=' -%}
-  {%- assign yt_id = page.youtube_id | split: 'v=' | last | split: '&' | first -%}
-  {%- elsif page.youtube_id contains 'shorts/' -%}
-  {%- assign yt_id = page.youtube_id | split: 'shorts/' | last | split: '?' | first -%}
-  {%- elsif page.youtube_id contains 'youtu.be/' -%}
-  {%- assign yt_id = page.youtube_id | split: 'youtu.be/' | last | split: '?' | first -%}
+  {%- if head_platform == 'youtube' and head_yt_id -%}
+  {%- assign yt_id = head_yt_id -%}
+  {%- if head_yt_id contains 'v=' -%}
+  {%- assign yt_id = head_yt_id | split: 'v=' | last | split: '&' | first -%}
+  {%- elsif head_yt_id contains 'shorts/' -%}
+  {%- assign yt_id = head_yt_id | split: 'shorts/' | last | split: '?' | first -%}
+  {%- elsif head_yt_id contains 'youtu.be/' -%}
+  {%- assign yt_id = head_yt_id | split: 'youtu.be/' | last | split: '?' | first -%}
   {%- endif -%}
   {%- assign vid_thumbnail = "https://img.youtube.com/vi/" | append: yt_id | append: "/hqdefault.jpg" -%}
-  {%- elsif page.platform == 'instagram' and page.instagram_id -%}
-  {%- assign vid_thumbnail = "https://www.instagram.com/p/" | append: page.instagram_id | append: "/media/?size=l" -%}
+  {%- elsif head_platform == 'instagram' and head_ig_id -%}
+  {%- assign vid_thumbnail = "https://www.instagram.com/p/" | append: head_ig_id | append: "/media/?size=l" -%}
   {%- endif -%}
   {%- endif -%}
 
@@ -45,21 +55,21 @@
   {%- endif -%}
   {%- endif -%}
 
-  {%- if page.type == 'video' -%}
-  {%- assign _vd = page.description | default: page.excerpt | strip_html | strip_newlines | strip -%}
+  {%- if head_type == 'video' -%}
+  {%- assign _vd = head_description | default: excerpt | default: page.excerpt | strip_html | strip_newlines | strip -%}
   {%- if _vd.size < 50 -%}
-    {%- assign _vg = page.genre | default: page.platform | default: 'Video' -%}
-    {%- assign _vd = page.title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
+    {%- assign _vg = head_genre | default: head_platform | default: 'Video' -%}
+    {%- assign _vd = head_title | append: ' — ' | append: _vg | append: ' - curated by Richard Djarbeng' -%}
   {%- endif -%}
   {%- assign page_description = _vd -%}
   {%- else -%}
-  {%- assign page_description = page.description | default: site.description -%}
+  {%- assign page_description = head_description | default: site.description -%}
   {%- endif -%}
 
 {%- if jekyll.environment == 'production' -%}
   {%- seo -%}
   
-  {%- if page.type == 'video' -%}
+  {%- if head_type == 'video' -%}
     {%- if page_has_video_thumbnail -%}
     <!-- Manual OG Image Injection for Videos -->
     <meta property="og:image" content="{{ page_has_video_thumbnail | absolute_url }}" />
@@ -74,11 +84,21 @@
 
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
-  {%- if page.previous -%}
-  <link rel="prev" href="{{ page.previous.url | absolute_url }}">
+  {%- if layout == 'post' or page.layout == 'post' -%}
+    {%- assign prev_p = page.url | getPrevPost: site.posts -%}
+    {%- assign next_p = page.url | getNextPost: site.posts -%}
+    {%- if prev_p -%}<link rel="prev" href="{{ prev_p.url | absolute_url }}">{%- endif -%}
+    {%- if next_p -%}<link rel="next" href="{{ next_p.url | absolute_url }}">{%- endif -%}
+  {%- elsif layout == 'personal' or page.layout == 'personal' -%}
+    {%- assign prev_p = page.url | getPrevPost: site.personal -%}
+    {%- assign next_p = page.url | getNextPost: site.personal -%}
+    {%- if prev_p -%}<link rel="prev" href="{{ prev_p.url | absolute_url }}">{%- endif -%}
+    {%- if next_p -%}<link rel="next" href="{{ next_p.url | absolute_url }}">{%- endif -%}
+  {%- elsif page.previous -%}
+    <link rel="prev" href="{{ page.previous.url | absolute_url }}">
   {%- endif -%}
-  {%- if page.next -%}
-  <link rel="next" href="{{ page.next.url | absolute_url }}">
+  {%- if page.next and layout != 'post' and layout != 'personal' and page.layout != 'post' and page.layout != 'personal' -%}
+    <link rel="next" href="{{ page.next.url | absolute_url }}">
   {%- endif -%}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
