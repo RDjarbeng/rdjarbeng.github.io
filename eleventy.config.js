@@ -302,9 +302,9 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   });
 
   eleventyConfig.addCollection("searchable", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md");
-    const personal = collectionApi.getFilteredByGlob("_personal/**/*.md");
-    const gallery = collectionApi.getFilteredByGlob("_gallery/**/*.md");
+    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md").filter((p) => p.data.published !== false);
+    const personal = collectionApi.getFilteredByGlob("_personal/**/*.md").filter((p) => p.data.published !== false);
+    const gallery = collectionApi.getFilteredByGlob("_gallery/**/*.md").filter((p) => p.data.published !== false);
     return [...posts, ...personal, ...gallery].sort((a, b) => b.date - a.date);
   });
 
@@ -340,7 +340,9 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
 
   // Categories & Tags maps
   eleventyConfig.addCollection("categoriesList", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md").sort((a, b) => b.date - a.date);
+    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
+      .filter((p) => p.data.published !== false)
+      .sort((a, b) => b.date - a.date);
     const slugMap = new Map();
     for (const post of posts) {
       const cat = post.data.category;
@@ -364,7 +366,9 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   });
 
   eleventyConfig.addCollection("tagsList", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md").sort((a, b) => b.date - a.date);
+    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
+      .filter((p) => p.data.published !== false)
+      .sort((a, b) => b.date - a.date);
     const slugMap = new Map();
     for (const post of posts) {
       const tags = post.data.tags;
@@ -422,7 +426,7 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
       data: "_data",
       output: "_site",
     },
-    templateFormats: ["html", "liquid", "md"],
+    templateFormats: ["html", "liquid", "md", "markdown"],
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "liquid",
   };
