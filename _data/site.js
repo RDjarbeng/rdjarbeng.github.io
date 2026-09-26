@@ -183,7 +183,45 @@ const video_collections = vidFiles.map((file) => {
   };
 });
 
-// 7. Categories Map
+// 7. Books
+const bookFiles = getFiles("_books");
+const books = bookFiles.map((file) => {
+  const content = fs.readFileSync(file, "utf8");
+  const parsed = matter(content);
+  const slug = path.basename(file, ".md");
+  return {
+    ...parsed.data,
+    slug,
+    title: parsed.data.title || "",
+    author: parsed.data.author || "",
+    link: parsed.data.link || "",
+    category: parsed.data.category || "",
+    format: parsed.data.format || "Online",
+    known_for: parsed.data.known_for || "",
+    tags: Array.isArray(parsed.data.tags) ? parsed.data.tags : [],
+    note: parsed.data.note || "",
+    description: parsed.data.description || "",
+    url: `/enlighten/#${slug}`
+  };
+});
+
+// 8. Book Categories
+const bookCatFiles = getFiles("_book_categories");
+const book_categories = bookCatFiles.map((file) => {
+  const content = fs.readFileSync(file, "utf8");
+  const parsed = matter(content);
+  const slug = slugify(parsed.data.name || path.basename(file, ".md"));
+  return {
+    ...parsed.data,
+    slug,
+    name: parsed.data.name || "",
+    icon: parsed.data.icon || "📚",
+    weight: parsed.data.weight || 0,
+    description: parsed.data.description || ""
+  };
+}).sort((a, b) => (a.weight || 0) - (b.weight || 0));
+
+// 9. Categories Map
 const categories = {};
 for (const p of posts) {
   for (const c of p.categories) {
@@ -192,7 +230,7 @@ for (const p of posts) {
   }
 }
 
-// 8. Tags Map
+// 10. Tags Map
 const tags = {};
 for (const p of posts) {
   for (const t of p.tags) {
@@ -240,6 +278,8 @@ module.exports = {
   gallery_categories,
   authors,
   video_collections,
+  books,
+  book_categories,
   categories,
   tags
 };

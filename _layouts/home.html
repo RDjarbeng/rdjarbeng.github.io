@@ -275,22 +275,29 @@ layout: default
         A hand-picked collection of genuinely great books on machine learning, deep learning, Python, and computer vision that authors and publishers have made permanently free to read online.
       </p>
       <div class="enlighten-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
-        {% assign featured_books = site.books | where_exp: "b", "b.known_for != nil" | slice: 0, 3 %}
+        {% assign featured_books = site.books | where_exp: "b", "b.known_for != nil and b.known_for != ''" | slice: 0, 3 %}
         {% if featured_books.size == 0 %}
           {% assign featured_books = site.books | slice: 0, 3 %}
         {% endif %}
         {% for book in featured_books %}
-        <a class="book-card" href="{{ book.link }}" target="_blank" rel="noopener">
+        {% assign b_link = book.link | default: book.data.link %}
+        {% assign b_format = book.format | default: book.data.format | default: "Online" %}
+        {% assign b_category = book.category | default: book.data.category %}
+        {% assign b_title = book.title | default: book.data.title %}
+        {% assign b_author = book.author | default: book.data.author %}
+        {% assign b_known = book.known_for | default: book.data.known_for %}
+        {% assign b_desc = book.description | default: book.data.description %}
+        <a class="book-card" href="{{ b_link }}" target="_blank" rel="noopener">
           <div class="book-card-top">
-            <span class="book-format">{{ book.format | default: "Online" }}</span>
-            <span style="font-size: 0.78rem; color: var(--text-color-light, #666);">{{ book.category }}</span>
+            <span class="book-format">{{ b_format }}</span>
+            <span style="font-size: 0.78rem; color: var(--text-color-light, #666);">{{ b_category }}</span>
           </div>
-          <h3>{{ book.title }}</h3>
-          <p class="book-author">by {{ book.author }}</p>
-          {% if book.known_for %}
-          <div class="book-known">{{ book.known_for }}</div>
+          <h3>{{ b_title }}</h3>
+          <p class="book-author">by {{ b_author }}</p>
+          {% if b_known and b_known != '' %}
+          <div class="book-known">{{ b_known }}</div>
           {% endif %}
-          <p class="book-desc">{{ book.description | truncate: 120 }}</p>
+          <p class="book-desc">{{ b_desc | truncate: 120 }}</p>
           <div class="book-footer">
             <span class="book-cta">Read free online →</span>
           </div>

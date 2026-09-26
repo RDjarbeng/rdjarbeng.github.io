@@ -194,6 +194,36 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   eleventyConfig.addFilter("markdownify", (str) =>
     str ? mdLib.render(str.toString()) : ""
   );
+  eleventyConfig.addFilter("sort", (input, prop) => {
+    if (!input) return [];
+    if (Array.isArray(input)) {
+      const arr = [...input];
+      if (prop) {
+        return arr.sort((a, b) => {
+          let valA = a && a.data && a.data[prop] !== undefined ? a.data[prop] : a ? a[prop] : undefined;
+          let valB = b && b.data && b.data[prop] !== undefined ? b.data[prop] : b ? b[prop] : undefined;
+          if (valA instanceof Date) valA = valA.getTime();
+          if (valB instanceof Date) valB = valB.getTime();
+          if (valA === valB) return 0;
+          if (valA === undefined || valA === null) return 1;
+          if (valB === undefined || valB === null) return -1;
+          if (typeof valA === "string" && typeof valB === "string") return valA.localeCompare(valB);
+          return valA > valB ? 1 : -1;
+        });
+      }
+      return arr.sort((a, b) => {
+        if (a === b) return 0;
+        if (a === undefined || a === null) return 1;
+        if (b === undefined || b === null) return -1;
+        if (typeof a === "string" && typeof b === "string") return a.localeCompare(b);
+        return a > b ? 1 : -1;
+      });
+    }
+    if (typeof input === "object") {
+      return Object.entries(input).sort((a, b) => a[0].localeCompare(b[0]));
+    }
+    return [input];
+  });
   eleventyConfig.addFilter("sample", (arr, n = 1) => {
     if (!Array.isArray(arr) || arr.length === 0) return n === 1 ? null : [];
     const shuffled = [...arr].sort(() => 0.5 - Math.random());
@@ -354,8 +384,22 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
 
   eleventyConfig.addCollection("books", (collectionApi) => {
     const books = collectionApi.getFilteredByGlob("_books/**/*.md");
-    siteData.books = books;
+    siteData.books = books.map((b) => ({
+      ...b.data,
+      slug: b.fileSlug,
+      url: b.url
+    }));
     return books;
+  });
+
+  eleventyConfig.addCollection("book_categories", (collectionApi) => {
+    const cats = collectionApi.getFilteredByGlob("_book_categories/**/*.md");
+    siteData.book_categories = cats.map((c) => ({
+      ...c.data,
+      slug: c.fileSlug,
+      url: c.url
+    })).sort((a, b) => (a.weight || 0) - (b.weight || 0));
+    return cats;
   });
 
   eleventyConfig.addCollection("gallery_categories", (collectionApi) => {
@@ -389,11 +433,22 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
         entry.posts.push(post);
       }
     }
-    siteData.categories = {};
+    const rawCategories = {};
+    const catLowerMap = new Map();
     for (const [s, entry] of slugMap.entries()) {
-      siteData.categories[entry.displayName] = entry.posts;
-      siteData.categories[s] = entry.posts;
+      rawCategories[entry.displayName] = entry.posts;
+      catLowerMap.set(s, entry.posts);
+      catLowerMap.set(entry.displayName.toLowerCase(), entry.posts);
     }
+    siteData.categories = new Proxy(rawCategories, {
+      get(target, prop) {
+        if (typeof prop === "string" && prop in target) return target[prop];
+        if (typeof prop === "string" && catLowerMap.has(prop.toLowerCase())) {
+          return catLowerMap.get(prop.toLowerCase());
+        }
+        return target[prop];
+      }
+    });
     return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
   });
 
@@ -419,11 +474,22 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
         }
       }
     }
-    siteData.tags = {};
+    const rawTags = {};
+    const tagLowerMap = new Map();
     for (const [s, entry] of slugMap.entries()) {
-      siteData.tags[entry.displayName] = entry.posts;
-      siteData.tags[s] = entry.posts;
+      rawTags[entry.displayName] = entry.posts;
+      tagLowerMap.set(s, entry.posts);
+      tagLowerMap.set(entry.displayName.toLowerCase(), entry.posts);
     }
+    siteData.tags = new Proxy(rawTags, {
+      get(target, prop) {
+        if (typeof prop === "string" && prop in target) return target[prop];
+        if (typeof prop === "string" && tagLowerMap.has(prop.toLowerCase())) {
+          return tagLowerMap.get(prop.toLowerCase());
+        }
+        return target[prop];
+      }
+    });
     return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
   });
 
