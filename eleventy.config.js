@@ -206,17 +206,30 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
       return val === undefined ? !!v : v === val;
     });
   });
-  eleventyConfig.addFilter("where_exp", (arr, keyOrItem, exp) => {
-    if (!Array.isArray(arr)) return [];
+  const expCache = new Map();
+  eleventyConfig.addFilter("where_exp", function(arr, keyOrItem, exp) {
+    if (!Array.isArray(arr) || arr.length === 0) return [];
     if (!exp) return arr;
-    return arr.filter((item) => {
-      const target = item && item.data ? item.data : item;
+    const cacheKey = `${keyOrItem}:${exp}`;
+    let fn = expCache.get(cacheKey);
+    if (!fn) {
       try {
-        const fn = new Function(keyOrItem, `with(${keyOrItem}) { return (${exp}); }`);
-        return fn(target);
+        const jsExp = exp
+          .replace(/\bnil\b/g, "null")
+          .replace(/\band\b/g, "&&")
+          .replace(/\bor\b/g, "||");
+        fn = new Function(keyOrItem, "page", `try { with(${keyOrItem}) { return Boolean(${jsExp}); } } catch(e) { return false; }`);
+        expCache.set(cacheKey, fn);
       } catch (e) {
-        return false;
+        return [];
       }
+    }
+    const page = (this && this.context && this.context.environments)
+      ? this.context.environments.page
+      : (this && this.page) ? this.page : {};
+    return arr.filter((item) => {
+      const target = item && item.data ? { ...item.data, url: item.url, date: item.date } : item;
+      return fn(target, page);
     });
   });
 
