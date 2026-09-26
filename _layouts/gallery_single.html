@@ -185,7 +185,17 @@ layout: default
                 {% assign fallback = site.gallery | where: 'type', 'video' | where_exp: "item", "item.title != item_title" | sample: 4 %}
                 {% assign related_items = related_items | concat: fallback | uniq | slice: 0, 4 %}
             {% endif %}
+        {% elsif display_cat and display_cat != '' and display_cat != 'None' and display_cat != 'videos' %}
+            {% assign related_items = site.gallery | where: 'category', display_cat | where_exp: "item", "item.title != item_title" | sample: 4 %}
+            {% if related_items.size < 4 %}
+                {% assign fallback = site.gallery | where_exp: "item", "item.title != item_title" | sample: 4 %}
+                {% assign related_items = related_items | concat: fallback | uniq | slice: 0, 4 %}
+            {% endif %}
         {% else %}
+            {% assign related_items = site.gallery | where_exp: "item", "item.title != item_title" | sample: 4 %}
+        {% endif %}
+
+        {% if related_items.size == 0 %}
             {% assign related_items = site.gallery | where_exp: "item", "item.title != item_title" | sample: 4 %}
         {% endif %}
 
@@ -208,8 +218,8 @@ layout: default
                 </div>
                 <div class="recommended-card-body">
                     <h4 class="recommended-card-title">{{ item.title | escape }}</h4>
-                    {% assign display_cat = item.genre | default: item.category | default: item.categories.first | default: "Other" %}
-                    <div class="recommended-card-genre">{{ display_cat }}</div>
+                    {% assign card_cat = item.genre | default: item.category | default: item.categories.first | default: "Other" %}
+                    <div class="recommended-card-genre">{{ card_cat }}</div>
                 </div>
             </a>
         {% endfor %}

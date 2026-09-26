@@ -239,18 +239,32 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
           .replace(/\bnil\b/g, "null")
           .replace(/\band\b/g, "&&")
           .replace(/\bor\b/g, "||");
-        fn = new Function(keyOrItem, "page", `try { with(${keyOrItem}) { return Boolean(${jsExp}); } } catch(e) { return false; }`);
+        fn = new Function(keyOrItem, "page", "context", `try { with(context || {}) { with(${keyOrItem} || {}) { return Boolean(${jsExp}); } } } catch(e) { return false; }`);
         expCache.set(cacheKey, fn);
       } catch (e) {
         return [];
       }
     }
-    const page = (this && this.context && this.context.environments)
+    let ctx = {};
+    if (this && this.context) {
+      if (typeof this.context.getAll === "function") {
+        ctx = this.context.getAll();
+      } else {
+        const scopes = this.context.scopes || [];
+        for (const s of scopes) {
+          Object.assign(ctx, s);
+        }
+        if (this.context.environments) {
+          Object.assign(ctx, this.context.environments);
+        }
+      }
+    }
+    const page = ctx.page || ((this && this.context && this.context.environments)
       ? this.context.environments.page
-      : (this && this.page) ? this.page : {};
+      : (this && this.page) ? this.page : {});
     return arr.filter((item) => {
       const target = item && item.data ? { ...item.data, url: item.url, date: item.date } : item;
-      return fn(target, page);
+      return fn(target, page, ctx);
     });
   });
 
