@@ -206,3 +206,4 @@ yout-ube.com/watch
 - [ ] Add the enlighten project as a section on the homepage
 - [ ] Add hackathons participated in Zindi and Kaggle to about sections, as well as that Kaggle notebook on SAM
 - [ ] TikTok videos aren't loading on the site due to overload protection
+- [ ] Add master CV to about page
