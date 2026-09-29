@@ -530,3 +530,4 @@ Signatures of Diogo, Erik, and Sasha
 - [ ] How AI has been used across nations on a national level
 - [ ] DHH calls an end to handwritten code
 - [ ] Giving agents a means of payment on the internet, bank account for agents?
+- [ ] Eniac patent was invalidated? How from YouTube: John Vincent Atanasoff invented the first computer...but no one has heard of him (including me until last week)! That's criminal, so we have to talk about it.
