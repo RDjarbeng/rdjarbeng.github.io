@@ -529,3 +529,4 @@ Signatures of Diogo, Erik, and Sasha
 - [ ] InstaVM 10 mins sandbox execution for agents, honestly have no idea what to do with it
 - [ ] How AI has been used across nations on a national level
 - [ ] DHH calls an end to handwritten code
+- [ ] Giving agents a means of payment on the internet, bank account for agents?
