@@ -531,3 +531,7 @@ Signatures of Diogo, Erik, and Sasha
 - [ ] DHH calls an end to handwritten code
 - [ ] Giving agents a means of payment on the internet, bank account for agents?
 - [ ] Eniac patent was invalidated? How from YouTube: John Vincent Atanasoff invented the first computer...but no one has heard of him (including me until last week)! That's criminal, so we have to talk about it.
+- [ ] The difference between Chatgpt, Claude, gemini chatbot vs using the models via API
+
+Advantages: more control of parameters like temperature
+Also able to structure an output
