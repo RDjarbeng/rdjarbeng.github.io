@@ -4,7 +4,7 @@ permalink: /search.json
 ---
 [
   {% for post in collections.searchable %}
-    {% assign words = post.templateContent | number_of_words %}
+    {% assign words = post.content | default: post.templateContent | number_of_words %}
     {% assign minutes = words | divided_by: 180 | ceil %}
     {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
     {% capture image_html %}

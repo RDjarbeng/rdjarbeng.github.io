@@ -221,23 +221,56 @@ const book_categories = bookCatFiles.map((file) => {
   };
 }).sort((a, b) => (a.weight || 0) - (b.weight || 0));
 
-// 9. Categories Map
-const categories = {};
-for (const p of posts) {
-  for (const c of p.categories) {
-    if (!categories[c]) categories[c] = [];
-    categories[c].push(p);
-  }
+if (!Object.prototype.hasOwnProperty.call(Array.prototype, "size")) {
+  Object.defineProperty(Array.prototype, "size", {
+    get() {
+      return this.length;
+    },
+    configurable: true
+  });
 }
 
-// 10. Tags Map
-const tags = {};
+function createLookupMap(rawMap) {
+  const lowerMap = new Map();
+  const slugMap = new Map();
+  for (const [k, v] of Object.entries(rawMap)) {
+    lowerMap.set(k.toLowerCase(), v);
+    slugMap.set(slugify(k), v);
+  }
+  return new Proxy(rawMap, {
+    get(target, prop) {
+      if (typeof prop === "string") {
+        if (prop in target) return target[prop];
+        if (prop === "size" || prop === "length") return Object.keys(target).length;
+        const low = prop.toLowerCase();
+        if (lowerMap.has(low)) return lowerMap.get(low);
+        const s = slugify(prop);
+        if (slugMap.has(s)) return slugMap.get(s);
+      }
+      return target[prop];
+    }
+  });
+}
+
+// 9. Categories Map
+const rawCategories = {};
 for (const p of posts) {
-  for (const t of p.tags) {
-    if (!tags[t]) tags[t] = [];
-    tags[t].push(p);
+  for (const c of p.categories) {
+    if (!rawCategories[c]) rawCategories[c] = [];
+    rawCategories[c].push(p);
   }
 }
+const categories = createLookupMap(rawCategories);
+
+// 10. Tags Map
+const rawTags = {};
+for (const p of posts) {
+  for (const t of p.tags) {
+    if (!rawTags[t]) rawTags[t] = [];
+    rawTags[t].push(p);
+  }
+}
+const tags = createLookupMap(rawTags);
 
 module.exports = {
   title: "Richard Djarbeng",

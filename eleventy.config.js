@@ -261,6 +261,42 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
   eleventyConfig.addFilter("where_exp", function(arr, keyOrItem, exp) {
     if (!Array.isArray(arr) || arr.length === 0) return [];
     if (!exp) return arr;
+
+    // Fast-path known hot expressions across templates
+    if (exp === "item.title != item_title" || exp === "item.title != page.title") {
+      let avoid = "";
+      if (this && this.context) {
+        if (typeof this.context.get === "function") {
+          avoid = this.context.get("item_title") || this.context.get("page.title") || "";
+        } else if (this.context.scopes) {
+          for (let i = this.context.scopes.length - 1; i >= 0; i--) {
+            const s = this.context.scopes[i];
+            if (s && s.item_title !== undefined) { avoid = s.item_title; break; }
+            if (s && s.page && s.page.title !== undefined) { avoid = s.page.title; break; }
+          }
+        }
+      }
+      return arr.filter((item) => item && (item.title || (item.data && item.data.title)) !== avoid);
+    }
+    if (exp === "b.known_for != nil and b.known_for != ''") {
+      return arr.filter((b) => b && (b.known_for || (b.data && b.data.known_for)));
+    }
+    if (exp === "p.image != nil and p.image != ''") {
+      return arr.filter((p) => p && (p.image || (p.data && p.data.image)));
+    }
+    if (exp === "item.type == 'video'") {
+      return arr.filter((item) => item && (item.type || (item.data && item.data.type)) === "video");
+    }
+    if (exp === "item.type != 'video'") {
+      return arr.filter((item) => item && (item.type || (item.data && item.data.type)) !== "video");
+    }
+    if (exp === "item.author != nil and item.author != '' and item.author != 'Richard' and item.author != 'richard'") {
+      return arr.filter((item) => {
+        const author = item && (item.author || (item.data && item.data.author));
+        return author && author !== "Richard" && author !== "richard";
+      });
+    }
+
     const cacheKey = `${keyOrItem}:${exp}`;
     let fn = expCache.get(cacheKey);
     if (!fn) {
@@ -284,14 +320,9 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
         for (const s of scopes) {
           Object.assign(ctx, s);
         }
-        if (this.context.environments) {
-          Object.assign(ctx, this.context.environments);
-        }
       }
     }
-    const page = ctx.page || ((this && this.context && this.context.environments)
-      ? this.context.environments.page
-      : (this && this.page) ? this.page : {});
+    const page = ctx.page || ((this && this.page) ? this.page : {});
     return arr.filter((item) => {
       const target = item && item.data ? { ...item.data, url: item.url, date: item.date } : item;
       return fn(target, page, ctx);
@@ -414,82 +445,42 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
     return info;
   });
 
-  // Categories & Tags maps
-  eleventyConfig.addCollection("categoriesList", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
-      .filter((p) => p.data.published !== false)
-      .sort((a, b) => b.date - a.date);
+  // Categories & Tags collections for archives (paginated in category-archive.liquid and tag-archive.liquid)
+  eleventyConfig.addCollection("categoriesList", () => {
     const slugMap = new Map();
-    for (const post of posts) {
-      const cat = post.data.category;
-      if (!cat) continue;
-      const s = slugify(cat);
-      if (!s) continue;
-      if (!slugMap.has(s)) {
-        slugMap.set(s, { slug: s, displayName: cat.toString().trim(), posts: [] });
-      }
-      const entry = slugMap.get(s);
-      if (!entry.posts.includes(post)) {
-        entry.posts.push(post);
-      }
-    }
-    const rawCategories = {};
-    const catLowerMap = new Map();
-    for (const [s, entry] of slugMap.entries()) {
-      rawCategories[entry.displayName] = entry.posts;
-      catLowerMap.set(s, entry.posts);
-      catLowerMap.set(entry.displayName.toLowerCase(), entry.posts);
-    }
-    siteData.categories = new Proxy(rawCategories, {
-      get(target, prop) {
-        if (typeof prop === "string" && prop in target) return target[prop];
-        if (typeof prop === "string" && catLowerMap.has(prop.toLowerCase())) {
-          return catLowerMap.get(prop.toLowerCase());
+    for (const post of siteData.posts) {
+      for (const cat of (post.categories || [])) {
+        if (!cat) continue;
+        const s = slugify(cat);
+        if (!s) continue;
+        if (!slugMap.has(s)) {
+          slugMap.set(s, { slug: s, displayName: cat.toString().trim(), posts: [] });
         }
-        return target[prop];
+        const entry = slugMap.get(s);
+        if (!entry.posts.includes(post)) {
+          entry.posts.push(post);
+        }
       }
-    });
+    }
     return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
   });
 
-  eleventyConfig.addCollection("tagsList", (collectionApi) => {
-    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
-      .filter((p) => p.data.published !== false)
-      .sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("tagsList", () => {
     const slugMap = new Map();
-    for (const post of posts) {
-      const tags = post.data.tags;
-      if (Array.isArray(tags)) {
-        for (let rawTag of tags) {
-          if (!rawTag) continue;
-          const s = slugify(rawTag);
-          if (!s) continue;
-          if (!slugMap.has(s)) {
-            slugMap.set(s, { slug: s, displayName: rawTag.toString().trim(), posts: [] });
-          }
-          const entry = slugMap.get(s);
-          if (!entry.posts.includes(post)) {
-            entry.posts.push(post);
-          }
+    for (const post of siteData.posts) {
+      for (const rawTag of (post.tags || [])) {
+        if (!rawTag) continue;
+        const s = slugify(rawTag);
+        if (!s) continue;
+        if (!slugMap.has(s)) {
+          slugMap.set(s, { slug: s, displayName: rawTag.toString().trim(), posts: [] });
+        }
+        const entry = slugMap.get(s);
+        if (!entry.posts.includes(post)) {
+          entry.posts.push(post);
         }
       }
     }
-    const rawTags = {};
-    const tagLowerMap = new Map();
-    for (const [s, entry] of slugMap.entries()) {
-      rawTags[entry.displayName] = entry.posts;
-      tagLowerMap.set(s, entry.posts);
-      tagLowerMap.set(entry.displayName.toLowerCase(), entry.posts);
-    }
-    siteData.tags = new Proxy(rawTags, {
-      get(target, prop) {
-        if (typeof prop === "string" && prop in target) return target[prop];
-        if (typeof prop === "string" && tagLowerMap.has(prop.toLowerCase())) {
-          return tagLowerMap.get(prop.toLowerCase());
-        }
-        return target[prop];
-      }
-    });
     return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
   });
 

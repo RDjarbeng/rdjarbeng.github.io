@@ -276,7 +276,8 @@ layout: default
       </p>
       <div class="enlighten-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
         {% assign featured_books = site.books | where_exp: "b", "b.known_for != nil and b.known_for != ''" | slice: 0, 3 %}
-        {% if featured_books.size == 0 %}
+        {% assign f_size = featured_books | size %}
+        {% if f_size == 0 %}
           {% assign featured_books = site.books | slice: 0, 3 %}
         {% endif %}
         {% for book in featured_books %}
