@@ -528,3 +528,4 @@ Signatures of Diogo, Erik, and Sasha
 - [ ] What does this mean to the average person: Smart Cities, the Smart Power Grid, Smart Manufacturing, Smart Healthcare, green cloud computing, and Industry 4.0.
 - [ ] InstaVM 10 mins sandbox execution for agents, honestly have no idea what to do with it
 - [ ] How AI has been used across nations on a national level
+- [ ] DHH calls an end to handwritten code
