@@ -535,3 +535,4 @@ Signatures of Diogo, Erik, and Sasha
 
 Advantages: more control of parameters like temperature
 Also able to structure an output
+- [ ] Different airplanes type per continent, which Airbus or Boeing planes are you going to see on each continent
