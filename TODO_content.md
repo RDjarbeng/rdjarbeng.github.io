@@ -570,3 +570,5 @@ Degrees Offered
 • Undergraduate: Bachelor of Science in Aerospace Engineering (Course 16) and Bachelor of Science in Engineering (Course 16-ENG), both ABET-accredited.
 • Graduate: Master of Science (SM), Doctor of Philosophy (PhD), and Doctor of Science (ScD), alongside multiple interdisciplinary programs.
 • Core Curriculum: Features foundational cross-disciplinary courses like Unified Engineering, which integrates materials, structures, signals, systems, fluid dynamics, and thermodynamics.
+- [ ] The Jet Propulsion Laboratory is a federally funded research and development center in La Cañada Flintridge, California, United States. Founded in 1936 by California Institute of Technology researchers, the laboratory is now owned and sponsored by NASA and administered and managed by Caltech
+https://www.jpl.nasa.gov/
