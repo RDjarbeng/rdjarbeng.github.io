@@ -8,8 +8,8 @@ import urllib.error
 from datetime import datetime
 from html import unescape
 
-APOD_API_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
-APOD_WEB_URL = "https://apod.nasa.gov/apod/astropix.html"
+APOD_API_URL = "https://science.nasa.gov/wp-json/wp/v2/apod-basic"
+APOD_WEB_URL = "https://science.nasa.gov/apod/"
 GALLERY_DIR = os.path.join("_gallery", "nasa-apod")
 
 def slugify(text):
@@ -26,7 +26,10 @@ def fetch_from_api(retries=3, delay=5):
         try:
             print(f"Fetching APOD from API (attempt {attempt}/{retries})...")
             with urllib.request.urlopen(req, timeout=30) as response:
-                return json.loads(response.read().decode('utf-8'))
+                data = json.loads(response.read().decode('utf-8'))
+                if isinstance(data, list) and len(data) > 0:
+                    data = data[0]
+                return data
         except urllib.error.HTTPError as e:
             print(f"API attempt {attempt} failed with HTTP {e.code}: {e.reason}")
         except Exception as e:
@@ -112,9 +115,17 @@ def main():
 
     date_str = data.get("date")
     raw_title = data.get("title", "Astronomy Picture of the Day").strip()
+    
     explanation = data.get("explanation", "").strip()
+    # The new API sometimes includes "<strong>Explanation: </strong>" and other HTML tags
+    explanation = re.sub(r'<strong>\s*Explanation:\s*</strong>', '', explanation, flags=re.IGNORECASE)
+    explanation = re.sub(r'<[^>]+>', '', explanation)
+    explanation = ' '.join(explanation.split())
+    
     media_type = data.get("media_type", "image")
-    raw_url = data.get("url") or data.get("hdurl", "")
+    # For images, the new API uses 'hdurl' for the image link and 'url' for the webpage link.
+    # For videos, 'url' might contain the video link.
+    raw_url = data.get("hdurl") or data.get("url", "")
 
     if media_type != "image" or raw_url.lower().endswith((".mp4", ".webm", ".ogg", ".mov")):
         print(f"NASA APOD for {date_str} is a video ({raw_url}). Skipping entry creation.")
@@ -131,7 +142,7 @@ def main():
         readable_date = date_formatted.strftime("%B %d, %Y").replace(" 0", " ")
         
     yymmdd = date_formatted.strftime("%y%m%d")
-    apod_page_link = f"https://apod.nasa.gov/apod/ap{yymmdd}.html"
+    apod_page_link = data.get("permalink", f"https://science.nasa.gov/apod/")
 
     # Title with short date (e.g. Sep 4, 26)
     display_title = f"NASA Picture of the Day: {raw_title} ({short_date})"
