@@ -208,3 +208,4 @@ yout-ube.com/watch
 - [ ] TikTok videos aren't loading on the site due to overload protection
 - [ ] Add master CV to about page
 - [ ] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo
+- [ ] Add a way to add and edit Playlists in the cms and in telegram
