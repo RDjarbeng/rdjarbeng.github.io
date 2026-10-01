@@ -547,3 +547,14 @@ We’ve grown over 2000% since the announcement!
 
 https:// 
 x.com /0x_meden/status/2103423701349781606
+- [ ] from chelsea finn: 
+
+@chelseabfinn
+
+LLM post-training used to mean fine-tuning to a downstream task
+
+Robotics has been stuck in this setting, needing task-specific fine-tuning for best performance
+
+π07 changes this: It works out of the box & outperforms fine-tuned specialists
+
+Details: http://pi.website/pi07
