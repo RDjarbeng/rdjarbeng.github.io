@@ -581,3 +581,4 @@ Multi-Angle Imager for Aerosols
 
 Future Mission
 - [ ] How tonget Google traffic data, traffic ahead?
+- [ ] Insurance, environment and ride hailing concerns for companies in mobility
