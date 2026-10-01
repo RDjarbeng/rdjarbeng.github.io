@@ -589,3 +589,6 @@ Future Mission
 https://huggingface.co/docs/lerobot/index
 Simulation section:
 https://huggingface.co/docs/lerobot/main/en/envhub
+- [ ] The agents economy and agent swarms, what happens when agents are doing what humans are doing. Do you have coordination between agents, agents instructing agents, agents building for agents, agents having their own economy, spending, eg: site where agents can hire humans, soon to be redundant once agents figure out ways to get agents to do other tasks on their behalf and have leader agents and hierarchies. Will an agent sacrifice itself for another agent, ignoring its instructions ?
+
+Current paradigm is 99% of agents are controlled by humans, a small percentage of agents controlled by agents currently called subagents, rare case of agent swarms where agents are intentionally working together, similar to the subagents architecture but not exactly, because subagents suggest higher and lower models, swarms suggests an equal group of agents all collaborating to perform a task
