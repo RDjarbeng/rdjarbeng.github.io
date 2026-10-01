@@ -584,3 +584,8 @@ Future Mission
 - [ ] Insurance, environment and ride hailing concerns for companies in mobility
 - [ ] Post on ambient AQ west Africa needs an update
 - [ ] Summarize the global assessment of air quality
+- [ ] Starting with LeRobot, what if you don't have a robot, simulations?
+
+https://huggingface.co/docs/lerobot/index
+Simulation section:
+https://huggingface.co/docs/lerobot/main/en/envhub
