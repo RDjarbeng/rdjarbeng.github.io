@@ -598,3 +598,4 @@ https://porabook.com/
 Preface is here consider extracting to enlighten project so that readers can know whats in the book:
 
 https://porabook.com/book/
+- [ ] What is really happening when your internet goes down? Is there a way to know why and how it happens?
