@@ -538,3 +538,4 @@ Also able to structure an output
 - [ ] Different airplanes type per continent, which Airbus or Boeing planes are you going to see on each continent
 - [ ] Collage of the pictures that can be dragged around and keep text on top of it, make it in such a way that it can be easily used by an agent
 - [ ] Top labs that are publishing research in the major conferences, journals amd papers
+- [ ] Contact page's form needs work in formatting
