@@ -510,3 +510,82 @@ From: A Survey of Deep Learning Methods for Cyber Security - Daniel S. Berman
 Published Post: [_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md](file:///c:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md)
 - [ ] Met my first person from Mozambique at the Agrismat summer school. So they speak Portuguese and have a coast line, what else can be said about them. Let's do a country spotlight
 - [ ] Company spotlight Crane AI - building high quality African language data
+- [ ] How do you engineer a tank so that it does not need cleaning and deposits don't form in it, it should remain clean. Is this impossible or will there always be dirt at the bottom of the tank?
+- [ ] Need an analytics dashboard for this site so I can see the percentage of categories for posts, gallery items, progression of posts, the paths in the sitemap, how long it takes to load the site,.. Etc
+- [ ] Found out that the man in the music group Bonney M, with the afro wasn't actually singing but was lip syncing
+- [ ] Meet Jev
+Our first (public) System One model
+
+We’re excited to share with you a new class of AI models optimized for programmatic (inside code) use. Think: Smart if-statements.
+
+Welcome message for Jev for typesafe AI For the last two years, we’ve been researching a new training algorithm that we’ve dubbed RLCD (Reinforcement Learning for Calibrated Decisions) to overcome issues such as mode dropping, hallucinations, and lack of reliability inherent to RLHF, the method used to train modern-day LLMs.
+
+Our claims may sound too good to be true, but the bitterest lesson in AI is that optimizing for the right task gets you an unfair advantage.
+
+May your intelligence be ever reliable,
+
+Signatures of Diogo, Erik, and Sasha
+- [ ] What does this mean to the average person: Smart Cities, the Smart Power Grid, Smart Manufacturing, Smart Healthcare, green cloud computing, and Industry 4.0.
+- [ ] InstaVM 10 mins sandbox execution for agents, honestly have no idea what to do with it
+- [ ] How AI has been used across nations on a national level
+- [ ] DHH calls an end to handwritten code
+- [ ] Giving agents a means of payment on the internet, bank account for agents?
+- [ ] Eniac patent was invalidated? How from YouTube: John Vincent Atanasoff invented the first computer...but no one has heard of him (including me until last week)! That's criminal, so we have to talk about it.
+- [ ] The difference between Chatgpt, Claude, gemini chatbot vs using the models via API
+
+Advantages: more control of parameters like temperature
+Also able to structure an output
+- [ ] Different airplanes type per continent, which Airbus or Boeing planes are you going to see on each continent
+- [ ] Collage of the pictures that can be dragged around and keep text on top of it, make it in such a way that it can be easily used by an agent
+- [ ] Top labs that are publishing research in the major conferences, journals amd papers
+- [ ] Contact page's form needs work in formatting
+- [ ] What are the API wars that happened? Something about restricting access
+- [ ] What does this mean?
+Stop what you’re doing and build a plugin extension for ChatGPT.
+
+We’ve grown over 2000% since the announcement!
+
+https:// 
+x.com /0x_meden/status/2103423701349781606
+- [ ] from chelsea finn: 
+
+@chelseabfinn
+
+LLM post-training used to mean fine-tuning to a downstream task
+
+Robotics has been stuck in this setting, needing task-specific fine-tuning for best performance
+
+π07 changes this: It works out of the box & outperforms fine-tuned specialists
+
+Details: http://pi.website/pi07
+- [ ] Book for enlighten project - Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares
+
+https://web.stanford.edu/~boyd/vmls/
+- [ ] MIT’s Department of Aeronautics and Astronautics (AeroAstro, or Course 16) is globally renowned as a premier program for aerospace engineering education and research.
+Program Overview & Ranking
+• Consistently ranked as the top program in aerospace engineering worldwide for both undergraduate and graduate studies.
+• Focuses on air, space, and computing sectors—spanning autonomous systems, sustainable propulsion, astrodynamics, and human-system collaboration.
+• Emphasizes the CDIO (Conceive, Design, Operate, Implement) engineering framework through hands-on laboratory and capstone subjects.
+Degrees Offered
+• Undergraduate: Bachelor of Science in Aerospace Engineering (Course 16) and Bachelor of Science in Engineering (Course 16-ENG), both ABET-accredited.
+• Graduate: Master of Science (SM), Doctor of Philosophy (PhD), and Doctor of Science (ScD), alongside multiple interdisciplinary programs.
+• Core Curriculum: Features foundational cross-disciplinary courses like Unified Engineering, which integrates materials, structures, signals, systems, fluid dynamics, and thermodynamics.
+- [ ] The Jet Propulsion Laboratory is a federally funded research and development center in La Cañada Flintridge, California, United States. Founded in 1936 by California Institute of Technology researchers, the laboratory is now owned and sponsored by NASA and administered and managed by Caltech
+https://www.jpl.nasa.gov/
+- [ ] A NASA-funded air pollution monitoring network has provided one of the most detailed long-term views yet of the role of black carbon, or soot produced by fires, diesel vehicles, and other combustion sources, in Ethiopia’s capital, Addis Ababa. The detailed measurements show how pollution changes by time of day and season, including increases associated with rush-hour traffic and holiday celebrations. The findings are relevant to cities around the world, including in the United States
+
+https://www.jpl.nasa.gov/news/nasa-mission-studies-air-pollution-over-ethiopia/
+- [ ] https://science.nasa.gov/mission/maia/
+Nasa air quality project
+Multi-Angle Imager for Aerosols
+
+Future Mission
+- [ ] How tonget Google traffic data, traffic ahead?
+- [ ] Insurance, environment and ride hailing concerns for companies in mobility
+- [ ] Post on ambient AQ west Africa needs an update
+- [ ] Summarize the global assessment of air quality
+- [ ] Starting with LeRobot, what if you don't have a robot, simulations?
+
+https://huggingface.co/docs/lerobot/index
+Simulation section:
+https://huggingface.co/docs/lerobot/main/en/envhub
