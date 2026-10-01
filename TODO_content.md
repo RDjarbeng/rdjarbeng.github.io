@@ -599,3 +599,4 @@ Preface is here consider extracting to enlighten project so that readers can kno
 
 https://porabook.com/book/
 - [ ] What is really happening when your internet goes down? Is there a way to know why and how it happens?
+- [ ] Building in stealth what GLM did. What is a stealth model
