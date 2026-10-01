@@ -572,3 +572,6 @@ Degrees Offered
 • Core Curriculum: Features foundational cross-disciplinary courses like Unified Engineering, which integrates materials, structures, signals, systems, fluid dynamics, and thermodynamics.
 - [ ] The Jet Propulsion Laboratory is a federally funded research and development center in La Cañada Flintridge, California, United States. Founded in 1936 by California Institute of Technology researchers, the laboratory is now owned and sponsored by NASA and administered and managed by Caltech
 https://www.jpl.nasa.gov/
+- [ ] A NASA-funded air pollution monitoring network has provided one of the most detailed long-term views yet of the role of black carbon, or soot produced by fires, diesel vehicles, and other combustion sources, in Ethiopia’s capital, Addis Ababa. The detailed measurements show how pollution changes by time of day and season, including increases associated with rush-hour traffic and holiday celebrations. The findings are relevant to cities around the world, including in the United States
+
+https://www.jpl.nasa.gov/news/nasa-mission-studies-air-pollution-over-ethiopia/
