@@ -540,3 +540,10 @@ Also able to structure an output
 - [ ] Top labs that are publishing research in the major conferences, journals amd papers
 - [ ] Contact page's form needs work in formatting
 - [ ] What are the API wars that happened? Something about restricting access
+- [ ] What does this mean?
+Stop what you’re doing and build a plugin extension for ChatGPT.
+
+We’ve grown over 2000% since the announcement!
+
+https:// 
+x.com /0x_meden/status/2103423701349781606
