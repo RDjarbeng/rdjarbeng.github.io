@@ -561,3 +561,12 @@ Details: http://pi.website/pi07
 - [ ] Book for enlighten project - Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares
 
 https://web.stanford.edu/~boyd/vmls/
+- [ ] MIT’s Department of Aeronautics and Astronautics (AeroAstro, or Course 16) is globally renowned as a premier program for aerospace engineering education and research.
+Program Overview & Ranking
+• Consistently ranked as the top program in aerospace engineering worldwide for both undergraduate and graduate studies.
+• Focuses on air, space, and computing sectors—spanning autonomous systems, sustainable propulsion, astrodynamics, and human-system collaboration.
+• Emphasizes the CDIO (Conceive, Design, Operate, Implement) engineering framework through hands-on laboratory and capstone subjects.
+Degrees Offered
+• Undergraduate: Bachelor of Science in Aerospace Engineering (Course 16) and Bachelor of Science in Engineering (Course 16-ENG), both ABET-accredited.
+• Graduate: Master of Science (SM), Doctor of Philosophy (PhD), and Doctor of Science (ScD), alongside multiple interdisciplinary programs.
+• Core Curriculum: Features foundational cross-disciplinary courses like Unified Engineering, which integrates materials, structures, signals, systems, fluid dynamics, and thermodynamics.
