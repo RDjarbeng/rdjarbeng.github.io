@@ -575,3 +575,8 @@ https://www.jpl.nasa.gov/
 - [ ] A NASA-funded air pollution monitoring network has provided one of the most detailed long-term views yet of the role of black carbon, or soot produced by fires, diesel vehicles, and other combustion sources, in Ethiopia’s capital, Addis Ababa. The detailed measurements show how pollution changes by time of day and season, including increases associated with rush-hour traffic and holiday celebrations. The findings are relevant to cities around the world, including in the United States
 
 https://www.jpl.nasa.gov/news/nasa-mission-studies-air-pollution-over-ethiopia/
+- [ ] https://science.nasa.gov/mission/maia/
+Nasa air quality project
+Multi-Angle Imager for Aerosols
+
+Future Mission
