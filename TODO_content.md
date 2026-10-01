@@ -558,3 +558,6 @@ Robotics has been stuck in this setting, needing task-specific fine-tuning for b
 π07 changes this: It works out of the box & outperforms fine-tuned specialists
 
 Details: http://pi.website/pi07
+- [ ] Book for enlighten project - Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares
+
+https://web.stanford.edu/~boyd/vmls/
