@@ -583,3 +583,4 @@ Future Mission
 - [ ] How tonget Google traffic data, traffic ahead?
 - [ ] Insurance, environment and ride hailing concerns for companies in mobility
 - [ ] Post on ambient AQ west Africa needs an update
+- [ ] Summarize the global assessment of air quality
