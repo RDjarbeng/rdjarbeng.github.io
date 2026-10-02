@@ -589,3 +589,48 @@ Future Mission
 https://huggingface.co/docs/lerobot/index
 Simulation section:
 https://huggingface.co/docs/lerobot/main/en/envhub
+- [ ] The agents economy and agent swarms, what happens when agents are doing what humans are doing. Do you have coordination between agents, agents instructing agents, agents building for agents, agents having their own economy, spending, eg: site where agents can hire humans, soon to be redundant once agents figure out ways to get agents to do other tasks on their behalf and have leader agents and hierarchies. Will an agent sacrifice itself for another agent, ignoring its instructions ?
+
+Current paradigm is 99% of agents are controlled by humans, a small percentage of agents controlled by agents currently called subagents, rare case of agent swarms where agents are intentionally working together, similar to the subagents architecture but not exactly, because subagents suggest higher and lower models, swarms suggests an equal group of agents all collaborating to perform a task
+- [ ] Add to enlighten project: Principles of Robot Autonomy
+
+https://porabook.com/
+Preface is here consider extracting to enlighten project so that readers can know whats in the book:
+
+https://porabook.com/book/
+- [ ] What is really happening when your internet goes down? Is there a way to know why and how it happens?
+- [ ] Building in stealth what GLM did. What is a stealth model
+- [ ] Top SaaS models of business that scaled to unicorn status and the different types of business they do
+- [ ] https://www.ri.cmu.edu/ri-people/zachary-manchester/
+
+Zachary Manchester at CMU robotics institude- one interesting paper mjorbit: A Simulation Framework for Space Robotics
+
+https://arxiv.org/abs/2609.08010
+- [ ] fast ai resources on deep learning with audio:
+
+https://forums.fast.ai/t/deep-learning-with-audio-thread/38123?replies_to_post_number=12
+- [ ] HoT published about me in the work I did consulting for them:
+You can find the public link to that document displayed on the Humanitarian OpenStreetMap Team's (HOT) official Linktree page.
+
+They are currently featuring it under their "HOT Case Studies Collection" section with the title:
+"HOT Climate Resilience Case Studies (PDF) - 2025"
+
+Here is the link to the page where it is officially hosted for the public:
+https://linktr.ee/hotosm
+
+Because HOT uses this Linktree as the main "link in bio" for all of their official social media accounts (including Instagram, Facebook, and LinkedIn), this document is actively being shared with their followers across those platforms.
+- [ ] Gee community catalogs with tutorials. These were not there back when I was learning GEE, this current generation is lucky:
+
+https://gee-community-catalog.org/tutorials/
+- [ ] From: https://eartharxiv.org/repository/view/14175/
+A community data commons for equitable Earth Science
+Plain Language Summary
+
+Satellites and sensors now produce more information about our planet than ever before, but most of it is not ready to use. Before scientists can study floods, droughts, or cities, they must spend weeks preprocessing data, and every group repeats this work separately. Researchers with limited funding, connectivity, and computational power are hit hardest.
+
+We describe a community data commons in the form of a free, volunteer-run catalog where people help curate datasets, document and make them available for everyone without any barriers. Over six years this catalog has grown to more than four thousand datasets and now serves millions of requests every month from nearly every country on Earth. The catalog hosts datasets from a wide range that affect governance and narratives around Indigenous territories and health facilities and those that are created by local communities.
+
+We draw five lessons from this experience for anyone building shared scientific resources, and we argue that science funders, agencies, and universities should support this kind of community infrastructure, because accessibility begins with findability and we are arguing for usability as part of the paradigm. It is truly one of the fastest ways to make Earth science both equitable, fair and accessible.
+- [ ] This page has a search bot that can search the gee community catalog for the community, might consider integrating with this one with other dataset sources.
+
+https://search.gee-community-catalog.org/
