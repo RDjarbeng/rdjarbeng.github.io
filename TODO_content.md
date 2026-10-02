@@ -622,3 +622,12 @@ Because HOT uses this Linktree as the main "link in bio" for all of their offici
 - [ ] Gee community catalogs with tutorials. These were not there back when I was learning GEE, this current generation is lucky:
 
 https://gee-community-catalog.org/tutorials/
+- [ ] From: https://eartharxiv.org/repository/view/14175/
+A community data commons for equitable Earth Science
+Plain Language Summary
+
+Satellites and sensors now produce more information about our planet than ever before, but most of it is not ready to use. Before scientists can study floods, droughts, or cities, they must spend weeks preprocessing data, and every group repeats this work separately. Researchers with limited funding, connectivity, and computational power are hit hardest.
+
+We describe a community data commons in the form of a free, volunteer-run catalog where people help curate datasets, document and make them available for everyone without any barriers. Over six years this catalog has grown to more than four thousand datasets and now serves millions of requests every month from nearly every country on Earth. The catalog hosts datasets from a wide range that affect governance and narratives around Indigenous territories and health facilities and those that are created by local communities.
+
+We draw five lessons from this experience for anyone building shared scientific resources, and we argue that science funders, agencies, and universities should support this kind of community infrastructure, because accessibility begins with findability and we are arguing for usability as part of the paradigm. It is truly one of the fastest ways to make Earth science both equitable, fair and accessible.
