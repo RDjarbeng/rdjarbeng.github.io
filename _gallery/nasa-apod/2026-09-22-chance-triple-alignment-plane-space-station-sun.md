@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Chance Triple Alignment: Plane, Space Station, Sun (Sep 22, 26)"
 date: 2026-09-22T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/PlaneIssSpots_Horalek_960.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/PlaneIssSpots_Horalek_1500.jpg?w=1500&h=1500&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Chance Triple Alignment: Plane, Space Station, Sun (Sep 22, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260922.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-22-chance-triple-alignment-plane-space-station-sun/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 22, 2026**
@@ -21,4 +21,4 @@ This shot captured an unexpected silhouette. Which is it?  It isn't the sunspots
 *Credit & Copyright: Petr Horalek / Inst. Physics Opava*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260922.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-22-chance-triple-alignment-plane-space-station-sun/)*

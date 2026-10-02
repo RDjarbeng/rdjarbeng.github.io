@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Messier 33: The Triangulum Galaxy (Sep 18, 26)"
 date: 2026-09-18T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/m33m14_rasa3NM1024.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/m33m14_rasa3NM.jpg?w=2996&h=2504&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Messier 33: The Triangulum Galaxy (Sep 18, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260918.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-18-messier-33-the-triangulum-galaxy/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 18, 2026**
@@ -21,4 +21,4 @@ The small, northern constellation Triangulum harbors this magnificent face-on sp
 *Credit & Copyright: George Chatzifrantzis*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260918.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-18-messier-33-the-triangulum-galaxy/)*

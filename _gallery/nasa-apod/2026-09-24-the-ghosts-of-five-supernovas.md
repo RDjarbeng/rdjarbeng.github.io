@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: The Ghosts of Five Supernovas (Sep 24, 26)"
 date: 2026-09-24T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/5SNR_Auriga_1000.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/5SNR_Auriga_2000.jpg?w=2000&h=1255&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - The Ghosts of Five Supernovas (Sep 24, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260924.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-24-the-ghosts-of-five-supernovas/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 24, 2026**
@@ -21,4 +21,4 @@ The ghosts of five supernovas haunt this extraordinary image.   It was acquired 
 *Credit & Copyright: Stephane Vetter, Yann Sainty  Text:  Cecilia Chirenti  (NASA GSFC,  UMCP,  CRESST II)*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260924.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-24-the-ghosts-of-five-supernovas/)*

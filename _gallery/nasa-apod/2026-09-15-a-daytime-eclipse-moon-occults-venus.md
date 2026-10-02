@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: A Daytime Eclipse: Moon Occults Venus (Sep 15, 26)"
 date: 2026-09-15T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/MoonVenus_Mariat_960.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/MoonVenus_Mariat_1410.jpg?w=0&h=0&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - A Daytime Eclipse: Moon Occults Venus (Sep 15, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260915.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-15-a-daytime-eclipse-moon-occults-venus/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 15, 2026**
@@ -21,4 +21,4 @@ There was something behind the clouds.  Upon close inspection, it was the Moon, 
 *Credit & Copyright: Arnaud Mariat*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260915.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-15-a-daytime-eclipse-moon-occults-venus/)*

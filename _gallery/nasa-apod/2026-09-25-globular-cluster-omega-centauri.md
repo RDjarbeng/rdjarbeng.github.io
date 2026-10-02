@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Globular Cluster Omega Centauri (Sep 25, 26)"
 date: 2026-09-25T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/NGC5139CadenasParra1024.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/NGC5139CadenasParra.jpg?w=2048&h=1542&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Globular Cluster Omega Centauri (Sep 25, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260925.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-25-globular-star-cluster-omega-centauri/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 25, 2026**
@@ -21,4 +21,4 @@ Globular star cluster Omega Centauri packs about 10 million stars much older tha
 *Credit & Copyright: Javier O. Cadenas Parra*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260925.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-25-globular-star-cluster-omega-centauri/)*

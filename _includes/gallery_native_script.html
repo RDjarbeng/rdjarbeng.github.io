@@ -73,6 +73,7 @@
                 const img = document.createElement('img');
                 img.src = item.getAttribute('data-src');
                 img.alt = title;
+                img.referrerPolicy = 'no-referrer-when-downgrade';
                 mediaContainer.appendChild(img);
             }
 

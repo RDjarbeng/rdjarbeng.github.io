@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Sh2-188: The Shrimp Nebula (Sep 29, 26)"
 date: 2026-09-29T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/Shrimp_Pawel_960.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/Shrimp_Pawel_2048.jpg?w=2048&h=2560&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Sh2-188: The Shrimp Nebula (Sep 29, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260929.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-29-sh2-188-the-shrimp-nebula/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 29, 2026**
@@ -21,4 +21,4 @@ What causes the swirl in the Shrimp Nebula? Its high speed is likely.  What is s
 *Credit & Copyright: Pawel Piechnik*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260929.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-29-sh2-188-the-shrimp-nebula/)*

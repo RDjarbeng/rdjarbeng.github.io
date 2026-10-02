@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Hubble: Decagon Around Saturn's South Pole (Sep 08, 26)"
 date: 2026-09-08T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/SaturnDecagon_Hubble_960.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/SaturnDecagon_Hubble_960.jpg?w=960&h=1315&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Hubble: Decagon Around Saturn's South Pole (Sep 08, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260908.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-8-hubble-decagon-around-saturns-south-pole/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 08, 2026**
@@ -19,4 +19,4 @@ link: "https://apod.nasa.gov/apod/ap260908.html"
 Why are Saturn’s poles geometric? Saturn’s North Pole has been known to be surrounded by a hexagonal (6 sides) cloud since discovery in 1987 in data taken by NASA’s Voyager spacecrafts, which quickly flew past the ringed world in the early 1980s.  Now, recent observations of Saturn by the Hubble Space Telescope reveal a slightly different geometric cloud pattern around the South Pole: a decagon (10 sides).  The geometric boundaries are possibly caused by waves when the fast-moving gas away from the poles interacts with slower-moving gas closer to the poles.  In the featured image composite by the Hubble taken last year, the South Pole of Saturn is marked by an X and surrounded by bands of circulating clouds.  The decagon appears most prominent in the dark inner regions.  The northern hexagon has proven stable for over 40 years, while the stability of the southern decagon will surely remain a topic of research.   APOD's main NASA site is moving: From apod.nasa.gov to science.nasa.gov/apod
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260908.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-8-hubble-decagon-around-saturns-south-pole/)*

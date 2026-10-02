@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: A Zodiacal Night (Sep 19, 26)"
 date: 2026-09-19T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/2026-09-09ZodiacalLightHSP1024.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/2026-09-09ZodiacalLightHSP.jpg?w=2060&h=1393&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - A Zodiacal Night (Sep 19, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260919.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-19-a-zodiacal-night/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 19, 2026**
@@ -21,4 +21,4 @@ Also known as the false dawn, a luminous band of zodiacal light is captured in t
 *Credit & Copyright: Neelam and Ajay Talwar*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260919.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-19-a-zodiacal-night/)*

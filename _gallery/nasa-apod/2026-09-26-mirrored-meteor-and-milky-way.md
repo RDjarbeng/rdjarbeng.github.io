@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Mirrored Meteor and Milky Way (Sep 26, 26)"
 date: 2026-09-26T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/MilkyWayMeteorLSTJeffDai1024.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/MilkyWayMeteorLSTJeffDai.jpg?w=2000&h=1334&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Mirrored Meteor and Milky Way (Sep 26, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260926.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-26-mirrored-meteor-and-milky-way/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 26, 2026**
@@ -21,4 +21,4 @@ On August 15, this perseid meteor streaked through night skies over the Observat
 *Credit & Copyright: Jeff Dai*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260926.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-26-mirrored-meteor-and-milky-way/)*

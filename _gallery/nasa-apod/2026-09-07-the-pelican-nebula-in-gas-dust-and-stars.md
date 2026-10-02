@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: The Pelican Nebula in Gas, Dust, and Stars (Sep 07, 26)"
 date: 2026-09-07T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/Pelican_Killion_4800.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/Pelican_Killion_4800.jpg?w=4800&h=6000&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - The Pelican Nebula in Gas, Dust, and Stars (Sep 07, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260907.html"
+link: "https://science.nasa.gov/image-article/apod/apod-2026-september-7-the-pelican-nebula-in-gas-dust-and-stars/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 07, 2026**
@@ -21,4 +21,4 @@ The Pelican Nebula is slowly being transformed.  IC 5070 (an official designatio
 *Credit & Copyright: Mark Killion*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260907.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod/apod-2026-september-7-the-pelican-nebula-in-gas-dust-and-stars/)*

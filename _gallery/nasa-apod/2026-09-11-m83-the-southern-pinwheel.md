@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: M83: The Southern Pinwheel (Sep 11, 26)"
 date: 2026-09-11T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/M83_Final2_1x1024.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/M83_Final2_1x.jpg?w=3828&h=3798&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - M83: The Southern Pinwheel (Sep 11, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260911.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-11-m83-the-southern-pinwheel/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 11, 2026**
@@ -21,4 +21,4 @@ Beautiful and bright spiral galaxy M83 lies some twelve million light-years away
 *Credit & Copyright: Aldo Zanetti*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260911.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-11-m83-the-southern-pinwheel/)*

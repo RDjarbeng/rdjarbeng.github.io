@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: LDN 1295: The Giraffe Nebula (Sep 10, 26)"
 date: 2026-09-10T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/LDN1295_giraffe.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/LDN1295_giraffe.jpg?w=6118&h=4014&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - LDN 1295: The Giraffe Nebula (Sep 10, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260910.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-10-ldn-1295-the-giraffe-nebula/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 10, 2026**
@@ -21,4 +21,4 @@ What does this image look like to you?   Many see a giraffe facing right, with n
 *Credit & Copyright: Alessandro Merga  Text:  Cecilia Chirenti  (NASA GSFC,  UMCP,  CRESST II)*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260910.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-10-ldn-1295-the-giraffe-nebula/)*

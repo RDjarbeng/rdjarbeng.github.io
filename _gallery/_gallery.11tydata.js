@@ -6,7 +6,10 @@ module.exports = {
     permalink: (data) => {
       if (data.published === false) return false;
       if (data.permalink) return data.permalink;
-      const subpath = data.page.filePathStem.replace(/^\/_gallery\//, "");
+      const inputPath = data.page.inputPath || "";
+      const subpath = inputPath
+        .replace(/^(\.\/)?_gallery\//, "")
+        .replace(/\.[^/.]+$/, "");
       return `/gallery/${subpath}/`;
     }
   }

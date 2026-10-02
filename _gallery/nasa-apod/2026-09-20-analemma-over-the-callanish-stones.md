@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Analemma over the Callanish Stones (Sep 20, 26)"
 date: 2026-09-20T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/CallanishAnalemma_Petricca_960.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/CallanishAnalemma_Petricca_1280.jpg?w=1280&h=1477&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Analemma over the Callanish Stones (Sep 20, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260920.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-20-analemma-over-the-callanish-stones/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 20, 2026**
@@ -21,4 +21,4 @@ If you went outside at the same time every day and took a picture that included 
 *Credit & Copyright: Giuseppe Petricca*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260920.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-20-analemma-over-the-callanish-stones/)*

@@ -1,7 +1,7 @@
 ---
 title: "NASA Picture of the Day: Cocoon Nebula Wide Field (Sep 21, 26)"
 date: 2026-09-21T00:00:00+00:00
-image: "https://apod.nasa.gov/apod/image/2609/Cocoon_Czerski_1080.jpg"
+image: "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/september/Cocoon_Czerski_3000.jpg?w=3000&h=2000&fit=clip&crop=faces%2Cfocalpoint"
 image_alt: "NASA Picture of the Day - Cocoon Nebula Wide Field (Sep 21, 26)"
 type: external
 category: NASA APOD
@@ -9,7 +9,7 @@ labels:
   - NASA
   - APOD
   - Space
-link: "https://apod.nasa.gov/apod/ap260921.html"
+link: "https://science.nasa.gov/image-article/apod-2026-september-21-cocoon-nebula-wide-field/"
 ---
 
 > 🌌 **NASA Picture of the Day — September 21, 2026**
@@ -21,4 +21,4 @@ When does a nebula look like a comet?  In this crowded starfield covering over t
 *Credit & Copyright: Piotr Czerski*
 
 ---
-*Source: [NASA Astronomy Picture of the Day](https://apod.nasa.gov/apod/ap260921.html)*
+*Source: [NASA Astronomy Picture of the Day](https://science.nasa.gov/image-article/apod-2026-september-21-cocoon-nebula-wide-field/)*

@@ -1,5 +1,6 @@
 <head>
   <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer-when-downgrade">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/jpeg" href="{{ '/assets/images/logo.jpeg' | relative_url }}">
@@ -9,6 +10,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   
   <!-- Preconnect to external image domains to speed up gallery load times -->
+  <link rel="preconnect" href="https://apod.nasa.gov">
+  <link rel="preconnect" href="https://assets.science.nasa.gov">
   <link rel="preconnect" href="https://images-assets.nasa.gov">
   <link rel="preconnect" href="https://www.nasa.gov">
   <link rel="preconnect" href="https://img.youtube.com">
