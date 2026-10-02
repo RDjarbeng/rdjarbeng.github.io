@@ -601,3 +601,8 @@ https://porabook.com/book/
 - [ ] What is really happening when your internet goes down? Is there a way to know why and how it happens?
 - [ ] Building in stealth what GLM did. What is a stealth model
 - [ ] Top SaaS models of business that scaled to unicorn status and the different types of business they do
+- [ ] https://www.ri.cmu.edu/ri-people/zachary-manchester/
+
+Zachary Manchester at CMU robotics institude- one interesting paper mjorbit: A Simulation Framework for Space Robotics
+
+https://arxiv.org/abs/2609.08010
