@@ -11,7 +11,7 @@ tags:
   - Developer Tools
 title: Sveltia CMS is feature complete. Time to switch from Decap CMS
 image: /assets/images/posts/covers/sveltia-cms-feature-complete.jpg
-image_alt: Flat vector illustration showing the Sveltia CMS editorial dashboard and Git branch integrations
+image_alt: Illustration depicting migration from Netlify CMS and Decap CMS to Sveltia CMS
 layout: post
 card_items:
   - name: Sveltia CMS Repository
@@ -39,7 +39,7 @@ card_items:
 
 If you run a static site on Decap CMS (formerly Netlify CMS), [Sveltia CMS](https://github.com/sveltia/sveltia-cms) created by [Kyoshino](https://github.com/kyoshino) has reached a decisive milestone. I contribute to the codebase and deploy it in production across client sites. Several projects I maintain are handed over to non-technical editors who must create, edit, and publish content without touching Markdown syntax or terminal commands. Sveltia makes that handoff seamless.
 
-![Flat vector illustration showing the Sveltia CMS editorial dashboard and Git branch integrations](/assets/images/posts/covers/sveltia-cms-feature-complete.jpg)
+![Illustration depicting migration from Netlify CMS and Decap CMS to Sveltia CMS](/assets/images/posts/covers/sveltia-cms-feature-complete.jpg)
 
 The project has achieved complete feature parity with Decap CMS, resolving the open bugs and architectural stagnation that plagued the Netlify CMS ecosystem for years.
 
