@@ -606,3 +606,6 @@ https://porabook.com/book/
 Zachary Manchester at CMU robotics institude- one interesting paper mjorbit: A Simulation Framework for Space Robotics
 
 https://arxiv.org/abs/2609.08010
+- [ ] fast ai resources on deep learning with audio:
+
+https://forums.fast.ai/t/deep-learning-with-audio-thread/38123?replies_to_post_number=12
