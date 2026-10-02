@@ -609,3 +609,13 @@ https://arxiv.org/abs/2609.08010
 - [ ] fast ai resources on deep learning with audio:
 
 https://forums.fast.ai/t/deep-learning-with-audio-thread/38123?replies_to_post_number=12
+- [ ] HoT published about me in the work I did consulting for them:
+You can find the public link to that document displayed on the Humanitarian OpenStreetMap Team's (HOT) official Linktree page.
+
+They are currently featuring it under their "HOT Case Studies Collection" section with the title:
+"HOT Climate Resilience Case Studies (PDF) - 2025"
+
+Here is the link to the page where it is officially hosted for the public:
+https://linktr.ee/hotosm
+
+Because HOT uses this Linktree as the main "link in bio" for all of their official social media accounts (including Instagram, Facebook, and LinkedIn), this document is actively being shared with their followers across those platforms.
