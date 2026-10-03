@@ -63,6 +63,9 @@ Git-based content management takes a different path. Your Markdown files, YAML d
 Decap CMS pioneered this model under Netlify. Yet development ground to a near-total halt after Netlify transferred ownership. Outstanding bug reports accumulated without resolution, bundle sizes grew unwieldy, and modern Git platform features remained unsupported.
 
 ## Why Sveltia CMS started
+Netlify CMS was a popular open-source Git-based CMS until it was abandoned. It got revived as Decap CMS under new maintainers, but development stalled and long-standing issues sat untouched for years.
+
+Sveltia CMS started with two goals: match Netlify/Decap CMS closely enough that switching is easy, and fix as many of the issues that piled up on Netlify/Decap CMS as possible.
 
 Sveltia CMS emerged with two distinct objectives:
 
