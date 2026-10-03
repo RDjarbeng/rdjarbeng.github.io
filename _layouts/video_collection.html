@@ -41,9 +41,9 @@ body_class: videos-page
 
         {% if col_match_by == "manual" or col_videos %}
           {% for vid in all_vids %}
-            {% assign file_name = vid.path | split: "/" | last | split: "\" | last %}
+            {% assign file_name = vid.relative_path | default: vid.path | split: "/" | last %}
             {% assign file_slug = file_name | replace: ".md", "" %}
-            {% if col_videos contains file_slug or col_videos contains vid.title %}
+            {% if col_videos contains file_slug or col_videos contains vid.title or col_videos contains vid.url %}
               {% assign collection_vids = collection_vids | push: vid %}
             {% endif %}
           {% endfor %}
@@ -60,6 +60,10 @@ body_class: videos-page
                 {% assign yt_vid_id = item.youtube_id | split: "youtu.be/" | last | split: "?" | first %}
                 {% elsif item.youtube_id contains "shorts/" %}
                 {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
+                {% elsif item.youtube_id contains "?list=" %}
+                {% assign yt_vid_id = item.youtube_id | split: "?list=" | first %}
+                {% elsif item.youtube_id contains "&list=" %}
+                {% assign yt_vid_id = item.youtube_id | split: "&list=" | first %}
                 {% else %}
                 {% assign yt_vid_id = item.youtube_id %}
                 {% endif %}

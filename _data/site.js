@@ -28,6 +28,57 @@ function getFiles(dir) {
   return results;
 }
 
+function extractCleanExcerpt(text, wordLimit = 30) {
+  if (!text) return "";
+  const clean = text
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[#*`_~>]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const words = clean.split(" ");
+  if (words.length <= wordLimit) return clean;
+  return words.slice(0, wordLimit).join(" ") + "...";
+}
+
+function computeWordsAndReadTime(content) {
+  if (!content) return { words: 0, read_time: 0 };
+  const words = content.trim().split(/\s+/).length;
+  const read_time = Math.round(words / 180);
+  return { words, read_time };
+}
+
+// 0. Authors
+const authorFiles = getFiles("_authors");
+const authors = authorFiles.map((file) => {
+  const content = fs.readFileSync(file, "utf8");
+  const parsed = matter(content);
+  const slug = slugify(parsed.data.short_name || path.basename(file, ".md"));
+  return {
+    ...parsed.data,
+    url: `/authors/${slug}/`
+  };
+});
+const authorMap = new Map();
+for (const a of authors) {
+  if (a.short_name) authorMap.set(a.short_name.toLowerCase(), a);
+}
+
+function getAuthorInfo(authorName) {
+  if (!authorName) return null;
+  const isGuest = authorName.toLowerCase() !== "richard";
+  const authorObj = authorMap.get(authorName.toLowerCase());
+  const displayName = (authorObj && authorObj.display_name) || (authorObj && authorObj.short_name) || authorName;
+  const avatar = (authorObj && authorObj.avatar) || "";
+  const initials = displayName.split(" ").map(w => w[0]).filter(Boolean).slice(0, 2).join("").toUpperCase();
+  return {
+    is_guest: isGuest,
+    display_name: displayName,
+    avatar,
+    initials
+  };
+}
+
 // 1. Posts
 const postFiles = getFiles("_posts");
 const posts = postFiles.map((file) => {
@@ -49,19 +100,53 @@ const posts = postFiles.map((file) => {
     ? parsed.data.tags.split(/,\s*/)
     : [];
 
+  const { words, read_time } = computeWordsAndReadTime(parsed.content);
+  const clean_excerpt = parsed.data.excerpt
+    ? extractCleanExcerpt(parsed.data.excerpt, 30)
+    : extractCleanExcerpt(parsed.content, 30);
+
+  const author_info = getAuthorInfo(parsed.data.author || "Richard");
+
+  const categories_data = categories.map((cat) => ({
+    name: cat,
+    slug: slugify(cat),
+    url: `/categories/${slugify(cat)}/`
+  }));
+  const tags_data = tags.map((tag) => ({
+    name: tag,
+    slug: slugify(tag),
+    url: `/tags/${slugify(tag)}/`
+  }));
+
+  const postYear = date.getFullYear();
+  const currentYear = new Date().getFullYear();
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const formatted_date = postYear === currentYear
+    ? `${monthNames[date.getMonth()]} ${date.getDate()}`
+    : `${monthNames[date.getMonth()]} ${date.getDate()}, ${postYear}`;
+  const iso_date = date.toISOString();
+
   return {
     ...parsed.data,
     title: parsed.data.title || "",
     categories,
+    categories_data,
     tags,
+    tags_data,
     author: parsed.data.author || "Richard",
+    author_info,
     image: parsed.data.image || "",
     image_alt: parsed.data.image_alt || "",
     thumbnail: parsed.data.thumbnail || parsed.data.image || "",
     url,
     date,
+    formatted_date,
+    iso_date,
     content: parsed.content,
     excerpt: parsed.data.excerpt || (parsed.content ? parsed.content.slice(0, 200) : ""),
+    clean_excerpt,
+    words,
+    read_time,
     relative_path: rel
   };
 }).filter((p) => p.published !== false).sort((a, b) => b.date - a.date);
@@ -87,19 +172,53 @@ const personal = personalFiles.map((file) => {
     ? parsed.data.tags.split(/,\s*/)
     : [];
 
+  const { words, read_time } = computeWordsAndReadTime(parsed.content);
+  const clean_excerpt = parsed.data.excerpt
+    ? extractCleanExcerpt(parsed.data.excerpt, 30)
+    : extractCleanExcerpt(parsed.content, 30);
+
+  const categories_data = categories.map((cat) => ({
+    name: cat,
+    slug: slugify(cat),
+    url: `/categories/${slugify(cat)}/`
+  }));
+  const tags_data = tags.map((tag) => ({
+    name: tag,
+    slug: slugify(tag),
+    url: `/tags/${slugify(tag)}/`
+  }));
+
+  const postYear = date.getFullYear();
+  const currentYear = new Date().getFullYear();
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const formatted_date = postYear === currentYear
+    ? `${monthNames[date.getMonth()]} ${date.getDate()}`
+    : `${monthNames[date.getMonth()]} ${date.getDate()}, ${postYear}`;
+  const iso_date = date.toISOString();
+
+  const author_info = getAuthorInfo(parsed.data.author || "Richard");
+
   return {
     ...parsed.data,
     title: parsed.data.title || "",
     categories,
+    categories_data,
     tags,
+    tags_data,
     author: parsed.data.author || "Richard",
+    author_info,
     image: parsed.data.image || "",
     image_alt: parsed.data.image_alt || "",
     thumbnail: parsed.data.thumbnail || parsed.data.image || "",
     url,
     date,
+    formatted_date,
+    iso_date,
     content: parsed.content,
     excerpt: parsed.data.excerpt || (parsed.content ? parsed.content.slice(0, 200) : ""),
+    clean_excerpt,
+    words,
+    read_time,
     relative_path: rel
   };
 }).filter((p) => p.published !== false).sort((a, b) => b.date - a.date);
@@ -124,6 +243,8 @@ const gallery = galleryFiles.map((file) => {
     ? parsed.data.tags.split(/,\s*/)
     : [];
 
+  const clean_caption = extractCleanExcerpt(parsed.content || parsed.data.caption || "", 50);
+
   return {
     ...parsed.data,
     title: parsed.data.title || "",
@@ -139,6 +260,7 @@ const gallery = galleryFiles.map((file) => {
     url,
     date,
     content: parsed.content,
+    clean_caption,
     relative_path: rel
   };
 }).filter((p) => p.published !== false).sort((a, b) => b.date - a.date);
@@ -159,26 +281,17 @@ const gallery_categories = catFiles.map((file) => {
   };
 });
 
-// 5. Authors
-const authorFiles = getFiles("_authors");
-const authors = authorFiles.map((file) => {
-  const content = fs.readFileSync(file, "utf8");
-  const parsed = matter(content);
-  const slug = slugify(parsed.data.short_name || path.basename(file, ".md"));
-  return {
-    ...parsed.data,
-    url: `/authors/${slug}/`
-  };
-});
+
 
 // 6. Video Collections
 const vidFiles = getFiles("_video_collections");
 const video_collections = vidFiles.map((file) => {
   const content = fs.readFileSync(file, "utf8");
   const parsed = matter(content);
-  const slug = slugify(parsed.data.title || path.basename(file, ".md"));
+  const slug = path.basename(file, ".md");
   return {
     ...parsed.data,
+    slug,
     url: `/gallery/videos/collections/${slug}/`
   };
 });

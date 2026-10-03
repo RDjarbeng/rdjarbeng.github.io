@@ -47,6 +47,10 @@
     {% assign video_id = include.item.youtube_id | split: 'shorts/' | last | split: '?' | first %}
   {% elsif include.item.youtube_id contains 'youtu.be/' %}
     {% assign video_id = include.item.youtube_id | split: 'youtu.be/' | last | split: '?' | first %}
+  {% elsif include.item.youtube_id contains '?list=' %}
+    {% assign video_id = include.item.youtube_id | split: '?list=' | first %}
+  {% elsif include.item.youtube_id contains '&list=' %}
+    {% assign video_id = include.item.youtube_id | split: '&list=' | first %}
   {% endif %}
   {% assign img_src = 'https://img.youtube.com/vi/' | append: video_id | append: '/hqdefault.jpg' %}
 {% elsif include.item.platform == 'tiktok' %}
@@ -72,7 +76,7 @@
          data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ original_img_src }}{% else %}{{ original_img_src | relative_url }}{% endif %}" 
          data-title="{{ include.item.title | escape }}" 
          data-type="{% if include.item.type == 'video' %}html{% else %}image{% endif %}" 
-         data-caption="{{ include.item.content | strip_html | truncatewords: 50 | escape }}" 
+         data-caption="{% if include.item.clean_caption %}{{ include.item.clean_caption | escape }}{% else %}{{ include.item.content | strip_html | truncatewords: 50 | escape }}{% endif %}" 
          data-date="{{ include.item.date | date_to_xmlschema }}">
         
         <img src="{% if is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
@@ -101,7 +105,12 @@
                 {% if include.item.embed_code and include.item.embed_code != '' %}
                     {{ include.item.embed_code }}
                 {% elsif include.item.platform == 'youtube' and video_id %}
-                    <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+                    {% assign yt_list_param = "" %}
+                    {% if include.item.youtube_id contains "list=" %}
+                      {% assign extracted_list = include.item.youtube_id | split: "list=" | last | split: "&" | first %}
+                      {% assign yt_list_param = "?list=" | append: extracted_list %}
+                    {% endif %}
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}{{ yt_list_param }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
                 {% elsif include.item.platform == 'instagram' %}
                     {% assign computed_ig = include.item.youtube_id | default: include.item.link %}
                     {% if computed_ig contains 'instagram.com/p/' %}

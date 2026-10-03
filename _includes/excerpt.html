@@ -1,7 +1,11 @@
-{% assign excerpt_word_limit = include.words | default: 30 %}
-{% if include.post.content %}
-  {% assign excerpt_text = include.post.content | markdownify | strip_html | truncatewords: excerpt_word_limit %}
+{% if include.post.clean_excerpt %}
+  {{ include.post.clean_excerpt }}
 {% else %}
-  {% assign excerpt_text = include.post.excerpt | strip_html | truncatewords: excerpt_word_limit %}
+  {% assign excerpt_word_limit = include.words | default: 30 %}
+  {% if include.post.content %}
+    {% assign excerpt_text = include.post.content | markdownify | strip_html | truncatewords: excerpt_word_limit %}
+  {% else %}
+    {% assign excerpt_text = include.post.excerpt | strip_html | truncatewords: excerpt_word_limit %}
+  {% endif %}
+  {{ excerpt_text }}
 {% endif %}
-{{ excerpt_text }}

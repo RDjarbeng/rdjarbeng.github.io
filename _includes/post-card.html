@@ -17,24 +17,17 @@
 
     <div class="post-card-content">
       {% unless include.is_js_template %}
-        {% assign post_author = include.post.author %}
-        {% assign is_guest = false %}
-        {% if post_author and post_author != "" and post_author != "Richard" and post_author != "richard" %}
-          {% assign is_guest = true %}
-        {% endif %}
-        {% if include.show_author or is_guest %}
-          {% assign card_author = site.authors | where: "short_name", include.post.author | first %}
-          {% assign author_display_name = card_author.display_name | default: card_author.short_name | default: include.post.author %}
+        {% assign author_info = include.post.author_info %}
+        {% if include.show_author or author_info.is_guest %}
           <div class="post-card-author" style="margin-bottom: 8px; font-size: 0.85rem; font-weight: 500; color: var(--text-color-light, #555); display: flex; align-items: center; gap: 8px;">
-            {% if card_author.avatar and card_author.avatar != "" %}
-              <img src="{{ card_author.avatar | relative_url }}" alt="{{ author_display_name }}" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover; flex-shrink: 0; opacity: 0.9;">
+            {% if author_info.avatar and author_info.avatar != "" %}
+              <img src="{{ author_info.avatar | relative_url }}" alt="{{ author_info.display_name }}" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover; flex-shrink: 0; opacity: 0.9;">
             {% else %}
-              {% assign initials = author_display_name | split: ' ' %}
               <span style="width: 22px; height: 22px; border-radius: 50%; background: #64748b; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0; text-transform: uppercase;">
-                {{ initials[0] | slice: 0, 1 }}{% if initials.size > 1 %}{{ initials[1] | slice: 0, 1 }}{% endif %}
+                {{ author_info.initials }}
               </span>
             {% endif %}
-            <span style="line-height: 1.2;">By {{ author_display_name }}</span>
+            <span style="line-height: 1.2;">By {{ author_info.display_name }}</span>
           </div>
         {% endif %}
       {% endunless %}
@@ -55,17 +48,21 @@
 
       {% assign words_per_minute = 180 %}
       {% if include.is_js_template %}
-        {% assign words = 0 %}
+        {% assign minutes = 0 %}
+      {% elsif include.post.read_time != nil %}
+        {% assign minutes = include.post.read_time %}
       {% else %}
         {% assign content_str = include.post.content | default: "" %}
         {% assign words = content_str | number_of_words %}
+        {% assign raw_minutes = words | divided_by: words_per_minute %}
+        {% assign minutes = raw_minutes | round %}
       {% endif %}
-      {% assign raw_minutes = words | divided_by: words_per_minute %}
-      {% assign minutes = raw_minutes | round %}
 
       {% unless include.show_excerpt == false %}
       {% if include.is_js_template %}
       <p class="post-card-excerpt">${components.Snippet({ hit, attribute: 'content' })}</p>
+      {% elsif include.post.clean_excerpt %}
+      <p class="post-card-excerpt">{{ include.post.clean_excerpt }}</p>
       {% else %}
       <p class="post-card-excerpt">{% include_cached excerpt.html post=include.post %}</p>
       {% endif %}
@@ -78,15 +75,19 @@
           ${readTime}
           {% else %}
           <div class="post-meta-card">
-            {% assign current_year = site.time | date: "%Y" %}
-            {% assign post_year = include.post.date | date: "%Y" %}
-            <time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">
-              {% if post_year == current_year %}
-                {{ include.post.date | date: "%B %-d" }}
-              {% else %}
-                {{ include.post.date | date: "%B %-d, %Y" }}
-              {% endif %}
-            </time>
+            {% if include.post.formatted_date %}
+              <time datetime="{{ include.post.iso_date }}" data-local="date">{{ include.post.formatted_date }}</time>
+            {% else %}
+              {% assign current_year = site.time | date: "%Y" %}
+              {% assign post_year = include.post.date | date: "%Y" %}
+              <time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">
+                {% if post_year == current_year %}
+                  {{ include.post.date | date: "%B %-d" }}
+                {% else %}
+                  {{ include.post.date | date: "%B %-d, %Y" }}
+                {% endif %}
+              </time>
+            {% endif %}
           </div>
           <div class="post-meta-dot">·</div>
           <div class="post-meta-card">
@@ -97,6 +98,22 @@
         
         {% if include.is_js_template %}
         ${categoriesHtml}
+        {% elsif include.post.categories_data or include.post.tags_data %}
+        <div class="post-card-categories">
+          {% assign items_shown = 0 %}
+          {% for cat in include.post.categories_data %}
+            {% if items_shown < 2 %}
+            <a href="{{ cat.url | relative_url }}" class="post-card-category">{{ cat.name }}</a>
+            {% assign items_shown = items_shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% for tag in include.post.tags_data %}
+            {% if items_shown < 2 %}
+            <a href="{{ tag.url | relative_url }}" class="post-card-tag">#{{ tag.name }}</a>
+            {% assign items_shown = items_shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
         {% elsif include.post.categories.size > 0 or include.post.tags.size > 0 %}
         <div class="post-card-categories">
           {% assign items_shown = 0 %}

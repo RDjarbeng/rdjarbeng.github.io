@@ -45,6 +45,10 @@
       {% elsif item.youtube_id contains "shorts/" %}
       {% assign yt_vid_id = item.youtube_id | split: "shorts/" | last | split: "?" | first %}
       {% assign item_gen = "shorts" %}
+      {% elsif item.youtube_id contains "?list=" %}
+      {% assign yt_vid_id = item.youtube_id | split: "?list=" | first %}
+      {% elsif item.youtube_id contains "&list=" %}
+      {% assign yt_vid_id = item.youtube_id | split: "&list=" | first %}
       {% else %}
       {% assign yt_vid_id = item.youtube_id %}
       {% endif %}

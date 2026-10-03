@@ -409,7 +409,11 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
 
   eleventyConfig.addCollection("video_collections", (collectionApi) => {
     const vids = collectionApi.getFilteredByGlob("_video_collections/**/*.md");
-    siteData.video_collections = vids;
+    siteData.video_collections = vids.map((v) => ({
+      ...v.data,
+      slug: v.fileSlug,
+      url: v.url
+    }));
     return vids;
   });
 
