@@ -395,10 +395,64 @@ collections:
     folder: _gallery/post_media
     media_folder: ""
     public_folder: ""
+  - name: video_collections
+    label: Video Collections (Playlists)
+    icon: playlist_play
+    folder: _video_collections
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
-      - name: post-image-media
-        label: post-image
-        widget: image
+      - name: title
+        label: Title
+        widget: string
+      - name: description
+        label: Description
+        widget: string
+        required: false
+      - name: icon
+        label: Icon
+        widget: string
+        required: false
+        hint: Emoji or SVG code for playlist icon
+      - name: match_by
+        label: Match By
+        widget: select
+        options:
+          - genre
+          - keywords
+          - genre_and_keywords
+          - manual
+        default: genre_and_keywords
+      - name: genre
+        label: Genre
+        widget: string
+        required: false
+      - name: keywords
+        label: Keywords
+        widget: list
+        required: false
+      - name: videos
+        label: Selected Videos
+        widget: relation
+        collection: gallery_videos
+        search_fields:
+          - title
+        value_field: "{{slug}}"
+        display_fields:
+          - title
+        multiple: true
+        required: false
+      - name: youtube_playlist_url
+        label: YouTube Playlist URL
+        widget: string
+        required: false
+        hint: Paste a YouTube playlist URL here.
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: video_collection
 public_folder: /assets/images
 backend:
   name: github

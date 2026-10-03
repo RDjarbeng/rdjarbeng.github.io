@@ -574,10 +574,10 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Icon", name: "icon", widget: "string", required: false, hint: "Emoji or text icon" }
-      - { label: "Match By", name: "match_by", widget: "select", options: ["genre", "keywords", "genre_and_keywords", "manual"], default: "keywords" }
-      - { label: "Genre", name: "genre", widget: "string", required: false }
-      - { label: "Keywords", name: "keywords", widget: "list", required: false }
+      - { label: "Icon", name: "icon", widget: "string", required: false, hint: "Emoji or SVG code for playlist icon" }
+      - { label: "Match By", name: "match_by", widget: "select", options: ["genre", "keywords", "genre_and_keywords", "manual"], default: "genre_and_keywords" }
+      - { label: "Genre", name: "genre", widget: "string", required: false, hint: "Match videos belonging to this genre (e.g. Education, Music)" }
+      - { label: "Keywords", name: "keywords", widget: "list", required: false, hint: "Keywords to match in video titles" }
       - {
           label: "Selected Videos",
           name: "videos",
