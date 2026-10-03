@@ -76,3 +76,4 @@ Index icon
 - [ ] 2026-07-28 17:42 CAT | Should have a section for longer posts that are more than a 5 minute read
 - [ ] 2026-09-03 10:00 CAT | The carousel title text blocks the image on mobile needs a better way to improve this
 - [ ] 2026-10-03 11:31 CAT | Motion designer as a skill, try faith over fear
+- [ ] 2026-10-03 11:52 CAT | Here's a cool animation, a post card on the home page, gets up and runs off the screen. It makes sure to disturb the cards around it. Later it sneaks back, turns the site to dark mode and tries to pretend as if nothing happened
