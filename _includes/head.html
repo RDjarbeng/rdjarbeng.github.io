@@ -18,8 +18,9 @@
   <link rel="preconnect" href="https://img.youtube.com">
   
   {% if layout == 'post' or layout == 'personal' or page.layout == 'post' or page.layout == 'personal' %}
-  <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
-  <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css"></noscript>
+  <script defer src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
   {% endif %}
 
   {% assign is_noindex = noindex | default: page.noindex %}
