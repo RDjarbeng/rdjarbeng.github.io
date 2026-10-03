@@ -37,11 +37,22 @@ card_items:
     link_text: Read Announcement
 ---
 
-If you run a static site on Decap CMS (formerly Netlify CMS), [Sveltia CMS](https://github.com/sveltia/sveltia-cms) created by [Kyoshino](https://github.com/kyoshino) has reached a decisive milestone. I contribute to the codebase and deploy it in production across client sites. Several projects I maintain are handed over to non-technical editors who must create, edit, and publish content without touching Markdown syntax or terminal commands. Sveltia makes that handoff seamless.
+If you run a static site on Decap CMS (formerly Netlify CMS), [Sveltia CMS](https://github.com/sveltia/sveltia-cms) created by [Kyoshino](https://github.com/kyoshino) has reached a decisive milestone. 
+
+
+ Several projects I maintain are handed over to non-technical editors who must create, edit, and publish content without touching Markdown syntax or terminal commands. Sveltia makes that handoff seamless.
 
 ![Illustration depicting migration from Netlify CMS and Decap CMS to Sveltia CMS](/assets/images/posts/covers/sveltia-cms-feature-complete.jpg)
 
 The project has achieved complete feature parity with Decap CMS, resolving the open bugs and architectural stagnation that plagued the Netlify CMS ecosystem for years.
+
+## What's a CMS, quickly
+
+A content management system lets someone update a website's content, text, images, pages, through forms and an editor, without writing code or touching the underlying files. If you've used WordPress to write a blog post, you've used a CMS. Sveltia (like Decap and Netlify CMS before it) is a Git-based CMS: content lives as files in a Git repository, but the person editing it just sees a normal interface such as when posting to social media.
+For example here is a screenshot of myself adding this post you are reading now to my website:
+
+![Editing post about sveltiacms being complete in sveltiacms by rdjarbeng](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/94zy66rskd3zg3urdu3b.png)
+
 
 ## The role of Git-based content management
 
@@ -170,3 +181,4 @@ For teams transitioning from Decap CMS, filing issue reports, contributing local
 
 *Original milestone announcement: [github.com/sveltia/sveltia-cms/discussions/957](https://github.com/sveltia/sveltia-cms/discussions/957)*
 
+**Disclaimer:** I contribute to the Sveltia CMS project on Github in seen and unseen ways so naturally, I am extremely excited about its progress.
