@@ -92,7 +92,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
     
     if playlist_id
       fetched_title = fetch_playlist_title(playlist_id)
-      genre = fetched_title || front_matter['genre'] || 'Other'
+      genre = front_matter['genre'] || fetched_title || 'Other'
       puts "Syncing playlist: #{front_matter['title']} (#{playlist_id}) -> Genre: #{genre}"
       
       items = fetch_playlist_items(playlist_id)
@@ -117,7 +117,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
         date = Time.parse(published_at).strftime("%Y-%m-%d")
         slug = slugify(title)[0..50] # Limit slug length
         
-        filename = "#{VIDEOS_DIR}/#{date}-#{slug}.md"
+        filename = "#{VIDEOS_DIR}/#{date}-#{slug}-#{video_id}.md"
         
         file_content = <<~YAML
         ---

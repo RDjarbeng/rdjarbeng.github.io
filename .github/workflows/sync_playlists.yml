@@ -12,6 +12,9 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,6 +32,7 @@ jobs:
         run: ruby .github/scripts/sync_youtube_playlists.rb
 
       - name: Commit and push changes
+        id: commit-step
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -36,7 +40,15 @@ jobs:
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No new videos to sync."
+            echo "pushed=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Auto-sync YouTube playlists [skip ci]"
+            git commit -m "Auto-sync YouTube playlists"
             git push
+            echo "pushed=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: Trigger Deploy
+        if: steps.commit-step.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run jekyll.yml --ref main
