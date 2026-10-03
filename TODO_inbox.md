@@ -75,3 +75,4 @@ Index icon
 - [ ] 2026-07-28 17:29 CAT | Agent tool calls are endogenous, what does it mean. Forecasting a method or tool that rewrites as you forecast it?
 - [ ] 2026-07-28 17:42 CAT | Should have a section for longer posts that are more than a 5 minute read
 - [ ] 2026-09-03 10:00 CAT | The carousel title text blocks the image on mobile needs a better way to improve this
+- [ ] 2026-10-03 11:31 CAT | Motion designer as a skill, try faith over fear
