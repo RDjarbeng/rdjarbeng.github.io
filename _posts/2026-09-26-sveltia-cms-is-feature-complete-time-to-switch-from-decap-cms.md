@@ -15,6 +15,7 @@ image_alt: Illustration depicting migration from Netlify CMS and Decap CMS to Sv
 layout: post
 card_items:
   - name: Sveltia CMS Repository
+    image: /assets/images/sveltia-logo.svg
     alt: Sveltia CMS GitHub
     badge_1: Open Source
     badge_2: GitHub
@@ -22,6 +23,7 @@ card_items:
     url: https://github.com/sveltia/sveltia-cms
     link_text: View on GitHub
   - name: Sveltia Official Documentation
+    image: /assets/images/sveltia-logo.svg
     alt: Sveltia CMS Documentation
     badge_1: Documentation
     badge_2: Setup Guide
