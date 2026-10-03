@@ -149,17 +149,35 @@ When refactoring your code, watch out for these changes:
 3. **Embedded HTML in Explanations**: The `explanation` string in the new API contains raw HTML tags, such as `<p>`, `<strong>Explanation: </strong>`, and anchor links. If you display this text in terminal applications, native UI labels, or markdown documents, you must strip or sanitize the HTML tags first.
 4. **Header Requirements**: Ensure your client sends a standard descriptive `User-Agent` header. Requests without a valid user agent may receive HTTP 403 Forbidden responses from cloud edge caches.
 
+### The Image Path Redirect Gotcha
+
+A critical breaking change that caught many developers off guard involves legacy image asset paths. Historically, APOD images were hosted directly under URLs like `https://apod.nasa.gov/apod/image/YYMM/filename.jpg`.
+
+With the migration, requests to `apod.nasa.gov/apod/image/...` no longer return image binaries. Instead, the legacy web server returns an HTTP `301 Moved Permanently` redirecting to the HTML landing page `https://science.nasa.gov/apod/`.
+
+This creates a subtle failure mode:
+- In web browsers, an `<img src="https://apod.nasa.gov/apod/image/...">` tag follows the 301 redirect and receives an HTML document instead of image data. The browser fails to decode the image, fires the `onerror` event, and displays a broken image icon or fallback placeholder.
+- In automated download scripts, downloading the URL without validating `Content-Type` saves an HTML file with a `.jpg` extension to disk.
+
+Modern direct image assets now live on NASA's dedicated CDN:
+```text
+https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/...
+```
+
+If you maintain existing databases or archives referencing `apod.nasa.gov/apod/image/`, you cannot rely on transparent HTTP redirects to resolve the binary images. You must update your records to reference the new direct CDN URLs provided by the `hdurl` field in the API, or self-host your image assets.
+
 ## How the changes affected this site
 
 This site features a dedicated [NASA APOD gallery collection](/gallery/) that archives daily imagery. A GitHub Actions workflow runs every night at midnight UTC to query NASA, generate a structured markdown post with frontmatter metadata, and commit it to the repository.
 
 ### What Broke
-On the day NASA transitioned traffic to the new WordPress infrastructure, our nightly GitHub Action failed. 
+On the day NASA transitioned traffic to the new WordPress infrastructure, our nightly GitHub Action failed, and several gallery cards broke. 
 
-Two issues broke the sync pipeline:
+Four issues disrupted the sync pipeline:
 1. **Broken Scraping Fallback**: Our backup scraper was targeting patterns specific to the 1995-era HTML tables on `apod.nasa.gov`. When the site redirected to `science.nasa.gov`, regex patterns looking for `<IMG SRC="...">` and `<center><b>` failed to match anything.
 2. **Image Link Inversion**: In the updated API responses, the `url` key stopped pointing to direct image binaries and began returning the WordPress article permalink. The build pipeline wrote web URLs into gallery markdown files instead of media links, creating empty gallery cards.
-3. **Raw HTML Explanations**: The explanation text imported with leading `<strong>Explanation: </strong>` strings and unbalanced paragraph tags, which cluttered the clean reading view.
+3. **Legacy Image 301 Redirects**: Existing gallery entries that referenced `apod.nasa.gov/apod/image/...` stopped loading because those URLs now issue 301 redirects to the NASA Science homepage rather than serving the raw image file. The browser attempted to parse the redirected HTML as image data, causing gallery images to disappear and fallback placeholders to display.
+4. **Raw HTML Explanations**: The explanation text imported with leading `<strong>Explanation: </strong>` strings and unbalanced paragraph tags, which cluttered the clean reading view.
 
 ### How We Fixed It
 We updated our fetch script at `.github/scripts/fetch_nasa_apod.py` to point directly to the new WordPress endpoint:
