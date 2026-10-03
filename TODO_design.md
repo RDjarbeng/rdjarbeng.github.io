@@ -205,6 +205,6 @@ yout-ube.com/watch
 - [ ] Add hackathons participated in Zindi and Kaggle to about sections, as well as that Kaggle notebook on SAM
 - [ ] TikTok videos aren't loading on the site due to overload protection
 - [ ] Add master CV to about page
-- [ ] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo
-- [ ] Add a way to add and edit Playlists in the cms and in telegram
+- [x] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo (added "📝 Save as TODO" option to video keyboard)
+- [x] Add a way to add and edit Playlists in the cms and in telegram (added playlist detection and collection creation in telegram bot, CMS playlist collection configured)
 
