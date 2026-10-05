@@ -209,3 +209,4 @@ yout-ube.com/watch
 - [x] Add a way to add and edit Playlists in the cms and in telegram (added playlist detection and collection creation in telegram bot, CMS playlist collection configured)
 
 - [ ] Need to be able to navigate the website with keyboard inputs if necessary
+- [ ] Consider making some of the longer posts into pdfs
