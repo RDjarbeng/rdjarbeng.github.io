@@ -208,3 +208,4 @@ yout-ube.com/watch
 - [ ] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo
 - [ ] Add a way to add and edit Playlists in the cms and in telegram
 
+- [ ] Need to be able to navigate the website with keyboard inputs if necessary
