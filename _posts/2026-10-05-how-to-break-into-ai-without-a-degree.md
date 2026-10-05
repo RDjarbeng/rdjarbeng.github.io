@@ -1,6 +1,6 @@
 ---
 date: 2026-10-05T11:30:00+02:00
-published: true
+published: false
 author: Richard
 category: Technology
 tags:
