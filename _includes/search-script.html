@@ -151,11 +151,36 @@ body.dark-mode .ais-Highlight-highlighted {
 </style>
 
 <script>
-  const searchClient = algoliasearch('IS96FR2E65', '244c316912077b528a2583b21970d464');
+  const rawSearchClient = algoliasearch('IS96FR2E65', '244c316912077b528a2583b21970d464');
 
   const mainSearchbox = document.getElementById('searchbox');
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get('q') || '';
+
+  // Intercept searches:
+  // - On the search page (mainSearchbox exists): allow empty queries so user can browse everything if desired.
+  // - On other pages (navbar search across the site): do NOT query Algolia when query is empty or whitespace.
+  const searchClient = {
+    ...rawSearchClient,
+    search(requests) {
+      if (!mainSearchbox && requests.every(req => !req.params.query || req.params.query.trim().length === 0)) {
+        return Promise.resolve({
+          results: requests.map(() => ({
+            hits: [],
+            nbHits: 0,
+            nbPages: 0,
+            page: 0,
+            processingTimeMS: 0,
+            hitsPerPage: 0,
+            exhaustiveNbHits: true,
+            query: '',
+            params: '',
+          })),
+        });
+      }
+      return rawSearchClient.search(requests);
+    },
+  };
 
   const search = instantsearch({
     indexName: 'rdjarbeng_index',
@@ -357,9 +382,14 @@ body.dark-mode .ais-Highlight-highlighted {
         const { query, refine, widgetParams } = renderOptions;
 
         if (isFirstRender) {
+          let debounceTimeout = null;
           widgetParams.input.addEventListener('input', event => {
-            refine(event.target.value);
-            if (event.target.value.length > 0) {
+            const val = event.target.value;
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+              refine(val);
+            }, 250);
+            if (val.trim().length > 0) {
               widgetParams.container.style.display = 'block';
             } else {
               widgetParams.container.style.display = 'none';
@@ -367,7 +397,7 @@ body.dark-mode .ais-Highlight-highlighted {
           });
           
           widgetParams.input.addEventListener('focus', event => {
-            if (event.target.value.length > 0) {
+            if (event.target.value.trim().length > 0) {
               widgetParams.container.style.display = 'block';
             }
           });
