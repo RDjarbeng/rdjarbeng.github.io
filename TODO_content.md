@@ -634,3 +634,8 @@ We draw five lessons from this experience for anyone building shared scientific 
 - [ ] This page has a search bot that can search the gee community catalog for the community, might consider integrating with this one with other dataset sources.
 
 https://search.gee-community-catalog.org/
+- [ ] Write about this: https://www.cs.cmu.edu/~harchol/gradschooltalk.pdf
+Applying to Ph.D. Programs in Computer Science
+- [ ] Academic Research Opportunities for International Students
+
+https://github.com/smsnobin77/Academic-research-opportunities-for-international-students
