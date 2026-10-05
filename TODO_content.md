@@ -640,3 +640,4 @@ Applying to Ph.D. Programs in Computer Science
 
 https://github.com/smsnobin77/Academic-research-opportunities-for-international-students
 - [ ] bottlenecks of large-scale Internet of Things (IoT) deployments
+- [ ] How do IoT systems deal with the the high transmission overhead, storage footprints, and energy costs associated with continuous sensor streams?
