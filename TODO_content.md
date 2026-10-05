@@ -639,3 +639,4 @@ Applying to Ph.D. Programs in Computer Science
 - [ ] Academic Research Opportunities for International Students
 
 https://github.com/smsnobin77/Academic-research-opportunities-for-international-students
+- [ ] bottlenecks of large-scale Internet of Things (IoT) deployments
