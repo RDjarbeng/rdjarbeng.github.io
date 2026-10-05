@@ -86,6 +86,10 @@ def extract_youtube_id(url):
     match = re.search(r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?\/\s]{11})', url)
     return match.group(1) if match else None
 
+def extract_youtube_playlist_id(url):
+    match = re.search(r'[?&]list=([^"&?\/\s]+)', url)
+    return match.group(1) if match else None
+
 def commit_files_to_github(files_dict, message):
     """Pushes multiple files to the GitHub repository in a single atomic commit"""
     
@@ -304,6 +308,49 @@ def process_video_upload(chat_id, message_id, msg_id_key, genre):
     except Exception as e:
         bot.edit_message_text(f"❌ Failed to commit to GitHub: {e}", chat_id, message_id)
 
+def process_playlist_upload(chat_id, message_id, msg_id_key, genre):
+    if msg_id_key not in uploads:
+        bot.edit_message_text("❌ Session expired.", chat_id, message_id)
+        return
+    payload = uploads.pop(msg_id_key)
+    url = payload.get('url')
+    text = payload.get('text')
+
+    text_without_url = text.replace(url, '').strip()
+    if text_without_url:
+        parts = text_without_url.split('\n', 1)
+        title = parts[0].strip()
+        description = parts[1].strip() if len(parts) > 1 else f"A video collection for {title}"
+    else:
+        page_title = get_page_title(url)
+        title = page_title if page_title else f"Playlist Collection ({genre})"
+        description = f"A collection of playlist videos for {title}."
+
+    timestamp = datetime.now(CAT).strftime("%Y%m%d_%H%M%S")
+    safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
+    if not safe_title:
+        safe_title = f"playlist-{timestamp}"
+    filename = safe_title
+
+    frontmatter = {
+        "title": title,
+        "description": description,
+        "icon": '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" fill="currentColor"/></svg>',
+        "youtube_playlist_url": url,
+        "match_by": "genre",
+        "genre": genre,
+        "layout": "video_collection"
+    }
+
+    md_content = f"---\n{yaml.dump(frontmatter, sort_keys=False)}---\n"
+    md_path = f"_video_collections/{filename}.md"
+
+    try:
+        commit_files_to_github({md_path: md_content}, f"Add Playlist Collection {filename}.md")
+        bot.edit_message_text(f"✅ Playlist Collection Committed to GitHub!\n\n📁 File: `_video_collections/{filename}.md`\n📝 Title: {title}\n🎭 Genre: {genre}\n🔗 Playlist: {url}\n\n⚙️ GitHub Actions will automatically sync all playlist videos on next run!", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to commit playlist collection: {e}", chat_id, message_id)
+
 def _get_file_text(repo, path):
     try:
         return repo.get_contents(path, ref="main").decoded_content.decode('utf-8')
@@ -481,6 +528,55 @@ def handle_callback(call):
         process_video_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
         return
 
+    elif data.startswith("plgenre_"):
+        bot.edit_message_text("⏳ Processing Playlist Collection and sending to GitHub...", call.message.chat.id, call.message.message_id)
+        genre = data.split("_", 1)[1]
+        process_playlist_upload(call.message.chat.id, call.message.message_id, msg_id_key, genre)
+        return
+
+    elif data == "vid_to_todo":
+        # Switch from video upload to TODO choice
+        payload['state'] = 'todo'
+        keyboard = [
+            [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
+            [InlineKeyboardButton("Notes Inbox", callback_data="todo_inbox")],
+            [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
+        ]
+        bot.edit_message_text("Where should this TODO go?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        return
+
+    elif data == "pl_as_video":
+        # User chose to treat playlist link as a standard single video
+        keyboard = [
+            [InlineKeyboardButton("Autos & Vehicles", callback_data="vidgenre_Autos & Vehicles"), InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy")],
+            [InlineKeyboardButton("Education", callback_data="vidgenre_Education"), InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment")],
+            [InlineKeyboardButton("Film & Animation", callback_data="vidgenre_Film & Animation"), InlineKeyboardButton("Gaming", callback_data="vidgenre_Gaming")],
+            [InlineKeyboardButton("Howto & Style", callback_data="vidgenre_Howto & Style"), InlineKeyboardButton("Music", callback_data="vidgenre_Music")],
+            [InlineKeyboardButton("News & Politics", callback_data="vidgenre_News & Politics"), InlineKeyboardButton("Nonprofits & Activism", callback_data="vidgenre_Nonprofits & Activism")],
+            [InlineKeyboardButton("People & Blogs", callback_data="vidgenre_People & Blogs"), InlineKeyboardButton("Pets & Animals", callback_data="vidgenre_Pets & Animals")],
+            [InlineKeyboardButton("Science & Tech", callback_data="vidgenre_Science & Technology"), InlineKeyboardButton("Sports", callback_data="vidgenre_Sports")],
+            [InlineKeyboardButton("Travel & Events", callback_data="vidgenre_Travel & Events"), InlineKeyboardButton("Food & Recipes", callback_data="vidgenre_Food & Recipes")],
+            [InlineKeyboardButton("BTS", callback_data="vidgenre_Behind the Scenes (BTS)"), InlineKeyboardButton("Reviews & Reactions", callback_data="vidgenre_Reviews & Reactions")],
+            [InlineKeyboardButton("Memes & Highlights", callback_data="vidgenre_Memes & Highlights"), InlineKeyboardButton("Interviews", callback_data="vidgenre_Interviews")],
+            [InlineKeyboardButton("Tutorials", callback_data="vidgenre_Tutorials"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
+            [InlineKeyboardButton("📝 Save as TODO", callback_data="vid_to_todo"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+        ]
+        bot.edit_message_text("Select a genre for the YouTube Video:", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        return
+
+    elif data == "pl_as_collection":
+        # User chose to treat playlist as a collection
+        keyboard = [
+            [InlineKeyboardButton("Education", callback_data="plgenre_Education"), InlineKeyboardButton("Music", callback_data="plgenre_Music")],
+            [InlineKeyboardButton("Science & Tech", callback_data="plgenre_Science & Technology"), InlineKeyboardButton("Entertainment", callback_data="plgenre_Entertainment")],
+            [InlineKeyboardButton("Film & Animation", callback_data="plgenre_Film & Animation"), InlineKeyboardButton("Gaming", callback_data="plgenre_Gaming")],
+            [InlineKeyboardButton("Howto & Style", callback_data="plgenre_Howto & Style"), InlineKeyboardButton("People & Blogs", callback_data="plgenre_People & Blogs")],
+            [InlineKeyboardButton("Tutorials", callback_data="plgenre_Tutorials"), InlineKeyboardButton("Other", callback_data="plgenre_Other")],
+            [InlineKeyboardButton("📝 Save as TODO", callback_data="vid_to_todo"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+        ]
+        bot.edit_message_text("Select a category/genre for the Playlist Collection:", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        return
+
     elif data.startswith("todo_"):
         action = data.split("_", 1)[1]
         text = payload.get('text')
@@ -520,6 +616,23 @@ def handle_text(message):
                 platform = "instagram"
             
             if platform != "unknown":
+                # Check if it's a YouTube playlist
+                if platform == "youtube" and extract_youtube_playlist_id(url):
+                    keyboard = [
+                        [InlineKeyboardButton("📑 New Playlist Collection", callback_data="pl_as_collection")],
+                        [InlineKeyboardButton("▶️ Single Video Entry", callback_data="pl_as_video")],
+                        [InlineKeyboardButton("📝 Save as TODO", callback_data="vid_to_todo"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+                    ]
+                    reply_markup = InlineKeyboardMarkup(keyboard)
+                    status_msg = bot.reply_to(message, "Detected YouTube Playlist! How would you like to add it?", reply_markup=reply_markup)
+                    uploads[str(status_msg.message_id)] = {
+                        'url': url,
+                        'text': text,
+                        'platform': platform,
+                        'state': 'playlist_choice'
+                    }
+                    return
+
                 keyboard = [
                     [InlineKeyboardButton("Autos & Vehicles", callback_data="vidgenre_Autos & Vehicles"), InlineKeyboardButton("Comedy", callback_data="vidgenre_Comedy")],
                     [InlineKeyboardButton("Education", callback_data="vidgenre_Education"), InlineKeyboardButton("Entertainment", callback_data="vidgenre_Entertainment")],
@@ -532,7 +645,7 @@ def handle_text(message):
                     [InlineKeyboardButton("BTS", callback_data="vidgenre_Behind the Scenes (BTS)"), InlineKeyboardButton("Reviews & Reactions", callback_data="vidgenre_Reviews & Reactions")],
                     [InlineKeyboardButton("Memes & Highlights", callback_data="vidgenre_Memes & Highlights"), InlineKeyboardButton("Interviews", callback_data="vidgenre_Interviews")],
                     [InlineKeyboardButton("Tutorials", callback_data="vidgenre_Tutorials"), InlineKeyboardButton("Other", callback_data="vidgenre_Other")],
-                    [InlineKeyboardButton("Cancel", callback_data="main_cancel")]
+                    [InlineKeyboardButton("📝 Save as TODO", callback_data="vid_to_todo"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
                 ]
                 reply_markup = InlineKeyboardMarkup(keyboard)
                 status_msg = bot.reply_to(message, f"Select a genre for the {platform.capitalize()} Video:", reply_markup=reply_markup)
