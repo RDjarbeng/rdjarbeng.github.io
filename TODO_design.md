@@ -41,7 +41,7 @@ Possible future implementation:
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
-- [ ] search is working sync with algolia, need to fix search for gallery and videos page
+- [x] search is working sync with algolia, need to fix search for gallery and videos page
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
 
