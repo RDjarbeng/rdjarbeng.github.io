@@ -14,7 +14,6 @@ image_alt: Flat vector illustration showing a software engineer transitioning in
 layout: post
 card_items:
   - name: Aleksa Gordić's Original Story
-    image: ''
     alt: Aleksa Gordic Medium Post
     badge_1: Story
     badge_2: Career
@@ -22,7 +21,6 @@ card_items:
     url: https://medium.com/@gordicaleksa/how-i-got-a-job-at-deepmind-as-a-research-engineer-without-a-machine-learning-degree-1a45f2a781de
     link_text: Read Story
   - name: The AI Epiphany (YouTube)
-    image: ''
     alt: The AI Epiphany YouTube Channel
     badge_1: Video
     badge_2: Tutorials
@@ -30,7 +28,6 @@ card_items:
     url: https://www.youtube.com/watch?v=SgaN-4po_cA
     link_text: Watch Video
   - name: Aleksa's GitHub Repositories
-    image: ''
     alt: Aleksa Gordic GitHub
     badge_1: Code
     badge_2: Open Source
