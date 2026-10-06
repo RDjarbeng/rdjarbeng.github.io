@@ -112,3 +112,10 @@ Aleksa Gordić's path illustrates that entering AI without a formal degree is no
 1. **Systematic self-curricula** that balance reading theory with writing code.
 2. **Re-implementing papers from scratch** to build tangible intuition for why models fail or succeed.
 3. **Public artifacts** (open-source implementations, technical breakdowns) that demonstrate competence and create organic connections with researchers.
+
+## Watch the Full Breakdown
+
+For those who prefer video, Aleksa covers his complete timeline, study routines, and interview experiences in his video walkthrough below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SgaN-4po_cA" title="How I Got a Job at DeepMind as a Research Engineer (without a Machine Learning Degree!)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
