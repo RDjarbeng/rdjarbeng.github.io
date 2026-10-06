@@ -68,6 +68,25 @@
   z-index: 1000;
   box-shadow: 0 4px 12px var(--shadow-color, rgba(0,0,0,0.1));
   display: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border, #444) transparent;
+}
+.nav-search-results-dropdown::-webkit-scrollbar,
+.nav-search-results::-webkit-scrollbar {
+  width: 6px;
+}
+.nav-search-results-dropdown::-webkit-scrollbar-track,
+.nav-search-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nav-search-results-dropdown::-webkit-scrollbar-thumb,
+.nav-search-results::-webkit-scrollbar-thumb {
+  background: var(--card-border, #444);
+  border-radius: 4px;
+}
+.nav-search-results-dropdown::-webkit-scrollbar-thumb:hover,
+.nav-search-results::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-text, #888);
 }
 html[data-theme="dark"] .nav-search-results-dropdown,
 body.dark-mode .nav-search-results-dropdown {
@@ -148,6 +167,57 @@ body.dark-mode .ais-Highlight-highlighted {
 .header-search-form {
   position: relative;
 }
+
+/* Search Loading Indicator Styling */
+@keyframes searchSpin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.search-spinner {
+  display: none;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(150, 150, 150, 0.3);
+  border-top-color: var(--brand-color, #0066cc);
+  border-radius: 50%;
+  animation: searchSpin 0.7s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.header-search-form .search-spinner {
+  right: 32px;
+  top: 50%;
+}
+
+.ais-SearchBox {
+  position: relative;
+}
+
+.ais-SearchBox .search-spinner {
+  right: 16px;
+  top: 50%;
+}
+
+.nav-search-loading {
+  padding: 12px 15px;
+  color: var(--grey-text, #888);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-search-loading .mini-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(150, 150, 150, 0.3);
+  border-top-color: var(--brand-color, #0066cc);
+  border-radius: 50%;
+  animation: searchSpin 0.7s linear infinite;
+}
 </style>
 
 <script>
@@ -156,6 +226,22 @@ body.dark-mode .ais-Highlight-highlighted {
   const mainSearchbox = document.getElementById('searchbox');
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = urlParams.get('q') || '';
+
+  // Loading indicator controller
+  let inFlightRequests = 0;
+  let showNavLoading = function() {};
+
+  function updateLoadingUI(loading) {
+    const navSpinner = document.getElementById('nav-search-spinner');
+    if (navSpinner) {
+      navSpinner.style.display = loading ? 'block' : 'none';
+    }
+    const mainBoxSpinner = document.getElementById('main-search-spinner');
+    if (mainBoxSpinner) {
+      mainBoxSpinner.style.display = loading ? 'block' : 'none';
+    }
+    showNavLoading(loading);
+  }
 
   // Intercept searches:
   // - On the search page (mainSearchbox exists): allow empty queries so user can browse everything if desired.
@@ -178,7 +264,16 @@ body.dark-mode .ais-Highlight-highlighted {
           })),
         });
       }
-      return rawSearchClient.search(requests);
+
+      inFlightRequests++;
+      updateLoadingUI(true);
+
+      return rawSearchClient.search(requests).finally(() => {
+        inFlightRequests = Math.max(0, inFlightRequests - 1);
+        if (inFlightRequests === 0) {
+          updateLoadingUI(false);
+        }
+      });
     },
   };
 
@@ -210,6 +305,7 @@ body.dark-mode .ais-Highlight-highlighted {
         container: '#results-container',
         templates: {
           empty(results, { html }) {
+            if (!results || !results.query) return '';
             return html`<p>No results found for <q>${results.query}</q></p>`;
           },
           item(hit, { html, components }) {
@@ -263,7 +359,7 @@ body.dark-mode .ais-Highlight-highlighted {
             const isVideo = hit.type === 'video' || hit.youtube_id;
             const isGallery = hit.collection === 'gallery' && !isVideo;
 
-            let badgeHtml = null;
+            let badgeHtml = '';
             let badgeText = '';
             let badgeColor = 'var(--base-color)';
 
@@ -286,7 +382,7 @@ body.dark-mode .ais-Highlight-highlighted {
 
             const categoriesHtml = uniqueTagsAndCats.length > 0 
                 ? html`<div class="post-card-categories" style="margin-top: 8px;">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type === 'tags' ? 'tags' : 'categories'}/${slugify(tc.name)}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
-                : null;
+                : '';
 
             if (isVideo) {
                 const genreStr = hit.genre || hit.category || "Other";
@@ -339,9 +435,9 @@ body.dark-mode .ais-Highlight-highlighted {
                 `;
             }
 
-            const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : null;
-            const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : null;
-            const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : null;
+            const imageHtml = hit.image ? html`<div class="post-card-image"><img src="${cleanUrl}" alt="Cover image of post: ${hit.title}" title="${hit.title}" class="post-image" width="800" height="450" loading="lazy" /></div>` : '';
+            const dateHtml = dateObj ? html`<div class="post-meta-card"><time data-local="date">${dateStr}</time></div>` : '';
+            const readTime = hit.read_time ? html`<div class="post-meta-dot">·</div><div class="post-meta-card">${hit.read_time}</div>` : '';
 
             return html`
               {% include post-card.html is_js_template=true show_excerpt=true %}
@@ -367,15 +463,39 @@ body.dark-mode .ais-Highlight-highlighted {
         }
       });
     }
+    // Mount main searchbox spinner
+    const boxContainer = document.getElementById('searchbox');
+    if (boxContainer) {
+      const spinner = document.createElement('div');
+      spinner.id = 'main-search-spinner';
+      spinner.className = 'search-spinner';
+      boxContainer.appendChild(spinner);
+    }
   }
 
-  // 2. Navbar Dropdown logic
+    // 2. Navbar Dropdown logic
   const navInput = document.getElementById('nav-search-input');
   const navResultsContainer = document.getElementById('nav-search-results');
   
   if (navInput && navResultsContainer) {
     navResultsContainer.classList.add('nav-search-results-dropdown');
     
+    // Dedicated elements inside navResultsContainer for loading state and hits list
+    const navLoadingEl = document.createElement('div');
+    navLoadingEl.className = 'nav-search-loading';
+    navLoadingEl.style.display = 'none';
+    navLoadingEl.innerHTML = '<div class="mini-spinner"></div><span>Searching...</span>';
+
+    const navHitsEl = document.createElement('div');
+    navHitsEl.className = 'nav-search-hits-wrapper';
+
+    navResultsContainer.appendChild(navLoadingEl);
+    navResultsContainer.appendChild(navHitsEl);
+
+    showNavLoading = function(show) {
+      navLoadingEl.style.display = show ? 'flex' : 'none';
+    };
+
     // Custom SearchBox connector to bind to existing nav input
     const connectSearchBox = instantsearch.connectors.connectSearchBox(
       (renderOptions, isFirstRender) => {
@@ -391,8 +511,11 @@ body.dark-mode .ais-Highlight-highlighted {
             }, 250);
             if (val.trim().length > 0) {
               widgetParams.container.style.display = 'block';
+              showNavLoading(true);
             } else {
               widgetParams.container.style.display = 'none';
+              showNavLoading(false);
+              updateLoadingUI(false);
             }
           });
           
@@ -426,18 +549,20 @@ body.dark-mode .ais-Highlight-highlighted {
 
     widgets.push(
       instantsearch.widgets.hits({
-        container: '#nav-search-results',
+        container: navHitsEl,
         templates: {
           empty(results, { html }) {
-            if (!results.query) return html``;
+            if (!results || !results.query) return '';
             return html`<div class="nav-search-empty">No results for "${results.query}"</div>`;
           },
           item(hit, { html, components }) {
-            const tags = hit.tags ? hit.tags.join(', ') : '';
-            const category = (hit.categories && hit.categories.length > 0) ? hit.categories[0] : (hit.collection || 'Post');
+            const tags = Array.isArray(hit.tags) ? hit.tags.filter(Boolean).join(', ') : '';
+            const category = (Array.isArray(hit.categories) && hit.categories.length > 0 && hit.categories[0]) 
+              ? hit.categories[0] 
+              : (hit.collection || 'Post');
             
             return html`
-              <a href="${hit.url}" class="nav-search-hit">
+              <a href="${hit.url || '#'}" class="nav-search-hit">
                 <div class="nav-search-hit-title">${components.Highlight({ hit, attribute: 'title' })}</div>
                 <div class="nav-search-hit-meta" style="font-size: 0.8em; color: var(--grey-text); margin-top: 4px;">
                   <span style="display: inline-block; padding: 2px 6px; background: var(--category-bg, #eee); border-radius: 4px; border: 1px solid var(--card-border);">${category}</span>
@@ -452,5 +577,15 @@ body.dark-mode .ais-Highlight-highlighted {
   }
 
   search.addWidgets(widgets);
+
+  // Guarantee spinner and dropdown loading state are hidden once search renders results or completes
+  search.on('render', () => {
+    inFlightRequests = 0;
+    updateLoadingUI(false);
+    if (typeof showNavLoading === 'function') {
+      showNavLoading(false);
+    }
+  });
+
   search.start();
 </script>
