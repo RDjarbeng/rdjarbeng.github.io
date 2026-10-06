@@ -37,6 +37,8 @@ Possible future implementation:
 
 ## High Priority - Immediate Fixes & Critical Enhancements
 
+- [x] Add search loading indicator: Provide visible loading feedback (spinner / loading state) while an Algolia search query is actively in flight across the navbar search and search page. (Fixed)
+
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
 - [ ] search is working sync with algolia, need to fix search for gallery and videos page
