@@ -2047,6 +2047,22 @@ pre.highlight span,
   max-height: 400px;
   overflow-y: auto;
   margin-top: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--card-border);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-text, #888);
+  }
 }
 
 /* Ensure header wrapper positions the results correctly */
