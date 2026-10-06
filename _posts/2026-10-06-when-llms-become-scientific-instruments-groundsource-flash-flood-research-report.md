@@ -39,9 +39,9 @@ card_items:
     link_text: Read Preprint
 ---
 
-Deep Literature Analysis
+Deep literature analysis
 
-*A deep-dive into Google's 2.6-million-event flood dataset: what the data actually shows, what claims hold up, and why the methodology may matter more than the dataset itself.*
+*A deep dive into Google's 2.6-million-event flood dataset: what the data shows, what claims hold up, and why the methodology matters more than the dataset itself.*
 
 **Resources:** [Enriched Dataset](https://huggingface.co/datasets/rdjarbeng/groundsource-enriched) | [Full Interactive Article](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis) | [Original on Zenodo](https://zenodo.org/records/18647054)
 
@@ -49,21 +49,21 @@ Deep Literature Analysis
 
 ## What is Groundsource?
 
-In February 2026, Google Research released **Groundsource** — an open-access global dataset of 2.6 million historical flood events extracted from news articles using Gemini LLMs. The dataset was published on [Zenodo](https://zenodo.org/records/18647054) alongside a comprehensive preprint on [EarthArXiv](https://doi.org/10.31223/x5rr2k) (*Mayo, Zlydenko, Bootbool, Nearing, Cohen, et al.*).
+In February 2026, Google Research released **Groundsource**, an open-access global dataset of 2.6 million historical flood events extracted from news articles using Gemini models. Google published the dataset on [Zenodo](https://zenodo.org/records/18647054) alongside a preprint on [EarthArXiv](https://doi.org/10.31223/x5rr2k) (*Mayo, Zlydenko, Bootbool, Nearing, Cohen, et al.*).
 
-Google used Gemini to scan **5 million news articles across 80+ languages** and generated **2.6 million geo-tagged flood events** spanning 150+ countries. This dataset serves as the foundational ground-truth training archive behind Google's operational flash flood forecasting system.
+Google used Gemini to scan **5 million news articles across 80+ languages**, generating **2.6 million geo-tagged flood events** spanning 150+ countries. This archive serves as the ground-truth training data behind Google's operational flash flood forecasting system.
 
-> The best existing global disaster databases (such as GDACS) contained roughly 10,000 flood events, primarily capturing catastrophic macro-disasters. If Groundsource genuinely delivers 2.6 million validated, localized events, that's not an incremental improvement — it's a demonstration that LLMs can convert unstructured global journalistic archives into structured scientific ground truth.
+> The largest existing global disaster databases, such as GDACS, held roughly 10,000 flood events, mostly major disasters. Groundsource records 2.6 million localized events, showing that language models can turn unstructured news archives into structured scientific datasets.
 
-We downloaded the full dataset, decoded every geometry, and benchmarked its claims against the underlying EarthArXiv preprint and external observational archives.
+We downloaded the dataset, parsed the geometries, and checked its claims against the EarthArXiv preprint and external observation records.
 
 ---
 
-## What the Data Actually Shows
+## What the data actually shows
 
-The dataset is distributed as a single 667 MB Parquet file containing exactly **2,646,302 flood events**. Each record contains a UUID, polygon boundary (stored as WKB geometry), area in km², start date, and end date.
+The dataset is distributed as a single 667 MB Parquet file containing **2,646,302 flood events**. Each record contains a UUID, polygon boundary (stored as WKB geometry), area in km², start date, and end date.
 
-### Key Numbers
+### Key numbers
 
 | Metric | Value |
 |--------|-------|
@@ -75,13 +75,13 @@ The dataset is distributed as a single 667 MB Parquet file containing exactly **
 | Mean area | 142.0 km² |
 | Peak year | 2024 (402,012 events) |
 
-### What's Absent
+### What is missing
 
-No country column. No source article URL. No language tag. No confidence score. No human casualty or severity classification. The published dataset is intentionally minimalist — strictly geometry, start date, end date, and area.
+There is no country column, no source article URL, no language tag, no confidence score, and no casualty or severity rating. The dataset includes only geometry, start date, end date, and area.
 
-### Geographic Distribution
+### Geographic distribution
 
-We decoded all 2.6M WKB geometries into lat/lon centroids:
+We decoded the 2.6 million WKB geometries into latitude and longitude centroids:
 
 | Region | Events | Share |
 |--------|--------|-------|
@@ -96,7 +96,7 @@ We decoded all 2.6M WKB geometries into lat/lon centroids:
 
 ![Global Spatial Distribution](/assets/images/groundsource/figure2.png "Global spatial distribution of extracted flood events aggregated per grid cell on a Robinson projection (logarithmic scale), with red centroids representing GDACS reference disasters.")
 
-### Temporal Growth
+### Temporal growth
 
 | Period | Events | Share |
 |--------|--------|-------|
@@ -104,30 +104,30 @@ We decoded all 2.6M WKB geometries into lat/lon centroids:
 | 2010-2019 | 876,630 | 33.1% |
 | 2020-2026 | 1,729,091 | 65.3% |
 
-Over 65% of all data comes from the last 6 years — a compound effect of digitized global news availability, modern web indexing, and LLM extraction scalability rather than a 40-fold spike in physical flooding.
+Over 65% of all records come from the last six years. This reflects the expansion of digitized online news, broader search indexing, and automated extraction tools, rather than a 40-fold increase in real-world flooding.
 
 ![Temporal Growth](/assets/images/groundsource/figure1.png "Monthly volume of ingested news URLs (a) versus finalized flood events extracted by Gemini (b) between 2000 and 2026.")
 
 ---
 
-## Data Topology: Entity-Based Polygons vs. Synoptic Disasters
+## Data topology: entity polygons vs. regional disasters
 
-A critical insight that explains the **median area of 2.05 km²** is that Groundsource is **entity-based**, not **meteorology-based**.
+The **median area of 2.05 km²** reflects how Groundsource structures records. The data is **entity based**, not organized around single weather systems.
 
 ![Event Area Footprint Distribution](/assets/images/groundsource/figure3.png "Distribution of event geographic areas in km² (logarithmic scale). Over 82% of all events have footprints smaller than 50 km².")
 
-As the authors explicitly note:
+The authors explain:
 > *"A single, large-scale real-world flood event may be represented by multiple entries within the Groundsource dataset. This occurs when an extensive flood inundates multiple distinct geographic entities (e.g., specific neighborhoods, towns, and districts), all of which are independently annotated by the LLM extraction process."*
 
-- **82% of all events have a spatial footprint under 50 km²** (with a median of 2.05 km² and mean of 142 km²).
-- When a severe cyclone strikes a region and inundates 40 towns, 80 streets, and 12 districts, Groundsource records over 100 distinct polygon rows — each tied to a specific administrative boundary or a buffered point ($0.001^\circ$).
-- **Why this matters for AI modeling:** In gridded hydrological training (e.g., $0.05^\circ$ ERA5-Land or $0.1^\circ$ IMERG), localized footprints prevent positive flood labels from artificially smearing across thousands of square kilometers of dry terrain. However, researchers conducting macroeconomic loss attribution cannot treat individual rows as independent meteorological events.
+- **82% of events cover less than 50 km²** (median: 2.05 km², mean: 142 km²).
+- When a severe cyclone strikes a region and floods 40 towns, 80 streets, and 12 districts, Groundsource records over 100 distinct polygon rows. Each is tied to a specific administrative boundary or a buffered point ($0.001^\circ$).
+- **Impact on hydrological modeling:** In gridded hydrological training (such as $0.05^\circ$ ERA5-Land or $0.1^\circ$ IMERG), tight footprints prevent positive flood labels from bleeding across dry terrain. But researchers studying macroeconomic disaster loss cannot treat individual rows as separate storms.
 
 ---
 
-## The Ingestion & Extraction Funnel
+## Ingestion and extraction pipeline
 
-While the raw Parquet file omits source article URLs, the EarthArXiv preprint details the full five-stage ingestion pipeline:
+The Parquet file does not include source URLs, but the EarthArXiv preprint describes the five-stage pipeline:
 
 ```
 [9.5M Candidate URLs]
@@ -140,129 +140,129 @@ While the raw Parquet file omits source article URLs, the EarthArXiv preprint de
    ↓ Google Maps Geocoding API + Spatial Aggregation + Geometric Thresholds
 ```
 
-1. **Entity Filtering (9.5M URLs):** Google’s web crawler harvested news articles published since 2000 mentioning floods. The WebRef entity system assigned a topicality score $\in [0, 1]$ for `"flood"`. Articles with a topicality score $\ge 0.6$ were retained (9.5 million URLs).
-2. **Boilerplate Stripping & Language Scope (7.5M Articles):** The Google Read Aloud User-agent isolated article body text and publication dates across **80 supported languages**. Sites blocking bots or unsupported languages were pruned, leaving 7.5 million accessible articles.
-3. **Translation & Entity Candidate Pooling:** Non-English articles were translated into English via the Google Cloud Translation API. WebRef extracted named geographic entities from both original and translated text to create a candidate pool of Machine Identifiers (MIDs).
-4. **Gemini 3 Flash Extraction (5.0M Articles):** Gemini 3 Flash evaluated each article using a strict structured prompt (Appendix A) to verify actual, ongoing or past events while discarding forecasts, insurance policies, or disjointed regional roundups. Gemini classified approximately 5.0 million articles as genuine flood reports.
-5. **Geocoding & Spatial Pruning (2.6M Final Events):** Extracted locations were resolved to Google Maps spatial polygons (or $0.001^\circ$ buffered points). Consecutive daily reports for identical locations were concatenated. Events exceeding $5{,}000\text{ km}^2$, with diameters $> 500\text{ km}$, continuous durations $> 7\text{ days}$, or dates prior to 2000 were filtered out, leaving **2,646,302 finalized records**.
+1. **Entity filtering (9.5M URLs):** Google harvested news articles published since 2000 mentioning floods. The WebRef entity system assigned a topicality score between 0 and 1 for "flood". Articles scoring at least 0.6 were kept (9.5 million URLs).
+2. **Text cleaning and language coverage (7.5M articles):** The Google Read Aloud user agent extracted article text and publication dates across 80 supported languages. Sites blocking bots or using unsupported languages were dropped, leaving 7.5 million accessible articles.
+3. **Translation and entity candidates:** Non-English articles were translated into English with the Google Cloud Translation API. WebRef extracted named places from both original and translated text to build candidate Machine Identifiers (MIDs).
+4. **Gemini 3 Flash extraction (5.0M articles):** Gemini 3 Flash evaluated each article using a structured prompt to confirm ongoing or past floods while discarding forecasts, insurance notices, or regional summaries. Gemini identified roughly 5.0 million articles as actual flood reports.
+5. **Geocoding and spatial filtering (2.6M final events):** Locations were resolved to Google Maps polygons (or $0.001^\circ$ buffered points). Consecutive daily reports for identical locations were merged. Events exceeding $5{,}000\text{ km}^2$, with diameters over $500\text{ km}$, continuous durations over 7 days, or dates before 2000 were filtered out, leaving **2,646,302 finalized records**.
 
 ---
 
-## Claim Verification
+## Claim verification
 
-### ✅ "2.6 million geo-tagged events"
-**CONFIRMED.** 2,646,302 events, all with valid WKB polygon geometries and dates. Zero nulls, zero duplicates.
+### Confirmed: 2.6 million geo-tagged events
+The dataset contains 2,646,302 events with valid WKB polygon geometries and dates. There are no null values and no duplicate records.
 
-### ✅ "5 million articles across 80 languages"
-**CONFIRMED & DOCUMENTED.** The intermediate funnel processed 7.5 million articles across Read Aloud's 80 supported languages; Gemini 3 Flash classified 5.0 million of them as actual flood events, which geocoding and morphological pruning synthesized into 2.65 million distinct spatiotemporal polygons.
+### Confirmed: 5 million articles across 80 languages
+The pipeline processed 7.5 million articles across 80 languages supported by Read Aloud. Gemini 3 Flash classified 5.0 million of them as real flood events, which geocoding and geometric filtering condensed into 2.65 million spatiotemporal polygons.
 
-### ⚠️ "GDACS had roughly 10,000 entries"
-**CONFIRMED WITH CONTEXT.** The 260× scale increase is real, but reflects fundamentally different granularities. GDACS tracks ~10,000 catastrophic humanitarian disasters requiring international response (affecting 100+ people or triggering external aid). Groundsource captures localized street, town, and municipal inundations.
+### Confirmed with context: GDACS comparison
+The 260x scale increase is real, but reflects a different unit of analysis. GDACS tracks roughly 10,000 major humanitarian disasters requiring international response (events affecting 100 or more people or triggering external aid). Groundsource captures localized street, town, and municipal flooding.
 
-### ✅ Africa coverage gap
-**CONFIRMED AND QUANTIFIED.** 4.2% of events vs ~17% of world population — a 4× underrepresentation driven by digital news infrastructure and indexing imbalances.
+### Confirmed: Africa coverage gap
+Africa represents 4.2% of events in the dataset despite having roughly 17% of the world's population. This underrepresentation stems from uneven digital news infrastructure and search engine indexing.
 
 ---
 
-## Ground Truth Fidelity & Error Taxonomy
+## Accuracy and failure modes
 
-A common question with LLM-generated scientific datasets is hallucination rate. Google conducted an independent manual audit of 400 randomly selected entries evaluated by human raters against the source news text:
+Google ran a manual audit of 400 randomly selected entries evaluated by human raters against the source news text:
 
-- **Strict Precision (60% ± 5% at 95% CI):** Exactly matched both the location polygon and start/end dates in the source article ("Accurate").
-- **Practical Usability (82% Combined):** An additional 22% exhibited minor acceptable discrepancies ("Approximate" or "Partial") — such as selecting an encompassing municipal district instead of an isolated village, or a $\pm 1$ day offset due to relative journalistic phrasing like *"over the weekend"*.
-- **Hard Error Rate (18% "Wrong"):** Classified as unusable due to false-positive metaphors (*"a flood of complaints"*), severe toponym ambiguity, or temporal hallucinations.
+- **Strict precision (60% ± 5% at 95% CI):** Matched both the location polygon and start and end dates in the article ("Accurate").
+- **Practical usability (82% combined):** An additional 22% had minor discrepancies ("Approximate" or "Partial"), such as selecting a surrounding municipal district instead of a specific village, or a one-day offset from phrases like "over the weekend".
+- **Hard error rate (18% "Wrong"):** Unusable due to metaphorical uses ("a flood of complaints"), ambiguous place names, or hallucinated dates.
 
-### The Three Main Failure Modes
+### Main failure modes
 
-1. **Ambiguous Toponyms:** Common locality names lacking regional context were misrouted by the geocoding engine (e.g., *"Kherbari"*, which exists in multiple Indian states).
-2. **Updated Publication Timestamps:** When a news publisher updated an article days after an event, the pipeline used the updated timestamp to calculate relative dates (*"last Tuesday"*), shifting event dates by a week.
-3. **Temporal Hallucination:** Vague journalistic references like *"last September"* occasionally led Gemini to impute a specific date (e.g., September 1st) rather than rejecting the event.
+1. **Ambiguous place names:** Common names without regional qualifiers were misrouted during geocoding (for example, "Kherbari", which exists in multiple Indian states).
+2. **Updated publication timestamps:** When an outlet updated an article days after an event, the system calculated relative dates ("last Tuesday") from the update time, shifting the event date by a week.
+3. **Temporal guessing:** Vague phrasing like "last September" sometimes led Gemini to guess a specific date (such as September 1) instead of dropping the record.
 
 > *"The actual errors in the dataset are likely not independent and identically distributed (i.i.d.). For instance, the geocoding system may exhibit variable accuracy with location names across different languages, potentially concentrating spatial errors in specific regions or countries."* — Mayo et al.
 
 ---
 
-## External Benchmark Validation: GDACS & DFO Audits
+## External benchmark validation: GDACS and DFO audits
 
-To measure recall against external ground truth, the authors performed a spatiotemporal intersection audit against **6,537 GDACS events (2017–2026)** and **3,875 Dartmouth Flood Observatory (DFO) satellite-derived events (2000–2023)**:
+To measure recall against external records, the authors evaluated spatiotemporal overlap against **6,537 GDACS events (2017 to 2026)** and **3,875 Dartmouth Flood Observatory (DFO) satellite-derived events (2000 to 2023)**:
 
 ![Global Recall and Coverage](/assets/images/groundsource/figure4.png "Country-level spatial recall of Groundsource against GDACS (a) and DFO (b) reference archives, alongside total reference event distributions (c, d).")
 
-- **Annual Recall vs. GDACS:** From 2020 to 2025, Groundsource consistently captured **81% to 86% of all GDACS events globally** (reaching 90.1% in 2017, 94.2% in 2018, and 93.6% in 2019).
-- **Annual Recall vs. DFO:** Rose from 13.7% in 2000 to **93.6% in 2019**, directly mirroring the historical digitization of online news.
-- **Geographic Disparities:** Recall exceeds 96% in the United States and 79%–89% in the Philippines and Malaysia, but drops sharply in regions with sparse digital media penetration or unsupported indigenous languages (39% in Papua New Guinea, 50% in Gabon).
+- **Annual recall vs. GDACS:** From 2020 to 2025, Groundsource captured **81% to 86% of all GDACS events globally** (reaching 90.1% in 2017, 94.2% in 2018, and 93.6% in 2019).
+- **Annual recall vs. DFO:** Recall grew from 13.7% in 2000 to **93.6% in 2019**, following the growth of digital news publishing.
+- **Regional disparities:** Recall exceeds 96% in the United States and 79% to 89% in the Philippines and Malaysia. It drops in areas with lower digital media presence or unsupported indigenous languages (39% in Papua New Guinea, 50% in Gabon).
 
 ![Recall Stratified by Severity](/assets/images/groundsource/figure5.png "Groundsource recall stratified by disaster impact: (a) GDACS alert level (green, orange, red) and (b) DFO Flood Impact Index.")
 
-### Monotonic Scaling with Severity
+### Scaling with event severity
 
-As shown in Figure 5, recall scales monotonically with event severity:
-- **GDACS Green Alerts** (locally manageable floods): **82% recall** ($n = 6{,}038$).
-- **GDACS Orange & Red Alerts** (major humanitarian disasters): **99% recall** ($n = 438$ orange, $n = 61$ red).
-- **DFO Flood Impact Index:** 43%–65% for minor events (Index 2–3), rising to **>90% for severe events** (Index $> 6$).
-
----
-
-## The Hydrological Paradigm: Why Flash Floods Needed Groundsource
-
-To appreciate why Groundsource is significant, one must understand the difference between **riverine flooding** and **flash flooding**:
-
-1. **Riverine Floods (Solved via Stream Gauges):** Traditional hydrological AI breakthroughs — including Google's global model ([Nearing et al., *Nature* 2024](https://doi.org/10.1038/s41586-024-07145-1)) and state-space architectures like [RiverMamba (Shams Eddin et al., 2025)](https://arxiv.org/abs/2505.22535) — predict river discharge across well-defined catchment topologies (HydroATLAS, Caravan dataset) where physical stream gauges provide continuous ground truth.
-2. **Flash / Pluvial Floods (The Sensor Void):** Flash floods are driven by rapid, high-intensity convective rainfall over small ungauged drainage basins, streets, and ephemeral streams. Stream gauges *do not exist* on city roads or small ravines.
-3. **The Human Sensor Network:** Optical satellites are blinded by clouds during heavy downpours. Groundsource transforms localized news coverage into the world's only dense proxy sensor network for flash flooding.
+Figure 5 shows that recall tracks event severity:
+- **GDACS Green Alerts** (locally managed floods): **82% recall** ($n = 6{,}038$).
+- **GDACS Orange and Red Alerts** (major humanitarian emergencies): **99% recall** ($n = 438$ orange, $n = 61$ red).
+- **DFO Flood Impact Index:** 43% to 65% for minor events (Index 2 to 3), rising to **over 90% for severe events** (Index $> 6$).
 
 ---
 
-## The Real-Time Question
+## Hydrological context: why flash floods needed Groundsource
 
-> If the dataset is a static archive of old news, how does it warn about a flood happening tomorrow?
+The gap Groundsource addresses becomes clear when comparing **riverine flooding** with **flash flooding**:
 
-**Groundsource is training data, not forecast input.** The model studied 2.6 million historical events alongside atmospheric and hydrological conditions (precipitation, soil moisture, runoff) at each location at the time. It learned the physical response patterns. For daily forecasting, the model ingests live numerical weather feeds (ECMWF, NASA, NOAA) and evaluates flood probabilities:
+1. **Riverine floods (tracked by stream gauges):** Hydrological machine learning models, including Google's global model ([Nearing et al., *Nature* 2024](https://doi.org/10.1038/s41586-024-07145-1)) and state-space architectures like [RiverMamba (Shams Eddin et al., 2025)](https://arxiv.org/abs/2505.22535), predict river flow through established river basins (HydroATLAS, Caravan dataset) where physical gauges provide steady measurements.
+2. **Flash and pluvial floods (the data void):** Flash floods are triggered by fast, intense rainfall over small ungauged drainage basins, city streets, and dry ravines. Physical gauges rarely exist in these locations.
+3. **The human reporting network:** Cloud cover blocks optical satellites during rainstorms. Groundsource uses local news reports as a proxy observation network for flash flood events.
+
+---
+
+## Forecasting with historical records
+
+> If the dataset is a static archive of past news, how does it warn about a flood happening tomorrow?
+
+**Groundsource provides training data, not live inputs.** The forecasting model paired these 2.6 million historical events with local weather conditions (rainfall, soil moisture, runoff) at the time of each event to learn physical response patterns. For daily forecasts, the trained model evaluates live weather feeds (ECMWF, NASA, NOAA) to calculate flood probabilities:
 
 ```
 TRAINING: Groundsource labels + Historical weather → Train model
 OPERATIONAL: Live weather feeds → Frozen model → "Flash flood likely here tomorrow"
 ```
 
-The dataset does not require real-time updates for operational deployment, just as ImageNet does not require daily retraining to classify images.
+The model does not need daily news ingestion to generate forecasts, just as an image classifier does not need daily retraining to identify new photos.
 
 ---
 
-## The Africa Gap & Concrete Mitigation Strategies
+## The Africa coverage gap and potential fixes
 
-Africa accounts for **4.2% of Groundsource events** despite representing **~17% of the global population**. The structural causes include:
-1. **Fewer digitized news outlets** indexed by major web aggregators; widespread reliance on vernacular radio broadcasts invisible to text crawlers.
-2. **Language coverage boundaries** — Africa is home to over 2,000 languages, while the ingestion pipeline was bounded by the 80 languages supported by Google's Read Aloud agent.
-3. **Urban reporting bias** — remote rural inundations rarely generate written news coverage.
+Africa accounts for **4.2% of Groundsource events** despite having **roughly 17% of the global population**. Several factors contribute to this disparity:
+1. **Fewer online news outlets** indexed by global aggregators, alongside heavy use of local radio broadcasts that web crawlers do not capture.
+2. **Language limits:** Africa has more than 2,000 languages, but the ingestion pipeline relied on the 80 languages supported by Google's Read Aloud agent.
+3. **Urban bias:** Floods in remote rural areas rarely generate written news stories.
 
-### Concrete Approaches to Fix It
+### Ways to address the gap
 
-Recent breakthroughs across remote sensing and machine learning provide practical paths forward:
+Current work in remote sensing and machine learning offers practical ways to fill these gaps:
 
-1. **All-Weather Satellite Ground Truth (SAR):** While optical sensors are blocked by storm clouds, Synthetic Aperture Radar (SAR) penetrates cloud cover day and night. Multi-temporal SAR datasets like [Kuro Siwo (Alberti et al., 2024)](https://doi.org/10.52202/079017-1204) provide 33 billion m² of flood inundation masks across 43 global disasters, creating verified ground truth independent of news reporting.
-2. **Synthetic Data Augmentation:** As demonstrated by [SAGDA (2025)](https://arxiv.org/abs/2506.13123) for agricultural data scarcity across Africa, physics-informed synthetic data generators can simulate realistic extreme hydrologic events in data-sparse regions.
-3. **Cross-Regional Transfer Learning:** State-space models like [RiverMamba (2025)](https://arxiv.org/abs/2505.22535) demonstrate that spatial representations pretrained on global reanalysis can successfully transfer predictive skill to ungauged basins across the Global South.
-4. **Multimodal Health Surveillance Analogues:** In epidemiological intelligence, [Epidemic IE (2024)](https://doi.org/10.1007/978-981-97-4581-4_17) and the WHO Disease Outbreak News Knowledge Graph ([eKG, *Scientific Data* 2025](https://doi.org/10.1038/s41597-025-05276-2)) demonstrate that combining structured ontologies with multi-LLM ensembles extracts outbreak events with $F_1$ scores up to 0.954 even from sparse regional reports. Similarly, [DengueNet (2024)](https://arxiv.org/abs/2401.11114) demonstrates how satellite imagery can overcome ground-reporting deficits in resource-limited nations.
-5. **Low-Resource Language Adaptation:** Extending entity extractors to localized African languages (Swahili, Hausa, Amharic, Yoruba) and transcribing local radio broadcasts via speech-to-text models.
+1. **Synthetic Aperture Radar (SAR):** Optical satellites cannot see through storm clouds, but SAR penetrates cloud cover day and night. Multi-temporal SAR datasets like [Kuro Siwo (Alberti et al., 2024)](https://doi.org/10.52202/079017-1204) supply 33 billion m² of flood inundation masks across 43 disasters, offering ground truth independent of news reporting.
+2. **Synthetic data generation:** As shown by [SAGDA (2025)](https://arxiv.org/abs/2506.13123) for agricultural data in Africa, physics-informed synthetic generators can simulate extreme hydrological events in data-sparse regions.
+3. **Cross-regional transfer learning:** Models like [RiverMamba (2025)](https://arxiv.org/abs/2505.22535) demonstrate that spatial representations pretrained on global reanalysis can transfer predictive skill to ungauged basins in the Global South.
+4. **Multimodal surveillance methods:** In epidemiological surveillance, [Epidemic IE (2024)](https://doi.org/10.1007/978-981-97-4581-4_17) and the WHO Disease Outbreak News Knowledge Graph ([eKG, *Scientific Data* 2025](https://doi.org/10.1038/s41597-025-05276-2)) show that combining structured ontologies with multi-LLM ensembles extracts outbreak events ($F_1$ scores up to 0.954) from sparse reporting. [DengueNet (2024)](https://arxiv.org/abs/2401.11114) similarly pairs satellite imagery with sparse health reports in developing regions.
+5. **Support for regional languages:** Extending entity extraction to African languages (such as Swahili, Hausa, Amharic, and Yoruba) and transcribing local radio broadcasts using speech-to-text models.
 
 ---
 
-## The Methodology Is The Story
+## Broader applications of the methodology
 
-The ultimate takeaway from Groundsource extends far beyond hydrology: **LLMs can transform unstructured global human text into structured scientific ground truth at planetary scale.**
+The core lesson from Groundsource reaches beyond hydrology: **language models can transform unstructured text into structured scientific ground truth at global scale.**
 
-### Where Else Can This Go?
+### Other potential domains
 
 | Domain | Feasibility | Why |
 |--------|------------|-----|
-| **Disease outbreaks** | 🟢 Very high | High public reporting; proven by ProMED/WHO eKG ($F_1 \approx 0.954$) |
-| **Conflict & displacement** | 🟢 High | ACLED validation; dense real-time journalistic coverage |
-| **Pollution events** | 🟡 Medium | Acute chemical spills work well; chronic continuous air/water metrics require sensor physics (e.g., [AirPhyNet](https://arxiv.org/abs/2402.03784)) |
-| **Wildfires** | 🟡 Medium | Thermal satellite imagery is already strong; text adds human impact, evacuation, and ignition cause context |
-| **Mining hazards** | 🟡 Medium | Tailings dam failures are acute; subsurface contamination is chronic and under-reported |
-| **Drought & crop failure** | 🔴 Lower | Slow onset over months; lacks discrete event boundaries in news reporting |
+| **Disease outbreaks** | Very high | Frequent public reporting; demonstrated by ProMED and WHO eKG ($F_1 \approx 0.954$) |
+| **Conflict and displacement** | High | ACLED validation; extensive real-time journalistic coverage |
+| **Pollution events** | Medium | Sudden chemical spills work well; ongoing air and water metrics require sensor measurements (such as [AirPhyNet](https://arxiv.org/abs/2402.03784)) |
+| **Wildfires** | Medium | Satellite thermal data is already strong; text adds context on evacuations and ignition causes |
+| **Mining hazards** | Medium | Dam failures are sudden and reported; underground leaks are chronic and rarely covered |
+| **Drought and crop failure** | Lower | Gradual onset over months; lacks distinct start and end dates in news reports |
 
-The methodology succeeds most reliably when targeting **binary, acute, high-impact events** coupled with **continuous physical Earth observation data**.
+This approach works best for **sudden, discrete events** that can be paired with **continuous physical Earth observation data**.
 
 ---
 
