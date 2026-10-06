@@ -8,10 +8,10 @@ tags:
   - '- climate'
   - '- disaster'
   - '- geospatial'
-  - 'Google'
-  - 'Gemini'
+  - Google
+  - Gemini
   - '- analysis'
-  - 'Research'
+  - Research
 title: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report'
 image: ''
 image_alt: ''
@@ -21,11 +21,11 @@ card_items: []
 
 Deep Literature Analysis
 
-*A deep-dive into Google's 2.6-million-event flood dataset — what the data actually shows, what claims hold up, and why the methodology may matter more than the dataset itself.*
+_A deep-dive into Google's 2.6-million-event flood dataset — what the data actually shows, what claims hold up, and why the methodology may matter more than the dataset itself._
 
 **Resources:** [Enriched Dataset](https://huggingface.co/datasets/rdjarbeng/groundsource-enriched) | [Full Interactive Article](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis) | [Original on Zenodo](https://zenodo.org/records/18647054)
 
----
+***
 
 ## What is Groundsource?
 
@@ -44,7 +44,7 @@ The dataset is a single 667 MB Parquet file containing exactly **2,646,302 flood
 ### Key Numbers
 
 | Metric | Value |
-|--------|-------|
+| --- | --- |
 | Total events | 2,646,302 |
 | Null values | 0 |
 | Duplicates | 0 |
@@ -61,7 +61,7 @@ No country column. No language of source article. No confidence score. No link t
 We decoded all 2.6M WKB geometries into lat/lon centroids:
 
 | Region | Events | Share |
-|--------|--------|-------|
+| --- | --- | --- |
 | Europe | 590,603 | 22.3% |
 | Southeast Asia | 488,885 | 18.5% |
 | South Asia | 484,418 | 18.3% |
@@ -74,7 +74,7 @@ We decoded all 2.6M WKB geometries into lat/lon centroids:
 ### Temporal Growth
 
 | Period | Events | Share |
-|--------|--------|-------|
+| --- | --- | --- |
 | 2000-2009 | 40,581 | 1.5% |
 | 2010-2019 | 876,630 | 33.1% |
 | 2020-2026 | 1,729,091 | 65.3% |
@@ -84,16 +84,20 @@ We decoded all 2.6M WKB geometries into lat/lon centroids:
 ## Claim Verification
 
 ### ✅ "2.6 million geo-tagged events"
+
 **CONFIRMED.** 2,646,302 events, all with polygon geometry and dates. Zero nulls, zero duplicates.
 
 ### ⚠️ "GDACS had roughly 10,000 entries"
-**Plausible, but needs context.** GDACS tracks *significant* disasters (affecting 100+ people). EM-DAT covers ~22K total natural disasters since 1900. The 260× scale increase is real, but GDACS events are curated expert assessments while Groundsource captures every reported flood — fundamentally different granularities.
+
+**Plausible, but needs context.** GDACS tracks _significant_ disasters (affecting 100+ people). EM-DAT covers \~22K total natural disasters since 1900. The 260× scale increase is real, but GDACS events are curated expert assessments while Groundsource captures every reported flood — fundamentally different granularities.
 
 ### ⚠️ "5 million articles across 80 languages"
+
 **CANNOT VERIFY FROM DATASET.** No language column, no source article metadata. The paper needs to provide this evidence directly.
 
 ### ✅ Africa coverage gap
-**CONFIRMED AND QUANTIFIED.** 4.2% of events vs ~17% of world population — a 4× underrepresentation.
+
+**CONFIRMED AND QUANTIFIED.** 4.2% of events vs \~17% of world population — a 4× underrepresentation.
 
 ## The Real-Time Question
 
@@ -101,7 +105,7 @@ We decoded all 2.6M WKB geometries into lat/lon centroids:
 
 **Groundsource is training data, not forecast input.** The model studied 2.6 million historical events alongside the weather conditions at each location at the time. It learned the patterns. For daily forecasting, it ingests live feeds from ECMWF, NASA, and NOAA and checks if today's weather matches a learned pattern.
 
-```
+```plain
 TRAINING: Groundsource labels + Historical weather → Train model
 OPERATIONAL: Live weather feeds → Frozen model → "Flash flood likely here tomorrow"
 ```
@@ -110,10 +114,10 @@ The dataset doesn't need updating for real-time forecasting, just as ImageNet do
 
 ## The Africa Gap
 
-Africa represents **4.2% of events** despite **~17% of world population**. The causes are structural:
+Africa represents **4.2% of events** despite **\~17% of world population**. The causes are structural:
 
 1. **Fewer digitized news sources** — African outlets less indexed by Google News; local radio invisible to text mining
-2. **Language gap** — Africa has ~2,000 languages; Gemini handles ~80
+2. **Language gap** — Africa has \~2,000 languages; Gemini handles \~80
 3. **Urban reporting bias** — rural flash floods may never appear in any outlet
 4. **The paradox:** the regions with the least monitoring infrastructure are where this methodology works worst
 
@@ -132,7 +136,7 @@ The most important thing about Groundsource is not the flood data — it's the d
 ### Where Else Can This Go?
 
 | Domain | Feasibility | Why |
-|--------|------------|-----|
+| --- | --- | --- |
 | **Disease outbreaks** | 🟢 Very high | Already working (ProMED/WHO) — F1 up to 0.954 |
 | **Conflict/displacement** | 🟢 High | ACLED exists, news coverage very high |
 | **Pollution events** | 🟡 Medium | Binary events work; continuous levels hard |
@@ -182,6 +186,8 @@ print(monthly.tail(5))
 - [SAGDA](https://arxiv.org/abs/2506.13123) — Synthetic data for Africa's agricultural data gap
 - [AirPhyNet](https://arxiv.org/abs/2402.03784) — Physics-guided air quality prediction
 
----
+***
 
-*The original Groundsource dataset is by Google Research, licensed CC-BY 4.0. This analysis and enriched dataset by [rdjarbeng](https://huggingface.co/rdjarbeng).*
+External media mentions: Published on [hugging face](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis).
+
+_The original Groundsource dataset is by Google Research, licensed CC-BY 4.0. This analysis and enriched dataset by_ [_rdjarbeng_](https://huggingface.co/rdjarbeng)_._
