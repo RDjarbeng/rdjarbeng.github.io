@@ -1,27 +1,47 @@
 ---
-date: 2026-04-25T14:13:00+02:00
-published: false
+date: 2026-09-06T10:30:00+02:00
+published: true
 author: Richard
 category: Research
 tags:
-  - '- flood'
-  - '- climate'
-  - '- disaster'
-  - '- geospatial'
-  - 'Google'
-  - 'Gemini'
-  - '- analysis'
-  - 'Research'
+  - flood
+  - climate
+  - disaster
+  - geospatial
+  - Google
+  - Gemini
+  - machine-learning
 title: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report'
-image: /assets/images/groundsource/figure2.png
-image_alt: 'Global spatial distribution of Groundsource flood events'
+image: /assets/images/posts/covers/groundsource_research_report_cover.jpg
+image_alt: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report cover'
 layout: post
-card_items: []
+card_items:
+  - name: Groundsource Enriched Dataset
+    image: /assets/images/groundsource/figure2.png
+    alt: Global spatial distribution of Groundsource flood events
+    badge_1: Dataset
+    badge_2: Hugging Face
+    url: https://huggingface.co/datasets/rdjarbeng/groundsource-enriched
+    link_text: Explore Dataset
+  - name: Interactive Analysis & Maps
+    image: /assets/images/groundsource/figure4.png
+    alt: Groundsource interactive data visualization
+    badge_1: Demo
+    badge_2: Interactive
+    url: https://huggingface.co/spaces/rdjarbeng/groundsource-analysis
+    link_text: Open Space
+  - name: Google EarthArXiv Preprint
+    image: /assets/images/groundsource/figure1.png
+    alt: Google Research Groundsource paper figures
+    badge_1: Paper
+    badge_2: Research
+    url: https://doi.org/10.31223/x5rr2k
+    link_text: Read Preprint
 ---
 
 Deep Literature Analysis
 
-*A deep-dive into Google's 2.6-million-event flood dataset — what the data actually shows, what claims hold up, and why the methodology may matter more than the dataset itself.*
+*A deep-dive into Google's 2.6-million-event flood dataset: what the data actually shows, what claims hold up, and why the methodology may matter more than the dataset itself.*
 
 **Resources:** [Enriched Dataset](https://huggingface.co/datasets/rdjarbeng/groundsource-enriched) | [Full Interactive Article](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis) | [Original on Zenodo](https://zenodo.org/records/18647054)
 
