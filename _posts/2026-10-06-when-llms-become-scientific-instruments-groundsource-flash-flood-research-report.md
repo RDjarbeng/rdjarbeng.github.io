@@ -39,7 +39,6 @@ card_items:
     link_text: Read Preprint
 ---
 
-Deep literature analysis
 
 *A deep dive into Google's 2.6-million-event flood dataset: what the data shows, what claims hold up, and why the methodology matters more than the dataset itself.*
 
@@ -191,6 +190,8 @@ To measure recall against external records, the authors evaluated spatiotemporal
 - **Annual recall vs. GDACS:** From 2020 to 2025, Groundsource captured **81% to 86% of all GDACS events globally** (reaching 90.1% in 2017, 94.2% in 2018, and 93.6% in 2019).
 - **Annual recall vs. DFO:** Recall grew from 13.7% in 2000 to **93.6% in 2019**, following the growth of digital news publishing.
 - **Regional disparities:** Recall exceeds 96% in the United States and 79% to 89% in the Philippines and Malaysia. It drops in areas with lower digital media presence or unsupported indigenous languages (39% in Papua New Guinea, 50% in Gabon).
+
+> **Reading note on Figure 4 (white vs. shaded countries):** In these maps, unshaded (white) countries represent **zero reference events in the baseline archive ($n = 0$)**—meaning recall is undefined—rather than 0% model extraction performance. For example, Gabon appears unshaded in panel (b) because the DFO archive contains zero recorded flood events for Gabon. In panel (a) GDACS, where $n = 8$ reference events exist, Gabon is shaded teal at **50% recall** (capturing 4 of 8 events). Conversely, neighboring inland countries like the Republic of the Congo and Central African Republic appear white in GDACS due to an absence of baseline disaster records.
 
 ![Recall Stratified by Severity](/assets/images/groundsource/figure5.png "Groundsource recall stratified by disaster impact: (a) GDACS alert level (green, orange, red) and (b) DFO Flood Impact Index.")
 
