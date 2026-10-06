@@ -213,3 +213,4 @@ yout-ube.com/watch
 - [ ] Need to be able to navigate the website with keyboard inputs if necessary
 - [ ] Consider making some of the longer posts into pdfs
 - [ ] What would it take to add versioning to posts
+- Don't know what to do with these 3D files: "C:\Users\Richard\RD\myprojects\rdjarbeng.github.io\assets\images\3d\firefly_dog_mascot"
