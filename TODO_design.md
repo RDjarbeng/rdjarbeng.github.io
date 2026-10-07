@@ -214,3 +214,4 @@ yout-ube.com/watch
 - [ ] Consider making some of the longer posts into pdfs
 - [ ] What would it take to add versioning to posts
 - Don't know what to do with these 3D files: "C:\Users\Richard\RD\myprojects\rdjarbeng.github.io\assets\images\3d\firefly_dog_mascot"
+- [ ] Let the homepage cards scroll horizontally on mobile liie in the gallery so it's easier to navigate the different sections
