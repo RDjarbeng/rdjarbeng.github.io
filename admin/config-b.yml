@@ -449,6 +449,11 @@ collections:
         widget: string
         required: false
         hint: Paste a YouTube playlist URL here.
+      - name: video_limit
+        label: Max Videos Displayed
+        widget: number
+        required: false
+        hint: Limit number of videos shown on page (e.g. 6).
       - name: layout
         label: Layout
         widget: hidden

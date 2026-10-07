@@ -591,6 +591,7 @@ collections:
           hint: "Select videos manually for this collection (Only used if Match By is 'manual')"
         }
       - { label: "YouTube Playlist URL", name: "youtube_playlist_url", widget: "string", required: false, hint: "Paste a YouTube playlist URL here. A GitHub Action will automatically fetch videos and add them to the videos collection." }
+      - { label: "Max Videos Displayed", name: "video_limit", widget: "number", required: false, hint: "Limit number of videos shown on page (e.g. 6), useful if iframe embedding is blocked or playlist is very long." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "video_collection" }
 
   - divider: true
