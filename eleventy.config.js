@@ -104,13 +104,16 @@ module.exports = function(eleventyConfig) {
     return {
       parse() {},
       render(ctx) {
-        const page = ctx.environments.page || {};
-        const title = page.title
-          ? `${page.title} - ${siteData.title}`
+        const env = ctx.environments || {};
+        const page = env.page || {};
+        const pageTitle = env.title || page.title || "";
+        const title = pageTitle
+          ? `${pageTitle} - ${siteData.title}`
           : siteData.title;
-        const desc = (page.description || siteData.description || "").replace(/"/g, "&quot;");
+        const pageDesc = env.description || page.description || env.head_description || env.excerpt || page.excerpt || siteData.description || "";
+        const desc = pageDesc.replace(/"/g, "&quot;");
         const canonical = page.url ? `https://rdjarbeng.com${page.url}` : "https://rdjarbeng.com/";
-        const img = page.image || page.thumbnail || siteData.logo;
+        const img = env.image || page.image || env.thumbnail || page.thumbnail || env.vid_thumbnail || siteData.logo;
         const imgUrl = img ? (img.startsWith("http") ? img : `https://rdjarbeng.com${img.startsWith("/") ? "" : "/"}${img}`) : "";
 
         const twitterHandle = siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard";
