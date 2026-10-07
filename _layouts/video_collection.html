@@ -9,9 +9,11 @@ body_class: videos-page
 {% assign col_genre = genre | default: page.genre %}
 {% assign col_keywords = keywords | default: page.keywords %}
 {% assign col_videos = videos | default: page.videos %}
+{% assign col_playlist_url = youtube_playlist_url | default: page.youtube_playlist_url %}
+{% assign col_video_limit = video_limit | default: page.video_limit %}
 
 <div class="videos-page-shell" style="padding: 2rem;">
-    <header class="video-collection-header" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 1rem;">
+    <header class="video-collection-header" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 1.5rem;">
         <h1>{{ col_icon }} {{ col_title }}</h1>
         <p>{{ col_description }}</p>
         <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
@@ -59,7 +61,11 @@ body_class: videos-page
         {% endif %}
 
         {% if collection_vids.size > 0 %}
-            {% for item in collection_vids %}
+            {% assign display_collection_vids = collection_vids %}
+            {% if col_video_limit and col_video_limit > 0 %}
+              {% assign display_collection_vids = collection_vids | slice: 0, col_video_limit %}
+            {% endif %}
+            {% for item in display_collection_vids %}
             {% assign yt_vid_id = "" %}
             {% if item.platform == 'youtube' %}
                 {% if item.youtube_id contains "v=" %}
@@ -127,6 +133,21 @@ body_class: videos-page
             {% endfor %}
         {% else %}
             <p>No videos found for this collection.</p>
+        {% endif %}
+
+        {% if col_playlist_url %}
+        <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.5rem 1.5rem; margin-top: 1.5rem; background: var(--card-bg, #f8f9fa); border: 1px dashed var(--border-color, #ccc); border-radius: 12px; text-align: center;">
+            <div style="width: 48px; height: 48px; background: rgba(255, 0, 0, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #ff0000;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </div>
+            <h3 style="margin: 0 0 8px 0; font-size: 1.25rem;">Watch All Lectures on YouTube</h3>
+            <p style="margin: 0 0 16px 0; max-width: 550px; font-size: 0.95rem; color: var(--grey-text, #666);">
+                Some lecture series have embed restrictions or span dozens of videos. You can view the complete uninterrupted playlist directly on YouTube.
+            </p>
+            <a href="{{ col_playlist_url }}" target="_blank" rel="noopener noreferrer" class="vid-source-btn" style="text-decoration: none; background: #ff0000; color: #ffffff; border-color: #ff0000; font-weight: 600; padding: 10px 24px; border-radius: 8px; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px;">
+                Open Full Playlist on YouTube &rarr;
+            </a>
+        </div>
         {% endif %}
     </div>
 </div>
