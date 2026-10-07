@@ -12,5 +12,6 @@ keywords:
 videos:
   - "stanford-engr108--introduction-to-applied-linear-algebra--lectures-by-professor-stephen-boyd--stanford-university"
 youtube_playlist_url: "https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9"
+video_limit: 6
 layout: video_collection
 ---
