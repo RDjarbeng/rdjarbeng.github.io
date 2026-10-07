@@ -54,7 +54,7 @@ Google used Gemini to scan **5 million news articles across 80+ languages**, gen
 
 > The largest existing global disaster databases, such as GDACS, held roughly 10,000 flood events, mostly major disasters. Groundsource records 2.6 million localized events, showing that language models can turn unstructured news archives into structured scientific datasets.
 
-We downloaded the dataset, parsed the geometries, and checked its claims against the EarthArXiv preprint and external observation records.
+In [our initial March breakdown on Google's flash flood system](/ai%20news/2026/03/13/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system.html), we covered the broader operational announcement—how Google deployed AI to forecast urban flash floods 24 hours in advance. This follow-up report takes a different angle: rather than evaluating the forecasting system from press announcements, we independently downloaded the raw 667 MB Groundsource Parquet archive to stress-test the underlying data, evaluate geographic representation, and verify whether the published claims hold up under empirical inspection.
 
 ---
 
@@ -80,7 +80,7 @@ There is no country column, no source article URL, no language tag, no confidenc
 
 ### Geographic distribution
 
-We decoded the 2.6 million WKB geometries into latitude and longitude centroids:
+To understand where these events actually cluster across the globe, we decoded the 2.6 million WKB geometries into latitude and longitude centroids. The table below breaks down event counts by world region:
 
 | Region | Events | Share |
 |--------|--------|-------|
@@ -93,9 +93,13 @@ We decoded the 2.6 million WKB geometries into latitude and longitude centroids:
 | **Africa** | **111,053** | **4.2%** |
 | Other | 131,591 | 4.9% |
 
+Mapping these coordinates globally highlights major regional imbalances. In **Figure 2**, the blue-to-yellow heatmap shows the density of Groundsource events aggregated across global grid cells, while red markers indicate reference disaster events recorded by GDACS:
+
 ![Global Spatial Distribution](/assets/images/groundsource/figure2.png "Global spatial distribution of extracted flood events aggregated per grid cell on a Robinson projection (logarithmic scale), with red centroids representing GDACS reference disasters.")
 
 ### Temporal growth
+
+A breakdown of event volume across the 26-year timeline reveals a heavy skew toward recent years:
 
 | Period | Events | Share |
 |--------|--------|-------|
@@ -103,7 +107,7 @@ We decoded the 2.6 million WKB geometries into latitude and longitude centroids:
 | 2010-2019 | 876,630 | 33.1% |
 | 2020-2026 | 1,729,091 | 65.3% |
 
-Over 65% of all records come from the last six years. This reflects the expansion of digitized online news, broader search indexing, and automated extraction tools, rather than a 40-fold increase in real-world flooding.
+Over 65% of all records come from the last six years. To see whether this reflects real-world climate trends or changes in digital data collection, **Figure 1** compares raw news article intake against extracted flood events over time. As shown below, event growth closely tracks Google's ingested web crawl volume rather than an actual 40-fold spike in worldwide flooding:
 
 ![Temporal Growth](/assets/images/groundsource/figure1.png "Monthly volume of ingested news URLs (a) versus finalized flood events extracted by Gemini (b) between 2000 and 2026.")
 
@@ -111,13 +115,18 @@ Over 65% of all records come from the last six years. This reflects the expansio
 
 ## Data topology: entity polygons vs. regional disasters
 
-The **median area of 2.05 km²** reflects how Groundsource structures records. The data is **entity based**, not organized around single weather systems.
+When looking at disaster data, most people expect each record to represent an entire storm system—like "Hurricane Helene" or "2024 European floods." In Groundsource, however, the **median event area is just 2.05 km²** (about the size of Monaco or New York's Central Park), while the mean is 142.0 km².
+
+This sharp contrast happens because Groundsource is **entity-based rather than storm-based**. The pipeline does not aggregate rainstorms into broad regional events; instead, it extracts specific localized entities named in news stories—individual neighborhood boundaries, suburban street networks, or local municipal districts.
+
+To illustrate how concentrated these footprints are, **Figure 3** shows the frequency distribution of event sizes on a logarithmic scale. The heavy skew toward the lower end reveals that most extracted records are hyper-local—meaning instead of marking an entire province or watershed as underwater, each record pinpoints a tiny, self-contained pocket like an underpass, a single residential block, or a small town square:
 
 ![Event Area Footprint Distribution](/assets/images/groundsource/figure3.png "Distribution of event geographic areas in km² (logarithmic scale). Over 82% of all events have footprints smaller than 50 km².")
 
-The authors explain:
+The authors explain this design explicitly:
 > *"A single, large-scale real-world flood event may be represented by multiple entries within the Groundsource dataset. This occurs when an extensive flood inundates multiple distinct geographic entities (e.g., specific neighborhoods, towns, and districts), all of which are independently annotated by the LLM extraction process."*
 
+Key implications of this structure:
 - **82% of events cover less than 50 km²** (median: 2.05 km², mean: 142 km²).
 - When a severe cyclone strikes a region and floods 40 towns, 80 streets, and 12 districts, Groundsource records over 100 distinct polygon rows. Each is tied to a specific administrative boundary or a buffered point ($0.001^\circ$).
 - **Impact on hydrological modeling:** In gridded hydrological training (such as $0.05^\circ$ ERA5-Land or $0.1^\circ$ IMERG), tight footprints prevent positive flood labels from bleeding across dry terrain. But researchers studying macroeconomic disaster loss cannot treat individual rows as separate storms.
@@ -148,6 +157,8 @@ The Parquet file does not include source URLs, but the EarthArXiv preprint descr
 ---
 
 ## Claim verification
+
+To evaluate whether the headline figures match reality, we audited the key claims made in the EarthArXiv paper against the downloaded Zenodo Parquet dataset and external disaster databases. Here is what held up, what required nuance, and where the discrepancies lie:
 
 ### Confirmed: 2.6 million geo-tagged events
 The dataset contains 2,646,302 events with valid WKB polygon geometries and dates. There are no null values and no duplicate records.
@@ -183,7 +194,9 @@ Google ran a manual audit of 400 randomly selected entries evaluated by human ra
 
 ## External benchmark validation: GDACS and DFO audits
 
-To measure recall against external records, the authors evaluated spatiotemporal overlap against **6,537 GDACS events (2017 to 2026)** and **3,875 Dartmouth Flood Observatory (DFO) satellite-derived events (2000 to 2023)**:
+To measure recall against external records, the authors evaluated spatiotemporal overlap against **6,537 GDACS events (2017 to 2026)** and **3,875 Dartmouth Flood Observatory (DFO) satellite-derived events (2000 to 2023)**. 
+
+**Figure 4** plots country-by-country recall against these two independent catalogs. Panels (a) and (b) show the percentage of recorded disasters that Groundsource successfully captured in GDACS and DFO, while panels (c) and (d) provide the raw count of baseline disasters recorded per country:
 
 ![Global Recall and Coverage](/assets/images/groundsource/figure4.png "Country-level spatial recall of Groundsource against GDACS (a) and DFO (b) reference archives, alongside total reference event distributions (c, d).")
 
