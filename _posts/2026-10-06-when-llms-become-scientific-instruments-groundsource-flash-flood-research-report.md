@@ -191,16 +191,21 @@ To measure recall against external records, the authors evaluated spatiotemporal
 - **Annual recall vs. DFO:** Recall grew from 13.7% in 2000 to **93.6% in 2019**, following the growth of digital news publishing.
 - **Regional disparities:** Recall exceeds 96% in the United States and 79% to 89% in the Philippines and Malaysia. It drops in areas with lower digital media presence or unsupported indigenous languages (39% in Papua New Guinea, 50% in Gabon).
 
-> **Reading note on Figure 4 (white vs. shaded countries):** In these maps, unshaded (white) countries represent **zero reference events in the baseline archive ($n = 0$)**—meaning recall is undefined—rather than 0% model extraction performance. For example, Gabon appears unshaded in panel (b) because the DFO archive contains zero recorded flood events for Gabon. In panel (a) GDACS, where $n = 8$ reference events exist, Gabon is shaded teal at **50% recall** (capturing 4 of 8 events). Conversely, neighboring inland countries like the Republic of the Congo and Central African Republic appear white in GDACS due to an absence of baseline disaster records.
-
-![Recall Stratified by Severity](/assets/images/groundsource/figure5.png "Groundsource recall stratified by disaster impact: (a) GDACS alert level (green, orange, red) and (b) DFO Flood Impact Index.")
+> **Reading note on Figure 4 (white vs. shaded countries):** In these maps, unshaded (white) countries represent **zero reference events in the baseline archive ($n = 0$)**, meaning recall is undefined, rather than 0% model extraction performance. For example, Gabon appears unshaded in panel (b) because the DFO archive contains zero recorded flood events for Gabon ($n = 0$). In panel (a) GDACS, where $n = 8$ reference events exist, Gabon is shaded teal at **50% recall** (capturing 4 of 8 events). Conversely, neighboring inland countries like the Republic of the Congo and Central African Republic appear white in GDACS due to an absence of baseline disaster records.
+>
+> ![Gabon and Central Africa Recall Comparison](/assets/images/groundsource/gabon_comparison_annotated.png "Close-up comparison of Gabon and neighboring Central African nations: (a) GDACS shows Gabon in teal at 50% recall across n = 8 events, while (b) DFO shows Gabon in white due to n = 0 recorded events.")
 
 ### Scaling with event severity
 
-Figure 5 shows that recall tracks event severity:
-- **GDACS Green Alerts** (locally managed floods): **82% recall** ($n = 6{,}038$).
-- **GDACS Orange and Red Alerts** (major humanitarian emergencies): **99% recall** ($n = 438$ orange, $n = 61$ red).
-- **DFO Flood Impact Index:** 43% to 65% for minor events (Index 2 to 3), rising to **over 90% for severe events** (Index $> 6$).
+When floods cause widespread damage, news coverage multiplies, making extraction far more reliable. Figure 5 plots Groundsource's retrieval rates broken down by disaster severity across both reference archives:
+
+![Recall Stratified by Severity](/assets/images/groundsource/figure5.png "Groundsource recall stratified by disaster impact: (a) GDACS alert level (green, orange, red) and (b) DFO Flood Impact Index.")
+
+As the bar charts show, model recall climbs steadily as an event's humanitarian or physical footprint grows:
+- **GDACS alert categories (panel a):** Recall sits at **82%** for routine, locally managed floods ($n = 6{,}038$ green alerts), but rises to **99%** for major humanitarian crises ($n = 438$ orange alerts and $n = 61$ red alerts).
+- **DFO Flood Impact Index (panel b):** Recall ranges from 43% to 65% for minor local floods (Impact Index 2 to 3), but exceeds **90%** for widespread or destructive events (Impact Index $> 6$).
+
+In short, while localized street flooding can slip through without coverage, major flood disasters almost never escape news extraction.
 
 ---
 
