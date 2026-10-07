@@ -14,7 +14,15 @@ body_class: videos-page
     <header class="video-collection-header" style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color, #eaeaea); padding-bottom: 1rem;">
         <h1>{{ col_icon }} {{ col_title }}</h1>
         <p>{{ col_description }}</p>
-        <a href="{{ '/gallery/videos/' | relative_url }}" class="vid-source-btn" style="display: inline-block; margin-top: 1rem; text-decoration: none;">&larr; Back to all videos</a>
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="{{ '/gallery/videos/' | relative_url }}" class="vid-source-btn" style="text-decoration: none;">&larr; Back to all videos</a>
+            {% if col_playlist_url %}
+            <a href="{{ col_playlist_url }}" target="_blank" rel="noopener noreferrer" class="vid-source-btn" style="text-decoration: none; background: #ff0000; color: #ffffff; border-color: #ff0000; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                Watch full playlist on YouTube &rarr;
+            </a>
+            {% endif %}
+        </div>
     </header>
 
     <div class="video-masonry" id="video-masonry" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
