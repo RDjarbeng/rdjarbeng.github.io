@@ -71,7 +71,6 @@
   {%- assign page_description = head_description | default: site.description -%}
   {%- endif -%}
 
-{%- if jekyll.environment == 'production' -%}
   {%- seo -%}
   
   {%- if head_type == 'video' -%}
@@ -85,7 +84,6 @@
     <meta property="og:description" content="{{ _vd | truncate: 150 | escape }}" />
     <meta name="description" content="{{ _vd | truncate: 150 | escape }}" />
   {%- endif -%}
-{%- endif -%}
 
 
   <!-- <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> -->
@@ -106,7 +104,7 @@
     <link rel="next" href="{{ page.next.url | absolute_url }}">
   {%- endif -%}
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- if site.google_analytics -%}
   {%- include google-analytics.html -%}
   {%- endif -%}
   {%- if content contains 'class="katex' or content contains 'katex-block' or page.math or math -%}
