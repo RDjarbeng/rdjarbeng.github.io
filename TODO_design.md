@@ -218,3 +218,4 @@ yout-ube.com/watch
 - [ ] Highlighting on the TOC for posts disappears down the screen when the TOC is long and needs to be scrolled, the TOC does not auto scroll as the user scrolls down
 - [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
+- [ ] In post geographic-concentration-machine-learning-models/ some of the math equations need to be inline, for example a line showing C on one line alone,instead of being inline
