@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages with Decap CMS
+name: Deploy Eleventy site to Pages with Decap CMS
 
 on:
   push:

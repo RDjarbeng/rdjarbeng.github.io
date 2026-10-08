@@ -106,14 +106,34 @@ module.exports = function(eleventyConfig) {
       render(ctx) {
         const env = ctx.environments || {};
         const page = env.page || {};
-        const pageTitle = env.title || page.title || "";
-        const title = pageTitle
-          ? `${pageTitle} - ${siteData.title}`
+        const url = page.url || "";
+        
+        // Find matching post/document in siteData to retrieve precomputed title, excerpt, and image
+        const siteDoc = url ? (
+          (siteData.posts || []).find((p) => p.url === url) ||
+          (siteData.personal || []).find((p) => p.url === url) ||
+          (siteData.gallery || []).find((p) => p.url === url) ||
+          (siteData.video_collections || []).find((p) => p.url === url)
+        ) : null;
+
+        const rawTitle = env.title || page.title || (siteDoc && siteDoc.title) || "";
+        const title = rawTitle
+          ? `${rawTitle} - ${siteData.title}`
           : siteData.title;
-        const pageDesc = env.description || page.description || env.head_description || env.excerpt || page.excerpt || siteData.description || "";
+
+        let pageDesc = env.description || page.description || env.head_description;
+        if (!pageDesc && siteDoc && siteDoc.description) {
+          pageDesc = siteDoc.description;
+        }
+        if (!pageDesc && siteDoc && siteDoc.clean_excerpt) {
+          pageDesc = siteDoc.clean_excerpt;
+        }
+        if (!pageDesc) {
+          pageDesc = env.excerpt || page.excerpt || siteData.description || "";
+        }
         const desc = pageDesc.replace(/"/g, "&quot;");
-        const canonical = page.url ? `https://rdjarbeng.com${page.url}` : "https://rdjarbeng.com/";
-        const img = env.image || page.image || env.thumbnail || page.thumbnail || env.vid_thumbnail || siteData.logo;
+        const canonical = url ? `https://rdjarbeng.com${url}` : "https://rdjarbeng.com/";
+        const img = env.image || page.image || (siteDoc && (siteDoc.image || siteDoc.thumbnail)) || env.thumbnail || page.thumbnail || env.vid_thumbnail || siteData.logo;
         const imgUrl = img ? (img.startsWith("http") ? img : `https://rdjarbeng.com${img.startsWith("/") ? "" : "/"}${img}`) : "";
 
         const twitterHandle = siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard";

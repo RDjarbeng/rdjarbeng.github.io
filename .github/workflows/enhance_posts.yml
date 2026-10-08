@@ -59,4 +59,4 @@ jobs:
         if: steps.auto-commit.outputs.changes_detected == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run jekyll.yml --ref main
+        run: gh workflow run deploy.yml --ref main
