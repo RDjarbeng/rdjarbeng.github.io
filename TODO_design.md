@@ -219,3 +219,4 @@ yout-ube.com/watch
 - [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
 - [ ] In post geographic-concentration-machine-learning-models/ some of the math equations need to be inline, for example a line showing C on one line alone,instead of being inline
+- [ ] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing
