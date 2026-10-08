@@ -12,6 +12,14 @@ layout: post
 card_items: []
 ---
 
+To the agent:
+
+Add a summary of artemis II
+
+Mention photo gallery specifically for artemis II on the gallery page. Modify post because these events are now past.
+
+Mention plans about the future
+
 That's an incredible shot of the **Artemis II** launch. You've caught a piece of history right there.
 
 **April 6, 2026**, the mission is officially in its fifth day and is currently reaching a major milestone. Having launched from Kennedy Space Center on **April 1**, the Orion spacecraft (named _Integrity_) is just hours away from its closest approach to the Moon.
