@@ -70,6 +70,7 @@ collections:
           label: "Tags",
           name: "tags",
           widget: "list",
+          required: false,
           allow_add: true,
           # field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
           default: [],
