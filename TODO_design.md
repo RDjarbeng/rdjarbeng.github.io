@@ -216,3 +216,4 @@ yout-ube.com/watch
 - Don't know what to do with these 3D files: "C:\Users\Richard\RD\myprojects\rdjarbeng.github.io\assets\images\3d\firefly_dog_mascot"
 - [ ] Let the homepage cards scroll horizontally on mobile liie in the gallery so it's easier to navigate the different sections
 - [ ] Highlighting on the TOC for posts disappears down the screen when the TOC is long and needs to be scrolled, the TOC does not auto scroll as the user scrolls down
+- [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
