@@ -56,21 +56,25 @@ card_items:
 
 ### Decoding Autonomy: Architecture, Liability, and the Practical Realities of SAE Levels 0 to 5
 
-Public discourse around autonomous mobility frequently conflates driver-assistance software with genuine driverless capability. Much of this confusion stems from aggressive consumer marketing that labels supervised driver-assist suites as "self-driving" or "autopilot."
+When car companies advertise driver-assist software, they often blur the line between convenient driver aids and true driverless autonomy. Marketing terms like "Autopilot," "Full Self-Driving," and "hands-free assist" make it sound as though the vehicle is driving itself, even when the human in the driver's seat remains entirely responsible if anything goes wrong.
 
 ![The Six Levels of Autonomous Driving](/assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg)
 
-To eliminate ambiguity, the global automotive and regulatory engineering community relies on the formal taxonomy established by **SAE International** in standard **J3016** (harmonized internationally as **ISO/SAE PAS 22736:2021**). Adopted by the **National Highway Traffic Safety Administration (NHTSA)** and the United Nations Economic Commission for Europe (**UNECE**), this framework does not classify vehicle intelligence by marketing buzzwords. Instead, it gauges two concrete engineering and legal metrics:
+To clear up this confusion, engineers and transportation regulators do not rely on marketing claims. Instead, they turn to a shared technical standard created by the **Society of Automotive Engineers (SAE International)**, a global standards body that develops engineering guidelines for the automotive and aerospace industries. 
 
-1. **Who controls the Dynamic Driving Task (DDT)?** Specifically, who executes the real-time operational maneuvers (steering, braking, throttle) and tactical maneuvers (lane changing, gap selection, signaling), and who monitors the driving environment (**Object and Event Detection and Recognition, or OEDR**)?
-2. **Who carries ultimate legal and operational liability when an edge case or collision occurs?** Does liability rest with the human seated in the cabin, or does it legally shift to the manufacturer and the autonomous software stack?
+In a benchmark document designated **SAE J3016** (where "J" indicates an SAE surface-vehicle standard and "3016" is its unique reference number), the organization defined an agreed-upon scale from Level 0 to Level 5. This framework has since been adopted by major international regulators, including the **National Highway Traffic Safety Administration (NHTSA)** in the United States and the United Nations Economic Commission for Europe (**UNECE**). It also serves as the basis for international standard **ISO/SAE PAS 22736**.
 
-Crucially, SAE J3016 draws a bright red line between two distinct categories:
+Instead of measuring vehicle intelligence with vague scores, the SAE standard evaluates two concrete engineering and legal questions:
 
-* **Levels 0 through 2: Driver Support Systems (ADAS).** The human is always legally the driver of record, must continuously supervise the environment, and remains responsible for performing the **DDT fallback** at every microsecond.
-* **Levels 3 through 5: Automated Driving Systems (ADS).** When engaged within its designated domain, the machine is legally in command of the entire Dynamic Driving Task, and the automated system handles the DDT fallback.
+1. **Who is actually driving?** In engineering terms, this is called the **Dynamic Driving Task (DDT)**. It covers both the immediate physical controls (steering, braking, accelerating) and tactical decisions (changing lanes, navigating turns, choosing safe following distances). It also asks who is responsible for scanning the surroundings, watching for hazards, and recognizing traffic signs, a task known as **Object and Event Detection and Recognition (OEDR)**.
+2. **Who is legally responsible if something goes wrong?** Does liability stay with the person sitting behind the wheel, or does it shift to the automaker and the software controlling the car?
 
-Understanding how responsibility migrates from the human steering wheel to the silicon compute stack reveals both the present state of commercial fleets and the roadmap for modern urban transit.
+Crucially, the standard splits these six levels into two clear categories:
+
+* **Levels 0 through 2 (Driver Support Systems / ADAS):** The vehicle assists the driver with features like lane-keeping or adaptive cruise control, but the human is always the legal driver. The driver must keep their eyes on the road and must be ready to take over steering or braking at any split second.
+* **Levels 3 through 5 (Automated Driving Systems / ADS):** When the automated system is switched on within its designated operating zone, the machine is in full control. The software monitors the environment and handles emergency stops, shifting operational liability from the passenger to the vehicle's automated driving system.
+
+Understanding how this responsibility moves from the human driver to onboard computing hardware explains where autonomous technology stands today, and why the biggest impact may be in public transit rather than personal cars.
 
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/x_Bsxz7Joqs" title="What Are The 6 Levels Of Automated Driving? (Engineering Explained)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -137,20 +141,20 @@ While Level 2 systems can create the visceral sensation of autonomous navigation
 * In a landmark study on naturalistic glance behavior around Tesla Autopilot disengagements ([Morando, Gershon, Mehler, & Reimer, 2021](https://doi.org/10.1016/j.aap.2021.106360)), researchers found that drivers exhibit significantly higher rates of off-road glances toward the central touch screen and personal devices when Level 2 features are engaged compared to manual driving.
 * Crucially, [Morando et al. (2020)](https://doi.org/10.1177/0018720820945113) discovered that in **33% of driver-initiated disengagements**, drivers were not holding the steering wheel prior to taking back control, resulting in measurable delays in physical intervention.
 
-To combat this "automation complacency," modern Level 2 platforms have been forced to deploy aggressive Driver Monitoring Systems (DMS):
-1. **Capacitive Touch Steering Rims:** Replacing older steering-column torque sensors (which drivers bypassed using weighted defeat devices) with capacitive sensors that detect micro-electrical impedance from human skin contact.
-2. **In-Cabin Infrared Eye-Tracking Cameras:** Processing 3D eye gaze vectors, head pose angle, and Percentage of Eyelid Closure (**PERCLOS**) to ensure the driver's cognitive attention remains focused on the forward roadway.
+To combat this "automation complacency," modern Level 2 platforms have deployed active Driver Monitoring Systems (DMS):
+1. **Capacitive touch steering rims:** Replacing older steering-column sensors (which measured torque and could be fooled by hanging weights on the wheel) with touch-sensitive rims that detect skin contact directly.
+2. **In-cabin infrared cameras:** Tracking head position, eye gaze direction, and eyelid closure rates to ensure the driver is still looking forward at the roadway.
 
 ---
 
 ### Level 3: Conditional Autonomy and the "Handover Dilemma"
 
-Level 3 marks a pivotal legal watershed: when engaged within its operational envelope, the automated system assumes **operational and legal liability**. The human in the driver's seat is legally permitted to disengage their visual and cognitive attention from the roadway. This allows them to watch streaming media on the center console, read emails, or converse with passengers.
+Level 3 marks a major legal transition: when the automated system is switched on, the manufacturer assumes **legal liability for driving**. The human in the driver's seat is legally allowed to take their eyes off the road, whether to glance at messages, browse infotainment menus, or speak with passengers.
 
-However, Level 3 is strictly bounded by an **Operational Design Domain (ODD)**:
-* Physical infrastructure: Structurally separated, multi-lane divided highways with no pedestrians, bicyclists, or opposing traffic.
-* Environmental constraints: Clear daytime weather (no heavy rain, dense fog, or snow covering pavement markings).
-* Operational limits: Pre-mapped highway corridors, absence of active construction zones, and defined speed ceilings.
+However, Level 3 systems operate only within a strictly bounded **Operational Design Domain (ODD)**. In automotive engineering, an ODD is simply the specific set of real-world conditions under which a system is designed and certified to function:
+* Road conditions: Structurally divided highways with clear physical lane barriers and no oncoming traffic, pedestrians, or cyclists.
+* Weather limits: Clear daytime weather, without heavy rain, fog, or snow obscuring lane markings.
+* Operating boundaries: Digitally pre-mapped highway stretches, no active construction zones, and strict speed limits.
 
 ```
 +---------------------------------------------------------------------------------------------------------+
@@ -175,22 +179,26 @@ However, Level 3 is strictly bounded by an **Operational Design Domain (ODD)**:
 ```
 
 #### The Handover Dilemma and Takeover Latency
-The primary obstacle to Level 3 deployment is the human-factors challenge known as **takeover latency**. When a vehicle approaches the edge of its ODD (such as an approaching construction zone or heavy rainfall), it issues a **Takeover Request (TOR)** (or Request to Intervene ,  RTI).
+The central challenge for Level 3 systems is what human factors researchers call **takeover latency**: the time it takes an off-duty human driver to recognize an alert, understand traffic conditions, and safely resume physical control of the car. When the car approaches the boundary of its operating conditions (such as entering a construction zone or encountering heavy downpours), it issues a **Takeover Request (TOR)**.
 
-In a foundational review published in *Human Factors*, [Eriksson and Stanton (2017)](https://doi.org/10.1177/0018720816685428) investigated transition times in highly automated vehicles. They observed that in non-critical transitions, takeover response times ranged from **1.9 to 25.7 seconds**, with a median latency between 4.5 and 6.0 seconds. Furthermore, driving simulator research by [Gold et al. (2013)](https://doi.org/10.1177/1541931213571433) and [Merat et al. (2014)](https://doi.org/10.1016/j.trf.2014.09.005) demonstrated that even after a driver places their hands back on the wheel, achieving true "post-takeover stabilization" of lateral lane position and speed requires **8 to 10 seconds**.
+In a landmark review published in *Human Factors*, [Eriksson and Stanton (2017)](https://doi.org/10.1177/0018720816685428) investigated handover transitions in automated driving. In non-emergency situations, driver response times ranged from **1.9 to 25.7 seconds**, with a typical response taking 4.5 to 6.0 seconds. Further simulator tests by [Gold et al. (2013)](https://doi.org/10.1177/1541931213571433) and [Merat et al. (2014)](https://doi.org/10.1016/j.trf.2014.09.005) found that even after drivers placed their hands back on the wheel, stabilizing lane position and vehicle speed required **8 to 10 seconds**.
 
 At highway speeds (e.g., 100 km/h or 62 mph), a car travels **27.8 meters per second**. A 6-second transition latency means the vehicle covers more than 166 meters while the driver transitions from cognitive distraction to situational awareness.
 
 If the fallback-ready driver fails to intervene after repeated acoustic, visual, and haptic alerts, the system must autonomously execute a **Minimal Risk Maneuver (MRM)** to achieve a **Minimal Risk Condition (MRC)**, bringing the vehicle to a controlled stop within its travel lane or on the shoulder, illuminating hazard flashers, and triggering an automated emergency cellular call.
 
-#### Commercial Implementation: Mercedes-Benz DRIVE PILOT
-The first automaker to achieve internationally recognized commercial type-approval for an SAE Level 3 system was **Mercedes-Benz** with **DRIVE PILOT**:
+At highway speeds (such as 100 km/h or 62 mph), a car travels 27.8 meters per second. A 6-second transition latency means the vehicle covers more than 166 meters while the driver shifts focus from a smartphone or video screen back to the road.
 
-* **Regulatory Certification:** Certified under **UN Regulation No. 157** (Automated Lane Keeping Systems (ALKS)) by the German Federal Motor Transport Authority (**Kraftfahrt-Bundesamt / KBA**) in December 2021, launching on the S-Class and EQS in Germany in May 2022.
-* **Speed Ceiling Evolution:** Originally restricted under UN-R157 to traffic-jam speeds of up to **60 km/h (37 mph)**. Following UNECE regulatory amendments, Mercedes-Benz secured KBA approval in September 2024 to increase DRIVE PILOT's top operating speed to **95 km/h (59 mph)** on the German Autobahn, with customer deliveries rolling out from early 2025.
-* **United States Rollout:** Approved by the **Nevada DMV** in January 2023 and the **California DMV** in June 2023 for use on designated freeway corridors at speeds up to 40 mph (64 km/h) in high-density traffic.
-* **Redundant Sensor Stack:** Features a front-mounted **Valeo SCALA 2 LiDAR**, long-range radar, stereo optical cameras, road-surface moisture sensors in the wheel arches, dual-antenna centimeter-precision GNSS positioning, and high-definition 3D digital vector maps. Crucially, the platform incorporates dual redundant steering actuators, redundant braking servos, and a secondary 12-volt onboard electrical network.
-* **Exterior Status Lighting (SAE J3134):** Mercedes-Benz became the first automaker authorized in California (test permit) and Nevada (production permit) to deploy **turquoise exterior automated driving marker lamps** integrated into the headlights, taillights, and side mirror housings. Based on the SAE J3134 standard, turquoise was specifically selected because it is immediately distinguishable from emergency vehicle flashing lights, amber turn indicators, and red brake lamps, allowing law enforcement and other motorists to see that the automated system is currently liable for driving.
+If the driver fails to take control after repeated visual, acoustic, and vibrating alerts, the system must execute what engineers call a **Minimal Risk Maneuver (MRM)** to reach a **Minimal Risk Condition (MRC)**. In plain language, the car must safely bring itself to a stop in its lane or on the shoulder, switch on hazard warning lights, and place an automatic emergency call.
+
+#### Commercial implementation: Mercedes-Benz DRIVE PILOT
+The first automaker to achieve internationally recognized commercial approval for an SAE Level 3 system was **Mercedes-Benz** with its **DRIVE PILOT** system:
+
+* **Regulatory certification:** Certified under **UN Regulation No. 157** (the international United Nations rulebook for Automated Lane Keeping Systems) by Germany's federal transport authority (**Kraftfahrt-Bundesamt, or KBA**) in December 2021, and launched on production S-Class and EQS sedans in Germany in 2022.
+* **Expanding speed limits:** Under initial UN rules, the system was restricted to traffic-jam speeds of up to **60 km/h (37 mph)**. After updated regulatory approvals, Mercedes-Benz secured clearance from German authorities in late 2024 to raise DRIVE PILOT's top operating speed to **95 km/h (59 mph)** on German Autobahn corridors.
+* **United States approvals:** Granted commercial operating approval by state motor vehicle departments in **Nevada** (January 2023) and **California** (June 2023) for designated freeway routes during congested traffic.
+* **Redundant hardware stack:** Uses front-mounted laser radar (**LiDAR**), long-range radar, stereo optical cameras, road-moisture sensors inside wheel wells, centimeter-grade satellite positioning, and high-definition 3D vector maps. Crucially, it includes duplicate backup steering motors, backup braking boosters, and an independent secondary 12-volt electrical circuit.
+* **Exterior turquoise marker lights (SAE J3134):** Mercedes-Benz became the first automaker authorized by California and Nevada to display **turquoise exterior status lights** built into headlights, taillights, and side mirrors. Engineers chose turquoise because it cannot be confused with flashing blue or red emergency vehicle lights, amber turn signals, or brake lamps. It lets surrounding motorists and traffic officers instantly see that the car's automated system, not the person in the front seat, is in legal control of driving.
 
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/AiUUgVuqH98" title="Hands-free on the Autobahn with Mercedes-Benz Drive Pilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -198,9 +206,9 @@ The first automaker to achieve internationally recognized commercial type-approv
 
 ### Level 4: High Automation Within Bounded Operational Domains
 
-Because Level 3 transfers operational risk back to an out-of-the-loop human during time-critical edge cases, many leading autonomous developers (such as Waymo, Zoox, and Baidu Apollo) chose to bypass Level 3 entirely and focus directly on **Level 4**.
+Because Level 3 transfers operational risk back to an out-of-the-loop human during sudden road hazards, many leading autonomous developers (such as Waymo, Zoox, and Baidu Apollo) chose to bypass Level 3 entirely and focus directly on **Level 4**.
 
-At Level 4, the vehicle is architected **never to issue a Takeover Request to an occupant**. If the vehicle encounters a critical sensor degradation, extreme weather exceeding its design envelope, or an unmapped road blockage, it executes its own DDT fallback autonomously, executing a Minimal Risk Maneuver (pulling onto the shoulder or coming to a safe stop) without requiring human intervention. Human occupants are strictly passengers.
+At Level 4, the vehicle is architected **never to ask an occupant to take the wheel**. If the vehicle encounters heavy weather exceeding its operating limits, a damaged sensor, or a road blockage it cannot navigate, it executes its own fallback stop safely on the shoulder or within its lane without human help. Everyone inside is strictly a passenger.
 
 ```
        +--------------------------------------------------------------+
@@ -217,21 +225,19 @@ At Level 4, the vehicle is architected **never to issue a Takeover Request to an
    - Case study: Waymo One                             - Case study: ADASTEC / Karsan e-ATAK
 ```
 
-#### 1. Urban Robotaxis: The Waymo Fleet
-Commercial driverless ride-hailing services are currently operating at commercial scale:
-* **Operating Footprint:** Waymo One operates fully driverless commercial ride-hailing services across major metropolitan areas including **Phoenix**, **San Francisco**, and **Los Angeles**, with active commercial testing and expansions across **Austin** and **Atlanta**.
-* **Sensor and Hardware Architecture:** Powered by the 5th-generation (and newly deployed 6th-generation) **Waymo Driver**, the vehicle integrates a multi-layered sensor suite:
-  * 360-degree rooftop and perimeter LiDARs capable of resolving 3D object geometries past 500 meters.
-  * Imaging radar arrays impervious to fog and direct solar glare.
-  * High-dynamic-range optical cameras providing dense RGB semantic segmentation.
-  * Exterior Audio Detection Sensors (ADS) engineered to detect the acoustic signatures and directional vectors of approaching emergency sirens.
-* **Empirical Safety Data (2026 Benchmarks):** Reporting under NHTSA's mandatory **Standing General Order (SGO 2021-01)**, Waymo evaluated crash performance over more than **270 million rider-only commercial miles** through mid-2026:
-  * **82% fewer injury-causing crashes** compared to estimated human-driver baselines in the same operating environments.
-  * **95% fewer serious injury crashes**.
-  * **82% reduction in airbag-deployment collisions**.
-  * **68% lower crash rate for police-reportable incidents**, as independently corroborated in a comprehensive July 2026 evaluation by the **Insurance Institute for Highway Safety (IIHS)**.
-
-<iframe width="100%" height="420" src="https://www.youtube.com/embed/jxSNZ1g0P-E" title="Riding with Waymo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+#### 1. Urban robotaxis: The Waymo fleet
+Commercial driverless ride-hailing services are operating at scale in major cities:
+* **Operating footprint:** Waymo One operates commercial, fully driverless passenger rides across metropolitan areas including **Phoenix**, **San Francisco**, and **Los Angeles**, with ongoing commercial expansions in **Austin** and **Atlanta**.
+* **Sensor and hardware architecture:** Powered by the Waymo Driver software stack, vehicles combine:
+  * 360-degree rooftop and perimeter laser sensors (LiDAR) that map 3D object shapes out to several hundred meters.
+  * Radar sensors that penetrate fog, rain, and blinding headlight glare.
+  * High-resolution cameras providing computer-vision scene recognition and traffic signal detection.
+  * Audio detection sensors tuned to identify the sirens and direction of approaching police cars, fire engines, and ambulances.
+* **Empirical safety benchmarks:** Reporting under mandatory federal incident guidelines from the United States National Highway Traffic Safety Administration (NHTSA), Waymo evaluated crash performance over more than **270 million rider-only commercial miles** through mid-2026:
+  * **82% fewer injury crashes** compared to human-driver baselines in the same operating areas.
+  * **95% fewer serious injuries**.
+  * **82% reduction in airbag deployments**.
+  * **68% lower rate of police-reported crashes**, findings corroborated in an independent July 2026 study by the United States **Insurance Institute for Highway Safety (IIHS)**.
 
 #### 2. Autonomous Municipal Transit: ADASTEC & The Karsan Autonomous e-ATAK
 While robotaxis dominate consumer media, Level 4 automation is quietly transforming public transportation fleets. Rather than retrofitting light passenger cars, transit automation deploys heavy commercial electric buses on dedicated transit ways and suburban feeder loops.
@@ -250,12 +256,12 @@ Passengers boarding an autonomous transit shuttle often wonder: *If this vehicle
 
 The presence of on-board staff in early-stage Level 4 deployments is not an indicator of automated control failure. Instead, it reflects legal, operational, and accessibility realities:
 
-1. **Accessibility and ADA Compliance:** An autonomous perception stack cannot assist a passenger in a wheelchair, operate a manual boarding ramp, secure four-point floor tie-down belts, assist visually impaired riders, or manage physical fare disputes during peak rush hours.
-2. **Regulatory Transition Frameworks:** National and regional type-approval regulations (such as European Union **Regulation (EU) 2022/1426** for automated driving systems and U.S. Federal Motor Vehicle Safety Standards exemptions) frequently mandate an authorized technical safety operator during initial deployment phases before granting uncrewed commercial operating licenses.
-3. **Teleoperation vs. Remote Fleet Response:**
-   As fleets scale and mature, physical in-vehicle attendants are replaced by **Remote Fleet Response Centers**. Crucially, remote assistance does **not** mean a human teleoperator driving the vehicle using a steering wheel and pedals over 5G:
-   * Direct remote driving over cellular connections is hazardous due to latency jitter, packet loss, and sensor bandwidth constraints.
-   * Instead, systems like Waymo Fleet Response and ADASTEC Remote Operations provide **high-level semantic guidance**. When the vehicle encounters an ambiguous blockage (e.g., traffic cones forcing a cross over a double yellow line, or a police officer directing traffic with manual hand gestures), the onboard ADS stops safely and requests guidance. The remote specialist reviews the 3D scene, approves an alternative corridor or waypoint path, and returns execution to the vehicle's onboard planning algorithms.
+1. **Passenger accessibility:** An autonomous perception stack cannot assist a passenger using a wheelchair, operate a manual boarding ramp, secure four-point floor belts, help visually impaired riders navigate to seats, or resolve fare disputes during peak rush hours. In the United States, compliance with the Americans with Disabilities Act (ADA) often necessitates staff assistance.
+2. **Regulatory transition periods:** Transportation rules, including European Union Regulation (EU) 2022/1426 for automated vehicles and United States commercial vehicle exemptions, routinely require certified safety personnel on board during initial public deployment stages before authorities grant fully uncrewed commercial licenses.
+3. **Remote fleet support instead of direct remote driving:**
+   As fleets gain operational mileage, onboard technicians give way to **remote fleet assistance centers**. Importantly, remote support does **not** mean someone driving the car like a video game over cellular data:
+   * Direct joystick driving over mobile networks is dangerous because network lag (latency spikes) and lost signals can delay emergency braking.
+   * Instead, systems like Waymo Fleet Response and ADASTEC Remote Operations provide **high-level route guidance**. When an automated vehicle meets an unexpected obstruction (such as construction cones pushing traffic across a solid double-yellow line, or a police officer directing traffic with hand gestures), the car brings itself to a safe stop and asks fleet control for guidance. A human specialist views the vehicle's 3D cameras, confirms an approved path around the obstacle, and hands execution back to the car's local obstacle avoidance software.
 
 ```
 +---------------------------------------------------------------------------------------+
