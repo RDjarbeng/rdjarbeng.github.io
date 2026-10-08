@@ -643,3 +643,4 @@ https://github.com/smsnobin77/Academic-research-opportunities-for-international-
 - [ ] How do IoT systems deal with the the high transmission overhead, storage footprints, and energy costs associated with continuous sensor streams?
 - [ ] What is NPU (Neural Processing Unit) and how does it differ from a GPU?
 - [ ] Add resource to post about eleventy: https://learneleventy.dev/
+- [ ] Write about: Ruikai Peng 16-year-old security researcher
