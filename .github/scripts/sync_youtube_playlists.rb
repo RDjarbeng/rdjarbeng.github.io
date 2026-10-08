@@ -96,13 +96,20 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
       puts "Syncing playlist: #{front_matter['title']} (#{playlist_id}) -> Genre: #{genre}"
       
       items = fetch_playlist_items(playlist_id)
+      video_limit = front_matter['video_limit']
       
+      playlist_synced = 0
       items.each do |item|
+        break if video_limit && video_limit.to_i > 0 && playlist_synced >= video_limit.to_i
+
         snippet = item['snippet']
         video_id = snippet.dig('resourceId', 'videoId')
         
         # Skip if already exists
-        next if existing_videos.include?(video_id)
+        if existing_videos.include?(video_id)
+          playlist_synced += 1
+          next
+        end
         
         title = snippet['title']
         # Skip private/deleted videos
@@ -138,6 +145,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
         File.write(filename, file_content)
         existing_videos << video_id
         new_videos_count += 1
+        playlist_synced += 1
         puts "Created: #{filename}"
       end
     end
