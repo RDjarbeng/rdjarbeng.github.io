@@ -10,8 +10,10 @@ keywords:
   - "Linear Algebra"
   - "Applied Linear Algebra"
 videos:
-  - "stanford-engr108--introduction-to-applied-linear-algebra--lectures-by-professor-stephen-boyd--stanford-university"
+  - "2020-12-01-stanford-engr108-introduction-to-applied-linear-alg-oR6G1MUMveE"
+  - "2020-12-01-stanford-engr108-introduction-to-applied-linear-alg-vVspolIKPgc"
+  - "2020-12-01-stanford-engr108-introduction-to-applied-linear-alg-wlPiJZ1DQjs"
 youtube_playlist_url: "https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9"
-video_limit: 6
+video_limit: 3
 layout: video_collection
 ---
