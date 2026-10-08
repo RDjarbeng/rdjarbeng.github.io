@@ -654,3 +654,4 @@ Intelligence shouldn’t be frozen in training data or updated in slow expensive
 We are betting against scaling, and instead building efficient AI that continually learns.
 
 Where others chase scale, we are building adaptability-first systems
+- [ ] Spacex Crew-12 Mission | Splashdown what's that? What's happening, context and post about this
