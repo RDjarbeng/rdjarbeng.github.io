@@ -16,6 +16,7 @@ Before creating the file, check `admin/config.yml` (specifically the `posts` col
 - Apply the `/humanizer` rules to scrub AI writing patterns (cutting buzzwords, em dashes, copulas, and false ranges while preserving technical depth).
 - DO NOT dumb down technical content. Retain technical depth while making the structure readable.
 - For technical posts, define 2-4 `card_items` in the frontmatter to explain key concepts or link to related resources.
+- **Video & Playlist Embed Verification**: Any embedded video must be verified live (via oEmbed or the `watch` skill) before insertion. Never overwrite or alter playlist metadata or IDs tied to automated sync workflows.
 - Ensure SEO best practices and proper markdown formatting.
 
 ## 3. Handle the Cover Image

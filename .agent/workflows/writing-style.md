@@ -38,6 +38,10 @@ When writing or editing posts for this website, follow these rules:
 
 2. **Embed YouTube Videos**: If a post contains YouTube links, embed them using an `<iframe>`.
    - Example: `<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>`
+   - **CRITICAL Video Verification**: NEVER guess or fabricate YouTube video IDs. Always verify that a video is live, public, and embeddable before inserting it into posts or video collections.
+     - Validate via YouTube oEmbed API (`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=VIDEO_ID&format=json` must return HTTP 200).
+     - Or use the `watch` skill (`~/.gemini/config/skills/watch/`) to inspect transcripts and confirm content validity.
+     - In video collections (`_video_collections/`) and synchronized playlists (`.github/scripts/sync_youtube_playlists.rb`), preserve existing playlist URLs and valid video IDs so sync workflows are not disrupted.
 
 ## Math & KaTeX Formatting (STRICT)
 
@@ -60,3 +64,4 @@ When writing or editing posts for this website, follow these rules:
 - [ ] No unnecessary questions directed at the reader
 - [ ] Tone matches the post type
 - [ ] All inline math uses double dollar signs (`$$math$$`) - NEVER single `$`
+- [ ] All embedded YouTube videos and playlist URLs verified live via oEmbed or the `watch` skill
