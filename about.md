@@ -17,6 +17,8 @@ custom_css_class: about-page
 <div class="about-section">
 <p class="about-summary-text">
 I am a software engineer and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I build low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision, time-series modeling, and data engineering, and I am currently preparing PhD applications centered on machine learning for environmental sensing and air quality. AWS Certified Solutions Architect. I also write technical posts and personal reflections on this blog.
+
+Currently looking to build strong research and engineering experience in multimodal learning, vision models, and robotics with a focus on space applications.
 </p>
 </div>
 
@@ -364,7 +366,7 @@ I am a software engineer and machine learning engineer with an MSc in Electrical
       <h3 class="exp-title"><a href="https://github.com/Nyandwi/machine_learning_complete" target="_blank" rel="noreferrer">Machine Learning Complete</a></h3>
       <span class="exp-date">PR merged September 2023</span>
     </div>
-    <span class="exp-org">by Nyandwi &middot; ~5k stars &middot; 800+ forks</span>
+    <span class="exp-org">by Nyandwi &middot; \~5k stars &middot; 800+ forks</span>
     <p class="exp-desc">Merged <a href="https://github.com/Nyandwi/machine_learning_complete/pull/9" target="_blank" rel="noreferrer">pull request #9</a>: added a curated collection of freely accessible Python learning resources (books, online courses, and videos) to the introductory chapter, verifying each resource was genuinely free before inclusion.</p>
     <div class="exp-skills">
         <span class="skill-pill">Open Source</span>
@@ -389,7 +391,9 @@ I am a software engineer and machine learning engineer with an MSc in Electrical
 </div>
 
 ## Areas of interest:
+
 ### Education:
+
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
 * Who are the key people in the field of AI and machine learning, beyond the media hype?
 
@@ -407,11 +411,13 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
 </div>
 
 ### AI / Machine Learning:
+
 * What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
 * How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
 * Computer vision: What are the latest advances in computer vision and in what areas can they be applied?
 
 ### Remote Sensing & GIS:
+
 * **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
 * **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
 * How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
@@ -419,6 +425,7 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
 * What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
 
 ### Finance:
+
 Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
 
 <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
@@ -546,7 +553,7 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
               <span class="skill-item">Pick-and-Place</span>
               <span class="skill-item">Gazebo &amp; Bullet Simulators</span>
               <span class="skill-item">Homogeneous Transforms &amp; Quaternions</span>
-              <span class="skill-item">A* Pathfinding</span>
+              <span class="skill-item">A\* Pathfinding</span>
               <span class="skill-item">Unity3D</span>
           </div>
       </div>
