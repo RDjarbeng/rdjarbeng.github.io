@@ -645,3 +645,12 @@ https://github.com/smsnobin77/Academic-research-opportunities-for-international-
 - [ ] Add resource to post about eleventy: https://learneleventy.dev/
 - [ ] Write about: Ruikai Peng 16-year-old security researcher
 - [ ] Are these the current leaders in the AI race? Anthropic , Google , Open AI , DeepSeek , Zai .
+- [ ] Company spotlight on https://adaptionlabs.ai/
+
+The last decade has been characterized by brute force: larger and larger volumes of compute to build larger and larger monolithic systems.
+
+Intelligence shouldn’t be frozen in training data or updated in slow expensive cycles.
+
+We are betting against scaling, and instead building efficient AI that continually learns.
+
+Where others chase scale, we are building adaptability-first systems
