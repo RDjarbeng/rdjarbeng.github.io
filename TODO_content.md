@@ -644,3 +644,4 @@ https://github.com/smsnobin77/Academic-research-opportunities-for-international-
 - [ ] What is NPU (Neural Processing Unit) and how does it differ from a GPU?
 - [ ] Add resource to post about eleventy: https://learneleventy.dev/
 - [ ] Write about: Ruikai Peng 16-year-old security researcher
+- [ ] Are these the current leaders in the AI race? Anthropic , Google , Open AI , DeepSeek , Zai .
