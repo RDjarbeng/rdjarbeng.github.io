@@ -220,3 +220,6 @@ yout-ube.com/watch
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
 - [ ] In post geographic-concentration-machine-learning-models/ some of the math equations need to be inline, for example a line showing C on one line alone,instead of being inline
 - [ ] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing
+- [ ] Do we need this or our current embeds are fine?
+
+https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
