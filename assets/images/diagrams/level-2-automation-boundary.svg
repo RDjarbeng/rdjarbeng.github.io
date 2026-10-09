@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="100%" style="background:#0f172a; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="l2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="actGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="humanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#fb7185"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <text x="30" y="38" fill="#f8fafc" font-size="19" font-weight="700" letter-spacing="0.5">Level 2 Partial Automation: Actuation vs. Legal Responsibility</text>
+  <text x="30" y="60" fill="#94a3b8" font-size="13">The car controls physical movement along two axes, but the human remains 100% legally liable</text>
+
+  <!-- Container 1: Level 2 Automated System Boundary -->
+  <g transform="translate(30, 80)">
+    <rect width="470" height="260" rx="10" fill="url(#l2Grad)" stroke="#0284c7" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="470" height="34" rx="10" fill="#0369a1" fill-opacity="0.35"/>
+    <text x="18" y="23" fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="0.5">MACHINE EXECUTION BOUNDARY (ECU CONTROL)</text>
+
+    <!-- Node 1: Lateral Axis -->
+    <g transform="translate(25, 52)">
+      <rect width="180" height="70" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="18" y="30" fill="#bae6fd" font-size="11" font-weight="600" text-transform="uppercase">Lateral Axis</text>
+      <text x="18" y="50" fill="#ffffff" font-size="14" font-weight="700">Lane Centering</text>
+    </g>
+
+    <!-- Node 2: Longitudinal Axis -->
+    <g transform="translate(25, 150)">
+      <rect width="180" height="70" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="18" y="30" fill="#bae6fd" font-size="11" font-weight="600" text-transform="uppercase">Longitudinal Axis</text>
+      <text x="18" y="50" fill="#ffffff" font-size="14" font-weight="700">Adaptive Cruise</text>
+    </g>
+
+    <!-- Node 3: Actuator Fusion -->
+    <g transform="translate(265, 96)">
+      <rect width="180" height="85" rx="8" fill="url(#actGrad)" stroke="#7dd3fc" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="16" y="30" fill="#f0f9ff" font-size="11" font-weight="600" text-transform="uppercase">Continuous Fusion</text>
+      <text x="16" y="50" fill="#ffffff" font-size="14" font-weight="700">Real-Time Actuation</text>
+      <text x="16" y="68" fill="#e0f2fe" font-size="11">Simultaneous Steering + Speed</text>
+    </g>
+
+    <!-- Connectors inside L2 -->
+    <path d="M 205 87 Q 235 87 265 125" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <path d="M 205 185 Q 235 185 265 150" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  </g>
+
+  <!-- Supervision Flow Arrow between containers -->
+  <g transform="translate(500, 205)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#f43f5e" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+    <text x="30" y="-12" fill="#fda4af" font-size="11" font-weight="700" text-anchor="middle">SUPERVISED BY</text>
+    <text x="30" y="20" fill="#94a3b8" font-size="10" text-anchor="middle">Zero Latency</text>
+  </g>
+
+  <!-- Container 2: Human Operator Responsibility -->
+  <g transform="translate(570, 80)">
+    <rect width="320" height="260" rx="10" fill="url(#l2Grad)" stroke="#e11d48" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="320" height="34" rx="10" fill="#be123c" fill-opacity="0.35"/>
+    <text x="18" y="23" fill="#fb7185" font-size="13" font-weight="700" letter-spacing="0.5">HUMAN OPERATOR (100% LIABLE)</text>
+
+    <!-- Node Human Eyes -->
+    <g transform="translate(20, 52)">
+      <rect width="280" height="70" rx="8" fill="url(#humanGrad)" stroke="#fda4af" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="18" y="30" fill="#fecdd3" font-size="11" font-weight="600" text-transform="uppercase">Visual Monitoring</text>
+      <text x="18" y="50" fill="#ffffff" font-size="14" font-weight="700">Eyes Continuously on Road</text>
+    </g>
+
+    <!-- Node Human Hands -->
+    <g transform="translate(20, 150)">
+      <rect width="280" height="70" rx="8" fill="url(#humanGrad)" stroke="#fda4af" stroke-width="1.2" filter="url(#shadow)"/>
+      <text x="18" y="30" fill="#fecdd3" font-size="11" font-weight="600" text-transform="uppercase">Physical Readiness</text>
+      <text x="18" y="50" fill="#ffffff" font-size="14" font-weight="700">Hands Ready to Intervene Instantly</text>
+    </g>
+
+    <!-- Sub note -->
+    <text x="20" y="245" fill="#f43f5e" font-size="11" font-weight="600">Legal Driver Status: 100% Human at all milliseconds</text>
+  </g>
+</svg>
