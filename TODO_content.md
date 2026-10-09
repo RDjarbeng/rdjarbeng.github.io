@@ -656,3 +656,14 @@ We are betting against scaling, and instead building efficient AI that continual
 Where others chase scale, we are building adaptability-first systems
 - [ ] Spacex Crew-12 Mission | Splashdown what's that? What's happening, context and post about this
 - [ ] Use this as a reference in a post on whether autonomous vehicles have surpassed humans in driving safety per km. Under mandatory federal incident reporting from the NHTSA Standing General Order, Waymo's dataset spanning more than 270 million rider-only miles shows an 82% reduction in injury crashes and a 95% reduction in serious injury crashes compared to human drivers, corroborated by research from the Insurance Institute for Highway Safety (IIHS).
+- [ ] The MPEG Video Coding for Machines (VCM) Ad Hoc Group was created in July 2019 by ISO/IEC JTC1/SC29 WG2 to standardize video and feature compression designed specifically for machine vision tasks rather than human viewing.
+
+Key Objectives and Tracks
+
+• Track 1 (Feature Coding / FCM): Focuses on compressing and transmitting intermediate neural network feature tensors rather than pixels, also standardized under MPEG-AI Part 4.
+• Track 2 (Image/Video Coding / VCM): Applies task-aware coding tools and neural-network-based optimizations (such as decoder-side chroma synthesis) directly in the pixel domain.
+• Core Tasks: Object detection, multi-object tracking, instance segmentation, and action recognition.
+• Primary Use Cases: Autonomous driving, smart cities, surveillance, IoT edge devices, and industrial automation.
+• Performance Gains: Achieves significant bitrate savings (ranging from roughly 12% to over 60% depending on the configuration and sequence) while maintaining high task accuracy compared to standard codecs like HEVC or VVC.
+Learn more about how MPEG's Feature Coding for Machines standard works for AI video analysis:
+58:34
