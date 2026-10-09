@@ -21,3 +21,13 @@ Intelligence shouldn’t be frozen in training data or updated in slow expensive
 We are betting against scaling, and instead building efficient AI that continually learns.
 
 Where others chase scale, we are building adaptability-first systems
+
+## Why have we become elevated prompt engineers?
+
+Today’s AI is expensive, static, and slow to change. A handful of companies build monolithic, one-size-fits-all-models optimized for the average use case.
+
+Averages erase the exceptional. Whether that’s because of your country, language, industry or your pursuit at the edge of what’s possible.
+
+Tools should exist to extend human capability. Instead, we contort. We rephrase. We mould our requests to compensate for AI limitations.
+
+Most models work well until your use case doesn’t fit. Then you’re on your own.
