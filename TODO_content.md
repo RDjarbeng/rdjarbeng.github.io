@@ -667,3 +667,4 @@ Key Objectives and Tracks
 • Performance Gains: Achieves significant bitrate savings (ranging from roughly 12% to over 60% depending on the configuration and sequence) while maintaining high task accuracy compared to standard codecs like HEVC or VVC.
 Learn more about how MPEG's Feature Coding for Machines standard works for AI video analysis:
 58:34
+- [ ] Write a post on the pull request that listed contributors on the countdown page
