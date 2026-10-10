@@ -670,3 +670,10 @@ Learn more about how MPEG's Feature Coding for Machines standard works for AI vi
 - [ ] Write a post on the pull request that listed contributors on the countdown page
 - [ ] Check if a country's outlook in Global media is good or bad, nice project to see if the media is being fair in their reporting on different countries. For instance are all BBC reports on Kenya negative or neutral? 🤔
 - [ ] Find quote: Reasonable men conform to their environment therefore all progress is due to unreasonable men
+- [ ] Psalms of David 139 is just something, after he asks God to kill his enemies and the wicked. "oh, that You would slay the wicked, O God !"
+
+Then he says "I hate them with perfect hatred"
+
+After that he then says "Search me O God and know my heart" and then "And see if there is any wicked way in me"
+😂😂
+I'm sorry Sir David, what? 🌝 You were just calling for your enemies to be slain now you're out here saying "if there is any wicked way in me", herh King David
