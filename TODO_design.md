@@ -223,3 +223,4 @@ yout-ube.com/watch
 - [ ] Do we need this or our current embeds are fine?
 
 https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
+- [ ] Add a UI where posts are linked to each other and the link to the cards. Would be good to add it to the recommended posts as a way to show where you should go next and which direction is strongest, kind of a mindmap, also good for my analytics so I can see posts that stand alone vs those that are connected across the site
