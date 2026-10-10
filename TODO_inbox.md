@@ -79,3 +79,6 @@ Index icon
 - [ ] 2026-10-03 11:52 CAT | Here's a cool animation, a post card on the home page, gets up and runs off the screen. It makes sure to disturb the cards around it. Later it sneaks back, turns the site to dark mode and tries to pretend as if nothing happened
 - [ ] 2026-10-03 15:41 CAT | Osint, is it a proper tool, does it show what governments are doing?
 - [ ] 2026-10-10 08:25 CAT | Add story about AWS certification what you didn't see, the number of rescheduled exams, internet technical issues, tutorials, impostor syndrome, maybe should habe taken the practicioner exam first...
+- [ ] 2026-10-10 08:27 CAT | Add story about CMMRS what it took to apply, immigration issues, perhaps we would have had to travel for the visa, so many documents to submit...
+
+The trip, door closing and mentally giving up, the hope that returned wen it opened again, calling a friend just to help with the trains and navigating Germany, almost missed the bus because of a station, shouting at Agnes because she almost missed the tram
