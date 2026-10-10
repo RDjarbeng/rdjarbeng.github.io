@@ -668,3 +668,4 @@ Key Objectives and Tracks
 Learn more about how MPEG's Feature Coding for Machines standard works for AI video analysis:
 58:34
 - [ ] Write a post on the pull request that listed contributors on the countdown page
+- [ ] Check if a country's outlook in Global media is good or bad, nice project to see if the media is being fair in their reporting on different countries. For instance are all BBC reports on Kenya negative or neutral? 🤔
