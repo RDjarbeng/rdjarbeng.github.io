@@ -510,11 +510,16 @@ iframe {
   margin-top: auto;
   /* Pushes this section to the bottom of the card if needed */
   padding-top: 5px;
+  /* Keep date + tags on one line; tags shrink instead of wrapping below */
+  flex-wrap: nowrap;
+  gap: 8px;
 }
 
 .post-meta-left {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .post-meta,
@@ -1294,6 +1299,18 @@ a:hover {
   border: 1px solid var(--card-border);
   padding: 6px 10px;
   background-color: var(--card-bg);
+}
+
+.post-content .mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.75rem 0;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
 
@@ -2791,11 +2808,31 @@ h1, h2, h3, h4, h5, h6,
 
 .post-card-categories {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   gap: 4px;
   margin-bottom: 0;
+  margin-left: auto;
+  min-width: 0;
+  overflow: hidden;
   position: relative;
   z-index: 2;
+
+  /* Long pills truncate with an ellipsis rather than pushing to a new line */
+  .post-card-category,
+  .post-card-tag {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* First pill stays whole; only later ones give up space */
+  > :first-child {
+    flex-shrink: 0;
+  }
 }
 
 .post-card-category {
