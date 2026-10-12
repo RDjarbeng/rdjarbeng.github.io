@@ -122,10 +122,7 @@ Possible future implementation:
 - [ ] Add a label to the posts and personal posts, detailing that eg: this post is part of a collection of technical posts on rdjarbeng.com (link to posts page), same for personal posts. Could do same for gallery groupings- need a nice way to implement this though
 - [ ] Post images thumbnails cut off on most of the postcards showing only a part of the image need to find a way to size the postcards and post images correctly to show majority of the image so that the text is not cut off especially on the home page- might consider changing from the 2 column layout after moving to 11ty
 - [ ] Remove horizontal scroll bars on the gallery collection on the homepage replace with arrows -depends on mobile or desktop
-- [ ] The gallery cards on the homepage have a white space above the image leaving a white line uptop
-- [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
 
-- [ ] Link directly dev, coder legion posts manually to main site
 
 - [ ] Some of the pages on bing webmaster upon inspection show: "Blocked URL cannot appear on Bing
 
@@ -138,7 +135,6 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Video page collections don't play without redirecting, would be nice to have them play
 - [ ] Need to integrate the site with other sites and services so it's useful to people and agents
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
-- [ ] Did an import from medium and the cards at the bottom of the posts weren't imported correctly. It shows 'related concepts and posts' but the card content was not included
 - [BUG] Thumbnails for TikTok video on the videos page shows a black background behind it instead of filling the page- a bit complicated because of different video sizes and difficulty knowing beforehand from the embed if the space is enough-better to have more space than for the video to be cutoff
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
 - [ ] Set certain tags as series on the website, such as money transfer
@@ -152,8 +148,6 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 -Need to show the visual hierarchy for the Gallery page, images first then the categories for the gallery image such as AI, then videos-partially implemented with toc
 
 Also need to move the Artemis II collection under the images and show about 2 subcollections for Artemis II
-- [ ] Could create an option like this for guest posts on my blog:
-https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
 - [ ] Click to play should not display on Instagram amd Twitter thumbnails on YouTube, also text should be out of the way of thumbnails
 - [ ] The sveltia cms docs has transformations for webp images for width and height, let's see if it can help solve the issue of cover images not being the same size
 
@@ -162,7 +156,6 @@ https://sveltiacms.app/en/docs/media/internal#asset-collections
 Eg from docs:
 width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Add the list of links in navigation and pages on the site to the footer so it's easier to navigate
-- [ ] Add icon to the minutes to read on the post cards for homepage
 - [ ] Need a way to distinguish the videos from the images in the gallery recommended section on single posts. The icon could help
 - [ ] Navigating back from a video collection takes you to the top of the videos page, needs to be fixed
 - The video collections start with Behind the scenes in alphabetical order, need to find a better way
@@ -186,16 +179,11 @@ https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know w
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website- partial
-- [ ] The tags on the postcards are displacing the dates and the read time sometimes for the long posts you need to make sure that it's always on a horizontal line and ensure the tags do not overflow
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
 - [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
-- [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
-- [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
-- [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
 - add a random movie picker, implement for nigerian movies, christian movies
 - [ ] https:// youtube.com/@rdjarbengwebAdd YouTube channel to contact or footer
 - [ ] add a way to collapse sidebar for main gallery
-- [ ] Do a section listing featuring, Featured YouTube channels I've posted about
 - [ ] Investigate no cookie for YouTube if it makes a difference
 
 It messes with the formatting, can't see the replies, and changes the url, but it works youtube-nocookie.com/embed/-ZRwlYtA.
@@ -204,21 +192,16 @@ It messes with the formatting, can't see the replies, and changes the url, but i
 (yout-ube.com/watch?....)
 yout-ube.com/watch
 - [ ] Add the enlighten project as a section on the homepage
-- [ ] Add hackathons participated in Zindi and Kaggle to about sections, as well as that Kaggle notebook on SAM
 - [ ] TikTok videos aren't loading on the site due to overload protection
-- [ ] Add master CV to about page
 - [x] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo (added "📝 Save as TODO" option to video keyboard)
 - [x] Add a way to add and edit Playlists in the cms and in telegram (added playlist detection and collection creation in telegram bot, CMS playlist collection configured)
 
 - [ ] Need to be able to navigate the website with keyboard inputs if necessary
-- [ ] Consider making some of the longer posts into pdfs
 - [ ] What would it take to add versioning to posts
-- Don't know what to do with these 3D files: "C:\Users\Richard\RD\myprojects\rdjarbeng.github.io\assets\images\3d\firefly_dog_mascot"
 - [ ] Let the homepage cards scroll horizontally on mobile liie in the gallery so it's easier to navigate the different sections
 - [ ] Highlighting on the TOC for posts disappears down the screen when the TOC is long and needs to be scrolled, the TOC does not auto scroll as the user scrolls down
 - [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
-- [ ] In post geographic-concentration-machine-learning-models/ some of the math equations need to be inline, for example a line showing C on one line alone,instead of being inline
 - [ ] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing
 - [ ] Do we need this or our current embeds are fine?
 

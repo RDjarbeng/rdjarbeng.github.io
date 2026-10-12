@@ -24,6 +24,33 @@ Add page for apps of interest, AI apps, image creators,video generators, I love 
 - [ ] Create a gallery of videos, music from RRR, Playlists from Andrew Ng and Lex Fridman, my own collection of songs that require headphones, nigerian movies
 
 
+## Moved from TODO_design.md
+
+### Fixes to existing posts
+- [ ] Did an import from medium and the cards at the bottom of the posts weren't imported correctly. It shows 'related concepts and posts' but the card content was not included
+- [ ] In post geographic-concentration-machine-learning-models/ some of the math equations need to be inline, for example a line showing C on one line alone,instead of being inline
+
+### Content quality (Gemini additional comments)
+- [ ] The Gemini additional comments sometimes do not make sense at all. Fix this so that the additional comments express a comprehensive idea, interesting to read, and logically sound
+- [ ] Find a way to measure if the Gemini additional comments improve the post or actually subtract from it
+- [ ] But since the output is unacceptable we want to go and look at retraining and fixing the underlying thing
+
+### About page
+- [ ] Add hackathons participated in Zindi and Kaggle to about sections, as well as that Kaggle notebook on SAM
+- [ ] Add master CV to about page
+
+### Gallery & media organization
+- [ ] Gallery images need to be organized, there are too many images in Gallery external that don't have a proper category
+- Don't know what to do with these 3D files: "C:\Users\Richard\RD\myprojects\rdjarbeng.github.io\assets\images\3d\firefly_dog_mascot"
+
+### Distribution & formats
+- [ ] Link directly dev, coder legion posts manually to main site
+- [ ] Could create an option like this for guest posts on my blog:
+https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
+- [ ] Do a section listing featuring, Featured YouTube channels I've posted about
+- [ ] Consider making some of the longer posts into pdfs
+
+
 # linkedIn posts
 Random thoughts and discussions from LinkedIN unposted posts:
 
