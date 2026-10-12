@@ -676,3 +676,29 @@ We are betting against scaling, and instead building efficient AI that continual
 Where others chase scale, we are building adaptability-first systems
 - [ ] Spacex Crew-12 Mission | Splashdown what's that? What's happening, context and post about this
 - [ ] Use this as a reference in a post on whether autonomous vehicles have surpassed humans in driving safety per km. Under mandatory federal incident reporting from the NHTSA Standing General Order, Waymo's dataset spanning more than 270 million rider-only miles shows an 82% reduction in injury crashes and a 95% reduction in serious injury crashes compared to human drivers, corroborated by research from the Insurance Institute for Highway Safety (IIHS).
+- [ ] The MPEG Video Coding for Machines (VCM) Ad Hoc Group was created in July 2019 by ISO/IEC JTC1/SC29 WG2 to standardize video and feature compression designed specifically for machine vision tasks rather than human viewing.
+
+Key Objectives and Tracks
+
+• Track 1 (Feature Coding / FCM): Focuses on compressing and transmitting intermediate neural network feature tensors rather than pixels, also standardized under MPEG-AI Part 4.
+• Track 2 (Image/Video Coding / VCM): Applies task-aware coding tools and neural-network-based optimizations (such as decoder-side chroma synthesis) directly in the pixel domain.
+• Core Tasks: Object detection, multi-object tracking, instance segmentation, and action recognition.
+• Primary Use Cases: Autonomous driving, smart cities, surveillance, IoT edge devices, and industrial automation.
+• Performance Gains: Achieves significant bitrate savings (ranging from roughly 12% to over 60% depending on the configuration and sequence) while maintaining high task accuracy compared to standard codecs like HEVC or VVC.
+Learn more about how MPEG's Feature Coding for Machines standard works for AI video analysis:
+58:34
+- [ ] Write a post on the pull request that listed contributors on the countdown page
+- [ ] Check if a country's outlook in Global media is good or bad, nice project to see if the media is being fair in their reporting on different countries. For instance are all BBC reports on Kenya negative or neutral? 🤔
+- [ ] Find quote: Reasonable men conform to their environment therefore all progress is due to unreasonable men
+- [ ] Psalms of David 139 is just something, after he asks God to kill his enemies and the wicked. "oh, that You would slay the wicked, O God !"
+
+Then he says "I hate them with perfect hatred"
+
+After that he then says "Search me O God and know my heart" and then "And see if there is any wicked way in me"
+😂😂
+I'm sorry Sir David, what? 🌝 You were just calling for your enemies to be slain now you're out here saying "if there is any wicked way in me", herh King David
+- [ ] - The day of the agent: An agent has influenced something in the real world, Agent can place an order/command and men will move to fulfill that agent's request. An invisible software entity has influenced something in the real world. An agent can organize an event, cause people to appear or all move towards a certain direction, cause a traffic jam because of people going for the event, an agent has influenced something in the real world. Gentlemen welcome to the day of the agent 
+- The token economy and the token bank. Is there a place where you can go and get tokens or loan tokens. Who are this rich tokenaires who will set up this bank or monetary or tokenary fund so agents don't run dry on tokens
+- [ ] Write about red teaming and what it takes to break a model? What about blue teaming, how do you defend this if you're deploying a model, generally a larger parameter model is less susceptible to prompt injections but not everybody can deploy the largest model they have. And from the standpoint of a developer of an AI app what can be done to ensure your bank chatbot is not being taken over by prompt injections and giving output it wasn't supposed to give
+- [ ] What is a model for an average person? Can you call it the soul of your chatbot like Chatgpt
+- [ ] Average age people buy brand new cars, vs used cars per country
