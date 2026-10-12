@@ -729,3 +729,6 @@ I'm sorry Sir David, what? 🌝 You were just calling for your enemies to be sla
 - [ ] Write about red teaming and what it takes to break a model? What about blue teaming, how do you defend this if you're deploying a model, generally a larger parameter model is less susceptible to prompt injections but not everybody can deploy the largest model they have. And from the standpoint of a developer of an AI app what can be done to ensure your bank chatbot is not being taken over by prompt injections and giving output it wasn't supposed to give
 - [ ] What is a model for an average person? Can you call it the soul of your chatbot like Chatgpt
 - [ ] Average age people buy brand new cars, vs used cars per country
+- [ ] This post needs updating and to be more readable to the average person: 
+
+samurai-advancing-zero-shot-visual-tracking-with-motion-aware-memory/
