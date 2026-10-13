@@ -732,3 +732,7 @@ I'm sorry Sir David, what? 🌝 You were just calling for your enemies to be sla
 - [ ] This post needs updating and to be more readable to the average person: 
 
 samurai-advancing-zero-shot-visual-tracking-with-motion-aware-memory/
+- [ ] Muse Wonder | Meta
+https://dev.meta.ai/models/muse-wonder
+
+See the benchmarks on this page amd extract them for a post in model benchmarks
