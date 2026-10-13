@@ -104,15 +104,39 @@
     <link rel="next" href="{{ page.next.url | absolute_url }}">
   {%- endif -%}
   {%- feed_meta -%}
-  {%- if site.google_analytics -%}
-  {%- include google-analytics.html -%}
-  {%- endif -%}
+
   {%- if content contains 'class="katex' or content contains 'katex-block' or page.math or math -%}
   <!-- KaTeX support (loaded only for pages with math formulas) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"
     onload="renderMathInElement(document.body, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false });"></script>
+  {%- endif -%}
+
+  {%- if content contains 'language-mermaid' or content contains 'class="mermaid"' or page.mermaid -%}
+  <!-- Mermaid diagram support (loaded on demand) -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: isDark ? 'dark' : 'neutral',
+      securityLevel: 'loose',
+      htmlLabels: true
+    });
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const codeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+      codeBlocks.forEach(code => {
+        const pre = code.parentElement;
+        const div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code.textContent;
+        pre.parentNode.replaceChild(div, pre);
+      });
+      await mermaid.run();
+    });
+  </script>
   {%- endif -%}
 
   <script>

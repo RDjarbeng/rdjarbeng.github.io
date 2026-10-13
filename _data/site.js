@@ -386,6 +386,7 @@ for (const p of posts) {
 const tags = createLookupMap(rawTags);
 
 module.exports = {
+  environment: process.env.ELEVENTY_ENV || (process.env.NODE_ENV === "production" ? "production" : "development"),
   title: "Richard Djarbeng",
   tagline: "A blog about technology research and personal posts from Richard Djarbeng",
   description: "Richard Djarbeng's website with technical and personal posts. Tech blogs + real-life adventures in East Africa, USA and Europe",
