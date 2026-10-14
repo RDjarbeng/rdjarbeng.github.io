@@ -23,12 +23,12 @@ Built with **Eleventy (11ty)** and powered by **SveltiaCMS** for seamless post m
 Explore the site through these core sections:
 
 - **[Home](https://rdjarbeng.com/)**: Overview of my latest posts and a quick intro to who I am.
-- **[Posts](https://rdjarbeng.com/posts/)**: A collection of articles covering AI innovations, tech fixes, environmental insights, and more. Highlights include hands-on reviews like Andrew Ng's [Landing AI for agentic object detection and document extraction](https://rdjarbeng.com/agentic-object-detection-and-document-extraction-with-landing.ai/), [Kolors' virtual try-on app](https://rdjarbeng.com/kolors-virtual-try-on-nobody-s-gonna-know/), and my latest deep dive: [A Chronological Look At AI—A Decade-by-Decade Evolution](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/), tracing the field from 1940s theoretical roots to today's generative AI boom. My latest post: [Why Can I Pay for Netflix Instantly, But Not Send Money Abroad? Enter Revolut](https://rdjarbeng.com/why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/)
+- **[Posts](https://rdjarbeng.com/posts/)**: A collection of articles covering AI innovations, tech fixes, environmental insights, and more. Highlights include hands-on reviews like Andrew Ng's [Landing AI for agentic object detection and document extraction](https://rdjarbeng.com/agentic-object-detection-and-document-extraction-with-landing.ai/), [Kolors' virtual try-on app](https://rdjarbeng.com/kolors-virtual-try-on-nobody-s-gonna-know/), and my latest deep dive: [A Chronological Look At AI—A Decade-by-Decade Evolution](https://rdjarbeng.com/a-chronological-look-at-ai-a-decade-by-decade-evolution/), tracing the field from 1940s theoretical roots to today's generative AI boom. My latest post: [When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report](https://rdjarbeng.com/when-llms-become-scientific-instruments-groundsource-flash-flood-research-report/)
 
   Recent favorites:
-    - [Before You Upgrade to Antigravity Google AI Pro, Read About This 5-Day Quota Glitch](https://rdjarbeng.com/google-ai-pro-users-locked-out-of-antigravity/) – Important information for IDE users.
-    - [Why is Nvidia Selling API Keys Now? The Plain English Guide to NIMs and the AI Cloud](https://rdjarbeng.com/why-is-nvidia-selling-api-keys-now-the-plain-english-guide-to-nims-and-the-ai-cloud/) – Demystifying the AI cloud.
-    - [CRITICAL: Active Supply Chain Attack on Axios NPM Package Update](https://rdjarbeng.com/critical-supply-chain-attack-on-axios-npm-package/) – A look at the recent npm security incident.
+    - [How to Break into AI Without a Degree](https://rdjarbeng.com/how-to-break-into-ai-without-a-degree/) – Aleksa Gordić's self-taught path into frontier AI engineering.
+    - [NASA APOD Has Migrated. Here Is What Is Changing and What Developers Must Do](https://rdjarbeng.com/nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do/) – What the move to science.nasa.gov means for apps built on APOD.
+    - [Sveltia CMS Is Feature Complete. Time to Switch from Decap CMS](https://rdjarbeng.com/sveltia-cms-is-feature-complete-time-to-switch-from-decap-cms/) – Why this site's CMS made the switch.
     - [Latest Gallery Images & Videos](https://rdjarbeng.com/gallery/) – Check out the newest cover images, memes, and social media videos.
     - [The Artemis II Collection](https://rdjarbeng.com/gallery/artemis-ii/) – A curated visual journey of the NASA Artemis II mission.
 - **[Personal](https://rdjarbeng.com/personal/)**: Candid stories, memes, and slices of life from my journeys—think Kigali sunsets, Ghanaian vibes, or unexpected adventures in Europe and East Africa. One popular post is: [Trip to Uganda- Kampala & silver springs](https://rdjarbeng.com/personal/trip-to-kampala-uganda-and-silver-springs/)
@@ -50,6 +50,7 @@ Explore the site through these core sections:
 
 ### 📖 Learn How This Was Built
 If you are curious about the technical setup of this blog, check out my deep-dive:
+- [Building a Modern Blog with Eleventy 3.x (Liquid Edition)](https://rdjarbeng.com/building-a-modern-blog-with-eleventy-3-x-liquid-edition/)
 - [Story Time: Add a CMS to a Jekyll / GitHub Pages Website](https://rdjarbeng.com/story-time-add-a-cms-to-a-jekyll-github-pages-website/) (written before the move to Eleventy)
 
 Keywords for discovery: personal tech blog, AI trends and reviews, troubleshooting guides Eleventy site, machine learning insights Rwanda, global travel stories tech.
