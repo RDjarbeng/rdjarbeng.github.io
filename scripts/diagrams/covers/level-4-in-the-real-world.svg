@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for "Level 4 in the Real World" (Part 2 of Self-Driving, Explained).
+       Style matches the Part 1 cover: cream matte background, flat red/blue/yellow, one text colour (black).
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/level-4-in-the-real-world.svg assets/images/posts/covers/level_4_in_the_real_world_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- headline: the only text colour is black -->
+  <g fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
+    <text x="640" y="104" font-size="70" font-weight="900" letter-spacing="1">LEVEL 4 IN THE REAL WORLD</text>
+    <text x="640" y="152" font-size="24" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">SELF-DRIVING, EXPLAINED · PART 2</text>
+  </g>
+
+  <!-- city blocks behind the vehicles -->
+  <g>
+    <rect x="130" y="300" width="120" height="200" fill="#1d4f9c"/>
+    <rect x="262" y="250" width="96" height="250" fill="#f2c12e"/>
+    <rect x="370" y="330" width="130" height="170" fill="#d7263d"/>
+    <rect x="512" y="275" width="104" height="225" fill="#1d4f9c"/>
+    <rect x="628" y="340" width="120" height="160" fill="#f2c12e"/>
+    <rect x="760" y="260" width="110" height="240" fill="#d7263d"/>
+    <rect x="882" y="310" width="128" height="190" fill="#1d4f9c"/>
+    <rect x="1022" y="285" width="120" height="215" fill="#d7263d"/>
+  </g>
+  <g fill="#f4f1e6" opacity="0.9">
+    <rect x="150" y="325" width="26" height="30"/><rect x="200" y="325" width="26" height="30"/>
+    <rect x="150" y="375" width="26" height="30"/><rect x="200" y="375" width="26" height="30"/>
+    <rect x="534" y="300" width="24" height="28"/><rect x="574" y="300" width="24" height="28"/>
+    <rect x="534" y="348" width="24" height="28"/><rect x="574" y="348" width="24" height="28"/>
+    <rect x="904" y="335" width="26" height="30"/><rect x="954" y="335" width="26" height="30"/>
+    <rect x="904" y="385" width="26" height="30"/><rect x="954" y="385" width="26" height="30"/>
+  </g>
+
+  <!-- geofence: the approved area -->
+  <rect x="96" y="214" width="1088" height="440" rx="34" fill="none" stroke="#141414" stroke-width="6" stroke-dasharray="26 16"/>
+
+  <!-- road -->
+  <rect x="0" y="500" width="1280" height="128" fill="#1f1f1f"/>
+  <line x1="0" y1="564" x2="1280" y2="564" stroke="#f2c12e" stroke-width="7" stroke-dasharray="46 30"/>
+
+  <!-- robotaxi sensor cone, drawn under the car -->
+  <path d="M566 560 L720 498 L720 622 Z" fill="#2fa4e7" opacity="0.9"/>
+  <path d="M566 560 L688 512 L688 608 Z" fill="#f2c12e"/>
+
+  <!-- robotaxi: red, nobody in the driver's seat -->
+  <g>
+    <path d="M300 522 L352 466 L486 466 L536 522 Z" fill="#d7263d"/>
+    <path d="M318 520 L360 476 L412 476 L412 520 Z" fill="#cfe6f7"/>
+    <path d="M424 520 L424 476 L480 476 L520 520 Z" fill="#cfe6f7"/>
+    <circle cx="452" cy="506" r="11" fill="none" stroke="#141414" stroke-width="4"/>
+    <rect x="232" y="516" width="338" height="74" rx="24" fill="#d7263d"/>
+    <rect x="540" y="534" width="26" height="14" rx="5" fill="#f2c12e"/>
+    <rect x="236" y="534" width="20" height="14" rx="5" fill="#f4f1e6"/>
+    <!-- roof LiDAR dome -->
+    <rect x="394" y="444" width="50" height="24" rx="8" fill="#f2c12e"/>
+    <rect x="394" y="452" width="50" height="7" fill="#141414"/>
+    <circle cx="306" cy="592" r="35" fill="#141414"/><circle cx="306" cy="592" r="14" fill="#9a9a9a"/>
+    <circle cx="496" cy="592" r="35" fill="#141414"/><circle cx="496" cy="592" r="14" fill="#9a9a9a"/>
+  </g>
+
+  <!-- bus sensor cone -->
+  <path d="M1128 548 L1260 494 L1260 602 Z" fill="#d7263d" opacity="0.92"/>
+
+  <!-- driverless bus: blue -->
+  <g>
+    <rect x="742" y="414" width="392" height="176" rx="20" fill="#1d4f9c"/>
+    <rect x="1090" y="436" width="36" height="78" rx="6" fill="#cfe6f7"/>
+    <g fill="#f2c12e">
+      <rect x="764" y="440" width="62" height="62" rx="4"/>
+      <rect x="838" y="440" width="62" height="62" rx="4"/>
+      <rect x="912" y="440" width="62" height="62" rx="4"/>
+      <rect x="986" y="440" width="62" height="62" rx="4"/>
+    </g>
+    <rect x="1054" y="440" width="28" height="128" fill="#cfe6f7"/>
+    <rect x="742" y="530" width="392" height="10" fill="#f2c12e"/>
+    <rect x="1084" y="394" width="44" height="22" rx="7" fill="#f2c12e"/>
+    <rect x="1084" y="401" width="44" height="6" fill="#141414"/>
+    <circle cx="828" cy="592" r="35" fill="#141414"/><circle cx="828" cy="592" r="14" fill="#9a9a9a"/>
+    <circle cx="1054" cy="592" r="35" fill="#141414"/><circle cx="1054" cy="592" r="14" fill="#9a9a9a"/>
+  </g>
+
+  <!-- labels and watermark, same black -->
+  <g fill="#141414" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="400" y="680" font-size="28">Robotaxi</text>
+    <text x="938" y="680" font-size="28">Driverless bus</text>
+    <text x="640" y="708" font-size="18" font-weight="400">rdjarbeng.com</text>
+  </g>
+</svg>
