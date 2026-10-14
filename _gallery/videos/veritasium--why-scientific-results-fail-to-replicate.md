@@ -1,5 +1,7 @@
 ---
-title: Veritasium- Why scientific results fail to replicate
+title: Veritasium- Why so much published research doesn’t hold up
+published: true
+date: 2026-10-14T12:55:14+02:00
 platform: youtube
 youtube_id: https://www.youtube.com/watch?app=desktop&v=42QuXLucH3Q
 embed_code: ''
@@ -7,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Education
 category: videos
-date: '2026-10-14T12:55:14+02:00'
-published: true
 ---
 
 The video argues that a large share of the scientific literature can't be trusted, a problem usually called the reproducibility crisis. It doesn't blame one bad actor or one troubled field. It points to several flaws in how research is done, rewarded, and published, and the flaws feed each other.
