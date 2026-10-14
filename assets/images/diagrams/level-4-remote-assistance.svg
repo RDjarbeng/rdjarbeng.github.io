@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1110" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">How remote assistance works for a Level 4 robotaxi</title>
+<desc id="d">Two columns: the car and the remote control room. The car meets an obstacle it cannot resolve, stops safely, and sends its camera views. A human specialist marks an allowed path and sends it back. The car then drives that path itself. The remote human never steers the car.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
+<rect width="800" height="1110" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 6</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">When a robotaxi gets stuck, a human advises</text>
+<text x="32" y="112" fill="#57514a" font-size="18">The person in the control room suggests a path.</text>
+<text x="32" y="138" fill="#57514a" font-size="18">The car still does all of the driving.</text>
+<line x1="32" y1="156" x2="768" y2="156" stroke="#1f1d1a" stroke-width="1.5"/>
+<text x="32" y="194" fill="#2f3d66" font-family="Georgia, 'Times New Roman', serif" font-size="24">In the car</text>
+<text x="412" y="194" fill="#b2477b" font-family="Georgia, 'Times New Roman', serif" font-size="24">In the control room</text>
+<line x1="400" y1="208" x2="400" y2="862" stroke="#cfc6b6" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="32" y="222" width="356" height="100" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="222" width="8" height="100" fill="#2f3d66"/>
+<text x="54" y="254" fill="#1f1d1a" font-size="18">1  Meets something it cannot</text>
+<text x="54" y="280" fill="#1f1d1a" font-size="18">    work out, such as cones</text>
+<text x="54" y="306" fill="#1f1d1a" font-size="18">    across the lane</text>
+<line x1="210.0" y1="322" x2="210.0" y2="347" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M202.0 344 L210.0 356 L218.0 344 Z" fill="#1f1d1a"/>
+<rect x="32" y="356" width="356" height="48" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="356" width="8" height="48" fill="#2f3d66"/>
+<text x="54" y="388" fill="#1f1d1a" font-size="18">2  Stops safely in its lane</text>
+<path d="M210.0 404 V454 H590.0 V482" fill="none" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M582.0 480 L590.0 492 L598.0 480 Z" fill="#1f1d1a"/>
+<rect x="270" y="414" width="260" height="28" fill="#f3efe6"/>
+<text x="400" y="435" fill="#57514a" font-size="18" font-style="italic" text-anchor="middle">sends camera views</text>
+<rect x="412" y="492" width="356" height="100" fill="#f3efe6" stroke="#b2477b" stroke-width="2.5"/>
+<rect x="412" y="492" width="8" height="100" fill="#b2477b"/>
+<text x="434" y="524" fill="#1f1d1a" font-size="18">3  A specialist looks at the</text>
+<text x="434" y="550" fill="#1f1d1a" font-size="18">    scene and marks an allowed</text>
+<text x="434" y="576" fill="#1f1d1a" font-size="18">    path</text>
+<path d="M590.0 592 V642 H210.0 V670" fill="none" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M202.0 668 L210.0 680 L218.0 668 Z" fill="#1f1d1a"/>
+<rect x="270" y="602" width="260" height="28" fill="#f3efe6"/>
+<text x="400" y="623" fill="#57514a" font-size="18" font-style="italic" text-anchor="middle">sends the path back</text>
+<rect x="32" y="680" width="356" height="100" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="680" width="8" height="100" fill="#2f3d66"/>
+<text x="54" y="712" fill="#1f1d1a" font-size="18">4  Drives the path itself,</text>
+<text x="54" y="738" fill="#1f1d1a" font-size="18">    still braking for anything</text>
+<text x="54" y="764" fill="#1f1d1a" font-size="18">    in the way</text>
+<line x1="210.0" y1="780" x2="210.0" y2="805" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M202.0 802 L210.0 814 L218.0 802 Z" fill="#1f1d1a"/>
+<rect x="32" y="814" width="356" height="48" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="814" width="8" height="48" fill="#2f3d66"/>
+<text x="54" y="846" fill="#1f1d1a" font-size="18">5  Rejoins normal traffic</text>
+<rect x="32" y="896" width="736" height="82" fill="none" stroke="#b87a12" stroke-width="2.5"/>
+<rect x="32" y="896" width="8" height="82" fill="#b87a12"/>
+<text x="54" y="929" fill="#1f1d1a" font-size="18" font-weight="700">No joystick driving.</text>
+<text x="54" y="957" fill="#1f1d1a" font-size="18">Mobile network lag would make remote steering unsafe.</text>
+<line x1="32" y1="1032" x2="768" y2="1032" stroke="#cfc6b6"/>
+<text x="32" y="1062" fill="#57514a" font-size="18">Based on public descriptions of Waymo Fleet Response</text>
+<text x="32" y="1088" fill="#57514a" font-size="18">and ADASTEC remote operations.</text>
+</svg>

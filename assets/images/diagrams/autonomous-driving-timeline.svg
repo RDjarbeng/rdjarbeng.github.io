@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1208" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Timeline of driving automation, 1999 to 2025</title>
+<desc id="d">Twelve milestones. Driver support arrived first (radar cruise 1999, Autopilot 2015). Driverless Level 4 rides opened to the public in Phoenix in 2020, a year before the first Level 3 cars in 2021.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
+<rect width="800" height="1208" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 2</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">The levels did not arrive in order</text>
+<text x="32" y="112" fill="#57514a" font-size="18">Level 4 robotaxis reached the public before Level 3 cars did.</text>
+<line x1="32" y1="130" x2="768" y2="130" stroke="#1f1d1a" stroke-width="1.5"/>
+<line x1="140" y1="162" x2="140" y2="1036" stroke="#1f1d1a" stroke-width="2"/>
+<text x="162" y="243.0" fill="#57514a" font-size="18" font-style="italic">5 quiet years</text>
+<text x="162" y="347.0" fill="#57514a" font-size="18" font-style="italic">3 quiet years</text>
+<text x="162" y="446.0" fill="#57514a" font-size="18" font-style="italic">4 quiet years</text>
+<path d="M36 738 h-8 V858 h8" fill="none" stroke="#b87a12" stroke-width="2"/>
+<text transform="translate(20 798.0) rotate(-90)" fill="#b87a12" font-size="18" font-weight="700" text-anchor="middle">4 before 3</text>
+<text x="118" y="182" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">1999</text>
+<rect x="132" y="164" width="16" height="16" fill="#b2477b"/>
+<text x="164" y="170" fill="#1f1d1a" font-size="20">Mercedes S-Class gets radar cruise control</text>
+<text x="164" y="194" fill="#b2477b" font-size="18" font-weight="700">Level 1</text>
+<text x="118" y="296" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2005</text>
+<circle cx="140" cy="286" r="8" fill="#f3efe6" stroke="#57514a" stroke-width="3"/>
+<text x="164" y="284" fill="#1f1d1a" font-size="20">Stanford's Stanley wins the DARPA Grand Challenge</text>
+<text x="164" y="308" fill="#57514a" font-size="18" font-weight="700">Research</text>
+<text x="118" y="390" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2009</text>
+<circle cx="140" cy="380" r="8" fill="#f3efe6" stroke="#57514a" stroke-width="3"/>
+<text x="164" y="378" fill="#1f1d1a" font-size="20">Google starts its self-driving car project</text>
+<text x="164" y="402" fill="#57514a" font-size="18" font-weight="700">Research</text>
+<text x="118" y="494" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2014</text>
+<circle cx="140" cy="484" r="8" fill="#f3efe6" stroke="#57514a" stroke-width="3"/>
+<text x="164" y="482" fill="#1f1d1a" font-size="20">SAE publishes J3016, defining Levels 0 to 5</text>
+<text x="164" y="506" fill="#57514a" font-size="18" font-weight="700">Standard</text>
+<text x="118" y="558" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2015</text>
+<rect x="132" y="540" width="16" height="16" fill="#b2477b"/>
+<text x="164" y="546" fill="#1f1d1a" font-size="20">Tesla Autopilot ships as an over-the-air update</text>
+<text x="164" y="570" fill="#b2477b" font-size="18" font-weight="700">Level 2</text>
+<text x="118" y="632" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2017</text>
+<rect x="132" y="614" width="16" height="16" fill="#b2477b"/>
+<text x="164" y="620" fill="#1f1d1a" font-size="20">Cadillac Super Cruise: hands-free on highways</text>
+<text x="164" y="644" fill="#b2477b" font-size="18" font-weight="700">Level 2</text>
+<text x="118" y="696" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2018</text>
+<path d="M140 676 l10 17 h-20 z" fill="#b87a12"/>
+<text x="164" y="684" fill="#1f1d1a" font-size="20">An Uber test car kills a pedestrian in Tempe</text>
+<text x="164" y="708" fill="#b87a12" font-size="18" font-weight="700">Incident</text>
+<text x="118" y="770" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2020</text>
+<rect x="132" y="752" width="16" height="16" fill="#2f3d66"/>
+<text x="164" y="758" fill="#1f1d1a" font-size="20">Waymo opens driverless rides to anyone in Phoenix</text>
+<text x="164" y="782" fill="#2f3d66" font-size="18" font-weight="700">Level 4</text>
+<text x="118" y="834" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2021</text>
+<rect x="132" y="816" width="16" height="16" fill="#2f3d66"/>
+<text x="164" y="822" fill="#1f1d1a" font-size="20">Honda Legend, then Mercedes DRIVE PILOT</text>
+<text x="164" y="846" fill="#2f3d66" font-size="18" font-weight="700">Level 3</text>
+<text x="118" y="898" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2022</text>
+<rect x="132" y="880" width="16" height="16" fill="#2f3d66"/>
+<text x="164" y="886" fill="#1f1d1a" font-size="20">Baidu Apollo Go goes driverless in Wuhan</text>
+<text x="164" y="910" fill="#2f3d66" font-size="18" font-weight="700">Level 4</text>
+<text x="118" y="962" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2023</text>
+<path d="M140 942 l10 17 h-20 z" fill="#b87a12"/>
+<text x="164" y="950" fill="#1f1d1a" font-size="20">California suspends Cruise's driverless permit</text>
+<text x="164" y="974" fill="#b87a12" font-size="18" font-weight="700">Incident</text>
+<text x="118" y="1036" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">2025</text>
+<rect x="132" y="1018" width="16" height="16" fill="#2f3d66"/>
+<text x="164" y="1024" fill="#1f1d1a" font-size="20">Waymo on Uber in Austin; Tesla starts a pilot</text>
+<text x="164" y="1048" fill="#2f3d66" font-size="18" font-weight="700">Level 4</text>
+<rect x="32" y="1081" width="16" height="16" fill="#57514a"/><text x="56" y="1096" fill="#1f1d1a" font-size="18">Product</text>
+<circle cx="168" cy="1089" r="8" fill="#f3efe6" stroke="#57514a" stroke-width="3"/><text x="184" y="1096" fill="#1f1d1a" font-size="18">Research or standard</text>
+<path d="M410 1079 l10 17 h-20 z" fill="#b87a12"/><text x="428" y="1096" fill="#1f1d1a" font-size="18">Incident</text>
+<line x1="32" y1="1156" x2="768" y2="1156" stroke="#cfc6b6"/>
+<text x="32" y="1186" fill="#57514a" font-size="18">Sources: DARPA, SAE, NTSB, California DMV, company news.</text>
+</svg>

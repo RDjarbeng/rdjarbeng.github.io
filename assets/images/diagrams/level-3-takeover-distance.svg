@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 690" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">How far a car travels while a driver takes back control</title>
+<desc id="d">At 100 km/h a car covers 27.8 metres per second. The fastest takeover, 1.9 seconds, takes 53 metres. Typical takeovers of 4.5 to 6 seconds take 125 to 167 metres. After about 10 seconds, 278 metres, a Level 3 car starts stopping itself. The slowest takeover, 25.7 seconds, takes 714 metres.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
+<rect width="800" height="690" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 4</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">The handover gap at 100 km/h</text>
+<text x="32" y="112" fill="#57514a" font-size="18">The car moves 27.8 m every second while the driver</text>
+<text x="32" y="138" fill="#57514a" font-size="18">looks up. Takeover times: Eriksson and Stanton (2017).</text>
+<line x1="32" y1="156" x2="768" y2="156" stroke="#1f1d1a" stroke-width="1.5"/>
+<rect x="60" y="410" width="700" height="54" fill="#e4ddd0"/>
+<line x1="60" y1="410" x2="760" y2="410" stroke="#1f1d1a" stroke-width="2"/>
+<line x1="60" y1="464" x2="760" y2="464" stroke="#1f1d1a" stroke-width="2"/>
+<line x1="60" y1="437.0" x2="760" y2="437.0" stroke="#f3efe6" stroke-width="3" stroke-dasharray="16 12"/>
+<rect x="181.5" y="410" width="40.8" height="54" fill="url(#hatchO)"/>
+<g transform="translate(12 425)"><rect width="44" height="24" fill="#1f1d1a"/><rect x="26" y="4" width="10" height="16" fill="#e4ddd0"/></g>
+<line x1="111.5" y1="218" x2="111.5" y2="464" stroke="#2f3d66" stroke-width="2"/>
+<text x="121.5" y="204" fill="#2f3d66" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="start">1.9 s</text>
+<text x="121.5" y="230" fill="#57514a" font-size="18" text-anchor="start">fastest, 53 m</text>
+<line x1="201.9" y1="288" x2="201.9" y2="464" stroke="#b87a12" stroke-width="2"/>
+<text x="211.9" y="274" fill="#b87a12" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="start">4.5 to 6 s</text>
+<text x="211.9" y="300" fill="#57514a" font-size="18" text-anchor="start">typical, 125 to 167 m</text>
+<line x1="330.3" y1="358" x2="330.3" y2="464" stroke="#1f1d1a" stroke-width="2"/>
+<text x="340.3" y="344" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="start">about 10 s</text>
+<text x="340.3" y="370" fill="#57514a" font-size="18" text-anchor="start">car starts to stop itself, 278 m</text>
+<line x1="754.2" y1="288" x2="754.2" y2="464" stroke="#b2477b" stroke-width="2"/>
+<text x="744.2" y="274" fill="#b2477b" font-family="Georgia, 'Times New Roman', serif" font-size="26" text-anchor="end">25.7 s</text>
+<text x="744.2" y="300" fill="#57514a" font-size="18" text-anchor="end">slowest, 714 m</text>
+<line x1="60.0" y1="470" x2="60.0" y2="476" stroke="#1f1d1a"/>
+<text x="60.0" y="496" fill="#57514a" font-size="18" text-anchor="middle">0 m</text>
+<line x1="157.2" y1="470" x2="157.2" y2="476" stroke="#1f1d1a"/>
+<line x1="254.4" y1="470" x2="254.4" y2="476" stroke="#1f1d1a"/>
+<text x="254.4" y="496" fill="#57514a" font-size="18" text-anchor="middle">200 m</text>
+<line x1="351.7" y1="470" x2="351.7" y2="476" stroke="#1f1d1a"/>
+<line x1="448.9" y1="470" x2="448.9" y2="476" stroke="#1f1d1a"/>
+<text x="448.9" y="496" fill="#57514a" font-size="18" text-anchor="middle">400 m</text>
+<line x1="546.1" y1="470" x2="546.1" y2="476" stroke="#1f1d1a"/>
+<line x1="643.3" y1="470" x2="643.3" y2="476" stroke="#1f1d1a"/>
+<text x="643.3" y="496" fill="#57514a" font-size="18" text-anchor="middle">600 m</text>
+<line x1="740.6" y1="470" x2="740.6" y2="476" stroke="#1f1d1a"/>
+<rect x="60" y="522" width="102.1" height="34" fill="none" stroke="#1f1d1a" stroke-width="1.5"/>
+<line x1="111.0" y1="522" x2="111.0" y2="556" stroke="#1f1d1a" stroke-width="1.5"/>
+<circle cx="111.0" cy="539" r="7" fill="none" stroke="#1f1d1a" stroke-width="1.5"/>
+<text x="178.1" y="546" fill="#1f1d1a" font-size="18">One football pitch (105 m) at the same scale</text>
+<line x1="32" y1="612" x2="768" y2="612" stroke="#cfc6b6"/>
+<text x="32" y="642" fill="#57514a" font-size="18">After grabbing the wheel, drivers needed another 8 to 10 s</text>
+<text x="32" y="668" fill="#57514a" font-size="18">to steady the car (Gold et al. 2013; Merat et al. 2014).</text>
+</svg>

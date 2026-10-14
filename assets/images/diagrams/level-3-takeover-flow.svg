@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 850" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">What a Level 3 car does when it hands control back</title>
+<desc id="d">Step 1: the car drives and the automaker is liable. Step 2: it reaches the edge of its approved conditions. Step 3: it asks the driver to take over. If the driver takes the wheel, the driver is liable again. If there is no response after about 10 seconds, the car stops itself, switches on the hazard lights and calls for help.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
+<rect width="800" height="850" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 3</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">How a Level 3 car hands control back</text>
+<text x="32" y="112" fill="#57514a" font-size="18">The car drives until it reaches the edge of its limits.</text>
+<text x="32" y="138" fill="#57514a" font-size="18">Then it asks for help, and a clock starts.</text>
+<line x1="32" y1="156" x2="768" y2="156" stroke="#1f1d1a" stroke-width="1.5"/>
+<rect x="32" y="180" width="736" height="74" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="180" width="8" height="74" fill="#2f3d66"/>
+<text x="54" y="212" fill="#1f1d1a" font-size="18" font-weight="700">1  The car is driving</text>
+<text x="54" y="238" fill="#1f1d1a" font-size="18">The automaker is liable. The driver may read or watch a film.</text>
+<line x1="400" y1="254" x2="400" y2="279" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M392 276 L400 288 L408 276 Z" fill="#1f1d1a"/>
+<rect x="32" y="288" width="736" height="74" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="32" y="288" width="8" height="74" fill="#2f3d66"/>
+<text x="54" y="320" fill="#1f1d1a" font-size="18" font-weight="700">2  It reaches the edge of its limits</text>
+<text x="54" y="346" fill="#1f1d1a" font-size="18">Roadworks, heavy rain, or the end of an approved road.</text>
+<line x1="400" y1="362" x2="400" y2="387" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M392 384 L400 396 L408 384 Z" fill="#1f1d1a"/>
+<rect x="32" y="396" width="736" height="74" fill="#f3efe6" stroke="#b87a12" stroke-width="2.5"/>
+<rect x="32" y="396" width="8" height="74" fill="#b87a12"/>
+<text x="54" y="428" fill="#1f1d1a" font-size="18" font-weight="700">3  It asks the driver to take over</text>
+<text x="54" y="454" fill="#1f1d1a" font-size="18">Chimes, dashboard lights, and a tug on the seat belt.</text>
+<path d="M400 470 V492 H210.0 V510" fill="none" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M400 492 H590.0 V510" fill="none" stroke="#1f1d1a" stroke-width="3"/>
+<path d="M202.0 507 L210.0 519 L218.0 507 Z" fill="#1f1d1a"/>
+<path d="M582.0 507 L590.0 519 L598.0 507 Z" fill="#1f1d1a"/>
+<text x="32" y="546" fill="#b2477b" font-family="Georgia, 'Times New Roman', serif" font-size="24">Driver responds</text>
+<text x="412" y="546" fill="#2f3d66" font-family="Georgia, 'Times New Roman', serif" font-size="24">No response</text>
+<text x="32" y="572" fill="#57514a" font-size="18">usually within 4.5 to 6 s</text>
+<text x="412" y="572" fill="#57514a" font-size="18">after about 10 s</text>
+<rect x="32" y="590" width="356" height="126" fill="#f3efe6" stroke="#b2477b" stroke-width="2.5"/>
+<rect x="32" y="590" width="8" height="126" fill="#b2477b"/>
+<text x="54" y="622" fill="#1f1d1a" font-size="18">Hands on the wheel,</text>
+<text x="54" y="648" fill="#1f1d1a" font-size="18">eyes on the road.</text>
+<text x="54" y="674" fill="#1f1d1a" font-size="18">The human drives again</text>
+<text x="54" y="700" fill="#1f1d1a" font-size="18">and is liable again.</text>
+<rect x="412" y="590" width="356" height="126" fill="#f3efe6" stroke="#2f3d66" stroke-width="2.5"/>
+<rect x="412" y="590" width="8" height="126" fill="#2f3d66"/>
+<text x="434" y="622" fill="#1f1d1a" font-size="18">The car stops itself in</text>
+<text x="434" y="648" fill="#1f1d1a" font-size="18">its lane or on the shoulder,</text>
+<text x="434" y="674" fill="#1f1d1a" font-size="18">turns the hazards on</text>
+<text x="434" y="700" fill="#1f1d1a" font-size="18">and calls for help.</text>
+<line x1="32" y1="772" x2="768" y2="772" stroke="#cfc6b6"/>
+<text x="32" y="802" fill="#57514a" font-size="18">Engineers call the self-stop a minimal risk manoeuvre.</text>
+<text x="32" y="828" fill="#57514a" font-size="18">Timings: Eriksson and Stanton (2017).</text>
+</svg>

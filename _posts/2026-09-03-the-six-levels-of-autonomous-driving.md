@@ -1,6 +1,6 @@
 ---
 date: 2026-09-03T16:59:00+02:00
-published: true
+published: false
 author: Richard
 category: Technology
 tags:
@@ -74,10 +74,12 @@ The modern self-driving car started as a military research prize. In 2004 the US
 
 A year later, in 2005, five vehicles completed a 132-mile course. The winner was Stanford University's *Stanley*, a modified Volkswagen Touareg led by Sebastian Thrun. In 2007 the DARPA Urban Challenge moved the contest to a mock city with traffic, junctions and parking, and Carnegie Mellon's *Boss* took first place.
 
+Stanley, shown below, looks nothing like a modern robotaxi. The roof rack of laser scanners and cameras is the ancestor of the sensor domes you now see on Waymo cars.
+
 ![Stanford's Stanley, winner of the 2005 DARPA Grand Challenge](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/The_winner%2C_2005_DARPA_Grand_Challenge_-Stanford%27s_Stanley.tiff/lossy-page1-500px-The_winner%2C_2005_DARPA_Grand_Challenge_-Stanford%27s_Stanley.tiff.jpg)
 *Stanford's Stanley, the first vehicle to win the DARPA Grand Challenge (2005). Photo: DARPA, [public domain](https://commons.wikimedia.org/wiki/File:The_winner,_2005_DARPA_Grand_Challenge_-Stanford%27s_Stanley.tiff).*
 
-Many people from those teams went on to build the industry. In 2009 Google quietly started its own self-driving car project, hiring Thrun and several DARPA veterans. That project became **Waymo** in December 2016, and its bubble-shaped *Firefly* prototype, built without a steering wheel or pedals, became the first fully driverless car to carry a member of the public on open roads in 2015.
+Many people from those teams went on to build the industry. In 2009 Google quietly started its own self-driving car project, hiring Thrun and several DARPA veterans. That project became **Waymo** in December 2016, and its bubble-shaped *Firefly* prototype, built without a steering wheel or pedals, became the first fully driverless car to carry a member of the public on open roads in 2015. The Firefly is now a museum piece:
 
 ![Waymo Firefly prototype at the Computer History Museum](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Waymo_Firefly_reference_vehicle_at_Computer_History_Museum%2C_Mountain_View.png/960px-Waymo_Firefly_reference_vehicle_at_Computer_History_Museum%2C_Mountain_View.png)
 *Google's Firefly prototype, now at the Computer History Museum in Mountain View. Photo: Jonathan Deamer, [CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Waymo_Firefly_reference_vehicle_at_Computer_History_Museum,_Mountain_View.png).*
@@ -107,12 +109,16 @@ Crucially, the standard splits these six levels into two clear categories:
 * [**Level 4: High Automation**](#level-4-high-automation-inside-a-defined-area): Car or bus operates without human fallback within geofenced areas (Waymo, Baidu Apollo, ADASTEC). No driver required.
 * [**Level 5: Full Automation**](#level-5-the-edge-case-frontier): Unconstrained driving anywhere, in any weather, with zero pedals or steering wheel. Still a research frontier.
 
+For a quick spoken version of the same list, this one-minute explainer from the Engineering Explained channel walks through the six levels and the cameras and radar that driver-assist systems rely on:
+
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/x_Bsxz7Joqs" title="What Are The 6 Levels Of Automated Driving? (Engineering Explained)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The easiest way to see the difference between the levels is to follow each part of the driving job and watch where it moves from the human to the machine:
+The easiest way to see the difference between the levels is to follow each part of the driving job and watch where it moves from the human to the machine. Figure 1 does exactly that: each row is a level, each column is one of the four jobs, and the colour shows who is responsible.
 
 ![Who is driving at each SAE level: a grid showing steering, watching the road, fallback and liability moving from human to machine between Level 2 and Level 3](/assets/images/diagrams/sae-levels-who-drives.svg)
-*Most of the interesting change happens between Level 2 and Level 3. Up to Level 2, the car can steer and brake, but you are still the driver in every legal sense.*
+*Figure 1. Most of the change happens between Level 2 and Level 3. Up to Level 2, the car can steer and brake, but you are still the driver in every legal sense.*
+
+The table below adds the formal SAE names and the year each level first reached public roads.
 
 | Level | Formal SAE Category | Controls (Steering & Speed) | Environment Monitoring | Intervention Fallback | Legal Liability | First on Public Roads |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -127,8 +133,10 @@ The easiest way to see the difference between the levels is to follow each part 
 
 The numbers suggest a staircase that the industry climbed one step at a time. That is not what happened. Level 4 robotaxis were carrying paying passengers in Phoenix in 2020, months before the first Level 3 car was sold in Japan. Meanwhile Level 2, which arrived in 2015, is still what almost every "self-driving" car in a private driveway actually is.
 
+Figure 2 lists the milestones in the order they happened. Read it top to bottom and notice two things: the long quiet gap before 2014, and Level 4 appearing a year before Level 3.
+
 ![Timeline of driving automation milestones from 1999 to 2025, colour-coded by level](/assets/images/diagrams/autonomous-driving-timeline.svg)
-*Key milestones from 1999 to 2025. Incidents are included because each one changed how regulators and companies treated the technology.*
+*Figure 2. Key milestones from 1999 to 2025. Incidents are included because each one changed how regulators and companies treated the technology.*
 
 The sections below follow the standard from Level 0 to Level 5, but each one notes when that level actually reached the road.
 
@@ -160,7 +168,7 @@ The system provides continuous automated execution of a single control axis (eit
 ### Level 2: Partial Automation
 **On the road since:** October 2015, when Tesla pushed *Autopilot* to existing cars as an over-the-air software update. Cadillac followed in 2017 with *Super Cruise*, the first system to allow hands-free driving on pre-mapped highways, and Ford's *BlueCruise* arrived in 2021.
 
-The hardware simultaneously executes lateral lane-centering and longitudinal speed modulation. Common commercial implementations include Tesla Autopilot and "Full Self-Driving (Supervised)", General Motors Super Cruise, Ford BlueCruise, and BMW Driving Assistant Professional.
+The hardware simultaneously executes lateral lane-centering and longitudinal speed modulation. Common commercial implementations include Tesla Autopilot and "Full Self-Driving (Supervised)", General Motors Super Cruise, Ford BlueCruise, and BMW Driving Assistant Professional. The photo below shows what that looks like from the driver's seat: the screen draws the lane and the cars around it, which is exactly what makes it so easy to stop paying attention.
 
 ![Tesla Autopilot engaged on Interstate 80 near Lake Tahoe](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg/1280px-Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg)
 *Tesla Autopilot engaged on I-80 near Lake Tahoe. The car is steering and holding its speed, but legally the person behind the wheel is still driving. Photo: Natecation, [CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Tesla_Autopilot_engaged_on_I-80_near_Lake_Tahoe.jpg).*
@@ -191,37 +199,20 @@ However, Level 3 systems operate only within a strictly bounded **Operational De
 * Weather limits: Clear daytime weather, without heavy rain, fog, or snow obscuring lane markings.
 * Operating boundaries: Digitally pre-mapped highway stretches, no active construction zones, and strict speed limits.
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Driver as Human Passenger
-    participant System as L3 ADS (Drive Pilot)
-    participant Road as Highway Environment
+The tricky moment is what happens when one of those conditions stops being true. Figure 3 follows a Level 3 car through that moment, from driving normally, to asking for help, to the two ways it can end.
 
-    Note over Driver,System: Normal L3 Operation (Automaker holds full legal liability)
-    Driver->>Driver: Eyes off road / Secondary task
-    Road->>System: ODD Boundary Detected (Construction / Heavy Rain)
-    System->>Driver: Takeover Request (Auditory, Visual, Haptic Alert)
-    Note over Driver,System: Takeover Latency Window: 1.9s to 25.7s
-    alt Driver Responds Promptly
-        Driver->>System: Hands on Wheel & Feet on Pedals
-        System->>Driver: Manual Control & Legal Liability Transferred
-    else Driver Unresponsive (after ~10 seconds)
-        System->>System: Autonomous Minimal Risk Maneuver (MRM)
-        System->>Road: Safely stops vehicle in travel lane or shoulder
-        System->>Road: Activates hazard lights & triggers automated emergency call
-    end
-```
+![How a Level 3 car hands control back: it drives, reaches the edge of its limits, asks the driver to take over, and then either the driver takes the wheel or the car stops itself](/assets/images/diagrams/level-3-takeover-flow.svg)
+*Figure 3. Liability only moves back to the human if the human actually takes the wheel. If nobody responds, the car has to stop safely on its own.*
 
 ### The Handover Problem and Takeover Latency
 The central challenge for Level 3 systems is what human factors researchers call **takeover latency**: the time it takes an off-duty human driver to recognize an alert, understand traffic conditions, and safely resume physical control of the car. When the car approaches the boundary of its operating conditions (such as entering a construction zone or encountering heavy downpours), it issues a **Takeover Request (TOR)**.
 
 In a landmark review published in *Human Factors*, [Eriksson and Stanton (2017)](https://doi.org/10.1177/0018720816685428) investigated handover transitions in automated driving. In non-emergency situations, driver response times ranged from **1.9 to 25.7 seconds**, with a typical response taking 4.5 to 6.0 seconds. Further simulator tests by [Gold et al. (2013)](https://doi.org/10.1177/1541931213571433) and [Merat et al. (2014)](https://doi.org/10.1016/j.trf.2014.09.005) found that even after drivers placed their hands back on the wheel, stabilizing lane position and vehicle speed required **8 to 10 seconds**.
 
-Those seconds turn into a lot of road. At highway speeds (such as 100 km/h or 62 mph), a car travels 27.8 meters per second:
+Those seconds turn into a lot of road. At highway speeds (such as 100 km/h or 62 mph), a car travels 27.8 meters per second. Figure 4 lays the measured takeover times out along a road at the same scale, with a football pitch for comparison.
 
 ![Distance a car covers at 100 km/h during a driver takeover: 53 m at 1.9 s, 125 to 167 m at 4.5 to 6 s, 278 m at 10 s and 714 m at 25.7 s](/assets/images/diagrams/level-3-takeover-distance.svg)
-*A typical takeover lasts about as long as it takes to drive one and a half football pitches. The slowest driver in the study needed most of a kilometre.*
+*Figure 4. A typical takeover lasts about as long as it takes to drive one and a half football pitches. The slowest driver in the study needed most of a kilometre.*
 
 If the driver fails to take control after repeated visual, acoustic, and vibrating alerts, the system must execute what engineers call a **Minimal Risk Maneuver (MRM)** to reach a **Minimal Risk Condition (MRC)**. In plain language, the car must safely bring itself to a stop in its lane or on the shoulder, switch on hazard warning lights, and place an automatic emergency call.
 
@@ -233,6 +224,8 @@ The first automaker to achieve internationally recognized commercial approval fo
 * **United States approvals:** Granted commercial operating approval by state authorities in [Nevada](https://dmv.nv.gov/) (January 2023) and the [California DMV](https://www.dmv.ca.gov/portal/vehicle-industry-services/autonomous-vehicles/) (June 2023) for designated freeway routes during congested traffic.
 * **Redundant hardware stack:** Uses front-mounted laser radar (**LiDAR**), long-range radar, stereo optical cameras, road-moisture sensors inside wheel wells, centimeter-grade satellite positioning, and high-definition 3D vector maps. Crucially, it includes duplicate backup steering motors, backup braking boosters, and an independent secondary 12-volt electrical circuit.
 * **Exterior turquoise marker lights ([SAE J3134](https://www.sae.org/standards/content/j3134_201905/)):** Mercedes-Benz became the first automaker authorized by California and Nevada to display turquoise exterior status lights built into headlights, taillights, and side mirrors. Engineers chose turquoise because it cannot be confused with flashing blue or red emergency vehicle lights, amber turn signals, or brake lamps. It lets surrounding motorists and traffic officers instantly see that the car's automated system, not the person in the front seat, is in legal control of driving.
+
+To see the system in use, Mercedes-Benz published this 12-minute episode filmed at its Sindelfingen site. The presenters meet engineers who worked on DRIVE PILOT, try the driving simulator used to study how people react to a takeover request, and then ride hands-free on the Autobahn.
 
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/AiUUgVuqH98" title="Hands-free on the Autobahn with Mercedes-Benz Drive Pilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -246,10 +239,10 @@ Because Level 3 transfers operational risk back to an out-of-the-loop human duri
 
 At Level 4, the vehicle is architected **never to ask an occupant to take the wheel**. If the vehicle encounters heavy weather exceeding its operating limits, a damaged sensor, or a road blockage it cannot navigate, it executes its own fallback stop safely on the shoulder or within its lane without human help. Everyone inside is strictly a passenger.
 
-In practice, Level 4 has split into two very different businesses:
+In practice, Level 4 has split into two very different businesses: robotaxis that go wherever a passenger asks within a mapped zone, and driverless buses that repeat a single route. Figure 5 puts them side by side.
 
-![Level 4 robotaxis drive any trip inside a geofence on demand, while autonomous buses repeat one fixed route on a timetable](/assets/images/diagrams/level-4-robotaxi-vs-bus.svg)
-*Robotaxis and autonomous buses are both Level 4. The difference is how much of the map they are allowed to use.*
+![Level 4 comes in two forms: a robotaxi may drive any trip inside a geofenced area on demand, while a driverless bus repeats one fixed route on a timetable](/assets/images/diagrams/level-4-robotaxi-vs-bus.svg)
+*Figure 5. Both are Level 4. The difference is how much of the map each one is allowed to use, and that shapes who they serve. The rest of this section covers each in turn.*
 
 ### 1. Urban Robotaxis: The Commercial Global Battleground
 
@@ -260,19 +253,27 @@ The United States has emerged as a stark contest between multi-modal sensor fusi
 
 * **[Waymo One](https://waymo.com/) (Alphabet):** The commercial pacesetter in driverless ride-hailing. After Phoenix, Waymo expanded to **San Francisco** and **Los Angeles**, and in 2025 launched in **Austin** and **Atlanta** through the Uber app. It logs hundreds of thousands of paid driverless trips each week. Its multi-sensor architecture combines roof-mounted LiDARs, imaging radar, optical cameras, and external microphone pods. Under mandatory federal incident reporting from the [NHTSA Standing General Order](https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting), Waymo's dataset spanning more than 270 million rider-only miles shows an **82% reduction in injury crashes** and a **95% reduction in serious injury crashes** compared to human drivers, corroborated by research from the [Insurance Institute for Highway Safety (IIHS)](https://www.iihs.org/).
 
+Those sensors are easy to spot on the street. The photo below shows a Waymo car on a San Francisco road with the driver's seat empty.
+
 ![A driverless Waymo Jaguar I-Pace in San Francisco with nobody in the driver's seat](https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg/1280px-Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg)
 *A Waymo Jaguar I-Pace driving itself through San Francisco in 2023, with nobody in the driver's seat. Note the roof-mounted LiDAR dome and the sensor pods on each corner. Photo: Dllu, [CC BY 4.0](https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg).*
 
-* **Cruise (General Motors): a cautionary example.** In August 2023 California allowed both Waymo and GM's Cruise to run paid, round-the-clock robotaxi service in San Francisco. Two months later, a pedestrian who had been thrown into a Cruise car's path by a hit-and-run driver was trapped under it, and the car then tried to pull over, dragging her about 20 feet. The [California DMV suspended Cruise's driverless permits](https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc-suspension/) in October 2023, partly over how the company disclosed the incident, and GM shut down the Cruise robotaxi business in December 2024. Level 4 shifts liability to the operator, and this is what that looks like when things go wrong.
-* **[Tesla](https://www.tesla.com/) (Autopilot, FSD Supervised, and Cybercab):** Tesla rejects LiDAR and HD maps in favor of an end-to-end neural network running exclusively on optical cameras ("Tesla Vision"). Consumer Teslas remain classified strictly as **SAE Level 2 (Supervised)** because the human driver retains total legal liability at all times. In late 2024, Tesla unveiled the dedicated two-seat **Cybercab** robotaxi concept without steering wheels or pedals, and in June 2025 it started a small paid robotaxi pilot in Austin using Model Y cars, with a Tesla safety monitor riding in the front passenger seat.
+What it is like to ride in one is harder to picture. In this 10-minute video, a travel YouTuber takes a first Waymo ride in San Francisco, from booking in the app and how the car talks to the passenger, to steep hills and busy intersections with nobody behind the wheel.
 
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/u0Iv3jvCDaE" title="Waymo Driverless Car in San Francisco | First Ride on City Streets" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Waymo is not the only company that has tried this in the US, and not every attempt went well:
+
+* **Cruise (General Motors): a cautionary example.** In August 2023 California allowed both Waymo and GM's Cruise to run paid, round-the-clock robotaxi service in San Francisco. Two months later, a pedestrian who had been thrown into a Cruise car's path by a hit-and-run driver was trapped under it, and the car then tried to pull over, dragging her about 20 feet. The [California DMV suspended Cruise's driverless permits](https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc-suspension/) in October 2023, partly over how the company disclosed the incident, and GM shut down the Cruise robotaxi business in December 2024. Level 4 shifts liability to the operator, and this is what that looks like when things go wrong.
+* **[Tesla](https://www.tesla.com/) (Autopilot, FSD Supervised, and Cybercab):** Tesla rejects LiDAR and HD maps in favor of an end-to-end neural network running exclusively on optical cameras ("Tesla Vision"). Consumer Teslas remain classified strictly as **SAE Level 2 (Supervised)** because the human driver retains total legal liability at all times. In late 2024, Tesla unveiled the dedicated two-seat **Cybercab** robotaxi concept without steering wheels or pedals, and in June 2025 it started a small paid robotaxi pilot in Austin using Model Y cars, with a Tesla safety monitor riding in the front passenger seat.
 
 #### The Chinese Market: Massive Scale and Multi-City Saturation
 China has rapidly scaled the world's highest-density driverless robotaxi deployments, supported by dedicated municipal smart-city infrastructure and vehicle-to-everything (V2X) sensor networks:
 
 * **[Baidu Apollo Go](https://apollo.auto/) (RT6):** Baidu began fully driverless commercial rides in **Wuhan** and **Chongqing** in 2022 and has since expanded across major Chinese cities including **Beijing**, **Shenzhen**, and **Shanghai**. Its Apollo Go fleet has completed millions of fully driverless commercial orders. In Wuhan alone, hundreds of sixth-generation **Apollo RT6** fully electric robotaxis navigate densely populated streets, bridges, and severe traffic corridors completely uncrewed.
 * **[Pony.ai](https://www.pony.ai/) and [WeRide](https://www.weride.ai/):** Both technology providers run licensed commercial driverless fleets across Guangzhou, Beijing, and international pilot sites in the UAE and Singapore. Their fleets incorporate customized electric platforms from Chinese automakers like **GAC**, **FAW**, and **Geely / Zeekr**, featuring multi-sensor LiDAR arrays integrated directly into production vehicle chassis.
+
+Baidu's own 35-second clip gives a quick look at an Apollo Go ride in Wuhan: booking the car, the cabin, and the robotaxi handling dense city traffic.
 
 <iframe width="100%" height="420" src="https://www.youtube.com/embed/xvitD_7jmUw" title="Experience Driverless Robotaxis in Wuhan | Baidu Apollo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -288,6 +289,8 @@ Their joint flagship vehicle is the **Karsan Autonomous e-ATAK**, an 8.3-meter, 
 * **Michigan State University (MSU, USA):** Deployed in 2022, the Autonomous e-ATAK operates on a 2.5-mile non-stop route connecting the MSU commuter lot to the campus transit center, making it the first full-size automated bus deployed on public roads in the United States.
 * **Paris, France (RATP Line 393):** Completed extensive operational trials on a high-frequency Bus Rapid Transit (BRT) corridor in the Île-de-France region, negotiating complex dedicated bus lanes, multi-lane roundabouts, pedestrian crossings, and priority traffic signals.
 * **International Expansion:** Further deployments and commercial pilots have been established in **Arbon (Switzerland)**, **Rotterdam The Hague Airport (Line 533)** in the Netherlands, and municipal campuses in **Romania** (Ploiești Industrial Park and Cluj-Napoca).
+
+From the kerb, an autonomous e-ATAK looks almost like any other city bus. This one is in regular service in the Netherlands:
 
 ![Karsan e-ATAK Autonomous bus operated by RET on Line 533 to Rotterdam The Hague Airport](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/RET_Karsan_e-ATAK_Autonomous_410_as_Line_533%2C_2026.jpg/1280px-RET_Karsan_e-ATAK_Autonomous_410_as_Line_533%2C_2026.jpg)
 *A Karsan e-ATAK Autonomous bus in RET service on Line 533 to Rotterdam The Hague Airport, 2026. Photo: Styyx, [CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:RET_Karsan_e-ATAK_Autonomous_410_as_Line_533,_2026.jpg).*
@@ -307,22 +310,10 @@ Having an attendant inside an automated bus is not an indicator that the self-dr
    * Direct joystick driving over mobile networks is dangerous because network lag (latency spikes) and lost signals can delay emergency braking.
    * Instead, systems like Waymo Fleet Response and ADASTEC Remote Operations provide **high-level route guidance**. When an automated vehicle meets an unexpected obstruction (such as construction cones pushing traffic across a solid double-yellow line, or a police officer directing traffic with hand gestures), the car brings itself to a safe stop and asks fleet control for guidance. A human specialist views the vehicle's 3D cameras, confirms an approved path around the obstacle, and hands execution back to the car's local obstacle avoidance software.
 
-```mermaid
-sequenceDiagram
-    autonumber
-    participant Car as Level 4 Automated Vehicle
-    participant Fleet as Remote Fleet Operations Center
+Figure 6 walks through one of those requests for help, step by step, with the car on one side and the remote control room on the other.
 
-    Note over Car: Driving normally in driverless passenger service
-    Car->>Car: Detects Unforeseen Obstacle (e.g. Cones blocking lane)
-    Car->>Car: Brings itself to safe stop in lane
-    Car->>Fleet: Uploads 3D perception snapshot + video feeds
-    Note over Fleet: Human Specialist reviews scene
-    Fleet->>Fleet: Draws Approved Bypass Corridor (Semantic Waypoints)
-    Fleet->>Car: Transmits Semantic Route Clearance
-    Note over Car: Car executes bypass using onboard collision avoidance
-    Car->>Car: Safely rejoins normal travel flow
-```
+![How remote assistance works for a Level 4 robotaxi: the car stops at an obstacle and sends camera views, a human specialist marks an allowed path, and the car drives that path itself](/assets/images/diagrams/level-4-remote-assistance.svg)
+*Figure 6. The remote specialist only suggests where the car may go. The car keeps doing the steering, braking and obstacle avoidance itself.*
 
 ---
 

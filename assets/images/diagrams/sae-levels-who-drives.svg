@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 760" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Who is driving at each SAE level</title>
+<desc id="d">Levels 0 to 5 as rows, four driving jobs as columns. Up to Level 2 every job belongs to the human (except shared steering at Level 1). From Level 3 the machine does them all; at Level 3 the human is only the fallback when the car asks.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
+<rect width="800" height="760" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 1</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">Who is driving at each level?</text>
+<text x="32" y="112" fill="#57514a" font-size="18">Each row is a level. Watch the colour change between 2 and 3.</text>
+<line x1="32" y1="130" x2="768" y2="130" stroke="#1f1d1a" stroke-width="1.5"/>
+<text x="262" y="166" fill="#1f1d1a" font-size="18" font-weight="700">Steering</text>
+<text x="390" y="166" fill="#1f1d1a" font-size="18" font-weight="700">Watching</text>
+<text x="518" y="166" fill="#1f1d1a" font-size="18" font-weight="700">Fallback</text>
+<text x="646" y="166" fill="#1f1d1a" font-size="18" font-weight="700">Liability</text>
+<text x="32" y="204" fill="#b2477b" font-size="18" font-weight="700">Driver support (ADAS): you are driving</text>
+<text x="32" y="256" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">0</text>
+<text x="62" y="252" fill="#57514a" font-size="18">No automation</text>
+<rect x="262" y="218" width="124" height="54" fill="#b2477b"/>
+<rect x="390" y="218" width="124" height="54" fill="#b2477b"/>
+<rect x="518" y="218" width="124" height="54" fill="#b2477b"/>
+<rect x="646" y="218" width="124" height="54" fill="#b2477b"/>
+<text x="660" y="252" fill="#f3efe6" font-size="18">driver</text>
+<text x="32" y="314" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">1</text>
+<text x="62" y="310" fill="#57514a" font-size="18">Driver assistance</text>
+<rect x="262" y="276" width="62.0" height="54" fill="#b2477b"/>
+<rect x="324.0" y="276" width="62.0" height="54" fill="#2f3d66"/>
+<rect x="390" y="276" width="124" height="54" fill="#b2477b"/>
+<rect x="518" y="276" width="124" height="54" fill="#b2477b"/>
+<rect x="646" y="276" width="124" height="54" fill="#b2477b"/>
+<text x="660" y="310" fill="#f3efe6" font-size="18">driver</text>
+<text x="32" y="372" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">2</text>
+<text x="62" y="368" fill="#57514a" font-size="18">Partial</text>
+<rect x="262" y="334" width="124" height="54" fill="#2f3d66"/>
+<rect x="390" y="334" width="124" height="54" fill="#b2477b"/>
+<rect x="518" y="334" width="124" height="54" fill="#b2477b"/>
+<rect x="646" y="334" width="124" height="54" fill="#b2477b"/>
+<text x="660" y="368" fill="#f3efe6" font-size="18">driver</text>
+<line x1="32" y1="394" x2="768" y2="394" stroke="#1f1d1a" stroke-width="2.5"/>
+<text x="32" y="426" fill="#2f3d66" font-size="18" font-weight="700">Automated driving (ADS): the system drives</text>
+<text x="32" y="478" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">3</text>
+<text x="62" y="474" fill="#57514a" font-size="18">Conditional</text>
+<rect x="262" y="440" width="124" height="54" fill="#2f3d66"/>
+<rect x="390" y="440" width="124" height="54" fill="#2f3d66"/>
+<rect x="518" y="440" width="124" height="54" fill="url(#hatchH)"/>
+<rect x="519.5" y="441.5" width="121" height="51" fill="none" stroke="#b2477b" stroke-width="3"/>
+<rect x="528" y="454" width="104" height="26" fill="#f3efe6"/>
+<text x="532" y="474" fill="#1f1d1a" font-size="18">if asked</text>
+<rect x="646" y="440" width="124" height="54" fill="#2f3d66"/>
+<text x="660" y="474" fill="#f3efe6" font-size="18">automaker</text>
+<text x="32" y="536" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">4</text>
+<text x="62" y="532" fill="#57514a" font-size="18">High</text>
+<rect x="262" y="498" width="124" height="54" fill="#2f3d66"/>
+<rect x="390" y="498" width="124" height="54" fill="#2f3d66"/>
+<rect x="518" y="498" width="124" height="54" fill="#2f3d66"/>
+<rect x="646" y="498" width="124" height="54" fill="#2f3d66"/>
+<text x="660" y="532" fill="#f3efe6" font-size="18">operator</text>
+<text x="32" y="594" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">5</text>
+<text x="62" y="590" fill="#57514a" font-size="18">Full</text>
+<rect x="262" y="556" width="124" height="54" fill="#2f3d66"/>
+<rect x="390" y="556" width="124" height="54" fill="#2f3d66"/>
+<rect x="518" y="556" width="124" height="54" fill="#2f3d66"/>
+<rect x="646" y="556" width="124" height="54" fill="#2f3d66"/>
+<text x="660" y="590" fill="#f3efe6" font-size="18">automaker</text>
+<rect x="32" y="628" width="18" height="18" fill="#b2477b"/><text x="58" y="644" fill="#1f1d1a" font-size="18">Human</text>
+<rect x="160" y="628" width="18" height="18" fill="#2f3d66"/><text x="186" y="644" fill="#1f1d1a" font-size="18">Machine</text>
+<rect x="300" y="628" width="9" height="18" fill="#b2477b"/><rect x="309" y="628" width="9" height="18" fill="#2f3d66"/><text x="326" y="644" fill="#1f1d1a" font-size="18">Shared</text>
+<rect x="420" y="628" width="18" height="18" fill="url(#hatchH)" stroke="#b2477b" stroke-width="2"/><text x="446" y="644" fill="#1f1d1a" font-size="18">Human, only if the car asks</text>
+<line x1="32" y1="708" x2="768" y2="708" stroke="#cfc6b6"/>
+<text x="32" y="738" fill="#57514a" font-size="18">Source: SAE J3016 (2021).</text>
+</svg>

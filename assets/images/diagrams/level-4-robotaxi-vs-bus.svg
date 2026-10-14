@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 830" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Two ways to run Level 4: robotaxis and autonomous buses</title>
+<desc id="d">Left: a robotaxi may take any route inside a geofenced zone, on demand. Right: an autonomous bus repeats one fixed route on a timetable. A table compares where, when, vehicle and examples.</desc>
+<defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern><pattern id="streets" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#cfc6b6" stroke-width="3"/></pattern></defs>
+<rect width="800" height="830" fill="#f3efe6"/>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 5</text>
+<text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">Level 4 comes in two forms</text>
+<text x="32" y="112" fill="#57514a" font-size="18">Level 4 means no driver is needed, but only inside an</text>
+<text x="32" y="138" fill="#57514a" font-size="18">approved area. A robotaxi may use the whole area;</text>
+<text x="32" y="164" fill="#57514a" font-size="18">a driverless bus repeats one route.</text>
+<line x1="32" y1="182" x2="768" y2="182" stroke="#1f1d1a" stroke-width="1.5"/>
+<text x="32" y="230" fill="#b2477b" font-family="Georgia, 'Times New Roman', serif" font-size="24">Robotaxi</text>
+<text x="408" y="230" fill="#2f3d66" font-family="Georgia, 'Times New Roman', serif" font-size="24">Autonomous bus</text>
+<rect x="32" y="244" width="360" height="230" fill="url(#streets)"/>
+<rect x="32" y="244" width="360" height="230" fill="none" stroke="#1f1d1a"/>
+<path d="M72 296 L162 268 L302 274 L372 314 L362 414 L252 444 L122 436 L62 384 Z" fill="url(#hatchM)" fill-opacity="0.35" stroke="#2f3d66" stroke-width="2.5" stroke-dasharray="9 6"/>
+<path d="M128 404 V356 H218 V322 H294 V300" fill="none" stroke="#b2477b" stroke-width="4"/>
+<circle cx="128" cy="404" r="8" fill="#f3efe6" stroke="#b2477b" stroke-width="3.5"/>
+<rect x="287" y="293" width="14" height="14" fill="#b2477b"/>
+<rect x="140" y="394" width="62" height="24" fill="#f3efe6"/><text x="144" y="412" fill="#b2477b" font-size="18" font-weight="700">pickup</text>
+<rect x="218" y="274" width="66" height="24" fill="#f3efe6"/><text x="222" y="292" fill="#b2477b" font-size="18" font-weight="700">drop-off</text>
+<text x="32" y="502" fill="#57514a" font-size="18">Dashed line: edge of the approved</text>
+<text x="32" y="526" fill="#57514a" font-size="18">area. Any trip inside it is allowed.</text>
+<rect x="408" y="244" width="360" height="230" fill="none" stroke="#1f1d1a"/>
+<path d="M444 424 H528 L578 374 H658 L708 324 V288" fill="none" stroke="#2f3d66" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="444" cy="424" r="9" fill="#f3efe6" stroke="#1f1d1a" stroke-width="3.5"/>
+<text x="424" y="458" fill="#1f1d1a" font-size="18" text-anchor="start">Park and ride</text>
+<circle cx="578" cy="374" r="9" fill="#f3efe6" stroke="#1f1d1a" stroke-width="3.5"/>
+<text x="558" y="410" fill="#1f1d1a" font-size="18" text-anchor="start">Campus</text>
+<circle cx="644" cy="374" r="9" fill="#f3efe6" stroke="#1f1d1a" stroke-width="3.5"/>
+<text x="630" y="410" fill="#1f1d1a" font-size="18" text-anchor="start">Clinic</text>
+<circle cx="708" cy="288" r="9" fill="#f3efe6" stroke="#1f1d1a" stroke-width="3.5"/>
+<text x="692" y="292" fill="#1f1d1a" font-size="18" text-anchor="end">Rail</text>
+<text x="408" y="502" fill="#57514a" font-size="18">Thick line: the only road it drives.</text>
+<text x="408" y="526" fill="#57514a" font-size="18">Same stops, on a timetable.</text>
+<text x="150" y="584" fill="#b2477b" font-size="18" font-weight="700">Robotaxi</text>
+<text x="440" y="584" fill="#2f3d66" font-size="18" font-weight="700">Autonomous bus</text>
+<line x1="32" y1="599" x2="768" y2="599" stroke="#cfc6b6"/>
+<text x="32" y="624" fill="#57514a" font-size="18">Where</text>
+<text x="150" y="624" fill="#1f1d1a" font-size="18">any street in the zone</text>
+<text x="440" y="624" fill="#1f1d1a" font-size="18">one fixed route</text>
+<line x1="32" y1="635" x2="768" y2="635" stroke="#cfc6b6"/>
+<text x="32" y="660" fill="#57514a" font-size="18">When</text>
+<text x="150" y="660" fill="#1f1d1a" font-size="18">on demand, via an app</text>
+<text x="440" y="660" fill="#1f1d1a" font-size="18">on a timetable</text>
+<line x1="32" y1="671" x2="768" y2="671" stroke="#cfc6b6"/>
+<text x="32" y="696" fill="#57514a" font-size="18">Vehicle</text>
+<text x="150" y="696" fill="#1f1d1a" font-size="18">cars and SUVs</text>
+<text x="440" y="696" fill="#1f1d1a" font-size="18">8 to 12 m e-buses</text>
+<line x1="32" y1="707" x2="768" y2="707" stroke="#cfc6b6"/>
+<text x="32" y="732" fill="#57514a" font-size="18">Examples</text>
+<text x="150" y="732" fill="#1f1d1a" font-size="18">Waymo, Apollo Go</text>
+<text x="440" y="732" fill="#1f1d1a" font-size="18">Karsan e-ATAK</text>
+<line x1="32" y1="778" x2="768" y2="778" stroke="#cfc6b6"/>
+<text x="32" y="808" fill="#57514a" font-size="18">Illustrative maps, not to scale. All examples run in 2025.</text>
+</svg>
