@@ -86,7 +86,7 @@ Possible future implementation:
     - [ ] GitHub Cross-Pollination: Ensure every README has a "Learn how this was built" link to a deep-dive post.
 - [ ] **Strategic Goal: Increasing Time Spent by 35%**
     - [ ] Live Interactive Demos: Embed "Lite" versions of your projects directly in the posts.
-    - [ ] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track").
+    - [x] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track"). (Done: series system with `series`/`series_part` front matter, `_series/`, pages at /series/. First series: "Self-Driving, Explained". Older posts still to be grouped.)
     - [ ] Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000+ word authoritative guides with annotated code blocks and architectural diagrams.
     - [x] Readability UX: Improve the "In-App" feel by adding Code "Copy" button. (Implemented in assets/js/copy-code.js and styled in _sass/main.scss)
     - [ ] Position the site so agents consider it as a source of information such as when users are asked what is the latest AI news this site shows up
@@ -111,7 +111,7 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image
+- [x] the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image (Implemented in _includes/gallery_card.html)
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
@@ -166,23 +166,23 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 
 🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
 - [ ] The TikTok cards on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video for desktop, especially for mobile
-- [ ] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page
+- [x] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page (Fixed: play button restricted to YouTube and TikTok in _includes/video_card.html)
 - [ ] When iframe for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
 - [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
 - [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
 - [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
 https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know when you are at teh end of the screenshot
-- [ ] Add a horizontal navbar to the about page to Skip sections-needed most on mobile
+- [x] Add a horizontal navbar to the about page to Skip sections-needed most on mobile (Fixed: added .about-quick-nav pill bar and section anchors in about.md & _sass/_about_cards.scss)
 - [x] References section for the free background remover post is not properly formatted-fix this (Fixed: formatted research citations and bibtex cleanly in _posts/2025-09-20-free-hd-background-remover-effortless-image-editing-tool.md)
 - [] Music of RRR | Richard Djarbeng
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website- partial
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
-- [ ] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized
+- [x] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized (Fixed: .site-footer margin-left set to 0 with transition in _sass/_sticky-sidebars.scss)
 - add a random movie picker, implement for nigerian movies, christian movies
-- [ ] https:// youtube.com/@rdjarbengwebAdd YouTube channel to contact or footer
+- [x] Add YouTube channel to contact or footer: https://youtube.com/@rdjarbengweb (Fixed: added to _data/site.js, footer social icons, and contact.md)
 - [ ] add a way to collapse sidebar for main gallery
 - [ ] Investigate no cookie for YouTube if it makes a difference
 
@@ -202,7 +202,7 @@ yout-ube.com/watch
 - [ ] Highlighting on the TOC for posts disappears down the screen when the TOC is long and needs to be scrolled, the TOC does not auto scroll as the user scrolls down
 - [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
-- [ ] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing
+- [x] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing (Fixed: modernized .tags-container with flex-wrap and responsive pill styling in _sass/main.scss)
 - [ ] Do we need this or our current embeds are fine?
 
 https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/

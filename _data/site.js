@@ -400,14 +400,16 @@ module.exports = {
     uri: "https://rdjarbeng.com",
     twitter: "DjarbengRichard",
     github: "RDjarbeng",
-    linkedin: "richarddjarbeng"
+    linkedin: "richarddjarbeng",
+    youtube: "rdjarbengweb"
   },
   social: {
     name: "Richard Djarbeng",
     links: [
       "https://twitter.com/DjarbengRichard",
       "https://github.com/RDjarbeng",
-      "https://linkedin.com/in/richarddjarbeng"
+      "https://linkedin.com/in/richarddjarbeng",
+      "https://youtube.com/@rdjarbengweb"
     ]
   },
   feed: {

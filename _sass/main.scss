@@ -1553,36 +1553,30 @@ a:hover {
 
 .tags-container {
   display: flex;
-  /* Lines up the tags horizontally */
-  overflow-x: auto;
-  /* Adds a horizontal scrollbar *only if needed* */
-  white-space: nowrap;
-  /* Prevents tags from wrapping to a new line */
+  flex-wrap: wrap;
+  gap: 8px;
   padding-bottom: 10px;
-  /* Adds a little space for the scrollbar so it doesn't overlap tags */
 }
 
 .tags-container a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background-color: var(--card-bg);
-  /* Light gray pill background */
-  color: var(--grey-text);
-  /* Darker text for contrast */
-  border-radius: 15px;
-  /* This creates the "pill" shape */
-  padding: 5px 12px;
-  /* Vertical and horizontal spacing inside the pill */
-  margin-right: 6px;
-  /* Space *between* the pills */
-  font-size: 0.9em;
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.88rem;
+  line-height: 1.2;
   text-decoration: none;
-  transition: background-color 0.2s;
-}
+  transition: all 0.2s ease;
 
-.tags-container a:hover {
-  background-color: #ddd;
-  /* Darken pill on hover */
-  color: #111;
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+    transform: translateY(-1px);
+  }
 }
 
 /* Clap button label - ensure visibility in dark mode */
@@ -3069,11 +3063,28 @@ h1, h2, h3, h4, h5, h6,
   li { margin: 0.3rem 0; }
 }
 
-.series-next {
-  margin: 2rem 0 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--card-border);
-  font-weight: 600;
+.series-continue {
+  margin: 2.5rem 0 1.5rem;
+  padding: 1rem 1.1rem 1.1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-top: 4px solid var(--base-color);
+
+  .series-continue__label { margin: 0 0 0.8rem; font-size: 1rem; }
+
+  // reuse the normal post card, but always visible and laid out sideways on wide screens
+  .post-card {
+    opacity: 1 !important;
+    animation: none !important;
+    max-width: none;
+    margin: 0;
+  }
+
+  @media (min-width: 700px) {
+    .post-link { flex-direction: row; }
+    .post-card-image { flex: 0 0 42%; width: 42%; align-self: center; } // keep 16:9, do not stretch to card height
+    .post-card-content { padding: 14px 18px; }
+  }
 }
 
 .series-page-parts {

@@ -37,6 +37,7 @@ You can also reach me via email at <span id="email-text">rdjarbeng@rdjarbeng.com
 *   [Twitter](https://twitter.com/DjarbengRichard)
 *   [LinkedIn](https://linkedin.com/in/richarddjarbeng)
 *   [GitHub](https://github.com/RDjarbeng)
+*   [YouTube](https://youtube.com/@rdjarbengweb)
 
 <div class="donation-section" align="left">
   <p>Love my work? Support me with a small donation!</p>

@@ -328,13 +328,14 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
         max-width: calc(100% - 60px);
       }
       .site-footer {
-        margin-left: 60px;
+        margin-left: 0;
       }
     }
   }
 
   .site-footer {
     margin-left: $_yt-rail-width;
+    transition: margin-left 0.3s ease;
   }
 
   .yt-sidebar {
