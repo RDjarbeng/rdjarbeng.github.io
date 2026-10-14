@@ -14,6 +14,8 @@ image: /assets/images/free_professional_email_2026.jpg
 image_alt: Free Custom Domain Email 2026
 layout: post
 card_items: []
+series: "Custom Domain Email"
+series_part: 1
 ---
 
 Tired of using a plain `@gmail.com` for business, newsletters, portfolios, or professional emails? You can set up unlimited custom email addresses (like `hello@yourname.com` or `rdjarbeng@yourbrand.com`) **completely free** — no monthly fees for Google Workspace or similar services.

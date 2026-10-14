@@ -23,6 +23,8 @@ card_items:
     description: "Watch the complete official trailer for 'Dear Upstairs Neighbors' directly on YouTube."
     url: "https://www.youtube.com/watch?v=eCk5VFKKz08"
     link_text: "Watch Trailer"
+series: "Bringing Images to Life with AI"
+series_part: 2
 ---
 
 ![Cover Image: Can AI bring images to life? - The Google Approach](/assets/images/posts/covers/dear_upstairs_neighbors_cover.png)

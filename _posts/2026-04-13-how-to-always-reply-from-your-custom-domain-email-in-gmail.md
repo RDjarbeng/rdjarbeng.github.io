@@ -12,6 +12,8 @@ image: /assets/images/posts/covers/gmail_custom_domain_reply.jpg
 image_alt: Illustration of an email envelope with a custom domain logo interacting with the Gmail inbox interface
 layout: post
 card_items: []
+series: "Custom Domain Email"
+series_part: 2
 ---
 
 You’ve done the hard work. You followed the steps in the earlier post to [get a free professional custom domain email](https://rdjarbeng.com/how-to-get-a-free-professional-custom-domain-email-in-2026-even-if-you-don-t-own-a-domain-yet/), configured your routing, and now inquiries are neatly flowing into your Gmail inbox. 

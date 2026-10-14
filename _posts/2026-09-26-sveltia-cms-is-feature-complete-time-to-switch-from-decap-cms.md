@@ -37,6 +37,8 @@ card_items:
     description: Milestone breakdown detailing the final feature implementations, closed upstream issues, and roadmap goals.
     url: https://github.com/sveltia/sveltia-cms/discussions/957
     link_text: Read Announcement
+series: "Building This Blog"
+series_part: 7
 ---
 
 If you run a static site on Decap CMS (formerly Netlify CMS), [Sveltia CMS](https://github.com/sveltia/sveltia-cms) created by [Kyoshino](https://github.com/kyoshino) has reached a decisive milestone. 

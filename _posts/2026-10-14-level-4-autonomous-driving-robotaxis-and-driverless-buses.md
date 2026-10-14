@@ -17,7 +17,7 @@ key_points:
   - "Level 4 comes in two forms: robotaxis that go anywhere inside a mapped zone, and driverless buses that repeat one route."
   - "When a robotaxi gets stuck, a remote human suggests a path, but the car still does all of the driving."
   - "Level 5, a car that can drive anywhere in any weather, does not exist yet."
-title: "Level 4 in the Real World: Robotaxis, Driverless Buses, and the Road to Level 5"
+title: "Level 4 Autonomous Driving: How Robotaxis and Driverless Buses Work Today"
 image: /assets/images/posts/covers/level_4_in_the_real_world_cover.jpg
 image_alt: "Flat vector illustration of a red driverless robotaxi and a blue driverless bus on a city road inside a dashed geofence, titled Level 4 in the Real World"
 layout: post

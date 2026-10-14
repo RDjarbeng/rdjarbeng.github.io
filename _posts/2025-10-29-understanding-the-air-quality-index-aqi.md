@@ -15,6 +15,8 @@ image: /assets/images/air_quality/aqi.png
 layout: post
 video: ''
 image_alt: "Cover image for Understanding the Air Quality Index (AQI)"
+series: "Air Quality Basics"
+series_part: 2
 ---
 The Air Quality Index (AQI) is a vital tool developed by the U.S. Environmental Protection Agency (EPA) to communicate outdoor air quality and its potential health impacts. This index provides an easy-to-understand system that helps individuals make informed decisions about their outdoor activities and health protection measures.
 

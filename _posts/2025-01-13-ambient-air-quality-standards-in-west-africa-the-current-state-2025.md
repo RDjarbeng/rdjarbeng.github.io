@@ -16,6 +16,8 @@ card_items: []
 categories:
   - Air Quality
 video: ''
+series: "Air Quality Basics"
+series_part: 3
 ---
 
 In the rapidly urbanizing region of West Africa, ambient air quality has become a pressing concern. With cities expanding and industrialization on the rise, the air we breathe is increasingly at risk. This blog post delves into the current state of ambient air quality standards across West African nations, highlighting both the challenges and ongoing efforts.

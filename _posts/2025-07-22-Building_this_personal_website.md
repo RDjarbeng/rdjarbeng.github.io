@@ -12,6 +12,8 @@ title: Dr Jekyll & Ruby -building Richard's personal website
 image: /assets/images/jekyll_cyber.jpeg
 layout: post
 image_alt: "Cover image for Dr Jekyll & Ruby -building Richard's personal website"
+series: "Building This Blog"
+series_part: 1
 ---
 This post is about my developer experience building my personal website with ruby, jekyll and GitHub pages, opinions are mine and mine alone.
 

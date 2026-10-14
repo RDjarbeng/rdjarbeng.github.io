@@ -89,8 +89,14 @@ body_class: post-page
       </aside>
       {% endif %}
       {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
-      {% if series_nav.next %}
-      <p class="series-next">Next in <a href="{{ series_nav.url }}">{{ series_nav.name }}</a>: <a href="{{ series_nav.next.url }}">Part {{ series_nav.next.number }}, {{ series_nav.next.title }}</a></p>
+      {% if series_nav.next %}{% assign series_card = series_nav.next %}{% assign series_card_label = "Up next" %}
+      {% elsif series_nav.prev %}{% assign series_card = series_nav.prev %}{% assign series_card_label = "Start from the beginning" %}
+      {% else %}{% assign series_card = nil %}{% endif %}
+      {% if series_card %}
+      <section class="series-continue" aria-label="{{ series_card_label }}">
+        <p class="series-continue__label"><strong>{{ series_card_label }}: Part {{ series_card.number }} of {{ series_nav.total }}</strong> in <a href="{{ series_nav.url }}">{{ series_nav.name }}</a></p>
+        {% include post-card.html post=series_card.card %}
+      </section>
       {% endif %}
       {% if post_card_items %}
       {% include card_list.html %}

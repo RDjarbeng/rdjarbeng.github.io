@@ -13,6 +13,8 @@ title: Building a Telegram Bot for Easy Media Uploads to My Blog
 layout: post
 image: "/assets/images/posts/telegram-bot-cover.jpg"
 image_alt: "A smartphone sending an image to a website folder via a paper airplane"
+series: "Building This Blog"
+series_part: 5
 ---
 
 

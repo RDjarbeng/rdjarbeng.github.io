@@ -18,6 +18,8 @@ tags:
 title: Can AI bring images to life? Limits of Generative AI- Luma AI and Virtual Bees.
 image: /assets/images/bees_luma.jpeg
 image_alt: Cover image for Can AI bring images to life?
+series: "Bringing Images to Life with AI"
+series_part: 1
 ---
 
  I recently tried out Luma AI's  [dream machine](https://lumalabs.ai/dream-machine) using a picture of what I believe are wasps or bees (though I'm not entirely sure which!)..

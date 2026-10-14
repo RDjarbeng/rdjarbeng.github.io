@@ -98,8 +98,8 @@ Crucially, the standard splits these six levels into two clear categories:
 * [**Level 1: Driver Assistance**](#level-1-driver-assistance): Steering or cruise assist (one axis). Human controls the other and monitors everything.
 * [**Level 2: Partial Automation**](#level-2-partial-automation): Simultaneous lane-centering and speed control (Tesla Autopilot, GM Super Cruise). Human remains legally liable at every second.
 * [**Level 3: Conditional Automation**](#level-3-conditional-automation-and-the-handover-problem): Car drives on selected highways (Honda Legend, Mercedes DRIVE PILOT). Manufacturer accepts liability until demanding a manual takeover.
-* [**Level 4: High Automation**](/level-4-in-the-real-world/#level-4-high-automation-inside-a-defined-area): Car or bus operates without human fallback within geofenced areas (Waymo, Baidu Apollo, ADASTEC). No driver required.
-* [**Level 5: Full Automation**](/level-4-in-the-real-world/#level-5-the-edge-case-frontier): Unconstrained driving anywhere, in any weather, with zero pedals or steering wheel. Still a research frontier.
+* [**Level 4: High Automation**](/level-4-autonomous-driving-robotaxis-and-driverless-buses/#level-4-high-automation-inside-a-defined-area): Car or bus operates without human fallback within geofenced areas (Waymo, Baidu Apollo, ADASTEC). No driver required.
+* [**Level 5: Full Automation**](/level-4-autonomous-driving-robotaxis-and-driverless-buses/#level-5-the-edge-case-frontier): Unconstrained driving anywhere, in any weather, with zero pedals or steering wheel. Still a research frontier.
 
 For a quick spoken version of the same list, this one-minute explainer from the Engineering Explained channel walks through the six levels and the cameras and radar that driver-assist systems rely on:
 

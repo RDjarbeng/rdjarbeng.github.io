@@ -30,6 +30,8 @@ card_items:
     badge_2: Tool
     url: https://pagefind.app/
     link_text: Visit Pagefind
+series: "Building This Blog"
+series_part: 6
 ---
 
 This is a complete, hands-on guide to building a real blog with [Eleventy](https://www.11ty.dev/) (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates, some data, and turns them into a finished set of HTML pages you can host anywhere. There's no database and no server-side code running once it's built, just files, which makes the result fast and simple to deploy.

@@ -51,6 +51,8 @@ card_items:
     description: "How they work, where they work, and why they're safer."
     url: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/"
     link_text: "Read Part 3"
+series: "Sending Money Across Borders"
+series_part: 2
 ---
 
 In my [last post](https://rdjarbeng.com/visa-and-mastercard-payment-cards-not-transfer-tools/), I wrote about a weird paradox: paying for Netflix with a card is a seamless, one-second breeze, but sending $100 to a friend or family member across a border is a nightmare of high fees and frustrating delays.

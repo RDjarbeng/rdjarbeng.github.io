@@ -54,6 +54,8 @@ card_items:
     description: "How they work, where they work, and why they're safer."
     url: "/what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer/"
     link_text: "Read Part 3"
+series: "Sending Money Across Borders"
+series_part: 1
 ---
 Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly between cardholders.
 This post explores the limitations of Visa and Mastercard for direct peer-to-peer (P2P) transfers between cardholders, contrasting their efficiency in merchant payments with the added costs, delays, and intermediaries required for bank account transfers.

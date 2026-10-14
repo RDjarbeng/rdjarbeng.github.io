@@ -68,10 +68,22 @@ module.exports = function(eleventyConfig) {
   });
 
   // 3. Liquid configuration & include_cached support
+  // Parsed includes/layouts are cached for the length of one build (Eleventy leaves Liquid's
+  // cache off, so every {% include %} was re-read from disk and re-parsed: ~3x slower builds).
+  // Emptied before each build so `--serve` still picks up edits to _includes and _layouts.
+  const liquidTemplateCache = new Map();
+  eleventyConfig.on("eleventy.before", () => liquidTemplateCache.clear());
+
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,
     strictFilters: false,
     jekyllInclude: true,
+    cache: {
+      read: (key) => liquidTemplateCache.get(key),
+      write: (key, value) => { liquidTemplateCache.set(key, value); },
+      remove: (key) => { liquidTemplateCache.delete(key); },
+      clear: () => liquidTemplateCache.clear(),
+    },
   });
 
   eleventyConfig.addLiquidTag("include_cached", function(liquidEngine) {
@@ -137,6 +149,138 @@ module.exports = function(eleventyConfig) {
         const img = env.image || page.image || (siteDoc && (siteDoc.image || siteDoc.thumbnail)) || env.thumbnail || page.thumbnail || env.vid_thumbnail || siteData.logo;
         const imgUrl = img ? (img.startsWith("http") ? img : `https://rdjarbeng.com${img.startsWith("/") ? "" : "/"}${img}`) : "";
 
+        // Structured data (schema.org JSON-LD). Replaces what jekyll-seo-tag generated before the
+        // Eleventy migration: BlogPosting + breadcrumbs on posts, Person on the about page.
+        const SITE = "https://rdjarbeng.com";
+        const isPost = Boolean(siteDoc) && (siteData.posts || []).includes(siteDoc);
+        const isPersonal = Boolean(siteDoc) && (siteData.personal || []).includes(siteDoc);
+        const authorPerson = {
+          "@type": "Person",
+          name: (siteData.author && siteData.author.name) || "Richard Djarbeng",
+          url: `${SITE}/about/`,
+          sameAs: (siteData.social && siteData.social.links) || [],
+        };
+        const graph = [];
+        if (isPost || isPersonal) {
+          const section = isPost ? { name: "Posts", url: `${SITE}/posts/` } : { name: "Personal", url: `${SITE}/personal/` };
+          const info = siteDoc.author_info || {};
+          const author = info.is_guest
+            ? { "@type": "Person", name: info.display_name, ...(info.url ? { url: SITE + info.url } : {}) }
+            : authorPerson;
+          const posting = {
+            "@type": "BlogPosting",
+            "@id": `${canonical}#article`,
+            headline: rawTitle,
+            description: pageDesc,
+            url: canonical,
+            mainEntityOfPage: canonical,
+            datePublished: siteDoc.iso_date,
+            dateModified: env.last_modified_at ? new Date(env.last_modified_at).toISOString() : siteDoc.iso_date,
+            author,
+            publisher: authorPerson,
+            inLanguage: siteData.lang || "en",
+          };
+          if (imgUrl) posting.image = imgUrl;
+          if ((siteDoc.categories || []).length) posting.articleSection = siteDoc.categories;
+          if ((siteDoc.tags || []).length) posting.keywords = siteDoc.tags.join(", ");
+          const series = (siteData.series || []).find((sr) => sr.parts.some((part) => part.url === url));
+          if (series) {
+            posting.position = series.parts.findIndex((part) => part.url === url) + 1;
+            posting.isPartOf = { "@type": "CreativeWorkSeries", name: series.name, url: SITE + series.url };
+          }
+          graph.push(posting, {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+              { "@type": "ListItem", position: 2, name: section.name, item: section.url },
+              { "@type": "ListItem", position: 3, name: rawTitle, item: canonical },
+            ],
+          });
+        } else if (siteDoc && (siteData.gallery || []).includes(siteDoc)) {
+          // Gallery item: VideoObject for videos (eligible for video results), ImageObject otherwise
+          const isoDate = new Date(siteDoc.date || Date.now()).toISOString();
+          if (siteDoc.type === "video" && imgUrl) {
+            const video = {
+              "@type": "VideoObject",
+              "@id": `${canonical}#video`,
+              name: rawTitle,
+              description: pageDesc || rawTitle,
+              thumbnailUrl: [imgUrl],
+              uploadDate: isoDate,
+              url: canonical,
+            };
+            const yt = String(siteDoc.youtube_id || "").match(/(?:youtu\.be\/|v=|embed\/|shorts\/)?([A-Za-z0-9_-]{11})(?:[?&#].*)?$/);
+            if (siteDoc.platform === "youtube" && yt) {
+              video.embedUrl = `https://www.youtube.com/embed/${yt[1]}`;
+              video.contentUrl = `https://www.youtube.com/watch?v=${yt[1]}`;
+            }
+            graph.push(video);
+          } else if (imgUrl) {
+            graph.push({
+              "@type": "ImageObject",
+              "@id": `${canonical}#image`,
+              name: rawTitle,
+              description: pageDesc || rawTitle,
+              contentUrl: imgUrl,
+              url: canonical,
+              uploadDate: isoDate,
+            });
+          }
+          const crumbs = [
+            { name: "Home", item: `${SITE}/` },
+            { name: "Gallery", item: `${SITE}/gallery/` },
+          ];
+          const galleryCat = (siteData.gallery_categories || []).find((c) =>
+            c.slug && siteDoc.category && c.slug === slugify(siteDoc.category));
+          if (galleryCat) crumbs.push({ name: galleryCat.title, item: SITE + galleryCat.url });
+          crumbs.push({ name: rawTitle, item: canonical });
+          graph.push({
+            "@type": "BreadcrumbList",
+            itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
+          });
+        } else if (url === "/about/") {
+          graph.push({ ...authorPerson, url: canonical, image: `${SITE}${siteData.logo || ""}` });
+        } else {
+          // Listing pages: the archives, video collections and series pages
+          const parents = [
+            [/^\/series\/[^/]+\/$/, "Series", "/series/"],
+            [/^\/categories\/[^/]+\/$/, "Categories", "/categories/"],
+            [/^\/tags\/[^/]+\/$/, "Tags", "/tags/"],
+            [/^\/gallery\/videos\/[^/]+\/$/, "Videos", "/videos/"],
+            [/^\/gallery\/[^/]+\/$/, "Gallery", "/gallery/"],
+          ];
+          const isListing = /^\/(gallery|videos|youtube|posts|personal|series|categories|tags)\//.test(url) ||
+            (siteData.video_collections || []).some((v) => v.url === url);
+          if (isListing) {
+            graph.push({
+              "@type": "CollectionPage",
+              "@id": `${canonical}#page`,
+              name: rawTitle || siteData.title,
+              description: pageDesc,
+              url: canonical,
+              isPartOf: { "@type": "WebSite", name: siteData.title, url: `${SITE}/` },
+            });
+            const parent = parents.find(([re]) => re.test(url));
+            if (parent && rawTitle) {
+              graph.push({
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+                  { "@type": "ListItem", position: 2, name: parent[1], item: SITE + parent[2] },
+                  { "@type": "ListItem", position: 3, name: rawTitle, item: canonical },
+                ],
+              });
+            }
+          }
+        }
+        const jsonLd = graph.length
+          ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c")}</script>`
+          : "";
+        const articleMeta = (isPost || isPersonal)
+          ? `<meta property="article:published_time" content="${siteDoc.iso_date}" />` +
+            (siteDoc.categories || []).map((c) => `\n<meta property="article:section" content="${String(c).replace(/"/g, "&quot;")}" />`).join("")
+          : "";
+
         const twitterHandle = siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard";
         const twitterCard = siteData.twitter ? siteData.twitter.card || "summary_large_image" : "summary_large_image";
 
@@ -148,7 +292,8 @@ module.exports = function(eleventyConfig) {
 <link rel="canonical" href="${canonical}" />
 
 <!-- OpenGraph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content="${isPost || isPersonal ? "article" : "website"}" />
+${articleMeta}
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${desc}" />
 <meta property="og:url" content="${canonical}" />
@@ -163,6 +308,7 @@ ${imgUrl ? `<meta property="og:image" content="${imgUrl}" />\n<meta property="og
 <meta name="twitter:title" content="${title}" />
 <meta name="twitter:description" content="${desc}" />
 ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitter:image:alt" content="${title}" />` : ""}
+${jsonLd}
 `;
       },
     };
@@ -263,7 +409,7 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
       return false;
     });
   });
-  // Series box data for one post: {name, url, number, total, parts[], next}, or null
+  // Series box data for one post: {name, url, number, total, parts[], next, prev}, or null
   eleventyConfig.addFilter("seriesNav", (seriesList, seriesName, inputPath) => {
     if (!seriesName || !Array.isArray(seriesList)) return null;
     const s = seriesList.find((x) => x.name.toLowerCase() === seriesName.toString().trim().toLowerCase());
@@ -272,8 +418,9 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
     const idx = s.parts.findIndex((p) => p.inputPath === here);
     if (idx === -1) return null;
     const parts = s.parts.map((p, i) => ({ ...p, current: i === idx }));
-    const next = parts.slice(idx + 1).find((p) => p.url) || null;
-    return { name: s.name, url: s.url, number: idx + 1, total: parts.length, parts, next };
+    const next = parts.slice(idx + 1).find((p) => p.card) || null;
+    const prev = parts.slice(0, idx).reverse().find((p) => p.card) || null;
+    return { name: s.name, url: s.url, number: idx + 1, total: parts.length, parts, next, prev };
   });
 
   eleventyConfig.addFilter("getPrevPost", function(currentUrl, collection) {
@@ -583,7 +730,14 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
         }
       }
     }
-    return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
+    const tags = Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
+    // `npm start` skips the ~700 /tags/<slug>/ pages: they relist every post, so any post edit
+    // rebuilt all of them. `npm run start:full`, `npm run build` and deploys build them all.
+    if (process.env.npm_lifecycle_event === "serve:11ty") {
+      console.log(`[dev] Skipping ${tags.length} tag pages for faster rebuilds. Use "npm run start:full" to include them.`);
+      return [];
+    }
+    return tags;
   });
 
   // 9. Post build event (cover-images.txt generation)

@@ -7,6 +7,8 @@ image: /assets/images/old_node_js.png
 categories: ["Software Engineering"]
 tags: [NodeJs, Raspberry Pi, node version install]
 image_alt: "Cover image for Install-NodeJs-on-Raspberry-Pi"
+series: "Raspberry Pi Setup"
+series_part: 2
 ---
 # How to install NodeJs on the Raspberry Pi 4
 Tested on Raspberry Pi 4B using the terminal
