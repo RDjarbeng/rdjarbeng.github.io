@@ -40,6 +40,12 @@ When generating cover images for this website, please adhere to the following sp
     *   Other related post images MUST be saved to the `assets/images/posts/` directory.
     *   **CRITICAL**: You MUST save the generated image with the **`.jpg`** file extension (e.g. `title_cover.jpg`). AI image generators typically return JPEG data, and saving it as `.png` causes a file mismatch that breaks social media link previews!
 
+7.  **No image generator available?**
+    *   Draw the cover as a 1280x720 SVG in the same flat style, keep the source in `scripts/diagrams/covers/`, and render it to JPG:
+        `node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/<name>.svg assets/images/posts/covers/<name>_cover.jpg`
+    *   Open the resulting JPG and check it before using it. Example: `scripts/diagrams/covers/level-4-in-the-real-world.svg`.
+    *   Each part of a series needs its own cover; do not reuse one image across parts.
+
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:
 > "A **flat vector illustration** of [subject] using a **matte** finish. **Solid** primary colors (Red, Blue, Yellow) for the illustration. Clean lines, **white or light background**. Text overlay says '[Title]' in exactly **ONE solid color** (e.g., solid black). Watermark 'rdjarbeng.com' at the bottom. **No neon, no glow, editorial style**. **16:9 Aspect Ratio**."
