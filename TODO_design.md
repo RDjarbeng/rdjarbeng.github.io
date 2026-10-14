@@ -137,7 +137,7 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
 - [BUG] Thumbnails for TikTok video on the videos page shows a black background behind it instead of filling the page- a bit complicated because of different video sizes and difficulty knowing beforehand from the embed if the space is enough-better to have more space than for the video to be cutoff
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
-- [ ] Set certain tags as series on the website, such as money transfer
+- [x] Set certain tags as series on the website, such as money transfer (Done: `series` + `series_part` front matter, `_series/` collection, series box on posts, pages at /series/. Money transfer posts not yet grouped.)
 - [ ] Reduce the number of Artemis II Items shown on the gallery page - there are repititions
 
 - [x] Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format (Fixed: updated titleize filter in eleventy.config.js and category metadata files)

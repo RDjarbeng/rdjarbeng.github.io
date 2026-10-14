@@ -3,7 +3,7 @@
 <desc id="d">Two columns: the car and the remote control room. The car meets an obstacle it cannot resolve, stops safely, and sends its camera views. A human specialist marks an allowed path and sends it back. The car then drives that path itself. The remote human never steers the car.</desc>
 <defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern></defs>
 <rect width="800" height="1110" fill="#f3efe6"/>
-<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 6</text>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 2</text>
 <text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">When a robotaxi gets stuck, a human advises</text>
 <text x="32" y="112" fill="#57514a" font-size="18">The person in the control room suggests a path.</text>
 <text x="32" y="138" fill="#57514a" font-size="18">The car still does all of the driving.</text>

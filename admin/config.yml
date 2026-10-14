@@ -75,6 +75,31 @@ collections:
           # field: { label: 'Tag', name: 'tag', widget: 'string', hint: 'Enter a tag or select from suggestions' },
           default: [],
         }
+      - {
+          label: "Series",
+          name: "series",
+          widget: "relation",
+          collection: "series",
+          display_fields: [series_name],
+          search_fields: [series_name],
+          value_field: "series_name",
+          required: false,
+          hint: "Optional. Pick a series if this post is one part of it. Manage series under the Series collection.",
+        }
+      - {
+          label: "Part in Series",
+          name: "series_part",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+          required: false,
+          hint: "Optional. Position in the series (1, 2, 3...). Leave empty to order parts by date.",
+        }
+      - label: "Key Points"
+        name: "key_points"
+        widget: "list"
+        required: false
+        hint: "Optional. Two to four one-sentence takeaways, shown in a box at the top of the post."
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       # - { label: 'Image', name: 'image', widget: 'image', required: false }
@@ -692,6 +717,31 @@ collections:
       - { label: "Position", name: "position", widget: "string", default: "Writer" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "series"
+    label: "Series"
+    icon: "collections_bookmark"
+    folder: "_series"
+    create: true
+    identifier_field: "series_name"
+    slug: "{{series_name}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Series Name", name: "series_name", widget: "string", hint: "Shown on posts as 'Part 1 of 3 in the series ...'. Renaming it means updating the Series field on its posts." }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+          hint: "One or two sentences for the series page.",
+        }
+      - {
+          label: "Created",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ssZ",
+          default: "{{now}}",
+        }
   - name: "category_info"
     label: "Category Info"
     icon: "label"

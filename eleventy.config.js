@@ -5,6 +5,7 @@ const pluginTOC = require("eleventy-plugin-toc");
 const siteData = require("./_data/site.js");
 const fs = require("fs");
 const path = require("path");
+const matter = require("gray-matter");
 
 function slugify(str) {
   if (!str) return "";
@@ -262,6 +263,19 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
       return false;
     });
   });
+  // Series box data for one post: {name, url, number, total, parts[], next}, or null
+  eleventyConfig.addFilter("seriesNav", (seriesList, seriesName, inputPath) => {
+    if (!seriesName || !Array.isArray(seriesList)) return null;
+    const s = seriesList.find((x) => x.name.toLowerCase() === seriesName.toString().trim().toLowerCase());
+    if (!s) return null;
+    const here = path.resolve(inputPath || "");
+    const idx = s.parts.findIndex((p) => p.inputPath === here);
+    if (idx === -1) return null;
+    const parts = s.parts.map((p, i) => ({ ...p, current: i === idx }));
+    const next = parts.slice(idx + 1).find((p) => p.url) || null;
+    return { name: s.name, url: s.url, number: idx + 1, total: parts.length, parts, next };
+  });
+
   eleventyConfig.addFilter("getPrevPost", function(currentUrl, collection) {
     const list = Array.isArray(collection) ? collection : siteData.posts;
     const cleanUrl = (currentUrl || "").replace(/\/+$/, "") + "/";
@@ -470,6 +484,67 @@ ${imgUrl ? `<meta name="twitter:image" content="${imgUrl}" />\n<meta name="twitt
     const info = collectionApi.getFilteredByGlob("_category_info/**/*.md");
     siteData.category_info = info.map((c) => ({ ...c.data, url: c.url }));
     return info;
+  });
+
+  // Series: each file in _series/ defines one; posts opt in with `series` (the series_name)
+  // and an optional `series_part`. Drafts are read from disk so they can show as "coming soon".
+  // Problems only warn: a post with an unknown series simply renders without the series box.
+  eleventyConfig.addCollection("seriesList", (collectionApi) => {
+    const byName = new Map();
+    for (const def of collectionApi.getFilteredByGlob("_series/**/*.md")) {
+      const name = (def.data.series_name || "").toString().trim();
+      if (!name) {
+        console.warn(`[series] ${def.inputPath} has no series_name; skipped.`);
+        continue;
+      }
+      byName.set(name.toLowerCase(), {
+        slug: def.fileSlug,
+        name,
+        description: def.data.description || "",
+        url: `/series/${def.fileSlug}/`,
+        parts: [],
+      });
+    }
+
+    const live = new Map(
+      collectionApi.getFilteredByGlob("_posts/**/*.md").map((p) => [path.resolve(p.inputPath), p])
+    );
+    const postsDir = path.join(__dirname, "_posts");
+    for (const file of fs.readdirSync(postsDir)) {
+      if (!file.endsWith(".md")) continue;
+      const full = path.join(postsDir, file);
+      const { data } = matter(fs.readFileSync(full, "utf8"));
+      if (!data.series) continue;
+      const entry = byName.get(data.series.toString().trim().toLowerCase());
+      if (!entry) {
+        console.warn(`[series] ${file}: unknown series "${data.series}". Add it in _series/; no series box is shown.`);
+        continue;
+      }
+      const post = live.get(full);
+      entry.parts.push({
+        title: data.title,
+        part: Number(data.series_part) || null,
+        date: new Date(data.date || 0),
+        url: post ? post.url : null,
+        inputPath: full,
+        card: post ? (siteData.posts || []).find((p) => p.url === post.url) : null,
+      });
+    }
+
+    const list = [...byName.values()];
+    for (const s of list) {
+      s.parts.sort((a, b) => (a.part || Infinity) - (b.part || Infinity) || a.date - b.date);
+      const seen = new Set();
+      s.parts.forEach((p, i) => {
+        if (p.part && seen.has(p.part)) {
+          console.warn(`[series] "${s.name}": two posts claim part ${p.part}; ordering by date.`);
+        }
+        if (p.part) seen.add(p.part);
+        p.number = i + 1;
+      });
+    }
+    siteData.series = list;
+    return list.sort((a, b) => a.name.localeCompare(b.name));
   });
 
   // Categories & Tags collections for archives (paginated in category-archive.liquid and tag-archive.liquid)

@@ -27,3 +27,5 @@ node_modules/
 **/__pycache__/
 **/__pycache__/*
 *.map
+# Diagram check renders
+scripts/diagrams/out/

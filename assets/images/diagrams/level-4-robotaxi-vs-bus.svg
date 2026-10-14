@@ -3,7 +3,7 @@
 <desc id="d">Left: a robotaxi may take any route inside a geofenced zone, on demand. Right: an autonomous bus repeats one fixed route on a timetable. A table compares where, when, vehicle and examples.</desc>
 <defs><pattern id="hatchH" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#f3efe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#b2477b" stroke-width="2.6"/></pattern><pattern id="hatchM" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#2f3d66" stroke-width="1.6"/></pattern><pattern id="hatchO" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#b87a12" stroke-width="2"/></pattern><pattern id="streets" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0 H0 V34" fill="none" stroke="#cfc6b6" stroke-width="3"/></pattern></defs>
 <rect width="800" height="830" fill="#f3efe6"/>
-<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 5</text>
+<text x="32" y="40" fill="#57514a" font-size="18" letter-spacing="2">FIG. 1</text>
 <text x="32" y="80" fill="#1f1d1a" font-family="Georgia, 'Times New Roman', serif" font-size="30">Level 4 comes in two forms</text>
 <text x="32" y="112" fill="#57514a" font-size="18">Level 4 means no driver is needed, but only inside an</text>
 <text x="32" y="138" fill="#57514a" font-size="18">approved area. A robotaxi may use the whole area;</text>

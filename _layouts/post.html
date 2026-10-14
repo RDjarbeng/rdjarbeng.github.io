@@ -63,7 +63,35 @@ body_class: post-page
 
   <div class="post-with-toc">
     <div class="post-content">
+      {% if series %}{% assign series_nav = collections.seriesList | seriesNav: series, page.inputPath %}{% endif %}
+      {% if series_nav %}
+      <nav class="series-box" aria-label="Series: {{ series_nav.name }}">
+        <p class="series-box__label"><strong>Part {{ series_nav.number }} of {{ series_nav.total }}</strong> in the series <a href="{{ series_nav.url }}">{{ series_nav.name }}</a></p>
+        <ol class="series-box__parts">
+          {% for part in series_nav.parts %}
+          {% if part.current %}
+          <li class="is-current" aria-current="page">{{ part.title }}</li>
+          {% elsif part.url %}
+          <li><a href="{{ part.url }}">{{ part.title }}</a></li>
+          {% else %}
+          <li class="is-upcoming">Coming soon</li>
+          {% endif %}
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+      {% if key_points and key_points.size > 0 %}
+      <aside class="key-points" aria-label="Key points">
+        <p class="key-points__label"><strong>Key points</strong></p>
+        <ul>
+          {% for point in key_points %}<li>{{ point | escape }}</li>{% endfor %}
+        </ul>
+      </aside>
+      {% endif %}
       {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+      {% if series_nav.next %}
+      <p class="series-next">Next in <a href="{{ series_nav.url }}">{{ series_nav.name }}</a>: <a href="{{ series_nav.next.url }}">Part {{ series_nav.next.number }}, {{ series_nav.next.title }}</a></p>
+      {% endif %}
       {% if post_card_items %}
       {% include card_list.html %}
       {% endif %}

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Series
+description: "Multi-part posts on rdjarbeng.com, collected so you can read them in order."
+permalink: /series/
+---
+<h1>Series</h1>
+<p>Longer topics split into parts. Each series is best read from Part 1.</p>
+
+<ul class="series-index">
+  {% for s in collections.seriesList %}
+  <li>
+    <a href="{{ s.url }}">{{ s.name }}</a>
+    <span class="series-index__count">{{ s.parts | size }} parts</span>
+    {% if s.description %}<p>{{ s.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

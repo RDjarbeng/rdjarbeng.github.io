@@ -1,0 +1,35 @@
+---
+layout: default
+pagination:
+  data: collections.seriesList
+  size: 1
+  alias: seriesItem
+permalink: "/series/{{ seriesItem.slug }}/"
+eleventyComputed:
+  title: "{{ seriesItem.name }}"
+  description: "{{ seriesItem.description }}"
+---
+<div class="categories-tags-container">
+  <a href="/series/">All Series</a>|
+  <a href="/posts/">All Posts</a>
+</div>
+<h1>Series: {{ seriesItem.name }}</h1>
+{% if seriesItem.description %}
+<div class="category-description">
+  {{ seriesItem.description | markdownify }}
+</div>
+{% endif %}
+<p>{{ seriesItem.parts | size }} parts, best read in order.</p>
+
+<ol class="series-page-parts">
+  {% for part in seriesItem.parts %}
+  <li>
+    <p class="series-page-parts__label">Part {{ part.number }}</p>
+    {% if part.card %}
+      {% include post-card.html post=part.card %}
+    {% else %}
+      <p class="is-upcoming">Coming soon</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ol>
