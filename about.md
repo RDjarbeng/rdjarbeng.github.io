@@ -14,6 +14,28 @@ custom_css_class: about-page
     <a href="#contact-form" class="contact-form-link">Contact Form ↓</a>
   </div>
 </div>
+
+<nav class="about-quick-nav" aria-label="Skip to section">
+  <span class="about-nav-label">Jump to:</span>
+  <div class="about-quick-nav-track">
+    <a href="#experience" class="about-nav-link">Experience</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#education" class="about-nav-link">Education</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#learning" class="about-nav-link">Learning</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#projects" class="about-nav-link">Projects</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#open-source" class="about-nav-link">Open Source</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#skills" class="about-nav-link">Skills</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#certifications" class="about-nav-link">Certifications</a>
+    <span class="about-nav-dot" aria-hidden="true">•</span>
+    <a href="#contact-form" class="about-nav-link">Contact</a>
+  </div>
+</nav>
+
 <div class="about-section">
 <p class="about-summary-text">
 I am a software engineer and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I build low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision, time-series modeling, and data engineering, and I am currently preparing PhD applications centered on machine learning for environmental sensing and air quality. AWS Certified Solutions Architect. I also write technical posts and personal reflections on this blog.
@@ -22,7 +44,7 @@ Currently looking to build strong research and engineering experience in multimo
 </p>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="experience">
   <h2 class="about-section-title">Experience</h2>
 
   <div class="experience-card">
@@ -92,7 +114,7 @@ Currently looking to build strong research and engineering experience in multimo
   </div>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="education">
   <h2 class="about-section-title">Education</h2>
 
   <div class="experience-card">
@@ -143,7 +165,7 @@ Currently looking to build strong research and engineering experience in multimo
   </div>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="learning">
   <h2 class="about-section-title">Ongoing Learning</h2>
   <div class="experience-card">
     <div class="exp-header">
@@ -169,7 +191,7 @@ Currently looking to build strong research and engineering experience in multimo
   </div>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="projects">
   <h2 class="about-section-title">Projects</h2>
   <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
   <p style="text-align: center; font-size: 0.9em; margin-bottom: 20px;"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
@@ -357,7 +379,7 @@ Currently looking to build strong research and engineering experience in multimo
   </div>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="open-source">
   <h2 class="about-section-title">Notable Open-Source Contributions</h2>
   <p class="about-section-subtitle">Selected contributions to open-source projects</p>
 
@@ -439,7 +461,7 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
   {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
 </div>
 
-<div class="about-section">
+<div class="about-section" id="skills">
   <h2 class="about-section-title">Technical Skills</h2>
   <p class="exp-desc">I work in Python, JavaScript/TypeScript, and C++. I use PyTorch, Keras, and FastAI for machine learning, React for the web, and I deploy models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
   <details class="exp-tech-details" open>
@@ -598,7 +620,7 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
   </div>
 </div>
 
-<div class="about-section">
+<div class="about-section" id="certifications">
   <h2 class="about-section-title">Certifications</h2>
   <p class="about-section-subtitle">Professional credentials and verified achievements</p>
   <div class="certifications-grid">
