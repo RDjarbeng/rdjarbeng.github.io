@@ -1,5 +1,5 @@
 ---
-date: 2026-09-04T16:59:00+02:00
+date: 2026-10-14T09:30:00+02:00
 published: true
 author: Richard
 category: Technology
@@ -18,8 +18,8 @@ key_points:
   - "When a robotaxi gets stuck, a remote human suggests a path, but the car still does all of the driving."
   - "Level 5, a car that can drive anywhere in any weather, does not exist yet."
 title: "Level 4 in the Real World: Robotaxis, Driverless Buses, and the Road to Level 5"
-image: /assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg
-image_alt: "Flat vector editorial illustration of the SAE six levels of autonomous driving from L0 human control to L5 full autonomy"
+image: /assets/images/posts/covers/level_4_in_the_real_world_cover.jpg
+image_alt: "Flat vector illustration of a red driverless robotaxi and a blue driverless bus on a city road inside a dashed geofence, titled Level 4 in the Real World"
 layout: post
 card_items:
   - name: "SAE J3016 Standard (ISO/SAE PAS 22736)"
@@ -47,7 +47,7 @@ Robotaxis with nobody in the driver's seat now carry paying passengers in severa
 
 [Part 1 of this series](/the-six-levels-of-autonomous-driving/) explained the six levels and why Level 3 is awkward: the car can drive itself, but it must hand control back to a human who may need ten seconds or more to respond. Level 4 removes that handover entirely. This part looks at what that means in practice, from robotaxis to driverless buses to the remote control rooms behind them, and ends with why Level 5 is still out of reach.
 
-![The Six Levels of Autonomous Driving](/assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg)
+![A driverless robotaxi and a driverless bus inside a geofenced city area](/assets/images/posts/covers/level_4_in_the_real_world_cover.jpg)
 
 ## Level 4: High Automation Inside a Defined Area
 
