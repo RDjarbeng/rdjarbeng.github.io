@@ -9,6 +9,8 @@ image_alt: "Cover image for Installing and removing Node.js on linux-based Syste
 ---
 
 
+> **Note:** For an updated guide on installing Node.js on Raspberry Pi (ARMv7 / Raspberry Pi 4B), see [How to install NodeJs on the Raspberry Pi 4](/Install_NodeJs_on_Raspberry_Pi/).
+
 To install Node.js 16 after uninstalling Node.js 18, you can use the NodeSource repository to get the specific version you want. Here's a step-by-step guide using the terminal:
 
 ![NodeJs site July 2024 screenshot ](/assets/images/nodejs_2024.png)
