@@ -736,3 +736,55 @@ samurai-advancing-zero-shot-visual-tracking-with-motion-aware-memory/
 https://dev.meta.ai/models/muse-wonder
 
 See the benchmarks on this page amd extract them for a post in model benchmarks
+- [ ] People shaping AI:
+
+
+Sam Altman
+Sam Altman
+
+CEO, OpenAI
+
+Jack Clark
+Jack Clark
+
+Head of Public Benefit, Anthropic
+
+Nand Mulchandani
+Nand Mulchandani
+
+Former CTO, CIA
+
+Trae Stephens
+Trae Stephens
+
+Co-Founder, Anduril
+
+Nick Clegg
+Nick Clegg
+
+Former President of Global Affairs, Meta
+
+Arthur Mensch
+Arthur Mensch
+
+CEO, Mistral AI
+
+Garry Tan
+Garry Tan
+
+President, Y Combinator
+
+Alfred Lin
+Alfred Lin
+
+Partner, Sequoia Capital
+
+Balaji Srinivasan
+Balaji Srinivasan
+
+Former CTO, Coinbase
+
+Peter Steinberger
+Peter Steinberger
+
+Founder, OpenClaw
