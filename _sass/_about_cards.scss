@@ -1,6 +1,63 @@
 // Card Containers
 .about-section {
     margin: 40px 0;
+    scroll-margin-top: 130px;
+}
+
+// Horizontal Quick Nav for skipping sections on About page
+.about-quick-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0 25px 0;
+    padding: 8px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+
+    .about-nav-label {
+        font-weight: 600;
+        color: var(--grey-text);
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        letter-spacing: 0.5px;
+        flex-shrink: 0;
+    }
+
+    .about-quick-nav-track {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .about-nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        transition: color 0.15s ease;
+
+        &:hover {
+            color: var(--link-hover-color, #007bff);
+            text-decoration: underline;
+        }
+    }
+
+    .about-nav-dot {
+        color: var(--grey-text);
+        opacity: 0.5;
+        font-size: 0.75rem;
+        user-select: none;
+    }
 }
 
 .about-section-title {
