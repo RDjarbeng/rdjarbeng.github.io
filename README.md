@@ -14,7 +14,7 @@
 
 Welcome to the source code for **rdjarbeng.com**, my personal corner of the web. This site is where I document anything interesting that catches my eye—from practical troubleshooting guides and tech solutions I've discovered, to explorations of emerging AI tools and occasional personal reflections drawn from my travels and life experiences across Ghana (my homeland), the USA, Germany, Uganda, and beyond.
 
-Built with **Jekyll** (a static site generator in Ruby) and powered by **SveltiaCMS** for seamless post management. Deployed via **GitHub Pages** for automatic builds and hosting.
+Built with **Eleventy (11ty)** and powered by **SveltiaCMS** for seamless post management. GitHub Actions builds the site and **GitHub Pages** hosts it.
 
 # 🚀 **Live Site**: [rdjarbeng.com](https://rdjarbeng.com)
 
@@ -39,29 +39,24 @@ Explore the site through these core sections:
 
 ## Tech Stack & Features
 
-- **Static Site Generator**: [Jekyll](https://jekyllrb.com/) – Ruby-based, for fast, SEO-friendly pages.
-- **Content Management**: [SveltiaCMS](https://github.com/sveltia/sveltia-cms) – Headless CMS integrated for editing blog posts directly in the browser.
-- **Styling**: Custom CSS with responsive design; supports dark mode.
-- **Deployment**: GitHub Pages – Push to `main` branch for instant updates.
-- **SEO Optimized**: Meta tags, Open Graph, structured data for better search visibility on topics like **AI tool reviews**, **DNS troubleshooting**, and **tech solutions from Africa**.
+- **Static Site Generator**: [Eleventy (11ty) 3.x](https://www.11ty.dev/) with LiquidJS templates, building 2,000+ pages in well under a minute. (Migrated from Jekyll.)
+- **Content Management**: [SveltiaCMS](https://github.com/sveltia/sveltia-cms) at `/admin/` for editing posts, gallery items and collections in the browser.
+- **Styling**: SCSS compiled with Dart Sass; responsive, with light and dark mode.
+- **Search**: [Algolia](https://www.algolia.com/), indexed on deploy by `scripts/algolia-sync.js`.
+- **Markdown extras**: KaTeX math, heading anchors and an auto-generated table of contents.
+- **Deployment**: GitHub Actions builds the site and publishes it to GitHub Pages on every push to `main`.
+- **Automation**: scheduled workflows sync YouTube playlists and NASA's Astronomy Picture of the Day, enhance gallery posts and check book links. A Telegram bot (`scripts/telegram-bot/`) adds videos and todos from a phone.
+- **SEO Optimized**: Meta tags, Open Graph, Twitter cards, sitemaps and an RSS feed for better search visibility on topics like **AI tool reviews**, **DNS troubleshooting**, and **tech solutions from Africa**.
 
 ### 📖 Learn How This Was Built
 If you are curious about the technical setup of this blog, check out my deep-dive:
-- [Story Time: Add a CMS to a Jekyll / GitHub Pages Website](https://rdjarbeng.com/story-time-add-a-cms-to-a-jekyll-github-pages-website/)
+- [Story Time: Add a CMS to a Jekyll / GitHub Pages Website](https://rdjarbeng.com/story-time-add-a-cms-to-a-jekyll-github-pages-website/) (written before the move to Eleventy)
 
-### Custom Pagination Implementation
-
-The site uses a custom pagination solution to handle the `posts` collection, as the default `jekyll-paginate` plugin has limitations with custom collections and complex sorting requirements.
-
-- **Plugin**: `_plugins/custom-pagination.rb`
-- **Logic**: Generates paginated pages for the `posts` collection, sorting them by date.
-- **Credit**: This implementation was adapted from a solution provided by [@eugeneandrienko](https://github.com/eugeneandrienko) in [jekyll-paginate-v2 Issue #265](https://github.com/sverrirs/jekyll-paginate-v2/issues/265).
-
-Keywords for discovery: personal tech blog, AI trends and reviews, troubleshooting guides Jekyll site, machine learning insights Rwanda, global travel stories tech.
+Keywords for discovery: personal tech blog, AI trends and reviews, troubleshooting guides Eleventy site, machine learning insights Rwanda, global travel stories tech.
 
 ## Quick Start: Local Development
 
-To run this site locally (requires Ruby 3.0+ and Bundler):
+Requires Node.js 20+.
 
 1. **Clone the Repo**:
    ```
@@ -71,36 +66,44 @@ To run this site locally (requires Ruby 3.0+ and Bundler):
 
 2. **Install Dependencies**:
    ```
-   bundle install
+   npm install
    ```
 
-3. **Serve Locally**:
+3. **Serve Locally** (watches SCSS and templates, with live reload):
    ```
-   bundle exec jekyll serve
+   npm start
    ```
-   Open [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser.
+   Open [http://localhost:8080](http://localhost:8080) in your browser. To use another port: `npx @11ty/eleventy --serve --port 5000`.
 
-4. **Edit Content**:
-   - Use SveltiaCMS via the GitHub integration for posts in `_posts/`.
-   - Modify pages in the root or `_pages/` for static content.
+4. **Build for Production**:
+   ```
+   npm run build
+   ```
+   Output goes to `_site/`.
 
-For SveltiaCMS setup: Follow the [official guide](https://github.com/sveltia/sveltia-cms#usage) and configure `sveltiarc.js` for your collections.
+5. **Edit Content**:
+   - Use SveltiaCMS at `/admin/`, or edit the Markdown files in `_posts/`, `_personal/`, `_gallery/` and the other collection folders directly.
+   - CMS collections are configured in `admin/config.yml`.
 
 ## Repository Structure
 
 ```
-├── _includes/      # Layout snippets (header, footer)
-├── _layouts/       # Page templates
-├── _posts/         # Markdown blog posts (managed via SveltiaCMS)
-├── _sass/          # SCSS styles
-├── assets/         # Images, JS, CSS
-├── _config.yml     # Jekyll configuration
-├── Gemfile         # Ruby dependencies
-├── index.md        # Home page
-├── posts.md        # Posts index
-├── personal.md     # Personal page
-├── about.md        # About page
-└── README.md       # You're reading it!
+├── _posts/              # Technical blog posts
+├── _personal/           # Personal posts
+├── _gallery/            # Gallery images and videos
+├── _video_collections/  # Video playlists / collections
+├── _books/, _projects/, _authors/ ...  # Other collections
+├── _data/               # Global data (site.js builds site-wide metadata and collections)
+├── _includes/           # Template partials (header, footer, cards)
+├── _layouts/            # Page layouts
+├── _sass/               # SCSS partials
+├── assets/              # Images, JS, compiled CSS
+├── admin/               # SveltiaCMS
+├── scripts/             # Algolia sync, Telegram bot, maintenance scripts
+├── .github/workflows/   # Deploy and scheduled sync workflows
+├── eleventy.config.js   # Eleventy configuration (Markdown, filters, collections)
+├── package.json         # Node dependencies and build scripts
+└── README.md            # You're reading it!
 ```
 
 ## Contributing
@@ -112,5 +115,4 @@ Open to collaborations and guest posts. Check my other repos like [Countdown App
 
 
 **Author**: [Richard Djarbeng](https://rdjarbeng.com/about/) | Follow on [X/Twitter](https://twitter.com/DjarbengRichard) for updates.  
-Built with ❤️ with Jekyll.
-[![Jekyll](https://jekyllrb.com/img/logo-2x.png)](https://jekyllrb.com/) 
+Built with ❤️ with [Eleventy](https://www.11ty.dev/).
