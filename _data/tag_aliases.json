@@ -1,0 +1,10 @@
+{
+  "artificial-intelligence": "ai",
+  "cybersecurity": "security",
+  "aqi": "air-quality-index",
+  "landmarks-in-kigali": "landmark-in-kigali",
+  "_distinct": [
+    ["email", "gmail"],
+    ["space", "spacex"]
+  ]
+}

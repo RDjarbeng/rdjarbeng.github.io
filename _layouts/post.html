@@ -112,7 +112,7 @@ body_class: post-page
     <span class="meta-label">Tagged In:</span>
     <div class="tags-container">
       {% for tag in post_tags %}
-      <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}">{{ tag }}</a>
+      <a href="{{ tag | tag_url }}">{{ tag }}</a>
       {% endfor %}
     </div>
   </div>

@@ -26,6 +26,14 @@ layout: default
     // Get the requested URL path
     const requestedPath = window.location.pathname;
 
+    // Old tag pages: small tags no longer have their own page, and merged tags (e.g.
+    // /tags/artificial-intelligence/) live under one key. The tag view at /tags/?tag=
+    // resolves both and forwards big tags to their page.
+    const tagMatch = requestedPath.match(/^\/tags\/([^/]+)\/?$/);
+    if (tagMatch) {
+      window.location.replace("/tags/?tag=" + encodeURIComponent(decodeURIComponent(tagMatch[1])));
+    }
+
     // Check if the path starts with "/RDjarbeng"
     if (requestedPath.startsWith("/RDjarbeng")) {
       // Redirect to the new site homepage

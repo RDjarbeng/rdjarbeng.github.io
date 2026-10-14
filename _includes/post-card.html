@@ -125,7 +125,7 @@
           {% endfor %}
           {% for tag in include.post.tags %}
             {% if items_shown < 2 %}
-            <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="post-card-tag">#{{ tag }}</a>
+            <a href="{{ tag | tag_url }}" class="post-card-tag">#{{ tag }}</a>
             {% assign items_shown = items_shown | plus: 1 %}
             {% endif %}
           {% endfor %}

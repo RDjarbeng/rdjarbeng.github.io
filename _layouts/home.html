@@ -188,7 +188,7 @@ layout: default
               {% assign t_url = '/categories/' | append: t_name_slug | relative_url %}
               {% assign t_posts = site.categories[t_name] %}
             {% else %}
-              {% assign t_url = '/tags/' | append: t_name_slug | relative_url %}
+              {% assign t_url = t_name | tag_url %}
               {% assign t_posts = site.tags[t_name] %}
             {% endif %}
 

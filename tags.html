@@ -21,40 +21,38 @@ redirect_from:
 </style>
 
 <div class="tags-page">
-  <h1>Tags</h1>
+  <!-- Tag view for small tags: /tags/?tag=<key>. Filled in by the script below. -->
+  <section id="tag-view" class="tag-view" hidden>
+    <p class="tag-view__back"><a href="/tags/">&larr; All tags</a></p>
+    <h1 id="tag-view-title"></h1>
+    <p id="tag-view-note" class="tag-view__note"></p>
+    <div id="tag-view-posts" class="tag-view__posts"></div>
+  </section>
 
-  {% assign tags_list = "" | split: "" %}
-  {% for tag in site.tags %}
-  {% assign tag_name = tag[0] %}
-  {% assign tag_size = tag[1].size | default: tag[1].length %}
-  {% capture tag_string %}{{ tag_size | prepend: '000000' | slice: -6, 6 }}:::{{ tag_name }}{% endcapture %}
-  {% assign tags_list = tags_list | push: tag_string %}
-  {% endfor %}
-  {% assign sorted_tags = tags_list | sort | reverse %}
+  <h1 id="tags-page-title">Tags</h1>
+
+  {% assign all_tags = collections.allTags %}
+  {% assign by_count = all_tags | sort: "count" | reverse %}
 
   <p style="text-align: center; margin-bottom: 20px;">
     <a href="/" class="about-link btn" style="margin-right: 10px;">Return Home🏠</a>
     <a href="/categories/" class="about-link">View Categories 📃</a>
   </p>
 
-  <p style="text-align: center; margin-bottom: 20px;">Total Tags: {{ site.tags.size }}</p>
+  <p style="text-align: center; margin-bottom: 20px;">Total Tags: {{ all_tags.size }}</p>
 
   <h2 class="section-title" style="text-align: center;">Top 4 Tags</h2>
   <div class="top-tags-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left; margin-bottom: 40px;">
-    {% for item in sorted_tags limit:4 %}
-    {% assign parts = item | split: ":::" %}
-    {% assign tag_size = parts[0] | plus: 0 %}
-    {% assign tag_name = parts[1] %}
+    {% for tag in by_count limit:4 %}
     <div class="top-tag-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 5px var(--shadow-color);">
       <div style="margin-bottom: 15px;">
-        <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
-          {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
+        <a href="{{ tag.url }}" class="tag-pill">
+          {{ tag.displayName }} <span class="tag-count">{{ tag.count }}</span>
         </a>
       </div>
       <div class="top-tag-posts" style="display: grid; gap: 15px;">
-        {% assign current_tag = site.tags[tag_name] %}
-        {% for post in current_tag limit:3 %}
-          {% include_cached post-card.html post=post %}
+        {% for post in tag.posts limit:3 %}
+          {% include post-card.html post=post %}
         {% endfor %}
       </div>
     </div>
@@ -63,15 +61,11 @@ redirect_from:
 
   <h2 class="section-title" style="text-align: center; margin-top: 40px;">Browse Tags</h2>
   <ul class="tags-cloud">
-    {% assign alpha_sorted_tags = site.tags | sort %}
-    {% for tag in alpha_sorted_tags %}
-    {% assign tag_name = tag[0] %}
-    {% assign tag_items = tag[1] %}
-    {% assign tag_size = tag_items.size | default: tag_items.length %}
-    {% if tag_size >= 2 %}
+    {% for tag in all_tags %}
+    {% if tag.hasPage %}
     <li>
-      <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
-        {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
+      <a href="{{ tag.url }}" class="tag-pill">
+        {{ tag.displayName }} <span class="tag-count">{{ tag.count }}</span>
       </a>
     </li>
     {% endif %}
@@ -82,18 +76,15 @@ redirect_from:
   <div id="other-tags-container">
     <ul class="tags-cloud" id="visible-other-tags">
       {% assign other_tags_count = 0 %}
-      {% for tag in alpha_sorted_tags %}
-      {% assign tag_name = tag[0] %}
-      {% assign tag_items = tag[1] %}
-      {% assign tag_size = tag_items.size | default: tag_items.length %}
-      {% if tag_size < 2 %}
+      {% for tag in all_tags %}
+      {% unless tag.hasPage %}
         {% assign other_tags_count = other_tags_count | plus: 1 %}
         <li class="other-tag-item" {% if other_tags_count > 15 %}style="display: none;"{% endif %}>
-          <a href="{{ '/tags/' | relative_url }}{{ tag_name | slugify }}/" class="tag-pill">
-            {{ tag_name }} <span class="tag-count">{{ tag_size }}</span>
+          <a href="{{ tag.url }}" class="tag-pill">
+            {{ tag.displayName }} <span class="tag-count">{{ tag.count }}</span>
           </a>
         </li>
-      {% endif %}
+      {% endunless %}
       {% endfor %}
     </ul>
     {% if other_tags_count > 15 %}
@@ -104,6 +95,86 @@ redirect_from:
   </div>
 </div>
 
+<script type="application/json" id="tag-view-data">{{ "" | tag_view_json }}</script>
+<script>
+  // /tags/?tag=<key>: show the posts for a small tag, or go to the tag's own page.
+  (function () {
+    var query = new URLSearchParams(window.location.search).get("tag");
+    if (!query) return;
+    var data = JSON.parse(document.getElementById("tag-view-data").textContent);
+    var flat = function (s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, ""); };
+
+    // Resolve the key the same way the build does: exact key, alias, then ignoring punctuation
+    var byFlat = {};
+    Object.keys(data.tags).forEach(function (k) { byFlat[flat(k)] = k; });
+    Object.keys(data.aliases).forEach(function (raw) { byFlat[flat(raw)] = data.aliases[raw]; });
+    var key = data.tags[query] ? query : (data.aliases[query] || byFlat[flat(query)]);
+    var tag = key && data.tags[key];
+
+    if (tag && tag.page) { window.location.replace(tag.page); return; }
+
+    var view = document.getElementById("tag-view");
+    var title = document.getElementById("tag-view-title");
+    var note = document.getElementById("tag-view-note");
+    var list = document.getElementById("tag-view-posts");
+    view.hidden = false;
+    document.getElementById("tags-page-title").textContent = "All tags";
+
+    if (!tag) {
+      title.textContent = "No posts are tagged “" + query + "”";
+      note.textContent = "Try searching for it instead: ";
+      var a = document.createElement("a");
+      a.href = "/search/?q=" + encodeURIComponent(query);
+      a.textContent = "search for “" + query + "”";
+      note.appendChild(a);
+      return;
+    }
+
+    document.title = "Tagged “" + tag.name + "” - " + document.title;
+    title.textContent = "Tagged “" + tag.name + "”";
+    note.textContent = tag.posts.length === 1
+      ? "“" + tag.name + "” comes up in this post. The link opens it at the first mention."
+      : "“" + tag.name + "” comes up in these " + tag.posts.length + " posts. Each link opens the post at the first mention.";
+
+    tag.posts.forEach(function (i) {
+      var p = data.posts[i];
+      var href = p.u + "#:~:text=" + encodeURIComponent(tag.name);
+      var card = document.createElement("div");
+      card.className = "post-card";
+      var link = document.createElement("div");
+      link.className = "post-link";
+      if (p.i) {
+        var imgWrap = document.createElement("div");
+        imgWrap.className = "post-card-image";
+        var img = document.createElement("img");
+        img.className = "post-image";
+        img.src = p.i; img.alt = p.t; img.loading = "lazy"; img.width = 800; img.height = 450;
+        imgWrap.appendChild(img);
+        link.appendChild(imgWrap);
+      }
+      var body = document.createElement("div");
+      body.className = "post-card-content";
+      var h = document.createElement("h4");
+      var ha = document.createElement("a");
+      ha.className = "post-card-title-link"; ha.href = href; ha.textContent = p.t;
+      h.appendChild(ha);
+      body.appendChild(h);
+      if (p.e) {
+        var ex = document.createElement("p");
+        ex.className = "post-card-excerpt"; ex.textContent = p.e;
+        body.appendChild(ex);
+      }
+      if (p.d) {
+        var meta = document.createElement("div");
+        meta.className = "post-meta-card"; meta.textContent = p.d;
+        body.appendChild(meta);
+      }
+      link.appendChild(body);
+      card.appendChild(link);
+      list.appendChild(card);
+    });
+  })();
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var showMoreBtn = document.getElementById("show-more-tags");

@@ -63,12 +63,18 @@ What the site does with them:
 *   Each series gets a page at `/series/<slug>/`, and all series are listed at `/series/`.
 *   A post naming an unknown series only prints a `[series]` warning during the build and renders without the box. Check the build output for `[series]` warnings after editing these fields.
 
-## 5. Categories
+## 5. Tags
+*   **Reuse existing tags** where one fits (see `/tags/`). Different spellings of the same topic are merged automatically (case, punctuation, plurals, `elonmusk` vs `elon-musk`), but true synonyms are not.
+*   **Synonyms** go in `_data/tag_aliases.json` as `"variant": "main-tag"` (for example `"artificial-intelligence": "ai"`). Pairs that look alike but are different topics go under `"_distinct"`.
+*   After adding tags, check the build output for `[tags] ... look like the same tag` warnings and resolve them with one of the two lists above.
+*   Only tags with **3 or more posts** get their own page (`/tags/<tag>/`). Smaller tags link to the tag view at `/tags/?tag=<tag>`. In templates always build tag links with the `tag_url` filter (`{{ tag | tag_url }}`), never by hand.
+
+## 6. Categories
 *   **Existing Categories**: Use the categories defined in the `_category_info` directory (e.g., `ai`, `air-quality`, `computer-vision`, `education`, `energy`, `entrepreneurship`, `environment`, `finance`, `gis`, `help`, `iot`, `it`, `news`, `open-source`, `research`, `satellite`, `security`, `software-development`, `software-engineering`, `technology`, `ui`, `web`) unless you absolutely need to create a new one.
 *   **Capitalization (CRITICAL)**: You MUST capitalize the first letter of the category in the front matter (e.g., use `Technology` instead of `technology`).
 *   **Creating New Categories**: You MUST notify the user if you want to create a new category that doesn't fit into the existing ones.
 
-## 6. Content Quality & Depth
+## 7. Content Quality & Depth
 *   **Informative and Comprehensive**: Posts MUST be highly informative and comprehensive. Do NOT write lazy, surface-level content or short few-sentence summaries. Every post should be at least three (3) well-developed paragraphs.
 *   **Context for Links and Embeds**: Do NOT just drop links or media (like tweets or videos) into a post without explanation. You MUST provide significant context for users so they understand what they are looking at and why it is relevant before they click.
 *   **Investigate Links**: If source links are provided, you MUST fetch and read their content (using available tools) and synthesize the information into the post rather than lazily repeating the link.

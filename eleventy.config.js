@@ -714,25 +714,165 @@ ${jsonLd}
     return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
   });
 
-  eleventyConfig.addCollection("tagsList", () => {
-    const slugMap = new Map();
-    for (const post of siteData.posts) {
-      for (const rawTag of (post.tags || [])) {
-        if (!rawTag) continue;
-        const s = slugify(rawTag);
+  // ── Tags ────────────────────────────────────────────────────────────────
+  // Every tag is reduced to one key per topic, so "AI", "ai" and "Artificial Intelligence"
+  // share a page. Automatic: case, punctuation, plurals and run-together words.
+  // Manual: true synonyms in _data/tag_aliases.json (e.g. "ml" -> "machine-learning").
+  // Tags with TAG_PAGE_MIN_POSTS or more posts get /tags/<key>/; smaller tags link to the
+  // tag view at /tags/?tag=<key> instead of producing hundreds of near-empty pages.
+  const TAG_PAGE_MIN_POSTS = 3;
+  let tagIndex = null;
+  eleventyConfig.on("eleventy.before", () => { tagIndex = null; });
+
+  function buildTagIndex() {
+    if (tagIndex) return tagIndex;
+    let aliases = {};
+    try {
+      aliases = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "tag_aliases.json"), "utf8"));
+    } catch (e) {
+      console.warn(`[tags] Could not read _data/tag_aliases.json: ${e.message}`);
+    }
+    // "_distinct": pairs that look alike but are different topics (silences the warning below)
+    const distinct = new Set((aliases._distinct || []).map((pair) => [...pair].sort().join("|")));
+    aliases = Object.fromEntries(Object.entries(aliases).filter(([k]) => !k.startsWith("_")));
+    const docs = [...(siteData.posts || []), ...(siteData.personal || [])];
+
+    // 1. raw slug -> how often each spelling is used
+    const rawCounts = new Map();
+    const spellings = new Map();
+    for (const doc of docs) {
+      for (const raw of (doc.tags || [])) {
+        const s = slugify(raw);
         if (!s) continue;
-        if (!slugMap.has(s)) {
-          slugMap.set(s, { slug: s, displayName: rawTag.toString().trim(), posts: [] });
-        }
-        const entry = slugMap.get(s);
-        if (!entry.posts.includes(post)) {
-          entry.posts.push(post);
+        rawCounts.set(s, (rawCounts.get(s) || 0) + 1);
+        if (!spellings.has(s)) spellings.set(s, new Map());
+        const name = raw.toString().trim();
+        spellings.get(s).set(name, (spellings.get(s).get(name) || 0) + 1);
+      }
+    }
+
+    // 2. raw slug -> key: run-together words, plurals, then manual aliases
+    const slugs = [...rawCounts.keys()];
+    const byJoined = new Map();
+    for (const s of slugs) {
+      const joined = s.replace(/-/g, "");
+      const prev = byJoined.get(joined);
+      // prefer the hyphenated, then the more used spelling ("artificialintelligence" -> "artificial-intelligence")
+      if (!prev || (s.includes("-") && !prev.includes("-")) || rawCounts.get(s) > rawCounts.get(prev)) byJoined.set(joined, s);
+    }
+    const keyOf = new Map();
+    const resolve = (s) => {
+      let k = byJoined.get(s.replace(/-/g, "")) || s;
+      const singular = k.endsWith("ies") ? k.slice(0, -3) + "y" : k.endsWith("s") && !k.endsWith("ss") ? k.slice(0, -1) : null;
+      if (singular && rawCounts.has(singular)) k = singular;
+      for (let hops = 0; aliases[k] && hops < 5; hops++) k = aliases[k];
+      return k;
+    };
+    for (const s of slugs) keyOf.set(s, resolve(s));
+    for (const [from, to] of Object.entries(aliases)) if (!keyOf.has(from)) keyOf.set(from, resolve(to));
+
+    // 3. key -> entry
+    const byKey = new Map();
+    for (const doc of docs) {
+      const seen = new Set();
+      for (const raw of (doc.tags || [])) {
+        const s = slugify(raw);
+        if (!s) continue;
+        const key = keyOf.get(s);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        if (!byKey.has(key)) byKey.set(key, { slug: key, posts: [], names: new Map() });
+        const entry = byKey.get(key);
+        entry.posts.push(doc);
+        for (const [name, n] of spellings.get(s)) entry.names.set(name, (entry.names.get(name) || 0) + n);
+      }
+    }
+    for (const entry of byKey.values()) {
+      // display the most used spelling, e.g. "AI" over "ai"
+      entry.displayName = [...entry.names.entries()].sort((a, b) => b[1] - a[1])[0][0];
+      delete entry.names;
+      entry.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      entry.count = entry.posts.length;
+      entry.hasPage = entry.count >= TAG_PAGE_MIN_POSTS;
+      entry.url = entry.hasPage ? `/tags/${entry.slug}/` : `/tags/?tag=${entry.slug}`;
+    }
+
+    // 4. post cards read tags_data[].url, so point those at the right place too
+    for (const doc of docs) {
+      for (const t of (doc.tags_data || [])) {
+        const entry = byKey.get(keyOf.get(slugify(t.name)));
+        if (entry) t.url = entry.url;
+      }
+    }
+
+    // 5. flag likely duplicates that were not merged automatically (one letter apart)
+    const keys = [...byKey.keys()].filter((k) => k.length >= 5).sort();
+    const close = (a, b) => {
+      if (Math.abs(a.length - b.length) > 1) return false;
+      let i = 0, j = 0, edits = 0;
+      while (i < a.length && j < b.length) {
+        if (a[i] === b[j]) { i++; j++; continue; }
+        if (++edits > 1) return false;
+        if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+      }
+      return edits + (a.length - i) + (b.length - j) <= 1;
+    };
+    for (let x = 0; x < keys.length; x++) {
+      for (let y = x + 1; y < keys.length; y++) {
+        if (close(keys[x], keys[y]) && !distinct.has(`${keys[x]}|${keys[y]}`)) {
+          console.warn(`[tags] "${keys[x]}" and "${keys[y]}" look like the same tag. Add an alias to _data/tag_aliases.json, or list them under "_distinct".`);
         }
       }
     }
-    const tags = Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
-    // `npm start` skips the ~700 /tags/<slug>/ pages: they relist every post, so any post edit
-    // rebuilt all of them. `npm run start:full`, `npm run build` and deploys build them all.
+
+    const all = [...byKey.values()].sort((a, b) => a.slug.localeCompare(b.slug));
+    tagIndex = { keyOf, byKey, all };
+    return tagIndex;
+  }
+
+  // Where a tag should link: its own page, or the tag view for small tags
+  eleventyConfig.addFilter("tag_url", (raw) => {
+    const s = slugify(raw);
+    const { keyOf, byKey } = buildTagIndex();
+    const entry = byKey.get(keyOf.get(s) || s);
+    return entry ? entry.url : `/tags/?tag=${s}`;
+  });
+
+  // Every tag (for the /tags/ page and its tag view)
+  eleventyConfig.addCollection("allTags", () => buildTagIndex().all);
+
+  // Compact JSON for the /tags/?tag=<key> view: small tags list their posts, big tags their page
+  eleventyConfig.addFilter("tag_view_json", () => {
+    const { keyOf, all } = buildTagIndex();
+    const posts = [];
+    const postIndex = new Map();
+    const tags = {};
+    for (const t of all) {
+      if (t.hasPage) {
+        tags[t.slug] = { name: t.displayName, page: t.url };
+        continue;
+      }
+      tags[t.slug] = {
+        name: t.displayName,
+        posts: t.posts.map((p) => {
+          if (!postIndex.has(p.url)) {
+            postIndex.set(p.url, posts.length);
+            posts.push({ t: p.title, u: p.url, e: p.clean_excerpt || "", i: p.image || "", d: p.formatted_date || "" });
+          }
+          return postIndex.get(p.url);
+        }),
+      };
+    }
+    const aliases = {};
+    for (const [raw, key] of keyOf) if (raw !== key) aliases[raw] = key;
+    return JSON.stringify({ tags, aliases, posts }).replace(/</g, "\\u003c");
+  });
+
+  // Tags that get their own archive page (paginated in tag-archive.liquid)
+  eleventyConfig.addCollection("tagsList", () => {
+    const tags = buildTagIndex().all.filter((t) => t.hasPage);
+    // `npm start` skips the tag archive pages for faster rebuilds; `npm run start:full`,
+    // `npm run build` and deploys build them all.
     if (process.env.npm_lifecycle_event === "serve:11ty") {
       console.log(`[dev] Skipping ${tags.length} tag pages for faster rebuilds. Use "npm run start:full" to include them.`);
       return [];

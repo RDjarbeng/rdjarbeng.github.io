@@ -344,7 +344,7 @@ body.dark-mode .ais-Highlight-highlighted {
                 const match = plainText.match(/^(.+?)\s+\d+$/);
                 if (match) {
                     const tagName = match[1];
-                    hit.url = `/tags/${slugify(tagName)}/`;
+                    hit.url = `/tags/?tag=${slugify(tagName)}`; // tag view: small tags list their posts, big tags redirect to their page
                     hit.title = `Tag: ${tagName}`;
                     if (hit._highlightResult && hit._highlightResult.title) {
                         hit._highlightResult.title.value = `Tag: ${tagName}`;
@@ -381,7 +381,7 @@ body.dark-mode .ais-Highlight-highlighted {
             }
 
             const categoriesHtml = uniqueTagsAndCats.length > 0 
-                ? html`<div class="post-card-categories" style="margin-top: 8px;">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="/${tc.type === 'tags' ? 'tags' : 'categories'}/${slugify(tc.name)}/" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
+                ? html`<div class="post-card-categories" style="margin-top: 8px;">${uniqueTagsAndCats.slice(0, 2).map(tc => html`<a href="${tc.type === 'tags' ? `/tags/?tag=${slugify(tc.name)}` : `/categories/${slugify(tc.name)}/`}" class="post-card-${tc.type === 'tags' ? 'tag' : 'category'}">${tc.type === 'tags' ? '#' : ''}${tc.name}</a>`)}</div>` 
                 : '';
 
             if (isVideo) {

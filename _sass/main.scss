@@ -3116,3 +3116,24 @@ h1, h2, h3, h4, h5, h6,
   margin-left: 0.5rem;
   color: var(--grey-text);
 }
+
+/* ── Tag view: /tags/?tag=<key> for tags without their own page ─────────── */
+.tag-view {
+  margin: 0 0 2.5rem;
+  padding: 1rem 1.25rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--base-color);
+
+  h1 { margin: 0.25rem 0 0.5rem; }
+  .post-card { opacity: 1 !important; animation: none !important; }
+}
+
+.tag-view__back { margin: 0; font-size: 0.95rem; }
+.tag-view__note { color: var(--grey-text); margin: 0 0 1.25rem; }
+
+.tag-view__posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
