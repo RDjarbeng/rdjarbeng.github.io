@@ -188,3 +188,4 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Create a kind of RSS feed or update that lists site development progress and releases somewhere on the website
 - [ ] Bug: In the recommendations for the gallery item the post being viewed can show up in the recommendations
 - [ ] In Chinese noodles post, cover image is 7MB ain't that a problem?
+- [ ] Rich results test fails for homepage but passes for posts on the site
