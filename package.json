@@ -51,6 +51,7 @@
     "start": "run-p serve:sass serve:11ty",
     "start:full": "run-p serve:sass serve:11ty:full",
     "sync:algolia": "node scripts/algolia-sync.js",
+    "generate:pdfs": "node scripts/generate_post_pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,0 +1,388 @@
+/* ==========================================================================
+   Print & PDF Export Stylesheet
+   Tailored for clean, readable paper/PDF rendering from web articles
+   ========================================================================== */
+
+/* Screen styles for the Save as PDF action button */
+.post-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-color, #e0e0e0);
+  background: var(--card-bg, #1e1e1e);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.15));
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  line-height: 1.4;
+  vertical-align: middle;
+
+  &:hover {
+    background: var(--bg-hover, #2a2a2a);
+    border-color: var(--link-color, #bb86fc);
+    color: var(--link-color, #bb86fc);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  .post-pdf-btn-icon {
+    flex-shrink: 0;
+  }
+}
+
+.print-header-notice {
+  display: none;
+}
+
+/* Print Media Query */
+@page {
+  margin: 1.6cm 1.4cm;
+  size: auto;
+}
+
+@media print {
+  :root {
+    --bg-color: #ffffff !important;
+    --text-color: #000000 !important;
+    --card-bg: #ffffff !important;
+    --card-border: #d0d7de !important;
+    --border-color: #d0d7de !important;
+    --grey-text: #333333 !important;
+  }
+
+  /* Hide non-printable web UI chrome */
+  .site-header,
+  .site-footer,
+  .footer-wrapper,
+  .footer-bottom,
+  .footer-dynamic,
+  .side-toc,
+  .side-toc-open,
+  .side-toc-backdrop,
+  .side-toc__head,
+  .post-pdf-btn,
+  .theme-toggle,
+  .copy-code-button,
+  .applause-button,
+  #clap-label,
+  .post-navigation,
+  .related-posts,
+  .post-separator,
+  .post-meta-footer,
+  .search-box,
+  .search-container,
+  .pagination-status,
+  .pagination,
+  .back-to-top,
+  .post-header-categories,
+  .series-continue,
+  iframe,
+  video,
+  audio,
+  button {
+    display: none !important;
+  }
+
+  /* Reset document canvas to pure white with rich dark ink typography */
+  html,
+  body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 10.5pt !important;
+    line-height: 1.6 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-header-notice {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-size: 8pt !important;
+    color: #666666 !important;
+    border-bottom: 1px solid #d0d7de !important;
+    padding-bottom: 6pt !important;
+    margin-bottom: 14pt !important;
+
+    .print-site-name {
+      font-weight: 700 !important;
+      color: #111111 !important;
+    }
+
+    .print-site-url {
+      color: #666666 !important;
+    }
+  }
+
+  .page-content,
+  .wrapper,
+  .post-container,
+  .content-wrapper,
+  .post-with-toc,
+  .post-content {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .post-content,
+  .post-content p,
+  .post-content li,
+  .post-content span,
+  .post-content dt,
+  .post-content dd,
+  .post-content td,
+  .post-content th,
+  .post-content strong,
+  .post-content em,
+  p,
+  li {
+    color: #000000 !important;
+  }
+
+  .post-header {
+    border-bottom: 2px solid #24292f !important;
+    padding-bottom: 10pt !important;
+    margin-bottom: 16pt !important;
+
+    h1 {
+      font-size: 22pt !important;
+      line-height: 1.25 !important;
+      color: #000000 !important;
+      margin: 0 0 8pt 0 !important;
+    }
+  }
+
+  .author_date {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12pt !important;
+    color: #555555 !important;
+    font-size: 9pt !important;
+    border: none !important;
+    padding-bottom: 0 !important;
+
+    a {
+      color: #111111 !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  /* Headings & page break controls */
+  h1, h2, h3, h4, h5, h6 {
+    color: #111111 !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  h2 {
+    font-size: 15pt !important;
+    border-bottom: 1px solid #eaecef !important;
+    padding-bottom: 4pt !important;
+    margin-top: 16pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  h3 {
+    font-size: 12.5pt !important;
+    margin-top: 14pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  h4 {
+    font-size: 11pt !important;
+    margin-top: 10pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  p, ul, ol, dl {
+    orphans: 3;
+    widows: 3;
+    margin-bottom: 8pt !important;
+  }
+
+  blockquote {
+    border-left: 3pt solid #d0d7de !important;
+    padding-left: 10pt !important;
+    color: #444444 !important;
+    font-style: italic !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 10pt 0 !important;
+  }
+
+  pre, code, kbd, samp {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  }
+
+  code,
+  .post-content code {
+    background: #f6f8fa !important;
+    background-color: #f6f8fa !important;
+    border: 1px solid #d0d7de !important;
+    color: #111111 !important;
+    padding: 1pt 3pt !important;
+    font-size: 9pt !important;
+    border-radius: 3px !important;
+  }
+
+  pre,
+  .post-content pre {
+    background: #f6f8fa !important;
+    background-color: #f6f8fa !important;
+    border: 1px solid #d0d7de !important;
+    color: #111111 !important;
+    padding: 8pt 10pt !important;
+    font-size: 8.5pt !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    border-radius: 4px !important;
+    margin: 10pt 0 !important;
+    box-shadow: none !important;
+
+    code,
+    span {
+      border: none !important;
+      padding: 0 !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      white-space: pre-wrap !important;
+      color: #111111 !important;
+    }
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 12pt 0 !important;
+    font-size: 9pt !important;
+
+    th, td {
+      border: 1px solid #d0d7de !important;
+      padding: 5pt 7pt !important;
+      color: #24292f !important;
+    }
+
+    th {
+      background: #f6f8fa !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 10pt auto !important;
+    display: block !important;
+  }
+
+  a {
+    color: #0969da !important;
+    text-decoration: underline !important;
+  }
+
+  .series-box,
+  .key-points {
+    background: #f6f8fa !important;
+    border: 1px solid #d0d7de !important;
+    border-radius: 6px !important;
+    padding: 10pt !important;
+    margin: 12pt 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    color: #24292f !important;
+  }
+
+  /* Related concept cards & post-bottom card lists */
+  .cards-section-intro {
+    margin-top: 14pt !important;
+    margin-bottom: 8pt !important;
+    h3, p, em {
+      color: #111111 !important;
+    }
+  }
+
+  .repo-list {
+    background: transparent !important;
+    gap: 10pt !important;
+    margin: 10pt 0 !important;
+    max-width: 100% !important;
+  }
+
+  .repo-item,
+  .card,
+  .card-item {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1px solid #d0d7de !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 8pt 10pt !important;
+    margin-bottom: 8pt !important;
+
+    * {
+      color: #111111 !important;
+    }
+
+    .repo-title,
+    h3,
+    h4 {
+      color: #000000 !important;
+      margin: 0 0 4pt 0 !important;
+    }
+
+    .repo-tag {
+      background: #f6f8fa !important;
+      border: 1px solid #d0d7de !important;
+      color: #24292f !important;
+      padding: 1pt 4pt !important;
+      font-size: 7.5pt !important;
+    }
+
+    .repo-description,
+    p {
+      color: #333333 !important;
+      margin: 4pt 0 !important;
+      font-size: 8.5pt !important;
+    }
+
+    .repo-link-btn {
+      border: 1px solid #0969da !important;
+      color: #0969da !important;
+      background: #ffffff !important;
+      padding: 2pt 6pt !important;
+      display: inline-block !important;
+      margin-top: 4pt !important;
+      font-size: 8pt !important;
+      text-decoration: none !important;
+    }
+  }
+}
