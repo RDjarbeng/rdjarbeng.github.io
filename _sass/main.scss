@@ -148,6 +148,7 @@ a:visited {
 @import "about_cards";
 @import "hero";
 @import "enlighten";
+@import "library";
 
 :root {
   --bg-color: #121212;
@@ -3154,3 +3155,81 @@ h1, h2, h3, h4, h5, h6,
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.25rem;
 }
+
+/* ── Horizontal post card variant: image on left, content on right ───────── */
+.post-list--horizontal {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  grid-template-columns: 1fr !important;
+}
+
+.post-card--horizontal {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  opacity: 1 !important;
+  animation: none !important;
+
+  .post-link {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .post-card-image {
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: 38%;
+    aspect-ratio: 16 / 9;
+    align-self: center;
+    border-radius: 12px 0 0 12px;
+    overflow: hidden;
+
+    .post-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post-card-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .post-card-excerpt {
+    margin: 6px 0 12px;
+    line-height: 1.55;
+  }
+
+  .post-meta-categories-container {
+    margin-top: auto;
+  }
+
+  @media (max-width: 680px) {
+    .post-link {
+      flex-direction: column;
+    }
+
+    .post-card-image {
+      flex: none;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .post-card-content {
+      padding: 14px 16px;
+    }
+  }
+}
+
+@import "print";

@@ -10,6 +10,10 @@ body_class: post-page has-side-toc
 {% assign post_last_modified_at = last_modified_at | default: page.last_modified_at %}
 
 <div class="post-container">
+  <div class="print-header-notice" aria-hidden="true">
+    <span class="print-site-name">Richard Djarbeng · rdjarbeng.com</span>
+    <span class="print-site-url">{{ page.url | absolute_url }}</span>
+  </div>
   <div class="post-header">
     {% if post_categories.size > 0 %}
     <div class="post-header-categories">
@@ -46,6 +50,23 @@ body_class: post-page has-side-toc
       <div class="reading-time">Less than a minute</div>
       {% else %}
       <div class="reading-time">{{ minutes }} min read</div>
+      {% endif %}
+
+      {% if minutes >= 5 %}
+      {% assign clean_slug = page.url | remove: '/' %}
+      {% assign post_pdf_name = clean_slug | append: '.pdf' %}
+      {% assign matching_pdf = site.library_pdfs | where: 'file_name', post_pdf_name | first %}
+      {% if matching_pdf %}
+      <a href="{{ matching_pdf.file | relative_url }}" download="{{ matching_pdf.file_name }}" class="post-pdf-btn" title="Download standalone PDF document ({{ matching_pdf.file_size }})" aria-label="Download PDF document">
+        <svg class="post-pdf-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Download PDF ({{ matching_pdf.file_size }})</span>
+      </a>
+      {% else %}
+      <button type="button" class="post-pdf-btn" onclick="window.print()" title="Print or save this guide as a PDF" aria-label="Save as PDF">
+        <svg class="post-pdf-btn-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+        <span>Save as PDF</span>
+      </button>
+      {% endif %}
       {% endif %}
     </div>
 </div>

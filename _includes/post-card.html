@@ -1,4 +1,4 @@
-<div class="post-card">
+<div class="post-card{% if include.horizontal %} post-card--horizontal{% endif %}">
   {% if include.badge %}<span class="card-type-badge badge-neutral">{{ include.badge }}</span>{% endif %}
   <div class="post-link">
     {% if include.is_js_template %}
@@ -78,6 +78,8 @@
           <div class="post-meta-card">
             {% if include.post.formatted_date %}
               <time datetime="{{ include.post.iso_date }}" data-local="date">{{ include.post.formatted_date }}</time>
+            {% elsif include.post.date %}
+              <time>{{ include.post.date }}</time>
             {% else %}
               {% assign current_year = site.time | date: "%Y" %}
               {% assign post_year = include.post.date | date: "%Y" %}
@@ -92,7 +94,15 @@
           </div>
           <div class="post-meta-dot">·</div>
           <div class="post-meta-card">
-            {% if minutes < 1 %}Less than a minute{% else %}{{ minutes }} min read{% endif %}
+            {% if include.post.file_size and minutes > 0 %}
+              {{ minutes }} min read · {{ include.post.file_size }}
+            {% elsif include.post.file_size %}
+              {{ include.post.file_size }}
+            {% elsif minutes < 1 %}
+              Less than a minute
+            {% else %}
+              {{ minutes }} min read
+            {% endif %}
           </div>
           {% endif %}
         </div>
