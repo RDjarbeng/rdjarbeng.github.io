@@ -37,28 +37,21 @@ Possible future implementation:
 
 ## High Priority - Immediate Fixes & Critical Enhancements
 
-- [x] Add search loading indicator: Provide visible loading feedback (spinner / loading state) while an Algolia search query is actively in flight across the navbar search and search page. (Fixed)
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 
-- [x] search is working sync with algolia, need to fix search for gallery and videos page
 
 ## Low Priority - Existing Feature Polish & Minor Bugs
 
 ### Styling & Layout
 - [ ] Optimize CSS: Currently loads CSS for personal and video pages when not needed. (Medium Importance, Medium Complexity: Refactor CSS loading)
 - [ ] Implement responsive images (via `@11ty/eleventy-img`) to properly size images on mobile devices. (Medium Importance, Medium Complexity: Eleventy image plugin integration)
-- [x] Fix: Previews for posts on Twitter aren't working for some reason, sometimes the preview doesn't load before & after posting. (Fixed: Comprehensive Twitter card and OpenGraph meta tags implemented in eleventy.config.js)
 - [ ] Fix: Videos page inline player is not obvious that video can play the video without navigating, perhaps set to play on hover or something. (Medium Importance, Trivial Complexity: CSS/JavaScript hover effect)
 - [ ] Add a view related posts link for videos too so I can track media across the site. (Medium Importance, Medium Complexity: Eleventy layout/logic)
 - [ ] Add skeleton loader for images. (Medium Importance, Medium Complexity: HTML/CSS/JS implementation)
-- [x] TOC section highlighting flashes briefly when title is visible then is not visible for rest of the scroll needs fix. (Fixed: assets/js/toc.js updated with requestAnimationFrame and persistent section tracking)
 
 ### Content & Data Structure
-- [x] **Contact Form**: Add dropdown to website contact form to append reason for user's query. (Fixed: Added inquiry_reason dropdown in _includes/contact-form.html and styled in _sass/main.scss)
-- [ ] **Card layouts**: Cards for posts (shown at the bottom of the page) are not shown in the table of contents. (Medium Importance, Medium Complexity: TOC generation logic)
 - [ ] Get images to load separately, get parts of the homepage to load separately so the main content loads quickly even on slow connections (ideally 1s initial load time,FCP). (High Importance, Significant Complexity: Advanced lazy loading/critical path optimization)
-- [x] Remove tiktok expander plugin if not necessary. (Completed: Legacy Jekyll plugins eliminated during Eleventy 3.x migration)
 - [ ] Tags and categories need to be added to personal posts, gallery images and videos. (Medium Importance, Medium Complexity: Content front matter updates/Eleventy data cascade)
 - [ ] Add pages: youtube videos (add a random picker for youtube videos, allow users to customize it to their preferred category, eg: Nigerian movies, long form content). (High Importance, Significant Complexity: New Eleventy layouts, YouTube API integration)
 
@@ -86,9 +79,7 @@ Possible future implementation:
     - [ ] GitHub Cross-Pollination: Ensure every README has a "Learn how this was built" link to a deep-dive post.
 - [ ] **Strategic Goal: Increasing Time Spent by 35%**
     - [ ] Live Interactive Demos: Embed "Lite" versions of your projects directly in the posts.
-    - [x] Series-Based Architecture: Reorganize content into "Tracks" (e.g., "The Autonomous Trading Track"). (Done: series system with `series`/`series_part` front matter, `_series/`, pages at /series/. First series: "Self-Driving, Explained". Older posts still to be grouped.)
     - [ ] Technical Deep-Dives (The 2,000+ Word Rule): Transition from 500-word overviews to 2,000+ word authoritative guides with annotated code blocks and architectural diagrams.
-    - [x] Readability UX: Improve the "In-App" feel by adding Code "Copy" button. (Implemented in assets/js/copy-code.js and styled in _sass/main.scss)
     - [ ] Position the site so agents consider it as a source of information such as when users are asked what is the latest AI news this site shows up
 
 ## Notes to Self & Research Ideas
@@ -111,7 +102,6 @@ Possible future implementation:
 ## Telegram todos
 - [ ] Check YouTube API to see if from a channel name you can see the growth in subscribers over time and plot this on a graph 📈
 - [ ] Memes don't show most recent first, layout needs improvement
-- [x] the nasa gallery images have an option to do ~small, to load smaller versions on the homepage, should use these for the gallery cards, and show the defaults ~large only for the full image (Implemented in _includes/gallery_card.html)
 
 - the card layout at the main gallery, and after clicking view all are different (need to decide whether to keep the date), check the gallery card
 - Even though I have a post on EV's searching electric vehicles bring up "no result found", can we fix this?
@@ -137,10 +127,8 @@ The inspected URL is known to Bing but has some issues which are preventing us f
 - [ ] Gallery section on homepage needs more text, can make excerpt or something else, need a smart solution so that no explanation is needed
 - [BUG] Thumbnails for TikTok video on the videos page shows a black background behind it instead of filling the page- a bit complicated because of different video sizes and difficulty knowing beforehand from the embed if the space is enough-better to have more space than for the video to be cutoff
 - [ ] Instagram videos on the video page don't play at all on mobile, redirects to Instagram
-- [x] Set certain tags as series on the website, such as money transfer (Done: `series` + `series_part` front matter, `_series/` collection, series box on posts, pages at /series/. Money transfer posts not yet grouped.)
 - [ ] Reduce the number of Artemis II Items shown on the gallery page - there are repititions
 
-- [x] Gallery page Artemis II doesn't capitalize II, instead uses 'Ii', breaking the Roman Numeral format (Fixed: updated titleize filter in eleventy.config.js and category metadata files)
 
 - The gallery light box shows a preview of the text for images, but shows the full text for the videos instead of just the preview -DISABLED THE PREVIEW
 - [ ] Add an explanation to the reader for the gallery so they know how to navigate, first describe the top-level sections such as images, then the subcategories such as Cover images-partial implementation 
@@ -166,24 +154,18 @@ width: 2048 # default: original size height: 2048 # default: original size svg:
 
 🔗 Markdown path: /assets/images/black-quote-go-and-be-the-best.jpg
 - [ ] The TikTok cards on the video page are so long or tall that it's difficult to see the entire card. Maybe we can find a way to display it in such a way that you can see a lot of the posts but when you play it it focuses on one particular video for desktop, especially for mobile
-- [x] Some video items " no matter what you do do you still judge you" for example have the play button even though it is still on Instagram post this needs to be fixed. Twitter and Instagram posts should not have a play button on the video page (Fixed: play button restricted to YouTube and TikTok in _includes/video_card.html)
 - [ ] When iframe for the video's page is loading it just shows a blank gap this is not good for the user experience. Find a way to fix this, make this Interactive
 - [ ] The skydiving shorts titled what are you afraid of is displayed as in landscape mode so it doesn't show up properly when played from the video speech and also when played from the single video page
 - [ ] The YouTube page sidebar when clicked it's not very obvious that the content is being filtered based on the selection of the sidebar
 - [ ] Find a way to detect errors on the site from 404 to site going down because of DNS or security issues. Currently will have to visit first before the issue is even noticed
 - [ ] In dark mode on mobile, the cards on this page are hard to distinguish 
 https://rdjarbeng.com/gallery/screenshots/ perhaps some kind of border to know when you are at teh end of the screenshot
-- [x] Add a horizontal navbar to the about page to Skip sections-needed most on mobile (Fixed: added .about-quick-nav pill bar and section anchors in about.md & _sass/_about_cards.scss)
-- [x] References section for the free background remover post is not properly formatted-fix this (Fixed: formatted research citations and bibtex cleanly in _posts/2025-09-20-free-hd-background-remover-effortless-image-editing-tool.md)
 - [] Music of RRR | Richard Djarbeng
 https://rdjarbeng.com/gallery/videos/music-of-rrr/
 
 How to put something underneath this post that shows that this is a playlist under a video collection for this website- partial
 - [ ] Artemis II Mission gallery needs to be organized so the subsections are organized chronologically
-- [x] Bug: The footer at the bottom of the YouTube page leaves a left gap when the sidebar is minimized (Fixed: .site-footer margin-left set to 0 with transition in _sass/_sticky-sidebars.scss)
 - add a random movie picker, implement for nigerian movies, christian movies
-- [x] Add YouTube channel to contact or footer: https://youtube.com/@rdjarbengweb (Fixed: added to _data/site.js, footer social icons, and contact.md)
-- [ ] add a way to collapse sidebar for main gallery
 - [ ] Investigate no cookie for YouTube if it makes a difference
 
 It messes with the formatting, can't see the replies, and changes the url, but it works youtube-nocookie.com/embed/-ZRwlYtA.
@@ -193,16 +175,12 @@ It messes with the formatting, can't see the replies, and changes the url, but i
 yout-ube.com/watch
 - [ ] Add the enlighten project as a section on the homepage
 - [ ] TikTok videos aren't loading on the site due to overload protection
-- [x] Need to find a way so that twitter links are not automatically added as videos, how to make sure a mistaken video can be remedied in telegram to be added as a todo (added "📝 Save as TODO" option to video keyboard)
-- [x] Add a way to add and edit Playlists in the cms and in telegram (added playlist detection and collection creation in telegram bot, CMS playlist collection configured)
 
 - [ ] Need to be able to navigate the website with keyboard inputs if necessary
 - [ ] What would it take to add versioning to posts
 - [ ] Let the homepage cards scroll horizontally on mobile liie in the gallery so it's easier to navigate the different sections
-- [ ] Highlighting on the TOC for posts disappears down the screen when the TOC is long and needs to be scrolled, the TOC does not auto scroll as the user scrolls down
 - [ ] Utilize the free space on the nav between the logo and nav items to put something interesting there. Was thinking about the category display with the icon but there could be something more interesting
 - [ ] What can we do with RSS feeds currently and how can it be integrated into the site in terms of content
-- [x] Find a better way to display tags at the bottom of posts instead of with the default scroll bar showing (Fixed: modernized .tags-container with flex-wrap and responsive pill styling in _sass/main.scss)
 - [ ] Do we need this or our current embeds are fine?
 
 https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
