@@ -788,3 +788,7 @@ Peter Steinberger
 Peter Steinberger
 
 Founder, OpenClaw
+- [ ] Write about this improvement of services, need to write more posts like this that are about policy and large scale impact instead of in one small area 
+
+Rockefeller Foundation, OpenAI Foundation Announce $50 Million Partnership To Help Cities Improve Public Services Through AI | RF
+https://www.rockefellerfoundation.org/news/rockefeller-openai-50-million-partnership-cities-improve-public-services-ai/
