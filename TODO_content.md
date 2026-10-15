@@ -48,7 +48,7 @@ Add page for apps of interest, AI apps, image creators,video generators, I love 
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
 - [ ] Do a section listing featuring, Featured YouTube channels I've posted about
-- [ ] Consider making some of the longer posts into pdfs
+- [x] Consider making some of the longer posts into pdfs (Generated standalone PDFs for top 15 deep-dive research posts in `documents/`, created `scripts/generate_post_pdfs.js`, and launched the PDF Library at `/library/` featuring custom presentations and research whitepapers)
 
 
 # linkedIn posts

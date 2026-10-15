@@ -1,0 +1,19 @@
+---
+layout: default
+title: "PDF Document Library"
+description: "Downloadable PDF presentations, slide decks, and deep-dive technical research articles by Richard Djarbeng."
+permalink: /library/
+---
+
+<h1>PDF Document Library</h1>
+<div class="posts-page-intro">
+  Downloadable PDF presentations, slide decks, and deep-dive technical articles by Richard Djarbeng.
+</div>
+
+{% assign pdf_items = site.library_pdfs | default: library_pdfs %}
+
+<div class="post-list post-list--horizontal">
+  {% for post in pdf_items %}
+    {% include post-card.html post=post badge="PDF" horizontal=true %}
+  {% endfor %}
+</div>
