@@ -1553,30 +1553,36 @@ a:hover {
 
 .tags-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  /* Lines up the tags horizontally */
+  overflow-x: auto;
+  /* Adds a horizontal scrollbar *only if needed* */
+  white-space: nowrap;
+  /* Prevents tags from wrapping to a new line */
   padding-bottom: 10px;
+  /* Adds a little space for the scrollbar so it doesn't overlap tags */
 }
 
 .tags-container a {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--card-border);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.88rem;
-  line-height: 1.2;
+  /* Light gray pill background */
+  color: var(--grey-text);
+  /* Darker text for contrast */
+  border-radius: 15px;
+  /* This creates the "pill" shape */
+  padding: 5px 12px;
+  /* Vertical and horizontal spacing inside the pill */
+  margin-right: 6px;
+  /* Space *between* the pills */
+  font-size: 0.9em;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s;
+}
 
-  &:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    border-color: var(--text-color);
-    transform: translateY(-1px);
-  }
+.tags-container a:hover {
+  background-color: #ddd;
+  /* Darken pill on hover */
+  color: #111;
 }
 
 /* Clap button label - ensure visibility in dark mode */
