@@ -187,3 +187,4 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Add a UI where posts are linked to each other and the link to the cards. Would be good to add it to the recommended posts as a way to show where you should go next and which direction is strongest, kind of a mindmap, also good for my analytics so I can see posts that stand alone vs those that are connected across the site
 - [ ] Create a kind of RSS feed or update that lists site development progress and releases somewhere on the website
 - [ ] Bug: In the recommendations for the gallery item the post being viewed can show up in the recommendations
+- [ ] In Chinese noodles post, cover image is 7MB ain't that a problem?
