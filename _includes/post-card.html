@@ -1,4 +1,5 @@
 <div class="post-card">
+  {% if include.badge %}<span class="card-type-badge badge-neutral">{{ include.badge }}</span>{% endif %}
   <div class="post-link">
     {% if include.is_js_template %}
       ${badgeHtml}

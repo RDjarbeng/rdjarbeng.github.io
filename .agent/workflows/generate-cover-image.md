@@ -38,13 +38,16 @@ When generating cover images for this website, please adhere to the following sp
 6.  **Directory Placement & Naming**:
     *   Cover images MUST be saved to the `assets/images/posts/covers/` directory.
     *   Other related post images MUST be saved to the `assets/images/posts/` directory.
-    *   **CRITICAL**: You MUST save the generated image with the **`.jpg`** file extension (e.g. `title_cover.jpg`). AI image generators typically return JPEG data, and saving it as `.png` causes a file mismatch that breaks social media link previews!
+    *   **The file extension MUST match the real format.** AI image generators usually return JPEG data; saving that as `.png` makes the extension lie about the content, and some link-preview crawlers then reject the image.
+    *   **Use `.jpg` for photographic or busy images** (AI art, photos, collages). PNG previews do work on Facebook, X, LinkedIn and WhatsApp, but a busy 1280x720 PNG is about 5x larger (a series collage: 937 KB as PNG, 169 KB as JPG), and WhatsApp drops preview images over roughly 300 KB. Aim for under 300 KB.
+    *   **PNG is fine for flat graphics** with few colours (diagrams, logos, text-only covers) when it stays under that size.
 
 7.  **No image generator available?**
     *   Draw the cover as a 1280x720 SVG in the same flat style, keep the source in `scripts/diagrams/covers/`, and render it to JPG:
         `node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/<name>.svg assets/images/posts/covers/<name>_cover.jpg`
     *   Open the resulting JPG and check it before using it. Example: `scripts/diagrams/covers/level-4-in-the-real-world.svg`.
     *   Each part of a series needs its own cover; do not reuse one image across parts.
+    *   **Series covers** are collages of the parts' covers, made with Collage Studio (the separate image-collage-agent project; see its `docs/agent-cookbook.md`). Pick a layout that shows every cover (e.g. filmstrip for 2 parts, a 2x2 grid for 4, magazine for 5, mosaic for 7+), use a transparent background, save to `assets/images/series/<slug>_cover.png`, and set it as `image` on the series (`_series/<slug>.md` or the CMS). Redo it when a part is added. The website itself does not run the collage tool.
 
 ## Example Prompt Structure
 When asking for an image generation, the prompt should look something like this:

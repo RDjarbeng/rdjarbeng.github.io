@@ -1,9 +1,8 @@
 // ===================================================
 // Sticky Left Sidebars
-// Posts TOC · Gallery Filters · YouTube Genres
+// Side TOC (posts, homepage) · Gallery Filters · YouTube Genres
 // ===================================================
 
-$_toc-rail-width:     200px;
 $_gallery-rail-width: 240px;
 $_yt-rail-width:      200px;
 $_rail-top:            65px; // Navbar height — sidebars start here by default
@@ -19,7 +18,198 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
 
 
 // ===================================================
-// POST PAGE — TOC sticky inside content-wrapper
+// SIDE TOC — posts and homepage
+// Desktop: fixed to the left screen edge like the gallery/YouTube rails,
+// collapsible to a slim strip. Below the breakpoint: an off-canvas drawer
+// (posts, opened by .side-toc-open) or hidden (homepage uses its pill bar).
+// Pages opt in with body class `has-side-toc`.
+// ===================================================
+$_side-toc-width:     250px;
+$_side-toc-collapsed:  56px;
+$_side-toc-bp:       1024px;
+
+body.has-side-toc {
+  --side-toc-w: 0px;
+
+  @media (min-width: $_side-toc-bp) {
+    --side-toc-w: #{$_side-toc-width};
+    &.side-toc-collapsed { --side-toc-w: #{$_side-toc-collapsed}; }
+
+    // Only the page content moves over; the footers stay full width because the
+    // TOC stops above them (side-toc.js)
+    .page-content { padding-left: var(--side-toc-w); transition: padding-left 0.25s ease; }
+  }
+}
+
+.side-toc {
+  background: var(--card-bg);
+  border-right: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) transparent;
+  &::-webkit-scrollbar { width: 5px; }
+  &::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 3px; }
+
+  .side-toc__head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 10px 8px 8px;
+    position: sticky;
+    top: 0;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--card-border);
+    z-index: 1;
+  }
+
+  .side-toc__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    flex: 1;
+    border: none;
+    padding: 0;
+  }
+
+  .side-toc__collapse,
+  .side-toc__close {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1.15rem;
+    cursor: pointer;
+    &:hover { border-color: var(--card-border); }
+  }
+
+  .side-toc__close { display: none; }
+
+  .side-toc__body { padding: 8px 10px 24px; }
+
+  // Legacy .toc-content rules hid the list on small screens and capped it at 15vw
+  .toc-content { display: block; max-width: none; width: auto; }
+  .toc-content ul { margin-left: 0; }
+
+  // Heading hierarchy (h1 is the post title, so the list starts at h2)
+  .toc-content li { margin: 2px 0; }
+  .toc-content li.toc-h2 { margin-top: 10px; }
+  .toc-content li.toc-h2:first-child { margin-top: 0; }
+  .toc-content li.toc-h2 > a { font-weight: 600; }
+  .toc-content li.toc-h3 {
+    margin-left: 12px;
+    border-left: 1px solid var(--card-border);
+    > a { font-size: 0.82rem; }
+  }
+  .toc-content li.toc-h4 {
+    margin-left: 24px;
+    border-left: 1px solid var(--card-border);
+    > a { font-size: 0.8rem; }
+  }
+
+  // Neutral colours: grey entries, the current section in the normal text colour
+  .toc-content a { color: var(--grey-text); }
+  .toc-content a:hover { color: var(--text-color); }
+  .toc-content a.active {
+    color: var(--text-color);
+    background: rgba(127, 127, 127, 0.16);
+    border-left-color: var(--text-color);
+  }
+}
+
+@media (min-width: $_side-toc-bp) {
+  .side-toc {
+    position: fixed;
+    left: 0;
+    top: $_rail-top;
+    bottom: 0;
+    width: $_side-toc-width;
+    z-index: 90;
+    transition: width 0.25s ease;
+
+    // Expand to fill the navbar gap once it scrolls out of view
+    @supports (animation-timeline: scroll()) {
+      animation: sidebar-fill-nav-gap linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0px #{$_rail-top};
+    }
+  }
+
+  body.side-toc-collapsed .side-toc {
+    width: $_side-toc-collapsed;
+    overflow: hidden;
+
+    .side-toc__head { flex-direction: column; border-bottom: none; padding: 10px 0; }
+    .side-toc__title { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 0.9rem; opacity: 0.7; }
+    .side-toc__body { display: none; }
+  }
+
+  // Homepage: the collapsed strip shows only the menu button
+  body.home-page.side-toc-collapsed .side-toc__title { display: none; }
+
+  .side-toc-open,
+  .side-toc-backdrop { display: none !important; }
+}
+
+@media (max-width: #{$_side-toc-bp - 1px}) {
+  // Homepage keeps its horizontal pill bar on small screens
+  .home-page .side-toc { display: none; }
+
+  .side-toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    z-index: 2001;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+
+    .side-toc__collapse { display: none; }
+    .side-toc__close { display: inline-flex; }
+  }
+
+  body.side-toc-open .side-toc { transform: none; }
+
+  .side-toc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2000;
+  }
+
+  .side-toc-open {
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
+    z-index: 1500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
+
+// ===================================================
+// POST PAGE — reading column centred in the space left of the TOC
 // ===================================================
 .post-page {
   .page-content {
@@ -33,60 +223,50 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     margin: 0;
   }
 
-  .post-container {
-    max-width: 1150px;
-    margin: 0 auto;
+  // Reading measure in characters rather than pixels, so it follows the text size.
+  // About 97ch gives an ~800px text column at the body font size, the width the
+  // figures in scripts/diagrams are drawn for.
+  .post-container,
+  .content-wrapper,
+  .post-meta-footer,
+  .post-separator,
+  .related-posts {
+    max-width: min(100%, 97ch);
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
   }
 
   .content-wrapper {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    display: block;
     position: relative;
-    max-width: 1150px;
-    margin: 0 auto;
   }
 
-  .toc-sidebar {
-    position: sticky;
-    top: calc(#{$_rail-top} + 15px);
-    align-self: flex-start;
-    width: $_toc-rail-width;
-    flex-shrink: 0;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    z-index: 10;
-    overflow-y: auto;
-    padding: 12px 10px 20px 10px;
-    max-height: calc(100vh - #{$_rail-top} - 30px);
-    border-radius: 12px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-
-    // Elegant thin scrollbar
-    scrollbar-width: thin;
-    scrollbar-color: var(--card-border) transparent;
-    &::-webkit-scrollbar { width: 4px; }
-    &::-webkit-scrollbar-track { background: transparent; }
-    &::-webkit-scrollbar-thumb {
-      background: var(--card-border);
-      border-radius: 4px;
-    }
-
-    .toc-content {
-      flex: 1;
+  // These blocks sit inside .post-container in post.html; the container already sets the
+  // width and side padding, so nested copies must not add theirs again
+  .post-container {
+    .content-wrapper,
+    .post-meta-footer,
+    .post-separator,
+    .related-posts {
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
   .post-with-toc {
-    flex: 1 1 auto;
     min-width: 0;
-    max-width: 850px;
+    max-width: 100%;
+  }
+
+  // The article body lines up with the title (the general .post-content rule insets it by
+  // 4% plus 20px, which made the text column narrower than and offset from the title)
+  .post-content {
+    max-width: none;
+    padding-left: 0;
   }
 
   .post-header h1 {
@@ -94,37 +274,9 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
   }
 
   @media (max-width: 1000px) {
+    .post-container,
     .content-wrapper {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 15px;
-      width: 100%;
-    }
-
-    .toc-sidebar {
-      position: static;
-      width: 100%;
-      max-width: none;
-      max-height: none;
-      background: none;
-      border: 1px solid var(--card-border);
-      border-radius: 8px;
-      box-shadow: none;
-      padding: 10px;
-      z-index: auto;
-    }
-
-    .post-with-toc {
-      width: 100%;
-      max-width: 100%;
-      align-self: stretch;
-    }
-
-    .post-container {
-      margin-left: 0;
-      max-width: 100%;
-      width: 100%;
-      padding: 0 10px;
+      padding: 0 12px;
     }
   }
 }
@@ -133,9 +285,6 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
 // GALLERY PAGE — Filter rail fixed on left screen edge
 // ===================================================
 .gallery-page {
-  .site-footer {
-    margin-left: $_gallery-rail-width;
-  }
 
   .page-content {
     padding: 0;
@@ -237,6 +386,37 @@ $_rail-top:            65px; // Navbar height — sidebars start here by default
     margin-left: $_gallery-rail-width;
     max-width: calc(100% - #{$_gallery-rail-width});
     padding: 30px;
+  }
+
+  // Collapse button and collapsed state (desktop only; on small screens the rail is a horizontal strip)
+  .gallery-rail-collapse {
+    display: none;
+    align-self: flex-start;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1.15rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    &:hover { border-color: var(--card-border); }
+  }
+
+  @media (min-width: 769px) {
+    .gallery-rail-collapse { display: inline-flex; }
+    .gallery-filter-rail { transition: width 0.25s ease, padding 0.25s ease; }
+    .gallery-content-area { transition: margin-left 0.25s ease, max-width 0.25s ease; }
+
+    &.gallery-rail-collapsed {
+      .gallery-filter-rail { width: 56px; padding: 12px 10px; overflow: hidden; }
+      .gallery-nav { display: none; }
+      .gallery-content-area { margin-left: 56px; max-width: calc(100% - 56px); }
+    }
   }
 
   @media (max-width: 768px) {

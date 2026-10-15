@@ -3030,21 +3030,38 @@ h1, h2, h3, h4, h5, h6,
   max-width: 100%;
 }
 
-/* ── Series box, key points and series pages ─────────────────────────── */
+/* ── Series box, key points, end-of-post series card, tag view ──────────────
+   These follow the post card: same background, border and 12px corners, no accent colour. */
+.series-box,
+.key-points,
+.series-continue,
+.tag-view {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+}
+
+/* Links inside these boxes use the text colour, not the (purple) dark-mode link colour */
+.series-box a,
+.series-continue__label a,
+.tag-view__back a,
+.tag-view__note a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--grey-text);
+}
+
 .series-box,
 .key-points {
   margin: 0 0 1.75rem;
   padding: 0.9rem 1.1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-left: 4px solid var(--base-color);
 }
 
 .series-box__label,
 .key-points__label {
   margin: 0 0 0.4rem;
   font-size: 0.95rem;
-  font-weight: 700;
 }
 
 .series-box__parts {
@@ -3057,8 +3074,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .key-points {
-  border-left-color: var(--link-color);
-
   ul { margin: 0 0 0 1.2rem; padding: 0; }
   li { margin: 0.3rem 0; }
 }
@@ -3066,9 +3081,6 @@ h1, h2, h3, h4, h5, h6,
 .series-continue {
   margin: 2.5rem 0 1.5rem;
   padding: 1rem 1.1rem 1.1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-top: 4px solid var(--base-color);
 
   .series-continue__label { margin: 0 0 0.8rem; font-size: 1rem; }
 
@@ -3083,47 +3095,46 @@ h1, h2, h3, h4, h5, h6,
   @media (min-width: 700px) {
     .post-link { flex-direction: row; }
     .post-card-image { flex: 0 0 42%; width: 42%; align-self: center; } // keep 16:9, do not stretch to card height
-    .post-card-content { padding: 14px 18px; }
+    .post-card-content { padding: 14px 18px; flex: 1 1 auto; min-width: 0; } // let the text side shrink instead of overflowing
   }
 }
 
-.series-page-parts {
-  list-style: none;
-  margin: 1.5rem 0;
-  padding: 0;
-  display: grid;
-  gap: 1.5rem;
-
-  .is-upcoming { color: var(--grey-text); font-style: italic; }
+/* Neutral corner badge for post cards ("Series", "Part 2"), on the existing .card-type-badge */
+.badge-neutral {
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  box-shadow: none;
 }
 
-.series-page-parts__label {
-  margin: 0 0 0.4rem;
-  font-weight: 700;
+/* A series is a post card with two cards stacked behind it, so it reads as a collection.
+   Back layers are tinted slightly toward the text colour so they show in both themes. */
+.series-card {
+  --stack-near: color-mix(in srgb, var(--card-bg) 86%, var(--text-color) 14%);
+  --stack-far: color-mix(in srgb, var(--card-bg) 93%, var(--text-color) 7%);
+  box-shadow:
+    8px 8px 0 -1px var(--stack-near), 8px 8px 0 0 var(--card-border),
+    16px 16px 0 -2px var(--stack-far), 16px 16px 0 -1px var(--card-border);
+  margin: 0 16px 16px 0;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow:
+      10px 10px 0 -1px var(--stack-near), 10px 10px 0 0 var(--card-border),
+      20px 20px 0 -2px var(--stack-far), 20px 20px 0 -1px var(--card-border),
+      0 5px 15px var(--shadow-color);
+  }
+}
+
+.series-upcoming-note {
   color: var(--grey-text);
-}
-
-.series-index {
-  list-style: none;
-  padding: 0;
-
-  li { margin: 0 0 1.25rem; }
-  a { font-size: 1.15rem; font-weight: 700; }
-  p { margin: 0.25rem 0 0; color: var(--grey-text); }
-}
-
-.series-index__count {
-  margin-left: 0.5rem;
-  color: var(--grey-text);
+  font-style: italic;
+  margin-top: 1.5rem;
 }
 
 /* ── Tag view: /tags/?tag=<key> for tags without their own page ─────────── */
 .tag-view {
   margin: 0 0 2.5rem;
   padding: 1rem 1.25rem 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-left: 4px solid var(--base-color);
 
   h1 { margin: 0.25rem 0 0.5rem; }
   .post-card { opacity: 1 !important; animation: none !important; }

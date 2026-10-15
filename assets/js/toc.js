@@ -1,15 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const tocToggle = document.querySelector('.toc-toggle');
-  const tocContent = document.querySelector('#toc-content');
   const headers = document.querySelectorAll('h1, h2, h3, h4'); // Adjust based on your heading levels
   const tocLinks = document.querySelectorAll('#toc-content a');
 
-  // Toggle TOC on mobile
-  if (tocToggle && tocContent) {
-    tocToggle.addEventListener('click', () => {
-      tocContent.classList.toggle('active');
-    });
-  }
+  // Collapse/drawer behaviour lives in side-toc.js
 
   // Highlight active section on scroll
   function highlightActiveSection() {

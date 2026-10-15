@@ -648,6 +648,7 @@ ${jsonLd}
         slug: def.fileSlug,
         name,
         description: def.data.description || "",
+        coverImage: def.data.image || "",
         url: `/series/${def.fileSlug}/`,
         parts: [],
       });
@@ -689,9 +690,16 @@ ${jsonLd}
         if (p.part) seen.add(p.part);
         p.number = i + 1;
       });
+      // For series cards: what a reader can open now, where to start, and when it last grew
+      s.published = s.parts.filter((p) => p.card);
+      s.firstPart = s.published[0] || null;
+      s.updated = s.published.reduce((latest, p) => (p.date > latest ? p.date : latest), new Date(0));
+      // Cover: the series' own `image` (set in the CMS), else Part 1's cover
+      s.image = s.coverImage || (s.firstPart && s.firstPart.card && s.firstPart.card.image) || "";
     }
     siteData.series = list;
-    return list.sort((a, b) => a.name.localeCompare(b.name));
+    // Most recently updated first, so new and growing series lead on the homepage and /series/
+    return list.sort((a, b) => b.updated - a.updated || a.name.localeCompare(b.name));
   });
 
   // Categories & Tags collections for archives (paginated in category-archive.liquid and tag-archive.liquid)

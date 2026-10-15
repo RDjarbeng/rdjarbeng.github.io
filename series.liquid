@@ -1,18 +1,25 @@
 ---
 layout: default
 title: Series
-description: "Multi-part posts on rdjarbeng.com, collected so you can read them in order."
+description: "Multi-part posts on rdjarbeng.com, collected so you can read them in order: from self-driving cars and air quality to building this blog."
 permalink: /series/
 ---
-<h1>Series</h1>
-<p>Longer topics split into parts. Each series is best read from Part 1.</p>
+{%- comment -%} Same page pattern as /categories/ and /tags/; series are listed most recently updated first {%- endcomment -%}
+<div class="categories-page">
+  <h1>Series</h1>
 
-<ul class="series-index">
-  {% for s in collections.seriesList %}
-  <li>
-    <a href="{{ s.url }}">{{ s.name }}</a>
-    <span class="series-index__count">{{ s.parts | size }} parts</span>
-    {% if s.description %}<p>{{ s.description }}</p>{% endif %}
-  </li>
-  {% endfor %}
-</ul>
+  <p style="text-align: center; margin-bottom: 20px;">
+    <a href="/" class="about-link btn" style="margin-right: 10px;">Return Home🏠</a>
+    <a href="/posts/" class="about-link">View All Posts 📃</a>
+  </p>
+
+  <p style="text-align: center; margin-bottom: 20px;">Total Series: {{ collections.seriesList.size }}. Each one is a topic told in parts, best read from the first.</p>
+
+  <div class="post-list">
+    {% for s in collections.seriesList %}
+      {% if s.published.size > 0 %}
+        {% include series-card.html series=s %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

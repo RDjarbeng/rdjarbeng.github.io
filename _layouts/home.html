@@ -1,5 +1,6 @@
 ---
 layout: default
+body_class: home-page has-side-toc
 ---
 
 <!-- WebSite schema for the homepage; posts get BlogPosting and BreadcrumbList from the seo tag in eleventy.config.js -->
@@ -88,15 +89,22 @@ layout: default
   {% endfor %}
 
   <!-- Layout wrapper for Desktop TOC -->
-  <div class="home-layout" style="display: flex; gap: 40px; align-items: flex-start; position: relative; margin-top: 40px;">
+  <div class="home-layout" style="position: relative; margin-top: 40px;">
     
     <!-- Sidebar TOC -->
-    <aside class="desktop-toc" style="position: sticky; top: 45px; width: 250px; flex-shrink: 0; align-self: flex-start; background: var(--card-bg); padding: 8px 10px; border-radius: 12px; border: 1px solid var(--card-border); z-index: 10; font-weight: 500; overflow-y: auto;">
+    <!-- Fixed to the left edge on desktop (assets/js/side-toc.js); small screens use the pill bar below -->
+    <aside class="side-toc desktop-toc" id="side-toc" aria-label="On this page">
+      <div class="side-toc__head">
+        <button class="side-toc__collapse" type="button" aria-label="Collapse contents">&#9776;</button>
+        <h2 class="side-toc__title">On this page</h2>
+      </div>
+      <nav class="side-toc__body">
        <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;" class="toc-list">
           <li style="margin-bottom: 5px;"><a href="#about-me" class="toc-link" style="font-size: 1.15rem; font-weight: bold; padding-left: 0;">About Me</a></li>
           <li style="font-size: 1.15rem; font-weight: bold; margin-top: 10px; margin-bottom: 5px; color: var(--text-color);">Blog</li>
           <li style="font-size: 1.05rem; font-weight: bold; color: var(--text-color); padding-left: 10px; margin-bottom: 5px;">Technical posts</li>
           <li><a href="#latest-posts" class="toc-link" style="padding-left: 20px;">Latest</a></li>
+          <li><a href="#series" class="toc-link" style="padding-left: 20px;">Series</a></li>
           <li><a href="#featured-posts" class="toc-link" style="padding-left: 20px;">Featured</a>
               <ul id="toc-dynamic-featured" style="list-style: none; padding: 0; margin: 0; margin-left: 28px; border-left: 1px solid var(--border-color, #ccc);">
                 {% for topic in featured_topics %}
@@ -120,11 +128,11 @@ layout: default
             <li><a href="#gallery-images" class="toc-link" style="padding-left: 10px;">Images</a></li>
           </div>
        </ul>
+      </nav>
     </aside>
+    <script>try { if (localStorage.getItem("sideTocCollapsed") === "1") document.body.classList.add("side-toc-collapsed"); } catch (e) {}</script>
 
       <style>
-      .home-layout { flex-direction: column; }
-      .desktop-toc { display: none; }
       
       .toc-link { text-decoration: none; color: var(--text-color); display: block; border-radius: 4px; padding: 6px 12px; transition: all 0.2s ease; font-size: 1.05rem; margin: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.4;}
       .toc-link:hover { background: rgba(150, 150, 150, 0.2); color: #007acc !important; }
@@ -135,8 +143,6 @@ layout: default
       .mobile-toc-link:hover, .mobile-toc-link.active { background: #007acc; color: #fff; border-color: #007acc; }
       
       @media (min-width: 1024px) {
-        .home-layout { flex-direction: row; }
-        .desktop-toc { display: block; }
         .mobile-toc { display: none; }
       }
       
@@ -149,6 +155,7 @@ layout: default
       <nav class="mobile-toc">
          <a href="#about-me" class="mobile-toc-link">About Me</a>
          <a href="#latest-posts" class="mobile-toc-link">Latest Posts</a>
+         <a href="#series" class="mobile-toc-link">Series</a>
          <a href="#featured-posts" class="mobile-toc-link">Featured Posts</a>
          <a href="#guest-posts" class="mobile-toc-link">Guest Authors</a>
          <a href="#personal-posts" class="mobile-toc-link">Personal Posts</a>
@@ -171,6 +178,29 @@ layout: default
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg></a>
+
+      <!-- Series: the most recently updated multi-part posts, as cards in the same grid as Latest Posts -->
+      {% assign shown_series = 0 %}
+      {% capture series_cards %}
+        {% for s in collections.seriesList %}
+          {% if s.published.size >= 2 and shown_series < 3 %}
+            {% include series-card.html series=s %}
+            {% assign shown_series = shown_series | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% if shown_series > 0 %}
+      <h2 class="section-title" id="series" style="scroll-margin-top: 80px;">Series</h2>
+      <div class="post-list">
+        {{ series_cards }}
+      </div>
+      <a href="{{ '/series/' | relative_url }}" class="about-link btn">View all series <svg width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="vertical-align: middle; margin-bottom: 2px; margin-left: 2px;">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg></a>
+      {% endif %}
 
       <!-- Featured Posts Section (Combines tags, categories, and random selection in visually distinct bubbles) -->
       <br>
@@ -323,6 +353,8 @@ layout: default
         .home-gallery-wrapper::-webkit-scrollbar { display: none; }
         .gallery-scroll-btn { transition: transform 0.2s, background 0.2s; }
         .gallery-scroll-btn:hover { transform: scale(1.1); background: var(--border-color, #f0f0f0); }
+        /* On narrow screens keep the arrows inside the viewport (they sat 15px outside and caused sideways scrolling) */
+        @media (max-width: 600px) { .gallery-scroll-btn.left { left: 2px !important; } .gallery-scroll-btn.right { right: 2px !important; } }
       </style>
       <div style="position: relative; display: flex; align-items: center;">
         <button class="gallery-scroll-btn left" aria-label="Scroll left" onclick="this.nextElementSibling.scrollBy({left: -320, behavior: 'smooth'})" style="position: absolute; left: -15px; z-index: 10; background: var(--card-bg, #fff); border: 1px solid var(--card-border, #eaeaea); border-radius: 50%; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: var(--text-color);">&#8592;</button>
@@ -397,6 +429,7 @@ layout: default
         const tocLinks = document.querySelectorAll('.desktop-toc .toc-link, .mobile-toc .mobile-toc-link');
         const sections = [
           document.getElementById('latest-posts'),
+          document.getElementById('series'),
           document.getElementById('featured-posts'),
           document.getElementById('guest-posts'),
           document.getElementById('personal-posts'),
@@ -429,3 +462,4 @@ layout: default
     })();
   </script>
 </div>
+<script src="{{ '/assets/js/side-toc.js' | relative_url }}" defer></script>

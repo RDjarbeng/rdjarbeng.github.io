@@ -8,28 +8,31 @@ permalink: "/series/{{ seriesItem.slug }}/"
 eleventyComputed:
   title: "{{ seriesItem.name }}"
   description: "{{ seriesItem.description }}"
+  image: "{{ seriesItem.image }}"
 ---
+{%- comment -%} Same structure as the category page (_layouts/category.html), with a part badge on each card {%- endcomment -%}
 <div class="categories-tags-container">
   <a href="/series/">All Series</a>|
   <a href="/posts/">All Posts</a>
 </div>
-<h1>Series: {{ seriesItem.name }}</h1>
+<h1>Series: {{ seriesItem.name }} ({{ seriesItem.published.size }} parts)</h1>
+
 {% if seriesItem.description %}
 <div class="category-description">
   {{ seriesItem.description | markdownify }}
 </div>
 {% endif %}
-<p>{{ seriesItem.parts | size }} parts, best read in order.</p>
 
-<ol class="series-page-parts">
+<div class="post-list">
   {% for part in seriesItem.parts %}
-  <li>
-    <p class="series-page-parts__label">Part {{ part.number }}</p>
     {% if part.card %}
-      {% include post-card.html post=part.card %}
-    {% else %}
-      <p class="is-upcoming">Coming soon</p>
+      {% capture part_badge %}Part {{ part.number }}{% endcapture %}
+      {% include post-card.html post=part.card badge=part_badge %}
     {% endif %}
-  </li>
   {% endfor %}
-</ol>
+</div>
+
+{% assign upcoming = seriesItem.parts.size | minus: seriesItem.published.size %}
+{% if upcoming > 0 %}
+<p class="series-upcoming-note">{{ upcoming }} more {% if upcoming == 1 %}part is{% else %}parts are{% endif %} on the way.</p>
+{% endif %}

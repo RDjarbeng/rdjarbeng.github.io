@@ -38,6 +38,7 @@ layout: default
 <div class="gallery-page-shell">
   <!-- Left filter rail — styled as fixed sidebar when body has class gallery-page -->
   <aside class="gallery-filter-rail" aria-label="Gallery category filters">
+    <button class="gallery-rail-collapse" type="button" aria-label="Collapse filters" aria-expanded="true" aria-controls="dynamic-gallery-nav">&#9776;</button>
     <nav class="gallery-nav" id="dynamic-gallery-nav">
       <button class="gallery-filter active" data-filter="all">All Items</button>
       {% for cat in site.gallery_categories %}
@@ -55,6 +56,42 @@ layout: default
       <button class="gallery-filter" data-filter="tiktok">TikTok</button>
     </nav>
   </aside>
+  <script>
+    // Collapse the filter rail on desktop; the choice is remembered between visits
+    (function () {
+      var KEY = "galleryRailCollapsed", btn = document.querySelector(".gallery-rail-collapse");
+      function set(c) {
+        document.body.classList.toggle("gallery-rail-collapsed", c);
+        btn.setAttribute("aria-expanded", String(!c));
+        btn.setAttribute("aria-label", c ? "Expand filters" : "Collapse filters");
+      }
+      try { set(localStorage.getItem(KEY) === "1"); } catch (e) {}
+      btn.addEventListener("click", function () {
+        var c = !document.body.classList.contains("gallery-rail-collapsed");
+        set(c);
+        try { localStorage.setItem(KEY, c ? "1" : "0"); } catch (e) {}
+      });
+
+      // Stop the fixed rail above the footers instead of running into them
+      var rail = document.querySelector(".gallery-filter-rail");
+      var wide = window.matchMedia("(min-width: 769px)");
+      var queued = 0;
+      function fit() {
+        queued = 0;
+        if (!wide.matches) { rail.style.bottom = ""; return; }
+        var top = Infinity;
+        // looked up here: this script runs before the footers are in the page
+        document.querySelectorAll(".dynamic-footer, .site-footer").forEach(function (f) {
+          top = Math.min(top, f.getBoundingClientRect().top);
+        });
+        rail.style.bottom = Math.max(0, window.innerHeight - top) + "px";
+      }
+      function queue() { if (!queued) queued = requestAnimationFrame(fit); }
+      window.addEventListener("scroll", queue, { passive: true });
+      window.addEventListener("resize", queue);
+      document.addEventListener("DOMContentLoaded", fit);
+    })();
+  </script>
 
   <div class="gallery-content-area">
     <div class="gallery-container">

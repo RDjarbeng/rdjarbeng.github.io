@@ -1,6 +1,6 @@
 module.exports = {
   layout: "post",
-  body_class: "post-page",
+  body_class: "post-page has-side-toc",
   tags: ["posts"],
   author: "Richard",
   eleventyComputed: {

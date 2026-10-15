@@ -735,6 +735,11 @@ collections:
           required: false,
           hint: "One or two sentences for the series page.",
         }
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Optional. Usually a collage of the parts' covers. Leave empty to use Part 1's cover."
       - {
           label: "Created",
           name: "date",

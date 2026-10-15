@@ -1,0 +1,30 @@
+{%- comment -%}
+  A series shown as a post card: same structure and classes as post-card.html, plus a
+  "Series" badge and a stacked edge (.series-card) so it reads as a collection.
+  Usage: {% include series-card.html series=s %}  (an item from collections.seriesList)
+{%- endcomment -%}
+{%- assign s = include.series -%}
+
+<div class="post-card series-card">
+  <span class="card-type-badge badge-neutral">Series</span>
+  <div class="post-link">
+    {% if s.image and s.image.size > 0 %}
+    <div class="post-card-image">
+      <img src="{{ s.image }}" alt="Covers of the posts in the series {{ s.name | escape }}" class="post-image" width="800" height="450" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="post-card-content">
+      <h4 title="{{ s.name | escape }}">
+        <a href="{{ s.url }}" class="post-card-title-link">{{ s.name | escape }}</a>
+      </h4>
+      {% if s.description %}<p class="post-card-excerpt">{{ s.description | escape }}</p>{% endif %}
+      <div class="post-meta-categories-container">
+        <div class="post-meta-left">
+          <div class="post-meta-card">{{ s.published.size }} parts</div>
+          <div class="post-meta-dot">·</div>
+          <div class="post-meta-card">Updated <time datetime="{{ s.updated | date_to_xmlschema }}">{{ s.updated | date: "%-d %B %Y" }}</time></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
