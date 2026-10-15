@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const yaml = require("js-yaml");
 
 function slugify(str) {
   if (!str) return "";
@@ -32,8 +33,9 @@ function extractCleanExcerpt(text, wordLimit = 30) {
   if (!text) return "";
   const clean = text
     .replace(/<[^>]+>/g, " ")
+    .replace(/!\[.*?\]\(.*?\)/g, "")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/[#*`_~>]/g, " ")
+    .replace(/[#*`_~>!]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
   const words = clean.split(" ");
@@ -334,6 +336,17 @@ const book_categories = bookCatFiles.map((file) => {
   };
 }).sort((a, b) => (a.weight || 0) - (b.weight || 0));
 
+// 8.5 Library PDFs
+const libraryPdfsFile = path.join(__dirname, "library_pdfs.yml");
+let library_pdfs = [];
+if (fs.existsSync(libraryPdfsFile)) {
+  try {
+    library_pdfs = yaml.load(fs.readFileSync(libraryPdfsFile, "utf8")) || [];
+  } catch (e) {
+    console.error("Error loading library_pdfs.yml:", e);
+  }
+}
+
 if (!Object.prototype.hasOwnProperty.call(Array.prototype, "size")) {
   Object.defineProperty(Array.prototype, "size", {
     get() {
@@ -430,5 +443,6 @@ module.exports = {
   books,
   book_categories,
   categories,
-  tags
+  tags,
+  library_pdfs
 };

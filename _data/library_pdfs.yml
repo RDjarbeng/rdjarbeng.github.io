@@ -1,0 +1,375 @@
+- id: data-lifecycle-ghana
+  title: The Data Lifecycle in the Ghanaian Context
+  url: /documents/Data_lfiecycle_by_richard_djarbeng.pdf
+  file: /documents/Data_lfiecycle_by_richard_djarbeng.pdf
+  file_name: Data_lfiecycle_by_richard_djarbeng.pdf
+  file_size: 224 KB
+  author: Richard Djarbeng
+  date: October 2026
+  formatted_date: October 2026
+  clean_excerpt: A practical presentation exploring the end-to-end data lifecycle - generation, storage, processing, archiving, and deletion - anchored in everyday Ghanaian digital interactions like Mobile Money transfers.
+  tags:
+    - Data Lifecycle
+    - Mobile Money
+    - Ghana
+    - Data Governance
+    - Fintech
+  categories:
+    - Data & Technology
+- id: post-what-can-you-do-testing-ai-agents-gemini-argon-and-claude
+  title: What can you do? Testing AI Agents, Gemini Argon and Claude
+  url: /documents/what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
+  file: /documents/what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
+  file_name: what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
+  file_size: 749 KB
+  read_time: 14
+  image: /assets/images/posts/covers/ai_agents_benchmark_cover.jpg
+  image_alt: Flat vector illustration of two AI robots sitting at desks taking a written exam while a human grades their responses
+  author: Richard Djarbeng
+  date: October 14
+  formatted_date: October 14
+  clean_excerpt: I have a benchmark prompt that I use to evaluate AI agent capabilities. The GitHub repository for the benchmark prompt is here. Every time a new model or agent drops,...
+  tags:
+    - AI
+    - gemini
+    - claude
+    - agents
+    - benchmarks
+  categories:
+    - Technology
+  is_generated: true
+- id: post-level-4-autonomous-driving-robotaxis-and-driverless-buses
+  title: 'Level 4 Autonomous Driving: How Robotaxis and Driverless Buses Work Today'
+  url: /documents/level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
+  file: /documents/level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
+  file_name: level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
+  file_size: 375 KB
+  read_time: 14
+  image: /assets/images/posts/covers/level_4_in_the_real_world_cover.jpg
+  image_alt: Flat vector illustration of a red driverless robotaxi and a blue driverless bus on a city road inside a dashed geofence, titled Level 4 in the Real World
+  author: Richard Djarbeng
+  date: October 14
+  formatted_date: October 14
+  clean_excerpt: Robotaxis with nobody in the driver's seat now carry paying passengers in several cities, and full-size electric buses run timetabled routes without a driver at the wheel. Both are...
+  tags:
+    - Autonomous Driving
+    - SAE J3016
+    - Robotics
+    - Public Transit
+    - Smart Cities
+    - Artificial Intelligence
+  categories:
+    - Technology
+  is_generated: true
+- id: post-the-six-levels-of-autonomous-driving
+  title: 'The Six Levels of Autonomous Driving: From Driver Assist to the Level 3 Handover'
+  url: /documents/the-six-levels-of-autonomous-driving.pdf
+  file: /documents/the-six-levels-of-autonomous-driving.pdf
+  file_name: the-six-levels-of-autonomous-driving.pdf
+  file_size: 747 KB
+  read_time: 21
+  image: /assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg
+  image_alt: Flat vector editorial illustration of the SAE six levels of autonomous driving from L0 human control to L5 full autonomy
+  author: Richard Djarbeng
+  date: October 14
+  formatted_date: October 14
+  clean_excerpt: When car companies advertise driver-assist software, they often blur the line between convenient driver aids and true driverless autonomy. Marketing terms like "Autopilot," "Full S...
+  tags:
+    - Autonomous Driving
+    - SAE J3016
+    - Robotics
+    - Automotive Tech
+    - Artificial Intelligence
+  categories:
+    - Technology
+  is_generated: true
+- id: post-when-llms-become-scientific-instruments-groundsource-flash-flood-research-report
+  title: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report'
+  url: /documents/when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
+  file: /documents/when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
+  file_name: when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
+  file_size: 3557 KB
+  read_time: 18
+  image: /assets/images/posts/covers/groundsource_research_report_cover.jpg
+  image_alt: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report cover'
+  author: Richard Djarbeng
+  date: October 6
+  formatted_date: October 6
+  clean_excerpt: 'A deep dive into Google''s 2.6-million-event flood dataset: what the data shows, what claims hold up, and why the methodology matters more than the dataset itself. Resources: Enrich...'
+  tags:
+    - flood
+    - climate
+    - disaster
+    - geospatial
+    - Google
+    - Gemini
+    - machine-learning
+  categories:
+    - Research
+  is_generated: true
+- id: post-nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do
+  title: NASA APOD Has Migrated. Here Is What Is Changing and What Developers Must Do
+  url: /documents/nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
+  file: /documents/nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
+  file_name: nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
+  file_size: 866 KB
+  read_time: 11
+  image: /assets/images/posts/covers/nasa-apod-api-migration-wordpress.jpg
+  image_alt: NASA APOD API migration illustration showing telescope data moving into a WordPress cloud architecture
+  author: Richard Djarbeng
+  date: October 1
+  formatted_date: October 1
+  clean_excerpt: NASA's Astronomy Picture of the Day (APOD) is one of the oldest living institutions on the World Wide Web. For over three decades, millions of space enthusiasts, students, research...
+  tags:
+    - Technology
+    - APIs
+    - Python
+    - NASA
+    - Web Development
+  categories:
+    - Technology
+  is_generated: true
+- id: post-geographic-concentration-machine-learning-models
+  title: 'Geographic Concentration of Machine Learning Models: How Compute Economics Re-Engineered the AI Map'
+  url: /documents/geographic-concentration-machine-learning-models.pdf
+  file: /documents/geographic-concentration-machine-learning-models.pdf
+  file_name: geographic-concentration-machine-learning-models.pdf
+  file_size: 562 KB
+  read_time: 14
+  image: /assets/images/posts/covers/geographic-concentration-ml-models-cover.jpg
+  image_alt: Editorial illustration of a world globe where massive server monoliths and nuclear power towers in the US and China connect via heavy power lines, while the rest of the world has unplugged cords, under the title Why 2 Countries Control 90% of AI
+  author: Richard Djarbeng
+  date: September 8
+  formatted_date: September 8
+  clean_excerpt: When you look at where notable artificial intelligence models come from, the global map looks empty. In the 2024 Stanford AI Index Report, researchers tracked 149 notable machine l...
+  tags:
+    - Artificial Intelligence
+    - Machine Learning
+    - Compute Economics
+    - Geopolitics
+    - Epoch AI
+    - Stanford AI Index
+  categories:
+    - Technology
+  is_generated: true
+- id: post-building-a-modern-blog-with-eleventy-3-x-liquid-edition
+  title: Building a Modern Blog with Eleventy 3.x (Liquid Edition)
+  url: /documents/building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
+  file: /documents/building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
+  file_name: building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
+  file_size: 782 KB
+  read_time: 42
+  image: /assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg
+  image_alt: Building a Modern Blog with Eleventy 3.x Liquid Edition cover image
+  author: Richard Djarbeng
+  date: September 3
+  formatted_date: September 3
+  clean_excerpt: 'This is a complete, hands-on guide to building a real blog with Eleventy (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates,...'
+  tags:
+    - Blog
+    - Eleventy
+    - JavaScript
+  categories:
+    - Web
+  is_generated: true
+- id: post-finding-the-mean-median-and-mode-tensortonic
+  title: Coding the Mean, Median and Mode in Python - TensorTonic
+  url: /documents/finding-the-mean-median-and-mode-tensortonic.pdf
+  file: /documents/finding-the-mean-median-and-mode-tensortonic.pdf
+  file_name: finding-the-mean-median-and-mode-tensortonic.pdf
+  file_size: 559 KB
+  read_time: 12
+  image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
+  image_alt: Coding the Mean, Median and Mode in Python by rdjarbeng for rdjarbeng.com cover image
+  author: Richard Djarbeng
+  date: August 31
+  formatted_date: August 31
+  clean_excerpt: For anyone unfamiliar with TensorTonic, it is often described as the "LeetCode of machine learning", a platform designed for developers to practice algorithms, refine data science...
+  tags:
+    - Algorithm
+    - Python
+  categories:
+    - Education
+  is_generated: true
+- id: post-100-posts-later-lessons-learnt-from-building-this-blog
+  title: '100 Posts Later: My Lessons Learnt From Building This Blog (rdjarbeng.com)'
+  url: /documents/100-posts-later-lessons-learnt-from-building-this-blog.pdf
+  file: /documents/100-posts-later-lessons-learnt-from-building-this-blog.pdf
+  file_name: 100-posts-later-lessons-learnt-from-building-this-blog.pdf
+  file_size: 4155 KB
+  read_time: 16
+  image: /assets/images/100_posts_cover.jpg
+  image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark
+  author: Richard Djarbeng
+  date: October 23, 2025
+  formatted_date: October 23, 2025
+  clean_excerpt: Changes Since the Start Reaching the milestone of 100 website posts is a moment for reflection. What started as a simple platform to share thoughts has grown into a comprehensive.....
+  tags:
+    - Review
+  categories:
+    - Technology
+  is_generated: true
+- id: post-putting-google-s-gemini-pro-and-nano-banana-to-the-test
+  title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
+  url: /documents/putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
+  file: /documents/putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
+  file_name: putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
+  file_size: 6827 KB
+  read_time: 10
+  image: /assets/images/gemini_room_design_cover.webp
+  image_alt: Cover image for I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
+  author: Richard Djarbeng
+  date: October 8, 2025
+  formatted_date: October 8, 2025
+  clean_excerpt: 'When I finally got access to Gemini Pro, I had one main goal: to test its new image generation capabilities, which I’d heard referred to by the intriguing codename "Nano...'
+  tags:
+    - Gemini Pro
+    - Nano Banana
+    - AI Image
+    - AI test
+    - Generative AI
+    - Tech Review
+    - Interior Design
+    - Text-to-Image
+    - Artificial Intelligence
+  categories:
+    - Technology
+  is_generated: true
+- id: post-a-chronological-look-at-ai-a-decade-by-decade-evolution
+  title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
+  url: /documents/a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
+  file: /documents/a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
+  file_name: a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
+  file_size: 3450 KB
+  read_time: 23
+  image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
+  image_alt: 'Cover image for A Chronological Look At AI: A Decade-by-Decade Evolution'
+  author: Richard Djarbeng
+  date: September 22, 2025
+  formatted_date: September 22, 2025
+  clean_excerpt: Artificial intelligence did not arrive overnight with ChatGPT. It took eighty years of alternating breakthroughs, hardware bottlenecks, and research winters to reach this point. Lo...
+  tags:
+    - AI
+    - Artificial Intelligence
+    - Machine Learning
+    - Deep Learning
+    - AI History
+    - Generative AI
+    - GPT
+    - Neural Networks
+    - Tech History
+    - Google
+    - Geoffery Hinton
+    - Ian Goodfellow
+    - AI 101
+    - Tesla
+    - Nvidia
+  categories:
+    - AI
+  is_generated: true
+- id: post-http-get-post-sim900
+  title: GSM module HTTP GET & POST request using arduino microcontroller and SIM900
+  url: /documents/http-get-post-sim900.pdf
+  file: /documents/http-get-post-sim900.pdf
+  file_name: http-get-post-sim900.pdf
+  file_size: 193 KB
+  read_time: 12
+  image: /assets/images/gsm_module.jpg
+  image_alt: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.
+  author: Richard Djarbeng
+  date: June 27, 2025
+  formatted_date: June 27, 2025
+  clean_excerpt: This post covers the procedure to send a GET and POST request with AT commands using the SIM900 GSM/GPRS module and the Arduino UNO. It is useful for retrieving data...
+  tags:
+    - HTTP
+    - HTTP verbs
+    - arduino
+    - GSM module
+    - SIM900
+    - 2G
+    - request
+  categories:
+    - IoT
+  is_generated: true
+- id: post-list-of-banks-in-rwanda-and-their-services
+  title: List of Banks in Rwanda and Their Services
+  url: /documents/list-of-banks-in-rwanda-and-their-services.pdf
+  file: /documents/list-of-banks-in-rwanda-and-their-services.pdf
+  file_name: list-of-banks-in-rwanda-and-their-services.pdf
+  file_size: 828 KB
+  read_time: 11
+  image: /assets/images/1000189531.jpg
+  image_alt: Cover image for List of Banks in Rwanda and Their Services
+  author: Richard Djarbeng
+  date: May 24, 2025
+  formatted_date: May 24, 2025
+  clean_excerpt: This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. There are more than 16 commercial and microfinance banks operating in...
+  tags:
+    - Finance
+    - Banking
+    - Rwanda
+    - USD vs RWF
+  categories:
+    - Finance
+  is_generated: true
+- id: post-earth-observation’s-promise-and-barriers-a-down-to-earth-view
+  title: 'Earth Observation’s Promise and Barriers: A Down to Earth View'
+  url: /documents/earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
+  file: /documents/earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
+  file_name: earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
+  file_size: 636 KB
+  read_time: 12
+  image: /assets/images/satellite_orbiting_earth_color_codes.jpg
+  image_alt: 'Cover image for Earth Observation’s Promise and Barriers: A Down to Earth View'
+  author: Richard Djarbeng
+  date: May 20, 2025
+  formatted_date: May 20, 2025
+  clean_excerpt: In this post I consider the transformative potential of satellite data for tackling global challenges like climate change, food security, and urban planning, while examining the re...
+  tags:
+    - Satellites
+    - Earth Observation
+    - Geospatial data
+    - European Space Agency
+    - Landsat
+    - Sentinel
+    - Copernicus
+    - Planet
+    - NASA
+  categories:
+    - Technology
+  is_generated: true
+- id: post-visa-and-mastercard-payment-cards-not-transfer-tools
+  title: Why Can't I Just Send Money With My Visa Card?
+  url: /documents/visa-and-mastercard-payment-cards-not-transfer-tools.pdf
+  file: /documents/visa-and-mastercard-payment-cards-not-transfer-tools.pdf
+  file_name: visa-and-mastercard-payment-cards-not-transfer-tools.pdf
+  file_size: 695 KB
+  read_time: 11
+  image: /assets/images/visa_locked_image.jpg
+  image_alt: Cover image for Why Can't I Just Send Money With My Visa Card?
+  author: Richard Djarbeng
+  date: March 19, 2025
+  formatted_date: March 19, 2025
+  clean_excerpt: 'Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions. However, one critical feature is notably absent: the ability to transfer funds directly...'
+  tags:
+    - Visa
+    - MasterCard
+    - Fintech
+    - Payment Networks
+    - Bank Transfers
+    - Cross-Border Payments
+    - SWIFT
+    - ACH
+    - Venmo
+    - Zelle
+    - Wise
+    - PayPal
+    - M-Pesa
+    - Mobile-Money
+    - Remittance
+    - Payments
+    - Visa
+    - MasterCard
+  categories:
+    - Finance
+  is_generated: true
