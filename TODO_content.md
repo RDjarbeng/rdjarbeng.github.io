@@ -740,51 +740,41 @@ See the benchmarks on this page amd extract them for a post in model benchmarks
 
 
 Sam Altman
-Sam Altman
 
 CEO, OpenAI
 
-Jack Clark
 Jack Clark
 
 Head of Public Benefit, Anthropic
 
 Nand Mulchandani
-Nand Mulchandani
 
 Former CTO, CIA
 
-Trae Stephens
 Trae Stephens
 
 Co-Founder, Anduril
 
 Nick Clegg
-Nick Clegg
 
 Former President of Global Affairs, Meta
 
-Arthur Mensch
 Arthur Mensch
 
 CEO, Mistral AI
 
 Garry Tan
-Garry Tan
 
 President, Y Combinator
 
-Alfred Lin
 Alfred Lin
 
 Partner, Sequoia Capital
 
 Balaji Srinivasan
-Balaji Srinivasan
 
 Former CTO, Coinbase
 
-Peter Steinberger
 Peter Steinberger
 
 Founder, OpenClaw
@@ -795,3 +785,4 @@ https://www.rockefellerfoundation.org/news/rockefeller-openai-50-million-partner
 - [ ] We should run an experiment looking at submissions to journals and conferences since Chatgpt was released and whether the results were significant. Might want to add to the post with the info that now the amount of published papers have exceeded what can physically be read
 - [ ] Use cases for Amazon S3, EBS, or AWS for the average person
 - [ ] Papers of interest: Original Yann LeCun CNN for text detection described in LeCun et al.'s NeurIPS (then known as NIPS) 1989 paper Handwritten Digit Recognition with a Back-Propagation Network. A 28×28 input, four hidden layers, ten output classes.
+Link to video: https://www.youtube.com/watch?v=FwFduRA_L6Q
