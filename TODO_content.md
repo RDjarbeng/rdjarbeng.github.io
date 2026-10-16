@@ -794,3 +794,4 @@ Rockefeller Foundation, OpenAI Foundation Announce $50 Million Partnership To He
 https://www.rockefellerfoundation.org/news/rockefeller-openai-50-million-partnership-cities-improve-public-services-ai/
 - [ ] We should run an experiment looking at submissions to journals and conferences since Chatgpt was released and whether the results were significant. Might want to add to the post with the info that now the amount of published papers have exceeded what can physically be read
 - [ ] Use cases for Amazon S3, EBS, or AWS for the average person
+- [ ] Papers of interest: Original Yann LeCun CNN for text detection described in LeCun et al.'s NeurIPS (then known as NIPS) 1989 paper Handwritten Digit Recognition with a Back-Propagation Network. A 28×28 input, four hidden layers, ten output classes.
