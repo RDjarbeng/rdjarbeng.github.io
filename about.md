@@ -623,18 +623,49 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
 <div class="about-section" id="certifications">
   <h2 class="about-section-title">Certifications</h2>
   <p class="about-section-subtitle">Professional credentials and verified achievements</p>
-  <div class="certifications-grid">
-    <a href="https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url" target="_blank" rel="noreferrer" class="certification-card" title="Verify AWS Certified Solutions Architect – Associate on Credly">
+
+  <div class="experience-card cert-experience-card">
+    <div class="cert-card-header">
       <div class="certification-badge">
-        <img src="/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png" alt="AWS Certified Solutions Architect – Associate badge" width="120" height="120">
+        <img src="/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png" alt="AWS Certified Solutions Architect Associate badge" width="110" height="110">
       </div>
-      <div class="certification-info">
-        <h3 class="certification-title">AWS Certified Solutions Architect</h3>
-        <p class="certification-level">Associate</p>
-        <p class="certification-issuer">Amazon Web Services (AWS)</p>
-        <span class="certification-verify">Verify on Credly →</span>
+      <div class="cert-card-title-group">
+        <div class="exp-header">
+          <h3 class="exp-title">AWS Certified Solutions Architect</h3>
+          <span class="exp-date">Associate</span>
+        </div>
+        <span class="exp-org">Amazon Web Services (AWS)</span>
+        <div class="cert-card-actions">
+          <a href="https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url" target="_blank" rel="noreferrer" class="cert-action-btn" title="Verify AWS Certified Solutions Architect Associate on Credly">Verify on Credly &rarr;</a>
+          <a href="/personal/finally-aws-certified-solutions-architect-richard-djarbeng/" class="cert-action-btn cert-action-secondary" title="Read write-up on AWS Solutions Architect certification">Read Certification Article &rarr;</a>
+        </div>
       </div>
-    </a>
+    </div>
+    <div class="cert-plain-explainer">
+      <strong class="cert-explainer-label">What this means in plain terms:</strong>
+      <p class="exp-desc cert-explainer-text">In simple terms, cloud computing means hosting and running software on secure remote data centers managed by companies like Amazon rather than on local physical computers. An AWS Certified Solutions Architect designs the blueprint for how applications run in this cloud environment. That involves selecting and configuring the right cloud services so software runs fast, stays online during server failures, protects sensitive user data, and operates without unnecessary hosting costs.</p>
+    </div>
+    <details class="exp-tech-details" open>
+      <summary>Cloud architecture and AWS experience</summary>
+      <ul>
+        <li><strong>Hands-on system design:</strong> Over a year of direct experience designing, deploying, and operating distributed systems and cloud workloads on the AWS platform.</li>
+        <li><strong>Core cloud infrastructure:</strong> Practical engineering across foundational AWS services: compute (EC2, Lambda), networking (VPC, subnets, route tables, security groups), storage (S3, EBS, EFS), and databases (RDS, DynamoDB).</li>
+        <li><strong>Requirement-driven architecture:</strong> Translating business and customer requirements into reliable, production-ready cloud architectures based on proven design principles.</li>
+        <li><strong>Implementation guidance:</strong> Providing architectural roadmaps, technical documentation, and best practices for teams building or migrating applications to the cloud.</li>
+        <li><strong>Service evaluation and selection:</strong> Evaluating workload demands and selecting the right AWS services to balance latency, resilience, and cost efficiency.</li>
+        <li><strong>Well-Architected Framework:</strong> Applying core architectural pillars (security, reliability, performance efficiency, and cost optimization) to build resilient systems without single points of failure.</li>
+        <li><strong>Global infrastructure and networking:</strong> Deep understanding of AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the network technologies that connect distributed environments worldwide.</li>
+      </ul>
+    </details>
+    <div class="exp-skills">
+      <span class="skill-pill">AWS</span>
+      <span class="skill-pill">Cloud Architecture</span>
+      <span class="skill-pill">Distributed Systems</span>
+      <span class="skill-pill">Well-Architected Framework</span>
+      <span class="skill-pill">High Availability</span>
+      <span class="skill-pill">Cost Optimization</span>
+      <span class="skill-pill">Security &amp; IAM</span>
+    </div>
   </div>
 </div>
 

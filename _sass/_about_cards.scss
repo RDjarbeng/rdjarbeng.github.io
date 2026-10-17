@@ -661,6 +661,85 @@
     display: inline-block;
 }
 
+// Expanded Certification Card Styles
+.cert-experience-card {
+    margin-top: 20px;
+
+    .cert-card-header {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 20px;
+    }
+
+    .cert-card-title-group {
+        flex: 1;
+    }
+
+    .cert-card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .cert-action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        background: #007acc;
+        color: #fff;
+        border: 1px solid #007acc;
+        transition: background 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+            background: #005fa3;
+            border-color: #005fa3;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &.cert-action-secondary {
+            background: transparent;
+            color: var(--link-color);
+            border-color: var(--card-border);
+
+            &:hover {
+                background: var(--category-bg);
+                border-color: var(--link-color);
+                color: var(--link-color);
+            }
+        }
+    }
+
+    .cert-plain-explainer {
+        background: var(--category-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin-bottom: 20px;
+    }
+
+    .cert-explainer-label {
+        color: var(--text-color);
+        font-size: 0.95rem;
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+
+    .cert-explainer-text {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
 // Responsive adjustments
 @media (max-width: 768px) {
     .cards-grid {
@@ -672,5 +751,19 @@
         text-align: center;
         padding: 20px;
         gap: 16px;
+    }
+
+    .cert-experience-card .cert-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+
+        .exp-header {
+            justify-content: center;
+        }
+
+        .cert-card-actions {
+            justify-content: center;
+        }
     }
 }
