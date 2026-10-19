@@ -32,6 +32,8 @@ card_items:
     description: A popular command-line chat tool that lets you write code with AI, known for its efficiency and strong editing capabilities.
     url: https://aider.chat/
     link_text: Visit Aider
+series: "Google Antigravity"
+series_part: 4
 ---
 
 **TL;DR:** Google’s agent-first IDE, **Antigravity**, launched with massive promises (multi-model support, deep CLI/browser integration, and reasoning modes) along with a 5-hour quota reset. However, it is currently locking AI Pro users out for up to **7 days**, with Google instead offering a gentle nudge to upgrade to their $200/month Ultra plan.

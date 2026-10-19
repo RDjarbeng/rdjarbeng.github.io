@@ -13,6 +13,8 @@ image: /assets/images/falcon9_launch.jpeg
 layout: post
 video: ''
 image_alt: "Cover image for SpaceX Falcon 9 rocket  successfully reaches a hundred launches."
+series: "SpaceX and Starlink"
+series_part: 5
 ---
 SpaceX's Falcon 9 just celebrated its 100th successful launch. After nailing over a hundred launches, it's clear they've really mastered this rocket business.
 

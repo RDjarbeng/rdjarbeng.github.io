@@ -30,6 +30,8 @@ card_items:
     description: An Application Programming Interface (API) is a set of rules that allows different software applications to communicate with each other. When you use an API key to access an AI model, your app sends a request to the model's server and receives a response, all without managing the model yourself.
     url: https://build.nvidia.com/explore/discover
     link_text: NVIDIA Build Catalog
+series: "The Cost of AI Compute"
+series_part: 5
 ---
 
 If you visit the [NVIDIA Build catalog](https://build.nvidia.com/models) today, you are greeted by a massive list of numbers, acronyms, and technical jargon. You will see names like "Nemotron," "Gemma," and "Mistral." For anyone without a technical background, it looks like a database meant only for software engineers.

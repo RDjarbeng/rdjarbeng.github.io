@@ -14,6 +14,8 @@ image: /assets/images/elon_la_fire_dtc.png
 video: ''
 layout: post
 image_alt: "Cover image for Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers"
+series: "SpaceX and Starlink"
+series_part: 3
 ---
 In January 2025, while the Palisades and Eaton fires were burning in Los Angeles, SpaceX and T-Mobile turned on satellite texting for the area. Fires can destroy cell towers or cut their power, so this meant some people with no signal could still send a text. Elon Musk announced it on X by quoting an earlier post from SpaceX.
 

@@ -22,6 +22,8 @@ card_items:
   - name: "Google Trust Services"
     badge_1: "Certificate Authority"
     description: "The Certificate Authority responsible for issuing and managing certificates for Google services. They are providing the new WE1 intermediate certificate used in this infrastructure transition."
+series: "Security Alerts"
+series_part: 4
 ---
 
 If you manage client applications that interact with Google Cloud services, please take note of an upcoming infrastructure change. In **Q2 2026**, Google is updating the Transport Layer Security (TLS) certificates for many of its endpoints to improve overall efficiency and security.

@@ -12,6 +12,8 @@ image: /assets/images/resume_chrome_tabs_rd.webp
 image_alt: Resume Chrome Tabs Cover Image
 layout: post
 categories: Technology
+series: "Quick Tech Fixes"
+series_part: 5
 ---
 
 When a Windows update unexpectedly interrupts your work and forces a restart, you don't have to worry about losing all your carefully organized Chrome windows and tabs.

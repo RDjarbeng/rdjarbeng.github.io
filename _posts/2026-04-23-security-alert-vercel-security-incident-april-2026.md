@@ -33,6 +33,8 @@ card_items:
   - name: What is Google Workspace?
     badge_1: Productivity Suite
     description: Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses, including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers.
+series: "Security Alerts"
+series_part: 2
 ---
 
 Vercel has disclosed a security incident involving unauthorized access to certain internal systems, which has led to the exposure of some customer environment variables.

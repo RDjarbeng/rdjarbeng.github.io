@@ -28,6 +28,8 @@ card_items:
     url: https://github.com/axios/axios/issues/10604
     link_text: View on GitHub
     badge_1: Technical Track
+series: "Security Alerts"
+series_part: 1
 ---
 **TLDR:** A popular npm package has been attacked and it's used by many web developers.
 

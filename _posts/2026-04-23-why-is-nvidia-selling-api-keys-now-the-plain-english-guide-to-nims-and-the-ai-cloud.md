@@ -30,6 +30,8 @@ card_items:
     description: "DGX Cloud is Nvidia's AI-as-a-service platform that provides instant access to Nvidia DGX supercomputers hosted in partner data centers (like Google Cloud and Oracle). It lets organizations train and deploy AI models without purchasing and managing their own hardware clusters."
     url: "https://www.nvidia.com/en-us/data-center/dgx-cloud/"
     link_text: "Nvidia DGX Cloud"
+series: "The Cost of AI Compute"
+series_part: 4
 ---
 
 The landscape of artificial intelligence is shifting rapidly. For years, Nvidia was known primarily as a hardware company that manufactured the powerful Graphics Processing Units (GPUs) required for gaming and professional visualization. If you were a developer, you knew them for CUDA, which is the software layer that allows those chips to process complex mathematical data.

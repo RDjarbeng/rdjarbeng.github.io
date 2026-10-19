@@ -20,6 +20,8 @@ title: 'Review: Google Antigravity License Agreement and First Impressions'
 image: /assets/images/antigravity_cover_image.webp
 image_alt: A dark, futuristic image for a tech review. A curved computer monitor displays the Google Antigravity IDE interface with lines of code. Above the screen, a glowing circuit pattern connects to a large Google 'G' logo, symbolizing the flow of AI data. In the foreground, a transparent tablet features the words "TERMS OF SERVICE" next to a magnifying glass and a tag reading "REVIEW," emphasizing the post's focus on the license agreement.
 layout: post
+series: "Google Antigravity"
+series_part: 1
 ---
 Google’s new Antigravity code editor promises a revolution where AI agents write and test code for you, but the fine print reveals a potential privacy nightmare. This review uncovers buried terms in the terms and conditions that allow Google staff to view your proprietary code and hold you fully liable if the AI autonomously destroys your work making it essential reading before you click "**Accept**".
 

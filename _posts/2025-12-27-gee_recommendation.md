@@ -7,6 +7,8 @@ image: https://github.com/user-attachments/assets/213b0937-d8b0-4b12-82fc-9220c9
 categories: ["GIS"]
 tags: [Google Earth Engine, Satellite, satellite imagery,GEE]
 image_alt: "Cover image for Google Earth Engine: A Useful Tool for Satellite Imagery"
+series: "Free Satellite and Climate Data"
+series_part: 3
 ---
 
 I discovered Google Earth Engine (GEE), and I thought it might be helpful to share my experience with others who might need satellite images for their work.    

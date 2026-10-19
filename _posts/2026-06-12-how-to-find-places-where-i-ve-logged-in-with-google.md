@@ -30,6 +30,8 @@ card_items:
     description: Read Google's official support documentation on how third-party access works, security implications, and how to stay safe.
     url: https://support.google.com/accounts/answer/3466521
     link_text: Read Google Support Guide
+series: "Quick Tech Fixes"
+series_part: 9
 ---
 
 Using your Google account to log into external apps and websites is incredibly convenient. It saves you from creating new passwords and speeds up the signup process. However, over time, you can accumulate dozens of connected services that you no longer use. These inactive apps might still have access to your personal information, which poses a security and privacy risk.

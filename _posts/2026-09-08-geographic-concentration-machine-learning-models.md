@@ -33,6 +33,8 @@ card_items:
     url: "https://aiindex.stanford.edu/report/"
     link_text: "View 2024 AI Index"
     description: "National and regional investments in high-bandwidth GPU clusters to counter bilateral dominance and secure autonomous foundational AI capability."
+series: "The Cost of AI Compute"
+series_part: 3
 ---
 
 When you look at where notable artificial intelligence models come from, the global map looks empty.

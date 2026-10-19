@@ -39,6 +39,8 @@ card_items:
     link_text: Compare Prices
     badge_1: Tools
     badge_2: FinOps
+series: "The Cost of AI Compute"
+series_part: 6
 ---
 
 ## The $280 Overnight Surprise

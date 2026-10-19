@@ -46,6 +46,8 @@ card_items:
     badge_1: "Temp & Precipitation"
     badge_2: "Wind & Humidity"
     description: "Access essential weather metrics like temperature, relative humidity, precipitation (rain and snow), and wind speed/direction from global models."
+series: "Free Satellite and Climate Data"
+series_part: 4
 ---
 
 ![Open Meteo Archive: Free Historical Weather Data](/assets/images/posts/covers/open_meteo_cover.jpg)

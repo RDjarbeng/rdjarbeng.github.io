@@ -18,6 +18,8 @@ image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 video: ''
 layout: post
 image_alt: "Cover image for What Satellite Data Could Do for Climate and Food Security, and What Stops It Today"
+series: "Free Satellite and Climate Data"
+series_part: 1
 ---
 This post looks at what satellite data could do for problems like climate change, food security, and urban planning, and at what keeps it from doing that today. There is a large gap between what's possible and what's actually being done, so I cover both the potential and the current reality.
 

@@ -11,6 +11,8 @@ image: '/assets/images/posts/covers/vscode_merge_editor_cover.jpg'
 image_alt: 'VSCode Merge Editor Fix'
 layout: post
 card_items: []
+series: "Quick Tech Fixes"
+series_part: 4
 ---
 
 ![How To Fix vscode merge editor not showing in 1 minute](/assets/images/posts/covers/vscode_merge_editor_cover.jpg)

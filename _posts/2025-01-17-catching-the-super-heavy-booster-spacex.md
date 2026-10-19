@@ -19,6 +19,8 @@ image: /assets/images/Starship_spacex_website.webp
 layout: post
 video: ''
 image_alt: "Cover image for SpaceX's 'Mechazilla' Catches Super Heavy Booster: A Giant Leap for Rocket Reusability"
+series: "SpaceX and Starlink"
+series_part: 6
 ---
 On my X feed, I shared a moment that perfectly captures the revolutionary work being done at SpaceX. In a stunning display of engineering, they successfully caught the **Super Heavy booster** with their launch tower's robotic arms, a system aptly nicknamed "Mechazilla."
 

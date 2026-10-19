@@ -15,6 +15,8 @@ image: /assets/images/starlink_direct_to_cell.png
 video: ''
 layout: post
 image_alt: "Cover image for Starlink's Direct to Cell: Revolutionizing Mobile Connectivity"
+series: "SpaceX and Starlink"
+series_part: 2
 ---
 In a groundbreaking move, SpaceX’s Starlink has introduced its **Direct to Cell** service, a satellite-based mobile connectivity solution that eliminates the need for traditional cell towers. This innovative technology enables standard LTE-compatible smartphones to connect directly to Starlink satellites, ensuring seamless communication even in the most remote areas of the world.
 

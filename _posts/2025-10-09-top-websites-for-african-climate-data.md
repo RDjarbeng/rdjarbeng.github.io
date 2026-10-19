@@ -88,6 +88,8 @@ card_items:
     badge_2: "US Govt Data"
     description: "Offers global climate data, including for Africa. It's an official website of the United States government and a gold standard for climate research."
     link_text: "Visit NOAA"
+series: "Free Satellite and Climate Data"
+series_part: 5
 ---
 When working on climate research or environmental projects in Africa, having access to reliable weather and climate data is essential. The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate data crucial for agriculture, infrastructure, and academic research. Fortunately, there are several websites where you can find both historical and current climate data specifically tailored for African regions. Below is a comprehensive list of top resources to help you access this valuable information.
 

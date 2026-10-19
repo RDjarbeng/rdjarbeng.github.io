@@ -40,6 +40,8 @@ card_items:
     description: HPC refers to clusters of powerful, interconnected computers used to run large-scale computations far beyond what a single machine can handle. Universities and research labs with HPC access can train larger models and run more experiments in parallel.
     url: https://en.wikipedia.org/wiki/High-performance_computing
     link_text: Learn More
+series: "The Cost of AI Compute"
+series_part: 2
 ---
 
 One challenge I have noticed throughout my academic journey and as a TA is that access to computing resources, especially GPUs, has become a major bottleneck for many students especially here in Africa and young researchers working on machine learning.

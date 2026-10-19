@@ -24,6 +24,8 @@ image_alt: "Guide to moving the Windows 11 Start button to the left"
 layout: post
 categories:
   - Help
+series: "Quick Tech Fixes"
+series_part: 6
 ---
 
 When Windows 11 first launched, it brought a major visual overhaul—including a centered Start button and taskbar icons. While this new look is modern and macOS-like, many long-time Windows users found it jarring. If you've spent years (or decades) reaching for the bottom-left corner, retraining that muscle memory can be frustrating.

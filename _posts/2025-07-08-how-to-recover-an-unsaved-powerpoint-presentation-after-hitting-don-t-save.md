@@ -13,6 +13,8 @@ image_alt: Cover image for Don''t Save" -How to Recover an Unsaved PowerPoint Pr
 layout: post
 categories:
   - Technology
+series: "Quick Tech Fixes"
+series_part: 7
 ---
 
 How to Recover an Unsaved PowerPoint Presentation After Hitting "Don't Save"

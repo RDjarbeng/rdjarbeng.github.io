@@ -25,6 +25,8 @@ card_items:
   - name: "IAM Recommender"
     badge_1: "Privilege Management"
     description: "An automated tool that analyzes permission usage over time and provides actionable recommendations to remove excess permissions, helping enforce the principle of least privilege."
+series: "Security Alerts"
+series_part: 3
 ---
 
 Managing service account keys and API keys securely within your Google Cloud environment is a critical responsibility for any organization. Recent security trends highlight a glaring issue: long-lived credentials lacking proper security measures remain a top vulnerability for unauthorized access.

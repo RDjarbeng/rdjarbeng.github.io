@@ -32,6 +32,8 @@ card_items:
     badge_2: Launch Footage
     url: https://twitter.com/elonmusk/status/1880025359636394458
     link_text: Watch on X
+series: "SpaceX and Starlink"
+series_part: 7
 ---
 
 Just when you thought Elon Musk and the team at SpaceX couldn't top themselves, they proved once again that rapid aerospace iteration rewrites what is possible. SpaceX successfully guided a 33-story tall Super Heavy booster back from space at supersonic speeds and caught it mid-air using the giant mechanical "chopstick" arms of the Mechazilla launch tower at Starbase, Texas.
