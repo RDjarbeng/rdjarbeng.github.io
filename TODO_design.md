@@ -189,3 +189,4 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Bug: In the recommendations for the gallery item the post being viewed can show up in the recommendations
 - [ ] In Chinese noodles post, cover image is 7MB ain't that a problem?
 - [ ] Rich results test fails for homepage but passes for posts on the site
+- [ ] Add a way for links to posts referenced on my website to look very nice with their own preview and make sure it works on other posts mentioning the next one

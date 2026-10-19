@@ -786,3 +786,32 @@ https://www.rockefellerfoundation.org/news/rockefeller-openai-50-million-partner
 - [ ] Use cases for Amazon S3, EBS, or AWS for the average person
 - [ ] Papers of interest: Original Yann LeCun CNN for text detection described in LeCun et al.'s NeurIPS (then known as NIPS) 1989 paper Handwritten Digit Recognition with a Back-Propagation Network. A 28×28 input, four hidden layers, ten output classes.
 Link to video: https://www.youtube.com/watch?v=FwFduRA_L6Q
+- [ ] Interesting project, measure how long ot takes to get a government service such as register a business, get a passport, file a worker’s visa, get a police report, open a bank account, etc across different countries
+- [ ] New AI framework bridges a critical gap in mid-range weather forecasts - Microsoft Research
+https://www.microsoft.com/en-us/research/story/new-ai-framework-bridges-a-critical-gap-in-mid-range-weather-forecasts/
+- [ ] Timeline of notable events in AI 
+AlexNet before 2014
+Transformers -2017
+GPT3-2020
+Dall-E- 2021
+ChatGPT -2022
+- [ ] Wonder if I can make a visualization of this that's interactive and can be embedded and screenshotted
+- [ ] How are video games made?
+- [ ] How is an iPhone made?
+- [ ] How is a smartphone made?
+- [ ] Evolution of smartphones not from telephones, but from first smartphone to now
+- [ ] Innovations, companies that have come from universities and research, a parallel to the NASA spinoffs
+- [ ] From
+https://www.linkedin.com/posts/nikolai-barnwell_moving-money-between-banks-and-mobile-activity-7517226151606669312-BKtx?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAC7j1ZQBIejpa-6ArmTXSq7lz30h2l2SjQU&utm_campaign=copy_link
+Moving money between banks and mobile wallets in Rwanda now costs at most RWF 20, under 2 US cents.
+Before the cap, some banks charged up to RWF 5,000 for the same transfer. Since 14 July, every person-to-person transfer between banks and wallets runs through the national switch, eKash.
+NIt did 10.5 million transactions worth RWF 960 billion (about $650 milion) in the first three weeks. People using interoperable payments went from 740,787 in June to 1.97 million by the end of July. 
+
+Sources:
+BNR eKash performance update (Aug 2026): https://www.bnr.rw/documents/PressRelease-_Update_on_the_Performance_of_eKash_Aug_2026.pdf
+TechMoonshot:
+https://techmoonshot.com/2026/07/1 5 Irwanda-makes-ekash-mandatory-kills-the -wallet-app-that-carried-it/ Global Finance:
+htps://gfmag.com/transaction-banking /rwandas-ekash-instant-payment-system -growth/
+- [ ] Do you know what happened to processor design? You develop middleware and think that a machine cannot do better what you do. Have a read on how processors are being designed for the last 15+ years... not by hand. Machines do a much better job calculating the layour and physics (heat, energy etc) of milions of transistors. More people than ever work on processor design, but none of them do it by hand. Those who insisted a human does transistor layout better don't design CPUS anymore; those who embraced machines plus their experience still do!
+
+https://www.linkedin.com/posts/gergelyorosz_a-middleware-engineer-in-south-korea-wrote-activity-7517698256982933504-DKId?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAC7j1ZQBIejpa-6ArmTXSq7lz30h2l2SjQU&utm_campaign=copy_link
