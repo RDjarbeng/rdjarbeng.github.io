@@ -398,6 +398,16 @@ for (const p of posts) {
 }
 const tags = createLookupMap(rawTags);
 
+// Category pages are only built for categories used by technical posts
+// (eleventy.config.js, categoriesList). Other categories keep their name but
+// get no URL, so cards show them as text instead of a link to a 404.
+const categoryPageSlugs = new Set(posts.flatMap((p) => p.categories_data.map((c) => c.slug)));
+for (const p of personal) {
+  for (const c of p.categories_data) {
+    if (!categoryPageSlugs.has(c.slug)) c.url = "";
+  }
+}
+
 module.exports = {
   environment: process.env.ELEVENTY_ENV || (process.env.NODE_ENV === "production" ? "production" : "development"),
   title: "Richard Djarbeng",

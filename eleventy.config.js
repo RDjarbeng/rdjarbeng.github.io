@@ -715,6 +715,16 @@ ${jsonLd}
   });
 
   // Categories & Tags collections for archives (paginated in category-archive.liquid and tag-archive.liquid)
+  // Category pages exist only for categories used by technical posts (see
+  // categoriesList). Returns "" for other categories so templates can show
+  // them as plain text instead of linking to a page that was never built.
+  eleventyConfig.addFilter("category_url", (cat) => {
+    const s = slugify(cat);
+    if (!s) return "";
+    const has = siteData.posts.some((p) => (p.categories || []).some((c) => slugify(c) === s));
+    return has ? `/categories/${s}/` : "";
+  });
+
   eleventyConfig.addCollection("categoriesList", () => {
     const slugMap = new Map();
     for (const post of siteData.posts) {

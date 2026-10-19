@@ -1,6 +1,6 @@
 ---
 title: Gif for kolors virtual try-onpost
-image: /assets/images/kolors_try_onoptimize.gif
+image: /assets/images/kolors-try-on-optimized.gif
 type: external
 link: ''
 labels:

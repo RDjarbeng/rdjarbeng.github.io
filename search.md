@@ -34,7 +34,7 @@ keywords: search, AI, web development, IoT, technology, security, education, Ric
         <a href="/categories/research/" class="search-chip">Research</a>
         <a href="/categories/finance/" class="search-chip">Finance</a>
         <a href="/categories/news/" class="search-chip">News</a>
-        <a href="/categories/space/" class="search-chip">Space</a>
+        <a href="/categories/satellite/" class="search-chip">Satellite</a>
         <a href="/categories/environment/" class="search-chip">Environment</a>
       </div>
     </section>

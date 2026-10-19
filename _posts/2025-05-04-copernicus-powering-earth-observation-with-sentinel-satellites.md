@@ -5,11 +5,11 @@ categories:
   - Satellite
 tags:
     - satellite
-title: "What Satellite Data Could Do for Climate and Food Security, and What Stops It Today"
+title: "Copernicus Explained: What Each Sentinel Satellite Measures and How to Use the Free Data"
 image: /assets/images/copernicus_airq_new_delhi.png
 video: ''
 layout: post
-image_alt: "Cover image for What Satellite Data Could Do for Climate and Food Security, and What Stops It Today"
+image_alt: "Cover image for Copernicus Explained: What Each Sentinel Satellite Measures and How to Use the Free Data"
 ---
 Copernicus is the European Union's Earth observation programme. Its data is free for anyone: you create an account and you can download satellite images of almost anywhere on Earth, often only a few days old. The European Commission runs the programme, and the European Space Agency (ESA) builds and operates most of the satellites.
 

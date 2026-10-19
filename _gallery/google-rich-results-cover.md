@@ -3,7 +3,7 @@ title: Cover image for post - Google Rich Results Testing
 date: 2026-02-02T12:05:00
 image: /assets/images/google_rich_results_cover.jpg
 type: cover
-link: /google-rich-results-testing-tool-your-key-to-seo-visibility
+link: /google-rich-results-testing-tool/
 categories:
 - cover-images
 image_alt: An infographic showing a web browser interface linked to golden shields with checkmarks symbolizing verified structured data for Google Rich Results.

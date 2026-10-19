@@ -106,7 +106,7 @@ Instead, let us start from the recent beginning as the first sub-Saharan nation 
 
 ## Geography
 
-![Ghana - Wikipedia](/assets/images/250px-Ghana_%28orthographic_projection%29.svg.png "Ghana on a map, image credit wikipedia")
+![Ghana - Wikipedia](/assets/images/250px-Ghana_orthographic_projection.svg.png "Ghana on a map, image credit wikipedia")
 
 Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round. From coastal plains to lush rainforests and savannas, it features diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe.
 

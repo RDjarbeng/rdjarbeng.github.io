@@ -52,7 +52,8 @@
     "start:full": "run-p serve:sass serve:11ty:full",
     "sync:algolia": "node scripts/algolia-sync.js",
     "generate:pdfs": "node scripts/generate_post_pdfs.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check:links": "node scripts/check-links.mjs _site"
   },
   "repository": {
     "type": "git",

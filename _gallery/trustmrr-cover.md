@@ -3,7 +3,7 @@ title: Cover image for post - TrustMRR Verified Startup Revenues
 date: 2026-02-02T12:00:00
 image: /assets/images/trustmrr_revenue_leaderboard_cover.jpg
 type: cover
-link: /trustmrr-reveals-which-startups-are-actually-making-money-in-2026
+link: /trustmrr-leaderboard-top-startup-revenues-january-2026/
 categories:
 - cover-images
 image_alt: A glowing digital display in a server room showing verified startup revenue bar charts for Alpha Tech, Beta Solutions, and Gamma Innovations.

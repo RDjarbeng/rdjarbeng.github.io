@@ -54,7 +54,7 @@ Google used Gemini to scan **5 million news articles across 80+ languages**, gen
 
 > The largest existing global disaster databases, such as GDACS, held roughly 10,000 flood events, mostly major disasters. Groundsource records 2.6 million localized events, showing that language models can turn unstructured news archives into structured scientific datasets.
 
-In [our initial March breakdown on Google's flash flood system](/ai%20news/2026/03/13/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system.html), we covered the broader operational announcement—how Google deployed AI to forecast urban flash floods 24 hours in advance. This follow-up report takes a different angle: rather than evaluating the forecasting system from press announcements, we independently downloaded the raw 667 MB Groundsource Parquet archive to stress-test the underlying data, evaluate geographic representation, and verify whether the published claims hold up under empirical inspection.
+In [our initial March breakdown on Google's flash flood system](/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system/), we covered the broader operational announcement—how Google deployed AI to forecast urban flash floods 24 hours in advance. This follow-up report takes a different angle: rather than evaluating the forecasting system from press announcements, we independently downloaded the raw 667 MB Groundsource Parquet archive to stress-test the underlying data, evaluate geographic representation, and verify whether the published claims hold up under empirical inspection.
 
 ---
 

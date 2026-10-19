@@ -114,7 +114,7 @@
           {% assign items_shown = 0 %}
           {% for cat in include.post.categories_data %}
             {% if items_shown < 2 %}
-            <a href="{{ cat.url | relative_url }}" class="post-card-category">{{ cat.name }}</a>
+            {% if cat.url and cat.url != "" %}<a href="{{ cat.url | relative_url }}" class="post-card-category">{{ cat.name }}</a>{% else %}<span class="post-card-category">{{ cat.name }}</span>{% endif %}
             {% assign items_shown = items_shown | plus: 1 %}
             {% endif %}
           {% endfor %}
@@ -130,7 +130,8 @@
           {% assign items_shown = 0 %}
           {% for cat in include.post.categories %}
             {% if items_shown < 2 %}
-            <a href="{{ '/categories/' | relative_url }}{{ cat | slugify }}/" class="post-card-category">{{ cat }}</a>
+            {% assign cat_href = cat | category_url %}
+            {% if cat_href != "" %}<a href="{{ cat_href | relative_url }}" class="post-card-category">{{ cat }}</a>{% else %}<span class="post-card-category">{{ cat }}</span>{% endif %}
             {% assign items_shown = items_shown | plus: 1 %}
             {% endif %}
           {% endfor %}

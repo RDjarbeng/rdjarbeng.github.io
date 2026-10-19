@@ -3,7 +3,7 @@ title: 'Cover image for post - From Swiss Alps to African Cities: How IQAir is D
 date: 2025-11-22 12:00:00
 image: /assets/images/iqair_air_quality_cover.webp
 type: cover
-link: /from-swiss-alps-to-african-cities-how-iqair-is-dominating-the-global-air-quality-conversation
+# link: /from-swiss-alps-to-african-cities-how-iqair-is-dominating-the-global-air-quality-conversation  (re-enable when the post is published)
 image_alt: A split image showing the Swiss Alps on the left and a bustling African city on the right, featuring IQAir devices and a digital globe overlay.
 enhanced_by_bot: true
 ---

@@ -3,7 +3,7 @@ title: Cover image for post - Designing ananse a generative AI approach
 date: 2025-09-14T12:00:00
 image: /assets/images/ananse_design_cover_rdjarbeng.JPG
 type: cover
-link: /designing-ananse-a-generative-ai-approach
+# link: /designing-ananse-a-generative-ai-approach  (re-enable when the post is published)
 image_alt: A character design sheet for Ananse featuring a bald man with geometric facial markings, spider illustrations, and various traditional props.
 enhanced_by_bot: true
 ---

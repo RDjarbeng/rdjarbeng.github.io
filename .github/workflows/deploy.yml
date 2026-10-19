@@ -42,6 +42,9 @@ jobs:
         run: npm run build
         env:
           ELEVENTY_ENV: production
+      - name: Check internal links
+        # Fails the deploy if any page links to a URL the build did not produce.
+        run: npm run check:links
       - name: Push index to Algolia
         run: |
           if git rev-parse HEAD~1 >/dev/null 2>&1 && git diff --name-only HEAD~1 HEAD | grep -E "^(_posts/|_personal/|_gallery/|_authors/|_video_collections/|about\.md)"; then

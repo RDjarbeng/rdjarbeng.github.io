@@ -79,4 +79,5 @@ Finally, to maintain an organized dashboard, you can use the standard `/v2/editM
 
 **Bonus Feature**: Every monitor you configure automatically gets its own status page on UptimeRobot, allowing you to publicly or privately track the historical uptime of all your configured routes in one place!
 
-![UptimeRobot Dashboard Monitors](/assets/images/posts/uptimerobot_dashboard.png)
+<!-- Image file missing from the repo: add assets/images/posts/uptimerobot_dashboard.png, then restore this line:
+![UptimeRobot Dashboard Monitors](/assets/images/posts/uptimerobot_dashboard.png) -->

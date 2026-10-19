@@ -18,7 +18,8 @@ body_class: post-page has-side-toc
     {% if post_categories.size > 0 %}
     <div class="post-header-categories">
       {% for category in post_categories %}
-      <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}" class="post-header-category-tag">{{ category }}</a>
+      {% assign cat_href = category | category_url %}
+      {% if cat_href != "" %}<a href="{{ cat_href | relative_url }}" class="post-header-category-tag">{{ category }}</a>{% else %}<span class="post-header-category-tag">{{ category }}</span>{% endif %}
       {% endfor %}
     </div>
     {% endif %}
