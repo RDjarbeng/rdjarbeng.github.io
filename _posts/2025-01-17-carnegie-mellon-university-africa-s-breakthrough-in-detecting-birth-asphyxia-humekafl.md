@@ -18,11 +18,11 @@ tags:
   - HumekaFL
   - Ubenwa
   - Carnegie Mellon University
-title: Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL
+title: "HumekaFL: CMU-Africa's App That Detects Birth Asphyxia From a Baby's Cry"
 image: /assets/images/pamely_cmu_website.png
 layout: post
 video: ''
-image_alt: "Cover image for Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL"
+image_alt: "Cover image for HumekaFL: CMU-Africa's App That Detects Birth Asphyxia From a Baby's Cry"
 ---
 Birth asphyxia is when a baby does not get enough oxygen during delivery. It is one of the main causes of newborn deaths, and sub-Saharan Africa has some of the highest under-five mortality rates in the world. If it is detected early, babies with mild or moderate asphyxia can recover fully. If treatment is delayed, it can cause lasting damage to the brain, heart, lungs and kidneys. Diagnosing it usually needs trained staff and equipment, which a lot of clinics do not have enough of.
 

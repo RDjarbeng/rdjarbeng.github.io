@@ -119,6 +119,8 @@ card_items:
     description: "Don't underestimate this resource! **Wikipedia** maintains several curated lists of datasets for machine learning research. These pages are often well-organized by data type (e.g., images, text, time series) and provide direct links and brief descriptions for each dataset."
     url: "https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research"
     link_text: "Visit Repository"
+series: "Getting Started with Machine Learning"
+series_part: 6
 ---
 In data science and machine learning, data is the new oil—it's the fuel that powers our models and insights. But finding the _right_ data can be a challenge. Whether you're a seasoned researcher, a data scientist looking for a competition, or a student just starting, knowing where to look is key.
 

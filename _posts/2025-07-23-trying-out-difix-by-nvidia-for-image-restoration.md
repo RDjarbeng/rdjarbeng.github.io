@@ -9,10 +9,10 @@ tags:
   - Hugging face
   - Nvidia
   - Difix
-title: Trying Out Difix by NVIDIA for Image Restoration
+title: "Trying NVIDIA's Difix on Blurry Phone Photos: What It Fixes and What It Distorts"
 image: /assets/images/difix_cover_image_rd.webp
 layout: post
-image_alt: "Cover image for Trying Out Difix by NVIDIA for Image Restoration"
+image_alt: "Cover image for Trying NVIDIA's Difix on Blurry Phone Photos: What It Fixes and What It Distorts"
 ---
 Difix is an image model from NVIDIA that cleans up blurry or smeared images in a single pass. NVIDIA has a demo on Hugging Face, so I tried it on their example image and then on some blurry photos from my phone. First I show the examples, then I explain what the model was built for, because that helps explain some of the results.
 

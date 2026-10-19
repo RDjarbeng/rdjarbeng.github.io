@@ -12,11 +12,11 @@ tags:
   - United States Space Force
   - Satellite Visualization
   - TypeScript
-title: Explore the Fascinating World of Satellite Orbits with Keeptrack.space
+title: "KeepTrack: A Free 3D Website for Tracking Satellites in Real Time"
 image: /assets/images/keeptrack.png
 video: ''
 layout: post
-image_alt: "Cover image for Explore the Fascinating World of Satellite Orbits with Keeptrack.space"
+image_alt: "Cover image for KeepTrack: A Free 3D Website for Tracking Satellites in Real Time"
 ---
 I recently came across [KeepTrack](https://keeptrack.space/), a website that shows satellites orbiting Earth in 3D. Every tracked object is a coloured dot, and when you click one you get its name, its altitude and who owns it. It is surprising to watch how fast some of them move. Some cross an entire country in a few seconds.
 

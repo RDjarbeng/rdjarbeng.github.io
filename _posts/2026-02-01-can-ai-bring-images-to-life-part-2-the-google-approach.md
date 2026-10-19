@@ -8,7 +8,7 @@ tags:
   - Generative AI
   - DeepMind
   - Animation
-title: 'Can AI bring images to life? (Part 2: The Google Approach)- Dear Upstairs Neighbors'
+title: "How Google DeepMind Animated 'Dear Upstairs Neighbors' and What One-Click AI Video Tools Miss"
 image: /assets/images/posts/covers/can_ai_bring_google_approach_cover.jpg
 image_alt: 'A vibrant 2D animated abstract drawing depicting a stressed character with their hands on their head surrounded by floating neon objects'
 layout: post

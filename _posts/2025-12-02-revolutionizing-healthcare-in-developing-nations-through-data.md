@@ -9,11 +9,11 @@ tags:
   - Developing Nations
   - Leapfrogging
   - data
-title: Revolutionizing Healthcare in Developing Nations Through Data
+title: "Jeremy Howard on Using AI to Make Up for the Shortage of Doctors in Developing Countries"
 image: /assets/images/hr_constraints_africa.png
 video: ''
 layout: post
-image_alt: "Cover image for Revolutionizing Healthcare in Developing Nations Through Data"
+image_alt: "Cover image for Jeremy Howard on Using AI to Make Up for the Shortage of Doctors in Developing Countries"
 ---
 Jeremy Howard, a prominent figure in artificial intelligence and healthcare innovation, highlights a critical issue in global healthcare: developing nations have less than 10% of the medical experts they need. This severe shortage means most patients lack access to proper medical diagnostics, while existing physicians are overwhelmed with work.
 

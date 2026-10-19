@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Install-NodeJs-on-Raspberry-Pi"
+title: "How to Install Node.js on a Raspberry Pi 4"
 date: 2025-10-25
 author: Richard
 image: /assets/images/old_node_js.png
 categories: ["Software Engineering"]
 tags: [NodeJs, Raspberry Pi, node version install]
-image_alt: "Cover image for Install-NodeJs-on-Raspberry-Pi"
+image_alt: "Cover image for How to Install Node.js on a Raspberry Pi 4"
 series: "Raspberry Pi Setup"
 series_part: 2
 ---

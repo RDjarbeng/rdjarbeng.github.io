@@ -1,12 +1,12 @@
 ---
-title: The UI- The Challenge of Color Themes
+title: "Light or Dark Mode? What a Small User Survey Taught Me About Colour Themes"
 date: 2025-09-29T00:00:00
 author: Richard
 image: https://github.com/user-attachments/assets/aa1035db-077c-439a-971e-5f8a002daaeb
 layout: post
 categories: ["UI"]
 tags: [Software engineering, apps, UI/UX, countdown]
-image_alt: "Cover image for The UI- The Challenge of Color Themes"
+image_alt: "Cover image for Light or Dark Mode? What a Small User Survey Taught Me About Colour Themes"
 ---
 ![Light mode and dark mode comparison](https://github.com/user-attachments/assets/aa1035db-077c-439a-971e-5f8a002daaeb)
 

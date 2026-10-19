@@ -5,10 +5,10 @@ categories:
   - Technology
 tags:
   - Website
-title: Why Websites Love to Overanalyze Everything
+title: "Why Websites Take So Long to Answer Your Question (Blame SEO)"
 image: /assets/images/website_long_text_on_screen.jpg
 layout: post
-image_alt: "Cover image for Why Websites Love to Overanalyze Everything"
+image_alt: "Cover image for Why Websites Take So Long to Answer Your Question (Blame SEO)"
 ---
 So, I was scrolling through Twitter the other day, and I came across this gem: a [post](https://x.com/programmerByDay/status/1927189984710140408) complaining about how websites never just get to the point. If you ask ChatGPT it gives you the answer right away. Instead, they dive into every single aspect of a topic before finally addressing what you actually searched for. Why do websites do this? 
 

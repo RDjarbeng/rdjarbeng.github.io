@@ -9,7 +9,7 @@ tags:
   - Reusable Rockets
   - Aerospace Engineering
   - Innovation
-title: "SpaceX Did It Again: Precision Engineering on Display"
+title: "SpaceX Catches a Super Heavy Booster Again with Mechazilla's Chopstick Arms"
 image: /assets/images/posts/covers/spacex_booster_catch_cover.jpg
 image_alt: "SpaceX Super Heavy Booster Catch Cover Image"
 layout: post

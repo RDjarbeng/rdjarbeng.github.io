@@ -10,9 +10,9 @@ tags:
   - Data Privacy
   - Cybercrime
   - Cross-Border Payments
-title: A Decade of Singapore FinTech Festival 2025-Decoding an Email
+title: "Decoding the Open Letter for the Singapore FinTech Festival's 10th Edition"
 image: /assets/images/sff_2025_cover_image.webp
-image_alt: Cover image for A Decade of Singapore FinTech Festival 2025-Decoding an Email
+image_alt: "Cover image for Decoding the Open Letter for the Singapore FinTech Festival's 10th Edition"
 layout: post
 categories:
   - Finance

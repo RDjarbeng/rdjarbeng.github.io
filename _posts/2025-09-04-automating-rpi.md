@@ -20,9 +20,9 @@ tags:
   - Scripting
   - Terminal
   - Service Manager
-title: Automating Script Execution on a Raspberry Pi
+title: "How to Run a Script Automatically When Your Raspberry Pi Boots"
 image: /assets/images/raspberrypi.png
-image_alt: "Cover image for Automating Script Execution on a Raspberry Pi"
+image_alt: "Cover image for How to Run a Script Automatically When Your Raspberry Pi Boots"
 series: "Raspberry Pi Setup"
 series_part: 3
 ---

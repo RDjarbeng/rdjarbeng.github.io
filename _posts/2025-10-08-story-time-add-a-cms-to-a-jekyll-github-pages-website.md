@@ -1,5 +1,5 @@
 ---
-title: Escaping CMS hell-DecapCMS, Netlify and Sveltia
+title: "How I Added a CMS to My Jekyll Site on GitHub Pages: Decap CMS, Netlify and Sveltia"
 date: 2025-10-08T23:01:00
 author: Richard
 image: /assets/images/static_site.jpeg
@@ -7,7 +7,7 @@ video: ""
 layout: post
 categories: ["Software Engineering"]
 tags: [CMS, DecapCMS, Sveltia, Netlify, Software engineering, Web Development]
-image_alt: "Cover image for Escaping CMS hell-DecapCMS, Netlify and Sveltia"
+image_alt: "Cover image for How I Added a CMS to My Jekyll Site on GitHub Pages: Decap CMS, Netlify and Sveltia"
 series: "Building This Blog"
 series_part: 3
 ---

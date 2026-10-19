@@ -7,11 +7,11 @@ tags:
   - SveltiaCMS
   - CMS
   - Jekyll
-title: 'My Experience with SveltiaCMS: A Game-Changer for Website Management'
+title: "SveltiaCMS Keeps Getting Better: The Features That Made Running My Blog Easier"
 image: /assets/images/sveltia-logo.svg
 layout: post
 video: ''
-image_alt: "Cover image for My Experience with SveltiaCMS: A Game-Changer for Website Management"
+image_alt: "Cover image for SveltiaCMS Keeps Getting Better: The Features That Made Running My Blog Easier"
 series: "Building This Blog"
 series_part: 2
 ---

@@ -8,7 +8,7 @@ tags:
   - Machine Learning
   - Career
   - Software Engineering
-title: How to Break into AI Without a Degree In AI-Aleksa Gordić
+title: "How Aleksa Gordić Broke into AI Engineering Without a Degree in AI"
 image: /assets/images/posts/covers/how-to-break-into-ai-without-a-degree.jpg
 image_alt: Flat vector illustration showing a software engineer transitioning into AI and machine learning engineering without a degree
 layout: post
@@ -34,6 +34,8 @@ card_items:
     description: Open-source PyTorch implementations of seminal papers including GAT, Transformers, DCGAN, and DQN.
     url: https://github.com/gordicaleksa
     link_text: View Repositories
+series: "Getting Started with Machine Learning"
+series_part: 9
 ---
 
 Entering artificial intelligence often looks impossible without a master's degree, a PhD, or years inside elite academic research labs. Yet one of the clearest case studies of breaking into frontier AI engineering comes from Aleksa Gordić, who transitioned from an electrical engineering background in Serbia into a software role at Microsoft, and ultimately landed a Research Engineer position at DeepMind without holding a machine learning degree.

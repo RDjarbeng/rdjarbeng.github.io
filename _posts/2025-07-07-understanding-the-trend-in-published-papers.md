@@ -7,10 +7,10 @@ tags:
   - Research
   - Papers
   - Academics
-title: Understanding the Trend in Published Papers
+title: "How a New Research Technique Becomes Standard: The 7 Stages of Published Papers"
 image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
-image_alt: "Cover image for Understanding the Trend in Published Papers"
+image_alt: "Cover image for How a New Research Technique Becomes Standard: The 7 Stages of Published Papers"
 ---
 If you follow research in one field for a while, you notice a pattern in what gets published. A new technique appears in one paper, a few groups test it, and then many groups start using it, so a lot of papers end up looking similar. Eventually someone compares all the versions. A few years later the technique is in textbooks and people stop publishing about it because it has become a standard tool.
 

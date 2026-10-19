@@ -15,9 +15,9 @@ tags:
   - Machine Learning
   - Bing Image Creator
   - Generative AI
-title: Can AI bring images to life? Limits of Generative AI- Luma AI and Virtual Bees.
+title: "Can AI Bring a Photo of Bees to Life? Testing Luma AI's Dream Machine"
 image: /assets/images/bees_luma.jpeg
-image_alt: Cover image for Can AI bring images to life?
+image_alt: "Cover image for Can AI Bring a Photo of Bees to Life? Testing Luma AI's Dream Machine"
 series: "Bringing Images to Life with AI"
 series_part: 1
 ---

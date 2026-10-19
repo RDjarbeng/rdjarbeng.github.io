@@ -1,11 +1,13 @@
 ---
-title: Introducing fastai-Practical deep learning without a PhD
+title: "fastai's Practical Deep Learning for Coders: Deep Learning Without a PhD"
 date: 2025-08-01T00:00:00
 author: Richard
 image: /assets/images/fastaibook.webp
 categories: ["AI"]
 tags: [AI, fast ai, Machine Learning, Deep Learning, practical deep learning]
-image_alt: "Cover image for Introducing fastai-Practical deep learning without a PhD"
+image_alt: "Cover image for fastai's Practical Deep Learning for Coders: Deep Learning Without a PhD"
+series: "Getting Started with Machine Learning"
+series_part: 3
 ---
 In case you have to do Deep learning or interested in building applications with neural networks in a hands-on way you can check out [fastai](https://course.fast.ai/) by Jeremy Howard and his course practical deep learning.
 

@@ -15,10 +15,12 @@ tags:
   - Jean de Dieu Nyandwi
   - Github machine learning
   - open-source
-title: Complete Machine Learning package- learn by doing
+title: "Complete Machine Learning Package: A Free, Hands-On ML Course by Jean de Dieu Nyandwi"
 image: /assets/images/git_complete_ml_package_cover_rd.webp
 layout: post
-image_alt: "Cover image for Complete Machine Learning package- learn by doing"
+image_alt: "Cover image for Complete Machine Learning Package: A Free, Hands-On ML Course by Jean de Dieu Nyandwi"
+series: "Getting Started with Machine Learning"
+series_part: 4
 ---
 Are you fascinated by machine learning but have no idea where to start? Do you find yourself jumping between YouTube tutorials, blog posts, and dense textbooks, only to end up more confused than when you began? This is a common struggle, but what you need is a structured path—a single roadmap that takes you from zero to capable.
 

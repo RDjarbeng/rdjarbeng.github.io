@@ -8,9 +8,9 @@ tags:
   - Kolors
   - Virtual try-on
   - Hugging face
-title: Kolors Virtual Try-On:Nobody's Gonna Know
+title: "Kolors Virtual Try-On: How to Try On Outfits with AI (Demo and Tips)"
 image: /assets/images/kolors-try-on-optimized.gif
-image_alt: Cover image for Kolors Virtual Try-On:Nobody's Gonna Know
+image_alt: "Cover image for Kolors Virtual Try-On: How to Try On Outfits with AI (Demo and Tips)"
 layout: post
 categories:
   - Computer Vision

@@ -71,7 +71,8 @@ card_items:
     description: "Inventor of Generative Adversarial Networks (GANs), which revolutionized generative AI. He has worked at Google Brain, OpenAI, and Apple, and is the lead author of the 'Deep Learning' textbook. _Why follow?_ To keep up with the cutting edge of generative models and deep learning theory."
     url: "https://www.iangoodfellow.com/"
     link_text: "Visit Website"
-
+series: "Getting Started with Machine Learning"
+series_part: 10
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI.
 

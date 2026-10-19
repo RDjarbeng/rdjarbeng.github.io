@@ -13,9 +13,9 @@ tags:
   - Segment Anything Model (SAM)
   - Research
   - Object Detection
-title: 'SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory'
+title: "SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in Video"
 image: /assets/images/Samurai_paper_logo.png
-image_alt: 'Cover image for SAMURAI: Advancing Zero-Shot Visual Tracking with Motion-Aware Memory'
+image_alt: "Cover image for SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in Video"
 layout: post
 categories:
   - Computer Vision

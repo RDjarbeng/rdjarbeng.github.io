@@ -9,11 +9,13 @@ tags:
   - Getting started
   - Jason Brownlee
   - beginners
-title: 'Exploring Machine Learning: The Best Resources for Beginners'
+title: "Where to Start with Machine Learning: Jason Brownlee's Resource List and My Pick"
 image: /assets/images/jason_brownlee_start_ml.png
 video: ''
 layout: post
-image_alt: "Cover image for Exploring Machine Learning: The Best Resources for Beginners"
+image_alt: "Cover image for Where to Start with Machine Learning: Jason Brownlee's Resource List and My Pick"
+series: "Getting Started with Machine Learning"
+series_part: 1
 ---
 Jason Brownlee runs [Machine Learning Mastery](https://machinelearningmastery.com/), a site I have ended up on many times while trying to fix an error in my code. He describes his work as helping developers get results with machine learning ([about page](https://machinelearningmastery.com/about/)), so I was curious what he recommends to people who are just starting out. He has a short guide on it called ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/).
 
@@ -59,4 +61,4 @@ I wish I had followed the first one. When I started I kept signing up for new co
 
 If you already know some Python, I would take Jeremy Howard's [Practical Deep Learning for Coders](https://course.fast.ai/) from fast.ai. You train a working model in the first lesson, and the theory comes in later as you need it. That fits Brownlee's advice to spend more time doing. I wrote more about the course in [fastai: Practical deep learning without a PhD](/introducingfastai/).
 
-If you prefer a more traditional route, Andrew Ng's course from the list is still a good way to learn the foundations, and Coursera now has an updated version of it.
+If you prefer a more traditional route, Andrew Ng's course from the list is still a good way to learn the foundations, and Coursera now has an updated version of it, the [Machine Learning Specialization](/machine-learning-specialization-by-andrew-ng-and-deeplearning-ai/), which is the next post in this series.

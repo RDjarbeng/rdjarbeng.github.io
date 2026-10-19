@@ -8,10 +8,10 @@ tags:
   - jekyll
   - website development
   - Richard Djarbeng's website
-title: Dr Jekyll & Ruby -building Richard's personal website
+title: "Building My Personal Website with Jekyll, Ruby and GitHub Pages"
 image: /assets/images/jekyll_cyber.jpeg
 layout: post
-image_alt: "Cover image for Dr Jekyll & Ruby -building Richard's personal website"
+image_alt: "Cover image for Building My Personal Website with Jekyll, Ruby and GitHub Pages"
 series: "Building This Blog"
 series_part: 1
 ---
