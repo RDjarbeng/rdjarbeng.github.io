@@ -19,7 +19,11 @@ layout: default
 
 <div class="post-list">
   {% for post in cat_posts %}
-    {% include post-card.html post=post %}
+    {% if post.url contains '/personal/' %}
+      {% include post-card.html post=post badge="Personal" %}
+    {% else %}
+      {% include post-card.html post=post %}
+    {% endif %}
   {% endfor %}
 </div>
 

@@ -715,34 +715,12 @@ ${jsonLd}
   });
 
   // Categories & Tags collections for archives (paginated in category-archive.liquid and tag-archive.liquid)
-  // Category pages exist only for categories used by technical posts (see
-  // categoriesList). Returns "" for other categories so templates can show
-  // them as plain text instead of linking to a page that was never built.
-  eleventyConfig.addFilter("category_url", (cat) => {
-    const s = slugify(cat);
-    if (!s) return "";
-    const has = siteData.posts.some((p) => (p.categories || []).some((c) => slugify(c) === s));
-    return has ? `/categories/${s}/` : "";
-  });
+  // Every category used by a technical or personal post has a page
+  // (siteData.categoryIndex). "" means the value is not a category at all.
+  const categoryUrls = new Map(siteData.categoryIndex.map((c) => [c.slug, c.url]));
+  eleventyConfig.addFilter("category_url", (cat) => categoryUrls.get(slugify(cat)) || "");
 
-  eleventyConfig.addCollection("categoriesList", () => {
-    const slugMap = new Map();
-    for (const post of siteData.posts) {
-      for (const cat of (post.categories || [])) {
-        if (!cat) continue;
-        const s = slugify(cat);
-        if (!s) continue;
-        if (!slugMap.has(s)) {
-          slugMap.set(s, { slug: s, displayName: cat.toString().trim(), posts: [] });
-        }
-        const entry = slugMap.get(s);
-        if (!entry.posts.includes(post)) {
-          entry.posts.push(post);
-        }
-      }
-    }
-    return Array.from(slugMap.values()).sort((a, b) => a.slug.localeCompare(b.slug));
-  });
+  eleventyConfig.addCollection("categoriesList", () => siteData.categoryIndex);
 
   // ── Tags ────────────────────────────────────────────────────────────────
   // Every tag is reduced to one key per topic, so "AI", "ai" and "Artificial Intelligence"

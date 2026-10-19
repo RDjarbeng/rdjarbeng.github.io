@@ -378,35 +378,49 @@ function createLookupMap(rawMap) {
   });
 }
 
-// 9. Categories Map
-const rawCategories = {};
-for (const p of posts) {
-  for (const c of p.categories) {
-    if (!rawCategories[c]) rawCategories[c] = [];
-    rawCategories[c].push(p);
+// 9. Categories: one index for technical and personal posts.
+// Categories are merged by slug, so "AI" and "ai" share a page. The display
+// name is the spelling used most often. Every category in the index gets a
+// page at /categories/<slug>/ (category-archive.liquid).
+const categoryIndex = (() => {
+  const bySlug = new Map();
+  for (const p of [...posts, ...personal]) {
+    for (const c of p.categories) {
+      const slug = slugify(c);
+      if (!slug) continue;
+      if (!bySlug.has(slug)) bySlug.set(slug, { slug, url: `/categories/${slug}/`, names: new Map(), posts: [] });
+      const entry = bySlug.get(slug);
+      const name = String(c).trim();
+      entry.names.set(name, (entry.names.get(name) || 0) + 1);
+      if (!entry.posts.includes(p)) entry.posts.push(p);
+    }
   }
-}
+  return [...bySlug.values()].map((e) => {
+    const displayName = [...e.names.entries()].sort((a, b) => b[1] - a[1])[0][0];
+    const sorted = e.posts.sort((a, b) => b.date - a.date);
+    return {
+      slug: e.slug,
+      url: e.url,
+      displayName,
+      posts: sorted,
+      technical: sorted.filter((p) => !p.url.startsWith("/personal/")).length,
+      personal: sorted.filter((p) => p.url.startsWith("/personal/")).length
+    };
+  }).sort((a, b) => a.slug.localeCompare(b.slug));
+})();
+const rawCategories = {};
+for (const c of categoryIndex) rawCategories[c.displayName] = c.posts;
 const categories = createLookupMap(rawCategories);
 
-// 10. Tags Map
+// 10. Tags Map (technical and personal posts)
 const rawTags = {};
-for (const p of posts) {
+for (const p of [...posts, ...personal]) {
   for (const t of p.tags) {
     if (!rawTags[t]) rawTags[t] = [];
     rawTags[t].push(p);
   }
 }
 const tags = createLookupMap(rawTags);
-
-// Category pages are only built for categories used by technical posts
-// (eleventy.config.js, categoriesList). Other categories keep their name but
-// get no URL, so cards show them as text instead of a link to a 404.
-const categoryPageSlugs = new Set(posts.flatMap((p) => p.categories_data.map((c) => c.slug)));
-for (const p of personal) {
-  for (const c of p.categories_data) {
-    if (!categoryPageSlugs.has(c.slug)) c.url = "";
-  }
-}
 
 module.exports = {
   environment: process.env.ELEVENTY_ENV || (process.env.NODE_ENV === "production" ? "production" : "development"),
@@ -453,6 +467,7 @@ module.exports = {
   books,
   book_categories,
   categories,
+  categoryIndex,
   tags,
   library_pdfs
 };
