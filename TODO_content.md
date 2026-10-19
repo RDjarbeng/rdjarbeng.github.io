@@ -13,7 +13,7 @@ This todo contains direction for content on this site rdjarbeng.com, areas to im
 
 ## Content Ideas & Drafts
 - [ ] **Ananse**: Finish Ananse website post.
-How many nines post? How many nines do current services have
+- [ ] How many nines post? How many nines do current services have when it comes to reliability 99.9?
 - [ ] **Review**: Food-Ghana vs Nigeria Jollof.
 - [ ] **Tech**: Write Google DeepMind post about [Agent 57](https://deepmind.google/discover/blog/agent57-outperforming-the-human-atari-benchmark/).
 - [ ] **TikTok**: Post "What you are sold online vs what you see" (guns in my head).
