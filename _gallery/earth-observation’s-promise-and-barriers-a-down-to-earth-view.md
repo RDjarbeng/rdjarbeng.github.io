@@ -4,7 +4,7 @@ title: 'Cover image for post - Earth Observation’s Promise and Barriers: A Dow
 date: 2025-05-20 12:00:00
 image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 type: cover
-link: /earth-observation’s-promise-and-barriers-a-down-to-earth-view
+link: /earth-observations-promise-and-barriers-a-down-to-earth-view/
 image_alt: A satellite orbits a glowing Earth at night, showing vibrant clusters of
   orange, green, and blue lights representing global data networks.
 enhanced_by_bot: true

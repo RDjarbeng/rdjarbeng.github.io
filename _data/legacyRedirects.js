@@ -7,6 +7,7 @@
 // the old sitemap did not list.
 const site = require("./site.js");
 const legacy = require("./legacy_urls.json");
+const renamed = require("./renamed_urls.json").renamed;
 
 const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
 const FIXED = {
@@ -55,5 +56,8 @@ module.exports = function () {
     const cats = (a.categories || []).map((c) => String(c).toLowerCase()).join("/");
     add(`/RDjarbeng${cats ? "/" + cats : ""}/${ymd}/${slug}.html`, a.url);
   }
+  // Posts whose files were renamed to give them clean URLs.
+  for (const [from, to] of Object.entries(renamed)) add(`${from}index.html`, to);
+
   return [...out.values()];
 };

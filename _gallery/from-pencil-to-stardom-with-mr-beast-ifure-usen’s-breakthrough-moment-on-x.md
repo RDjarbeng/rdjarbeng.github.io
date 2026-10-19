@@ -3,7 +3,7 @@ title: Cover image for post - The Viral Tweet That Put a Nigerian Pencil Artist 
 date: 2025-12-28T22:55:10
 image: /assets/images/cover_mr_beast_reply_ifure_usen.webp
 type: cover
-link: /personal/from-pencil-to-stardom-with-mr-beast-ifure-usen’s-breakthrough-moment-on-x/
+link: /personal/from-pencil-to-stardom-with-mr-beast-ifure-usens-breakthrough-moment-on-x/
 image_alt: A social media screenshot showing MrBeast interacting with an artist, featuring his tweets about AI-generated images and requesting physical artwork.
 enhanced_by_bot: true
 ---

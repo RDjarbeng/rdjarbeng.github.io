@@ -3,7 +3,7 @@ title: Cover image for post - From the Norrsken Hub in Kigali, A Look at the Dea
 date: 2025-07-13T12:00:00
 image: /assets/images/norrsken_africa_tech_boom_cover.webp
 type: cover
-link: /africa’s-tech-scene-is-thriving-funding-and-mergers-lead-the-way
+link: /africas-tech-scene-is-thriving-funding-and-mergers-lead-the-way/
 image_alt: A glowing digital map of Africa resembling a circuit board, surrounded by icons for Fintech, Clean Energy, Healthtech, and Mergers and Acquisitions.
 enhanced_by_bot: true
 ---

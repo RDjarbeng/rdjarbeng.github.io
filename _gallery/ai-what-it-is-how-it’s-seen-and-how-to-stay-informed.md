@@ -3,7 +3,7 @@ title: 'Cover image for post - AI: What It Is, How It’s Seen, and How to Stay 
 date: 2025-05-23T12:00:00
 image: /assets/images/rtdetr/cat_prediction_rtdetr.jpg
 type: cover
-link: /ai-what-it-is-how-it’s-seen-and-how-to-stay-informed
+link: /ai-what-it-is-how-its-seen-and-how-to-stay-informed/
 image_alt: Two sleeping tabby cats resting on a vibrant pink blanket alongside television remote controls with overlaid computer vision object detection boxes.
 enhanced_by_bot: true
 ---
