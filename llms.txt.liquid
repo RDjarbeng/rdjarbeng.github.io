@@ -1,0 +1,33 @@
+---
+permalink: /llms.txt
+layout: null
+eleventyExcludeFromCollections: true
+---
+# {{ site.title }}
+
+> Technical and personal writing by Richard Djarbeng, a software and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. Topics: machine learning and computer vision, AI tools and compute, satellite and climate data, IoT and Raspberry Pi, web development, and life in Kigali and East Africa.
+
+Every post has a plain Markdown copy: add `index.md` to the post URL (for example {{ site.url }}{{ site.articles.first.url }}index.md). A JSON feed of all posts is at {{ site.url }}/feed.json.
+
+## Main pages
+
+- [Home]({{ site.url }}/): latest posts, series and gallery
+- [All technical posts]({{ site.url }}/posts/)
+- [Personal posts]({{ site.url }}/personal/): life, travel and reflections
+- [Series]({{ site.url }}/series/): posts grouped into ordered guides
+- [About Richard Djarbeng]({{ site.url }}/about/): experience, education and projects
+- [Gallery]({{ site.url }}/gallery/) and [videos]({{ site.url }}/gallery/videos/)
+
+## Series
+{% for s in collections.seriesList %}
+### [{{ s.name }}]({{ site.url }}{{ s.url }})
+
+{{ s.description }}
+{% for p in s.parts %}{% if p.url %}
+- [{{ p.title }}]({{ site.url }}{{ p.url }})
+{%- endif %}{% endfor %}
+{% endfor %}
+## All posts
+{% for a in site.articles %}
+- [{{ a.title }}]({{ site.url }}{{ a.url }}): {{ a.description | default: a.clean_excerpt | strip_newlines | truncate: 160 }}
+{%- endfor %}

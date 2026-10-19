@@ -1,0 +1,31 @@
+---
+permalink: /feed.json
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- comment -%} JSON Feed 1.1 (https://jsonfeed.org) of all technical and personal posts. {%- endcomment -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ site.title | jsonify }},
+  "home_page_url": "{{ site.url }}/",
+  "feed_url": "{{ site.url }}/feed.json",
+  "description": {{ site.description | default: site.tagline | jsonify }},
+  "authors": [{ "name": "Richard Djarbeng", "url": "{{ site.url }}/about/" }],
+  "items": [
+  {%- for a in site.articles %}
+    {
+      "id": "{{ site.url }}{{ a.url }}",
+      "url": "{{ site.url }}{{ a.url }}",
+      "title": {{ a.title | jsonify }},
+      "summary": {{ a.description | default: a.clean_excerpt | jsonify }},
+      "date_published": "{{ a.iso_date }}",
+      {%- if a.image and a.image != '' %}
+      "image": {{ a.image | absolute_url | jsonify }},
+      {%- endif %}
+      "authors": [{ "name": {{ a.author_info.display_name | default: "Richard Djarbeng" | jsonify }} }],
+      "tags": {{ a.tags | jsonify }},
+      "_rdjarbeng": { "markdown": "{{ site.url }}{{ a.url }}index.md"{% if a.series %}, "series": {{ a.series | jsonify }}, "series_part": {{ a.series_part | default: 0 }}{% endif %} }
+    }{% unless forloop.last %},{% endunless %}
+  {%- endfor %}
+  ]
+}

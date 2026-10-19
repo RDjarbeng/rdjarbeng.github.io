@@ -469,6 +469,9 @@ module.exports = {
   book_categories,
   categories,
   categoryIndex,
+  // Technical and personal posts together, newest first (llms.txt, feed.json,
+  // the Markdown copies of posts).
+  articles: [...posts, ...personal].sort((a, b) => b.date - a.date),
   tags,
   library_pdfs
 };

@@ -1,0 +1,28 @@
+---
+pagination:
+  data: site.articles
+  size: 1
+  alias: article
+  addAllPagesToCollections: false
+permalink: "{{ article.url }}index.md"
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  A plain Markdown copy of every post at <post url>index.md, for AI agents
+  and other readers that do not need the HTML page. Linked from each post's
+  <head> as rel="alternate" type="text/markdown" and listed in /llms.txt.
+{%- endcomment -%}
+# {{ article.title }}
+
+- URL: {{ site.url }}{{ article.url }}
+- Published: {{ article.date | date: "%Y-%m-%d" }}
+- Author: {{ article.author_info.display_name | default: article.author | default: "Richard Djarbeng" }}
+{%- if article.series %}
+- Series: {{ article.series }}{% if article.series_part %}, part {{ article.series_part }}{% endif %}
+{%- endif %}
+{%- if article.tags.size > 0 %}
+- Tags: {{ article.tags | join: ", " }}
+{%- endif %}
+
+{{ article.content }}

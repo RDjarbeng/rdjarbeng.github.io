@@ -293,6 +293,8 @@ module.exports = function(eleventyConfig) {
 <meta name="generator" content="Eleventy 3.1.6" />
 <meta name="description" content="${desc}" />
 <link rel="canonical" href="${canonical}" />
+${isPost || isPersonal ? `<link rel="alternate" type="text/markdown" href="${canonical}index.md" title="Markdown version" />` : ""}
+<link rel="alternate" type="application/feed+json" href="${SITE}/feed.json" title="${siteData.title || "Richard Djarbeng"} (JSON Feed)" />
 
 <!-- OpenGraph / Facebook -->
 <meta property="og:type" content="${isPost || isPersonal ? "article" : "website"}" />
@@ -534,7 +536,6 @@ ${jsonLd}
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("google611ac759df8b329b.html");
   eleventyConfig.addPassthroughCopy("c1a71520d5504c3b932e5cce4931df21.txt");
 
