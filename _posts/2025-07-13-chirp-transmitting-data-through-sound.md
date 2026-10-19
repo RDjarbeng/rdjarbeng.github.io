@@ -12,51 +12,43 @@ image: /assets/images/chirp_screenshot_data_with_sound.png
 layout: post
 image_alt: "Cover image for Chirp: Transmitting Data Through Sound"
 ---
-In the ever-evolving world of data transfer, a project called **Chirp** caught my attention on GitHub. Developed by [solst-ice](https://github.com/solst-ice), Chirp enables users to send and receive data using sound waves, transforming text into audio frequencies that can be transmitted through speakers and captured by a microphone. You can try it out yourself on their [demo website](https://chirp.hex.dance/), where granting microphone access unlocks a unique data transfer experience.
+[Chirp](https://github.com/solst-ice/chirp) is a small GitHub project by [solst-ice](https://github.com/solst-ice) that sends text from one device to another as sound. One browser plays a string of beeps through its speaker, another listens through its microphone and turns the beeps back into text. No Wi-Fi, no Bluetooth, no pairing. You can try it on the [demo site](https://chirp.hex.dance/) once you allow microphone access, and it is more fun with two devices in the same room.
 
-![Chirp website screenshot showing data being transmitted on a real-time frequency spectrum](/assets/images/chirp_screenshot_data_with_sound.png "Chirp website screenshot showing data being transmitted on a real-time frequency spectrum")
+![Chirp website showing a message being received on a live frequency spectrum](/assets/images/chirp_screenshot_data_with_sound.png "Chirp website showing a message being received on a live frequency spectrum")
 
-## What is Chirp?
+## How it turns text into sound
 
-Chirp is an innovative application that leverages audio to encode and transmit text data. By mapping characters to specific audio frequencies, it creates a seamless way to send messages through sound and decode them back into text. This proof-of-concept project showcases the potential of sound-based communication in a creative and accessible way.
+I read through the code to see what the beeps actually are, and the scheme is refreshingly simple. Every character gets its own pitch:
 
-### Key Features
+- A space is 900 Hz.
+- Punctuation and symbols sit between 1,300 and 4,600 Hz.
+- The digits 0 to 9 run from 4,700 to 5,600 Hz.
+- The letters A to Z run from 5,700 to 8,200 Hz.
 
-- Real-time frequency visualization to watch the audio spectrum as data is transmitted and received.
-- Text-to-sound encoding to convert text messages into unique audio frequencies for transmission.
-- Sound-to-text decoding to capture audio input and decode it back into readable text.
-- Start and end signatures to ensure accurate detection of message boundaries.
+Each step is 100 Hz apart, so the receiver has room to tell neighbours apart. Lowercase text is converted to uppercase before sending, which keeps the alphabet down to 26 tones.
 
-## How Chirp Works
+A message starts with a 2,500 Hz tone and ends with a 2,700 Hz tone, so the listener knows when to start and stop recording characters. Each character plays for 70 milliseconds followed by a 30 millisecond gap. That works out at about ten characters a second, slow by any network standard but fast enough that a short message is over in a couple of seconds.
 
-Chirp operates through a straightforward process: encoding each character into a specific audio frequency, transmitting with start and end signatures, receiving and decoding the frequencies back into text, and providing a real-time frequency spectrum display for visualization.
+On the receiving side, the Web Audio API breaks the microphone input into its frequencies, the same thing the spectrum on screen is showing you. The decoder looks for the loudest tone, matches it to the nearest character within a small tolerance, and ignores repeats that arrive too quickly. To make the signal easier to pick out, each character is sent as two tones played together, 35 Hz apart.
 
-## Getting Started with Chirp
+## Getting a clean transmission
 
-You can access the application directly on the [demo site](https://chirp.hex.dance/) or explore the project further via the [GitHub repository](https://github.com/solst-ice/chirp).
+Sound is a noisy channel. A few things helped when I tried it:
 
-## Using Chirp
+- Use a quiet room. Talking, music or a fan adds frequencies that confuse the decoder.
+- Turn the sending device's volume up and keep the two devices fairly close.
+- Allow microphone access when the browser asks, otherwise the receiver hears nothing.
 
-Start by visiting the demo site, grant microphone access, enter a message, and transmit it as sound. Received messages will appear if your setup is correctly configured.
+The README calls it a proof of concept with a simplified encoding scheme, and that is fair. There is no error correction, so a missed beep is a missed letter.
 
-### Tips for Best Results
+## Why I like it
 
-- Use a quiet environment to minimize interference.
-- Adjust your microphone and speaker settings for optimal performance.
-- Grant microphone access when prompted by your browser.
+Data over sound is not new. A startup also called Chirp built a business on it, and Sonos bought its technology in 2020. Modems were doing a version of this long before that. What I like about this project is that it is small enough to understand in an afternoon. It is a React and TypeScript app built with Vite, and the whole codec fits in one file. If you have ever wondered what "encoding" means in practice, changing a frequency table and hearing the result is a good way to find out.
 
-## Technologies Behind Chirp
+It also turned out to be popular. The repository was created in February 2025, and within about five months it had nearly 600 stars. One of them caught my eye: `jackjackbits`, Jack Dorsey's GitHub account.
 
-Chirp is built with a modern tech stack including React, TypeScript, Vite, and the Web Audio API, making it both robust and developer-friendly.
+![Jack Dorsey's GitHub account starring the Chirp repository](/assets/images/jackjackbits_dorsey_stars_chirp.png "Jack Dorsey stars the Chirp repository on GitHub")
 
-## Why Chirp is Exciting
+## Try it
 
-Chirp is more than just a novelty—it's a creative exploration of alternative data transmission methods. While a proof of concept with a simplified encoding scheme, it opens possibilities for low-bandwidth environments or creative installations, and its visualization serves as an educational tool for understanding audio frequencies and data encoding.
-
-For a 5 month project it also happens to almost 600 stars on GitHub and one particular developer caught my eye👀.
-
-![jackjackbits stars chirp repository on GitHub](/assets/images/jackjackbits_dorsey_stars_chirp.png "Jack Dorsey starts chirp repository on GitHub")
-
-## Try It Out!
-
-Curious to see Chirp in action? Visit the [demo site](https://chirp.hex.dance/) to test it directly in your browser, or check out the [GitHub repository](https://github.com/solst-ice/chirp) to learn more. Whether you're a developer or a tech enthusiast, Chirp offers a fun and insightful look into sound-based communication.
+Open the [demo site](https://chirp.hex.dance/) on two devices, or on one device with the volume up, and send yourself a message. The code is on [GitHub](https://github.com/solst-ice/chirp) if you want to see how it works.

@@ -17,52 +17,57 @@ layout: post
 card_items:
   - name: What is Kiira Motors?
     badge_1: Automotive Manufacturer
-    description: Kiira Motors Corporation (KMC) is a State Enterprise in Uganda established to champion value addition in the domestic automotive industry. They are pioneers in building electric and solar-powered vehicles in Africa.
+    description: Kiira Motors Corporation (KMC) is a State Enterprise in Uganda established to champion value addition in the domestic automotive industry. It builds electric and solar-powered buses and cars in Jinja, Uganda.
   - name: Uganda's Role in EV Innovation
     badge_1: African Tech
-    description: Uganda has been rapidly advancing in electric mobility, investing heavily in infrastructure and local manufacturing to produce vehicles like the Kayoola E-Coach that are built specifically for African roads and conditions.
+    description: Uganda is building its own electric vehicle industry through Kiira Motors, with buses like the Kayoola E-Coach designed for African roads, distances and charging conditions.
 categories:
   - Technology
 ---
 
-## The 13,700+ km Journey 🇺🇬➡️🇿🇦
+On 20 November 2025, a Ugandan-built electric coach left Kampala for Cape Town. It came back on 28 December, after about 13,700 km through Uganda, Tanzania, Zambia, Botswana, Eswatini and South Africa. The bus was Kiira Motors' 13 metre Kayoola Electric Coach, and the trip ran under the name "From the Pearl to the Cape".
 
-In a historic feat for African innovation, Kiira Motors' **Kayoola Electric Coach** (the 13-metre 2025 model) has driven exactly **13,784 km** across six countries (Uganda, Tanzania, Zambia, Botswana, Eswatini, and South Africa) and back, under the banner **"From the Pearl to the Cape"**.
+Electric city buses are common now. An electric coach doing long intercity days across six countries, most of them with almost no public charging for anything that size, is a much harder test. That was the point.
 
-![Flat vector illustration of a Kayoola electric coach bus driving across an African road with a city in the background showcasing a modern electric coach driving down a well-paved highway leading into a bustling contemporary African metropolis.](/assets/images/posts/covers/kayoola_ev_expedition.jpg "Kayoola EV Expedition")
+![Illustration of a Kayoola electric coach on an African highway heading into a city](/assets/images/posts/covers/kayoola_ev_expedition.jpg "Kayoola EV expedition")
 
-### How was it charged through the journey?
+## Charging a bus where there are no chargers
 
-A dedicated advance team scouted and set up charging spots along the route, as no existing public fast-charging network could reliably support a heavy-duty electric bus with a **422 kWh** Lithium Iron Phosphate (LFP) battery pack. The Kayoola demonstrated real-world capability with an impressive \~500 km range per charge and a remarkably low average consumption of **0.79 kWh/km**.
+The coach carries a 422 kWh lithium iron phosphate (LFP) battery, which Kiira says is good for about 500 km per charge. There was no public fast charging network along the route that could reliably handle a heavy bus, so an advance team went ahead to scout and set up charging points, and mobile chargers filled the gaps. According to [electrive](https://www.electrive.com/2026/01/05/13700-km-through-africa-with-an-electric-bus/), the bus averaged around 390 km on driving days, so most stops were planned charges rather than running the battery close to empty.
 
-Here's a video featuring Eng. Fred Matovu sharing key technical challenges in conducting this expedition midway through the 40-day expedition:
+The average consumption came out at 0.79 kWh per kilometre. That is the number to remember. Multiply it by the distance and you get the whole trip's energy bill.
+
+About 2,370 km in, Eng. Fred Matovu of Kiira Motors talked about the charging problems and what they mean for building an EV industry in Africa:
 
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">We’ve covered 2,370 km thanks to the charging infrastructure supporting our electric journey. <br>Eng. Fred Matovu <a href="https://twitter.com/fdxmat?ref_src=twsrc%5Etfw">@fdxmat</a> shares key challenges and opportunities in building Africa’s EV ecosystem. <a href="https://twitter.com/hashtag/WeBuiltTomorrow?src=hash&ref_src=twsrc%5Etfw">#WeBuiltTomorrow</a><a href="https://twitter.com/hashtag/FromThePearlToTheCape?src=hash&ref_src=twsrc%5Etfw">#FromThePearlToTheCape</a> <a href="https://t.co/mWhEg6agdj">pic.twitter.com/mWhEg6agdj</a></p>&mdash; 𝐊𝐢𝐢𝐫𝐚 𝐌𝐨𝐭𝐨𝐫𝐬 (@KiiraMotors) <a href="https://twitter.com/KiiraMotors/status/1994288162227511407?ref_src=twsrc%5Etfw">November 28, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## Pushing the Limits of Electric Mobility
+## What the trip tested
 
-The expedition was a rigorous stress test of battery performance across varying altitudes (like the 2,300m Tanzanian highlands), thermal management in varying climates, and smart-connectivity monitored live in partnership with MTN. 
+Besides range, the route took the bus up to around 2,300 m in the Tanzanian highlands and through very different climates, which tests the battery's thermal management as much as its capacity. MTN provided connectivity so the bus could be monitored live along the way. Electrive reports one safety incident over the whole trip. One trip does not prove reliability, but finishing a route like this with one incident is a solid first result.
 
-## The Economics and Impact
+## The numbers
 
-The numbers speak for themselves:
+Kiira's figures for the trip:
 
-* 🔋 **Energy Consumed:** 10,904 kWh
-* 🛢️ **Fuel Saved:** 5,189 liters of diesel 
-* 💰 **Cost Savings:** \~UGX 14.4 million (\~$3,900 USD)
-* 🌍 **Emissions Avoided:** Over 6 tonnes of CO2 
+- Energy used: 10,904 kWh
+- Diesel saved: 5,189 litres
+- Fuel cost saved: about UGX 14.4 million (around $3,900)
+- CO2 avoided: over 6 tonnes
 
-## A Landmark Deal for African EV Manufacturing
+About $3,900 is modest for one bus on one trip, but a fleet running every day adds up quickly. The bigger argument for electric coaches in Uganda is fuel imports. Electricity can be generated locally, much of it from hydropower, while diesel has to be bought abroad.
 
-The bus completed the expedition with only one minor safety incident, proving the unmatched reliability of Ugandan-engineered electric mobility. And the journey has already borne fruit: a major South African transport operator, Golden Arrow, signed a landmark deal reportedly worth around **$150 million for 450 Kayoola E-Coaches**. 
+## Orders
 
-This is what **Made in Africa** looks like: solving African problems with African solutions while proving that our sustainable future is homegrown. 
+Electrive reports more than 400 expressions of interest and pre-orders from cities, institutions and transport operators after the trip. The trade site MarkLines has also reported that Golden Arrow, the Cape Town bus operator, agreed to buy 450 Kayoola electric buses for about $150 million, including charging infrastructure. I could not find the announcement from either company, so treat that one as reported rather than confirmed. Golden Arrow is already moving to electric buses and has been buying from BYD, so a deal with Kiira would be a big win for a Ugandan manufacturer up against Chinese competition.
 
-## Key highlights from the expedition:
+## The coach itself
 
-    - The 13m Kayoola Electric Coach that completed the journey 
+Kiira calls the 13 m coach "the King of the African Highway". It seats 53 to 65 people and comes with Wi-Fi, CCTV and a fridge.
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Meet the 13 Metre Kayoola Electric Coach The King of the African Highway. <br>53–65 seats | Executive comfort | WiFi | CCTV | Fridge | Fully customizable.<br>Learn more: <a href="https://t.co/1KGbN8WkSC">https://t.co/1KGbN8WkSC</a><br>Fun fact: This coach traversed 13,000+ km. From the Pearl to the Cape. <a href="https://t.co/dy2iMWBAdS">pic.twitter.com/dy2iMWBAdS</a></p>&mdash; 𝐊𝐢𝐢𝐫𝐚 𝐌𝐨𝐭𝐨𝐫𝐬 (@KiiraMotors) <a href="https://twitter.com/KiiraMotors/status/2028405512618786883?ref_src=twsrc%5Etfw">March 2, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Additional shots highlighting the bus
+Since the trip, Kiira has delivered more coaches to the Uganda Civil Aviation Authority, bringing that fleet to five.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Two more 13m Kayoola Electric Coaches delivered to <a href="https://twitter.com/UgandaCAA?ref_src=twsrc%5Etfw">@UgandaCAA</a>. Fleet now at 5 buses.<br>13,000km. Uganda to South Africa. Proven performance.<br>The King of the African Highway.<br>Built in Uganda. Ready for Africa and beyond.<br><br>For fleet and partnership inquiries:<br>📩 sales@kiiramotors.com <a href="https://t.co/yhfeKHBD0H">pic.twitter.com/yhfeKHBD0H</a></p>&mdash; 𝐊𝐢𝐢𝐫𝐚 𝐌𝐨𝐭𝐨𝐫𝐬 (@KiiraMotors) <a href="https://twitter.com/KiiraMotors/status/2037235402256318883?ref_src=twsrc%5Etfw">March 26, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Kiira still relies heavily on Chinese components, as most bus makers do. But the design, assembly and this trip are Ugandan, and it is the kind of proof a buyer wants before committing to a fleet.

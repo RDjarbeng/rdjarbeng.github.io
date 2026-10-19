@@ -15,40 +15,35 @@ video: ''
 layout: post
 image_alt: "Cover image for Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers"
 ---
-In a recent development that highlights the innovative strides in satellite communication, Elon Musk took to X (formerly Twitter) to announce that Starlink's Direct to Cell service is now available in Los Angeles, California, specifically for subscribers of T-Mobile. This announcement comes at a crucial time, especially considering the recent wildfires that have disrupted traditional communication channels in the area.
+While the Palisades and Eaton fires were burning across Los Angeles in January 2025, SpaceX and T-Mobile switched on satellite texting for the area. Fires take out cell towers and the power that feeds them, so for some people a phone with no signal was suddenly able to send a text again. Elon Musk announced it on X, quoting an earlier post from SpaceX.
 
-![Screenshot of tweet announcing that direct to cell was available in LA](/assets/images/elon_la_fire_dtc.png "Elon Musk tweets announcing that direct to cell was available in LA")
+![Screenshot of Elon Musk's post announcing Direct to Cell texting in LA](/assets/images/elon_la_fire_dtc.png "Elon Musk's post announcing Direct to Cell texting in LA")
 
-Elon Musk's [post](https://x.com/elonmusk/status/1877560971973329273), which quoted an earlier starlink tweet read: "Texting should now work in LA even when there is no cellular service if you use @TMobile." This service essentially allows T-Mobile users to send basic text messages (SMS) via Starlink's satellite network, which bypasses the need for terrestrial cellular infrastructure. This is particularly vital for emergency situations, where maintaining communication can be a matter of life and death.
+Musk's [post](https://x.com/elonmusk/status/1877560971973329273) read: "Texting should now work in LA even when there is no cellular service if you use @TMobile." The SpaceX [post](https://x.com/SpaceX/status/1877547777858687231) he was quoting gave the details: "For those in the Los Angeles area, the [@Starlink](https://x.com/Starlink) team and [@TMobile](https://x.com/TMobile) have enabled basic texting (SMS) through our Direct to Cell satellites. You can now text loved ones, text 911 and receive emergency alerts."
 
-The quoted [post](https://x.com/SpaceX/status/1877547777858687231) from starlink read: "For those in the Los Angeles area, the [@Starlink](https://x.com/Starlink) team and [@TMobile](https://x.com/TMobile) have enabled basic texting (SMS) through our Direct to Cell satellites. You can now text loved ones, text 911 and receive emergency alerts."
+That list is short, and it is the right one for a disaster. Plain SMS, texts to 911, and emergency alerts. No calls, no browsing, no photos. A text needs very little bandwidth, which is what a satellite talking to an ordinary phone can manage.
 
-The implementation of Starlink's Direct to Cell in Los Angeles was especially significant during the wildfires that ravaged Southern California. With traditional cell towers potentially compromised by the fires, Starlink's service ensured that residents could still text loved ones, emergency services, and receive critical alerts, enhancing safety and coordination during the crisis.
+## How a normal phone talks to a satellite
 
-### How Starlink Direct to Cell Works
+Starlink is SpaceX's constellation of satellites in low Earth orbit, best known for home internet through a dish. The [Direct to Cell](https://www.starlink.com/business/direct-to-cell) satellites are different. They carry what is effectively a cell tower in orbit, broadcasting on T-Mobile's mid-band spectrum. Your phone sees them as just another T-Mobile network, so there is no special handset and no dish. When the towers on the ground are down, the phone can still reach the sky.
 
-Starlink, a project by SpaceX, aims to provide global internet coverage through a constellation of satellites in low Earth orbit. By partnering with T-Mobile, Starlink has extended its capabilities to include [direct-to-cell phone communication](https://www.starlink.com/business/direct-to-cell), which is not reliant on local cellular networks. This technology leverages T-Mobile's mid-band spectrum to connect smartphones directly to Starlink satellites, offering a new layer of connectivity resilience.
+The catch is that a phone's antenna is tiny and the satellite is hundreds of kilometres away. That is why the service started with text only, and why it works best outdoors with a clear view of the sky.
 
-### Impact on Emergency Management
+![Los Angeles fire seen from an airplane](/assets/images/los_angeles_fire.jpg "Los Angeles fire seen from an airplane")
 
-The availability of this service has significantly improved emergency communications in disaster scenarios. As mentioned in a recent article on improving emergency management communications, satellite internet like Starlink can be pivotal in maintaining communication when traditional methods fail due to power outages or infrastructure damage. This was crucial during the LA wildfires, where maintaining contact with emergency services was paramount. [Improving Emergency Management Communications with Starlink Satellite Internet](https://www.d4h.com/blog/improving-emergency-management-communications-with-starlink-satellite-internet)[](https://www.d4h.com/blog/improving-emergency-management-communications-with-starlink-satellite-internet)
+## Why it matters in emergencies
 
-![Los Angeles fire seen from an airplane](/assets/images/los_angeles_fire.jpg "Los Angeles fire in California seen from an airplane")
+The service had not launched yet when the fires started. T-Mobile switched it on for the affected area anyway as a temporary early test, since the constellation was not fully deployed. It was not the first time: the same trick had been used in October 2024 to let hurricane victims in the southeast send emergency texts. If it was working, your phone showed "T-Mobile SpaceX" next to the signal bars. The case for this kind of backup is simple. Emergency teams have used Starlink dishes for years to restore connectivity when infrastructure fails, as [D4H describes](https://www.d4h.com/blog/improving-emergency-management-communications-with-starlink-satellite-internet), but a dish has to be delivered and set up. Direct to Cell works on the phone people already have in their pocket, which is the device they will actually be holding when they need help.
 
-### Broader Implications
+## What happened next
 
-This move by Starlink and T-Mobile is part of a larger vision to provide near-complete coverage across most places in the U.S., as announced in a joint event in August 2022. The partnership aims to eventually cover not just emergency situations but also to provide everyday connectivity in areas where traditional service might be sparse or non-existent. [T-Mobile Takes Coverage Above and Beyond With SpaceX](https://www.t-mobile.com/news/un-carrier/coverage-above-and-beyond)[](https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex)
+T-Mobile and SpaceX first [announced the partnership](https://www.businesswire.com/news/home/20220825005742/en/T-Mobile-Takes-Coverage-Above-and-Beyond-With-SpaceX) in August 2022 with the goal of covering the dead zones in the US where there is no tower at all. After the LA emergency rollout and a public beta that ran through the first half of 2025, the service launched commercially as T-Satellite on [23 July 2025](https://www.satelliteinternet.com/resources/t-mobile-starlink-satellite-launch-date/), using more than 650 satellites. It added picture messages and short audio clips at launch, with data for selected apps following in October. It is included in T-Mobile's top plan and costs $10 a month for others, including customers of other carriers.
 
-### Conclusion
+Looking back, LA was the first big public test, and it happened under the worst conditions. Text-only sounds limited until you are standing somewhere with no signal and need to reach someone.
 
-Elon Musk's announcement of Starlink's Direct to Cell service in Los Angeles is a testament to the evolving landscape of communication technology, especially in crisis situations. It underscores the potential of satellite technology to not only enhance everyday connectivity but also to serve as a lifeline when traditional systems fail.
+I wrote about how the technology works in more detail in an earlier [post on Starlink's Direct to Cell](/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/).
 
-For more information you can look at this earlier [post](https://rdjarbeng.github.io/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/) I made about [starlink's direct to cell technology](https://rdjarbeng.github.io/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/)
+## Further reading
 
----
-
-### Additional Resources
-
-- [T-Mobile allows L.A. wildfire victims to text for help using Starlink Direct-to-Cell satellite system](https://www.phonearena.com/news/t-mobile-starlink-direct-to-cell-la-wildfires_id149140) - For more details on how the service was implemented during the wildfires. [](https://www.phonearena.com/news/t-mobile-enables-direct-to-call-in-los-angeles-due-to-wildfire_id166499)
-- [Starlink Internet Review: Low Satellites, High Pricing](https://www.cnet.com/reviews/starlink-internet-review/) - An overview of Starlink's service availability and pricing. [](https://www.cnet.com/home/internet/starlink-internet-review/)
-- [Elon Musk's Original Tweet](https://x.com/elonmusk/status/1877560971973329273) - Direct link to the tweet where Elon Musk announced the service in LA. [](https://x.com/elonmusk/status/1877219652050313671)
+- [PhoneArena: T-Mobile lets LA wildfire victims text for help using Starlink](https://www.phonearena.com/news/t-mobile-enables-direct-to-call-in-los-angeles-due-to-wildfire_id166499), on how the service was turned on during the fires.
+- [CNET's Starlink internet review](https://www.cnet.com/home/internet/starlink-internet-review/), for Starlink's home internet service and pricing.

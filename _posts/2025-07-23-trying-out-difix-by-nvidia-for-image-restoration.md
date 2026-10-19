@@ -14,97 +14,83 @@ image: /assets/images/difix_cover_image_rd.webp
 layout: post
 image_alt: "Cover image for Trying Out Difix by NVIDIA for Image Restoration"
 ---
-In this post I discuss Difix, NVIDIA's single-step image diffusion model available on Hugging Face. It is designed for enhancing and restoring images, especially those with artifacts or blurriness. First we will look at some examples of the image restoration model in action, then we will look at the project description according to Nvidia. At the end we will look at the things the model does well, pros, and the parts where it falls short, cons. Now let us look at the examples
+Difix is an image model from NVIDIA that cleans up blurry, smeared images in a single pass. NVIDIA put a demo on Hugging Face, so I tried it on the example image and then on some of my own bad phone photos to see how far it goes. The examples come first, then what the model was actually built for, which turns out to explain both the good and the strange results.
 
-## Example's of Difix Image restoration -Before and After
+## The example from the demo page
 
-Below are examples of images before and after restoration using Difix. These visuals demonstrate the model's capability to enhance image quality.
+This is the example NVIDIA provides. The first image is the input, the second is what Difix returned.
 
-This set of images is from the example on the page
+![Before restoration: blurry example image from the Difix demo](/assets/images/nvidia_difix3d_example1.png "Before restoration")
 
-![Before Restoration - Blurry Image](/assets/images/nvidia_difix3d_example1.png "Before Restoration - Blurry Image")
+_Before: the blurry example from the demo page._
 
-_Before Restoration: A blurry image that needs enhancement._
+![After restoration: the same image after Difix](/assets/images/nvidia_difix3d_example1_restored.webp "After restoration")
 
-![After Restoration - Enhanced Image](/assets/images/nvidia_difix3d_example1_restored.webp "After Restoration - Enhanced Image")
+_After: sharper edges and more detail._
 
-_After Restoration: The same image after Difix processing, showing improved clarity and detail._
+## My own photos
 
-The following images are examples from pictures I took using my mobile phone camera to explore the use cases. 
+The rest are pictures I took with my phone, each blurry for a different reason.
 
-The first picture is an image of Kigali at night that has a lot of motion blur because I took this from a moving bus.
+The first is Kigali at night, taken from a moving bus, so there is a lot of motion blur.
 
-![Before Restoration - Blurry Image](/assets/images/test_nvidia_restoration2_kigali.jpg "Before Restoration - Blurry Image")
+![Before restoration: Kigali at night with motion blur](/assets/images/test_nvidia_restoration2_kigali.jpg "Before restoration")
 
-_Before Restoration: A blurry image that needs enhancement._
+_Before: motion blur from a moving bus._
 
-![After Restoration - Enhanced Image](/assets/images/nvidia_restoration2_restored_kigali.webp "After Restoration - Enhanced Image")
+![After restoration: Kigali at night after Difix](/assets/images/nvidia_restoration2_restored_kigali.webp "After restoration")
 
-_After Restoration: The same image after Difix processing, showing improved clarity and detail. I think Difix actually fixed (no pun intended) this image to a sufficient degree_
+_After: I think Difix actually fixed (no pun intended) this image to a sufficient degree._
 
-The next image is an image I took of the Margaret Morrison apartments in Kigali. You can see that the building in the foreground was slightly out of focus leading to loss in detail. Due to this the windows don't have that much of a reflection and the window glass does not really have much detail. Generally the building does not look great in this photo.
+The next is the Margaret Morrison apartments in Pittsburgh. The building in the foreground was slightly out of focus, so it lost detail. The windows barely show any reflection, the glass looks flat, and overall the building does not look great.
 
-![Margaret morrison apartments Pittsburgh Before Restoration - Blurry Image](/assets/images/margaret_morrison_blurred_difix.jpg "Margaret morrison apartments Pittsburgh  Before Restoration - Blurry Image")
+![Margaret Morrison apartments, Pittsburgh, before restoration](/assets/images/margaret_morrison_blurred_difix.jpg "Margaret Morrison apartments before restoration")
 
-_Before Restoration: A blurry image that needs enhancement._
+_Before: the foreground building is out of focus._
 
-![Margaret morrison apartments Pittsburgh  After Restoration - Enhanced Image](/assets/images/margaret_morrison_restored_difix.webp "Margaret morrison apartments Pittsburgh  After Restoration - Enhanced Image")
+![Margaret Morrison apartments, Pittsburgh, after restoration](/assets/images/margaret_morrison_restored_difix.webp "Margaret Morrison apartments after restoration")
 
-_After Restoration: The same image after Difix processing, showing improved clarity and detail._
+_After: the building detail and window reflections come back._
 
-For this particular restoration for this image, I was surprised that the final image had got the details in the building to stand out clearly. It also got the window reflections to show up quite nicely.
+This one surprised me. The details on the building stand out clearly, and the window reflections show up quite nicely.
 
-The next image is of course, yours truly, in front of a mirror taking a self portrait. Unfortunately this image came out all blurry with most of my features in my face; eyes, nose, mouth and my hands not so clear. The mirror itself was not very clean causing white streaks to show up in the final image. Can Difix fix this?
+The last one is, of course, yours truly, taking a self portrait in a mirror. It came out blurry: my eyes, nose, mouth and hands are not clear, and the mirror was not very clean, which left white streaks across the picture.
 
-![Richard personal portrait Before Restoration - Blurry Image](/assets/images/richard_blurred_mirror_difix.jpg "Before Restoration - Blurry Image")
+![Richard's mirror self portrait before restoration](/assets/images/richard_blurred_mirror_difix.jpg "Mirror self portrait before restoration")
 
-_Before Restoration: A blurry image that greatly needs enhancement to save Richard's face, literally._
+_Before: a blurry image that badly needs help to save Richard's face, literally._
 
-![After Restoration - Enhanced Image](/assets/images/richard_restored_mirror_difix.webp "After Restoration - Enhanced Image")
+![Richard's mirror self portrait after restoration](/assets/images/richard_restored_mirror_difix.webp "Mirror self portrait after restoration")
 
-_After Restoration: The same image after Difix processing, showing improved clarity and detail for face and hands._
+_After: sharper face and hands, at a cost._
 
-Now the results here are subjective. On one hand it improves the sharpness of the picture and makes it clearer. On the other hand the picture now looks like an oil painting; the details in the shirt have been smudged together, the face has been slightly distorted and the fingers look unrealistic; If I had not taken this picture myself I would have suspected it was AI generated. That being said it seems to have done a decent job. Now here are some technical details:
+The result here is mixed. It is sharper and clearer. It also looks like an oil painting: the details in the shirt are smudged together, the face is slightly distorted and the fingers look wrong. If I had not taken this picture myself, I would have suspected it was AI generated. Still, it did a decent job with what it was given.
 
-## NVIDIA Leading the Way
+## What Difix was actually built for
 
-NVIDIA continues to push the boundaries of AI and computer vision with projects like Difix. The tool shows their commitment to advancing image processing technologies. The fact that they made the model open source and deployed on hugging face is also one thing that deserves praise.
+The oil painting effect makes more sense once you know what Difix is for. It is not a general photo restorer. It comes from a CVPR 2025 paper, [Difix3D+](https://arxiv.org/abs/2503.01774), about 3D reconstruction.
 
-### Project Description
+Techniques like NeRF and 3D Gaussian Splatting build a 3D scene from a set of photos, and then let you render it from new angles. When you move the camera to an angle the original photos did not cover well, the render fills with blur and smeared artefacts, because the model is guessing. Difix is trained to clean up exactly those renders. In the full pipeline it is used twice: once during reconstruction, to clean up extra views that are fed back into the 3D model, and again at the end to tidy what is left. The paper reports about a twofold improvement in FID, a measure of how realistic images look, over the methods it compares against.
 
-🎨 **Difix**
-This demo showcases Difix, a single-step image diffusion model trained to enhance and remove artifacts in rendered novel views caused by underconstrained regions of 3D representation.
+The "single step" part matters too. Most diffusion models refine an image over many steps. Difix does it in one, which is why the demo returns results quickly.
 
-**Key Features:**
+So when I give it a blurry photo, it treats the blur like a bad render and fills in plausible detail. On a building, plausible detail is close enough to real. On a face and hands, plausible is not the same as correct, and you can see the difference.
 
-- Single-step diffusion-based artifact removal for 3D novel views
-- Enhancement of underconstrained 3D regions (1024x576 default)
-- Model Status: ✅ Pipeline loaded successfully
+The [code is on GitHub](https://github.com/nv-tlabs/Difix3D) and the demo is a [Hugging Face space](https://huggingface.co/spaces/nvidia/difix). NVIDIA releasing both openly deserves credit.
 
-**How It Works:**
-Upload an image to see the restoration capabilities of Difix+. The model will automatically process your image and return an enhanced version.
+## What worked and what did not
 
-🧑‍💻 [**GitHub Repository**](https://github.com/nv-tlabs/Difix3D)  
-📄 [**Research Paper**](https://arxiv.org/abs/2503.01774)  
-🤗 [**Hugging Face Model**](https://huggingface.co/spaces/nvidia/difix)
+The demo is easy to use. Upload an image, wait a few seconds, download the result. No setup, no GPU on your side. And on blurry photos of buildings and streets, the results were genuinely good.
 
-## Pros and Cons
+The input size was the annoying part. The demo works at 1024x576 by default, and I had to resize my photos to that first. Windows Photos would not let me enter those exact dimensions, so it took extra steps. Anything that does not match the expected size can affect the output.
 
-### Pros
+People and faces are where it falls down, for the reasons above. I would use it to rescue a blurry landscape or building shot, not a portrait.
 
-- **Effective Restoration**: Difix does a commendable job at restoring images, even those that are blurry. It can significantly improve the clarity and detail of underconstrained regions in 3D representations.
-- **Ease of Use**: The model is straightforward to use via the Hugging Face interface, making it accessible for those without deep technical knowledge.
+## Try it yourself
 
-### Cons
+The space is embedded below, so you can upload your own images.
 
-- **Image Dimension Requirements**: One downside is the need to resize images to specific dimensions (1024x576 by default) before processing. In my case, Windows Photos did not allow me to specify exactly these dimensions, which required additional steps to prepare the images.
-- **Processing Limitations**: The restoration is limited to the specified dimensions, and any deviation might affect the output quality or require manual adjustment.
-
-## Conclusion
-
-Difix by NVIDIA is a powerful tool for image restoration, particularly for those interested in enhancing 3D novel views or improving blurry images. While it requires some preparation in terms of image dimensions, the results are impressive and highlight NVIDIA's leadership in this field. Whether you're a researcher, developer, or enthusiast, Difix offers a glimpse into the future of image processing technology.
-
-I have embedded the space beneath this post so you can try it out for yourself
+PS: Update on 10/19/2026: It seems the space has been paused on hugging face and needs a maintainer to restart it. I hope the way it works can at least be seen from the example images I gave.
 
 ---
 <iframe

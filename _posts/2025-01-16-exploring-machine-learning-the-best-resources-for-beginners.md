@@ -15,31 +15,48 @@ video: ''
 layout: post
 image_alt: "Cover image for Exploring Machine Learning: The Best Resources for Beginners"
 ---
-If you're just stepping into the world of machine learning, finding the right resources can feel like navigating a labyrinth. Thankfully, Jason Brownlee at Machine Learning Mastery has compiled an excellent guide titled ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/). Jason Brownlee has earned a reputation for providing solutions to machine learning errors and seems to be a good person to take recommendations on where to start. I his [words](https://machinelearningmastery.com/about/), he  helps  **developers** get results with **machine learning**."
+When you start learning machine learning, the hard part is not finding material. It is picking something and sticking with it. Jason Brownlee runs [Machine Learning Mastery](https://machinelearningmastery.com/), a site I have landed on many times while trying to fix an error, and he has a short guide called ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/). In his [own words](https://machinelearningmastery.com/about/), he helps developers get results with machine learning, and this guide is written for exactly that reader.
 
-**Why This Guide Stands Out:**
+![Jason Brownlee's guide to machine learning resources](/assets/images/jason_brownlee_start_ml.png "Best Machine Learning Resources for Getting Started")
 
-- **Comprehensive Coverage:** Jason doesn't just list books or courses; he provides a broad spectrum of resources including blogs, podcasts, YouTube channels, and even community forums where you can learn from others and share your experiences.
-- **Curated by an Expert:** With his background, Jason Brownlee has firsthand knowledge of what works for beginners. His selection ensures you're not just reading through a list but engaging with high-quality, relevant material.
-- **Practical Focus:** One of the strengths of this guide is its emphasis on practical learning. Each resource is chosen to help you move from theory to practice, understanding how machine learning algorithms work in real-world scenarios.
+## What the guide recommends
 
-**Key Resources Highlighted:**
+The list is short on purpose, and it is split into five groups.
 
-- **Books:** From foundational texts like "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" to more specialized reads, Jason picks books that cater to different learning styles and levels.
-- **Courses:** Whether you prefer structured learning through online platforms like Coursera or interactive experiences on platforms like Kaggle he considers the varied learning styles.AI
-- **Blogs and Websites:** For those who learn best through reading, blogs like those from Google AI or Fast.ai offer up-to-date insights into the field.
-- **Communities:** Learning is not just about consuming content but also interacting with peers. Platforms like Reddit's r/MachineLearning or Stack Overflow are invaluable for community support.
+### Libraries to practise with
 
-**Why Should You Care?**
+R (with the CRAN machine learning packages), WEKA, scikit-learn, Octave, and BigML if you would rather not write code at all. His advice is to start in a language you already know and learn just enough to start trying things.
 
-Machine learning is transforming industries, and understanding its basics can open up numerous opportunities, whether you're looking to switch careers or enhance your current skill set. This guide by Machine Learning Mastery acts as your map, ensuring you don't waste time on less effective resources.
+### Video courses
 
-**Start Here:**
+Andrew Ng's Stanford machine learning course on Coursera and Yaser Abu-Mostafa's Learning from Data from Caltech, on edX. He also points to a talk by Jeremy Howard about getting into data science.
 
-For anyone eager to dive into machine learning without feeling overwhelmed, check out Jason Brownlee's curated list at [Machine Learning Mastery](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/). It's your first step towards not just understanding but mastering the art and science of machine learning.
+### Two overview papers
 
-My recommendation:
+Tom Mitchell's "The Discipline of Machine Learning" and Pedro Domingos's "A Few Useful Things to Know about Machine Learning". The Domingos paper is the one I would read first. It is short and full of the kind of lessons people usually learn the hard way, like why more data often beats a cleverer algorithm.
 
-If you read all this way and want my personal recommendation I would suggest to take Jeremy Howard's [course](https://course.fast.ai/) on fast ai - Practical deep learning for coders. This would be most useful to you if you already have some knowledge of programming in python.
+### Beginner books
 
-Previously I wrote a post about this here: `[fastai-Practical deep learning without a PhD](https://rdjarbeng.github.io/introducingfastai/)`
+Programming Collective Intelligence, Machine Learning for Hackers, Machine Learning: An Algorithmic Perspective, Data Mining: Practical Machine Learning Tools and Techniques (the WEKA book), and Tom Mitchell's textbook Machine Learning.
+
+### Further reading
+
+A few community lists and Q&A threads on Quora and Stack Overflow for when you want more.
+
+## The advice is the useful part
+
+The list itself is dated. Some of these books predate deep learning, and few people reach for WEKA or Octave today. What has aged well is the advice around it:
+
+- Pick one resource, one book or one library, and finish it before starting the next.
+- Take notes when you watch videos and try what they show. Watching alone feels productive but mostly is not.
+- Be selective with papers. They can bog you down early on.
+- Learn the maths behind a method before you rely on it in anything real.
+- Do more than you read.
+
+The first point is the one I wish I had followed. Beginners tend to collect courses the way some people collect gym memberships, and the bookmarks folder grows while the skills do not.
+
+## My recommendation
+
+If you already know some Python, take Jeremy Howard's [Practical Deep Learning for Coders](https://course.fast.ai/) from fast.ai. It starts with a working model in the first lesson and explains the theory as you need it, which is close to the "do, don't just read" approach Brownlee argues for. I wrote more about it in [fastai: Practical deep learning without a PhD](/introducingfastai/).
+
+If you want something more traditional, Andrew Ng's course from Brownlee's list is still a good place to build the foundations, and it now has updated versions on Coursera.

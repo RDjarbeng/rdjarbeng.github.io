@@ -18,29 +18,37 @@ video: ''
 layout: post
 image_alt: "Cover image for Explore the Fascinating World of Satellite Orbits with Keeptrack.space"
 ---
-I recently stumbled upon an incredible tool called [Keeptrack.space](https://keeptrack.space/) that brings the mesmerizing world of satellite orbits to life. Check out the short video below to see it in action! The colorful dots gracefully orbiting Earth represent satellites, and with a single click, you can dive into detailed information about each one. It’s mind-blowing to watch some satellites zip across entire countries in seconds.
+I came across [KeepTrack](https://keeptrack.space/) while looking for a way to see satellites without installing heavy software, and I ended up losing an hour to it. It draws Earth in your browser and fills the space around it with dots, one for every tracked object. Click a dot and you get its name, its altitude and who owns it. The thing that got me was the speed. Some of these satellites cross an entire country in the time it takes to read their label.
 
-![keeptrack app screenshot](/assets/images/keeptrack.png "keeptrack app screenshot")
+![KeepTrack showing Earth surrounded by tracked satellites](/assets/images/keeptrack.png "KeepTrack in the browser")
 
-## What is Keeptrack.space?
+## What it is
 
-[Keeptrack.space](https://keeptrack.space/) offers a unique, user-friendly perspective on satellite activity, making orbital analysis accessible to everyone—not just engineers. Built with TypeScript and enhanced by artificial intelligence, this astrodynamics software is remarkably lightweight at just 20 MB (including satellite data) and runs smoothly even on your phone. The 3D app is now hosted at [app.keeptrack.space](https://app.keeptrack.space/).
+KeepTrack is an open source satellite tracker written in TypeScript by Theodore Kruczek. The project describes itself as astrodynamics software for non-engineers, and that is a fair summary. You do not need to know what an orbital element is to use it, but the tools are there if you do. The 3D app lives at [app.keeptrack.space](https://app.keeptrack.space/) and runs on a phone as well as a desktop, with nothing to install.
 
-Created by Theodore Kruczek, Keeptrack.space adheres to the design guidelines of the [United States Space Force Space and Missiles Center](https://www.spaceforce.mil/), ensuring accuracy and reliability. 
+It is also used by people who track satellites for a living. The project lists the U.S. Space Force's Combined Space Operations Center and the 18th Space Defense Squadron among its users, along with StarTalk. It started as a fork of James Yoder's Things in Space, though the code has since been rewritten. The [repository](https://github.com/thkruz/keeptrack.space) says it can follow more than 50,000 satellites in real time.
 
-## Key Features of Keeptrack.space
+## How it stays fast
 
-- **Real-Time Satellite Info**: Click any satellite to see its current altitude, position above Earth, and ownership details.
-- **Country-Based Insights**: Explore satellite data by country—did you know Russia and the USA lead the satellite landscape?
-- **Simulations & Orbital Analysis**: Dive deeper with tools to simulate and analyze orbits.
-- **Search & Filter**: Easily find specific satellites with robust search and filtering options.
-- **Detailed Visualizations**: Explore plots like ECI, ECF, and RIC to understand satellite positions and motion in space.
-![Keep track space app screenshot](/assets/images/keeptrack_app_screenshot.png "Keep track space app screenshot")
+Drawing tens of thousands of moving objects in a browser tab sounds like a recipe for a frozen laptop. KeepTrack avoids that by doing the orbit maths in Web Workers, which run in the background, while WebGL handles the drawing. The positions come from published orbital data (TLEs, the two line element sets that describe each orbit), and an orbital mechanics library by the same author works out where each object is at any moment. That split is why it stays smooth on a phone.
 
-## Get Started Today!
+## What you can do with it
 
-Ready to embark on your satellite exploration journey? Visit [Keeptrack.space](https://keeptrack.space/) to explore the 3D app at [app.keeptrack.space](https://app.keeptrack.space/). Curious about the code? Check out the project’s [GitHub repository](https://github.com/thkruz/keeptrack.space) for more details.
+The screenshot below shows the full app with the menus open. The parts I used most:
 
-Start exploring the cosmos today! 
+- Click any satellite to see where it is now, how high it is and which country or company owns it.
+- Filter by country. Russia and the United States account for a large share of what is up there, and seeing it plotted makes that obvious.
+- Search by name or catalogue number, or pick a group such as GPS or the ISS.
+- Move time forward or backward and watch the orbits play out.
+- Plot a satellite's position in different reference frames (ECI, ECF and RIC). These are the coordinate systems engineers use, and seeing the same orbit in each is a good way to understand why they exist.
+- Model launches, breakups and manoeuvres, and check when a satellite will pass over a ground sensor.
+
+![KeepTrack interface with satellite details and menus open](/assets/images/keeptrack_app_screenshot.png "KeepTrack with menus open")
+
+## Trying it
+
+Open [app.keeptrack.space](https://app.keeptrack.space/) and click anything. If you want to run it yourself or read the code, it is on [GitHub](https://github.com/thkruz/keeptrack.space) under the AGPL licence.
+
+This short video walks through the app and is a quicker introduction than reading the menus one by one.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qkQSz1UA_PY?si=V-DwVG8eIxDppl1B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

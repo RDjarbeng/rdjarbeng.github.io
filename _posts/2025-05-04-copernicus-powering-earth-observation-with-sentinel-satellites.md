@@ -1,7 +1,8 @@
 ---
 date: 2025-05-04T18:18:00
 author: Richard
-categories: []
+categories:
+  - Satellite
 tags:
     - satellite
 title: 'Copernicus: Powering Earth Observation with Sentinel Satellites'
@@ -10,72 +11,60 @@ video: ''
 layout: post
 image_alt: "Cover image for Copernicus: Powering Earth Observation with Sentinel Satellites"
 ---
-The **Copernicus program**, the European Union’s premier Earth observation initiative, delivers free, high-quality data to monitor our planet’s environment. Led by the European Commission and the European Space Agency (ESA), Copernicus uses its **Sentinel satellites** to provide insights into climate change, disaster response, and more. Let’s explore how Copernicus works and the specific ways its Sentinel satellites are transforming our world.
+Copernicus is the European Union's Earth observation programme, and its data is free. Not free for researchers only, or free after an application. Anyone can create an account and download satellite images of almost anywhere on Earth, often from a few days ago. The European Commission runs it, with the European Space Agency (ESA) building and operating most of the satellites.
 
-### What is Copernicus?
+I went in looking for air quality data and ended up exploring far more of it than I meant to. This post is a map of what is there.
 
-Copernicus combines satellite and ground-based data to monitor Earth’s atmosphere, land, oceans, and ice. Its **Sentinel satellites**—each with specialized sensors—deliver near-real-time imagery and measurements, freely accessible through the **Copernicus Data Space Ecosystem** (https://dataspace.copernicus.eu). The program’s six core services—atmosphere, marine, land, climate change, emergency, and security—turn raw data into actionable insights for governments, businesses, and individuals.
+## How Copernicus is put together
 
-### How Copernicus Works
+There are three layers:
 
-Copernicus operates through:
+1. **Satellites.** The Sentinel family, each one built for a different kind of measurement.
+2. **Ground measurements.** Weather stations, ocean buoys, air quality sensors and other instruments that calibrate and fill in what satellites cannot see.
+3. **Services.** Six services turn the raw data into ready to use products: atmosphere, marine, land, climate change, emergency management and security. The atmosphere service (CAMS), for example, publishes daily air quality forecasts. The climate service (C3S) publishes the monthly temperature reports you see in the news.
 
-1. **Space Component**: Sentinel satellites, including Sentinel-1, -2, -3, -5P, and -6, capture diverse data.
-2. **In-Situ Component**: Ground stations, buoys, and sensors provide local context.
-3. **Service Component**: Processes data into user-friendly products via the Copernicus Data Space Ecosystem.
+Most people only ever touch the third layer, and that is fine. You do not need to process raw satellite data to use a flood map or an air quality forecast.
 
-### Specific Uses of Sentinel Satellites
+## What each Sentinel does
 
-The Sentinel satellites power a wide range of applications. Here’s how each contributes:
+### Sentinel-1: radar that sees through clouds
 
-#### Sentinel-1: Radar Imaging for All-Weather Monitoring
+Sentinel-1 carries a radar instead of a camera. It sends out microwave pulses and measures what bounces back, so it works at night and through cloud. That makes it the go-to satellite for flood mapping, since floods usually come with heavy cloud. The Copernicus emergency service uses it to map flooded areas for rescue teams.
 
-- **Disaster Response**: Sentinel-1’s radar penetrates clouds and darkness, mapping flood extents during events like the 2021 Germany floods. Emergency teams used its imagery to prioritize rescue operations within hours.
-- **Infrastructure Monitoring**: Its data detects ground subsidence in cities like Jakarta, identifying sinking areas to guide urban planning and prevent building collapses.
-- **Agriculture**: Farmers in Spain monitor soil moisture to optimize irrigation, reducing water waste in drought-prone regions.
+By comparing radar images taken weeks or months apart, scientists can also measure the ground moving by millimetres. That is how sinking cities like Jakarta, where groundwater pumping is causing parts of the city to subside, are monitored.
 
-#### Sentinel-2: High-Resolution Optical Imagery
+### Sentinel-2: the colour camera
 
-- **Precision Agriculture**: In Brazil, Sentinel-2’s 10-meter resolution tracks crop health, detecting pest infestations in soybean fields early, boosting yields by up to 15%.
-- **Deforestation Tracking**: Conservationists in the Amazon use Sentinel-2 to monitor illegal logging, alerting authorities to new clearings within days.
-- **Urban Planning**: Cities like Copenhagen map green spaces to enhance urban cooling, using Sentinel-2 to assess vegetation coverage.
+Sentinel-2 is the one most people picture: a high resolution camera that sees in 13 bands, from visible light into the infrared. Detail goes down to 10 metres, and with two satellites working together, the same spot is photographed about every five days.
 
-#### Sentinel-3: Ocean and Land Monitoring
+The infrared bands are the useful part. Healthy plants reflect a lot of near-infrared light, so Sentinel-2 can show crop stress before it is visible to the eye. The same data is used to spot new forest clearings, map farmland and track how cities grow.
 
-- **Marine Conservation**: Sentinel-3 measures sea surface temperature, helping fisheries in the Mediterranean avoid overfishing by tracking fish migration patterns.
-- **Wildfire Management**: In Australia, its thermal data monitors fire spread, guiding firefighting efforts during the 2023 bushfire season.
-- **Water Quality**: Dutch authorities use Sentinel-3 to detect algal blooms in the North Sea, protecting tourism and aquaculture.
+### Sentinel-3: oceans and land temperature
 
-#### Sentinel-5P: Atmospheric Monitoring
+Sentinel-3 measures the temperature of the sea and land surface, the colour of the ocean and the height of the sea surface. Ocean colour shows plankton and algal blooms, which matters for fisheries and water quality. Its thermal sensor also picks up active fires from space.
 
-- **Air Quality**: Sentinel-5P tracks nitrogen dioxide over cities like Delhi, informing policies that reduced urban smog by 10% in 2024.
-Here's a screenshot of the web interface where I was looking at a project focused on air quality emissions in New Delhi.
-![Screenshot of copernicus web interface](/assets/images/copernicus_airq_new_delhi.png "Screenshot of copernicus web interface")
-- **Climate Research**: It monitors methane leaks from oil fields in Texas, enabling targeted emission reductions.
-- **Volcanic Eruptions**: During the 2022 Tonga eruption, Sentinel-5P tracked sulfur dioxide plumes, aiding aviation safety.
+### Sentinel-5P: what is in the air
 
-#### Sentinel-6: Sea Level Measurement
+Sentinel-5P carries an instrument called TROPOMI that measures gases in the atmosphere: nitrogen dioxide from traffic and industry, methane, sulphur dioxide, ozone and carbon monoxide. It is the satellite behind many of the city pollution maps you see. It has been used to find large methane leaks from oil and gas sites, and it tracked the sulphur dioxide cloud from the 2022 Hunga Tonga eruption.
 
-- **Coastal Protection**: Sentinel-6’s precise sea level data helps the Netherlands plan dike reinforcements, protecting low-lying areas from flooding.
-- **Climate Modeling**: Its measurements of global sea level rise, increasing at 3.7 mm/year, refine IPCC climate projections.
-- **Storm Surge Prediction**: In Bangladesh, Sentinel-6 data improves cyclone surge forecasts, saving lives through timely evacuations.
+This is where I spent most of my time. The screenshot below shows the web interface while I was looking at a project on air pollution over New Delhi, one of the cities where nitrogen dioxide levels stand out clearly.
 
-### Support for Jupyter notebooks
+![Copernicus web interface showing air quality over New Delhi](/assets/images/copernicus_airq_new_delhi.png "Copernicus web interface showing air quality over New Delhi")
 
-It seems there is an option to use jupyter notebooks for  those who wish to access the data through the familiar python notebook. Jupyter lab is now offered to copernicus users. Here's a[ youtube video](https://www.youtube.com/watch?v=zRqf9Nv0Tes) from the EU space youtube channel for a quick overview.
+### Sentinel-6: sea level
 
-![Screenshot of copernicus jupyter notebook for data analysis launch page](/assets/images/copernicus_jupyter_notebook.png "Screenshot of copernicus jupyter notebook for data analysis launch page")
+Sentinel-6 Michael Freilich, launched in 2020 together with NASA, NOAA and EUMETSAT, measures the height of the sea surface to within a few centimetres. It continues a satellite record of global sea level that goes back to the early 1990s. That record is how we know sea level rise is speeding up. Countries with low coastlines, like the Netherlands and Bangladesh, depend on these numbers for flood defences and storm surge forecasts.
 
-### Why Copernicus Matters
+## Working with the data in Jupyter
 
-Copernicus’ open-access model makes its data available to all, from scientists to startups. Through the Copernicus Data Space Ecosystem, users access tools like the **Copernicus Browser** to explore imagery or APIs for custom applications. The program fosters global collaboration, sharing data with NASA and the UN to tackle pressing challenges.
+If you prefer code to clicking around a map, Copernicus now offers JupyterLab inside the [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/). You get Python notebooks next to the data, so you can search, download and analyse images without moving gigabytes to your own machine first. The EU Space channel has a [short video overview](https://www.youtube.com/watch?v=zRqf9Nv0Tes) of how it works.
 
-### Get Started with Copernicus
+![Copernicus JupyterLab launch page](/assets/images/copernicus_jupyter_notebook.png "Copernicus JupyterLab launch page")
 
-Ready to dive in?
+## Getting started
 
-- **Explore Data**: Visit https://dataspace.copernicus.eu to use the Copernicus Browser or download datasets.
-- **Learn More**: Check success stories at https://www.copernicus.eu/en/use-cases.
-- **Get Support**: Contact the Helpdesk at https://dataspace.copernicus.eu/support.
+- The [Copernicus Browser](https://browser.dataspace.copernicus.eu/) is the easiest way in. Pick a place and a date, and switch between satellites and layers.
+- The [Data Space Ecosystem](https://dataspace.copernicus.eu/) is where you register, download data and use the APIs and notebooks.
+- The [Copernicus use cases](https://www.copernicus.eu/en/use-cases) page collects real projects built on the data, which is a good source of ideas.
 
-Copernicus is revolutionizing how we understand and protect Earth. Whether you’re tracking deforestation or planning a sustainable city, its Sentinel satellites provide the data to make a difference.
+I would start with the browser and a place you know well. Looking at your own neighbourhood in infrared or radar for the first time is a good way to get hooked.

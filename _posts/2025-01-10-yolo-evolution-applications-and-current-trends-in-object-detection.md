@@ -14,119 +14,56 @@ video: ''
 layout: post
 image_alt: "Cover image for YOLO: Evolution, Applications, and Current Trends in Object Detection"
 ---
-YOLO (You Only Look Once) has transformed from a groundbreaking concept to an industry standard in object detection since its inception in 2015. Initially developed by Joseph Redmon and Ali Farhadi at the University of Washington, YOLO gained popularity for its unprecedented speed and accuracy.
+Before YOLO, most object detectors worked in two stages. First they proposed a few thousand regions of the image that might contain something, then they ran a classifier on each one. It was accurate and slow. In 2015, Joseph Redmon and his co-authors at the University of Washington published [You Only Look Once](https://arxiv.org/abs/1506.02640), which did the whole job in a single pass. The network splits the image into a grid, and every cell predicts boxes and class probabilities at the same time. One look at the image, hence the name. It was fast enough to run on live video, and that is why it took off.
 
-The evolution timeline showcases significant improvements:
+Ten years later, "YOLO" is less a single model than a family name used by several different groups. This post covers how it got there, who makes which version, the licensing catch, and what people use it for.
 
-- YOLOv2 (2016): Introduced batch normalization and anchor boxes
-- YOLOv3 (2018): Enhanced backbone network and spatial pyramid pooling
-- YOLOv4 (2020): Added Mosaic data augmentation and new loss functions
-- YOLOv5: Brought hyperparameter optimization and experiment tracking
-- YOLOv6-8: Expanded capabilities across multiple vision AI tasks
-- YOLOv9: Implemented Programmable Gradient Information
-- YOLOv10: Introduced End-to-End head eliminating NMS requirements
-- YOLO11: Latest version offering state-of-the-art performance
+## From YOLOv1 to YOLO11
 
-# The YOLO-Ultralytics Connection
+- **YOLOv1 (2015):** the single pass grid detector. Fast, but weak on small objects and objects close together.
+- **YOLOv2 / YOLO9000 (2016):** batch normalisation, anchor boxes and training at several image sizes. The YOLO9000 variant could detect over 9,000 categories.
+- **YOLOv3 (2018):** a deeper backbone (Darknet-53) and predictions at three scales, which helped a lot with small objects.
+- **YOLOv4 (2020):** from Alexey Bochkovskiy, Chien-Yao Wang and Hong-Yuan Mark Liao after Redmon left. It collected many training tricks into one model, including Mosaic augmentation, which stitches four training images into one.
+- **YOLOv5 (2020):** from Ultralytics, written in PyTorch rather than the original Darknet framework. It had no paper, and its name caused arguments at the time, but it became the version most people actually used because it was easy to install and train.
+- **YOLOv6 (2022)** from Meituan and **YOLOv7 (2022)** from the YOLOv4 team pushed the speed and accuracy trade off further.
+- **YOLOv8 (2023):** Ultralytics again, one package for detection, segmentation, classification and pose estimation.
+- **YOLOv9 (2024):** from Wang and Liao, introducing Programmable Gradient Information (PGI), a way of keeping useful information from getting lost as it passes through a deep network.
+- **YOLOv10 (2024):** from Tsinghua University, which removed the need for non-maximum suppression (NMS), the clean-up step that deletes duplicate boxes. Skipping it makes deployment simpler and faster.
+- **YOLO11 (2024):** the latest Ultralytics release at the time of writing, with new building blocks for better accuracy at the same speed.
 
-## Historical Development
+Redmon himself stopped working on computer vision in 2020. He said he was uncomfortable with how the work was being used, particularly for military applications and privacy-invading surveillance. Every version after v3 came from someone else.
 
-YOLO  was originally created in 2015. Ultralytics, led by Glenn Jocher, later became involved with YOLO development, creating YOLOv5 and subsequent versions including the recent YOLOv8 through YOLO11.
+## The Ultralytics connection
 
-![Screenshot of ultralytics yolo page](/assets/images/ultralytics_yolo.png "Screenshot of ultralytics yolo page")
+![Screenshot of the Ultralytics YOLO page](/assets/images/ultralytics_yolo.png "Screenshot of the Ultralytics YOLO page")
 
-## Current Status
+Ultralytics, led by Glenn Jocher, is now the name most people associate with YOLO. Their `ultralytics` pip package wraps several YOLO versions behind one Python API and command line tool. Training a detector on your own data is a few lines of code, and exporting to ONNX, OpenVINO, CoreML and other formats is a single command. That convenience is a big part of why YOLO is everywhere.
 
-Ultralytics maintains and develops proprietary versions of YOLO, with some key aspects:
+## The licensing catch
 
-- They provide the popular Ultralytics YOLO pip package and framework
-- Their latest version is YOLO11, which includes advanced features like improved processing speed and new convolutional blocks
-- The company offers both open-source and commercial versions of their YOLO implementations
+This is the part people miss. The original Darknet versions (v1 to v3) were released under a very permissive licence. The Ultralytics versions are under AGPL-3.0. In practice, if you use them in a product, including one that runs as a web service, you have to release your own source code under the same licence, or buy an Ultralytics enterprise licence. For research and personal projects that is fine. For a company it is a decision to make before you build on it, not after. Some of the non-Ultralytics versions, such as YOLOv9 and YOLOv10, have their own licences, so check each one.
 
-## Licensing Considerations
+The shift from academic project to commercial product has caused some friction in the open source community, mostly around naming and licensing. Whatever you think of it, Ultralytics is also the main reason YOLO is so easy to use today.
 
-There's an important distinction regarding usage rights:
+## What people use it for
 
-- Earlier YOLO versions (v1-v4) have open licensing
-- Ultralytics' YOLO versions require either:
-- Making applications open-source
-- Purchasing an enterprise license for commercial use
+YOLO fits anywhere you need to find and count things in images or video quickly, often on cheap hardware:
 
-## Technical Contributions
+- **Manufacturing:** spotting defects on assembly lines and checking products as they pass a camera.
+- **Agriculture:** counting fruit, spotting pests and identifying diseased leaves from field or drone images.
+- **Security and traffic:** detecting people and vehicles, reading licence plates and recognising traffic signs.
+- **Medical imaging:** research on finding lesions or tumours in scans and identifying pills.
+- **Robotics and driving:** giving robots and vehicles a fast first pass at what is around them.
 
-Ultralytics has enhanced YOLO with several improvements:
+## Where it is heading
 
-- Created a unified framework supporting multiple YOLO architectures
-- Developed user-friendly Python interfaces and CLI tools
-- Added features like hyperparameter optimization and experiment tracking
-- Integrated support for various export formats (ONNX, OpenVINO, CoreML)
+The trend in recent versions is less about raw accuracy and more about deployment. Removing NMS, making models smaller for phones and edge devices, and handling more tasks with one model all point the same way. Detecting small objects is still the weak spot, and it is where a lot of the research effort goes.
 
-The relationship between YOLO and Ultralytics represents a transformation from an academic project to a commercialized AI product, though this has sparked some controversy in the open-source community.
+## References
 
-## Real-World Applications
-
-YOLO's versatility has led to its adoption across numerous industries:
-
-### Manufacturing and Quality Control
-
-- Defect detection on assembly lines
-- Product inspection and quality assurance
-- Surface inspection for anomalies
-
-### Agriculture and Environmental
-
-- Crop monitoring and disease detection
-- Pest identification
-- Fruit counting with 90.83% accuracy
-
-### Security and Surveillance
-
-- Real-time threat detection
-- Suspicious activity monitoring
-- Social distancing enforcement
-
-### Medical Applications
-
-- Cancer detection
-- Skin segmentation
-- Pill identification
-
-### Automotive Industry
-
-- Autonomous vehicle systems
-- Traffic sign recognition
-- License plate detection
-
-## Current Trends and Future Directions
-
-The latest developments in YOLO technology showcase several exciting trends:
-
-### Technical Advancements
-
-- Enhanced feature extraction capabilities
-- Improved processing speed for real-time applications
-- Better recognition of small and unusual objects
-
-### Integration Capabilities
-
-- Seamless deployment across edge devices and cloud platforms
-- Integration with robotics systems
-- Enhanced multi-task learning capabilities
-
-### Industry Focus
-
-- Expanding applications in precision agriculture
-- Enhanced medical imaging capabilities
-- Advanced surveillance systems
-
-YOLO continues to evolve, with each new version bringing improvements in speed, accuracy, and versatility. Its open-source nature and growing community support ensure ongoing innovation and development in object detection technology.
-
----
-
-### References
-
-1. Redmon, J., & Farhadi, A. (2015). You Only Look Once: Unified, Real-Time Object Detection
-2. Ultralytics Documentation (2023). YOLO: Real-Time Object Detection
-3. Jocher, G. et al. (2023). YOLOv8: A State-of-the-Art Object Detection Model
-4. Wang, X. et al. (2022). Applications of YOLO in Agricultural Systems
-5. Zhang, H. et al. (2023). Recent Advances in YOLO Object Detection
+1. Redmon, J., Divvala, S., Girshick, R., Farhadi, A. (2016). [You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640). CVPR.
+2. Redmon, J., Farhadi, A. (2018). [YOLOv3: An Incremental Improvement](https://arxiv.org/abs/1804.02767).
+3. Bochkovskiy, A., Wang, C.-Y., Liao, H.-Y. M. (2020). [YOLOv4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/abs/2004.10934).
+4. Wang, C.-Y., Yeh, I.-H., Liao, H.-Y. M. (2024). [YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information](https://arxiv.org/abs/2402.13616).
+5. Wang, A. et al. (2024). [YOLOv10: Real-Time End-to-End Object Detection](https://arxiv.org/abs/2405.14458).
+6. [Ultralytics YOLO documentation](https://docs.ultralytics.com/)

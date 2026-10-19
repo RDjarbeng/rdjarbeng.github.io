@@ -12,101 +12,74 @@ image: /assets/images/academic_papers_rising_wind.jpg
 layout: post
 image_alt: "Cover image for Understanding the Trend in Published Papers"
 ---
-In scientific research, the journey from a novel idea to a widely accepted standard is an iterative process. Diagrams often outline this lifecycle, from initial papers to standardization and public availability, divided into **Peer Review** and **Standardisation** phases. This reflects the collaborative nature of science and mirrors innovations in technology, business, or social movements. This post breaks down each stage with examples and analogies to connect with your own experiences.
+If you follow research in any field for long enough, you start to notice a pattern in what gets published. A new technique appears in one paper. Then a few groups test it. Then everyone uses it, a lot of the papers look the same, and eventually someone writes the review comparing all the versions. A few years later it is in the textbooks and nobody publishes about it anymore, because it is just how things are done.
 
-The analysis draws from sources like the National Network of Libraries of Medicine (NNLM) on the research lifecycle, Harvard’s Research Support, and Wikipedia entries on the scientific method. 
-
-### ---
+The pattern is usually drawn as seven stages in two phases. In the first, peer review, the idea gets tested and argued over. In the second, standardisation, it becomes a trusted tool. Knowing where a topic sits in that cycle tells you a lot about how to read a new paper on it, and whether it is worth writing one yourself.
 
 ![Academic papers rising with the wind](/assets/images/academic_papers_rising_wind.jpg "Academic papers rising with the wind")
 
-#### The Peer Review Phase: Laying the Groundwork
+I will use CRISPR gene editing as the running example, because it went through the whole peer review phase in about ten years and the history is well documented.
 
-The Peer Review phase introduces, tests, and refines techniques through community scrutiny, ensuring reliability. Each stage is detailed below with examples and analogies.
+## Phase 1: peer review
 
-##### Technique Papers: The Birth of an Idea
+### 1. Technique papers
 
-- **Description**: This stage introduces a new method, tool, or approach, with papers outlining the theoretical foundation, initial experiments, and potential applications.
-- **Real-world Example**: The first papers on CRISPR-Cas9 gene editing in the early 2010s described a revolutionary gene-editing method, with a 2012 [paper](https://pubmed.ncbi.nlm.nih.gov/22745249/) by Jennifer Doudna and Emmanuelle Charpentier later earning the[ 2020 Nobel Prize in Chemistry](https://www.nobelprize.org/prizes/chemistry/2020/press-release/).
-- **Analogy**: It’s like a chef inventing a new recipe, sharing it with colleagues to test its appeal.
-- **Context from Sources**: Aligns with the NNLM’s “Plan” stage, designing the study and identifying data needs.
+Someone introduces a new method and shows that it works, usually in a controlled setting. For CRISPR, that was the [2012 paper](https://pubmed.ncbi.nlm.nih.gov/22745249/) from Jennifer Doudna and Emmanuelle Charpentier's groups, showing that the Cas9 protein could be programmed to cut DNA at a chosen spot. It later earned them the [2020 Nobel Prize in Chemistry](https://www.nobelprize.org/prizes/chemistry/2020/press-release/).
 
-##### First to Measure Papers: Testing the Waters
+Technique papers are exciting and thin. They show the idea is possible, not that it is practical.
 
-- **Description**: Other researchers test the technique, measuring its effectiveness and applicability, providing data to support or challenge initial claims.
-- **Real-world Example**: After the initial CRISPR papers, mid-2010s studies measured its efficiency in editing human embryonic cells, revealing reliability and limitations.
-- **Analogy**: After the chef shares the recipe, other cooks test it, adjusting for different kitchens.
-- **Context from Sources**: Matches the NNLM’s “Acquire” and “Process” stages, organizing data for analysis.
+### 2. First to measure papers
 
-##### Us Too Papers: The Bandwagon Effect
+Other groups pick the technique up and test it on real problems, measuring how well it works and where it fails. Within a year of the 2012 paper, labs had shown CRISPR editing in human cells, and by 2015 it had been tried, controversially, in human embryos. These papers produce the first honest numbers on how efficient and reliable the method is.
 
-- **Description**: As the technique gains traction, a wave of papers applies it to various problems, often with variations, broadening its use despite some redundancy.
-- **Real-world Example**: During the late 2010s, a surge of papers used CRISPR for genetic diseases and GMOs, showcasing its versatility in medicine and agriculture.
-- **Analogy**: Like a new restaurant dish inspiring others to offer similar versions with their own twists.
-- **Context from Sources**: Reflects the NNLM’s “Analyze” stage, building on existing work.
+### 3. "Us too" papers
 
-##### Evaluations Papers: The Critical Eye
+Once the method is proven, it spreads. Every lab with a problem that it might solve publishes a paper applying it, often with a small variation. In the second half of the 2010s, CRISPR papers on crops, animal models and genetic diseases poured out. Many of these are useful. Many are also close to repeats of each other, which is why this stage gets its slightly mocking name.
 
-- **Description**: The community critically assesses the technique, evaluating strengths, weaknesses, and risks to refine it for broader use.
-- **Real-world Example**: Early 2020s CRISPR studies focused on off-target effects and improving specificity for safer clinical use.
-- **Analogy**: After a dish gains popularity, critics evaluate its nutrition and suggest improvements.
-- **Context from Sources**: Aligns with Wikipedia’s scientific method, refining through critical evaluation.
+If you are writing a paper in this stage, the bar is "what do we learn that the last ten papers did not tell us".
 
-##### Intercomparisons: Finding the Best Version
+### 4. Evaluation papers
 
-- **Description**: Researchers compare different implementations to standardize best practices, ensuring consistency.
-- **Real-world Example**: Late 2010s to early 2020s papers compared CRISPR delivery systems (viral vectors vs. direct injection) for gene therapy.
-- **Analogy**: Like comparing product brands to find the best performer.
-- **Context from Sources**: Reflected in NNLM’s “Preserve” and “Share Results” stages, facilitating comparisons.
+With enough results in, the field turns critical. Where does the method go wrong? For CRISPR, the big question was off-target edits, cuts in places that were never meant to be cut. That led to work on measuring off-target effects and to more precise versions of Cas9.
 
-#### The Standardisation Phase: Becoming a Trusted Tool
+### 5. Intercomparisons
 
-Once refined, the technique becomes a reference method, ensuring longevity and adoption.
+Now there are many versions of the technique, and people need to know which to use. Intercomparison papers test them side by side, under the same conditions. For CRISPR that meant comparing Cas9 variants and the different ways of getting the editing machinery into cells, such as viral vectors versus direct delivery. These papers are less glamorous than the early ones and often more useful.
 
-##### Reference Method: The Gold Standard
+## Phase 2: standardisation
 
-- **Description**: The technique is widely accepted, cited in textbooks, and used as a benchmark.
-- **Real-world Example**: PCR, introduced in the 1980s, is a standard for DNA amplification, taught globally.
-- **Analogy**: Like Microsoft Office becoming the go-to software for documents.
-- **Context from Sources**: Aligns with NNLM’s “Share Results” and “Reuse” stages, sharing protocols publicly.
+### 6. Reference method
 
-##### Public Data: Sharing the Wealth
+The technique is now the default. It is in textbooks, taught in courses, and other methods get compared against it. PCR, the method for copying DNA developed by Kary Mullis in the 1980s, is the classic example. Nobody writes a paper about using PCR. You just write "samples were amplified by PCR" in the methods section.
 
-- **Description**: Data and protocols are made public, ensuring transparency and reproducibility.
-- **Real-world Example**: The Human Genome Project’s 2003 data, accessible via GenBank, supports global genetic research.
-- **Analogy**: Like open-sourcing software for worldwide improvement.
-- **Context from Sources**: Supported by University of Washington’s emphasis on publishing data.
+CRISPR is getting there. The first CRISPR-based therapy, Casgevy for sickle cell disease, was approved in the UK and the US at the end of 2023, which is about as clear a sign as you get that a technique has left the experimental stage.
 
-#### Why This Matters: The Bigger Picture
+### 7. Public data
 
-This lifecycle showcases science’s collaborative nature, ensuring reliable techniques. It mirrors life’s progress—like smartphones evolving from clunky models to standard features like touchscreens—connecting to your experiences in technology or personal projects.
+At the end, the protocols and data are open and anyone can build on them. The Human Genome Project, finished in 2003, released its sequence through public databases like GenBank, and the data has been the foundation for a huge amount of genetics research since.
 
-Sources include:
+## Why it is useful to know this
 
-- [NNLM’s Research Lifecycle](https://www.nnlm.gov/guides/data-glossary/research-lifecycle)
-- [Harvard’s Research Support](https://researchsupport.harvard.edu/research-lifecycle)
-- Wikipedia’s [scientific method](https://en.wikipedia.org/wiki/Scientific_method) and [history](https://en.wikipedia.org/wiki/History_of_scientific_method).
+The cycle is a rough pattern, not a law, and fields move through it at different speeds. Machine learning moves through it in a couple of years. Medicine can take decades because of trials and regulation. But it helps in a few practical ways:
 
-#### Conclusion: Your Ideas Could Be Next
+- **Reading papers.** A technique paper's claims need more scepticism than an intercomparison's. Early results are often from the best case.
+- **Choosing what to write.** Late in the "us too" stage, another application paper is hard to publish. An honest evaluation or a careful comparison is often more welcome.
+- **Choosing what to use.** If you need a method that works reliably today, pick something in the standardisation phase.
 
-Understanding this process highlights the effort behind discoveries, inspiring you to apply similar steps in your own projects. The next breakthrough might just be yours! 
+Here is the whole cycle with the CRISPR example in one table.
 
-#### Summary Table: Research Lifecycle Stages with Examples
-
-| **Stage** | **Description** | **Scientific Example** |
+| Stage | What happens | Example |
 | --- | --- | --- |
-| Technique Papers | Introduction of a new method, laying theoretical foundation | First papers on CRISPR-Cas9 gene editing (2012) |
-| First to Measure Papers | Testing effectiveness and applicability in labs | Studies measuring CRISPR efficiency in human cells (mid-2010s) |
-| Us Too Papers | Widespread adoption, with variations and improvements | Surge of CRISPR papers for genetic diseases and GMOs (late 2010s) |
-| Evaluations Papers | Critical assessment of strengths, weaknesses, and comparisons | Studies on CRISPR off-target effects and specificity (early 2020s) |
-| Intercomparisons | Comparing different implementations to standardize best practices | Comparisons of CRISPR delivery systems (late 2010s-early 2020s) |
-| Reference Method | Widely accepted as standard, cited in textbooks and courses | PCR (Polymerase Chain Reaction) for DNA amplification (1980s onward) |
-| Public Data | Data and protocols made publicly available for global use | Human Genome Project data via GenBank (post-2003) |
+| Technique papers | A new method is introduced and shown to work | Programmable Cas9 cutting (2012) |
+| First to measure | Others test it and report real performance | CRISPR in human cells (2013), human embryos (2015) |
+| Us too | Widespread use, often with small variations | CRISPR for crops, animal models and diseases (late 2010s) |
+| Evaluations | Critical look at weaknesses and risks | Off-target editing studies and more precise Cas9 versions |
+| Intercomparisons | Versions compared side by side | Comparisons of Cas9 variants and delivery methods |
+| Reference method | Accepted as the standard | PCR; CRISPR heading there with Casgevy (2023) |
+| Public data | Data and protocols open for anyone | Human Genome Project data in GenBank (2003) |
 
-This table provides a quick reference for understanding the progression.
+## Further reading
 
-### Key Points
-
-- Research suggests that the trend of published papers follows a lifecycle from introducing new techniques to standardization, with two main phases: Peer Review and Standardisation.
-- It seems likely that this process involves stages like initial technique papers, testing, widespread adoption, critical evaluations, comparisons, and eventually becoming a reference method with public data.
-- The evidence leans toward this being a collaborative, iterative process, similar to how innovations in other fields evolve, but the specifics can vary by discipline.
+- [NNLM: the research lifecycle](https://www.nnlm.gov/guides/data-glossary/research-lifecycle), which looks at the same process from the data management side.
+- [Harvard Research Support: the research lifecycle](https://researchsupport.harvard.edu/research-lifecycle)
+- Wikipedia on the [scientific method](https://en.wikipedia.org/wiki/Scientific_method) and its [history](https://en.wikipedia.org/wiki/History_of_scientific_method).
