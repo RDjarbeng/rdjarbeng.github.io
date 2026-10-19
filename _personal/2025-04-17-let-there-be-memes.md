@@ -1,7 +1,7 @@
 ---
 title: 'Let There Be Memes: A Curated Collection of Internet Gold'
 date: 2025-04-17T13:15:00
-published: true
+published: false
 tags:
   - Memes
   - Dilbert

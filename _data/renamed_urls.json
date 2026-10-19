@@ -1,5 +1,5 @@
 {
- "note": "Post URLs that changed when their files were renamed (old -> new). Each old URL gets a redirect page via _data/legacyRedirects.js.",
+ "note": "Old URL -> new URL for posts that were renamed or merged into the gallery. Each old URL gets a redirect page via _data/legacyRedirects.js.",
  "renamed": {
   "/Stranger Things by Peter Kimanzi/": "/stranger-things-by-peter-kimanzi/",
   "/Spotlight on Peter Kimanzi/": "/spotlight-on-peter-kimanzi/",
@@ -9,6 +9,17 @@
   "/ai-what-it-is-how-it’s-seen-and-how-to-stay-informed/": "/ai-what-it-is-how-its-seen-and-how-to-stay-informed/",
   "/earth-observation’s-promise-and-barriers-a-down-to-earth-view/": "/earth-observations-promise-and-barriers-a-down-to-earth-view/",
   "/personal/from-pencil-to-stardom-with-mr-beast-ifure-usen’s-breakthrough-moment-on-x/": "/personal/from-pencil-to-stardom-with-mr-beast-ifure-usens-breakthrough-moment-on-x/",
-  "/spacex-falcon-9-rocket-successfully-reaches-a-hundred-launches./": "/spacex-falcon-9-rocket-successfully-reaches-a-hundred-launches/"
+  "/spacex-falcon-9-rocket-successfully-reaches-a-hundred-launches./": "/spacex-falcon-9-rocket-successfully-reaches-a-hundred-launches/",
+  "/personal/iconic-images-from-animation/": "/gallery/from-movies-and-animation/",
+  "/personal/2025-05-07-iconic-images-from-animation/": "/gallery/from-movies-and-animation/",
+  "/personal/iconic-images/": "/gallery/iconic-images/",
+  "/personal/2025-05-07-iconic-images/": "/gallery/iconic-images/",
+  "/personal/let-there-be-memes/": "/gallery/memes/",
+  "/personal/2025-04-17-let-there-be-memes/": "/gallery/memes/",
+  "/personal/meme-reactions/": "/gallery/memes/",
+  "/personal/2025-05-10-meme-reactions/": "/gallery/memes/",
+  "/gallery/iconic-images-from-animation/": "/gallery/from-movies-and-animation/",
+  "/gallery/let-there-be-memes/": "/gallery/memes/",
+  "/gallery/meme-reactions/": "/gallery/memes/"
  }
 }
