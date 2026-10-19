@@ -3,16 +3,43 @@ permalink: /sitemap.xml
 layout: null
 eleventyExcludeFromCollections: true
 ---
+{%- comment -%}
+  Lists only pages with original content: technical and personal posts,
+  series pages and the main hubs. Gallery items, video embeds, tag and
+  category listings are left out on purpose: they made up 85% of the old
+  sitemap, and a sitemap that is mostly thin or duplicate pages lowers how
+  much of the site Google crawls and indexes. Those pages stay reachable
+  through links. A page can still opt out with `sitemap: false` or
+  `noindex: true` in its front matter.
+{%- endcomment -%}
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for page in collections.all %}
-  {% if page.url and page.data.sitemap != false and page.data.noindex != true %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign hubs = "/,/posts/,/personal/,/series/,/about/,/projects/" | split: "," %}
+{%- for hub in hubs %}
+  <url><loc>{{ site.url }}{{ hub }}</loc></url>
+{%- endfor %}
+{%- for post in site.posts %}
+  {%- unless post.sitemap == false or post.noindex == true %}
   <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    {% if page.date %}
-    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.updated | default: post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
   </url>
-  {% endif %}
-{% endfor %}
+  {%- endunless %}
+{%- endfor %}
+{%- for post in site.personal %}
+  {%- unless post.sitemap == false or post.noindex == true %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.updated | default: post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {%- endunless %}
+{%- endfor %}
+{%- for s in collections.seriesList %}
+  <url>
+    <loc>{{ site.url }}{{ s.url }}</loc>
+    {%- if s.updated %}
+    <lastmod>{{ s.updated | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
 </urlset>

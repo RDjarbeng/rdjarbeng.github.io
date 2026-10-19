@@ -531,7 +531,6 @@ ${jsonLd}
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("image-sitemap.xml");
   eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("google611ac759df8b329b.html");
   eleventyConfig.addPassthroughCopy("c1a71520d5504c3b932e5cce4931df21.txt");

@@ -1,0 +1,27 @@
+---
+permalink: /image-sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  Cover images of technical and personal posts. This used to be a static
+  file copied as-is, so the live version was unrendered template code.
+{%- endcomment -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- assign all_posts = site.posts | concat: site.personal %}
+{%- for post in all_posts %}
+  {%- if post.image and post.image != '' and post.sitemap != false and post.noindex != true %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <image:image>
+      <image:loc>{{ post.image | absolute_url | xml_escape }}</image:loc>
+      <image:title>{{ post.title | xml_escape }}</image:title>
+      {%- if post.image_alt and post.image_alt != '' %}
+      <image:caption>{{ post.image_alt | xml_escape }}</image:caption>
+      {%- endif %}
+    </image:image>
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
