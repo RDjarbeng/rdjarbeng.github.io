@@ -795,3 +795,4 @@ Transformers -2017
 GPT3-2020
 Dall-E- 2021
 ChatGPT -2022
+- [ ] Wonder if I can make a visualization of this that's interactive and can be embedded and screenshotted
