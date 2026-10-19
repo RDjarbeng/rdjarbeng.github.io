@@ -815,3 +815,7 @@ htps://gfmag.com/transaction-banking /rwandas-ekash-instant-payment-system -grow
 - [ ] Do you know what happened to processor design? You develop middleware and think that a machine cannot do better what you do. Have a read on how processors are being designed for the last 15+ years... not by hand. Machines do a much better job calculating the layour and physics (heat, energy etc) of milions of transistors. More people than ever work on processor design, but none of them do it by hand. Those who insisted a human does transistor layout better don't design CPUS anymore; those who embraced machines plus their experience still do!
 
 https://www.linkedin.com/posts/gergelyorosz_a-middleware-engineer-in-south-korea-wrote-activity-7517698256982933504-DKId?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAC7j1ZQBIejpa-6ArmTXSq7lz30h2l2SjQU&utm_campaign=copy_link
+- [ ] Would like to write about this: From the vision book: https://visionbook.mit.edu/how_to_do_research.html
+
+For a presentation to the visiting admitted MIT computer science graduate students, I emailed all MIT Computer Science and Artificial Intelligence Laboratory (CSAIL) researchers and faculty members, asking “Please send me what you think is the most important quality for success in graduate school.” I compiled their responses (along with photos of the responders) into slides that are available online:
+http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf
