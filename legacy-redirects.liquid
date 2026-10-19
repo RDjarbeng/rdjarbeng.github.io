@@ -1,0 +1,31 @@
+---
+pagination:
+  data: legacyRedirects
+  size: 1
+  alias: r
+  addAllPagesToCollections: false
+permalink: "{{ r.from }}"
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  Old URLs from the first version of the site (rdjarbeng.github.io/RDjarbeng/...,
+  which GitHub now forwards to rdjarbeng.com/RDjarbeng/...). GitHub Pages cannot
+  send real 301s, so each old URL gets a page that redirects instantly; Google
+  treats an immediate meta refresh like a permanent redirect. See
+  _data/legacyRedirects.js for the list.
+{%- endcomment -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moved</title>
+<link rel="canonical" href="{{ site.url }}{{ r.to }}">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ r.to }}">
+<script>location.replace({{ r.to | jsonify }} + location.hash);</script>
+</head>
+<body>
+<p>This page has moved to <a href="{{ r.to }}">{{ site.url }}{{ r.to }}</a>.</p>
+</body>
+</html>
