@@ -797,3 +797,4 @@ Dall-E- 2021
 ChatGPT -2022
 - [ ] Wonder if I can make a visualization of this that's interactive and can be embedded and screenshotted
 - [ ] How are video games made?
+- [ ] How is an iPhone made?
