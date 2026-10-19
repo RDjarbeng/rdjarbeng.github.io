@@ -800,3 +800,4 @@ ChatGPT -2022
 - [ ] How is an iPhone made?
 - [ ] How is a smartphone made?
 - [ ] Evolution of smartphones not from telephones, but from first smartphone to now
+- [ ] Innovations, companies that have come from universities and research, a parallel to the NASA spinoffs
