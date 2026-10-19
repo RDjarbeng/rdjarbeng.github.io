@@ -239,6 +239,9 @@ layout: default
                     {% else %}
                         <img src="{{ '/assets/images/logo-small.png' | relative_url }}" class="img-contain logo-placeholder">
                     {% endif %}
+                    {% if item.type == 'video' %}
+                        <span class="recommended-card-play" aria-label="Video" title="Video"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+                    {% endif %}
                 </div>
                 <div class="recommended-card-body">
                     <h4 class="recommended-card-title">{{ item.title | escape }}</h4>

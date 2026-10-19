@@ -215,6 +215,30 @@ description: "Curated videos from YouTube, TikTok, Instagram, and Twitter. Explo
 </div>
 
 <script>
+    // Return to the same spot after visiting a video or collection. Embeds and
+    // lazy images change the page height after load, which defeats the
+    // browser's own scroll restoration.
+    (function () {
+        var key = 'videosScroll:' + location.pathname;
+        window.addEventListener('pagehide', function () {
+            try { sessionStorage.setItem(key, String(window.scrollY)); } catch (e) {}
+        });
+        var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        if (!nav || nav.type !== 'back_forward') return;
+        var y = 0;
+        try { y = parseInt(sessionStorage.getItem(key) || '0', 10); } catch (e) {}
+        if (!y) return;
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        var userMoved = false;
+        ['wheel', 'touchstart', 'keydown'].forEach(function (ev) {
+            window.addEventListener(ev, function () { userMoved = true; }, { once: true, passive: true });
+        });
+        var restore = function () { if (!userMoved) window.scrollTo({ top: y, behavior: 'instant' }); };
+        restore();
+        document.addEventListener('DOMContentLoaded', restore);
+        window.addEventListener('load', function () { restore(); setTimeout(restore, 400); });
+    })();
+
     document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('video-search-input');
         const masonry = document.getElementById('video-masonry');

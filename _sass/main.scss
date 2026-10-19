@@ -2620,6 +2620,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .recommended-card-thumb {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
@@ -2642,6 +2643,30 @@ h1, h2, h3, h4, h5, h6,
     &.logo-placeholder {
       padding: 2rem;
     }
+  }
+}
+
+// Marks video items so they stand apart from images in the grid
+.recommended-card-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+  transition: background 0.2s;
+
+  .recommended-card:hover & {
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 

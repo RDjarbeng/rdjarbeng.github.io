@@ -372,6 +372,15 @@ ${jsonLd}
         return arr.sort((a, b) => {
           let valA = a && a.data && a.data[prop] !== undefined ? a.data[prop] : a ? a[prop] : undefined;
           let valB = b && b.data && b.data[prop] !== undefined ? b.data[prop] : b ? b[prop] : undefined;
+          // Front matter dates arrive as Date when unquoted and as strings when
+          // quoted; compare them as timestamps so the two kinds sort together.
+          if (prop === "date") {
+            const toTime = (v) => (v instanceof Date ? v.getTime() : v == null ? v : Date.parse(v));
+            valA = toTime(valA);
+            valB = toTime(valB);
+            if (Number.isNaN(valA)) valA = undefined;
+            if (Number.isNaN(valB)) valB = undefined;
+          }
           if (valA instanceof Date) valA = valA.getTime();
           if (valB instanceof Date) valB = valB.getTime();
           if (valA === valB) return 0;
@@ -448,19 +457,22 @@ ${jsonLd}
 
     // Fast-path known hot expressions across templates
     if (exp === "item.title != item_title" || exp === "item.title != page.title") {
+      // LiquidJS's context.get takes a path array; a plain string silently
+      // returns undefined, which let pages recommend themselves.
+      const lookup = (path) => {
+        try { return this.context.get(path); } catch (e) { return undefined; }
+      };
       let avoid = "";
-      if (this && this.context) {
-        if (typeof this.context.get === "function") {
-          avoid = this.context.get("item_title") || this.context.get("page.title") || "";
-        } else if (this.context.scopes) {
-          for (let i = this.context.scopes.length - 1; i >= 0; i--) {
-            const s = this.context.scopes[i];
-            if (s && s.item_title !== undefined) { avoid = s.item_title; break; }
-            if (s && s.page && s.page.title !== undefined) { avoid = s.page.title; break; }
-          }
-        }
+      let avoidUrl = "";
+      if (this && this.context && typeof this.context.get === "function") {
+        avoid = lookup(["item_title"]) || lookup(["page", "title"]) || lookup(["title"]) || "";
+        avoidUrl = lookup(["page", "url"]) || "";
       }
-      return arr.filter((item) => item && (item.title || (item.data && item.data.title)) !== avoid);
+      return arr.filter((item) => {
+        if (!item) return false;
+        if (avoidUrl && item.url === avoidUrl) return false;
+        return (item.title || (item.data && item.data.title)) !== avoid;
+      });
     }
     if (exp === "b.known_for != nil and b.known_for != ''") {
       return arr.filter((b) => b && (b.known_for || (b.data && b.data.known_for)));

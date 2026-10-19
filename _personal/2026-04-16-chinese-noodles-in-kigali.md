@@ -7,7 +7,7 @@ tags:
   - food
   - Kigali
   - cooking
-image: /assets/images/posts/covers/chinese_noodles_kigali_cover_richard_pointing.png
+image: /assets/images/posts/covers/chinese_noodles_kigali_cover_richard_pointing.jpg
 image_alt: A man on a stage smiling and gesturing with both hands toward a large blue screen behind him. The screen displays the bold white text 'CHINESE NOODLES IN KIGALI' above a vibrant photograph of a steaming bowl of spicy noodles. Below the image, smaller white text reads 'rdjarbeng.com/personal/chinese-noodles-in-kigali'. This image is modeled by Richard Djarbeng
 layout: personal
 card_items: []

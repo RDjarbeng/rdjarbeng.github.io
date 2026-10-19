@@ -144,8 +144,6 @@ https://sveltiacms.app/en/docs/media/internal#asset-collections
 Eg from docs:
 width: 2048 # default: original size height: 2048 # default: original size svg:
 - [ ] Add the list of links in navigation and pages on the site to the footer so it's easier to navigate
-- [ ] Need a way to distinguish the videos from the images in the gallery recommended section on single posts. The icon could help
-- [ ] Navigating back from a video collection takes you to the top of the videos page, needs to be fixed
 - The video collections start with Behind the scenes in alphabetical order, need to find a better way
 - Video collections should animate on scroll
 -Need to show the subcategories visually for the navigation on the gallery homepage
@@ -186,7 +184,5 @@ yout-ube.com/watch
 https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Add a UI where posts are linked to each other and the link to the cards. Would be good to add it to the recommended posts as a way to show where you should go next and which direction is strongest, kind of a mindmap, also good for my analytics so I can see posts that stand alone vs those that are connected across the site
 - [ ] Create a kind of RSS feed or update that lists site development progress and releases somewhere on the website
-- [ ] Bug: In the recommendations for the gallery item the post being viewed can show up in the recommendations
-- [ ] In Chinese noodles post, cover image is 7MB ain't that a problem?
 - [ ] Rich results test fails for homepage but passes for posts on the site
 - [ ] Add a way for links to posts referenced on my website to look very nice with their own preview and make sure it works on other posts mentioning the next one
