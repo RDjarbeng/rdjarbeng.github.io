@@ -28,7 +28,7 @@ custom_css_class: about-page
     <span class="about-nav-dot" aria-hidden="true">•</span>
     <a href="#open-source" class="about-nav-link">Open Source</a>
     <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#skills" class="about-nav-link">Skills</a>
+    <a href="#skills" class="about-nav-link">Skills &amp; Resumes</a>
     <span class="about-nav-dot" aria-hidden="true">•</span>
     <a href="#certifications" class="about-nav-link">Certifications</a>
     <span class="about-nav-dot" aria-hidden="true">•</span>
@@ -194,7 +194,7 @@ Currently looking to build strong research and engineering experience in multimo
 <div class="about-section" id="projects">
   <h2 class="about-section-title">Projects</h2>
   <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
-  <p style="text-align: center; font-size: 0.9em; margin-bottom: 20px;"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
+  <p class="project-disclaimer"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
 
   <div class="filter-container">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -205,11 +205,9 @@ Currently looking to build strong research and engineering experience in multimo
   </div>
 
   <div class="cards-grid" id="projects-grid">
-
     <!-- Project 1: Air Quality -->
     <div class="project-card-about" data-category="web iot web research">
       <div class="project-image-container">
-        <!-- Replaced with generated asset -->
         <img src="/assets/images/project_air_quality_dashboard.jpg" alt="Air Quality Dashboard" onerror="this.src='https://images.unsplash.com/photo-1623851724495-9d332d7c57eb?auto=format&fit=crop&w=600&q=80'">
         <span class="project-type-badge">Research Trend</span>
       </div>
@@ -221,11 +219,10 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
     <!-- Project 2: Countdown -->
     <div class="project-card-about" data-category="web">
       <div class="project-image-container">
-        <img src="/assets/images/countdown_mobile.png" alt="Countdown App" style="object-fit: contain; background: #222;">
+        <img src="/assets/images/countdown_mobile.png" alt="Countdown App" class="countdown-img">
         <span class="project-type-badge">Web App</span>
       </div>
       <div class="project-content">
@@ -236,11 +233,9 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
     <!-- Project 3: Pollution Classification -->
     <div class="project-card-about" data-category="ml iot research">
       <div class="project-image-container">
-        <!-- Used relevant existing asset -->
         <img src="/assets/images/comp_vision_roboflow.jpeg" alt="Filter Imagery to PM Values">
         <span class="project-type-badge">Machine Learning</span>
       </div>
@@ -252,11 +247,9 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
     <!-- Project 4: Taxi Fleet -->
     <div class="project-card-about" data-category="data cloud">
       <div class="project-image-container">
-         <!-- Used relevant existing asset: kigali transport related -->
         <img src="/assets/images/kigali_bustop_motor.jpg" alt="Taxi Fleet">
         <span class="project-type-badge">GCP Dataflow</span>
       </div>
@@ -265,11 +258,9 @@ Currently looking to build strong research and engineering experience in multimo
         <p class="project-desc">Designed a streaming data pipeline using Google Cloud Dataflow and BigQuery to ingest and analyze real-time taxi data, displaying live metrics on Looker Studio.</p>
       </div>
     </div>
-
     <!-- Project 5: Background Remover -->
     <div class="project-card-about" data-category="ml web">
       <div class="project-image-container">
-         <!-- Used relevant existing asset: bg remover comparison -->
         <img src="/assets/images/richard_picture_comparison_background_remover.png" alt="Background Remover">
         <span class="project-type-badge">Deep Learning</span>
       </div>
@@ -281,11 +272,9 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
-     <!-- Project 6: Loan Risk -->
+    <!-- Project 6: Loan Risk -->
     <div class="project-card-about" data-category="ml data">
       <div class="project-image-container">
-         <!-- Used relevant existing asset: payment related -->
         <img src="/assets/images/loan_risk_prediction_dashboard.jpg" alt="Loan Risk">
         <span class="project-type-badge">AutoML</span>
       </div>
@@ -294,9 +283,7 @@ Currently looking to build strong research and engineering experience in multimo
         <p class="project-desc">Built and deployed a loan default risk prediction model on Google Cloud Vertex AI AutoML. I evaluated it with precision/recall and ROC curves, and checked feature importance to understand the contribution of each predictor .</p>
       </div>
     </div>
-
-    <!-- HIDDEN PROJECTS -->
-
+    <!-- Project 7: BigQuery -->
     <div class="project-card-about projects-hidden" data-category="data">
       <div class="project-image-container">
         <img src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="BigQuery">
@@ -307,7 +294,7 @@ Currently looking to build strong research and engineering experience in multimo
         <p class="project-desc">Built a classification model on Google Analytics data to predict returning-customer purchase intent. Feature engineering around checkout progress, traffic source, and device moved ROC AUC from 0.72 to 0.94.</p>
       </div>
     </div>
-
+    <!-- Project 8: GSM IoT -->
     <div class="project-card-about projects-hidden" data-category="iot research">
       <div class="project-image-container">
         <img src="/assets/images/gsm_module.jpg" alt="GSM IoT">
@@ -321,8 +308,8 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
-     <div class="project-card-about projects-hidden" data-category="web">
+    <!-- Project 9: University System -->
+    <div class="project-card-about projects-hidden" data-category="web">
       <div class="project-image-container">
         <img src="/assets/images/university_management_system_dashboard.jpg" alt="University System">
         <span class="project-type-badge">Java/TSQL</span>
@@ -335,10 +322,10 @@ Currently looking to build strong research and engineering experience in multimo
         </div>
       </div>
     </div>
-
+    <!-- Project 10: Remote Sensing -->
     <div class="project-card-about projects-hidden" data-category="ml research">
       <div class="project-image-container">
-         <img src="/assets/images/satellite_orbiting_earth_color_codes.jpg" alt="Transmission">
+        <img src="/assets/images/satellite_orbiting_earth_color_codes.jpg" alt="Transmission">
         <span class="project-type-badge">Remote Sensing</span>
       </div>
       <div class="project-content">
@@ -346,10 +333,10 @@ Currently looking to build strong research and engineering experience in multimo
         <p class="project-desc">Used Google Earth Engine and CNNs to detect encroachment on power transmission corridors in Ghana, enhancing safety for GRIDCo.</p>
       </div>
     </div>
-
+    <!-- Project 11: Game -->
     <div class="project-card-about projects-hidden" data-category="web game">
       <div class="project-image-container">
-         <img src="/assets/images/escape_covid_maze_game.jpg" alt="Game">
+        <img src="/assets/images/escape_covid_maze_game.jpg" alt="Game">
         <span class="project-type-badge">Unity / C#</span>
       </div>
       <div class="project-content">
@@ -357,21 +344,20 @@ Currently looking to build strong research and engineering experience in multimo
         <p class="project-desc">A 2D Unity3D game challenging players to navigate a maze while avoiding dynamic enemies using A\* search algorithms.</p>
       </div>
     </div>
-
-     <div class="project-card-about projects-hidden" data-category="ml web">
+    <!-- Project 12: Open Source -->
+    <div class="project-card-about projects-hidden" data-category="ml web">
       <div class="project-image-container">
-         <img src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="ML Package">
+        <img src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="ML Package">
         <span class="project-type-badge">Open Source</span>
       </div>
       <div class="project-content">
         <h3 class="project-title">Machine Learning Complete</h3>
         <p class="project-desc">Contributor to a comprehensive machine learning educational package to democratize AI education.</p>
-         <div class="project-links">
+        <div class="project-links">
           <a href="https://github.com/Nyandwi/machine_learning_complete/" target="_blank">View Code <span>&rarr;</span></a>
         </div>
       </div>
     </div>
-
   </div> <!-- End Grid -->
 
   <div class="show-more-container">
@@ -419,9 +405,9 @@ Currently looking to build strong research and engineering experience in multimo
 * What are the best ways to learn AI and machine learning, and what resources are recommended?
 * Who are the key people in the field of AI and machine learning, beyond the media hype?
 
-I cover this in posts like Complete Machine Learning Package — Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
+I cover this in posts like Complete Machine Learning Package: Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
 
-<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+<div class="cards-grid cards-grid-mini">
   {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
   {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
 
@@ -450,7 +436,7 @@ I cover this in posts like Complete Machine Learning Package — Learn by Doing 
 
 Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
 
-<div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; margin-bottom: 30px; display: grid;">
+<div class="cards-grid cards-grid-mini">
   {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
   {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
 
@@ -462,161 +448,178 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
 </div>
 
 <div class="about-section" id="skills">
-  <h2 class="about-section-title">Technical Skills</h2>
-  <p class="exp-desc">I work in Python, JavaScript/TypeScript, and C++. I use PyTorch, Keras, and FastAI for machine learning, React for the web, and I deploy models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
-  <details class="exp-tech-details" open>
-    <summary>In more depth</summary>
-    <ul>
-      <li>Classification and supervised learning: from logistic regression to CNNs (ResNet) and transfer learning; ROC/PR evaluation; feature engineering.</li>
-      <li>Computer vision: object detection (YOLO-World), semantic segmentation (U-Net, ISNet), video analysis, satellite imagery in Google Earth Engine.</li>
-      <li>Real-time pipelines and dashboards: streaming ingestion through Dataflow into BigQuery, live dashboards in Looker Studio.</li>
-    </ul>
-  </details>
-  <div class="skills-container">
+  <h2 class="about-section-title">Skills &amp; Resumes</h2>
+  <p class="about-section-subtitle">Core technical proficiencies, specialized toolsets, and curriculum vitae</p>
 
-      <div class="skill-category">
+  <div class="resume-section-container">
+    <h3 class="resume-heading">Download Resumes</h3>
+    <div class="resume-section">
+      <a href="/assets/documents/Richard_Resume_Software_engineering.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Software Engineering CV
+      </a>
+      <a href="/assets/documents/Resume_ML.pdf" target="_blank" class="resume-btn" title="Download Machine Learning Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Machine Learning CV
+      </a>
+      <a href="/assets/documents/Richard_Resume_Research.pdf" target="_blank" class="resume-btn" title="Download Research Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Research CV
+      </a>
+      <a href="/assets/documents/robotics_cv_richard_main.pdf" target="_blank" class="resume-btn" title="Download Robotics Resume">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Robotics CV
+      </a>
+    </div>
+  </div>
+
+  <div class="skills-block">
+    <p class="exp-desc">I work in Python, JavaScript/TypeScript, and C++. I use PyTorch, Keras, and FastAI for machine learning, React for the web, and I deploy models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
+    <details class="exp-tech-details skills-collapse-details">
+      <summary>View all technical skills and toolsets</summary>
+      <div class="skills-depth-summary">
+        <ul>
+          <li>Classification and supervised learning: from logistic regression to CNNs (ResNet) and transfer learning; ROC/PR evaluation; feature engineering.</li>
+          <li>Computer vision: object detection (YOLO-World), semantic segmentation (U-Net, ISNet), video analysis, satellite imagery in Google Earth Engine.</li>
+          <li>Real-time pipelines and dashboards: streaming ingestion through Dataflow into BigQuery, live dashboards in Looker Studio.</li>
+        </ul>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
           <div class="skill-category-title">Languages</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TS"> TypeScript</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python"> Python</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java"> Java</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++"> C++</span>
-              <span class="skill-item">C</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" alt="C#"> C#</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" alt="Dart"> Dart (Flutter)</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
-              <span class="skill-item">SQL</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TS"> TypeScript</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python"> Python</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java"> Java</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++"> C++</span>
+            <span class="skill-item">C</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" alt="C#"> C#</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" alt="Dart"> Dart (Flutter)</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+            <span class="skill-item">SQL</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Frontend</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React"> React.js</span>
-              <span class="skill-item">GatsbyJS</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5"> HTML5</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3"> CSS3</span>
-              <span class="skill-item">PWAs</span>
-              <span class="skill-item">Performance Optimisation</span>
-              <span class="skill-item">Responsive Design</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React"> React.js</span>
+            <span class="skill-item">GatsbyJS</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5"> HTML5</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3"> CSS3</span>
+            <span class="skill-item">PWAs</span>
+            <span class="skill-item">Performance Optimisation</span>
+            <span class="skill-item">Responsive Design</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Backend &amp; APIs</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
-              <span class="skill-item">Express.js</span>
-              <span class="skill-item">RESTful APIs</span>
-              <span class="skill-item">WebSockets</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
+            <span class="skill-item">Express.js</span>
+            <span class="skill-item">RESTful APIs</span>
+            <span class="skill-item">WebSockets</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Machine Learning &amp; AI</div>
           <div class="skill-list">
-              <span class="skill-item">PyTorch</span>
-              <span class="skill-item">Keras</span>
-              <span class="skill-item">FastAI</span>
-              <span class="skill-item">Computer Vision</span>
-              <span class="skill-item">Model Deployment</span>
-              <span class="skill-item">Hugging Face</span>
-              <span class="skill-item">Vertex AI</span>
-              <span class="skill-item">AWS ML</span>
-              <span class="skill-item">LLM Red-Teaming &amp; Evaluation</span>
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">Keras</span>
+            <span class="skill-item">FastAI</span>
+            <span class="skill-item">Computer Vision</span>
+            <span class="skill-item">Model Deployment</span>
+            <span class="skill-item">Hugging Face</span>
+            <span class="skill-item">Vertex AI</span>
+            <span class="skill-item">AWS ML</span>
+            <span class="skill-item">LLM Red-Teaming &amp; Evaluation</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Cloud &amp; DevOps</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS (Solutions Architect)</span>
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud Platform</span>
-              <span class="skill-item">BigQuery</span>
-              <span class="skill-item">Dataflow</span>
-              <span class="skill-item">Netlify</span>
-              <span class="skill-item">Render</span>
-              <span class="skill-item">Hugging Face Spaces</span>
-              <span class="skill-item">CI/CD</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS (Solutions Architect)</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud Platform</span>
+            <span class="skill-item">BigQuery</span>
+            <span class="skill-item">Dataflow</span>
+            <span class="skill-item">Netlify</span>
+            <span class="skill-item">Render</span>
+            <span class="skill-item">Hugging Face Spaces</span>
+            <span class="skill-item">CI/CD</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">CMS Platforms</div>
           <div class="skill-list">
-              <span class="skill-item">DecapCMS (NetlifyCMS)</span>
-              <span class="skill-item">SveltiaCMS</span>
-              <span class="skill-item">Custom CMS Backends</span>
-              <span class="skill-item">Headless CMS</span>
+            <span class="skill-item">DecapCMS (NetlifyCMS)</span>
+            <span class="skill-item">SveltiaCMS</span>
+            <span class="skill-item">Custom CMS Backends</span>
+            <span class="skill-item">Headless CMS</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Data &amp; Analytics</div>
           <div class="skill-list">
-              <span class="skill-item">Satellite Image Processing</span>
-              <span class="skill-item">Google Earth Engine</span>
-              <span class="skill-item">BigQuery ML</span>
-              <span class="skill-item">Google Looker Studio</span>
-              <span class="skill-item">Data Visualisation</span>
+            <span class="skill-item">Satellite Image Processing</span>
+            <span class="skill-item">Google Earth Engine</span>
+            <span class="skill-item">BigQuery ML</span>
+            <span class="skill-item">Google Looker Studio</span>
+            <span class="skill-item">Data Visualisation</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Robotics</div>
           <div class="skill-list">
-              <span class="skill-item">ROS (C++)</span>
-              <span class="skill-item">CRAM Cognitive Architecture</span>
-              <span class="skill-item">Robot Manipulation</span>
-              <span class="skill-item">Pick-and-Place</span>
-              <span class="skill-item">Gazebo &amp; Bullet Simulators</span>
-              <span class="skill-item">Homogeneous Transforms &amp; Quaternions</span>
-              <span class="skill-item">A\* Pathfinding</span>
-              <span class="skill-item">Unity3D</span>
+            <span class="skill-item">ROS (C++)</span>
+            <span class="skill-item">CRAM Cognitive Architecture</span>
+            <span class="skill-item">Robot Manipulation</span>
+            <span class="skill-item">Pick-and-Place</span>
+            <span class="skill-item">Gazebo &amp; Bullet Simulators</span>
+            <span class="skill-item">Homogeneous Transforms &amp; Quaternions</span>
+            <span class="skill-item">A\* Pathfinding</span>
+            <span class="skill-item">Unity3D</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Embedded &amp; IoT</div>
           <div class="skill-list">
-              <span class="skill-item">C</span>
-              <span class="skill-item">C++</span>
-              <span class="skill-item">Raspberry Pi</span>
-              <span class="skill-item">Arduino</span>
-              <span class="skill-item">GSM Modules</span>
-              <span class="skill-item">Sensor Calibration</span>
+            <span class="skill-item">C</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">Raspberry Pi</span>
+            <span class="skill-item">Arduino</span>
+            <span class="skill-item">GSM Modules</span>
+            <span class="skill-item">Sensor Calibration</span>
           </div>
-      </div>
-
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">Tools &amp; Practices</div>
           <div class="skill-list">
-              <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git"> Git</span>
-              <span class="skill-item">GitHub</span>
-              <span class="skill-item">Open-Source Maintenance</span>
-              <span class="skill-item">PR Review</span>
-              <span class="skill-item">Test-Driven Development (TDD)</span>
-              <span class="skill-item">Agile Methodologies</span>
+            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git"> Git</span>
+            <span class="skill-item">GitHub</span>
+            <span class="skill-item">Open-Source Maintenance</span>
+            <span class="skill-item">PR Review</span>
+            <span class="skill-item">Test-Driven Development (TDD)</span>
+            <span class="skill-item">Agile Methodologies</span>
           </div>
-      </div>
-      <div class="skill-category">
+        </div>
+        <div class="skill-category">
           <div class="skill-category-title">AI Tools &amp; Evaluation</div>
           <div class="skill-list">
-              <span class="skill-item">Hugging Face Agents CLI</span>
-              <span class="skill-item">AI-Assisted Dev Workflows</span>
-              <span class="skill-item">LLM Code Evaluation</span>
-              <span class="skill-item">Red-Teaming LLMs</span>
-              <span class="skill-item">OpenClaw</span>
-              <span class="skill-item">Cursor</span>
-              <span class="skill-item">Gemini</span>
-              <span class="skill-item">Antigravity</span>
+            <span class="skill-item">Hugging Face Agents CLI</span>
+            <span class="skill-item">AI-Assisted Dev Workflows</span>
+            <span class="skill-item">LLM Code Evaluation</span>
+            <span class="skill-item">Red-Teaming LLMs</span>
+            <span class="skill-item">OpenClaw</span>
+            <span class="skill-item">Cursor</span>
+            <span class="skill-item">Gemini</span>
+            <span class="skill-item">Antigravity</span>
           </div>
+        </div>
       </div>
-
+    </details>
   </div>
 </div>
 
@@ -657,50 +660,10 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
         <li><strong>Global infrastructure and networking:</strong> Deep understanding of AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the network technologies that connect distributed environments worldwide.</li>
       </ul>
     </details>
-    <div class="exp-skills">
-      <span class="skill-pill">AWS</span>
-      <span class="skill-pill">Cloud Architecture</span>
-      <span class="skill-pill">Distributed Systems</span>
-      <span class="skill-pill">Well-Architected Framework</span>
-      <span class="skill-pill">High Availability</span>
-      <span class="skill-pill">Cost Optimization</span>
-      <span class="skill-pill">Security &amp; IAM</span>
-    </div>
+    
   </div>
 </div>
 
-<div class="about-section">
-  <!-- <h2 class="about-section-title">Professional Summary</h2>
-   <div class="experience-card" style="border-left: 4px solid #007acc;">
-    <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
-        <li>Specialized in <strong>Web Development</strong>, <strong>Machine Learning</strong>, and <strong>IoT devices</strong> (Raspberry Pi, Arduino).</li>
-        <li>Experienced in developing <strong>Progressive Web Applications (PWAs)</strong> and scalable data-driven solutions.</li>
-        <li>Skilled in cloud technologies, particularly <strong>Google Cloud Platform (Vertex AI, BigQuery)</strong> and AWS.</li>
-        <li>Active open-source contributor, including the <a href="https://github.com/Nyandwi/machine_learning_complete/">Machine Learning Complete</a> package.</li>
-        <li>Passionate about democratizing technology through low-cost sensor deployment and accessible education.</li>
-    </ul>
-   </div> -->
-
-   <h3 style="text-align:center; font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px;">Download Resumes</h3>
-   <div class="resume-section">
-      <a href="/assets/documents/Richard_Resume_Software_engineering.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Software Engineering CV
-      </a>
-      <a href="/assets/documents/Resume_ML.pdf" target="_blank" class="resume-btn" title="Download Machine Learning Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Machine Learning CV
-      </a>
-      <a href="/assets/documents/Richard_Resume_Research.pdf" target="_blank" class="resume-btn" title="Download Research Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Research CV
-      </a>
-      <a href="/assets/documents/robotics_cv_richard_main.pdf" target="_blank" class="resume-btn" title="Download Robotics Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Robotics CV
-      </a>
-   </div>
-</div>
 
 <div class="about-section" style="text-align: center;">
     <h3>Connect With Me</h3>
