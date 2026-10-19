@@ -120,6 +120,7 @@ body_class: post-page has-side-toc
       </aside>
       {% endif %}
       {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+      {% include author-card.html author=post_author %}
       {% if series_nav.next %}{% assign series_card = series_nav.next %}{% assign series_card_label = "Up next" %}
       {% elsif series_nav.prev %}{% assign series_card = series_nav.prev %}{% assign series_card_label = "Start from the beginning" %}
       {% else %}{% assign series_card = nil %}{% endif %}

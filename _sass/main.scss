@@ -3067,6 +3067,7 @@ h1, h2, h3, h4, h5, h6,
 .series-box,
 .key-points,
 .series-continue,
+.author-card,
 .tag-view {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -3108,6 +3109,32 @@ h1, h2, h3, h4, h5, h6,
 .key-points {
   ul { margin: 0 0 0 1.2rem; padding: 0; }
   li { margin: 0.3rem 0; }
+}
+
+// Who wrote the post, after the content (_includes/author-card.html)
+.author-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 2.5rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+
+  .author-card__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .author-card__body { min-width: 0; }
+  .author-card__name { margin: 0 0 0.35rem; font-weight: 700; }
+  .author-card__role { display: block; font-weight: 400; color: var(--grey-text); font-size: 0.95rem; }
+  .author-card__bio p { margin: 0 0 0.5rem; }
+  .author-card__links { margin: 0; font-size: 0.95rem; }
+
+  a { color: var(--text-color); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--grey-text); }
 }
 
 .series-continue {

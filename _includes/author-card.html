@@ -1,0 +1,27 @@
+{%- comment -%}
+  Who wrote the post, shown after the content. Bio and links come from the
+  author's file in _authors/. Pass author=<short_name>.
+{%- endcomment -%}
+{%- assign ac = site.authors | where: 'short_name', include.author | first -%}
+{%- if ac and ac.short_name != 'anon' -%}
+<aside class="author-card" aria-label="About the author">
+  {%- if ac.avatar %}<img class="author-card__avatar" src="{{ ac.avatar | relative_url }}" alt="{{ ac.display_name | escape }}" width="64" height="64" loading="lazy">{% endif %}
+  <div class="author-card__body">
+    <p class="author-card__name">Written by <a href="{{ ac.url | relative_url }}">{{ ac.display_name }}</a>{% if ac.position %} <span class="author-card__role">{{ ac.position }}</span>{% endif %}</p>
+    {%- if ac.bio and ac.bio != '' %}
+    <div class="author-card__bio">{{ ac.bio | markdownify }}</div>
+    {%- endif %}
+    <p class="author-card__links">
+      {%- if ac.short_name == 'Richard' %}
+      <a href="/about/">About</a>
+      {%- for link in site.social.links %}
+      {%- if link contains 'linkedin' %} · <a href="{{ link }}" rel="me">LinkedIn</a>{% elsif link contains 'github' %} · <a href="{{ link }}" rel="me">GitHub</a>{% elsif link contains 'youtube' %} · <a href="{{ link }}" rel="me">YouTube</a>{% endif %}
+      {%- endfor %}
+      {%- else %}
+      {%- if ac.linkedin %}<a href="{{ ac.linkedin }}">LinkedIn</a>{% endif %}
+      {%- if ac.github %}{% if ac.linkedin %} · {% endif %}<a href="{{ ac.github }}">GitHub</a>{% endif %}
+      {%- endif %}
+    </p>
+  </div>
+</aside>
+{%- endif -%}

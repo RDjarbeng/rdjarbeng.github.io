@@ -58,6 +58,7 @@ const authors = authorFiles.map((file) => {
   const slug = slugify(parsed.data.short_name || path.basename(file, ".md"));
   return {
     ...parsed.data,
+    bio: parsed.content.trim(),
     url: `/authors/${slug}/`
   };
 });

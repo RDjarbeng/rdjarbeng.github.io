@@ -29,6 +29,8 @@ layout: default
 
   <!-- Something's here {{page.author}} -->
   {{ content | replace: 'src="assets/images/', 'src="/assets/images/' | replace: "src='assets/images/", "src='/assets/images/" }}
+  {% assign post_author = author | default: page.author | default: "Richard" %}
+  {% include author-card.html author=post_author %}
   {% if post_card_items %}
   {% include card_list.html %}
   {% endif %}

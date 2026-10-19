@@ -158,6 +158,9 @@ module.exports = function(eleventyConfig) {
           "@type": "Person",
           name: (siteData.author && siteData.author.name) || "Richard Djarbeng",
           url: `${SITE}/about/`,
+          jobTitle: "Software and Machine Learning Engineer",
+          alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
+          knowsAbout: ["Machine learning", "Computer vision", "Internet of Things", "Environmental sensing", "Satellite and climate data"],
           sameAs: (siteData.social && siteData.social.links) || [],
         };
         const graph = [];
