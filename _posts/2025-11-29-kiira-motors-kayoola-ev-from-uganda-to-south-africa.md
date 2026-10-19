@@ -27,15 +27,15 @@ categories:
 
 On 20 November 2025, a Ugandan-built electric coach left Kampala for Cape Town. It came back on 28 December, after about 13,700 km through Uganda, Tanzania, Zambia, Botswana, Eswatini and South Africa. The bus was Kiira Motors' 13 metre Kayoola Electric Coach, and the trip ran under the name "From the Pearl to the Cape".
 
-Electric city buses are common now. An electric coach doing long intercity days across six countries, most of them with almost no public charging for anything that size, is a much harder test. That was the point.
+Electric buses are already common in cities. Driving an electric coach long distances every day through six countries, most of which have almost no public charging for a vehicle that size, is a much harder test, and that is what Kiira wanted to show it could do.
 
 ![Illustration of a Kayoola electric coach on an African highway heading into a city](/assets/images/posts/covers/kayoola_ev_expedition.jpg "Kayoola EV expedition")
 
-## Charging a bus where there are no chargers
+## Charging along the way
 
 The coach carries a 422 kWh lithium iron phosphate (LFP) battery, which Kiira says is good for about 500 km per charge. There was no public fast charging network along the route that could reliably handle a heavy bus, so an advance team went ahead to scout and set up charging points, and mobile chargers filled the gaps. According to [electrive](https://www.electrive.com/2026/01/05/13700-km-through-africa-with-an-electric-bus/), the bus averaged around 390 km on driving days, so most stops were planned charges rather than running the battery close to empty.
 
-The average consumption came out at 0.79 kWh per kilometre. That is the number to remember. Multiply it by the distance and you get the whole trip's energy bill.
+The bus used an average of 0.79 kWh per kilometre. Multiplying that by the distance gives roughly the total energy used on the trip, which matches Kiira's figure below.
 
 About 2,370 km in, Eng. Fred Matovu of Kiira Motors talked about the charging problems and what they mean for building an EV industry in Africa:
 
@@ -43,7 +43,7 @@ About 2,370 km in, Eng. Fred Matovu of Kiira Motors talked about the charging pr
 
 ## What the trip tested
 
-Besides range, the route took the bus up to around 2,300 m in the Tanzanian highlands and through very different climates, which tests the battery's thermal management as much as its capacity. MTN provided connectivity so the bus could be monitored live along the way. Electrive reports one safety incident over the whole trip. One trip does not prove reliability, but finishing a route like this with one incident is a solid first result.
+Apart from range, the route took the bus up to around 2,300 m in the Tanzanian highlands and through very different climates, which tests the battery's thermal management as much as its capacity. MTN provided connectivity so the bus could be monitored live along the way. Electrive reports one safety incident over the whole trip. A single trip cannot prove long-term reliability, but it is a good start.
 
 ## The numbers
 
@@ -70,4 +70,4 @@ Since the trip, Kiira has delivered more coaches to the Uganda Civil Aviation Au
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Two more 13m Kayoola Electric Coaches delivered to <a href="https://twitter.com/UgandaCAA?ref_src=twsrc%5Etfw">@UgandaCAA</a>. Fleet now at 5 buses.<br>13,000km. Uganda to South Africa. Proven performance.<br>The King of the African Highway.<br>Built in Uganda. Ready for Africa and beyond.<br><br>For fleet and partnership inquiries:<br>📩 sales@kiiramotors.com <a href="https://t.co/yhfeKHBD0H">pic.twitter.com/yhfeKHBD0H</a></p>&mdash; 𝐊𝐢𝐢𝐫𝐚 𝐌𝐨𝐭𝐨𝐫𝐬 (@KiiraMotors) <a href="https://twitter.com/KiiraMotors/status/2037235402256318883?ref_src=twsrc%5Etfw">March 26, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Kiira still relies heavily on Chinese components, as most bus makers do. But the design, assembly and this trip are Ugandan, and it is the kind of proof a buyer wants before committing to a fleet.
+According to electrive, Kiira still relies heavily on Chinese components. The design and assembly are done in Uganda though, and a trip like this gives buyers some evidence before they commit to a fleet.

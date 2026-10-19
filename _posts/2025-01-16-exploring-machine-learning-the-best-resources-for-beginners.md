@@ -15,25 +15,25 @@ video: ''
 layout: post
 image_alt: "Cover image for Exploring Machine Learning: The Best Resources for Beginners"
 ---
-When you start learning machine learning, the hard part is not finding material. It is picking something and sticking with it. Jason Brownlee runs [Machine Learning Mastery](https://machinelearningmastery.com/), a site I have landed on many times while trying to fix an error, and he has a short guide called ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/). In his [own words](https://machinelearningmastery.com/about/), he helps developers get results with machine learning, and this guide is written for exactly that reader.
+Jason Brownlee runs [Machine Learning Mastery](https://machinelearningmastery.com/), a site I have ended up on many times while trying to fix an error in my code. He describes his work as helping developers get results with machine learning ([about page](https://machinelearningmastery.com/about/)), so I was curious what he recommends to people who are just starting out. He has a short guide on it called ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/).
 
 ![Jason Brownlee's guide to machine learning resources](/assets/images/jason_brownlee_start_ml.png "Best Machine Learning Resources for Getting Started")
 
 ## What the guide recommends
 
-The list is short on purpose, and it is split into five groups.
+He splits it into five groups.
 
 ### Libraries to practise with
 
-R (with the CRAN machine learning packages), WEKA, scikit-learn, Octave, and BigML if you would rather not write code at all. His advice is to start in a language you already know and learn just enough to start trying things.
+R (with the CRAN machine learning packages), WEKA, scikit-learn, Octave, and BigML if you would rather not write code. He suggests starting in a programming language you already know and learning just enough to try things out.
 
 ### Video courses
 
-Andrew Ng's Stanford machine learning course on Coursera and Yaser Abu-Mostafa's Learning from Data from Caltech, on edX. He also points to a talk by Jeremy Howard about getting into data science.
+Andrew Ng's Stanford machine learning course on Coursera, and Yaser Abu-Mostafa's Learning from Data from Caltech on edX. He also links a talk by Jeremy Howard about getting into data science.
 
 ### Two overview papers
 
-Tom Mitchell's "The Discipline of Machine Learning" and Pedro Domingos's "A Few Useful Things to Know about Machine Learning". The Domingos paper is the one I would read first. It is short and full of the kind of lessons people usually learn the hard way, like why more data often beats a cleverer algorithm.
+Tom Mitchell's "The Discipline of Machine Learning" and Pedro Domingos's "A Few Useful Things to Know about Machine Learning". I would read the Domingos paper first. It is short, and it covers things people usually find out the hard way, for example that more data often helps more than a cleverer algorithm.
 
 ### Beginner books
 
@@ -41,22 +41,22 @@ Programming Collective Intelligence, Machine Learning for Hackers, Machine Learn
 
 ### Further reading
 
-A few community lists and Q&A threads on Quora and Stack Overflow for when you want more.
+Some community lists and Q&A threads on Quora and Stack Overflow.
 
-## The advice is the useful part
+## His advice on how to use them
 
-The list itself is dated. Some of these books predate deep learning, and few people reach for WEKA or Octave today. What has aged well is the advice around it:
+The list is from 2020 and parts of it are dated. Some of the books came out before deep learning took off, and not many people use WEKA or Octave now. His advice on how to learn still holds up though:
 
-- Pick one resource, one book or one library, and finish it before starting the next.
-- Take notes when you watch videos and try what they show. Watching alone feels productive but mostly is not.
-- Be selective with papers. They can bog you down early on.
-- Learn the maths behind a method before you rely on it in anything real.
-- Do more than you read.
+- Pick one book or one library and work through it before you move on to the next.
+- Take notes when you watch videos, and try out what they show you.
+- Be careful with papers early on. They can slow you down.
+- Learn the maths behind a method before you use it for anything serious.
+- Spend more time doing than reading.
 
-The first point is the one I wish I had followed. Beginners tend to collect courses the way some people collect gym memberships, and the bookmarks folder grows while the skills do not.
+I wish I had followed the first one. When I started I kept signing up for new courses and finishing very few of them.
 
 ## My recommendation
 
-If you already know some Python, take Jeremy Howard's [Practical Deep Learning for Coders](https://course.fast.ai/) from fast.ai. It starts with a working model in the first lesson and explains the theory as you need it, which is close to the "do, don't just read" approach Brownlee argues for. I wrote more about it in [fastai: Practical deep learning without a PhD](/introducingfastai/).
+If you already know some Python, I would take Jeremy Howard's [Practical Deep Learning for Coders](https://course.fast.ai/) from fast.ai. You train a working model in the first lesson, and the theory comes in later as you need it. That fits Brownlee's advice to spend more time doing. I wrote more about the course in [fastai: Practical deep learning without a PhD](/introducingfastai/).
 
-If you want something more traditional, Andrew Ng's course from Brownlee's list is still a good place to build the foundations, and it now has updated versions on Coursera.
+If you prefer a more traditional route, Andrew Ng's course from the list is still a good way to learn the foundations, and Coursera now has an updated version of it.

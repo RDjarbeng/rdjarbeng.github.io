@@ -15,31 +15,33 @@ video: ''
 layout: post
 image_alt: "Cover image for Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers"
 ---
-While the Palisades and Eaton fires were burning across Los Angeles in January 2025, SpaceX and T-Mobile switched on satellite texting for the area. Fires take out cell towers and the power that feeds them, so for some people a phone with no signal was suddenly able to send a text again. Elon Musk announced it on X, quoting an earlier post from SpaceX.
+In January 2025, while the Palisades and Eaton fires were burning in Los Angeles, SpaceX and T-Mobile turned on satellite texting for the area. Fires can destroy cell towers or cut their power, so this meant some people with no signal could still send a text. Elon Musk announced it on X by quoting an earlier post from SpaceX.
 
 ![Screenshot of Elon Musk's post announcing Direct to Cell texting in LA](/assets/images/elon_la_fire_dtc.png "Elon Musk's post announcing Direct to Cell texting in LA")
 
-Musk's [post](https://x.com/elonmusk/status/1877560971973329273) read: "Texting should now work in LA even when there is no cellular service if you use @TMobile." The SpaceX [post](https://x.com/SpaceX/status/1877547777858687231) he was quoting gave the details: "For those in the Los Angeles area, the [@Starlink](https://x.com/Starlink) team and [@TMobile](https://x.com/TMobile) have enabled basic texting (SMS) through our Direct to Cell satellites. You can now text loved ones, text 911 and receive emergency alerts."
+Musk's [post](https://x.com/elonmusk/status/1877560971973329273) read: "Texting should now work in LA even when there is no cellular service if you use @TMobile." The SpaceX [post](https://x.com/SpaceX/status/1877547777858687231) he quoted had the details: "For those in the Los Angeles area, the [@Starlink](https://x.com/Starlink) team and [@TMobile](https://x.com/TMobile) have enabled basic texting (SMS) through our Direct to Cell satellites. You can now text loved ones, text 911 and receive emergency alerts."
 
-That list is short, and it is the right one for a disaster. Plain SMS, texts to 911, and emergency alerts. No calls, no browsing, no photos. A text needs very little bandwidth, which is what a satellite talking to an ordinary phone can manage.
+So it was only basic texting: SMS, texts to 911 and emergency alerts. Calls and mobile data were not included. Texts use very little bandwidth, and that was all a satellite talking to an ordinary phone could handle at the time.
 
-## How a normal phone talks to a satellite
+## How a normal phone connects to a satellite
 
-Starlink is SpaceX's constellation of satellites in low Earth orbit, best known for home internet through a dish. The [Direct to Cell](https://www.starlink.com/business/direct-to-cell) satellites are different. They carry what is effectively a cell tower in orbit, broadcasting on T-Mobile's mid-band spectrum. Your phone sees them as just another T-Mobile network, so there is no special handset and no dish. When the towers on the ground are down, the phone can still reach the sky.
+Starlink is SpaceX's network of satellites in low Earth orbit. Most people know it for home internet, which needs a dish. The [Direct to Cell](https://www.starlink.com/business/direct-to-cell) satellites work differently. Each one carries the equivalent of a cell tower and broadcasts on T-Mobile's mid-band spectrum, so your phone sees it as another T-Mobile network. You do not need a special phone or a dish.
 
-The catch is that a phone's antenna is tiny and the satellite is hundreds of kilometres away. That is why the service started with text only, and why it works best outdoors with a clear view of the sky.
+A phone's antenna is small, though, and the satellite is a few hundred kilometres up. This is why the service started with text only, and why it works best outside with a clear view of the sky.
 
 ![Los Angeles fire seen from an airplane](/assets/images/los_angeles_fire.jpg "Los Angeles fire seen from an airplane")
 
-## Why it matters in emergencies
+## Using it in an emergency
 
-The service had not launched yet when the fires started. T-Mobile switched it on for the affected area anyway as a temporary early test, since the constellation was not fully deployed. It was not the first time: the same trick had been used in October 2024 to let hurricane victims in the southeast send emergency texts. If it was working, your phone showed "T-Mobile SpaceX" next to the signal bars. The case for this kind of backup is simple. Emergency teams have used Starlink dishes for years to restore connectivity when infrastructure fails, as [D4H describes](https://www.d4h.com/blog/improving-emergency-management-communications-with-starlink-satellite-internet), but a dish has to be delivered and set up. Direct to Cell works on the phone people already have in their pocket, which is the device they will actually be holding when they need help.
+The service had not officially launched when the fires started. T-Mobile turned it on for the affected areas as a temporary early test, because the satellite network was not fully built yet. They had done the same in October 2024, when hurricane victims in the southeast US used it to send emergency texts. When it was working, phones showed "T-Mobile SpaceX" next to the signal bars.
 
-## What happened next
+Emergency teams have used Starlink dishes for years to get back online when local networks fail ([D4H has a good write up](https://www.d4h.com/blog/improving-emergency-management-communications-with-starlink-satellite-internet)). A dish has to be brought in and set up first. Direct to Cell works on the phone people already carry, which I think is the bigger deal for ordinary people caught in a disaster.
 
-T-Mobile and SpaceX first [announced the partnership](https://www.businesswire.com/news/home/20220825005742/en/T-Mobile-Takes-Coverage-Above-and-Beyond-With-SpaceX) in August 2022 with the goal of covering the dead zones in the US where there is no tower at all. After the LA emergency rollout and a public beta that ran through the first half of 2025, the service launched commercially as T-Satellite on [23 July 2025](https://www.satelliteinternet.com/resources/t-mobile-starlink-satellite-launch-date/), using more than 650 satellites. It added picture messages and short audio clips at launch, with data for selected apps following in October. It is included in T-Mobile's top plan and costs $10 a month for others, including customers of other carriers.
+## What happened after LA
 
-Looking back, LA was the first big public test, and it happened under the worst conditions. Text-only sounds limited until you are standing somewhere with no signal and need to reach someone.
+T-Mobile and SpaceX [announced the partnership](https://www.businesswire.com/news/home/20220825005742/en/T-Mobile-Takes-Coverage-Above-and-Beyond-With-SpaceX) in August 2022. The plan was to cover places in the US with no cell towers at all. After the LA rollout and a public beta in the first half of 2025, the service launched commercially as T-Satellite on [23 July 2025](https://www.satelliteinternet.com/resources/t-mobile-starlink-satellite-launch-date/), using more than 650 satellites. Picture messages and short audio clips were added at launch, and data for some apps followed in October. It comes with T-Mobile's top plan, and other customers, including people on other carriers, can add it for $10 a month.
+
+The LA fires were the first time a lot of people used this, and it was during an emergency. Texting only might sound limited, but if you have no signal and need to reach someone, it is enough.
 
 I wrote about how the technology works in more detail in an earlier [post on Starlink's Direct to Cell](/starlink-s-direct-to-cell-revolutionizing-mobile-connectivity/).
 

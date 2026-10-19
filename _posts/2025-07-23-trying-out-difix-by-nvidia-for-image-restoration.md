@@ -14,7 +14,7 @@ image: /assets/images/difix_cover_image_rd.webp
 layout: post
 image_alt: "Cover image for Trying Out Difix by NVIDIA for Image Restoration"
 ---
-Difix is an image model from NVIDIA that cleans up blurry, smeared images in a single pass. NVIDIA put a demo on Hugging Face, so I tried it on the example image and then on some of my own bad phone photos to see how far it goes. The examples come first, then what the model was actually built for, which turns out to explain both the good and the strange results.
+Difix is an image model from NVIDIA that cleans up blurry or smeared images in a single pass. NVIDIA has a demo on Hugging Face, so I tried it on their example image and then on some blurry photos from my phone. First I show the examples, then I explain what the model was built for, because that helps explain some of the results.
 
 ## The example from the demo page
 
@@ -68,23 +68,23 @@ The result here is mixed. It is sharper and clearer. It also looks like an oil p
 
 ## What Difix was actually built for
 
-The oil painting effect makes more sense once you know what Difix is for. It is not a general photo restorer. It comes from a CVPR 2025 paper, [Difix3D+](https://arxiv.org/abs/2503.01774), about 3D reconstruction.
+The oil painting effect makes more sense once you know what Difix was made for. It was designed for 3D reconstruction rather than for fixing ordinary photos, and comes from a CVPR 2025 paper called [Difix3D+](https://arxiv.org/abs/2503.01774).
 
-Techniques like NeRF and 3D Gaussian Splatting build a 3D scene from a set of photos, and then let you render it from new angles. When you move the camera to an angle the original photos did not cover well, the render fills with blur and smeared artefacts, because the model is guessing. Difix is trained to clean up exactly those renders. In the full pipeline it is used twice: once during reconstruction, to clean up extra views that are fed back into the 3D model, and again at the end to tidy what is left. The paper reports about a twofold improvement in FID, a measure of how realistic images look, over the methods it compares against.
+Techniques like NeRF and 3D Gaussian Splatting build a 3D scene from a set of photos, and then let you render it from new angles. When you move the camera to an angle the original photos did not cover well, the result is full of blur and smeared artefacts, because the model has to guess what is there. Difix is trained to clean up these renders. In the full pipeline it is used twice: once during reconstruction, to clean up extra views that are fed back into the 3D model, and again at the end to tidy what is left. The paper reports about a twofold improvement in FID, a measure of how realistic images look, over the methods it compares against.
 
-The "single step" part matters too. Most diffusion models refine an image over many steps. Difix does it in one, which is why the demo returns results quickly.
+Most diffusion models improve an image over many steps. Difix does it in one step, which is why the demo returns results quickly.
 
-So when I give it a blurry photo, it treats the blur like a bad render and fills in plausible detail. On a building, plausible detail is close enough to real. On a face and hands, plausible is not the same as correct, and you can see the difference.
+So when I give it a blurry photo, it treats the blur like a bad render and fills in detail that looks believable. For a building, that invented detail is close enough to the real thing. For a face and hands, small mistakes are easy to notice, which is what happened with my selfie.
 
-The [code is on GitHub](https://github.com/nv-tlabs/Difix3D) and the demo is a [Hugging Face space](https://huggingface.co/spaces/nvidia/difix). NVIDIA releasing both openly deserves credit.
+The [code is on GitHub](https://github.com/nv-tlabs/Difix3D) and the demo is a [Hugging Face space](https://huggingface.co/spaces/nvidia/difix). I appreciate that NVIDIA made both of them public.
 
 ## What worked and what did not
 
-The demo is easy to use. Upload an image, wait a few seconds, download the result. No setup, no GPU on your side. And on blurry photos of buildings and streets, the results were genuinely good.
+The demo is easy to use: you upload an image, wait a few seconds and download the result, and you do not need your own GPU. For blurry photos of buildings and streets, the results were very good.
 
-The input size was the annoying part. The demo works at 1024x576 by default, and I had to resize my photos to that first. Windows Photos would not let me enter those exact dimensions, so it took extra steps. Anything that does not match the expected size can affect the output.
+What I did not like was the input size. The demo works at 1024x576 by default, and I had to resize my photos to that first. Windows Photos would not let me enter those exact dimensions, so it took extra steps. Anything that does not match the expected size can affect the output.
 
-People and faces are where it falls down, for the reasons above. I would use it to rescue a blurry landscape or building shot, not a portrait.
+It struggles with people and faces, for the reasons above. I would use it for a blurry landscape or building photo, but I would not use it on a portrait.
 
 ## Try it yourself
 

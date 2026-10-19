@@ -24,33 +24,33 @@ layout: post
 video: ''
 image_alt: "Cover image for Carnegie Mellon University Africa's Breakthrough in Detecting Birth Asphyxia-HumekaFL"
 ---
-Birth asphyxia happens when a baby does not get enough oxygen during delivery. It is one of the leading causes of newborn death, and sub-Saharan Africa carries some of the highest under-five mortality rates in the world. Caught early, mild and moderate cases can recover fully. Caught late, the lack of oxygen can do lasting damage to the brain, heart, lungs and kidneys. Diagnosis usually depends on trained staff and equipment, and many clinics have too little of both.
+Birth asphyxia is when a baby does not get enough oxygen during delivery. It is one of the main causes of newborn deaths, and sub-Saharan Africa has some of the highest under-five mortality rates in the world. If it is detected early, babies with mild or moderate asphyxia can recover fully. If treatment is delayed, it can cause lasting damage to the brain, heart, lungs and kidneys. Diagnosing it usually needs trained staff and equipment, which a lot of clinics do not have enough of.
 
-A team at Carnegie Mellon University Africa in Kigali, Rwanda, has built a phone app that tries to spot it from the sound of a newborn's cry. It is called HumekaFL.
+A team at Carnegie Mellon University Africa (CMU-Africa) in Kigali, Rwanda, has built a phone app called HumekaFL that tries to detect it from the sound of a newborn's cry.
 
 ![Pamely Zantou, the project's lead research assistant (credit: engineering.cmu.edu)](/assets/images/pamely_cmu_website.png "Pamely Zantou, the project's lead research assistant (credit: engineering.cmu.edu)")
 
 ## How it works
 
-A health worker records the baby crying on a smartphone. The recording goes through a machine learning model, a support vector machine (SVM), which looks for patterns in the cry that are associated with asphyxia. The team chose SVMs because they handle small, high-dimensional datasets well, and small datasets are what you get in medicine. It runs on ordinary phones, with no special hardware and no expert training.
+A health worker records the baby crying on a smartphone. The recording is passed to a machine learning model called a support vector machine (SVM), which looks for patterns in the cry linked to asphyxia. The team picked SVMs because they work well with small datasets that have a lot of features per sample, and medical datasets are usually small. The app runs on an ordinary phone, so clinics do not need special hardware or experts to use it.
 
-The interesting part is the "FL", which stands for federated learning. Normally you would gather recordings from every hospital into one central dataset and train a model on it. That means sensitive patient data leaves the hospital, and many hospitals understandably refuse. With federated learning, each hospital keeps its recordings and trains its own copy of the model locally. Only the model updates are sent to be combined into a shared model. The data stays put, which also makes a large data breach much less likely.
+The "FL" in the name stands for federated learning, and I think this is the most useful part of the design. Normally you would collect recordings from every hospital into one dataset and train a model on it. That means patient data has to leave the hospital, and many hospitals are not willing to allow that. With federated learning, each hospital keeps its own recordings and trains a copy of the model on them. Only the model updates are sent out and combined into a shared model. The recordings never leave the hospital, which also makes a large data breach much less likely.
 
-In the team's [paper](https://arxiv.org/abs/2412.01167), the federated SVM did better than the centralised SVM and neural network approaches reported in earlier work. The paper was presented as a poster at ACM COMPASS 2024.
+According to the team's [paper](https://arxiv.org/abs/2412.01167), the federated SVM performed better than the centralised SVM and neural network methods from earlier studies. The paper was presented as a poster at ACM COMPASS 2024.
 
 ## The team
 
-The project was led by CMU-Africa students Pamely Zantou (lead research assistant), Blessed Guda, Bereket Retta and Gladys Inabeza, with Assane Gueye at CMU-Africa and Carlee Joe-Wong at CMU in Pittsburgh. Joe-Wong described her role as advisory and credited the Kigali team with the idea and most of the design around privacy and limited resources.
+The project was led by CMU-Africa students Pamely Zantou (lead research assistant), Blessed Guda, Bereket Retta and Gladys Inabeza, with Assane Gueye at CMU-Africa and Carlee Joe-Wong at CMU in Pittsburgh. Joe-Wong said her role was advisory and that the idea and most of the design for privacy and limited resources came from the team in Kigali.
 
-## What still has to happen
+## Next steps
 
-This is research, not a product in clinics yet. Joe-Wong made the point that the model needs real data from the population it will serve, so it learns local patterns instead of someone else's biases. The next steps are more experiments on African health data and partnerships with African hospitals to collect recordings and validate the model.
+HumekaFL is still a research project and is not being used in clinics yet. Joe-Wong pointed out that the model needs real data from the people it will be used on, so it learns local patterns and not the biases of data collected somewhere else. The team plans to run more experiments on African health data and to partner with African hospitals to collect recordings and test the model.
 
-## Ubenwa, the older cousin
+## Ubenwa
 
-HumekaFL is not the first attempt at this. [Ubenwa](https://www.ubenwa.ai/), co-founded by Nigerian researcher Charles Onu and based in Montreal, has worked on cry analysis for birth asphyxia since its [2017 paper](https://arxiv.org/abs/1711.06405). Ubenwa analyses the amplitude and frequency patterns in a cry, using techniques borrowed from speech recognition, and has run clinical validation at the University of Port Harcourt Teaching Hospital in Nigeria and the McGill University Health Centre in Canada.
+HumekaFL is not the first project to try this. [Ubenwa](https://www.ubenwa.ai/), a Montreal-based company co-founded by Nigerian researcher Charles Onu, has worked on detecting birth asphyxia from cries since its [2017 paper](https://arxiv.org/abs/1711.06405). Ubenwa looks at the amplitude and frequency patterns in a cry using methods taken from speech recognition, and has done clinical validation at the University of Port Harcourt Teaching Hospital in Nigeria and the McGill University Health Centre in Canada.
 
-The two share the same bet: a cry is free to record, and a phone is something most health workers already carry. HumekaFL's twist is the privacy design, which could make hospitals more willing to take part. Neither will matter much until it has been tested on enough babies in the places it is meant for, and both teams say so.
+Both projects rely on the fact that recording a cry costs nothing and most health workers already have a phone. What HumekaFL adds is the privacy design, which could make more hospitals willing to take part. I would like to see both tested on many more babies in the hospitals they are meant for, which is what the CMU-Africa team says it plans to do next.
 
 ## References
 

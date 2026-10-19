@@ -25,9 +25,9 @@ Add correct host key in /path/to/.ssh/known_hosts to get rid of this message.
 Offending ECDSA key in /path/to/.ssh/known_hosts:11
 ```
 
-The first time you connect to a machine, SSH saves its host key, a kind of fingerprint, in a file called `known_hosts`. Every connection after that, it checks the fingerprint matches. If it does not, SSH refuses to connect, because a different fingerprint is exactly what you would see if someone were intercepting the connection.
+The first time you connect to a machine, SSH saves its host key, a kind of fingerprint, in a file called `known_hosts`. Every connection after that, it checks the fingerprint matches. If it does not, SSH refuses to connect, because a changed fingerprint is also what you would see if someone were intercepting the connection.
 
-With a Raspberry Pi, the usual cause is far more boring. Reflash the SD card and the Pi generates a brand new host key on first boot. Your router may also have given the same IP address to a different device. In both cases the old fingerprint in `known_hosts` is simply out of date. If you know you reinstalled the Pi or changed devices, the fix is to delete the old entry. If you did not change anything and see this on a network you do not trust, stop and find out why first.
+With a Raspberry Pi, the cause is usually harmless. If you reflash the SD card, the Pi creates a new host key the first time it boots. Your router may also have given the same IP address to a different device. In both cases the old fingerprint saved in `known_hosts` is out of date. If you know you reinstalled the Pi or changed devices, the fix is to delete the old entry. If you did not change anything and see this on a network you do not trust, stop and find out why first.
 
 ![Red error warning illustration](/assets/images/error_image.webp)
 
