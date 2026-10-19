@@ -799,3 +799,4 @@ ChatGPT -2022
 - [ ] How are video games made?
 - [ ] How is an iPhone made?
 - [ ] How is a smartphone made?
+- [ ] Evolution of smartphones not from telephones, but from first smartphone to now
