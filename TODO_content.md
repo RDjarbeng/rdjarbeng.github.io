@@ -789,3 +789,9 @@ Link to video: https://www.youtube.com/watch?v=FwFduRA_L6Q
 - [ ] Interesting project, measure how long ot takes to get a government service such as register a business, get a passport, file a worker’s visa, get a police report, open a bank account, etc across different countries
 - [ ] New AI framework bridges a critical gap in mid-range weather forecasts - Microsoft Research
 https://www.microsoft.com/en-us/research/story/new-ai-framework-bridges-a-critical-gap-in-mid-range-weather-forecasts/
+- [ ] Timeline of notable events in AI 
+AlexNet before 2014
+Transformers -2017
+GPT3-2020
+Dall-E- 2021
+ChatGPT -2022
