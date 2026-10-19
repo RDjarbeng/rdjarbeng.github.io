@@ -2,7 +2,6 @@
 date: 2025-11-14T18:50:00
 published: true
 author: Richard
-category: Finance
 tags:
   - Digital Wallets
   - Google Pay
@@ -44,8 +43,7 @@ card_items:
     description: A look into how digital payments and international transfers differ.
     url: /why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad/
     link_text: Read Part 2
-categories:
-  - Finance
+category: "Money & Fintech"
 ---
 
 In a world where your phone is your wallet, **Google Pay** (also known as the [Google Wallet](https://wallet.google/)) and [**Apple Pay**](https://www.apple.com/apple-pay/) have become essential tools for millions. But what exactly are they? Are they like bank accounts? How do they differ from your regular bank account? And can you use them everywhere, including in Africa and Asia? Let's try and answer these questions and give some context to these services for android and iPhone Users.

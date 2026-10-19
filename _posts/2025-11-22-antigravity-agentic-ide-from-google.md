@@ -2,8 +2,6 @@
 date: 2025-11-22T18:36:00
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - Google Antigravity
   - Generative AI
@@ -22,6 +20,7 @@ image_alt: A dark, futuristic image for a tech review. A curved computer monitor
 layout: post
 series: "Google Antigravity"
 series_part: 1
+category: "AI"
 ---
 Google’s new Antigravity code editor promises a revolution where AI agents write and test code for you, but the fine print reveals a potential privacy nightmare. This review uncovers buried terms in the terms and conditions that allow Google staff to view your proprietary code and hold you fully liable if the AI autonomously destroys your work making it essential reading before you click "**Accept**".
 

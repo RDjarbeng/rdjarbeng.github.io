@@ -2,8 +2,6 @@
 date: 2025-07-19T11:09:00
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - trends
   - googletrends
@@ -19,6 +17,7 @@ title: What's Hot Right Now? Find Out with Google Trends!
 image: /assets/images/1Google trends.webp
 layout: post
 image_alt: "Cover image for What's Hot Right Now? Find Out with Google Trends!"
+category: "Web & Software"
 ---
 Ever wonder what people are searching for online—like the latest gadgets, hot topics, or even local events? Google Trends is a free, easy-to-use tool that shows you what’s trending on Google, whether it’s in your neighborhood or across the globe.
 

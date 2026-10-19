@@ -16,6 +16,7 @@ card_items:
   - name: "Auto Scaling & Load Balancing"
     badge_1: "Performance"
     description: "**Auto Scaling** automatically adds more servers when your app gets busy and removes them when it's quiet. A **Load Balancer** acts like a traffic cop, evenly distributing users across those servers so none get overwhelmed."
+category: "Career & Growth"
 ---
 
 Glad to acquire my [Amazon Web Services (AWS)](https://www.linkedin.com/feed/update/urn:li:activity:7450603934706016256/#) Solutions Architect Associate Certification. It took many months of preparation and it was worth it.

@@ -2,7 +2,6 @@
 date: 2025-09-03T11:42:00
 published: true
 author: Richard
-category: Finance
 tags:
   - Fintech
   - Open Banking
@@ -14,8 +13,7 @@ title: "Decoding the Open Letter for the Singapore FinTech Festival's 10th Editi
 image: /assets/images/sff_2025_cover_image.webp
 image_alt: "Cover image for Decoding the Open Letter for the Singapore FinTech Festival's 10th Edition"
 layout: post
-categories:
-  - Finance
+category: "Money & Fintech"
 ---
 
 Today, I want to share something interesting that landed in my inbox – an email from Sopnendu Mohanty, the Group CEO of the Global Finance & Technology Network (GFTN). The email was titled: "An Open Letter from Sopnendu Mohanty: A Decade of SFF and What’s Next". It's an open letter about the Singapore FinTech Festival (SFF), which is celebrating its 10th edition in 2025. As someone who's not deeply versed in finance, a lot of the terms threw me for a loop at first. Things like "open banking," "UPI," and "financing for SMEs" sounded straightforward but felt overwhelming. I did some digging to make sense of it all, and I thought it'd be fun to break it down here. If you're like me and fintech jargon makes your head spin, this post is for you. 

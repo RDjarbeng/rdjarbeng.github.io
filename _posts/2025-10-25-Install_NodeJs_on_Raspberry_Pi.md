@@ -4,11 +4,11 @@ title: "How to Install Node.js on a Raspberry Pi 4"
 date: 2025-10-25
 author: Richard
 image: /assets/images/old_node_js.png
-categories: ["Software Engineering"]
 tags: [NodeJs, Raspberry Pi, node version install]
 image_alt: "Cover image for How to Install Node.js on a Raspberry Pi 4"
 series: "Raspberry Pi Setup"
 series_part: 2
+category: "Web & Software"
 ---
 # How to install NodeJs on the Raspberry Pi 4
 Tested on Raspberry Pi 4B using the terminal

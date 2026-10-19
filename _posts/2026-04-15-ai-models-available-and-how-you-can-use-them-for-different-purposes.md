@@ -2,7 +2,6 @@
 date: 2026-04-15T15:32:00+02:00
 published: true
 author: Richard
-category: AI
 tags:
   - AI
   - AI news
@@ -11,6 +10,7 @@ image: /assets/images/posts/covers/ai_models_guide_cover.jpg
 image_alt: 'Flat vector illustration of AI model icons on a leaderboard'
 layout: post
 card_items: []
+category: "AI"
 ---
 
 Not all AI models are built the same. Some excel at reasoning through complex logic puzzles, while others are masterfully tuned to transcribe audio with near-human accuracy. Matching the model to the task from the outset avoids unnecessary complexity, sluggish performance, and bloated infrastructure costs later. 

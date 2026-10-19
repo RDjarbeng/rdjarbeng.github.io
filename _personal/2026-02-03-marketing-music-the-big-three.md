@@ -6,6 +6,7 @@ author: Richard
 tags: [Music Business, Sony, Universal, Warner, Economics]
 image: /assets/images/music_big_three_cover.jpg
 image_alt: "The Big 3 Music Labels: Universal, Sony, and Warner"
+category: "Music, Film & Books"
 ---
 
 The global music industry is effectively an oligopoly. While it may seem like there are thousands of record labels out there, the vast majority of commercial music—estimates often cite over 65-70% of the market—is owned or distributed by just three companies: **Universal Music Group (UMG)**, **Sony Music Entertainment (SME)**, and **Warner Music Group (WMG)**.

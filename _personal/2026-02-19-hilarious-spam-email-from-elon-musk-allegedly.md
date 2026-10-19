@@ -7,6 +7,7 @@ image: /assets/images/elon_spam_improved.jpg
 image_alt: ''
 layout: personal
 card_items: []
+category: "Internet & Culture"
 ---
 
 Usually I delete spam/phishing emails, but this one was so blatantly fake and hilarious that I had to make a post about it. Here is the full unedited email I received, allegedly from Elon Musk himself!

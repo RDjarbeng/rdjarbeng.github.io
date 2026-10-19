@@ -2,7 +2,6 @@
 date: 2026-01-05
 published: true
 author: Nathaniel
-category: Finance
 tags:
   - Investing
   - Ghana Stock Exchange
@@ -16,8 +15,7 @@ title: How To Invest On The Ghana Stock Exchange
 image: /assets/images/gse_article_nat/gse_cover.jpg
 image_alt: Illustration of Ghana Stock Exchange with bull market symbol and financial charts
 layout: post
-categories:
-  - Finance
+category: "Money & Fintech"
 ---
 
 The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian investors to participate in the growth of the country's economy. As Ghana's primary stock market, the GSE provides access to publicly traded companies across various sectors including banking, telecommunications, mining, and consumer goods. Investing on the GSE allows you to become a partial owner in these companies and potentially benefit from their success through capital appreciation and dividends.

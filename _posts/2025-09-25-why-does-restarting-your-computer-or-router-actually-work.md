@@ -2,8 +2,6 @@
 date: 2025-09-25T11:15:00
 published: true
 author: Richard
-categories:
-  - IT
 tags:
   - Repair
   - IT
@@ -22,6 +20,7 @@ title: Why Does Restarting Your Computer (or Router) Actually Work?
 image: /assets/images/why_does_restarting_work_rdjarbeng_cover.webp
 layout: post
 image_alt: "Cover image for Why Does Restarting Your Computer (or Router) Actually Work?"
+category: "How-to Guides"
 ---
 
 A frozen screen, an app that refuses to open, WiFi that has decided it no longer knows your password. The reliable first move is often a restart. It sounds like an IT-support cliché because it works across phones, computers, servers, routers, and plenty of other devices. A restart is not magic, and it is not only a Windows trick. It clears temporary state, stops software that is stuck, and gives the device a fresh chance to initialize the services it needs.

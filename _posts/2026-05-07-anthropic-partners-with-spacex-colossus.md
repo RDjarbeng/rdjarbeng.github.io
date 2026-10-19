@@ -2,7 +2,6 @@
 date: 2026-05-07T15:37:00+02:00
 published: true
 author: Richard
-category: AI News
 tags:
   - Anthropic
   - AI
@@ -25,6 +24,7 @@ card_items:
     badge_1: Integration
     badge_2: Aerospace
     description: "The newly integrated AI division of SpaceX, combining high-performance computing with aerospace engineering."
+category: "AI"
 ---
 
 On 6th of May, 2026 Anthropic, the company behind Claude AI, announced a major deal for exclusive access to Colossus 1. This massive supercomputer facility, located in Memphis, represents a significant leap in available compute for the AI laboratory. The data center boasts over 300 megawatts of power capacity, which is equivalent to more than 220,000 NVIDIA GPUs coming online this month. This partnership with SpaceX provides a substantial foundation for Anthropic's future model development and deployment.

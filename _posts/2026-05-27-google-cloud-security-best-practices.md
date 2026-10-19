@@ -2,7 +2,6 @@
 date: 2026-05-26T21:15:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Google Cloud
   - Security
@@ -27,6 +26,7 @@ card_items:
     description: "An automated tool that analyzes permission usage over time and provides actionable recommendations to remove excess permissions, helping enforce the principle of least privilege."
 series: "Security Alerts"
 series_part: 3
+category: "Security"
 ---
 
 Managing service account keys and API keys securely within your Google Cloud environment is a critical responsibility for any organization. Recent security trends highlight a glaring issue: long-lived credentials lacking proper security measures remain a top vulnerability for unauthorized access.

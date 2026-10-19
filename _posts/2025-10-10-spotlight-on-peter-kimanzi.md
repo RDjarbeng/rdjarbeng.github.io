@@ -1,7 +1,6 @@
 ---
 date: 2025-10-10
 author: Richard
-category: People & Blogs
 tags:
   - Software engineering
   - Peter Kimanzi
@@ -14,8 +13,7 @@ title: Spotlight on Peter Kimanzi- Developer from Nairobi
 image: /assets/images/peterKimanziPortfolio.png
 image_alt: Screenshot of Peter Kimanzi's portfolio website featuring a dark theme, his name, and title as Software Engineer.
 layout: post
-categories:
-  - Software Engineering
+category: "Web & Software"
 ---
 
 _Developer from Nairobi, Kenya._

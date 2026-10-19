@@ -2,7 +2,6 @@
 date: 2026-07-22T11:49:00+02:00
 published: true
 author: Bright
-category: Education
 tags:
   - machine-learning
   - computer-vision
@@ -42,6 +41,7 @@ card_items:
     link_text: Learn More
 series: "The Cost of AI Compute"
 series_part: 2
+category: "AI"
 ---
 
 One challenge I have noticed throughout my academic journey and as a TA is that access to computing resources, especially GPUs, has become a major bottleneck for many students especially here in Africa and young researchers working on machine learning.

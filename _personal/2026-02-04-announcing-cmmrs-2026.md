@@ -9,6 +9,7 @@ tags:
 image: /assets/images/posts/covers/cmmrs_2026_cover.jpg
 image_alt: Official announcement banner for CMMRS 2026 in Saarbrücken, Germany
 layout: personal
+category: "Career & Growth"
 ---
 
 Applications are requested from undergraduate students or Master’s students in computer and information science, computer engineering, or a related discipline to the 10th annual Cornell, Maryland, Max Planck Pre-doctoral Research School.

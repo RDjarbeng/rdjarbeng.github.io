@@ -1,8 +1,6 @@
 ---
 date: 2025-03-12T11:22:00
 author: Richard
-categories:
-  - Technology
 tags:
   - Starlink
   - Satellite
@@ -23,6 +21,7 @@ layout: post
 image_alt: "Cover image for How Starlink Satellites Work, Explained in a 3D Animated Video by Branch Education"
 series: "SpaceX and Starlink"
 series_part: 1
+category: "Space & Satellites"
 ---
 Are you interested in the future of space technology? Ever wonder how Elon Musk's Starlink satellites work? Get ready to be blown away by this interactive video by Branch Education that uses 3D animation to explain the technical details of satellite signal propagation, beamforming, 64-QAM modulation, and more.
 

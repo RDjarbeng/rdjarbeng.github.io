@@ -3,11 +3,11 @@ title: "How to Remove Node.js 18 and Install Node.js 16 on a Raspberry Pi 4B"
 date: 2025-07-26
 author: Richard
 image: /assets/images/nodejs_2024.png
-categories: ["IoT"]
 tags: [NodeJs, installation, Raspberry Pi, raspberry pi 4B, Linux]
 image_alt: "Cover image for How to Remove Node.js 18 and Install Node.js 16 on a Raspberry Pi 4B"
 series: "Raspberry Pi Setup"
 series_part: 1
+category: "IoT & Hardware"
 ---
 
 

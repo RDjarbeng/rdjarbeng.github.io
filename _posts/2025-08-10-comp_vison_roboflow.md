@@ -3,11 +3,11 @@ title: "Free Roboflow Notebooks for Training Your Own Computer Vision Models"
 author: Richard
 date: 2025-08-10
 image: /assets/images/comp_vision_roboflow.jpeg
-categories: ["Computer Vision"]
 tags: [Computer Vision, Machine Learning, AI]
 image_alt: "Cover image for Free Roboflow Notebooks for Training Your Own Computer Vision Models"
 series: "Getting Started with Machine Learning"
 series_part: 7
+category: "Computer Vision"
 ---
 
 Are you looking to learn how to build a computer vision model?

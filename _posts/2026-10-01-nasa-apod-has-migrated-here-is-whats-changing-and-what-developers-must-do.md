@@ -2,7 +2,6 @@
 date: 2026-10-01T17:00:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Technology
   - APIs
@@ -35,6 +34,7 @@ card_items:
     description: Direct JSON endpoint serving structured metadata, explanation text, and media assets.
     url: https://science.nasa.gov/wp-json/wp/v2/apod-basic
     link_text: View Endpoint
+category: "Web & Software"
 ---
 
 NASA's Astronomy Picture of the Day (APOD) is one of the oldest living institutions on the World Wide Web. For over three decades, millions of space enthusiasts, students, researchers, and hobbyist coders have visited the service daily to view imagery captured by deep space observatories, planetary rovers, and amateur astrophotographers.

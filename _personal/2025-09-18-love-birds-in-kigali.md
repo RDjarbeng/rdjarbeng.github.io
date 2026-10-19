@@ -23,6 +23,7 @@ tags:
 image: /assets/images/loverbirds_cover_rdjarbeng.webp
 image_alt: 'Cover image for Interrupted Romance: Sunset, Cynicism And Love birds In Kigali'
 layout: personal
+category: "Travel & Places"
 ---
 
 I stumbled upon this serene moment the other evening, right around sunset in Kigali; two little birds sitting on a ledge. At first glance it looks like they were on a date of some sort just chilling at the end of the day. There they were,  on a ledge overlooking the Special Economic Zone, gazing into the reddish horizon as if they were lost in some avian rom-com.

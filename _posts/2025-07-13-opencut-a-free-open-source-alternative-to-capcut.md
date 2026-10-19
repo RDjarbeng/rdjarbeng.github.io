@@ -1,7 +1,6 @@
 ---
 date: 2025-07-13T10:07:00
 author: Richard
-category: Technology
 tags:
   - Capcut
   - open-source
@@ -10,8 +9,6 @@ title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png
 image_alt: 'Cover image for OpenCut: A Free, Open-Source Alternative to CapCut'
 layout: post
-categories:
-  - Open-source
 card_items:
   - name: DaVinci Resolve
     description: A professional-grade, industry-standard editor featuring a massive free version. It includes world-class color grading, visual effects, and multi-track audio editing.
@@ -33,6 +30,7 @@ card_items:
     url: https://shotcut.org/
     link_text: Visit Shotcut
     badge_1: Cross-platform
+category: "Web & Software"
 ---
 
 > **Update (March 2026):** The OpenCut project has officially entered beta! You can now try the beta version for yourself directly in the browser.

@@ -7,6 +7,7 @@ image: /assets/images/1000525267.jpg
 image_alt: Africa reset forum stage featuring orange and white theme at the Kigali Convention Center Auditorium
 layout: personal
 card_items: []
+category: "Career & Growth"
 ---
 
 ## Africa Mindset Reset Forum: A Live Log

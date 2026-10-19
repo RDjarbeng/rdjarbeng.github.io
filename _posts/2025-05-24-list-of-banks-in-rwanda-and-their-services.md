@@ -2,8 +2,6 @@
 date: 2025-05-24T14:55:00
 published: true
 author: Richard
-categories:
-  - Finance
 tags:
   - Finance
   - Banking
@@ -13,6 +11,7 @@ title: List of Banks in Rwanda and Their Services
 image: /assets/images/1000189531.jpg
 layout: post
 image_alt: "Cover image for List of Banks in Rwanda and Their Services"
+category: "Money & Fintech"
 ---
 This guide is designed for foreigners arriving in Kigali, Rwanda, to help you navigate the banking landscape. There are more than 16 commercial  and microfinance banks operating in Rwanda, with most of them having branches in Kigali. Below is a list of 5 major banks operating in Rwanda in no particular order.
 

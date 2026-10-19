@@ -1,8 +1,6 @@
 ---
 date: 2025-08-26T00:00:00
 author: Richard
-categories:
-  - IoT
 tags:
   - shell scripting
   - bash
@@ -16,6 +14,7 @@ image: /assets/images/just_start.png
 image_alt: "Cover image for Automating Python Execution on a Raspberry Pi with a virtual environment"
 series: "Raspberry Pi Setup"
 series_part: 4
+category: "IoT & Hardware"
 ---
 In this guide, you will learn how to automate the execution of a Python script on your Raspberry Pi using a `systemd` service. This can be particularly useful for running scripts automatically at startup without any manual intervention.
 

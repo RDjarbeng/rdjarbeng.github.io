@@ -2,7 +2,6 @@
 date: 2026-02-12T20:52:00
 published: true
 author: Richard
-category: AI
 tags:
   - AI
   - open-source
@@ -12,6 +11,7 @@ title: How to Install OpenClaw with Installation Requirements
 image: /assets/images/openclaw_install_guide_cover.jpg
 image_alt: Get OpenClaw - Installation Guide
 layout: post
+category: "AI"
 ---
 
 **OpenClaw** is an open-source, autonomous **personal AI assistant** (often described as an "AI agent" or "agent platform") that runs locally on your own hardware. Released in late 2025 (initially as Clawdbot, briefly Moltbot due to a trademark issue, then rebranded to OpenClaw in early 2026), it was created by developer Peter Steinberger and has exploded in popularity with massive GitHub stars and viral attention.

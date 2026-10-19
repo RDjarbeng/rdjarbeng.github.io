@@ -2,7 +2,6 @@
 date: 2026-07-08T13:05:00+02:00
 published: true
 author: Richard
-category: Help
 tags:
   - Vscode
   - IDE
@@ -13,6 +12,7 @@ layout: post
 card_items: []
 series: "Quick Tech Fixes"
 series_part: 4
+category: "How-to Guides"
 ---
 
 ![How To Fix vscode merge editor not showing in 1 minute](/assets/images/posts/covers/vscode_merge_editor_cover.jpg)

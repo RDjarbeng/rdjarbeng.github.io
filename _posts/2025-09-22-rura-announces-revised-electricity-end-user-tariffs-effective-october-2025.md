@@ -2,8 +2,6 @@
 date: 2025-09-22T11:09:00
 published: true
 author: Richard
-categories:
-  - Energy
 tags:
   - Rwanda Energy Group tariffs
   - REG tariffs
@@ -24,6 +22,7 @@ title: RURA Announces Revised Electricity End-User Tariffs Effective October 202
 image: /assets/images/rura_tariffs_october2025_cover.webp
 layout: post
 image_alt: "Cover image for RURA Announces Revised Electricity End-User Tariffs Effective October 2025"
+category: "Climate & Environment"
 ---
 The Rwanda Utilities Regulatory Authority (RURA) has notified the public of a revision to the Electricity End-User Tariff. The revised tariffs will take effect on 01 October 2025.
 In residential households, the threshold for the lowest consumption bracket has been extended from 15 kWh to 20 kWh per month, maintaining affordability for basic needs. 

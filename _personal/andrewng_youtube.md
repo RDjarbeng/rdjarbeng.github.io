@@ -4,6 +4,7 @@ title: "Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
 image: /assets/images/andrewng_youtube.png
 date: 2025-08-05
 image_alt: "Cover image for Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI"
+category: "Career & Growth"
 ---
 
 Andrew Ng's Machine Learning Specialization, one of the most popular AI courses ever made, is now completely free on YouTube. If you've been putting it off, this is the easiest on-ramp to learning ML properly.

@@ -3,9 +3,9 @@ title: "Introducing GitHub Models"
 author: Richard
 date: 2025-08-05
 image: /assets/images/github_models_pic.png
-categories: ["AI"]
 tags: [AI, GitHub,AI engineer]
 image_alt: "Cover image for Introducing GitHub Models"
+category: "AI"
 ---
 
 

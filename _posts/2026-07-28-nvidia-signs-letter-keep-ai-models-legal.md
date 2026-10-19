@@ -3,7 +3,6 @@ title: "AI Companies Want to Keep Free AI Models Legal But The Company Behind Cl
 date: 2026-07-28T17:50:00+02:00
 published: true
 author: Richard
-category: AI News
 tags:
   - Open weights
   - AI Leadership
@@ -54,6 +53,7 @@ card_items:
     badge_2: "Open Platform"
     description: "The main central repository where developers upload, share, and test open AI models and datasets, often described as the GitHub for artificial intelligence."
     link_text: "Visit Hugging Face"
+category: "AI"
 ---
 
 On July 24, 2026, Nvidia, Microsoft, Meta, and more than 20 other companies and organizations published an open letter, "Open Weights and American AI Leadership," urging Washington not to restrict downloadable AI model weights. Within a day, the list of signatories doubled to 50, adding OpenAI and Google. 

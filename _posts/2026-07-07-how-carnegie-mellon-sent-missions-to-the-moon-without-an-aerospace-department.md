@@ -2,7 +2,6 @@
 date: 2026-09-02T10:10:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Space
   - Robotics
@@ -13,6 +12,7 @@ image: /assets/images/posts/covers/cmu_moon_missions_cover.jpg
 image_alt: Richard standing beside the Iris and MoonRanger lunar rovers at Carnegie Mellon University
 layout: post
 card_items: []
+category: "Space & Satellites"
 ---
 
 Visitors to Carnegie Mellon's labs expect artificial intelligence, big software systems, and robotics. In the university's planetary robotics space they also find flight-ready moon rovers being prepared for lunar deployment.

@@ -1,8 +1,6 @@
 ---
 date: 2025-05-21T14:09:00
 author: Richard
-categories:
-  - Technology
 tags:
   - Nvidia
   - GPU
@@ -14,6 +12,7 @@ layout: post
 image_alt: "Cover image for NVIDIA's Consumer GPU Restrictions in Data Centers: Impact on Cloud Computing Costs"
 series: "The Cost of AI Compute"
 series_part: 1
+category: "AI"
 ---
 NVIDIA, a leading manufacturer of graphics processing units (GPUs), has restricted the use of its consumer-grade GPUs, such as the GeForce RTX series, in data center environments through its [End-User License Agreement (EULA)](https://www.nvidia.com/en-us/drivers/geforce-license/). This policy has sparked debate, as it pushes cloud computing providers, researchers, and startups toward more expensive enterprise-grade GPUs, increasing costs. In this post, we explore the restriction, its rationale, its critics, and its impact on cloud computing.
 

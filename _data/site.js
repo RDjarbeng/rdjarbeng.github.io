@@ -379,6 +379,13 @@ function createLookupMap(rawMap) {
   });
 }
 
+// 8b. Category descriptions (_category_info), read here so every template
+// sees them as site.category_info.
+const category_info = getFiles("_category_info").map((file) => {
+  const parsed = matter(fs.readFileSync(file, "utf8"));
+  return { ...parsed.data, slug: slugify(parsed.data.category_name || path.basename(file, ".md")) };
+});
+
 // 9. Categories: one index for technical and personal posts.
 // Categories are merged by slug, so "AI" and "ai" share a page. The display
 // name is the spelling used most often. Every category in the index gets a
@@ -469,6 +476,7 @@ module.exports = {
   book_categories,
   categories,
   categoryIndex,
+  category_info,
   // Technical and personal posts together, newest first (llms.txt, feed.json,
   // the Markdown copies of posts).
   articles: [...posts, ...personal].sort((a, b) => b.date - a.date),

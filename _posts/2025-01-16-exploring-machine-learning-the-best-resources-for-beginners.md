@@ -1,8 +1,6 @@
 ---
 date: 2025-01-16T16:52:00
 author: Richard
-categories:
-  - AI
 tags:
   - AI
   - Machine Learning
@@ -16,6 +14,7 @@ layout: post
 image_alt: "Cover image for Where to Start with Machine Learning: Jason Brownlee's Resource List and My Pick"
 series: "Getting Started with Machine Learning"
 series_part: 1
+category: "AI"
 ---
 Jason Brownlee runs [Machine Learning Mastery](https://machinelearningmastery.com/), a site I have ended up on many times while trying to fix an error in my code. He describes his work as helping developers get results with machine learning ([about page](https://machinelearningmastery.com/about/)), so I was curious what he recommends to people who are just starting out. He has a short guide on it called ["Best Machine Learning Resources for Getting Started"](https://machinelearningmastery.com/best-machine-learning-resources-for-getting-started/).
 

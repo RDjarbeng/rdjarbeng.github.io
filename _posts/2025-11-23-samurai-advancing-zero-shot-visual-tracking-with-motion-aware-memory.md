@@ -1,7 +1,6 @@
 ---
 date: 2025-11-23T16:59:00
 author: Richard
-category: Research
 tags:
   - Computer Vision
   - AI
@@ -17,9 +16,8 @@ title: "SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in V
 image: /assets/images/Samurai_paper_logo.png
 image_alt: "Cover image for SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in Video"
 layout: post
-categories:
-  - Computer Vision
 video: ''
+category: "Computer Vision"
 ---
 
 In video object tracking, you draw a box around something in the first frame and the model follows it for the rest of the video. This becomes difficult when the scene is crowded with things that look alike, when the object moves fast, or when it disappears behind something for a few seconds. [SAMURAI](https://arxiv.org/abs/2411.11922), from Cheng-Yen Yang and colleagues at the University of Washington, takes Meta's Segment Anything Model 2 (SAM 2) and improves how it handles those cases without any extra training.

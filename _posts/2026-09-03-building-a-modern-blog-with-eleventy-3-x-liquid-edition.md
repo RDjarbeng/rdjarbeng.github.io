@@ -2,7 +2,6 @@
 date: 2026-09-03T14:29:00+02:00
 published: true
 author: Richard
-category: Web
 tags:
   - Blog
   - Eleventy
@@ -32,6 +31,7 @@ card_items:
     link_text: Visit Pagefind
 series: "Building This Blog"
 series_part: 6
+category: "Web & Software"
 ---
 
 This is a complete, hands-on guide to building a real blog with [Eleventy](https://www.11ty.dev/) (also called 11ty), a static site generator: a tool that takes plain files, Markdown posts, HTML templates, some data, and turns them into a finished set of HTML pages you can host anywhere. There's no database and no server-side code running once it's built, just files, which makes the result fast and simple to deploy.

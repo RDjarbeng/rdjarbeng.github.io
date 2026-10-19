@@ -2,7 +2,6 @@
 date: 2026-01-29T11:25:00
 published: true
 author: Richard
-category: Environment
 tags:
   - Weather
   - Kigali
@@ -12,6 +11,7 @@ title: Dense Haze Over Kigali - Weather Report - 29th January, 2026
 image: /assets/images/kigali_weather_thumbnail.jpg
 image_alt: Kigali Weather Report thumbnail showing the hills and title for the post
 layout: post
+category: "Climate & Environment"
 ---
 
 Today, Kigali is shrouded in a dense haze that has significantly reduced visibility across the city. The atmosphere feels heavy, with the usual crisp views of the surrounding hills obscured by the mist.

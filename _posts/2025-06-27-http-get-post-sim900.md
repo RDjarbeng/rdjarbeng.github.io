@@ -1,8 +1,6 @@
 ---
 date: 2025-06-27T00:00:00
 author: Richard
-categories:
-  - IoT
 tags:
   - HTTP
   - HTTP verbs
@@ -15,6 +13,7 @@ title: GSM module HTTP GET & POST request using arduino microcontroller and SIM9
 image: /assets/images/gsm_module.jpg
 image_alt: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.
 layout: post
+category: "IoT & Hardware"
 ---
 This post covers the procedure to send a GET and POST request with AT commands using the SIM900 GSM/GPRS module and the Arduino UNO. It is useful for retrieving data from the Web and sending data to a web server for Internet of Things(IOT) or embedded systems projects. Also this should work with simlar GSM modules that are operated by AT commands such as SIM800L, SIM808, SIM7000e etc. This tutorial uses 2G (GSM) connection. 
 

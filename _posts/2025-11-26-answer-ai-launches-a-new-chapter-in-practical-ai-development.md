@@ -1,8 +1,6 @@
 ---
 date: 2025-11-26T12:02:00
 author: Richard
-categories:
-  - AI
 tags:
   - AI
   - answer.ai
@@ -15,6 +13,7 @@ image: /assets/images/answer_ai.jpg
 video: ""
 layout: post
 image_alt: "Cover image for Answer.AI Launches: A New Chapter in Practical AI Development"
+category: "AI"
 ---
 A groundbreaking AI venture has emerged with the launch of Answer.AI, a novel R&D laboratory founded by Jeremy Howard and Eric Ries with $10 million in funding from Decibel VC. This initiative represents a fresh approach to artificial intelligence development, focusing on practical applications rather than pursuing Artificial General Intelligence (AGI).
 

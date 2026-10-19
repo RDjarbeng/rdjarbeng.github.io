@@ -8,6 +8,7 @@ image: /assets/images/pasted-image-1780945885973.webp
 image_alt: ''
 layout: personal
 card_items: []
+category: "Music, Film & Books"
 ---
 
 A message from Alan Becker. Celebrating 20 years of Animation.

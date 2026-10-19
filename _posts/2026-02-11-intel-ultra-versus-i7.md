@@ -2,8 +2,6 @@
 date: 2026-02-12T12:00:00
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - Intel
   - Hardware
@@ -12,6 +10,7 @@ title: "Intel Ultra Versus i7: What's the Difference In 2026?"
 image: /assets/images/intel_ultra_vs_i7_cover.jpg
 image_alt: Intel Core Ultra vs New Core i7 Illustration
 layout: post
+category: "IoT & Hardware"
 ---
 
 ![Intel Core Ultra vs New Core i7 Illustration](/assets/images/intel_ultra_vs_i7_cover.jpg "Intel Core Ultra vs New Core i7 Illustration")

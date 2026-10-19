@@ -1,8 +1,6 @@
 ---
 date: 2025-11-21T21:18:00
 author: Richard
-categories:
-  - AI
 tags:
   - Machine Learning
   - AI
@@ -15,6 +13,7 @@ layout: post
 image_alt: "Cover image for Andrew Ng's Machine Learning Specialization: The Updated Stanford Course for Beginners"
 series: "Getting Started with Machine Learning"
 series_part: 2
+category: "AI"
 ---
 The **Machine Learning Specialization**, created by Andrew Ng and DeepLearning.AI, is a revamped and modernized version of the original Stanford Machine Learning course, one of the most popular and foundational AI courses ever made. This updated program is designed to make machine learning more accessible to beginners while incorporating the latest tools, techniques, and best practices in the field.
 

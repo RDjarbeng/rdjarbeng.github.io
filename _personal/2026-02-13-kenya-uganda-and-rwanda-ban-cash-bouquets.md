@@ -11,6 +11,7 @@ tags:
   - Currency
   - East Africa
 published: true
+category: "Internet & Culture"
 ---
 
 As Valentine's Day approaches, lovers across East Africa will have to rethink their gift ideas as Kenya, Uganda, and Rwanda have all taken a firm stance against the popular trend of cash bouquets. Central banks in these nations have issued warnings or outright bans on the practice, citing the degradation of currency notes.

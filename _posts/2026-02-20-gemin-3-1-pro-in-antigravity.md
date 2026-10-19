@@ -2,7 +2,6 @@
 date: 2026-02-26T13:20:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - AI
   - Google
@@ -15,9 +14,9 @@ image_alt: Gemini 3.1 Pro in Antigravity SUPERCHARGED
 layout: post
 card_items: []
 description: Google has announced that Gemini 3.1 Pro is now natively available within Google Antigravity. Here is what you need to know about the latest update.
-categories: Technology
 series: "Google Antigravity"
 series_part: 2
+category: "AI"
 ---
 
 [Google officially announced](https://antigravity.google/blog/gemini-3-1-pro-in-google-antigravity) that **Gemini 3.1 Pro** is now available in Google Antigravity! This brings enhanced AI capabilities, better coding workflows, and a much smoother agentic experience directly into your development workspace.

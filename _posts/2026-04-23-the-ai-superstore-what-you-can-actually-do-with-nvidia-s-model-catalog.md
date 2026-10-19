@@ -2,7 +2,6 @@
 date: 2026-04-23T22:33:00+02:00
 published: true
 author: Richard
-category: AI
 tags:
   - Nvidia
   - NIM
@@ -32,6 +31,7 @@ card_items:
     link_text: NVIDIA Build Catalog
 series: "The Cost of AI Compute"
 series_part: 5
+category: "AI"
 ---
 
 If you visit the [NVIDIA Build catalog](https://build.nvidia.com/models) today, you are greeted by a massive list of numbers, acronyms, and technical jargon. You will see names like "Nemotron," "Gemma," and "Mistral." For anyone without a technical background, it looks like a database meant only for software engineers.

@@ -9,6 +9,7 @@ tags:
 image: /assets/images/rd_silver_springs_stare_at_statue_cover.webp
 image_alt: Cover image for Trip to Uganda- Kampala & silver springs
 layout: personal
+category: "Travel & Places"
 ---
 
 After three years in Rwanda, I finally seized the chance to visit Uganda, Rwanda’s vibrant northern neighbor. It took a Toastmasters conference in Kampala to finally get me across the border. Tagging along with a friend, I traded the quiet streets of Kigali for an 11-hour bus ride filled with unexpected twists; from a passenger left behind at the border, to the thrill of exchanging Rwandan Francs **(RWF)** for what felt like a fortune in Ugandan Shillings (**UGX**).

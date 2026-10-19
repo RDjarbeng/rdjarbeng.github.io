@@ -1,8 +1,6 @@
 ---
 date: 2025-12-27T23:35:00
 author: Richard
-categories:
-  - Research
 tags:
   - Research
   - Academics
@@ -14,6 +12,7 @@ layout: post
 image_alt: "Cover image for What is TechRxiv?"
 series: "Publishing Research"
 series_part: 3
+category: "Research & Learning"
 ---
 **[TechRxiv](https://www.techrxiv.org)**  is an open, moderated preprint server designed for sharing unpublished research in fields such as electrical engineering, computer science, and related technology disciplines. It was launched in 2020 by the **Institute of Electrical and Electronics Engineers (IEEE)** to facilitate rapid dissemination of research findings, encourage collaboration, and provide a platform for researchers to share early results before formal peer review and publication. 
 

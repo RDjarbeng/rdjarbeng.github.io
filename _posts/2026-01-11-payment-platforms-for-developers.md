@@ -14,8 +14,7 @@ image: /assets/images/payment-platforms-thumbnail-v2.jpg
 image_alt: ''
 layout: post
 description: A comprehensive comparison of Stripe, Lemon Squeezy, Paddle, and Paystack for developers building apps in 2026.
-categories:
-  - Finance
+category: "Money & Fintech"
 ---
 
 Building an app is hard. Getting paid for it shouldn't be.

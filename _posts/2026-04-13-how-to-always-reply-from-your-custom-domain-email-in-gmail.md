@@ -2,7 +2,6 @@
 date: 2026-04-13T17:54:00+02:00
 published: true
 author: Richard
-category: Help
 tags:
   - Email
   - How-to
@@ -14,6 +13,7 @@ layout: post
 card_items: []
 series: "Custom Domain Email"
 series_part: 2
+category: "How-to Guides"
 ---
 
 You’ve done the hard work. You followed the steps in the earlier post to [get a free professional custom domain email](https://rdjarbeng.com/how-to-get-a-free-professional-custom-domain-email-in-2026-even-if-you-don-t-own-a-domain-yet/), configured your routing, and now inquiries are neatly flowing into your Gmail inbox. 

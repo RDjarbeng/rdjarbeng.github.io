@@ -2,7 +2,6 @@
 date: 2026-08-31T17:00:00+02:00
 published: true
 author: Richard
-category: Education
 tags:
   - Algorithm
   - Python
@@ -29,6 +28,7 @@ card_items:
     badge_2: Python
     url: https://docs.python.org/3/library/collections.html#collections.Counter
     link_text: View Python Docs
+category: "AI"
 ---
 
 For anyone unfamiliar with [TensorTonic](https://www.tensortonic.com/), it is often described as the "LeetCode of machine learning", a platform designed for developers to practice algorithms, refine data science techniques, and build machine learning skills through hands-on coding challenges.

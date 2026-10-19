@@ -2,8 +2,6 @@
 date: 2025-08-26
 published: true
 author: Richard
-categories:
-  - IoT
 tags:
   - Raspberry Pi
   - Automation
@@ -25,6 +23,7 @@ image: /assets/images/raspberrypi.png
 image_alt: "Cover image for How to Run a Script Automatically When Your Raspberry Pi Boots"
 series: "Raspberry Pi Setup"
 series_part: 3
+category: "IoT & Hardware"
 ---
 There are several ways to automate a Raspberry Pi to run a program automatically without needing to start it manually from the terminal. Whether you're using Python, Node.js, or another language, the following methods can help you ensure that your script runs whenever your Raspberry Pi boots up.
 

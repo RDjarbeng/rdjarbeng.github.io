@@ -2,7 +2,6 @@
 date: 2026-10-06T11:51:00+02:00
 published: true
 author: Richard
-category: Research
 tags:
   - flood
   - climate
@@ -37,6 +36,7 @@ card_items:
     badge_2: Research
     url: https://doi.org/10.31223/x5rr2k
     link_text: Read Preprint
+category: "AI"
 ---
 
 

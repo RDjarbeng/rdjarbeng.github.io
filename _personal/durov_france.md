@@ -28,6 +28,7 @@ image: /assets/images/durov_mountains.jpg
 image_alt: Cover image for Is this where Durov's French journey began
 layout: personal
 author: Richard
+category: "Internet & Culture"
 ---
 
 "Do you think a platform owner should be held responsible for what happens in private chats? " 

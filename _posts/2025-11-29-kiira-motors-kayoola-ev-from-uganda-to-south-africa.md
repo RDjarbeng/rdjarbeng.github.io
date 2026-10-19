@@ -2,7 +2,6 @@
 date: 2026-05-01T12:55:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Kiira Motors
   - Kayoola EV
@@ -21,8 +20,7 @@ card_items:
   - name: Uganda's Role in EV Innovation
     badge_1: African Tech
     description: Uganda is building its own electric vehicle industry through Kiira Motors, with buses like the Kayoola E-Coach designed for African roads, distances and charging conditions.
-categories:
-  - Technology
+category: "Climate & Environment"
 ---
 
 On 20 November 2025, a Ugandan-built electric coach left Kampala for Cape Town. It came back on 28 December, after about 13,700 km through Uganda, Tanzania, Zambia, Botswana, Eswatini and South Africa. The bus was Kiira Motors' 13 metre Kayoola Electric Coach, and the trip ran under the name "From the Pearl to the Cape".

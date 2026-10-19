@@ -1,8 +1,6 @@
 ---
 date: 2025-04-07T18:07:00
 author: Richard
-categories:
-  - AI
 tags:
   - AI
   - Image to 3D
@@ -15,6 +13,7 @@ image: /assets/images/deepmotion_walking.png
 video: ''
 layout: post
 image_alt: "Cover image for Zombie Walk: Turning an Image into a 3D Model with DeepMotion"
+category: "AI"
 ---
 I recently ran a little experiment to animate a character walking, starting from a single image. Why does this matter? Well, I was chatting with a game developer friend who mentioned that creating characters—especially their walk cycles—is one of the toughest challenges in game development. That sparked an idea: if I could use AI to streamline this process, it might speed up game development or even offer a new solution. Here's a quick glimpse of the end result with the 3D model mimicking the pose of a 2D character.
 

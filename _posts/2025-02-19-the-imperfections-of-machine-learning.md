@@ -2,8 +2,6 @@
 date: 2025-02-19T22:12:00
 published: true
 author: Richard
-categories:
-  - AI
 tags:
   - Computer Vision
   - Machine Learning
@@ -16,6 +14,7 @@ image: /assets/images/ml_false positive_cropped_charger_rd.jpg
 layout: post
 video: ''
 image_alt: "Cover image for Why Machine Learning Models Can Be Confidently Wrong: A Charger Classified as a Phone"
+category: "AI"
 ---
 While machine learning is a powerful tool, it's important to remember that models are not infallible. In fact, they can sometimes be overconfident in their predictions, as shown in this image where a charger is misclassified as a cell phone with 94% confidence.
 

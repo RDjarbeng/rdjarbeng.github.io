@@ -2,7 +2,6 @@
 date: 2026-03-13T14:28:00+02:00
 published: true
 author: Richard
-category: AI News
 tags:
   - Google
   - Floods
@@ -56,6 +55,7 @@ card_items:
     description: The underlying scientific paper, submitted March 9, 2026. Not yet peer reviewed. Includes full model evaluation, precision and recall metrics by country, and Africa coverage notes.
     url: https://eartharxiv.org/repository/view/12082/
     link_text: Read the Preprint
+category: "AI"
 ---
 
 Google just announced _(March 13th, 2026)_  that it can predict urban flash floods up to 24 hours in advance, for most of the world, without building a single physical sensor. The strange thing is they didn't use traditional means instead they used journalists and news reports as a starting point.  Here is how they did it, and what the limits are.

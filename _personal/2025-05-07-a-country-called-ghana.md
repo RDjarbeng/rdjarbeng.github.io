@@ -62,6 +62,7 @@ card_items:
     description: Visual symbols that represent concepts or aphorisms. From 'Gye Nyame' (Except God) to 'Sankofa' (Go back and get it), these symbols are deeply embedded in Ghanaian life and art.
     url: https://en.wikipedia.org/wiki/Adinkra_symbols
     link_text: Explore Symbols
+category: "Travel & Places"
 ---
 
 This is an introduction to Ghana I hope you will find interesting. In this post I'll try to focus on certain aspects a visitor to Ghana might find interesting; people, history, governance, and sights to visit.

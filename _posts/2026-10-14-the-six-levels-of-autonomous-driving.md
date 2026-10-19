@@ -2,7 +2,6 @@
 date: 2026-10-14T09:00:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Autonomous Driving
   - SAE J3016
@@ -50,6 +49,7 @@ card_items:
     url: "https://doi.org/10.1177/0018720816685428"
     link_text: "Read Takeover Study"
     description: "Seminal human factors research documenting that non-critical driver takeover times in automated driving span 1.9 to 25.7 seconds, demonstrating the hazard of sudden manual transitions."
+category: "AI"
 ---
 
 

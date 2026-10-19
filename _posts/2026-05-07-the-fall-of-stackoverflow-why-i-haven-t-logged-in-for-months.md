@@ -2,7 +2,6 @@
 date: 2026-05-07T15:05:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - StackOverflow
 title: "The fall of stackoverflow: Why I Haven't Logged In for Months"
@@ -24,6 +23,7 @@ card_items:
     badge_1: Disruptor
     badge_2: AI Chat
     description: The tool that changed everything, moving developers from searching for answers to synthesizing them instantly.
+category: "Web & Software"
 ---
 
 I just realized I haven't been on Stack Overflow in a while. 

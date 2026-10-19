@@ -2,7 +2,6 @@
 date: 2026-02-24T10:35:00
 published: true
 author: Richard
-category: AI News
 tags:
   - AI
   - Claude
@@ -35,6 +34,7 @@ card_items:
     url: https://claude.com/
     link_text: Learn about Claude
 description: How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap.
+category: "AI"
 ---
 
 The tech world is more than accustomed to disruption, but the events of Monday, February 23, 2026, were something else entirely. In a single afternoon, a concise blog post from **Anthropic** accomplished what decades of fierce competition couldn't: it shattered IBM’s legendary "COBOL moat," wiping a staggering **$30 billion** off its market cap in mere hours.

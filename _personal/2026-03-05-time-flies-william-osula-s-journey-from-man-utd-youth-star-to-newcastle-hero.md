@@ -11,6 +11,7 @@ image: /assets/images/posts/covers/osula_time_flies_cover.jpg
 image_alt: Flat illustration showing William Osula journey from Man Utd youth player to Newcastle United goal scorer
 layout: personal
 card_items: []
+category: "Sport"
 ---
 
 Football loves a good full-circle story, and Newcastle United delivered one of the best on March 4, 2026. Newcastle United didn't just beat Manchester United with a 90th-minute winner, they also used a 12-year-old trophy photo to deliver the ultimate social media burn.

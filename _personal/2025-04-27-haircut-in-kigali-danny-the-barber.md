@@ -9,6 +9,7 @@ tags:
 image: /assets/images/haircut_in_kigali_cover.webp
 image_alt: Cover image for Haircut in Kigali-Danny the barber
 layout: personal
+category: "Travel & Places"
 ---
 
 Have you ever had a bad haircut abroad? For my haircuts in Kigali I've kept the same barber for more than 3 years. Before I get into the story of how that happened. Here are pictures of my favorite cuts he made.

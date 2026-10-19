@@ -2,13 +2,13 @@
 date: 2026-02-24T10:35:00
 published: true
 author: Richard
-category: AI
 tags:
   - OpenClaw
 title: OpenClaw, The Viral AI Agent That's Actually Doing Real Work An Article by Grok
 image: /assets/images/openclaw_cover_refined.jpg
 image_alt: 'OpenClaw space-lobster AI assistant cover'
 layout: post
+category: "AI"
 ---
 
 Hello, Richard here. There's a new AI big tool in town called OpenClaw (formerly Clawdbot, Moltbot)

@@ -2,8 +2,6 @@
 date: 2025-07-13T09:15:00
 published: true
 author: Richard
-categories:
-  - Entrepreneurship
 tags:
   - Africa Tech
   - African Startups
@@ -27,6 +25,7 @@ title: From the Norrsken Hub in Kigali, A Look at the Deals Shaping Africa's Fut
 image: /assets/images/norrsken_africa_tech_boom_cover.webp
 image_alt: 'A stylized, glowing, circuit-board map of Africa overlaid on a digital background with radiating connections. Key sectors and themes are highlighted around the map with icons and text, indicating a growing technology ecosystem. The highlighted sectors are Fintech (smartphone icon with an arrow), Clean Energy (solar panel and house icon), Healthtech (heart with a plus sign icon), and Mergers & Acquisitions (M&A acronym, appearing twice). Text reads: "Africa''s Tech Ecosystem Moving Forward" and "AFRICA''S TECH BOOM 2025: INVESTMENTS & INNOVATION."'
 layout: post
+category: "Money & Fintech"
 ---
 Africa’s technology ecosystem is moving forward in 2025, as startups secure big investments and join forces to make a bigger impact. From mobile apps for money transfers to solar power for rural areas, African innovators are showing the world what’s possible. In a recent newsletter, [Norrsken East Africa](https://www.norrsken.org/) shared exciting updates on this growth, and we’re diving into the details to show how Africa’s tech scene is stronger than ever.
 

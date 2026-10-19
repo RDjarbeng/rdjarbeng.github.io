@@ -1,8 +1,6 @@
 ---
 date: 2025-02-17T12:48:00
 author: Richard
-categories:
-  - Environment
 tags:
   - Hardware
   - Davis
@@ -14,6 +12,7 @@ image: /assets/images/solar_radiation_senosr.png
 video: ''
 layout: post
 image_alt: "Cover image for Is the Davis Solar Radiation Sensor Overpriced?"
+category: "Climate & Environment"
 ---
 When it comes to measuring solar radiation for agricultural, meteorological, or environmental projects, precision is key. The [Davis Solar Radiation Sensor](https://www.davisinstruments.com/products/solar-radiation-sensor) is a popular choice among professionals, but a common question arises: is it worth the price?
 

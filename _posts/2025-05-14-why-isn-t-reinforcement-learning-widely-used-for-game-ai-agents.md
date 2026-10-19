@@ -1,8 +1,6 @@
 ---
 date: 2025-05-14T08:53:00
 author: Richard
-categories:
-  - AI
 tags:
   - Reinforcement Learning
   - Game development
@@ -13,6 +11,7 @@ image: /assets/images/reinforcement%20learning_in_games_grok.jpg
 video: ''
 layout: post
 image_alt: "Cover image for Why Isn't Reinforcement Learning Widely Used for Game AI Agents?"
+category: "AI"
 ---
 Reinforcement learning (RL) has powered impressive achievements in game-playing AI, such as AlphaGo and OpenAI's Dota 2 bot. Tools like Unity ML Agents and examples like Gran Turismo 7's RL-trained AI racer show its potential. Yet, RL remains rare in complex games for NPCs or opponents. Why is this powerful technology not more widely adopted? 
 

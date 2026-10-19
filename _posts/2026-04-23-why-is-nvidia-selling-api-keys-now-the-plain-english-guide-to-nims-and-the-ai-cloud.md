@@ -2,7 +2,6 @@
 date: 2026-04-23T20:36:00+02:00
 published: true
 author: Richard
-category: AI
 tags:
   - Nvidia
   - NIM
@@ -32,6 +31,7 @@ card_items:
     link_text: "Nvidia DGX Cloud"
 series: "The Cost of AI Compute"
 series_part: 4
+category: "AI"
 ---
 
 The landscape of artificial intelligence is shifting rapidly. For years, Nvidia was known primarily as a hardware company that manufactured the powerful Graphics Processing Units (GPUs) required for gaming and professional visualization. If you were a developer, you knew them for CUDA, which is the software layer that allows those chips to process complex mathematical data.

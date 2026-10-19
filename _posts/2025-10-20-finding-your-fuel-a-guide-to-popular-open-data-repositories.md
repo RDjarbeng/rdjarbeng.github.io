@@ -2,8 +2,6 @@
 date: 2025-10-20T20:35:00
 published: true
 author: Richard
-categories:
-  - AI
 tags:
   - data
   - open data
@@ -121,6 +119,7 @@ card_items:
     link_text: "Visit Repository"
 series: "Getting Started with Machine Learning"
 series_part: 6
+category: "AI"
 ---
 In data science and machine learning, data is the new oil—it's the fuel that powers our models and insights. But finding the _right_ data can be a challenge. Whether you're a seasoned researcher, a data scientist looking for a competition, or a student just starting, knowing where to look is key.
 

@@ -2,7 +2,6 @@
 date: 2026-04-23T11:47:00+02:00
 published: true
 author: Richard
-category: Security
 tags:
   - Vercel
   - Security
@@ -35,6 +34,7 @@ card_items:
     description: Google Workspace (formerly G Suite) is Google's cloud-based productivity platform used by businesses, including Gmail, Drive, Docs, and admin tools. Because it's deeply integrated into many organizations, a compromised Workspace account is a powerful foothold for attackers.
 series: "Security Alerts"
 series_part: 2
+category: "Security"
 ---
 
 Vercel has disclosed a security incident involving unauthorized access to certain internal systems, which has led to the exposure of some customer environment variables.

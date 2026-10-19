@@ -2,7 +2,6 @@
 date: 2026-10-05T11:30:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -36,6 +35,7 @@ card_items:
     link_text: View Repositories
 series: "Getting Started with Machine Learning"
 series_part: 9
+category: "AI"
 ---
 
 Entering artificial intelligence often looks impossible without a master's degree, a PhD, or years inside elite academic research labs. Yet one of the clearest case studies of breaking into frontier AI engineering comes from Aleksa Gordić, who transitioned from an electrical engineering background in Serbia into a software role at Microsoft, and ultimately landed a Research Engineer position at DeepMind without holding a machine learning degree.

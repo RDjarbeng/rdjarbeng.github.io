@@ -1,8 +1,6 @@
 ---
 date: 2025-01-10T13:39:00
 author: Richard
-categories:
-  - Computer Vision
 tags:
   - AI
   - Computer Vision
@@ -13,6 +11,7 @@ image: /assets/images/ultralytics_yolo.png
 video: ''
 layout: post
 image_alt: "Cover image for YOLO Object Detection Explained: Every Version From v1 to YOLO11, Licensing and Uses"
+category: "Computer Vision"
 ---
 Before YOLO, most object detectors worked in two stages. First they proposed a few thousand regions of the image that might contain something, then they ran a classifier on each one. This was accurate but slow. In 2015, Joseph Redmon and his co-authors at the University of Washington published [You Only Look Once](https://arxiv.org/abs/1506.02640), which did the whole job in a single pass. The network splits the image into a grid, and every cell predicts boxes and class probabilities at the same time, so the model only looks at the image once. It was fast enough to run on live video, which is the main reason it became popular.
 

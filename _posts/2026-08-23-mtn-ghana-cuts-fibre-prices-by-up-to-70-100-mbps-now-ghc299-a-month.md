@@ -2,7 +2,6 @@
 date: 2026-08-23T19:18:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Ghana
   - Internet
@@ -27,6 +26,7 @@ card_items:
     badge_1: "Satellite Internet"
     badge_2: "Global / SpaceX"
     description: "SpaceX's low-Earth orbit (LEO) satellite constellation offering high-speed, low-latency internet globally. In Ghana, standard residential plans cost GH¢770 per month."
+category: "Money & Fintech"
 ---
 
 Ghanaians complaining about expensive home broadband got substantial relief when MTN Ghana announced a major reduction in home fibre prices, with the revised tariffs taking effect on Wednesday, June 17, 2026. The price of the 100 Mbps unlimited monthly fibre package dropped from GH¢987 to GH¢299, representing a 70 percent reduction. MTN also expanded its high-speed offerings by introducing a 300 Mbps package at GH¢444 per month and a 500 Mbps tier at GH¢999 per month.

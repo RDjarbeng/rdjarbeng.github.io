@@ -2,7 +2,6 @@
 layout: post
 title: "TrustMRR reveals which startups are actually making money in 2026"
 date: 2026-02-02
-category: Entrepreneurship
 tags: [TrustMRR, Revenue, Startups, AI, SaaS, Marc Lou]
 image: /assets/images/trustmrr_revenue_leaderboard_cover.jpg
 image_alt: "TrustMRR Verified Revenue Leaderboard Cover"
@@ -40,6 +39,7 @@ card_items:
     badge_1: "~$174,274 MRR"
     badge_2: "2% growth"
     description: "Editee is a comprehensive content creation suite. It combines AI text generation (for blogs, ads, etc.) with image editing capabilities, catering to marketers who need to produce high volumes of assets quickly."
+category: "Money & Fintech"
 ---
 
 For years, the "Indie Hacker" and startup community has been plagued by a subtle dishonesty: fake revenue screenshots. It became too easy to inspect an element and manipulate the content on a website, change a `$0` to a `$10,000`, and post it on Twitter to build hype. Even "Open Startups" often self-reported numbers that couldn't be audited. 

@@ -29,6 +29,7 @@ tags:
 image: /assets/images/happily_exhausted_cover_image.webp
 image_alt: 'Illustration of a man leaning happily exhausted against a large rock on a mountain top at sunset. The text reads: "The Good Kind of Tired: Why ''Happily Exhausted'' Deserves Its Own Word.'
 layout: personal
+category: "Career & Growth"
 ---
 You know the feeling. Your legs are jelly after the final whistle, your eyes burn after the last line of code compiles, your arms ache from carrying a laughing kid on your shoulders all day at the zoo.
 By every objective measure you should be miserable… but you’re grinning like an idiot.

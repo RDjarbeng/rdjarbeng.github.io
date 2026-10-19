@@ -2,7 +2,6 @@
 date: 2025-01-13T10:28:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Air Quality
   - Air pollution
@@ -13,11 +12,10 @@ image: /assets/images/brightglobe_in_africa.jpg
 image_alt: 'Cover image for Ambient Air Quality Standards in West Africa: The Current State (2025)'
 layout: post
 card_items: []
-categories:
-  - Air Quality
 video: ''
 series: "Air Quality Basics"
 series_part: 3
+category: "Climate & Environment"
 ---
 
 In the rapidly urbanizing region of West Africa, ambient air quality has become a pressing concern. With cities expanding and industrialization on the rise, the air we breathe is increasingly at risk. This blog post delves into the current state of ambient air quality standards across West African nations, highlighting both the challenges and ongoing efforts.

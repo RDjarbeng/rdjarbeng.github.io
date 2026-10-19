@@ -63,8 +63,9 @@ collections:
           collection: "category_info",
           display_fields: [category_name],
           search_fields: [category_name],
-          default: "Technology",
           value_field: "category_name",
+          filters: [{ field: "section", values: ["technical"] }],
+          hint: "Technical sections. Personal posts have their own list.",
         }
       - {
           label: "Tags",
@@ -211,6 +212,18 @@ collections:
           name: "published",
           widget: "boolean",
           default: true,
+        }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "relation",
+          collection: "category_info",
+          display_fields: [category_name],
+          search_fields: [category_name],
+          value_field: "category_name",
+          filters: [{ field: "section", values: ["personal"] }],
+          required: false,
+          hint: "Life topics for personal posts. Use tags for anything more specific.",
         }
       - {
           label: "Tags",
@@ -757,6 +770,14 @@ collections:
       preview: false
     fields:
       - { label: "Category Name", name: "category_name", widget: "string" }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "select",
+          options: ["technical", "personal"],
+          default: "technical",
+          hint: "Technical sections are offered on posts, personal ones on personal posts.",
+        }
       - {
           label: "Category Description",
           name: "description",

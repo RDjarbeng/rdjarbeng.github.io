@@ -2,8 +2,6 @@
 date: 2025-01-15T11:36:00
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - SpaceX
   - Falcon 9
@@ -15,6 +13,7 @@ video: ''
 image_alt: "Cover image for SpaceX Falcon 9 rocket  successfully reaches a hundred launches."
 series: "SpaceX and Starlink"
 series_part: 5
+category: "Space & Satellites"
 ---
 SpaceX's Falcon 9 just celebrated its 100th successful launch. After nailing over a hundred launches, it's clear they've really mastered this rocket business.
 

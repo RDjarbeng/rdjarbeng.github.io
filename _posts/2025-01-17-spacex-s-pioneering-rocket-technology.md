@@ -1,8 +1,6 @@
 ---
 date: 2025-01-17T12:39:00
 author: Richard
-categories:
-  - Technology
 tags:
   - SpaceX
   - ElonMusk
@@ -15,6 +13,7 @@ layout: post
 image_alt: "Cover image for SpaceX's Rocket Innovations Explained: Reusable Falcon 9, Starship, Raptor Engines and Drone Ships"
 series: "SpaceX and Starlink"
 series_part: 4
+category: "Space & Satellites"
 ---
 SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology with several groundbreaking innovations:
 

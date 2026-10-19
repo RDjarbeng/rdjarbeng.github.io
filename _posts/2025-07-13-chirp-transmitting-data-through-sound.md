@@ -1,8 +1,6 @@
 ---
 date: 2025-07-13T14:35:00
 author: Richard
-categories:
-  - Technology
 tags:
   - Sound
   - GitHub
@@ -11,6 +9,7 @@ title: 'Chirp: Transmitting Data Through Sound'
 image: /assets/images/chirp_screenshot_data_with_sound.png
 layout: post
 image_alt: "Cover image for Chirp: Transmitting Data Through Sound"
+category: "Web & Software"
 ---
 [Chirp](https://github.com/solst-ice/chirp) is a small GitHub project by [solst-ice](https://github.com/solst-ice) that sends text from one device to another as sound. One browser plays a series of beeps through its speaker, and another listens with its microphone and turns the beeps back into text. The two devices do not need Wi-Fi or Bluetooth to talk to each other. You can try it on the [demo site](https://chirp.hex.dance/) after allowing microphone access, ideally with two devices in the same room.
 

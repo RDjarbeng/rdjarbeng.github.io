@@ -1,8 +1,6 @@
 ---
 date: 2025-05-03T18:14:00
 author: Richard
-categories:
-  - AI
 tags:
   - Machine Learning
   - AI
@@ -73,6 +71,7 @@ card_items:
     link_text: "Visit Website"
 series: "Getting Started with Machine Learning"
 series_part: 10
+category: "AI"
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI.
 

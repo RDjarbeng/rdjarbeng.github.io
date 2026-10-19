@@ -8,6 +8,7 @@ tags:
 image: /assets/images/do_the_thing_tv_cover_animated.jpg
 image_alt: Animated illustration of a person watching Chris Williamson on a monitor
 layout: personal
+category: "Career & Growth"
 ---
 
 There's this video on 'Doing the Thing' that I like so much so I'm gonna share it with you. [Chris Williamson](https://www.youtube.com/@ChrisWillx) shares a perspective on productivity and procrastination.

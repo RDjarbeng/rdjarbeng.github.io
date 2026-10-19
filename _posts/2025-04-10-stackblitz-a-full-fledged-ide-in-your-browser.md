@@ -1,8 +1,6 @@
 ---
 date: 2025-04-10T16:08:00
 author: Richard
-categories:
-  - Technology
 tags:
   - Programming
   - Developer
@@ -13,6 +11,7 @@ image: /assets/images/stackblitz_logo.jpeg
 video: ''
 layout: post
 image_alt: "Cover image for StackBlitz: A Full-IDE in Your Browser"
+category: "Web & Software"
 ---
 ## Why I Use StackBlitz
 

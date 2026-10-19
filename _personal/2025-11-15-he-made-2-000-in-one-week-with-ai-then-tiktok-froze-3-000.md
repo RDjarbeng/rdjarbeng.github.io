@@ -22,6 +22,7 @@ tags:
 image: /assets/images/tiktok_ai_frozen_thumbnail.jpg
 image_alt: A dramatic YouTube-style thumbnail with the text '$2,000 with AI' in bright green and 'FROZEN!' in red, overlaid on a background showing a person in a black shirt with an ai generated old woman.
 layout: personal
+category: "Internet & Culture"
 ---
 First came the win: **$2,200 in profit** in just one week.
 Then came the loss: **$3,722 in earnings**, frozen and inaccessible.

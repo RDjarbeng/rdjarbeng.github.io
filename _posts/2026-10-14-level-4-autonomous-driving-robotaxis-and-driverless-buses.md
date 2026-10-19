@@ -2,7 +2,6 @@
 date: 2026-10-14T09:30:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - Autonomous Driving
   - SAE J3016
@@ -40,6 +39,7 @@ card_items:
     url: "https://www.adastec.com/"
     link_text: "View ADASTEC Platform"
     description: "Deployment profiles of the Karsan Autonomous e-ATAK full-size electric bus across municipal transit lines in Stavanger (Norway), Paris (RATP Line 393), and Michigan State University."
+category: "AI"
 ---
 
 

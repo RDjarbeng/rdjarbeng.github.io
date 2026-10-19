@@ -2,7 +2,6 @@
 date: 2026-09-26T16:13:00+02:00
 published: true
 author: Richard
-category: Web
 tags:
   - Web
   - CMS
@@ -39,6 +38,7 @@ card_items:
     link_text: Read Announcement
 series: "Building This Blog"
 series_part: 7
+category: "Web & Software"
 ---
 
 If you run a static site on Decap CMS (formerly Netlify CMS), [Sveltia CMS](https://github.com/sveltia/sveltia-cms) created by [Kyoshino](https://github.com/kyoshino) has reached a decisive milestone. 

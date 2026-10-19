@@ -1,8 +1,6 @@
 ---
 date: 2025-05-03T18:34:00
 author: Richard
-categories:
-  - Satellite
 tags:
   - Satellite
   - Space
@@ -19,6 +17,7 @@ layout: post
 image_alt: "Cover image for KeepTrack: A Free 3D Website for Tracking Satellites in Real Time"
 series: "Free Satellite and Climate Data"
 series_part: 6
+category: "Space & Satellites"
 ---
 I recently came across [KeepTrack](https://keeptrack.space/), a website that shows satellites orbiting Earth in 3D. Every tracked object is a coloured dot, and when you click one you get its name, its altitude and who owns it. It is surprising to watch how fast some of them move. Some cross an entire country in a few seconds.
 

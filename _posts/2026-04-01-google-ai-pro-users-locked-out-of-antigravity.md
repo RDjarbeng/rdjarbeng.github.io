@@ -2,7 +2,6 @@
 date: 2026-04-01T17:41:00+02:00
 published: true
 author: Richard
-category: AI News
 tags:
   - AI
   - Antigravity
@@ -34,6 +33,7 @@ card_items:
     link_text: Visit Aider
 series: "Google Antigravity"
 series_part: 4
+category: "AI"
 ---
 
 **TL;DR:** Google’s agent-first IDE, **Antigravity**, launched with massive promises (multi-model support, deep CLI/browser integration, and reasoning modes) along with a 5-hour quota reset. However, it is currently locking AI Pro users out for up to **7 days**, with Google instead offering a gentle nudge to upgrade to their $200/month Ultra plan.

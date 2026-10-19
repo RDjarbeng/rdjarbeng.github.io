@@ -2,8 +2,6 @@
 date: 2025-08-16
 published: true
 author: Richard
-categories:
-  - AI
 tags:
   - Luma AI
   - Dream Machine
@@ -20,6 +18,7 @@ image: /assets/images/bees_luma.jpeg
 image_alt: "Cover image for Can AI Bring a Photo of Bees to Life? Testing Luma AI's Dream Machine"
 series: "Bringing Images to Life with AI"
 series_part: 1
+category: "AI"
 ---
 
  I recently tried out Luma AI's  [dream machine](https://lumalabs.ai/dream-machine) using a picture of what I believe are wasps or bees (though I'm not entirely sure which!)..

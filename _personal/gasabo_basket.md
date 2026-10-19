@@ -13,6 +13,7 @@ tags:
 image: /assets/images/gasabo_cropped.jpg
 image_alt: Cover image for Why is There a Giant Basket on This Building in Kigali?
 layout: personal
+category: "Travel & Places"
 ---
 First time visitors to Kigali might wonder why there is this giant basket on a building? I know I did.
 

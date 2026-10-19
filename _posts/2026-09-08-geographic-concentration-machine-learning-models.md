@@ -4,7 +4,6 @@ title: "Geographic Concentration of Machine Learning Models: How Compute Economi
 date: 2026-09-08T16:00:00Z
 published: true
 author: Richard
-category: Technology
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -35,6 +34,7 @@ card_items:
     description: "National and regional investments in high-bandwidth GPU clusters to counter bilateral dominance and secure autonomous foundational AI capability."
 series: "The Cost of AI Compute"
 series_part: 3
+category: "AI"
 ---
 
 When you look at where notable artificial intelligence models come from, the global map looks empty.

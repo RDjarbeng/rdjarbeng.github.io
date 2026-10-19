@@ -2,7 +2,6 @@
 date: 2026-06-12T11:44:00+02:00
 published: true
 author: Richard
-category: Help
 tags:
   - Google
   - Security
@@ -32,6 +31,7 @@ card_items:
     link_text: Read Google Support Guide
 series: "Quick Tech Fixes"
 series_part: 9
+category: "How-to Guides"
 ---
 
 Using your Google account to log into external apps and websites is incredibly convenient. It saves you from creating new passwords and speeds up the signup process. However, over time, you can accumulate dozens of connected services that you no longer use. These inactive apps might still have access to your personal information, which poses a security and privacy risk.

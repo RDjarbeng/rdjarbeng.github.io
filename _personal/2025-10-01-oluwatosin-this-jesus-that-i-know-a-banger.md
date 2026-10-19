@@ -23,6 +23,7 @@ tags:
 image: /assets/images/1000267977.webp
 layout: personal
 image_alt: "Cover image for Now On Repeat: \"Oluwatosin\" by Tkeyz ft. SteveHills"
+category: "Faith"
 ---
 I have to share this track that's been on repeat for me lately. It's "Oluwatosin (Jesus Is Enough)" by Tkeyz and SteveHills. The song dropped in July 2025, and it's clear I'm not the only one who loves it – the visualizer has exploded with over **4.5 million views** already!
 

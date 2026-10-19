@@ -2,7 +2,6 @@
 date: 2026-10-14T10:08:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - AI
   - gemini
@@ -32,6 +31,7 @@ card_items:
     description: A standardized, multi-dimensional prompt designed to quickly evaluate and audit new AI agents, LLMs, coding assistants, and autonomous systems across six categories including inputs/outputs, internet access, strengths, weaknesses, misconceptions, and hidden complexity.
     url: https://github.com/RDjarbeng/testing-agent-capabilities
     link_text: View on GitHub
+category: "AI"
 ---
 
 I have a benchmark prompt that I use to evaluate AI agent capabilities.

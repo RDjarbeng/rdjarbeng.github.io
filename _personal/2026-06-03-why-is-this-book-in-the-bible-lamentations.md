@@ -8,6 +8,7 @@ tags:
 image: /assets/images/posts/covers/why_is_this_book_in_the_bible_lamentations_cover.jpg
 image_alt: Stick figure in a red shirt staring at a sunrise over water, with the overlay text 'Why is Lamentations in the Bible?'
 layout: personal
+category: "Faith"
 ---
 
 The book literally says lamentations which in simple term can be called complaining. My first time reading this book I was wondering why would anyone even add this to the bible.

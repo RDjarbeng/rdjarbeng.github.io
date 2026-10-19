@@ -20,6 +20,7 @@ tags:
 image: /assets/images/ordinary_song_find_1000175293.webp
 image_alt: Cover image for Finding a song -an ordinary google task
 layout: personal
+category: "Music, Film & Books"
 ---
 
 Here is a method for finding a song from a video you are watching on my phone. Let's do it together. Here I used the split screen feature to open 2 apps at the same time. I open the Google app as one of them and get to the find a song feature. Google keeps changing the layout but it was underneath the search bar for me (see screenshot) .

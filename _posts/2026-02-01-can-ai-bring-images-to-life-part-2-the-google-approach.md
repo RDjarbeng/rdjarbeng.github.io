@@ -2,7 +2,6 @@
 date: 2026-03-01T21:42:00
 published: true
 author: Richard
-category: AI
 tags:
   - AI
   - Generative AI
@@ -25,6 +24,7 @@ card_items:
     link_text: "Watch Trailer"
 series: "Bringing Images to Life with AI"
 series_part: 2
+category: "AI"
 ---
 
 ![Cover Image: Can AI bring images to life? - The Google Approach](/assets/images/posts/covers/dear_upstairs_neighbors_cover.png)

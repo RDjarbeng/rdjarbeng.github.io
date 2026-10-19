@@ -10,7 +10,8 @@ layout: default
 {% assign cat_title = title | default: category | default: page.title %}
 <h1>Posts in Category: {{ cat_title }} ({{ cat_posts | size }})</h1>
 
-{% assign current_category = site.category_info | where: "category_name", cat_title | first %}
+{% assign cat_slug = cat_title | slugify %}
+{% assign current_category = site.category_info | where: "slug", cat_slug | first %}
 {% if current_category.description %}
 <div class="category-description">
   {{ current_category.description | markdownify }}

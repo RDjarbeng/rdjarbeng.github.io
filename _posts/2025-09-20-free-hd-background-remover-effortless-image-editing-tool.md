@@ -2,8 +2,6 @@
 date: 2025-09-20T16:29:00
 published: true
 author: Richard
-categories:
-  - AI
 tags:
   - Computer Vision
   - Background Remover
@@ -22,6 +20,7 @@ title: 'Why I Built a Free HD Background Remover (and What People Use It For)'
 image: /assets/images/bg_remover_cover_rd.webp
 layout: post
 image_alt: "Cover image for Free HD Background Remover: Effortless Image Editing Tool"
+category: "AI"
 ---
 Need to remove the background from a photo without losing HD quality? I built a free web app for that. Upload your image, adjust a few options, and download a full resolution PNG. There's no sign-up, no subscription, and no watermark. You can swap a brown background for white, or make it transparent for designs, profiles, or presentations.
 

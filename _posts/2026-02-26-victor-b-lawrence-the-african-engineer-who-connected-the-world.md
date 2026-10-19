@@ -2,7 +2,6 @@
 date: 2026-02-26 19:30:00
 published: true
 author: Richard
-category: People & Blogs
 tags:
   - Engineering
   - Inspiration
@@ -13,7 +12,7 @@ image: /assets/images/victor_b_lawrence_inventions_1772127000500.jpg
 image_alt: A vibrant illustration of an African engineer working on networks
 layout: post
 description: Discover the inspiring story of Victor B. Lawrence, an African engineer whose pioneering work in telecommunications revolutionized the internet.
-categories: Technology
+category: "Research & Learning"
 ---
 
 When you connect to the internet today, streaming high-definition video, joining crystal-clear video calls, or simply browsing at lightning speeds, you are benefiting from the life’s work of a pioneer you may have never heard of: **Dr. Victor B. Lawrence**. A Ghanaian-born electrical engineer, his [innovations in digital signal processing (DSP)](https://nationalmedals.org/laureate/victor-b-lawrence/) and data communications were instrumental in the world's transition from clunky analog systems to the high-speed digital networks we rely on today.

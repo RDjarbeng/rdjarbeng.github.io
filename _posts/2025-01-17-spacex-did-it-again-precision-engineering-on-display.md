@@ -2,7 +2,6 @@
 date: 2025-01-17T13:21:00+02:00
 published: true
 author: Richard
-category: Technology
 tags:
   - SpaceX
   - Space Exploration
@@ -34,6 +33,7 @@ card_items:
     link_text: Watch on X
 series: "SpaceX and Starlink"
 series_part: 7
+category: "Space & Satellites"
 ---
 
 Just when you thought Elon Musk and the team at SpaceX couldn't top themselves, they proved once again that rapid aerospace iteration rewrites what is possible. SpaceX successfully guided a 33-story tall Super Heavy booster back from space at supersonic speeds and caught it mid-air using the giant mechanical "chopstick" arms of the Mechazilla launch tower at Starbase, Texas.

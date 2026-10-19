@@ -1,8 +1,6 @@
 ---
 date: 2025-07-22T00:00:00
 author: Richard
-categories:
-  - Software Engineering
 tags:
   - Ruby
   - jekyll
@@ -14,6 +12,7 @@ layout: post
 image_alt: "Cover image for Building My Personal Website with Jekyll, Ruby and GitHub Pages"
 series: "Building This Blog"
 series_part: 1
+category: "Web & Software"
 ---
 This post is about my developer experience building my personal website with ruby, jekyll and GitHub pages, opinions are mine and mine alone.
 

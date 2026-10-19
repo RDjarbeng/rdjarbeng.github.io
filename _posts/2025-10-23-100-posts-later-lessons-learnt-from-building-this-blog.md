@@ -2,7 +2,6 @@
 date: 2025-10-23T15:21:00
 published: true
 author: Richard
-category: People & Blogs
 tags:
   - Review
 title: '100 Posts Later: My Lessons Learnt From Building This Blog (rdjarbeng.com)'
@@ -26,10 +25,9 @@ card_items:
     badge_1: Real-time Generation
     badge_2: On-the-fly Editing
     description: I used Meta AI for the post on [Tunde Onakoya's chess marathon](https://rdjarbeng.com/personal/tunde-onakoya-breaks-guinness-world-record-with-epic-chess-marathon-for-children-s-education/) in Times square. I liked the feature where it generated images as you typed allowing you to kind of edit on the fly. However since then I have not used it much, also because when I was in Rwanda it was not available in that Region for some time. It is now available but now, just like Claude, I haven't really felt a need to go back to it after I stopped using it.
-categories:
-  - Technology
 series: "Building This Blog"
 series_part: 4
+category: "Web & Software"
 ---
 
 ## Changes Since the Start

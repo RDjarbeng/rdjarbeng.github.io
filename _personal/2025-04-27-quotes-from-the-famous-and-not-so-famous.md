@@ -49,6 +49,7 @@ card_items:
       That shall be to you better than light and safer than a known way".
     link_text: "Poem Source"
     url: "https://en.wikipedia.org/wiki/The_Gate_of_the_Year"
+category: "Career & Growth"
 ---
 In this post we'll take a look at interesting quotes I found across the internet and books I read. For a glimpse I'm featuring George Bernard Shaw and Captain Jack Sparrow.
 

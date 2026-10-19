@@ -9,6 +9,7 @@ tags:
 image: /assets/images/posts/covers/the_man_who_can_cover.jpg
 image_alt: Cover image for The Man Who Can - Editorial illustration on determination and mindset
 layout: personal
+category: "Career & Growth"
 ---
 
 

@@ -2,7 +2,6 @@
 date: 2026-03-02T13:23:00
 published: true
 author: Richard
-category: AI News
 tags:
   - Google
   - Antigravity
@@ -26,6 +25,7 @@ card_items:
     link_text: "Visit Platform"
 series: "Google Antigravity"
 series_part: 3
+category: "AI"
 ---
 
 The Google Antigravity OpenClaw controversy erupted in mid-February 2026, when numerous users of Google's agentic development platform **Antigravity** (powered by Gemini models) suddenly found their accounts restricted or banned. The trigger: integration with **OpenClaw**, the viral open-source AI agent framework that exploded in popularity late 2025.

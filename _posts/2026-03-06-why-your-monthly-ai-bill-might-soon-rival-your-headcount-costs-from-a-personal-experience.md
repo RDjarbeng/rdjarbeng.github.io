@@ -2,7 +2,6 @@
 date: 2026-03-06T16:10:00+02:00
 published: true
 author: Anthonio
-category: Software development
 tags:
   - AI Engineering
   - Engineering Management
@@ -41,6 +40,7 @@ card_items:
     badge_2: FinOps
 series: "The Cost of AI Compute"
 series_part: 6
+category: "Web & Software"
 ---
 
 ## The $280 Overnight Surprise

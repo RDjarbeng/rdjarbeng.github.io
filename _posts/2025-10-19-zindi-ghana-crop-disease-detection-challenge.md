@@ -5,9 +5,9 @@ author: Richard
 image: /assets/images/zindi_crop_disease.png
 video: ""
 layout: post
-categories: ["News"]
 tags: [Hackathons, Ghana, Zindi, Machine Learning, Computer Vision]
 image_alt: "Cover image for Zindi -Ghana Crop Disease Detection Challenge"
+category: "AI"
 ---
 
 

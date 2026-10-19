@@ -2,8 +2,6 @@
 date: 2026-02-02
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - Google
   - Rich Results Testing
@@ -13,6 +11,7 @@ title: "Google Rich Results Testing Tool: Your Key to SEO Visibility"
 image: /assets/images/google_rich_results_cover.jpg
 layout: post
 image_alt: "Google Rich Results Testing Tool Cover Image"
+category: "Web & Software"
 ---
 
 Have you ever searched for a recipe and seen the rating, cooking time, and a photo right there in the search results? Or searched for a product and seen its price and availability without clicking a link?

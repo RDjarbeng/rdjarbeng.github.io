@@ -2,8 +2,6 @@
 date: 2026-02-24T14:40:00
 published: true
 author: Richard
-categories:
-  - Technology
 tags:
   - Automation
   - Python
@@ -15,6 +13,7 @@ image: "/assets/images/posts/telegram-bot-cover.jpg"
 image_alt: "A smartphone sending an image to a website folder via a paper airplane"
 series: "Building This Blog"
 series_part: 5
+category: "Web & Software"
 ---
 
 

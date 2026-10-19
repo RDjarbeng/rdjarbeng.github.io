@@ -2,7 +2,6 @@
 date: 2026-02-25T19:37:00
 published: true
 author: Richard
-category: Web
 tags:
   - Email Hosting
   - Custom Domain
@@ -16,6 +15,7 @@ layout: post
 card_items: []
 series: "Custom Domain Email"
 series_part: 1
+category: "Web & Software"
 ---
 
 Tired of using a plain `@gmail.com` for business, newsletters, portfolios, or professional emails? You can set up unlimited custom email addresses (like `hello@yourname.com` or `rdjarbeng@yourbrand.com`) **completely free** — no monthly fees for Google Workspace or similar services.

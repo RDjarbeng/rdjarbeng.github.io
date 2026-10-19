@@ -1,8 +1,6 @@
 ---
 date: 2025-05-21T12:40:00
 author: Richard
-categories:
-  - Web
 tags:
   - SveltiaCMS
   - CMS
@@ -14,6 +12,7 @@ video: ''
 image_alt: "Cover image for SveltiaCMS Keeps Getting Better: The Features That Made Running My Blog Easier"
 series: "Building This Blog"
 series_part: 2
+category: "Web & Software"
 ---
 **TL;DR**: SveltiaCMS continues to evolve, delivering essential features that make content management a breeze.
 

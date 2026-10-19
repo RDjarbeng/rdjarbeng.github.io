@@ -1,7 +1,6 @@
 ---
 date: 2025-07-08T11:51:00
 author: Richard
-category: Help
 tags:
   - Powerpoint
   - Microsoft
@@ -11,10 +10,9 @@ title: How to Recover an Unsaved PowerPoint Presentation After Closing
 image: /assets/images/recover_unsaved_presentation_ppt.png
 image_alt: Cover image for Don''t Save" -How to Recover an Unsaved PowerPoint Presentation After Mistake
 layout: post
-categories:
-  - Technology
 series: "Quick Tech Fixes"
 series_part: 7
+category: "How-to Guides"
 ---
 
 How to Recover an Unsaved PowerPoint Presentation After Hitting "Don't Save"

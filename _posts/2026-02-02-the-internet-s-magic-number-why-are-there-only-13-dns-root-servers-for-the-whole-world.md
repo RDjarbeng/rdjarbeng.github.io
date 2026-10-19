@@ -2,7 +2,6 @@
 date: 2026-02-02T12:32:00
 published: true
 author: Richard
-category: Technology
 tags:
   - DNS
   - AWS
@@ -11,6 +10,7 @@ image: /assets/images/dns_root_servers_cover.jpg
 image_alt: A digital illustration of the globe connected by a network of glowing nodes, highlighting the number 13.
 layout: post
 description: Discover why the entire internet relies on just 13 DNS root servers. Explore the history, the 512-byte limit, and the Anycast technology that makes it possible.
+category: "Web & Software"
 ---
 
 If you are studying for a networking or cloud certification (like AWS Solutions Architect), you will eventually hit a question that stops you in your tracks:

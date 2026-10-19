@@ -11,6 +11,7 @@ image: /assets/images/posts/covers/chinese_noodles_kigali_cover_richard_pointing
 image_alt: A man on a stage smiling and gesturing with both hands toward a large blue screen behind him. The screen displays the bold white text 'CHINESE NOODLES IN KIGALI' above a vibrant photograph of a steaming bowl of spicy noodles. Below the image, smaller white text reads 'rdjarbeng.com/personal/chinese-noodles-in-kigali'. This image is modeled by Richard Djarbeng
 layout: personal
 card_items: []
+category: "Travel & Places"
 ---
 
 Finding Chinese noodles in Kigali isn't something you'd expect, but here we are. I picked up a packet of **Lao Tan Sauerkraut Beef Noodles (117g + toppings)** from the Chinese shop at Nyarutarama, whose name I can't particularly remember, and decided to see what Chinese instant noodles are actually like compared to the go-to Indomie that's everywhere in the city.

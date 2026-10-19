@@ -1,8 +1,6 @@
 ---
 date: 2025-02-24T12:45:00
 author: Richard
-categories:
-  - Air Quality
 tags:
   - Data Resources
   - Air Quality
@@ -17,6 +15,7 @@ layout: post
 video: ''
 series: "Air Quality Basics"
 series_part: 4
+category: "Climate & Environment"
 ---
 AirNow.gov is a collaborative platform involving the US Environmental Protection Agency (EPA), the National Oceanic and Atmospheric Administration (NOAA), and other agencies, dedicated to providing air quality information to the public. Among its offerings is air quality data from US embassies and consulates located around the world. This data serves as a critical resource for researchers, policymakers, and individuals concerned with environmental health and air pollution trends globally.
 

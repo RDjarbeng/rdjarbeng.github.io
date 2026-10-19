@@ -3,8 +3,6 @@ title: 'AVATAR: THE LAST AIRBENDER Season 2 Trailer Has been Released - First Lo
 date: 2025-12-11T09:54:00
 published: true
 author: Richard
-categories:
-  - Entertainment
 tags:
   - Toph
   - Avatar
@@ -20,6 +18,7 @@ tags:
 image: /assets/images/avatar_netflix/avatar_season2_cover_rdjarbeng.jpg
 image_alt: 'Avatar The Last Airbender Season 2 Title Card with Earth Kingdom background'
 layout: personal
+category: "Music, Film & Books"
 ---
 
 The wait is finally over! Netflix has just dropped the first official trailer for **Avatar: The Last Airbender** Season 2, giving us our very first look at the highly anticipated debut of **Toph Beifong**, the Blind Bandit.

@@ -4,7 +4,6 @@ title: "Know Instantly When Your Site Goes Down: Automating Website Monitoring W
 date: 2026-07-11T13:30:00Z
 published: true
 author: Richard
-category: Technology
 tags:
   - UptimeRobot
   - DevOps
@@ -29,6 +28,7 @@ card_items:
     badge_1: Concept
     badge_2: Security
     description: A strategy for limiting network traffic. It puts a cap on how often someone can repeat an action within a certain timeframe (e.g., trying to log in or sending an email).
+category: "Web & Software"
 ---
 
 How do website admins know when their website is down? Do they just wait until a frustrated user tells them, or do they constantly navigate their own site to find broken pages? What happens if the site crashes while they are sleeping? 

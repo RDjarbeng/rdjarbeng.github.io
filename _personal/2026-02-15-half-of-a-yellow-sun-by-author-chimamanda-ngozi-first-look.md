@@ -7,6 +7,7 @@ tags:
 image: /assets/images/half_of_a_yellow_sun_first_look.jpg
 image_alt: 'A stylized illustration of a half yellow sun with text "First Look: Half of a Yellow Sun"'
 layout: personal
+category: "Music, Film & Books"
 ---
 
 I finally picked up a copy of _Half of a Yellow Sun_ by Chimamanda Ngozi Adichie. The blurb at the back doesn't give away too many spoilers, but I am incredibly curious to find out why this specific novel was crowned the **Women's Prize for Fiction 'Winner of Winners'**.

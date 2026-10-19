@@ -39,6 +39,7 @@ card_items:
   - name: "Alternative Language Change"
     badge_1: "*184#"
     description: "Dial *184#, then select 5 (my account) and 3 (change language) and follow the prompts."
+category: "Travel & Places"
 ---
 USSD CODES and COMMANDS for MTN Rwanda.
 

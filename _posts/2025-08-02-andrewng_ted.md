@@ -2,8 +2,6 @@
 date: 2025-08-02
 published: true
 author: Richard
-categories:
-  - AI
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -13,6 +11,7 @@ tags:
 title: How AI Could Empower Any Business - Andrew Ng
 image: /assets/images/andrew_ng_ai_talk.png
 image_alt: "Cover image for How AI Could Empower Any Business - Andrew Ng"
+category: "AI"
 ---
 In this TED talk by Andrew Ng, co-founder of Google Brain and deeplearning.ai, he believes that artificial intelligence (AI) systems should be more widely available and accessible, so that even small businesses such as local pizza shops can use them to make data-driven decisions and improve their profitability and productivity.
 

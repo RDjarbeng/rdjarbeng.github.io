@@ -3,7 +3,6 @@ layout: post
 title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved?)"
 date: 2026-03-31T23:08:34+02:00
 author: Richard
-category: Security
 tags:
   - Security
   - NPM
@@ -30,6 +29,7 @@ card_items:
     badge_1: Technical Track
 series: "Security Alerts"
 series_part: 1
+category: "Security"
 ---
 **TLDR:** A popular npm package has been attacked and it's used by many web developers.
 

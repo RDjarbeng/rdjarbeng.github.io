@@ -2,7 +2,6 @@
 date: 2026-07-07T16:54:00+02:00
 published: true
 author: Richard
-category: Research
 tags:
   - Weather
 title: Open Meteo archive free historical weather data
@@ -48,6 +47,7 @@ card_items:
     description: "Access essential weather metrics like temperature, relative humidity, precipitation (rain and snow), and wind speed/direction from global models."
 series: "Free Satellite and Climate Data"
 series_part: 4
+category: "Climate & Environment"
 ---
 
 ![Open Meteo Archive: Free Historical Weather Data](/assets/images/posts/covers/open_meteo_cover.jpg)

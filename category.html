@@ -6,35 +6,32 @@ description: "Browse all blog post categories on Richard Djarbeng's website. Fin
 ---
 
 <div class="categories-page">
-  <h1>Categories for posts </h1>
-
-  {% assign categories_list = "" | split: "" %}
-  {% for category in site.categories %}
-  {% assign category_name = category[0] %}
-  {% assign category_size = category[1].size | default: category[1].length %}
-  {% capture category_string %}{{ category_size | prepend: '000000' | slice: -6, 6 }}:::{{ category_name }}{% endcapture %}
-  {% assign categories_list = categories_list | push: category_string %}
-  {% endfor %}
-  {% assign sorted_categories = categories_list | sort | reverse %}
+  <h1>Categories</h1>
 
   <p style="text-align: center; margin-bottom: 20px;">
     <a href="/" class="about-link btn" style="margin-right: 10px;">Return Home🏠</a>
     <a href="/tags/" class="about-link">View Tags 🏷️</a>
   </p>
 
-  <p style="text-align: center; margin-bottom: 20px;">Total Categories: {{ site.categories.size }}</p>
-
-  <h2 class="section-title" style="text-align: center;">Top 4 Categories</h2>
+  {%- comment -%}
+    Technical posts and personal posts each have their own small set of
+    categories (see _category_info, field `section`). Tags are shared.
+  {%- endcomment -%}
+  {% assign sections = "technical,personal" | split: "," %}
+  {% for section in sections %}
+  <h2 class="section-title" style="text-align: center; margin-top: 40px;">
+    {% if section == "technical" %}Technical posts{% else %}Personal posts{% endif %}
+  </h2>
   <ul class="category-grid">
-    {% for item in sorted_categories limit:4 %}
-    {% assign parts = item | split: ":::" %}
-    {% assign cat_size = parts[0] | plus: 0 %}
-    {% assign cat_name = parts[1] %}
-    {% assign cat_info = site.category_info | where: "category_name", cat_name | first %}
+    {% for cat in site.categoryIndex %}
+    {% if section == "technical" and cat.technical == 0 %}{% continue %}{% endif %}
+    {% if section == "personal" and cat.personal == 0 %}{% continue %}{% endif %}
+    {% assign cat_size = cat.posts.size %}
+    {% assign cat_info = site.category_info | where: "slug", cat.slug | first %}
     <li>
-      <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
+      <a href="{{ cat.url }}" class="category-card">
         <div class="category-card-header">
-          <span class="category-name">{{ cat_name }}</span>
+          <span class="category-name">{{ cat.displayName }}</span>
           <span class="category-count">{{ cat_size }} post{% if cat_size != 1 %}s{% endif %}</span>
         </div>
         {% if cat_info.description %}
@@ -44,26 +41,5 @@ description: "Browse all blog post categories on Richard Djarbeng's website. Fin
     </li>
     {% endfor %}
   </ul>
-
-  <h2 class="section-title" style="text-align: center; margin-top: 40px;">Browse all categories</h2>
-  <ul class="category-grid">
-    {% assign alpha_sorted_categories = site.categories | sort %}
-    {% for category in alpha_sorted_categories %}
-    {% assign cat_name = category[0] %}
-    {% assign cat_items = category[1] %}
-    {% assign cat_size = cat_items.size | default: cat_items.length %}
-    {% assign cat_info = site.category_info | where: "category_name", cat_name | first %}
-    <li>
-      <a href="{{ '/categories/' | relative_url }}{{ cat_name | slugify }}" class="category-card">
-        <div class="category-card-header">
-          <span class="category-name">{{ cat_name }}</span>
-          <span class="category-count">{{ cat_size }} post{% if cat_size != 1 %}s{% endif %}</span>
-        </div>
-        {% if cat_info.description %}
-          <p class="category-card-desc">{{ cat_info.description | strip_html | truncate: 120 }}</p>
-        {% endif %}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+  {% endfor %}
 </div>
