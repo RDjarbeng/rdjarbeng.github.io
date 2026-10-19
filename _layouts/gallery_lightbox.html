@@ -168,6 +168,10 @@ layout: default
         {% assign cat_title = cat.title | default: cat_slug | capitalize | replace: '-', ' ' %}
         {% if cat_slug == 'external' %}{% assign cat_title = "Gallery Images" %}{% endif %}
         {% if cat_slug == 'cover-images' %}{% assign cat_title = "Cover Images" %}{% endif %}
+        {% assign cat_href = '/gallery/' | append: cat_slug | append: '/' %}
+        {% if cat_slug == 'youtube' or cat_slug == 'tiktok' or cat_slug == 'instagram' or cat_slug == 'twitter' %}
+          {% assign cat_href = '/gallery/videos/' | append: cat_slug | append: '/' %}
+        {% endif %}
         {% if cat_slug == 'videos' %}{% assign cat_title = "All Videos" %}{% endif %}
         {% if cat_slug == 'artemis-ii' %}{% assign cat_title = "Artemis II" %}{% endif %}
         
@@ -202,7 +206,7 @@ layout: default
         <div class="dashboard-category" data-category-slug="{{ cat_slug }}">
           <div class="dashboard-category-header">
             <h3 class="dashboard-category-title">{{ cat_title }}</h3>
-            <a class="view-all-link" href="/gallery/{{ cat_slug }}/">View All</a>
+            <a class="view-all-link" href="{{ cat_href }}">View All</a>
           </div>
 
           {% assign subfolders = "" | split: "" %}
@@ -274,7 +278,7 @@ layout: default
                     </div>
               {% endfor %}
               {% if cat_items.size > 6 %}
-              <a href="/gallery/{{ cat_slug }}/" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
+              <a href="{{ cat_href }}" class="dashboard-item dashboard-view-all-card" style="text-decoration: none; width: 200px; display: flex; flex-direction: column; justify-content: center; border-radius: 8px;">
                   <span class="view-all-icon" style="font-size: 2rem;">➜</span>
                   <span style="font-weight: bold; color: #102a43;">View All {{ cat_title }}</span>
               </a>

@@ -32,6 +32,7 @@ layout: default
     {% endif %}
 
     {% assign safe_cat_slug = cat_title | slugify %}
+    {% unless cat_pager.all_posts %}
     {% assign all_category_items = "" | split: "" %}
     {% for item in site.gallery %}
         {% assign cats_str = item.categories | join: ' ' %}
@@ -52,14 +53,20 @@ layout: default
             {% assign all_category_items = all_category_items | push: item %}
         {% endif %}
     {% endfor %}
+    {% endunless %}
 
-    {% assign all_category_items = all_category_items | sort: "date" | reverse %}
+    {% if cat_pager.all_posts %}
+        {% comment %} Generated pages pass their items in (see _data/galleryPages.js). {% endcomment %}
+        {% assign all_category_items = cat_pager.all_posts %}
+    {% else %}
+        {% assign all_category_items = all_category_items | sort: "date" | reverse %}
+    {% endif %}
 
     {% assign subfolders = "" | split: "" %}
     {% for item in all_category_items %}
         {% assign parts = item.relative_path | split: "/" %}
         {% if parts.size >= 4 %}
-            {% assign subfolder = parts[2] %}
+            {% assign subfolder = parts[1] | append: '/' | append: parts[2] %}
             {% unless subfolders contains subfolder %}
                 {% assign subfolders = subfolders | push: subfolder %}
             {% endunless %}
@@ -71,15 +78,16 @@ layout: default
         {% for sub in subfolders %}
             <div class="subfolder-wrapper">
                 <div class="subfolder-header">
-                    <h4 style="font-size: 1.5rem;">{{ sub | replace: "-", " " }}</h4>
-                    <a href="/gallery/{{ page.url | split: '/' | last }}/{{ sub }}/" style="font-size: 1rem;">View All</a>
+                    <h4 style="font-size: 1.5rem;">{{ sub | split: '/' | last | replace: "-", " " }}</h4>
+                    <a href="/gallery/{{ sub }}/" style="font-size: 1rem;">View All</a>
                 </div>
                 
                 <div class="meme-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; text-align: left;">
                     {% assign sub_count = 0 %}
                     {% for item in all_category_items %}
                         {% assign parts = item.relative_path | split: "/" %}
-                        {% if parts[2] == sub %}
+                        {% assign item_sub = parts[1] | append: '/' | append: parts[2] %}
+                        {% if parts.size >= 4 and item_sub == sub %}
                             {% assign sub_count = sub_count | plus: 1 %}
                             {% if sub_count <= 6 %}
                             <div class="sub-item" style="display: flex; flex-direction: column; gap: 8px;">

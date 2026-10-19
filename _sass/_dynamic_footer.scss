@@ -47,6 +47,17 @@
     // the bar keeps its plain theme background so no image sliver shows
     // above "Get in touch / Scroll to expand" before expansion completes.
     &.is-expanded.has-bg {
+        // The scrim is dark in both themes, so the text always uses the
+        // dark-theme colours here. Otherwise light mode puts black text on a
+        // dark photo.
+        --text-color: #f5f5f5;
+        --grey-text: rgba(255, 255, 255, 0.78);
+        color: var(--text-color);
+
+        .footer-bottom {
+            border-top-color: rgba(255, 255, 255, 0.2);
+        }
+
         &::before,
         &::after {
             opacity: 1;

@@ -197,7 +197,7 @@
                         <div class="video-bullet">•</div>
                         {% assign fallback_genre = include.item.genre | default: include.item.category | default: "Other" %}
                         {% assign genre_slug = fallback_genre | slugify %}
-                        {% assign genre_url = '/gallery/videos/' | append: genre_slug | append: '/' | relative_url %}
+                        {% if genre_slug == 'videos' %}{% assign genre_url = '/gallery/videos/' %}{% else %}{% assign genre_url = '/gallery/videos/' | append: genre_slug | append: '/' | relative_url %}{% endif %}
                         <a href="{{ genre_url }}" class="video-genre">{{ fallback_genre }}</a>
                     </div>
                 </div>

@@ -39,7 +39,8 @@ layout: default
         
         {% assign display_cat = item_category %}
         {% if display_cat == nil or display_cat == 'None' %}
-            {% assign parts = item_rel_path | split: '/' %}
+            {% assign parts = item_rel_path | remove_first: './' | split: '/' %}
+            {% comment %} Only items inside a folder (_gallery/<folder>/item.md) get a folder badge. {% endcomment %}
             {% if parts.size >= 3 %}
                 {% assign display_cat = parts[1] %}
             {% endif %}
