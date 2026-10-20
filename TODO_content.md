@@ -21,9 +21,6 @@ This todo contains direction for content on this site rdjarbeng.com, areas to im
 Add page for apps of interest, AI apps, image creators,video generators, I love pdf, ...
 - [ ] Comment from reddit I'd like to implement: "Then i switched things up and started automating all that research part, like it would handle the keyword stuff and competitor analysis automatically so i could just focus on making the actual content good, the weird part is it also optimized everything for those AI overview things that show up in google now and that's when my traffic actually started moving"
 
-- [ ] Create a gallery of videos, music from RRR, Playlists from Andrew Ng and Lex Fridman, my own collection of songs that require headphones, nigerian movies
-
-
 ## Moved from TODO_design.md
 
 ### Fixes to existing posts
