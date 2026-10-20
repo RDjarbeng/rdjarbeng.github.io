@@ -3149,26 +3149,13 @@ h1, h2, h3, h4, h5, h6,
 
   .series-continue__label { margin: 0 0 0.8rem; font-size: 1rem; }
 
-  // reuse the normal post card, but always visible and laid out sideways on wide screens
+  // the horizontal post card (post-card--horizontal), always visible
   .post-card {
     opacity: 1 !important;
     animation: none !important;
     max-width: none;
     margin: 0;
   }
-
-  @media (min-width: 700px) {
-    .post-link { flex-direction: row; }
-    .post-card-image { flex: 0 0 42%; width: 42%; align-self: center; } // keep 16:9, do not stretch to card height
-    .post-card-content { padding: 14px 18px; flex: 1 1 auto; min-width: 0; } // let the text side shrink instead of overflowing
-  }
-}
-
-/* Neutral corner badge for post cards ("Series", "Part 2"), on the existing .card-type-badge */
-.badge-neutral {
-  background: rgba(0, 0, 0, 0.72);
-  color: #fff;
-  box-shadow: none;
 }
 
 /* A series is a post card with two cards stacked behind it, so it reads as a collection.
@@ -3223,71 +3210,108 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .post-card--horizontal {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
+  /* YouTube "up next" style: thumbnail on the left, title on top, meta under it */
   flex-direction: row;
   height: auto;
   opacity: 1 !important;
   animation: none !important;
 
+  &:hover { transform: none; }
+
   .post-link {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
     width: 100%;
-    align-items: stretch;
+    padding: 10px;
   }
 
   .post-card-image {
-    flex: 0 0 280px;
-    width: 280px;
-    max-width: 38%;
+    flex: 0 0 auto;
+    width: clamp(120px, 38%, 260px);
     aspect-ratio: 16 / 9;
-    align-self: center;
-    border-radius: 12px 0 0 12px;
+    border-radius: 8px;
     overflow: hidden;
-
-    .post-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 
   .post-card-content {
     flex: 1 1 auto;
     min-width: 0;
-    padding: 16px 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 0;
   }
 
-  .post-card-excerpt {
-    margin: 6px 0 12px;
-    line-height: 1.55;
+  h4 {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 0 0 4px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
-  .post-meta-categories-container {
-    margin-top: auto;
-  }
-
-  @media (max-width: 680px) {
-    .post-link {
-      flex-direction: column;
-    }
-
-    .post-card-image {
-      flex: none;
-      width: 100%;
-      max-width: 100%;
-      border-radius: 12px 12px 0 0;
-    }
-
-    .post-card-content {
-      padding: 14px 16px;
-    }
-  }
+  .post-card-excerpt { -webkit-line-clamp: 2; margin-bottom: 4px; }
+  .post-card-meta { margin-top: 2px; }
 }
 
 @import "print";
+
+
+/* ── Card meta line and reading order ──────────────────────────────────────
+   Title first, then two lines of excerpt, then one quiet line of meta
+   (label · category · date · read time). No pills or corner badges. */
+.post-card .post-card-excerpt { -webkit-line-clamp: 2; line-clamp: 2; }
+
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--grey-text);
+
+  > * + *::before {
+    content: "·";
+    margin: 0 6px;
+  }
+
+  .post-card-meta__label { font-weight: 600; color: var(--text-color); }
+
+  a.post-card-meta__cat,
+  a.post-card-meta__cat:visited {
+    position: relative;
+    z-index: 2;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover { color: var(--text-color); text-decoration: underline; text-underline-offset: 2px; }
+  }
+}
+
+.post-card--no-excerpt h4 { margin-bottom: 2px; }
+
+/* Previous / next post: two horizontal cards side by side, stacked on phones */
+.post-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+
+  .prev-post,
+  .next-post {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .post-navigation__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--grey-text);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}

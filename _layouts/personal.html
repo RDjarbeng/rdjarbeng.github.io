@@ -82,12 +82,12 @@ layout: default
     {% assign next_post = page.url | getNextPost: site.personal %}
     <div class="prev-post">
       {% if prev_post %}
-      « Previous post : {% include_cached post-card.html post=prev_post %}
+      <span class="post-navigation__label">« Previous post</span>{% include_cached post-card.html post=prev_post horizontal=true show_excerpt=false %}
       {% endif %}
     </div>
     <div class="next-post">
       {% if next_post %}
-      Next post »: {% include_cached post-card.html post=next_post %}
+      <span class="post-navigation__label">Next post »</span>{% include_cached post-card.html post=next_post horizontal=true show_excerpt=false %}
       {% endif %}
     </div>
   </div>

@@ -1,5 +1,11 @@
-<div class="post-card{% if include.horizontal %} post-card--horizontal{% endif %}">
-  {% if include.badge %}<span class="card-type-badge badge-neutral">{{ include.badge }}</span>{% endif %}
+{%- comment -%}
+  Post card. Options:
+    horizontal=true   thumbnail on the left, text on the right (YouTube "up next" style)
+    show_excerpt=false  title and meta only
+    label="Part 2"    a short word shown first in the meta line ("badge" still works)
+  The meta line is plain text: label · category · date · read time.
+{%- endcomment -%}
+<div class="post-card{% if include.horizontal %} post-card--horizontal{% endif %}{% if include.show_excerpt == false %} post-card--no-excerpt{% endif %}">
   <div class="post-link">
     {% if include.is_js_template %}
       ${badgeHtml}
@@ -69,81 +75,43 @@
       {% endif %}
       {% endunless %}
 
+      {% if include.is_js_template %}
       <div class="post-meta-categories-container">
         <div class="post-meta-left">
-          {% if include.is_js_template %}
           ${dateHtml}
           ${readTime}
-          {% else %}
-          <div class="post-meta-card">
-            {% if include.post.formatted_date %}
-              <time datetime="{{ include.post.iso_date }}" data-local="date">{{ include.post.formatted_date }}</time>
-            {% elsif include.post.date %}
-              <time>{{ include.post.date }}</time>
-            {% else %}
-              {% assign current_year = site.time | date: "%Y" %}
-              {% assign post_year = include.post.date | date: "%Y" %}
-              <time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">
-                {% if post_year == current_year %}
-                  {{ include.post.date | date: "%B %-d" }}
-                {% else %}
-                  {{ include.post.date | date: "%B %-d, %Y" }}
-                {% endif %}
-              </time>
-            {% endif %}
-          </div>
-          <div class="post-meta-dot">·</div>
-          <div class="post-meta-card">
-            {% if include.post.file_size and minutes > 0 %}
-              {{ minutes }} min read · {{ include.post.file_size }}
-            {% elsif include.post.file_size %}
-              {{ include.post.file_size }}
-            {% elsif minutes < 1 %}
-              Less than a minute
-            {% else %}
-              {{ minutes }} min read
-            {% endif %}
-          </div>
-          {% endif %}
         </div>
-        
-        {% if include.is_js_template %}
         ${categoriesHtml}
-        {% elsif include.post.categories_data or include.post.tags_data %}
-        <div class="post-card-categories">
-          {% assign items_shown = 0 %}
-          {% for cat in include.post.categories_data %}
-            {% if items_shown < 2 %}
-            {% if cat.url and cat.url != "" %}<a href="{{ cat.url | relative_url }}" class="post-card-category">{{ cat.name }}</a>{% else %}<span class="post-card-category">{{ cat.name }}</span>{% endif %}
-            {% assign items_shown = items_shown | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-          {% for tag in include.post.tags_data %}
-            {% if items_shown < 2 %}
-            <a href="{{ tag.url | relative_url }}" class="post-card-tag">#{{ tag.name }}</a>
-            {% assign items_shown = items_shown | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-        </div>
-        {% elsif include.post.categories.size > 0 or include.post.tags.size > 0 %}
-        <div class="post-card-categories">
-          {% assign items_shown = 0 %}
-          {% for cat in include.post.categories %}
-            {% if items_shown < 2 %}
-            {% assign cat_href = cat | category_url %}
-            {% if cat_href != "" %}<a href="{{ cat_href | relative_url }}" class="post-card-category">{{ cat }}</a>{% else %}<span class="post-card-category">{{ cat }}</span>{% endif %}
-            {% assign items_shown = items_shown | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-          {% for tag in include.post.tags %}
-            {% if items_shown < 2 %}
-            <a href="{{ tag | tag_url }}" class="post-card-tag">#{{ tag }}</a>
-            {% assign items_shown = items_shown | plus: 1 %}
-            {% endif %}
-          {% endfor %}
-        </div>
-        {% endif %}
       </div>
+      {% else %}
+      {% assign card_label = include.label | default: include.badge %}
+      {% assign card_cat = include.post.categories_data | first %}
+      {% if card_cat %}
+        {% assign card_cat_name = card_cat.name %}{% assign card_cat_url = card_cat.url %}
+      {% else %}
+        {% assign card_cat_name = include.post.categories | first | default: include.post.category %}
+        {% assign card_cat_url = card_cat_name | category_url %}
+      {% endif %}
+      <div class="post-card-meta">
+        {%- if card_label %}<span class="post-card-meta__label">{{ card_label }}</span>{% endif -%}
+        {%- if card_cat_name and card_cat_name != "" -%}
+          {%- if card_cat_url and card_cat_url != "" %}<a href="{{ card_cat_url | relative_url }}" class="post-card-meta__cat">{{ card_cat_name }}</a>{% else %}<span class="post-card-meta__cat">{{ card_cat_name }}</span>{% endif -%}
+        {%- endif -%}
+        <span>
+          {%- if include.post.formatted_date -%}
+            <time datetime="{{ include.post.iso_date }}" data-local="date">{{ include.post.formatted_date }}</time>
+          {%- elsif include.post.date -%}
+            <time datetime="{{ include.post.date | date_to_xmlschema }}" data-local="date">{{ include.post.date | date: "%B %-d, %Y" }}</time>
+          {%- endif -%}
+        </span>
+        <span>
+          {%- if include.post.file_size and minutes > 0 -%}{{ minutes }} min read · {{ include.post.file_size }}
+          {%- elsif include.post.file_size -%}{{ include.post.file_size }}
+          {%- elsif minutes < 1 -%}1 min read
+          {%- else -%}{{ minutes }} min read{%- endif -%}
+        </span>
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>
