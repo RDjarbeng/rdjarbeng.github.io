@@ -1,7 +1,3 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
 vendor
 /assets/images/*.py
 /assets/scripts/*.py
@@ -22,7 +18,7 @@ generate_tags_gemini.rb
 *.log
 .env
 !llms.txt
-crawls_from_web/*.md
+misc_crawls_from_web/*
 node_modules/  
 **/__pycache__/
 **/__pycache__/*
