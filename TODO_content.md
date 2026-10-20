@@ -45,7 +45,6 @@ Add page for apps of interest, AI apps, image creators,video generators, I love 
 - [ ] Could create an option like this for guest posts on my blog:
 https://blog.pragmaticengineer.com/pragmatic-engineer-guest-article/
 - [ ] Do a section listing featuring, Featured YouTube channels I've posted about
-- [x] Consider making some of the longer posts into pdfs (Generated standalone PDFs for top 15 deep-dive research posts in `documents/`, created `scripts/generate_post_pdfs.js`, and launched the PDF Library at `/library/` featuring custom presentations and research whitepapers)
 
 
 # linkedIn posts
@@ -527,7 +526,7 @@ https://gordicaleksa.medium.com/how-i-got-a-job-at-deepmind-as-a-research-engine
 https://gordicaleksa.medium.com/get-started-with-ai-and-machine-learning-in-3-months-5236d5e0f230
 - [ ] Big players in AI at the moment companies and people
 OpenAI Grok Anthropic  meta Zuckerberg Elon Musk Dario Amodei Sam Altman Jensen Huang Karparthy, Yann Le Cunn, Nvidia, AMD, Intel, Microsoft, Google, Tesla, XAI, SpaceX Deepseek (China), honorable mention Mistral, Cohere
-- [x] Cybersecurity Datasets for Deep Learning
+- [ ] Cybersecurity Datasets for Deep Learning
 One of the most widely used datasets for intrusion detection is the Knowledge Discovery and Dissemination (KDD) 1999 dataset [57]. This dataset was created for the KDD Cup challenge in 1999 and is composed of more than 4 million network traffic records.
 From: A Survey of Deep Learning Methods for Cyber Security - Daniel S. Berman
 Published Post: [_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md](file:///c:/Users/Richard/RD/myprojects/rdjarbeng.github.io/_posts/2026-09-24-cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models.md)
