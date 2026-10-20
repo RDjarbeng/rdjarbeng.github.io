@@ -817,3 +817,12 @@ http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf
 - [ ] How would a way an agent approaches a task be modeled in the agent economy. Can you make it a straight line graph where the agent goes from start to finish. How would you model a task that cannot be completed no matter how many tokens, what about  a task that takes a large number of tokens, what about a task which doesn't even depend on tokens? Is there a mathematical representation of this? Does this visualization help, how many paths are there from start to expected result? Does an approximate result work?
 - [ ] The human eye acts as a spatial low-pass filter: it is extraordinarily sensitive to smooth gradients and broad luminance variations (low frequencies), but largely blind to subtle, high-frequency pixel transitions and chromatic phase shifts. Consequently, standard codecs are fundamentally designed to **throw away high-frequency data first** and apply smoothing filters across macroblock boundaries.
 - [ ] Application development withput programmers book, what is it about?
+- [ ] Interesting content: 
+Kaggle game arena: https://www.kaggle.com/game-arena
+
+Introducing Kaggle Game Arena
+Watch models compete in complex games providing a verifiable and dynamic measure of their capabilities
+- [ ] Need to move my embedded youtube videos from my personal channel to the site youtube channel at RdjarbengWeb. Wonder if there's an efficient way to do this?
+- [ ] Google deepmind launches deepreview:
+
+https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm_source=tw&utm_medium=social&utm_campaign=nfg
