@@ -141,6 +141,14 @@ a:visited {
   color: var(--link-color);
   text-decoration: none;
 }
+/* Links styled as cards keep their own colour after a visit: a:visited above
+   is more specific than a single class, so each needs :visited spelled out. */
+.recommended-card:visited,
+.gallery-card-link:visited,
+.video-rail-card:visited,
+.video-info-link:visited {
+  color: inherit;
+}
 @import "gallery";
 @import "personal";
 @import "dynamic_footer";
@@ -511,9 +519,10 @@ iframe {
   margin-top: auto;
   /* Pushes this section to the bottom of the card if needed */
   padding-top: 5px;
-  /* Keep date + tags on one line; tags shrink instead of wrapping below */
-  flex-wrap: nowrap;
-  gap: 8px;
+  /* Pills wrap onto their own row above the date (see .post-card-categories) */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
 }
 
 .post-meta-left {
@@ -2812,7 +2821,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Post card category tags and stretched link pattern */
-.post-card-title-link {
+.post-card-title-link,
+.post-card-title-link:visited {
+  /* :visited listed explicitly: the global a:visited rule is more specific
+     than a single class and would otherwise recolour titles you have read */
   color: inherit;
   text-decoration: none;
 
@@ -2832,32 +2844,26 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+/* Category and tag pills sit on their own row above the date, so they are
+   never cut off; a pill only truncates if it is wider than the whole card. */
 .post-card-categories {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  gap: 4px;
-  margin-bottom: 0;
-  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 6px;
+  order: -1;
+  flex-basis: 100%;
+  margin: 0 0 8px;
   min-width: 0;
-  overflow: hidden;
   position: relative;
   z-index: 2;
 
-  /* Long pills truncate with an ellipsis rather than pushing to a new line */
   .post-card-category,
   .post-card-tag {
-    flex: 0 1 auto;
-    min-width: 0;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-
-  /* First pill stays whole; only later ones give up space */
-  > :first-child {
-    flex-shrink: 0;
   }
 }
 

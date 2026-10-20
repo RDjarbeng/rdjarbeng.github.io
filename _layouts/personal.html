@@ -7,6 +7,17 @@ layout: default
 
 <div class="personal-container">
   <div class="post-header">
+    {% assign post_categories = categories | default: page.categories %}
+    {% assign single_category = category | default: page.category %}
+    {% if post_categories == nil or post_categories.size == 0 %}{% if single_category %}{% assign post_categories = single_category | split: "|||" %}{% endif %}{% endif %}
+    {% if post_categories.size > 0 %}
+    <div class="post-header-categories">
+      {% for cat in post_categories %}
+      {% assign cat_href = cat | category_url %}
+      {% if cat_href != "" %}<a href="{{ cat_href | relative_url }}" class="post-header-category-tag">{{ cat }}</a>{% else %}<span class="post-header-category-tag">{{ cat }}</span>{% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
     <h1>{{ post_title }}</h1>
     <div class="author_date">
       <!-- Display full date with time if the time is provided, otherwise just the date -->
