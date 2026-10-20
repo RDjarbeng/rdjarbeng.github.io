@@ -827,3 +827,6 @@ Kaggle game arena: https://www.kaggle.com/game-arena
 Introducing Kaggle Game Arena
 Watch models compete in complex games providing a verifiable and dynamic measure of their capabilities
 - [ ] Need to move my embedded youtube videos from my personal channel to the site youtube channel at RdjarbengWeb. Wonder if there's an efficient way to do this?
+- [ ] Google deepmind launches deepreview:
+
+https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm_source=tw&utm_medium=social&utm_campaign=nfg
