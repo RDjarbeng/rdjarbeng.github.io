@@ -12,7 +12,7 @@ I created this to separate the drawn/animated images from my original post on ic
 
 Tom and Jerry: Tom about to blow his mind. Ironically he's the one with the trigger.
 
-![Image](https://pbs.twimg.com/media/Gn42Cb0WsAAb6Nr?format=png&name=small)
+![Image](/assets/images/twitter/Gn42Cb0WsAAb6Nr.png)
 
 ---
 
@@ -42,4 +42,4 @@ Tai Lung returns to the jade palace in Dreamwork's Kung Fu Panda. Credit to [@UT
 
 General Zhao from Avatar the Last Airbender 'We attack at sunrise'.
 
-![General Zhao and Iroh from Avatar the Last Airbender 'We attack at sunrise'](https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small)
+![General Zhao and Iroh from Avatar the Last Airbender 'We attack at sunrise'](/assets/images/twitter/GnM7K9NXoAAX3bE.jpg)

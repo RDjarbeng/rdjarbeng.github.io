@@ -1,4 +1,5 @@
 ---
+published: false  # original image deleted by Twitter and not archived; add a local image to re-enable
 title: 'A moment of absence: Buffett and Munger'
 image: https://pbs.twimg.com/media/GoiWj8VXUAAglL2?format=jpg&name=small
 image_alt: 'Warren Buffet accidentally calls Charlie''s name at a meeting'

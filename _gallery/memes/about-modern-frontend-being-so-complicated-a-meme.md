@@ -1,6 +1,6 @@
 ---
 title: 'Modern frontend is complicated'
-image: https://pbs.twimg.com/media/GY5Xg07WQAAYfcE?format=jpg&name=small
+image: /assets/images/twitter/GY5Xg07WQAAYfcE.jpg
 image_alt: 'Meme about frontend development being too complicated by  the swan chasing a man'
 type: image
 category: memes

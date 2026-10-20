@@ -1,6 +1,6 @@
 ---
 title: 'Doctor dressed as the Joker delivers a baby'
-image: https://pbs.twimg.com/media/GmZPxZBa8AUVogI?format=jpg&name=small
+image: /assets/images/twitter/GmZPxZBa8AUVogI.jpg
 image_alt: 'Dr. Paul Locus in a Joker costume in a hospital delivery room'
 type: image
 category: Iconic Images

@@ -1,6 +1,6 @@
 ---
 title: 'The Hercules Armor, forged in 1555 for Emperor Maximilian II of Austria'
-image: https://pbs.twimg.com/media/Gkw87SkaoAA0GLw?format=jpg&name=small
+image: /assets/images/twitter/Gkw87SkaoAA0GLw.jpg
 image_alt: 'The Hercules Armor, forged in 1555 for Emperor Maximilian II of Austria'
 type: image
 category: Iconic Images

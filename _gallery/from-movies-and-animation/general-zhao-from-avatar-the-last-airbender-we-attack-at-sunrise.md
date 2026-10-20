@@ -1,6 +1,6 @@
 ---
 title: 'General Zhao in Avatar: The Last Airbender: ''We attack at sunrise'''
-image: https://pbs.twimg.com/media/GnM7K9NXoAAX3bE?format=jpg&name=small
+image: /assets/images/twitter/GnM7K9NXoAAX3bE.jpg
 image_alt: 'General Zhao and Iroh from Avatar the Last Airbender ''We attack at sunrise'''
 type: image
 category: From Movies and Animation

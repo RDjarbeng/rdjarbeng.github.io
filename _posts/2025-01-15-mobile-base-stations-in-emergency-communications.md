@@ -23,7 +23,7 @@ TLDR
 
 ---
 
-![Tesla cybertrucks lined up](https://pbs.twimg.com/media/GhHzgf1W8AARQfS?format=jpg&name=small "Tesla cybertrucks lined up")
+![Tesla cybertrucks lined up](/assets/images/twitter/GhHzgf1W8AARQfS.jpg "Tesla cybertrucks lined up")
 
 
 

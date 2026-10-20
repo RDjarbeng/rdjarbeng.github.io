@@ -12,7 +12,7 @@ Pictures that caught my eye when I was browsing the internet. If I find the cont
 
 In 2017 Dr. Paul Locus was attending a Halloween party dressed as the Joker when he was urgently called to deliver a baby. Despite the costume he rushed to the hospital
 
-![Image](https://pbs.twimg.com/media/GmZPxZBa8AUVogI?format=jpg&name=small "https://x.com/PicturesFoIder/status/1902295605998973014")
+![Image](/assets/images/twitter/GmZPxZBa8AUVogI.jpg "https://x.com/PicturesFoIder/status/1902295605998973014")
 
 ---
 
@@ -24,7 +24,7 @@ Michael Jackson at the super bowl half time performance on January 31, 1993, at 
 
 Trumpet boy (2018). Thanks to the [lost meme archive](https://x.com/LostMemeArchive/status/1899498051288682546) on Twitter/x
 
-![Boy blowing trumpet whilst girl covers her ears](https://pbs.twimg.com/media/GlxBY8JXUAE3A6H?format=jpg&name=small "Meme from 2018")
+![Boy blowing trumpet whilst girl covers her ears](/assets/images/twitter/GlxBY8JXUAE3A6H.jpg "Meme from 2018")
 
 ---
 
@@ -36,7 +36,7 @@ Chaos at football match
 
 Trying to stop a Japanese MP from speaking
 
-![Many people trying to stop one man from speaking into the microphone](https://pbs.twimg.com/media/Gm-qpqVWYAAYxXR?format=jpg&name=small)
+![Many people trying to stop one man from speaking into the microphone](/assets/images/twitter/Gm-qpqVWYAAYxXR.jpg)
 
 ---
 
@@ -50,7 +50,7 @@ Credit to [@historyinmemes](https://x.com/historyinmemes) on [twitter](https://x
 
 The Hercules Armor, forged in 1555 for Emperor Maximilian II of Austria.
 
-![Image](https://pbs.twimg.com/media/Gkw87SkaoAA0GLw?format=jpg&name=small)
+![Image](/assets/images/twitter/Gkw87SkaoAA0GLw.jpg)
 
 ---
 

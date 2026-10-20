@@ -27,7 +27,7 @@ Programmers vs scientists
 
 And now we wait
 
-![Image](https://pbs.twimg.com/media/GlDyT_TbEAE66Pp?format=jpg&name=small)
+![Image](/assets/images/twitter/GlDyT_TbEAE66Pp.jpg)
 
 ----
 Forgotten documentation
@@ -74,4 +74,4 @@ Senior dev versus junior dev after the code works
 
 About modern Frontend  being so complicated, a meme.
 
-![Meme about frontend development being too complicated by  the swan chasing a man](https://pbs.twimg.com/media/GY5Xg07WQAAYfcE?format=jpg&name=small "Meme about frontend development being too complicated by  the swan chasing a man")
+![Meme about frontend development being too complicated by  the swan chasing a man](/assets/images/twitter/GY5Xg07WQAAYfcE.jpg "Meme about frontend development being too complicated by  the swan chasing a man")

@@ -53,4 +53,4 @@ category: "Career & Growth"
 ---
 In this post we'll take a look at interesting quotes I found across the internet and books I read. For a glimpse I'm featuring George Bernard Shaw and Captain Jack Sparrow.
 
-![The problem with stealing quotes off the internet is you never know if they are genuine](https://pbs.twimg.com/media/Goi5CsPW0AABO8o?format=jpg&name=small "Wrong Abraham Lincoln post")
+![The problem with stealing quotes off the internet is you never know if they are genuine](/assets/images/twitter/Goi5CsPW0AABO8o.jpg "Wrong Abraham Lincoln post")

@@ -1,6 +1,6 @@
 ---
 title: 'And now we wait'
-image: https://pbs.twimg.com/media/GlDyT_TbEAE66Pp?format=jpg&name=small
+image: /assets/images/twitter/GlDyT_TbEAE66Pp.jpg
 image_alt: 'And now we wait'
 type: image
 category: memes
