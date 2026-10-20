@@ -857,6 +857,8 @@ module.exports = function (eleventyConfig) {
 
 Part 1 gives you a fully functional, production-ready static blog. Part 2 is an optional menu of features you can add to tailor the site to your needs. Every section below is self-contained: pick the features that fit your workflow, implement them in any order, and skip whatever you don't need.
 
+> **A note on the `eleventy.config.js` snippets in Part 2:** each one is shown wrapped in `module.exports = function (eleventyConfig) { ... }` so you can see where the code goes. Don't paste that wrapper in again. Your config must have only **one** `module.exports`. Put any `require(...)` lines at the top of the file, and put the `eleventyConfig.add...` calls inside your existing function, before the `return { ... }`. If you end up with two `module.exports`, the last one silently replaces the first, and either the new feature never loads or your whole config stops working. If you're unsure, compare with [the complete `eleventy.config.js` file](#the-complete-eleventyconfigjs-file) near the end.
+
 ***
 
 ## 1. A Separate Content Type: Gallery Collection
@@ -1020,6 +1022,8 @@ npm install @11ty/eleventy-plugin-rss
 
 **Step 2: Register the plugin in `eleventy.config.js`.**
 
+Add the `require` line to the top of your config, and the `addPlugin` call inside your existing `module.exports` function, before the `return`. Don't add a second `module.exports`. If you do, the plugin never registers and you'll get "Cannot GET /feed.xml".
+
 ```js
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
@@ -1177,6 +1181,8 @@ We can implement this by adding a custom JavaScript filter to `eleventy.config.j
 
 **Step 1: Register the `relatedPosts` filter in `eleventy.config.js`.**
 
+Add the `addFilter` call inside your existing `module.exports` function, before the `return`.
+
 ```js
 module.exports = function (eleventyConfig) {
   // Custom filter to find articles with matching tags
@@ -1246,7 +1252,7 @@ Install the plugin:
 npm install eleventy-plugin-seo
 ```
 
-Register it in `eleventy.config.js`:
+Register it in `eleventy.config.js`. The `require` lines go at the top of the file, and the `addPlugin` call goes inside your existing `module.exports` function, before the `return`:
 
 ```js
 const pluginSEO = require("eleventy-plugin-seo");
@@ -1330,6 +1336,8 @@ npm install --save-dev @11ty/eleventy-plugin-syntaxhighlight
 ```
 
 **Step 2: Register the plugin in `eleventy.config.js`.**
+
+As before, the `require` line goes at the top, and the `addPlugin` call goes inside your existing `module.exports` function.
 
 ```js
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
