@@ -44,6 +44,8 @@ function titleize(input) {
 }
 
 module.exports = function(eleventyConfig) {
+  // {% media "<gallery path>" %}: embed a gallery item in a post (lib/media.js)
+  require("./lib/media.js")(eleventyConfig, siteData);
   // 1. Markdown configuration
   const mdLib = markdownIt({
     html: true,
