@@ -827,3 +827,4 @@ Watch models compete in complex games providing a verifiable and dynamic measure
 
 https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm_source=tw&utm_medium=social&utm_campaign=nfg
 - [ ] Who's selling my data, a look at the ad networks and how they operate
+- [ ] Who's selling my data, a look at the ad networks and how they operate
