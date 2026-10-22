@@ -2102,6 +2102,18 @@ pre.highlight span,
   position: relative;
 }
 
+/* Same header on every page. Post, gallery and YouTube layouts zero the
+   padding of every .wrapper (so their side rails sit flush left), which used
+   to move the logo 30px depending on the page. Pin the header's own spacing:
+   the logo lines up with the side-panel hamburger, and the nav keeps a small
+   gap from the right edge. `body` lifts this above those page-level rules. */
+body .site-header > .wrapper {
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 16px;
+}
+
 .nav-search-results:empty {
   display: none;
 }
