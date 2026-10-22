@@ -3,7 +3,7 @@
 
 // "Media from gallery": pick any item from the Gallery collection (images,
 // memes, YouTube/TikTok/Instagram/X videos) and insert it into a post. It
-// writes {% media "<path>" %}, which lib/media.js turns into the right embed
+// writes {% media "<file name>" %}, which lib/media.js turns into the right embed
 // with the gallery item's caption and a link back to its gallery page.
 CMS.registerEditorComponent({
   id: "media",
