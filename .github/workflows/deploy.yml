@@ -83,3 +83,46 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Opens (or comments on) a GitHub issue that @-mentions the owner when a
+  # deploy takes longer than 5 minutes, so slow builds get noticed by email.
+  build-time-alert:
+    needs: [build, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: read
+      issues: write
+    steps:
+      - name: Check how long this deploy took
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          LIMIT_SECONDS: "300"
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          started=$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq .run_started_at)
+          elapsed=$(( $(date -u +%s) - $(date -u -d "$started" +%s) ))
+          took="$((elapsed / 60))m $((elapsed % 60))s"
+          echo "Deploy took $took" | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ "$elapsed" -le "$LIMIT_SECONDS" ]; then
+            exit 0
+          fi
+          echo "::warning::Deploy took $took, over the 5 minute limit"
+          slow=$(gh api "repos/$REPO/actions/runs/$RUN_ID/jobs" --jq '
+            .jobs[] | .name as $job | .steps[]
+            | select(.started_at != null and .completed_at != null)
+            | {job: $job, step: .name, s: ((.completed_at | fromdateiso8601) - (.started_at | fromdateiso8601))}
+            | select(.s >= 30) | "- \(.job) / \(.step): \(.s)s"')
+          body=$(printf '@%s the deploy for %s took **%s** (limit 5 minutes).\n\nSteps over 30 seconds:\n%s\n\nRun: %s' \
+            "$OWNER" "${GITHUB_SHA:0:7}" "$took" "${slow:-none recorded}" "$RUN_URL")
+          gh label create slow-deploy --repo "$REPO" --color D93F0B --description "Deploy took over 5 minutes" 2>/dev/null || true
+          open=$(gh issue list --repo "$REPO" --label slow-deploy --state open --json number --jq '.[0].number')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --repo "$REPO" --body "$body"
+          else
+            gh issue create --repo "$REPO" --label slow-deploy --title "Slow deploy: $took" --body "$body"
+          fi
