@@ -38,6 +38,8 @@ card_items:
 
 On Wednesday 21 October 2026, PHP released emergency fixes for two bugs that let an attacker take over a web server without logging in. PHP runs a large part of the web, including every WordPress, Drupal, Joomla, Magento and Laravel site, so the response was unusual. The NSA, CISA and CERT-EU told organisations that could not patch straight away to take their sites offline, and governments, banks, airlines and broadcasters did exactly that.
 
+![Flat illustration of the blue PHP elephant in front of three browser windows, two showing a pulled plug and the word OFFLINE and one a warning sign](/assets/images/posts/covers/php2shell_cover.jpg "PHP2Shell: patch or go offline")
+
 The bugs became known as **php2shell**. Here is what they are, who was affected, and what to do if you run a PHP site or pay someone to host one.
 
 ## What the two bugs are
