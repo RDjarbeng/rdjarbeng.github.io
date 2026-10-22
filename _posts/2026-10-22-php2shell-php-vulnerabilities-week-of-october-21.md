@@ -214,8 +214,16 @@ CISA added four Plex Media Server flaws, nicknamed Plex2Shell, to its list of vu
 
 eMudhra, an Indian certificate authority whose job is to vouch that websites are who they say they are, had eight intermediate certificates revoked after their private keys turned out to be tiny numbers. One was literally 4, which means anyone could have recreated it. Mozilla, Google, Apple and Microsoft have blocked the certificates, and Node.js removed them too ([BleepingComputer](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/)). Browsers update this automatically; older devices and software with their own certificate lists may need an update.
 
-### What I could not confirm
+## Conclusion
 
-The viral post also mentions a TiDB Cloud breach with 10.6 terabytes taken, 300 hijacked Tor exit relays stealing SSH passwords, SafePay ransomware hitting over 600 critical infrastructure organisations, a data loss incident at India's biggest bank, and Japan being in a cyberspace state of emergency since 9 October. PingCAP, the company behind TiDB, did disclose that an attacker used stolen credentials for about a month, but I found no source for the 10.6 terabyte figure, and nothing reliable on the other claims. Treat them as unconfirmed.
+Three things stand out from this week.
+
+**The gap between a fix and an attack is now hours.** The PHP details leaked a day early, and Cloudflare saw exploit attempts climb from thousands to millions within a day of the announcement. An update that waits for the weekend may already be too late, which is why the advice from the NSA, CISA and Japan's Prime Minister was to patch that night or take the site offline.
+
+**Most people don't control the software they depend on.** If your site is on shared hosting, PHP is your host's job, and updating WordPress or its plugins does nothing for these bugs. The same goes for secrets stored on platforms like Railway, or the certificates your browser trusts. So the useful question is who runs each layer, and whether they have patched it.
+
+**AI is now finding these bugs.** Calif found php2shell with an OpenAI model, and Wiz found it independently with its own tools. That should mean more serious flaws are found and fixed before attackers find them, but it also means more of them arriving at once, as this week showed.
+
+This site is built with Eleventy and served by GitHub Pages, so it doesn't run PHP at all. Node.js only runs while it is being built, and the build has been moved to a patched version. If you run a PHP site, check your PHP version today, or ask your host to confirm theirs.
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
