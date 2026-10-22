@@ -15,8 +15,9 @@ key_points:
   - "Two PHP bugs, CVE-2026-109618 and CVE-2026-109619 (php2shell), let an attacker run code on a web server without logging in. Both are rated 9.2 out of 10."
   - "The fix is PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35. Updating your website or its plugins does not fix it; PHP itself has to be updated and the workers restarted."
   - "Government portals, banks, airlines, a port, hospitals and the BBC took services offline as a precaution while they patched."
+  - "The same day Node.js, GitLab, LiteLLM, Railway and Plex had their own emergencies. Node.js users should update to 26.12.1, 24.22.1 or 22.23.4."
 title: "PHP2Shell: The Two PHP Bugs That Took Government Websites Offline, and What to Do"
-description: "What CVE-2026-109618 and CVE-2026-109619 are, who took their websites offline in October 2026 and why, which PHP versions fix the bugs, and what to do if you run or host a PHP site."
+description: "What CVE-2026-109618 and CVE-2026-109619 are, who took their websites offline in October 2026 and why, which PHP versions fix the bugs, what to do if you run or host a PHP site, and the Node.js, GitLab, LiteLLM, Railway and Plex incidents from the same week."
 image: /assets/images/posts/covers/php2shell_cover.jpg
 image_alt: "Flat illustration of the blue PHP elephant in front of three browser windows, two showing a pulled plug and the word OFFLINE and one a warning sign, under the headline PHP2Shell: patch or go offline"
 layout: post
@@ -168,20 +169,53 @@ These are attempts, not confirmed break-ins. On 21 October [CISA said](https://w
 
 4. **Look for signs of compromise from 17 October onwards.** Watch for PHP worker processes starting shells or downloading tools, new files in the web root, new cron jobs and new user accounts. If you find any, isolate the server and keep the logs before you clean up.
 
-## The rest of the week
+## The rest of the week: other software patched or breached
 
-PHP was not the only problem. This viral post summed up the mood of the week, half joking:
+PHP was not the only problem. On the same day, Node.js, GitLab and several hosting and AI tools had their own emergencies. This viral post summed up the mood, half joking, but X cuts it off after a few lines:
 
 <blockquote class="twitter-tweet" data-dnt="true">
   <p lang="en" dir="ltr">So basically, today PHP got two critical bugs that let anyone run code on your server without even logging in, which is bad, and then the details leaked before the patch was even out, which is worse... Anyway, it&#39;s Wednesday.</p>
   &mdash; ⁵⁄₉ (@fiveoutofnine) <a href="https://x.com/fiveoutofnine/status/2113045722744717360">October 21, 2026</a>
 </blockquote>
- checked three of the other incidents in the post, and they are real:
 
-- **GitLab** fixed [CVE-2026-110264](https://www.cve.org/CVERecord?id=CVE-2026-110264), rated the maximum 10.0, which lets an attacker run code on self-managed GitLab servers without logging in by sending a specially crafted regular expression. It affects every version since GitLab 7.0 in 2014. The fix is in 19.5.1, 19.4.3 and 19.3.6, with backports to older branches ([GitLab's release notes](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/)).
-- **LiteLLM 1.107.0**, a popular Python library for calling AI models, was published to PyPI and Docker with a credential stealer inside. It was live for about two hours on 21 October, and installing it was enough to run the malware. LiteLLM says 1.106.2 is safe and that any machine that installed 1.107.0 should be treated as compromised, with every secret on it rotated ([LiteLLM incident report](https://docs.litellm.ai/blog/security-incident-oct-21-2026)).
-- **eMudhra**, an Indian certificate authority, had eight intermediate certificates revoked after their private keys turned out to be tiny numbers. One was literally 4. Mozilla, Google, Apple and Microsoft have blocked them ([BleepingComputer](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/)).
+Here is everything else it lists, checked against official sources.
 
-I haven't verified the rest of the list, so treat it as a snapshot of how the week felt rather than a checklist.
+### Node.js: ten fixes, four rated High
+
+Node.js runs JavaScript on servers and in build tools. It released fixes for all supported versions on 21 October: **26.12.1, 24.22.1 and 22.23.4** ([Node.js advisory](https://nodejs.org/en/blog/vulnerability/october-2026-security-releases)). The four High-rated issues are:
+
+- A bug in the Brotli decompressor ([CVE-2026-111497](https://www.cve.org/CVERecord?id=CVE-2026-111497)) that allows remote code execution when Node unpacks Brotli-compressed data from an attacker, for example a response fetched from a malicious server.
+- Two ways to get around TLS hostname checks (CVE-2026-105483 and CVE-2026-106069), which means an HTTPS connection could trust a server it should have rejected.
+- A DNS lookup bug (CVE-2026-105482) where names containing a hidden NUL character are cut short and resolve to the wrong place.
+
+The same releases also remove the compromised eMudhra certificates (see below) from Node's built-in list of trusted certificates.
+
+**Who should care:** anyone running a Node.js server, API or app, and anyone whose build tools run on Node (most JavaScript projects, including static sites like this one). A static site is far less exposed than a live server, because Node only runs while the site is being built, but update anyway. Node 20 and older are out of support and did not get these fixes, so they will stay vulnerable.
+
+### GitLab: a 10.0 bug in self-hosted servers
+
+GitLab fixed [CVE-2026-110264](https://www.cve.org/CVERecord?id=CVE-2026-110264), rated the maximum 10.0. Sending a specially crafted regular expression lets an attacker run code on a self-managed GitLab server without logging in. It affects every version since GitLab 7.0 in 2014. The fix is in 19.5.1, 19.4.3 and 19.3.6, with backports to older branches ([GitLab's release notes](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/)). Users of gitlab.com don't need to do anything; companies that host their own GitLab do.
+
+### LiteLLM: a poisoned release
+
+LiteLLM is a popular Python library for calling AI models. Version 1.107.0 was published to PyPI and Docker with a credential stealer inside, and was live for about two hours on 21 October. Installing it was enough to run the malware, which went after cloud keys, SSH keys, browser passwords and AI API tokens. LiteLLM says 1.106.2 is safe and that any machine that installed 1.107.0 should be treated as compromised, with every secret on it rotated ([LiteLLM incident report](https://docs.litellm.ai/blog/security-incident-oct-21-2026)).
+
+### Railway and Zeabur: hosting platforms leak their customers' secrets
+
+Railway, a platform for deploying apps, disclosed on 21 October that attackers may have reached customers' environment variables, the place where apps keep passwords and API keys. It paused deployments across the platform while it responded and invalidated every Railway API token. The advice to customers is to treat every secret stored there as exposed and rotate it ([GitGuardian's summary](https://blog.gitguardian.com/railway-october-2026-incident-environment-variables)).
+
+Zeabur, a smaller deployment platform, is shutting down after a breach that exposed data for about 321,000 accounts and 3.2 million environment variable records. The company says the attackers most likely used credentials taken in an earlier breach in August. Services end on 31 December 2026 ([SC Media](https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach)).
+
+### Plex: home media servers being taken over
+
+CISA added four Plex Media Server flaws, nicknamed Plex2Shell, to its list of vulnerabilities that are being actively exploited. Attackers chain them to take over Plex servers that missed the September update, without a Plex login, and then mine cryptocurrency or route other people's traffic through them. The fix is Plex Media Server 1.43.3.10861 or later, but updating doesn't remove an infection that is already there ([Guardian MSSP](https://www.guardianmssp.com/2026/10/21/cisa-orders-federal-agencies-to-patch-exploited-plex2shell-siemens-and-siteguard-flaws/)). If you run Plex at home, update it and check for unfamiliar processes.
+
+### eMudhra: a private key that was the number 4
+
+eMudhra, an Indian certificate authority whose job is to vouch that websites are who they say they are, had eight intermediate certificates revoked after their private keys turned out to be tiny numbers. One was literally 4, which means anyone could have recreated it. Mozilla, Google, Apple and Microsoft have blocked the certificates, and Node.js removed them too ([BleepingComputer](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/)). Browsers update this automatically; older devices and software with their own certificate lists may need an update.
+
+### What I could not confirm
+
+The viral post also mentions a TiDB Cloud breach with 10.6 terabytes taken, 300 hijacked Tor exit relays stealing SSH passwords, SafePay ransomware hitting over 600 critical infrastructure organisations, a data loss incident at India's biggest bank, and Japan being in a cyberspace state of emergency since 9 October. PingCAP, the company behind TiDB, did disclose that an attacker used stolen credentials for about a month, but I found no source for the 10.6 terabyte figure, and nothing reliable on the other claims. Treat them as unconfirmed.
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
