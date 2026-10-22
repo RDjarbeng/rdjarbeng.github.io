@@ -96,7 +96,7 @@ const posts = postFiles.map((file) => {
     ? parsed.data.categories
     : parsed.data.category
     ? [parsed.data.category]
-    : [];
+    : ["Science & Technology"]; // default section for technical posts saved without one
   const tags = Array.isArray(parsed.data.tags)
     ? parsed.data.tags
     : typeof parsed.data.tags === "string"

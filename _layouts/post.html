@@ -6,7 +6,7 @@ body_class: post-page has-side-toc
 {% assign post_title = title | default: page.title %}
 {% assign post_categories = categories | default: page.categories %}
 {% assign single_category = category | default: page.category %}
-{% if post_categories == nil or post_categories.size == 0 %}{% if single_category %}{% assign post_categories = single_category | split: "|||" %}{% endif %}{% endif %}
+{% if post_categories == nil or post_categories.size == 0 %}{% if single_category %}{% assign post_categories = single_category | split: "|||" %}{% else %}{% assign post_categories = "Science & Technology" | split: "|||" %}{% endif %}{% endif %}
 {% assign post_tags = tags | default: page.tags %}
 {% assign post_card_items = card_items | default: page.card_items %}
 {% assign post_last_modified_at = last_modified_at | default: page.last_modified_at %}
