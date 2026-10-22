@@ -34,7 +34,7 @@ Every post should have a cover image. You must choose one of the following two a
 - Save this modified image as a `.jpg` in `assets/images/posts/covers/` and link that new image in the frontmatter.
 
 **Image Placement Rule**
-- If the post does not contain any other images, you MUST embed the cover image inside the post body (e.g., after the first paragraph) so the post isn't just a wall of text. Use standard markdown `![Alt Text](/path/to/image.jpg)`.
+- ALWAYS embed the cover image in the post body right after the first paragraph, even when the post has other images. Use the same descriptive alt text as `image_alt` plus a short title: `![Alt text](/assets/images/posts/covers/<name>.jpg "Short title")`.
 
 ## 4. Create the File
 - Create the markdown file in the `_posts/` directory.
