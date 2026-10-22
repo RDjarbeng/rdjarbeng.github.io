@@ -815,3 +815,8 @@ Watch models compete in complex games providing a verifiable and dynamic measure
 - [ ] Google deepmind launches deepreview:
 
 https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm_source=tw&utm_medium=social&utm_campaign=nfg
+- [ ] Who's selling my data, a look at the ad networks and how they operate
+- [ ] Who's selling my data, a look at the ad networks and how they operate
+- [ ] The first computer to hit 1 petaflop, IBM's Roadrunner in 2008, cost $100M and filled 6,000 square feet. In 2016 Jensen Huang CEO of Nvidia delivered one Petaflop and 128GB of memory to a small company called OpenAI, that occupied a desktop now he posts about one Petaflop in 2026 but he's holding it one hand. What's next a Petaflop in your palm or on your wrist?
+
+https://x.com/nvidia/status/2112854401207439553?s=20
