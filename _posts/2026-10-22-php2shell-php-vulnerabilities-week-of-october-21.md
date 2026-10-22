@@ -224,6 +224,7 @@ Three things stand out from this week.
 
 **AI is now finding these bugs.** Calif found php2shell with an OpenAI model, and Wiz found it independently with its own tools. That should mean more serious flaws are found and fixed before attackers find them, but it also means more of them arriving at once, as this week showed.
 
+_Aside on this site:_
 This site is built with Eleventy and served by GitHub Pages, so it doesn't run PHP at all. Node.js only runs while it is being built, and the build has been moved to a patched version. If you run a PHP site, check your PHP version today, or ask your host to confirm theirs.
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
