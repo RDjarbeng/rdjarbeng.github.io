@@ -65,7 +65,9 @@ collections:
           search_fields: [category_name],
           value_field: "category_name",
           filters: [{ field: "section", values: ["technical"] }],
-          hint: "Technical sections. Personal posts have their own list.",
+          default: "Science & Technology",
+          required: false,
+          hint: "Optional. Left as Science & Technology unless you pick a more specific section.",
         }
       - {
           label: "Tags",
