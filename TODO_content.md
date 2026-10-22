@@ -53,13 +53,6 @@ Random thoughts and discussions from LinkedIN unposted posts:
 
 ## CMMRS
 
-Preparations for CMMRS visa appointment booking, and checklists. 
-Getting an RSSB document, banks charging for pages in bank statement, cash in case of anything
-
-
-This post is for the experience of going to Germany, we are going to skip the details of CMMRS focusing on the travel experience and the differences for someone coming first to Germany. Starting from the preparation to depart Kigali, move disappointed me, almost missed the flight, left one person at the airport,  (some lava fields which I am not sure what those are) transit in Ethiopia, Landing in Frankfurt Intl Airport, restaurants, train station connected to the airport,  a transportation nightmare after entering a new country for the first time 7 hours after landing we were on the move. AutoBahn cars were just overtaking the bus. We got to KaiserSlautern and the train platform had changed, we couldn’t decipher the signs, but luckily I had a friend who lives in Germany who used the app to confirm the train platform,  we had to move quickly. To move between platforms we used elevators.
- Found the platform and train and the doors slammed shut on us. Was ready to give up then, till one lady pushed the button and the doors opened, we are so back. Arrived in Saarbrucken, nice train station, nice flowers. Navigating the trams and buses was another issue and we missed our stop so had to get off and walk the rest of the way. That’s how we made it to the Europa youth hostel. Check-in was at 2pm so we had to wait. It’s good to be in Germany. Now to wait for the start of the program. 
-Experience in Frankfurt, no uber in Saarbrucken, the trains (day ticket, airport ticket), navigation, Doner Kebab and Indian restaurant; that’s how you get people to come back, people smoking, turns out I’m lactose intolerant, Galeria luxury mall, MyZeil,  (not gonna mention IBIS budget)
 
 # Potential posts
 ## Research & Questions
@@ -84,10 +77,7 @@ Introduction of wolves in Yellowstone national park changed the rivers - oh how?
 Review challenges and opportunities for air quality in Africa
 Air quality and energy, is there a link, is solar the only link due to dust
 Why doesn't Kenya and East Africa experience the harmattan? 
-
-## Quanta Magazine
-About Quanta magazine, wonderful material
-It’s online and it’s free. Among other accolades it has received for its science journalism, Quanta won a 2022 Pulitzer Prize in Explanatory Reporting and a 2020 National Magazine Award for general excellence. 
+ 
 —
 
 ### Arduino IDE - who cares? - this post doesn't have a large audience
@@ -814,7 +804,6 @@ https://www.linkedin.com/posts/gergelyorosz_a-middleware-engineer-in-south-korea
 
 For a presentation to the visiting admitted MIT computer science graduate students, I emailed all MIT Computer Science and Artificial Intelligence Laboratory (CSAIL) researchers and faculty members, asking “Please send me what you think is the most important quality for success in graduate school.” I compiled their responses (along with photos of the responders) into slides that are available online:
 http://people.csail.mit.edu/billf/talks/10minFreeman2013.pdf
-- [ ] How would a way an agent approaches a task be modeled in the agent economy. Can you make it a straight line graph where the agent goes from start to finish. How would you model a task that cannot be completed no matter how many tokens, what about  a task that takes a large number of tokens, what about a task which doesn't even depend on tokens? Is there a mathematical representation of this? Does this visualization help, how many paths are there from start to expected result? Does an approximate result work?
 - [ ] The human eye acts as a spatial low-pass filter: it is extraordinarily sensitive to smooth gradients and broad luminance variations (low frequencies), but largely blind to subtle, high-frequency pixel transitions and chromatic phase shifts. Consequently, standard codecs are fundamentally designed to **throw away high-frequency data first** and apply smoothing filters across macroblock boundaries.
 - [ ] Application development withput programmers book, what is it about?
 - [ ] Interesting content: 
