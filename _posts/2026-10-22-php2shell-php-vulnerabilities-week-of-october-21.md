@@ -1,6 +1,6 @@
 ---
 date: 2026-10-22T14:55:00+02:00
-published: false
+published: true
 author: Richard
 category: Security
 tags:
@@ -71,6 +71,7 @@ The bugs were found with the help of AI. Researchers at Calif found them through
 Telling people to switch off their own websites is rare. It happened here because the bugs are reachable before any login, affect almost every PHP version back to 5.4, and were public before most people could patch.
 
 The NSA's first post put it bluntly:
+>Effective Immediately, all organizations using PHP for their systems are advised to be prepared for an update addressing two critical vulnerabilities. PHP is widely used for web applications. These vulnerabilities often provide a direct path to the server's file system or database. If an immediate update is not feasible, it is recommend that organizations take the system offline until it can be fully mitigated. NSA will follow up shortly with more specific guidance.
 
 <blockquote class="twitter-tweet" data-dnt="true">
   <p lang="en" dir="ltr">Effective Immediately, all organizations using PHP for their systems are advised to be prepared for an update addressing two critical vulnerabilities. … If an immediate update is not feasible, it is recommend that organizations take the system offline until it can be fully mitigated.</p>
@@ -87,6 +88,7 @@ The next day it followed up with detailed guidance:
 CISA gave the same advice for anyone who could not update, or who runs PHP 8.1 or older. CERT-EU advised taking sites offline while patches were pending, and the UK's National Cyber Security Centre warned organisations to look for backdoors.
 
 The most unusual warning came from Japan. Shortly before 10 pm on 21 October, Prime Minister Sanae Takaichi posted on X asking everyone to act that night: check whether their public websites use PHP, get the fix ready, and treat temporarily stopping a site as a valid way to reduce the risk. She took her own website offline too.
+(I noticed the Japanese tweet doesn't have auto translate enabled, so you may)
 
 <blockquote class="twitter-tweet" data-dnt="true" data-lang="ja">
   <p lang="ja" dir="ltr">皆様に、今夜に対応して頂きたい大至急のお願いです。多くのウェブサイトで使用されているPHPに関し、PHPのセキュリティチームが、重大な２件の脆弱性に関する注意喚起を行っています。…</p>
