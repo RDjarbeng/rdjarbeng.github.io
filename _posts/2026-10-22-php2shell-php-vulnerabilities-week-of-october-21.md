@@ -174,8 +174,7 @@ PHP was not the only problem. This viral post summed up the mood of the week, ha
   <p lang="en" dir="ltr">So basically, today PHP got two critical bugs that let anyone run code on your server without even logging in, which is bad, and then the details leaked before the patch was even out, which is worse... Anyway, it&#39;s Wednesday.</p>
   &mdash; ⁵⁄₉ (@fiveoutofnine) <a href="https://x.com/fiveoutofnine/status/2113045722744717360">October 21, 2026</a>
 </blockquote>
-
-It mentions the Japanese Prime Minister posting "at 5:55 in the morning". That is right for the US West Coast, where it was 5:55 am when it was just before 10 pm in Tokyo. I checked three of the other incidents in the post, and they are real:
+ checked three of the other incidents in the post, and they are real:
 
 - **GitLab** fixed [CVE-2026-110264](https://www.cve.org/CVERecord?id=CVE-2026-110264), rated the maximum 10.0, which lets an attacker run code on self-managed GitLab servers without logging in by sending a specially crafted regular expression. It affects every version since GitLab 7.0 in 2014. The fix is in 19.5.1, 19.4.3 and 19.3.6, with backports to older branches ([GitLab's release notes](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/)).
 - **LiteLLM 1.107.0**, a popular Python library for calling AI models, was published to PyPI and Docker with a credential stealer inside. It was live for about two hours on 21 October, and installing it was enough to run the malware. LiteLLM says 1.106.2 is safe and that any machine that installed 1.107.0 should be treated as compromised, with every secret on it rotated ([LiteLLM incident report](https://docs.litellm.ai/blog/security-incident-oct-21-2026)).
