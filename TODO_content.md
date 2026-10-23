@@ -826,3 +826,4 @@ https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep
 When we measured typical agent sessions, we found that agents spend most of their lives waiting. They wait for the model to return the next step, and they wait for the user to reply. At any moment, only a small portion of open sessions were running code.
 
 My take: Agents are mostly idle over their lifetime, something to consider in the agent economy
+- [ ] How long does it take for a research method published to get implemented
