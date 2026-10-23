@@ -827,3 +827,4 @@ When we measured typical agent sessions, we found that agents spend most of thei
 
 My take: Agents are mostly idle over their lifetime, something to consider in the agent economy
 - [ ] How long does it take for a research method published to get implemented
+- [ ] What are golden images when it comes to deploys?
