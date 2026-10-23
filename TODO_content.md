@@ -819,3 +819,6 @@ https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm
 - [ ] The first computer to hit 1 petaflop, IBM's Roadrunner in 2008, cost $100M and filled 6,000 square feet. In 2016 Jensen Huang CEO of Nvidia delivered one Petaflop and 128GB of memory to a small company called OpenAI, that occupied a desktop now he posts about one Petaflop in 2026 but he's holding it one hand. What's next a Petaflop in your palm or on your wrist?
 
 https://x.com/nvidia/status/2112854401207439553?s=20
+- [ ] From Google: An agent is a dynamic software entity acting autonomously — often on-behalf-of (OBO) a human user
+
+https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive
