@@ -822,3 +822,7 @@ https://x.com/nvidia/status/2112854401207439553?s=20
 - [ ] From Google: An agent is a dynamic software entity acting autonomously — often on-behalf-of (OBO) a human user
 
 https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive
+- [ ] Most agents are waiting, most of the time
+When we measured typical agent sessions, we found that agents spend most of their lives waiting. They wait for the model to return the next step, and they wait for the user to reply. At any moment, only a small portion of open sessions were running code.
+
+My take: Agents are mostly idle over their lifetime, something to consider in the agent economy
