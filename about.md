@@ -49,7 +49,25 @@ Hoping to build strong research and engineering experience in multimodal learnin
 
 <div class="about-section" id="experience">
   <h2 class="about-section-title">Experience</h2>
-
+  <div class="experience-card">
+    <div class="exp-header">
+      <h3 class="exp-title">Research Associate</h3>
+      <span class="exp-date">October 2025</span>
+    </div>
+    <span class="exp-org">Kigali Collaborative Research Center</span>
+    <p class="exp-desc">Working on Edge AI, mobility and compression methods for Computer vision</p>
+    <details class="exp-tech-details" open>
+      <summary>Details</summary>
+      <ul>
+        <li>Compression-Driven Insights and Performance Enrichment for IoT (CRISPER IoT) with KCRC as the African deployment partner</li>
+      </ul>
+    </details>
+     <div class="exp-skills">
+        <span class="skill-pill">IoT</span>
+        <span class="skill-pill">Data Collection</span>
+        <span class="skill-pill">Embedded Systems</span>
+    </div>
+  </div>
   <div class="experience-card">
     <div class="exp-header">
       <h3 class="exp-title">Research Associate</h3>
