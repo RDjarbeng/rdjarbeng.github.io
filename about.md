@@ -7,7 +7,7 @@ custom_css_class: about-page
 
 <div class="about-intro">
   <h1>Richard Djarbeng</h1>
-  <p>Software Engineer | ML Engineer | Robotics &amp; Embedded Systems</p>
+  <p>Software Engineer | ML Engineer | Solutions Architect &amp; Embedded Systems</p>
   <div class="contact-links">
     <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
     <span class="contact-separator">•</span>
@@ -64,8 +64,7 @@ Hoping to build strong research and engineering experience in multimodal learnin
     </details>
      <div class="exp-skills">
         <span class="skill-pill">IoT</span>
-        <span class="skill-pill">Data Collection</span>
-        <span class="skill-pill">Embedded Systems</span>
+        <span class="skill-pill">Computer Vision</span>
     </div>
   </div>
   <div class="experience-card">
