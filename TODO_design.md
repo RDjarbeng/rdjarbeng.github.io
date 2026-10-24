@@ -186,3 +186,4 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Rich results test fails for homepage but passes for posts on the site
 - [ ] Add a way for links to posts referenced on my website to look very nice with their own preview and make sure it works on other posts mentioning the next one
 - [ ] Add a separate section for sources for posts that links all the posts referenced with their previews
+- [ ] About page needs work, the rounded corners need to go, the cards, the highlighting with color accents, and that purple theme in dark mode needs to go
