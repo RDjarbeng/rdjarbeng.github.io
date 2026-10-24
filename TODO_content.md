@@ -829,3 +829,4 @@ My take: Agents are mostly idle over their lifetime, something to consider in th
 - [ ] How long does it take for a research method published to get implemented
 - [ ] What are golden images when it comes to deploys?
 - [ ] Compression methods and techniques for the cloud and why it matters
+- [ ] Planet scale exabyte data systems
