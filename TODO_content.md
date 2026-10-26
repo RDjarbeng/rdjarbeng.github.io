@@ -870,3 +870,4 @@ Because models will eventually shut down completely—at which point the endpoin
 - Graceful Degradation: Implement a try/catch mechanism in your API client. If your pinned older model fails or returns a service error, configure a fallback to automatically route traffic to a designated alternative (like a newer, cheap alternative such as gemini-3.5-flash-lite). [1]
 4. Monitor the Official Lifecycles
 Keep a close
+- [ ] eye on the Google AI Studio Deprecations Page and the Google Cloud Release Notes. Google typically provides several months of notice before a model enters "deprecation" (no longer supported/restricted access) and moves to "shutdown" (completely turned off). [1, 2]
