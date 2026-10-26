@@ -830,3 +830,4 @@ My take: Agents are mostly idle over their lifetime, something to consider in th
 - [ ] What are golden images when it comes to deploys?
 - [ ] Compression methods and techniques for the cloud and why it matters
 - [ ] Planet scale exabyte data systems
+- [ ] Go higher, a look at the aerospace industry and why planes don't go in a straight line. How the shape of the earth and the atmosphere changes travel, and why going higher seems to be creating a longer curve but is actually shorter
