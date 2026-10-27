@@ -876,3 +876,5 @@ Keep a close
 If you work on projects that become more effective as compute/intelligence scales then the result would be much higher feedback. 
 
 The negative is that you really don't wanna work on projects that are gonna be solved anyway with scale\
+- [ ] Small choices early in exponential growth that have huge Consequences
+Proposal for standardized email (SMTP) but not chat protocol in 1980 Free sharing of HeLa immortal human cell line Hobbyist creation of Linux operating system Introduction of invasive rabbits to Australia as food animal Work on Haber-Bosch nitrogen fixation process Choice of lead as anti-knocking agent in gasoline Proposal of, and choice to commercialize, PageRank algorithm Founding of professional organization (American Medical Association, American Bar Association, ...) Establishment of academic peer review system
