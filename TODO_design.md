@@ -188,3 +188,8 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Add a separate section for sources for posts that links all the posts referenced with their previews
 - [ ] About page needs work, the rounded corners need to go, the cards, the highlighting with color accents, and that purple theme in dark mode needs to go
 - [ ] Customer service evolution, why does it take so long to speak to a person? Why does the automated system suck, nobody seems glad to call them, who's installing them and benefiting them, personally it takes more than 5 minutes to talk to an agent, usually there's some generic tune playing, who even asked for that. Include Amazon call where the numbers were seemingly good but they decided to place a call for themselves only to be on hold for so long
+- [ ] Algolia shows 
+Recommend Requests
+0 / 10K 
+
+Is this something I should be using or it's fine?
