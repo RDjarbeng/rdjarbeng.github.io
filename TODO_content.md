@@ -871,3 +871,4 @@ Because models will eventually shut down completely—at which point the endpoin
 4. Monitor the Official Lifecycles
 Keep a close
 - [ ] eye on the Google AI Studio Deprecations Page and the Google Cloud Release Notes. Google typically provides several months of notice before a model enters "deprecation" (no longer supported/restricted access) and moves to "shutdown" (completely turned off). [1, 2]
+- [ ] Add to about page -Teaching Assistant for Operating Systems (CPEN 307) and Fundamentals of Information Transmission (CPEN 308) at University of Ghana
