@@ -872,3 +872,7 @@ Because models will eventually shut down completely—at which point the endpoin
 Keep a close
 - [ ] eye on the Google AI Studio Deprecations Page and the Google Cloud Release Notes. Google typically provides several months of notice before a model enters "deprecation" (no longer supported/restricted access) and moves to "shutdown" (completely turned off). [1, 2]
 - [ ] Add to about page -Teaching Assistant for Operating Systems (CPEN 307) and Fundamentals of Information Transmission (CPEN 308) at University of Ghana
+- [ ] The bitter lesson - Richard Sutton -General methods that leverage computation are ultimately the most effective, the positive & negative
+If you work on projects that become more effective as compute/intelligence scales then the result would be much higher feedback. 
+
+The negative is that you really don't wanna work on projects that are gonna be solved anyway with scale\
