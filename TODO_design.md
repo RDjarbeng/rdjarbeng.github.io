@@ -193,3 +193,4 @@ Recommend Requests
 0 / 10K 
 
 Is this something I should be using or it's fine?
+- [ ] Is the current way the files are organized in the repo good for agents, what about scale and conpute? I feel like this website isn't taking advantage of all the advantages we have in this modern age
