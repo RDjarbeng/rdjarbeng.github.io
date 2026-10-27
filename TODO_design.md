@@ -196,3 +196,4 @@ Is this something I should be using or it's fine?
 - [ ] Is the current way the files are organized in the repo good for agents, what about scale and conpute? I feel like this website isn't taking advantage of all the advantages we have in this modern age
 - [ ] Why do inspected pages show this error on google search console: Sitemaps
 Temporary processing error
+- [ ] Is the animate on scroll still working for posts?
