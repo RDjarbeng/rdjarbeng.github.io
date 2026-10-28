@@ -198,3 +198,7 @@ Is this something I should be using or it's fine?
 Temporary processing error
 - [ ] Is the animate on scroll still working for posts?
 - [ ] With my knowledge of computer vision and image and video compression, I think it would be nice to have some kind of filter or image transformation, I see that this gives a 'funky' different looking image especially for cover images, it makes things interesting than just seeing a grid of posts
+- [ ] For the enlighten project we can go deeper than book level, go to chapters.
+Which books have interconnected chapters, maybe one book has a theory section on Fourier, and another has a place you can apply it
+
+Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need
