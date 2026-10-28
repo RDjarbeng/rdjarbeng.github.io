@@ -881,3 +881,14 @@ Proposal for standardized email (SMTP) but not chat protocol in 1980 Free sharin
 - [ ] Add David Vernon's paper about mistakes in teaching software engineering
 
 Perhaps enlighten project should contain some useful links to sites I found useful. Such as quantas, they have an excellent explanation of the Fourier transform which I like
+- [ ] What is the problem with African salaries? Highly skilled engineers getting paid $2500 a year, not a month. 
+supposedly good ones can be up to $25000 a year, these are the senior engineers. 
+Meanwhile that won't even pass for a graduate monthly salary in many parts of the world. If a person asks about this the usual argument is That it's the local rate. I find this argument baseless and more of a convenient excuse.
+
+One key evidence for this is the companies who pay abysmal salaries but yet hire expatriates paying them at an excellent rate.
+If they can pay expats that rate, who are not permanent workers why discredit the workers.
+
+The alternative for most have been to turn to remote jobs, to access other markets.
+
+
+However now it seems remote jobs are like ghosts. Most people believe they exist, some have even claimed to see some, but to find one walking out in the daylight would be a miracle
