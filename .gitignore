@@ -8,6 +8,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+scratch
 /assets/images/*.py
 /assets/scripts/*.py
 .gemini_key
