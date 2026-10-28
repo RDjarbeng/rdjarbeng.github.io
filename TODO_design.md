@@ -197,3 +197,4 @@ Is this something I should be using or it's fine?
 - [ ] Why do inspected pages show this error on google search console: Sitemaps
 Temporary processing error
 - [ ] Is the animate on scroll still working for posts?
+- [ ] With my knowledge of computer vision and image and video compression, I think it would be nice to have some kind of filter or image transformation, I see that this gives a 'funky' different looking image especially for cover images, it makes things interesting than just seeing a grid of posts
