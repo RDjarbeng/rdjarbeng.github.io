@@ -915,3 +915,4 @@ Introducing Kwaku from Hamburg when you ask a German security firm to send you t
 - [ ] University of Florida giving application fee waivers especially of you attend their info session
 
 - CMU PhD applications open, especially for robotics institute
+- [ ] Low-cost particulate matter sensors suffer from severe baseline drift under high relative humidity conditions, making long-term trend analysis unreliable without frequent lab recalibration.
