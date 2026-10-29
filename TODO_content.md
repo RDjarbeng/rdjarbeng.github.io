@@ -910,3 +910,4 @@ Also because of the way they treat their employees with dignity, it is something
 
 Introducing Kwaku from Hamburg when you ask a German security firm to send you their best man for the job
 - [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress
+- [ ] Warren Buffet's big bet - S&P 500 will outperform hedge funds and all the other financial instruments over the long term
