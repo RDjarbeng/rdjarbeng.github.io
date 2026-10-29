@@ -912,3 +912,6 @@ Introducing Kwaku from Hamburg when you ask a German security firm to send you t
 - [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress
 - [ ] Warren Buffet's big bet - S&P 500 will outperform hedge funds and all the other financial instruments over the long term
 - [ ] About the cms and deploys with Github pages, sometimes a build can be in progress then a new change comes in what happens then. If it's paused what happens if multiple changes keep coming especially for a large site with multiple editors and changes being made concurrently. Is this something the CMS should worry about?
+- [ ] University of Florida giving application fee waivers especially of you attend their info session
+
+- CMU PhD applications open, especially for robotics institute
