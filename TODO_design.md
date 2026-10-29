@@ -185,3 +185,20 @@ https://www.jamesleighton.com/2026/09/easily-embed-youtube-videos-into-11ty/
 - [ ] Create a kind of RSS feed or update that lists site development progress and releases somewhere on the website
 - [ ] Rich results test fails for homepage but passes for posts on the site
 - [ ] Add a way for links to posts referenced on my website to look very nice with their own preview and make sure it works on other posts mentioning the next one
+- [ ] Add a separate section for sources for posts that links all the posts referenced with their previews
+- [ ] About page needs work, the rounded corners need to go, the cards, the highlighting with color accents, and that purple theme in dark mode needs to go
+- [ ] Customer service evolution, why does it take so long to speak to a person? Why does the automated system suck, nobody seems glad to call them, who's installing them and benefiting them, personally it takes more than 5 minutes to talk to an agent, usually there's some generic tune playing, who even asked for that. Include Amazon call where the numbers were seemingly good but they decided to place a call for themselves only to be on hold for so long
+- [ ] Algolia shows 
+Recommend Requests
+0 / 10K 
+
+Is this something I should be using or it's fine?
+- [ ] Is the current way the files are organized in the repo good for agents, what about scale and conpute? I feel like this website isn't taking advantage of all the advantages we have in this modern age
+- [ ] Why do inspected pages show this error on google search console: Sitemaps
+Temporary processing error
+- [ ] Is the animate on scroll still working for posts?
+- [ ] With my knowledge of computer vision and image and video compression, I think it would be nice to have some kind of filter or image transformation, I see that this gives a 'funky' different looking image especially for cover images, it makes things interesting than just seeing a grid of posts
+- [ ] For the enlighten project we can go deeper than book level, go to chapters.
+Which books have interconnected chapters, maybe one book has a theory section on Fourier, and another has a place you can apply it
+
+Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need

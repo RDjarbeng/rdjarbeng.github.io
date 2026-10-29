@@ -819,3 +819,95 @@ https://research.google/blog/analyzing-technical-documents-with-deep-review/?utm
 - [ ] The first computer to hit 1 petaflop, IBM's Roadrunner in 2008, cost $100M and filled 6,000 square feet. In 2016 Jensen Huang CEO of Nvidia delivered one Petaflop and 128GB of memory to a small company called OpenAI, that occupied a desktop now he posts about one Petaflop in 2026 but he's holding it one hand. What's next a Petaflop in your palm or on your wrist?
 
 https://x.com/nvidia/status/2112854401207439553?s=20
+- [ ] From Google: An agent is a dynamic software entity acting autonomously — often on-behalf-of (OBO) a human user
+
+https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive
+- [ ] Most agents are waiting, most of the time
+When we measured typical agent sessions, we found that agents spend most of their lives waiting. They wait for the model to return the next step, and they wait for the user to reply. At any moment, only a small portion of open sessions were running code.
+
+My take: Agents are mostly idle over their lifetime, something to consider in the agent economy
+- [ ] How long does it take for a research method published to get implemented
+- [ ] What are golden images when it comes to deploys?
+- [ ] Compression methods and techniques for the cloud and why it matters
+- [ ] Planet scale exabyte data systems
+- [ ] Go higher, a look at the aerospace industry and why planes don't go in a straight line. How the shape of the earth and the atmosphere changes travel, and why going higher seems to be creating a longer curve but is actually shorter
+- [ ] IoT and data flow how to manage all that data in a way that does not overwhelm servers and what are the tradeoffs, edge processing, compression, etc
+- [ ] Google does not guarantee permanent availability for any AI model. All models follow a strict lifecycle from General Availability (GA) to deprecation and eventual shutdown
+
+AI Mode conversation: is gemini 2.5 flash still available
+You said: is gemini 2.5 flash still available
+is gemini 2.5 flash still available
+Yes, Gemini 2.5 Flash is still available through the Gemini API and Vertex AI, though its official retirement date is scheduled for October 20, 2026. [1, 2]
+Key Details:
+- Availability Status: It is still active for existing users/workflows, though Google has restricted access to users who have actively used it in the past. [1]
+- Retirement Date: Google's lifecycle documentation lists October 20, 2026 as the retirement date for Gemini 2.5 Flash. [1]
+- Recommended Replacements: Google recommends migrating new projects or transitioning older ones to Gemini 3.8 Flash or Gemini 3.5 Flash-Lite. [1]
+- Past Issues: The model experienced temporary 404 errors/outages in July 2026 that caused confusion regarding early shutdown, which Google rolled back and confirmed was a configuration issue. [1]
+You can check the full model timeline on the Google AI Studio Deprecations Page. [1]
+Are you trying to access Gemini 2.5 Flash via the API / Google AI Studio or looking for a newer replacement model for your project?
+- Google AI for Developers
+Gemini deprecations | Gemini API | Google AI for Developers
+Table_title: Gemini 2. 5 Pro models Table_content: | Model | Release date | Shutdown date | Recommended replacement | | --- | --- ...
+- Google Cloud Documentation
+Model versions and lifecycle | Gemini Enterprise Agent Platform
+Table_title: Models available for at least 12 months after release Table_content: | Model ID | Release date | Retirement date | Re...
+- Google AI Developers Forum
+Gemini 2.5 Flash deprecated without warning earlier than shutdown date - Gemini API - Google AI Developers Forum
+Gemini 2.5 Flash deprecated without warning earlier than shutdown date * Ruthvik July 9, 2026, 7:11pm 1. Hi, we are using Gemini 2...
+Source preferences
+So what happens if I want to use other lower models like gemini, 1,2,3 not the latest ones for my app, how can I make sure it's available
+To ensure older or "lower" generations of Gemini models remain available for your app, you must hardcode specific version-pinned model IDs into your API calls and actively monitor Google's official deprecation timelines. [1, 2]
+Google does not guarantee permanent availability for any AI model. All models follow a strict lifecycle from General Availability (GA) to deprecation and eventual shutdown. [1, 2]
+To manage your app's dependencies on older models, implement these engineering strategies:
+1. Pin the Explicit Model Version
+Do not use generic aliases like gemini-flash or gemini-pro, as Google automatically maps these to the latest stable versions. Instead, lock your code to a specific, immutable version identifier (e.g., gemini-2.5-flash-001 or gemini-2.0-flash-exp). This prevents your app's behavior from changing overnight when a new model generation rolls out. [1, 2]
+2. Understand Google’s Availability Windows
+- The 12-Month Guarantee: For primary stable GA models, Google generally guarantees availability for at least 12 months after the initial release date. [1]
+
+3. Build a Fallback and Migration Architecture
+Because models will eventually shut down completely—at which point the endpoint returns a 404 or 410 error—your app must be designed to adapt: [1, 2]
+- Abstract the Model ID: Store the target model identifier in an environment variable or a remote configuration database rather than deep within your application code. This allows you to swap models instantly without pushing an app store update or redeploying code. [1]
+- Graceful Degradation: Implement a try/catch mechanism in your API client. If your pinned older model fails or returns a service error, configure a fallback to automatically route traffic to a designated alternative (like a newer, cheap alternative such as gemini-3.5-flash-lite). [1]
+4. Monitor the Official Lifecycles
+Keep a close
+- [ ] eye on the Google AI Studio Deprecations Page and the Google Cloud Release Notes. Google typically provides several months of notice before a model enters "deprecation" (no longer supported/restricted access) and moves to "shutdown" (completely turned off). [1, 2]
+- [ ] Add to about page -Teaching Assistant for Operating Systems (CPEN 307) and Fundamentals of Information Transmission (CPEN 308) at University of Ghana
+- [ ] The bitter lesson - Richard Sutton -General methods that leverage computation are ultimately the most effective, the positive & negative
+If you work on projects that become more effective as compute/intelligence scales then the result would be much higher feedback. 
+
+The negative is that you really don't wanna work on projects that are gonna be solved anyway with scale\
+- [ ] Small choices early in exponential growth that have huge Consequences
+Proposal for standardized email (SMTP) but not chat protocol in 1980 Free sharing of HeLa immortal human cell line Hobbyist creation of Linux operating system Introduction of invasive rabbits to Australia as food animal Work on Haber-Bosch nitrogen fixation process Choice of lead as anti-knocking agent in gasoline Proposal of, and choice to commercialize, PageRank algorithm Founding of professional organization (American Medical Association, American Bar Association, ...) Establishment of academic peer review system
+- [ ] Add David Vernon's paper about mistakes in teaching software engineering
+
+Perhaps enlighten project should contain some useful links to sites I found useful. Such as quantas, they have an excellent explanation of the Fourier transform which I like
+- [ ] What is the problem with African salaries? Highly skilled engineers getting paid $2500 a year, not a month. 
+supposedly good ones can be up to $25000 a year, these are the senior engineers. 
+Meanwhile that won't even pass for a graduate monthly salary in many parts of the world. If a person asks about this the usual argument is That it's the local rate. I find this argument baseless and more of a convenient excuse.
+
+One key evidence for this is the companies who pay abysmal salaries but yet hire expatriates paying them at an excellent rate.
+If they can pay expats that rate, who are not permanent workers why discredit the workers.
+
+The alternative for most have been to turn to remote jobs, to access other markets.
+
+
+However now it seems remote jobs are like ghosts. Most people believe they exist, some have even claimed to see some, but to find one walking out in the daylight would be a miracle
+- [ ] The whole working weekend shift has brought another conversation about if tech engineers, such as security engineers would be paid overtime or bonus
+
+Overtime? Bonus, In Africa?
+
+My boy in Security asking for bonus after he resolved 10 major vulnerabilities (insert man standing up to ask a question)
+
+The boss watching you demand for your weekend bonus
+
+The other engineers - they are formally employed so do get bonuses
+
+The veteran watching this unfold- he's seen this many times - watch what management has to say here, is it going to be something about the contract being fixed, they'll think about it, no way to stop ot being abused, you think it's easy to run a business,... Something along those lines
+
+The story is that a lot of qualified engineers can do those security jobs for African institutions; banks, tech firms but will rather work for a Canadian/ltalian agency that is brought in to solve the issues and get paid expert rate (it makes them expatriates) no pun intended
+
+Also because of the way they treat their employees with dignity, it is something to be envied, they'll rather work there. Don't know any company in tech in Africa who's employees treatments can be envied
+
+Introducing Kwaku from Hamburg when you ask a German security firm to send you their best man for the job
+- [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress
+- [ ] Warren Buffet's big bet - S&P 500 will outperform hedge funds and all the other financial instruments over the long term

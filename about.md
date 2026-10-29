@@ -7,7 +7,7 @@ custom_css_class: about-page
 
 <div class="about-intro">
   <h1>Richard Djarbeng</h1>
-  <p>Software Engineer | ML Engineer | Robotics &amp; Embedded Systems</p>
+  <p>Software Engineer | ML Engineer | Solutions Architect &amp; Embedded Systems</p>
   <div class="contact-links">
     <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
     <span class="contact-separator">•</span>
@@ -38,15 +38,35 @@ custom_css_class: about-page
 
 <div class="about-section">
 <p class="about-summary-text">
-I am a software engineer and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I build low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision, time-series modeling, and data engineering, and I am currently preparing PhD applications centered on machine learning for environmental sensing and air quality. AWS Certified Solutions Architect. I also write technical posts and personal reflections on this blog.
+I am a software engineer, AWS Certified Solutions Architect, and researcher with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. My previous work focused on building low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision and data engineering, and I am currently preparing PhD applications centered on machine learning for computer vision, environmental sensing and AI.  
 
-Currently looking to build strong research and engineering experience in multimodal learning, vision models, and robotics with a focus on space applications.
+Research interestes: I'm focused on deep learning, and computer vision with a focus on their applications. Perhaps I chose that because I like to see tangible evidence of work done.
+
+I have varied multi-disciplinary interests ranging from Cloud technologies, ML (reinforcement learning), Generative AI, autonomous driving, security and the Internet of Things.
+Hoping to build strong research and engineering experience in multimodal learning, vision models, and robotics with a focus on their interdisciplinary applications.
 </p>
 </div>
 
 <div class="about-section" id="experience">
   <h2 class="about-section-title">Experience</h2>
-
+  <div class="experience-card">
+    <div class="exp-header">
+      <h3 class="exp-title">Research Associate</h3>
+      <span class="exp-date">October 2025</span>
+    </div>
+    <span class="exp-org">Kigali Collaborative Research Center</span>
+    <p class="exp-desc">Working on Edge AI, mobility and compression methods for Computer vision</p>
+    <details class="exp-tech-details" open>
+      <summary>Details</summary>
+      <ul>
+        <li>Compression-Driven Insights and Performance Enrichment for IoT (CRISPER IoT) with KCRC as the African deployment partner</li>
+      </ul>
+    </details>
+     <div class="exp-skills">
+        <span class="skill-pill">IoT</span>
+        <span class="skill-pill">Computer Vision</span>
+    </div>
+  </div>
   <div class="experience-card">
     <div class="exp-header">
       <h3 class="exp-title">Research Associate</h3>
@@ -660,10 +680,9 @@ Why can I pay for Netflix instantly, but not send money to a friend abroad? Why 
         <li><strong>Global infrastructure and networking:</strong> Deep understanding of AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the network technologies that connect distributed environments worldwide.</li>
       </ul>
     </details>
-    
+
   </div>
 </div>
-
 
 <div class="about-section" style="text-align: center;">
     <h3>Connect With Me</h3>
