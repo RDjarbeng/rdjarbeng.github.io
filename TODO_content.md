@@ -892,3 +892,20 @@ The alternative for most have been to turn to remote jobs, to access other marke
 
 
 However now it seems remote jobs are like ghosts. Most people believe they exist, some have even claimed to see some, but to find one walking out in the daylight would be a miracle
+- [ ] The whole working weekend shift has brought another conversation about if tech engineers, such as security engineers would be paid overtime or bonus
+
+Overtime? Bonus, In Africa?
+
+My boy in Security asking for bonus after he resolved 10 major vulnerabilities (insert man standing up to ask a question)
+
+The boss watching you demand for your weekend bonus
+
+The other engineers - they are formally employed so do get bonuses
+
+The veteran watching this unfold- he's seen this many times - watch what management has to say here, is it going to be something about the contract being fixed, they'll think about it, no way to stop ot being abused, you think it's easy to run a business,... Something along those lines
+
+The story is that a lot of qualified engineers can do those security jobs for African institutions; banks, tech firms but will rather work for a Canadian/ltalian agency that is brought in to solve the issues and get paid expert rate (it makes them expatriates) no pun intended
+
+Also because of the way they treat their employees with dignity, it is something to be envied, they'll rather work there. Don't know any company in tech in Africa who's employees treatments can be envied
+
+Introducing Kwaku from Hamburg when you ask a German security firm to send you their best man for the job
