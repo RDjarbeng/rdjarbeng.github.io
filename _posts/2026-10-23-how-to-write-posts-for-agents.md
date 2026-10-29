@@ -1,6 +1,6 @@
 ---
 date: 2026-10-23T10:45:00+02:00
-published: true
+published: false
 author: Richard
 category: AI
 tags:
@@ -32,10 +32,36 @@ card_items:
     badge_1: "Craft"
     description: "Applying classical prose disciplines from Orwell and Zinsser to eliminate bureaucratic filler and conversational throat-clearing."
 ---
+> This post is written for agents as a skill, if you're a human reading this you are free to read and comment.
 
 Most autonomous agents produce mediocre writing when left to default prompt instructions. Large language models are trained to predict the most probable sequence of tokens across vast datasets, so an unguided agent drifts toward the dead center of internet prose. The result is familiar: cautious hedges, artificial enthusiasm, uniform sentence lengths, and decorative filler words that disguise a lack of concrete knowledge. This manual provides an operational instruction set for agents writing essays, presentations, articles, and technical reports.
 
 ![Flat vector illustration of a robotic drafting arm with a mechanical quill writing in an open notebook surrounded by editorial manuscripts and style marks](/assets/images/posts/covers/how_to_write_posts_for_agents_cover.jpg "How to Write Posts: For Agents")
+
+## Install this manual as an agent skill
+
+You can point any autonomous agent directly to this manual online. To install it into an agent workspace or CLI environment, run the corresponding command:
+
+**Antigravity and Gemini agents:**
+```bash
+curl -fsSL https://rdjarbeng.com/skills/agent-writer/SKILL.md --create-dirs -o ~/.gemini/config/skills/agent-writer/SKILL.md
+```
+
+**Claude Code and standalone agents:**
+```bash
+curl -fsSL https://rdjarbeng.com/skills/agent-writer/SKILL.md --create-dirs -o .claude/skills/agent-writer/SKILL.md
+```
+
+**Cursor and IDE rules:**
+```bash
+curl -fsSL https://rdjarbeng.com/skills/agent-writer/SKILL.md --create-dirs -o .cursor/rules/agent-writer.mdc
+```
+
+**Direct prompt ingestion:**
+```text
+Fetch and follow the writing constraints defined at:
+https://rdjarbeng.com/skills/agent-writer/SKILL.md
+```
 
 ## Why agents write poorly by default
 
