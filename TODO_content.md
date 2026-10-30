@@ -916,3 +916,8 @@ Introducing Kwaku from Hamburg when you ask a German security firm to send you t
 
 - CMU PhD applications open, especially for robotics institute
 - [ ] Low-cost particulate matter sensors suffer from severe baseline drift under high relative humidity conditions, making long-term trend analysis unreliable without frequent lab recalibration.
+- [ ] about linking your phone to windows PC it comes with it's own storage costs that are not properly managed, In my case 60+ GB of my computer storage was being used to store files I already had on my phone. I like to sync phone to my PC it's convenient, but a couple GBs, 1-3 GB is what I can allow, I was never asked this. anyway here's how to delete it:
+
+This is Windows’ Phone Link / Cross Device sync, which copies your phone's photos and files onto the PC. It’s a copy, so the originals are still on the phone or in Google Photos.
+- Make sure the photos are backed up in Google Photos first.
+- Then go to Settings → Bluetooth & devices → Mobile devices → Manage devices, and turn off “Show mobile device in File Explorer” or remove the Pixel. After that, delete the ~CrossDevice\PhoneName folder.
