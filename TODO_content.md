@@ -921,3 +921,8 @@ Introducing Kwaku from Hamburg when you ask a German security firm to send you t
 This is Windows’ Phone Link / Cross Device sync, which copies your phone's photos and files onto the PC. It’s a copy, so the originals are still on the phone or in Google Photos.
 - Make sure the photos are backed up in Google Photos first.
 - Then go to Settings → Bluetooth & devices → Mobile devices → Manage devices, and turn off “Show mobile device in File Explorer” or remove the Pixel. After that, delete the ~CrossDevice\PhoneName folder.
+- [ ] When do you go from one perceptron to the next? 
+
+Then in 1969, Marvin Minsky and Seymour Papert published a book called Perceptrons. They proved mathematically that a single-layer network could not solve a basic logical operation called exclusive or. Given two binary inputs, output one if exactly one of them is one. Trivial for a human. Mathematically impossible for a single- perceptron.
+
+Funding dried up immediately. Research halted. The period became known as the first Al winter. The irony is that Minsky and Papert were technically correct about single-layer networks. Multi-layer networks could solve exclusive or. The problem was that nobody knew how to train them. That problem sat unsolved for seventeen years.
