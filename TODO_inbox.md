@@ -81,3 +81,8 @@ Index icon
 - [ ] 2026-10-10 08:27 CAT | Add story about CMMRS what it took to apply, immigration issues, perhaps we would have had to travel for the visa, so many documents to submit...
 
 The trip, door closing and mentally giving up, the hope that returned wen it opened again, calling a friend just to help with the trains and navigating Germany, almost missed the bus because of a station, shouting at Agnes because she almost missed the tram
+- [ ] 2026-11-03 15:33 CAT | Quotes from the internet:
+
+Nobody from your company is coming to your funeral. Nobody will mention your company in your Eulogy - A life engineered (youtube channel
+
+https://youtu.be/Ocr0bdB1d9M)
