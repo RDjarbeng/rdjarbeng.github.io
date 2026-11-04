@@ -926,3 +926,5 @@ This is Windows’ Phone Link / Cross Device sync, which copies your phone's pho
 Then in 1969, Marvin Minsky and Seymour Papert published a book called Perceptrons. They proved mathematically that a single-layer network could not solve a basic logical operation called exclusive or. Given two binary inputs, output one if exactly one of them is one. Trivial for a human. Mathematically impossible for a single- perceptron.
 
 Funding dried up immediately. Research halted. The period became known as the first Al winter. The irony is that Minsky and Papert were technically correct about single-layer networks. Multi-layer networks could solve exclusive or. The problem was that nobody knew how to train them. That problem sat unsolved for seventeen years.
+- [ ] [2606.05608v2] Agentic Software: How AI Agents Are Restructuring the Software Paradigm
+https://arxiv.org/abs/2606.05608v2
