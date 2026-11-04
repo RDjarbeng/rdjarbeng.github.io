@@ -928,3 +928,8 @@ Then in 1969, Marvin Minsky and Seymour Papert published a book called Perceptro
 Funding dried up immediately. Research halted. The period became known as the first Al winter. The irony is that Minsky and Papert were technically correct about single-layer networks. Multi-layer networks could solve exclusive or. The problem was that nobody knew how to train them. That problem sat unsolved for seventeen years.
 - [ ] [2606.05608v2] Agentic Software: How AI Agents Are Restructuring the Software Paradigm
 https://arxiv.org/abs/2606.05608v2
+- [ ] Removing the friction of dealing with another human being:
+
+Let me attempt a definition: the Waymo effect is what happens when a technology removes the friction of dealing with another human being, and we experience that removal as pure gain – because the costs of the friction were always visible to us, while its benefits were not.
+
+https://www.researchagenda.news/articles/the-waymo-effect.html
