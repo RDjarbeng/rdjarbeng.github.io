@@ -86,3 +86,7 @@ The trip, door closing and mentally giving up, the hope that returned wen it ope
 Nobody from your company is coming to your funeral. Nobody will mention your company in your Eulogy - A life engineered (youtube channel
 
 https://youtu.be/Ocr0bdB1d9M)
+- [ ] 2026-11-04 14:22 CAT | Things that maie students quit or fail university in Ghana /Africa.
+
+We need to talk about items such as extra curricula activities, pregnancy isn't really a problem for most universities,.
+One thing is in campus fellowships that occupy students time, eventually they spend more time planning church events than studies then the GPA begins to drop, sometimes it becomes too late and the student drops out. Now does the fellowship see all this and lift the burdens from other leaders in the fellowship, no, forget that one leader has dropped out, or the endless cycle keep it going year after year
