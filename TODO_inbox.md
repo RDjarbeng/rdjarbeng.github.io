@@ -90,3 +90,6 @@ https://youtu.be/Ocr0bdB1d9M)
 
 We need to talk about items such as extra curricula activities, pregnancy isn't really a problem for most universities,.
 One thing is in campus fellowships that occupy students time, eventually they spend more time planning church events than studies then the GPA begins to drop, sometimes it becomes too late and the student drops out. Now does the fellowship see all this and lift the burdens from other leaders in the fellowship, no, forget that one leader has dropped out, or the endless cycle keep it going year after year
+- [ ] 2026-11-04 16:09 CAT | Steve Jobs’s famous description of the computer as “a bicycle for our minds”
+
+Need to put quotes somewhere so I can use them in posts in an organized manner
