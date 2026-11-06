@@ -103,3 +103,4 @@ Ghana, first you'll do tests upon tests before even receiving a diagnosis
 
 Rwanda have to go do bp checks and diagnostics before you can even see a doctor. Even the dentist
 - [ ] 2026-11-06 11:43 CAT | Different tests that can be made and the connection of hospitals across Africa, why do we have to fly to India or Germany for tests. Or surgeries what's the difference?
+- [ ] 2026-11-06 11:57 CAT | We used to queue and gather documents and spend sleepless nights making applications just so we can get a page in our passport stamped/laminated so we can visit a country or study. Yes it's true we used to call them visas and you couldn't move without them
