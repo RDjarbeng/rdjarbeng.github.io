@@ -97,3 +97,8 @@ Need to put quotes somewhere so I can use them in posts in an organized manner
 - [ ] 2026-11-06 11:06 CAT | Project showing how money flows in an economy and where it is going.
 
 For instance see SpaceX and where money inflows and goes out
+- [ ] 2026-11-06 11:29 CAT | How hospital systems work in Ghana, Rwanda, USA, UK
+
+Ghana, first you'll do tests upon tests before even receiving a diagnosis
+
+Rwanda have to go do bp checks and diagnostics before you can even see a doctor. Even the dentist
