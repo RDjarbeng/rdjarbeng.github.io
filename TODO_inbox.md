@@ -108,3 +108,4 @@ Rwanda have to go do bp checks and diagnostics before you can even see a doctor.
 - [ ] 2026-11-06 12:31 CAT | Systems programming, Pass by value or pass by reference? Yes we know how it works. Advantage of reference is that you don't have to allocate space, if your variable/array contains 100 million values do you want to pass by value creating a copy everytime?
 
 But of you pass by reference any change made to the array by the function happens to the actual array, what happens if a 100 variables are changed by 10 different functions and you're not sure what the final state will be?
+- [ ] 2026-11-06 15:11 CAT | Add book: https://rlhfbook.com/
