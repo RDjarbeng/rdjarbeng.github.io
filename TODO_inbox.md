@@ -93,3 +93,4 @@ One thing is in campus fellowships that occupy students time, eventually they sp
 - [ ] 2026-11-04 16:09 CAT | Steve Jobs’s famous description of the computer as “a bicycle for our minds”
 
 Need to put quotes somewhere so I can use them in posts in an organized manner
+- [ ] 2026-11-06 10:30 CAT | Thanks to Kaggle and hugging face if you're in data, these are your best friends
