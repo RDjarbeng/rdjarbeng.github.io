@@ -105,3 +105,6 @@ Rwanda have to go do bp checks and diagnostics before you can even see a doctor.
 - [ ] 2026-11-06 11:43 CAT | Different tests that can be made and the connection of hospitals across Africa, why do we have to fly to India or Germany for tests. Or surgeries what's the difference?
 - [ ] 2026-11-06 11:57 CAT | We used to queue and gather documents and spend sleepless nights making applications just so we can get a page in our passport stamped/laminated so we can visit a country or study. Yes it's true we used to call them visas and you couldn't move without them
 - [ ] 2026-11-06 12:24 CAT | Did the introduction of AI make shipping commercial software any faster?
+- [ ] 2026-11-06 12:31 CAT | Systems programming, Pass by value or pass by reference? Yes we know how it works. Advantage of reference is that you don't have to allocate space, if your variable/array contains 100 million values do you want to pass by value creating a copy everytime?
+
+But of you pass by reference any change made to the array by the function happens to the actual array, what happens if a 100 variables are changed by 10 different functions and you're not sure what the final state will be?
