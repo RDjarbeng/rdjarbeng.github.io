@@ -160,9 +160,9 @@ Hoping to build strong research and engineering experience in multimodal learnin
       <ul>
         <li><strong>Cognitive Robotics</strong> (18-799): developed robot software with ROS in C++ (packages, topics, publishers, subscribers), wrote CRAM cognitive-architecture plans in Lisp, and programmed pick-and-place tasks for the PR2 and Lynxmotion AL5D manipulators in Gazebo and Bullet simulators</li>
         <li><strong>Computer Vision</strong> (16-720): image filtering and edge detection, HOG descriptors, Lucas-Kanade optical flow tracking, homographies and image warping, camera models, two-view geometry, structure from motion, CNNs, and photometric stereo</li>
-        <li><strong>Autonomous Driving</strong> (18-744): sensing, perception, localization, driving behaviors, planning, control, and fault management across a full autonomous vehicle stack</li>
+        <li><strong>Autonomous Driving</strong> (18-744): sensing, perception, localization, driving behaviors, planning, control, and fault management across a full autonomous vehicle stack. Understanding the tradeoffs in the different levels of autonomy (SAE), the internal workings of an autonomous vehicle and differences in combustion vehicles vs Electric vehicles such as the drivetrain components and control systems </li>
         <li><strong>Introduction to Deep Learning</strong> (11-785): RNNs/LSTMs, sequence-to-sequence, attention and Transformers, vision architectures (e.g., Vision Transformers)</li>
-        <li><strong>Internet of Things</strong>: wireless embedded sensing systems and communication protocols</li>
+        <li><strong>Internet of Things</strong>: wireless embedded sensing systems and communication protocols (HTTP, LoRaWAN, GSM, GPRS, 3G,4G, GPS, MQTT) </li>
       </ul>
     </details>
   </div>
