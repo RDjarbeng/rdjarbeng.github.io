@@ -94,3 +94,6 @@ One thing is in campus fellowships that occupy students time, eventually they sp
 
 Need to put quotes somewhere so I can use them in posts in an organized manner
 - [ ] 2026-11-06 10:30 CAT | Thanks to Kaggle and hugging face if you're in data, these are your best friends
+- [ ] 2026-11-06 11:06 CAT | Project showing how money flows in an economy and where it is going.
+
+For instance see SpaceX and where money inflows and goes out
