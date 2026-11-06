@@ -102,3 +102,4 @@ For instance see SpaceX and where money inflows and goes out
 Ghana, first you'll do tests upon tests before even receiving a diagnosis
 
 Rwanda have to go do bp checks and diagnostics before you can even see a doctor. Even the dentist
+- [ ] 2026-11-06 11:43 CAT | Different tests that can be made and the connection of hospitals across Africa, why do we have to fly to India or Germany for tests. Or surgeries what's the difference?
