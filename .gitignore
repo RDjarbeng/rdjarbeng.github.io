@@ -20,6 +20,7 @@ generate_tags_gemini.rb
 .env
 !llms.txt
 misc_crawls_from_web/*
+misc_files_plans/*
 node_modules/  
 **/__pycache__/
 **/__pycache__/*
