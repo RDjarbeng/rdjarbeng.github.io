@@ -26,3 +26,14 @@ node_modules/
 *.map
 # Diagram check renders
 scripts/diagrams/out/
+
+# Local files and environment overrides
+.local
+.local/
+*.local
+*.local.*
+.env*.local
+
+
+# Claude Code settings and app config
+.claude/
