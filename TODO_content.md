@@ -909,5 +909,5 @@ The story is that a lot of qualified engineers can do those security jobs for Af
 Also because of the way they treat their employees with dignity, it is something to be envied, they'll rather work there. Don't know any company in tech in Africa who's employees treatments can be envied
 
 Introducing Kwaku from Hamburg when you ask a German security firm to send you their best man for the job
-- [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress
+- [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress. Eg: Ian Richardson in 2003 in his book H.264 and MPEG-4 Video Compression: Video Coding for Next-generation Multimedia predicted "H.264 may become the technical leader that will drive the next generation of digital video applications" (How did that turn out?)
 - [ ] Warren Buffet's big bet - S&P 500 will outperform hedge funds and all the other financial instruments over the long term
