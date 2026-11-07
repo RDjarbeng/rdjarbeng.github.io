@@ -53,7 +53,8 @@
     "sync:algolia": "node scripts/algolia-sync.js",
     "generate:pdfs": "node scripts/generate_post_pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "check:links": "node scripts/check-links.mjs _site"
+    "check:links": "node scripts/check-links.mjs _site",
+    "check:edits": "node scripts/check-edits.mjs"
   },
   "repository": {
     "type": "git",
