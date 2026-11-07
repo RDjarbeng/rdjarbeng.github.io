@@ -2,23 +2,39 @@
 date: 2026-08-10T14:55:00+02:00
 published: false
 author: Richard
-category: Technology
+category: Research & Learning
 tags:
   - Autonomous Driving
   - Carnegie Mellon
   - ECE 18-744
   - Robotics
   - Software Architecture
-title: "Inside CMU 18-744: Architectural Lessons from Prof. Raj Rajkumar’s Autonomous Driving Course"
+title: "Inside CMU 18-744: Architectural Lessons from Prof. Raj Rajkumar's Autonomous Driving Course"
+layout: post
+description: A retrospective on Carnegie Mellon's graduate autonomous driving course (ECE 18-744), examining multi-layer software stacks, sensor fusion trade-offs, and real-time automotive safety.
 image: /assets/images/posts/covers/cmu_18744_autonomous_driving_cover.jpg
 image_alt: "Vector illustration of an autonomous vehicle navigating urban traffic with perception bounding boxes and path trajectory planning"
-layout: post
-card_items: []
+key_points:
+  - Autonomous vehicles operate as distributed real-time systems requiring deterministic latency guarantees across CAN buses, Ethernet, and RTOS kernels.
+  - Multi-sensor fusion balances early raw sensor concatenation against modular late fusion with Extended Kalman Filters and Hungarian data association.
+  - Localization combines pre-built HD vector maps with live LiDAR and IMU dead reckoning to achieve sub-decimeter positioning in satellite shadow zones.
+  - Behavioral state machines decouple strategic decision making from fifth-order polynomial trajectory generation and low-level drive-by-wire actuation.
+card_items:
+  - name: "CMU ECE 18-744 Course Listing"
+    badge_1: "Graduate Course"
+    badge_2: "Carnegie Mellon"
+    url: "https://courses.ece.cmu.edu/18744"
+    link_text: "View Course Syllabus"
+    description: "Official course page for Autonomous Driving in the Department of Electrical and Computer Engineering at Carnegie Mellon University."
+  - name: "Prof. Raj Rajkumar Faculty Profile"
+    badge_1: "Faculty Bio"
+    badge_2: "Embedded Systems"
+    url: "https://www.ece.cmu.edu/directory/bios/rajkumar-raj.html"
+    link_text: "Read Faculty Profile"
+    description: "George Westinghouse Professor of ECE and director of the Mobility21 National University Transportation Center at CMU."
 ---
 
 Carnegie Mellon University has a long history in vehicle automation, dating back to early mobile robotics experiments in the 1980s and the DARPA Urban Challenge victory in 2007 with the autonomous SUV named Boss. In the Department of Electrical and Computer Engineering (ECE), [18-744: Autonomous Driving](https://courses.ece.cmu.edu/18744) focuses on the core software architectures and engineering trade-offs required to build safe self-driving systems. Taught by Professor [Raj Rajkumar](https://www.ece.cmu.edu/directory/bios/rajkumar-raj.html), a leading researcher in real-time embedded systems and connected vehicles, the course approaches autonomous driving as a complex system engineering problem rather than a simple machine learning challenge.
-
-![Vector illustration of an autonomous vehicle navigating urban traffic with perception bounding boxes and path trajectory planning](/assets/images/posts/covers/cmu_18744_autonomous_driving_cover.jpg)
 
 Popular media often frames self-driving cars as a problem solved purely by training large neural networks on video feeds. Taking 18-744 provides a far more practical perspective. Real-world autonomous vehicles are distributed real-time systems that require precise coordination across hardware buses, sensor fusion pipelines, localization algorithms, motion planners, and safety watchdogs.
 
