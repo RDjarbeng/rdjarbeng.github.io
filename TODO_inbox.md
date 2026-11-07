@@ -109,3 +109,6 @@ Rwanda have to go do bp checks and diagnostics before you can even see a doctor.
 
 But of you pass by reference any change made to the array by the function happens to the actual array, what happens if a 100 variables are changed by 10 different functions and you're not sure what the final state will be?
 - [ ] 2026-11-06 15:11 CAT | Add book: https://rlhfbook.com/
+- [ ] 2026-11-07 08:47 CAT | Can you carry starlink with you wherever you please, or there's a catch? Can it be powered by a car in remote/rural areas. Is it unlimited everywhere or there are limits in certain places?
+
+What of I buy it in one place and I'm carrying it to another country, what are the restrictions?
