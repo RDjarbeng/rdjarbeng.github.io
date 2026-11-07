@@ -4,7 +4,7 @@ title: "Cybersecurity Datasets and Deep Learning: From KDD99 to Modern Foundatio
 date: 2026-09-24T08:00:00Z
 published: false
 author: Richard
-category: Technology
+category: Security
 tags:
   - Cybersecurity
   - Deep Learning
@@ -12,8 +12,14 @@ tags:
   - Network Intrusion Detection
   - Malware Analysis
   - Graph Neural Networks
+description: A comprehensive analysis of how defensive machine learning evolved from flawed KDD99 tabular benchmarks to modern kernel provenance graphs and security foundation models.
 image: /assets/images/posts/covers/deep-learning-cybersecurity-datasets-cover.jpg
 image_alt: "Editorial illustration of a cybersecurity research laboratory showing data pipelines from internet through firewalls, feature extraction, neural network models, and security researchers analyzing alerts under the title Deep Learning for Cybersecurity"
+key_points:
+  - Classic intrusion benchmarks like KDD99 and CIC-IDS2017 suffered from base rate fallacies and severe synthetic feature leakage that crippled production generalization.
+  - Universal TLS 1.3 encryption blinded payload inspection models, forcing the industry to transition toward behavioral flow metrics and host-level kernel telemetry.
+  - Modern benchmarks such as SOREL-20M, BETH, and DARPA TC provenance provide disarmed binaries, eBPF system call traces, and causal graph representations.
+  - Production defensive architectures integrate a three-tier stack: line-rate GBDT packet filtering, provenance Graph Neural Networks, and reasoning foundation models.
 card_items:
   - name: "Berman et al. 2019 Survey"
     badge_1: "Foundational Review"
@@ -43,9 +49,7 @@ card_items:
 
 For more than twenty years, academic research in machine learning for intrusion detection revolved around a single, artificial collection of simulated network records. The Knowledge Discovery and Dissemination (KDD) 1999 dataset, derived from the 1998 DARPA intrusion detection evaluation at MIT Lincoln Laboratory, provided over four million connection records that sustained hundreds of doctoral theses and conference papers.
 
-![Cybersecurity Datasets and Deep Learning](/assets/images/posts/covers/deep-learning-cybersecurity-datasets-cover.jpg)
-
-When Daniel S. Berman, Anna L. Buczak, Jeffrey S. Chavis, and Cherita L. Corbett published their survey, *A Survey of Deep Learning Methods for Cyber Security* (Information 2019, 10(4), 122), they captured a pivotal inflection point. Deep learning architectures like Restricted Boltzmann Machines, Autoencoders, and early Convolutional Neural Networks were replacing shallow classifiers like decision trees and support vector machines. Yet researchers were still training these sophisticated architectures on tabular datasets originally collected during the dial-up era.
+When Daniel S. Berman, Anna L. Buczak, Jeffrey S. Chavis, and Cherita L. Corbett published their survey, *A Survey of Deep Learning Methods for Cyber Security* (Information 2019, 10(4), 122), they captured a clear inflection point. Deep learning architectures like Restricted Boltzmann Machines, Autoencoders, and early Convolutional Neural Networks were replacing shallow classifiers like decision trees and support vector machines. Yet researchers were still training these sophisticated architectures on tabular datasets originally collected during the dial-up era.
 
 Understanding where defensive machine learning stands today requires examining the baseline that Berman and his colleagues documented in 2019.
 
