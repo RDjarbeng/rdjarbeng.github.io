@@ -69,7 +69,7 @@ Possible future implementation:
 - [ ] The gallery page doesn't have a way to browse all gallery items that is user friendly, in markdown using crawl4ai it shows a very long page for /gallery which shouldn't be. (High Importance, Significant Complexity: Re-thinking gallery navigation/pagination)
 
 ### Search & Discovery
-- [ ] Search needs to include gallery items, tags, categories. (High Importance, Significant Complexity: Search engine integration or custom build) - partially completed with algolia
+- [x] Search needs to include gallery items, tags, categories. (Completed via Algolia in `scripts/algolia-sync.js`)
 
 ### Overall Strategic Goals
 - [ ] **Strategic Goal: Doubling Daily Active Users (2x DAU)**

@@ -46,7 +46,7 @@ List of todos is split across two files:
 This is the short, curated list of work currently being pursued. It should normally contain no more than three outcomes.
 
 - [ ] Make `/videos/` easy to understand and navigate for a first-time visitor.
-- [ ] Extend the existing Algolia search architecture (`scripts/algolia-sync.js`) to gallery and YouTube content.
+- [x] Extend the existing Algolia search architecture (`scripts/algolia-sync.js`) to gallery and YouTube content (completed in commit `2e59e8bc`).
 - [ ] Define a scalable video-collection model, including how YouTube playlist updates are synchronized.
 
 ## Current known issue
