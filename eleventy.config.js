@@ -578,9 +578,16 @@ ${jsonLd}
 
   // 8. Collections & Site Bridge
   eleventyConfig.addCollection("posts", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("_posts/**/*.md")
+    const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
       .filter((p) => p.data.published !== false)
       .sort((a, b) => b.date - a.date);
+    // Notes added by scripts/writer-note.mjs are for drafts only.
+    for (const p of posts) {
+      if ((p.rawInput || "").includes("<!-- WRITER NOTE")) {
+        console.warn(`[writer-note] ${p.inputPath} is published but still has a writer note. Remove it with: node scripts/writer-note.mjs ${p.inputPath} --remove`);
+      }
+    }
+    return posts;
   });
 
   eleventyConfig.addCollection("personal", (collectionApi) => {
