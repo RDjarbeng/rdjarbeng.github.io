@@ -29,7 +29,7 @@ When writing or editing posts for this website, follow these rules:
    - Technical posts: Clear, instructive tone.
    - Personal reflection posts: Conversational but still statement-driven.
 
-3. **Expand, Don't Summarize**: When completing a post, unless explicitly told to summarize, add more information and detail to make the post longer and more comprehensive. Improve the wording while keeping all original details.
+3. **Expand, Don't Summarize**: When completing a post, unless explicitly told to summarize, add more information and detail to make the post longer and more comprehensive. Improve the wording while keeping all original details, links and embeds (see section 8 of `.agent/instructions/editing_posts.md`).
 
 ## Media Embedding
 
