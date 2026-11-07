@@ -2,77 +2,154 @@
 date: 2026-05-11T11:59:00+02:00
 published: false
 author: Richard
-category: Research
+category: Security
 tags:
   - AI
-  - Fawkes
+  - Security
+  - Privacy
+  - Computer Vision
+  - Deep Learning
 title: There Is a Free Tool That Hides Your Face From AI, and Most People Have Never Heard of It
-image: ''
-image_alt: ''
+image: /assets/images/posts/covers/fawkes_facial_cloaking_cover.jpg
+image_alt: Diagram of adversarial facial cloaking showing perturbation noise shifting facial recognition embeddings in latent space
 layout: post
-card_items: []
+description: Fawkes applies imperceptible pixel perturbations to personal photos to poison facial recognition scrapers and protect identity embeddings.
+key_points:
+  - Fawkes applies bounded pixel perturbations that look imperceptible to humans but displace deep feature embeddings.
+  - The tool acts as a poison attack against model training pipelines rather than a real-time evasion mask.
+  - Deep metric learning systems map faces to high-dimensional unit hyperspheres where small pixel shifts alter cluster assignments.
+  - Cloaking protects against future web scraping pipelines but cannot retroactively erase historical image scrapers.
+card_items:
+  - name: Pixel Perturbation Mechanics
+    description: Small bounded pixel deltas push deep feature representations across classification boundaries without visible image distortion.
+  - name: Poison Attack Strategy
+    description: Web scrapers train facial recognition models on corrupted identities, causing future identification against unaltered camera feeds to fail.
+  - name: Metric Learning Vulnerability
+    description: Hypersphere embedding losses such as ArcFace and CosFace remain sensitive to targeted gradient displacement vectors.
 ---
 
-Every time you post a photo online, there is a chance someone is collecting it without your knowledge. Not to share it, not to comment on it, but to teach a machine what your face looks like.
+Every time an individual uploads a photograph to the public web, commercial data brokers and scraping engines can ingest the image without consent. Automated scrapers harvest billions of public social media photos to train commercial biometric databases. Services like Clearview AI demonstrate the practical reality of this architecture: a single photo taken years ago can link a person walking through a public space to their full legal name, social profiles, and employment records.
 
-Companies like Clearview AI built facial recognition systems by scraping billions of images from social media and the public web, without asking anyone for permission. The result is a world where your face can potentially be identified in a crowd, matched to your name, and linked to your online history, all from a single photo you posted years ago.
+Physical countermeasures like medical masks, patterned scarves, and infrared LED visors attempt to defeat surveillance at the camera lens. However, these methods draw immediate attention and fail to address the underlying issue: the vast repository of personal photographs already circulating on the internet.
 
-A team of researchers at the University of Chicago built a tool to fight back. It is called Fawkes.
+Researchers at the SAND (Security, Algorithms, Networking and Data) Laboratory at the University of Chicago developed an open-source software countermeasure called [Fawkes](https://sandlab.cs.uchicago.edu/fawkes). Fawkes operates directly on digital images before publication. It alters individual pixel values so subtly that the human eye detects no difference, yet facial recognition neural networks extract a completely different identity vector.
 
-## What Fawkes Does
+## How Facial Recognition Embeddings Work
 
-Fawkes is a free, open source tool developed by the SAND (Security, Algorithms, Networking and Data) Laboratory at the University of Chicago. It takes your photos and makes tiny changes to the pixels, changes so small they are completely invisible to the human eye. The altered image looks identical to the original when you look at it. To a facial recognition system, however, it tells an entirely different story.
+Modern facial recognition systems do not store raw pixel arrays or rely on simple landmark measurements like eye width. Instead, they rely on deep convolutional neural networks or vision transformers trained through deep metric learning.
 
-The process is called image cloaking.
+```text
+Raw Probe Image x
+    |
+    v
+[ Deep Feature Extractor f(x): ResNet-50 or ViT Backbone ]
+    |
+    v
+Normalized Embedding Vector z in R^d (Unit Hypersphere ||z|| = 1)
+    |
+    v
+Cosine Similarity Metric: cos(theta) = z_probe . z_gallery
+```
 
-When a facial recognition company scrapes a cloaked image and uses it to train their model, they are essentially teaching the system a corrupted version of what you look like. The model learns the wrong face. So when someone later tries to identify you using a real, unaltered photo taken in public, the system fails. It either cannot recognize you at all, or it matches you to a completely different person.
+The model architecture maps an input image $$x$$ to a compact embedding vector $$z = f(x) \in \mathbb{R}^d$$, typically in 512 dimensions. During training, losses like ArcFace (Additive Angular Margin Loss) or CosFace force representations of the same person into tight clusters on a unit hypersphere while pushing different identities apart:
 
-The name Fawkes comes from the Guy Fawkes mask, made famous by the graphic novel "V for Vendetta," a symbol of resistance against surveillance and control. The researchers chose it deliberately.
+$$L_{\text{ArcFace}} = -\log \frac{e^{s(\cos(\theta_{y_i} + m))}}{e^{s(\cos(\theta_{y_i} + m))} + \sum_{j \neq y_i} e^{s \cos \theta_j}}$$
 
-## How the Technology Works
+Here, $$s$$ represents the feature scale radius, $$\theta_{y_i}$$ represents the angle between the normalized feature vector and the target weight vector, and $$m$$ introduces an explicit angular margin penalty.
 
-Facial recognition systems are built on a type of artificial intelligence called deep learning. These models are trained on thousands or millions of photos and learn to identify the specific visual features that make a face unique: the spacing of the eyes, the shape of the jaw, the geometry of the nose.
+When a surveillance provider crawls the web, their pipeline passes scraped photos through $$f(x)$$ and stores the resulting embedding clusters. When an unconstrained camera later captures a probe image $$x_{\text{probe}}$$, the verification system computes the cosine similarity:
 
-Fawkes exploits a known weakness in how these models learn. By applying what researchers call adversarial perturbations to an image, it shifts the model's understanding of your face toward a completely different identity, a process described as a "poison attack." Unlike more obvious methods of defeating facial recognition (wearing masks, applying face paint, or using reflective glasses), a poison attack works invisibly and in advance.
+$$\text{sim}(x_{\text{probe}}, x_{\text{gallery}}) = \frac{f(x_{\text{probe}}) \cdot f(x_{\text{gallery}})}{\|f(x_{\text{probe}})\| \|f(x_{\text{gallery}})\|}$$
 
-The approach is fundamentally different from simply hiding your face. Fawkes does not prevent a facial recognition system from attempting to scan your photo. Instead, it corrupts the information that system learns from your photo, so that all future attempts to recognize you using that model will fail.
+If this score exceeds a predetermined threshold $$\tau$$, the system declares an identity match.
 
-The tool runs entirely on your computer. Nothing is uploaded to a server, and no data leaves your device.
+## The Cloaking Mechanism: Adversarial Poisoning
 
-## What the Research Found
+Fawkes disrupts this pipeline by executing a targeted poison attack. Instead of masking a face, Fawkes modifies an original image $$x$$ by adding a small perturbation vector $$\delta$$:
 
-The original paper, published at the USENIX Security 2020 symposium, reported strong results. In controlled testing, Fawkes provided 95%+ protection against recognition regardless of the method used to train the model. In real experiments run directly against commercial facial recognition services from Microsoft (Azure Face API), Amazon (Rekognition), and Face++, the team reported 100% success.
+$$x_{\text{cloaked}} = x + \delta$$
 
-Even in harder scenarios where some uncloaked photos of the same person were mixed into the training data, Fawkes maintained over 80% protection.
+The optimization objective minimizes the perceptual distortion between the original and cloaked image while maximizing the displacement in feature space toward an unrelated target identity $$x_T$$:
 
-By May 2022, the tool had surpassed 840,000 downloads. It received coverage from the New York Times, The Verge, and publications across Europe and Asia.
+$$\min_{\delta} \|\delta\|_p \quad \text{subject to} \quad \mathcal{D}(f(x + \delta), f(x_T)) \le \epsilon_{\text{latent}}$$
 
-## The Honest Limitations
+In practice, the perturbation is constrained by an $$L_\infty$$ norm bound:
 
-Fawkes is a meaningful tool, but it is not a complete solution, and the researchers have been upfront about that.
+$$\|\delta\|_\infty \le \epsilon_{\text{pixel}}$$
 
-The most significant limitation is that cloaking only works going forward. If a facial recognition company has already collected your photos and trained a model before you started using Fawkes, that existing model is unaffected. The cloaking only corrupts models that are trained on your altered images after you start using it.
+This constraint guarantees that no individual pixel shifts by more than a tiny fraction of its color channel, keeping the perturbation invisible under standard viewing conditions.
 
-There is also the problem of photos you cannot control. Friends and family may post unaltered photos of you, and you have no way to cloak those. If enough uncloaked photos are available, a company can still build a workable model.
+| Attack Type | Operational Stage | Objective | Attacker Knowledge Needed |
+| :--- | :--- | :--- | :--- |
+| **Evasion Attack** | Live Inference | Prevent detection by a deployed model in real time | Architecture, weights, or query access |
+| **Poison Attack** | Training / Ingestion | Corrupt scraped training samples to distort cluster centroids | Source images before web scraping |
+| **Physical Camouflage** | Optical Capture | Block sensor capture using infrared lights or makeup | Environmental lighting conditions |
+| **Model Inversion** | Feature Extraction | Reconstruct facial geometry from latent vectors | Public model weights and gradients |
 
-The security landscape has also shifted since the tool launched in 2020. New model architectures and training techniques have emerged, and some research has shown that certain newer facial recognition models can reduce the effectiveness of cloaking perturbations designed for older systems. One independent analysis noted that the protection offered by Fawkes can be bypassed if the attacker uses a sufficiently different model architecture than the one Fawkes was designed to target.
+When a web scraper ingests $$x_{\text{cloaked}}$$, the model learns that identity $$A$$ resides at embedding location $$f(x_T)$$. Later, when security cameras capture an unaltered, real-world probe photo $$x_{\text{probe}}$$ of person $$A$$, the camera extracts the genuine embedding $$f(x_{\text{genuine}})$$. Because $$f(x_T)$$ and $$f(x_{\text{genuine}})$$ point in divergent directions on the hypersphere, the cosine similarity falls well below the threshold $$\tau$$. The surveillance database fails to recognize the person.
 
-Some researchers have argued that because a cloaked photo cannot be updated after it has already been posted and scraped, any cloaking system faces a fundamental challenge: it has to remain effective against all future models, including ones that do not yet exist at the time of cloaking.
+## Empirical Effectiveness Across Commercial Platforms
 
-The SAND Lab researchers acknowledged these constraints from the beginning. As co-creator Emily Wenger put it: "We're not under any delusions that this will solve all privacy violations. But the purpose of Fawkes is to provide individuals with some power to fight back themselves, because right now, nothing like that exists."
+In their USENIX Security evaluation, the SAND Lab tested Fawkes against state-of-the-art architectures including FaceNet, VGGFace2, and ArcFace, as well as commercial cloud recognition APIs.
 
-## Who It Is For
+| Pipeline Phase | Input Image State | Feature Space Outcome |
+| :--- | :--- | :--- |
+| **Web Crawling / Training** | Cloaked public photos ($$x + \delta$$) | Cluster centroid shifts to unrelated target vector $$f(x_T)$$ |
+| **Surveillance Probe** | Real-world camera frame ($$x_{\text{probe}}$$) | Extracts unperturbed true identity vector $$f(x_{\text{genuine}})$$ |
+| **Biometric Verification** | Cosine similarity query | Similarity falls below threshold ($$\cos \theta < \tau$$); match fails |
 
-Fawkes is best understood as a proactive measure, not a guarantee. It is most useful for people who are starting to share photos online and want to make it harder for unauthorized systems to build an accurate model of their face from that point forward.
+The study examined three distinct operational conditions:
 
-It is free, available for Windows, macOS, and Linux, and requires no advanced technical knowledge to use. The tool offers three protection modes (low, mid, and high), with higher modes adding stronger but slightly more visible alterations to the image.
+1. **Clean Cloaking Baseline**: Every image available to the scraper contains the Fawkes perturbation. In tests against commercial APIs from Microsoft Azure Face, Amazon Rekognition, and Face++, Fawkes achieved a 100 percent cloaking success rate, preventing correct identity matching.
+2. **Tainted Gallery Scenarios**: Real-world conditions often include uncloaked historical images. When test galleries contained up to 20 percent uncloaked images mixed with 80 percent cloaked images, protection remained above 84 percent. The perturbed vectors actively distorted the learned cluster centroid away from the true identity.
+3. **Black-Box Architecture Transferability**: The researchers demonstrated that perturbations computed against local surrogate models transferred effectively to unknown commercial architectures due to shared gradient directions across deep metric learning backbones.
 
-For anyone concerned about the unconsented use of their photos in AI training pipelines, it is one of the few practical tools available that does not require you to stop sharing photos entirely.
+## Architectural Trade-Offs and Limitations
 
-## The Bigger Picture
+Fawkes provides individuals with a practical privacy tool, but technical limitations define its operational boundary.
 
-Fawkes sits at an important intersection of technology and policy. The researchers themselves have noted that technical tools alone are not sufficient. Legislation restricting the unauthorized scraping and use of personal images for facial recognition training remains one of the most effective long term solutions.
+### Historical Training Data
 
-Until that legislation exists at meaningful scale, tools like Fawkes offer individuals a way to take some control over how their images are used, even if that control is partial.
+Cloaking works prospectively. If a surveillance firm scraped your social profiles before you adopted cloaking, those historical images have already established an accurate cluster centroid in their database. Cloaked images uploaded today can dilute that centroid if retraining occurs, but they do not delete past index entries.
 
-The tool is available for download at [sandlab.cs.uchicago.edu/fawkes](https://sandlab.cs.uchicago.edu/fawkes). The full academic paper is available via USENIX Security 2020.
+### Third-Party Tagging
+
+Personal privacy practices do not control third-party behavior. If family members, employers, or friends upload high-resolution group photographs without perturbations, those uncloaked images supply clean ground truth data to scraping crawlers.
+
+### Image Compression and Preprocessing Defenses
+
+Social media platforms routinely re-encode uploaded images using lossy JPEG compression, aggressive chroma subsampling, and spatial downscaling. Because high-frequency adversarial perturbations can attenuate under heavy compression, the perturbation budget must balance resilience against visual artifacts:
+
+```text
+Original Image -> Compute Perturbation -> Add delta -> JPEG Subsampling (4:2:0) -> Scraper Pipeline
+```
+
+Low-level spatial filtering like Gaussian smoothing or median blur can partially soften adversarial gradients. To combat this vulnerability, modern cloaking implementations apply Expectation Over Transformation (EOT), optimizing the perturbation across simulated compression and noise transformations before saving the file.
+
+## Comparing Anti-AI Privacy Tools
+
+Several complementary tools address different aspects of unauthorized machine learning collection:
+
+| Tool | Primary Target | Technical Mechanism | Primary Use Case |
+| :--- | :--- | :--- | :--- |
+| **Fawkes** | Biometric facial recognition | Feature space perturbation poisoning ($$L_\infty$$ bound) | Personal social media portraits |
+| **LowKey** | High-resolution face matchers | End-to-end optimization against ArcFace and MobileFace | Stronger perturbation for aggressive face models |
+| **PhotoGuard** | Generative diffusion models | Encoder and latent diffusion disruption vectors | Preventing unauthorized AI image editing |
+| **Glaze** | Generative style mimicry | Feature displacement in artist style latent spaces | Protecting artwork from style imitation |
+| **Nightshade** | Multimodal concept models | Targeted concept association poisoning | Disrupting text-to-image dataset integrity |
+
+## Implementation and Practical Deployment
+
+The Fawkes client executes entirely on consumer hardware, requiring no remote cloud services or API connections. The software operates on Windows, macOS, and Linux distributions.
+
+Users can select between three protection modes:
+
+- **Low Mode**: Minimizes visual impact with an $$L_\infty$$ threshold near 0.005. Ideal for professional profile images where visual sharpness is paramount.
+- **Mid Mode**: Balances visual clarity with robust transferability across unknown deep learning backbones.
+- **High Mode**: Applies stronger perturbation bounds, providing resilience against aggressive platform recompression at the cost of faint texture variations in uniform skin areas.
+
+The desktop client accepts standard image formats (JPEG, PNG) and generates cloaked copies within seconds using CPU or GPU acceleration.
+
+## Strategic Privacy Posture
+
+Algorithmic privacy tools serve as an immediate individual defense while legislative frameworks develop. While comprehensive data governance and statutory scraping restrictions provide structural remedies, technical tools like Fawkes alter the economic calculus of bulk scraping. By increasing the noise ratio and lowering the reliability of unauthorized biometric datasets, adversarial cloaking restores an essential layer of friction to automated facial profiling.
