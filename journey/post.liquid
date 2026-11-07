@@ -1,0 +1,70 @@
+---
+layout: page
+pagination:
+  data: journey.posts
+  size: 1
+  alias: jp
+permalink: "/journey/{{ jp.slug }}/"
+eleventyComputed:
+  title: "Journey: {{ jp.title }}"
+eleventyExcludeFromCollections: true
+---
+{%- comment -%} Dev-only (npm start). Data comes from _data/journey.js. {%- endcomment -%}
+<style>
+  .journey-bar { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 12px; }
+  .journey-bar label { flex: 1 1 280px; font-size: .85rem; }
+  .journey-bar select { width: 100%; font: inherit; padding: 4px; }
+  .journey-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .journey-cols { grid-template-columns: 1fr; } }
+  .journey-col { min-width: 0; overflow-wrap: anywhere; }
+  .journey-col img, .journey-col iframe { max-width: 100%; }
+  .journey-col h4 { margin: 0 0 4px; }
+  .journey-meta { font-size: .8rem; opacity: .7; margin: 0 0 12px; }
+</style>
+
+<p>
+  <a href="/journey/">← All posts</a> ·
+  <a href="/admin/index.html#/collections/posts/entries/{{ jp.slug }}" target="_blank">Edit in CMS</a> ·
+  <a href="vscode://file/{{ jp.absPath }}">Open in VS Code</a> ·
+  <code>{{ jp.file }}</code>
+</p>
+<p class="journey-meta">Edit in CMS works on your local files only after choosing “Work with Local Repository” on the CMS sign-in screen (Chrome or Edge). Otherwise it edits the version on GitHub, which doesn't have uncommitted changes.</p>
+
+<p class="journey-meta">{{ jp.count }} versions. ★ marks milestones: the first version, big changes in length, the last commit and uncommitted edits.</p>
+
+<div class="journey-bar">
+  <label>Left
+    <select id="jl">{% for m in jp.versions %}<option value="{{ m.id }}"{% if forloop.first %} selected{% endif %}>{{ m.label | escape }}</option>{% endfor %}</select>
+  </label>
+  <label>Right
+    <select id="jr">{% for m in jp.versions %}<option value="{{ m.id }}"{% if forloop.last %} selected{% endif %}>{{ m.label | escape }}</option>{% endfor %}</select>
+  </label>
+</div>
+
+<div class="journey-cols">
+  <div class="journey-col" id="cl"></div>
+  <div class="journey-col" id="cr"></div>
+</div>
+
+{% for m in jp.versions %}
+<template id="v{{ m.id }}">
+  <h4>{{ m.title | escape }}</h4>
+  <p class="journey-meta">{{ m.label | escape }}{% if m.subject != "" %} · {{ m.subject | escape }}{% endif %}</p>
+  {{ m.html }}
+</template>
+{% endfor %}
+
+<script>
+  (function () {
+    function show(sel, col) {
+      var t = document.getElementById("v" + document.getElementById(sel).value);
+      var c = document.getElementById(col);
+      c.innerHTML = "";
+      c.appendChild(t.content.cloneNode(true));
+    }
+    document.getElementById("jl").onchange = function () { show("jl", "cl"); };
+    document.getElementById("jr").onchange = function () { show("jr", "cr"); };
+    show("jl", "cl");
+    show("jr", "cr");
+  })();
+</script>

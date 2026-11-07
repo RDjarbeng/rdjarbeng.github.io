@@ -1,0 +1,116 @@
+---
+layout: page
+title: Post journeys
+permalink: /journey/
+eleventyExcludeFromCollections: true
+---
+{%- comment -%} Dev-only (npm start). Data comes from _data/journey.js. {%- endcomment -%}
+<style>
+  .journey-tools { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+  .journey-tools input, .journey-tools select { font: inherit; padding: 6px 8px; }
+  .journey-tools input { flex: 1 1 220px; }
+  .journey-wrap { overflow-x: auto; }
+  .journey-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .journey-table th, .journey-table td { padding: 6px 8px; border-bottom: 1px solid rgba(127,127,127,.25); text-align: left; vertical-align: top; }
+  .journey-table th button { font: inherit; font-weight: 600; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; text-align: left; }
+  .journey-table th[aria-sort] button::after { content: " ▲"; font-size: .7em; }
+  .journey-table th[aria-sort="descending"] button::after { content: " ▼"; }
+  .journey-table td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .journey-tag { font-size: .75rem; border: 1px solid currentColor; border-radius: 99px; padding: 0 6px; opacity: .8; white-space: nowrap; }
+  .journey-count { font-size: .85rem; opacity: .7; align-self: center; }
+</style>
+
+<p>How each post changed from its first version to now, read from git. Only visible on the dev server. Click a column heading to sort by it.</p>
+
+<div class="journey-tools">
+  <input id="jq" type="search" placeholder="Filter by title">
+  <select id="js">
+    <option value="">All posts</option>
+    <option value="uncommitted">Uncommitted changes</option>
+    <option value="draft">Drafts</option>
+    <option value="published">Published</option>
+  </select>
+  <span class="journey-count" id="jc"></span>
+</div>
+
+<div class="journey-wrap">
+<table class="journey-table">
+  <thead><tr>
+    <th data-key="title" data-type="text"><button>Post</button></th>
+    <th data-key="status" data-type="text"><button>Status</button></th>
+    <th data-key="first" data-type="num"><button>First words</button></th>
+    <th data-key="now" data-type="num"><button>Now words</button></th>
+    <th data-key="count" data-type="num"><button>Versions</button></th>
+    <th data-key="started" data-type="text"><button>Started</button></th>
+    <th data-key="last" data-type="text" aria-sort="descending"><button>Last change</button></th>
+  </tr></thead>
+  <tbody>
+  {%- for p in journey.posts %}
+    {%- if p.published %}{% assign status = "published" %}{% else %}{% assign status = "draft" %}{% endif %}
+    <tr data-title="{{ p.title | downcase | escape }}" data-status="{{ status }}" data-uncommitted="{{ p.uncommitted }}"
+        data-first="{{ p.firstWords }}" data-now="{{ p.nowWords }}" data-count="{{ p.count }}"
+        data-started="{{ p.firstDate }}" data-last="{% if p.uncommitted %}9999{% else %}{{ p.lastDate }}{% endif %}">
+      <td><a href="/journey/{{ p.slug }}/">{{ p.title | escape }}</a></td>
+      <td>
+        <span class="journey-tag">{{ status }}</span>
+        {% if p.uncommitted %}<span class="journey-tag">uncommitted</span>{% endif %}
+      </td>
+      <td class="num">{{ p.firstWords }}</td>
+      <td class="num">{{ p.nowWords }}</td>
+      <td class="num">{{ p.count }}</td>
+      <td class="num">{{ p.firstDate }}</td>
+      <td class="num">{% if p.uncommitted %}now{% else %}{{ p.lastDate }}{% endif %}</td>
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>
+</div>
+
+<script>
+  (function () {
+    var tbody = document.querySelector(".journey-table tbody");
+    var rows = Array.prototype.slice.call(tbody.rows);
+    var heads = document.querySelectorAll(".journey-table th");
+    var q = document.getElementById("jq");
+    var s = document.getElementById("js");
+
+    function filter() {
+      var text = q.value.toLowerCase();
+      var want = s.value;
+      var shown = 0;
+      rows.forEach(function (r) {
+        var ok = r.dataset.title.indexOf(text) !== -1 &&
+          (!want || (want === "uncommitted" ? r.dataset.uncommitted === "true" : r.dataset.status === want));
+        r.hidden = !ok;
+        if (ok) shown++;
+      });
+      document.getElementById("jc").textContent = shown + " of " + rows.length;
+    }
+
+    function sort(th, dir) {
+      var key = th.dataset.key;
+      var num = th.dataset.type === "num";
+      heads.forEach(function (h) { h.removeAttribute("aria-sort"); });
+      th.setAttribute("aria-sort", dir > 0 ? "ascending" : "descending");
+      rows.sort(function (a, b) {
+        var x = a.dataset[key], y = b.dataset[key];
+        return dir * (num ? x - y : x.localeCompare(y));
+      });
+      rows.forEach(function (r) { tbody.appendChild(r); });
+    }
+
+    heads.forEach(function (th) {
+      th.querySelector("button").onclick = function () {
+        // Text columns start A to Z; numbers and dates start biggest/newest first.
+        var current = th.getAttribute("aria-sort");
+        var dir = current ? (current === "ascending" ? -1 : 1) : (th.dataset.type === "num" || th.dataset.key === "last" || th.dataset.key === "started" ? -1 : 1);
+        sort(th, dir);
+      };
+    });
+    q.oninput = filter;
+    s.onchange = filter;
+
+    sort(document.querySelector('th[data-key="last"]'), -1);
+    filter();
+  })();
+</script>

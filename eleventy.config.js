@@ -573,6 +573,8 @@ ${jsonLd}
   eleventyConfig.ignores.add("dropdownlists.txt");
   eleventyConfig.ignores.add("kroki_urls.txt");
   eleventyConfig.ignores.add("yt_card_styles.txt");
+  // Post history pages read git and the working copy; dev server only.
+  if (process.env.ELEVENTY_RUN_MODE !== "serve") eleventyConfig.ignores.add("journey/**");
   eleventyConfig.ignores.add("lighthouse.json");
   eleventyConfig.ignores.add("*.png");
 
