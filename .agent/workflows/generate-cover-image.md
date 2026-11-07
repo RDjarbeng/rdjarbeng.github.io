@@ -42,10 +42,13 @@ When generating cover images for this website, please adhere to the following sp
     *   **Use `.jpg` for photographic or busy images** (AI art, photos, collages). PNG previews do work on Facebook, X, LinkedIn and WhatsApp, but a busy 1280x720 PNG is about 5x larger (a series collage: 937 KB as PNG, 169 KB as JPG), and WhatsApp drops preview images over roughly 300 KB. Aim for under 300 KB.
     *   **PNG is fine for flat graphics** with few colours (diagrams, logos, text-only covers) when it stays under that size.
 
-7.  **No image generator available?**
+7.  **Use an image generator first.** Generate covers with the Antigravity CLI (`agy -p "<prompt>"`, see the example prompt below). A cover is a thumbnail, not an infographic: one large headline of at most about six words, one clear illustration, the watermark, and nothing else.
+
+8.  **No image generator available?**
     *   Draw the cover as a 1280x720 SVG in the same flat style, keep the source in `scripts/diagrams/covers/`, and render it to JPG:
         `node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/<name>.svg assets/images/posts/covers/<name>_cover.jpg`
-    *   Open the resulting JPG and check it before using it. Example: `scripts/diagrams/covers/level-4-in-the-real-world.svg`.
+    *   **Keep it to a thumbnail (STRICT)**: at most three text elements (the headline, an optional short hook, the `rdjarbeng.com` watermark). The headline must be at least 64px. No panels, cards, dashboards, code, tables, charts with values or small labels; these are unreadable at card size and break easily when rendered. Example: `scripts/diagrams/covers/level-4-in-the-real-world.svg`.
+    *   **Look at the rendered JPG before using it (REQUIRED)**: open the image and check that no text overlaps or runs off the edge, no box is empty, the headline reads at small size and the watermark is there. Do not commit a cover you have not looked at.
     *   Each part of a series needs its own cover; do not reuse one image across parts.
     *   **Series covers** are collages of the parts' covers, made with Collage Studio (the separate image-collage-agent project; see its `docs/agent-cookbook.md`). Pick a layout that shows every cover (e.g. filmstrip for 2 parts, a 2x2 grid for 4, magazine for 5, mosaic for 7+), use a transparent background, save to `assets/images/series/<slug>_cover.png`, and set it as `image` on the series (`_series/<slug>.md` or the CMS). Redo it when a part is added. The website itself does not run the collage tool.
 
