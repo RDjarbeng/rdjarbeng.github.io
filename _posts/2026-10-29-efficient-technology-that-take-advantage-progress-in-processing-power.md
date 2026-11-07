@@ -1,6 +1,6 @@
 ---
 date: 2026-10-29T09:08:00+02:00
-published: true
+published: false
 author: Richard
 category: Science & Technology
 tags: []

@@ -81,3 +81,34 @@ Index icon
 - [ ] 2026-10-10 08:27 CAT | Add story about CMMRS what it took to apply, immigration issues, perhaps we would have had to travel for the visa, so many documents to submit...
 
 The trip, door closing and mentally giving up, the hope that returned wen it opened again, calling a friend just to help with the trains and navigating Germany, almost missed the bus because of a station, shouting at Agnes because she almost missed the tram
+- [ ] 2026-11-03 15:33 CAT | Quotes from the internet:
+
+Nobody from your company is coming to your funeral. Nobody will mention your company in your Eulogy - A life engineered (youtube channel
+
+https://youtu.be/Ocr0bdB1d9M)
+- [ ] 2026-11-04 14:22 CAT | Things that maie students quit or fail university in Ghana /Africa.
+
+We need to talk about items such as extra curricula activities, pregnancy isn't really a problem for most universities,.
+One thing is in campus fellowships that occupy students time, eventually they spend more time planning church events than studies then the GPA begins to drop, sometimes it becomes too late and the student drops out. Now does the fellowship see all this and lift the burdens from other leaders in the fellowship, no, forget that one leader has dropped out, or the endless cycle keep it going year after year
+- [ ] 2026-11-04 16:09 CAT | Steve Jobs’s famous description of the computer as “a bicycle for our minds”
+
+Need to put quotes somewhere so I can use them in posts in an organized manner
+- [ ] 2026-11-06 10:30 CAT | Thanks to Kaggle and hugging face if you're in data, these are your best friends
+- [ ] 2026-11-06 11:06 CAT | Project showing how money flows in an economy and where it is going.
+
+For instance see SpaceX and where money inflows and goes out
+- [ ] 2026-11-06 11:29 CAT | How hospital systems work in Ghana, Rwanda, USA, UK
+
+Ghana, first you'll do tests upon tests before even receiving a diagnosis
+
+Rwanda have to go do bp checks and diagnostics before you can even see a doctor. Even the dentist
+- [ ] 2026-11-06 11:43 CAT | Different tests that can be made and the connection of hospitals across Africa, why do we have to fly to India or Germany for tests. Or surgeries what's the difference?
+- [ ] 2026-11-06 11:57 CAT | We used to queue and gather documents and spend sleepless nights making applications just so we can get a page in our passport stamped/laminated so we can visit a country or study. Yes it's true we used to call them visas and you couldn't move without them
+- [ ] 2026-11-06 12:24 CAT | Did the introduction of AI make shipping commercial software any faster?
+- [ ] 2026-11-06 12:31 CAT | Systems programming, Pass by value or pass by reference? Yes we know how it works. Advantage of reference is that you don't have to allocate space, if your variable/array contains 100 million values do you want to pass by value creating a copy everytime?
+
+But of you pass by reference any change made to the array by the function happens to the actual array, what happens if a 100 variables are changed by 10 different functions and you're not sure what the final state will be?
+- [ ] 2026-11-06 15:11 CAT | Add book: https://rlhfbook.com/
+- [ ] 2026-11-07 08:47 CAT | Can you carry starlink with you wherever you please, or there's a catch? Can it be powered by a car in remote/rural areas. Is it unlimited everywhere or there are limits in certain places?
+
+What of I buy it in one place and I'm carrying it to another country, what are the restrictions?

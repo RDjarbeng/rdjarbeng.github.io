@@ -911,3 +911,25 @@ Also because of the way they treat their employees with dignity, it is something
 Introducing Kwaku from Hamburg when you ask a German security firm to send you their best man for the job
 - [ ] Future predictions, predictions nade that can be quantified, those that can be verified, have a way or time to ascertain, those that came true, false and Kinda. Those still in progress. Eg: Ian Richardson in 2003 in his book H.264 and MPEG-4 Video Compression: Video Coding for Next-generation Multimedia predicted "H.264 may become the technical leader that will drive the next generation of digital video applications" (How did that turn out?)
 - [ ] Warren Buffet's big bet - S&P 500 will outperform hedge funds and all the other financial instruments over the long term
+- [ ] About the cms and deploys with Github pages, sometimes a build can be in progress then a new change comes in what happens then. If it's paused what happens if multiple changes keep coming especially for a large site with multiple editors and changes being made concurrently. Is this something the CMS should worry about?
+- [ ] University of Florida giving application fee waivers especially of you attend their info session
+
+- CMU PhD applications open, especially for robotics institute
+- [ ] Low-cost particulate matter sensors suffer from severe baseline drift under high relative humidity conditions, making long-term trend analysis unreliable without frequent lab recalibration.
+- [ ] about linking your phone to windows PC it comes with it's own storage costs that are not properly managed, In my case 60+ GB of my computer storage was being used to store files I already had on my phone. I like to sync phone to my PC it's convenient, but a couple GBs, 1-3 GB is what I can allow, I was never asked this. anyway here's how to delete it:
+
+This is Windows’ Phone Link / Cross Device sync, which copies your phone's photos and files onto the PC. It’s a copy, so the originals are still on the phone or in Google Photos.
+- Make sure the photos are backed up in Google Photos first.
+- Then go to Settings → Bluetooth & devices → Mobile devices → Manage devices, and turn off “Show mobile device in File Explorer” or remove the Pixel. After that, delete the ~CrossDevice\PhoneName folder.
+- [ ] When do you go from one perceptron to the next? 
+
+Then in 1969, Marvin Minsky and Seymour Papert published a book called Perceptrons. They proved mathematically that a single-layer network could not solve a basic logical operation called exclusive or. Given two binary inputs, output one if exactly one of them is one. Trivial for a human. Mathematically impossible for a single- perceptron.
+
+Funding dried up immediately. Research halted. The period became known as the first Al winter. The irony is that Minsky and Papert were technically correct about single-layer networks. Multi-layer networks could solve exclusive or. The problem was that nobody knew how to train them. That problem sat unsolved for seventeen years.
+- [ ] [2606.05608v2] Agentic Software: How AI Agents Are Restructuring the Software Paradigm
+https://arxiv.org/abs/2606.05608v2
+- [ ] Removing the friction of dealing with another human being:
+
+Let me attempt a definition: the Waymo effect is what happens when a technology removes the friction of dealing with another human being, and we experience that removal as pure gain – because the costs of the friction were always visible to us, while its benefits were not.
+
+https://www.researchagenda.news/articles/the-waymo-effect.html
