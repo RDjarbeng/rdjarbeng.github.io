@@ -31,7 +31,7 @@ card_items:
     description: "Under ICAO's definitions, a charge recovers the cost of an aviation service, while a tax raises government revenue and generally does not go back into aviation in full."
 ---
 
-Search for a flight between two African cities and the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to RWF 832,490 (about USD 570), of which RWF 215,610 was the base fare and RWF 616,880 was "taxes and fees."
+When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to RWF 832,490 (about USD 570), of which RWF 215,610 was the base fare and RWF 616,880 was "taxes and fees."
 
 ![Visual breakdown of an African flight ticket receipt comparing a 26 percent base fare against 74 percent taxes, surcharges, and fees](/assets/images/posts/covers/african_airfare_taxes_cover.jpg "Airfares in Africa: The Breakdown of Taxes, Fees, and Base Fares")
 
@@ -139,7 +139,7 @@ AFRAA's study, drawing on IATA data from September 2024, shows how much the tota
 
 The continental average for an international departure is USD 68, more than double the USD 32 AFRAA reports for Europe and the USD 34 for the Middle East. The spread between countries is wider still. An international departure from Gabon carried USD 297.70 in these charges, Sierra Leone USD 294, Nigeria USD 180, and Ghana USD 111.50, while Morocco was at USD 25.10, Malawi USD 5, and Libya USD 1.30.
 
-The bill is also split into more pieces. A passenger leaving an African country on an international flight pays an average of 3.5 different taxes, charges, and fees on that departure, compared with 2.53 in Europe and 2.69 in the Middle East. Changing planes can add one more: 42 of the 52 countries AFRAA reviewed charge passengers for transferring through their airports, and that adds an average of USD 34.40 to the ticket. A connection can therefore carry a fee that a nonstop on the same trip would not.
+The bill is also split into more pieces. When you leave an African country on an international flight, you pay an average of 3.5 different taxes, charges, and fees on that departure, compared with 2.53 in Europe and 2.69 in the Middle East. Changing planes can add one more: 42 of the 52 countries AFRAA reviewed charge passengers for transferring through their airports, and that adds an average of USD 34.40 to the ticket. A connection can therefore carry a fee that a nonstop on the same trip would not.
 
 Some individual fees stand out. IATA has singled out [Tanzania's USD 45 one-way API-PNR fee](https://www.zawya.com/en/economy/africa/the-growing-costs-of-aviation-in-africa-w8i4i6x3), a charge linked to sending passenger details to border authorities, which adds USD 90 to a round trip.
 
@@ -155,9 +155,9 @@ All of this describes the seller's side of the transaction. The person holding t
 
 ## From the passenger's seat
 
-The passenger's numbers start with a date that often cannot move: a wedding, a visa appointment, the start of a semester, a funeral. Within that window they are looking for the most comfort they can get at a price they can live with, while avoiding the things that have gone wrong before or that a cousin warned them about. That list includes very long layovers, overnight connections, airlines with poor reputations, lost bags, and schedules that change without warning.
+Your numbers start with a date that often cannot move: a wedding, a visa appointment, the start of a semester, a funeral. Within that window you are looking for the most comfort you can get at a price you can live with, while avoiding the things that have gone wrong before or that a cousin warned you about. That list includes very long layovers, overnight connections, airlines with poor reputations, lost bags, and schedules that change without warning.
 
-So the ticket price is only part of what they are comparing. Take a nonstop at USD 450 and a one-stop at USD 340 with a nine hour layover and USD 25 in food at the hub. These are illustrative numbers again:
+So the ticket price is only part of what you are comparing. Take a nonstop at USD 450 and a one-stop at USD 340 with a nine hour layover and USD 25 in food at the hub. These are illustrative numbers again:
 
 | | Nonstop | One stop, nine hour layover |
 | :--- | :--- | :--- |
@@ -172,7 +172,7 @@ Risk belongs in the sum too, and here perception and data do not always match. P
 
 Baggage has a worse reputation than the regional numbers support. [SITA's figures for 2024](https://africanpilot.africa/middle-east-africa-reports-strong-mishandled-bag-numbers-as-global-air-travel-hits-records) put the Middle East and Africa combined at 6.02 mishandled bags per 1,000 passengers, slightly better than the global 6.3. The two regions are reported together, so that says little about any one African airport, but it does suggest the problem is uneven and not universal.
 
-Safety is the concern where the data does back up the worry, although it is improving. [IATA's 2025 safety report](https://nairametrics.com/2026/03/10/africa-records-highest-aviation-accident-rate-globally-in-2025-iata/) recorded 7.86 accidents per million sectors in Africa, down from 12.13 in 2024 and still far above the global 1.32. Many travelers respond by paying more for an airline they trust, and that willingness to pay is itself a force in the market. [Visa rules](https://www.devdiscourse.com/article/business/3891940-iata-urges-africa-to-treat-aviation-as-economic-engine-amid-high-costs-and-safety-gaps) narrow the options again: nearly half of intra-African travel still requires a visa before departure, so the cheapest connection on the screen may run through a country the traveler cannot enter or transit easily.
+Safety is the concern where the data does back up the worry, although it is improving. [IATA's 2025 safety report](https://nairametrics.com/2026/03/10/africa-records-highest-aviation-accident-rate-globally-in-2025-iata/) recorded 7.86 accidents per million sectors in Africa, down from 12.13 in 2024 and still far above the global 1.32. Many travelers respond by paying more for an airline they trust, and that willingness to pay is itself a force in the market. [Visa rules](https://www.devdiscourse.com/article/business/3891940-iata-urges-africa-to-treat-aviation-as-economic-engine-amid-high-costs-and-safety-gaps) narrow the options again: nearly half of intra-African travel still requires a visa before departure, so the cheapest connection on the screen may run through a country you cannot enter or transit easily.
 
 The airline cannot see inside each traveler's head, but it can see when they book, where they fly, and which fares they choose, and that is enough to price for the differences.
 
