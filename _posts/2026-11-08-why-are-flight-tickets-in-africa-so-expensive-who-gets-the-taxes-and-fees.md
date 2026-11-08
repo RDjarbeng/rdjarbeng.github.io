@@ -218,7 +218,7 @@ Nobody can change incomes or airport charges from a booking page, but the same r
 5. If your date cannot move, buy once the price is acceptable. The cheapest fare buckets sell first, so waiting for a drop on a firm date usually works against you, especially on routes with few flights a week.
 6. Give yourself time at the connecting airport. Choose a layover with a few hours of margin over the shortest one on offer, particularly if the first flight is on an airline that often runs late. Flight tracking sites such as [FlightAware](https://www.flightaware.com/) show how a specific flight has performed recently. Booking both flights on one ticket also helps, since the airline will usually rebook you if its own delay makes you miss the second flight.
 
-The price on that screen is the result of a long chain: one aircraft with fixed bills, a schedule bent by law and thin demand, costs that run above world averages, charges collected by parties the airline does not control, and a traveler weighing money against time and risk. For a wider view of how this industry fits together, see the [introduction to the aerospace industry](/i-wanna-fly-an-introduction-to-the-aerospace-industry/) on this site.
+The price on that screen is the result of a long chain: one aircraft with fixed bills, a schedule bent by law and thin demand, costs that run above world averages, charges collected by parties the airline does not control, and a traveler weighing money against time and risk. For a wider view of how this industry fits together, see the upcoming introduction to the aerospace industry on this site.
 
 ## References and further reading
 
