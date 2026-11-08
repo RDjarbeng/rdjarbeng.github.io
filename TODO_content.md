@@ -933,3 +933,4 @@ https://arxiv.org/abs/2606.05608v2
 Let me attempt a definition: the Waymo effect is what happens when a technology removes the friction of dealing with another human being, and we experience that removal as pure gain – because the costs of the friction were always visible to us, while its benefits were not.
 
 https://www.researchagenda.news/articles/the-waymo-effect.html
+- [ ] Mapreduce, BigTable, Tensorflow, AlphaChip, who is Jeff Dean?
