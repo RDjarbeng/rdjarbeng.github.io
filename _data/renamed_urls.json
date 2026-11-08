@@ -44,6 +44,7 @@
   "/categories/news/": "/categories/research-learning/",
   "/categories/help/": "/categories/how-to-guides/",
   "/categories/it/": "/categories/how-to-guides/",
-  "/categories/entertainment/": "/categories/music-film-books/"
+  "/categories/entertainment/": "/categories/music-film-books/",
+  "/gallery/advice-to-developers-who-feel-like-they-are-behind/": "/gallery/videos/advice-to-developers-who-feel-like-they-are-behind/"
  }
 }
