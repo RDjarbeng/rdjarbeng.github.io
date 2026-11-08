@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
+      .faith-solid {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial Black', Impact, sans-serif;
+        font-weight: 900;
+        fill: #0a0a0a;
+        text-anchor: middle;
+      }
+      .fear-outlined {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial Black', Impact, sans-serif;
+        font-weight: 900;
+        fill: #ffffff;
+        stroke: #0a0a0a;
+        stroke-width: 14px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        paint-order: stroke fill;
+        text-anchor: middle;
+      }
+      .faith-watermark {
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 600;
+        fill: #0a0a0a;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Crisp White Matte Background -->
+  <rect width="1500" height="500" fill="#ffffff"/>
+
+  <!-- Minimalist Corner Registration Marks -->
+  <g stroke="#0a0a0a" stroke-width="2.5" fill="none" opacity="0.85">
+    <path d="M 28 48 L 28 28 L 48 28" />
+    <path d="M 1452 28 L 1472 28 L 1472 48" />
+    <path d="M 28 452 L 28 472 L 48 472" />
+    <path d="M 1452 472 L 1472 472 L 1472 452" />
+  </g>
+
+  <!-- Subtle Inset Hairline Frame -->
+  <rect x="36" y="36" width="1428" height="428" fill="none" stroke="#0a0a0a" stroke-width="1" opacity="0.18"/>
+
+  <!-- FAITH (Solid Filled Black Body on Top) -->
+  <text x="750" y="206" class="faith-solid" font-size="142" letter-spacing="18">FAITH</text>
+
+  <!-- The Thick Dividing Line (Replacing 'OVER') -->
+  <g id="divider-rule">
+    <rect x="150" y="242" width="1200" height="16" fill="#0a0a0a" rx="4"/>
+  </g>
+
+  <!-- FEAR (White Body with Black Outline Below) -->
+  <text x="750" y="404" class="fear-outlined" font-size="142" letter-spacing="38">FEAR</text>
+
+  <!-- Watermark: rdjarbeng.com (Subtle & Visible) -->
+  <g transform="translate(750, 464)">
+    <line x1="-200" y1="-5" x2="-100" y2="-5" stroke="#0a0a0a" stroke-width="1" opacity="0.2"/>
+    <text x="0" y="0" class="faith-watermark" font-size="18" letter-spacing="5" opacity="0.55">rdjarbeng.com</text>
+    <line x1="100" y1="-5" x2="200" y2="-5" stroke="#0a0a0a" stroke-width="1" opacity="0.2"/>
+  </g>
+</svg>
