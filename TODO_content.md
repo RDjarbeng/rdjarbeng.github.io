@@ -86,6 +86,9 @@ Arduino IDE freeze -locked as too heated and limited conversation to collaborato
 ### Interesting questions
 How do the price of tickets change based on the time from the flight up to check-in. Is it linear, exponential, does it jump up prior to checkpoint
 Does AI encourage ‘just enough’ work? Create drafts and prompts then AI does the rest of it. Is this a good thing? Do you feel you can do as good a work if the AI tools can do this?
+
+- [ ] **Aviation**: Ticket prices in Africa — booking a round trip flight on RwandAir costs RWF 832,490 (Base fare: RWF 215,610; Taxes & fees: RWF 616,880). Who gets the taxes and fees? *(Draft started: `_posts/2026-11-08-why-are-flight-tickets-in-africa-so-expensive-who-gets-the-taxes-and-fees.md`)*
+
 Interesting graphics effects in movies - van helsing mirror scene, fire in star wars denethor scene, legolas eye colours changing 
 Aflimba backpacks from recycled denim -  https://aflimba.com/product-category/backpacks/
 How to connect cloudflare domains to github pages- https://www.youtube.com/watch?v=VRgTYJyN9pg
