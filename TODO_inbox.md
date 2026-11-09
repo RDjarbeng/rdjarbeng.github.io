@@ -111,3 +111,4 @@ But of you pass by reference any change made to the array by the function happen
 - [ ] 2026-11-07 08:47 CAT | Can you carry starlink with you wherever you please, or there's a catch? Can it be powered by a car in remote/rural areas. Is it unlimited everywhere or there are limits in certain places?
 
 What of I buy it in one place and I'm carrying it to another country, what are the restrictions?
+- [ ] 2026-11-09 09:55 CAT | Africa had 2.2% of air traffic passenger market in 2025, according to https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/
