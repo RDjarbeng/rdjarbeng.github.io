@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline: FREE TEXT TO SPEECH -->
+  <text x="640" y="116" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="100" font-weight="900" fill="#141414">
+    <tspan x="640" dy="0">FREE TEXT</tspan>
+    <tspan x="640" dy="104">TO SPEECH</tspan>
+  </text>
+
+  <!-- Illustration Group -->
+  <!-- 1. Large White Page with Thick Black Text Lines (Left) -->
+  <polygon points="110,295 295,295 340,340 340,625 110,625" fill="#ffffff" stroke="#141414" stroke-width="7" stroke-linejoin="round"/>
+  <!-- Folded Page Flap (Yellow Accent) -->
+  <polygon points="295,295 295,340 340,340" fill="#f2c12e" stroke="#141414" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- Thick Black Lines of Text -->
+  <rect x="145" y="355" width="110" height="16" rx="8" ry="8" fill="#141414"/>
+  <rect x="145" y="398" width="160" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+  <rect x="145" y="433" width="160" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+  <rect x="145" y="468" width="135" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+  <rect x="145" y="513" width="160" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+  <rect x="145" y="548" width="160" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+  <rect x="145" y="583" width="95" height="13" rx="6.5" ry="6.5" fill="#141414"/>
+
+  <!-- 2. Thick Red Arrow Pointing Right (Center) -->
+  <path d="M 390 436 L 490 436 L 490 402 L 560 460 L 490 518 L 490 484 L 390 484 Z" fill="#d7263d" stroke="#141414" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- 3. Big Black Speaker (Right) -->
+  <!-- Magnet Housing & Expanding Horn Body -->
+  <path d="M 632 390 Q 620 390 620 402 L 620 518 Q 620 530 632 530 L 705 530 L 850 610 L 850 310 L 705 390 Z" fill="#141414" stroke="#141414" stroke-width="7" stroke-linejoin="round"/>
+  <!-- Driver Housing Grooves -->
+  <line x1="655" y1="412" x2="655" y2="508" stroke="#f4f1e6" stroke-width="5" stroke-linecap="round"/>
+  <line x1="678" y1="412" x2="678" y2="508" stroke="#f4f1e6" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Horn Mouth Flange / Rim -->
+  <ellipse cx="850" cy="460" rx="22" ry="150" fill="#141414" stroke="#141414" stroke-width="7"/>
+  <!-- Yellow Speaker Diaphragm Cone -->
+  <ellipse cx="850" cy="460" rx="17" ry="122" fill="#f2c12e" stroke="#141414" stroke-width="5"/>
+  <!-- Inner Acoustic Ring -->
+  <ellipse cx="850" cy="460" rx="13" ry="82" fill="none" stroke="#141414" stroke-width="4"/>
+  <!-- Center Dust Cap / Dome -->
+  <ellipse cx="850" cy="460" rx="9" ry="42" fill="#141414"/>
+
+  <!-- 4. Three Thick Blue Curved Sound Waves -->
+  <path d="M 913 411 A 80 80 0 0 1 913 509" fill="none" stroke="#1d4f9c" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 969 353 A 160 160 0 0 1 969 567" fill="none" stroke="#1d4f9c" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 1020 290 A 240 240 0 0 1 1020 630" fill="none" stroke="#1d4f9c" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- Watermark -->
+  <text x="1236" y="694" text-anchor="end" font-family="Arial, sans-serif" font-weight="bold" font-size="26" fill="#141414">rdjarbeng.com</text>
+</svg>
