@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200" role="img" aria-labelledby="plane-title plane-desc">
+  <title id="plane-title">Single 150-seat narrowbody commercial airliner</title>
+  <desc id="plane-desc">Side elevation illustration of a 150-seat narrowbody commercial jetliner with swept wing, underslung turbofan engine, and vertical stabilizer.</desc>
+  
+  <!-- Warm paper background matching site theme -->
+  <rect width="800" height="200" fill="#f4f1e6"/>
+
+  <!-- Subtle ground baseline -->
+  <line x1="80" y1="180" x2="720" y2="180" stroke="#cfc6b6" stroke-width="1.5" stroke-dasharray="12 8"/>
+
+  <!-- Horizontal Commercial Airliner (Centered, 150-seat narrowbody profile) -->
+  <g transform="translate(400, 115) scale(1.15)">
+    <!-- 1. Tail Fin / Vertical Stabilizer (rises from upper rear fuselage) -->
+    <path d="M -110 -18 L -170 -92 L -194 -89 L -185 -4 Z" fill="#f2c12e" stroke="#141414" stroke-width="3"/>
+    <!-- Tail Fin Accent Stripe -->
+    <path d="M -138 -55 L -170 -92 L -194 -89 L -180 -55 Z" fill="#1d4f9c"/>
+
+    <!-- 2. Horizontal Stabilizer at tail cone -->
+    <path d="M -145 2 L -190 12 L -200 9 L -175 -2 Z" fill="#1d4f9c" stroke="#141414" stroke-width="2.5"/>
+
+    <!-- 3. Fuselage (White Upper Cabin, Dark Navy Blue Lower Belly) -->
+    <path d="M 235 2 C 215 -16, 160 -18, -110 -18 C -150 -18, -185 -10, -205 -2 C -208 2, -207 7, -198 10 C -150 18, 100 20, 205 11 C 225 8, 235 5, 235 2 Z" fill="#ffffff" stroke="#141414" stroke-width="3"/>
+
+    <!-- Navy Blue Lower Belly Stripe -->
+    <path d="M -180 8 C -120 17, 90 18, 205 11 C 220 8, 232 5, 235 2 C 215 13, 110 14, -100 13 C -140 13, -165 10, -180 8 Z" fill="#1d4f9c"/>
+
+    <!-- Cockpit Windshield (on TOP of the nose) -->
+    <path d="M 188 -13 L 214 -6 L 212 0 L 186 -6 Z" fill="#141414"/>
+
+    <!-- Passenger Cabin Windows (neat row along upper fuselage) -->
+    <g fill="#141414">
+      <rect x="155" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="141" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="127" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="113" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="99" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="85" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="71" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="57" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="43" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="29" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="15" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="1" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="-13" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="-27" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="-41" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="-55" y="-6" width="6" height="9" rx="2.5"/>
+      <rect x="-69" y="-6" width="6" height="9" rx="2.5"/>
+    </g>
+
+    <!-- 4. Turbofan Jet Engine (Mounted under the wing leading edge) -->
+    <!-- Pylon connecting wing to engine -->
+    <path d="M 45 14 L 56 14 L 50 24 L 38 24 Z" fill="#141414"/>
+    <!-- Engine Nacelle (Matte Red) -->
+    <rect x="20" y="24" width="56" height="22" rx="11" fill="#d7263d" stroke="#141414" stroke-width="2.5"/>
+    <!-- Front Air Intake (Faces right/forward) -->
+    <ellipse cx="76" cy="35" rx="4" ry="9" fill="#141414"/>
+    <!-- Exhaust Nozzle (Faces left/rear) -->
+    <path d="M 20 30 L 12 32 L 12 38 L 20 40 Z" fill="#57514a"/>
+
+    <!-- 5. Main Wing (Low-wing profile: stays cleanly beneath the window line) -->
+    <!-- Root: (80, 14) -> Sweeps back to (-35, 10) -> Winglet at (-42, 4) -> Trailing: (12, 18) -->
+    <path d="M 80 14 L -35 10 L -44 4 L -50 6 L -42 13 L 12 18 Z" fill="#f2c12e" stroke="#141414" stroke-width="3"/>
+  </g>
+</svg>
