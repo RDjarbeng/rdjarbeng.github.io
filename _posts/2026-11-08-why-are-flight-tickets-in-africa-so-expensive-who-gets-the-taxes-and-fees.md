@@ -39,9 +39,11 @@ That is 74% in fees, and it makes a good screenshot. It is also the far end of t
 
 A ticket price is what happens when two people with different problems meet. One is an airline with a very expensive machine that has to earn money every day under the rules of every country it touches. The other is a traveler with a date, a budget, and a list of things they would rather not go through. Working out why tickets cost what they do means starting with each of them, and the airline comes first because its costs set the floor.
 
+![Diagram illustrating the meeting of airline costs and traveler constraints to form a ticket price](/assets/images/diagrams/airline-vs-traveler-meeting.svg "The meeting of airline costs and traveler needs")
+
 ## Start with one airplane
 
-![A graphich showing a single 150-seat narrowbody commercial airliner in side profile with a white fuselage](/assets/images/diagrams/single-narrowbody-airliner.svg)
+![A graphic showing a single 150-seat narrowbody commercial airliner in side profile with a white fuselage](/assets/images/diagrams/single-narrowbody-airliner.svg "Single 150-seat narrowbody airliner profile")
 
 Imagine you run an airline with a single 150-seat narrowbody. You lease it, so the payment is due every month whether it flies or not. Before a given flight departs, you have committed to the crew, the fuel plan, the maintenance that accumulates with every cycle, the landing and handling bills, and the navigation fees for the airspace you will cross. Once the doors close, an empty seat saves you almost nothing.
 
@@ -60,6 +62,8 @@ The obvious fix is to cut the price and fill the plane, and sometimes that works
 
 ## Deciding where the plane goes and when
 
+![Comparison of point-to-point thin route economics versus hub-and-spoke passenger consolidation](/assets/images/diagrams/hub-vs-direct-routing.svg "Direct vs hub routing in African aviation")
+
 Where the plane goes is the hardest question an airline answers, because every option uses up the same limited hours. A schedule has to fit routes the airline is legally allowed to fly, airports that are open when it wants to land, crew duty limits, maintenance slots, and the times of day people want to travel. A flight that leaves at a convenient hour in one city may arrive at a useless hour in the next, and the plane still has to get home.
 
 Those constraints decide how many hours the aircraft earns money. Say the lease and other fixed costs of ownership run to USD 400,000 a month, again a made-up figure. Fly 300 hours a month and each hour carries about USD 1,333. Fly 200 hours and each hour carries USD 2,000. On a 2.5 hour flight with 113 passengers, that is the difference between roughly USD 30 and USD 44 per person. A plane that sits on the ground at an outstation, waiting for the next viable departure, charges its passengers for the wait.
@@ -73,6 +77,8 @@ Traffic rights narrow the choice further. An airline can generally only carry pa
 So the plane now has a schedule, shaped as much by law and demand as by what the airline would choose. Every flight on it comes with bills, and in Africa most of those bills are larger than they are elsewhere.
 
 ## What it costs to keep the plane flying
+
+![Chart showing African airline operating cost premiums above global averages for fuel, taxes, navigation, and maintenance](/assets/images/diagrams/african-airline-cost-drivers.svg "African airline cost premium over global averages")
 
 Those bills start with fuel, the largest variable cost. IATA's [regional breakdown from December 2025](https://www.iata.org/en/about/worldwide/ame/blog/africa-growth-strengthens-but-structural-challenges-keep-airline-profitability-marginal/) compares African costs with global averages:
 
@@ -127,6 +133,8 @@ This table is why the 74% receipt cannot be read as a tax rate. Any part of that
 
 ### What airports, regulators, and treasuries collect
 
+![Horizontal bar chart comparing average airport departure taxes across African sub-regions and Europe](/assets/images/diagrams/regional-departure-charges.svg "Regional departure taxes and passenger charges")
+
 Airports have to pay for runways, terminals, lighting, and baggage systems, and they often borrow to do it. A large European or Asian airport spreads those costs across tens of millions of passengers. A smaller African airport has the same runway to maintain and far fewer people to bill, so its passenger service charges and development levies come out higher per head. Civil aviation authorities such as those in Rwanda, Kenya, and Ghana collect further amounts for safety oversight and security screening, which ICAO Annex 17 requires states to organize. Finance ministries then add departure taxes, tourism levies, and in some places VAT.
 
 AFRAA's study, drawing on IATA data from September 2024, shows how much the total depends on where you start:
@@ -149,6 +157,8 @@ Fixed charges hit cheap tickets hardest. A USD 100 charge on a USD 800 fare is 1
 
 ### Charges, taxes, and the scale trap
 
+![Cycle diagram illustrating how low traffic volumes force higher per-passenger fees that suppress demand in a scale trap](/assets/images/diagrams/aviation-scale-trap-cycle.svg "The airport scale trap feedback loop")
+
 ICAO separates two things the receipt blends together. In its [policies on charges (Doc 9082)](https://www.icao.int/sites/default/files/Meetings/2026/ATconf7/Doc9082_ICAO-Policies-on-Charges_en.pdf), a charge is designed to recover the cost of providing an aviation facility or service, while a tax is designed to raise government revenue and generally does not go back into aviation in full. The same document sets out four principles for charges: they should not discriminate between users, should relate to cost, should be transparent, and should follow consultation with the airlines paying them.
 
 Airports in low-traffic markets have a fair argument under those rules, because their costs per passenger are higher. The difficulty is the feedback loop. High per-passenger charges discourage travel, and lower traffic pushes the cost per passenger up again. AFRAA notes that most high-charge airports draw low to average traffic, and that 12 of the 23 countries in West and Central Africa charge over USD 100 even though those two regions together carried only 23% of the continent's traffic. North Africa, with 35% of the traffic, mostly charges under USD 50. AFRAA also argues that air transport is still treated across the continent as a luxury service, which makes it an easy target for revenue.
@@ -156,6 +166,8 @@ Airports in low-traffic markets have a fair argument under those rules, because 
 All of this describes the seller's side of the transaction. The person holding the phone is working through a different set of numbers.
 
 ## From the passenger's seat
+
+![Comparison of nonstop versus connecting flight costs factoring in food and hourly time value for different travelers](/assets/images/diagrams/passenger-cost-tradeoff.svg "The real cost of a flight: nonstop versus 9-hour layover")
 
 Your numbers start with a date that often cannot move: a wedding, a visa appointment, the start of a semester, a funeral. Within that window you are looking for the most comfort you can get at a price you can live with, while avoiding the things that have gone wrong before or that a cousin warned you about. That list includes very long layovers, overnight connections, airlines with poor reputations, lost bags, and schedules that change without warning.
 
@@ -178,16 +190,9 @@ Safety is the concern where the data does back up the worry, although it is impr
 
 The airline cannot see inside each traveler's head, but it can see when they book, where they fly, and which fares they choose, and that is enough to price for the differences.
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '18px' }}}%%
-flowchart LR
-    A["Airline costs, load factor,<br/>schedule, fees"] --> C["Lowest price the<br/>airline can accept"]
-    B["Passenger budget, dates,<br/>time, risk, alternatives"] --> D["Highest price the<br/>passenger will accept"]
-    C --> E["The fare you see"]
-    D --> E
-```
-
 ## Where the two meet
+
+![Diagram illustrating airline revenue management stepping up fares across discount, economy, flex, and walk-up buckets](/assets/images/diagrams/airline-fare-bucket-ladder.svg "How revenue management fare buckets step up ticket prices")
 
 Pricing for those differences is the job of revenue management, which explains why the person next to you may have paid half of what you did. An airline does not sell a flight at one price. It splits the seats into [ordered fare classes](https://aerocorner.com/blog/airline-ticket-pricing/), releases a limited number at each price, and keeps some back for the late bookers who usually pay most. When a bucket sells out, the next price appears, which is why a fare can jump overnight without anything having changed about the flight.
 
@@ -203,6 +208,8 @@ Bringing that group into the market means moving the numbers on the airline's si
 
 ## What would move the price
 
+![Summary of four structural reforms: open skies agreements, regional tax reductions, local maintenance facilities, and currency repatriation](/assets/images/diagrams/four-reform-levers.svg "Four policy levers to lower African airfares")
+
 Each cost in this post has a corresponding fix, and some are under way. West Africa has the most direct test. [ECOWAS adopted a Supplementary Act](https://www.ecowas.int/ecowas-adopts-measures-to-reduce-air-transport-taxes-and-charges-and-lower-the-cost-of-air-travel-in-west-africa-from-1st-january-2026/) that abolishes air transport taxes and cuts passenger and security charges by 25% from January 2026. Its [implementation plan was adopted only in July 2026](https://centreforaviation.com/news/ecowas-adopts-plan-for-implementing-policy-on-aviation-charges-and-tariffs-1365020), when Côte d'Ivoire was reported as the first member to implement fully. I could not find published data yet showing what happened to fares, and that outcome depends on airlines passing the savings on, which competition makes more likely.
 
 Open skies attack the network problem. SAATM's implementers have added [124 new intra-African routes, 22 of them using fifth freedom rights](https://africanpilot.africa/one-african-sky-saatm-implementation-takes-centre-stage-in-lome/), according to AFCAC. [Five airlines](https://www.ch-aviation.com/news/158125-five-african-airlines-unite-for-joint-mro-efficiency-drive) (Royal Air Maroc, EgyptAir, Kenya Airways, Ethiopian, and South African Airways' technical arm) are working together to keep more maintenance in Africa, and clearing blocked funds would remove a risk airlines currently price into every sale. ICAO's principles give governments a ready framework for separating real cost recovery from revenue raising, and IATA has been pressing African states to apply them.
@@ -210,6 +217,8 @@ Open skies attack the network problem. SAATM's implementers have added [124 new 
 Those changes would help, but they leave one input untouched. Household incomes set how many people can pay for a seat at all, and a market with more travelers lowers almost every per-passenger figure in this post, from airport charges to the cost of an empty seat.
 
 ## What to do when you book
+
+![Six practical steps for travelers booking intra-African flights to avoid hidden costs, missed connections, and visa issues](/assets/images/diagrams/passenger-booking-checklist.svg "Passenger booking decision checklist")
 
 Nobody can change incomes or airport charges from a booking page, but the same reasoning can save you money and trouble on your next trip.
 

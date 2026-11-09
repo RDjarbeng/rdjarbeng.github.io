@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="360" role="img" aria-labelledby="tax-title tax-desc">
+  <title id="tax-title">Taxes and passenger charges by African sub-region</title>
+  <desc id="tax-desc">Bar chart comparing average passenger taxes and charges per international departure across African regions against Europe.</desc>
+
+  <rect width="800" height="360" fill="#f4f1e6"/>
+
+  <g transform="translate(50, 25)">
+    <text x="0" y="24" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#141414">AVERAGE TAXES AND CHARGES PER PASSENGER</text>
+    <text x="0" y="48" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Per international departure in USD (Source: AFRAA 2024 Study)</text>
+
+    <!-- Bar 1: West Africa -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">West Africa</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#d7263d"/>
+      <text x="615" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">USD 109.49</text>
+    </g>
+
+    <!-- Bar 2: Central Africa -->
+    <g transform="translate(0, 115)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Central Africa</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="409" height="26" rx="4" fill="#d7263d"/>
+      <text x="605" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">USD 106.62</text>
+    </g>
+
+    <!-- Reference Line: Continental Average -->
+    <g transform="translate(0, 155)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1d4f9c">Africa Average</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="260" height="26" rx="4" fill="#1d4f9c"/>
+      <text x="455" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#1d4f9c">USD 68.00</text>
+    </g>
+
+    <!-- Bar 3: East Africa -->
+    <g transform="translate(0, 195)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">East Africa</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="242" height="26" rx="4" fill="#f2c12e" stroke="#141414" stroke-width="1.5"/>
+      <text x="440" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">USD 63.32</text>
+    </g>
+
+    <!-- Bar 4: Southern Africa -->
+    <g transform="translate(0, 235)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Southern Africa</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="132" height="26" rx="4" fill="#57514a"/>
+      <text x="325" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">USD 34.50</text>
+    </g>
+
+    <!-- Bar 5: Europe Benchmark -->
+    <g transform="translate(0, 275)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#57514a">Europe (Ref)</text>
+      <rect x="180" y="2" width="420" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="180" y="2" width="122" height="26" rx="4" fill="#cfc6b6"/>
+      <text x="315" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="700" fill="#57514a">USD 32.00</text>
+    </g>
+  </g>
+</svg>
+

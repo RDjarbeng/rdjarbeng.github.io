@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" width="100%" height="290" role="img" aria-labelledby="cost-title cost-desc">
+  <title id="cost-title">How operating costs in Africa compare to global aviation averages</title>
+  <desc id="cost-desc">Horizontal bar chart showing the percentage premiums African airlines face on jet fuel, taxes, navigation, and maintenance.</desc>
+
+  <rect width="800" height="290" fill="#f4f1e6"/>
+
+  <g transform="translate(50, 25)">
+    <text x="0" y="24" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#141414">OPERATING COST PREMIUMS IN AFRICA</text>
+    <text x="0" y="48" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Cost difference compared to global airline averages (Source: IATA)</text>
+
+    <!-- Bar 1: Jet Fuel -->
+    <g transform="translate(0, 75)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Jet fuel</text>
+      <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="230" y="2" width="380" height="26" rx="4" fill="#d7263d"/>
+      <text x="625" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+17%</text>
+    </g>
+
+    <!-- Bar 2: Taxes and charges -->
+    <g transform="translate(0, 115)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Taxes and charges</text>
+      <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="230" y="2" width="335" height="26" rx="4" fill="#d7263d"/>
+      <text x="580" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+15%</text>
+    </g>
+
+    <!-- Bar 3: Air navigation charges -->
+    <g transform="translate(0, 155)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Navigation charges</text>
+      <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="230" y="2" width="225" height="26" rx="4" fill="#1d4f9c"/>
+      <text x="470" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+10%</text>
+    </g>
+
+    <!-- Bar 4: Maintenance and Capital -->
+    <g transform="translate(0, 195)">
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Maintenance (MRO)</text>
+      <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
+      <rect x="230" y="2" width="225" height="26" rx="4" fill="#1d4f9c"/>
+      <text x="470" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+10%</text>
+    </g>
+  </g>
+</svg>
+

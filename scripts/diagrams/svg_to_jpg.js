@@ -19,7 +19,14 @@ const width = opt("width", 1280);
 const height = opt("height", 720);
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const launchOptions = {};
+  const sysChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+  if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+    launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+  } else if (fs.existsSync(sysChrome)) {
+    launchOptions.executablePath = sysChrome;
+  }
+  const browser = await puppeteer.launch(launchOptions);
   const page = await browser.newPage();
   await page.setViewport({ width, height });
   const svg = fs.readFileSync(input, "utf8");

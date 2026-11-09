@@ -29,7 +29,14 @@ if (!files.length) {
 fs.mkdirSync(outDir, { recursive: true });
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const launchOptions = {};
+  const sysChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+  if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+    launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
+  } else if (fs.existsSync(sysChrome)) {
+    launchOptions.executablePath = sysChrome;
+  }
+  const browser = await puppeteer.launch(launchOptions);
   const page = await browser.newPage();
   let failed = false;
   for (const file of files) {

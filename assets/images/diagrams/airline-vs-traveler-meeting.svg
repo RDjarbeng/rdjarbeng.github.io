@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="240" role="img" aria-labelledby="meet-title meet-desc">
+  <title id="meet-title">How ticket prices are formed between airline costs and passenger needs</title>
+  <desc id="meet-desc">Diagram comparing the airline fixed costs and regulatory constraints on the left against the traveler budget and schedule limits on the right.</desc>
+
+  <!-- Background -->
+  <rect width="800" height="240" fill="#f4f1e6"/>
+
+  <!-- Left Card: The Airline -->
+  <g transform="translate(40, 25)">
+    <rect x="0" y="0" width="290" height="190" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="290" height="42" rx="6" fill="#1d4f9c"/>
+    <text x="145" y="27" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">THE AIRLINE</text>
+    
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Cost Floor</text>
+    <text x="20" y="105" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Fixed monthly aircraft lease</text>
+    <text x="20" y="135" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Fuel, crew, and navigation bills</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Need to fill 75%+ of seats</text>
+  </g>
+
+  <!-- Center: Meeting Point -->
+  <g transform="translate(345, 75)">
+    <!-- Arrows -->
+    <path d="M 0 45 L 20 45" stroke="#141414" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M 110 45 L 90 45" stroke="#141414" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <rect x="15" y="15" width="80" height="60" rx="6" fill="#f2c12e" stroke="#141414" stroke-width="2"/>
+    <text x="55" y="42" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414" text-anchor="middle">FARE</text>
+    <text x="55" y="62" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414" text-anchor="middle">PRICE</text>
+  </g>
+
+  <!-- Right Card: The Traveler -->
+  <g transform="translate(470, 25)">
+    <rect x="0" y="0" width="290" height="190" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="290" height="42" rx="6" fill="#d7263d"/>
+    <text x="145" y="27" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">THE TRAVELER</text>
+    
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Budget Ceiling</text>
+    <text x="20" y="105" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Fixed departure date</text>
+    <text x="20" y="135" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Strict household cash budget</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="18" fill="#57514a">• Avoiding bad layovers and risk</text>
+  </g>
+</svg>
+

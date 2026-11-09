@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="280" role="img" aria-labelledby="hub-title hub-desc">
+  <title id="hub-title">Why thin passenger demand creates regional airline hubs</title>
+  <desc id="hub-desc">Diagram comparing an empty direct flight between two small markets versus full flights connecting through an airline hub.</desc>
+
+  <rect width="800" height="280" fill="#f4f1e6"/>
+
+  <!-- Left: Direct Route (Thin Demand) -->
+  <g transform="translate(40, 20)">
+    <rect x="0" y="0" width="340" height="240" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="42" rx="6" fill="#d7263d"/>
+    <text x="170" y="27" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">DIRECT POINT TO POINT</text>
+
+    <!-- Visual route -->
+    <circle cx="60" cy="90" r="14" fill="#141414"/>
+    <text x="60" y="125" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414" text-anchor="middle">City A</text>
+    
+    <line x1="85" y1="90" x2="255" y2="90" stroke="#d7263d" stroke-width="3" stroke-dasharray="6 4"/>
+    
+    <circle cx="280" cy="90" r="14" fill="#141414"/>
+    <text x="280" y="125" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414" text-anchor="middle">City B</text>
+
+    <rect x="20" y="145" width="300" height="75" rx="6" fill="#fef2f2" stroke="#d7263d" stroke-width="1.5"/>
+    <text x="170" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#991b1b" text-anchor="middle">Only 30 passengers daily</text>
+    <text x="170" y="205" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">150-seat plane is 80% empty (Loss)</text>
+  </g>
+
+  <!-- Right: Hub and Spoke -->
+  <g transform="translate(420, 20)">
+    <rect x="0" y="0" width="340" height="240" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="42" rx="6" fill="#1d4f9c"/>
+    <text x="170" y="27" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">HUB AND SPOKE MODEL</text>
+
+    <!-- Visual route with central hub -->
+    <circle cx="50" cy="70" r="10" fill="#57514a"/>
+    <circle cx="50" cy="110" r="10" fill="#57514a"/>
+    
+    <line x1="65" y1="70" x2="155" y2="90" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="65" y1="110" x2="155" y2="90" stroke="#1d4f9c" stroke-width="2"/>
+
+    <!-- Central Hub -->
+    <circle cx="170" cy="90" r="18" fill="#f2c12e" stroke="#141414" stroke-width="2"/>
+    <text x="170" y="125" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1d4f9c" text-anchor="middle">Regional Hub</text>
+
+    <line x1="190" y1="90" x2="275" y2="90" stroke="#1d4f9c" stroke-width="3"/>
+    <circle cx="290" cy="90" r="14" fill="#141414"/>
+    <text x="290" y="125" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414" text-anchor="middle">Dest.</text>
+
+    <rect x="20" y="145" width="300" height="75" rx="6" fill="#eff6ff" stroke="#1d4f9c" stroke-width="1.5"/>
+    <text x="170" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1d4f9c" text-anchor="middle">Pools passengers from 6 cities</text>
+    <text x="170" y="205" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">150-seat plane flies 85% full (Viable)</text>
+  </g>
+</svg>
+

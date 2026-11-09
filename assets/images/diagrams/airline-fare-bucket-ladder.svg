@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="300" role="img" aria-labelledby="buckets-title buckets-desc">
+  <title id="buckets-title">How airline fare buckets step up ticket prices</title>
+  <desc id="buckets-desc">Diagram showing how airlines allocate seats into ascending fare classes, from early discount buckets to last minute walk-up fares.</desc>
+
+  <rect width="800" height="300" fill="#f4f1e6"/>
+
+  <text x="400" y="38" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#141414" text-anchor="middle">HOW REVENUE MANAGEMENT STEPS UP FARES</text>
+
+  <g transform="translate(40, 60)">
+    <!-- Step 1: Promo / Early -->
+    <g transform="translate(0, 110)">
+      <rect x="0" y="0" width="165" height="90" rx="6" fill="#ffffff" stroke="#2d6a4f" stroke-width="2"/>
+      <rect x="0" y="0" width="165" height="34" rx="6" fill="#2d6a4f"/>
+      <text x="82" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Promo: $180</text>
+      <text x="82" y="60" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">40 seats sold</text>
+      <text x="82" y="82" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="middle">90 days out</text>
+    </g>
+
+    <!-- Step 2: Standard Economy -->
+    <g transform="translate(185, 75)">
+      <rect x="0" y="0" width="165" height="125" rx="6" fill="#ffffff" stroke="#1d4f9c" stroke-width="2"/>
+      <rect x="0" y="0" width="165" height="34" rx="6" fill="#1d4f9c"/>
+      <text x="82" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Economy: $280</text>
+      <text x="82" y="62" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">50 seats sold</text>
+      <text x="82" y="88" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="middle">30 days out</text>
+      <text x="82" y="112" font-family="Arial, sans-serif" font-size="18" fill="#1d4f9c" text-anchor="middle">Bucket empties</text>
+    </g>
+
+    <!-- Step 3: Flex -->
+    <g transform="translate(370, 40)">
+      <rect x="0" y="0" width="165" height="160" rx="6" fill="#ffffff" stroke="#d7263d" stroke-width="2"/>
+      <rect x="0" y="0" width="165" height="34" rx="6" fill="#d7263d"/>
+      <text x="82" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Flex: $390</text>
+      <text x="82" y="65" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">35 seats sold</text>
+      <text x="82" y="95" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="middle">14 days out</text>
+      <text x="82" y="125" font-family="Arial, sans-serif" font-size="18" fill="#d7263d" text-anchor="middle">High demand</text>
+    </g>
+
+    <!-- Step 4: Late Walkup -->
+    <g transform="translate(555, 0)">
+      <rect x="0" y="0" width="165" height="200" rx="6" fill="#ffffff" stroke="#8a1c14" stroke-width="2"/>
+      <rect x="0" y="0" width="165" height="34" rx="6" fill="#8a1c14"/>
+      <text x="82" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Walk-up: $550</text>
+      <text x="82" y="70" font-family="Arial, sans-serif" font-size="18" fill="#141414" text-anchor="middle">25 seats sold</text>
+      <text x="82" y="105" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="middle">Final 48 hours</text>
+      <text x="82" y="140" font-family="Arial, sans-serif" font-size="18" fill="#8a1c14" text-anchor="middle">Inelastic buyer</text>
+    </g>
+
+    <!-- Timeline Arrow below -->
+    <path d="M 10 215 L 710 215" stroke="#141414" stroke-width="2"/>
+    <polygon points="710,210 720,215 710,220" fill="#141414"/>
+    <text x="360" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414" text-anchor="middle">Time to departure decreases &gt;&gt; Price steps up as buckets close</text>
+  </g>
+</svg>
+

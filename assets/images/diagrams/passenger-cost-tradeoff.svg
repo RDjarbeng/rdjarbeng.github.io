@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="100%" height="340" role="img" aria-labelledby="tradeoff-title tradeoff-desc">
+  <title id="tradeoff-title">The real cost of a flight: nonstop versus connection</title>
+  <desc id="tradeoff-desc">Comparison showing how time valuation changes whether a nonstop or connecting flight is cheaper for a student versus a business consultant.</desc>
+
+  <rect width="800" height="340" fill="#f4f1e6"/>
+
+  <text x="400" y="38" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#141414" text-anchor="middle">THE REAL COST: NONSTOP VS 9-HOUR LAYOVER</text>
+
+  <!-- Left Card: Student -->
+  <g transform="translate(40, 60)">
+    <rect x="0" y="0" width="345" height="255" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="345" height="42" rx="8" fill="#2d6a4f"/>
+    <text x="172" y="28" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">STUDENT (Time: $5 / hr)</text>
+
+    <!-- Nonstop -->
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Nonstop flight:</text>
+    <text x="325" y="75" font-family="'Arial Black', sans-serif" font-size="18" fill="#141414" text-anchor="end">$450</text>
+
+    <!-- Connection Breakdown -->
+    <text x="20" y="112" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">1-Stop connecting:</text>
+    <text x="40" y="140" font-family="Arial, sans-serif" font-size="18" fill="#555555">Ticket fare: $340</text>
+    <text x="40" y="166" font-family="Arial, sans-serif" font-size="18" fill="#555555">Hub meals: $25</text>
+    <text x="40" y="192" font-family="Arial, sans-serif" font-size="18" fill="#555555">Time value (9h x $5): $45</text>
+
+    <!-- Total badge -->
+    <rect x="20" y="210" width="305" height="34" rx="5" fill="#e8f5e9" stroke="#2d6a4f" stroke-width="1.5"/>
+    <text x="172" y="233" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2d6a4f" text-anchor="middle">Total: $410 (Connection wins)</text>
+  </g>
+
+  <!-- Right Card: Consultant -->
+  <g transform="translate(415, 60)">
+    <rect x="0" y="0" width="345" height="255" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+    <rect x="0" y="0" width="345" height="42" rx="8" fill="#1d4f9c"/>
+    <text x="172" y="28" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">CONSULTANT (Time: $30 / hr)</text>
+
+    <!-- Nonstop -->
+    <text x="20" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Nonstop flight:</text>
+    <text x="325" y="75" font-family="'Arial Black', sans-serif" font-size="18" fill="#141414" text-anchor="end">$450</text>
+
+    <!-- Connection Breakdown -->
+    <text x="20" y="112" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">1-Stop connecting:</text>
+    <text x="40" y="140" font-family="Arial, sans-serif" font-size="18" fill="#555555">Ticket fare: $340</text>
+    <text x="40" y="166" font-family="Arial, sans-serif" font-size="18" fill="#555555">Hub meals: $25</text>
+    <text x="40" y="192" font-family="Arial, sans-serif" font-size="18" fill="#555555">Time value (9h x $30): $270</text>
+
+    <!-- Total badge -->
+    <rect x="20" y="210" width="305" height="34" rx="5" fill="#e3f2fd" stroke="#1d4f9c" stroke-width="1.5"/>
+    <text x="172" y="233" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1d4f9c" text-anchor="middle">Total: $635 (Nonstop wins)</text>
+  </g>
+</svg>
+
