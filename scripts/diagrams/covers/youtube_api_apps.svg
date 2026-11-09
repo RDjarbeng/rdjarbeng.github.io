@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline -->
+  <text x="56" y="118" font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#141414">
+    <tspan x="56" dy="0">BUILT ON THE</tspan>
+    <tspan x="56" dy="104">YOUTUBE API</tspan>
+  </text>
+
+  <!-- Connecting Lines -->
+  <!-- Line to Window 1 (Top-Left) -->
+  <line x1="530" y1="425" x2="350" y2="360" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+  <!-- Line to Window 2 (Bottom-Left) -->
+  <line x1="530" y1="505" x2="350" y2="570" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+  <!-- Line to Window 3 (Top-Right) -->
+  <line x1="750" y1="425" x2="930" y2="360" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+  <!-- Line to Window 4 (Bottom-Right) -->
+  <line x1="750" y1="505" x2="930" y2="570" stroke="#141414" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- App Window 1: Top-Left (x=140, y=265, w=220, h=150) -->
+  <g id="app-window-1">
+    <rect x="140" y="265" width="220" height="150" rx="12" fill="#ffffff"/>
+    <path d="M 140,303 L 140,277 Q 140,265 152,265 L 348,265 Q 360,265 360,277 L 360,303 Z" fill="#1d4f9c"/>
+    <line x1="140" y1="303" x2="360" y2="303" stroke="#141414" stroke-width="6"/>
+    <circle cx="160" cy="284" r="5" fill="#ffffff"/>
+    <circle cx="176" cy="284" r="5" fill="#ffffff"/>
+    <circle cx="192" cy="284" r="5" fill="#ffffff"/>
+    <rect x="158" y="319" width="184" height="78" rx="8" fill="#f2c12e" stroke="#141414" stroke-width="6"/>
+    <rect x="140" y="265" width="220" height="150" rx="12" fill="none" stroke="#141414" stroke-width="8"/>
+  </g>
+
+  <!-- App Window 2: Bottom-Left (x=140, y=510, w=220, h=150) -->
+  <g id="app-window-2">
+    <rect x="140" y="510" width="220" height="150" rx="12" fill="#ffffff"/>
+    <path d="M 140,548 L 140,522 Q 140,510 152,510 L 348,510 Q 360,510 360,522 L 360,548 Z" fill="#1d4f9c"/>
+    <line x1="140" y1="548" x2="360" y2="548" stroke="#141414" stroke-width="6"/>
+    <circle cx="160" cy="529" r="5" fill="#ffffff"/>
+    <circle cx="176" cy="529" r="5" fill="#ffffff"/>
+    <circle cx="192" cy="529" r="5" fill="#ffffff"/>
+    <rect x="158" y="564" width="184" height="78" rx="8" fill="#f2c12e" stroke="#141414" stroke-width="6"/>
+    <rect x="140" y="510" width="220" height="150" rx="12" fill="none" stroke="#141414" stroke-width="8"/>
+  </g>
+
+  <!-- App Window 3: Top-Right (x=920, y=265, w=220, h=150) -->
+  <g id="app-window-3">
+    <rect x="920" y="265" width="220" height="150" rx="12" fill="#ffffff"/>
+    <path d="M 920,303 L 920,277 Q 920,265 932,265 L 1128,265 Q 1140,265 1140,277 L 1140,303 Z" fill="#1d4f9c"/>
+    <line x1="920" y1="303" x2="1140" y2="303" stroke="#141414" stroke-width="6"/>
+    <circle cx="940" cy="284" r="5" fill="#ffffff"/>
+    <circle cx="956" cy="284" r="5" fill="#ffffff"/>
+    <circle cx="972" cy="284" r="5" fill="#ffffff"/>
+    <rect x="938" y="319" width="184" height="78" rx="8" fill="#f2c12e" stroke="#141414" stroke-width="6"/>
+    <rect x="920" y="265" width="220" height="150" rx="12" fill="none" stroke="#141414" stroke-width="8"/>
+  </g>
+
+  <!-- App Window 4: Bottom-Right (x=920, y=510, w=220, h=150) -->
+  <g id="app-window-4">
+    <rect x="920" y="510" width="220" height="150" rx="12" fill="#ffffff"/>
+    <path d="M 920,548 L 920,522 Q 920,510 932,510 L 1128,510 Q 1140,510 1140,522 L 1140,548 Z" fill="#1d4f9c"/>
+    <line x1="920" y1="548" x2="1140" y2="548" stroke="#141414" stroke-width="6"/>
+    <circle cx="940" cy="529" r="5" fill="#ffffff"/>
+    <circle cx="956" cy="529" r="5" fill="#ffffff"/>
+    <circle cx="972" cy="529" r="5" fill="#ffffff"/>
+    <rect x="938" y="564" width="184" height="78" rx="8" fill="#f2c12e" stroke="#141414" stroke-width="6"/>
+    <rect x="920" y="510" width="220" height="150" rx="12" fill="none" stroke="#141414" stroke-width="8"/>
+  </g>
+
+  <!-- Central YouTube Play Button -->
+  <g id="youtube-play-button">
+    <rect x="520" y="385" width="240" height="160" rx="40" fill="#d7263d" stroke="#141414" stroke-width="8"/>
+    <polygon points="616,427 680,465 616,503" fill="#ffffff" stroke="#ffffff" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Watermark -->
+  <text x="1236" y="694" text-anchor="end" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#141414">rdjarbeng.com</text>
+</svg>
