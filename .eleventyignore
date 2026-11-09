@@ -2,6 +2,7 @@
 .git/
 .github/**
 .vscode/**
+.claude/**
 .replit
 .replit/**
 replit.md
@@ -20,7 +21,10 @@ TODO*.md
 index_old.md
 posts.md.bak
 crawls_from_web/**
+misc_crawls_from_web/**
 misc_files_plans/**
+scratch/**
+openresearch/**
 vendor/**
 scripts/**
 _sass/**
@@ -35,6 +39,7 @@ _config*.yml
 # Logs, scratch data, and root screenshots
 *.log
 build_logs_final.txt
+cover-images.txt
 dropdownlists.txt
 kroki_urls.txt
 yt_card_styles.txt

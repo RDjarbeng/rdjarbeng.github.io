@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for Eleventy Heap Out of Memory Post
+       Strict thumbnail rules:
+       - At most three text elements: Headline (>=64px), short hook, rdjarbeng.com watermark
+       - Exactly ONE solid text color (#141414)
+       - Clean graphic shapes: Memory bar hitting limit and resetting cleanly
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/eleventy_heap_out_of_memory_fix.svg assets/images/posts/covers/eleventy_heap_out_of_memory_fix_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Text Element 1 (Headline, >= 64px) & Text Element 2 (Short hook) -->
+  <g fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
+    <text x="640" y="112" font-size="70" font-weight="900" letter-spacing="1">ELEVENTY OUT OF MEMORY</text>
+    <text x="640" y="162" font-size="24" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">NODE.JS WATCH HEAP LEAKS &amp; THE FIX</text>
+  </g>
+
+  <!-- Illustration: Memory Gauge & Heap Meter Concept -->
+  <g transform="translate(640, 420)">
+    <!-- Base podium line -->
+    <rect x="-460" y="140" width="920" height="8" fill="#141414" rx="4"/>
+
+    <!-- Left side: The 4GB Heap Crash (Red warning tower) -->
+    <g transform="translate(-220, 0)">
+      <!-- Outer container tank -->
+      <rect x="-110" y="-180" width="220" height="300" rx="16" fill="#ffffff" stroke="#141414" stroke-width="6"/>
+      <!-- Overflow level (Red fill overflowing) -->
+      <rect x="-98" y="-168" width="196" height="276" rx="10" fill="#d7263d"/>
+      <!-- Warning badge -->
+      <circle cx="0" cy="-60" r="42" fill="#ffffff" stroke="#141414" stroke-width="5"/>
+      <path d="M 0 -85 L -20 -40 L 20 -40 Z" fill="#d7263d"/>
+      <rect x="-3" y="-68" width="6" height="14" fill="#ffffff" rx="2"/>
+      <circle cx="0" cy="-48" r="3" fill="#ffffff"/>
+      <!-- 4GB label in geometry -->
+      <rect x="-60" y="30" width="120" height="32" rx="8" fill="#141414"/>
+      <line x1="-120" y1="-180" x2="120" y2="-180" stroke="#d7263d" stroke-width="4" stroke-dasharray="8 8"/>
+    </g>
+
+    <!-- Center Arrow / Transition -->
+    <g transform="translate(0, -30)">
+      <circle cx="0" cy="0" r="38" fill="#141414"/>
+      <!-- Right arrow -->
+      <polygon points="-12,-16 14,0 -12,16 -4,0" fill="#f4f1e6"/>
+    </g>
+
+    <!-- Right side: The Fixed Stable Heap with Forced GC (Green healthy tank) -->
+    <g transform="translate(220, 0)">
+      <!-- Outer container tank -->
+      <rect x="-110" y="-180" width="220" height="300" rx="16" fill="#ffffff" stroke="#141414" stroke-width="6"/>
+      <!-- Healthy low memory level (Emerald green fill at bottom ~15%) -->
+      <rect x="-98" y="20" width="196" height="88" rx="10" fill="#1b998b"/>
+      <!-- Sparkle / checkmark symbol -->
+      <circle cx="0" cy="-60" r="42" fill="#1b998b" stroke="#141414" stroke-width="5"/>
+      <path d="M -14 -60 L -4 -50 L 16 -70" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- 450MB stable badge -->
+      <rect x="-60" y="30" width="120" height="32" rx="8" fill="#141414"/>
+      <!-- Headroom dashed line showing 8GB ceiling far above -->
+      <line x1="-120" y1="-180" x2="120" y2="-180" stroke="#1b998b" stroke-width="4" stroke-dasharray="8 8"/>
+    </g>
+  </g>
+
+  <!-- Text Element 3: Site Watermark -->
+  <text x="640" y="682" font-size="20" font-weight="700" letter-spacing="3" fill="#141414" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">rdjarbeng.com</text>
+</svg>

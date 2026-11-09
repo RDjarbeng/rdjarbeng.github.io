@@ -923,6 +923,11 @@ ${jsonLd}
     const outputPath = path.join(dir.output, "cover-images.txt");
     fs.writeFileSync(outputPath, Array.from(coverImages).join("\n") + "\n");
     console.log(`[Cover Images] Wrote ${coverImages.size} image paths to cover-images.txt`);
+
+    // Force garbage collection in watch mode after large builds to prevent heap accumulation
+    if (typeof global.gc === "function") {
+      global.gc();
+    }
   });
 
   return {
