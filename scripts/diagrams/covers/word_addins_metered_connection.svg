@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Full-size background -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline: Exactly one headline, Arial Black 96px, solid black, split into two lines with tspans -->
+  <text x="56" y="128" font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#141414">
+    <tspan x="56" dy="0">FIX WORD</tspan>
+    <tspan x="56" dy="102">ADD-INS ERROR</tspan>
+  </text>
+
+  <!-- Illustration Area: Document Page with Blue Header Bar, Black Text Lines, and Puzzle Hole -->
+  <g id="document-group">
+    <!-- Document Page Outline with Folded Dog-Ear Top-Right Corner -->
+    <path d="M 75 260 L 435 260 L 495 320 L 495 650 Q 495 660 485 660 L 75 660 Q 65 660 65 650 L 65 270 Q 65 260 75 260 Z"
+          fill="#ffffff" stroke="#141414" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- Folded Dog-Ear Flap -->
+    <polygon points="435,260 435,320 495,320"
+             fill="#f2c12e" stroke="#141414" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- Document Blue Header Bar -->
+    <rect x="95" y="292" width="315" height="38" rx="6" fill="#1d4f9c"/>
+
+    <!-- Document Black Lines of Text (Top Half) -->
+    <rect x="95" y="352" width="365" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="376" width="340" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="400" width="375" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="424" width="310" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="448" width="360" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="472" width="330" height="11" rx="5.5" fill="#141414"/>
+
+    <!-- Document Black Lines of Text (Bottom Half, Left of Puzzle Hole) -->
+    <rect x="95" y="506" width="210" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="530" width="225" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="554" width="200" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="578" width="220" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="602" width="190" height="11" rx="5.5" fill="#141414"/>
+    <rect x="95" y="626" width="215" height="11" rx="5.5" fill="#141414"/>
+
+    <!-- Puzzle-Piece-Shaped Hole at Lower Right of Document -->
+    <g transform="translate(390, 560)">
+      <path d="M -50 -50
+               L -14 -50
+               C -14 -58, -24 -62, -24 -70
+               C -24 -82, -14 -86, 0 -86
+               C 14 -86, 24 -82, 24 -70
+               C 24 -62, 14 -58, 14 -50
+               L 50 -50
+               L 50 -14
+               C 58 -14, 62 -24, 70 -24
+               C 82 -24, 86 -14, 86 0
+               C 86 14, 82 24, 70 24
+               C 62 24, 58 14, 50 14
+               L 50 50
+               L 14 50
+               C 14 42, 24 38, 24 30
+               C 24 18, 14 14, 0 14
+               C -14 14, -24 18, -24 30
+               C -24 38, -14 42, -14 50
+               L -50 50
+               L -50 14
+               C -42 14, -38 24, -30 24
+               C -18 24, -14 14, -14 0
+               C -14 -14, -18 -24, -30 -24
+               C -38 -24, -42 -14, -50 -14
+               Z"
+            fill="#f4f1e6" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Missing Red Puzzle Piece Floating Just Beside the Hole -->
+  <g transform="translate(585, 540)">
+    <path d="M -50 -50
+             L -14 -50
+             C -14 -58, -24 -62, -24 -70
+             C -24 -82, -14 -86, 0 -86
+             C 14 -86, 24 -82, 24 -70
+             C 24 -62, 14 -58, 14 -50
+             L 50 -50
+             L 50 -14
+             C 58 -14, 62 -24, 70 -24
+             C 82 -24, 86 -14, 86 0
+             C 86 14, 82 24, 70 24
+             C 62 24, 58 14, 50 14
+             L 50 50
+             L 14 50
+             C 14 42, 24 38, 24 30
+             C 24 18, 14 14, 0 14
+             C -14 14, -24 18, -24 30
+             C -24 38, -14 42, -14 50
+             L -50 50
+             L -50 14
+             C -42 14, -38 24, -30 24
+             C -18 24, -14 14, -14 0
+             C -14 -14, -18 -24, -30 -24
+             C -38 -24, -42 -14, -50 -14
+             Z"
+          fill="#d7263d" stroke="#141414" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Large Blue Wifi Symbol at the Far Right -->
+  <g id="wifi-symbol">
+    <!-- Outer Wave -->
+    <path d="M 793 423 A 265 265 0 0 1 1147 423"
+          fill="none" stroke="#1d4f9c" stroke-width="34" stroke-linecap="round"/>
+    <!-- Middle Wave -->
+    <path d="M 850 486 A 180 180 0 0 1 1090 486"
+          fill="none" stroke="#1d4f9c" stroke-width="34" stroke-linecap="round"/>
+    <!-- Inner Wave -->
+    <path d="M 906 549 A 95 95 0 0 1 1034 549"
+          fill="none" stroke="#1d4f9c" stroke-width="34" stroke-linecap="round"/>
+    <!-- Base Dot -->
+    <circle cx="970" cy="620" r="24" fill="#1d4f9c"/>
+  </g>
+
+  <!-- Exactly One Watermark -->
+  <text x="1236" y="694" font-family="Arial,sans-serif" font-weight="bold" font-size="26" text-anchor="end" fill="#141414">rdjarbeng.com</text>
+</svg>
