@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Full-size Background -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline: Exactly one headline in Arial Black, split into two lines -->
+  <text x="640" y="102" text-anchor="middle" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="104" fill="#141414">
+    <tspan x="640" dy="0">JUST LET</tspan>
+    <tspan x="640" dy="102">ME WORK</tspan>
+  </text>
+
+  <!-- Illustration Group: Open Laptop & Red Coffee Mug on Desk -->
+  <g id="illustration">
+    <!-- Desk Surface Ground Line -->
+    <line x1="120" y1="626" x2="1160" y2="626" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Coffee Mug (Beside Laptop) -->
+    <!-- Handle (drawn first so ends are covered by the body) -->
+    <path d="M 1056 528 C 1122 528 1122 594 1056 594" fill="none" stroke="#d7263d" stroke-width="16" stroke-linecap="round"/>
+    <!-- Mug Body -->
+    <path d="M 958 496 L 958 614 A 12 12 0 0 0 970 626 L 1050 626 A 12 12 0 0 0 1062 614 L 1062 496 Z" fill="#d7263d"/>
+    <!-- Mug Rim -->
+    <ellipse cx="1010" cy="496" rx="52" ry="13" fill="#d7263d"/>
+    <!-- Coffee Surface -->
+    <ellipse cx="1010" cy="498" rx="44" ry="9" fill="#141414"/>
+
+    <!-- Open Laptop Seen From The Front -->
+    <!-- Display Lid Outer Shell / Bezel -->
+    <rect x="240" y="256" width="600" height="334" rx="16" fill="#141414"/>
+
+    <!-- Webcam -->
+    <circle cx="540" cy="265" r="3" fill="#ffffff"/>
+
+    <!-- Solid Blue Screen Display -->
+    <rect x="258" y="274" width="564" height="294" rx="6" fill="#1d4f9c"/>
+
+    <!-- Screen Content: White Gear -->
+    <g id="gear">
+      <!-- 8 Gear Teeth (4 intersecting rounded rects) -->
+      <rect x="524" y="303" width="32" height="154" rx="6" fill="#ffffff"/>
+      <rect x="524" y="303" width="32" height="154" rx="6" transform="rotate(45 540 380)" fill="#ffffff"/>
+      <rect x="524" y="303" width="32" height="154" rx="6" transform="rotate(90 540 380)" fill="#ffffff"/>
+      <rect x="524" y="303" width="32" height="154" rx="6" transform="rotate(135 540 380)" fill="#ffffff"/>
+      <!-- Gear Central Hub -->
+      <circle cx="540" cy="380" r="58" fill="#ffffff"/>
+      <!-- Gear Axle Center Hole (Screen Blue) -->
+      <circle cx="540" cy="380" r="24" fill="#1d4f9c"/>
+    </g>
+
+    <!-- Screen Content: Nearly Full Progress Bar -->
+    <g id="progress-bar">
+      <!-- Track Container with White Border -->
+      <rect x="350" y="478" width="380" height="24" rx="12" fill="#141414" stroke="#ffffff" stroke-width="3"/>
+      <!-- Yellow Progress Fill (approx 85% full) -->
+      <rect x="354" y="482" width="318" height="16" rx="8" fill="#f2c12e"/>
+    </g>
+
+    <!-- Laptop Hinge -->
+    <rect x="400" y="586" width="280" height="10" rx="4" fill="#141414"/>
+
+    <!-- Laptop Base / Lower Chassis -->
+    <rect x="190" y="594" width="700" height="28" rx="6" fill="#141414"/>
+    <!-- Trackpad Outline -->
+    <rect x="495" y="600" width="90" height="14" rx="2" fill="none" stroke="#f4f1e6" stroke-width="2"/>
+    <!-- Front Edge Display Open Indent -->
+    <rect x="505" y="618" width="70" height="4" rx="2" fill="#f4f1e6"/>
+
+    <!-- Laptop Base Rubber Feet -->
+    <rect x="230" y="622" width="40" height="4" rx="2" fill="#141414"/>
+    <rect x="810" y="622" width="40" height="4" rx="2" fill="#141414"/>
+  </g>
+
+  <!-- Watermark -->
+  <text x="1236" y="694" text-anchor="end" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#141414">rdjarbeng.com</text>
+</svg>
