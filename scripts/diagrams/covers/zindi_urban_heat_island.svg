@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Full-size background -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline: Exactly one headline, two lines with tspans, font size >= 96px, between x=56 and x=1224 -->
+  <text x="56" y="130" font-family="'Arial Black', Arial, sans-serif" font-size="96" fill="#141414">
+    <tspan x="56" y="130">CITIES THAT</tspan>
+    <tspan x="56" y="235">RUN HOT</tspan>
+  </text>
+
+  <!-- Ground line for illustration -->
+  <line x1="40" y1="640" x2="1230" y2="640" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- 12 Plain Rectangular Buildings along bottom (Ground baseline y=640) -->
+  <!-- Building 1: Blue, shortest (edge) -->
+  <rect x="56" y="530" width="74" height="110" fill="#1d4f9c" stroke="#141414" stroke-width="4"/>
+  <rect x="70" y="550" width="18" height="16" fill="white"/>
+  <rect x="98" y="550" width="18" height="16" fill="white"/>
+  <rect x="70" y="580" width="18" height="16" fill="white"/>
+  <rect x="98" y="580" width="18" height="16" fill="white"/>
+  <rect x="82" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 2: Blue, short (edge) -->
+  <rect x="142" y="480" width="74" height="160" fill="#1d4f9c" stroke="#141414" stroke-width="4"/>
+  <rect x="156" y="500" width="18" height="16" fill="white"/>
+  <rect x="184" y="500" width="18" height="16" fill="white"/>
+  <rect x="156" y="530" width="18" height="16" fill="white"/>
+  <rect x="184" y="530" width="18" height="16" fill="white"/>
+  <rect x="156" y="560" width="18" height="16" fill="white"/>
+  <rect x="184" y="560" width="18" height="16" fill="white"/>
+  <rect x="156" y="590" width="18" height="16" fill="white"/>
+  <rect x="184" y="590" width="18" height="16" fill="white"/>
+  <rect x="168" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 3: Yellow, shorter (beside centre) -->
+  <rect x="228" y="420" width="74" height="220" fill="#f2c12e" stroke="#141414" stroke-width="4"/>
+  <rect x="242" y="440" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="440" width="18" height="16" fill="#141414"/>
+  <rect x="242" y="470" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="470" width="18" height="16" fill="#141414"/>
+  <rect x="242" y="500" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="500" width="18" height="16" fill="#141414"/>
+  <rect x="242" y="530" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="530" width="18" height="16" fill="#141414"/>
+  <rect x="242" y="560" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="560" width="18" height="16" fill="#141414"/>
+  <rect x="242" y="590" width="18" height="16" fill="#141414"/>
+  <rect x="270" y="590" width="18" height="16" fill="#141414"/>
+  <rect x="254" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 4: Yellow, shorter (beside centre) -->
+  <rect x="314" y="355" width="74" height="285" fill="#f2c12e" stroke="#141414" stroke-width="4"/>
+  <rect x="328" y="375" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="375" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="405" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="405" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="435" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="435" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="465" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="465" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="495" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="495" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="525" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="525" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="555" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="555" width="18" height="16" fill="#141414"/>
+  <rect x="328" y="585" width="18" height="16" fill="#141414"/>
+  <rect x="356" y="585" width="18" height="16" fill="#141414"/>
+  <rect x="340" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 5: Red, tall (centre) -->
+  <rect x="400" y="310" width="74" height="330" fill="#d7263d" stroke="#141414" stroke-width="4"/>
+  <rect x="414" y="330" width="18" height="16" fill="white"/>
+  <rect x="442" y="330" width="18" height="16" fill="white"/>
+  <rect x="414" y="360" width="18" height="16" fill="white"/>
+  <rect x="442" y="360" width="18" height="16" fill="white"/>
+  <rect x="414" y="390" width="18" height="16" fill="white"/>
+  <rect x="442" y="390" width="18" height="16" fill="white"/>
+  <rect x="414" y="420" width="18" height="16" fill="white"/>
+  <rect x="442" y="420" width="18" height="16" fill="white"/>
+  <rect x="414" y="450" width="18" height="16" fill="white"/>
+  <rect x="442" y="450" width="18" height="16" fill="white"/>
+  <rect x="414" y="480" width="18" height="16" fill="white"/>
+  <rect x="442" y="480" width="18" height="16" fill="white"/>
+  <rect x="414" y="510" width="18" height="16" fill="white"/>
+  <rect x="442" y="510" width="18" height="16" fill="white"/>
+  <rect x="414" y="540" width="18" height="16" fill="white"/>
+  <rect x="442" y="540" width="18" height="16" fill="white"/>
+  <rect x="414" y="570" width="18" height="16" fill="white"/>
+  <rect x="442" y="570" width="18" height="16" fill="white"/>
+  <rect x="426" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 6: Red, tallest (centre) -->
+  <rect x="486" y="280" width="74" height="360" fill="#d7263d" stroke="#141414" stroke-width="4"/>
+  <rect x="500" y="300" width="18" height="16" fill="white"/>
+  <rect x="528" y="300" width="18" height="16" fill="white"/>
+  <rect x="500" y="330" width="18" height="16" fill="white"/>
+  <rect x="528" y="330" width="18" height="16" fill="white"/>
+  <rect x="500" y="360" width="18" height="16" fill="white"/>
+  <rect x="528" y="360" width="18" height="16" fill="white"/>
+  <rect x="500" y="390" width="18" height="16" fill="white"/>
+  <rect x="528" y="390" width="18" height="16" fill="white"/>
+  <rect x="500" y="420" width="18" height="16" fill="white"/>
+  <rect x="528" y="420" width="18" height="16" fill="white"/>
+  <rect x="500" y="450" width="18" height="16" fill="white"/>
+  <rect x="528" y="450" width="18" height="16" fill="white"/>
+  <rect x="500" y="480" width="18" height="16" fill="white"/>
+  <rect x="528" y="480" width="18" height="16" fill="white"/>
+  <rect x="500" y="510" width="18" height="16" fill="white"/>
+  <rect x="528" y="510" width="18" height="16" fill="white"/>
+  <rect x="500" y="540" width="18" height="16" fill="white"/>
+  <rect x="528" y="540" width="18" height="16" fill="white"/>
+  <rect x="500" y="570" width="18" height="16" fill="white"/>
+  <rect x="528" y="570" width="18" height="16" fill="white"/>
+  <rect x="512" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 7: Red, tallest (centre) -->
+  <rect x="572" y="280" width="74" height="360" fill="#d7263d" stroke="#141414" stroke-width="4"/>
+  <rect x="586" y="300" width="18" height="16" fill="white"/>
+  <rect x="614" y="300" width="18" height="16" fill="white"/>
+  <rect x="586" y="330" width="18" height="16" fill="white"/>
+  <rect x="614" y="330" width="18" height="16" fill="white"/>
+  <rect x="586" y="360" width="18" height="16" fill="white"/>
+  <rect x="614" y="360" width="18" height="16" fill="white"/>
+  <rect x="586" y="390" width="18" height="16" fill="white"/>
+  <rect x="614" y="390" width="18" height="16" fill="white"/>
+  <rect x="586" y="420" width="18" height="16" fill="white"/>
+  <rect x="614" y="420" width="18" height="16" fill="white"/>
+  <rect x="586" y="450" width="18" height="16" fill="white"/>
+  <rect x="614" y="450" width="18" height="16" fill="white"/>
+  <rect x="586" y="480" width="18" height="16" fill="white"/>
+  <rect x="614" y="480" width="18" height="16" fill="white"/>
+  <rect x="586" y="510" width="18" height="16" fill="white"/>
+  <rect x="614" y="510" width="18" height="16" fill="white"/>
+  <rect x="586" y="540" width="18" height="16" fill="white"/>
+  <rect x="614" y="540" width="18" height="16" fill="white"/>
+  <rect x="586" y="570" width="18" height="16" fill="white"/>
+  <rect x="614" y="570" width="18" height="16" fill="white"/>
+  <rect x="598" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 8: Red, tall (centre) -->
+  <rect x="658" y="310" width="74" height="330" fill="#d7263d" stroke="#141414" stroke-width="4"/>
+  <rect x="672" y="330" width="18" height="16" fill="white"/>
+  <rect x="700" y="330" width="18" height="16" fill="white"/>
+  <rect x="672" y="360" width="18" height="16" fill="white"/>
+  <rect x="700" y="360" width="18" height="16" fill="white"/>
+  <rect x="672" y="390" width="18" height="16" fill="white"/>
+  <rect x="700" y="390" width="18" height="16" fill="white"/>
+  <rect x="672" y="420" width="18" height="16" fill="white"/>
+  <rect x="700" y="420" width="18" height="16" fill="white"/>
+  <rect x="672" y="450" width="18" height="16" fill="white"/>
+  <rect x="700" y="450" width="18" height="16" fill="white"/>
+  <rect x="672" y="480" width="18" height="16" fill="white"/>
+  <rect x="700" y="480" width="18" height="16" fill="white"/>
+  <rect x="672" y="510" width="18" height="16" fill="white"/>
+  <rect x="700" y="510" width="18" height="16" fill="white"/>
+  <rect x="672" y="540" width="18" height="16" fill="white"/>
+  <rect x="700" y="540" width="18" height="16" fill="white"/>
+  <rect x="672" y="570" width="18" height="16" fill="white"/>
+  <rect x="700" y="570" width="18" height="16" fill="white"/>
+  <rect x="684" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 9: Yellow, shorter (beside centre) -->
+  <rect x="744" y="355" width="74" height="285" fill="#f2c12e" stroke="#141414" stroke-width="4"/>
+  <rect x="758" y="375" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="375" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="405" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="405" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="435" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="435" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="465" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="465" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="495" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="495" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="525" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="525" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="555" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="555" width="18" height="16" fill="#141414"/>
+  <rect x="758" y="585" width="18" height="16" fill="#141414"/>
+  <rect x="786" y="585" width="18" height="16" fill="#141414"/>
+  <rect x="770" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 10: Yellow, shorter (beside centre) -->
+  <rect x="830" y="420" width="74" height="220" fill="#f2c12e" stroke="#141414" stroke-width="4"/>
+  <rect x="844" y="440" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="440" width="18" height="16" fill="#141414"/>
+  <rect x="844" y="470" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="470" width="18" height="16" fill="#141414"/>
+  <rect x="844" y="500" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="500" width="18" height="16" fill="#141414"/>
+  <rect x="844" y="530" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="530" width="18" height="16" fill="#141414"/>
+  <rect x="844" y="560" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="560" width="18" height="16" fill="#141414"/>
+  <rect x="844" y="590" width="18" height="16" fill="#141414"/>
+  <rect x="872" y="590" width="18" height="16" fill="#141414"/>
+  <rect x="856" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 11: Blue, short (edge) -->
+  <rect x="916" y="480" width="74" height="160" fill="#1d4f9c" stroke="#141414" stroke-width="4"/>
+  <rect x="928" y="500" width="18" height="16" fill="white"/>
+  <rect x="956" y="500" width="18" height="16" fill="white"/>
+  <rect x="928" y="530" width="18" height="16" fill="white"/>
+  <rect x="956" y="530" width="18" height="16" fill="white"/>
+  <rect x="928" y="560" width="18" height="16" fill="white"/>
+  <rect x="956" y="560" width="18" height="16" fill="white"/>
+  <rect x="928" y="590" width="18" height="16" fill="white"/>
+  <rect x="956" y="590" width="18" height="16" fill="white"/>
+  <rect x="942" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Building 12: Blue, shortest (edge) -->
+  <rect x="1002" y="530" width="74" height="110" fill="#1d4f9c" stroke="#141414" stroke-width="4"/>
+  <rect x="1014" y="550" width="18" height="16" fill="white"/>
+  <rect x="1042" y="550" width="18" height="16" fill="white"/>
+  <rect x="1014" y="580" width="18" height="16" fill="white"/>
+  <rect x="1042" y="580" width="18" height="16" fill="white"/>
+  <rect x="1028" y="614" width="22" height="26" fill="#141414"/>
+
+  <!-- Large Red Thermometer at the far right -->
+  <!-- Red backing mount -->
+  <rect x="1110" y="100" width="100" height="540" rx="50" fill="#d7263d" stroke="#141414" stroke-width="5"/>
+  <circle cx="1160" cy="128" r="7" fill="#f4f1e6" stroke="#141414" stroke-width="4"/>
+
+  <!-- White glass tube & bulb housing -->
+  <rect x="1144" y="160" width="32" height="395" rx="16" fill="white" stroke="#141414" stroke-width="4"/>
+  <circle cx="1160" cy="570" r="38" fill="white" stroke="#141414" stroke-width="4"/>
+
+  <!-- Rising Red Mercury liquid (running hot, near the top) -->
+  <circle cx="1160" cy="570" r="28" fill="#d7263d"/>
+  <rect x="1151" y="180" width="18" height="400" rx="9" fill="#d7263d"/>
+
+  <!-- Measurement tick marks (left side) -->
+  <line x1="1120" y1="190" x2="1136" y2="190" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1126" y1="220" x2="1136" y2="220" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1120" y1="250" x2="1136" y2="250" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1126" y1="280" x2="1136" y2="280" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1120" y1="310" x2="1136" y2="310" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1126" y1="340" x2="1136" y2="340" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1120" y1="370" x2="1136" y2="370" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1126" y1="400" x2="1136" y2="400" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1120" y1="430" x2="1136" y2="430" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1126" y1="460" x2="1136" y2="460" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1120" y1="490" x2="1136" y2="490" stroke="white" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Measurement tick marks (right side) -->
+  <line x1="1184" y1="190" x2="1200" y2="190" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1184" y1="220" x2="1194" y2="220" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1184" y1="250" x2="1200" y2="250" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1184" y1="280" x2="1194" y2="280" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1184" y1="310" x2="1200" y2="310" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1184" y1="340" x2="1194" y2="340" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1184" y1="370" x2="1200" y2="370" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1184" y1="400" x2="1194" y2="400" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1184" y1="430" x2="1200" y2="430" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1184" y1="460" x2="1194" y2="460" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="1184" y1="490" x2="1200" y2="490" stroke="white" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Exactly one watermark -->
+  <text x="1236" y="694" font-family="Arial, sans-serif" font-weight="bold" font-size="26" text-anchor="end" fill="#141414">rdjarbeng.com</text>
+</svg>
