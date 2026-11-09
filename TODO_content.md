@@ -935,3 +935,6 @@ Let me attempt a definition: the Waymo effect is what happens when a technology 
 
 https://www.researchagenda.news/articles/the-waymo-effect.html
 - [ ] Mapreduce, BigTable, Tensorflow, AlphaChip, who is Jeff Dean?
+- [ ] Who is Noam Shazeer? Who are all these authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+
+ANd what is "Attention is all you need?"
