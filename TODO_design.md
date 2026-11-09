@@ -202,3 +202,4 @@ Temporary processing error
 Which books have interconnected chapters, maybe one book has a theory section on Fourier, and another has a place you can apply it
 
 Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need
+- [ ] The mermaid diagrams don't look interesting to look at, some colour,some bigger font, more contrast in night mode instead of grey on black would help
