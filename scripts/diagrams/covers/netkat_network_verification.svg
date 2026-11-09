@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Full-size matte background -->
+  <rect width="1280" height="720" fill="#f4f1e6" />
+
+  <defs>
+    <!-- Flat vector network switch: realistic proportions, front faceplate view -->
+    <g id="network-switch">
+      <!-- Main switch chassis -->
+      <rect x="-80" y="-22" width="160" height="44" rx="4" fill="#1d4f9c" stroke="#141414" stroke-width="4" />
+
+      <!-- Rack mounting ear dividers and hardware mounting holes -->
+      <line x1="-62" y1="-22" x2="-62" y2="22" stroke="#141414" stroke-width="3" />
+      <line x1="62" y1="-22" x2="62" y2="22" stroke="#141414" stroke-width="3" />
+      <circle cx="-71" cy="0" r="3.5" fill="#141414" />
+      <circle cx="71" cy="0" r="3.5" fill="#141414" />
+
+      <!-- Power & status indicator LEDs -->
+      <circle cx="-52" cy="-6" r="3" fill="#f2c12e" />
+      <circle cx="-52" cy="6" r="3" fill="#ffffff" />
+
+      <!-- Recessed port bay -->
+      <rect x="-42" y="-13" width="98" height="26" rx="2" fill="#141414" />
+
+      <!-- Row of small yellow port lights and RJ45 sockets -->
+      <!-- Port 1 -->
+      <rect x="-39" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="-39" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="-37" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 2 -->
+      <rect x="-27" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="-27" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="-25" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 3 -->
+      <rect x="-15" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="-15" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="-13" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 4 -->
+      <rect x="-3" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="-3" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="-1" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 5 -->
+      <rect x="9" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="9" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="11" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 6 -->
+      <rect x="21" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="21" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="23" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 7 -->
+      <rect x="33" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="33" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="35" y="6" width="4" height="4" fill="#141414" />
+
+      <!-- Port 8 -->
+      <rect x="45" y="-10" width="8" height="6" rx="1" fill="#f2c12e" />
+      <rect x="45" y="-2" width="8" height="12" rx="1" fill="#1d4f9c" />
+      <rect x="47" y="6" width="4" height="4" fill="#141414" />
+    </g>
+  </defs>
+
+  <!-- Headline: bold, two lines via tspans, kept strictly between x=56 and x=1224 -->
+  <text x="56" font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#141414">
+    <tspan x="56" y="125">PROVING THE</tspan>
+    <tspan x="56" y="230">NETWORK RIGHT</tspan>
+  </text>
+
+  <!-- Thick black network mesh interconnects -->
+  <g id="mesh-network-links">
+    <!-- Perimeter mesh links -->
+    <line x1="250" y1="320" x2="1030" y2="320" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="320" x2="140" y2="475" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="140" y1="475" x2="250" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="630" x2="1030" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="1030" y1="630" x2="1140" y2="475" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="1140" y1="475" x2="1030" y2="320" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Vertical trunk links -->
+    <line x1="250" y1="320" x2="250" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="1030" y1="320" x2="1030" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Cross-mesh links meeting and traversing through the verification core -->
+    <line x1="140" y1="475" x2="1140" y2="475" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="320" x2="1030" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="630" x2="1030" y2="320" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="320" x2="1140" y2="475" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="250" y1="630" x2="1140" y2="475" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="140" y1="475" x2="1030" y2="320" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+    <line x1="140" y1="475" x2="1030" y2="630" stroke="#141414" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <!-- Central Verification Emblem: Very large red circle with bold white tick mark -->
+  <g id="verification-badge">
+    <circle cx="640" cy="475" r="130" fill="#d7263d" stroke="#141414" stroke-width="10" />
+    <polyline points="575,475 625,525 715,425" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Six Network Switches -->
+  <g id="switches">
+    <!-- Top-Left Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="250" y="320" />
+    <!-- Top-Right Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="1030" y="320" />
+    <!-- Mid-Left Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="140" y="475" />
+    <!-- Mid-Right Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="1140" y="475" />
+    <!-- Bottom-Left Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="250" y="630" />
+    <!-- Bottom-Right Switch -->
+    <use href="#network-switch" xlink:href="#network-switch" x="1030" y="630" />
+  </g>
+
+  <!-- Watermark: exactly one watermark, Arial bold 26px, text-anchor end -->
+  <text x="1236" y="694" text-anchor="end" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#141414">rdjarbeng.com</text>
+</svg>
