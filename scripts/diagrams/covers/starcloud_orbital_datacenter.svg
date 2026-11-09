@@ -1,0 +1,351 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background Rectangles -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+  <rect width="1280" height="720" fill="#12264d"/>
+
+  <!-- Stars in Deep Space -->
+  <!-- Distant Stars (Upper Right & Sides) -->
+  <circle cx="950" cy="70" r="2" fill="#ffffff"/>
+  <circle cx="1020" cy="110" r="3" fill="#f4f1e6"/>
+  <circle cx="1110" cy="55" r="2.5" fill="#f2c12e"/>
+  <circle cx="1185" cy="130" r="2" fill="#ffffff"/>
+  <circle cx="1235" cy="80" r="3" fill="#f4f1e6"/>
+  <circle cx="980" cy="190" r="2" fill="#ffffff"/>
+  <circle cx="1065" cy="235" r="3" fill="#f2c12e"/>
+  <circle cx="1150" cy="205" r="2.5" fill="#ffffff"/>
+  <circle cx="1220" cy="245" r="2" fill="#f4f1e6"/>
+  
+  <circle cx="80" cy="310" r="2.5" fill="#ffffff"/>
+  <circle cx="160" cy="275" r="2" fill="#f4f1e6"/>
+  <circle cx="260" cy="325" r="3" fill="#f2c12e"/>
+  <circle cx="370" cy="285" r="2" fill="#ffffff"/>
+  <circle cx="460" cy="310" r="2.5" fill="#f4f1e6"/>
+
+  <circle cx="830" cy="290" r="2.5" fill="#ffffff"/>
+  <circle cx="920" cy="335" r="2" fill="#f4f1e6"/>
+  <circle cx="1030" cy="300" r="3" fill="#f2c12e"/>
+  <circle cx="1140" cy="330" r="2.5" fill="#ffffff"/>
+  <circle cx="1240" cy="295" r="2" fill="#f4f1e6"/>
+
+  <!-- Diamond Sparkle Stars -->
+  <polygon points="1080,140 1083,148 1091,151 1083,154 1080,162 1077,154 1069,151 1077,148" fill="#ffffff"/>
+  <polygon points="1210,170 1212,176 1218,178 1212,180 1210,186 1208,180 1202,178 1208,176" fill="#f2c12e"/>
+  <polygon points="110,340 112,345 117,347 112,349 110,354 108,349 103,347 108,345" fill="#ffffff"/>
+  <polygon points="880,310 882,315 887,317 882,319 880,324 878,319 873,317 878,315" fill="#ffffff"/>
+
+  <!-- Earth Horizon and Atmosphere -->
+  <!-- Exosphere Edge -->
+  <path d="M -40 616 Q 640 536 1320 616" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <!-- Mesosphere / Stratosphere Ribbon -->
+  <path d="M -40 622 Q 640 542 1320 622 L 1320 634 Q 640 554 -40 634 Z" fill="#1d4f9c"/>
+  
+  <!-- Earth Ocean Globe -->
+  <path d="M -40 632 Q 640 552 1320 632 L 1320 730 L -40 730 Z" fill="#1d4f9c"/>
+  <!-- Earth Horizon Deep Curve Shadow -->
+  <path d="M -40 670 Q 640 605 1320 670 L 1320 730 L -40 730 Z" fill="#141414"/>
+
+  <!-- Continents and Landmass Silhouettes -->
+  <path d="M 120 650 Q 180 625 260 630 Q 320 640 370 660 Q 290 675 200 672 Q 140 665 120 650 Z" fill="#12264d"/>
+  <path d="M 450 632 Q 530 618 610 625 Q 670 635 700 655 Q 620 662 540 655 Q 480 648 450 632 Z" fill="#12264d"/>
+  <path d="M 820 640 Q 920 625 1020 635 Q 1110 650 1140 675 Q 1050 682 960 675 Q 870 660 820 640 Z" fill="#12264d"/>
+
+  <!-- Swirling Clouds -->
+  <path d="M 40 642 Q 220 600 460 608 Q 340 624 100 656 Z" fill="#ffffff"/>
+  <path d="M 520 598 Q 720 578 940 592 Q 810 612 600 618 Z" fill="#f4f1e6"/>
+  <path d="M 860 620 Q 1040 608 1250 632 Q 1110 646 900 636 Z" fill="#ffffff"/>
+  <path d="M 260 636 Q 440 620 640 628 Q 500 644 300 650 Z" fill="#ffffff"/>
+  <path d="M 720 628 Q 880 616 1060 624 Q 940 638 760 642 Z" fill="#f4f1e6"/>
+
+  <!-- Satellite: Orbital Data Center -->
+  
+  <!-- Left Solar Array Wing -->
+  <g id="left-solar-wing">
+    <!-- Rotary Actuator Joint on Rack -->
+    <rect x="540" y="413" width="25" height="24" rx="3" fill="#141414" stroke="#f2c12e" stroke-width="2"/>
+    <!-- Truss Connection Booms -->
+    <rect x="495" y="422" width="48" height="6" fill="#141414"/>
+    <line x1="495" y1="410" x2="540" y2="425" stroke="#f2c12e" stroke-width="2.5"/>
+    <line x1="495" y1="440" x2="540" y2="425" stroke="#f2c12e" stroke-width="2.5"/>
+    <rect x="490" y="405" width="6" height="40" fill="#141414"/>
+
+    <!-- Solar Wing Frame Outer Structure -->
+    <rect x="95" y="383" width="398" height="84" rx="2" fill="#141414"/>
+
+    <!-- Panel Segment 1 -->
+    <rect x="100" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="123" y1="387" x2="123" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="146" y1="387" x2="146" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="169" y1="387" x2="169" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="100" y1="406" x2="192" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="100" y1="444" x2="192" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 2 -->
+    <rect x="198" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="221" y1="387" x2="221" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="244" y1="387" x2="244" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="267" y1="387" x2="267" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="198" y1="406" x2="290" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="198" y1="444" x2="290" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 3 -->
+    <rect x="296" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="319" y1="387" x2="319" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="342" y1="387" x2="342" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="365" y1="387" x2="365" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="296" y1="406" x2="388" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="296" y1="444" x2="388" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 4 -->
+    <rect x="394" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="417" y1="387" x2="417" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="440" y1="387" x2="440" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="463" y1="387" x2="463" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="394" y1="406" x2="486" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="394" y1="444" x2="486" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Longitudinal Structural Centerline -->
+    <line x1="95" y1="425" x2="493" y2="425" stroke="#141414" stroke-width="3"/>
+    
+    <!-- Gold Hinges and End Bracket -->
+    <rect x="193" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="193" y="459" width="4" height="7" fill="#f2c12e"/>
+    <rect x="291" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="291" y="459" width="4" height="7" fill="#f2c12e"/>
+    <rect x="389" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="389" y="459" width="4" height="7" fill="#f2c12e"/>
+    <polygon points="95,417 88,421 88,429 95,433" fill="#f2c12e"/>
+  </g>
+
+  <!-- Right Solar Array Wing -->
+  <g id="right-solar-wing">
+    <!-- Rotary Actuator Joint on Rack -->
+    <rect x="715" y="413" width="25" height="24" rx="3" fill="#141414" stroke="#f2c12e" stroke-width="2"/>
+    <!-- Truss Connection Booms -->
+    <rect x="737" y="422" width="48" height="6" fill="#141414"/>
+    <line x1="785" y1="410" x2="740" y2="425" stroke="#f2c12e" stroke-width="2.5"/>
+    <line x1="785" y1="440" x2="740" y2="425" stroke="#f2c12e" stroke-width="2.5"/>
+    <rect x="784" y="405" width="6" height="40" fill="#141414"/>
+
+    <!-- Solar Wing Frame Outer Structure -->
+    <rect x="787" y="383" width="398" height="84" rx="2" fill="#141414"/>
+
+    <!-- Panel Segment 1 -->
+    <rect x="794" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="817" y1="387" x2="817" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="840" y1="387" x2="840" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="863" y1="387" x2="863" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="794" y1="406" x2="886" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="794" y1="444" x2="886" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 2 -->
+    <rect x="892" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="915" y1="387" x2="915" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="938" y1="387" x2="938" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="961" y1="387" x2="961" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="892" y1="406" x2="984" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="892" y1="444" x2="984" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 3 -->
+    <rect x="990" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="1013" y1="387" x2="1013" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="1036" y1="387" x2="1036" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="1059" y1="387" x2="1059" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="990" y1="406" x2="1082" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="990" y1="444" x2="1082" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Panel Segment 4 -->
+    <rect x="1088" y="387" width="92" height="76" rx="2" fill="#1d4f9c"/>
+    <line x1="1111" y1="387" x2="1111" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="1134" y1="387" x2="1134" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="1157" y1="387" x2="1157" y2="463" stroke="#f2c12e" stroke-width="1.5"/>
+    <line x1="1088" y1="406" x2="1180" y2="406" stroke="#12264d" stroke-width="1.5"/>
+    <line x1="1088" y1="444" x2="1180" y2="444" stroke="#12264d" stroke-width="1.5"/>
+
+    <!-- Longitudinal Structural Centerline -->
+    <line x1="787" y1="425" x2="1185" y2="425" stroke="#141414" stroke-width="3"/>
+    
+    <!-- Gold Hinges and End Bracket -->
+    <rect x="887" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="887" y="459" width="4" height="7" fill="#f2c12e"/>
+    <rect x="985" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="985" y="459" width="4" height="7" fill="#f2c12e"/>
+    <rect x="1083" y="384" width="4" height="7" fill="#f2c12e"/>
+    <rect x="1083" y="459" width="4" height="7" fill="#f2c12e"/>
+    <polygon points="1185,417 1192,421 1192,429 1185,433" fill="#f2c12e"/>
+  </g>
+
+  <!-- Central Body: The Server Rack -->
+  <g id="server-rack-satellite-body">
+    <!-- Side Heat Radiator Fins (Attached to Chassis) -->
+    <!-- Left Radiator -->
+    <rect x="553" y="338" width="12" height="174" fill="#141414"/>
+    <line x1="553" y1="352" x2="565" y2="352" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="370" x2="565" y2="370" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="388" x2="565" y2="388" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="406" x2="565" y2="406" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="444" x2="565" y2="444" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="462" x2="565" y2="462" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="480" x2="565" y2="480" stroke="#12264d" stroke-width="2"/>
+    <line x1="553" y1="498" x2="565" y2="498" stroke="#12264d" stroke-width="2"/>
+
+    <!-- Right Radiator -->
+    <rect x="715" y="338" width="12" height="174" fill="#141414"/>
+    <line x1="715" y1="352" x2="727" y2="352" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="370" x2="727" y2="370" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="388" x2="727" y2="388" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="406" x2="727" y2="406" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="444" x2="727" y2="444" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="462" x2="727" y2="462" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="480" x2="727" y2="480" stroke="#12264d" stroke-width="2"/>
+    <line x1="715" y1="498" x2="727" y2="498" stroke="#12264d" stroke-width="2"/>
+
+    <!-- Main Server Rack Cabinet Frame -->
+    <rect x="565" y="320" width="150" height="210" rx="4" fill="#141414" stroke="#f2c12e" stroke-width="2"/>
+    <!-- Inner Rack Bay Housing -->
+    <rect x="575" y="328" width="130" height="194" fill="#12264d"/>
+    <!-- Left & Right Rack Rails -->
+    <rect x="575" y="328" width="8" height="194" fill="#141414"/>
+    <rect x="697" y="328" width="8" height="194" fill="#141414"/>
+
+    <!-- Server Blade 0: Top Optical Network Switch (y=334, h=20) -->
+    <rect x="585" y="334" width="110" height="20" rx="1" fill="#141414"/>
+    <!-- Optical SFP Ports -->
+    <rect x="590" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <rect x="599" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <rect x="608" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <rect x="617" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <rect x="626" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <rect x="635" y="339" width="6" height="10" fill="#1d4f9c"/>
+    <!-- Status LEDs -->
+    <circle cx="670" cy="344" r="2" fill="#f2c12e"/>
+    <circle cx="678" cy="344" r="2" fill="#d7263d"/>
+    <circle cx="686" cy="344" r="2" fill="#f4f1e6"/>
+
+    <!-- Server Blade 1: AI Accelerator Blade (y=357, h=20) -->
+    <rect x="585" y="357" width="110" height="20" rx="1" fill="#141414"/>
+    <!-- Drive Caddies -->
+    <rect x="590" y="361" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="603" y="361" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="616" y="361" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <!-- GPU Air Ventilation Vents -->
+    <line x1="634" y1="361" x2="634" y2="373" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="640" y1="361" x2="640" y2="373" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="646" y1="361" x2="646" y2="373" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="652" y1="361" x2="652" y2="373" stroke="#1d4f9c" stroke-width="2"/>
+    <!-- Blade LEDs -->
+    <circle cx="670" cy="367" r="2" fill="#d7263d"/>
+    <circle cx="678" cy="367" r="2" fill="#f2c12e"/>
+    <circle cx="686" cy="367" r="2" fill="#ffffff"/>
+
+    <!-- Server Blade 2: High-Density Compute Node (y=380, h=20) -->
+    <rect x="585" y="380" width="110" height="20" rx="1" fill="#141414"/>
+    <rect x="590" y="384" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="603" y="384" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="616" y="384" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <line x1="634" y1="384" x2="634" y2="396" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="640" y1="384" x2="640" y2="396" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="646" y1="384" x2="646" y2="396" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="652" y1="384" x2="652" y2="396" stroke="#1d4f9c" stroke-width="2"/>
+    <circle cx="670" cy="390" r="2" fill="#f2c12e"/>
+    <circle cx="678" cy="390" r="2" fill="#ffffff"/>
+    <circle cx="686" cy="390" r="2" fill="#d7263d"/>
+
+    <!-- Server Blade 3: NVMe Space Storage Pod (y=403, h=20) -->
+    <rect x="585" y="403" width="110" height="20" rx="1" fill="#141414"/>
+    <!-- 8 Dense NVMe SSD Trays -->
+    <rect x="590" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="598" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="606" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="614" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="622" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="630" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="638" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <rect x="646" y="406" width="6" height="14" fill="#1d4f9c"/>
+    <!-- Activity LEDs -->
+    <circle cx="664" cy="413" r="2" fill="#f2c12e"/>
+    <circle cx="672" cy="413" r="2" fill="#f2c12e"/>
+    <circle cx="680" cy="413" r="2" fill="#d7263d"/>
+    <circle cx="688" cy="413" r="2" fill="#ffffff"/>
+
+    <!-- Server Blade 4: Compute Node (y=426, h=20) -->
+    <rect x="585" y="426" width="110" height="20" rx="1" fill="#141414"/>
+    <rect x="590" y="430" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="603" y="430" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="616" y="430" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <line x1="634" y1="430" x2="634" y2="442" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="640" y1="430" x2="640" y2="442" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="646" y1="430" x2="646" y2="442" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="652" y1="430" x2="652" y2="442" stroke="#1d4f9c" stroke-width="2"/>
+    <circle cx="670" cy="436" r="2" fill="#ffffff"/>
+    <circle cx="678" cy="436" r="2" fill="#f2c12e"/>
+    <circle cx="686" cy="436" r="2" fill="#d7263d"/>
+
+    <!-- Server Blade 5: Compute Node (y=449, h=20) -->
+    <rect x="585" y="449" width="110" height="20" rx="1" fill="#141414"/>
+    <rect x="590" y="453" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="603" y="453" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <rect x="616" y="453" width="10" height="12" fill="#12264d" stroke="#f4f1e6" stroke-width="0.8"/>
+    <line x1="634" y1="453" x2="634" y2="465" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="640" y1="453" x2="640" y2="465" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="646" y1="453" x2="646" y2="465" stroke="#1d4f9c" stroke-width="2"/>
+    <line x1="652" y1="453" x2="652" y2="465" stroke="#1d4f9c" stroke-width="2"/>
+    <circle cx="670" cy="459" r="2" fill="#d7263d"/>
+    <circle cx="678" cy="459" r="2" fill="#f2c12e"/>
+    <circle cx="686" cy="459" r="2" fill="#ffffff"/>
+
+    <!-- Server Blade 6: Orbital Power Control Unit (y=472, h=20) -->
+    <rect x="585" y="472" width="110" height="20" rx="1" fill="#141414"/>
+    <rect x="592" y="477" width="18" height="10" fill="#f2c12e"/>
+    <rect x="615" y="477" width="18" height="10" fill="#f2c12e"/>
+    <circle cx="650" cy="482" r="3" fill="#d7263d"/>
+    <circle cx="664" cy="482" r="3" fill="#f2c12e"/>
+    <circle cx="678" cy="482" r="3" fill="#ffffff"/>
+    <circle cx="688" cy="482" r="2" fill="#1d4f9c"/>
+
+    <!-- Server Blade 7: Space Lithium-Ion Battery Module (y=495, h=20) -->
+    <rect x="585" y="495" width="110" height="20" rx="1" fill="#141414"/>
+    <rect x="590" y="500" width="16" height="10" rx="1" fill="#1d4f9c"/>
+    <rect x="610" y="500" width="16" height="10" rx="1" fill="#1d4f9c"/>
+    <rect x="630" y="500" width="16" height="10" rx="1" fill="#1d4f9c"/>
+    <circle cx="665" cy="505" r="2" fill="#f2c12e"/>
+    <circle cx="674" cy="505" r="2" fill="#f2c12e"/>
+    <circle cx="683" cy="505" r="2" fill="#d7263d"/>
+
+    <!-- Top Cap: Gold Thermal Multi-Layer Insulation (MLI) -->
+    <polygon points="580,320 700,320 686,306 594,306" fill="#f2c12e"/>
+    <line x1="605" y1="306" x2="600" y2="320" stroke="#141414" stroke-width="1.5"/>
+    <line x1="625" y1="306" x2="620" y2="320" stroke="#141414" stroke-width="1.5"/>
+    <line x1="655" y1="306" x2="660" y2="320" stroke="#141414" stroke-width="1.5"/>
+    <line x1="675" y1="306" x2="680" y2="320" stroke="#141414" stroke-width="1.5"/>
+
+    <!-- High-Gain Earth Downlink Parabolic Antenna -->
+    <rect x="637" y="280" width="6" height="26" fill="#141414"/>
+    <circle cx="640" cy="280" r="5" fill="#f2c12e"/>
+    <line x1="640" y1="280" x2="622" y2="266" stroke="#141414" stroke-width="3"/>
+    <!-- Parabolic Reflector Dish -->
+    <path d="M 598 248 Q 618 270 638 292" stroke="#f4f1e6" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <line x1="618" y1="270" x2="604" y2="280" stroke="#d7263d" stroke-width="2"/>
+    <circle cx="604" cy="280" r="2.5" fill="#d7263d"/>
+
+    <!-- Bottom Cap: Propulsion Adapter -->
+    <polygon points="585,530 695,530 682,544 598,544" fill="#141414"/>
+    <!-- Orbital Maneuvering Rocket Nozzle -->
+    <polygon points="628,544 652,544 658,562 622,562" fill="#141414" stroke="#f2c12e" stroke-width="1.5"/>
+    <ellipse cx="640" cy="562" rx="18" ry="4" fill="#d7263d"/>
+
+    <!-- Attitude Control RCS Thruster Blocks -->
+    <rect x="568" y="525" width="8" height="6" fill="#141414"/>
+    <polygon points="568,526 562,524 562,532 568,530" fill="#f2c12e"/>
+    <rect x="704" y="525" width="8" height="6" fill="#141414"/>
+    <polygon points="712,526 718,524 718,532 712,530" fill="#f2c12e"/>
+  </g>
+
+  <!-- Headline: Exactly ONE Headline, Words: DATA CENTERS IN SPACE -->
+  <text x="56" y="125" font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#ffffff">
+    <tspan x="56" y="125">DATA CENTERS</tspan>
+    <tspan x="56" y="225">IN SPACE</tspan>
+  </text>
+
+  <!-- Watermark: Exactly ONE Watermark, rdjarbeng.com at x=1236 y=694 -->
+  <text x="1236" y="694" text-anchor="end" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#ffffff">rdjarbeng.com</text>
+</svg>
