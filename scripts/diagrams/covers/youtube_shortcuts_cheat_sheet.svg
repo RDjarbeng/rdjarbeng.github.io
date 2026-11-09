@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#f4f1e6" />
+
+  <!-- Headline -->
+  <text x="56" y="142" font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#141414">
+    <tspan x="56" dy="0">YOUTUBE KEYBOARD</tspan>
+    <tspan x="56" dy="102">SHORTCUTS</tspan>
+  </text>
+
+  <!-- Illustration: Keyboard Keycaps and Play Button -->
+  <g id="illustration">
+    <!-- Keycap 1 (Blue - J) -->
+    <g id="keycap-1">
+      <rect x="74" y="369.5" width="196" height="196" rx="28" ry="28" fill="#1d4f9c" stroke="#141414" stroke-width="8" stroke-linejoin="round" />
+      <rect x="102" y="397.5" width="140" height="140" rx="16" ry="16" fill="#4a8fe7" />
+    </g>
+
+    <!-- Keycap 2 (Yellow - K) -->
+    <g id="keycap-2">
+      <rect x="294" y="369.5" width="196" height="196" rx="28" ry="28" fill="#f2c12e" stroke="#141414" stroke-width="8" stroke-linejoin="round" />
+      <rect x="322" y="397.5" width="140" height="140" rx="16" ry="16" fill="#fae17d" />
+    </g>
+
+    <!-- Keycap 3 (Blue - L) -->
+    <g id="keycap-3">
+      <rect x="514" y="369.5" width="196" height="196" rx="28" ry="28" fill="#1d4f9c" stroke="#141414" stroke-width="8" stroke-linejoin="round" />
+      <rect x="542" y="397.5" width="140" height="140" rx="16" ry="16" fill="#4a8fe7" />
+    </g>
+
+    <!-- Keycap Letters -->
+    <text font-family="'Arial Black',Arial,sans-serif" font-size="96" font-weight="900" fill="#141414" text-anchor="middle" dominant-baseline="central">
+      <tspan x="172" y="467.5">J</tspan>
+      <tspan x="392" y="467.5">K</tspan>
+      <tspan x="612" y="467.5">L</tspan>
+    </text>
+
+    <!-- Play Button (Big Red Rounded Rectangle with White Triangle) -->
+    <g id="play-button">
+      <rect x="764" y="340" width="440" height="255" rx="54" ry="54" fill="#d7263d" stroke="#141414" stroke-width="8" stroke-linejoin="round" />
+      <polygon points="942,412 1040,467.5 942,523" fill="white" stroke="white" stroke-width="8" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <!-- Watermark -->
+  <text x="1236" y="694" font-family="Arial,sans-serif" font-weight="bold" font-size="26" text-anchor="end" fill="#141414">rdjarbeng.com</text>
+</svg>
