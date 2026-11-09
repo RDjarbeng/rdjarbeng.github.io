@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 root.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
                 updateIcons();
+                window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: newTheme } }));
             });
         });
     }

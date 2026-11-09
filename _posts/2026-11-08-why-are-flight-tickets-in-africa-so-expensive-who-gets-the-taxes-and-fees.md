@@ -110,7 +110,6 @@ The profit figure in that example is the part most people find hardest to believ
 That line looks like a government bill, but it is a pool with several owners:
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '18px' }}}%%
 flowchart LR
     A["Total ticket price"] --> B["Base fare<br/>Airline"]
     A --> C["Taxes, surcharges and fees"]

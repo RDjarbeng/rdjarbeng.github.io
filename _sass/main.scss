@@ -1297,30 +1297,68 @@ a:hover {
   min-width: 100px;
   color: var(--text-color);
   border: 1px solid var(--card-border);
-  padding: 6px 10px;
+  padding: 8px 12px;
   background-color: var(--card-bg);
 }
 
 .post-content th {
   font-weight: 700;
-  background-color: var(--category-bg);
+  background-color: color-mix(in srgb, var(--card-bg) 85%, var(--text-color) 15%);
   color: var(--text-color);
-  /* Fix: tables not showing text properly in dark mode */
   border: 1px solid var(--card-border);
-  padding: 6px 10px;
-  background-color: var(--card-bg);
+  padding: 10px 12px;
+}
+
+.post-content tr:nth-child(even) td {
+  background-color: color-mix(in srgb, var(--card-bg) 95%, var(--text-color) 5%);
 }
 
 .post-content .mermaid {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1.75rem 0;
-  padding: 1.25rem;
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 8px;
   overflow-x: auto;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+
+  svg {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .nodeLabel,
+  .edgeLabel,
+  .label,
+  span,
+  p {
+    color: var(--text-color);
+  }
+}
+
+/* Diagram & flowchart images across light and dark mode */
+.post-content img[src*="kroki.io"],
+.post-content img[src*="mermaid"],
+.post-content img.diagram-card {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.75rem auto;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] .post-content img[src*="kroki.io"],
+[data-theme="dark"] .post-content img[src*="mermaid"],
+[data-theme="dark"] .post-content img.diagram-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 
