@@ -9,6 +9,7 @@ layout: default
 {% assign item_youtube_id = youtube_id | default: page.youtube_id %}
 {% assign item_instagram_id = instagram_id | default: page.instagram_id %}
 {% assign item_image = image | default: page.image %}
+{% assign item_images = images | default: page.images %}
 {% assign item_caption = caption | default: page.caption %}
 {% assign item_genre = genre | default: page.genre %}
 {% assign item_embed_code = embed_code | default: page.embed_code %}
@@ -154,6 +155,101 @@ layout: default
                     {{ item_embed_code }}
                     {% endif %}
                 </div>
+                {% elsif item_images and item_images.size > 1 %}
+                <div class="gallery-multi-viewer" style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: rgba(0,0,0,0.02);">
+                    <div style="position: relative; display: flex; align-items: center; justify-content: center; min-height: 320px; padding: 10px; background: rgba(0,0,0,0.03);">
+                        {% assign first_slide = item_images.first %}
+                        {% assign first_url = first_slide.image | default: first_slide.url | default: first_slide %}
+                        {% assign first_caption = first_slide.caption | default: first_slide.title | default: "" %}
+                        <img id="gallery-multi-active-img" src="{{ first_url | relative_url }}" alt="{{ item_title | escape }}"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            style="max-height: 720px; width: auto; max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 0 auto; transition: opacity 0.15s ease;">
+                        
+                        <button type="button" id="gallery-multi-prev" aria-label="Previous image" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.65); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: background 0.2s; z-index: 2;">‹</button>
+                        <button type="button" id="gallery-multi-next" aria-label="Next image" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.65); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: background 0.2s; z-index: 2;">›</button>
+
+                        <span id="gallery-multi-counter" style="position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.7); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; z-index: 2;">1 / {{ item_images.size }}</span>
+                    </div>
+
+                    {% if first_caption != "" %}
+                    <div id="gallery-multi-caption" style="padding: 10px 15px; font-weight: 600; font-size: 0.95rem; text-align: center; color: var(--text-color); border-top: 1px solid var(--card-border, rgba(0,0,0,0.08));">
+                        {{ first_caption }}
+                    </div>
+                    {% else %}
+                    <div id="gallery-multi-caption" style="padding: 10px 15px; font-weight: 600; font-size: 0.95rem; text-align: center; color: var(--text-color); border-top: 1px solid var(--card-border, rgba(0,0,0,0.08)); display: none;"></div>
+                    {% endif %}
+
+                    <!-- Thumbnail Strip -->
+                    <div class="gallery-multi-thumbs" style="display: flex; gap: 10px; justify-content: center; padding: 12px; overflow-x: auto; border-top: 1px solid var(--card-border, rgba(0,0,0,0.08)); background: rgba(0,0,0,0.02);">
+                        {% for slide in item_images %}
+                        {% assign thumb_url = slide.image | default: slide.url | default: slide %}
+                        {% assign thumb_cap = slide.caption | default: slide.title | default: "" %}
+                        <div class="gallery-multi-thumb" data-index="{{ forloop.index0 }}" role="button" tabindex="0" title="{{ thumb_cap | escape }}"
+                             style="width: 80px; height: 50px; flex-shrink: 0; cursor: pointer; border-radius: 4px; overflow: hidden; border: 2px solid {% if forloop.first %}var(--link-color, #2a7ae2){% else %}transparent{% endif %}; opacity: {% if forloop.first %}1{% else %}0.6{% endif %}; transition: all 0.2s ease;">
+                            <img src="{{ thumb_url | relative_url }}" alt="{{ thumb_cap | escape }}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <script>
+                (function() {
+                    const slides = [
+                        {% for slide in item_images %}
+                        {
+                            url: "{{ slide.image | default: slide.url | default: slide | relative_url }}",
+                            caption: "{{ slide.caption | default: slide.title | escape }}"
+                        }{% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    ];
+                    let currentIndex = 0;
+                    const imgEl = document.getElementById('gallery-multi-active-img');
+                    const capEl = document.getElementById('gallery-multi-caption');
+                    const countEl = document.getElementById('gallery-multi-counter');
+                    const thumbs = document.querySelectorAll('.gallery-multi-thumb');
+
+                    function showSlide(index) {
+                        if (index < 0) index = slides.length - 1;
+                        if (index >= slides.length) index = 0;
+                        currentIndex = index;
+                        imgEl.style.opacity = '0.35';
+                        setTimeout(() => {
+                            imgEl.src = slides[currentIndex].url;
+                            imgEl.style.opacity = '1';
+                        }, 120);
+                        if (capEl) {
+                            if (slides[currentIndex].caption) {
+                                capEl.textContent = slides[currentIndex].caption;
+                                capEl.style.display = 'block';
+                            } else {
+                                capEl.textContent = '';
+                                capEl.style.display = 'none';
+                            }
+                        }
+                        if (countEl) countEl.textContent = (currentIndex + 1) + ' / ' + slides.length;
+                        thumbs.forEach((th, i) => {
+                            th.style.borderColor = (i === currentIndex) ? 'var(--link-color, #2a7ae2)' : 'transparent';
+                            th.style.opacity = (i === currentIndex) ? '1' : '0.6';
+                        });
+                    }
+
+                    const prevBtn = document.getElementById('gallery-multi-prev');
+                    const nextBtn = document.getElementById('gallery-multi-next');
+                    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+                    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+                    thumbs.forEach(th => {
+                        th.addEventListener('click', function() {
+                            showSlide(parseInt(this.dataset.index, 10));
+                        });
+                        th.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                showSlide(parseInt(this.dataset.index, 10));
+                            }
+                        });
+                    });
+                })();
+                </script>
                 {% else %}
                 <img src="{{ item_image | relative_url }}" alt="{{ item_title | escape }}"
                     referrerpolicy="no-referrer-when-downgrade"

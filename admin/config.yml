@@ -346,6 +346,14 @@ collections:
           required: false,
           hint: "Alt text for the cover image",
         }
+      - label: "Additional Images"
+        name: "images"
+        widget: "list"
+        required: false
+        hint: "Optional extra images or variations for this gallery item"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Caption / Variant Name", name: "caption", widget: "string", required: false }
 
       - label: "Type"
         name: "type"

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
+      .faith-solid {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial Black', Impact, sans-serif;
+        font-weight: 900;
+        fill: #0a0a0a;
+        text-anchor: middle;
+      }
+      .faith-watermark {
+        font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 600;
+        fill: #0a0a0a;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Crisp White Matte Background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Minimalist Corner Registration / Crop Marks -->
+  <g stroke="#0a0a0a" stroke-width="2.5" fill="none" opacity="0.85">
+    <path d="M 32 56 L 32 32 L 56 32" />
+    <path d="M 1224 32 L 1248 32 L 1248 56" />
+    <path d="M 32 664 L 32 688 L 56 688" />
+    <path d="M 1224 688 L 1248 688 L 1248 664" />
+  </g>
+
+  <!-- Subtle Inset Hairline Frame -->
+  <rect x="42" y="42" width="1196" height="636" fill="none" stroke="#0a0a0a" stroke-width="1" opacity="0.18"/>
+
+  <!-- FAITH (Solid Black Numerator) -->
+  <text x="640" y="318" class="faith-solid" font-size="142" letter-spacing="22">FAITH</text>
+
+  <!-- The Balanced Divider Line (Replacing 'OVER') -->
+  <g id="divider-rule">
+    <rect x="220" y="356" width="840" height="8" fill="#0a0a0a" rx="3"/>
+  </g>
+
+  <!-- FEAR (Solid Black Denominator) -->
+  <text x="640" y="498" class="faith-solid" font-size="142" letter-spacing="38">FEAR</text>
+
+  <!-- Watermark: rdjarbeng.com -->
+  <g transform="translate(640, 660)">
+    <line x1="-220" y1="-5" x2="-120" y2="-5" stroke="#0a0a0a" stroke-width="1" opacity="0.2"/>
+    <text x="0" y="0" class="faith-watermark" font-size="18" letter-spacing="6" opacity="0.55">rdjarbeng.com</text>
+    <line x1="120" y1="-5" x2="220" y2="-5" stroke="#0a0a0a" stroke-width="1" opacity="0.2"/>
+  </g>
+</svg>
+

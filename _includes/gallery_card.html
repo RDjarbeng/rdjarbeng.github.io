@@ -1,6 +1,6 @@
 {% if include.is_js_template %}
-<a href="${hit.url}" class="gallery-card-link" data-title="${hit.title}">
-    <div class="gallery-item is-category" 
+<a href="${hit.url}" class="gallery-card-link ${hit.images && hit.images.length > 1 ? 'is-collection' : ''}" data-title="${hit.title}">
+    <div class="gallery-item is-category ${hit.images && hit.images.length > 1 ? 'has-collection' : ''}" 
          data-url="${hit.url}" 
          data-src="${cleanUrl}" 
          data-title="${hit.title}" 
@@ -14,6 +14,18 @@
              decoding="async"
              onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
         
+        ${(hit.images && hit.images.length > 1) ? html`
+        <div class="gallery-collection-badge-wrapper" title="${hit.images.length} items in collection">
+            <span class="gallery-carousel-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="8" y="8" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+                <span class="collection-count">${hit.images.length}</span>
+            </span>
+        </div>
+        ` : null}
+
         ${(hit.type === 'video' || hit.youtube_id) ? html`
         <div class="video-icon-wrapper">
             <span class="gallery-type-icon">▶</span>
@@ -70,8 +82,14 @@
   {% assign is_external = true %}
 {% endif %}
 
-<a href="{{ include.item.url | relative_url }}" class="gallery-card-link" data-title="{{ include.item.title | escape }}">
-    <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %} {% if include.is_small %}is-small{% endif %}" 
+{% assign collection_images = include.item.images | default: include.item.data.images %}
+{% assign is_collection = false %}
+{% if collection_images and collection_images.size > 1 %}
+  {% assign is_collection = true %}
+{% endif %}
+
+<a href="{{ include.item.url | relative_url }}" class="gallery-card-link {% if is_collection %}is-collection{% endif %}" data-title="{{ include.item.title | escape }}">
+    <div class="gallery-item {% if include.is_dashboard %}is-dashboard{% else %}is-category{% endif %} {% if include.is_small %}is-small{% endif %} {% if is_collection %}has-collection{% endif %}" 
          data-url="{{ include.item.url | relative_url }}" 
          data-src="{% if include.item.type == 'video' %}{{ include.item.url | relative_url }}{% elsif is_external %}{{ original_img_src }}{% else %}{{ original_img_src | relative_url }}{% endif %}" 
          data-title="{{ include.item.title | escape }}" 
@@ -85,6 +103,18 @@
              decoding="async"
              referrerpolicy="no-referrer-when-downgrade"
              onerror="this.onerror=null; this.src='/assets/images/webOrMobile.jpeg';">
+        
+        {% if is_collection %}
+        <div class="gallery-collection-badge-wrapper" title="{{ collection_images.size }} items in collection">
+            <span class="gallery-carousel-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="8" y="8" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+                <span class="collection-count">{{ collection_images.size }}</span>
+            </span>
+        </div>
+        {% endif %}
         
 
         {% if include.item.type == 'video' %}
