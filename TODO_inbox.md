@@ -112,3 +112,4 @@ But of you pass by reference any change made to the array by the function happen
 
 What of I buy it in one place and I'm carrying it to another country, what are the restrictions?
 - [ ] 2026-11-09 09:55 CAT | Africa had 2.2% of air traffic passenger market in 2025, according to https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/
+- [ ] 2026-11-10 09:48 CAT | Quote from https://www.zachleat.com/web/ai-websites/ "Certainly we have more software. But is it better? I don’t know."
