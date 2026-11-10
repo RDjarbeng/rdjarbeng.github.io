@@ -10,176 +10,180 @@ tags:
   - LLMs
   - Copyright
   - Data
-title: "The Scramble for Pre-AI Code: Why Clean Human Repositories Are Gaining Value"
+title: "The Market for Pre-AI Code: Why Clean Repositories Have a Price Tag"
+image: /assets/images/posts/covers/pre_ai_code_cover.jpg
+image_alt: "Flat editorial illustration of an archival code ledger and Git branch history stamped pre-2025"
 layout: post
-description: "AI labs and data brokers are willing to pay thousands for private codebases written before 2025. Here is why uncontaminated human Git history is gaining value, how the math works, and where the catches lie."
+description: "AI labs and data brokers are paying to license private code written before 2025. Here is why uncontaminated Git history is valuable, how the token math works, and the legal hurdles that keep most developers from selling."
 key_points:
-  - "AI labs face a data contamination crisis: post-2024 code repositories are heavily saturated with synthetic, AI-generated code that risks model collapse."
-  - "Codebases committed before 2025 represent an irreplaceable archive of pure human reasoning, architectural decisions, and authentic debugging history."
-  - "Data brokers like Pangea.ai are listing requests to license private pre-2025 repositories at rates around $1,000 per 1 million tokens."
-  - "1 million tokens translates to roughly 70,000 to 100,000 lines of clean code after deduplication strips dependencies, lockfiles, and boilerplate."
-  - "The biggest barrier to monetizing old code is intellectual property: employment contracts, client work-for-hire clauses, and indemnification liabilities."
+  - "Post-2024 code repositories contain heavy amounts of synthetic code, creating data contamination risks for training next-generation models."
+  - "Repositories committed before 2025 serve as an unpolluted baseline of human architectural decisions and debugging history."
+  - "Data brokers like Pangea.ai list bounties of roughly $1,000 per 1 million tokens for private pre-2025 codebases."
+  - "1 million tokens translates to 70,000 to 100,000 lines of clean code once pipelines strip dependencies, lockfiles, and boilerplate."
+  - "Employment agreements and client contracts mean very few individual developers hold clean, unencumbered rights to monetize past code."
 card_items:
   - name: "Model Collapse (Nature 2024)"
     badge_1: "Research"
     badge_2: "AI"
-    description: "Shumailov et al.'s landmark study demonstrating that training recursive AI models on synthetic data leads to irreversible degradation and collapse."
+    description: "Shumailov et al.'s paper showing that recursive training on synthetic data degrades model variance and amplifies errors."
     url: "https://www.nature.com/articles/s41586-024-07566-y"
     link_text: "Read on Nature"
   - name: "GitClear Code Quality Study"
     badge_1: "Industry"
     badge_2: "Data"
-    description: "Analysis of 153 million lines of code examining how AI coding assistants accelerated code churn and duplicate logic while reducing refactoring."
+    description: "Analysis of 153 million lines of code finding that AI coding tools correlated with higher churn and less refactoring."
     url: "https://www.gitclear.com/coding_on_copilot_data_shows_downward_pressure_on_code_quality"
-    link_text: "Read the report"
+    link_text: "Read report"
   - name: "Stack Overflow & OpenAI Deal"
     badge_1: "Licensing"
     badge_2: "OpenAI"
     description: "The May 2024 partnership giving OpenAI structured access to Stack Overflow's human-validated technical Q&A via the OverflowAPI."
     url: "https://openai.com/index/openai-and-stack-overflow-partnership/"
     link_text: "View announcement"
+  - name: "GitHub Copilot Adoption"
+    badge_1: "Metrics"
+    badge_2: "GitHub"
+    description: "GitHub's report tracking Copilot generating 46% of developers' code on average across all languages (61% in Java)."
+    url: "https://github.blog/ai-and-ml/github-copilot/github-copilot-now-has-a-better-ai-model-and-new-capabilities/"
+    link_text: "Read blog post"
 ---
 
-A quiet shift has been happening in the market for AI training data. For the first two years of the generative AI boom, the strategy was simple: scrape everything publicly available on the web, ingest every public GitHub repo, and worry about the consequences later.
+AI training data has entered a new phase. During the first two years of large language model development, labs scraped whatever was publicly available across GitHub, documentation sites, and open forums.
 
-Now, AI labs are hunting for a very specific commodity: **private source code written before 2025**.
+Now buyers are targeting private repositories written before 2025.
 
-A recent example is a listing on [Pangea.ai's code licensing marketplace](https://pangea.ai/code-licensing/companies?id=1376#request), where buyers are soliciting private codebases committed before 2025 at an advertised payout of **$1,000 per 1 million tokens**.
+One clear example is a listing on [Pangea.ai's code licensing board](https://pangea.ai/code-licensing/companies?id=1376#request). The posting requests private source code repositories committed before 2025, offering $1,000 per 1 million tokens. The cutoff date and the focus on private repositories point to practical problems facing model developers: data contamination, copyright exposure, benchmark leakage, and the collapse in data diversity caused by AI tools themselves.
 
-At first glance, treating dusty Git repositories like vintage wine sounds bizarre. Why does code have an expiration date? Why are private repositories suddenly worth real money? And if you have a private GitHub account with years of commits, can you actually cash in?
-
-The answers explain a lot about where AI model training is heading—and why human-written code is simultaneously becoming cheaper to generate and more expensive to source.
-
----
-
-## The Threat of Synthetic Pollution and "Model Collapse"
-
-To understand why pre-2025 code commands a premium, you have to understand the nightmare scenario for foundation model developers: **data contamination**.
-
-Between 2022 and 2024, tools like GitHub Copilot, ChatGPT, and Cursor went from novelties to standard developer fixtures. According to GitHub's own telemetry, millions of developers now use AI to generate 30% to 50% or more of their code.
-
-That convenience created an unintended side effect: public code repositories are now flooded with synthetic and semi-synthetic output. When an AI model is trained on code that was itself generated by an earlier AI model, bad things happen.
-
-In July 2024, researchers from Oxford, Cambridge, Toronto, and Imperial College published a landmark paper in *Nature* titled [*"AI models collapse when trained on recursively generated data"*](https://www.nature.com/articles/s41586-024-07566-y). Their findings showed that as models train recursively on synthetic data:
-1. **The tails of the distribution disappear:** Edge-case reasoning and niche algorithms are lost first.
-2. **Variance shrinks:** The model defaults to generic, repetitive patterns.
-3. **Hallucinations compound:** Minor flaws in generation get magnified in subsequent training generations until the model's output collapses into nonsense.
-
-```
-Cycle 1: Human Code  ──> Model A  ──> Competent Output
-Cycle 2: Model A Code ──> Model B  ──> Homogenized Boilerplate (Loss of Edge Cases)
-Cycle 3: Model B Code ──> Model C  ──> Model Collapse (Hallucinations & Degradation)
-```
-
-In software engineering, this is particularly dangerous. A 2024 study by GitClear analyzing 153 million lines of code found that the rise of AI coding assistants coincided with a sharp increase in **code churn** (code that is rewritten or deleted within two weeks) and a noticeable drop in architectural refactoring.
-
-AI models can generate syntactically valid code, but they do not experience the frustration of a 2:00 AM production outage, an obscure concurrency race condition, or the deliberate trade-offs of refactoring a legacy subsystem.
-
-**Pre-2025 code is the cutoff.** Code written and committed before generative tools took over developer machines represents pristine, uncontaminated human thought: real debugging commits, genuine PR reviews, messy but authentic architectural choices, and human-tested edge cases.
+![Flat editorial illustration of an archival code ledger and Git branch history stamped pre-2025](/assets/images/posts/covers/pre_ai_code_cover.jpg "The pre-AI code market")
 
 ---
 
-## Verifiable Precedents: The Scramble for Human Data
+## Why pre-2025 code has value
 
-Pangea's code licensing board is not an isolated initiative. It is part of a broader, industry-wide pivot away from indiscriminate web scraping toward paid, verified human archives:
+Between 2022 and 2024, developer workflows shifted toward automated assistance. In an update on Copilot adoption, [GitHub reported](https://github.blog/ai-and-ml/github-copilot/github-copilot-now-has-a-better-ai-model-and-new-capabilities/) that Copilot was already generating 46% of developers' code files on average across all languages, rising to 61% in Java.
 
-### 1. The Stack Overflow and OpenAI / Google Partnerships
-In February and May 2024, Stack Overflow signed major commercial licensing agreements with Google Cloud and OpenAI. Through its **OverflowAPI**, Stack Overflow provides structured access to more than 15 years of human-curated programming discussions.
+Because developers push assisted code directly to public repositories, public code written after 2023 contains large amounts of synthetic logic. When a new model trains on the output of an older model, the training process runs into data contamination.
 
-The reason AI labs paid millions for this archive is not that they needed more Python code; they needed the *human consensus* attached to that code—the upvotes, downvotes, revisions, and comment debates that distinguish good solutions from subtly broken ones.
+A July 2024 study published in *Nature* by researchers from Oxford, Cambridge, Toronto, and Imperial College examined this dynamic in detail: [*"AI models collapse when trained on recursively generated data"*](https://www.nature.com/articles/s41586-024-07566-y). The authors demonstrated that recursive training leads to model collapse:
+1. Rare patterns and edge cases drop out of the training distribution first.
+2. The model converges on repetitive, average outputs.
+3. Errors and minor hallucinations accumulate until subsequent models produce unusable responses.
 
-### 2. Reddit's $60M/Year Data Deals
-In early 2024, Reddit signed a data licensing agreement with Google worth an estimated $60 million annually, followed by a similar licensing deal with OpenAI. While not strictly a code repository, Reddit's technical subreddits (`r/programming`, `r/sysadmin`, `r/devops`) contain decades of real human troubleshooting that bots cannot authentically replicate.
+In software engineering, synthetic code introduces specific operational risks. An analysis of 153 million lines of code published by [GitClear](https://www.gitclear.com/coding_on_copilot_data_shows_downward_pressure_on_code_quality) found that the expansion of AI assistants corresponded with increased code churn and a drop in refactoring activity. Generated code can pass unit tests while introducing structural repetition. It does not reflect the operational trade-offs made by engineers keeping software stable under real user workloads.
 
-### 3. The Shift to Paid Human Data Providers
-Data platforms like **Scale AI**, **Surge AI**, and **Turing** now pay experienced software developers $50 to $150+ per hour to write code and solve algorithmic challenges strictly *without* AI assistance. Frontier labs have discovered that a few thousand lines of verified, step-by-step human problem-solving are worth more than terabytes of scraped public web pages.
-
-### 4. Clean-Room Consortia (BigCode & The Stack v2)
-Initiatives like the BigCode project (co-managed by Hugging Face and ServiceNow) invested heavily into building datasets like *The Stack v2*, tracking license provenance, metadata, and git history while giving developers opt-out mechanisms. AI labs are increasingly desperate for datasets with clear provenance that won't trigger copyright litigation or GPL compliance violations down the road.
+Code committed before 2025 acts as an unpolluted baseline. It contains genuine commit histories, debugging steps, architectural trade-offs, and edge cases handled by humans without machine intervention.
 
 ---
 
-## Doing the Math: What Does "$1,000 per 1M Tokens" Actually Mean?
+## Why Git commit history matters more than static files
 
-The headline rate on Pangea's board—**$1,000 per 1 million tokens**—sounds lucrative. But how much code is 1 million tokens in practice?
+When data brokers buy access to repositories, they rarely want a zip file of the latest release. They want the full `.git` directory, including commit logs, pull request metadata, and incremental diffs.
 
-In source code, tokenization works somewhat differently than plain English text:
-* **1 token** is roughly 3 to 4 characters (or ~0.5 keywords, identifiers, or symbols).
-* **1 line of formatted code** typically contains **10 to 14 tokens**.
-* Therefore, **1 million tokens** equals approximately **70,000 to 100,000 lines of code (LOC)**.
+There is a technical reason for this distinction. Modern coding agents such as SWE-agent, Devin, and Cursor do not write whole applications from scratch in a single prompt. They operate by reading a repository, diagnosing an issue, and applying targeted diffs to existing files.
 
-| Metric | Estimated Scale |
-| :--- | :--- |
-| **Token-to-line ratio** | ~10–14 tokens per formatted line |
-| **1,000,000 tokens** | ~70,000 – 100,000 lines of code (LOC) |
-| **Raw file size equivalent** | ~3 MB to 4.5 MB of pure text |
-| **Average personal side-project** | ~3,000 – 10,000 LOC (~30,000 – 100,000 tokens) |
-| **Gross payout for average project** | **~$30 – $100** |
+Training a model on static source code only teaches it the destination. It shows what a finished service looks like, but it reveals nothing about how that service arrived at its current structure. 
 
-```
-[ Your Raw Repository: 250 MB ]
-  ├── node_modules / vendor/   ──> Stripped (0 tokens)
-  ├── package-lock.json        ──> Discarded (0 tokens)
-  ├── dist / build / binaries  ──> Discarded (0 tokens)
-  ├── Auto-generated schemas   ──> Discarded (0 tokens)
-  └── Clean Human Logic        ──> ~5,000 to 15,000 tokens ($5 - $15)
-```
+In contrast, Git commit history teaches the model the trajectory of software development:
+* A commit message records human intent in plain language.
+* The associated diff shows the exact edits required to fulfill that intent.
+* A sequence of commits shows how an engineer identified a defect, tested an initial fix, reverted an approach that broke backwards compatibility, and settled on an optimal patch.
 
-When developers open their project folders, they often look at a repo that takes up 100 MB on disk and imagine thousands of dollars. But automated data pipelines clean repositories aggressively before counting tokens:
-
-* **Discarded entirely:** `node_modules/`, `vendor/`, `package-lock.json` (which can easily contain 300,000 tokens of useless dependency trees), compiled binaries, minified bundles, asset files, and auto-generated database migrations.
-* **Deduplicated:** Repetitive boilerplates, copy-pasted configuration files, and standard scaffolding are deduplicated across the dataset.
-
-After those filters run, a typical side-project often shrinks down to a few tens of thousands of net tokens, yielding a payout between **$20 and $50**.
+This commit-level granularity provides supervised training data for multi-step reasoning. If an AI lab wants an autonomous agent that can resolve real GitHub issues, training on paired commit messages and diffs is far more valuable than training on static file trees.
 
 ---
 
-## The Real Catches: IP Ownership and Legal Liability
+## Benchmark leakage and private codebases
 
-Even if you have millions of tokens of clean, pre-2025 code sitting on your drive, you run directly into a legal wall.
+Public code suffers from another structural problem: evaluation contamination.
 
-### 1. The Work-for-Hire Trap
-As software engineers, we write millions of lines of code over our careers, but we almost never own it:
-* **Full-Time Employment (W-2):** Standard employment agreements contain broad IP assignment clauses. Everything you write on company time, using company hardware, or relating to the company's business belongs 100% to your employer under the "work-for-hire" doctrine. Selling or licensing that code is a direct violation of your contract and intellectual property law.
-* **Agency and Freelance Contracts:** Master Services Agreements (MSAs) and Statements of Work (SOWs) routinely stipulate that the paying client owns all deliverables and custom code.
-* **Personal Projects:** Most personal side projects are small, rely heavily on open-source frameworks, or were never built out to 100,000 lines of proprietary code.
+When researchers evaluate coding models on public benchmarks like HumanEval, MBPP, or SWE-bench, the results are frequently compromised. Because foundation models ingest vast web crawls, they often absorb benchmark solutions during pre-training. A model that scores 85% on a public benchmark may simply be recalling solutions it saw during training rather than reasoning through logic.
 
-### 2. The Indemnification Clause
-When you sign an agreement with a data broker or marketplace, you aren't just uploading files; you are signing legal representations and warranties:
-1. You certify that you hold **sole, unencumbered ownership** of the code.
-2. You certify that the code does not violate third-party intellectual property or copyleft licenses (e.g., mixing in GPL or AGPL libraries).
-3. You certify that it contains no client trade secrets or confidential data.
-
-If a former employer, ex-partner, or past client discovers their internal code was fed into an AI training set, **you are personally on the hook to indemnify the broker and the AI lab**. Risking a breach-of-contract or copyright claim for a few hundred dollars is a disastrous trade.
-
-### 3. Ghost Secrets in Git History
-Private repositories—especially legacy ones—almost always contain skeletons in their commit history:
-* Hardcoded API keys and AWS tokens from 2019 before you set up `.env` files.
-* Test database connection strings containing internal credentials.
-* Customer test fixtures containing real names, emails, or internal IP addresses.
-
-While data brokers run automated regex scrubbers, automated tools routinely miss non-standard config formats or obscure key structures. Once those tokens are digested into an AI model's training weights, they cannot simply be "deleted."
+Private repositories offer model developers an unpolluted evaluation suite. If an AI lab evaluates a model against a private codebase written in 2021, researchers know with certainty that the model never encountered those proprietary endpoints, internal schemas, or architectural constraints during pre-training. Private repositories provide an honest measurement of whether a model can navigate unfamiliar software.
 
 ---
 
-## Who Is This Actually For?
+## Existing data licensing deals
 
-If individual developers and freelance contractors cannot safely license their code, who can?
+The Pangea posting reflects a wider transition from open web scraping to commercial data deals:
 
-There are two primary groups where programs like this make sense:
-
-1. **Founders of Defunct or Acquired Startups:** Startups that shut down or wound down operations where the founders retained clean, unencumbered ownership of the IP. That code is otherwise sitting dormant, generating zero value.
-2. **Software Development Agencies with Internal IP:** Agencies that spent years building internal boilerplates, custom CMS engines, deployment automation, or R&D libraries under explicit "retained IP" terms in their client contracts.
+* **Stack Overflow and model labs:** In May 2024, OpenAI announced a [direct partnership with Stack Overflow](https://openai.com/index/openai-and-stack-overflow-partnership/) through the OverflowAPI. The value of that dataset was not raw code snippets, but the human feedback loop: upvotes, downvotes, revisions, and accepted answers accumulated over 15 years.
+* **Reddit's data licensing:** In February 2024, [Reuters reported](https://www.reuters.com/technology/reddit-ai-content-licensing-deal-with-google-sources-say-2024-02-22/) that Reddit signed an artificial intelligence content licensing agreement with Google worth roughly $60 million annually, followed by a separate data agreement with OpenAI. Forums like `r/programming` and `r/sysadmin` contain long records of operational troubleshooting that cannot be produced synthetically.
+* **Curated code repositories:** The BigCode initiative, led by ServiceNow and Hugging Face, published the architecture for [The Stack v2](https://arxiv.org/abs/2402.19173). The project specifically tracks software licensing, repository metadata, and provenance to give model builders clean training corpora with explicit opt-out controls.
+* **Specialized human data platforms:** Firms like Scale AI and Surge AI employ experienced software engineers to write original code, draft detailed technical rationale, and solve novel algorithmic tasks under controlled environments where AI autocomplete tools are explicitly banned. Labs pay premium hourly rates for these datasets because verified human problem-solving cannot be fabricated at scale.
 
 ---
 
-## The Irony of the New Code Economy
+## How much code is 1 million tokens?
 
-There is a fascinating irony in where we have landed.
+The advertised rate of $1,000 per 1 million tokens sounds substantial, but the payout depends on how tokenization pipelines count source code.
 
-In 2026, generating code is cheaper and faster than it has ever been. An LLM can produce hundreds of lines of functional boilerplate in seconds for fractions of a cent.
+In programming languages:
+* 1 token represents roughly 3 to 4 characters (about half a keyword or variable name).
+* 1 formatted line of code contains 10 to 14 tokens on average.
+* 1 million tokens equals roughly 70,000 to 100,000 lines of code.
 
-Yet at the very same time, **unassisted human code from 2021 is being priced like an endangered species**. 
+| Component | Pipeline handling | Net token credit |
+| :--- | :--- | :--- |
+| `node_modules/` and `vendor/` | Stripped completely | 0 tokens |
+| `package-lock.json` and lockfiles | Discarded entirely | 0 tokens |
+| `dist/`, `build/`, compiled assets | Discarded entirely | 0 tokens |
+| Auto-generated schemas and migrations | Filtered out | 0 tokens |
+| Original proprietary logic and Git diffs | Kept after deduplication | ~5,000 to 15,000 tokens ($5 to $15) |
 
-The commodity is no longer the syntax; the commodity is the uncontaminated human intent behind it. If you have an old repository that you legitimately own from top to bottom, it may finally have monetary value—just make sure you read the indemnity clause before you cash the check.
+A repository that takes up 100 MB on disk rarely contains 100 MB of original source code. Ingestion systems discard dependency folders, compiled bundles, and lockfiles (which can contain hundreds of thousands of tokens of dependency graphs on their own). What remains after deduplication is the core handwritten logic, meaning an average personal project might yield between $10 and $50.
 
+### Deduplication and filtering pipelines
+
+Data ingestion engines apply rigorous filtering before calculating token payouts:
+1. **Deduplication:** Algorithms such as MinHash and Locality-Sensitive Hashing (LSH) detect near-duplicate files. If five repositories use the same open-source helper function or framework scaffolding, that code is counted once and credited only to the original source.
+2. **Boilerplate removal:** Standard configuration files, continuous integration scripts, and boilerplate directory setups are excluded from compensation metrics.
+3. **Language density differences:** Verbose languages like Java or C++ produce more tokens per feature than compact languages like Python or Go. However, pipelines normalize code volume against syntactic complexity to prevent low-information bloat from inflating payouts.
+
+---
+
+## The legal limits on selling old code
+
+Even developers with repositories from 2020 face legal constraints when attempting to license them.
+
+### Employment contracts and client ownership
+Most code written by engineers does not belong to them:
+* **Salaried employees:** Standard employment agreements assign intellectual property to the employer under work-for-hire doctrines. Employees cannot legally license internal tools, service code, or scripts written during their tenure.
+* **Agency and freelance contractors:** Client Master Services Agreements (MSAs) and Statements of Work assign deliverables to the client. Unless a contract contains explicit terms reserving proprietary ownership of custom modules, the paying client holds the rights.
+* **Personal projects:** Personal side projects rarely reach 100,000 lines of original proprietary logic without incorporating open-source libraries that carry their own license terms.
+
+### Indemnification clauses
+Data broker agreements require contributors to sign legal warranties:
+1. You certify that you hold complete, unencumbered ownership of the code.
+2. You certify that the repository does not contain third-party copyleft code (such as GPL or AGPL libraries) without required attribution.
+3. You certify that no client trade secrets or confidential materials are included.
+
+If an employer or client discovers their internal repository was submitted to an AI training pipeline, the contributor bears the legal liability. The risk of violating an employment contract or non-disclosure agreement outweighs small token payouts.
+
+### Forgotten credentials in Git history
+Older private repositories frequently contain credentials committed before environment variable hygiene became standard practice:
+* Database connection strings and local secrets.
+* Old API keys and internal test tokens.
+* Internal server names and internal team addresses.
+
+Automated regex filters catch standard key formats, but custom configuration files and embedded connection strings can slip through. Once weights absorb those tokens, the data cannot be extracted from the model.
+
+---
+
+## Regulatory pressure and data provenance
+
+The shift toward paid code licensing is also driven by regulatory compliance.
+
+Under the European Union's Artificial Intelligence Act, providers of general-purpose AI models must document and publish comprehensive summaries of the data used to train their systems. Indiscriminate web scraping leaves AI companies vulnerable to copyright claims and compliance penalties in European jurisdictions.
+
+In the United States, ongoing copyright litigation regarding open-source code ingestion has made tech companies cautious about using unverified repositories without documented consent. Licensing private code through formal contracts establishes a clear chain of custody. The data broker verifies repository provenance, tracks contributor consent, and provides the AI lab with commercial indemnity against future infringement claims.
+
+---
+
+## Who can actually participate?
+
+Because individual contributors face strict ownership limits, the market for private code licensing is practical for two specific groups:
+
+1. **Founders of closed startups:** Companies that shut down where founders retained the intellectual property. The software has no operational future, making licensing a way to recover residual value.
+2. **Software agencies with proprietary tooling:** Development firms that created internal scaffolding, starter platforms, or deployment engines under client contracts that explicitly preserved the agency's ownership.
+
+For individual developers, pre-2025 code has high value to AI labs precisely because it is rare and uncontaminated. The same contracts that made it valuable ensure that very few people have the legal right to sell it.
