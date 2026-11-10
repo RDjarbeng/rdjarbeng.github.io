@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for "Vector Versus Raster". The same circle twice: as square pixels (raster)
+       and as a path with anchor points and Bezier handles (vector).
+       Rules (generate-cover-image.md step 8): one headline, the watermark, one text colour.
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/vector_versus_raster_graphics.svg assets/images/posts/covers/vector_versus_raster_graphics_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <text x="640" y="150" fill="#141414" font-family="&apos;Arial Black&apos;, &apos;Helvetica Neue&apos;, Impact, sans-serif" font-size="108" font-weight="900" text-anchor="middle" textLength="1100" lengthAdjust="spacingAndGlyphs">VECTOR VS RASTER</text>
+
+  <!-- raster: the circle as square pixels -->
+  <g fill="#d7263d">
+    <rect x="854" y="285" width="30" height="30"/>
+    <rect x="887" y="285" width="30" height="30"/>
+    <rect x="920" y="285" width="30" height="30"/>
+    <rect x="953" y="285" width="30" height="30"/>
+    <rect x="788" y="318" width="30" height="30"/>
+    <rect x="821" y="318" width="30" height="30"/>
+    <rect x="854" y="318" width="30" height="30"/>
+    <rect x="887" y="318" width="30" height="30"/>
+    <rect x="920" y="318" width="30" height="30"/>
+    <rect x="953" y="318" width="30" height="30"/>
+    <rect x="986" y="318" width="30" height="30"/>
+    <rect x="1019" y="318" width="30" height="30"/>
+    <rect x="788" y="351" width="30" height="30"/>
+    <rect x="821" y="351" width="30" height="30"/>
+    <rect x="854" y="351" width="30" height="30"/>
+    <rect x="887" y="351" width="30" height="30"/>
+    <rect x="920" y="351" width="30" height="30"/>
+    <rect x="953" y="351" width="30" height="30"/>
+    <rect x="986" y="351" width="30" height="30"/>
+    <rect x="1019" y="351" width="30" height="30"/>
+    <rect x="755" y="384" width="30" height="30"/>
+    <rect x="788" y="384" width="30" height="30"/>
+    <rect x="821" y="384" width="30" height="30"/>
+    <rect x="854" y="384" width="30" height="30"/>
+    <rect x="887" y="384" width="30" height="30"/>
+    <rect x="920" y="384" width="30" height="30"/>
+    <rect x="953" y="384" width="30" height="30"/>
+    <rect x="986" y="384" width="30" height="30"/>
+    <rect x="1019" y="384" width="30" height="30"/>
+    <rect x="1052" y="384" width="30" height="30"/>
+    <rect x="755" y="417" width="30" height="30"/>
+    <rect x="788" y="417" width="30" height="30"/>
+    <rect x="821" y="417" width="30" height="30"/>
+    <rect x="854" y="417" width="30" height="30"/>
+    <rect x="887" y="417" width="30" height="30"/>
+    <rect x="920" y="417" width="30" height="30"/>
+    <rect x="953" y="417" width="30" height="30"/>
+    <rect x="986" y="417" width="30" height="30"/>
+    <rect x="1019" y="417" width="30" height="30"/>
+    <rect x="1052" y="417" width="30" height="30"/>
+    <rect x="755" y="450" width="30" height="30"/>
+    <rect x="788" y="450" width="30" height="30"/>
+    <rect x="821" y="450" width="30" height="30"/>
+    <rect x="854" y="450" width="30" height="30"/>
+    <rect x="887" y="450" width="30" height="30"/>
+    <rect x="920" y="450" width="30" height="30"/>
+    <rect x="953" y="450" width="30" height="30"/>
+    <rect x="986" y="450" width="30" height="30"/>
+    <rect x="1019" y="450" width="30" height="30"/>
+    <rect x="1052" y="450" width="30" height="30"/>
+    <rect x="755" y="483" width="30" height="30"/>
+    <rect x="788" y="483" width="30" height="30"/>
+    <rect x="821" y="483" width="30" height="30"/>
+    <rect x="854" y="483" width="30" height="30"/>
+    <rect x="887" y="483" width="30" height="30"/>
+    <rect x="920" y="483" width="30" height="30"/>
+    <rect x="953" y="483" width="30" height="30"/>
+    <rect x="986" y="483" width="30" height="30"/>
+    <rect x="1019" y="483" width="30" height="30"/>
+    <rect x="1052" y="483" width="30" height="30"/>
+    <rect x="788" y="516" width="30" height="30"/>
+    <rect x="821" y="516" width="30" height="30"/>
+    <rect x="854" y="516" width="30" height="30"/>
+    <rect x="887" y="516" width="30" height="30"/>
+    <rect x="920" y="516" width="30" height="30"/>
+    <rect x="953" y="516" width="30" height="30"/>
+    <rect x="986" y="516" width="30" height="30"/>
+    <rect x="1019" y="516" width="30" height="30"/>
+    <rect x="788" y="549" width="30" height="30"/>
+    <rect x="821" y="549" width="30" height="30"/>
+    <rect x="854" y="549" width="30" height="30"/>
+    <rect x="887" y="549" width="30" height="30"/>
+    <rect x="920" y="549" width="30" height="30"/>
+    <rect x="953" y="549" width="30" height="30"/>
+    <rect x="986" y="549" width="30" height="30"/>
+    <rect x="1019" y="549" width="30" height="30"/>
+    <rect x="854" y="582" width="30" height="30"/>
+    <rect x="887" y="582" width="30" height="30"/>
+    <rect x="920" y="582" width="30" height="30"/>
+    <rect x="953" y="582" width="30" height="30"/>
+  </g>
+
+  <!-- divider -->
+  <line x1="640" y1="270" x2="640" y2="630" stroke="#141414" stroke-width="6" stroke-dasharray="22 16" stroke-linecap="round"/>
+
+  <!-- vector: the same circle as a smooth path with its control points -->
+  <circle cx="360" cy="450" r="165" fill="#1d4f9c" stroke="#141414" stroke-width="7"/>
+  <g stroke="#141414" stroke-width="5">
+    <line x1="269" y1="285" x2="451" y2="285"/>
+    <line x1="525" y1="359" x2="525" y2="541"/>
+    <line x1="269" y1="615" x2="451" y2="615"/>
+    <line x1="195" y1="359" x2="195" y2="541"/>
+  </g>
+  <g fill="#f2c12e" stroke="#141414" stroke-width="5">
+    <circle cx="269" cy="285" r="10"/><circle cx="451" cy="285" r="10"/>
+    <circle cx="525" cy="359" r="10"/><circle cx="525" cy="541" r="10"/>
+    <circle cx="269" cy="615" r="10"/><circle cx="451" cy="615" r="10"/>
+    <circle cx="195" cy="359" r="10"/><circle cx="195" cy="541" r="10"/>
+    <rect x="347" y="272" width="26" height="26"/>
+    <rect x="512" y="437" width="26" height="26"/>
+    <rect x="347" y="602" width="26" height="26"/>
+    <rect x="182" y="437" width="26" height="26"/>
+  </g>
+
+  <text x="1236" y="694" fill="#141414" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="end">rdjarbeng.com</text>
+</svg>
