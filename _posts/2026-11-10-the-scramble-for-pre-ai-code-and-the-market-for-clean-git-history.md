@@ -48,7 +48,7 @@ AI training data has entered a new phase. During the first two years of large la
 
 Now buyers are targeting private repositories written before 2025.
 
-One clear example is a listing on [Pangea.ai's code licensing board](https://pangea.ai/code-licensing/companies?id=1376#request). The posting requests private source code repositories committed before 2025, offering $1,000 per 1 million tokens. In language model training, a token is a chunk of characters or word fragments that models use to measure text volume, roughly equating to 70,000 to 100,000 lines of code. The cutoff date and the focus on private repositories point to practical problems facing model developers: data contamination, copyright exposure, benchmark leakage, and the collapse in data diversity caused by AI tools themselves.
+One clear example surfaced recently in an email distributed to members of the Andela developer community, pointing to a request on [Pangea.ai's code licensing board](https://pangea.ai/code-licensing/companies?id=1376#request). The outreach invited developers to license private source code repositories committed before 2025, offering $1,000 per 1 million tokens. In language model training, a token is a chunk of characters or word fragments that models use to measure text volume, roughly equating to 70,000 to 100,000 lines of code. The cutoff date and the focus on private repositories point to practical problems facing model developers: data contamination, copyright exposure, benchmark leakage, and the collapse in data diversity caused by AI tools themselves.
 
 ![Flat editorial illustration of an archival code ledger and Git branch history stamped pre-2025](/assets/images/posts/covers/pre_ai_code_cover.jpg "The pre-AI code market")
 
@@ -144,7 +144,7 @@ Even developers with repositories from 2020 face legal constraints when attempti
 ### Employment contracts and client ownership
 Most code written by engineers does not belong to them:
 * **Salaried employees:** Standard employment agreements assign intellectual property to the employer under work-for-hire doctrines: the legal rule that an employer automatically owns whatever an employee creates on company time or equipment. Employees cannot legally license internal tools, service code, or scripts written during their tenure.
-* **Agency and freelance contractors:** Client Master Services Agreements (MSAs) and Statements of Work assign deliverables to the client. Unless a contract contains explicit terms reserving proprietary ownership of custom modules, the paying client holds the rights.
+* **Agency and freelance contractors:** Client Master Services Agreements (MSAs) and Statements of Work assign deliverables to the client. In talent networks like Andela, where engineers work as embedded contractors for external companies, client contracts almost universally vest full code ownership in the hiring company. Unless an agreement contains explicit terms reserving proprietary ownership of custom modules, the paying client holds the rights.
 * **Personal projects:** Personal side projects rarely reach 100,000 lines of original proprietary logic without incorporating open-source libraries that carry their own license terms.
 
 ### Indemnification clauses
