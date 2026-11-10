@@ -9,6 +9,7 @@ thumbnail: /assets/images/videos/youtube_6C0FjHoN3qE.jpg
 type: video
 genre: Science & Technology
 category: videos
+index: true
 ---
 
 Google Anti-gravity 2.0 marks a major shift from a standard developer tool to a fully standalone, agent-first desktop application. Powered by Gemini 3.5 Flash, the application allows developers and non-developers alike to build complex, full-stack software applications simply by conversing with AI.
