@@ -1,6 +1,6 @@
-// Version history of every post, read from git, for the dev-only /journey/
-// pages. Only runs under `eleventy --serve`; production builds get an empty
-// list and the journey/ templates are ignored (see eleventy.config.js).
+// Version history of every post, read from git, for the opt-in /journey/
+// pages. Only runs under `npm run start:journey`; every other build gets an
+// empty list and the journey/ templates are ignored (see eleventy.config.js).
 //
 // Every committed version of each post is kept, plus the uncommitted working
 // copy if there is one. Milestones (starred in the version pickers) are the
@@ -66,7 +66,7 @@ function render(body) {
 }
 
 module.exports = function () {
-  if (process.env.ELEVENTY_RUN_MODE !== "serve") return { posts: [] };
+  if (process.env.npm_lifecycle_event !== "serve:11ty:journey") return { posts: [] };
 
   // Newest first. Each commit: "\0<sha>\t<date>\t<subject>" then raw lines
   // ":<mode> <mode> <old blob> <new blob> <status>\t<path>[\t<new path>]".

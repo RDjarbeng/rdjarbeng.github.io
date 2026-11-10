@@ -9,7 +9,7 @@ eleventyComputed:
   title: "Journey: {{ jp.title }}"
 eleventyExcludeFromCollections: true
 ---
-{%- comment -%} Dev-only (npm start). Data comes from _data/journey.js. {%- endcomment -%}
+{%- comment -%} Opt-in (npm run start:journey). Data comes from _data/journey.js. {%- endcomment -%}
 <style>
   .journey-bar { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 12px; }
   .journey-bar label { flex: 1 1 280px; font-size: .85rem; }

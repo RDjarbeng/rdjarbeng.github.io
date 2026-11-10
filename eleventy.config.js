@@ -573,8 +573,12 @@ ${jsonLd}
   eleventyConfig.ignores.add("dropdownlists.txt");
   eleventyConfig.ignores.add("kroki_urls.txt");
   eleventyConfig.ignores.add("yt_card_styles.txt");
-  // Post history pages read git and the working copy; dev server only.
-  if (process.env.ELEVENTY_RUN_MODE !== "serve") eleventyConfig.ignores.add("journey/**");
+  // Post history pages read git and the working copy, which slows every rebuild, so they are
+  // built only by `npm run start:journey`. Otherwise remove old output so it can't be served stale.
+  if (process.env.npm_lifecycle_event !== "serve:11ty:journey") {
+    eleventyConfig.ignores.add("journey/**");
+    fs.rmSync(path.join(__dirname, "_site", "journey"), { recursive: true, force: true });
+  }
   eleventyConfig.ignores.add("lighthouse.json");
   eleventyConfig.ignores.add("*.png");
 
