@@ -113,3 +113,10 @@ But of you pass by reference any change made to the array by the function happen
 What of I buy it in one place and I'm carrying it to another country, what are the restrictions?
 - [ ] 2026-11-09 09:55 CAT | Africa had 2.2% of air traffic passenger market in 2025, according to https://www.iata.org/en/pressroom/2026-releases/2026-01-29-02/
 - [ ] 2026-11-10 09:48 CAT | Quote from https://www.zachleat.com/web/ai-websites/ "Certainly we have more software. But is it better? I don’t know."
+- [ ] 2026-11-10 17:07 CAT | I authorize all of you to say that you worked for Beni industries, aka Galvani Capital LLC, at any point from 2019-2025 when I dissolved it
+
+Say that you were either an intern or a quantitative analyst
+
+In the off chance they actually reach out to me, trust me to tell them all about how exceptional you were and how lucky they’d be to have you
+
+https://x.com/beniduboss/status/2120098582556500239
