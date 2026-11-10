@@ -9,219 +9,241 @@ tags:
   - JavaScript
   - Performance
   - Web Development
-title: "Fixing Eleventy JavaScript Heap Out of Memory in Watch Mode"
+title: "Eleventy Ran Out of Memory in Watch Mode. Forced GC Didn't Fix It."
 image: /assets/images/posts/covers/eleventy_heap_out_of_memory_fix_cover.jpg
-image_alt: "Visual representation of Node.js heap memory filling to 4GB crash versus stabilizing cleanly at 430MB with forced garbage collection"
+image_alt: "Flat illustration of a long chain of linked document pages weighing down a cracking red RAM stick while a small broom lies defeated beside it, with the headline The 10 GB Memory Leak"
 layout: post
 series: "Building This Blog"
 series_part: 8
-description: "Why Eleventy development servers hit Node's 4GB heap ceiling during long watch sessions, why static generators accumulate RAM, and how to stabilize memory with three clean fixes."
+description: "My Eleventy dev server hit a heap out of memory crash. Raising the limit and forcing garbage collection let it reach 10 GB instead. Heap snapshots found the real leak in my config."
 key_points:
-  - "In production, a static site requires almost zero server memory. In development, Eleventy is a compiler running inside Node's V8 engine that processes thousands of Markdown ASTs, templates, and asset hashes."
-  - "Node.js uses lazy garbage collection by default. During multi-hour watch sessions, incremental re-renders leave discarded template ASTs in heap memory until hitting V8's 4GB ceiling."
-  - "Editing global layout files like head.html triggers a re-render of every page in your site inside the existing process, causing immediate memory spikes."
-  - "Running Node with --expose-gc and calling global.gc() in eleventy.after forces immediate post-build reclamation, keeping active heap under 450MB indefinitely."
+  - "Forcing garbage collection only frees memory nothing refers to. My crash log already showed a full collection recovering just 3 MB out of 4 GB."
+  - "Raising Node's heap limit to 8 GB did not fix the leak. It let the dev server reach nearly 10 GB and push the whole PC close to running out of memory."
+  - "Heap measured right after a forced collection grew by about 150 MB on every rebuild, even when only 32 files were written."
+  - "The cause was copying Eleventy's item.data onto a long-lived object. item.data includes global data, so each rebuild kept the previous rebuild alive."
+  - "After the fix, heap stayed between 536 and 587 MB across the same 12 builds, against 2,138 MB before."
 card_items:
-  - name: "Eleventy (11ty)"
-    badge_1: "SSG"
+  - name: "Eleventy Data Cascade"
+    badge_1: "Docs"
+    badge_2: "Eleventy"
+    description: "How Eleventy merges global, directory and template data into the data each page sees."
+    url: "https://www.11ty.dev/docs/data-cascade/"
+    link_text: "Read the docs"
+  - name: "Node.js Heap Snapshots"
+    badge_1: "Guide"
     badge_2: "Node.js"
-    description: "The zero-config static site generator powering modern Markdown and Liquid blogs."
-    url: "https://www.11ty.dev/"
-    link_text: "Visit 11ty.dev"
-  - name: "V8 Heap & GC"
-    badge_1: "Engine"
-    badge_2: "Memory"
-    description: "V8 memory management, generational garbage collection, and --max-old-space-size mechanics."
-    url: "https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes"
-    link_text: "Read Node.js CLI Flags"
-  - name: "Node.js Expose GC"
-    badge_1: "Flag"
-    badge_2: "Optimization"
-    description: "The --expose-gc flag exposes the global.gc() function to runtime scripts for deterministic garbage collection."
-    url: "https://nodejs.org/api/vm.html"
-    link_text: "View GC Details"
+    description: "How to capture a V8 heap snapshot and find what is keeping objects in memory."
+    url: "https://nodejs.org/en/learn/diagnostics/memory/using-heap-snapshot"
+    link_text: "Read the guide"
 ---
 
-You are two hours deep into writing an article or refining your site layout. You hit `Ctrl + S` to tweak an icon in your header, look over at your terminal, and see this wall of red:
+My Eleventy dev server crashed with a heap out of memory error after two hours of editing. I raised Node's limit to 8 GB, forced garbage collection after every build, and wrote the first version of this post saying memory would now sit around 450 MB for days. Less than a day later, the same server was using nearly 10 GB and my PC had almost run out of memory.
+
+![Flat illustration of a long chain of linked document pages weighing down a cracking red RAM stick while a small broom lies defeated beside it](/assets/images/posts/covers/eleventy_heap_out_of_memory_fix_cover.jpg "The 10 GB Memory Leak")
+
+That first version was wrong, so this is the rewrite. If you found this page because of the same crash, the short version is that a bigger limit and `global.gc()` can hide a leak for a while, but neither can fix one. Here is how the real cause turned up, and what the numbers looked like before and after.
+
+---
+
+## The clue I ignored
+
+This is the crash that started it:
 
 ```text
 [11ty] Watching…
 
 <--- Last few GCs --->
 
-[38508:0000014DFF0AD000]  7175775 ms: Mark-Compact 4091.2 (4102.1) -> 4088.1 (4102.6) MB, pooled: 1 MB, 1070.39 / 0.00 ms  (average mu = 0.102, current mu = 0.012) allocation failure; scavenge might not succeed
-[38508:0000014DFF0AD000]  7176881 ms: Mark-Compact (reduce) 4092.1 (4102.6) -> 4089.6 (4097.1) MB, pooled: 0 MB, 542.78 / 0.00 ms  (+ 315.9 ms in 63 steps since start of marking, biggest step 5.1 ms, walltime since start of marking 911 ms) (average mu = 0.089, current mu = 0.006) allocation failure; scavenge might not succeed
+[38508:0000014DFF0AD000]  7175775 ms: Mark-Compact 4091.2 (4102.1) -> 4088.1 (4102.6) MB
 
 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
- 1: 00007FF7C868AE1F node::OnFatalError+1343
- 2: 00007FF7C92D37B7 v8::Function::NewInstance+423
- ...
 ERROR: "serve:11ty" exited with 134.
 ```
 
-Your dev server died with exit code 134. Node ran out of memory.
+I read that as V8 being lazy about cleaning up. The log says the opposite. `4091.2 -> 4088.1` means a full collection ran and recovered 3 MB out of 4 GB. V8 was not behind on its cleaning. Nearly everything in the heap was still referenced by something, so none of it counted as garbage.
 
-The immediate reaction most developers have is completely understandable: **"Wait, why on earth does a website need 4 GB of RAM just to run?!"**
+That rules out both things I did next:
 
-It shouldn't—and in production, it doesn't. But in development, you aren't just "running a website." You are running a compiler. Here is why Node's memory ceiling blows up during long watch sessions, why static generators accumulate heap, and how to permanently stabilize Eleventy's memory footprint.
-
-![Illustration showing Node.js heap memory hitting 4GB versus stabilizing at 430MB with forced garbage collection](/assets/images/posts/covers/eleventy_heap_out_of_memory_fix_cover.jpg "Eleventy JavaScript Heap Out of Memory Fix")
-
----
-
-## 1. Production vs. Compiler: The Scale Disconnect
-
-To understand the problem, you have to separate your site at runtime from your site at build time:
-
-1. **In production (e.g. GitHub Pages, Netlify, Cloudflare, Nginx):**  
-   The output is pure static HTML, CSS, client-side JS, and media files. There is no Node.js server running. A standard web server serves those files consuming virtually zero memory (often under 20 MB).
-2. **In development (`eleventy --serve`):**  
-   Eleventy is a compilation engine. In this blog's repository, Eleventy processes:
-   - **1,590+ Markdown files** (including 240+ blog posts and 1,238 gallery entries)
-   - KaTeX math parsing, custom Liquid tags, and syntax highlighting
-   - Category and tag relationship matrices
-   - Sitemaps, RSS feeds, search JSON dictionaries, and cover image manifests
-   - **2,425 generated output files** and **1,195 copied assets**
-
-A clean, single cold build of this entire 2,400-page catalog takes approximately **13 seconds** and peaks at **~500 MB of heap memory**. That is a completely healthy, normal number for compiling thousands of documents in V8.
-
-So how did 500 MB turn into 4,092 MB?
+- **Forcing garbage collection** after each build frees unreferenced memory sooner. It cannot touch memory that is still referenced.
+- **Raising the limit to 8 GB** only moved the failure. Before, one process crashed at 4 GB. After, it kept growing until it had 9.73 GB committed, the PC was at 45.6 of 49.7 GB, and Windows Search stopped working. The crash had been protecting my machine.
 
 ---
 
-## 2. Anatomy of the 2-Hour Watch Leak
+## Measuring instead of guessing
 
-Look closely at the numbers in the crash log:
+Two questions needed real answers.
+
+**Was something triggering endless rebuilds?** This was my first suspect, because Eleventy writes files and also watches files. It wasn't that. Left alone for 25 minutes, the server did 0 rebuilds and memory stayed flat at 730 MB. Later, 16 edits produced exactly 16 rebuilds.
+
+**Did memory grow with each rebuild?** To answer this I logged the heap straight after a forced collection. Taking the reading at that moment matters, because anything still counted must be referenced by something.
+
+| Build | Heap after forced GC |
+| :--- | ---: |
+| 1 (first build) | 565 MB |
+| 3 | 729 MB |
+| 5 | 1,007 MB |
+| 8 | 1,508 MB |
+| 12 | 2,138 MB |
+
+That is about 150 MB per rebuild, and it did not depend on how much was rebuilt. Editing a single post wrote only 32 files and still added about 140 MB. So the leak was per rebuild, not per page.
+
+One experiment gave it away. Touching `_data/site.js` made the heap drop from 2,028 MB to 567 MB in a single rebuild. That is the file Eleventy reloads when it changes, so whatever held the memory was hanging off that module.
+
+---
+
+## What the heap snapshots showed
+
+Node can write the whole heap to a file with `v8.writeHeapSnapshot()`. I took one after the first build and another four rebuilds later. V8 numbers objects in the order it creates them, so anything in the second snapshot with an ID higher than every ID in the first must be new and still alive.
+
+That came to 559 MB. Tracing those objects back to what was holding them, 391 MB led to the same place:
 
 ```text
-[38508:0000014DFF0AD000]  7175775 ms: Mark-Compact 4091.2 (4102.1) -> 4088.1 (4102.6) MB
+_data/site.js  (module.exports)
+  gallery_categories[]
+    site                  <- from the previous rebuild
+      gallery_categories[]
+        site              <- from the rebuild before that
+          gallery_categories[]
+            ...
 ```
 
-Two critical facts are buried in that line:
-* `7175775 ms` = **119.5 minutes**. The dev server had been alive in the background for two hours.
-* `4091.2 -> 4088.1 MB`: V8 paused execution for over 1,000 milliseconds to perform a full Mark-Compact garbage collection, but could only scavenge 3 MB of memory.
-
-Here is what happens during a typical afternoon editing session:
-
-### A. V8's "Lazy" Garbage Collector
-Node.js uses Google's V8 engine. By default, V8 is designed for speed and low CPU overhead. If your machine has 16 GB or 32 GB of system RAM, V8 will not waste CPU cycles aggressively reclaiming discarded objects if there is plenty of room left in its default heap space (~4 GB on 64-bit systems). It lets the heap expand until it starts approaching the ceiling.
-
-### B. The Global File Re-render Spike
-When you edit an individual post (`_posts/my-post.md`), Eleventy's incremental build only rebuilds that single file. Memory usage barely flinches.
-
-However, when you edit a global file—such as `_includes/head.html`, `_layouts/default.html`, or a shared stylesheet that injects into every header—**Eleventy must recompile all 2,425 pages**.
-
-Inside the existing Node process, thousands of new Abstract Syntax Trees (ASTs), parsed Liquid templates, and output buffers are instantiated. 
-
-### C. Watcher Object Retention
-Across two hours of saving files, editing diagrams, and triggering re-renders, discarded template scopes and file watcher metadata linger in memory. When a large re-render hits a process that already has 2.5 GB of accumulated uncollected memory, the temporary allocation pushes the heap past 4,096 MB.
-
-V8 attempts a panic collection cycle, fails to free enough memory within its threshold, and terminates the process: `FATAL ERROR: Ineffective mark-compacts near heap limit`.
-
-![Chart comparing uncollected heap accumulation steadily rising to 4GB crash versus post-build forced GC resetting memory back to 430MB](/assets/images/diagrams/eleventy-watch-heap-comparison.svg "Node.js Heap Behavior in Eleventy Watch Mode")
+There was one link per rebuild, and each link held that build's whole `collections` object and a 51 MB block of generated HTML for a dev-only page. Most of the remaining 168 MB was the current build's own template data, which is expected and only exists once.
 
 ---
 
-## 3. The 3-Step Permanent Solution
+## The bug was in my config
 
-Fixing this does not require abandoning Eleventy or splitting your site into smaller micro-sites. It requires three surgical changes:
+Eleventy was doing what it is designed to do. The mistake was mine, and it had been there since I migrated from Jekyll:
 
-### Step 1: Raise Node's Ceiling in `package.json`
+```javascript
+const siteData = require("./_data/site.js");
 
-By default, Node caps heap memory at approximately 2 GB or 4 GB depending on your environment. For large static sites with thousands of generated pages, give Node enough breathing room by passing `--max-old-space-size=8192` (8 GB) directly to your scripts:
+eleventyConfig.addCollection("gallery_categories", (collectionApi) => {
+  const cats = collectionApi.getFilteredByGlob("_gallery_categories/**/*.md");
+  siteData.gallery_categories = cats.map((c) => ({ ...c.data, url: c.url }));
+  return cats;
+});
+```
 
-```json
-{
-  "scripts": {
-    "build:11ty": "node --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.cjs",
-    "serve:11ty": "node --max-old-space-size=8192 --expose-gc ./node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
-    "serve:11ty:full": "node --max-old-space-size=8192 --expose-gc ./node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
-    "start": "run-p serve:sass serve:11ty"
-  }
+I wanted each category's front matter. But `item.data` is the merged [data cascade](https://www.11ty.dev/docs/data-cascade/), so it also contains every global data file, including `site`, along with `collections`.
+
+`siteData` is a module that lives as long as the process does. So on each rebuild:
+
+1. The new `gallery_categories` array was stored on the long-lived object.
+2. Each entry carried a `site`, and that `site` still pointed at the previous build's `gallery_categories`.
+3. Those entries carried their own `site`, and so on back to the first build.
+
+Nothing in the chain could ever be collected, because every generation was reachable from a module Node keeps loaded. The pattern appeared in six collections.
+
+---
+
+## The fix
+
+Copy only an item's own fields:
+
+```javascript
+const globalDataKeys = new Set([
+  ...fs.readdirSync(path.join(__dirname, "_data")).map((f) => path.parse(f).name),
+  "collections", "page", "eleventy", "pkg",
+]);
+
+const ownData = (item) =>
+  Object.fromEntries(Object.entries(item.data).filter(([key]) => !globalDataKeys.has(key)));
+
+// Then, wherever item.data was being copied:
+siteData.gallery_categories = cats.map((c) => ({ ...ownData(c), url: c.url }));
+```
+
+Here is the same sequence of builds before and after:
+
+![Line chart of heap after garbage collection over 12 builds. Before the fix it climbs from 565 MB to 2,138 MB. After the fix it stays near 580 MB.](/assets/images/diagrams/eleventy-watch-heap-comparison.svg "Heap after forced garbage collection, before and after the fix")
+
+| After the same 12 builds | Before | After |
+| :--- | ---: | ---: |
+| Heap after forced GC | 2,138 MB | 580 MB |
+| Total process memory (RSS) | 2,765 MB | 1,358 MB |
+| Heap added per rebuild | about 150 MB | 0 once settled |
+
+RSS is the amount of physical RAM the whole process is holding, which includes the JavaScript heap, Node itself, and space V8 keeps for reuse.
+
+I compared the generated site from before and after, and the fix changed no page content. The only differences were things that vary on every build anyway, like randomised recommended cards and feed timestamps.
+
+The 8 GB allowance is gone too. `npm run build:11ty` now passes with no heap flag, and the dev server runs with a 2 GB cap. Peak memory for a production build was 834 MB before the fix and 846 MB after, so the site never needed 8 GB to build.
+
+---
+
+## A guard, so this can't take the PC down again
+
+A heap limit only watches JavaScript objects. What actually hurt my PC was total process memory, so I added a small preload that stops the dev server if RSS passes a limit:
+
+```javascript
+// scripts/dev-memory-guard.cjs, loaded with: node -r ./scripts/dev-memory-guard.cjs
+const fs = require("fs");
+const { Worker, isMainThread } = require("worker_threads");
+
+// `node -r` also loads this file inside every worker, so only the main thread may start one.
+if (isMainThread && !process.env.DEV_MEMORY_GUARD_DISABLED) {
+  const limitMb = Number(process.env.DEV_MEMORY_LIMIT_MB) || 3072;
+  new Worker(
+    `const fs = require("fs");
+     const { limitMb } = require("worker_threads").workerData;
+     setInterval(() => {
+       const rssMb = Math.round(process.memoryUsage.rss() / 1048576);
+       if (rssMb <= limitMb) return;
+       fs.writeSync(2, "[memory guard] STOPPING the dev server: RSS is " + rssMb + " MB.\\n");
+       process.kill(process.pid, "SIGKILL");
+     }, 1000);`,
+    { eval: true, workerData: { limitMb } }
+  ).unref();
 }
 ```
 
-> **Why call `cmd.cjs` directly?**  
-> Specifying `node --max-old-space-size=... ./node_modules/@11ty/eleventy/cmd.cjs` is 100% cross-platform. It avoids environment variable syntax issues between Windows PowerShell, Command Prompt, macOS, and Linux without requiring extra packages like `cross-env`.
+It runs on its own thread because a build blocks the main thread, which is exactly when memory spikes.
+
+That `isMainThread` check is there for a reason. Without it, an early version of a probe like this started a worker, which loaded the preload, which started another worker. It reached 4.7 GB in about 16 seconds. If you preload anything that uses `worker_threads`, check this first.
+
+With a test limit of 400 MB, the guard stopped a real `npm start` at 423 MB with its message on screen, and the Sass watcher stopped with it.
 
 ---
 
-### Step 2: The Silver Bullet — Post-Build Forced Garbage Collection
+## What I can and can't claim this time
 
-Raising the ceiling to 8 GB prevents early crashes, but if memory never gets collected, it will eventually hit 8 GB too.
+The first version of this post promised a number I had never tested, so here is exactly what was measured. I ran the real `npm start` for 33 minutes, made 16 edits across posts, includes, data files, an asset and the config, and logged memory from Windows once a minute.
 
-The real solution is enabling the `--expose-gc` flag on Node and hooking into Eleventy's `eleventy.after` lifecycle event.
+| | RSS | Committed |
+| :--- | ---: | ---: |
+| Start | 962 MB | 1,029 MB |
+| Peak | 1,465 MB | 1,527 MB |
+| End | 1,442 MB | 1,527 MB |
 
-In your `eleventy.config.js`:
+The highest RSS I measured anywhere after the fix was 1,531 MB, in a separate run of 21 builds sampled more often.
 
-```javascript
-module.exports = function(eleventyConfig) {
-  // Existing configuration...
+Some limits on that:
 
-  // Clean up transient memory after every build/rebuild cycle
-  eleventyConfig.on("eleventy.after", async () => {
-    if (typeof global.gc === "function") {
-      global.gc();
-    }
-  });
-
-  return {
-    dir: {
-      input: ".",
-      output: "_site",
-    },
-  };
-};
-```
-
-#### Why This Works
-`--expose-gc` makes Node's internal garbage collector available at `global.gc()`. 
-
-Whenever Eleventy finishes rendering a build—whether it was 1 page or 2,425 pages—`global.gc()` immediately sweeps away all the temporary Markdown tokens, parsed Liquid syntax trees, and output strings.
-
-When we benchmarked this in our 2,400-page project:
-* **Before forced GC:** Heap was holding **~600 MB to 1.2 GB** immediately after a build, climbing with every edit.
-* **With forced GC:** Heap instantly drops back down to **437 MB** the moment the build completes.
-
-The memory curve becomes completely flat. You can leave `npm start` running for three days straight, and it will stay at ~450 MB.
+- **33 minutes is not three days.** I have not tested longer sessions.
+- **RSS still rose in steps during the test.** Its high points moved from about 1,080 MB to about 1,450 MB, with the largest step after a config edit. For the last 10 minutes it moved between 1,322 and 1,465 MB without trending up.
+- **Editing `eleventy.config.js` adds memory.** The first edit added about 380 MB of heap and later ones about 18 MB each. I haven't traced why.
+- **The guard's real default is untested.** I proved it fires at 400 MB. I haven't pushed a server to the 3,072 MB default.
+- **I can't prove what the 10 GB process did.** Its log is gone. At 150 MB per rebuild, about 60 rebuilds would account for it, but that is arithmetic. I only reproduced the growth up to about 3 GB before stopping.
 
 ---
 
-### Step 3: Prevent Watcher Loops in `.eleventyignore`
+## Why it still uses about 1 GB
 
-If your project directory contains scratch folders, AI agent logs, or build manifests, Eleventy's file watcher (Chokidar) may be quietly watching hundreds of files that have nothing to do with your public site. 
+Even with the leak gone, the first build peaks at about 960 MB of RSS, which sounds like a lot for a blog.
 
-Every time a background tool writes a temporary file, Eleventy triggers another build event.
+A heap snapshot after that build held 594 MB, and 418 MB of it was strings. The site turns about 9 MB of Markdown into 114 MB of finished HTML across 2,226 files, and the server stays running with the current build's templates and data in memory. The strings include 51 MB for the dev-only page mentioned above. I didn't break them down further. The gap between the 594 MB heap and the RSS is outside live JavaScript objects, such as Node itself and heap space V8 has not handed back.
 
-Audit your `.eleventyignore` and make sure non-content directories are excluded:
+That dev-only page rebuilt every version of every post on each save, and I only looked at it occasionally, so I made it opt-in. In a short comparison of three rebuilds each, peak RSS was 866 MB without it and 1,187 MB with it.
 
-```gitignore
-# Environments and background agent tools
-.git/
-.github/**
-.vscode/**
-.claude/**
-.agent/**
-node_modules/**
-_site/**
-
-# Scratch directories and build artifacts
-scratch/**
-openresearch/**
-misc_crawls_from_web/**
-cover-images.txt
-*.log
-```
+A dev server is a compiler that stays open, so needing that much is normal. Needing more after every save is not.
 
 ---
 
-## 4. Summary Checklist
+## If your Eleventy server keeps growing
 
-| Issue | Root Cause | Solution |
-| :--- | :--- | :--- |
-| **Crash with Code 134** | Process hits Node's default 4 GB heap limit | Add `--max-old-space-size=8192` in `package.json` |
-| **Creeping Memory in Watch Mode** | V8 defers garbage collection of parsed ASTs | Add `--expose-gc` and call `global.gc()` in `eleventy.after` |
-| **Random Mid-Edit Rebuilds** | Watcher monitoring non-site files | Exclude tools, agent logs, and scratch folders in `.eleventyignore` |
-| **Global Template Lag** | Editing layouts forces site-wide re-render | Normal behavior; with forced GC, memory returns to baseline immediately |
-
-With these three adjustments in place, your dev server remains fast, responsive, and predictable—no matter how large your archive grows or how long you keep your terminal open.
+1. Log heap right after a forced collection, on each rebuild. If that number climbs, you have a real leak and more garbage collection will not help.
+2. Don't raise `--max-old-space-size` until you know why it's growing.
+3. Search your config for `...item.data`, or anything else that copies `data` onto an object outliving the build. Copy the fields you need instead.
+4. If the numbers point to a leak, take two heap snapshots a few rebuilds apart and look at what holds the new objects.
+5. Keep non-site folders in `.eleventyignore`. It wasn't my problem, but tools writing into watched folders do cause surprise rebuilds.
