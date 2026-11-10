@@ -579,6 +579,16 @@ ${jsonLd}
   eleventyConfig.ignores.add("*.png");
 
   // 8. Collections & Site Bridge
+  // An item's own fields, without what Eleventy merges in from the global data. Never copy
+  // `item.data` itself into siteData: it contains `site`, so each rebuild's copy kept the
+  // previous rebuild's `site` alive, adding about 150 MB of heap per rebuild under --serve.
+  const globalDataKeys = new Set([
+    ...fs.readdirSync(path.join(__dirname, "_data")).map((f) => path.parse(f).name),
+    "collections", "page", "eleventy", "pkg",
+  ]);
+  const ownData = (item) =>
+    Object.fromEntries(Object.entries(item.data).filter(([key]) => !globalDataKeys.has(key)));
+
   eleventyConfig.addCollection("posts", (collectionApi) => {
     const posts = collectionApi.getFilteredByGlob("_posts/**/*.md")
       .filter((p) => p.data.published !== false)
@@ -613,14 +623,14 @@ ${jsonLd}
 
   eleventyConfig.addCollection("authors", (collectionApi) => {
     const authors = collectionApi.getFilteredByGlob("_authors/**/*.md");
-    siteData.authors = authors.map((a) => ({ ...a.data, url: a.url }));
+    siteData.authors = authors.map((a) => ({ ...ownData(a), url: a.url }));
     return authors;
   });
 
   eleventyConfig.addCollection("video_collections", (collectionApi) => {
     const vids = collectionApi.getFilteredByGlob("_video_collections/**/*.md");
     siteData.video_collections = vids.map((v) => ({
-      ...v.data,
+      ...ownData(v),
       slug: v.fileSlug,
       url: v.url
     }));
@@ -630,7 +640,7 @@ ${jsonLd}
   eleventyConfig.addCollection("books", (collectionApi) => {
     const books = collectionApi.getFilteredByGlob("_books/**/*.md");
     siteData.books = books.map((b) => ({
-      ...b.data,
+      ...ownData(b),
       slug: b.fileSlug,
       url: b.url
     }));
@@ -640,7 +650,7 @@ ${jsonLd}
   eleventyConfig.addCollection("book_categories", (collectionApi) => {
     const cats = collectionApi.getFilteredByGlob("_book_categories/**/*.md");
     siteData.book_categories = cats.map((c) => ({
-      ...c.data,
+      ...ownData(c),
       slug: c.fileSlug,
       url: c.url
     })).sort((a, b) => (a.weight || 0) - (b.weight || 0));
@@ -649,13 +659,13 @@ ${jsonLd}
 
   eleventyConfig.addCollection("gallery_categories", (collectionApi) => {
     const cats = collectionApi.getFilteredByGlob("_gallery_categories/**/*.md");
-    siteData.gallery_categories = cats.map((c) => ({ ...c.data, url: c.url }));
+    siteData.gallery_categories = cats.map((c) => ({ ...ownData(c), url: c.url }));
     return cats;
   });
 
   eleventyConfig.addCollection("category_info", (collectionApi) => {
     const info = collectionApi.getFilteredByGlob("_category_info/**/*.md");
-    siteData.category_info = info.map((c) => ({ ...c.data, url: c.url }));
+    siteData.category_info = info.map((c) => ({ ...ownData(c), url: c.url }));
     return info;
   });
 
@@ -924,7 +934,7 @@ ${jsonLd}
     fs.writeFileSync(outputPath, Array.from(coverImages).join("\n") + "\n");
     console.log(`[Cover Images] Wrote ${coverImages.size} image paths to cover-images.txt`);
 
-    // Force garbage collection in watch mode after large builds to prevent heap accumulation
+    // Under --serve, return memory sooner between rebuilds. This cannot free anything still referenced.
     if (typeof global.gc === "function") {
       global.gc();
     }
