@@ -203,3 +203,6 @@ Which books have interconnected chapters, maybe one book has a theory section on
 
 Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need
 - [ ] Increase font size across the site so most text uses the same size as email font large by default
+- [ ] Bug: Something is wrong on the youtube page the playlist: Neural Networks for Machine Learning —Geoffrey Hinton 
+
+includes some other videos from somewhere else
