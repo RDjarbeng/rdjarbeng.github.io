@@ -202,3 +202,4 @@ Temporary processing error
 Which books have interconnected chapters, maybe one book has a theory section on Fourier, and another has a place you can apply it
 
 Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need
+- [ ] Increase font size across the site so most text uses the same size as email font large by default
