@@ -120,3 +120,4 @@ Say that you were either an intern or a quantitative analyst
 In the off chance they actually reach out to me, trust me to tell them all about how exceptional you were and how lucky they’d be to have you
 
 https://x.com/beniduboss/status/2120098582556500239
+- [ ] 2026-11-10 17:28 CAT | Repo pushed to ai-model-speed-benchmark, need to report on this and create a post for it. ALso need a way to visualize this data that's friendly and excellent for future updates
