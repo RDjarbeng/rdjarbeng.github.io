@@ -1,5 +1,7 @@
 ---
-title: I actually don't miss coding by hand
+title: I actually don't miss coding by hand- Andrew Ng
+published: true
+date: 2026-11-04T20:05:54+02:00
 platform: youtube
 youtube_id: https://youtu.be/qeMMnOiF51A
 embed_code: ''
@@ -7,8 +9,6 @@ thumbnail: ''
 type: video
 genre: Interviews
 category: videos
-date: '2026-11-04T20:05:54+02:00'
-published: true
 ---
 
 Andrew Ng defines AI engineering not merely as a standalone job title, but as a critical, evolving skill set that benefits professionals across all software domains, including front-end, back-end, DevOps, and mobile development. While traditional software engineering focuses on building and maintaining deterministic systems, AI engineering specifically addresses the uncertainty inherent in AI-powered applications, where outcomes are not always predictable in advance.
