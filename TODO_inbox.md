@@ -121,3 +121,4 @@ In the off chance they actually reach out to me, trust me to tell them all about
 
 https://x.com/beniduboss/status/2120098582556500239
 - [ ] 2026-11-10 17:28 CAT | Repo pushed to ai-model-speed-benchmark, need to report on this and create a post for it. ALso need a way to visualize this data that's friendly and excellent for future updates
+- [ ] 2026-11-11 12:45 CAT | Where does this behavior come from where you pay for a service, it could be a health scan, a request for information, a document or transcript and it will not be worked on or delivered until you follow-up to see what the progress is. Example is Ghana. Why do some systems just work, you request a document you receive it, you pay for a service that promised to take 3 days and you receive it before the 3 days is up and you don't speak to anybody. What's the difference, let's analyze from a system and environment perspective
