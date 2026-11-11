@@ -206,3 +206,6 @@ Or a chapter collection for people who want to learn Laplace or codecs, so it's 
 - [ ] Bug: Something is wrong on the youtube page the playlist: Neural Networks for Machine Learning —Geoffrey Hinton 
 
 includes some other videos from somewhere else
+- [ ] CMS Status context: Let's see if we can add this to the cms:  preview_context: Cloudflare Pages
+
+https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
