@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for Pre-AI Code Licensing Post
+       Specifications:
+       - 16:9 Aspect Ratio (1280x720)
+       - Background: #f4f1e6 (cream matte)
+       - At most three text elements: Headline (>=64px), hook (24px), watermark (18px)
+       - Exactly ONE solid text color (#141414)
+       - Flat editorial illustration: Archival repository ledger, Git branch history, and pre-2025 certification stamp
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/pre_ai_code.svg assets/images/posts/covers/pre_ai_code_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- Headline & Hook: Solid #141414 text only -->
+  <g fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
+    <text x="640" y="108" font-size="68" font-weight="900" letter-spacing="1">THE PRE-AI CODE BOOM</text>
+    <text x="640" y="156" font-size="23" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">WHY UNCONTAMINATED REPOS HAVE A PRICE</text>
+  </g>
+
+  <!-- Illustration Area: Archival Repo Binder, Git Trunk, and Pre-2025 Stamp -->
+  <g transform="translate(640, 420)">
+    <!-- Base grounding bar -->
+    <rect x="-460" y="180" width="920" height="8" fill="#141414" rx="4"/>
+    <line x1="-420" y1="210" x2="420" y2="210" stroke="#f2c12e" stroke-width="6" stroke-dasharray="30 20"/>
+
+    <!-- Archival repository binder (Matte navy blue and vibrant red) -->
+    <g transform="translate(-360, -140)">
+      <!-- Folder back tab -->
+      <path d="M 0 30 L 120 30 L 150 0 L 480 0 L 480 280 L 0 280 Z" fill="#1d4f9c"/>
+      <!-- Inner paper pages -->
+      <rect x="20" y="20" width="440" height="250" fill="#ffffff" rx="4"/>
+      <!-- Left spine border -->
+      <rect x="20" y="20" width="30" height="250" fill="#e5dfd0"/>
+      <!-- Notebook binding rings -->
+      <circle cx="35" cy="50" r="7" fill="#141414"/>
+      <circle cx="35" cy="100" r="7" fill="#141414"/>
+      <circle cx="35" cy="150" r="7" fill="#141414"/>
+      <circle cx="35" cy="200" r="7" fill="#141414"/>
+      <circle cx="35" cy="245" r="7" fill="#141414"/>
+
+      <!-- Clean code line blocks (flat vector bars, no small unreadable text) -->
+      <rect x="75" y="45" width="80" height="12" fill="#d7263d" rx="3"/>
+      <rect x="165" y="45" width="120" height="12" fill="#1d4f9c" rx="3"/>
+
+      <rect x="95" y="70" width="180" height="10" fill="#141414" opacity="0.3" rx="3"/>
+      <rect x="95" y="90" width="240" height="10" fill="#141414" opacity="0.3" rx="3"/>
+      <rect x="115" y="110" width="150" height="10" fill="#141414" opacity="0.25" rx="3"/>
+      <rect x="115" y="130" width="200" height="10" fill="#141414" opacity="0.25" rx="3"/>
+      <rect x="95" y="150" width="90" height="10" fill="#141414" opacity="0.3" rx="3"/>
+
+      <!-- Large stylized code brackets -->
+      <path d="M 330 65 L 310 85 L 310 115 L 295 130 L 310 145 L 310 175 L 330 195" fill="none" stroke="#f2c12e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 380 65 L 400 85 L 400 115 L 415 130 L 400 145 L 400 175 L 380 195" fill="none" stroke="#f2c12e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Folder front lip -->
+      <path d="M 0 170 L 480 170 L 480 280 L 0 280 Z" fill="#d7263d"/>
+      <rect x="0" y="165" width="480" height="8" fill="#141414"/>
+    </g>
+
+    <!-- Git Branch Pipeline Illustration (Right side) -->
+    <g transform="translate(160, -40)">
+      <!-- Main trunk line -->
+      <line x1="-30" y1="120" x2="260" y2="120" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+      <!-- Feature branch curve -->
+      <path d="M 30 120 C 60 120, 70 30, 110 30 L 190 30 C 220 30, 230 120, 250 120" fill="none" stroke="#1d4f9c" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Commit Nodes on Feature Branch -->
+      <circle cx="110" cy="30" r="16" fill="#f2c12e" stroke="#141414" stroke-width="5"/>
+      <circle cx="160" cy="30" r="16" fill="#f2c12e" stroke="#141414" stroke-width="5"/>
+
+      <!-- Commit Nodes on Main Trunk -->
+      <circle cx="0" cy="120" r="18" fill="#d7263d" stroke="#141414" stroke-width="5"/>
+      <circle cx="80" cy="120" r="18" fill="#d7263d" stroke="#141414" stroke-width="5"/>
+      <circle cx="170" cy="120" r="18" fill="#d7263d" stroke="#141414" stroke-width="5"/>
+      <circle cx="250" cy="120" r="22" fill="#1d4f9c" stroke="#141414" stroke-width="6"/>
+
+      <!-- Git branch label tag (pure geometry) -->
+      <rect x="-10" y="150" width="80" height="24" rx="6" fill="#141414"/>
+      <circle cx="5" cy="162" r="4" fill="#ffffff"/>
+      <rect x="18" y="158" width="42" height="8" rx="2" fill="#ffffff"/>
+    </g>
+
+    <!-- Rubber Stamp Seal: "PRE-2025 / VERIFIED HUMAN" -->
+    <g transform="translate(80, -60) rotate(-14)">
+      <!-- Double outer seal circle -->
+      <circle cx="0" cy="0" r="76" fill="none" stroke="#d7263d" stroke-width="6"/>
+      <circle cx="0" cy="0" r="68" fill="none" stroke="#d7263d" stroke-width="2" stroke-dasharray="8 5"/>
+      <!-- Stamp solid fill backing -->
+      <circle cx="0" cy="0" r="64" fill="#f4f1e6" opacity="0.95"/>
+      <!-- Star icons inside stamp -->
+      <polygon points="0,-48 4,-38 15,-38 6,-32 10,-22 0,-28 -10,-22 -6,-32 -15,-38 -4,-38" fill="#d7263d"/>
+      <polygon points="0,48 4,38 15,38 6,32 10,22 0,28 -10,22 -6,32 -15,38 -4,38" fill="#d7263d"/>
+      <!-- Stamp central text badge -->
+      <rect x="-56" y="-18" width="112" height="36" fill="#d7263d" rx="4"/>
+      <text x="0" y="7" font-family="'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">PRE-2025</text>
+    </g>
+  </g>
+
+  <!-- Watermark: Solid #141414 text -->
+  <text x="640" y="700" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="400" fill="#141414" text-anchor="middle">rdjarbeng.com</text>
+</svg>
+

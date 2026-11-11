@@ -17,6 +17,8 @@ _site/**
 
 # Documentation, scratch, and plans
 README.md
+GEMINI.md
+AGENTS.md
 TODO*.md
 index_old.md
 posts.md.bak
