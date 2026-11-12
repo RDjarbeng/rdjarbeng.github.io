@@ -209,3 +209,4 @@ includes some other videos from somewhere else
 - [ ] CMS Status context: Let's see if we can add this to the cms:  preview_context: Cloudflare Pages
 
 https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
+- [ ] Interesting repo, I'm considering doing this for my site mascot using one of my avatars for posts: https://myoctocat.com/
