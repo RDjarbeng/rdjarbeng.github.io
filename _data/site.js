@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 const yaml = require("js-yaml");
+const { getPostLastModified } = require("../scripts/git-dates.cjs");
 
 function slugify(str) {
   if (!str) return "";
@@ -128,9 +129,12 @@ const posts = postFiles.map((file) => {
     ? `${monthNames[date.getMonth()]} ${date.getDate()}`
     : `${monthNames[date.getMonth()]} ${date.getDate()}, ${postYear}`;
   const iso_date = date.toISOString();
+  const last_modified = getPostLastModified(rel, parsed.data.last_modified_at || parsed.data.updated, date);
+  const last_modified_at = last_modified ? last_modified.toISOString() : null;
 
   return {
     ...parsed.data,
+    last_modified_at,
     title: parsed.data.title || "",
     categories,
     categories_data,
@@ -198,11 +202,14 @@ const personal = personalFiles.map((file) => {
     ? `${monthNames[date.getMonth()]} ${date.getDate()}`
     : `${monthNames[date.getMonth()]} ${date.getDate()}, ${postYear}`;
   const iso_date = date.toISOString();
+  const last_modified = getPostLastModified(rel, parsed.data.last_modified_at || parsed.data.updated, date);
+  const last_modified_at = last_modified ? last_modified.toISOString() : null;
 
   const author_info = getAuthorInfo(parsed.data.author || "Richard");
 
   return {
     ...parsed.data,
+    last_modified_at,
     title: parsed.data.title || "",
     categories,
     categories_data,

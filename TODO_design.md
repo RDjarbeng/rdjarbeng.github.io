@@ -37,6 +37,21 @@ Possible future implementation:
 
 ## High Priority - Immediate Fixes & Critical Enhancements
 
+### Credibility & citability (audit 2026-11-13): the changes that move the needle
+Goal: the site should look and behave like a source a professor would link to. Technical SEO is already solid (BlogPosting/Person JSON-LD, canonical URLs, breadcrumbs, Markdown alternates, legacy redirects). What's missing is the trust layer.
+
+- [x] **Real "Last updated" dates.** No post sets `last_modified_at`, so JSON-LD `dateModified` always equals the publish date and readers never see an update. Derive it from git history at build time (or a front-matter `updated:` field for substantive edits only). Show "Updated <date>" in the post header. (Highest impact, Low–Medium complexity: `eleventy.config.js` seo tag + `_layouts/post.html`)
+- [ ] **Editorial standards page** (`/editorial-policy/`): how posts are researched and sourced, the AI-assistance policy, the corrections policy (with a public corrections log), affiliations/conflicts (CMU-Africa), and how to report an error. Link it from the footer and from every post's author card. (Highest impact, Low complexity)
+- [ ] **"Cite this page" box on posts**: a ready-to-copy citation (Author. (Year). *Title*. rdjarbeng.com. URL, accessed date) plus BibTeX. Also add Highwire `citation_title` / `citation_author` / `citation_publication_date` meta tags so Google Scholar and Zotero pick posts up correctly. (High impact, Low complexity: `_layouts/post.html`, seo tag)
+- [ ] **Standard sources/footnotes rendering**: enable markdown-it-footnote (or a `references:` front-matter list) so citations render consistently as numbered references with a "Sources" section, not ad hoc links. (High impact, Medium complexity)
+- [ ] **Standard AI-assistance disclosure**: add front matter like `ai_assistance: drafting | editing | images | none`, rendered as a short consistent note linking to the editorial policy. Replaces the 11 ad hoc paragraphs, and the Gemini "additional comments" should either meet that bar or be removed. (High impact, Low complexity)
+- [ ] **Content-type labels**: front matter `content_type: analysis | guide | explainer | paper-review | news | opinion | personal`, shown as a badge, so a visitor (or professor) can tell a researched analysis from a quick note at a glance. Let the posts listing filter on it. (Medium–High impact, Low complexity)
+- [ ] **Author identity that verifies itself**: use a real photo on `/about/` and the author card instead of the logo in Person schema. Add `sameAs` for ORCID, Google Scholar, LinkedIn, GitHub and CMU-Africa profiles, plus `affiliation`. Align job titles: `/about/` says "Software Engineer | ML Engineer | Solutions Architect & Embedded Systems" while the schema says "Software and Machine Learning Engineer". Add a short "Research & publications" section. (High impact, Low complexity: `about.md`, `_authors/richard.md`, seo tag)
+- [ ] **Topic hub pages** for the expertise clusters (start with *Air Quality & Sensing in Africa*): a curated, maintained landing page that orders the posts from fundamentals → data sources → standards → original work. Hubs are the pages institutions link to. (High impact, Medium complexity)
+- [ ] **Datasets/projects with DOIs**: publish original data and code (Kigali dashboard, sensor data) to Zenodo/GitHub releases and render a "Data & code" box with the DOI on the related posts. (High long-term impact, Medium complexity)
+- [ ] **Remove trust-eroding third-party bits from posts**: the applause button loads unversioned `unpkg.com/applause-button` (pin the version or self-host), and Mermaid loads as `mermaid@10` (pin the exact version). Consider dropping claps on analysis/guide posts. (Medium impact, Trivial complexity: `_includes/head.html`, `_layouts/post.html`)
+- [ ] **Homepage rich results failing** (noted in inbox): fix it so the homepage emits valid `WebSite` + `Person`/`Organization` JSON-LD. (Medium impact, Low complexity)
+
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 

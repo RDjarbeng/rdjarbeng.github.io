@@ -35,8 +35,8 @@ body_class: post-page has-side-toc
       {% assign author_obj = site.authors | where: 'short_name', post_author | first %}
       {% if post_last_modified_at %}
       <div class="last_edited">
-        Last edited: <time datetime="{{ post_last_modified_at | date_to_xmlschema }}" data-local="time">{{
-          post_last_modified_at | date: "%-d %B, %Y at %-I:%M %p" }}</time>
+        Last updated: <time datetime="{{ post_last_modified_at | date_to_xmlschema }}" data-local="time">{{
+          post_last_modified_at | date: "%B %-d, %Y at %-I:%M %p" }}</time>
       </div>
       {% endif %}
       {% if author_obj %}
