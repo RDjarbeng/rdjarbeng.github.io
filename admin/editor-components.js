@@ -26,7 +26,11 @@ CMS.registerEditorComponent({
   pattern: /^\{% media "(?<item>[^"]*)" %\}$/m,
   toBlock: ({ item } = {}) => `{% media "${item || ""}" %}`,
   toPreview: ({ item } = {}) =>
-    `<p style="padding:12px;border:1px dashed #999;border-radius:8px;margin:0">
+    `<figure class="gallery-media-preview" style="padding:12px;border:1px dashed #999;border-radius:8px;margin:0">
       Gallery media: <code>${item || "none selected"}</code>
-    </p>`,
+    </figure>`,
+  htmlSelector: "figure.gallery-media-preview",
+  fromBlockHTML: (el) => ({ item: el?.dataset?.item || "" }),
+  toBlockHTML: ({ item } = {}) =>
+    `<figure class="gallery-media-preview" data-item="${item || ""}">Gallery media: ${item || "none selected"}</figure>`,
 });
