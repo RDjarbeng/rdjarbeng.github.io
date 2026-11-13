@@ -1,5 +1,10 @@
 ---
 layout: post
+key_points:
+  - "A critical, active supply chain attack is currently targeting the popular npm package Axios, which has over 100 million weekly downloads."
+  - "The malicious payload involves a new, obfuscated dependency called `plain-crypto-js@4.2.1`, designed to compromise the host machine immediately upon installation."
+  - "The attack was discovered and publicly reported by X/Twitter user @feross, who is the Founder and CEO of Socket Security and a Visiting lecturer at Stanford."
+  - "Immediate action is required for JavaScript and Node.js developers using Axios, including not upgrading to the latest version, pinning the exact version in `package.json`, auditing lockfiles, and scanning CI/CD pipelines for the presence of the malicious package."
 title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved?)"
 date: 2026-03-31T23:08:34+02:00
 author: Richard

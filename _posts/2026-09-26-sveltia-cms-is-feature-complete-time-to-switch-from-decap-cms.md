@@ -8,6 +8,11 @@ tags:
   - Open Source
   - Jamstack
   - Developer Tools
+key_points:
+  - "Sveltia CMS has reached complete feature parity with Decap CMS, resolving years of open bugs and architectural stagnation."
+  - "The project provides a seamless handoff for non-technical editors to create, edit, and publish content without touching Markdown syntax or terminal commands."
+  - "Sveltia CMS is a Git-based content management system that allows editors to update page copy, media files, and taxonomy tags through structured forms, while content lives as files in a Git repository."
+  - "The project has resolved 335 reported Netlify/Decap issues, with a roadmap to resolve 450 more, and has gained over 530 production sites and 160 weekly npm downloads."
 title: Sveltia CMS is feature complete. Time to switch from Decap CMS
 image: /assets/images/posts/covers/sveltia-cms-feature-complete.jpg
 image_alt: Illustration depicting migration from Netlify CMS and Decap CMS to Sveltia CMS

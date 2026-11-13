@@ -21,6 +21,11 @@ tags:
   - Payments
   - Visa
   - MasterCard
+key_points:
+  - "Banks often promote Visa and Mastercard as efficient tools for swift, seamless transactions, but they lack the ability to transfer funds directly between cardholders."
+  - "Direct transfers between cardholders require additional steps, fees, and delays, as these cards are primarily designed for merchant payments and online payments."
+  - "Most banks do not allow Visa or Mastercard to fund wire transfers directly, and fees for such transfers can range from $25 to $50, depending on the method and amount."
+  - "Third-party services like Wise, PayPal, and Venmo offer alternatives for transferring money between cardholders, with fees typically ranging from 0.43% to 2.9% plus a fixed fee, and processing times of hours to 2 days."
 title: Why Can't I Just Send Money With My Visa Card?
 image: /assets/images/visa_locked_image.jpg
 layout: post

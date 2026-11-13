@@ -8,6 +8,11 @@ tags:
   - Environmental Monitoring
   - PM2.5
   - AQI
+key_points:
+  - "The Air Quality Index (AQI) is a vital tool developed by the U.S. Environmental Protection Agency (EPA) to communicate outdoor air quality and its potential health impacts."
+  - "The AQI uses a color-coded system with six categories, each representing a different level of health concern, based on index values ranging from 0 to 500+."
+  - "The EPA establishes AQI values for five major air pollutants regulated by the Clean Air Act, including ground-level ozone, particle pollution (PM2.5 and PM10), carbon monoxide, sulfur dioxide, and nitrogen dioxide."
+  - "Understanding the AQI can help individuals, especially those in sensitive groups, make informed decisions about outdoor activities and potential exposure to air pollution, and it plays a crucial role in protecting public health by providing easily accessible information about air quality."
 title: Understanding the Air Quality Index (AQI)
 image: /assets/images/air_quality/aqi.png
 layout: post

@@ -3,6 +3,11 @@ date: 2025-05-27T22:30:00
 author: Richard
 tags:
   - Website
+key_points:
+  - "SEO, or Search Engine Optimization, is a strategy websites use to rank higher on search engines like Google."
+  - "SEO involves creating comprehensive content that covers every aspect of a topic, which can lead to lengthy articles."
+  - "Websites aim to keep users engaged by providing detailed information, which can result in longer dwell times and higher SEO rankings."
+  - "Backlinks and authority are crucial in SEO, as websites want other sites to link to their content, which can be achieved through detailed and comprehensive articles."
 title: "Why Websites Take So Long to Answer Your Question (Blame SEO)"
 image: /assets/images/website_long_text_on_screen.jpg
 layout: post

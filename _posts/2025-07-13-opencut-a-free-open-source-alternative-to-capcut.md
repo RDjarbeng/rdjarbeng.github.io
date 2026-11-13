@@ -5,6 +5,11 @@ tags:
   - Capcut
   - open-source
   - Video editing
+key_points:
+  - "OpenCut is a free, open-source alternative to CapCut, designed to provide a powerful, user-friendly video editing experience without the restrictions of modern freemium apps."
+  - "The project is built entirely to run inside a web browser, ensuring privacy by processing all video content locally on the user's device, and offering no watermarks on exported videos."
+  - "OpenCut is currently in its early beta stages, supporting essential features like basic timeline manipulation, multi-track functionality, and clean exports. The project is hosted on GitHub, where a vibrant community is actively contributing to its stable release."
+  - "The sudden shift in CapCut's pricing model has sparked discontent among creators, leading to a growing interest in open-source editing alternatives like OpenCut. By supporting OpenCut, users are not just getting a free video editor but also contributing to a movement for fair, accessible creative tools that respect their users."
 title: 'OpenCut: A Free, Open-Source Alternative to CapCut'
 image: /assets/images/opencut.png
 image_alt: 'Cover image for OpenCut: A Free, Open-Source Alternative to CapCut'

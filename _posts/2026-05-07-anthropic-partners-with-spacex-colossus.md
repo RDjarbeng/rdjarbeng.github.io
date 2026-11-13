@@ -6,6 +6,11 @@ tags:
   - Anthropic
   - AI
   - Elon Musk
+key_points:
+  - "Anthropic has partnered with SpaceX to access Colossus 1, a massive supercomputer facility in Memphis with over 300 megawatts of power capacity and 220,000 NVIDIA GPUs."
+  - "This partnership provides Anthropic with significant compute capacity for future model development and deployment, doubling the 5-hour rate limits for Claude Code on Pro, Max, and Team plans."
+  - "Elon Musk endorsed the deal, praising the team's competence and ethics, and noted that SpaceXAI had already transitioned its primary training operations to the more advanced Colossus 2 facility."
+  - "The integration of xAI into SpaceX as SpaceXAI, a new division focused on AI products and research, signals a tighter integration between SpaceX's hardware capabilities and AI development, positioning SpaceX as a dual-threat powerhouse in both aerospace and high-performance computing."
 title: Anthropic partners with SpaceX to Improve Compute Capacity with Colossus 1
 image: /assets/images/posts/covers/anthropic_spacex_colossus_cover.jpg
 image_alt: A flat vector illustration for the blog post "Claude's Massive 2X Boost" featuring a supercomputer and rocket silhouette.

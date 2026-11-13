@@ -13,6 +13,11 @@ tags:
   - Jean de Dieu Nyandwi
   - Github machine learning
   - open-source
+key_points:
+  - "The Complete Machine Learning Package is an open-source project by Jean de Dieu Nyandwi, designed to be the definitive starting point for beginners in machine learning."
+  - "It features 35 end-to-end Jupyter Notebooks, providing a cohesive learning experience with practical examples and real-world applications."
+  - "The curriculum is structured in a logical order, building upon foundational concepts and progressing to more complex topics like data manipulation, model building, and MLOps."
+  - "The package is free, open-source, and encourages contributions from the community, making it a valuable resource for anyone looking to start their machine learning journey."
 title: "Complete Machine Learning Package: A Free, Hands-On ML Course by Jean de Dieu Nyandwi"
 image: /assets/images/git_complete_ml_package_cover_rd.webp
 layout: post

@@ -6,6 +6,11 @@ tags:
   - ElonMusk
   - Innovation
   - SpaceTravel
+key_points:
+  - "SpaceX's Falcon 9 rocket was the first to successfully demonstrate the reusability of rocket first stages, significantly lowering the cost of space access."
+  - "Falcon Heavy, an evolution from Falcon 9, is one of the most powerful operational rockets in the world, utilizing three Falcon 9 cores and incorporating reusability."
+  - "Starship, SpaceX's ambitious project aimed at interplanetary travel, is designed to be fully reusable, both the spacecraft and its first-stage booster, Super Heavy."
+  - "The Raptor engines, utilized by Starship and Super Heavy, provide greater efficiency and thrust compared to SpaceX's earlier Merlin engines, and are capable of deep throttling for precise landing maneuvers."
 title: "SpaceX's Rocket Innovations Explained: Reusable Falcon 9, Starship, Raptor Engines and Drone Ships"
 image: /assets/images/space_x_gallery.avif
 video: ''

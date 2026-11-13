@@ -5,6 +5,11 @@ author: Richard
 tags:
   - Ghana
   - Internet
+key_points:
+  - "MTN Ghana has reduced its home fibre broadband prices by up to 70%, with the 100 Mbps unlimited monthly package now priced at GH¢299."
+  - "The price reduction was announced following negotiations between state regulators and telecom executives, addressing consumer complaints about the high cost of fixed broadband relative to average household income in Ghana."
+  - "MTN Ghana holds approximately 41% of the national residential fibre market, but has remained the most expensive provider on the market, with competitors like Telecel Broadband already offering lower-cost entry packages."
+  - "The price cuts position MTN more competitively against satellite providers like Starlink, which offers similar speeds at a higher monthly cost for rural locations and enterprise fallback connections."
 title: 'MTN Ghana cuts fibre prices by up to 70%: 100 Mbps Now GH¢299 a Month'
 image: '/assets/images/posts/covers/2026-08-23-mtn-ghana-cuts-fibre-prices-by-up-to-70-100-mbps-now-ghc299-a-month.jpg'
 image_alt: 'MTN Ghana cuts fibre broadband prices by up to 70%'

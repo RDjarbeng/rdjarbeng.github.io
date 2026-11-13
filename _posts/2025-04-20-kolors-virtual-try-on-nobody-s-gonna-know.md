@@ -8,6 +8,12 @@ tags:
   - Kolors
   - Virtual try-on
   - Hugging face
+key_points:
+  - "Kolors Virtual Try-On is an AI-powered app that allows users to virtually try on outfits by uploading an image of themselves or a model and a garment image."
+  - "The app processes the images and displays the final result, showing how the garment looks on the person, in about 5 seconds."
+  - "To achieve a good fit with virtual try-on, it is recommended to have similar poses and similar outfits between the input image and the garment image, as the model may struggle with more complex or varied poses and styles."
+  - "The app has been tested with various garments, including a striped T-shirt, a black suit, and a muscle vest, with mixed results, suggesting that the model's performance may vary depending on the garment's style and the input image."
+  - "The app could benefit from an option to see if a garment actually fits, as this would provide more accurate results and improve the user experience."
 title: "Kolors Virtual Try-On: How to Try On Outfits with AI (Demo and Tips)"
 image: /assets/images/kolors-try-on-optimized.gif
 image_alt: "Cover image for Kolors Virtual Try-On: How to Try On Outfits with AI (Demo and Tips)"

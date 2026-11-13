@@ -11,6 +11,11 @@ tags:
   - Atari57
   - Research paper
   - Google deepmind
+key_points:
+  - "Agent57, developed by Google DeepMind, is a reinforcement learning model that outperforms human performance on all Atari 57 games."
+  - "The model achieves this by decomposing the state-action value function into intrinsic and extrinsic parts, allowing it to balance exploration and exploitation."
+  - "Agent57 uses a meta-controller to optimize for augmented returns, which combine extrinsic rewards (game-defined rewards) with intrinsic rewards (curiosity or exploration bonuses)."
+  - "The model's performance is measured using the Challenging Human-Normalized Score (CHNS), which indicates the percentage of Atari 57 games where the agent's score exceeds the human-normalized baseline, particularly on the challenging set of games."
 title: Agent57 for Reinforcement Learning beats Atari benchmark
 image: ''
 layout: post

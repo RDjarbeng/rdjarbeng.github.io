@@ -15,6 +15,12 @@ tags:
   - Prompt Engineering
   - Software Architecture
   - Tech Leadership
+key_points:
+  - "The author's friend incurred a $280 bill for overnight AI coding, highlighting the new cost of AI usage in software engineering."
+  - "The cost of AI usage is now measured in tokens rather than headcount, requiring engineering managers to consider token budgets for tasks."
+  - "The shift in the structural approach to AI usage involves allocating token budgets by role, with senior developers receiving higher limits and junior developers facing constraints."
+  - "Organizations will soon need to measure the efficiency of AI usage, with the best engineers focusing on getting the most output from the fewest tokens, and finance teams taking an interest in context windows and model selection."
+  - "The ROI conversation will become uncomfortable as teams face the reality of monthly AI bills rivaling headcount costs, leading to hard questions and a focus on intentionality in AI usage."
 title: Why Your Monthly AI Bill Might Soon Rival Your Headcount Costs From A Personal Experience
 image: /assets/images/posts/covers/ai_bill_headcount_cover.jpg
 image_alt: 'AI Bill vs Headcount Costs illustration'

@@ -7,6 +7,12 @@ tags:
   - Rich Results Testing
   - Websites
   - SEO
+key_points:
+  - "The Google Rich Results Testing Tool is a free utility provided by Google that allows developers and SEOs to validate the structured data (usually Schema.org markup) on their web pages."
+  - "It helps developers and SEOs ensure that their content is understood well enough to be highlighted in search results, potentially increasing click-through rates, SERP real estate, and voice search readiness."
+  - "The tool is easy to use, with options to input either a URL or raw HTML/JSON-LD code, and to select between smartphone or desktop devices for testing."
+  - "Interpreting the results is straightforward, with three possible statuses: 'Eligible' (green light), 'Eligible with Warnings' (minor issues), or 'Not Eligible' (red light)."
+  - "Common rich result types include Breadcrumbs, FAQ, Article, Product, and Local Business, each serving specific purposes in enhancing search visibility."
 title: "Google Rich Results Testing Tool: Your Key to SEO Visibility"
 image: /assets/images/google_rich_results_cover.jpg
 layout: post

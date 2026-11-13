@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG errors in Google Chrome are typically caused by issues with the DNS (Domain Name System) server."
+  - "To verify if this is a DNS error, you can use the ping command to check if you can access the internet by sending packets to another device on the internet, and then ping a URL like 'google.com' to confirm if the DNS resolution is working."
+  - "If the first ping to the IP address works but the second ping to the URL 'google.com' does not succeed, it indicates a DNS problem. This is because DNS is supposed to resolve the site address (like 'google.com') to an IP address (like '8.8.8.8')."
+  - "To resolve these errors, you can restart your router or manually set your DNS settings to use reliable public DNS servers like Google DNS or OpenDNS. These steps help bypass potential issues with your ISP's default DNS settings and improve DNS resolution."
 title: How to Fix ERR_NAME_NOT_RESOLVED and DNS_PROBE_FINISHED_BAD_CONFIG Errors in Google Chrome due to DNS
 date: 2025-11-20T14:10:00
 author: Richard

@@ -1,4 +1,10 @@
 ---
+key_points:
+  - "SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED' error occurs when the host key, a fingerprint, used to authenticate the remote server changes unexpectedly."
+  - "This error is common when re-flashing the Raspberry Pi's SD card or when the router assigns the same IP address to a different device, causing the outdated fingerprint in the 'known_hosts' file."
+  - "The solution is to delete the outdated entry in the 'known_hosts' file, either manually or by using the 'ssh-keygen -R' command, which removes the key and keeps a backup as 'known_hosts.old'."
+  - "After removing the entry, re-connect to the Raspberry Pi using SSH, and it will treat the connection as a new machine, prompting for trust before proceeding."
+  - "The error is harmless and typically indicates a temporary issue, such as a re-flashed SD card or a changed device, and can be resolved by updating the 'known_hosts' file."
 title: "Resolving SSH 'REMOTE HOST IDENTIFICATION HAS CHANGED' Error"
 date: 2025-07-26
 author: Richard

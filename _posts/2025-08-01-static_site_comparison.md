@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "Static site hosting providers offer various features such as free tiers, custom domains, SSL support, continuous deployment, and global CDN."
+  - "Popular providers include GitHub Pages, Netlify, Cloudflare Pages, Vercel, Amazon S3 + CloudFront, Google Cloud Storage, Azure Static Web Apps, DigitalOcean App Platform, Render, Surge, Firebase Hosting, and GitLab Pages."
+  - "Key considerations for choosing a static site hosting provider include ease of use, integration with development workflow, performance and scalability, cost for expected traffic, additional features like serverless functions, forms, etc., and support for specific static site generators."
+  - "Static sites are web pages delivered exactly as stored without server-side processing, contrasting with dynamic sites that generate content on-the-fly based on user interactions, database queries, or other real-time factors."
 title: "Comparison of Static Site Hosting Options"
 date: 2025-08-01
 author: Richard

@@ -1,4 +1,10 @@
 ---
+key_points:
+  - "Publishing in arXiv allows for fast publication, as papers don't undergo peer review before appearing online."
+  - "There are no fees to publish or access papers on arXiv, making it a cost-effective option for researchers."
+  - "arXiv provides a platform for early feedback on papers, allowing authors to improve their work before formal peer review."
+  - "Some journals now offer options to submit papers to both their journals and arXiv, providing flexibility in publication choices."
+  - "The video from XploreBio emphasizes the benefits of preprint publishing, including gaining credit as the first inventor and making findings accessible to the scientific community."
 title: Why You Should Consider Publishing in arXiv
 date: 2025-10-14T12:19:00
 author: Richard

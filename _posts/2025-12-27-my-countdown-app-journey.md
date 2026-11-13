@@ -17,6 +17,11 @@ tags:
   - Flutter
   - Dark Mode
   - Customization
+key_points:
+  - "The countdown app was created in December 2021 and has evolved into a comprehensive tool with features like creating and sorting countdown timers, viewing the nth day of the year, customizing appearance, and being a Progressive Web App."
+  - "The app allows users to create and manage their own countdowns by providing a date and descriptive text, and it can be shared directly to WhatsApp on mobile devices."
+  - "Users can customize the appearance of the app by changing color themes, toggling between night mode and light mode, and setting custom backgrounds."
+  - "The app has been developed using JavaScript and web development, and it has been a learning experience for the creator, with future improvements planned for remote countdown storage, additional features like birthdays, confetti effects, and shareable countdowns for team deadlines, reminders, and notifications."
 title: 'The Evolution of a Side Project: My Countdown App'
 image: https://github.com/user-attachments/assets/792bcbd5-ec73-43e2-bac5-2328482da1b3
 layout: post

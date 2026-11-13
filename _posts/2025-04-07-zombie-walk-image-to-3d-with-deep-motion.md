@@ -8,6 +8,11 @@ tags:
   - Game development
   - AI video
   - 3D
+key_points:
+  - "The post discusses the use of AI to animate a character walking from a single image, aiming to streamline game development."
+  - "The experiment involved creating an image of a character in various stages of a walk cycle using Bing Image Generator, then animating it into a video with RunwayML."
+  - "The final step was converting the animated video into a 3D model using DeepMotion, a tool designed to generate 3D models from text, images, or videos."
+  - "The final output was a 3D character that moves more like a zombie than a polished game character, but it serves as a promising first attempt in AI-assisted game development."
 title: 'Zombie Walk: Turning an Image into a 3D Model with DeepMotion'
 image: /assets/images/deepmotion_walking.png
 video: ''

@@ -1,5 +1,10 @@
 ---
 layout: post
+key_points:
+  - "Automated website monitoring services like UptimeRobot send invisible pings to your website every few minutes to detect downtime."
+  - "If a website fails to respond, the service instantly alerts you via email, telegram, or monitoring service of choice, allowing you to fix the issue before most visitors notice."
+  - "Path-based monitoring requires manually setting up different paths that you plan to monitor, while a full-site monitor acts like a crawler, automatically checking the entire site and all its internal links."
+  - "UptimeRobot's free plan has API restrictions, but an agentic endpoint allows automated scripts to create free HTTPS monitors without a Pro plan, using a Proof-of-Work puzzle for authentication."
 title: "Know Instantly When Your Site Goes Down: Automating Website Monitoring With UptimeRobot"
 date: 2026-07-11T13:30:00Z
 published: true

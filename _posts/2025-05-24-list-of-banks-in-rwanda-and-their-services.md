@@ -7,6 +7,12 @@ tags:
   - Banking
   - Rwanda
   - USD vs RWF
+key_points:
+  - "Rwanda has over 16 commercial and microfinance banks operating in Kigali, with most having branches in the city."
+  - "Ecobank Rwanda offers RWF and USD accounts, with USD accounts incurring a $20 initial deposit and a $4 monthly maintenance fee, while I&M Bank Rwanda has no initial deposit requirement for USD accounts."
+  - "Equity Bank Rwanda provides RWF and USD accounts, with no specific interest rates disclosed, and BPR Bank Rwanda offers RWF and USD accounts with competitive loan rates."
+  - "Foreign exchange services are available across all banks, supporting multiple currencies and international money transfers, with Ecobank Rwanda having the most extensive African network."
+  - "Time to complete account creation varies by bank, with Ecobank Rwanda taking approximately 3 hours and I&M Bank Rwanda less than 1 hour."
 title: List of Banks in Rwanda and Their Services
 image: /assets/images/1000189531.jpg
 layout: post

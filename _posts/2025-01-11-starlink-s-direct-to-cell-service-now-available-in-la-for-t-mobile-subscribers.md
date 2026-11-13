@@ -7,6 +7,11 @@ tags:
   - TMobile
   - ElonMusk
   - SpaceX
+key_points:
+  - "In January 2025, SpaceX and T-Mobile enabled basic texting (SMS) through Starlink's Direct to Cell satellites in the Los Angeles area, allowing users with no cellular service to send texts, 911 alerts, and receive emergency notifications."
+  - "The service uses T-Mobile's mid-band spectrum, so phones see the satellite as another T-Mobile network, requiring no special equipment or dish, and works best outdoors with a clear view of the sky."
+  - "The service was initially a temporary early test for the affected areas, but T-Mobile and SpaceX announced the partnership in August 2022 to cover places in the US with no cell towers at all, with more than 650 satellites launched in July 2025."
+  - "Texting only might seem limited, but it is sufficient for reaching someone in an emergency when no other communication options are available, and the service has since been expanded to include picture messages and short audio clips, as well as data for some apps."
 title: Starlink's Direct to Cell Service Now Available in LA for T-Mobile Subscribers
 image: /assets/images/elon_la_fire_dtc.png
 video: ''

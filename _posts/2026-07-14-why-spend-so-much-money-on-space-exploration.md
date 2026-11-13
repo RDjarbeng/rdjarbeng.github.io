@@ -5,6 +5,12 @@ author: Richard
 category: Space
 tags:
   - NASA
+key_points:
+  - "Space exploration is not just about rockets and launches; every dollar spent is invested in Earth's problems."
+  - "NASA's budget is a significant economic driver, supporting hundreds of thousands of jobs and generating tens of billions of dollars annually."
+  - "The investment in space exploration leads to numerous"
+  - "spinoffs"
+  - "technologies that have commercial applications on Earth, such as clean water, medical devices, and air purification systems."
 title: Why spend so much money on space exploration?
 image: ''
 image_alt: ''

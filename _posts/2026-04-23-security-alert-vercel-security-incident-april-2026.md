@@ -13,6 +13,11 @@ tags:
   - Developer Tools
   - Cybersecurity
   - Incident Response
+key_points:
+  - "Vercel disclosed a supply-chain attack in April 2026, where an attacker compromised Context.ai, a third-party AI tool used by a Vercel employee, to gain unauthorized access to Vercel internal systems."
+  - "The attack involved the theft of OAuth tokens from Context.ai, which allowed the attacker to move laterally into Vercel's Google Workspace account and access environment variables that were not marked as sensitive."
+  - "The compromised environment variables contained sensitive data, but Vercel has stated that environment variables marked as sensitive are stored in a way that prevents them from being read back, and there is currently no evidence that personal data or credentials were compromised."
+  - "Vercel has identified and contacted a limited subset of customers whose credentials were confirmed to be compromised, advising them to rotate credentials immediately. The company has also updated its platform to default all new environment variables to sensitive and enhanced team-wide environment variable management."
 title: 'Security Alert: Vercel Supply Chain Attack (April 2026) in 4 minutes'
 image: /assets/images/vercel_security_incident_april_2026_cover.png
 image_alt: 'A dramatic dark-themed cover image showing a cracked security shield with the Vercel logo surrounded by digital chains and broken padlocks, representing the April 2026 supply-chain security incident. Text reads: SECURITY ALERT: VERCEL INCIDENT · APRIL 2026'

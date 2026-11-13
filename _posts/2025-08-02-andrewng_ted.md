@@ -8,6 +8,12 @@ tags:
   - Business
   - Andrew Ng
   - AI
+key_points:
+  - "Andrew Ng, co-founder of Google Brain and deeplearning.ai, believes AI systems should be more widely accessible to small businesses."
+  - "AI systems are currently expensive and require highly skilled engineers, making them inaccessible to small businesses."
+  - "Ng envisions a future where AI can be democratized and made more accessible to all businesses, similar to the availability of information and digital tools."
+  - "He questions whether AI could assist small businesses like local pizza shops, supermarkets, or clothing retailers in improving their operations with limited data available to them."
+  - "The TED talk by Andrew Ng discusses the potential of AI to empower small businesses with data-driven decision-making and improved profitability and productivity."
 title: How AI Could Empower Any Business - Andrew Ng
 image: /assets/images/andrew_ng_ai_talk.png
 image_alt: "Cover image for How AI Could Empower Any Business - Andrew Ng"

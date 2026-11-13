@@ -1,4 +1,10 @@
 ---
+key_points:
+  - "arXiv is a pioneering open-access repository where researchers can upload preprints of their scientific papers before formal peer review, launched in 1991 and now covering a broad range of fields."
+  - "The platform is managed by Cornell University Library, supported by institutional funding, grants, and donations, and is governed by the arXiv Advisory Boards."
+  - "arXiv is committed to free and open access for everyone, with no charges for researchers or readers, and has safeguards in place to prevent false or plagiarized papers."
+  - "The platform offers easy access to the latest papers across a wide range of fields, with features like browsing by discipline, sorting by date, a robust search function, and email alerts or RSS feeds."
+  - "arXiv is important for researchers as it enables quick dissemination of findings, facilitates feedback and collaboration, and helps establish credit. It is also valuable for people outside research or academia, providing open access to science and real-time knowledge sharing."
 title: What is arXiv?
 date: 2025-10-19T22:41:00
 author: Richard

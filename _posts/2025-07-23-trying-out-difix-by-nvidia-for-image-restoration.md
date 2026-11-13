@@ -7,6 +7,11 @@ tags:
   - Hugging face
   - Nvidia
   - Difix
+key_points:
+  - "Difix is an image model from NVIDIA that cleans up blurry or smeared images in a single pass."
+  - "The model was built for 3D reconstruction, not for fixing ordinary photos, and comes from a CVPR 2025 paper called Difix3D+."
+  - "Difix improves image quality by treating blur as a bad render and filling in believable detail, with a reported twofold improvement in FID over other methods."
+  - "The demo is easy to use, allowing users to upload images and download the restored results without needing a personal GPU, but it struggles with people and faces, and requires resizing input images to 1024x576."
 title: "Trying NVIDIA's Difix on Blurry Phone Photos: What It Fixes and What It Distorts"
 image: /assets/images/difix_cover_image_rd.webp
 layout: post

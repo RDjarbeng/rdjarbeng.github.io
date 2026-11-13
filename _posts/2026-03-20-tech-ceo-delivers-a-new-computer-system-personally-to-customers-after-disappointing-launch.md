@@ -10,6 +10,11 @@ tags:
   - OpenAI
   - Elon Musk
   - Jensen Huang
+key_points:
+  - "Jensen Huang, CEO of Nvidia, personally delivered a new computer system to a small startup in California, which later became OpenAI."
+  - "The CEO was initially disappointed with the lack of interest in the new technology, but the startup's interest in the system led to the personal delivery."
+  - "Jensen Huang, the CEO of Nvidia, is the founder of OpenAI, which is currently valued at a significant figure."
+  - "The delivery of the new system to OpenAI and Andrej Karpathy's company highlights the rapid growth and increasing value of both companies in the tech industry."
 title: Tech CEO Delivers A New Computer System Personally To Customers After Disappointing Launch
 image: ''
 image_alt: ''

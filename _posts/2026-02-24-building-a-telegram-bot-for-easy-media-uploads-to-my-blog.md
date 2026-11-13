@@ -7,6 +7,11 @@ tags:
   - Python
   - Telegram Bot
   - GitHub Pages
+key_points:
+  - "The author built a Telegram bot to simplify media uploads to their blog, reducing friction in the process."
+  - "The bot categorizes media uploads (e.g., memes, AI-generated images, gallery pictures) and automatically generates Jekyll frontmatter."
+  - "It supports bulk uploads and can handle YouTube video summaries, making the process more efficient."
+  - "The bot is hosted on PythonAnywhere, allowing for instant cloud commits to the GitHub repository, which triggers the site's build process automatically."
 title: Building a Telegram Bot for Easy Media Uploads to My Blog
 layout: post
 image: "/assets/images/posts/telegram-bot-cover.jpg"

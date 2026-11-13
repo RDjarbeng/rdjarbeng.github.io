@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The guide provides a step-by-step process to remove Node.js 18 and install Node.js 16 on a Raspberry Pi 4B."
+  - "The process involves removing the existing Node.js version using the command 'sudo apt remove nodejs'."
+  - "The NodeSource repository is used to install Node.js 16, with the command 'curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -'."
+  - "After installing Node.js 16, the version can be verified using the command 'node -v', which should output 'v16.x.x' where 'x.x' is the specific version installed."
 title: "How to Remove Node.js 18 and Install Node.js 16 on a Raspberry Pi 4B"
 date: 2025-07-26
 author: Richard

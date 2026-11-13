@@ -7,6 +7,11 @@ tags:
   - PM
   - PM2.5
   - Black Carbon
+key_points:
+  - "Particulate Matter (PM) comprises a diverse mix of solid and liquid particles suspended in the atmosphere, varying in size, chemical composition, and origin."
+  - "Among these, PM2.5, particles with an aerodynamic diameter of 2.5 micrometers or less, is a critical air pollutant due to its ability to penetrate deep into the respiratory system and bloodstream, posing significant health and environmental risks."
+  - "PM2.5 consists of various chemical and physical components, each contributing to its environmental and health impacts, including sulphates, nitrates, ammonia, sodium chloride, black carbon, mineral dust, and water."
+  - "PM2.5 arises from both primary and secondary sources, each contributing to its atmospheric concentration and impacts, with primary sources including combustion processes, biomass burning, and industrial activities, while secondary sources involve chemical reactions involving precursor gases such as sulphur dioxide, nitrogen oxides, and volatile organic compounds."
 title: What is Particulate Matter (PM2.5) and the Environmental Significance
 image: /assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg
 layout: post

@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "Soil sealing-free infrastructure refers to construction, engineering, and urban planning methods that avoid covering the ground with impermeable materials, allowing the soil to remain open, breathable, and functional."
+  - "Core concepts include permeable paving, elevated structures, brownfield and infill prioritization, and de-sealing (unsealing) techniques."
+  - "Key environmental benefits include improved water management, urban heat island mitigation, biodiversity protection, and carbon storage."
+  - "Soil sealing-free infrastructure can help prevent surface runoff and flash floods, keep surface temperatures lower, preserve habitats for beneficial organisms, and store organic carbon."
 title: soil sealing Infrastructure
 image: ''
 image_alt: ''

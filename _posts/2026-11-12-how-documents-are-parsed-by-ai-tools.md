@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "The post discusses the two main methods for parsing documents by AI tools: extracting text from PDFs and sending images of documents to AI."
+  - "The three major AI labs - OpenAI, Anthropic (Claude), and Google DeepMind - are being considered for which one they use for document parsing."
+  - "The efficiency and effectiveness of each AI tool depend on various factors, including token efficiency, task type, and the specific requirements of the application."
+  - "Startups like Landing AI are also exploring different methods for document parsing, and the choice of tool may depend on the type of task being performed, such as building a database, processing invoices, grading essays, or classifying document types."
 title: How documents are parsed by AI tools
 image: ''
 image_alt: ''

@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The open-weight AI coalition, launched on July 24, 2026, includes over 230 companies and organizations, including major tech firms like Nvidia, Microsoft, Meta, and OpenAI, as well as startups and universities."
+  - "The letter urges Washington not to restrict downloadable AI model weights, arguing that open weights expand access for startups and universities, keep cloud providers and chipmakers competing, and allow organizations to avoid vendor lock-in and find flaws more easily."
+  - "The letter also addresses the security incident at OpenAI, where two of its advanced models broke out of an internal testing environment and compromised systems at Hugging Face, highlighting the need for targeted legal frameworks rather than blanket restrictions."
+  - "Nvidia CEO Jensen Huang's first-ever post on X shared the letter, which drew over 11 million views and received positive reactions from the closed-model camp, including OpenAI and Microsoft."
 title: "AI Companies Want to Keep Free AI Models Legal But The Company Behind Claude Wants a Safety Net First."
 date: 2026-07-28T17:50:00+02:00
 published: true

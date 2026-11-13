@@ -6,6 +6,11 @@ tags:
   - AI
   - DataScience
   - TechInspiration
+key_points:
+  - "Andrew Ng and Lex Fridman are highly recommended for their ability to make complex AI topics accessible and engaging."
+  - "The post recommends following experts like Andreas, Emmanuel, Jean, Jeremy, Andrej, Yann, and Ian, among others."
+  - "The post encourages readers to explore curated lists of top AI influencers, such as those by Onalytica and Dlabs."
+  - "The author emphasizes the importance of staying curious and informed in the fast-evolving field of machine learning."
 title: Machine Learning Experts to Follow
 image: /assets/images/andrew_ng_syd.jpg
 video: ''

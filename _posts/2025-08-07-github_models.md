@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "GitHub has introduced GitHub Models, enabling AI engineers to access industry-leading large and small language models directly on the platform."
+  - "The models available include Llama 3.1, GPT-4o, GPT-4o mini, Phi 3, and Mistral Large 2, which can be used through a built-in playground within GitHub."
+  - "Users can interact with these models for free, test different prompts and model parameters, and provide feedback to help refine and improve the tool."
+  - "GitHub Models are accessible to all developers with a GitHub account, and users can sign up for the waitlist to be among the first to experience this innovative tool."
 title: "Introducing GitHub Models"
 author: Richard
 date: 2025-08-05

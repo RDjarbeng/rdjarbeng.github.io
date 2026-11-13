@@ -11,6 +11,11 @@ tags:
   - Wealth
   - GSE
   - ISEDAN
+key_points:
+  - "The Ghana Stock Exchange (GSE) represents a unique opportunity for Ghanaian investors to participate in the growth of the country's economy."
+  - "Investing on the GSE allows you to become a partial owner in publicly traded companies across various sectors, potentially benefiting from capital appreciation and dividends."
+  - "As a shareholder, you have important rights such as voting rights, dividend rights, and information rights, and can potentially benefit from capital appreciation, dividend income, total return, and inflation protection."
+  - "Understanding stock trading basics, including trading hours, order types, reading stock quotes, and understanding investment risk, is crucial before starting your investment journey on the GSE."
 title: How To Invest On The Ghana Stock Exchange
 image: /assets/images/gse_article_nat/gse_cover.jpg
 image_alt: Illustration of Ghana Stock Exchange with bull market symbol and financial charts

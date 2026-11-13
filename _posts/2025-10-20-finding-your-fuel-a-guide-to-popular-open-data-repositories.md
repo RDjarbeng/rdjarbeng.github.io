@@ -14,6 +14,12 @@ tags:
   - Computer Vision
   - data analysis
   - Research
+key_points:
+  - "Open data repositories are essential for data scientists and machine learning practitioners, providing access to a wide range of datasets for research and model development."
+  - "Some of the most popular open data repositories include Kaggle, UCI Machine Learning Repository, and Google Dataset Search, each offering unique datasets and tools for data exploration and analysis."
+  - "Kaggle is a leading platform for data science competitions and datasets, offering a wide variety of datasets across different domains, including healthcare, finance, and social sciences."
+  - "The UCI Machine Learning Repository is a comprehensive collection of datasets used for machine learning research, featuring datasets from various domains such as biology, economics, and social sciences."
+  - "Google Dataset Search is a powerful tool for discovering and accessing datasets from various sources, including academic publications, government databases, and commercial datasets, making it easier for researchers to find and utilize relevant data for their projects."
 title: 'Where to Find Data: A Curated List of Free Datasets and Repositories'
 image: /assets/images/finding_your_data_fuel_cover.webp
 image_alt: "futuristic illustration of a glowing blue digital brain made of network connections and data icons, set between two server racks, with the text 'Finding Your Fuel: A Guide to Popular Open Data Repositories' and 'rdjarbeng.com' overlaid."

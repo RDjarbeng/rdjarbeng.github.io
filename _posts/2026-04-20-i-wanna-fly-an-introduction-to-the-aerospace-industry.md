@@ -5,6 +5,11 @@ author: Richard
 category: Aviation and Aerospace
 tags:
   - Aerospace
+key_points:
+  - "A metal container with elongated metal wings can fly, propelled by a large fan that draws in air and expels it out the back."
+  - "The fan's thrust is created by the reaction and stream of hot air from fuel combustion, which powers a turbine engine."
+  - "The aviation industry is worth around $xx trillion USD and employs many people across continents, with auxiliary jobs in related industries."
+  - "The invention of jet turbine engines has led to the development of various offshoots, such as manufacturing, vehicles (like sports cars), and NASA's spinoff companies."
 title: I wanna fly- an introduction to the aerospace industry
 image: ''
 image_alt: ''

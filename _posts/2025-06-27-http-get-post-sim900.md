@@ -9,6 +9,11 @@ tags:
   - SIM900
   - 2G
   - request
+key_points:
+  - "This post covers the procedure to send a GET and POST request with AT commands using the SIM900 GSM/GPRS module and the Arduino UNO."
+  - "The SIM900 module communicates with AT commands, where 'AT' stands for attention. Most successful commands end with 'OK', and unsuccessful commands return 'ERROR'."
+  - "The code snippet demonstrates how to perform a GET request using the GPRS connection of the SIM900 GSM module, including setting the APN, opening the GPRS context, initiating the HTTP GET request, waiting for the response, and reading the HTTP response."
+  - "The code snippet also demonstrates how to perform a POST request using the SIM900 module, including setting the APN, opening the GPRS context, initializing the HTTP service, setting the URL and content type, sending the JSON data, and reading the HTTP response."
 title: GSM module HTTP GET & POST request using arduino microcontroller and SIM900
 image: /assets/images/gsm_module.jpg
 image_alt: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.

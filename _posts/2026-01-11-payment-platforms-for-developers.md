@@ -9,6 +9,11 @@ tags:
   - paddle
   - paystack
   - saas
+key_points:
+  - "Stripe is the industry standard for payment processing, offering unmatched API, global reach, and Stripe Connect for marketplaces."
+  - "Lemon Squeezy is a creator-friendly platform that handles tax compliance and offers no-code checkout, making it ideal for digital product sellers."
+  - "Paddle is an enterprise-focused Merchant of Record, providing unified billing, subscription management, and tax compliance for B2B SaaS companies."
+  - "Paystack is a gateway to Africa, supporting local payment channels and international cards, making it a strong choice for businesses targeting African markets."
 title: "The Developer's Guide to Payment Platforms: Stripe, Lemon Squeezy, Paddle, and Paystack"
 image: /assets/images/payment-platforms-thumbnail-v2.jpg
 image_alt: ''

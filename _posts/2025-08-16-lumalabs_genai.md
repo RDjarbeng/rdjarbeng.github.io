@@ -13,6 +13,12 @@ tags:
   - Machine Learning
   - Bing Image Creator
   - Generative AI
+key_points:
+  - "Luma AI's Dream Machine successfully recognized the input image as a scene of flying insects."
+  - "The AI attempted to animate the image, but struggled with accurately depicting the movement of the bees' wings."
+  - "The bees in the background had some motion blur applied, but their wings did not flap properly."
+  - "The AI's performance was hampered by its lack of understanding of the physical laws governing insect flight."
+  - "The experiment highlights the limitations of generative AI in accurately simulating real-world phenomena."
 title: "Can AI Bring a Photo of Bees to Life? Testing Luma AI's Dream Machine"
 image: /assets/images/bees_luma.jpeg
 image_alt: "Cover image for Can AI Bring a Photo of Bees to Life? Testing Luma AI's Dream Machine"

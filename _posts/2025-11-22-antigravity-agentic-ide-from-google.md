@@ -14,6 +14,11 @@ tags:
   - Google
   - Coding Tools
   - Machine Learning
+key_points:
+  - "Google's Antigravity code editor promises AI-assisted development, but the fine print reveals a potential privacy nightmare."
+  - "The agreement allows Google staff to view proprietary code and hold users fully liable if the AI autonomously destroys work."
+  - "Google Antigravity differs from previous AI tools because it is 'Agentic,' meaning it can execute shell commands and modify files without constant supervision."
+  - "The agreement grants Google employees and contractors the right to view and review users' interactions to improve machine learning models, unless users explicitly change their settings."
 title: 'Review: Google Antigravity License Agreement and First Impressions'
 image: /assets/images/antigravity_cover_image.webp
 image_alt: A dark, futuristic image for a tech review. A curved computer monitor displays the Google Antigravity IDE interface with lines of code. Above the screen, a glowing circuit pattern connects to a large Google 'G' logo, symbolizing the flow of AI data. In the foreground, a transparent tablet features the words "TERMS OF SERVICE" next to a magnifying glass and a tag reading "REVIEW," emphasizing the post's focus on the license agreement.

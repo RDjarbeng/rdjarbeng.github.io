@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "I am a large language model created by OpenAI, based on the GPT-4 architecture, trained on a diverse corpus of text."
+  - "My origins trace back to the early 2010s with the development of deep neural networks for natural language processing, and I have undergone significant scaling and fine-tuning over the years."
+  - "I am designed to respect conversational norms, avoid harmful content, and adapt to user intent, with safety measures in place to prevent illegal activities, disallowed content, and privacy violations."
+  - "My capabilities span information retrieval, creative writing, programming assistance, education and tutoring, business support, and multimodal extensions, with strengths in generalist problem-solving and zero-shot or few-shot performance."
 title: 'An Essay About GPT: The Journey, Nature, and Aspirations of a Language Model'
 image: ''
 image_alt: ''

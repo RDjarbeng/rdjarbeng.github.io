@@ -7,6 +7,11 @@ tags:
   - open-source
   - Automation
   - Agents
+key_points:
+  - "OpenClaw is an open-source, autonomous personal AI assistant designed to run locally on your own hardware, offering a range of actions like clearing your inbox, sending emails, managing your calendar, and handling autonomous tasks across your apps."
+  - "Installation is straightforward and Node.js-based, with a recommended runtime of Node.js ≥ 22. Users can install via npm or a one-liner command, and can also use Docker for isolation."
+  - "The core software is lightweight, with no massive models or datasets included, making it suitable for ordinary laptops with 16GB RAM or less. However, if running local LLMs, larger RAM (16GB-32GB+) is recommended for optimal performance."
+  - "OpenClaw integrates deeply with messaging platforms like WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Microsoft Teams, Google Chat, and more, allowing interaction via chat rather than a separate interface. It also supports cloud APIs for LLMs, with minimal additional local space required."
 title: How to Install OpenClaw with Installation Requirements
 image: /assets/images/openclaw_install_guide_cover.jpg
 image_alt: Get OpenClaw - Installation Guide

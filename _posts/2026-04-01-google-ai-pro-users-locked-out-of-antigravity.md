@@ -5,6 +5,12 @@ author: Richard
 tags:
   - AI
   - Antigravity
+key_points:
+  - "Google's Antigravity IDE, launched with promises of multi-model support, deep CLI/browser integration, and reasoning modes, now locks AI Pro users out for up to 7 days due to a 120-hour quota glitch."
+  - "The 5-hour quota reset limit advertised for Antigravity has proven to be a significant disappointment for users, with many experiencing lockouts lasting 5 days or more."
+  - "Google's suggested solution to resolve the issue is to upgrade to the $200/month AI Ultra plan, which many users feel is an unfair response to the ongoing quota issues."
+  - "The irony of the situation is further highlighted by the fact that the IDE has an internal issue-reporting feature that is currently broken, making it difficult for users to report the lockouts and seek resolution."
+  - "Alternative AI coding tools, such as Claude Code, OpenAI Codex, and Open-Source Tools like Cline, Aider, and Continue.dev, are recommended for users seeking a more reliable and responsive AI coding experience."
 title: Before You Upgrade to Antigravity Google AI Pro, Read About This 5-Day Quota Glitch Locking Users Out of The IDE
 image: /assets/images/posts/covers/antigravity_lockout.jpg
 image_alt: Cover image showing an AI user locked out of the Antigravity IDE

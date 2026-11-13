@@ -7,6 +7,11 @@ tags:
   - AI
   - Tech
   - Future
+key_points:
+  - "The year 2025 marked the transition of artificial intelligence from a digital novelty to a driver of global industrial strategy."
+  - "China's DeepSeek model challenged the assumption that hardware sanctions alone could stifle Chinese innovation, leading to a physical infrastructure boom that reshaped national economies."
+  - "Reasoning models boosted performance, moving AI from 'System 1' (fast, intuitive chat) to 'System 2' (slow, deliberative reasoning), with significant improvements in accuracy in math and logic."
+  - "Agents wrote code, with systems like Claude Code and Devin AI autonomously executing workflows, becoming the primary domain for 'Agentic AI' and significantly increasing task completion rates."
 title: 'The Top AI Stories of 2025: Reasoning, Agents, and the Chip Wars'
 image: /assets/images/20260201-top-ai-2025-v2.jpg
 image_alt: Top AI Stories of 2025 Cover

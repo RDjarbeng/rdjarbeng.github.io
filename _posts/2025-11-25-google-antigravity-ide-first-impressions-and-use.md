@@ -5,6 +5,12 @@ author: Richard
 category: Technology
 tags:
   - IDE
+key_points:
+  - "The antigravity IDE is praised for its efficiency, understanding of file structure, and ability to infer project types, such as Jekyll websites deployed on GitHub Pages."
+  - "It offers advantages like not lagging, not complaining when working across multiple files, and understanding pending comments for workflow updates."
+  - "However, it has some drawbacks, such as taking a long time to generate walkthroughs, not always knowing when it breaks something, and not having access to terminal output for error checking."
+  - "The antigravity browser, a separate Chrome instance, is useful for UI problems but is slow and takes more time than a solution without launching the browser."
+  - "The antigravity IDE has high CPU usage and RAM usage, especially when an error occurs, causing the laptop fans to kick in and the PC to run at full throttle."
 title: Google antigravity IDE first impressions and use
 image: ''
 image_alt: ''

@@ -18,6 +18,12 @@ tags:
   - Tariff Revision
   - Sustainable Energy
   - Kigali
+key_points:
+  - "The Rwanda Utilities Regulatory Authority (RURA) has revised the Electricity End-User Tariff, effective October 1, 2025."
+  - "Residential households now have a threshold of 20 kWh per month for the lowest consumption bracket, up from 15 kWh."
+  - "Rate changes for residential households are as follows: 0-20 kWh per month at RWF 89/kWh, 20-50 kWh per month at RWF 310/kWh, and above 50 kWh per month at RWF 369/kWh."
+  - "Industrial customers with smart meters have a flat rate of RWF 239/kWh for consumption under 660,000 kWh annually, RWF 214/kWh for health facilities, schools, and higher learning institutions, and RWF 176/kWh for small industries."
+  - "Industrial customers without smart meters have a flat rate of RWF 176/kWh for consumption under 1,000,000 kWh annually, RWF 133/kWh for medium industries, and RWF 110/kWh for large industry plants."
 title: RURA Announces Revised Electricity End-User Tariffs Effective October 2025
 image: /assets/images/rura_tariffs_october2025_cover.webp
 layout: post

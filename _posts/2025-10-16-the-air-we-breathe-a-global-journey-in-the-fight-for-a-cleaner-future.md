@@ -10,6 +10,12 @@ tags:
   - Europe Air Quality
   - North America Air Quality
   - USA Air Quality
+key_points:
+  - "The U.S. Clean Air Act of 1970 has been a powerful model for air quality improvement, cutting emissions of six widespread criteria pollutants by nearly 80%."
+  - "Canada and Europe have adopted similar cooperative approaches, with the Canada-U.S. Air Quality Agreement and the Geneva Convention on Long-Range Transboundary Air Pollution setting global standards."
+  - "Asia's air quality journey is marked by rapid change and stark contrasts, with China leading in recent improvements and India facing a complex crisis requiring a National Clean Air Programme."
+  - "South America's air quality challenges are primarily urban, with Mexico City and other cities implementing strict vehicle emission standards and investing in modern public transit, while the continent's diverse challenges include biomass burning, industrial emissions, and dust storms."
+  - "Africa's air quality landscape is vast and diverse, with cities like Lagos, Lagos, and Cairo facing significant pollution from vehicle emissions and biomass burning, while the Sahel region's dust storms contribute to high Particulate Matter levels."
 title: 'The Air We Breathe: A Global Journey in the Fight for a Cleaner Future'
 layout: post
 image_alt: "Cover image for The Air We Breathe: A Global Journey in the Fight for a Cleaner Future"

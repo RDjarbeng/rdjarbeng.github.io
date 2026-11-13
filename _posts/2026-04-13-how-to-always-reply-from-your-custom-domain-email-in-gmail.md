@@ -6,6 +6,12 @@ tags:
   - Email
   - How-to
   - Gmail
+key_points:
+  - "The post explains how to automatically reply from a custom domain email in Gmail, preventing the default personal Gmail address from being used."
+  - "The process involves accessing Gmail settings, navigating to the 'Accounts and Import' tab, and selecting the 'Reply from the same address the message was sent to' option."
+  - "This setting ensures that replies are sent from the custom domain email address, maintaining a professional appearance and avoiding the use of the personal Gmail address."
+  - "The post emphasizes the importance of this setting for maintaining a consistent and professional communication style, especially for those managing a high volume of emails."
+  - "A media mention is provided, linking to a related post on dev.to for further reading."
 title: In 2 Minutes I'll Show You How to Always Reply from Your Custom Domain Email in Gmail
 image: /assets/images/posts/covers/gmail_custom_domain_reply.jpg
 image_alt: Illustration of an email envelope with a custom domain logo interacting with the Gmail inbox interface

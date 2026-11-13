@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "Recent advancements in processing power have enabled more efficient and effective technology."
+  - "MPEG-2 has been replaced by H.264, demonstrating the impact of improved processing capabilities."
+  - "The transition from MPEG-2 to H.264 highlights the efficiency gains possible with modern technology."
+  - "Efficient technology is crucial for leveraging the progress in processing power and optimizing performance."
 title: Efficient technology that take advantage progress in processing power
 image: ''
 image_alt: ''

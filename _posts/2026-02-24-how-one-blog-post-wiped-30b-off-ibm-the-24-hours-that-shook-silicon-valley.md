@@ -10,6 +10,12 @@ tags:
   - Tech News
   - COBOL
   - Mainframe
+key_points:
+  - "The post from Anthropic demonstrates that its Claude Code agent can map, document, and translate legacy COBOL code with 98% accuracy."
+  - "IBM's market cap was shattered by $30 billion in a single afternoon, marking the worst single-day drop since October 2000."
+  - "The event highlights the broader trend of AI agents automating complex tasks across various tech sectors, including cybersecurity."
+  - "The implications of this event extend beyond Wall Street, drawing attention from state actors and the Pentagon, indicating significant geopolitical stakes."
+  - "Anthropic's Claude Code has demonstrated the ability to significantly impact the legacy technology industry, particularly in COBOL modernization, which has been a significant moat for IBM."
 title: 'How One Blog Post Wiped $30B Off IBM: The 24 Hours That Shook Silicon Valley'
 image: /assets/images/posts/ibm-cobol-cover.jpg
 image_alt: An AI breaking down a vintage mainframe computer with a crashing stock chart.

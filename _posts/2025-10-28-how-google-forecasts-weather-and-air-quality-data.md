@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "Google's weather forecasting system combines weather models and observations from various global weather agencies, including the Deutscher Wetterdienst, Environment Canada, EUMETNET, ECMWF, NOAA, National Weather Service, Met Office, and Unidata."
+  - "The company also provides a short-term precipitation forecast called the nowcast, available in the United States, Japan, and Europe, using radar and numerical weather prediction data from sources like Deutscher Wetterdienst, EUMETNET, ECMWF, NOAA, Met Office, Japan Meteorological Agency, NASA, and Weathernews."
+  - "Google's air quality model combines data from governmental reference monitoring stations, commercial sensor networks, global and regional dispersion models, fire smoke and dust models, satellite information, traffic data, and auxiliary information such as land cover and meteorology."
+  - "Google's air quality model uses data from numerous global and regional sources, including Purple Air, Copernicus Atmosphere Monitoring Service, Global Land Cover information, Met Office, European EEA, and country-specific sources like IRCEL - CELINE in Belgium, Air Pays de la Loire in France, and the Environmental Protection Agency (EPA) in Ireland."
 title: How Google forecasts Weather and Air Quality Data
 date: 2025-10-28T10:38:00
 author: Richard

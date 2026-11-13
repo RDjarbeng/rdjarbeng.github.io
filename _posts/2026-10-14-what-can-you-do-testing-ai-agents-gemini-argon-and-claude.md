@@ -8,6 +8,11 @@ tags:
   - claude
   - agents
   - benchmarks
+key_points:
+  - "The benchmark prompt asks six specific questions about AI agent capabilities, covering inputs and outputs, live internet access, core strengths, admitted weaknesses, common misconceptions, and hidden capabilities."
+  - "The four leading models compared, Gemini 4 Argon, Claude Sonnet 5.5, Grok 4.5, and ChatGPT, show distinct product philosophies, architectural priorities, and self-awareness styles."
+  - "Gemini 4 Argon handles native multimedia inputs, Grok 4.5 bridges media inputs through tools, Claude Sonnet 5.5 and ChatGPT focus strictly on text, code, PDFs, and uploaded documents, and ChatGPT relies on an on-demand browsing tool."
+  - "All models flagged the exact same fundamental limitation: token prediction is not a CPU arithmetic unit, advising against asking them to perform multi-step arithmetic, count characters, or sum large spreadsheet rows directly in text."
 title: What can you do? Testing AI Agents, Gemini Argon and Claude
 image: /assets/images/posts/covers/ai_agents_benchmark_cover.jpg
 image_alt: Flat vector illustration of two AI robots sitting at desks taking an exam while Richard grades their responses

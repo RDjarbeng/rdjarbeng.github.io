@@ -7,6 +7,11 @@ categories:
 tags:
   - AI
   - GenAI
+key_points:
+  - "AI tools like Grok and Gemini can be used as help sections for different apps, providing quick and efficient guidance for specific tasks."
+  - "Using AI tools for app navigation can save time compared to searching for documentation or watching training videos, as it often leads to more accurate and relevant results."
+  - "However, AI tools may not always be familiar with specific apps or software, and may not have up-to-date knowledge about new features or tasks."
+  - "A practical solution is to use a friend or local/tour guide to navigate the app or software, providing tailored guidance and minimizing deviations from the desired outcome."
 title: A smart guide for navigating software-AI tools as support agents
 layout: post
 image_alt: "Cover image for A smart guide for navigating software-AI tools as support agents"

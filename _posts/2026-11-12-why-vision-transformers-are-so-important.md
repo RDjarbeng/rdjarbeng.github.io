@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "Vision Transformers (ViT) marked a significant milestone in 2020, with 57 internal citations, second only to ResNet."
+  - "ViT replaced convolutional locality and translation equivariance with scale, enabling clean scaling with data and compute."
+  - "ViT directly unlocked CLIP, BLIP-2/LLaVA, and modern multimodal LLMs, leading to a surge in vision-language and multimodal research."
+  - "ViT enabled self-supervised and promptable vision, making masked image modeling, end-to-end detection, hierarchical backbones, and promptable segmentation possible with minimal task-specific engineering."
 title: Why Vision Transformers Are So Important
 image: ''
 image_alt: ''

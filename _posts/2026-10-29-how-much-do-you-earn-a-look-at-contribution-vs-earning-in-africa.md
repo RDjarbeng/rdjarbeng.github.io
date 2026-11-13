@@ -6,7 +6,12 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "Engineers at Dangote Group, including those at the Dangote Refinery or Dangote Cement, are primarily paid in Nigerian Naira (NGN), though expatriate or high-level specialist roles can occasionally be negotiated in US Dollars (USD)."
+  - "Based on current employee salary data and the current exchange rate (~$1 USD = ₦1,360 NGN), the estimated USD conversion of what Dangote pays engineers spans the following ranges: $1,300 to $3,000 USD per year for graduate engineer trainees, $2,500 to $9,000 USD per year for mid-level engineers, and $5,500 to $25,000+ USD per year for senior engineers/technical managers."
+  - "Specialized and expatriate compensation for refinery specialists and consultants ranges from $15,000 to $50,000+ USD per year, while specialized technical listings for refinery technicians have seen targeted contract offers ranging from $723 to $1,004 USD per month (~$8,600 to $12,000 USD per year)."
+  - "The low USD conversion figures are primarily due to the severe devaluation of the Nigerian Naira (NGN) over recent years. A salary of ₦500,000 to ₦800,000 per month used to convert to a respectable mid-level sum in USD years ago, but today, with the exchange rate hovering past ₦1,360+ per dollar, that exact same local salary shrinks to just a few hundred dollars a month when converted."
+  - "Despite the low USD conversion, these positions remain highly competitive in Nigeria due to the rare, heavy-industrial technical experience gained working on massive infrastructure like the Dangote Petroleum Refinery and the stepping stone effect of building up resumes and transitioning into higher-paying expatriate positions or jobs with international firms abroad."
 title: How much do you earn? A look at contribution vs earning in Africa
 image: ''
 image_alt: ''

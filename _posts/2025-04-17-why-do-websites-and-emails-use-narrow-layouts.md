@@ -18,6 +18,11 @@ tags:
   - Cognitive Load
   - Accessibility
   - Design Principles
+key_points:
+  - "Websites and emails typically use narrow, single-column layouts (600-700 pixels wide) to improve readability, focus, and mobile-friendliness."
+  - "The optimal line length for comfortable reading is 50-75 characters, and narrow layouts achieve this by presenting content in a single, digestible path."
+  - "This design pattern is rooted in centuries of print media and has been reinforced by the rise of mobile-first design in the early 2010s."
+  - "Narrow layouts enhance focus and reduce cognitive load by limiting visual distractions and presenting information in a single, top-to-bottom path."
 title: Why Do Websites and Emails Use Narrow Layouts?
 image: /assets/images/narrow_website_layout_grok.jpg
 image_alt: Cover image for Why Do Websites and Emails Use Narrow Layouts?

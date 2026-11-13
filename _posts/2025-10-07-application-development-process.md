@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The post discusses a general process for building an application, emphasizing the importance of breaking down steps and testing each one before moving on."
+  - "The process can vary depending on the company's techniques, such as agile, and the specific application being built."
+  - "An example process includes developing an initial idea, testing a prototype, discussing and reviewing feedback, conducting a second test (beta), discussing and reviewing again, and finally testing for errors before deployment."
+  - "The post suggests that the steps are not a definitive guide and that more steps may be added in between, and that troubleshooting errors using resources like Google and Stack Overflow is recommended."
 title: "App Development Process: From Concept to Launch"
 date: 2025-10-07
 layout: post
