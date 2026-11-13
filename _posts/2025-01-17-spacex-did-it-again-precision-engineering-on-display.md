@@ -8,6 +8,11 @@ tags:
   - Reusable Rockets
   - Aerospace Engineering
   - Innovation
+key_points:
+  - "SpaceX successfully guided a 33-story tall Super Heavy booster back from space at supersonic speeds and caught it mid-air using the giant mechanical 'chopstick' arms of the Mechazilla launch tower at Starbase, Texas."
+  - "Catching a rocket booster returning from space is not just a sensational spectacle for social media, but represents a fundamental breakthrough in mechanical, control, and structural engineering that pushes space travel closer to true operational reusability."
+  - "The Super Heavy booster is equipped with massive titanium grid fins positioned near the top of the vehicle to actuate continuously during hypersonic and supersonic atmospheric entry phases, allowing for precise navigation and sub-meter positioning tolerances."
+  - "When I covered the first catch of the Super Heavy booster, many viewed the initial success as a once-in-a-lifetime engineering miracle. Repeating the catch proves that this capability is a repeatable manufacturing and operational workflow, dramatically lowering the cost per kilogram to orbit and laying the technical foundation for interplanetary transport."
 title: "SpaceX Catches a Super Heavy Booster Again with Mechazilla's Chopstick Arms"
 image: /assets/images/posts/covers/spacex_booster_catch_cover.jpg
 image_alt: "SpaceX Super Heavy Booster Catch Cover Image"

@@ -5,6 +5,11 @@ author: Richard
 category: Technology
 tags:
   - AI
+key_points:
+  - "The Fast.ai Audio Classification technique involves converting audio files into 2D time-frequency visual representations called Mel-spectrograms, which are then used as input to standard computer vision models."
+  - "Ethan Sutin's community project achieved a classification accuracy of 80.5% on the UrbanSound8K dataset, outperforming the official academic baseline set by the dataset's creators."
+  - "The original 2014 study that introduced the UrbanSound8K dataset achieved a baseline accuracy of 79% using traditional handcrafted features and a Support Vector Machine (SVM) classifier."
+  - "Modern improvements in audio deep learning, such as hybrid attention networks, pre-trained audio spectrogram transformers, and edge-optimized deployments, have pushed the UrbanSound8K benchmarks close to perfection, with accuracies ranging from 92.6% to 98.4%."
 title: Classifying sound as images with Neural networks a weird idea that works
 image: ''
 image_alt: ''

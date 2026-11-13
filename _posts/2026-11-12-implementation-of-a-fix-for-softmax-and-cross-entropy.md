@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "Fixed Softmax and Cross-Entropy (Fixed CE) maintains exact zero-sum gradients and preserves target gradients past the 16.6 precision cliff, unlike Standard CE which collapses target gradients to 0.0."
+  - "Fixed CE reaches 100.0% train memorization and 78.0% test accuracy, with a margin advancing smoothly toward theoretical equilibrium of 18.42, without slingshot spikes."
+  - "Fixed Soft CE maintains exact parameter stability with a KL divergence of 0.00 and 100.0% test accuracy, eliminating the gradient noise floor that causes drift in Standard Soft CE."
+  - "Potential next experiments include a precision sweep across bf16, fp32, and fp64, modular polynomials without weight decay, and alternative loss comparisons against Zero-Sum Projection and StableMax."
 title: Implementation of A Fix for Softmax and Cross-Entropy
 image: ''
 image_alt: ''

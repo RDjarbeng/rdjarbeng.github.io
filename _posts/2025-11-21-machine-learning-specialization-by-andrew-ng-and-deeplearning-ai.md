@@ -6,6 +6,11 @@ tags:
   - AI
   - Deep Learning
   - Andrew Ng
+key_points:
+  - "The Machine Learning Specialization is a revamped version of the original Stanford Machine Learning course, designed to make machine learning more accessible to beginners."
+  - "The specialization uses Python for all programming assignments and includes three courses covering supervised learning, advanced learning algorithms, and unsupervised learning, decision trees, ensemble methods, recommender systems, and deep reinforcement learning."
+  - "The program is tailored to first-time learners of machine learning, balancing intuition, coding practice, and mathematical theory while minimizing prerequisites, and is accessible through free video lectures on YouTube."
+  - "Completing the specialization equips learners with hands-on experience with modern machine learning tools, practical application of ML techniques to real-world problems, and a strong foundation for further exploration in AI fields like deep learning or natural language processing."
 title: "Andrew Ng's Machine Learning Specialization: The Updated Stanford Course for Beginners"
 image: /assets/images/andrew_ng_coursera.png
 video: ""

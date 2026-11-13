@@ -9,6 +9,11 @@ tags:
   - Raspberry Pi
   - raspberry pi 4B
   - Linux
+key_points:
+  - "The guide demonstrates how to automate the execution of a Python script on a Raspberry Pi using a systemd service."
+  - "A systemd service file is created in the /etc/systemd/system/ directory, specifying the user, working directory, and command to run the Python script."
+  - "The service is enabled to start automatically on boot using the 'systemctl enable' command, and can be manually started with 'systemctl start' for testing."
+  - "Troubleshooting is suggested by checking the service logs with 'journalctl' if the service fails to start."
 title: Automating Python Execution on a Raspberry Pi with a virtual environment
 image: /assets/images/just_start.png
 image_alt: "Cover image for Automating Python Execution on a Raspberry Pi with a virtual environment"

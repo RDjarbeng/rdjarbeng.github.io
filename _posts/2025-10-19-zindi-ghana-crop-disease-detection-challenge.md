@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The Ghana Crop Disease Detection Challenge, launched by Zindi in partnership with GIZ, Digital Transformation Centre Ghana, Fairforward, and the Responsible AI Lab, aims to build machine learning models to identify diseases affecting tomato, corn, and pepper crops through mobile phone images."
+  - "Crop diseases and pests reduce yields by up to 40% annually in Sub-Saharan Africa, significantly impacting food security and the region's economy. This competition seeks to create models that can accurately predict all diseases present in images of these crops."
+  - "Participants must build models that can generalize well, even when encountering diseases not seen in the training set, and operate efficiently on edge devices, such as entry-level smartphones used by most subsistence farmers in Africa."
+  - "The competition closes on 15 December 2024, and prizes include USD 4,000 for 1st place, USD 2,500 for 2nd place, and USD 1,500 for 3rd place, with only African citizens eligible for prizes."
 title: Zindi -Ghana Crop Disease Detection Challenge
 date: 2025-10-19T22:19:00
 author: Richard

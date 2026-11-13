@@ -10,6 +10,11 @@ tags:
   - Machine Learning
   - GPU
   - TensorRT
+key_points:
+  - "Nvidia is transitioning from a hardware-focused company to a service provider, offering API keys for access to their AI cloud infrastructure."
+  - "Nvidia NIMs, or Nvidia Inference Microservices, are pre-optimized, model-in-a-box solutions that run efficiently on Nvidia GPUs."
+  - "The company's shift to a cloud AI service allows developers to use high-performance hardware without the need for physical servers, providing a middle ground between black box models and custom hardware setups."
+  - "Nvidia's business model differs from traditional cloud providers like AWS, Google, and Azure, as they focus on specialized AI workloads rather than general-purpose computing services."
 title: Why is Nvidia Selling API Keys Now? The Plain English Guide to NIMs and the AI Cloud
 image: /assets/images/posts/covers/nvidia_nims_api_cover.jpg
 image_alt: 'A flat vector illustration of a green GPU chip surrounded by floating golden API keys, representing Nvidia transition from hardware to cloud AI services with NIMs'

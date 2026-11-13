@@ -6,6 +6,12 @@ tags:
   - Google
   - Security
   - Privacy
+key_points:
+  - "Reviewing and cleaning up connected apps can enhance your digital security and privacy."
+  - "Inactive apps may still have access to your personal information, posing security risks."
+  - "You can find and manage your connected apps through Google Account Security Settings or the Google Account Connections page."
+  - "Different apps request varying levels of access, from basic account info to read/write permissions and additional data."
+  - "Revoking access for unused apps is crucial to maintain your account's security."
 title: How to Find Places Where You've Logged In with Google
 image: /assets/images/posts/covers/google_login_cover.jpg
 image_alt: "Cover image asking 'Where Have You Logged In With Google?' with a shield and app connections"

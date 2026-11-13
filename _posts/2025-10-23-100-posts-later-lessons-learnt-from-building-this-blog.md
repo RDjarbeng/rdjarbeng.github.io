@@ -4,6 +4,12 @@ published: true
 author: Richard
 tags:
   - Review
+key_points:
+  - "The author reflects on the milestone of 100 posts and shares lessons learned from building the blog."
+  - "Content evolution has been marked by the transition from short-form to long-form content, with AI tools like Grok, Claude, and Gemini enhancing the writing process."
+  - "Technical aspects of building the website include changing the domain to .com, adopting SveltiaCMS for post management, and implementing a contact form."
+  - "AI tools have significantly improved content creation, thumbnail generation, and editing, but require careful supervision to maintain the author's voice and style."
+  - "Future improvements include enhancing the homepage layout, improving the about page, expanding the tags pages, and increasing backlinks to the website."
 title: '100 Posts Later: My Lessons Learnt From Building This Blog (rdjarbeng.com)'
 image: /assets/images/100_posts_cover.jpg
 image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark

@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The survey results showed that users' color theme preferences can be influenced by the order in which they are presented."
+  - "Some users switched their preference after seeing dark and light modes side by side, indicating the side-by-side comparison effect."
+  - "User opinions can be influenced by various factors, making it challenging to get truly objective feedback."
+  - "Developers should be aware of their own biases and make decisions based on proper verification and user feedback."
 title: "Light or Dark Mode? What a Small User Survey Taught Me About Colour Themes"
 date: 2025-09-29T00:00:00
 author: Richard

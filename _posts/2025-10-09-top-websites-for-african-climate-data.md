@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate climate data crucial for agriculture, infrastructure, and academic research."
+  - "TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa, offering a convenient API for easy data integration into custom applications."
+  - "Weather Underground is a globally recognized platform that aggregates data from local weather stations, providing extensive global coverage that includes many African countries, with data available for daily weather conditions, temperature, mean pressure, relative humidity, mean visibility, and wind direction and speed."
+  - "The IRI Data Library, maintained by Columbia University, is a detailed resource widely used in academic research, providing in-depth datasets for temperature and precipitation data across Africa, highly recommended for researchers needing rigorous data sets for African climate modeling."
 title: Top Websites for African Climate Data
 date: 2025-10-09 12:12:00
 author: Richard

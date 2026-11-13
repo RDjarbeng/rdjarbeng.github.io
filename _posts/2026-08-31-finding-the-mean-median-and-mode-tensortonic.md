@@ -5,6 +5,10 @@ author: Richard
 tags:
   - Algorithm
   - Python
+key_points:
+  - "The Mean (Arithmetic Average) is the sum of all values divided by the count, providing a measure of central tendency that uses all data points."
+  - "The Median is the middle value when data is sorted, offering a robust measure of central tendency that is less affected by outliers."
+  - "The Mode is the most frequently occurring value, which can be used with categorical data and may not exist or be unique in certain distributions."
 title: Coding the Mean, Median and Mode in Python - TensorTonic
 image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
 image_alt: Coding the Mean, Median and Mode in Python by rdjarbeng for rdjarbeng.com cover image

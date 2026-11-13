@@ -4,6 +4,12 @@ author: Richard
 tags:
   - Air Quality
   - Research papers
+key_points:
+  - "Low-cost sensors are increasingly used for real-time PM exposure assessment, particularly in occupational settings like mining, where in-cabin exposures exceed safety thresholds."
+  - "Low-cost sensor networks are being developed to correct relative humidity biases in PM2.5 sensors, enhancing data reliability for diverse climates and regulatory use."
+  - "Mobile sensors are being used to map PM10 hotspots in urban areas, revealing sources often missed by stationary monitors and enabling dynamic pollution tracking."
+  - "Aircraft ultrafine particle emissions are being differentiated in near-airport communities, providing crucial data for local air quality management and helping to inform local air quality management plans."
+  - "Real-world vehicle emissions are being measured in traffic conditions, with diesel vehicles showing outsized contributions to PM2.5, highlighting the need for targeted interventions in urban areas."
 title: 'This Week in Air Quality Research: Novel Insights and Sensor Advances (23-June-2025)'
 image: /assets/images/air_quality_sensors_city_background.jpg
 layout: post

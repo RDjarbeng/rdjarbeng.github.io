@@ -10,6 +10,11 @@ tags:
   - research
   - AI
   - Africa
+key_points:
+  - "Access to computing resources, especially GPUs, is a major bottleneck for many students and young researchers in Africa and other developing regions."
+  - "Training and experimenting with deep learning models often require significant computational power, which is out of reach for many due to limited resources."
+  - "Platforms like Google Colab and Kaggle notebooks have democratized access to computational resources, but they are not always designed for large-scale research projects."
+  - "Creating affordable mini high-performance computing (HPC) clusters or a dedicated low-cost cloud computing platform specifically for students and researchers in African institutions could help overcome this challenge and enable innovation."
 title: Africa Has the ML Talent But Missing the GPUs.
 image: /assets/images/posts/covers/africa_ml_talent_gpus_cover.jpg
 image_alt: Flat vector illustration of African machine learning researchers at computers with an empty GPU slot

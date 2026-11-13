@@ -11,6 +11,12 @@ tags:
   - Copernicus
   - Planet
   - NASA
+key_points:
+  - "Satellite data has the potential to revolutionize climate and food security monitoring, agriculture, urban planning, and economic/social applications, but there is a large gap between the potential and current reality."
+  - "Environmental monitoring and climate science can benefit from satellite data, with examples including real-time tracking of deforestation, monitoring of polar ice and sea level changes, analysis of atmospheric composition, and early warning for natural disasters."
+  - "Agriculture and food security can also benefit from satellite data, with examples including field-level crop health assessments, data-driven yield predictions, regional soil moisture mapping, and irrigation efficiency analysis."
+  - "Urban planning and development can benefit from satellite data, with examples including detailed 3D city models, continuous monitoring of urban heat islands and air quality, tracking of informal settlements and population movements, and infrastructure assessment and planning based on spatial data."
+  - "Economic and social applications can benefit from satellite data, with examples including night lights as an indicator of economic activity, better supply chain visibility and logistics, digital inclusion mapping in developing regions, and monitoring of refugee movements and humanitarian crisis response."
 title: "What Satellite Data Could Do for Climate and Food Security, and What Stops It Today"
 image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 video: ''

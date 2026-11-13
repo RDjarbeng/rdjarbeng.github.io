@@ -18,6 +18,11 @@ tags:
   - AI 101
   - Tesla
   - Nvidia
+key_points:
+  - "Artificial intelligence did not arrive overnight with ChatGPT; it took 80 years of alternating breakthroughs, hardware bottlenecks, and research winters to reach this point."
+  - "The foundational decades (1940s-1970s) saw the development of the McCulloch-Pitts neuron, Turing's imitation game, and the birth of the AI field at Dartmouth."
+  - "The 1980s introduced expert systems and backpropagation, while the 1990s saw hardware acceleration and the creation of Deep Blue."
+  - "The 2010s marked the deep learning renaissance with AlexNet's breakthrough, embeddings, generative models, and the rise of OpenAI, Google, and Tesla."
 title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
 image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 layout: post

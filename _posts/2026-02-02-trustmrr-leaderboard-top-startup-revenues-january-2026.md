@@ -1,5 +1,10 @@
 ---
 layout: post
+key_points:
+  - "TrustMRR is a database of verified startup revenues, built by Marc Lou to combat fake revenue screenshots and self-reported numbers."
+  - "Verification in TrustMRR requires a direct, cryptographic proof of income, using API integrations with payment processors like Stripe, LemonSqueezy, and Polar."
+  - "The platform's algorithmic audit filters out one-time fees, refund-heavy transactions, and non-recurring spikes to calculate genuine Monthly Recurring Revenue (MRR)."
+  - "The January 2026 leaderboard shows that the Creator Economy is the most financially successful sector, with tools like Rezi, Followr, and DM Champ leading the pack, while AI is more niche-focused."
 title: "TrustMRR reveals which startups are actually making money in 2026"
 date: 2026-02-02
 tags: [TrustMRR, Revenue, Startups, AI, SaaS, Marc Lou]

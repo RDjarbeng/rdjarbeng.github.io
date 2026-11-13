@@ -12,6 +12,12 @@ tags:
   - Interior Design
   - Text-to-Image
   - Artificial Intelligence
+key_points:
+  - "The author tested Gemini Pro's image generation capabilities, specifically the 'Nano Banana' model, to see if it could follow complex instructions and understand a crude drawing."
+  - "The initial test revealed that Gemini could generate images but failed to mention the 'Nano Banana' codename, which became public and created buzz online."
+  - "The author provided a hand-drawn sketch of a room with specific dimensions, and Gemini generated a photorealistic image of the room, but with some inaccuracies, such as adding a TV and placing doors on the same wall."
+  - "The author then instructed Gemini to generate a top-down view of the room, which resulted in a more accurate layout. However, the AI still made mistakes, such as adding a window on the wrong wall and removing the bathroom door."
+  - "The author provided additional constraints to the AI, specifying the positions of the cupboard and doors, and asked it to create a new layout. Gemini successfully adjusted the layout to accommodate the tight space between the cupboard and the entrance door, swinging the door inward."
 title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
 image: /assets/images/gemini_room_design_cover.webp
 layout: post

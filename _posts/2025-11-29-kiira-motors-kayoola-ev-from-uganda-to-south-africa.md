@@ -9,6 +9,11 @@ tags:
   - African Innovation
   - Uganda
   - Sustainable Mobility
+key_points:
+  - "The Kayoola Electric Coach completed a 13,700 km journey from Uganda to South Africa, showcasing its range and capabilities."
+  - "The bus used a 422 kWh lithium iron phosphate (LFP) battery, capable of providing around 500 km per charge, with most charging stops planned to avoid running the battery close to empty."
+  - "The trip tested the bus's thermal management, connectivity, and safety, with one safety incident reported during the journey."
+  - "The bus saved approximately 5,189 litres of diesel, avoiding over 6 tonnes of CO2 emissions, and saved about $3,900 in fuel costs, highlighting the potential for electric coaches in Uganda's fuel-import-dependent economy."
 title: Kiira Motors Kayoola EV completes 13,700+ km journey from Uganda to South Africa.
 image: /assets/images/posts/covers/kayoola_ev_expedition.jpg
 image_alt: Flat vector illustration of a Kayoola electric coach bus driving across an African landscape

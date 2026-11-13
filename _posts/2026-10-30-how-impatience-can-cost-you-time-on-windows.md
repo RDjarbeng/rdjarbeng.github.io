@@ -6,7 +6,11 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "QuickEdit mode in Windows allows users to select text by clicking or dragging within a window, and the title changes to 'Select …'."
+  - "While text is selected, Windows freezes the window's output to prevent the text from scrolling away before copying."
+  - "The program running inside the window can't print anything during this selection process, causing a pause that affects the entire program, not just the display."
+  - "Pressing Esc, Enter, or right-clicking ends the selection and resumes the program's functionality."
 title: How impatience can cost you time on windows
 image: ''
 image_alt: ''

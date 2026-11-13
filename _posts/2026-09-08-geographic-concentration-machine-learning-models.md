@@ -1,5 +1,10 @@
 ---
 layout: post
+key_points:
+  - "The United States leads in notable machine learning models, with 61 out of 149 models built in 2024, followed by China with 15."
+  - "The global distribution of AI models is heavily influenced by the cost of hardware, with frontier models requiring massive computational resources."
+  - "The shift from university labs to corporate data centers has been driven by the need for specialized hardware, electrical substations, and significant capital investments."
+  - "The geographic concentration of AI models is a result of the economic and technological barriers to entry, with frontier model creation remaining tied to organizations with the necessary infrastructure and resources."
 title: "Geographic Concentration of Machine Learning Models: How Compute Economics Re-Engineered the AI Map"
 date: 2026-09-08T16:00:00Z
 published: true

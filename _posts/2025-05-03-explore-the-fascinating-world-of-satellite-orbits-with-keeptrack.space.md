@@ -10,6 +10,11 @@ tags:
   - United States Space Force
   - Satellite Visualization
   - TypeScript
+key_points:
+  - "KeepTrack is an open-source, free 3D website that tracks satellites orbiting Earth in real time."
+  - "It displays tracked objects as colored dots, providing information about each satellite's name, altitude, and owner."
+  - "The website is written in TypeScript and uses Web Workers for efficient orbit calculations, allowing it to run smoothly on both desktop and mobile devices."
+  - "KeepTrack is used by professionals in the satellite tracking industry, including the U.S. Space Force and StarTalk, and can track over 50,000 satellites in real time."
 title: "KeepTrack: A Free 3D Website for Tracking Satellites in Real Time"
 image: /assets/images/keeptrack.png
 video: ''

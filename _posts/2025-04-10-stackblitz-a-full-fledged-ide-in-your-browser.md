@@ -6,6 +6,11 @@ tags:
   - Developer
   - IDE
   - Stackblitz
+key_points:
+  - "StackBlitz allows users to access a terminal from their browser, enabling quick prototyping and debugging without leaving the tab."
+  - "The platform integrates seamlessly with GitHub, allowing users to pull repositories directly into the platform and collaborate via shareable links."
+  - "StackBlitz supports popular frameworks like React and Next.js, providing a complete package for full-featured coding experiences."
+  - "The browser-based nature of StackBlitz enables users to work from anywhere, making it a convenient tool for remote work and on-the-go development."
 title: 'StackBlitz: A Full-IDE in Your Browser'
 image: /assets/images/stackblitz_logo.jpeg
 video: ''

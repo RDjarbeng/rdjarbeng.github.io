@@ -16,6 +16,11 @@ tags:
   - Machine Learning
   - deployment
   - free-ai
+key_points:
+  - "The free HD background remover is a web app that allows users to remove backgrounds from photos without losing high-definition quality."
+  - "Users can upload their images, adjust options, and download full-resolution PNGs without signing up or subscribing."
+  - "The app is built using the `rembg` library and is deployed on Hugging Face, making it accessible to anyone with a web browser."
+  - "People use the app to change backgrounds for LinkedIn profile pictures, presentations, and other applications requiring specific backgrounds."
 title: 'Why I Built a Free HD Background Remover (and What People Use It For)'
 image: /assets/images/bg_remover_cover_rd.webp
 layout: post

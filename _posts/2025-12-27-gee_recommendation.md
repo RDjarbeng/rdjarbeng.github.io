@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "Google Earth Engine (GEE) is a free, web-based platform providing access to satellite imagery and analysis tools for academic and research use."
+  - "GEE includes historical imagery dating back over 30 years, with image refresh times ranging from daily to a few weeks, depending on the dataset and satellite image source."
+  - "The platform offers JavaScript and Python access through a Web IDE, allowing users to filter images to show specific areas in given years. However, the highest available resolution is 10m pixel resolution from Sentinel-2."
+  - "Users should be cautious of data usage during development and consider NASA ARSET's training videos and GEE documentation for further learning."
 title: "Google Earth Engine: A Useful Tool for Satellite Imagery"
 date: 2025-12-27
 layout: post

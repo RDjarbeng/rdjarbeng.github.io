@@ -24,6 +24,11 @@ tags:
   - MINDS Scholarship
   - Application Deadlines
   - STEM
+key_points:
+  - "Carnegie Mellon University Africa (CMU-Africa) offers three master's programs in Rwanda, focusing on technology and engineering solutions for global challenges."
+  - "The Master of Science in Information Technology (MSIT) is a 16-20 month interdisciplinary degree that combines technology, business, and innovation, with over 900 hours of industry interaction."
+  - "The Master of Science in Electrical and Computer Engineering (MS ECE) is a 10-16 month intensive degree covering nanotechnology, large-scale systems, and applications in communications, robotics, and IoT."
+  - "The Master of Science in Engineering Artificial Intelligence (MS EAI) is a 16-20 month degree that integrates AI, machine learning, and data science with engineering disciplines to address sectors like transportation, energy, and health."
 title: Discover Graduate Programs at Carnegie Mellon University Africa
 image: /assets/images/CMU_africa_brochure.png
 layout: post

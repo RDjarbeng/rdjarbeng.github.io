@@ -1,5 +1,11 @@
 ---
 layout: post
+key_points:
+  - "The post provides step-by-step instructions for installing Node.js on a Raspberry Pi 4 using the terminal."
+  - "It assumes the Raspberry Pi is already set up and provides optional resources for setting up the Raspberry Pi."
+  - "The installation process involves downloading Node.js version 18.18.0 (LTS) from the official Node.js website and extracting the tarball file."
+  - "After installation, the post demonstrates how to verify the successful installation by running the 'node --version' command, which should display the installed Node.js version (18.18.0 in this case)."
+  - "The post also mentions that npm should be installed with the Node.js version, but it can be installed separately if needed."
 title: "How to Install Node.js on a Raspberry Pi 4"
 date: 2025-10-25
 author: Richard

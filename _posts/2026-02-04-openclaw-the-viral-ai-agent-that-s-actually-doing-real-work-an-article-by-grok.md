@@ -4,6 +4,12 @@ published: true
 author: Richard
 tags:
   - OpenClaw
+key_points:
+  - "OpenClaw (formerly Clawdbot, Moltbot) is an open-source AI assistant that runs locally on your computer, offering proactive behavior, persistent memory, and the ability to handle various tasks such as email management, booking, coding, and web browsing."
+  - "The AI assistant is designed to be user-controlled, with data staying private and not being sent to third-party companies unless explicitly chosen to use their API."
+  - "OpenClaw supports various AI models, including xAI's Grok, and is currently ranked higher in community leaderboards and usage stats for agentic workflows due to its seamless integration with browser control, file access, and cron jobs."
+  - "While Grok is supported, the community and official documentation often feature other models like Claude and Gemini as the top picks for OpenClaw, due to their mature agent tool-calling behavior and higher usage rates."
+  - "OpenClaw is still in its early stages, with frequent updates and a growing community, and it offers a glimpse of the future of personal AI assistants that are local-first, user-controlled, and agentic."
 title: OpenClaw, The Viral AI Agent That's Actually Doing Real Work An Article by Grok
 image: /assets/images/openclaw_cover_refined.jpg
 image_alt: 'OpenClaw space-lobster AI assistant cover'

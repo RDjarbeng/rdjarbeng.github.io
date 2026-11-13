@@ -12,6 +12,11 @@ tags:
   - Aerospace Engineering
   - Innovation
   - Rocket Launch
+key_points:
+  - "SpaceX successfully caught the Super Heavy booster using robotic arms, a system nicknamed 'Mechazilla', demonstrating unprecedented precision in rocket reusability."
+  - "The booster, weighing over 200 tons, was captured with centimeter-level precision, eliminating the need for landing legs and reducing weight."
+  - "This achievement is a significant step towards full and rapid reusability, cutting the cost of launching payloads and eventually people into orbit and beyond."
+  - "The capture marks a critical milestone in the pursuit of interplanetary travel, bringing us closer to the goal of routine space exploration between Earth, the Moon, and Mars."
 title: "SpaceX's 'Mechazilla' Catches Super Heavy Booster: A Giant Leap for Rocket Reusability"
 image: /assets/images/Starship_spacex_website.webp
 layout: post

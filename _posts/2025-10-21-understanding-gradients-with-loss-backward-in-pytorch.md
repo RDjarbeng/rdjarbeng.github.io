@@ -8,6 +8,12 @@ tags:
   - pytorch
   - loss calculation
   - loss.backward
+key_points:
+  - "PyTorch calculates gradients by tracking operations performed on tensors with `requires_grad=True` and using the chain rule to propagate gradients backward through the computation graph."
+  - "When `loss.backward()` is called, PyTorch computes gradients for all tensors involved in the calculation of the loss, including `coeffs` in this example."
+  - "The gradients of `loss` with respect to `coeffs` are stored in `coeffs.grad`, allowing PyTorch to update `coeffs` during optimization."
+  - "The division by $N$ in the gradient calculation ensures that the gradients reflect the averaging in the loss calculation, maintaining consistency regardless of dataset size."
+  - "The example demonstrates how predictions, loss, and gradients are computed and stored in PyTorch, illustrating the relationship between `loss` and `coeffs` in gradient calculation."
 title: "How PyTorch Calculates Gradients: What loss.backward() and .grad Actually Do"
 image: /assets/images/math_science.jpeg
 image_alt: "Cover image for How PyTorch Calculates Gradients: What loss.backward() and .grad Actually Do"

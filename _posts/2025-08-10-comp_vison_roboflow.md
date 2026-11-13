@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The post provides free Roboflow computer vision notebooks on GitHub for training your own models."
+  - "The tutorials cover Yolov7, Yolov6, and Yolov5 models, including object detection, classification, and segmentation."
+  - "The notebooks are designed to help users build high-quality computer vision models with step-by-step guidance."
+  - "The tutorials are available for free on GitHub, making them accessible to anyone interested in learning computer vision."
 title: "Free Roboflow Notebooks for Training Your Own Computer Vision Models"
 author: Richard
 date: 2025-08-10

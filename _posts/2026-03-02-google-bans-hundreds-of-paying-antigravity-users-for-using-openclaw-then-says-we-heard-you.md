@@ -6,6 +6,12 @@ tags:
   - Google
   - Antigravity
   - OpenClaw
+key_points:
+  - "The Google Antigravity OpenClaw controversy erupted in mid-February 2026, when numerous users of Google's agentic development platform Antigravity (powered by Gemini models) suddenly found their accounts restricted or banned."
+  - "Around February 12 to 14, 2026, reports flooded forums like the Google AI Developers Forum, Reddit, and X, with paid subscribers, including those on the pricey AI Ultra plan ($250/month), losing access without warning, no prior notice, and initially no clear appeals process. Google cited 'malicious usage' and backend overload from automated/agentic patterns routed through third-party tools via OAuth credentials."
+  - "The official response came on February 27, 2026, from the @antigravity account, confirming mass restoration for those restricted and promising a future restoration process, though with limited capacity mentioned in related coverage. The response also stated that third-party tool use via Antigravity login stays prohibited under the ToS (likely under clauses banning credential sharing, unauthorized product powering, or resource abuse)."
+  - "OpenClaw's creator, Peter Steinberger (@steipete), was vocal and critical, calling Google's approach 'pretty draconian' and contrasting it with more communicative providers like Anthropic. He followed through by removing Antigravity support in updates around late February 2026, with the OAuth bridge moved to a bundled (disabled-by-default) plugin and official docs no longer listing Google Antigravity as a supported provider."
+  - "The timeline summary includes the surge in OpenClaw + Antigravity usage leading to backend strain, mass restrictions beginning on February 12 to 14, OpenAI hiring Steinberger, Steinberger publicly criticizing Google as 'draconian' and announcing intent to drop support on February 23, OpenClaw removing Antigravity integration in late February, Google announcing restorations and reaffirming policy on February 27, and the way forward for Antigravity users including sticking to official channels, following restoration steps, exploring alternatives, and a broader lesson on the tension between innovation and guardrails."
 title: Google Bans Hundreds of Paying Antigravity Users for Using OpenClaw - Then Says "We Heard You"
 image: '/assets/images/google_bans_antigravity_v2.png'
 image_alt: 'Illustration of a structural gate blocking a claw with text The OpenClaw Ban Wave'

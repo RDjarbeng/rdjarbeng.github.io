@@ -18,6 +18,11 @@ tags:
   - ConceptArt
   - stablediffusion
   - AI
+key_points:
+  - "Ananse is a prominent figure in West African folklore, particularly among the Akan people of Ghana and other parts of the African diaspora."
+  - "He is a trickster character, usually depicted as a spider, a man, or a combination of both, known for his cunning, wit, and resourcefulness."
+  - "Ananse often uses his intelligence and cleverness to outsmart stronger opponents, like gods, animals, or even humans, in various stories passed down through generations."
+  - "His personality mixes humor, greed, and ingenuity, making him both relatable and unpredictable, with tales often teaching lessons about humility or consequences."
 title: Designing ananse a generative AI approach
 image: /assets/images/ananse_design_cover_rdjarbeng.JPG
 layout: post

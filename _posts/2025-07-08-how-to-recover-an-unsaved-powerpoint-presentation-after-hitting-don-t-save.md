@@ -6,6 +6,12 @@ tags:
   - Microsoft
   - Windows
   - Help
+key_points:
+  - "PowerPoint's AutoRecover feature can help you retrieve unsaved presentations after hitting 'Don't Save'."
+  - "To recover an unsaved presentation, open PowerPoint, navigate to File > Open, and select 'Recover Unsaved Presentations' from the bottom of the dialog box."
+  - "Find the unsaved presentation you want to recover in the list displayed and open it, then immediately save it to a secure location."
+  - "Enable AutoSave in PowerPoint to automatically save your work at regular intervals, and save your presentation frequently using Ctrl+S or Cmd+S."
+  - "Consider saving your files to cloud storage like OneDrive or Google Drive for added backup security."
 title: How to Recover an Unsaved PowerPoint Presentation After Closing
 image: /assets/images/recover_unsaved_presentation_ppt.png
 image_alt: Cover image for Don''t Save" -How to Recover an Unsaved PowerPoint Presentation After Mistake

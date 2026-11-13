@@ -11,6 +11,11 @@ tags:
   - Computer Vision
   - OCR
   - Startup
+key_points:
+  - "Agentic object detection and document extraction using tools from Landing.ai are introduced, simplifying complex tasks and mimicking human intuition."
+  - "The technology can automatically organize documents, extract key details, and categorize photos, saving time and effort."
+  - "Potential use cases include personal organization, education, home automation, small business operations, market research, and accessibility."
+  - "A video demonstration is provided, showcasing the technology's capabilities and its speed compared to previous versions."
 title: Agentic Object Detection and Document Extraction with Landing.ai
 image: /assets/images/agentic_obj_dection_landingai_cover.png
 layout: post

@@ -7,6 +7,11 @@ tags:
   - Air pollution
   - West Africa
   - Africa
+key_points:
+  - "West Africa is experiencing rapid urbanization and industrial growth, leading to increased air pollution in its cities."
+  - "The primary global guidance on air quality is provided by the World Health Organization (WHO), which sets guideline values for ambient air quality."
+  - "Air quality management in West Africa varies significantly by country, with challenges in monitoring, regulation, and enforcement."
+  - "The health implications of poor air quality in West Africa are severe, with high incidences of respiratory diseases, cardiovascular issues, and premature deaths linked to air pollution."
 title: 'Ambient Air Quality Standards in West Africa From WHO: The Current State (2025)'
 image: /assets/images/brightglobe_in_africa.jpg
 image_alt: 'Cover image for Ambient Air Quality Standards in West Africa: The Current State (2025)'

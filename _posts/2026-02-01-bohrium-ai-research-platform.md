@@ -5,6 +5,11 @@ author: Richard
 category: Research
 tags:
   - Research
+key_points:
+  - "Air quality in Africa is a significant public health concern, with ambient pollution contributing to approximately 1.1 million premature deaths annually and household air pollution accounting for two-thirds of the total."
+  - "Sub-Saharan Africa bears the highest population growth and urbanization rates globally, leading to rapid emissions escalation from aging diesel fleets, informal industrial activity, biomass combustion, unregulated waste burning, and Saharan dust events."
+  - "The trajectory of air quality research published from African institutions reflects persistent structural constraints and accelerating momentum, with historically lagging research and a marked inflection point post-2015 driven by targeted international funding and regional capacity-building networks."
+  - "Innovative, unconventional methodologies are emerging in African air quality research, including low-cost sensor networks, machine learning for data correction, satellite data fusion, citizen science platforms, drone-based vertical profiling, and AI-driven source apportionment."
 title: Bohrium AI Research Platform
 image: ''
 image_alt: ''

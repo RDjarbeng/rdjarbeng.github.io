@@ -6,6 +6,11 @@ tags:
   - SpaceX
   - Falcon 9
   - Satellite
+key_points:
+  - "SpaceX's Falcon 9 rocket has achieved 100 successful launches, marking a significant milestone in its history."
+  - "The successful 100th launch demonstrates SpaceX's mastery of the Falcon 9 rocket technology."
+  - "The 100th launch was achieved on January 15, 2025, at Pad 39A in Florida."
+  - "This milestone highlights SpaceX's continued success and reliability in launching satellites and other payloads."
 title: SpaceX Falcon 9 rocket  successfully reaches a hundred launches.
 image: /assets/images/falcon9_launch.jpeg
 layout: post

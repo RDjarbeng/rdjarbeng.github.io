@@ -9,6 +9,11 @@ tags:
   - AI
   - JavaScript
   - Imperfections
+key_points:
+  - "Machine learning models can sometimes be overconfident in their predictions, as shown in an example where a charger is misclassified as a cell phone with 94% confidence."
+  - "The misclassification occurred because there weren't enough examples of chargers in the training data for the model to accurately distinguish them from similar objects like cell phones."
+  - "To create useful machine learning models, it's important to train them to minimize errors and false positives, which can be achieved through fine-tuning the model to better match the specific data it may encounter in your application."
+  - "As an engineer, it's the role to help communicate the possibilities and limitations of these models to users, emphasizing that no model is perfect and careful training and fine-tuning can bring real value to users."
 title: "Why Machine Learning Models Can Be Confidently Wrong: A Charger Classified as a Phone"
 image: /assets/images/ml_false positive_cropped_charger_rd.jpg
 layout: post

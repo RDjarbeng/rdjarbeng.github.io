@@ -14,6 +14,11 @@ tags:
   - Visual Storytelling
   - Education
   - Animation
+key_points:
+  - "Starlink is a satellite internet service developed by Elon Musk's SpaceX to provide low-latency, high-speed internet to underserved areas worldwide."
+  - "The video by Branch Education uses 3D animation to explain the technical details of Starlink's satellite signal propagation, beamforming, 64-QAM modulation, and more, making the complex science accessible to a broader audience."
+  - "Starlink aims to revolutionize internet access by deploying thousands of satellites orbiting the Earth, offering a solution to areas where traditional broadband is limited or non-existent."
+  - "The video breaks down the science behind Starlink in an engaging and educational manner, using visual storytelling techniques to simplify complex concepts and make them understandable for all viewers."
 title: "How Starlink Satellites Work, Explained in a 3D Animated Video by Branch Education"
 image: /assets/images/starlink_branch_education.png
 video: ''

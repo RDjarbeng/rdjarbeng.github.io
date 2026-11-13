@@ -8,6 +8,11 @@ tags:
   - Jeremy Howard
   - Eric Ries
   - startups
+key_points:
+  - "Answer.AI is a new R&D laboratory founded by Jeremy Howard and Eric Ries with $10 million in funding from Decibel VC, focusing on practical AI applications rather than AGI."
+  - "Jeremy Howard, a machine learning expert with over 30 years of experience, and Eric Ries, known for his lean startup methodology, lead the venture."
+  - "Answer.AI distinguishes itself by concentrating on leveraging existing AI models for practical applications, rather than developing new foundation models."
+  - "The company operates as a fully-remote team of deep-tech generalists, emphasizing skill, curiosity, and creativity over traditional credentials, and follows an iterative approach to problem-solving."
 title: "Answer.AI Launches: A New Chapter in Practical AI Development"
 image: /assets/images/answer_ai.jpg
 video: ""

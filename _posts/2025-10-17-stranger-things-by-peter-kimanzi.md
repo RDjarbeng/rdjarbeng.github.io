@@ -1,4 +1,9 @@
 ---
+key_points:
+  - "The video showcases the 'Stranger Things' animation website created by Peter Kimanzi."
+  - "The website features a mouse pointer and animated 'creatures' that follow the pointer."
+  - "The video is not as responsive on mobile devices due to touch interaction limitations."
+  - "The previous post about Peter Kimanzi, a developer from Nairobi, Kenya, is also mentioned in the blog post."
 title: "Stranger Things by Peter Kimanzi"
 date: 2025-10-17
 layout: post

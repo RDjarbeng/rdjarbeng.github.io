@@ -9,6 +9,12 @@ tags:
   - Data Privacy
   - Cybercrime
   - Cross-Border Payments
+key_points:
+  - "The email is an invitation and reflection on the Singapore FinTech Festival (SFF), themed 'Shaping the Next Decade of Growth' and celebrating its 10th edition in 2025."
+  - "The email highlights past achievements such as real-time payments, digital public infrastructure, and cross-border payment links like PayNow-UPI."
+  - "It introduces key speakers like Dr. Roy Fielding, Nandan Nilekani, Eric Jing, and Dr. Paul Taylor, and discusses future tech like AI, tokenization, and quantum computing."
+  - "The email outlines challenges such as the financing gap for SMEs, unbanked populations, ageing societies, and risks in digital finance, and calls for collaboration to build a resilient, inclusive financial ecosystem."
+  - "The email ends on an optimistic note, emphasizing the importance of collaboration and the potential for innovation in the financial ecosystem."
 title: "Decoding the Open Letter for the Singapore FinTech Festival's 10th Edition"
 image: /assets/images/sff_2025_cover_image.webp
 image_alt: "Cover image for Decoding the Open Letter for the Singapore FinTech Festival's 10th Edition"

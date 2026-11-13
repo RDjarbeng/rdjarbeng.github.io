@@ -9,6 +9,11 @@ tags:
   - ChatGPT
   - OpenAI
   - Google
+key_points:
+  - "Artificial Intelligence (AI) refers to systems that process data to perform specific tasks like recognizing patterns, making predictions, or generating text, built on math, algorithms, and data."
+  - "AI is 'narrow', designed for specific tasks, not general human-like intelligence, and depends on quality data, making it not conscious or magical."
+  - "Media and pop culture often shape AI's image, leading to misconceptions such as AI being sentient, a fix-all solution, a threat to jobs, or only for experts."
+  - "To stay informed about AI, learn the basics, understand its limitations, follow accessible news sources, engage with discussions on social media, and try simple AI tools to grasp its practical applications."
 title: 'AI: What It Is, How It’s Seen, and How to Stay Informed'
 image: /assets/images/rtdetr/cat_prediction_rtdetr.jpg
 video: ''

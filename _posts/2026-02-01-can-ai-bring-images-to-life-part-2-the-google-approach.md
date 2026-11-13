@@ -7,6 +7,12 @@ tags:
   - Generative AI
   - DeepMind
   - Animation
+key_points:
+  - "Google DeepMind's 'Dear Upstairs Neighbors' animation project highlights the limitations of one-click AI video tools."
+  - "The team behind the project used a combination of fine-tuning, video-to-video workflows, and localized refinement to achieve their desired artistic style."
+  - "Fine-tuning involves training the AI model with specific examples, allowing for greater control over the generated content."
+  - "Video-to-video workflows allow animators to provide a rough video as input, which the AI then uses to generate a polished final product."
+  - "Localized refinement enables users to make targeted adjustments to specific parts of the generated video, saving time and improving overall quality."
 title: "How Google DeepMind Animated 'Dear Upstairs Neighbors' and What One-Click AI Video Tools Miss"
 image: /assets/images/posts/covers/can_ai_bring_google_approach_cover.jpg
 image_alt: 'A vibrant 2D animated abstract drawing depicting a stressed character with their hands on their head surrounded by floating neon objects'

@@ -12,6 +12,11 @@ tags:
   - RDjarbeng's project
   - Animation
   - virtual head
+key_points:
+  - "The face shifts between emotional states, happy, surprised, bored, or neutral, based on mouse position and activity, acting like a finite state machine."
+  - "The eyes track the cursor for a lively effect, and the face gets happier when the mouse is closer, showing surprise after a pause in interaction, turning bored after long inactivity, and settling to neutral with less activity."
+  - "Smooth transitions come from CSS and JavaScript, adjusting eye movement, mouth shape, and blush."
+  - "The project was inspired by a Human-Robot Interaction (HRI) course at Carnegie Mellon, where the author explored how robots evoke emotions, and it incorporates concepts like feedback loops, agency, affective interaction, social presence, proxemics, and the uncanny valley."
 title: Roboface-an Interactive Face Animation Tracker for the Mouse Pointer
 image: /assets/images/face_animation_cover.webp
 image_alt: Cover image for Roboface-an Interactive Face Animation Tracker

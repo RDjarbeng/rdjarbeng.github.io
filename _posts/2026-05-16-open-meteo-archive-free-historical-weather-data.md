@@ -4,6 +4,11 @@ published: true
 author: Richard
 tags:
   - Weather
+key_points:
+  - "The Open-Meteo Archive provides free, open-source access to historical and past weather data, allowing users to access decades of climate history and archived past forecasts."
+  - "It offers a continuous historical timeseries of weather variables with a 1-hour step, reaching all the way back to January 1, 1979, making it perfect for spotting long-term climate trends."
+  - "The Open-Meteo Archive integrates short-term historical forecast runs (up to 16 days back) so users can easily compare what was predicted recently with what actually happened."
+  - "The archive integrates data from dozens of global weather models, ensuring a seamless stream of historical weather data without any gaps, and provides a wide range of weather metrics such as temperature, humidity, precipitation, and wind speed/direction."
 title: Open Meteo archive free historical weather data
 image: '/assets/images/posts/covers/open_meteo_cover.jpg'
 image_alt: 'Open Meteo Archive: Free Historical Weather Data'

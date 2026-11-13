@@ -18,6 +18,12 @@ tags:
   - Scripting
   - Terminal
   - Service Manager
+key_points:
+  - "There are multiple methods to automate a Raspberry Pi to run a program automatically upon boot, including using systemd, crontab, and rc.local."
+  - "Systemd is a service manager that allows you to create a service to run your program automatically at startup, with the ability to manage it using the 'systemctl' command."
+  - "The 'crontab' utility enables scheduling your program to run at specific times, allowing you to define when and how your script should be executed."
+  - "The '/etc/rc.local' file can be used to run your program automatically at startup by adding the command to execute your script before the 'exit 0' line."
+  - "Automating a script with systemd involves creating a service file, configuring it to execute your script, enabling it to start on boot, and managing it using the 'systemctl' command."
 title: "How to Run a Script Automatically When Your Raspberry Pi Boots"
 image: /assets/images/raspberrypi.png
 image_alt: "Cover image for How to Run a Script Automatically When Your Raspberry Pi Boots"

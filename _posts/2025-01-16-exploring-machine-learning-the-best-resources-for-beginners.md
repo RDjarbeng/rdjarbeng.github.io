@@ -7,6 +7,12 @@ tags:
   - Getting started
   - Jason Brownlee
   - beginners
+key_points:
+  - "Jason Brownlee's guide to machine learning resources is split into five groups: libraries to practice with, video courses, two overview papers, beginner books, and further reading."
+  - "He recommends starting with a programming language you already know and learning just enough to try things out."
+  - "Andrew Ng's Stanford machine learning course on Coursera and Yaser Abu-Mostafa's Learning from Data from Caltech on edX are among the video courses recommended."
+  - "Tom Mitchell's 'The Discipline of Machine Learning' and Pedro Domingos's 'A Few Useful Things to Know about Machine Learning' are two overview papers recommended."
+  - "Beginner books such as Programming Collective Intelligence, Machine Learning for Hackers, Machine Learning: An Algorithmic Perspective, Data Mining: Practical Machine Learning Tools and Techniques, and Tom Mitchell's textbook Machine Learning are also suggested."
 title: "Where to Start with Machine Learning: Jason Brownlee's Resource List and My Pick"
 image: /assets/images/jason_brownlee_start_ml.png
 video: ''

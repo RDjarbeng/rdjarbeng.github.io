@@ -5,6 +5,11 @@ author: Richard
 category: Technology
 tags:
   - HuggingFace
+key_points:
+  - "Hugging Face Chat is a versatile language model capable of writing code, explaining complex topics, drafting content, reasoning through math and logic, and processing uploaded files."
+  - "It can write and debug code in various languages, build interactive web apps, explain algorithms, and refactor legacy code."
+  - "Hugging Face Chat is not a calculator or a sysadmin; it can't execute code, access local machines, or guarantee the truth of its outputs."
+  - "The model can generate first drafts for projects like a fully functional fantasy RPG engine or a detailed supply-chain economics simulation, but it cannot execute the code or access local files directly."
 title: Hugging face chat what can it do?
 image: ''
 image_alt: ''

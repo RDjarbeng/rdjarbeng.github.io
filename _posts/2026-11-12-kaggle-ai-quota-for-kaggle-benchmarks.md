@@ -6,7 +6,12 @@ category: Science & Technology
 tags: []
 series: ''
 series_part: null
-key_points: []
+key_points:
+  - "The AI quota is a free API credit allowance provided by Kaggle for Kaggle Benchmarks and its Model Proxy."
+  - "It is separate from standard notebook compute hours and covers inference token costs for calling hosted frontier LLMs."
+  - "The daily allowance is $10.00, while the monthly allowance is $100.00, with no additional cost to users."
+  - "Every time a Benchmark task is run, a model is evaluated, or an LLM is used as a judge through Kaggle's proxy, the token cost is deducted from both daily and monthly balances."
+  - "Temporary higher quotas, such as $50/day, may be granted during certain AI-focused hackathons or competitions."
 title: Kaggle AI quota for Kaggle Benchmarks
 image: ''
 image_alt: ''

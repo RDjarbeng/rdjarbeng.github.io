@@ -8,6 +8,11 @@ tags:
   - Python
   - NASA
   - Web Development
+key_points:
+  - "NASA's Astronomy Picture of the Day (APOD) has migrated from its legacy HTML layout at 'apod.nasa.gov' to a WordPress-based content management platform at 'science.nasa.gov/apod/'."
+  - "The new architecture includes a headless WordPress backend, a direct REST API endpoint, and a transition period for legacy API usage until December 1, 2026."
+  - "Developers must update their code to handle the new JSON response format, which includes a list of post objects, updated URL semantics, and HTML-embedded explanations, as well as address the image path redirect issue."
+  - "The migration affects the APOD gallery collection, requiring updates to the GitHub Actions workflow and the use of the new WordPress endpoint for fetching daily imagery."
 title: NASA APOD Has Migrated. Here Is What Is Changing and What Developers Must Do
 image: /assets/images/posts/covers/nasa-apod-api-migration-wordpress.jpg
 image_alt: NASA APOD API migration illustration showing telescope data moving into a WordPress cloud architecture

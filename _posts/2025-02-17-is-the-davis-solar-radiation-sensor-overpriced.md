@@ -7,6 +7,11 @@ tags:
   - Solar radiation
   - Price
   - Environmental sensing
+key_points:
+  - "The Davis Solar Radiation Sensor is a popular choice for measuring solar radiation in agricultural, meteorological, and environmental projects."
+  - "The sensor is priced around €232.74, with prices varying based on location and time of purchase."
+  - "The Davis sensor is designed with high-quality materials and technology to ensure accurate readings, making it suitable for applications where solar radiation data directly affects decision-making."
+  - "While some users appreciate its accuracy, others feel it's overpriced when compared to their expectations or needs, and alternatives with similar functionalities may be available at a lower cost."
 title: Is the Davis Solar Radiation Sensor Overpriced?
 image: /assets/images/solar_radiation_senosr.png
 video: ''

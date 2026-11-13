@@ -5,6 +5,10 @@ author: Richard
 tags:
   - AI
   - AI news
+key_points:
+  - "Not all AI models are built the same. Some excel at reasoning through complex logic puzzles, while others are masterfully tuned to transcribe audio with near-human accuracy."
+  - "Matching the model to the task from the outset avoids unnecessary complexity, sluggish performance, and bloated infrastructure costs later."
+  - "Reasoning models don't just spit out the first word that comes to mind. They 'think' through a problem step-by-step, making them highly capable in mathematics, coding, and logical deduction."
 title: "The Right AI Model for the Job: A Practical Guide"
 image: /assets/images/posts/covers/ai_models_guide_cover.jpg
 image_alt: 'Flat vector illustration of AI model icons on a leaderboard'

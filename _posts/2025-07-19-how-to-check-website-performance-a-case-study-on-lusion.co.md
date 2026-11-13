@@ -4,6 +4,12 @@ published: true
 author: Richard
 tags:
   - Website, Lusion, CSS, threejs
+key_points:
+  - "Website performance directly impacts user satisfaction, engagement, and conversions. Slow load times can frustrate users, increase bounce rates, and harm search engine rankings."
+  - "Google's research shows that a 1-second delay in mobile page load can reduce conversions by up to 20%."
+  - "Manual inspection using browser developer tools and online tools like Google PageSpeed Insights, WebPageTest, and Pingdom can help measure website performance accurately."
+  - "Lusion.co, a visually stunning website, only used 18.9MB of data when fully loaded, but load times varied significantly based on network speed, highlighting the importance of balancing aesthetics with performance."
+  - "Analyzing website performance helps identify bottlenecks, optimize resources, and ensure the site delivers a seamless experience across devices and networks."
 title: "How to Check Your Website's Performance: A Case Study on Lusion.co"
 image: /assets/images/lusion_web_astronaut_annotated_rd.webp
 layout: post

@@ -10,6 +10,12 @@ tags:
   - Machine Learning
   - Computer Vision
   - NLP
+key_points:
+  - "The NVIDIA Build catalog is an AI superstore offering a massive list of AI models, including video and image manipulation, office assistants, universal translators, and healthcare and physics tools."
+  - "NVIDIA hosts several models dedicated to manipulating and analyzing video, such as Media Relighting, LipSync, and Synthetic Video Detector, which can fix bad lighting, instantly dub audio, and detect synthetic videos."
+  - "The catalog includes specialized models for heavy-duty office work, like Nemotron OCR for extracting data from messy files and Flux 2 Klein 4B for lightning-fast image generation from text descriptions."
+  - "The catalog also features models for healthcare and physics, such as OpenFold3 for protein and DNA structure prediction and StreamPETR for real-time object detection in autonomous driving."
+  - "NVIDIA's catalog allows users to test models in the browser for free, build prototypes via API with a generous free tier, and commercialize products by downloading open-source models or using NVIDIA's Enterprise tier for dedicated access to their supercomputers."
 title: "Give Me 8 Minutes To Show What You Can Actually Do With NVIDIA's Model Catalog- The AI Superstore:"
 image: /assets/images/posts/covers/nvidia_ai_superstore_cover.jpg
 image_alt: A flat vector illustration of a storefront styled as an AI superstore with shelves displaying colorful model icons including a brain, camera, speech bubble, and DNA helix

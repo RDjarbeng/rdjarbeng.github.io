@@ -1,4 +1,10 @@
 ---
+key_points:
+  - "The author initially used a visual studio code editor to create and edit posts on a Jekyll GitHub Pages site, which was slow and required manual file naming and asset management."
+  - "DecapCMS was introduced as a potential solution, but it required a Netlify account and had documentation that was difficult to follow."
+  - "After spending a significant amount of time trying to get DecapCMS to work, the author gave up and asked for help on Stack Overflow, but received no response."
+  - "The author then found SveltiaCMS, which was built from the ground up with Svelte and already had login with GitHub setup. This made the migration process much easier and smoother."
+  - "The author successfully set up SveltiaCMS on their GitHub Pages site using the Sveltia CMS Authenticator, which allowed them to manage the site without having to manage file names or keep track of dates."
 title: "How I Added a CMS to My Jekyll Site on GitHub Pages: Decap CMS, Netlify and Sveltia"
 date: 2025-10-08T23:01:00
 author: Richard

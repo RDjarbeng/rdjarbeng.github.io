@@ -5,6 +5,12 @@ tags:
   - Research
   - Papers
   - Academics
+key_points:
+  - "A new research technique becomes standard through a seven-stage process: peer review, first measurement, 'us too' papers, evaluation papers, intercomparisons, becoming a reference method, and public data."
+  - "In the first phase, peer review, the technique is tested and debated, and papers show its potential but do not yet demonstrate practical application."
+  - "In the second phase, standardisation, the technique is widely adopted and becomes a trusted tool, with many groups applying it to their own problems and publishing results."
+  - "Knowing the stage a technique is in helps readers judge new papers and decide whether to write one themselves, as well as guide the choice of method for real-world applications."
+  - "The CRISPR gene editing example demonstrates this pattern, with the technique moving from experimental to standardised status over a decade, and the importance of understanding the stage a technique is in for evaluating new research."
 title: "How a New Research Technique Becomes Standard: The 7 Stages of Published Papers"
 image: /assets/images/academic_papers_rising_wind.jpg
 layout: post

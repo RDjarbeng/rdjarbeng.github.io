@@ -16,6 +16,11 @@ tags:
   - memes
   - productivity hacks
   - digital life
+key_points:
+  - "A restart clears a crowded temporary state, stopping stuck software, releasing memory, and starting a fresh operating-system session."
+  - "Windows adds a useful wrinkle by preserving the kernel session and loaded drivers in a hibernation file when choosing 'Restart', which can solve driver or kernel-session problems that a normal shutdown and power-on does not."
+  - "Routers also need the same reset, with different symptoms, as they keep track of connected devices, addresses, WiFi sessions, DNS lookups, and their connection to the modem or internet provider."
+  - "Restarting does more than occasionally fix a device; it narrows the problem, exposing persistent issues such as memory leaks, faulty drivers, failing storage, overheating, bad cables, unstable internet service, or broken application updates."
 title: Why Does Restarting Your Computer (or Router) Actually Work?
 image: /assets/images/why_does_restarting_work_rdjarbeng_cover.webp
 layout: post

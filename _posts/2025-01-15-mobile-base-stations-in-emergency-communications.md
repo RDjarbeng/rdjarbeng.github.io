@@ -8,6 +8,11 @@ tags:
   - California
   - Los Angeles
   - Wildfires
+key_points:
+  - "Elon Musk is deploying Tesla Cybertrucks equipped with Starlink terminals in a grid pattern to provide internet connectivity and power in areas of Los Angeles and Malibu affected by wildfires."
+  - "This initiative comes after Musk's criticism of California's wildfire management, suggesting a comparison between his actions and the state's response, which adds a layer of socio-political commentary to the post."
+  - "The trucks will provide a source of power to the Starlink terminals acting as mobile base stations."
+  - "Natural disasters like wildfires, earthquakes, or hurricanes often disrupt traditional communication infrastructure, leaving affected areas isolated. This is where mobile base stations come into play, providing a critical lifeline by extending network coverage to areas where it's needed most."
 title: Cybertrucks as mobile Base Stations in Emergency Communications
 image: /assets/images/cybertruck.jpeg
 video: ''

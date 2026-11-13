@@ -6,6 +6,11 @@ tags:
   - Game development
   - Machine Learning
   - AI 
+key_points:
+  - "Reinforcement learning (RL) has powered impressive achievements in game-playing AI, such as AlphaGo and OpenAI's Dota 2 bot."
+  - "Tools like Unity ML Agents and examples like Gran Turismo 7's RL-trained AI racer show its potential, but RL remains rare in complex games for NPCs or opponents."
+  - "RL is often about creating entertaining experiences, not just winning, and developers typically want AI that plays to lose entertainingly, behaves predictably, and avoids exploits or weird behaviors."
+  - "Players prefer human opponents for true challenges, as they foster social connections and provide a more engaging experience than AI opponents."
 title: Why Isn't Reinforcement Learning Widely Used for Game AI Agents?
 image: /assets/images/reinforcement%20learning_in_games_grok.jpg
 video: ''

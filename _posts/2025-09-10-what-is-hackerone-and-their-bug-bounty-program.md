@@ -11,6 +11,11 @@ tags:
   - Cybersecurity
   - GitHub
   - PayPal
+key_points:
+  - "HackerOne is a leading hacker-powered security platform that connects organizations with a global community of over 2 million ethical hackers."
+  - "Founded in 2012, it empowers over 1,200 companies, including GitHub, PayPal, and Uber, to secure digital assets through crowdsourced testing."
+  - "The platform has facilitated over 500,000 bug discoveries, with one critical vulnerability reported hourly, saving organizations millions per critical fix prevented."
+  - "HackerOne hosts a directory of programs, from public initiatives like the Internet Bug Bounty to exclusive private programs, and reported vulnerabilities rose by 9% in 2024, highlighting the platform’s impact."
 title: What is HackerOne and Their Bug Bounty Program?
 image: /assets/images/hackerone_bugbounty_rd.webp
 layout: post

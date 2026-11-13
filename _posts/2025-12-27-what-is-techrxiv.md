@@ -5,6 +5,12 @@ tags:
   - Research
   - Academics
   - Papers
+key_points:
+  - "TechRxiv is an open, moderated preprint server for sharing unpublished research in engineering and technology disciplines."
+  - "It was launched in 2020 by the Institute of Electrical and Electronics Engineers (IEEE) to facilitate rapid dissemination of research findings."
+  - "TechRxiv is not peer-reviewed but is screened for plagiarism and inappropriate content, and it is free and publicly accessible."
+  - "TechRxiv differs from arXiv in its discipline scope, provider, launch year, moderation, and peer review practices."
+  - "Other similar preprint repositories include bioRxiv, medRxiv, ChemRxiv, engrXiv, SocArXiv, SSRN, ViXra, and others, each catering to specific disciplines or general research."
 title: What is TechRxiv?
 image: /assets/images/techrxiv/techrxiv_screenshot_good.png
 video: ''

@@ -7,6 +7,11 @@ tags:
   - Kigali
   - Environment
   - Sensors
+key_points:
+  - "Kigali is currently shrouded in a dense haze that has significantly reduced visibility across the city."
+  - "The haze is likely composed of dust, smoke, or water vapor, but the exact cause is not yet clear."
+  - "The haze has obscured the surrounding hills, making it difficult to see the Kigali International Airport from the Special Economic Zone."
+  - "Indoor environmental data from Carnegie Mellon University Africa's sensor array shows a warm and moderately humid environment with an average temperature of 25°C and humidity levels between 60% and 67%."
 title: Dense Haze Over Kigali - Weather Report - 29th January, 2026
 image: /assets/images/kigali_weather_thumbnail.jpg
 image_alt: Kigali Weather Report thumbnail showing the hills and title for the post

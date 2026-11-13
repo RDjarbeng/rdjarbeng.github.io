@@ -7,6 +7,11 @@ tags:
   - Robotics
   - Carnegie Mellon
   - Autonomous Systems
+key_points:
+  - "Carnegie Mellon University's planetary robotics space houses flight-ready moon rovers being prepared for lunar deployment, demonstrating a unique approach to space technology development."
+  - "The university's focus on autonomy, field robotics, and cross-disciplinary engineering has made it a major source of space technology, moving away from traditional aerospace engineering disciplines."
+  - "Carnegie Mellon organizes its space technology development across its existing strengths, including the School of Computer Science, Robotics Institute, Mechanical Engineering, Electrical and Computer Engineering, and Materials Science."
+  - "Two rovers developed on campus, Iris and MoonRanger, showcase the university's approach to lunar exploration, with Iris being a tiny, carbon-fiber rover and MoonRanger being a suitcase-sized autonomous rover designed for the Moon's south pole."
 title: How Carnegie Mellon Sent Missions to the Moon Without an Aerospace Department
 image: /assets/images/posts/covers/cmu_moon_missions_cover.jpg
 image_alt: Richard standing beside the Iris and MoonRanger lunar rovers at Carnegie Mellon University

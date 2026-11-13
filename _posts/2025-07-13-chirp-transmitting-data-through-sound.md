@@ -5,6 +5,11 @@ tags:
   - Sound
   - GitHub
   - Projects
+key_points:
+  - "Chirp is a small GitHub project that sends text from one device to another as sound."
+  - "The project uses the Web Audio API to convert text into a series of beeps, with each character having its own pitch."
+  - "The sender device plays a series of beeps through its speaker, while the receiver device listens with its microphone and converts the beeps back into text."
+  - "The project has gained popularity, with nearly 600 stars on GitHub within five months of its creation in February 2025."
 title: 'Chirp: Transmitting Data Through Sound'
 image: /assets/images/chirp_screenshot_data_with_sound.png
 layout: post

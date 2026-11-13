@@ -5,6 +5,12 @@ tags:
   - SveltiaCMS
   - CMS
   - Jekyll
+key_points:
+  - "SveltiaCMS has evolved to offer essential features that simplify content management, making it easier to create and manage posts."
+  - "The platform now includes a native image picker, allowing users to drag and drop multiple images into posts without manually entering file paths."
+  - "SveltiaCMS supports automation of date and time settings for new posts, eliminating the need for manual input and saving time."
+  - "The platform boasts a responsive and active community, with Kohei actively addressing user issues and integrating new features based on user feedback."
+  - "SveltiaCMS has resolved multiple user-reported issues, demonstrating the project's commitment to user satisfaction and continuous improvement."
 title: "SveltiaCMS Keeps Getting Better: The Features That Made Running My Blog Easier"
 image: /assets/images/sveltia-logo.svg
 layout: post

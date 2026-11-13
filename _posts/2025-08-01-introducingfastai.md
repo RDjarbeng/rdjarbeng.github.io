@@ -1,4 +1,10 @@
 ---
+key_points:
+  - "Fastai is a free course designed for people with some coding experience, who want to learn how to apply deep learning and machine learning to practical problems."
+  - "The course covers building and training deep learning models for computer vision, natural language processing, tabular analysis, and collaborative filtering problems."
+  - "It includes creating random forests and regression models, deploying models, and using PyTorch, the world’s fastest growing deep learning software, along with popular libraries like fastai and Hugging Face."
+  - "The course is based on the book 'Deep Learning for Coders with Fastai and PyTorch: AI Applications Without a PhD' by Jeremy Howard and Rachel Thomas, which is recommended to be read alongside the course."
+  - "The course is divided into 20 chapters, covering topics such as production, ethics, MNIST basics, multi-category classification, sizing and transfer learning, collaborative filtering, tabular data processing, natural language processing, convolutions, resnet, optimizer and callbacks, foundations, gradCAM, learner, and conclusion."
 title: "fastai's Practical Deep Learning for Coders: Deep Learning Without a PhD"
 date: 2025-08-01T00:00:00
 author: Richard

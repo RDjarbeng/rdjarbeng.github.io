@@ -13,6 +13,11 @@ tags:
   - interest
   - Manchester United
   - Trending
+key_points:
+  - "Google Trends is a free tool that shows what people are searching for on Google, tracking search interest over time and across different topics."
+  - "It helps users understand what's popular, compare trends, and make informed decisions based on real-time data."
+  - "Users can explore trends by typing in keywords, comparing multiple searches, and using filters to focus on specific locations, time periods, or categories."
+  - "Google Trends can be used for various purposes, such as staying informed about trends, comparing fields of study, making smart choices, and planning events or sales."
 title: What's Hot Right Now? Find Out with Google Trends!
 image: /assets/images/1Google trends.webp
 layout: post

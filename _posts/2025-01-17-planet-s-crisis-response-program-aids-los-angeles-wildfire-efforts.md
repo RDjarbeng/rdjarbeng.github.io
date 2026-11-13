@@ -6,6 +6,11 @@ tags:
   - Satellite data
   - Wildfires
   - California
+key_points:
+  - "Planet Labs, known for satellite imagery services, has stepped up to offer non-commercial data for the Los Angeles wildfire response efforts."
+  - "The Palisades Fire, which has ravaged parts of Los Angeles, is being monitored using Planet's SkySat imagery, including near-infrared capabilities."
+  - "Access to the data is available through a secure web portal, emphasizing Planet's commitment to aiding in crisis situations."
+  - "The response from the community has been overwhelmingly positive, with praise for Planet Labs' altruistic efforts and the application of media access for personal reasons and public safety."
 title: Planet's Crisis Response Program Aids Los Angeles Wildfire Efforts
 image: /assets/images/planet_california_wildfires.jpeg
 video: ''

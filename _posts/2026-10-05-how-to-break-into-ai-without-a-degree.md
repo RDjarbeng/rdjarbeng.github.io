@@ -7,6 +7,11 @@ tags:
   - Machine Learning
   - Career
   - Software Engineering
+key_points:
+  - "Aleksa Gordić transitioned from an electrical engineering background in Serbia to a software role at Microsoft and ultimately landed a Research Engineer position at DeepMind without holding a machine learning degree."
+  - "His path was marked by late exposure to programming, multiple high-profile rejections, and a self-designed curriculum that included studying core algorithms, data structures, and machine learning."
+  - "Aleksa structured his self-study system around macro and micro cycles, dedicating dedicated time to a single subfield of machine learning and producing verifiable public work, such as open-source implementations and video walkthroughs."
+  - "His breakthrough came through open-source contributions, as he reached out to Petar Veličković, a staff research scientist at DeepMind, and built a genuine technical rapport after completing his own implementation of the Graph Attention Network paper."
 title: "How Aleksa Gordić Broke into AI Engineering Without a Degree in AI"
 image: /assets/images/posts/covers/how-to-break-into-ai-without-a-degree.jpg
 image_alt: Flat vector illustration showing a software engineer transitioning into AI and machine learning engineering without a degree

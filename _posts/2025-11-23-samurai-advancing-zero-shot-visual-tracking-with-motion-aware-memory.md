@@ -12,6 +12,11 @@ tags:
   - Segment Anything Model (SAM)
   - Research
   - Object Detection
+key_points:
+  - "SAMURAI (Segment Anything Model 2) improves video object tracking by addressing weaknesses in Meta's SAM 2, such as trusting appearance over motion, using a fixed memory window, and ignoring motion."
+  - "SAMURAI uses a Kalman filter to track the object's motion, checking the overlap between the candidate mask and the expected object position, and only storing frames where the mask confidence, object score, and motion score all pass a threshold."
+  - "The improvements in SAMURAI result in a 7.1% gain in AUC on LaSOT-ext and a 3.5% gain in average overlap on GOT-10k, competing with trackers trained specifically on tracking data."
+  - "SAMURAI can be used for tracking objects in crowded, fast-moving, or self-occluded scenes, such as sports analysis, crowd footage, or vehicle or pedestrian tracking in robots or cars, without requiring additional training."
 title: "SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in Video"
 image: /assets/images/Samurai_paper_logo.png
 image_alt: "Cover image for SAMURAI: How a Motion Filter Makes SAM 2 Better at Tracking Objects in Video"

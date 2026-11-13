@@ -16,6 +16,11 @@ tags:
   - HumekaFL
   - Ubenwa
   - Carnegie Mellon University
+key_points:
+  - "Birth asphyxia is a leading cause of newborn deaths in sub-Saharan Africa, with high mortality rates and limited access to trained staff and equipment."
+  - "A team at Carnegie Mellon University Africa (CMU-Africa) in Kigali, Rwanda, has developed a phone app called HumekaFL to detect birth asphyxia from the sound of a newborn's cry."
+  - "The app uses a support vector machine (SVM) machine learning model to analyze the cry patterns linked to asphyxia, and it runs on ordinary phones, requiring no special hardware or expertise."
+  - "The project's lead research assistant, Pamely Zantou, emphasizes the importance of federated learning in the design, which allows hospitals to keep their own recordings and train a model on them without sharing patient data."
 title: "HumekaFL: CMU-Africa's App That Detects Birth Asphyxia From a Baby's Cry"
 image: /assets/images/pamely_cmu_website.png
 layout: post

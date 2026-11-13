@@ -8,6 +8,11 @@ tags:
   - EPA air quality
   - Airnow
   - AQI
+key_points:
+  - "AirNow.gov is a collaborative platform involving the US Environmental Protection Agency (EPA), the National Oceanic and Atmospheric Administration (NOAA), and other agencies, dedicated to providing air quality information to the public."
+  - "The website offers air quality data from US embassies and consulates located around the world, serving as a critical resource for researchers, policymakers, and individuals concerned with environmental health and air pollution trends globally."
+  - "To retrieve air quality data from a specific US embassy or consulate, navigate to the AirNow.gov International US Embassies and Consulates page, select the desired location from the interactive map or list, and proceed to the 'Historical Data' section to download the available files."
+  - "The data primarily consists of PM2.5 (fine particulate matter) measurements, which are essential for assessing air quality. PM2.5 refers to particles with a diameter of 2.5 micrometers or smaller, and these tiny particles can penetrate deep into the lungs and even enter the bloodstream, posing significant health risks. The Air Quality Index (AQI) is also included, providing a standardized scale that indicates the level of air pollution and its potential health effects."
 title: Guide to Accessing Air Quality Data from US Embassies Worldwide
 image: /assets/images/airnow_africa.png
 image_alt: Cover image for Guide to Accessing Air Quality Data from US Embassies Worldwide

@@ -6,6 +6,11 @@ categories:
   - AI
 tags:
   - AI
+key_points:
+  - "Gemini is praised for its ability to forget less than other models and its accuracy in editing essays."
+  - "ChatGPT is described as people-pleasing, goody-two-shoes, prone to hallucination, and lacking a spine."
+  - "Grok is noted for its context understanding, up-to-date data retrieval, and ability to provide reasonable alternatives."
+  - "Claude from Anthropic is considered chill, reliable, and not easily frustrated, though it has issues with rate limits."
 title: The AI Chatbots Annual Class Reunion
 image: ''
 layout: post

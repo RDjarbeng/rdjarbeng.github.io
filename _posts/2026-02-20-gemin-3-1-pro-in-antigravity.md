@@ -8,6 +8,11 @@ tags:
   - Antigravity
   - LLM
   - Update
+key_points:
+  - "Gemini 3.1 Pro is now available in Google Antigravity, bringing enhanced AI capabilities, better coding workflows, and a smoother agentic experience."
+  - "The update may require manual triggering for current users to ensure access to new features and improvements."
+  - "Recent patches have significantly improved the IDE's performance, particularly in handling complex websites and large codebase edits."
+  - "The update includes a fix for Windows auto-updater issues, ensuring seamless delivery of future patches without manual intervention."
 title: Gemini 3.1 Pro Is Now Available in Google Antigravity
 image: /assets/images/gemini_3_1_pro_antigravity_supercharged.jpg
 image_alt: Gemini 3.1 Pro in Antigravity SUPERCHARGED

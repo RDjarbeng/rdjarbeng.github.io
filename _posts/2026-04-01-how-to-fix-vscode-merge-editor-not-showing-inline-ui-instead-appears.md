@@ -5,6 +5,11 @@ author: Richard
 tags:
   - Vscode
   - IDE
+key_points:
+  - "The three-way Merge Editor in VS Code provides a more comprehensive view for resolving merge conflicts compared to the inline UI."
+  - "Enabling the Merge Editor is a quick process that takes less than a minute, involving opening settings, searching for 'merge editor', and checking the Git: Merge Editor option."
+  - "A restart of VS Code may be required for the changes to take effect, which can be done by opening the Command Palette and typing 'Developer: Reload Window'."
+  - "The Merge Editor is particularly useful for resolving complex merge conflicts, offering a visual representation of changes and allowing for easier resolution."
 title: How To Fix vscode merge editor not showing in 1 minute
 image: '/assets/images/posts/covers/vscode_merge_editor_cover.jpg'
 image_alt: 'VSCode Merge Editor Fix'

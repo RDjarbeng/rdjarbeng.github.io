@@ -5,6 +5,11 @@ author: Richard
 category: Security
 tags:
   - Email
+key_points:
+  - "Curiosity bait emails are a social engineering tactic that uses vague accusations to verify a user's email address and engagement."
+  - "The scam relies on human instinct to respond to accusations, leading to the verification of active email addresses and increased spam targeting."
+  - "Red flags include vague subject lines, mismatched sender details, and the absence of context or previous communication."
+  - "The best defense against curiosity bait emails is to not reply, click links, or open attachments, and to mark them as spam or junk."
 title: 'The "Why Are You Ignoring Me?" Scam: How to Spot Curiosity Bait'
 image: ''
 image_alt: ''

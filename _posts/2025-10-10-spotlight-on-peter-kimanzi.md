@@ -9,6 +9,11 @@ tags:
   - html
   - css
   - js
+key_points:
+  - "Peter Kimanzi is a web developer from Nairobi, Kenya, who has created a repository of web development projects on GitHub."
+  - "One of his projects is an animation that follows the mouse cursor as it moves on the screen, inspired by the TV series Stranger Things."
+  - "Kimanzi built some of his websites, including his portfolio website, with just HTML, CSS, and JavaScript."
+  - "His portfolio website and GitHub repository are available for exploration, and he is also active on LinkedIn."
 title: Spotlight on Peter Kimanzi- Developer from Nairobi
 image: /assets/images/peterKimanziPortfolio.png
 image_alt: Screenshot of Peter Kimanzi's portfolio website featuring a dark theme, his name, and title as Software Engineer.

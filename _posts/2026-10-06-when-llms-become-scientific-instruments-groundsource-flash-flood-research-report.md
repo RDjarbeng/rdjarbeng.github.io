@@ -10,6 +10,11 @@ tags:
   - Google
   - Gemini
   - machine-learning
+key_points:
+  - "Groundsource is an open‑access global dataset of 2.6 million historical flood events extracted from 5 million news articles using Google's Gemini models, covering 150+ countries and spanning 2000‑2026."
+  - "The dataset includes only geometry, start date, end date, and area, with no country, source URL, language tag, confidence score, or casualty information."
+  - "Geographic distribution shows a heavy concentration in Europe (22.3 %), Southeast Asia (18.5 %), and South Asia (18.3 %), while Africa represents only 4.2 % of events despite having ~17 % of the world's population."
+  - "The dataset's entity‑based approach captures localized flood pockets (median 2.05 km², mean 142 km²) rather than aggregating entire storm systems, leading to a 4.2 % Africa coverage gap that can be partially addressed through synthetic SAR data, cross‑regional transfer learning, and multilingual entity extraction."
 title: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report'
 image: /assets/images/posts/covers/groundsource_research_report_cover.jpg
 image_alt: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report cover'

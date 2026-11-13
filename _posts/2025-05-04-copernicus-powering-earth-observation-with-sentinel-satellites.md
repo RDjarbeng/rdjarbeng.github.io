@@ -3,6 +3,11 @@ date: 2025-05-04T18:18:00
 author: Richard
 tags:
     - satellite
+key_points:
+  - "Copernicus is the European Union's Earth observation programme, providing free satellite data for anyone to download and use."
+  - "The programme consists of three parts: satellites, ground measurements, and services, each serving a specific purpose in collecting and processing data."
+  - "Sentinel-1, Sentinel-2, Sentinel-3, Sentinel-5P, and Sentinel-6 are the main Sentinel satellites, each equipped with different instruments to measure various aspects of Earth's surface and atmosphere."
+  - "Copernicus services, such as the Atmosphere, Marine, Land, Climate Change, Emergency Management, and Security services, turn raw satellite data into ready-to-use products like air quality forecasts, flood maps, and ocean temperature data."
 title: "Copernicus Explained: What Each Sentinel Satellite Measures and How to Use the Free Data"
 image: /assets/images/copernicus_airq_new_delhi.png
 video: ''

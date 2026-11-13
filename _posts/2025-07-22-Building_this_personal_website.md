@@ -6,6 +6,12 @@ tags:
   - jekyll
   - website development
   - Richard Djarbeng's website
+key_points:
+  - "The author built their personal website using Ruby, Jekyll, and GitHub Pages, which they found to be a neat and simple solution."
+  - "Jekyll is a static site generator that supports various file formats, including YAML, Markdown, Gemfile, Json, and CSV."
+  - "The author followed a step-by-step tutorial to set up Jekyll, which covered topics such as setup, Liquid, Front Matter, Layouts, Includes, Data Files, Assets, Blogging, and Collections."
+  - "The author experienced some challenges during the development process, including build errors and debugging issues, but eventually resolved them by using a different workflow in GitHub Actions."
+  - "The author successfully deployed their website on GitHub Pages without any errors, and the final result was a smooth blogging experience with the ability to generate pages of posts, support images and gifs, and include content about the creator."
 title: "Building My Personal Website with Jekyll, Ruby and GitHub Pages"
 image: /assets/images/jekyll_cyber.jpeg
 layout: post

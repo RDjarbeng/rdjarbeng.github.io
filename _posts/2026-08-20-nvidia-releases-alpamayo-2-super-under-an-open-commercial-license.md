@@ -5,6 +5,11 @@ author: Richard
 category: Technology
 tags:
   - Nvidia
+key_points:
+  - "NVIDIA has released Alpamayo 2 Super, a 34-billion-parameter open Vision-Language-Action (VLA) model designed for robotaxis and autonomous vehicles."
+  - "The model combines multi-modal visual reasoning with precise motion trajectory planning, and is available under the Linux Foundation’s OpenMDW-1.1 permissive commercial license."
+  - "Alpamayo 2 Super produces five tightly coupled outputs in a single pass, ensuring transparency and auditability in complex driving situations."
+  - "The model is deployed using a Cloud-to-Car architecture, with smaller variants like Alpamayo 1.5 and Alpamayo 1 used for real-time, low-latency inference on embedded hardware."
 title: NVIDIA Releases Alpamayo 2 Super Under an Open Commercial License
 image: ''
 image_alt: ''

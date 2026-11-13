@@ -5,6 +5,11 @@ author: Richard
 category: Technology
 tags:
   - Integrated-circuits
+key_points:
+  - "Electronic Design Automation (EDA) refers to specialized software tools used by electrical and computer engineers to design, simulate, verify, and manufacture complex electronic systems, particularly Integrated Circuits (ICs) and Printed Circuit Boards (PCBs)."
+  - "The EDA pipeline involves core stages such as Design Capture and RTL, Simulation and Functional Verification, Logic Synthesis, Physical Design (Place and Route), and Sign-off and Physical Verification, each playing a crucial role in the chip design lifecycle."
+  - "EDA tools bridge the gap between human architectural concepts and the physical manufacturing of silicon, enabling the creation of modern computing systems with billions of microscopic transistors. The major players in this space include Synopsys, Cadence, and Siemens EDA, which develop engines capable of processing terabytes of geometric data."
+  - "The EDA industry is undergoing a significant shift by integrating Machine Learning and Reinforcement Learning into its pipelines, particularly during the Place and Route phase, to optimize power, performance, and area (PPA) metrics, automate iterations, and enhance overall design efficiency."
 title: What's EDA in chip design?
 image: ''
 image_alt: ''

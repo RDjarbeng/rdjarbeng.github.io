@@ -5,6 +5,11 @@ author: Richard
 category: Technology
 tags:
   - AI
+key_points:
+  - "The article discusses the decline of various AI tools that were either copied or superseded by Openclaw."
+  - "These tools were once considered promising candidates for emerging as the next agentic IDE or tool."
+  - "The article serves as both a historical lesson and a reflection on the current state of AI development in the context of Openclaw."
+  - "The key tools mentioned in the article include Cline, Bolt.new, and other tools that were either copied or replaced by Openclaw."
 title: AI Tools That Were Copied Or Superseded by Openclaw
 image: ''
 image_alt: ''

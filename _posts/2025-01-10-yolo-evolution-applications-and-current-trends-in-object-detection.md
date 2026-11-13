@@ -6,6 +6,12 @@ tags:
   - Computer Vision
   - yolo
   - Machine Learning
+key_points:
+  - "YOLO (You Only Look Once) is a family of object detection models that work in a single pass, making them faster than traditional two-stage detectors."
+  - "The original YOLOv1, released in 2015, was fast but weak on small objects and objects close together, while YOLOv2 introduced batch normalization, anchor boxes, and training at multiple image sizes."
+  - "YOLOv3, released in 2018, used a deeper backbone (Darknet-53) and predictions at three scales, significantly improving performance on small objects."
+  - "YOLOv4, released in 2020, was developed by Alexey Bochkovskiy, Chien-Yao Wang, and Hong-Yuan Mark Liao, and introduced many training tricks, including Mosaic augmentation, which stitched four training images into one."
+  - "YOLOv5, released in 2020 by Ultralytics, became the most widely used version due to its ease of installation and training, despite its lack of a formal paper."
 title: "YOLO Object Detection Explained: Every Version From v1 to YOLO11, Licensing and Uses"
 image: /assets/images/ultralytics_yolo.png
 video: ''

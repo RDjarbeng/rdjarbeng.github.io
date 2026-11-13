@@ -7,6 +7,11 @@ tags:
   - Developing Nations
   - Leapfrogging
   - data
+key_points:
+  - "Developing nations have less than 10% of the medical experts they need, leading to inadequate healthcare access and overwhelmed physicians."
+  - "Nigeria, for example, would need to multiply its current physician workforce by 12 to reach standard healthcare coverage levels, requiring an investment of US$51 billion."
+  - "A data-driven solution combines medical data sources with advanced analysis tools to automate diagnostic processes, amplifying the capabilities of existing medical professionals."
+  - "This approach has shown positive results in remote healthcare, efficient triage, and standardized care, potentially bypassing traditional healthcare development stages in developing nations."
 title: "Jeremy Howard on Using AI to Make Up for the Shortage of Doctors in Developing Countries"
 image: /assets/images/hr_constraints_africa.png
 video: ''

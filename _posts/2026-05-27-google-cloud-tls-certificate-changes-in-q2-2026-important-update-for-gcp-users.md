@@ -7,6 +7,11 @@ tags:
   - Security
   - TLS
   - Networking
+key_points:
+  - "Google is updating TLS certificates for many of its endpoints in Q2 2026 to improve efficiency and security."
+  - "The shift involves transitioning from a traditional RSA certificate chain and leaf certificate to an ECDSA certificate."
+  - "Most users will experience no impact, but those using certificate pinning or custom trust stores may encounter connection failures."
+  - "A proactive check of trust store configurations is recommended before June 15, 2026, to avoid potential issues."
 title: "Google Cloud TLS Certificate Changes in Q2 2026: Important Update for GCP users"
 image: '/assets/images/posts/covers/gcp_tls_cover.jpg'
 image_alt: 'A flat vector illustration of an ECDSA digital certificate being authenticated in a cloud environment'

@@ -5,6 +5,12 @@ author: Richard
 tags:
   - DNS
   - AWS
+key_points:
+  - "The DNS root servers are 13 in number, a result of the 512-byte UDP packet limit in the early days of the internet."
+  - "These servers are managed by 12 different organizations, including NASA, the US Army Research Lab, and the US Department of Defense, showcasing a US-centric management."
+  - "Anycast routing technology allows these 13 servers to be physically located in thousands of sites worldwide, ensuring high availability and low latency for DNS queries."
+  - "Understanding the DNS root servers is crucial for cloud certifications, particularly for AWS Solutions Architect, as it helps in comprehending the routing and availability of DNS services like Route 53."
+  - "The 13 root servers are a testament to the internet's resilience and decentralization, ensuring that even if major parts of the network go offline, the DNS system remains operational."
 title: 'The Internet’s Magic Number: Why Are There Only 13 DNS Root Servers For The Whole World?'
 image: /assets/images/dns_root_servers_cover.jpg
 image_alt: A digital illustration of the globe connected by a network of glowing nodes, highlighting the number 13.

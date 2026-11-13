@@ -10,6 +10,11 @@ tags:
   - Machine Learning
   - Gemini
   - Environment
+key_points:
+  - "Google's AI system, using 5 million news articles, can predict urban flash floods up to 24 hours in advance for most of the world, without building physical sensors."
+  - "Flash floods are a significant global hazard, causing over 5,000 deaths annually and accounting for 85% of flood-related fatalities, and are difficult to predict due to the lack of physical sensors in urban areas."
+  - "Google's solution involves training an AI model on 2.6 million geo-tagged flood events from 2000 to the present, extracted from 80 languages of news reports, to learn patterns that precede flash floods in various environments."
+  - "The model's accuracy is limited by the static nature of the training data, which only covers historical flood events, and its current application is limited to urban areas with more than 100 people per square kilometer, with potential gaps in coverage for Africa."
 title: How Google Turned 5 Million News Articles into a Flash Flood Warning System
 image: /assets/images/posts/covers/google_flood_cover.jpg
 image_alt: Flat vector illustration of AI parsing news reports for flood warnings
