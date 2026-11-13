@@ -39,6 +39,7 @@
     "markdown-it": "^15.0.2",
     "markdown-it-anchor": "^10.0.0",
     "npm-run-all": "^4.1.5",
+    "patch-package": "^8.0.1",
     "sass": "^1.105.0"
   },
   "scripts": {
@@ -56,7 +57,8 @@
     "generate:pdfs": "node scripts/generate_post_pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:links": "node scripts/check-links.mjs _site",
-    "check:edits": "node scripts/check-edits.mjs"
+    "check:edits": "node scripts/check-edits.mjs",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",

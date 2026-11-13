@@ -1,0 +1,26 @@
+diff --git a/node_modules/@11ty/eleventy/src/Eleventy.js b/node_modules/@11ty/eleventy/src/Eleventy.js
+index 0568a3e..5cb45b5 100644
+--- a/node_modules/@11ty/eleventy/src/Eleventy.js
++++ b/node_modules/@11ty/eleventy/src/Eleventy.js
+@@ -1040,7 +1040,20 @@ Arguments:
+ 					queueSize !== 1 ? "s" : ""
+ 				})`,
+ 			);
+-			await this.#watch();
++			// Patched for rdjarbeng.github.io (see patches/): start the queued rebuild after this one
++			// returns instead of awaiting it here. Awaiting nests each rebuild inside the previous one,
++			// so every earlier build's results stay in memory until the queue is empty.
++			setImmediate(() => {
++				this.#watch().catch(async (e) => {
++					if (e instanceof EleventyBaseError) {
++						this.errorHandler.error(e, "Eleventy watch error");
++						this.watchManager.setBuildFinished();
++					} else {
++						this.errorHandler.fatal(e, "Eleventy fatal watch error");
++						await this.stopWatch();
++					}
++				});
++			});
+ 		} else {
+ 			this.logger.log("Watching…");
+ 		}
