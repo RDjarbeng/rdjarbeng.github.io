@@ -907,9 +907,9 @@ ${jsonLd}
   // Tags that get their own archive page (paginated in tag-archive.liquid)
   eleventyConfig.addCollection("tagsList", () => {
     const tags = buildTagIndex().all.filter((t) => t.hasPage);
-    // `npm start` skips the tag archive pages for faster rebuilds; `npm run start:full`,
-    // `npm run build` and deploys build them all.
-    if (process.env.npm_lifecycle_event === "serve:11ty") {
+    // `npm start` and `npm run start:journey` skip the tag archive pages for faster rebuilds;
+    // `npm run start:full`, `npm run build` and deploys build them all.
+    if (["serve:11ty", "serve:11ty:journey"].includes(process.env.npm_lifecycle_event)) {
       console.log(`[dev] Skipping ${tags.length} tag pages for faster rebuilds. Use "npm run start:full" to include them.`);
       return [];
     }
