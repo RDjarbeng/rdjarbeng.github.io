@@ -125,3 +125,4 @@ https://x.com/beniduboss/status/2120098582556500239
 - [ ] 2026-11-12 12:02 CAT | Adding this in case I make a series on datasets as a dataset I've used:
 
 https://www.kaggle.com/datasets/jefmenegazzo/pvs-passive-vehicular-sensors-datasets/data
+- [ ] 2026-11-13 09:55 CAT | Weird idea: We can take a look at Dubai's economic zone and look at that repository for the laws from every nation and select the UAE looking at how the laws that were made affected the growth of the economic zone. Let's see how useful this can be
