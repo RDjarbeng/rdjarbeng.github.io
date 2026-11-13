@@ -207,3 +207,7 @@ Or a chapter collection for people who want to learn Laplace or codecs, so it's 
 
 includes some other videos from somewhere else
 - [ ] The mermaid diagrams don't look interesting to look at, some colour,some bigger font, more contrast in night mode instead of grey on black would help
+- [ ] CMS Status context: Let's see if we can add this to the cms:  preview_context: Cloudflare Pages
+
+https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
+- [ ] Interesting repo, I'm considering doing this for my site mascot using one of my avatars for posts: https://myoctocat.com/
