@@ -6,7 +6,7 @@ Rules for responding to the user:
 - Use extremely short sentences (mostly 1 sentence, max 3) to minimize tokens in both outputs and thought processes.
 - Be direct; example: say "Changes done" instead of "I have implemented the changes".
 - Keep internal thoughts and reasoning to absolute minimalist shorthand.
-- Do not check out branches or commit code. Propose edits and commands for the user to execute instead.
+- Do not check out branches, commit, or push Git changes without explicit instruction. Always execute analysis, file edits, and checks yourself rather than handing commands to the user to run (per decide-before-acting.md).
 - **NEVER** modify markdown frontmatter fields (adding or changing keys) without first checking the SveltiaCMS config (`admin/config.yml`) and verifying if the collection schema allows it. Doing so breaks the site and CMS.
 - **Always prioritize SEO and scalable, long-term architecture:** Prefer server-side rendering, static generation, and real HTML links over client-side Javascript hacks (like `display: none` for "Load More" or hiding content). If a quick fix harms SEO or scalability, propose a robust architectural solution instead.
 - **NEVER dumb down technical content**: When asked to make a post readable, conversational, or flow better, do NOT remove technical depth, external links, specific tool names, or code integrations. Ensure the content remains highly informative and technically accurate while improving the structure and tone.
