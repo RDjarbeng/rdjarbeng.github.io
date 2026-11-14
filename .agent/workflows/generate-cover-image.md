@@ -15,9 +15,19 @@ When generating cover images for this website, please adhere to the following sp
     *   The text `rdjarbeng.com` MUST be included as a watermark on the image.
     *   Placement: subtle but visible, typically at the bottom center or bottom right.
 
-3.  **Color Palette**:
-    *   **Text Color (STRICT)**: You MUST pick exactly ONE solid color for the entire text overlay (e.g., solid black, solid white, solid red, yellow or blue). Do NOT use gradients, multiple colors, or mix and match colors in the text.
-    *   **Background/Illustration Colors**: Use bold, vibrant, and high-contrast color schemes (Primary Colors like Red, Blue, Yellow).
+3.  **Color Palette & Curated Themes**:
+    *   **Background Canvas**: Always cream paper `#f4f1e6`.
+    *   **Text Color (STRICT)**: You MUST use solid black (`#141414`) for the entire text overlay (headline, hook, and watermark). Never mix multiple colors in the text and never use gradients.
+    *   **Illustration Color Limit (STRICT)**: Capped at **exactly 3 flat colors** per artwork (1 dominant, 1 secondary, 1 accent). Never use 4+ colors to avoid clutter and ensure it functions as a punchy thumbnail.
+    *   **The 6 Curated Site Palettes (Choose exactly ONE group and stick with it)**:
+        1. **Muted Primaries (Warm Editorial):** Terracotta `#b84d43`, Slate Ink `#2d4763`, Ochre Gold `#cfa14a`
+        2. **Muted Botanical (Environment / Organic):** Deep Pine `#1b3b2b`, Sage Moss `#3d634e`, Sand Champagne `#cbb87b`
+        3. **Muted Risograph (Cultural / Indie):** Aubergine Plum `#38233f`, Dusty Lavender `#6d597a`, Curry Mustard `#d99b26`
+        4. **Stripe Modernist (Developer / Modern):** Stripe Navy `#0a2540`, Blurple `#635bff`, Soft Coral `#ff705a`
+        5. **IBM Carbon (Technical / Precision):** Carbon Gray 100 `#121619`, Carbon Blue 60 `#0f62fe`, Teal 50 `#009d9a`
+        6. **Google M3 Tonal (Accessible / Systems):** Royal Blue `#1a73e8`, Brick Red `#b3261e`, Warm Amber `#f59e0b`
+    *   **Universal Black & White Exemption**: Black (`#141414`) and White (`#ffffff` / cream `#f4f1e6`) are universal foundation colors. An all black-and-white cover is completely acceptable. Using black or white alongside any chosen palette (e.g., for outlines, highlights, or container fills) is always allowed and does not count against the 3 chromatic colors limit.
+    *   **Color Addition Guardrail (STRICT)**: If an agent runs out of colors or feels a complex subject requires more than the 3 palette colors, **DO NOT invent or add new colors**. You MUST alert Richard to request a palette expansion or guidance.
 
 4.  **Content & Style**:
     *   **Style**: Use **Flat Vector Art**, **Editorial Illustration**, or **Minimalist Geometric** styles.

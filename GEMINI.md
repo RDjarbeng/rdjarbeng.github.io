@@ -24,9 +24,18 @@ node scripts/lint-post.mjs <path-to-post.md>
    * Do NOT use em dashes (`—`) or en dashes (`–`) anywhere in post content.
    * Do NOT use spaced hyphens (` - `) as dash substitutes.
    * Use natural punctuation: commas, periods, colons, semicolons, or parentheses.
-2. **Mandatory Cover Image:**
+2. **Mandatory Cover Image & Palette System:**
    * Every post MUST have a 16:9 (1280x720) `.jpg` cover image saved to `assets/images/posts/covers/<name>_cover.jpg`.
-   * Create the SVG source in `scripts/diagrams/covers/<name>.svg` following the strict thumbnail rules in `.agent/workflows/generate-cover-image.md` (cream `#f4f1e6` background, solid `#141414` text, flat vector primary color illustration, `rdjarbeng.com` watermark).
+   * Create the SVG source in `scripts/diagrams/covers/<name>.svg` following the strict thumbnail rules in `.agent/workflows/generate-cover-image.md` (cream `#f4f1e6` background, solid `#141414` text, exact 3-color palette limit, `rdjarbeng.com` watermark).
+   * **The 6 Curated Site Palettes (Strict Groups - Pick ONE per asset, max 3 colors):**
+     1. **Muted Primaries (Warm Editorial):** Terracotta `#b84d43`, Slate Ink `#2d4763`, Ochre Gold `#cfa14a`
+     2. **Muted Botanical (Environment/Organic):** Deep Pine `#1b3b2b`, Sage Moss `#3d634e`, Sand Champagne `#cbb87b`
+     3. **Muted Risograph (Cultural/Indie):** Aubergine Plum `#38233f`, Dusty Lavender `#6d597a`, Curry Mustard `#d99b26`
+     4. **Stripe Modernist (Developer/Modern):** Stripe Navy `#0a2540`, Blurple `#635bff`, Soft Coral `#ff705a`
+     5. **IBM Carbon (Technical/Precision):** Carbon Gray 100 `#121619`, Carbon Blue 60 `#0f62fe`, Teal 50 `#009d9a`
+     6. **Google M3 Tonal (Accessible/Systems):** Royal Blue `#1a73e8`, Brick Red `#b3261e`, Warm Amber `#f59e0b`
+   * **Universal Black & White Rule:** Black (`#141414`) and White (`#ffffff` / cream `#f4f1e6`) are universal foundation colors. An all black-and-white cover, diagram, or chart is always acceptable. Using black or white alongside a chosen 3-color palette (for outlines, fills, or contrast) is also permitted and does not count against the 3-color palette limit.
+   * **Strict Palette Guardrail:** Pick exactly ONE named group per cover, diagram, chart, or UI element and stick with it. Never mix colors across groups. **If you need more colors for a complex chart or SVG, NEVER invent or add new colors; you MUST stop and alert Richard.**
    * Render to JPG with: `node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/<name>.svg assets/images/posts/covers/<name>_cover.jpg`.
    * The cover image MUST be declared in the frontmatter (`image: /assets/images/posts/covers/<name>_cover.jpg` and `image_alt: "..."`).
    * The cover image MUST be embedded in the markdown body immediately after the first paragraph: `![Alt text](/assets/images/posts/covers/<name>_cover.jpg "Title")`.
@@ -40,6 +49,10 @@ node scripts/lint-post.mjs <path-to-post.md>
 5. **Math Formatting (KaTeX):**
    * Inline math MUST use double dollars (`$$math$$`). Never use single `$` for math (Kramdown/Eleventy will not render single `$`).
    * Plain currency amounts like `$1,000` must be written as normal text without math delimiters.
+6. **SVG Diagrams, Charts & Watermark:**
+   * Every SVG diagram created in `assets/images/diagrams/` MUST include the `rdjarbeng.com` watermark at the bottom right (`text-anchor="end"`, `fill="#57514a"`, font-size `18px`, bold).
+   * All diagram text MUST be >= 18px and pass `node scripts/diagrams/render.js <file.svg>`.
+   * Diagrams, figures, and charts MUST use one of the 6 Curated Site Palettes (max 3 colors per figure). Do not invent outside colors; alert Richard if additional categorical series colors are needed.
 
 ---
 
