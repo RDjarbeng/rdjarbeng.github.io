@@ -224,3 +224,5 @@ Or a chapter collection for people who want to learn Laplace or codecs, so it's 
 
 https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
 - [ ] Interesting repo, I'm considering doing this for my site mascot using one of my avatars for posts: https://myoctocat.com/
+- [ ] Post thumbnail here looks jagged/unclear on the home page, not sure why
+https://rdjarbeng.com/what-can-you-do-testing-ai-agents-gemini-argon-and-claude/
