@@ -132,3 +132,9 @@ https://www.kaggle.com/datasets/jefmenegazzo/pvs-passive-vehicular-sensors-datas
 https://papercopilot.com/statistics/cvpr-statistics/
 
 How can we help this so that rejections are not the norm
+- [ ] 2026-11-15 18:26 CAT | Above post is a paper on super mimic, fast training of robots 
+
+Why are batteries heavy?
+
+
+A first principles post, ties into the earlier todo on battery storage systems and the cost of solar
