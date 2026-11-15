@@ -245,6 +245,15 @@ module.exports = function(eleventyConfig) {
           });
         } else if (url === "/about/") {
           graph.push({ ...authorPerson, url: canonical, image: `${SITE}${siteData.logo || ""}` });
+        } else if (url === "/" || url === "") {
+          graph.push({
+            "@type": "WebSite",
+            "@id": `${SITE}/#website`,
+            url: `${SITE}/`,
+            name: siteData.title || "Richard Djarbeng",
+            description: siteData.description || "",
+            publisher: authorPerson,
+          }, authorPerson);
         } else {
           // Listing pages: the archives, video collections and series pages
           const parents = [
@@ -286,6 +295,22 @@ module.exports = function(eleventyConfig) {
             (siteDoc.categories || []).map((c) => `\n<meta property="article:section" content="${String(c).replace(/"/g, "&quot;")}" />`).join("")
           : "";
 
+        let highwireMeta = "";
+        if (isPost) {
+          const pubDate = siteDoc.iso_date ? siteDoc.iso_date.slice(0, 10).replace(/-/g, "/") : "";
+          const authorName = (siteDoc.author_info && siteDoc.author_info.display_name) || (siteData.author && siteData.author.name) || "Richard Djarbeng";
+          highwireMeta = `
+<!-- Highwire Press / Google Scholar / Zotero Metadata -->
+<meta name="citation_title" content="${String(rawTitle).replace(/"/g, "&quot;")}" />
+<meta name="citation_author" content="${String(authorName).replace(/"/g, "&quot;")}" />
+<meta name="citation_publication_date" content="${pubDate}" />
+<meta name="citation_fulltext_html_url" content="${canonical}" />
+<meta name="citation_language" content="${siteData.lang || "en"}" />`;
+          if (imgUrl) {
+            highwireMeta += `\n<meta name="citation_image" content="${imgUrl}" />`;
+          }
+        }
+
         const twitterHandle = siteData.twitter ? siteData.twitter.username || "DjarbengRichard" : "DjarbengRichard";
         const twitterCard = siteData.twitter ? siteData.twitter.card || "summary_large_image" : "summary_large_image";
 
@@ -301,6 +326,7 @@ ${isPost || isPersonal ? `<link rel="alternate" type="text/markdown" href="${can
 <!-- OpenGraph / Facebook -->
 <meta property="og:type" content="${isPost || isPersonal ? "article" : "website"}" />
 ${articleMeta}
+${highwireMeta}
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${desc}" />
 <meta property="og:url" content="${canonical}" />
