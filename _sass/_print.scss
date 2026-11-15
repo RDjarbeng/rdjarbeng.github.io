@@ -308,11 +308,10 @@
     text-decoration: underline !important;
   }
 
-  .series-box,
-  .key-points {
+  .series-box {
     background: #f6f8fa !important;
     border: 1px solid #d0d7de !important;
-    border-radius: 6px !important;
+    border-radius: 4px !important;
     padding: 10pt !important;
     margin: 12pt 0 !important;
     page-break-inside: avoid !important;
@@ -320,8 +319,22 @@
     color: #24292f !important;
   }
 
+  .key-points {
+    background: transparent !important;
+    border: none !important;
+    border-top: 1pt solid #d0d7de !important;
+    border-bottom: 1pt solid #d0d7de !important;
+    border-radius: 0 !important;
+    padding: 8pt 0 !important;
+    margin: 12pt 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    color: #24292f !important;
+  }
+
   /* Related concept cards & post-bottom card lists */
-  .cards-section-intro {
+  .cards-section-intro,
+  .concepts-section {
     margin-top: 14pt !important;
     margin-bottom: 8pt !important;
     h3, p, em {
@@ -329,11 +342,19 @@
     }
   }
 
-  .repo-list {
+  .repo-list,
+  .concepts-index {
     background: transparent !important;
-    gap: 10pt !important;
-    margin: 10pt 0 !important;
+    gap: 8pt !important;
+    margin: 8pt 0 !important;
     max-width: 100% !important;
+  }
+
+  .concepts-index__item {
+    border-bottom: 1pt solid #d0d7de !important;
+    padding: 6pt 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .repo-item,
