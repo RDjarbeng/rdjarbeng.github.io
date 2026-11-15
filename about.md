@@ -40,7 +40,7 @@ custom_css_class: about-page
 <p class="about-summary-text">
 I am a software engineer, AWS Certified Solutions Architect, and researcher with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. My previous work focused on building low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision and data engineering, and I am currently preparing PhD applications centered on machine learning for computer vision, environmental sensing and AI.  
 
-Research interestes: I'm focused on deep learning, and computer vision with a focus on their applications. Perhaps I chose that because I like to see tangible evidence of work done.
+Research interests: I'm focused on deep learning, and computer vision with a focus on their applications. Perhaps I chose that because I like to see tangible evidence of work done.
 
 I have varied multi-disciplinary interests ranging from Cloud technologies, ML (reinforcement learning), Generative AI, autonomous driving, security and the Internet of Things.
 Hoping to build strong research and engineering experience in multimodal learning, vision models, and robotics with a focus on their interdisciplinary applications.
