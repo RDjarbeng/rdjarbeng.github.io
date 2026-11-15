@@ -47,7 +47,7 @@
         transition: color 0.15s ease;
 
         &:hover {
-            color: var(--link-hover-color, #007bff);
+            color: var(--link-hover-color);
             text-decoration: underline;
         }
     }
@@ -108,11 +108,13 @@
     padding: 24px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-color: var(--border-dark);
     }
 
     .exp-header {
@@ -140,7 +142,7 @@
     }
 
     .exp-org {
-        color: var(--link-color); // Accent color
+        color: var(--text-color);
         font-size: 1rem;
         margin-bottom: 16px;
         display: block;
@@ -172,16 +174,18 @@
 
     summary {
         cursor: pointer;
-        color: var(--link-color, #0056b3);
-        font-size: 1rem;
+        color: var(--text-color);
+        font-size: 0.95rem;
         font-weight: 600;
         display: inline-block;
-        padding: 10px 14px;
+        padding: 8px 14px;
         margin-bottom: 10px;
-        border: 1px solid var(--link-color, #0056b3);
+        border: 1px solid var(--card-border);
         border-radius: 8px;
-        background: transparent;
-        transition: background 0.2s ease, color 0.2s ease;
+        background: var(--category-bg);
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
 
         &::-webkit-details-marker {
             display: none;
@@ -193,8 +197,14 @@
         }
 
         &:hover {
-            background: var(--link-color, #0056b3);
-            color: #fff;
+            background: var(--category-hover);
+            border-color: var(--border-dark);
+            color: var(--text-color);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--border-dark);
+            outline-offset: 2px;
         }
     }
 
@@ -226,13 +236,13 @@
 }
 
 .skill-pill {
-    background: var(--pill-bg, #f0f7ff);
-    color: var(--link-color, #0056b3);
+    background: var(--category-bg);
+    color: var(--text-color);
     padding: 4px 12px;
     border-radius: 100px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid var(--pill-border, rgba(0, 86, 179, 0.1));
+    border: 1px solid var(--card-border);
 }
 
 // Project Card (Grid Style)
@@ -243,12 +253,14 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         transform: translateY(-4px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-color: var(--border-dark);
     }
 
     .project-image-container {
@@ -309,7 +321,7 @@
     .project-links {
         margin-top: auto;
         padding-top: 15px;
-        border-top: 1px solid #f0f0f0;
+        border-top: 1px solid var(--card-border);
         display: flex;
         gap: 15px;
 
@@ -319,6 +331,7 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            color: var(--text-color);
 
             &:hover {
                 text-decoration: underline;
@@ -337,9 +350,10 @@
     flex-direction: column;
     height: 100%;
     transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-        border-color: #d0d0d0;
+        border-color: var(--border-dark);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
@@ -352,11 +366,11 @@
 
     .honor-icon {
         font-size: 1.5rem;
-        color: #8e44ad; // Purple accent
+        color: var(--text-color);
     }
 
     .honor-year {
-        color: #999;
+        color: var(--grey-text);
         font-size: 0.9rem;
     }
 
@@ -369,8 +383,9 @@
 
     .honor-badge {
         display: inline-block;
-        background: #f3e5f5;
-        color: #8e44ad;
+        background: var(--category-bg);
+        color: var(--text-color);
+        border: 1px solid var(--card-border);
         padding: 2px 8px;
         border-radius: 4px;
         font-size: 0.75rem;
@@ -518,18 +533,25 @@
 
 .show-more-btn {
     background-color: transparent;
-    border: 2px solid #007acc;
-    color: var(--link-color);
+    border: 1px solid var(--border-dark);
+    color: var(--text-color);
     padding: 10px 24px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-        background-color: var(--link-color);
-        color: white;
+        background-color: var(--text-color);
+        color: var(--bg-color);
+        border-color: var(--text-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--border-dark);
+        outline-offset: 2px;
     }
 }
 
@@ -544,23 +566,30 @@
 
 .filter-btn {
     background: transparent;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--card-border);
     color: var(--grey-text);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-        background: #f3f4f6;
-        border-color: #9ca3af;
+        background: var(--category-bg);
+        border-color: var(--border-dark);
+        color: var(--text-color);
     }
 
     &.active {
-        background: #007acc;
-        color: white;
-        border-color: var(--link-color);
+        background: var(--text-color);
+        color: var(--bg-color);
+        border-color: var(--text-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--border-dark);
+        outline-offset: 2px;
     }
 }
 
@@ -614,9 +643,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #fff;
-    border: 1px solid #d1d5db;
-    color: #374151;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -624,13 +653,19 @@
     text-decoration: none;
     transition: all 0.2s ease;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-        background-color: #f9fafb;
-        border-color: #9ca3af;
+        background-color: var(--category-bg);
+        border-color: var(--border-dark);
         transform: translateY(-1px);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        color: #111827;
+        color: var(--text-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--border-dark);
+        outline-offset: 2px;
     }
 
     svg {
@@ -663,14 +698,13 @@
     width: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0, 122, 204, 0.18);
-        border-color: #007acc;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        border-color: var(--border-dark);
     }
-
-    
 }
 
 .certification-badge {
@@ -702,7 +736,7 @@
 
 .certification-level {
     font-size: 0.95rem;
-    color: #007acc;
+    color: var(--grey-text);
     font-weight: 600;
     margin: 0;
 }
@@ -715,7 +749,7 @@
 
 .certification-verify {
     font-size: 0.85rem;
-    color: var(--link-color);
+    color: var(--text-color);
     font-weight: 500;
     margin-top: 8px;
     display: inline-block;
@@ -752,27 +786,27 @@
         font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
-        background: #007acc;
-        color: #fff;
-        border: 1px solid #007acc;
-        transition: background 0.2s ease, border-color 0.2s ease;
+        background: var(--text-color);
+        color: var(--bg-color);
+        border: 1px solid var(--text-color);
+        transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
 
         &:hover {
-            background: #005fa3;
-            border-color: #005fa3;
-            color: #fff;
+            opacity: 0.88;
+            color: var(--bg-color);
             text-decoration: none;
         }
 
         &.cert-action-secondary {
             background: transparent;
-            color: var(--link-color);
+            color: var(--text-color);
             border-color: var(--card-border);
 
             &:hover {
                 background: var(--category-bg);
-                border-color: var(--link-color);
-                color: var(--link-color);
+                border-color: var(--border-dark);
+                color: var(--text-color);
             }
         }
     }
