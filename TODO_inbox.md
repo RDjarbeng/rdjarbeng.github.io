@@ -140,3 +140,4 @@ Why are batteries heavy?
 A first principles post, ties into the earlier todo on battery storage systems and the cost of solar
 - [ ] 2026-11-15 18:26 CAT | 2610.28480v2.pdf
 https://arxiv.org/pdf/2610.28480
+- [ ] 2026-11-16 10:20 CAT | What is recursive self improvement?
