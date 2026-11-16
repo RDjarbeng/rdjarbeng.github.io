@@ -141,3 +141,10 @@ A first principles post, ties into the earlier todo on battery storage systems a
 - [ ] 2026-11-15 18:26 CAT | 2610.28480v2.pdf
 https://arxiv.org/pdf/2610.28480
 - [ ] 2026-11-16 10:20 CAT | What is recursive self improvement?
+- [ ] 2026-11-16 14:59 CAT | A simple GPS from first principle.
+First you need a watch.
+Knowing  the accurate time at your location gives you a nice estimate of your position along the vertical (longitude) but now where arong the longitude are you? How do you calculate latitude when you are alone in a sun scorched desert.
+
+Wait the sun? eureka. If I was at the poles the sun will be at an angle, but it's not at an angle so I must be somewhere between the poles. And If I can see the sun then I'm not on the side of the earth where the night is happening, I already knew this from my longitude but good to confirm. 
+
+But how can I know if I'm at the equator or at a latitude above or below it and how many degrees north or south?
