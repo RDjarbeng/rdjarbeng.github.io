@@ -148,3 +148,5 @@ Knowing  the accurate time at your location gives you a nice estimate of your po
 Wait the sun? eureka. If I was at the poles the sun will be at an angle, but it's not at an angle so I must be somewhere between the poles. And If I can see the sun then I'm not on the side of the earth where the night is happening, I already knew this from my longitude but good to confirm. 
 
 But how can I know if I'm at the equator or at a latitude above or below it and how many degrees north or south?
+- [ ] 2026-11-17 12:39 CAT | PARDIG & SatWeave: Foundational Datasets for Earth Science — Google DeepMind
+https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/
