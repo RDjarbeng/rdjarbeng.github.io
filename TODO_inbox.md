@@ -152,3 +152,4 @@ But how can I know if I'm at the equator or at a latitude above or below it and 
 https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/
 - [ ] 2026-11-17 16:16 CAT | This google video on weather would be a nice addition to the weather category posts, maybe we can make it a gif or build different versions from this:
 https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/1JDTJ5D1fR_MbDBa/PARDIG_and_SatWeave__figure-3__mosaic_9620_nm_images.webm#t=0.1
+- [ ] 2026-11-18 08:44 CAT | Create a chart or animation system that can animate the animation is all you need diagram and open it up. Inspiration from the TensorFlow playground
