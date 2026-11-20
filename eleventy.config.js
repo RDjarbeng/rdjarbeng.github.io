@@ -160,6 +160,7 @@ module.exports = function(eleventyConfig) {
           "@type": "Person",
           name: (siteData.author && siteData.author.name) || "Richard Djarbeng",
           url: `${SITE}/about/`,
+          image: `${SITE}/assets/images/richard/richard-djarbeng-headshot.jpg`,
           jobTitle: "Software and Machine Learning Engineer",
           alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
           knowsAbout: ["Machine learning", "Computer vision", "Internet of Things", "Environmental sensing", "Satellite and climate data"],
@@ -244,7 +245,7 @@ module.exports = function(eleventyConfig) {
             itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
           });
         } else if (url === "/about/") {
-          graph.push({ ...authorPerson, url: canonical, image: `${SITE}${siteData.logo || ""}` });
+          graph.push({ ...authorPerson, url: canonical });
         } else if (url === "/" || url === "") {
           graph.push({
             "@type": "WebSite",

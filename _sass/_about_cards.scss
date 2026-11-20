@@ -467,6 +467,15 @@
     max-width: 800px;
     margin: 0 auto 40px;
 
+    .about-headshot {
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
     h1 {
         font-size: 2.5rem;
         margin-bottom: 16px;

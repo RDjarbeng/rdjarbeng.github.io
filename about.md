@@ -6,8 +6,9 @@ custom_css_class: about-page
 ---
 
 <div class="about-intro">
+  <img class="about-headshot" src="/assets/images/richard/richard-djarbeng-headshot.jpg" alt="Richard Djarbeng" width="160" height="160">
   <h1>Richard Djarbeng</h1>
-  <p>Software Engineer | ML Engineer | Solutions Architect &amp; Embedded Systems</p>
+  <p>Software and Machine Learning Engineer | Solutions Architect &amp; Embedded Systems</p>
   <div class="contact-links">
     <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
     <span class="contact-separator">•</span>
