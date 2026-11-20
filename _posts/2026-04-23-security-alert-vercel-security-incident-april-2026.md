@@ -42,6 +42,15 @@ series_part: 2
 category: "Security"
 ---
 
+> **Update, 20 November 2026: how it ended.** Vercel closed the incident on 16 October 2026, saying all remediation actions were complete ([Vercel security bulletin](https://vercel.com/kb/bulletin/vercel-april-2026-security-incident)). What we learned after this post was first written:
+>
+> - **More accounts were affected than first reported.** A wider log review on 22 and 23 April found a small number of additional compromised accounts, and those customers were notified. Vercel also found a few accounts with signs of a separate compromise that did not originate on its systems and is not part of this incident.
+> - **The npm supply chain was safe.** Working with GitHub, Microsoft, npm and Socket, Vercel confirmed that no npm packages it publishes were tampered with.
+> - **Who did it is still not settled publicly.** Vercel described the attacker as highly sophisticated and worked with Google Mandiant and law enforcement. A group claiming links to ShinyHunters demanded $2 million, but ShinyHunters denied involvement ([The Block](https://www.theblock.co/news/markets/2026-04-19-web3-hosting-backbone-vercel-confirms-breach-as-supposed-hacker-demands-2-million-ransom-398010), [Infosecurity Magazine](https://www.infosecurity-magazine.com/news/vercel-cyber-incident-threat-actor/)). Researchers at Hudson Rock traced the start of the chain to infostealer malware on a Context.ai employee's machine in February 2026 ([The Hacker News](https://thehackernews.com/2026/04/vercel-breach-tied-to-context-ai-hack.html)); Vercel has not confirmed that detail. As of this update I found no public reports of arrests or lawsuits.
+> - **What changed in the product:** stronger defaults for environment variables, a team-wide security overview of them, and an easier-to-use activity log.
+>
+> The advice below still stands: mark secrets as sensitive, rotate anything stored as plain environment variables, enable MFA, and review which third-party apps hold OAuth access to your work accounts. The rest of this post is the original alert from 23 April 2026.
+
 Vercel has disclosed a security incident involving unauthorized access to certain internal systems, which has led to the exposure of some customer environment variables.
 
 If you use Vercel, here is a breakdown of what happened, who is impacted, and the immediate steps you should take to secure your applications.
@@ -64,7 +73,7 @@ Vercel has stated that environment variables properly marked as "sensitive" are 
 
 Vercel has already identified and directly contacted a limited subset of customers whose credentials were confirmed to be compromised, advising them to rotate credentials immediately.
 
-**If Vercel has not contacted you, they currently have no reason to believe your personal data or credentials were compromised.** However, the investigation is still ongoing in partnership with **Mandiant**, industry peers, and law enforcement. Vercel services, including Next.js, Turbopack, the AI SDK, and all published npm packages, remain fully operational and were not affected.
+**If Vercel has not contacted you, they currently have no reason to believe your personal data or credentials were compromised.** However, the investigation was still ongoing at the time of writing (it closed in October 2026, see the update above) in partnership with **Mandiant**, industry peers, and law enforcement. Vercel services, including Next.js, Turbopack, the AI SDK, and all published npm packages, remain fully operational and were not affected.
 
 ### Sources and Time of Discovery
 
