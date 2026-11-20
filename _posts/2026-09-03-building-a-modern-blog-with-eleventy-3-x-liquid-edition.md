@@ -1367,6 +1367,24 @@ function greet(name) {
 
 Docs: [Eleventy Syntax Highlighting Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
 
+### Reader note: a bug in this section, now fixed
+
+My attention was drawn to a bug in the example just above. Instead of a neat code block, the page showed stray triple backticks (```` ``` ````), and part of the example spilled out as plain text. This had escaped me, so thank you to [jpw](https://github.com/jpw), who spotted it, opened [an issue on GitHub](https://github.com/RDjarbeng/rdjarbeng.github.io/issues/7) and mentioned that this guide helped them.
+
+**The cause:** the example shows a code block inside another code block. Both used three backticks, so the inner closing fence also closed the outer block early.
+
+**The solution:** make the outer fence longer than any fence inside it. Markdown only closes a block with a fence at least as long as the one that opened it, so four backticks on the outside keep the three-backtick block inside intact:
+
+`````markdown
+````markdown
+```javascript
+console.log("inner block");
+```
+````
+`````
+
+Fixed on 20 November 2026. If you find another error anywhere on this site, [open an issue](https://github.com/RDjarbeng/rdjarbeng.github.io/issues) or use the [contact form](/contact/).
+
 ***
 
 ## 9. Deploying Your Site to Production
