@@ -21,9 +21,9 @@ Older posts do not all meet this standard yet. I am going back through them, sta
 
 ## Use of AI tools
 
-I use AI tools for research, editing, code, diagrams and cover images, and occasionally for a first draft. I review and edit everything before it is published, and I am responsible for every claim on this site.
+AI tools are part of how this site is made. I use them for research, editing, code, diagrams, cover images, gallery captions and sometimes first drafts, usually with my own notes and context as the starting point. I decide what gets published, and I am responsible for what it says. If something an AI tool helped produce is wrong, that is my error to fix.
 
-When AI played a substantial part in a post, for example writing a first draft or generating the images, the post says so in a note under the title.
+Some posts carry an "AI assistance" note under the title describing how AI was used. I add these where I can, but not every page has one, especially older posts and gallery items, so assume AI may have been involved anywhere on the site.
 
 ## Updates
 
