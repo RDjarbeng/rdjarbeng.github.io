@@ -33,15 +33,27 @@ What I took from it is that the hard part is rarely the model or the chart. It i
 
 END WRITER NOTE -->
 
-The data came from the US Embassy reference monitors in Kigali, instruments that had quietly logged hourly particulate matter readings for years. These monitors utilize beta-attenuation mass monitoring, pulling ambient air through a filter tape and measuring particulate mass density per cubic meter with calibrated precision. While raw data files were publicly archived, nobody had transformed those dense time-series tables into an interface that an urban resident, a school administrator, or a city planner could act on.
+<!-- SOURCE CHECKLIST (2026-11-20, remove before publishing)
+Your original note only supports: mean 43.31 ug/m3, 3.4% Good, over 57% Unhealthy or worse. Check the rest against your own analysis before publishing:
+- [ ] Category shares 39.2 / 31.8 / 22.1 / 3.5 %: rerun from your data or delete.
+- [ ] Hourly diurnal table and the "frequently exceeding 75" / "20 to 30" figures: rerun or replace with your real chart.
+- [ ] Date range and station(s) of the dataset: state them (e.g. "Kigali US Embassy monitor, Jan 2017 to Dec 2023").
+- [ ] Bands used are the pre-2024 EPA AQI breakpoints (Good 0-12.0). EPA changed Good to 0-9.0 in 2024. Either say you used the older breakpoints, or recompute.
+- [ ] Amahoro Stadium photos: do they exist? If yes, add 2-3 of them. If not, remove the section.
+- [ ] "Submitted to ... academic advisors for peer review": name who reviewed it (with permission) or soften to "checked with my advisors".
+- [ ] Link to the dashboard itself (live or archived) and, ideally, the code and a dataset snapshot (Zenodo DOI).
+- [ ] AirNow's US embassy pages now return 404 (checked 2026-11-20). Confirm where the data is archived now and link that.
+END SOURCE CHECKLIST -->
+
+The data came from the [US Embassy reference monitors](/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/) in Kigali, instruments that had quietly logged hourly particulate matter readings for years. These monitors utilize beta-attenuation mass monitoring, pulling ambient air through a filter tape and measuring particulate mass density per cubic meter with calibrated precision. While raw data files were publicly archived, nobody had transformed those dense time-series tables into an interface that an urban resident, a school administrator, or a city planner could act on.
 
 I set out to build that bridge. The effort began not with frontend mockups, but with statistical groundwork to determine how ambient air quality actually changes in Kigali across days, seasons, and years.
 
 ## The Statistical Reality Behind the Numbers
 
-When examining public discourse on air pollution, conversations often stall in vague generalities. People speak of haze or traffic exhaust without quantifying exposure. To establish clear baselines, I measured the hourly dataset against the World Health Organization guidelines and the United States Environmental Protection Agency Air Quality Index breakpoints.
+When examining public discourse on air pollution, conversations often stall in vague generalities. People speak of haze or traffic exhaust without quantifying exposure. To establish clear baselines, I measured the hourly dataset against the [World Health Organization guidelines](https://www.who.int/publications/i/item/9789240034228) and the United States Environmental Protection Agency [Air Quality Index](/understanding-the-air-quality-index-aqi/) breakpoints ([AirNow technical document](https://www.airnow.gov/publications/air-quality-index/technical-assistance-document-for-reporting-the-daily-aqi/)).
 
-Under WHO standards updated in 2021, the recommended 24-hour average limit for fine particulate matter ($\text{PM}_{2.5}$) is $15\,\mu\text{g/m}^3$, while the recommended annual mean cap is $5\,\mu\text{g/m}^3$. The empirical distribution from the Kigali reference monitor told an unmistakable story:
+Under the [WHO guidelines updated in 2021](https://www.who.int/publications/i/item/9789240034228), the recommended 24-hour average limit for fine particulate matter ([$\text{PM}_{2.5}$](/what-is-particulate-matter-pm2.5-and-the-environmental-significance/)) is $15\,\mu\text{g/m}^3$, while the recommended annual mean cap is $5\,\mu\text{g/m}^3$. The empirical distribution from the Kigali reference monitor told an unmistakable story:
 
 - **Good Category ($0 \text{ to } 12.0\,\mu\text{g/m}^3$):** $3.4\%$ of recorded hours
 - **Moderate ($12.1 \text{ to } 35.4\,\mu\text{g/m}^3$):** $39.2\%$ of recorded hours
@@ -131,3 +143,11 @@ Civic and environmental tooling requires strict auditability. If a policy stakeh
 This project reinforced a lesson that defines production software. Writing mathematical transformations and rendering interactive charts is rarely the hardest problem. The real challenge lies in discovering what needs to exist when working alongside stakeholders who do not express their needs in formal technical specifications.
 
 Turning ambiguous public datasets into reliable tools that empower communities demands technical rigor combined with deep ground-level empathy. That intersection is where engineering delivers lasting value.
+
+## Sources
+
+1. World Health Organization (2021). [WHO global air quality guidelines: particulate matter (PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide](https://www.who.int/publications/i/item/9789240034228).
+2. US EPA and AirNow. [Technical Assistance Document for the Reporting of Daily Air Quality, the Air Quality Index (AQI)](https://www.airnow.gov/publications/air-quality-index/technical-assistance-document-for-reporting-the-daily-aqi/).
+3. US EPA (2024). [Final Reconsideration of the National Ambient Air Quality Standards for Particulate Matter](https://www.epa.gov/pm-pollution/final-reconsideration-national-ambient-air-quality-standards-particulate-matter-pm), which revised the PM2.5 AQI breakpoints.
+4. AirNow. [AQI Basics](https://www.airnow.gov/aqi/aqi-basics/).
+5. Related on this site: [Accessing air quality data from US embassies worldwide](/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/), [Understanding the Air Quality Index](/understanding-the-air-quality-index-aqi/), [What is PM2.5](/what-is-particulate-matter-pm2.5-and-the-environmental-significance/).
