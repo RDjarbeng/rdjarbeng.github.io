@@ -1357,13 +1357,13 @@ Download any standard Prism CSS theme (such as Prism Tomorrow Dark) or include a
 
 Now, any fenced code block in Markdown posts formats automatically:
 
-```markdown
+````markdown
 ```javascript
 function greet(name) {
   console.log(`Hello, ${name}!`);
 }
 ```
-```
+````
 
 Docs: [Eleventy Syntax Highlighting Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/)
 
