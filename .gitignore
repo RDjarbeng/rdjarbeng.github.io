@@ -35,6 +35,7 @@ scripts/diagrams/out/
 *.local.*
 .env*.local
 
+SOUL.md
 
 # Claude Code settings and app config
 .claude/
