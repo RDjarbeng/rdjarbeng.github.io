@@ -59,19 +59,19 @@ Football data historically relied on manual event tagging provided by data vendo
 | **Event Data** | Discrete timestamps, on-ball events only | Pass completion, shot volume, basic player ratings (< 2% of match activity) |
 | **Optical Tracking Data** | 25 Hz continuous coordinates for all 22 players and ball | Spatial control, pressing intensity, off-ball runs, and physical fatigue |
 
-Event logs record discrete timestamps, player identifiers, event types, and coordinate pairs $$(x, y)$$. While useful for computing basic pass completion rates and shot volumes, event data suffers from an inherent structural blind spot: a single outfield player controls the ball for less than three minutes during an entire 90-minute match. The remaining 87 minutes consist of off-ball positioning, spatial closing, defensive cover shadows, and supporting decoy runs.
+Event logs record discrete timestamps, player identifiers, event types, and coordinate pairs $(x, y)$. While useful for computing basic pass completion rates and shot volumes, event data suffers from an inherent structural blind spot: a single outfield player controls the ball for less than three minutes during an entire 90-minute match. The remaining 87 minutes consist of off-ball positioning, spatial closing, defensive cover shadows, and supporting decoy runs.
 
 Modern clubs rely on broadcast optical tracking datasets produced by computer vision firms like SkillCorner. By running multi-object tracking networks across standard broadcast cameras, these systems generate continuous time series data at 25 Hz:
 
 $$\mathbf{S}(t) = \left\{ \mathbf{p}_{\text{ball}}(t), \{\mathbf{p}_i(t), \mathbf{v}_i(t)\}_{i=1}^{22} \right\}$$
 
-For every frame $$t$$, the pipeline tracks position coordinates $$\mathbf{p}_i(t) = (x_i, y_i)$$ and instantaneous velocity vectors $$\mathbf{v}_i(t) = (v_{x,i}, v_{y,i})$$ for all 22 athletes on the pitch. This enables analysts to quantify team compact shape, press resistance, and physical output without requiring physical GPS vests.
+For every frame $t$, the pipeline tracks position coordinates $\mathbf{p}_i(t) = (x_i, y_i)$ and instantaneous velocity vectors $\mathbf{v}_i(t) = (v_{x,i}, v_{y,i})$ for all 22 athletes on the pitch. This enables analysts to quantify team compact shape, press resistance, and physical output without requiring physical GPS vests.
 
 ## Beyond Expected Goals: Spatial Control and Expected Threat (xT)
 
 Expected Goals (xG) established quantitative football analytics by predicting the probability that a given shot results in a goal based on distance, angle, body part, and assist type. However, xG rewards only the final action in an attacking sequence, assigning zero mathematical value to the defense-splitting pass that unlocked the penalty box in the first place.
 
-To solve this, researchers developed Expected Threat (xT), formalized by Karun Singh as a discrete Markov decision process across an $$M \times N$$ grid overlaid on the pitch.
+To solve this, researchers developed Expected Threat (xT), formalized by Karun Singh as a discrete Markov decision process across an $M \times N$ grid overlaid on the pitch.
 
 | Pitch Zone | Defensive Third | Middle Third | Attacking Flank | Central Zone 14 | Danger Area (Box) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -79,17 +79,17 @@ To solve this, researchers developed Expected Threat (xT), formalized by Karun S
 | **Central Channel** | 0.01 | 0.02 | 0.03 | 0.15 (Zone 14) | 0.35 (Goal Mouth) |
 | **Right Wing** | 0.01 | 0.02 | 0.04 | 0.07 | 0.12 |
 
-At any cell $$(x, y)$$, a player in possession faces two mutually exclusive actions: shoot with probability $$s(x, y)$$, or move the ball (via a pass or progressive dribble carry) with probability $$m(x, y) = 1 - s(x, y)$$.
+At any cell $(x, y)$, a player in possession faces two mutually exclusive actions: shoot with probability $s(x, y)$, or move the ball (via a pass or progressive dribble carry) with probability $m(x, y) = 1 - s(x, y)$.
 
 The Expected Threat of any location satisfies the recursive equation:
 
 $$\text{xT}(x, y) = s(x, y) \times g(x, y) + m(x, y) \times \sum_{x'=1}^{M} \sum_{y'=1}^{N} T((x, y) \to (x', y')) \times \text{xT}(x', y')$$
 
 In this system:
-- $$g(x, y)$$ is the goal conversion probability given a shot taken from cell $$(x, y)$$.
-- $$T((x, y) \to (x', y'))$$ is the empirical transition probability of moving the ball from cell $$(x, y)$$ to cell $$(x', y')$$.
+- $g(x, y)$ is the goal conversion probability given a shot taken from cell $(x, y)$.
+- $T((x, y) \to (x', y'))$ is the empirical transition probability of moving the ball from cell $(x, y)$ to cell $(x', y')$.
 
-When an attacking midfielder receives possession in a low-value zone ($$\text{xT} = 0.03$$) and executes an incisive line-breaking pass to a forward in Zone 14 ($$\text{xT} = 0.18$$), the model credits the passer with an added threat delta:
+When an attacking midfielder receives possession in a low-value zone ($\text{xT} = 0.03$) and executes an incisive line-breaking pass to a forward in Zone 14 ($\text{xT} = 0.18$), the model credits the passer with an added threat delta:
 
 $$\Delta \text{xT} = \text{xT}_{\text{end}} - \text{xT}_{\text{start}} = 0.18 - 0.03 = +0.15$$
 
@@ -119,14 +119,14 @@ Because goals in a football match occur as rare, discrete counts over a 90-minut
 $$P(X = x, Y = y) = \frac{\lambda^x e^{-\lambda}}{x!} \times \frac{\mu^y e^{-\mu}}{y!} \times \tau_{x,y}(\lambda, \mu, \rho)$$
 
 In this formulation:
-- $$X$$ and $$Y$$ represent the goals scored by the home and away teams respectively.
-- The expected goal rates $$\lambda$$ and $$\mu$$ are parameterized as:
+- $X$ and $Y$ represent the goals scored by the home and away teams respectively.
+- The expected goal rates $\lambda$ and $\mu$ are parameterized as:
 
 $$\log \lambda = \alpha_{\text{home}} + \beta_{\text{away}} + \gamma$$
 
 $$\log \mu = \alpha_{\text{away}} + \beta_{\text{home}}$$
 
-Here, $$\alpha$$ measures a team's attacking strength, $$\beta$$ measures defensive resistance, and $$\gamma$$ represents the universal home field advantage coefficient. The correction factor $$\tau_{x,y}$$ adjusts probabilities for low-scoring states (0-0, 1-0, 0-1, and 1-1) where defensive game state incentives distort independent Poisson assumptions.
+Here, $\alpha$ measures a team's attacking strength, $\beta$ measures defensive resistance, and $\gamma$ represents the universal home field advantage coefficient. The correction factor $\tau_{x,y}$ adjusts probabilities for low-scoring states (0-0, 1-0, 0-1, and 1-1) where defensive game state incentives distort independent Poisson assumptions.
 
 ### Python Simulation Example
 

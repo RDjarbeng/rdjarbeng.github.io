@@ -61,17 +61,17 @@ One of the most significant releases in this initiative targeted Family 003: the
 
 ## The mystery of prime numbers
 
-Prime numbers ($$2, 3, 5, 7, 11, 13, 17, \dots$$) are the multiplicative building blocks of all integers. Every integer greater than 1 factors uniquely into a product of primes.
+Prime numbers ($2, 3, 5, 7, 11, 13, 17, \dots$) are the multiplicative building blocks of all integers. Every integer greater than 1 factors uniquely into a product of primes.
 
-Yet, despite their foundational role, primes appear irregularly. There is no simple algebraic formula that outputs the $$n$$-th prime directly. Instead, primes thin out as numbers grow larger, governed globally by the Prime Number Theorem:
+Yet, despite their foundational role, primes appear irregularly. There is no simple algebraic formula that outputs the $n$-th prime directly. Instead, primes thin out as numbers grow larger, governed globally by the Prime Number Theorem:
 
 $$
 \pi(x) \sim \frac{x}{\ln x}
 $$
 
-Where $$\pi(x)$$ represents the prime-counting function, returning the total number of primes less than or equal to $$x$$.
+Where $\pi(x)$ represents the prime-counting function, returning the total number of primes less than or equal to $x$.
 
-While the Prime Number Theorem describes the smooth average density of primes, it does not explain their local fluctuations. Primes occasionally cluster in close pairs ($$11$$ and $$13$$, $$17$$ and $$19$$), followed by massive deserts where millions of consecutive composite numbers appear without a single prime.
+While the Prime Number Theorem describes the smooth average density of primes, it does not explain their local fluctuations. Primes occasionally cluster in close pairs ($11$ and $13$, $17$ and $19$), followed by massive deserts where millions of consecutive composite numbers appear without a single prime.
 
 ## Riemann's complex bridge
 
@@ -81,18 +81,18 @@ $$
 \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} = \prod_{p \text{ prime}} \frac{1}{1 - p^{-s}}
 $$
 
-For real numbers $$s > 1$$, this infinite sum converges smoothly. Riemann extended the definition of $$\zeta(s)$$ across the entire complex plane using analytic continuation, where $$s = \sigma + it$$, with $$\sigma = \text{Re}(s)$$ representing the real component and $$t = \text{Im}(s)$$ representing the imaginary component.
+For real numbers $s > 1$, this infinite sum converges smoothly. Riemann extended the definition of $\zeta(s)$ across the entire complex plane using analytic continuation, where $s = \sigma + it$, with $\sigma = \text{Re}(s)$ representing the real component and $t = \text{Im}(s)$ representing the imaginary component.
 
-Riemann demonstrated that the function has two classes of zeros where $$\zeta(s) = 0$$:
+Riemann demonstrated that the function has two classes of zeros where $\zeta(s) = 0$:
 
-1. **Trivial Zeros**: Negative even integers ($$s = -2, -4, -6, \dots$$), which arise naturally from the functional equation's gamma factors.
-2. **Non-Trivial Zeros**: Complex numbers located inside the vertical boundary called the **critical strip**, defined by $$0 < \text{Re}(s) < 1$$.
+1. **Trivial Zeros**: Negative even integers ($s = -2, -4, -6, \dots$), which arise naturally from the functional equation's gamma factors.
+2. **Non-Trivial Zeros**: Complex numbers located inside the vertical boundary called the **critical strip**, defined by $0 < \text{Re}(s) < 1$.
 
 The non-trivial zeros act like harmonic frequencies in a Fourier transform. Every non-trivial zero adds a specific oscillatory correction term to the prime-counting function. If you know the precise locations of the zeros, you know the exact distribution of the primes.
 
 ## The Riemann Hypothesis and the Quasi-Riemann conjecture
 
-Riemann calculated the first few non-trivial zeros by hand and observed a remarkable pattern: all of them shared a real part of exactly $$\frac{1}{2}$$.
+Riemann calculated the first few non-trivial zeros by hand and observed a remarkable pattern: all of them shared a real part of exactly $\frac{1}{2}$.
 
 He conjectured that **all** non-trivial zeros lie strictly on this central vertical line:
 
@@ -106,7 +106,7 @@ $$
 |\pi(x) - \text{Li}(x)| = \mathcal{O}(\sqrt{x} \ln x)
 $$
 
-Because proving the full hypothesis remains elusive, mathematicians study the **Quasi-Riemann Hypothesis**. Instead of requiring all zeros to sit exactly on $$\sigma = \frac{1}{2}$$, the Quasi-Riemann Hypothesis asserts that there exists some constant bound $$\alpha < 1$$ such that no zeros exist in the right-hand half-plane:
+Because proving the full hypothesis remains elusive, mathematicians study the **Quasi-Riemann Hypothesis**. Instead of requiring all zeros to sit exactly on $\sigma = \frac{1}{2}$, the Quasi-Riemann Hypothesis asserts that there exists some constant bound $\alpha < 1$ such that no zeros exist in the right-hand half-plane:
 
 $$
 \zeta(s) \ne 0 \quad \text{for all } \text{Re}(s) > \alpha

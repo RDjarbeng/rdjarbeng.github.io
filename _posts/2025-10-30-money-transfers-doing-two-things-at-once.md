@@ -111,7 +111,7 @@ Rather than treating account balance as a single scalar value, modern distribute
 
 $$\mathbf{B}_u = \sum_{c \in \mathcal{C}} b_{u, c} \mathbf{e}_c$$
 
-Here $$\mathcal{C}$$ denotes the set of supported international ISO 4217 currency identifiers, and $$b_{u, c}$$ represents the settled balance for user $$u$$ within currency bucket $$c$$.
+Here $\mathcal{C}$ denotes the set of supported international ISO 4217 currency identifiers, and $b_{u, c}$ represents the settled balance for user $u$ within currency bucket $c$.
 
 | Sub-Bucket (ISO) | Available Balance | Pending Ledger State |
 | :--- | :--- | :--- |

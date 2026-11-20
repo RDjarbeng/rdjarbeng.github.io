@@ -77,11 +77,11 @@ This process follows the Stefan-Boltzmann law:
 $$P_{\text{rad}} = \epsilon \sigma A (T^4 - T_{\text{space}}^4)$$
 
 In this equation:
-- $$\epsilon$$ represents surface emissivity (typically 0.85 to 0.92 for optical solar reflectors or white radiator coatings).
-- $$\sigma$$ represents the Stefan-Boltzmann constant ($$5.670 \times 10^{-8} \text{ W/m}^2\text{K}^4$$).
-- $$A$$ represents effective radiator surface area in square meters.
-- $$T$$ represents the radiator absolute temperature in Kelvin.
-- $$T_{\text{space}}$$ represents the deep-space cosmic microwave background temperature ($$\approx 3 \text{ K}$$), making $$T_{\text{space}}^4$$ negligible.
+- $\epsilon$ represents surface emissivity (typically 0.85 to 0.92 for optical solar reflectors or white radiator coatings).
+- $\sigma$ represents the Stefan-Boltzmann constant ($5.670 \times 10^{-8} \text{ W/m}^2\text{K}^4$).
+- $A$ represents effective radiator surface area in square meters.
+- $T$ represents the radiator absolute temperature in Kelvin.
+- $T_{\text{space}}$ represents the deep-space cosmic microwave background temperature ($\approx 3 \text{ K}$), making $T_{\text{space}}^4$ negligible.
 
 ```text
 Heat Dissipation Pipeline

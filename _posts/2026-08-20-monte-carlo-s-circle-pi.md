@@ -73,7 +73,7 @@ END WRITER NOTE -->
 
 Monte Carlo methods estimate deterministic mathematical quantities through repeated random sampling. Named by Stanislaw Ulam and John von Neumann after the famed Monaco casino, these stochastic algorithms power modern computational physics, quantitative finance, and Bayesian machine learning.
 
-The classic canonical demonstration of this technique is estimating the transcendental mathematical constant $$\pi$$ using rejection sampling inside a unit square. Behind this simple geometric exercise lies a profound study in the Law of Large Numbers, the Central Limit Theorem, and the fundamental computational trade-offs of stochastic integration.
+The classic canonical demonstration of this technique is estimating the transcendental mathematical constant $\pi$ using rejection sampling inside a unit square. Behind this simple geometric exercise lies a profound study in the Law of Large Numbers, the Central Limit Theorem, and the fundamental computational trade-offs of stochastic integration.
 
 ## Geometric Formulation of the Estimator
 
@@ -94,37 +94,37 @@ Geometric Boundary in the First Quadrant
 --------------------------------------------------------------------------------
 ```
 
-Let $$X$$ and $$Y$$ be independent random variables drawn uniformly from the continuous interval $$[0, 1]$$:
+Let $X$ and $Y$ be independent random variables drawn uniformly from the continuous interval $[0, 1]$:
 
 $$X \sim \mathcal{U}(0, 1), \quad Y \sim \mathcal{U}(0, 1)$$
 
-The point $$(X, Y)$$ lands uniformly inside the unit square whose area is:
+The point $(X, Y)$ lands uniformly inside the unit square whose area is:
 
 $$A_{\text{square}} = 1 \times 1 = 1$$
 
-The quarter-circle consists of all points whose Euclidean distance from the origin is at most $$1$$, satisfying the algebraic condition:
+The quarter-circle consists of all points whose Euclidean distance from the origin is at most $1$, satisfying the algebraic condition:
 
 $$X^2 + Y^2 \le 1$$
 
-Because the area of a complete circle with radius $$r = 1$$ is $$\pi r^2 = \pi$$, the area of the quarter-circle in the first quadrant is:
+Because the area of a complete circle with radius $r = 1$ is $\pi r^2 = \pi$, the area of the quarter-circle in the first quadrant is:
 
 $$A_{\text{quarter}} = \frac{\pi \cdot 1^2}{4} = \frac{\pi}{4}$$
 
-Because the points are uniformly distributed across the unit square, the theoretical probability $$p$$ that any randomly chosen point falls inside the quarter-circle equals the ratio of the two areas:
+Because the points are uniformly distributed across the unit square, the theoretical probability $p$ that any randomly chosen point falls inside the quarter-circle equals the ratio of the two areas:
 
 $$p = P\left(X^2 + Y^2 \le 1\right) = \frac{A_{\text{quarter}}}{A_{\text{square}}} = \frac{\pi / 4}{1} = \frac{\pi}{4}$$
 
 ## The Statistical Estimator and Asymptotic Variance
 
-When sampling $$N$$ independent points $$(x_i, y_i)$$, we define an indicator random variable $$I_i$$ for each point:
+When sampling $N$ independent points $(x_i, y_i)$, we define an indicator random variable $I_i$ for each point:
 
 $$I_i = \begin{cases} 1 & \text{if } x_i^2 + y_i^2 \le 1 \\ 0 & \text{otherwise} \end{cases}$$
 
-Each $$I_i$$ is an independent Bernoulli trial with success probability $$p = \frac{\pi}{4}$$. The total number of points landing inside the quarter-circle is the sum of these indicators:
+Each $I_i$ is an independent Bernoulli trial with success probability $p = \frac{\pi}{4}$. The total number of points landing inside the quarter-circle is the sum of these indicators:
 
 $$N_{\text{inside}} = \sum_{i=1}^N I_i \sim \text{Binomial}\left(N, \frac{\pi}{4}\right)$$
 
-The Monte Carlo estimator for $$\pi$$, denoted $$\hat{\pi}_N$$, scales the empirical sample mean by $$4$$:
+The Monte Carlo estimator for $\pi$, denoted $\hat{\pi}_N$, scales the empirical sample mean by $4$:
 
 $$\hat{\pi}_N = 4 \times \frac{N_{\text{inside}}}{N} = \frac{4}{N} \sum_{i=1}^N I_i$$
 
@@ -136,11 +136,11 @@ $$\mathbb{E}[\hat{\pi}_N] = \frac{4}{N} \sum_{i=1}^N \mathbb{E}[I_i] = \frac{4}{
 
 ### Variance and the Standard Error Penalty
 
-To quantify the precision of the estimate, we compute the variance of $$\hat{\pi}_N$$:
+To quantify the precision of the estimate, we compute the variance of $\hat{\pi}_N$:
 
 $$\text{Var}(\hat{\pi}_N) = \text{Var}\left(\frac{4}{N} \sum_{i=1}^N I_i\right) = \frac{16}{N^2} \sum_{i=1}^N \text{Var}(I_i)$$
 
-For a Bernoulli random variable with parameter $$p = \frac{\pi}{4}$$, the variance is:
+For a Bernoulli random variable with parameter $p = \frac{\pi}{4}$, the variance is:
 
 $$\text{Var}(I_i) = p(1 - p) = \left(\frac{\pi}{4}\right)\left(1 - \frac{\pi}{4}\right) = \frac{\pi(4 - \pi)}{16}$$
 
@@ -148,11 +148,11 @@ Substituting this variance back into the formula yields:
 
 $$\text{Var}(\hat{\pi}_N) = \frac{16}{N^2} \cdot N \cdot \left(\frac{\pi(4 - \pi)}{16}\right) = \frac{\pi(4 - \pi)}{N}$$
 
-The standard error $$\sigma_{\hat{\pi}}$$ is the square root of the variance:
+The standard error $\sigma_{\hat{\pi}}$ is the square root of the variance:
 
 $$\sigma_{\hat{\pi}} = \sqrt{\frac{\pi(4 - \pi)}{N}} \approx \frac{\sqrt{3.14159 \times 0.85841}}{\sqrt{N}} \approx \frac{1.6421}{\sqrt{N}}$$
 
-This result exposes the fundamental computational property of standard Monte Carlo integration: the error decays at the rate of $$\mathcal{O}(1 / \sqrt{N})$$. 
+This result exposes the fundamental computational property of standard Monte Carlo integration: the error decays at the rate of $\mathcal{O}(1 / \sqrt{N})$. 
 
 ```text
 Monte Carlo Sample Volume vs Standard Error
@@ -166,7 +166,7 @@ Sample Count (N)    Standard Error (approx)    Expected Correct Decimals
 --------------------------------------------------------------------------------
 ```
 
-To gain a single additional decimal digit of precision (a tenfold reduction in standard error), the required number of random samples must increase by a factor of one hundred ($$10^2$$). Calculating millions of digits of $$\pi$$ using standard pseudo-random rejection sampling is computationally impractical compared to analytical algorithms like the Chudnovsky formula.
+To gain a single additional decimal digit of precision (a tenfold reduction in standard error), the required number of random samples must increase by a factor of one hundred ($10^2$). Calculating millions of digits of $\pi$ using standard pseudo-random rejection sampling is computationally impractical compared to analytical algorithms like the Chudnovsky formula.
 
 ## Python Implementation and Vectorization
 
@@ -211,7 +211,7 @@ for exponent in [3, 5, 7]:
     print(f"N={n:10d} | Estimate: {res['pi_estimate']:.6f} | Error: {res['absolute_error']:.6f}")
 ```
 
-Executing this code produces empirical estimates that closely track the theoretical $$\mathcal{O}(1 / \sqrt{N})$$ standard error curve.
+Executing this code produces empirical estimates that closely track the theoretical $\mathcal{O}(1 / \sqrt{N})$ standard error curve.
 
 ## Breaking the Bound: Quasi-Monte Carlo and Sobol Sequences
 
@@ -233,10 +233,10 @@ Clusters and gaps occur.     Evenly spaced spatial coverage.
 --------------------------------------------------------------------------------
 ```
 
-Low-discrepancy sequences intentionally place each subsequent point into the largest remaining unsampled spatial void. This deliberate dispersion improves the integration convergence rate from the stochastic limit of $$\mathcal{O}(N^{-1/2})$$ toward the near-linear deterministic limit of:
+Low-discrepancy sequences intentionally place each subsequent point into the largest remaining unsampled spatial void. This deliberate dispersion improves the integration convergence rate from the stochastic limit of $\mathcal{O}(N^{-1/2})$ toward the near-linear deterministic limit of:
 
 $$\mathcal{O}\left(\frac{(\log N)^d}{N}\right)$$
 
-In two dimensions ($$d = 2$$), a Sobol sequence achieves a much smaller estimation error for the exact same sample count $$N$$.
+In two dimensions ($d = 2$), a Sobol sequence achieves a much smaller estimation error for the exact same sample count $N$.
 
-While estimating $$\pi$$ via Monte Carlo simulation is rarely the method of choice for calculating constants to record precision, it provides an invaluable mental model. It demonstrates how simple probability spaces can approximate complex multidimensional integrals that resist closed-form analytical solutions.
+While estimating $\pi$ via Monte Carlo simulation is rarely the method of choice for calculating constants to record precision, it provides an invaluable mental model. It demonstrates how simple probability spaces can approximate complex multidimensional integrals that resist closed-form analytical solutions.

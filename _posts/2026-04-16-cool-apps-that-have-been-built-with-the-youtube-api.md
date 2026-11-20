@@ -82,7 +82,7 @@ Short-form video platforms (TikTok, Instagram Reels, YouTube Shorts) require 9:1
 
 Content creators optimize their publication schedules and packaging using competitive analytics dashboards:
 
-- **View Velocity Tracking**: Calculating the first derivative of views with respect to time ($$\frac{dV}{dt}$$) across the first two hours post-upload reveals whether YouTube's recommendation algorithm is promoting the video to broader audiences.
+- **View Velocity Tracking**: Calculating the first derivative of views with respect to time ($\frac{dV}{dt}$) across the first two hours post-upload reveals whether YouTube's recommendation algorithm is promoting the video to broader audiences.
 - **Thumbnail A/B Testing**: Because the API allows authenticated channel owners to update video thumbnails programmatically, tools rotate two distinct image assets every 24 hours, measuring click-through rate variations to declare a statistical winner.
 - **Tag Co-Occurrence Graphs**: Crawling top-ranking videos within specific search niches produces weighted co-occurrence networks, highlighting secondary keywords that improve search discoverability.
 

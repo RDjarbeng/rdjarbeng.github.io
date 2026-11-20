@@ -68,25 +68,25 @@ Consider three patterns that resolve a substantial portion of entry-level questi
 
 ### 1. Two Pointers and Sliding Window
 
-Whenever a problem involves a contiguous array or string and asks for a subsegment satisfying a constraint (such as finding the longest substring without repeating characters), a brute-force approach evaluates all $$\mathcal{O}(N^2)$$ pairs of start and end indices.
+Whenever a problem involves a contiguous array or string and asks for a subsegment satisfying a constraint (such as finding the longest substring without repeating characters), a brute-force approach evaluates all $\mathcal{O}(N^2)$ pairs of start and end indices.
 
-A sliding window maintains two pointers defining the current valid window. By advancing the right pointer to expand the window and advancing the left pointer only when an invariant is violated, the algorithm processes each element at most twice, reducing the time complexity to linear $$\mathcal{O}(N)$$.
+A sliding window maintains two pointers defining the current valid window. By advancing the right pointer to expand the window and advancing the left pointer only when an invariant is violated, the algorithm processes each element at most twice, reducing the time complexity to linear $\mathcal{O}(N)$.
 
 ### 2. Prefix Sums and Hash Map Indexing
 
-When tasked with finding whether a continuous subarray sums to a target value $$K$$, computing every subarray sum takes quadratic time. 
+When tasked with finding whether a continuous subarray sums to a target value $K$, computing every subarray sum takes quadratic time. 
 
 By tracking a cumulative running prefix sum and storing previously seen sums in a hash map, the problem transforms into an instantaneous lookup:
 
 $$\text{Current Sum} - \text{Target } K = \text{Previous Prefix Sum}$$
 
-If the difference exists in the hash table, a valid subarray ending at the current index has been identified in $$\mathcal{O}(1)$$ lookup time.
+If the difference exists in the hash table, a valid subarray ending at the current index has been identified in $\mathcal{O}(1)$ lookup time.
 
 ### 3. Binary Search on Continuous Spaces
 
 Binary search is frequently taught solely as a way to find a target value in a sorted array. In technical interviews, its most powerful application involves searching over monotonic predicate spaces.
 
-If a problem asks for the minimum capacity required to ship packages within $$D$$ days, testing every possible capacity sequentially is inefficient. Because the validity function is monotonic (if capacity $$C$$ can deliver the cargo in $$D$$ days, any capacity greater than $$C$$ will also succeed), one can binary search directly over the range of possible capacities between the heaviest package and total cargo weight.
+If a problem asks for the minimum capacity required to ship packages within $D$ days, testing every possible capacity sequentially is inefficient. Because the validity function is monotonic (if capacity $C$ can deliver the cargo in $D$ days, any capacity greater than $C$ will also succeed), one can binary search directly over the range of possible capacities between the heaviest package and total cargo weight.
 
 ## The UMPIRE Execution Framework
 
@@ -107,7 +107,7 @@ Stage 6: EVALUATE    ---> Quantify formal Big-O time and space complexity
 ### 1. Understand (5 to 7 Minutes)
 
 Never begin coding immediately. Read the prompt carefully, repeat the core objective in your own words, and clarify ambiguity:
-- Identify input size bounds ($$N \le 10^3$$ allows quadratic approaches, whereas $$N \ge 10^5$$ mandates linear or logarithmic $$\mathcal{O}(N \log N)$$ algorithms).
+- Identify input size bounds ($N \le 10^3$ allows quadratic approaches, whereas $N \ge 10^5$ mandates linear or logarithmic $\mathcal{O}(N \log N)$ algorithms).
 - Determine whether inputs contain negative numbers, zeros, or duplicate values.
 - Establish expected function behavior on empty lists, null pointers, or invalid data.
 
@@ -145,7 +145,7 @@ Actively verify boundary conditions, checking execution against an array of leng
 ### 6. Evaluate (2 to 3 Minutes)
 
 Conclude by calculating the exact asymptotic complexity:
-- **Time Complexity:** Express runtime using Big O notation, detailing the dominant operations ($$\mathcal{O}(N \log N)$$ for sorting followed by $$\mathcal{O}(N)$$ linear scan).
+- **Time Complexity:** Express runtime using Big O notation, detailing the dominant operations ($\mathcal{O}(N \log N)$ for sorting followed by $\mathcal{O}(N)$ linear scan).
 - **Space Complexity:** Differentiate between auxiliary working memory (such as hash maps or recursive call stacks) and output data structures.
 
 ## How to Handle Getting Stuck
@@ -154,8 +154,8 @@ Every software engineer encounters moments where a problem seems intractable und
 
 When your progress stalls, follow these constructive recovery techniques:
 
-1. **State a Brute-Force Baseline:** If the optimal solution is not immediately apparent, explain the naive brute-force approach first. Calculating an $$\mathcal{O}(N^2)$$ or exponential solution demonstrates baseline competence and establishes a working foundation to optimize against.
+1. **State a Brute-Force Baseline:** If the optimal solution is not immediately apparent, explain the naive brute-force approach first. Calculating an $\mathcal{O}(N^2)$ or exponential solution demonstrates baseline competence and establishes a working foundation to optimize against.
 2. **Solve a Smaller Instance by Hand:** Reduce the problem size. If the prompt deals with a complex graph, draw a tiny three-node graph on the whiteboard. Solve it manually and pay close attention to the decisions your brain makes to arrive at the answer.
-3. **Vocalize Your Bottleneck:** Explain specifically what part of the logic is missing: "I can identify the target in linear time using a hash map, but I am exploring how to maintain this invariant without using additional $$\mathcal{O}(N)$$ auxiliary space." Interviewers often supply targeted hints when they understand your exact line of thought.
+3. **Vocalize Your Bottleneck:** Explain specifically what part of the logic is missing: "I can identify the target in linear time using a hash map, but I am exploring how to maintain this invariant without using additional $\mathcal{O}(N)$ auxiliary space." Interviewers often supply targeted hints when they understand your exact line of thought.
 
 Technical interviews are a specialized skill separate from day-to-day software development. By treating interview preparation as the study of pattern recognition, structured communication, and disciplined complexity analysis, beginners can transform a stressful trial into an orderly, repeatable technical conversation.

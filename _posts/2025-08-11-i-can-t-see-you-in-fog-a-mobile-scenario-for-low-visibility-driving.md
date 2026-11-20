@@ -73,7 +73,7 @@ At 60 kilometers per hour, a vehicle covers nearly 53 meters before coming to a 
 Two common perceptual phenomena make fog driving even more hazardous:
 
 1. **The Velocity Illusion**: In dense fog, the loss of high-frequency visual references along the road shoulder removes normal optical flow cues. Drivers systematically underestimate their speed, believing they are crawling along when their speedometer still reads 50 or 60 km/h.
-2. **The High-Beam Backscatter**: Switching to high beams in thick fog worsens visibility immediately. Headlamp photons hit millions of suspended water droplets measuring 10 to 50 micrometers across. Because droplet diameters exceed the wavelength of visible light ($$\lambda \approx 0.4 \text{ to } 0.7\,\mu\text{m}$$), light scatters backward directly toward the driver eyes. This creates a blinding white wall of glare. Low-mounted fog lamps work because they project a wide, flat beam underneath the elevated mist layer.
+2. **The High-Beam Backscatter**: Switching to high beams in thick fog worsens visibility immediately. Headlamp photons hit millions of suspended water droplets measuring 10 to 50 micrometers across. Because droplet diameters exceed the wavelength of visible light ($\lambda \approx 0.4 \text{ to } 0.7\,\mu\text{m}$), light scatters backward directly toward the driver eyes. This creates a blinding white wall of glare. Low-mounted fog lamps work because they project a wide, flat beam underneath the elevated mist layer.
 
 The degradation of human vision follows Koschmieder's law of atmospheric extinction:
 
@@ -81,7 +81,7 @@ $$
 C(x) = C_0 \exp(-\beta_{\text{ext}} x)
 $$
 
-Here $$C_0$$ is the original contrast of the pedestrian clothing against the pavement, $$x$$ is distance in meters, and $$\beta_{\text{ext}}$$ is the atmospheric extinction coefficient. In thick fog where $$\beta_{\text{ext}} > 0.05\,\text{m}^{-1}$$, contrast collapses below human recognition thresholds long before headlights reach the target. Even high-visibility fluorescent vests only buy a few extra meters in thick mist because the reflected light itself is scattered before returning to the driver retina.
+Here $C_0$ is the original contrast of the pedestrian clothing against the pavement, $x$ is distance in meters, and $\beta_{\text{ext}}$ is the atmospheric extinction coefficient. In thick fog where $\beta_{\text{ext}} > 0.05\,\text{m}^{-1}$, contrast collapses below human recognition thresholds long before headlights reach the target. Even high-visibility fluorescent vests only buy a few extra meters in thick mist because the reflected light itself is scattered before returning to the driver retina.
 
 ## The V2P Architecture: C-V2X PC5 Direct Sidelinks
 

@@ -59,18 +59,18 @@ Understanding the physical drivers of land surface temperature is essential for 
 $$R_n = H + LE + G$$
 
 In this thermodynamic relationship:
-- $$R_n$$ represents net radiation, calculated as incoming shortwave and longwave radiation minus reflected and emitted radiation.
-- $$H$$ is the sensible heat flux transferring thermal energy into the atmosphere through conduction and convection.
-- $$LE$$ denotes the latent heat flux driven by evapotranspiration from moist soil and vegetative stomata.
-- $$G$$ is the ground heat flux conducted downward into the substrate.
+- $R_n$ represents net radiation, calculated as incoming shortwave and longwave radiation minus reflected and emitted radiation.
+- $H$ is the sensible heat flux transferring thermal energy into the atmosphere through conduction and convection.
+- $LE$ denotes the latent heat flux driven by evapotranspiration from moist soil and vegetative stomata.
+- $G$ is the ground heat flux conducted downward into the substrate.
 
-In rural environments, a substantial fraction of net radiation is dissipated through latent heat ($$LE$$), keeping surfaces cool. In paved urban cores, the moisture deficit drives $$LE$$ toward zero, forcing nearly all incoming solar energy into sensible heat ($$H$$) and deep structural storage ($$G$$).
+In rural environments, a substantial fraction of net radiation is dissipated through latent heat ($LE$), keeping surfaces cool. In paved urban cores, the moisture deficit drives $LE$ toward zero, forcing nearly all incoming solar energy into sensible heat ($H$) and deep structural storage ($G$).
 
 | Energy Partition | Rural Heat Flux Distribution | Urban Heat Flux Distribution |
 | :--- | :--- | :--- |
-| **Latent Heat Flux ($$LE$$)** | High (~60%) via plant evapotranspiration | Deficit (~5%) due to impermeable pavements |
-| **Sensible Heat Flux ($$H$$)** | Low (~30%) atmospheric heating | Extreme (~65%) direct air heating |
-| **Ground Storage Flux ($$G$$)** | Low (~10%) natural soil absorption | High (~30%) concrete and asphalt thermal mass |
+| **Latent Heat Flux ($LE$)** | High (~60%) via plant evapotranspiration | Deficit (~5%) due to impermeable pavements |
+| **Sensible Heat Flux ($H$)** | Low (~30%) atmospheric heating | Extreme (~65%) direct air heating |
+| **Ground Storage Flux ($G$)** | Low (~10%) natural soil absorption | High (~30%) concrete and asphalt thermal mass |
 | **Net Microclimate Outcome** | Subdued ambient surface temperature | Elevated Urban Heat Island (UHI) anomaly |
 
 ## Establishing the Rapid Baseline
@@ -105,8 +105,8 @@ Multispectral satellite imagery provides electromagnetic reflection measurements
 
 | Spectral Index | Formula | Physical Interpretation | Correlation to Land Surface Temp |
 | :--- | :--- | :--- | :--- |
-| **NDVI** | $$\frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$$ | Photosynthetically active green canopy cover | Strong negative correlation (cooling effect) |
-| **NDBI** | $$\frac{\text{SWIR} - \text{NIR}}{\text{SWIR} + \text{NIR}}$$ | Impervious concrete, asphalt, and roofing density | Strong positive correlation (thermal heating) |
+| **NDVI** | $\frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$ | Photosynthetically active green canopy cover | Strong negative correlation (cooling effect) |
+| **NDBI** | $\frac{\text{SWIR} - \text{NIR}}{\text{SWIR} + \text{NIR}}$ | Impervious concrete, asphalt, and roofing density | Strong positive correlation (thermal heating) |
 | **NDBI-NDVI Differential** | Difference metric | Contrast between built-up mass and vegetated area | Primary predictor of localized heat retention |
 
 ### 1. Normalized Difference Vegetation Index (NDVI)
@@ -127,13 +127,13 @@ NDBI serves as an effective indicator of urban impervious surface density. In co
 
 ### 3. Fractional Vegetation Cover and Emissivity
 
-To approximate surface emissivity, the fractional vegetation cover ($$F_v$$) was computed from scaled NDVI values:
+To approximate surface emissivity, the fractional vegetation cover ($F_v$) was computed from scaled NDVI values:
 
 $$F_v = \left( \frac{\text{NDVI} - \text{NDVI}_{\text{min}}}{\text{NDVI}_{\text{max}} - \text{NDVI}_{\text{min}}} \right)^2$$
 
 $$\epsilon = \epsilon_v F_v + \epsilon_s (1 - F_v) + C_{\text{roughness}}$$
 
-Here, $$\epsilon_v$$ and $$\epsilon_s$$ denote the known emissivities of pure vegetation (0.985) and pure bare soil (0.960). Incorporating estimated emissivity provided the regression models with physical surface radiative transfer features.
+Here, $\epsilon_v$ and $\epsilon_s$ denote the known emissivities of pure vegetation (0.985) and pure bare soil (0.960). Incorporating estimated emissivity provided the regression models with physical surface radiative transfer features.
 
 ```python
 def compute_spectral_indices(df):
@@ -162,7 +162,7 @@ def compute_spectral_indices(df):
 
 In standard tabular machine learning, practitioners frequently rely on random K-fold cross-validation. In geospatial data science, applying random cross-validation represents a critical methodological error.
 
-According to Tobler's First Law of Geography, near spatial objects are more related than distant objects. Satellite observations sampled on adjacent grid pixels share nearly identical atmospheric humidity, soil composition, and solar elevation angles. If a standard random train-test split places pixel $$(x, y)$$ in the training fold and neighboring pixel $$(x+1, y)$$ in the validation fold, the model simply memorizes local spatial coordinates rather than learning transferable biophysical dynamics.
+According to Tobler's First Law of Geography, near spatial objects are more related than distant objects. Satellite observations sampled on adjacent grid pixels share nearly identical atmospheric humidity, soil composition, and solar elevation angles. If a standard random train-test split places pixel $(x, y)$ in the training fold and neighboring pixel $(x+1, y)$ in the validation fold, the model simply memorizes local spatial coordinates rather than learning transferable biophysical dynamics.
 
 | Validation Scheme | Splitting Strategy | Leakage Risk | Generalization Fidelity |
 | :--- | :--- | :--- | :--- |

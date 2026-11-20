@@ -46,11 +46,11 @@ Analyzing these trends requires understanding the mathematical foundation of Goo
 
 ## The Mathematics of Relative Search Volume
 
-Google does not disclose raw query counts. When an analyst queries a term $$q$$ over a time interval $$T$$ in region $$r$$, the platform computes a normalized ratio:
+Google does not disclose raw query counts. When an analyst queries a term $q$ over a time interval $T$ in region $r$, the platform computes a normalized ratio:
 
 $$P(q, t, r) = \frac{n_q(t, r)}{N(t, r)}$$
 
-In this expression, $$n_q(t, r)$$ denotes the absolute volume of searches for term $$q$$ at time step $$t$$ within region $$r$$. The denominator $$N(t, r)$$ represents the aggregate total of all queries submitted from that region during the same interval. This division eliminates the distorting effect of sheer population size.
+In this expression, $n_q(t, r)$ denotes the absolute volume of searches for term $q$ at time step $t$ within region $r$. The denominator $N(t, r)$ represents the aggregate total of all queries submitted from that region during the same interval. This division eliminates the distorting effect of sheer population size.
 
 To convert this proportion into an accessible index, the system scales the peak value within the queried window to 100:
 
@@ -58,12 +58,12 @@ $$\text{RSV}(q, t, r) = 100 \times \frac{P(q, t, r)}{\max_{t' \in T} P(q, t', r)
 
 | Step | Calculation Phase | Mathematical Representation |
 | :--- | :--- | :--- |
-| **1** | Raw Query Submissions | $$n_q(t, r)$$ |
-| **2** | Normalize by Total Regional Volume | $$P(q, t, r) = \frac{n_q(t, r)}{N(t, r)}$$ |
-| **3** | Scale by Window Maximum | $$\frac{P(q, t, r)}{\max_{t' \in T} P(q, t', r)}$$ |
-| **4** | Compute Final Metric | $$\text{RSV}(q, t, r) \in [0, 100]$$ |
+| **1** | Raw Query Submissions | $n_q(t, r)$ |
+| **2** | Normalize by Total Regional Volume | $P(q, t, r) = \frac{n_q(t, r)}{N(t, r)}$ |
+| **3** | Scale by Window Maximum | $\frac{P(q, t, r)}{\max_{t' \in T} P(q, t', r)}$ |
+| **4** | Compute Final Metric | $\text{RSV}(q, t, r) \in [0, 100]$ |
 
-Because the denominator contains aggregate traffic, an increase in RSV does not always mean total query volume grew. If overall internet traffic declines while interest in term $$q$$ stays constant, the computed RSV rises. Conversely, during major global events that trigger massive general query traffic, the RSV for stable topics can drop even if their absolute volume remains unchanged.
+Because the denominator contains aggregate traffic, an increase in RSV does not always mean total query volume grew. If overall internet traffic declines while interest in term $q$ stays constant, the computed RSV rises. Conversely, during major global events that trigger massive general query traffic, the RSV for stable topics can drop even if their absolute volume remains unchanged.
 
 ## Regional Search Clusters in April 2026
 

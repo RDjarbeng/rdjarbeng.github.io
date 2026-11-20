@@ -53,7 +53,7 @@ $$
 y = f\left(\sum_{i=1}^{m} w_i x_i + b\right)
 $$
 
-Here, the inputs $$x_1, x_2, \dots, x_m$$ represent the incoming data, the weights $$w_1, w_2, \dots, w_m$$ represent the importance or strength of each input, $$b$$ is an adjustable bias value that sets the firing threshold, and $$f$$ is the activation function that produces the final output $$y$$.
+Here, the inputs $x_1, x_2, \dots, x_m$ represent the incoming data, the weights $w_1, w_2, \dots, w_m$ represent the importance or strength of each input, $b$ is an adjustable bias value that sets the firing threshold, and $f$ is the activation function that produces the final output $y$.
 
 The diagram below shows this flow in visual form:
 

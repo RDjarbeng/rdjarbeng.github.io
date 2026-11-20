@@ -51,29 +51,29 @@ Normalized Embedding Vector z in R^d (Unit Hypersphere ||z|| = 1)
 Cosine Similarity Metric: cos(theta) = z_probe . z_gallery
 ```
 
-The model architecture maps an input image $$x$$ to a compact embedding vector $$z = f(x) \in \mathbb{R}^d$$, typically in 512 dimensions. During training, losses like ArcFace (Additive Angular Margin Loss) or CosFace force representations of the same person into tight clusters on a unit hypersphere while pushing different identities apart:
+The model architecture maps an input image $x$ to a compact embedding vector $z = f(x) \in \mathbb{R}^d$, typically in 512 dimensions. During training, losses like ArcFace (Additive Angular Margin Loss) or CosFace force representations of the same person into tight clusters on a unit hypersphere while pushing different identities apart:
 
 $$L_{\text{ArcFace}} = -\log \frac{e^{s(\cos(\theta_{y_i} + m))}}{e^{s(\cos(\theta_{y_i} + m))} + \sum_{j \neq y_i} e^{s \cos \theta_j}}$$
 
-Here, $$s$$ represents the feature scale radius, $$\theta_{y_i}$$ represents the angle between the normalized feature vector and the target weight vector, and $$m$$ introduces an explicit angular margin penalty.
+Here, $s$ represents the feature scale radius, $\theta_{y_i}$ represents the angle between the normalized feature vector and the target weight vector, and $m$ introduces an explicit angular margin penalty.
 
-When a surveillance provider crawls the web, their pipeline passes scraped photos through $$f(x)$$ and stores the resulting embedding clusters. When an unconstrained camera later captures a probe image $$x_{\text{probe}}$$, the verification system computes the cosine similarity:
+When a surveillance provider crawls the web, their pipeline passes scraped photos through $f(x)$ and stores the resulting embedding clusters. When an unconstrained camera later captures a probe image $x_{\text{probe}}$, the verification system computes the cosine similarity:
 
 $$\text{sim}(x_{\text{probe}}, x_{\text{gallery}}) = \frac{f(x_{\text{probe}}) \cdot f(x_{\text{gallery}})}{\|f(x_{\text{probe}})\| \|f(x_{\text{gallery}})\|}$$
 
-If this score exceeds a predetermined threshold $$\tau$$, the system declares an identity match.
+If this score exceeds a predetermined threshold $\tau$, the system declares an identity match.
 
 ## The Cloaking Mechanism: Adversarial Poisoning
 
-Fawkes disrupts this pipeline by executing a targeted poison attack. Instead of masking a face, Fawkes modifies an original image $$x$$ by adding a small perturbation vector $$\delta$$:
+Fawkes disrupts this pipeline by executing a targeted poison attack. Instead of masking a face, Fawkes modifies an original image $x$ by adding a small perturbation vector $\delta$:
 
 $$x_{\text{cloaked}} = x + \delta$$
 
-The optimization objective minimizes the perceptual distortion between the original and cloaked image while maximizing the displacement in feature space toward an unrelated target identity $$x_T$$:
+The optimization objective minimizes the perceptual distortion between the original and cloaked image while maximizing the displacement in feature space toward an unrelated target identity $x_T$:
 
 $$\min_{\delta} \|\delta\|_p \quad \text{subject to} \quad \mathcal{D}(f(x + \delta), f(x_T)) \le \epsilon_{\text{latent}}$$
 
-In practice, the perturbation is constrained by an $$L_\infty$$ norm bound:
+In practice, the perturbation is constrained by an $L_\infty$ norm bound:
 
 $$\|\delta\|_\infty \le \epsilon_{\text{pixel}}$$
 
@@ -86,7 +86,7 @@ This constraint guarantees that no individual pixel shifts by more than a tiny f
 | **Physical Camouflage** | Optical Capture | Block sensor capture using infrared lights or makeup | Environmental lighting conditions |
 | **Model Inversion** | Feature Extraction | Reconstruct facial geometry from latent vectors | Public model weights and gradients |
 
-When a web scraper ingests $$x_{\text{cloaked}}$$, the model learns that identity $$A$$ resides at embedding location $$f(x_T)$$. Later, when security cameras capture an unaltered, real-world probe photo $$x_{\text{probe}}$$ of person $$A$$, the camera extracts the genuine embedding $$f(x_{\text{genuine}})$$. Because $$f(x_T)$$ and $$f(x_{\text{genuine}})$$ point in divergent directions on the hypersphere, the cosine similarity falls well below the threshold $$\tau$$. The surveillance database fails to recognize the person.
+When a web scraper ingests $x_{\text{cloaked}}$, the model learns that identity $A$ resides at embedding location $f(x_T)$. Later, when security cameras capture an unaltered, real-world probe photo $x_{\text{probe}}$ of person $A$, the camera extracts the genuine embedding $f(x_{\text{genuine}})$. Because $f(x_T)$ and $f(x_{\text{genuine}})$ point in divergent directions on the hypersphere, the cosine similarity falls well below the threshold $\tau$. The surveillance database fails to recognize the person.
 
 ## Empirical Effectiveness Across Commercial Platforms
 
@@ -94,9 +94,9 @@ In their USENIX Security evaluation, the SAND Lab tested Fawkes against state-of
 
 | Pipeline Phase | Input Image State | Feature Space Outcome |
 | :--- | :--- | :--- |
-| **Web Crawling / Training** | Cloaked public photos ($$x + \delta$$) | Cluster centroid shifts to unrelated target vector $$f(x_T)$$ |
-| **Surveillance Probe** | Real-world camera frame ($$x_{\text{probe}}$$) | Extracts unperturbed true identity vector $$f(x_{\text{genuine}})$$ |
-| **Biometric Verification** | Cosine similarity query | Similarity falls below threshold ($$\cos \theta < \tau$$); match fails |
+| **Web Crawling / Training** | Cloaked public photos ($x + \delta$) | Cluster centroid shifts to unrelated target vector $f(x_T)$ |
+| **Surveillance Probe** | Real-world camera frame ($x_{\text{probe}}$) | Extracts unperturbed true identity vector $f(x_{\text{genuine}})$ |
+| **Biometric Verification** | Cosine similarity query | Similarity falls below threshold ($\cos \theta < \tau$); match fails |
 
 The study examined three distinct operational conditions:
 
@@ -132,7 +132,7 @@ Several complementary tools address different aspects of unauthorized machine le
 
 | Tool | Primary Target | Technical Mechanism | Primary Use Case |
 | :--- | :--- | :--- | :--- |
-| **Fawkes** | Biometric facial recognition | Feature space perturbation poisoning ($$L_\infty$$ bound) | Personal social media portraits |
+| **Fawkes** | Biometric facial recognition | Feature space perturbation poisoning ($L_\infty$ bound) | Personal social media portraits |
 | **LowKey** | High-resolution face matchers | End-to-end optimization against ArcFace and MobileFace | Stronger perturbation for aggressive face models |
 | **PhotoGuard** | Generative diffusion models | Encoder and latent diffusion disruption vectors | Preventing unauthorized AI image editing |
 | **Glaze** | Generative style mimicry | Feature displacement in artist style latent spaces | Protecting artwork from style imitation |
@@ -144,7 +144,7 @@ The Fawkes client executes entirely on consumer hardware, requiring no remote cl
 
 Users can select between three protection modes:
 
-- **Low Mode**: Minimizes visual impact with an $$L_\infty$$ threshold near 0.005. Ideal for professional profile images where visual sharpness is paramount.
+- **Low Mode**: Minimizes visual impact with an $L_\infty$ threshold near 0.005. Ideal for professional profile images where visual sharpness is paramount.
 - **Mid Mode**: Balances visual clarity with robust transferability across unknown deep learning backbones.
 - **High Mode**: Applies stronger perturbation bounds, providing resilience against aggressive platform recompression at the cost of faint texture variations in uniform skin areas.
 

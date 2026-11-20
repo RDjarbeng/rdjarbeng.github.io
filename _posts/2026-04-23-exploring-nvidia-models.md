@@ -72,17 +72,17 @@ Achieving this transition in real time demands solving the classic ill-posed com
 
 A single pixel in an observed camera frame represents the final convergence of multiple physical parameters: surface geometry, diffuse material reflectance, directional illumination, and specular reflection.
 
-The rendering equation models observed surface radiance $$I(x)$$ at image coordinate $$x$$:
+The rendering equation models observed surface radiance $I(x)$ at image coordinate $x$:
 
 $$I(x) = A(x) \odot S(x) + E(x)$$
 
 In this formulation:
-- $$A(x)$$ represents diffuse albedo, the intrinsic color and reflectance of the human skin, hair, and clothing isolated from any external light source.
-- $$S(x)$$ represents the incident shading field, which incorporates light direction, shadows, and surface orientation.
-- $$E(x)$$ accounts for direct emissive components and high-intensity specular highlights.
-- The operator $$\odot$$ denotes element-wise Hadamard multiplication across color channels.
+- $A(x)$ represents diffuse albedo, the intrinsic color and reflectance of the human skin, hair, and clothing isolated from any external light source.
+- $S(x)$ represents the incident shading field, which incorporates light direction, shadows, and surface orientation.
+- $E(x)$ accounts for direct emissive components and high-intensity specular highlights.
+- The operator $\odot$ denotes element-wise Hadamard multiplication across color channels.
 
-To relight an individual, the algorithm must invert this function. It extracts the unshaded albedo map $$A(x)$$ by factoring out the original, unmeasured ambient room lighting. If the system fails to strip out existing directional shadows, new virtual light sources will layer on top of old shadows, producing unnatural double-shadow artifacts.
+To relight an individual, the algorithm must invert this function. It extracts the unshaded albedo map $A(x)$ by factoring out the original, unmeasured ambient room lighting. If the system fails to strip out existing directional shadows, new virtual light sources will layer on top of old shadows, producing unnatural double-shadow artifacts.
 
 ## Surface Geometry and Normal Map Estimation
 
@@ -107,17 +107,17 @@ The target environment is supplied as an equirectangular 360-degree panoramic HD
 
 To compute diffuse surface illumination rapidly on GPU hardware without performing computationally expensive Monte Carlo ray tracing for every pixel, the system projects the target lighting environment into an orthogonal basis known as Spherical Harmonics (SH).
 
-The continuous lighting distribution $$L(\theta, \phi)$$ across spherical coordinates expands into basis functions $$Y_l^m$$:
+The continuous lighting distribution $L(\theta, \phi)$ across spherical coordinates expands into basis functions $Y_l^m$:
 
 $$L(\theta, \phi) \approx \sum_{l=0}^{N} \sum_{m=-l}^{l} c_l^m Y_l^m(\theta, \phi)$$
 
-For Lambertian diffuse surfaces like skin, higher-frequency lighting details blur out across the surface. Ramamoorthi and Hanrahan proved that second-order spherical harmonics ($$N = 2$$) account for over 99 percent of diffuse reflected irradiance:
+For Lambertian diffuse surfaces like skin, higher-frequency lighting details blur out across the surface. Ramamoorthi and Hanrahan proved that second-order spherical harmonics ($N = 2$) account for over 99 percent of diffuse reflected irradiance:
 
 $$E(\mathbf{n}) \approx \sum_{l=0}^{2} \sum_{m=-l}^{l} \hat{A}_l c_l^m Y_l^m(\mathbf{n})$$
 
-Because second-order harmonics require only 9 coefficients per color channel (27 scalar values for full RGB), the environment map compresses into a compact mathematical tensor. Computing diffuse illumination on any facial coordinate reduces to a fast matrix-vector quadratic product against the estimated surface normal $$\mathbf{n}(x)$$.
+Because second-order harmonics require only 9 coefficients per color channel (27 scalar values for full RGB), the environment map compresses into a compact mathematical tensor. Computing diffuse illumination on any facial coordinate reduces to a fast matrix-vector quadratic product against the estimated surface normal $\mathbf{n}(x)$.
 
-| Order $$l$$ | Basis Count $$(2l + 1)$$ | Total Coefficients | Physical Lighting Captured |
+| Order $l$ | Basis Count $(2l + 1)$ | Total Coefficients | Physical Lighting Captured |
 | :--- | :--- | :--- | :--- |
 | **0** | 1 | 1 | Uniform ambient diffuse light |
 | **1** | 3 | 4 | Directional light vectors (XYZ axes) |
@@ -143,13 +143,13 @@ NVIDIA's relighting pipeline addresses this by feeding the diffuse physical shad
 
 ## Temporal Stability Across Video Frames
 
-Executing neural relighting frame-by-frame leads to severe flickering. Slight variations in monocular normal estimation between frame $$t$$ and frame $$t+1$$ cause noticeable illumination jitter across cheekbones and foreheads.
+Executing neural relighting frame-by-frame leads to severe flickering. Slight variations in monocular normal estimation between frame $t$ and frame $t+1$ cause noticeable illumination jitter across cheekbones and foreheads.
 
 To guarantee broadcast-grade temporal coherence, the NIM architecture incorporates optical flow warping and recurrent cross-frame conditioning:
 
 $$\mathbf{F}_{t \to t-1} = \text{OpticalFlow}(I_t, I_{t-1})$$
 
-The feature representation of the preceding frame $$t-1$$ warps along the motion vector field $$\mathbf{F}_{t \to t-1}$$ into alignment with frame $$t$$. A temporal attention module compares the warped previous state with the current candidate estimation, smoothing out high-frequency flickering while preserving sharp geometric changes during rapid head rotations.
+The feature representation of the preceding frame $t-1$ warps along the motion vector field $\mathbf{F}_{t \to t-1}$ into alignment with frame $t$. A temporal attention module compares the warped previous state with the current candidate estimation, smoothing out high-frequency flickering while preserving sharp geometric changes during rapid head rotations.
 
 ## Invoking the NVIDIA NIM Relighting API
 

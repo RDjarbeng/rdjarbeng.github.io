@@ -78,11 +78,11 @@ Minimizing generated output tokens and leveraging input parallelization forms th
 
 In conversational agents, retrieval-augmented generation (RAG), and developer coding tools, consecutive API requests frequently share substantial identical context: multi-page system instructions, API tool definitions, database schemas, and background reference documentation.
 
-In standard stateless inference, the model re-computes the multi-head attention Key ($$K$$) and Value ($$V$$) matrices across every single prompt token on every single request:
+In standard stateless inference, the model re-computes the multi-head attention Key ($K$) and Value ($V$) matrices across every single prompt token on every single request:
 
 $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V$$
 
-Prompt caching eliminates this redundant computation. Major cloud providers (including Anthropic, OpenAI, DeepSeek, and aggregation routers like OpenRouter) retain the pre-computed $$K$$ and $$V$$ vector tensors in GPU memory for a designated time window.
+Prompt caching eliminates this redundant computation. Major cloud providers (including Anthropic, OpenAI, DeepSeek, and aggregation routers like OpenRouter) retain the pre-computed $K$ and $V$ vector tensors in GPU memory for a designated time window.
 
 ```text
 KV Cache Memory Reuse Across Consecutive API Calls

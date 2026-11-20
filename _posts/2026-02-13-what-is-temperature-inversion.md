@@ -34,10 +34,10 @@ Under typical tropospheric conditions, atmospheric air temperature decreases ste
 
 A temperature inversion occurs when this fundamental profile reverses. Instead of cooling aloft, an intermediate atmospheric layer warms with altitude. This reversal creates a layer of warm, lower-density air resting directly above colder, denser air near the surface. The boundary between these air masses acts as a fluid lid that suppresses vertical circulation, trapping moisture, particulate matter, and chemical pollutants within the lowest hundreds of meters of the urban canopy.
 
-| Atmospheric Regime | Altitude Gradient ($$\frac{dT}{dz}$$) | Thermal Structure | Dynamic Convection |
+| Atmospheric Regime | Altitude Gradient ($\frac{dT}{dz}$) | Thermal Structure | Dynamic Convection |
 | :--- | :--- | :--- | :--- |
-| **Standard Atmosphere** | Negative ($$\frac{dT}{dz} < 0$$) | Warm surface air underlies cold air aloft | Active vertical mixing and pollutant dispersal |
-| **Temperature Inversion** | Positive ($$\frac{dT}{dz} > 0$$) | Cold, dense air trapped beneath warm inversion lid | Stable thermal stratification; vertical suppression |
+| **Standard Atmosphere** | Negative ($\frac{dT}{dz} < 0$) | Warm surface air underlies cold air aloft | Active vertical mixing and pollutant dispersal |
+| **Temperature Inversion** | Positive ($\frac{dT}{dz} > 0$) | Cold, dense air trapped beneath warm inversion lid | Stable thermal stratification; vertical suppression |
 
 ## Thermodynamic principles and lapse rates
 
@@ -45,9 +45,9 @@ The stability of the atmospheric boundary layer depends on the relationship betw
 
 $$\Gamma_d = \frac{g}{c_p} \approx 9.8 \text{ } ^\circ\text{C/km}$$
 
-Here, $$g$$ represents gravitational acceleration (9.81 m/s$$^2$$) and $$c_p$$ denotes the specific heat capacity of dry air at constant pressure (1005 J/kg$$\cdot$$K). If water vapor in the parcel condenses, latent heat release lowers this rate to the saturated adiabatic lapse rate, typically between 4 and 7 degrees Celsius per kilometer.
+Here, $g$ represents gravitational acceleration (9.81 m/s$^2$) and $c_p$ denotes the specific heat capacity of dry air at constant pressure (1005 J/kg$\cdot$K). If water vapor in the parcel condenses, latent heat release lowers this rate to the saturated adiabatic lapse rate, typically between 4 and 7 degrees Celsius per kilometer.
 
-Meteorologists evaluate static stability using the vertical gradient of potential temperature $$\theta$$, defined as the temperature an air parcel would attain if brought adiabatically to a standard reference pressure of 1000 hPa:
+Meteorologists evaluate static stability using the vertical gradient of potential temperature $\theta$, defined as the temperature an air parcel would attain if brought adiabatically to a standard reference pressure of 1000 hPa:
 
 $$\theta = T \left( \frac{P_0}{P} \right)^{\frac{R_d}{c_p}}$$
 
@@ -55,17 +55,17 @@ In an inversion layer, temperature increases with altitude, yielding:
 
 $$\frac{dT}{dz} > 0 \implies \frac{d\theta}{dz} \gg 0$$
 
-The buoyancy frequency, or [Brunt-Väisälä frequency](https://glossary.ametsoc.org/wiki/Brunt-vaisala_frequency) $$N$$, quantifies the frequency at which a displaced fluid parcel oscillates within a stably stratified environment:
+The buoyancy frequency, or [Brunt-Väisälä frequency](https://glossary.ametsoc.org/wiki/Brunt-vaisala_frequency) $N$, quantifies the frequency at which a displaced fluid parcel oscillates within a stably stratified environment:
 
 $$N^2 = \frac{g}{\theta} \frac{d\theta}{dz}$$
 
-When $$N^2 > 0$$, the atmosphere is statically stable. Any parcel forced upward becomes colder and denser than its new surroundings, producing a downward restoring force that immediately pulls it back toward its initial position. The inversion layer acts as an impermeable dynamic boundary, preventing vertical turbulence from penetrating upward into the free troposphere.
+When $N^2 > 0$, the atmosphere is statically stable. Any parcel forced upward becomes colder and denser than its new surroundings, producing a downward restoring force that immediately pulls it back toward its initial position. The inversion layer acts as an impermeable dynamic boundary, preventing vertical turbulence from penetrating upward into the free troposphere.
 
 | Atmospheric Layer | Thermodynamic Property | Fluid Dynamics Behavior |
 | :--- | :--- | :--- |
 | **Warm Inversion Layer** | Low density, warm air aloft | Functions as a rigid ceiling over the boundary layer |
-| **Inversion Boundary** | Buoyancy frequency ($$N^2 > 0$$) | Exerts negative buoyant restoring force on rising air parcels |
-| **Ground Boundary Layer** | High density, cold surface air | Particulate matter ($$\text{PM}_{2.5}$$) and $$\text{NO}_2$$ trapped at breathing level |
+| **Inversion Boundary** | Buoyancy frequency ($N^2 > 0$) | Exerts negative buoyant restoring force on rising air parcels |
+| **Ground Boundary Layer** | High density, cold surface air | Particulate matter ($\text{PM}_{2.5}$) and $\text{NO}_2$ trapped at breathing level |
 
 ## The four primary inversion mechanisms
 
@@ -111,29 +111,29 @@ If surrounding mountain ranges shelter the basin from prevailing synoptic winds,
 
 ## Air pollution surges and the box model
 
-The direct human consequence of a temperature inversion is an exponential surge in ground-level air pollution. Under normal convective conditions, the planetary boundary layer expands during midday to a mixing height $$H$$ of 1,500 to 2,500 meters, diluting ground-level emissions into a massive volume of circulating air.
+The direct human consequence of a temperature inversion is an exponential surge in ground-level air pollution. Under normal convective conditions, the planetary boundary layer expands during midday to a mixing height $H$ of 1,500 to 2,500 meters, diluting ground-level emissions into a massive volume of circulating air.
 
-During an intense surface inversion, the effective mixing height collapses down to 50 to 150 meters. The steady-state concentration $$C$$ of a non-reactive air pollutant in an urban airshed can be estimated using the classic [steady-state box model](https://www.epa.gov/scram/air-quality-dispersion-modeling-alternative-models):
+During an intense surface inversion, the effective mixing height collapses down to 50 to 150 meters. The steady-state concentration $C$ of a non-reactive air pollutant in an urban airshed can be estimated using the classic [steady-state box model](https://www.epa.gov/scram/air-quality-dispersion-modeling-alternative-models):
 
 $$C = C_b + \frac{Q \cdot L}{H \cdot W \cdot U}$$
 
 In this formulation:
-- $$C_b$$ is the background concentration of the pollutant entering the airshed.
-- $$Q$$ is the emission rate per unit area (g/s$$\cdot$$m$$^2$$) from vehicles, factories, and residential heating.
-- $$L$$ is the along-wind length of the urban area.
-- $$H$$ is the vertical mixing height beneath the inversion cap.
-- $$W$$ is the crosswind width of the city.
-- $$U$$ is the average wind speed ventilating the basin.
+- $C_b$ is the background concentration of the pollutant entering the airshed.
+- $Q$ is the emission rate per unit area (g/s$\cdot$m$^2$) from vehicles, factories, and residential heating.
+- $L$ is the along-wind length of the urban area.
+- $H$ is the vertical mixing height beneath the inversion cap.
+- $W$ is the crosswind width of the city.
+- $U$ is the average wind speed ventilating the basin.
 
 | Parameter | Normal Midday Atmosphere | Winter Inversion Event |
 | :--- | :--- | :--- |
-| **Mixing Height ($$H$$)** | 2,000 meters | 100 meters |
-| **Wind Speed ($$U$$)** | 5.0 m/s | 0.8 m/s |
-| **Ventilation Factor ($$H \times U$$)** | 10,000 m²/s | 80 m²/s |
+| **Mixing Height ($H$)** | 2,000 meters | 100 meters |
+| **Wind Speed ($U$)** | 5.0 m/s | 0.8 m/s |
+| **Ventilation Factor ($H \times U$)** | 10,000 m²/s | 80 m²/s |
 | **Dilution Capacity** | 100% (Baseline) | **0.8% of Baseline** |
-| **Relative Surface $$\text{PM}_{2.5}$$** | 12 µg/m³ | **150 µg/m³** |
+| **Relative Surface $\text{PM}_{2.5}$** | 12 µg/m³ | **150 µg/m³** |
 
-When wind speed $$U$$ falls near zero and mixing height $$H$$ drops twentyfold, the ventilation factor $$(H \cdot U)$$ plummets by more than two orders of magnitude. The same volume of tailpipe exhaust and wood smoke emitted into this constrained air volume causes concentrations of fine particulate matter (PM2.5), nitrogen dioxide (NO2), and carbon monoxide to spike into hazardous ranges.
+When wind speed $U$ falls near zero and mixing height $H$ drops twentyfold, the ventilation factor $(H \cdot U)$ plummets by more than two orders of magnitude. The same volume of tailpipe exhaust and wood smoke emitted into this constrained air volume causes concentrations of fine particulate matter (PM2.5), nitrogen dioxide (NO2), and carbon monoxide to spike into hazardous ranges.
 
 The historic Great Smog of London in December 1952 provides a stark illustration of this thermodynamic trap. A persistent anticyclone created a deep radiation inversion over the Thames basin, reducing the mixing height to under sixty meters. Coal smoke from millions of fireplaces and industrial boilers accumulated beneath the stagnant ceiling, resulting in estimated excess mortality exceeding 10,000 deaths over several weeks and prompting modern clean air legislation worldwide.
 

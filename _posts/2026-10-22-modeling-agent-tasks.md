@@ -87,29 +87,29 @@ $$
 $$
 
 Where:
-- $$\mathcal{V}$$ represents the set of all possible system states. A state $$v \in \mathcal{V}$$ encapsulates the agent's context window, file system modifications, running process tables, and external database records at a given time step.
-- $$\mathcal{E} \subseteq \mathcal{V} \times \mathcal{V}$$ represents the directed edges. An edge $$e = (v_i, v_j)$$ exists if the agent can transition from state $$v_i$$ to state $$v_j$$ by invoking a tool, generating text, or receiving external input.
-- $$\mathcal{W}: \mathcal{E} \to \mathbb{R}^+$$ assigns a non-negative cost to every transition, measured in input tokens, output tokens, wall-clock latency, and API dollar costs.
+- $\mathcal{V}$ represents the set of all possible system states. A state $v \in \mathcal{V}$ encapsulates the agent's context window, file system modifications, running process tables, and external database records at a given time step.
+- $\mathcal{E} \subseteq \mathcal{V} \times \mathcal{V}$ represents the directed edges. An edge $e = (v_i, v_j)$ exists if the agent can transition from state $v_i$ to state $v_j$ by invoking a tool, generating text, or receiving external input.
+- $\mathcal{W}: \mathcal{E} \to \mathbb{R}^+$ assigns a non-negative cost to every transition, measured in input tokens, output tokens, wall-clock latency, and API dollar costs.
 
-The execution begins at a designated start state $$S \in \mathcal{V}$$. The user assigns an intended goal state $$G \in \mathcal{V}$$. The agent's objective is to construct a path $$P = (S = v_0, v_1, v_2, \dots, v_k)$$ such that the final state $$v_k$$ satisfies the requirements of $$G$$.
+The execution begins at a designated start state $S \in \mathcal{V}$. The user assigns an intended goal state $G \in \mathcal{V}$. The agent's objective is to construct a path $P = (S = v_0, v_1, v_2, \dots, v_k)$ such that the final state $v_k$ satisfies the requirements of $G$.
 
 ## The goal divergence problem
 
-In deterministic software, the destination state is explicitly coded. In probabilistic agent systems, the agent terminates at a state $$G'$$ that it believes satisfies the user prompt:
+In deterministic software, the destination state is explicitly coded. In probabilistic agent systems, the agent terminates at a state $G'$ that it believes satisfies the user prompt:
 
 $$
 \delta = \mathcal{D}(G, G')
 $$
 
-Where $$\mathcal{D}$$ is a domain-specific distance metric measuring discrepancies between what the user requested and what the agent delivered.
+Where $\mathcal{D}$ is a domain-specific distance metric measuring discrepancies between what the user requested and what the agent delivered.
 
-Three distinct conditions characterize the relationship between $$G$$ and $$G'$$:
+Three distinct conditions characterize the relationship between $G$ and $G'$:
 
-1. **Exact Convergence ($$\delta = 0$$)**: The produced state matches all structural, functional, and stylistic constraints specified by the user. A unit test suite passing completely is an example of exact convergence.
-2. **Acceptable Approximation ($$0 < \delta \le \epsilon$$)**: The produced state deviates slightly from the ideal objective but remains within the user's tolerance threshold $$\epsilon$$. An essay written with valid facts but slightly different paragraph ordering falls into this category.
-3. **Task Failure ($$\delta > \epsilon$$)**: The agent terminates prematurely, hallucinated completion, or satisfied a distorted interpretation of the prompt while leaving core requirements unfulfilled.
+1. **Exact Convergence ($\delta = 0$)**: The produced state matches all structural, functional, and stylistic constraints specified by the user. A unit test suite passing completely is an example of exact convergence.
+2. **Acceptable Approximation ($0 < \delta \le \epsilon$)**: The produced state deviates slightly from the ideal objective but remains within the user's tolerance threshold $\epsilon$. An essay written with valid facts but slightly different paragraph ordering falls into this category.
+3. **Task Failure ($\delta > \epsilon$)**: The agent terminates prematurely, hallucinated completion, or satisfied a distorted interpretation of the prompt while leaving core requirements unfulfilled.
 
-Because agents evaluate their own stopping conditions, an agent often declares success at a state $$G'$$ where $$\delta$$ is unacceptably large. Solving this requires external verification nodes that test invariants independently of the generating model.
+Because agents evaluate their own stopping conditions, an agent often declares success at a state $G'$ where $\delta$ is unacceptably large. Solving this requires external verification nodes that test invariants independently of the generating model.
 
 ## Execution topologies
 
@@ -139,15 +139,15 @@ When an agent employs reflection, planning, or self-correction, the graph expand
     [Backtrack: v1]   [Terminal Goal: G]
 ```
 
-At state $$v_1$$, the model samples multiple possible reasoning paths or tool combinations. If an attempted branch leads to an error state $$v_4$$, the agent backtracks to an earlier checkpoint and traverses an alternative branch.
+At state $v_1$, the model samples multiple possible reasoning paths or tool combinations. If an attempted branch leads to an error state $v_4$, the agent backtracks to an earlier checkpoint and traverses an alternative branch.
 
-The computational cost scales with the branching factor $$b$$ and the search depth $$d$$. While a linear pipeline consumes $$O(d)$$ tokens, unconstrained branching trees consume exponential resources:
+The computational cost scales with the branching factor $b$ and the search depth $d$. While a linear pipeline consumes $O(d)$ tokens, unconstrained branching trees consume exponential resources:
 
 $$
 \text{Cost} = \sum_{t=0}^{d} b^t \cdot \bar{w}
 $$
 
-Where $$\bar{w}$$ represents the average token cost per node.
+Where $\bar{w}$ represents the average token cost per node.
 
 ### 3. Absorbing cycles and doom loops
 
@@ -169,11 +169,11 @@ $$
 S \to \mathcal{M}_1 \to \mathcal{M}_2 \to \dots \to \mathcal{M}_m \to G
 $$
 
-Within milestone $$\mathcal{M}_i$$, the agent may branch and retry locally. However, execution cannot transition to milestone $$\mathcal{M}_{i+1}$$ until a deterministic validator verifies that all state invariants for $$\mathcal{M}_i$$ are satisfied. This prevents early errors from compounding downstream.
+Within milestone $\mathcal{M}_i$, the agent may branch and retry locally. However, execution cannot transition to milestone $\mathcal{M}_{i+1}$ until a deterministic validator verifies that all state invariants for $\mathcal{M}_i$ are satisfied. This prevents early errors from compounding downstream.
 
 ## The token budget horizon
 
-Every step along an edge consumes finite tokens. Let $$B$$ represent the maximum token budget allocated for a task. The set of reachable states is strictly bounded by this budget:
+Every step along an edge consumes finite tokens. Let $B$ represent the maximum token budget allocated for a task. The set of reachable states is strictly bounded by this budget:
 
 $$
 \mathcal{V}_{\text{reachable}}(B) = \left\{ v \in \mathcal{V} \;\middle|\; \exists \text{ path } P = (S, \dots, v) \text{ such that } \sum_{e \in P} \mathcal{W}(e) \le B \right\}
@@ -181,15 +181,15 @@ $$
 
 This constraint categorizes tasks into three distinct feasibility classes:
 
-1. **Sub-Budget Solvable**: A valid path exists to a state $$G'$$ where $$\delta \le \epsilon$$, and the cumulative cost along the optimal path is strictly less than $$B$$.
-2. **Budget-Starved**: A valid path to an acceptable goal exists in the state graph, but the minimum path length exceeds $$B$$. The agent exhausts its budget and halts mid-execution.
-3. **Unreachable Goals**: No path exists from $$S$$ to any state within the $$\epsilon$$-neighborhood of $$G$$, regardless of token budget size. Tasks that require offline information, non-existent API credentials, or mathematically impossible operations fall into this class. Providing infinite tokens to an agent tasked with an unreachable goal simply accelerates billing costs without altering the outcome.
+1. **Sub-Budget Solvable**: A valid path exists to a state $G'$ where $\delta \le \epsilon$, and the cumulative cost along the optimal path is strictly less than $B$.
+2. **Budget-Starved**: A valid path to an acceptable goal exists in the state graph, but the minimum path length exceeds $B$. The agent exhausts its budget and halts mid-execution.
+3. **Unreachable Goals**: No path exists from $S$ to any state within the $\epsilon$-neighborhood of $G$, regardless of token budget size. Tasks that require offline information, non-existent API credentials, or mathematically impossible operations fall into this class. Providing infinite tokens to an agent tasked with an unreachable goal simply accelerates billing costs without altering the outcome.
 
 ## Incorporating environmental non-determinism
 
 Real agents do not operate in closed mathematical vacuums. They interact with web APIs, file systems, operating system kernels, and network sockets. These environments introduce non-deterministic state transitions.
 
-When an agent issues a tool call $$a \in \mathcal{A}$$, the transition to the next state is governed by a probability distribution:
+When an agent issues a tool call $a \in \mathcal{A}$, the transition to the next state is governed by a probability distribution:
 
 $$
 \mathcal{P}(v_{t+1} \mid v_t, a)
@@ -197,7 +197,7 @@ $$
 
 An external server might return an HTTP 200, an HTTP 429 rate limit, or an HTTP 500 internal error for identical inputs. Consequently, the agent graph is not static. It represents a Partially Observable Markov Decision Process (POMDP).
 
-An agent navigating a POMDP must balance exploitation (following the path with highest historical probability of reaching $$G$$) with exploration (testing environmental responsiveness before committing irreversible state changes).
+An agent navigating a POMDP must balance exploitation (following the path with highest historical probability of reaching $G$) with exploration (testing environmental responsiveness before committing irreversible state changes).
 
 ## Architectural guardrails for production agents
 
@@ -206,7 +206,7 @@ Formalizing agent tasks as graphs directly informs system architecture. Five con
 1. **Topological Checkpointing**: Serialize the complete environment state at every milestone. If an agent enters a suspected cycle, roll the system back to the previous checkpoint rather than allowing the model to self-diagnose in-context.
 2. **Cycle Detectors on Tool Signatures**: Hash each tool call and its serialized arguments. If an agent executes an identical tool hash within a sliding window of three actions, interrupt execution immediately and inject a deterministic constraint into the prompt.
 3. **Hard Horizon Cutoffs**: Impose a maximum edge traversal count in addition to raw token limits. A task that takes more than thirty tool invocations without transitioning to a new milestone is almost certainly trapped in an unrecoverable sink.
-4. **Independent Verifiers**: Separate the agent generating changes from the agent evaluating completion. The generating agent must never have authority to declare that $$\mathcal{D}(G, G') = 0$$.
+4. **Independent Verifiers**: Separate the agent generating changes from the agent evaluating completion. The generating agent must never have authority to declare that $\mathcal{D}(G, G') = 0$.
 5. **Divergence Metrics**: Define measurable pass criteria (such as test coverage thresholds, schema validation, or structural linters) that evaluate output artifacts externally.
 
 ## Toward a calculus of agent workflows

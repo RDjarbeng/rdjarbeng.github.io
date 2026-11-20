@@ -54,7 +54,7 @@ Understanding what those circles represent geometrically clarifies why normaliza
 
 ## What the circles actually mean
 
-In two-dimensional space ($$\mathbb{R}^2$$), any vector can be represented as an arrow from the origin $$(0, 0)$$ to a coordinate $$(x, y)$$.
+In two-dimensional space ($\mathbb{R}^2$), any vector can be represented as an arrow from the origin $(0, 0)$ to a coordinate $(x, y)$.
 
 The length or magnitude of that vector is its Euclidean distance from the origin, known formally as the **L2 norm**:
 
@@ -84,7 +84,7 @@ defines the **unit circle** centered at the origin with a radius of 1.
 
 The circle in the TensorTonic visualization is that unit circle. When you normalize a matrix of two-dimensional row vectors, you take arrows of arbitrary lengths pointing in various directions and pull or push their tips so they land precisely on the perimeter of the circle.
 
-The directional angle of each vector remains unchanged. Only the magnitude is standardized to 1. In higher dimensions ($$\mathbb{R}^n$$), the circle generalizes into a unit hypersphere ($$\mathbb{S}^{n-1}$$).
+The directional angle of each vector remains unchanged. Only the magnitude is standardized to 1. In higher dimensions ($\mathbb{R}^n$), the circle generalizes into a unit hypersphere ($\mathbb{S}^{n-1}$).
 
 ## Row-wise versus column-wise normalization
 
@@ -99,7 +99,7 @@ $$
 $$
 
 This is the standard transformation applied in:
-- **Cosine Similarity**: Normalizing embedding vectors allows cosine similarity to be computed as a simple dot product: $$\cos(\theta) = \mathbf{u} \cdot \mathbf{v}$$.
+- **Cosine Similarity**: Normalizing embedding vectors allows cosine similarity to be computed as a simple dot product: $\cos(\theta) = \mathbf{u} \cdot \mathbf{v}$.
 - **Attention Layers**: Normalizing query and key vectors stabilizes dot-product attention scores in Transformer architectures.
 - **Computer Vision Embeddings**: Face recognition models (like ArcFace) project face embeddings onto a unit hypersphere so distances depend solely on angular identity rather than image brightness.
 
@@ -115,7 +115,7 @@ This ensures that one feature with massive scale (such as annual salary in dolla
 
 ## The numerical stability problem: Zero vectors
 
-A critical edge case in production normalization is the null vector $$\mathbf{v} = (0, 0, \dots, 0)$$.
+A critical edge case in production normalization is the null vector $\mathbf{v} = (0, 0, \dots, 0)$.
 
 The L2 norm of an all-zero vector is:
 
@@ -125,7 +125,7 @@ $$
 
 Dividing by zero results in `NaN` (Not a Number) or `Inf` (Infinity) values, which propagate through neural networks and destroy weight updates.
 
-To prevent division by zero, implementations add a small numerical stabilizer $$\epsilon$$ (typically $$10^{-12}$$):
+To prevent division by zero, implementations add a small numerical stabilizer $\epsilon$ (typically $10^{-12}$):
 
 $$
 \hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|_2 + \epsilon}
@@ -186,11 +186,11 @@ if __name__ == "__main__":
 
 ### The role of keepdims=True
 
-When `np.linalg.norm` computes row norms on a $$(3, 3)$$ matrix, it collapses the specified dimension, returning a 1D array of shape $$(3,)$$.
+When `np.linalg.norm` computes row norms on a $(3, 3)$ matrix, it collapses the specified dimension, returning a 1D array of shape $(3,)$.
 
-Attempting to divide a $$(3, 3)$$ array by a $$(3,)$$ array triggers NumPy broadcasting errors or divides along the wrong axis.
+Attempting to divide a $(3, 3)$ array by a $(3,)$ array triggers NumPy broadcasting errors or divides along the wrong axis.
 
-Specifying `keepdims=True` preserves the collapsed axis with length 1, returning an array of shape $$(3, 1)$$. NumPy then broadcasts the division across all columns of each row automatically.
+Specifying `keepdims=True` preserves the collapsed axis with length 1, returning an array of shape $(3, 1)$. NumPy then broadcasts the division across all columns of each row automatically.
 
 ## Framework equivalents: PyTorch and Scikit-Learn
 

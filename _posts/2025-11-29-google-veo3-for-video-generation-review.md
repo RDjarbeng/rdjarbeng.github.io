@@ -69,7 +69,7 @@ Google Veo addresses temporal flicker through a unified spatiotemporal architect
 
 ### 1. 3D Spatiotemporal Latent Representation
 
-Rather than processing raw RGB video frames, which requires astronomical memory bandwidth, Veo compresses video clips into a low-dimensional latent space using a temporal video autoencoder. The latent tensor incorporates dimensions for batch size, channel depth, temporal frames ($$T$$), height ($$H$$), and width ($$W$$). Denoising occurs directly within this compact spatiotemporal volume.
+Rather than processing raw RGB video frames, which requires astronomical memory bandwidth, Veo compresses video clips into a low-dimensional latent space using a temporal video autoencoder. The latent tensor incorporates dimensions for batch size, channel depth, temporal frames ($T$), height ($H$), and width ($W$). Denoising occurs directly within this compact spatiotemporal volume.
 
 ### 2. Factored Spatial and Temporal Attention
 
@@ -78,16 +78,16 @@ Scaling transformer attention across high-definition video frames is computation
 $$\mathcal{O}((T \times H \times W)^2)$$
 
 Veo factors the self-attention mechanism into two decoupled operations:
-- **Spatial Attention Layers:** Compute attention across spatial pixels within each individual time frame ($$H \times W$$), resolving visual sharpness, texture fidelity, and local lighting.
-- **Temporal Attention Layers:** Compute cross-attention strictly along the time axis ($$T$$) for each spatial coordinate, modeling physical velocity, momentum, and occlusion boundaries.
+- **Spatial Attention Layers:** Compute attention across spatial pixels within each individual time frame ($H \times W$), resolving visual sharpness, texture fidelity, and local lighting.
+- **Temporal Attention Layers:** Compute cross-attention strictly along the time axis ($T$) for each spatial coordinate, modeling physical velocity, momentum, and occlusion boundaries.
 
 This factorization maintains computational tractability while enforcing rigid physical rules across extended temporal windows.
 
 | Processing Stage | Target Domain | Computational Role |
 | :--- | :--- | :--- |
 | **Input Latent Volume** | Raw spatiotemporal tensor | Encodes temporal duration and spatial resolution |
-| **Spatial Attention Layer** | Single frame ($$H \times W$$) | Enforces sharpness, lighting fidelity, and texture realism |
-| **Temporal Attention Layer** | Frame trajectory ($$T$$) | Tracks pixel momentum and prevents character morphing |
+| **Spatial Attention Layer** | Single frame ($H \times W$) | Enforces sharpness, lighting fidelity, and texture realism |
+| **Temporal Attention Layer** | Frame trajectory ($T$) | Tracks pixel momentum and prevents character morphing |
 | **Denoised Output Tensor** | Final latent sequence | Reconstructs coherent 1080p 60 FPS motion |
 
 ### 3. Cinematic Prompt Understanding
@@ -123,7 +123,7 @@ Single generations from frontier video models typically span four to six seconds
 Creators utilize the terminal frame chaining methodology:
 
 1. **Generate the Initial Clip:** Create the initial five-second sequence using an image prompt and directional text.
-2. **Export the Terminal Frame:** In a video editor like DaVinci Resolve or Adobe Premiere, pause on the final frame ($$T_{\text{final}}$$) and export it as an uncompressed PNG image.
+2. **Export the Terminal Frame:** In a video editor like DaVinci Resolve or Adobe Premiere, pause on the final frame ($T_{\text{final}}$) and export it as an uncompressed PNG image.
 3. **Condition the Next Clip:** Import this exported frame back into Veo as the reference image for the subsequent generation.
 4. **Direct the Action:** Craft the new prompt to describe the next physical movement starting from that exact frozen posture.
 

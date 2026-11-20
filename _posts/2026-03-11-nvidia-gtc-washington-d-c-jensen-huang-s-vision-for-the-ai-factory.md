@@ -120,7 +120,7 @@ Quantum processors (QPUs) operating with superconducting transmons or trapped io
 
 To achieve fault-tolerant quantum computing, systems require continuous quantum error correction (QEC). Classical control computers must measure auxiliary syndrome qubits, decode the error pattern, and apply corrective phase flips before the quantum state decays.
 
-NVIDIA announced **NVQ Link**, an open interconnect architecture supported by seventeen quantum hardware organizations. NVQ Link bridges classical GPU tensor clusters with cryogenic quantum control electronics, achieving sub-microsecond ($$< 1\,\mu\text{s}$$) round-trip latency. GPUs execute parallel syndrome decoding algorithms at microsecond intervals, enabling practical quantum error correction loops.
+NVIDIA announced **NVQ Link**, an open interconnect architecture supported by seventeen quantum hardware organizations. NVQ Link bridges classical GPU tensor clusters with cryogenic quantum control electronics, achieving sub-microsecond ($< 1\,\mu\text{s}$) round-trip latency. GPUs execute parallel syndrome decoding algorithms at microsecond intervals, enabling practical quantum error correction loops.
 
 ### 3. Department of Energy Supercomputing Expansion
 

@@ -91,7 +91,7 @@ For civic developers, epidemiological researchers, and local citizens who built 
 
 To appreciate why this data feed matters, one must examine its origin. In 2008, leading into the Beijing Summer Olympics, the U.S. Embassy in Beijing installed a rooftop Met One BAM-1020 beta-attenuation mass monitor on its Chaoyang District compound. 
 
-The embassy began broadcasting hourly fine particulate matter ($$\text{PM}_{2.5}$$) measurements to the public via an automated Twitter account, `@BeijingAir`. At the time, official municipal reports only published broad coarse particulate ($$\text{PM}_{10}$$) indices, often describing heavily smogged days as "slightly polluted." The embassy's automated feed introduced the terminology of "unhealthy," "very unhealthy," and the famous outlier "crazy bad" ($$> 500\,\mu\text{g/m}^3$$) to millions of residents.
+The embassy began broadcasting hourly fine particulate matter ($\text{PM}_{2.5}$) measurements to the public via an automated Twitter account, `@BeijingAir`. At the time, official municipal reports only published broad coarse particulate ($\text{PM}_{10}$) indices, often describing heavily smogged days as "slightly polluted." The embassy's automated feed introduced the terminology of "unhealthy," "very unhealthy," and the famous outlier "crazy bad" ($> 500\,\mu\text{g/m}^3$) to millions of residents.
 
 ```text
 Evolution of the Diplomatic Air Quality Network
@@ -122,7 +122,7 @@ The consequences of this data gap extend beyond missing dashboard widgets. A pee
 
 The findings demonstrated clear negative outcomes:
 
-1. **Drop in Protective Health Behaviors:** In metropolitan centers where public awareness rested on embassy feeds, web searches for N95 masks, air purifiers, and outdoor exercise advisories declined by more than $$40\%$$ following the feed termination.
+1. **Drop in Protective Health Behaviors:** In metropolitan centers where public awareness rested on embassy feeds, web searches for N95 masks, air purifiers, and outdoor exercise advisories declined by more than $40\%$ following the feed termination.
 2. **Loss of Policy Accountability:** Municipal authorities in several emerging economies rolled back vehicle emissions enforcement and industrial curtailment rules that had previously been triggered by embassy alerts.
 3. **Low-Cost Sensor Drift:** Dozens of academic and community low-cost optical sensor networks lost their co-located reference baseline. Without reference beta-attenuation instruments to calculate seasonal humidity correction formulas, low-cost optical sensors drifted, producing inaccurate exposure estimates.
 
@@ -162,13 +162,13 @@ Because optical counters overestimate particle mass under high relative humidity
 
 $$\text{PM}_{2.5,\,\text{calibrated}} = 0.524 \times \text{PM}_{2.5,\,\text{raw}} - 0.0862 \times \text{RH} + 5.75$$
 
-Here, $$\text{RH}$$ represents relative humidity as a percentage. While an optical sensor cannot fully substitute for a federal reference monitor, a dense cluster of corrected units provides valuable relative spatial resolution across urban neighborhoods.
+Here, $\text{RH}$ represents relative humidity as a percentage. While an optical sensor cannot fully substitute for a federal reference monitor, a dense cluster of corrected units provides valuable relative spatial resolution across urban neighborhoods.
 
 ### 3. Satellite Atmospheric Reanalysis (Copernicus CAMS)
 
 The European Union's Copernicus Atmosphere Monitoring Service (CAMS) produces global atmospheric composition models by assimilating satellite retrievals from instruments like Sentinel-5P TROPOMI and MODIS with ground observations.
 
-CAMS provides continuous, gridded reanalysis data at $$0.1^\circ \times 0.1^\circ$$ resolution. Developers can access this data programmatically through the Copernicus Atmosphere Data Store API to track regional particulate plumes and long-range dust transport.
+CAMS provides continuous, gridded reanalysis data at $0.1^\circ \times 0.1^\circ$ resolution. Developers can access this data programmatically through the Copernicus Atmosphere Data Store API to track regional particulate plumes and long-range dust transport.
 
 ```python
 import cdsapi

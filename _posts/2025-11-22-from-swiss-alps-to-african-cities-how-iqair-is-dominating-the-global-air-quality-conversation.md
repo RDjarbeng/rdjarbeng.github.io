@@ -45,7 +45,7 @@ IQAir operates a vertically integrated business flywheel. By providing free atmo
 
 ### High-Efficiency Mechanical Air Purification
 
-IQAir maintains a firm product positioning that rejects electronic air purification technologies such as electrostatic precipitators, corona discharge ionizers, and plasma generators. These ionization methods can emit trace amounts of ozone ($$\text{O}_3$$), an unstable triatomic oxygen allotrope that triggers respiratory inflammation and alveolar cellular damage. IQAir focuses exclusively on high-resistance physical media filtration.
+IQAir maintains a firm product positioning that rejects electronic air purification technologies such as electrostatic precipitators, corona discharge ionizers, and plasma generators. These ionization methods can emit trace amounts of ozone ($\text{O}_3$), an unstable triatomic oxygen allotrope that triggers respiratory inflammation and alveolar cellular damage. IQAir focuses exclusively on high-resistance physical media filtration.
 
 1. **HealthPro Series**: The flagship residential and clinical line. Units such as the [HealthPro Plus](https://www.youtube.com/watch?v=NJIcw-ud5wQ) utilize granular activated carbon combined with impregnated alumina to adsorb volatile organic compounds (VOCs) and acidic gases, followed by a dense glass-fiber particulate filter.
    - Retail pricing spans from USD 1,154.60 for the baseline HealthPro 100 up to USD 1,431.11 for the HealthPro 250.
@@ -61,7 +61,7 @@ IQAir maintains a firm product positioning that rejects electronic air purificat
 
 Low-cost optical particle counters (OPCs) inside edge sensors measure particulate matter through light scattering principles. A semiconductor laser diode projects a collimated beam across an enclosed optical detection chamber. When suspended aerosol particles traverse the optical path, they scatter photons across a defined solid angle. A photodiode detector positioned at 90 degrees captures the scattering intensity.
 
-The physical interaction between electromagnetic radiation and spherical aerosols depends on the particle diameter $$d$$ relative to the laser wavelength $$\lambda$$. When the size parameter $$\alpha = \pi d / \lambda$$ is substantially smaller than unity, Rayleigh scattering applies. For particles comparable to or larger than the optical wavelength (such as $$\text{PM}_{2.5}$$, where $$0.3\,\mu\text{m} \le d \le 2.5\,\mu\text{m}$$), Mie scattering governs the radiant intensity:
+The physical interaction between electromagnetic radiation and spherical aerosols depends on the particle diameter $d$ relative to the laser wavelength $\lambda$. When the size parameter $\alpha = \pi d / \lambda$ is substantially smaller than unity, Rayleigh scattering applies. For particles comparable to or larger than the optical wavelength (such as $\text{PM}_{2.5}$, where $0.3\,\mu\text{m} \le d \le 2.5\,\mu\text{m}$), Mie scattering governs the radiant intensity:
 
 $$
 I(\theta) = \frac{I_0 \lambda^2}{8\pi^2 r^2} \left[ |S_1(\theta)|^2 + |S_2(\theta)|^2 \right]
@@ -77,7 +77,7 @@ $$
 \text{PM}_{2.5}^{\text{corrected}} = \frac{\text{PM}_{2.5}^{\text{raw}}}{1 + \kappa \cdot \frac{\text{RH}}{100 - \text{RH}}}
 $$
 
-Here $$\kappa$$ represents the empirical hygroscopic growth parameter derived from localized co-location regressions against reference beta-attenuation monitors (BAM) and federal reference method (FRM) gravimetric samplers.
+Here $\kappa$ represents the empirical hygroscopic growth parameter derived from localized co-location regressions against reference beta-attenuation monitors (BAM) and federal reference method (FRM) gravimetric samplers.
 
 ### The AirVisual Ingestion Engine
 
@@ -93,8 +93,8 @@ IQAir leverages its [AirVisual platform](https://commercialairfiltration.co.uk/p
 
 | Rating System | Managing Organization | Relevant Metric | Verification Requirement |
 | :--- | :--- | :--- | :--- |
-| **LEED v4.1 (BD+C / O+M)** | U.S. Green Building Council | Minimum Indoor Air Quality Performance, Enhanced IAQ Strategies | Continuous $$\text{CO}_2$$ monitoring within all densely occupied spaces, baseline testing for $$\text{PM}_{2.5}$$, $$\text{PM}_{10}$$, TVOC, and formaldehyde |
-| **WELL v2** | International WELL Building Institute | Air Concept (A01 Air Quality, A08 Air Quality Monitoring) | Mandatory compliance thresholds for $$\text{PM}_{2.5} < 15\,\mu\text{g/m}^3$$, continuous data logging, and public occupant display dashboards |
+| **LEED v4.1 (BD+C / O+M)** | U.S. Green Building Council | Minimum Indoor Air Quality Performance, Enhanced IAQ Strategies | Continuous $\text{CO}_2$ monitoring within all densely occupied spaces, baseline testing for $\text{PM}_{2.5}$, $\text{PM}_{10}$, TVOC, and formaldehyde |
+| **WELL v2** | International WELL Building Institute | Air Concept (A01 Air Quality, A08 Air Quality Monitoring) | Mandatory compliance thresholds for $\text{PM}_{2.5} < 15\,\mu\text{g/m}^3$, continuous data logging, and public occupant display dashboards |
 | **RESET Air** | GIGA Real Estate | Commercial Interiors and Core and Shell | Continuous cloud data streaming from certified Grade B or Grade A monitors with strict calibration schedules |
 
 To fulfill WELL Feature A08 (Air Quality Monitoring and Awareness), facility managers must deploy dedicated indoor monitors that measure fine particulate matter, total volatile organic compounds, carbon dioxide, and relative humidity at a spatial density of one device per 325 square meters. AirVisual Pro enterprise feeds interface directly with building management systems (BMS) over Modbus, BACnet, or REST APIs, modulating ventilation dampers when occupant carbon dioxide levels exceed 800 parts per million.
@@ -130,7 +130,7 @@ The operational footprint of IQAir varies according to regional economic and reg
 The continuous expansion of low-cost sensing arrays across Africa has brought critical environmental realities to global attention through IQAir's annual reports:
 
 * **The 2023 World Air Quality Report**: Ingesting data across 24 African nations, the report revealed that Burkina Faso ranked as the fifth most polluted country globally, with Egypt, the Democratic Republic of the Congo, and Rwanda also placing in the top fifteen. Coastal centers like [Accra, Ghana](https://newnarratives.org/stories/accra-is-africas-10th-most-polluted-city-2023-world-air-quality-report/), recorded annual particulate averages placing them among the continent's ten most polluted cities.
-* **The 2024 World Air Quality Report**: In the [2024 World Air Quality Report](https://www.prnewswire.com/news-releases/2024-iqair-world-air-quality-report-finds-only-17-of-global-cities-meet-who-air-pollution-guideline-302397828.html), expanded sensor coverage documented that zero percent of reporting African cities met the World Health Organization annual PM2.5 guideline of $$5\,\mu\text{g/m}^3$$. Chad emerged as the single most polluted country globally, while the Democratic Republic of the Congo ranked fourth worldwide.
+* **The 2024 World Air Quality Report**: In the [2024 World Air Quality Report](https://www.prnewswire.com/news-releases/2024-iqair-world-air-quality-report-finds-only-17-of-global-cities-meet-who-air-pollution-guideline-302397828.html), expanded sensor coverage documented that zero percent of reporting African cities met the World Health Organization annual PM2.5 guideline of $5\,\mu\text{g/m}^3$. Chad emerged as the single most polluted country globally, while the Democratic Republic of the Congo ranked fourth worldwide.
 
 ## African Green Building Certifications: Beyond LEED
 

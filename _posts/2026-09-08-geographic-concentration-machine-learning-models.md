@@ -61,7 +61,7 @@ The lines in Figure 2 used to look very different.
 
 Before 2012, machine learning research happened mostly in public universities. Useful work came from wherever professors and graduate students tried new statistical ideas: early neural language models at [Université de Montréal](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf), deep belief networks at the [University of Toronto](https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf), convolutional networks at [IDSIA in Switzerland](https://people.idsia.ch/~juergen/cvpr2012.pdf), and learning theory at INRIA in France.
 
-Most experiments ran on desktop computers with standard Intel processors or small departmental servers. A training run consumed under $$10^{15}$$ floating point operations (FLOPs), cost a few hundred dollars in power, and was funded by standard government grants. More than 80 percent of notable models built before 2012 came from university labs.
+Most experiments ran on desktop computers with standard Intel processors or small departmental servers. A training run consumed under $10^{15}$ floating point operations (FLOPs), cost a few hundred dollars in power, and was funded by standard government grants. More than 80 percent of notable models built before 2012 came from university labs.
 
 ```
 Pre-2012: University networks
@@ -95,19 +95,19 @@ $$
 C \approx 6 N D
 $$
 
-Here $$C$$ is the total floating point operations needed to train a model, $$N$$ is the parameter count, and $$D$$ is the number of tokens (words or word fragments) in the training dataset.
+Here $C$ is the total floating point operations needed to train a model, $N$ is the parameter count, and $D$ is the number of tokens (words or word fragments) in the training dataset.
 
 The factor of 6 comes from the arithmetic of neural network training:
 
-1. **Forward pass ($$2N$$ operations per token):**
+1. **Forward pass ($2N$ operations per token):**
    The model processes an input vector through its weights. Each weight requires one multiplication and one addition, so each parameter performs two operations per token.
 
-2. **Backward pass ($$4N$$ operations per token):**
-   The computer calculates two sets of numbers: the errors passed back through the layers ($$2N$$) and the adjustments made to each weight ($$2N$$). That makes the backward pass twice as large as the forward pass.
+2. **Backward pass ($4N$ operations per token):**
+   The computer calculates two sets of numbers: the errors passed back through the layers ($2N$) and the adjustments made to each weight ($2N$). That makes the backward pass twice as large as the forward pass.
 
-Combining the forward and backward passes gives $$6N$$ operations per token. For an entire dataset of $$D$$ tokens, training costs $$6ND$$ operations.
+Combining the forward and backward passes gives $6N$ operations per token. For an entire dataset of $D$ tokens, training costs $6ND$ operations.
 
-Modern numbers make the scale clear. [Meta's Llama 3 405B](https://ai.meta.com/blog/meta-llama-3/) has 405 billion parameters ($$N = 405 \times 10^9$$) and trained on 15 trillion tokens ($$D = 15 \times 10^{12}$$):
+Modern numbers make the scale clear. [Meta's Llama 3 405B](https://ai.meta.com/blog/meta-llama-3/) has 405 billion parameters ($N = 405 \times 10^9$) and trained on 15 trillion tokens ($D = 15 \times 10^{12}$):
 
 $$
 C \approx 6 \times (405 \times 10^9) \times (15 \times 10^{12}) \approx 3.64 \times 10^{26} \text{ FLOPs}
@@ -123,9 +123,9 @@ Training compute across model generations:
   Llama 3 (2024):  405B params  ×   15T tokens   -->   ~3.6 × 10^26 FLOPs
 ```
 
-In 2022, DeepMind published the [Chinchilla scaling laws (Hoffmann et al.)](https://arxiv.org/abs/2203.15556). An earlier [2020 paper by Kaplan et al.](https://arxiv.org/abs/2001.08361) suggested that model size $$N$$ should grow faster than data size $$D$$. Hoffmann showed that to get the most capability out of a given compute budget, parameters and tokens must grow together in equal proportion ($$N \propto C^{0.5}, D \propto C^{0.5}$$). 
+In 2022, DeepMind published the [Chinchilla scaling laws (Hoffmann et al.)](https://arxiv.org/abs/2203.15556). An earlier [2020 paper by Kaplan et al.](https://arxiv.org/abs/2001.08361) suggested that model size $N$ should grow faster than data size $D$. Hoffmann showed that to get the most capability out of a given compute budget, parameters and tokens must grow together in equal proportion ($N \propto C^{0.5}, D \propto C^{0.5}$). 
 
-To finish $$10^{26}$$ operations in three months, thousands of specialized chips must run side by side without stopping.
+To finish $10^{26}$ operations in three months, thousands of specialized chips must run side by side without stopping.
 
 **So what does this mean?**
 You cannot make up for missing hardware with clever code alone. Until someone finds a way to train models without this volume of arithmetic, frontier model creation remains tied to organizations that can run tens of thousands of processors at once.
@@ -222,7 +222,7 @@ Open weights and efficient architectures let people fine-tune and run models any
 
 ## The current map
 
-The geographic split in Figure 2 is the result of capital costs, power supplies, and network physics. As long as frontier models require septillions of operations ($$C \approx 6ND$$), and as long as training requires microsecond-level connections between chips, frontier development stays where money, silicon, and electricity meet.
+The geographic split in Figure 2 is the result of capital costs, power supplies, and network physics. As long as frontier models require septillions of operations ($C \approx 6ND$), and as long as training requires microsecond-level connections between chips, frontier development stays where money, silicon, and electricity meet.
 
 Today the field has settled into three groups:
 

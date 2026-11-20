@@ -66,24 +66,24 @@ Accurate precision agriculture depends on physical measurement transducers burie
 
 ### Dielectric Permittivity and Volumetric Water Content
 
-Soil volumetric water content ($$\theta_v$$) represents the ratio of water volume to total soil volume:
+Soil volumetric water content ($\theta_v$) represents the ratio of water volume to total soil volume:
 
 $$\theta_v = \frac{V_{\text{water}}}{V_{\text{total}}}$$
 
-Rather than extracting physical core samples for oven drying, modern IoT nodes measure the apparent relative complex dielectric permittivity ($$\epsilon_a$$) of the surrounding soil matrix using Time Domain Reflectometry (TDR) or Frequency Domain Reflectometry (FDR).
+Rather than extracting physical core samples for oven drying, modern IoT nodes measure the apparent relative complex dielectric permittivity ($\epsilon_a$) of the surrounding soil matrix using Time Domain Reflectometry (TDR) or Frequency Domain Reflectometry (FDR).
 
-Because the dielectric constant of liquid water ($$\approx 80$$ at 20 degrees Celsius) is vastly higher than that of dry mineral soil ($$\approx 3 \text{ to } 5$$) and air ($$\approx 1$$), the bulk permittivity of the soil is overwhelmingly dominated by moisture content.
+Because the dielectric constant of liquid water ($\approx 80$ at 20 degrees Celsius) is vastly higher than that of dry mineral soil ($\approx 3 \text{ to } 5$) and air ($\approx 1$), the bulk permittivity of the soil is overwhelmingly dominated by moisture content.
 
-| Material / Soil Matrix Component | Relative Dielectric Permittivity ($$\epsilon$$) |
+| Material / Soil Matrix Component | Relative Dielectric Permittivity ($\epsilon$) |
 | :--- | :--- |
-| **Dry Air** | $$\epsilon \approx 1$$ |
-| **Solid Mineral Soil Particles** | $$\epsilon \approx 3 \text{ to } 5$$ |
-| **Bound Soil Water** | $$\epsilon \approx 30 \text{ to } 40$$ |
-| **Free Liquid Water** | $$\epsilon \approx 80$$ |
+| **Dry Air** | $\epsilon \approx 1$ |
+| **Solid Mineral Soil Particles** | $\epsilon \approx 3 \text{ to } 5$ |
+| **Bound Soil Water** | $\epsilon \approx 30 \text{ to } 40$ |
+| **Free Liquid Water** | $\epsilon \approx 80$ |
 
 In high-frequency FDR probes, an oscillator applies a 50 MHz to 150 MHz sinusoidal signal to parallel stainless steel wave guides inserted into the soil. 
 
-The resonant frequency shifts as a function of the soil capacitance. The empirical relationship between apparent permittivity $$\epsilon_a$$ and volumetric water content $$\theta_v$$ is calculated using the classical polynomial formulated by Topp:
+The resonant frequency shifts as a function of the soil capacitance. The empirical relationship between apparent permittivity $\epsilon_a$ and volumetric water content $\theta_v$ is calculated using the classical polynomial formulated by Topp:
 
 $$\theta_v = -0.053 + 0.0292 \epsilon_a - 5.5 \times 10^{-4} \epsilon_a^2 + 4.3 \times 10^{-6} \epsilon_a^3$$
 
@@ -93,8 +93,8 @@ Calibrating these curves across specific soil textures (such as vertisols, sandy
 
 In addition to moisture volume, comprehensive sensor nodes incorporate:
 
-- **Bulk Electrical Conductivity (EC)**: Measures ion flux within the soil pore solution. As nitrogen, phosphorus, and potassium fertilizers dissolve into ionic forms ($$\text{NO}_3^-$$, $$\text{NH}_4^+$$, $$\text{K}^+$$), soil electrical conductivity rises proportionally. Monitoring EC allows growers to prevent salinity-induced osmotic stress and track fertilizer uptake kinetics.
-- **Vapor Pressure Deficit (VPD)**: Calculated from canopy air temperature ($$T$$) and relative humidity ($$\text{RH}$$). VPD quantifies the drying power of the atmosphere:
+- **Bulk Electrical Conductivity (EC)**: Measures ion flux within the soil pore solution. As nitrogen, phosphorus, and potassium fertilizers dissolve into ionic forms ($\text{NO}_3^-$, $\text{NH}_4^+$, $\text{K}^+$), soil electrical conductivity rises proportionally. Monitoring EC allows growers to prevent salinity-induced osmotic stress and track fertilizer uptake kinetics.
+- **Vapor Pressure Deficit (VPD)**: Calculated from canopy air temperature ($T$) and relative humidity ($\text{RH}$). VPD quantifies the drying power of the atmosphere:
 
 $$\text{VPD} = \text{VP}_{\text{sat}}(T) \times \left(1 - \frac{\text{RH}}{100}\right)$$
 
@@ -121,9 +121,9 @@ LoRa modulation utilizes Chirped Spread Spectrum (CSS) encoding. Signal pulses s
 
 $$f(t) = f_0 + \left(\frac{\text{BW}}{T}\right) t$$
 
-This spread spectrum modulation delivers exceptional processing gain, allowing receivers to decode payloads buried 20 decibels below the thermal noise floor ($$\text{SNR} = -20\,\text{dB}$$). 
+This spread spectrum modulation delivers exceptional processing gain, allowing receivers to decode payloads buried 20 decibels below the thermal noise floor ($\text{SNR} = -20\,\text{dB}$). 
 
-A single solar-powered LoRa gateway mounted on a central 15-meter mast covers a transmission radius of 10 to 15 kilometers in open rural topography, collecting telemetry from thousands of sensor nodes running on single AA lithium-thionyl chloride ($$\text{Li-SOCl}_2$$) batteries for over five years.
+A single solar-powered LoRa gateway mounted on a central 15-meter mast covers a transmission radius of 10 to 15 kilometers in open rural topography, collecting telemetry from thousands of sensor nodes running on single AA lithium-thionyl chloride ($\text{Li-SOCl}_2$) batteries for over five years.
 
 ## Agronomic Fintech: Bridging the Smallholder Credit Deficit
 

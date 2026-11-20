@@ -42,11 +42,11 @@ Original draft, kept so you remember where this post was going:
 
 END WRITER NOTE -->
 
-In elementary geometry, finding integer solutions to the Pythagorean theorem ($$a^2 + b^2 = c^2$$) is straightforward. Triangles with sides like $$3, 4, 5$$ or $$5, 12, 13$$ have been understood since antiquity. The arithmetic behavior of squares is predictable and clean.
+In elementary geometry, finding integer solutions to the Pythagorean theorem ($a^2 + b^2 = c^2$) is straightforward. Triangles with sides like $3, 4, 5$ or $5, 12, 13$ have been understood since antiquity. The arithmetic behavior of squares is predictable and clean.
 
 ![Flat vector editorial illustration of an elliptic curve graph with rational points, cubic geometry, and formal verification seal](/assets/images/posts/covers/sum_of_two_cubes_cover.jpg "The Sum of Two Cubes")
 
-When powers increase from squares to cubes, simple arithmetic transforms into deep algebraic geometry. Determining which whole numbers $$N$$ can be expressed as the sum of two rational cubes has challenged mathematicians for centuries:
+When powers increase from squares to cubes, simple arithmetic transforms into deep algebraic geometry. Determining which whole numbers $N$ can be expressed as the sum of two rational cubes has challenged mathematicians for centuries:
 
 $$
 x^3 + y^3 = N \quad \text{where } x, y \in \mathbb{Q}
@@ -58,27 +58,27 @@ In a breakthrough release focused on mathematical reasoning, OpenAI deployed mod
 
 Unlike squares, cubes can yield counter-intuitive, massive fractions even for tiny integers.
 
-For $$N = 1$$, the answer is trivial ($$1^3 + 0^3 = 1$$). For $$N = 2$$, $$1^3 + 1^3 = 2$$. For $$N = 3, 4, 5$$, no rational solutions exist.
+For $N = 1$, the answer is trivial ($1^3 + 0^3 = 1$). For $N = 2$, $1^3 + 1^3 = 2$. For $N = 3, 4, 5$, no rational solutions exist.
 
-When $$N = 6$$, the smallest positive rational numbers that solve the equation require substantial fractional denominators:
+When $N = 6$, the smallest positive rational numbers that solve the equation require substantial fractional denominators:
 
 $$
 6 = \left(\frac{17}{21}\right)^3 + \left(\frac{37}{21}\right)^3
 $$
 
-Expanding this to $$N = 43$$ requires numerators and denominators spanning dozens of digits. For centuries, number theorists lacked general methods to determine whether an arbitrary integer possessed any rational cubic solutions at all.
+Expanding this to $N = 43$ requires numerators and denominators spanning dozens of digits. For centuries, number theorists lacked general methods to determine whether an arbitrary integer possessed any rational cubic solutions at all.
 
 ## From cubes to elliptic curves
 
 The reason the sum of two cubes is so profound is that it is not merely an arithmetic curiosity. It is an elliptic curve in disguise.
 
-Through a birational change of variables, the equation $$x^3 + y^3 = N$$ can be mapped onto the generalized Weierstrass form:
+Through a birational change of variables, the equation $x^3 + y^3 = N$ can be mapped onto the generalized Weierstrass form:
 
 $$
 E_N: Y^2 = X^3 - 432 N^2
 $$
 
-Under this transformation, every rational solution $$(x, y)$$ to the sum of two cubes corresponds directly to a rational point $$(X, Y)$$ on the elliptic curve $$E_N$$.
+Under this transformation, every rational solution $(x, y)$ to the sum of two cubes corresponds directly to a rational point $(X, Y)$ on the elliptic curve $E_N$.
 
 According to the **Mordell-Weil theorem**, the set of all rational points on an elliptic curve forms a finitely generated abelian group:
 
@@ -87,36 +87,36 @@ E_N(\mathbb{Q}) \cong T \oplus \mathbb{Z}^r
 $$
 
 Where:
-- $$T$$ is a finite torsion subgroup, representing points of finite order that loop back on themselves under elliptic curve addition.
-- $$r \ge 0$$ is the **algebraic rank** of the curve, representing the number of independent infinite-order rational points.
+- $T$ is a finite torsion subgroup, representing points of finite order that loop back on themselves under elliptic curve addition.
+- $r \ge 0$ is the **algebraic rank** of the curve, representing the number of independent infinite-order rational points.
 
-If the rank $$r = 0$$, the curve contains only a finite number of rational points (which typically correspond to trivial solutions like $$x = 0$$ or $$y = 0$$).
+If the rank $r = 0$, the curve contains only a finite number of rational points (which typically correspond to trivial solutions like $x = 0$ or $y = 0$).
 
-If the rank $$r \ge 1$$, the curve contains an infinite number of non-trivial rational points. A single non-trivial point can be added to itself repeatedly using the chord-and-tangent group law, generating an infinite family of distinct rational cubic decompositions for $$N$$.
+If the rank $r \ge 1$, the curve contains an infinite number of non-trivial rational points. A single non-trivial point can be added to itself repeatedly using the chord-and-tangent group law, generating an infinite family of distinct rational cubic decompositions for $N$.
 
 ## The Birch and Swinnerton-Dyer bridge
 
-Calculating the algebraic rank $$r$$ by direct search is often computationally impossible. In the 1960s, British mathematicians Bryan Birch and Peter Swinnerton-Dyer formulated a conjecture connecting the algebraic rank to analytic calculus.
+Calculating the algebraic rank $r$ by direct search is often computationally impossible. In the 1960s, British mathematicians Bryan Birch and Peter Swinnerton-Dyer formulated a conjecture connecting the algebraic rank to analytic calculus.
 
-To every elliptic curve $$E_N$$, mathematicians associate a complex analytic L-function:
+To every elliptic curve $E_N$, mathematicians associate a complex analytic L-function:
 
 $$
 L(E_N, s) = \sum_{n=1}^{\infty} \frac{a_n}{n^s}
 $$
 
-Where the coefficients $$a_n$$ count the number of solutions to the curve across finite modular arithmetic fields $$\mathbb{F}_p$$.
+Where the coefficients $a_n$ count the number of solutions to the curve across finite modular arithmetic fields $\mathbb{F}_p$.
 
-The **Birch and Swinnerton-Dyer (BSD) Conjecture**, another of the million-dollar Millennium Prize Problems, asserts that the algebraic rank equals the order of zero of the L-function at the critical point $$s = 1$$:
+The **Birch and Swinnerton-Dyer (BSD) Conjecture**, another of the million-dollar Millennium Prize Problems, asserts that the algebraic rank equals the order of zero of the L-function at the critical point $s = 1$:
 
 $$
 \text{ord}_{s=1} L(E_N, s) = r
 $$
 
-If the L-function vanishes at $$s = 1$$ (meaning $$L(E_N, 1) = 0$$), the BSD conjecture predicts that the curve has positive rank ($$r \ge 1$$), guaranteeing the existence of rational points.
+If the L-function vanishes at $s = 1$ (meaning $L(E_N, 1) = 0$), the BSD conjecture predicts that the curve has positive rank ($r \ge 1$), guaranteeing the existence of rational points.
 
 ## Sylvester's conjecture and the AI proof
 
-In the 19th century, English mathematician James Joseph Sylvester investigated which prime numbers could be written as the sum of two cubes. He conjectured that any prime number $$p$$ satisfying:
+In the 19th century, English mathematician James Joseph Sylvester investigated which prime numbers could be written as the sum of two cubes. He conjectured that any prime number $p$ satisfying:
 
 $$
 p \equiv 4, 7, \text{ or } 8 \pmod 9

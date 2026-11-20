@@ -36,9 +36,9 @@ If color resolution drops across neighboring pixels, your visual system fills in
 
 ## Chroma Subsampling in 4:2:0
 
-Splitting brightness and color into separate streams is exactly what the $$Y'CbCr$$ color space, commonly called YUV, was created to accomplish. In this system, $$Y'$$ represents luma (brightness), while $$Cb$$ and $$Cr$$ represent chroma (blue difference and red difference relative to luma). 
+Splitting brightness and color into separate streams is exactly what the $Y'CbCr$ color space, commonly called YUV, was created to accomplish. In this system, $Y'$ represents luma (brightness), while $Cb$ and $Cr$ represent chroma (blue difference and red difference relative to luma). 
 
-Once brightness stands apart from color, encoders can discard redundant chromatic data through chroma subsampling, most frequently $$4:2:0$$. In a $$2 \times 2$$ block of four adjacent pixels, the encoder keeps all four luma samples at full resolution, but shares a single pair of $$Cb$$ and $$Cr$$ samples across the whole quartet:
+Once brightness stands apart from color, encoders can discard redundant chromatic data through chroma subsampling, most frequently $4:2:0$. In a $2 \times 2$ block of four adjacent pixels, the encoder keeps all four luma samples at full resolution, but shares a single pair of $Cb$ and $Cr$ samples across the whole quartet:
 
 ```text
 4:4:4 Full RGB / YUV vs 4:2:0 Chroma Subsampling Grid
@@ -63,7 +63,7 @@ This subsampling cuts raw data volume by 50 percent before spatial or temporal c
 
 ## Practical FFmpeg Workflows
 
-In everyday practice, FFmpeg gives you direct control over that subsampling with a single flag. When encoding video with the standard H.264 encoder, `yuv420p` provides standard 8-bit $$4:2:0$$ planar output:
+In everyday practice, FFmpeg gives you direct control over that subsampling with a single flag. When encoding video with the standard H.264 encoder, `yuv420p` provides standard 8-bit $4:2:0$ planar output:
 
 ```bash
 ffmpeg -i input.mov -c:v libx264 -pix_fmt yuv420p output.mp4
@@ -83,4 +83,4 @@ Media players insist on `yuv420p` because consumer playback hardware is physical
 
 Most consumer browsers and native media players lack hardware decoding support for `rgb24` video streams. Feeding an `rgb24` MP4 into standard players frequently causes black screens, dropped frames, or decode errors.
 
-The default to `yuv420p` is not an accident of history, but a clean match between human visual biology and playback silicon. YUV splits luma from chroma so $$4:2:0$$ subsampling can slice raw frame weight in half, while `ffmpeg -pix_fmt yuv420p` and `ffprobe` give you the exact commands to encode and verify universal playback across modern devices.
+The default to `yuv420p` is not an accident of history, but a clean match between human visual biology and playback silicon. YUV splits luma from chroma so $4:2:0$ subsampling can slice raw frame weight in half, while `ffmpeg -pix_fmt yuv420p` and `ffprobe` give you the exact commands to encode and verify universal playback across modern devices.

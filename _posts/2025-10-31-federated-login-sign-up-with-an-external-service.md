@@ -187,7 +187,7 @@ Applications must never parse JWT payload claims without first mathematically va
 }
 ```
 
-3. **Cryptographic Validation**: Using the RSA public modulus $$n$$ and exponent $$e$$, the backend validates the RS256 signature using the formula:
+3. **Cryptographic Validation**: Using the RSA public modulus $n$ and exponent $e$, the backend validates the RS256 signature using the formula:
 
 $$\text{Verify}_{\text{PubKey}}\left(\text{Header} \mathbin{\Vert} \text{Payload}, \text{Signature}\right) \equiv \text{True}$$
 

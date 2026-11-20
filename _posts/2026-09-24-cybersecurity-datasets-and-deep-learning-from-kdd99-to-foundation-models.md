@@ -88,7 +88,7 @@ Production traffic broke these models because academic datasets hid three struct
 
 ### 1. The base rate fallacy
 
-The most persistent flaw in early cybersecurity machine learning was the ignoring of the base rate fallacy, originally formalized for intrusion detection by Stefan Axelsson in 2000. In academic benchmark sets like KDD99 or NSL-KDD, malicious connections often made up 20 percent to 50 percent of the total evaluation samples. In production enterprise backbones, real attacks represent an infinitesimal fraction of daily packet traffic, often fewer than one packet in a million ($$P(\text{Attack}) \approx 10^{-6}$$).
+The most persistent flaw in early cybersecurity machine learning was the ignoring of the base rate fallacy, originally formalized for intrusion detection by Stefan Axelsson in 2000. In academic benchmark sets like KDD99 or NSL-KDD, malicious connections often made up 20 percent to 50 percent of the total evaluation samples. In production enterprise backbones, real attacks represent an infinitesimal fraction of daily packet traffic, often fewer than one packet in a million ($P(\text{Attack}) \approx 10^{-6}$).
 
 When an alert occurs, the probability that an attack is actually taking place is governed by Bayes' theorem:
 
@@ -96,7 +96,7 @@ $$
 P(\text{Attack} \mid \text{Alert}) = \frac{P(\text{Alert} \mid \text{Attack}) \cdot P(\text{Attack})}{P(\text{Alert} \mid \text{Attack}) \cdot P(\text{Attack}) + P(\text{Alert} \mid \text{Benign}) \cdot P(\text{Benign})}
 $$
 
-Suppose a model achieves an outstanding True Positive Rate of $$99.9\%$$ ($$P(\text{Alert} \mid \text{Attack}) = 0.999$$) and an extremely low False Positive Rate of $$0.1\%$$ ($$P(\text{Alert} \mid \text{Benign}) = 0.001$$). When deployed against a standard corporate pipe carrying $$10^7$$ connections per day with an attack base rate of $$P(\text{Attack}) = 10^{-6}$$:
+Suppose a model achieves an outstanding True Positive Rate of $99.9\%$ ($P(\text{Alert} \mid \text{Attack}) = 0.999$) and an extremely low False Positive Rate of $0.1\%$ ($P(\text{Alert} \mid \text{Benign}) = 0.001$). When deployed against a standard corporate pipe carrying $10^7$ connections per day with an attack base rate of $P(\text{Attack}) = 10^{-6}$:
 
 $$
 P(\text{Attack} \mid \text{Alert}) = \frac{0.999 \times 10^{-6}}{(0.999 \times 10^{-6}) + (0.001 \times (1 - 10^{-6}))}
@@ -106,7 +106,7 @@ $$
 P(\text{Attack} \mid \text{Alert}) = \frac{0.000000999}{0.000000999 + 0.000999999} \approx 0.000998 \approx 0.1\%
 $$
 
-Even with a $$99.9\%$$ detection rate and a $$99.9\%$$ specificity rate, over 99.9 percent of all generated alerts are false alarms. A Security Operations Center (SOC) processing tens of millions of records per day receives thousands of false alerts daily for every single true intrusion. This alert fatigue leads analysts to disable the automated system entirely.
+Even with a $99.9\%$ detection rate and a $99.9\%$ specificity rate, over 99.9 percent of all generated alerts are false alarms. A Security Operations Center (SOC) processing tens of millions of records per day receives thousands of false alerts daily for every single true intrusion. This alert fatigue leads analysts to disable the automated system entirely.
 
 ### 2. Synthetic capture artifacts and label leakage
 
@@ -266,7 +266,7 @@ Graph Neural Networks (GNNs) analyze this behavior by constructing dynamic prove
 [External C2 Socket: 198.51.100.24:443]
 ```
 
-Modern systems like Unicorn (Han et al., NDSS 2020), ProvGNN, and ThreaTrace run message passing over these heterogeneous graphs. Each node $$v$$ with feature vector $$h_v^{(0)}$$ iteratively updates its hidden representation by aggregating the representations of its incoming causal neighbors $$u \in \mathcal{N}(v)$$:
+Modern systems like Unicorn (Han et al., NDSS 2020), ProvGNN, and ThreaTrace run message passing over these heterogeneous graphs. Each node $v$ with feature vector $h_v^{(0)}$ iteratively updates its hidden representation by aggregating the representations of its incoming causal neighbors $u \in \mathcal{N}(v)$:
 
 $$
 h_v^{(k)} = \sigma \left( W^{(k)} \cdot \text{AGGREGATE} \left( \left\{ h_u^{(k-1)} : u \in \mathcal{N}(v) \right\} \right) + B^{(k)} h_v^{(k-1)} \right)

@@ -59,13 +59,13 @@ The distinction between raster and vector representations stems from signal proc
 
 ### Raster Graphics: Discrete Spatial Sampling
 
-A raster image represents a continuous visual scene $$f(x, y)$$ sampled onto a discrete two-dimensional integer matrix $$I[i, j]$$:
+A raster image represents a continuous visual scene $f(x, y)$ sampled onto a discrete two-dimensional integer matrix $I[i, j]$:
 
 $$I[i, j] = f(i \cdot \Delta x, j \cdot \Delta y), \quad i \in [0, W-1], \; j \in [0, H-1]$$
 
 Each cell (pixel) stores fixed numerical values representing color channels, typically 8 bits per channel across Red, Green, Blue, and Alpha (RGBA).
 
-Because raster representations capture a fixed grid of samples, their quality is governed by the Nyquist-Shannon sampling theorem. When a browser displays a $$200 \times 200$$ pixel PNG image across a $$800 \times 800$$ logical pixel canvas, the spatial frequency of the display exceeds the sampling rate of the image. The rendering engine must interpolate missing intermediate values using algorithms like nearest-neighbor, bilinear, or bicubic filtering.
+Because raster representations capture a fixed grid of samples, their quality is governed by the Nyquist-Shannon sampling theorem. When a browser displays a $200 \times 200$ pixel PNG image across a $800 \times 800$ logical pixel canvas, the spatial frequency of the display exceeds the sampling rate of the image. The rendering engine must interpolate missing intermediate values using algorithms like nearest-neighbor, bilinear, or bicubic filtering.
 
 Nearest-neighbor scaling produces jagged staircase pixelation, while bilinear filtering softens edges into an unsharp blur.
 
@@ -79,7 +79,7 @@ Original Sample: [xx] -> Upscaled 4x: [x][x][x][x] (Visible pixel blocks)
 
 Vector graphics do not store pre-computed pixel grids. Instead, they store mathematical instructions: coordinates, line segments, polygons, circular arcs, and cubic Bézier curves.
 
-A cubic Bézier curve, the core primitive of SVG path elements (`<path d="M... C...">`), is defined parametrically across the interval $$t \in [0, 1]$$ using four control points $$\mathbf{P}_0, \mathbf{P}_1, \mathbf{P}_2, \mathbf{P}_3$$:
+A cubic Bézier curve, the core primitive of SVG path elements (`<path d="M... C...">`), is defined parametrically across the interval $t \in [0, 1]$ using four control points $\mathbf{P}_0, \mathbf{P}_1, \mathbf{P}_2, \mathbf{P}_3$:
 
 $$\mathbf{B}(t) = (1-t)^3 \mathbf{P}_0 + 3(1-t)^2 t \mathbf{P}_1 + 3(1-t) t^2 \mathbf{P}_2 + t^3 \mathbf{P}_3$$
 
@@ -103,14 +103,14 @@ The storage economics of raster and vector formats scale under entirely differen
 
 | Graphic Format | Scaling Variable | File Size Formula | 4K Display Payload Impact |
 | :--- | :--- | :--- | :--- |
-| **Raster (PNG/WebP)** | Pixel Dimensions | $$\text{Size} \propto \text{Width} \times \text{Height}$$ | Expands quadratically ($$4\times$$ when doubling axes) |
-| **Vector (SVG)** | Geometric Complexity | $$\text{Size} \propto N_{\text{nodes}} + N_{\text{curves}}$$ | Remains constant regardless of display resolution |
+| **Raster (PNG/WebP)** | Pixel Dimensions | $\text{Size} \propto \text{Width} \times \text{Height}$ | Expands quadratically ($4\times$ when doubling axes) |
+| **Vector (SVG)** | Geometric Complexity | $\text{Size} \propto N_{\text{nodes}} + N_{\text{curves}}$ | Remains constant regardless of display resolution |
 
-An uncompressed raster image with dimensions $$W \times H$$ at 32-bit color depth consumes:
+An uncompressed raster image with dimensions $W \times H$ at 32-bit color depth consumes:
 
 $$\text{Memory}_{\text{raw}} = W \times H \times 4 \text{ bytes}$$
 
-Displaying a full-bleed background on a 4K display ($$3840 \times 2160$$) requires over 33 megabytes of raw memory in the GPU frame buffer before compression.
+Displaying a full-bleed background on a 4K display ($3840 \times 2160$) requires over 33 megabytes of raw memory in the GPU frame buffer before compression.
 
 In contrast, a vector illustration containing 50 Bézier curves requires approximately 3 kilobytes of XML text. When gzipped across an HTTP/2 or HTTP/3 connection, the transfer payload drops below 1 kilobyte. The same 1 KB file scales to cover a smartwatch display or an outdoor billboard without a single byte of added data transfer.
 

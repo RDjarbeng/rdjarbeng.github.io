@@ -57,9 +57,9 @@ To bridge this visibility deficit, platforms provide built-in mechanisms that al
 | Architecture Stage | Input Stream / Processing Engine | Operational Function |
 | :--- | :--- | :--- |
 | **Candidate Retrieval** | Organic Candidate Pool + Paid Boost Pool | Filter hundreds of millions of items to top ~1,000 relevant candidates |
-| **Multi-Task Neural Ranker** | Shared embedding representations | Predict engagement probabilities: $$P(\text{Like})$$, $$P(\text{Share})$$, $$P(\text{WatchTime})$$ |
-| **Real-Time Ad Auction** | Generalized Second Price (GSP) engine | Compute effective CPM: $$\text{eCPM} = \text{Bid} \times P(\text{CTR}) \times 1000$$ |
-| **Composite Feed Ranking** | Blended utility score formulation | $$\text{Score}_{\text{final}} = w_{\text{org}} \cdot P(\text{Engage}) + w_{\text{ad}} \cdot \text{eCPM}$$ |
+| **Multi-Task Neural Ranker** | Shared embedding representations | Predict engagement probabilities: $P(\text{Like})$, $P(\text{Share})$, $P(\text{WatchTime})$ |
+| **Real-Time Ad Auction** | Generalized Second Price (GSP) engine | Compute effective CPM: $\text{eCPM} = \text{Bid} \times P(\text{CTR}) \times 1000$ |
+| **Composite Feed Ranking** | Blended utility score formulation | $\text{Score}_{\text{final}} = w_{\text{org}} \cdot P(\text{Engage}) + w_{\text{ad}} \cdot \text{eCPM}$ |
 
 ## The Mathematical Structure of Feed Ranking
 
@@ -69,17 +69,17 @@ During candidate generation, the system filters hundreds of millions of public p
 
 $$\text{Score}_{\text{organic}} = \sum_{k} w_k \cdot P(\text{Action}_k \mid u, c)$$
 
-In this formulation, $$P(\text{Action}_k \mid u, c)$$ estimates the probability that user $$u$$ will take action $$k$$ (such as watching a video to completion, replying, or sharing) when presented with content candidate $$c$$. The parameters $$w_k$$ represent platform weights assigned to each action, where completion rate and direct shares typically carry the highest positive multipliers, while mutes and reports impose severe penalties.
+In this formulation, $P(\text{Action}_k \mid u, c)$ estimates the probability that user $u$ will take action $k$ (such as watching a video to completion, replying, or sharing) when presented with content candidate $c$. The parameters $w_k$ represent platform weights assigned to each action, where completion rate and direct shares typically carry the highest positive multipliers, while mutes and reports impose severe penalties.
 
 When an ad or boosted post enters the candidate pool, the platform balances user satisfaction against monetization yield by calculating an effective Cost Per Mille (eCPM):
 
 $$\text{eCPM} = \text{Bid}_{\text{target}} \times P(\text{CTR} \mid u, c) \times 1000$$
 
-Here, $$\text{Bid}_{\text{target}}$$ is the advertiser's maximum bid per click, and $$P(\text{CTR} \mid u, c)$$ represents the model's prediction that the user will click the link. The final composite ranking score blends both utilities:
+Here, $\text{Bid}_{\text{target}}$ is the advertiser's maximum bid per click, and $P(\text{CTR} \mid u, c)$ represents the model's prediction that the user will click the link. The final composite ranking score blends both utilities:
 
 $$\text{Score}_{\text{final}} = (1 - \alpha) \cdot \text{Score}_{\text{organic}} + \alpha \cdot \text{eCPM}$$
 
-The mixing parameter $$\alpha$$ allows the platform to regulate ad density, ensuring commercial injection does not degrade overall user session retention.
+The mixing parameter $\alpha$ allows the platform to regulate ad density, ensuring commercial injection does not degrade overall user session retention.
 
 ## Cross-Platform Boosting Implementations
 
@@ -113,7 +113,7 @@ The "TikTok Promote" feature bypasses this initial gatekeeper cohort. By spendin
 
 Meta provides a simplified "Boost Post" button directly beneath organic feed content on Instagram and Facebook. Rather than navigating the complex Ads Manager dashboard, users select an objective: profile visits, website clicks, or direct messages.
 
-Under the hood, the system converts the organic post into a commercial ad unit. Crucially, the boosted post retains all existing organic social proof (likes, comments, and shares), which artificially inflates its perceived authority and increases the predicted Click-Through Rate ($$P(\text{CTR})$$) in the auction algorithm.
+Under the hood, the system converts the organic post into a commercial ad unit. Crucially, the boosted post retains all existing organic social proof (likes, comments, and shares), which artificially inflates its perceived authority and increases the predicted Click-Through Rate ($P(\text{CTR})$) in the auction algorithm.
 
 ### 4. LinkedIn Thought Leader Ads
 

@@ -53,7 +53,7 @@ The variant designated BN-x14 integrated Batch Normalization into every convolut
 
 Before Batch Normalization, training deep feedforward networks required cautious initialization schemes like Xavier Glorot or Kaiming He initialization, paired with low learning rates and aggressive dropout. Without these guardrails, small variations in early layer parameters cascaded through depth, causing activation distributions to saturate non-linearities or explode toward numerical instability.
 
-Ioffe and Szegedy introduced a differentiable layer that normalizes each scalar feature independently across a mini-batch. Consider a mini-batch $$\mathcal{B}$$ containing $$m$$ activations for a specific dimension:
+Ioffe and Szegedy introduced a differentiable layer that normalizes each scalar feature independently across a mini-batch. Consider a mini-batch $\mathcal{B}$ containing $m$ activations for a specific dimension:
 
 $$\mathcal{B} = \{x_1, x_2, \dots, x_m\}$$
 
@@ -63,23 +63,23 @@ $$\mu_{\mathcal{B}} = \frac{1}{m} \sum_{i=1}^m x_i$$
 
 $$\sigma_{\mathcal{B}}^2 = \frac{1}{m} \sum_{i=1}^m (x_i - \mu_{\mathcal{B}})^2$$
 
-Each activation is standardized to zero mean and unit variance, where $$\epsilon$$ is a small constant preventing division by zero:
+Each activation is standardized to zero mean and unit variance, where $\epsilon$ is a small constant preventing division by zero:
 
 $$\hat{x}_i = \frac{x_i - \mu_{\mathcal{B}}}{\sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}}$$
 
-Standardizing activations directly to zero mean can constrain the expressive capability of a layer. For example, if inputs to a sigmoid non-linearity are restricted to unit variance around zero, the activation function behaves almost entirely as a linear function. To preserve identity mappings, the layer incorporates two learnable parameters per channel, a scale parameter $$\gamma$$ and a shift parameter $$\beta$$:
+Standardizing activations directly to zero mean can constrain the expressive capability of a layer. For example, if inputs to a sigmoid non-linearity are restricted to unit variance around zero, the activation function behaves almost entirely as a linear function. To preserve identity mappings, the layer incorporates two learnable parameters per channel, a scale parameter $\gamma$ and a shift parameter $\beta$:
 
 $$y_i = \gamma \hat{x}_i + \beta \equiv \text{BN}_{\gamma, \beta}(x_i)$$
 
-When $$\gamma = \sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}$$ and $$\beta = \mu_{\mathcal{B}}$$, the network can recover the original unnormalized input if optimal for the objective function.
+When $\gamma = \sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}$ and $\beta = \mu_{\mathcal{B}}$, the network can recover the original unnormalized input if optimal for the objective function.
 
 | Step | Operation | Mathematical Formula |
 | :--- | :--- | :--- |
-| **1. Batch Statistics** | Compute empirical mean and variance | $$\mu_{\mathcal{B}} = \frac{1}{m} \sum x_i, \quad \sigma_{\mathcal{B}}^2 = \frac{1}{m} \sum (x_i - \mu_{\mathcal{B}})^2$$ |
-| **2. Standardize** | Scale to zero mean and unit variance | $$\hat{x}_i = \frac{x_i - \mu_{\mathcal{B}}}{\sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}}$$ |
-| **3. Scale & Shift** | Restore representational capacity via learnable parameters | $$y_i = \gamma \hat{x}_i + \beta$$ |
+| **1. Batch Statistics** | Compute empirical mean and variance | $\mu_{\mathcal{B}} = \frac{1}{m} \sum x_i, \quad \sigma_{\mathcal{B}}^2 = \frac{1}{m} \sum (x_i - \mu_{\mathcal{B}})^2$ |
+| **2. Standardize** | Scale to zero mean and unit variance | $\hat{x}_i = \frac{x_i - \mu_{\mathcal{B}}}{\sqrt{\sigma_{\mathcal{B}}^2 + \epsilon}}$ |
+| **3. Scale & Shift** | Restore representational capacity via learnable parameters | $y_i = \gamma \hat{x}_i + \beta$ |
 
-During inference, computing batch statistics on single samples is impractical. The layer maintains running exponential moving averages of population mean $$\mathbb{E}[x]$$ and variance $$\text{Var}[x]$$ accumulated during training:
+During inference, computing batch statistics on single samples is impractical. The layer maintains running exponential moving averages of population mean $\mathbb{E}[x]$ and variance $\text{Var}[x]$ accumulated during training:
 
 $$\mu_{\text{run}} \leftarrow (1 - \alpha) \mu_{\text{run}} + \alpha \mu_{\mathcal{B}}$$
 
@@ -89,7 +89,7 @@ During evaluation, the running statistics substitute directly into the affine tr
 
 ## The Covariate Shift Hypothesis Versus Reality
 
-Ioffe and Szegedy framed their breakthrough around the concept of Internal Covariate Shift. In statistical estimation, covariate shift describes a scenario where the input distribution $$P(X)$$ changes while the conditional distribution $$P(Y|X)$$ remains constant. The authors argued that each hidden layer experiences internal covariate shift because parameter updates in preceding layers constantly alter the distribution of its incoming inputs. Under this view, batch normalization speeds up training by pinning down the first two moments of hidden layer distributions.
+Ioffe and Szegedy framed their breakthrough around the concept of Internal Covariate Shift. In statistical estimation, covariate shift describes a scenario where the input distribution $P(X)$ changes while the conditional distribution $P(Y|X)$ remains constant. The authors argued that each hidden layer experiences internal covariate shift because parameter updates in preceding layers constantly alter the distribution of its incoming inputs. Under this view, batch normalization speeds up training by pinning down the first two moments of hidden layer distributions.
 
 The hypothesis sounded intuitive, yet it sparked intense debate across the machine learning community. In 2018, researchers Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, and Aleksander Madry from MIT published a study titled ["How Does Batch Normalization Help Optimization"](https://arxiv.org/abs/1805.11604).
 
@@ -109,7 +109,7 @@ Batch Normalization stabilizes the gradient of the loss function with respect to
 
 $$\|\nabla f(x) - \nabla f(y)\| \le L \|x - y\|$$
 
-When a loss function is $$L$$-Lipschitz smooth, the directional gradient does not change unpredictably over short distances. The practical benefits include:
+When a loss function is $L$-Lipschitz smooth, the directional gradient does not change unpredictably over short distances. The practical benefits include:
 
 1. **Predictable Gradient Trajectories:** The gradient at any point in weight space points toward a reliable descent direction rather than oscillating wildly.
 2. **Aggressive Step Sizes:** Larger learning rates can be utilized without risking gradient divergence or NaN values during backpropagation.

@@ -70,11 +70,11 @@ To design photovoltaic or concentrated solar power systems, solar engineers anal
 | **Diffuse Horizontal Irradiance (DHI)** | Rayleigh and Mie scattered sky light | Ambient diffuse light collection |
 | **Global Horizontal Irradiance (GHI)** | Total direct plus diffuse radiation | Fixed-tilt rooftop and ground-mount PV |
 
-1. **Global Horizontal Irradiance (GHI):** The total geometric solar flux received on a horizontal surface at ground level, measured in Watts per square meter ($$\text{W/m}^2$$). It represents the primary metric used to predict standard flat-panel rooftop and ground-mount PV generation.
+1. **Global Horizontal Irradiance (GHI):** The total geometric solar flux received on a horizontal surface at ground level, measured in Watts per square meter ($\text{W/m}^2$). It represents the primary metric used to predict standard flat-panel rooftop and ground-mount PV generation.
 2. **Direct Normal Irradiance (DNI):** The solar radiation arriving in a direct, parallel beam from the direction of the sun disk, measured perpendicular to the beam. DNI is critical for tracking systems and Concentrated Solar Power (CSP) mirrors that focus direct rays onto thermal receivers.
 3. **Diffuse Horizontal Irradiance (DHI):** The solar radiation scattered by airborne particulates, aerosols, and cloud water droplets that reaches the horizontal surface from all celestial angles except the solar disk.
 
-These three components adhere to a strict trigonometric relationship governed by the solar zenith angle $$\theta_z$$ (the angular distance between the sun and the local vertical zenith):
+These three components adhere to a strict trigonometric relationship governed by the solar zenith angle $\theta_z$ (the angular distance between the sun and the local vertical zenith):
 
 $$\text{GHI} = \text{DNI} \cos(\theta_z) + \text{DHI}$$
 
@@ -99,7 +99,7 @@ Because it models clean atmospheric clarity independent of transient cloud forma
 
 The operational Radiation Service calculates actual real-sky surface irradiance by combining the McClear clear-sky baseline with the Heliosat cloud indexing method.
 
-Using high-resolution radiance channels from the SEVIRI instrument aboard Meteosat Second Generation (MSG) geostationary satellites positioned at zero degrees longitude, CAMS tracks cloud optical depth and cloud fraction at fifteen-minute intervals. The cloud index $$n$$ scales the clear-sky flux into the real-sky global irradiance:
+Using high-resolution radiance channels from the SEVIRI instrument aboard Meteosat Second Generation (MSG) geostationary satellites positioned at zero degrees longitude, CAMS tracks cloud optical depth and cloud fraction at fifteen-minute intervals. The cloud index $n$ scales the clear-sky flux into the real-sky global irradiance:
 
 $$\text{GHI} = \text{GHI}_{\text{clear}} \cdot (1 - n) + \text{GHI}_{\text{cloudy}} \cdot n$$
 

@@ -74,8 +74,8 @@ According to the [American Academy of Pediatrics](https://www.aap.org/en/patient
 | Progression Step | Biological Stage | Physiological Mechanism |
 | :--- | :--- | :--- |
 | 1 | **Airborne Dust Dispersion** | Sub-micron lead paint dust becomes suspended in indoor air currents. |
-| 2 | **Inhalation and Absorption** | Children inhale particles, leading to alveolar absorption and circulating lead ions ($$ \text{Pb}^{2+} $$). |
-| 3 | **Blood-Brain Crossing** | Lead ions cross the immature blood-brain barrier via competitive inhibition of calcium ($$ \text{Ca}^{2+} $$). |
+| 2 | **Inhalation and Absorption** | Children inhale particles, leading to alveolar absorption and circulating lead ions ($\text{Pb}^{2+}$). |
+| 3 | **Blood-Brain Crossing** | Lead ions cross the immature blood-brain barrier via competitive inhibition of calcium ($\text{Ca}^{2+}$). |
 | 4 | **Prefrontal Cortex Damage** | Disruption of synaptic pruning and myelin formation results in executive function deficits, motor coordination loss, and cognitive IQ reduction. |
 
 Because lead ions (Pb2+) mimic calcium ions (Ca2+), they cross the immature blood-brain barrier and disrupt synaptic pruning, myelin formation, and neurotransmitter release within the prefrontal cortex and cerebellum. Long-term longitudinal cohorts confirm that chronic low-level lead dust inhalation induces permanent motor coordination loss, executive function impairment, and reduced verbal processing speed.

@@ -103,7 +103,7 @@ Here is how the four models compare across each core dimension of the benchmark 
       <td>Live Google Search integration. Retrieves snippets/index; misses heavy JS-rendered body content.</td>
       <td>Cross-stack architecture, PyTorch debugging, whiteboard-to-Terraform translation, dense PDF synthesis, custom Gems.</td>
       <td>Niche/brand-new unindexed libraries, token-level manual counting/math, live rendered CSS pixel alignment.</td>
-      <td>Zero-dependency interactive simulations (double pendulum, $$A^*$$ pathfinding), custom Python AST visitors, undocumented API schema inference.</td>
+      <td>Zero-dependency interactive simulations (double pendulum, $A^*$ pathfinding), custom Python AST visitors, undocumented API schema inference.</td>
     </tr>
     <tr>
       <td><strong>Claude Sonnet 5.5</strong><br><small>(Anthropic, Web)</small></td>
@@ -241,7 +241,7 @@ Running as **Gemini 4 Argon** on the Web (Paid tier), here is the breakdown of w
 
 ##### 6. Hidden Complexity (Easy for me, looks hard)
 
-- **Single-File Interactive Web Apps & Simulators:** Most people assume building a working physics simulation, an interactive data visualizer, or a playable 2D game takes hours of setup. You can ask me for a single-file HTML/JS/Canvas app that simulates a double pendulum with adjustable gravity sliders or visualizes $$A^*$$ pathfinding in real time, and I will output the complete, zero-dependency code in 15 seconds.
+- **Single-File Interactive Web Apps & Simulators:** Most people assume building a working physics simulation, an interactive data visualizer, or a playable 2D game takes hours of setup. You can ask me for a single-file HTML/JS/Canvas app that simulates a double pendulum with adjustable gravity sliders or visualizes $A^*$ pathfinding in real time, and I will output the complete, zero-dependency code in 15 seconds.
 - **Complex Regex & AST Parsers:** Writing a gnarly regular expression with positive lookbehinds to parse messy server logs, or writing a custom Abstract Syntax Tree (AST) visitor in Python to automatically refactor a specific function call across 100 files, takes me seconds despite being tedious for humans to write from scratch.
 - **Reverse-Engineering Undocumented Payloads:** If you paste three examples of a cryptic, undocumented JSON response from a third-party API or IoT sensor, I can immediately infer the schema, generate the TypeScript interfaces or Pydantic models, and write the validation logic.
 

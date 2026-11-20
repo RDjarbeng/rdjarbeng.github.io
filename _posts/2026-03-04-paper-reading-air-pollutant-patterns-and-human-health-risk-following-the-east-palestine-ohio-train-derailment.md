@@ -61,19 +61,19 @@ Unlike conventional gas chromatography-mass spectrometry (GC-MS), which requires
 | Stage | Analytical Component | Reaction / Physics Mechanism | Operational Output |
 | :--- | :--- | :--- | :--- |
 | 1. **Sample Ingestion** | Inlet Tube | Direct intake of ambient air without pre-concentration canisters | Continuous VOC sample stream |
-| 2. **Drift Tube Ionization** | Reaction Chamber | Hydronium ion source: $$ \text{H}_3\text{O}^+ + \text{VOC} \longrightarrow \text{VOC}\cdot\text{H}^+ + \text{H}_2\text{O} $$ | Soft chemical ionization with zero molecular fragmentation |
-| 3. **Mass Separation** | Time-of-Flight Analyzer | High mass resolution analyzer ($$ m / \Delta m > 4{,}000 $$) | Separates ions by mass-to-charge ratio ($$ m/z $$) |
+| 2. **Drift Tube Ionization** | Reaction Chamber | Hydronium ion source: $\text{H}_3\text{O}^+ + \text{VOC} \longrightarrow \text{VOC}\cdot\text{H}^+ + \text{H}_2\text{O}$ | Soft chemical ionization with zero molecular fragmentation |
+| 3. **Mass Separation** | Time-of-Flight Analyzer | High mass resolution analyzer ($m / \Delta m > 4{,}000$) | Separates ions by mass-to-charge ratio ($m/z$) |
 | 4. **Spectral Output** | Detector System | 1 Hz acquisition frequency at parts-per-trillion (ppt) sensitivity | Real-time quantification of trace atmospheric VOCs |
 
-The instrument generates hydronium ions ($$\text{H}_3\text{O}^+$$) inside a discharge chamber. In the drift tube, these hydronium ions collide with incoming volatile organic molecules. A proton transfers efficiently from hydronium to any trace compound whose proton affinity exceeds that of water ($$691 \text{ kJ/mol}$$):
+The instrument generates hydronium ions ($\text{H}_3\text{O}^+$) inside a discharge chamber. In the drift tube, these hydronium ions collide with incoming volatile organic molecules. A proton transfers efficiently from hydronium to any trace compound whose proton affinity exceeds that of water ($691 \text{ kJ/mol}$):
 
 $$\text{H}_3\text{O}^+ + \text{VOC} \longrightarrow \text{VOC}\cdot\text{H}^+ + \text{H}_2\text{O}$$
 
-Because proton transfer is a soft ionization process, the target molecules rarely fragment. The time-of-flight mass analyzer separates the resulting ions by their mass-to-charge ratio ($$m/z$$) with extreme precision, resolving isobaric compounds (molecules sharing the same nominal mass) at one-second acquisition intervals while driving at highway speeds.
+Because proton transfer is a soft ionization process, the target molecules rarely fragment. The time-of-flight mass analyzer separates the resulting ions by their mass-to-charge ratio ($m/z$) with extreme precision, resolving isobaric compounds (molecules sharing the same nominal mass) at one-second acquisition intervals while driving at highway speeds.
 
 ## Toxicological Findings: Acrolein Versus Vinyl Chloride
 
-The public and regulatory focus centered almost entirely on vinyl chloride monomer ($$\text{C}_2\text{H}_3\text{Cl}$$), a known human carcinogen linked to hepatic angiosarcoma.
+The public and regulatory focus centered almost entirely on vinyl chloride monomer ($\text{C}_2\text{H}_3\text{Cl}$), a known human carcinogen linked to hepatic angiosarcoma.
 
 The mobile PTR-TOF-MS survey revealed a more nuanced chemical profile:
 
@@ -88,11 +88,11 @@ The mobile PTR-TOF-MS survey revealed a more nuanced chemical profile:
 
 By February 20, ambient concentrations of vinyl chloride, benzene, toluene, and xylenes (BTEX) had dropped below chronic Minimum Risk Levels (MRLs) established by the Agency for Toxic Substances and Disease Registry (ATSDR). 
 
-Because vinyl chloride has a high vapor pressure ($$3.4 \text{ bar at } 20^\circ\text{C}$$) and a relatively short atmospheric chemical lifetime governed by hydroxyl radical ($$\cdot\text{OH}$$) oxidation, the initial gaseous cloud dispersed rapidly into the regional atmosphere once the fire subsided.
+Because vinyl chloride has a high vapor pressure ($3.4 \text{ bar at } 20^\circ\text{C}$) and a relatively short atmospheric chemical lifetime governed by hydroxyl radical ($\cdot\text{OH}$) oxidation, the initial gaseous cloud dispersed rapidly into the regional atmosphere once the fire subsided.
 
 ### 2. The Acrolein Anomaly
 
-In contrast to vinyl chloride, concentrations of acrolein ($$\text{CH}_2\text{=CHCHO}$$) remained elevated throughout the village of East Palestine, reaching levels up to six times higher than the surrounding regional rural background.
+In contrast to vinyl chloride, concentrations of acrolein ($\text{CH}_2\text{=CHCHO}$) remained elevated throughout the village of East Palestine, reaching levels up to six times higher than the surrounding regional rural background.
 
 Acrolein is an unsaturated aldehyde with extreme mucosal toxicity. It is formed during the incomplete combustion and secondary photochemical oxidation of acrylic monomers that were also aboard the derailed train, including butyl acrylate and ethylhexyl acrylate.
 
@@ -100,15 +100,15 @@ To determine whether measured concentrations posed an immediate public health th
 
 $$\text{HQ} = \frac{C_{\text{measured}}}{\text{RfC}}$$
 
-In this calculation, $$C_{\text{measured}}$$ is the ambient exposure concentration, and $$\text{RfC}$$ represents the reference concentration established by toxicological standards (the level below which no adverse health effects are anticipated across lifetime exposure). 
+In this calculation, $C_{\text{measured}}$ is the ambient exposure concentration, and $\text{RfC}$ represents the reference concentration established by toxicological standards (the level below which no adverse health effects are anticipated across lifetime exposure). 
 
 When an HQ exceeds 1.0, potential for adverse non-cancer health consequences exists. In East Palestine, the Hazard Quotient for acrolein significantly exceeded 1.0, directly explaining why residents continued to report burning eyes, sore throats, and headaches even after officials announced that vinyl chloride had dropped to undetectable levels.
 
-| Target Compound | Hazard Quotient ($$ \text{HQ} $$) Status | Toxicological Interpretation |
+| Target Compound | Hazard Quotient ($\text{HQ}$) Status | Toxicological Interpretation |
 | :--- | :--- | :--- |
-| **Vinyl Chloride** | $$ \text{HQ} < 1.0 $$ | Safe intermediate boundary; initial gaseous cloud dispersed rapidly |
-| **Benzene** | $$ \text{HQ} < 1.0 $$ | Consistent with normal regional rural baseline levels |
-| **Acrolein** | $$ \text{HQ} > 1.0 $$ | Highly elevated non-cancer respiratory and ocular health hazard |
+| **Vinyl Chloride** | $\text{HQ} < 1.0$ | Safe intermediate boundary; initial gaseous cloud dispersed rapidly |
+| **Benzene** | $\text{HQ} < 1.0$ | Consistent with normal regional rural baseline levels |
+| **Acrolein** | $\text{HQ} > 1.0$ | Highly elevated non-cancer respiratory and ocular health hazard |
 
 ## Spatial Hot Spots and Creekbed Outgassing
 

@@ -87,30 +87,30 @@ Residual Output -> Next Layer
 
 ### Alternating Sliding-Window and Global Attention
 
-Standard full causal attention exhibits quadratic computational complexity $$\mathcal{O}(L^2)$$ with sequence length $$L$$. To support context windows up to 128,000 tokens without crippling GPU memory during autoregressive generation, Gemma 4 alternates attention mechanisms every layer:
+Standard full causal attention exhibits quadratic computational complexity $\mathcal{O}(L^2)$ with sequence length $L$. To support context windows up to 128,000 tokens without crippling GPU memory during autoregressive generation, Gemma 4 alternates attention mechanisms every layer:
 
-1. **Even Layers (Local Attention)**: Restrict attention to a sliding window of $$W = 4096$$ preceding tokens. The attention mask matrix $$M_{i,j}$$ enforces:
+1. **Even Layers (Local Attention)**: Restrict attention to a sliding window of $W = 4096$ preceding tokens. The attention mask matrix $M_{i,j}$ enforces:
 
 $$M_{i,j} = \begin{cases} 0 & \text{if } 0 \le i - j \le W \\ -\infty & \text{otherwise} \end{cases}$$
 
 2. **Odd Layers (Global Attention)**: Attend across all prior tokens up to the full sequence context length, synthesizing semantic information collected by the intermediate sliding window blocks.
 
-This alternating pattern restricts the memory complexity of half the attention heads to $$\mathcal{O}(L \times W)$$, reducing memory overhead while preserving long-range recall benchmarks like Needle-In-A-Haystack.
+This alternating pattern restricts the memory complexity of half the attention heads to $\mathcal{O}(L \times W)$, reducing memory overhead while preserving long-range recall benchmarks like Needle-In-A-Haystack.
 
 ### Grouped-Query Attention (GQA)
 
-Traditional Multi-Head Attention (MHA) maintains an independent Key ($$K$$) and Value ($$V$$) vector for every single Query ($$Q$$) head. During long-context generation, storing these vectors in the Key-Value (KV) cache dominates GPU memory.
+Traditional Multi-Head Attention (MHA) maintains an independent Key ($K$) and Value ($V$) vector for every single Query ($Q$) head. During long-context generation, storing these vectors in the Key-Value (KV) cache dominates GPU memory.
 
 Gemma 4 implements Grouped-Query Attention with an 8-to-1 ratio:
 
 $$\text{Memory}_{\text{KV}} = 2 \times n_{\text{layers}} \times n_{\text{heads,kv}} \times d_{\text{head}} \times L_{\text{ctx}} \times b$$
 
-Here, $$n_{\text{heads,kv}} = \frac{n_{\text{heads,q}}}{8}$$, and $$b$$ represents bytes per precision element. By sharing each Key and Value head across eight Query heads, Gemma 4 slashes the memory footprint of the KV cache by 87.5 percent compared to standard multi-head designs.
+Here, $n_{\text{heads,kv}} = \frac{n_{\text{heads,q}}}{8}$, and $b$ represents bytes per precision element. By sharing each Key and Value head across eight Query heads, Gemma 4 slashes the memory footprint of the KV cache by 87.5 percent compared to standard multi-head designs.
 
 ### Normalization and Activation
 
 - **Root Mean Square Normalization (RMSNorm)**: Gemma 4 applies normalization both before and after attention and feed-forward sub-layers to prevent gradient explosion at large depths.
-- **Rotary Position Embeddings (RoPE)**: Position encodings use an increased base frequency $$\theta = 500,000$$ to sustain mathematical stability when extrapolating beyond initial pre-training lengths.
+- **Rotary Position Embeddings (RoPE)**: Position encodings use an increased base frequency $\theta = 500,000$ to sustain mathematical stability when extrapolating beyond initial pre-training lengths.
 - **GeGLU Activations**: The feed-forward network splits the linear projection into two paths, applying a Gaussian Error Linear Unit to one path before element-wise multiplication with the gate vector.
 
 ## Quantization Mechanics and Memory Footprint

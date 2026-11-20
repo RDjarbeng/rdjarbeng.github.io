@@ -41,13 +41,13 @@ I set out to build that bridge. The effort began not with frontend mockups, but 
 
 When examining public discourse on air pollution, conversations often stall in vague generalities. People speak of haze or traffic exhaust without quantifying exposure. To establish clear baselines, I measured the hourly dataset against the World Health Organization guidelines and the United States Environmental Protection Agency Air Quality Index breakpoints.
 
-Under WHO standards updated in 2021, the recommended 24-hour average limit for fine particulate matter ($$\text{PM}_{2.5}$$) is $$15\,\mu\text{g/m}^3$$, while the recommended annual mean cap is $$5\,\mu\text{g/m}^3$$. The empirical distribution from the Kigali reference monitor told an unmistakable story:
+Under WHO standards updated in 2021, the recommended 24-hour average limit for fine particulate matter ($\text{PM}_{2.5}$) is $15\,\mu\text{g/m}^3$, while the recommended annual mean cap is $5\,\mu\text{g/m}^3$. The empirical distribution from the Kigali reference monitor told an unmistakable story:
 
-- **Good Category ($$0 \text{ to } 12.0\,\mu\text{g/m}^3$$):** $$3.4\%$$ of recorded hours
-- **Moderate ($$12.1 \text{ to } 35.4\,\mu\text{g/m}^3$$):** $$39.2\%$$ of recorded hours
-- **Unhealthy for Sensitive Groups ($$35.5 \text{ to } 55.4\,\mu\text{g/m}^3$$):** $$31.8\%$$ of recorded hours
-- **Unhealthy ($$55.5 \text{ to } 150.4\,\mu\text{g/m}^3$$):** $$22.1\%$$ of recorded hours
-- **Very Unhealthy or Hazardous ($$> 150.5\,\mu\text{g/m}^3$$):** $$3.5\%$$ of recorded hours
+- **Good Category ($0 \text{ to } 12.0\,\mu\text{g/m}^3$):** $3.4\%$ of recorded hours
+- **Moderate ($12.1 \text{ to } 35.4\,\mu\text{g/m}^3$):** $39.2\%$ of recorded hours
+- **Unhealthy for Sensitive Groups ($35.5 \text{ to } 55.4\,\mu\text{g/m}^3$):** $31.8\%$ of recorded hours
+- **Unhealthy ($55.5 \text{ to } 150.4\,\mu\text{g/m}^3$):** $22.1\%$ of recorded hours
+- **Very Unhealthy or Hazardous ($> 150.5\,\mu\text{g/m}^3$):** $3.5\%$ of recorded hours
 
 ```text
 Kigali PM2.5 Hourly Distribution (Historical Multi-Year Baseline)
@@ -62,7 +62,7 @@ Combined Unhealthy or Worse: 57.4%
 Mean Concentration: 43.31 ug/m3 (Nearly 9x above the WHO annual guideline)
 ```
 
-Fewer than four out of every hundred hours qualified as clean air under baseline health thresholds. More than $$57\%$$ of recorded hours sat firmly in categories that warrant health advisories or outdoor activity curtailment. This was not a marginal or borderline situation. It was a persistent environmental reality that demanded clear public communication.
+Fewer than four out of every hundred hours qualified as clean air under baseline health thresholds. More than $57\%$ of recorded hours sat firmly in categories that warrant health advisories or outdoor activity curtailment. This was not a marginal or borderline situation. It was a persistent environmental reality that demanded clear public communication.
 
 ## Diurnal Cycles and Valley Topography
 
@@ -70,8 +70,8 @@ A single static average obscures the daily rhythm of exposure. Kigali is defined
 
 When I plotted the diurnal cycle across thousands of hours, the data revealed a consistent bimodal curve with two sharp peaks:
 
-1. **Morning Surge (06:00 to 09:00):** Ambient concentrations rise sharply, frequently exceeding $$75\,\mu\text{g/m}^3$$. Radiation cooling overnight creates a ground-level temperature inversion where cold air settles in valley floors beneath a layer of warmer air. This thermal lid traps low-altitude emissions from wood and charcoal cookstoves, brick kilns, and early commuter traffic within a compressed atmospheric layer.
-2. **Midday Dispersal (12:00 to 16:00):** Solar radiation warms the ground, breaking the inversion layer. Thermal convective currents mix the air column vertically, dispersing particulates into higher altitudes. Concentrations drop to their daily lows, hovering in the moderate range between $$20\,\mu\text{g/m}^3$$ and $$30\,\mu\text{g/m}^3$$.
+1. **Morning Surge (06:00 to 09:00):** Ambient concentrations rise sharply, frequently exceeding $75\,\mu\text{g/m}^3$. Radiation cooling overnight creates a ground-level temperature inversion where cold air settles in valley floors beneath a layer of warmer air. This thermal lid traps low-altitude emissions from wood and charcoal cookstoves, brick kilns, and early commuter traffic within a compressed atmospheric layer.
+2. **Midday Dispersal (12:00 to 16:00):** Solar radiation warms the ground, breaking the inversion layer. Thermal convective currents mix the air column vertically, dispersing particulates into higher altitudes. Concentrations drop to their daily lows, hovering in the moderate range between $20\,\mu\text{g/m}^3$ and $30\,\mu\text{g/m}^3$.
 3. **Evening Resurgence (18:30 to 22:00):** As surface temperatures cool at dusk, the boundary layer collapses once again. Evening meal preparation with solid biomass fuels combines with rush-hour vehicle exhaust, driving particulate readings back into the severe band.
 
 ```text
@@ -98,11 +98,11 @@ Mapping this cycle provided actionable value. A school athletic director plannin
 
 ## Anchoring Data in Physical Perception
 
-A dashboard presenting raw numerical charts often fails to connect with non-specialist audiences. A figure like $$68\,\mu\text{g/m}^3$$ lacks intuitive physical meaning for someone without a background in atmospheric chemistry.
+A dashboard presenting raw numerical charts often fails to connect with non-specialist audiences. A figure like $68\,\mu\text{g/m}^3$ lacks intuitive physical meaning for someone without a background in atmospheric chemistry.
 
 To bridge this gap, I introduced visual visibility reference points. I paired hourly sensor readings with systematic reference photographs taken from fixed vantage points across Remera toward Amahoro National Stadium.
 
-At concentrations below $$15\,\mu\text{g/m}^3$$, the structural arches, seating tiers, and distant hills behind the stadium remain sharply defined with clear contrast. As concentrations cross $$50\,\mu\text{g/m}^3$$, atmospheric light scattering washes out distant background ridges. Above $$100\,\mu\text{g/m}^3$$, the entire stadium complex dissolves into a flat gray silhouette.
+At concentrations below $15\,\mu\text{g/m}^3$, the structural arches, seating tiers, and distant hills behind the stadium remain sharply defined with clear contrast. As concentrations cross $50\,\mu\text{g/m}^3$, atmospheric light scattering washes out distant background ridges. Above $100\,\mu\text{g/m}^3$, the entire stadium complex dissolves into a flat gray silhouette.
 
 Placing these visual benchmarks alongside real-time gauge components allowed users to cross-reference the digital readout against what they saw out their own windows. It converted an abstract data stream into an immediate physical observation.
 

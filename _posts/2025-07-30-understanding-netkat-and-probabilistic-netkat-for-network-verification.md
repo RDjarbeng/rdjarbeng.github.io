@@ -54,9 +54,9 @@ Kleene Algebra with Tests, originally formalized by Dexter Kozen in 1997, is an 
 $$\left(K, B, +, \cdot, {}^*, 0, 1, \neg\right)$$
 
 In this algebraic system:
-- The structure $$(K, +, \cdot, {}^*, 0, 1)$$ forms an idempotent semiring, where addition ($$+$$, representing non-deterministic choice or parallel union) and multiplication ($$\cdot$$, representing sequential composition) satisfy standard associativity, distributivity, and identity axioms.
-- The structure $$(B, +, \cdot, \neg, 0, 1)$$ forms a Boolean algebra embedded within $$K$$, representing conditional tests and filters.
-- The Kleene star operator ($$p^*$$) denotes unbounded finite iteration:
+- The structure $(K, +, \cdot, {}^*, 0, 1)$ forms an idempotent semiring, where addition ($+$, representing non-deterministic choice or parallel union) and multiplication ($\cdot$, representing sequential composition) satisfy standard associativity, distributivity, and identity axioms.
+- The structure $(B, +, \cdot, \neg, 0, 1)$ forms a Boolean algebra embedded within $K$, representing conditional tests and filters.
+- The Kleene star operator ($p^*$) denotes unbounded finite iteration:
 
 $$p^* = 1 + p + p \cdot p + p \cdot p \cdot p + \dots$$
 
@@ -73,19 +73,19 @@ $$p^* = 1 + p + p \cdot p + p \cdot p \cdot p + \dots$$
 
 ### NetKAT Primitive Operations
 
-NetKAT extends basic KAT by introducing primitives specifically engineered for packet processing. A packet $$pk$$ is modeled as a record mapping field names (such as destination IP, source port, VLAN tag) to finite bit-vector values. 
+NetKAT extends basic KAT by introducing primitives specifically engineered for packet processing. A packet $pk$ is modeled as a record mapping field names (such as destination IP, source port, VLAN tag) to finite bit-vector values. 
 
-A packet history $$\pi$$ is a non-empty sequence of packets recording every state transformation as a packet traverses physical switches:
+A packet history $\pi$ is a non-empty sequence of packets recording every state transformation as a packet traverses physical switches:
 
 $$\pi = [pk_0, pk_1, \dots, pk_n]$$
 
 NetKAT defines several foundational primitives:
 
-1. **Packet Filtering (Test)**: Written as $$f = v$$. If the header field $$f$$ of the current packet equals value $$v$$, the test evaluates to identity ($$1$$), passing the packet history forward. Otherwise, it evaluates to zero ($$0$$), dropping the packet.
-2. **Packet Modification (Action)**: Written as $$f \leftarrow v$$. Updates the header field $$f$$ of the current packet to value $$v$$, recording the modified state.
-3. **Sequential Composition ($$p \cdot q$$)**: Applies policy $$p$$ to the packet history, then applies policy $$q$$ to the resulting outputs.
-4. **Parallel Union ($$p + q$$)**: Duplicates the packet stream, executing policies $$p$$ and $$q$$ concurrently (such as multicasting or routing across redundant links).
-5. **Topology Hop Operator ($$\mathbf{dup}$$)**: Appends the current packet state to the history, modeling physical transit across a switch link:
+1. **Packet Filtering (Test)**: Written as $f = v$. If the header field $f$ of the current packet equals value $v$, the test evaluates to identity ($1$), passing the packet history forward. Otherwise, it evaluates to zero ($0$), dropping the packet.
+2. **Packet Modification (Action)**: Written as $f \leftarrow v$. Updates the header field $f$ of the current packet to value $v$, recording the modified state.
+3. **Sequential Composition ($p \cdot q$)**: Applies policy $p$ to the packet history, then applies policy $q$ to the resulting outputs.
+4. **Parallel Union ($p + q$)**: Duplicates the packet stream, executing policies $p$ and $q$ concurrently (such as multicasting or routing across redundant links).
+5. **Topology Hop Operator ($\mathbf{dup}$)**: Appends the current packet state to the history, modeling physical transit across a switch link:
 
 $$\pi \cdot \mathbf{dup} = [\pi, pk_{\text{current}}]$$
 
@@ -121,7 +121,7 @@ Policy Implementation (P)                 Safety Invariant (Q)
 
 ### Invariant Verification Examples
 
-1. **Loop Freedom**: Proving that packets cannot circulate indefinitely within the network. This corresponds to proving that the policy iteration $$P^*$$ produces histories with bounded path lengths.
+1. **Loop Freedom**: Proving that packets cannot circulate indefinitely within the network. This corresponds to proving that the policy iteration $P^*$ produces histories with bounded path lengths.
 2. **Tenant Isolation**: Proving that tenant A packets cannot reach tenant B resources under any sequence of inputs:
    $$\text{Tenant}_A \cdot \text{NetworkTopology} \cdot \text{Tenant}_B \equiv 0$$
 3. **Reachability**: Proving that packets originating at an ingress gateway are guaranteed to reach a functional egress port without dropping:
@@ -135,13 +135,13 @@ While standard NetKAT assumes deterministic packet transitions, production netwo
 
 Physical links experience intermittent packet loss, randomized load balancers split traffic across server clusters, and wireless channels face probabilistic atmospheric fading.
 
-[Probabilistic NetKAT](https://www.cs.cornell.edu/~jnfoster/papers/probnetkat.pdf) (ProbNetKAT), formulated by Dexter Kozen, Alexandra Silva, and their research collaborators at Cornell University, introduces stochastic behavior by replacing the non-deterministic choice operator ($$+$$, which selects branches arbitrarily) with the probabilistic choice operator:
+[Probabilistic NetKAT](https://www.cs.cornell.edu/~jnfoster/papers/probnetkat.pdf) (ProbNetKAT), formulated by Dexter Kozen, Alexandra Silva, and their research collaborators at Cornell University, introduces stochastic behavior by replacing the non-deterministic choice operator ($+$, which selects branches arbitrarily) with the probabilistic choice operator:
 
 $$p \oplus_c q$$
 
-Here $$c \in [0, 1]$$ represents a rational probability weight:
-- With probability $$c$$, the policy executes policy $$p$$.
-- With probability $$1 - c$$, the policy executes policy $$q$$.
+Here $c \in [0, 1]$ represents a rational probability weight:
+- With probability $c$, the policy executes policy $p$.
+- With probability $1 - c$, the policy executes policy $q$.
 
 ```	ext
 Standard NetKAT:
@@ -184,7 +184,7 @@ In ProbNetKAT, this is expressed as:
 
 $$\text{Policy}_{\text{5G}} = (\text{Slice} = \text{URLLC}) \cdot \left( \text{fwd}_1 \oplus_{0.98} \text{drop} \right) + (\text{Slice} = \text{eMBB}) \cdot \text{fwd}_2$$
 
-Verifying the policy against an ideal specification $$Q$$ guarantees compliance before provisioning virtual network functions in production telco data centers.
+Verifying the policy against an ideal specification $Q$ guarantees compliance before provisioning virtual network functions in production telco data centers.
 
 ## Industrial Implementation Approaches: Google C++ vs Galois Haskell
 
