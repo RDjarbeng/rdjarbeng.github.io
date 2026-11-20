@@ -226,3 +226,4 @@ https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
 - [ ] Interesting repo, I'm considering doing this for my site mascot using one of my avatars for posts: https://myoctocat.com/
 - [ ] Post thumbnail here looks jagged/unclear on the home page, not sure why
 https://rdjarbeng.com/what-can-you-do-testing-ai-agents-gemini-argon-and-claude/
+- [ ] A lot of my emails to this website domain email end up in spam, setup the SPF, DKIM, DMARC

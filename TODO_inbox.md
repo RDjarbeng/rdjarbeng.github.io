@@ -132,3 +132,24 @@ https://www.kaggle.com/datasets/jefmenegazzo/pvs-passive-vehicular-sensors-datas
 https://papercopilot.com/statistics/cvpr-statistics/
 
 How can we help this so that rejections are not the norm
+- [ ] 2026-11-15 18:26 CAT | Above post is a paper on super mimic, fast training of robots 
+
+Why are batteries heavy?
+
+
+A first principles post, ties into the earlier todo on battery storage systems and the cost of solar
+- [ ] 2026-11-15 18:26 CAT | 2610.28480v2.pdf
+https://arxiv.org/pdf/2610.28480
+- [ ] 2026-11-16 10:20 CAT | What is recursive self improvement?
+- [ ] 2026-11-16 14:59 CAT | A simple GPS from first principle.
+First you need a watch.
+Knowing  the accurate time at your location gives you a nice estimate of your position along the vertical (longitude) but now where arong the longitude are you? How do you calculate latitude when you are alone in a sun scorched desert.
+
+Wait the sun? eureka. If I was at the poles the sun will be at an angle, but it's not at an angle so I must be somewhere between the poles. And If I can see the sun then I'm not on the side of the earth where the night is happening, I already knew this from my longitude but good to confirm. 
+
+But how can I know if I'm at the equator or at a latitude above or below it and how many degrees north or south?
+- [ ] 2026-11-17 12:39 CAT | PARDIG & SatWeave: Foundational Datasets for Earth Science — Google DeepMind
+https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/
+- [ ] 2026-11-17 16:16 CAT | This google video on weather would be a nice addition to the weather category posts, maybe we can make it a gif or build different versions from this:
+https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/1JDTJ5D1fR_MbDBa/PARDIG_and_SatWeave__figure-3__mosaic_9620_nm_images.webm#t=0.1
+- [ ] 2026-11-18 08:44 CAT | Create a chart or animation system that can animate the animation is all you need diagram and open it up. Inspiration from the TensorFlow playground
