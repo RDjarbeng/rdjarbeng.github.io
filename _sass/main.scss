@@ -2772,6 +2772,20 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+// Content type ("Analysis", "Guide"...): outlined so it reads as a label, not a link
+.post-type-badge {
+  background-color: transparent;
+  color: var(--text-color);
+  border-color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--text-color);
+  }
+}
+
 // Memes Page
 .meme-page-wrapper {
   max-width: 900px;

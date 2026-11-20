@@ -188,6 +188,7 @@ module.exports = function(eleventyConfig) {
           };
           if (imgUrl) posting.image = imgUrl;
           if ((siteDoc.categories || []).length) posting.articleSection = siteDoc.categories;
+          if (env.content_type) posting.genre = env.content_type;
           if ((siteDoc.tags || []).length) posting.keywords = siteDoc.tags.join(", ");
           const series = (siteData.series || []).find((sr) => sr.parts.some((part) => part.url === url));
           if (series) {

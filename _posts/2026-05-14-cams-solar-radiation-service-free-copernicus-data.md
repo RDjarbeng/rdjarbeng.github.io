@@ -22,6 +22,7 @@ key_points:
   - The McClear clear-sky model evaluates atmospheric absorption using ECMWF aerosol optical depth, water vapor, and total column ozone.
   - Developers and energy analysts can programmatically query multi-year radiation profiles via the Copernicus Atmosphere Data Store and SoDa web APIs.
 card_items: []
+content_type: guide
 ---
 <!-- WRITER NOTE (for the writer only, remove before publishing)
 Original draft, kept so you remember where this post was going:

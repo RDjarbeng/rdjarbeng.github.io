@@ -126,6 +126,12 @@ collections:
         }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
+      - label: "Content type"
+        name: "content_type"
+        widget: "select"
+        required: false
+        options: ["analysis", "guide", "explainer", "paper-review", "review", "project", "news", "opinion"]
+        hint: "Shown as a label above the title so readers can tell a researched analysis from a quick note."
       - label: "AI assistance"
         name: "ai_assistance"
         widget: "select"

@@ -95,6 +95,7 @@ card_items:
 series: "Free Satellite and Climate Data"
 series_part: 5
 category: "Climate & Environment"
+content_type: guide
 ---
 When working on climate research or environmental projects in Africa, having access to reliable weather and climate data is essential. The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate data crucial for agriculture, infrastructure, and academic research. Fortunately, there are several websites where you can find both historical and current climate data specifically tailored for African regions. Below is a comprehensive list of top resources to help you access this valuable information.
 

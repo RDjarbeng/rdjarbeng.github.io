@@ -21,6 +21,7 @@ key_points:
   - Bridging technical metrics and public comprehension required pairing quantitative AQI bins with physical visibility benchmarks at Amahoro Stadium.
   - Retrospective engineering lessons highlight the necessity of automated continuous ingestion pipelines and strict dataset versioning for civic tools.
 card_items: []
+content_type: project
 ---
 <!-- WRITER NOTE (for the writer only, remove before publishing)
 Original draft, kept so you remember where this post was going:

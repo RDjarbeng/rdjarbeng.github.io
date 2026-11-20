@@ -17,6 +17,7 @@ image: /assets/images/kigali_weather_thumbnail.jpg
 image_alt: Kigali Weather Report thumbnail showing the hills and title for the post
 layout: post
 category: "Climate & Environment"
+content_type: news
 ---
 
 Today, Kigali is shrouded in a dense haze that has significantly reduced visibility across the city. The atmosphere feels heavy, with the usual crisp views of the surrounding hills obscured by the mist.

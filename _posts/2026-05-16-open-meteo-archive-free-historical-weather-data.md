@@ -53,6 +53,7 @@ card_items:
 series: "Free Satellite and Climate Data"
 series_part: 4
 category: "Climate & Environment"
+content_type: guide
 ---
 
 ![Open Meteo Archive: Free Historical Weather Data](/assets/images/posts/covers/open_meteo_cover.jpg)

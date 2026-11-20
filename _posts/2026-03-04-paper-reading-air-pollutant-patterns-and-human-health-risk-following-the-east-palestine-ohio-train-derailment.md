@@ -26,6 +26,7 @@ card_items:
     description: Toxicological calculations confirmed that acrolein represented the dominant non-cancer respiratory irritant in the ambient plume.
   - name: Spatial Plume Dynamics
     description: Continuous driving routes identified persistent volatilization hot spots near contaminated creekbeds and trench excavation sites.
+content_type: paper-review
 ---
 For agent: Needs link to the paper by Oladayo 
 

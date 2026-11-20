@@ -27,6 +27,7 @@ card_items:
     description: Documenting the measurable drop in civic protective action and sensor calibration drift following feed termination.
   - name: Alternative Data Pipelines
     description: Transitioning monitoring architectures to OpenAQ Parquet archives, corrected optical sensor meshes, and Copernicus CAMS models.
+content_type: news
 ---
 <!-- WRITER NOTE (for the writer only, remove before publishing)
 Original draft, kept so you remember where this post was going:

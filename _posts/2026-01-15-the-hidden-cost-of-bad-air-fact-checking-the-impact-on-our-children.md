@@ -26,6 +26,7 @@ card_items:
     description: Aromatic solvents like toluene and xylene can induce direct apoptotic damage to auditory cochlear hair cells, compounding noise-induced hearing loss.
   - name: Engineering Countermeasures
     description: Adopting ASHRAE 62.1 outdoor ventilation benchmarks, MERV 13 filtration, and continuous NDIR CO2 monitors protects learning environments.
+content_type: analysis
 ---
 
 Public discussions surrounding air pollution typically focus on visible outdoor threats: industrial emissions, vehicular traffic grids, and wildfire smoke plumes. Yet children in developed and urbanizing nations spend more than eighty percent of their daily lives inside enclosed buildings, primarily classrooms and residential bedrooms.
