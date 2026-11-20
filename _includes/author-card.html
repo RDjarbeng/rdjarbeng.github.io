@@ -17,6 +17,8 @@
       {%- for link in site.social.links %}
       {%- if link contains 'linkedin' %} · <a href="{{ link }}" rel="me">LinkedIn</a>{% elsif link contains 'github' %} · <a href="{{ link }}" rel="me">GitHub</a>{% elsif link contains 'youtube' %} · <a href="{{ link }}" rel="me">YouTube</a>{% endif %}
       {%- endfor %}
+      · <a href="/editorial-policy/">Editorial policy</a>
+      · <a href="https://github.com/RDjarbeng/rdjarbeng.github.io/issues">Report an error</a>
       {%- else %}
       {%- if ac.linkedin %}<a href="{{ ac.linkedin }}">LinkedIn</a>{% endif %}
       {%- if ac.github %}{% if ac.linkedin %} · {% endif %}<a href="{{ ac.github }}">GitHub</a>{% endif %}
