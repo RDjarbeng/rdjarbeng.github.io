@@ -15,6 +15,8 @@ image: /assets/images/openclaw_cover_refined.jpg
 image_alt: 'OpenClaw space-lobster AI assistant cover'
 layout: post
 category: "AI"
+ai_assistance:
+  - drafting
 ---
 
 Hello, Richard here. There's a new AI big tool in town called OpenClaw (formerly Clawdbot, Moltbot)

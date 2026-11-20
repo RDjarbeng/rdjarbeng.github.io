@@ -28,6 +28,10 @@ image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
 layout: post
 image_alt: "Cover image for A Chronological Look At AI: A Decade-by-Decade Evolution"
 category: "AI"
+ai_assistance:
+  - drafting
+  - editing
+  - images
 ---
 Artificial intelligence did not arrive overnight with ChatGPT. It took eighty years of alternating breakthroughs, hardware bottlenecks, and research winters to reach this point. Looking at the field decade by decade clarifies how we got here: the ideas behind modern models were often proposed decades before computers were fast enough to execute them.
 

@@ -126,6 +126,13 @@ collections:
         }
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       # - { label: 'Last Modified', name: 'last_modified_at', widget: 'datetime', required: false, hint: 'Automatically updated by GitHub Action', hidden: true }
+      - label: "AI assistance"
+        name: "ai_assistance"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["drafting", "editing", "images", "research", "code"]
+        hint: "Tick where AI played a substantial part. Shown under the title with a link to the editorial policy."
       - label: "Card Items"
         name: "card_items"
         widget: "list"

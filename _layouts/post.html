@@ -44,6 +44,14 @@ body_class: post-page has-side-toc
         Author: <a href="{{ author_obj.url | relative_url }}" class="author">{{ author_obj.display_name }}</a>
       </div>
       {% endif %}
+      {% assign post_ai = ai_assistance | default: page.ai_assistance %}
+      {% if post_ai and post_ai.size > 0 %}
+      <div class="ai-assistance-note">
+        AI assistance:
+        {% for use in post_ai %}{% case use %}{% when 'drafting' %}first draft{% when 'editing' %}editing{% when 'images' %}images{% when 'research' %}research{% when 'code' %}code{% else %}{{ use }}{% endcase %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        · <a href="/editorial-policy/#use-of-ai-tools">how I use AI</a>
+      </div>
+      {% endif %}
 
       {% assign words_per_minute = 180 %}
       {% assign words = content | number_of_words %}
