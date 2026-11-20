@@ -28,7 +28,7 @@ AirNow.gov is a collaborative platform involving the US Environmental Protection
 
 ## Accessing the Data
 
-> Update: As of March 2024, this website has been offline, with no estimated timeframe for its return.
+> Update: Since March 2025 the US embassy and consulate data on AirNow has been offline, after the State Department suspended the data feed, with no estimated timeframe for its return. Checked again on 20 November 2026: the pages still return "not found". The steps below describe how access worked before the suspension.
 
 ![Screenshot of airnow website showing 'this web page does not exist' message](/assets/images/airnow_screenshot_showing_webpage_not_available.png "Air now website down for us embassies")
 
