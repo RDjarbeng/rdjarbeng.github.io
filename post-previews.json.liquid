@@ -13,6 +13,22 @@ eleventyExcludeFromCollections: true
     "image": {{ series.coverImage | default: "" | jsonify }}
   },
 {% endfor %}
+{%- comment -%}
+  Standalone pages, automatically: any titled page whose source file sits at the repo root
+  (about.md, air-quality.md, editorial-policy.md, contact.md...). Posts, gallery items and
+  paginated archives live in subfolders or have no title, so they are not repeated here.
+{%- endcomment -%}
+{% for p in collections.all %}{% assign p_path = p.inputPath | remove_first: "./" %}{% unless p_path contains "/" %}{% if p.data.title and p.url and p.url != "/" %}{% unless p.url contains ".json" or p.url contains ".xml" or p.url contains ".txt" or p.url contains "/series/" or p.data.pagination %}
+  {%- assign p_desc = p.data.description | default: "" -%}
+  {%- if p_desc == "" -%}{%- assign p_desc = p.content | strip_html | strip_newlines | truncate: 160 -%}{%- endif %}
+  {{ p.url | jsonify }}: {
+    "title": {{ p.data.title | jsonify }},
+    "excerpt": {{ p_desc | strip_html | strip_newlines | truncate: 160 | jsonify }},
+    "date": "Page",
+    "read_time": "rdjarbeng.com",
+    "image": {{ p.data.image | default: "" | jsonify }}
+  },
+{% endunless %}{% endif %}{% endunless %}{% endfor %}
 {% for post in collections.posts %}
   {% assign words = post.content | number_of_words %}
   {% assign raw_minutes = words | divided_by: 180 | round %}
