@@ -1,0 +1,413 @@
+// About page: academic CV ledger.
+// Vocabulary (keep it this small):
+//  - Colour: site tokens only (IBM Carbon palette). Text, muted grey, one link blue, hairline rules.
+//  - Type: system serif for the name and section labels, site sans for body. No web fonts.
+//  - Shape: no radius, no shadows, no cards. Structure comes from alignment and 1px rules.
+//  - Layout: label rail on the left (desktop), "when | what" rows; everything stacks below 760px.
+
+$cv-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+$cv-rail: 9rem;
+$cv-when: 8.5rem;
+$cv-break: 760px;
+
+.cv {
+  --cv-rule: var(--border-color);
+  --cv-muted: var(--grey-text);
+  max-width: 54rem;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  .post-content {
+    max-width: none;
+    padding: 0 16px;
+  }
+
+  p {
+    margin: 0 0 0.75em;
+  }
+
+  // Links: the site's prose links, minus the heavy weight
+  a {
+    color: var(--link-color);
+  }
+  p a,
+  li a,
+  dd a {
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--text-color);
+  }
+
+  // ---------- Header ----------
+  .cv-head {
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .cv-head__photo {
+    width: 148px;
+    height: 148px;
+    object-fit: cover;
+    border-radius: 0;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .cv-head__name {
+    font-family: $cv-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.4rem;
+  }
+
+  .cv-head__role {
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .cv-head__affil {
+    color: var(--cv-muted);
+    margin: 0 0 0.9rem;
+  }
+
+  .cv-head__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    margin: 0;
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  // ---------- In-page nav ----------
+  .cv-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--cv-rule);
+    border-bottom: 1px solid var(--cv-rule);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    a {
+      color: var(--cv-muted);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--text-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // ---------- Sections ----------
+  .cv-section {
+    display: grid;
+    grid-template-columns: $cv-rail 1fr;
+    gap: 0 2rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--cv-rule);
+    scroll-margin-top: 80px;
+  }
+
+  .cv-section--bio {
+    font-size: 1.08rem;
+
+    .cv-section__body {
+      grid-column: 1 / -1;
+      max-width: 44rem;
+    }
+  }
+
+  .cv-section--contact {
+    border-bottom: 0;
+  }
+
+  .cv-section__label {
+    font-family: $cv-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    padding-top: 0.1rem;
+  }
+
+  .cv-section__body {
+    min-width: 0;
+  }
+
+  // ---------- Entries ----------
+  // Dates sit at the right end of the title line (no separate date column), so the
+  // description gets the full width of the section.
+  .cv-entry {
+    position: relative;
+    padding: 0 0 1.25rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .cv-entry__when {
+    position: absolute;
+    top: 0.15rem;
+    right: 0;
+    color: var(--cv-muted);
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  // Keep long titles from running under the date
+  .cv-entry__what .cv-entry__title {
+    padding-right: 9.5rem;
+  }
+
+  .cv-entry__what > :last-child {
+    margin-bottom: 0;
+  }
+
+  .cv-entry__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .cv-entry__org {
+    color: var(--cv-muted);
+    margin: 0 0 0.35rem;
+  }
+
+  // ---------- Lists ----------
+  .cv-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1.1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .cv-list--plain li {
+    margin-bottom: 0.3rem;
+  }
+
+  .cv-projects {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0 0 1rem;
+    }
+
+    p {
+      margin: 0.15rem 0 0;
+    }
+  }
+
+  // Projects with a picture: small square thumbnail beside the text, no frame or radius
+  .cv-projects li.has-thumb {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 0 1rem;
+    align-items: start;
+  }
+
+  .cv-thumb {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0.2rem 0 0;
+    border: 1px solid var(--cv-rule);
+  }
+
+  .cv-note {
+    color: var(--cv-muted);
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .cv-tag {
+    color: var(--cv-muted);
+    font-weight: 400;
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &::before {
+      content: "· ";
+    }
+  }
+
+  // ---------- Disclosure ----------
+  // Selector is deliberately specific: it beats the site-wide boxed `.post-content details` style.
+  .post-content details.cv-more,
+  .post-content details.cv-more[open] {
+    margin: 0.35rem 0 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+
+    summary {
+      display: list-item;
+      list-style: none;
+      cursor: pointer;
+      color: var(--cv-muted);
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 0;
+      background: none;
+      border: 0;
+      border-radius: 0;
+      width: fit-content;
+
+      &::before {
+        content: "+";
+        color: inherit;
+        font-size: inherit;
+        margin: 0 0.35em 0 0;
+        transform: none;
+      }
+
+      &:hover {
+        color: var(--text-color);
+        background: none;
+        text-decoration: underline;
+      }
+    }
+
+    &[open] summary {
+      margin-bottom: 0.5rem;
+      border: 0;
+
+      &::before {
+        content: "−";
+        transform: none;
+      }
+    }
+  }
+
+  .cv-more {
+
+    ul {
+      margin: 0 0 0.5rem;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+  }
+
+  // ---------- Skills ----------
+  .cv-skills {
+    display: grid;
+    grid-template-columns: $cv-when 1fr;
+    gap: 0.5rem 1.25rem;
+    margin: 0 0 1rem;
+
+    dt {
+      color: var(--cv-muted);
+      font-size: 0.9rem;
+      padding-top: 0.1rem;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  .cv-cvs {
+    margin: 0;
+  }
+
+  // Keyboard focus stays visible everywhere on the page
+  a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 2px;
+  }
+
+  // ---------- Small screens ----------
+  @media (max-width: $cv-break) {
+    .cv-head {
+      gap: 1rem;
+      padding-top: 1.25rem;
+    }
+
+    .cv-head__photo {
+      width: 96px;
+      height: 96px;
+    }
+
+    .cv-head__name {
+      font-size: 1.8rem;
+    }
+
+    .cv-section {
+      grid-template-columns: 1fr;
+      padding: 1.25rem 0;
+    }
+
+    .cv-section__label {
+      margin-bottom: 0.75rem;
+    }
+
+    .cv-entry,
+    .cv-skills {
+      grid-template-columns: 1fr;
+    }
+
+    // Phones: date goes back above the title so titles keep the full width
+    .cv-entry__when {
+      position: static;
+      padding-top: 0;
+      margin-bottom: 0.1rem;
+      font-size: 0.85rem;
+    }
+
+    .cv-entry__what .cv-entry__title {
+      padding-right: 0;
+    }
+
+    .cv-skills dd {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .cv-head {
+      flex-direction: column;
+    }
+  }
+}

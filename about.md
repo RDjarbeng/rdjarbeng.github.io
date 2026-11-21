@@ -2,764 +2,293 @@
 layout: about
 title: About Richard Djarbeng
 permalink: /about/
-custom_css_class: about-page
+custom_css_class: about-page cv
+description: Richard Djarbeng is a software and machine learning engineer and researcher. Since October 2026 he has been a Research Associate at the Kigali Collaborative Research Center in Rwanda. He holds an MSc in Electrical and Computer Engineering from Carnegie Mellon University.
 ---
 
-<div class="about-intro">
-  <img class="about-headshot" src="/assets/images/richard/richard-djarbeng-headshot.jpg" alt="Richard Djarbeng" width="160" height="160">
-  <h1>Richard Djarbeng</h1>
-  <p>Software and Machine Learning Engineer | Solutions Architect &amp; Embedded Systems</p>
-  <div class="contact-links">
-    <a href="mailto:rdjarbeng@rdjarbeng.com" class="contact-email">rdjarbeng@rdjarbeng.com</a>
-    <span class="contact-separator">•</span>
-    <a href="#contact-form" class="contact-form-link">Contact Form ↓</a>
+<header class="cv-head">
+  <img class="cv-head__photo" src="/assets/images/richard/richard-djarbeng-headshot.jpg" alt="Richard Djarbeng" width="148" height="148">
+  <div class="cv-head__id">
+    <h1 class="cv-head__name">Richard Djarbeng</h1>
+    <p class="cv-head__role">Software and Machine Learning Engineer, Researcher</p>
+    <p class="cv-head__affil">Research Associate at the Kigali Collaborative Research Center (since October 2026). MSc ECE, Carnegie Mellon University.</p>
+    <p class="cv-head__links">
+      <a href="mailto:rdjarbeng@rdjarbeng.com">rdjarbeng@rdjarbeng.com</a>
+      <a href="/assets/documents/Richard_Resume_Research.pdf">CV (PDF)</a>
+      <a href="https://github.com/RDjarbeng" rel="me">GitHub</a>
+      <a href="https://www.linkedin.com/in/richarddjarbeng" rel="me">LinkedIn</a>
+      <a href="https://www.twitter.com/DjarbengRichard" rel="me">X / Twitter</a>
+    </p>
   </div>
-</div>
+</header>
 
-<nav class="about-quick-nav" aria-label="Skip to section">
-  <span class="about-nav-label">Jump to:</span>
-  <div class="about-quick-nav-track">
-    <a href="#experience" class="about-nav-link">Experience</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#education" class="about-nav-link">Education</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#learning" class="about-nav-link">Learning</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#projects" class="about-nav-link">Projects</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#open-source" class="about-nav-link">Open Source</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#skills" class="about-nav-link">Skills &amp; Resumes</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#certifications" class="about-nav-link">Certifications</a>
-    <span class="about-nav-dot" aria-hidden="true">•</span>
-    <a href="#contact-form" class="about-nav-link">Contact</a>
-  </div>
+<nav class="cv-nav" aria-label="On this page">
+  <a href="#research">Research</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#open-source">Open source</a>
+  <a href="#writing">Writing</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact-form">Contact</a>
 </nav>
 
-<div class="about-section">
-<p class="about-summary-text">
-I am a software engineer, AWS Certified Solutions Architect, and researcher with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. My previous work focused on building low-cost sensing systems and machine learning pipelines for environmental monitoring: AI-calibrated sensor networks in East Africa, a smartphone-based method for measuring black carbon, and the web dashboards that make the data usable. I work across computer vision and data engineering, and I am currently preparing PhD applications centered on machine learning for computer vision, environmental sensing and AI.  
-
-Research interests: I'm focused on deep learning, and computer vision with a focus on their applications. Perhaps I chose that because I like to see tangible evidence of work done.
-
-I have varied multi-disciplinary interests ranging from Cloud technologies, ML (reinforcement learning), Generative AI, autonomous driving, security and the Internet of Things.
-Hoping to build strong research and engineering experience in multimodal learning, vision models, and robotics with a focus on their interdisciplinary applications.
-</p>
-</div>
-
-<div class="about-section" id="experience">
-  <h2 class="about-section-title">Experience</h2>
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Research Associate</h3>
-      <span class="exp-date">October 2025</span>
-    </div>
-    <span class="exp-org">Kigali Collaborative Research Center</span>
-    <p class="exp-desc">Working on Edge AI, mobility and compression methods for Computer vision</p>
-    <details class="exp-tech-details" open>
-      <summary>Details</summary>
-      <ul>
-        <li>Compression-Driven Insights and Performance Enrichment for IoT (CRISPER IoT) with KCRC as the African deployment partner</li>
-      </ul>
-    </details>
-     <div class="exp-skills">
-        <span class="skill-pill">IoT</span>
-        <span class="skill-pill">Computer Vision</span>
-    </div>
+<section class="cv-section cv-section--bio" aria-label="Biography">
+  <div class="cv-section__body">
+    <p>I'm a software and machine learning engineer, and I do research on computer vision and environmental sensing. I have an MSc in Electrical and Computer Engineering from Carnegie Mellon University, and I'm an AWS Certified Solutions Architect.</p>
+    <p>I joined the Kigali Collaborative Research Center (KCRC) as a Research Associate in October 2026. My work there is on edge AI and compression methods for computer vision.</p>
+    <p>Before KCRC, I was a Research Associate at Carnegie Mellon University Africa in Kigali, working with Prof. Edwin Mugume. We built low-cost weather sensors for deployment across East Africa, and most of my work was on their design. Before that I worked in Prof. Albert Presto's group at Carnegie Mellon University in Pittsburgh, on a way to measure black carbon from smartphone photos of filter samples.</p>
+    <p>My focus right now is computer vision and machine learning. I'm preparing PhD applications in machine learning for computer vision and environmental sensing. I chose this area partly because I like to see tangible evidence of work done.</p>
   </div>
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Research Associate</h3>
-      <span class="exp-date">Feb 2024 - Oct 2025</span>
-    </div>
-    <span class="exp-org">Carnegie Mellon University Africa</span>
-    <p class="exp-desc">Worked with Prof Edwin Mugume on a project building low-cost weather sensors, focusing on the deployment and maintenance of these solutions across East Africa.</p>
-    <details class="exp-tech-details" open>
-      <summary>Technical details</summary>
-      <ul>
-        <li>3D radiation shield design in Fusion 360 for environmental sensor nodes</li>
-        <li>Energy consumption and network traffic estimation and simulation for environmental nodes</li>
-        <li>Time-series data pipelines and ingestion for sensor networks deployed in the field</li>
-        <li>Real-time monitoring dashboards for visualizing air-quality and weather data</li>
-      </ul>
-    </details>
-     <div class="exp-skills">
-        <span class="skill-pill">IoT</span>
-        <span class="skill-pill">Data Collection</span>
-        <span class="skill-pill">Embedded Systems</span>
-    </div>
+</section>
+
+<section class="cv-section" id="research">
+  <h2 class="cv-section__label">Research interests</h2>
+  <div class="cv-section__body">
+    <p>Deep learning and computer vision for sensing the physical world. I'm also interested in multimodal learning, vision models and robotics. Questions I keep returning to:</p>
+    <ul class="cv-list">
+      <li>Ground stations measure air quality accurately at a single point, while satellites give area averages. How do we bridge the two, especially in Africa, where ground stations are sparse?</li>
+      <li>Low-cost sensor networks are noisy. Can they be calibrated in real time against reference-grade instruments?</li>
+      <li>Where can recent computer vision models improve environmental and satellite sensing?</li>
+      <li>How small can a vision model get, through compression, and still be useful on low-power IoT hardware?</li>
+    </ul>
+    <p>Outside my main work I'm drawn to aerospace engineering. Part of it is a long-standing love of physics, and part of it is that I see aerospace as the frontier of human innovation, the place where engineering gets pushed furthest. {% assign aero = site.posts | where: "slug", "i-wanna-fly-an-introduction-to-the-aerospace-industry" | first %}I've written about it in {% if aero %}<a href="{{ aero.url }}">an introduction to the aerospace industry</a> and in {% endif %}<a href="/how-carnegie-mellon-sent-missions-to-the-moon-without-an-aerospace-department/">how Carnegie Mellon sent missions to the Moon without an aerospace department</a>.</p>
   </div>
+</section>
 
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Research Assistant</h3>
-      <span class="exp-date">2023 - 2024</span>
+<section class="cv-section" id="experience">
+  <h2 class="cv-section__label">Experience</h2>
+  <div class="cv-section__body">
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Oct 2026 to present</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Research Associate</h3>
+        <p class="cv-entry__org">Kigali Collaborative Research Center, Kigali, Rwanda</p>
+        <p>Edge AI and compression methods for computer vision. KCRC is the African deployment partner for the CRISPER IoT project (Compression-Driven Insights and Performance Enrichment for IoT).</p>
+      </div>
     </div>
-    <span class="exp-org">Center for Atmospheric Particle Studies (CAPS) - CMU</span>
-    <p class="exp-desc">Worked with Prof Albert Presto's group through the CMU-Africa student exchange. Contributed to a smartphone-based method for measuring black carbon, analyzing photos of Aethalometer samples across multiple wavelength channels to identify the presence of fossil-fuel from wood-smoke pollution.</p>
-      <div class="exp-skills">
-        <span class="skill-pill">Computer Vision</span>
-        <span class="skill-pill">Machine Learning</span>
-        <span class="skill-pill">Environmental Tech</span>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Jul 2024 to Oct 2025</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Research Associate</h3>
+        <p class="cv-entry__org">Carnegie Mellon University Africa, Kigali, Rwanda</p>
+        <p>Worked with Prof. Edwin Mugume on low-cost weather sensors deployed across East Africa, mostly on their design.</p>
+        <details class="cv-more">
+          <summary>Technical details</summary>
+          <ul>
+            <li>Designed 3D radiation shields for the sensor nodes in Fusion 360</li>
+            <li>Estimated and simulated each node's energy use and network traffic</li>
+            <li>Built the time-series pipelines that ingest data from the field</li>
+            <li>Built dashboards for the live air quality and weather data</li>
+          </ul>
+        </details>
+      </div>
     </div>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Jan to May 2024</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Research Assistant</h3>
+        <p class="cv-entry__org">Center for Atmospheric Particle Studies (CAPS), Carnegie Mellon University, Pittsburgh, USA</p>
+        <p>In Prof. Albert Presto's group, through the CMU-Africa student exchange. I worked on a smartphone-based method for measuring black carbon. We photographed Aethalometer filter samples and analysed the images across wavelength channels to tell fossil-fuel pollution apart from wood smoke.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Aug to Dec 2023</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Teaching Assistant, Internet of Things</h3>
+        <p class="cv-entry__org">Carnegie Mellon University Africa, Kigali, Rwanda</p>
+        <p>Ran recitations and helped students build IoT systems with sensors on Raspberry Pi, Node.js backends and HTTP calls over 2G/3G modems.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">May to Aug 2023</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Graduate Intern</h3>
+        <p class="cv-entry__org">AfriqAir, Kigali Collaborative Research Center, Kigali, Rwanda</p>
+        <p>Built a wireless data logger that collected air quality readings from a Thermo Fisher TEOM monitor automatically, in Python and C++ on a Raspberry Pi and an Arduino. Also built a React and TypeScript dashboard for the live sensor feeds.</p>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Teaching Assistant, Internet of Things</h3>
-      <span class="exp-date">Aug - Dec 2023</span>
+<section class="cv-section" id="education">
+  <h2 class="cv-section__label">Education</h2>
+  <div class="cv-section__body">
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Jul 2022 to May 2024</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">MSc Electrical and Computer Engineering</h3>
+        <p class="cv-entry__org">Carnegie Mellon University, Kigali, Rwanda and Pittsburgh, USA</p>
+        <p>Focused on machine learning and software engineering. I was president of the Internet of Things club.</p>
+        <details class="cv-more">
+          <summary>Selected coursework</summary>
+          <ul>
+            <li><strong>Computer Vision</strong> (16-720): filtering and edge detection, HOG, Lucas-Kanade tracking, homographies, camera models, two-view geometry, structure from motion, CNNs and photometric stereo</li>
+            <li><strong>Introduction to Deep Learning</strong> (11-785): RNNs and LSTMs, sequence-to-sequence models, attention, Transformers and Vision Transformers</li>
+            <li><strong>Cognitive Robotics</strong> (18-799): ROS in C++, CRAM plans in Lisp, and pick-and-place with the PR2 and Lynxmotion AL5D arms in Gazebo and Bullet</li>
+            <li><strong>Autonomous Driving</strong> (18-744): the full vehicle stack from sensing and perception to planning, control and fault management; SAE autonomy levels; how EV drivetrains differ from combustion ones</li>
+            <li><strong>Internet of Things</strong>: wireless embedded sensing and its protocols, including HTTP, MQTT, LoRaWAN, GSM/GPRS, 3G/4G and GPS</li>
+          </ul>
+          <p>Breadth areas: algorithms and programming languages; AI, robotics and control; circuits; computer hardware; signal processing and communications; software systems and networking.</p>
+        </details>
+      </div>
     </div>
-    <span class="exp-org">Carnegie Mellon University</span>
-    <p class="exp-desc">Ran recitations and mentored students building IoT systems: embedded sensors on Raspberry Pi, Node.js backends, and REST/HTTP calls over 2G/3G modems.</p>
-      <div class="exp-skills">
-        <span class="skill-pill">IoT</span>
-        <span class="skill-pill">Raspberry Pi</span>
-        <span class="skill-pill">Node.js</span>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">2017 to 2021</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">BSc Computer Engineering</h3>
+        <p class="cv-entry__org">University of Ghana, Accra, Ghana</p>
+        <p>Electives in computer graphics (Unity3D), software engineering (PHP, JavaScript, Java and JavaFX on Postgres, OracleDB and SQLite) and computer-aided design in Solid Edge.</p>
+      </div>
     </div>
+
+    <div class="cv-entry">
+      <p class="cv-entry__when">Jun 2026</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">AWS Certified Solutions Architect, Associate</h3>
+        <p class="cv-entry__org">Amazon Web Services. <a href="https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url" rel="noreferrer">Verify on Credly</a> or read <a href="/personal/finally-aws-certified-solutions-architect-richard-djarbeng/">how I prepared</a>.</p>
+        <details class="cv-more">
+          <summary>What this covers</summary>
+          <p>Designing how applications run on AWS so they are fast, stay up when servers fail, keep data safe and don't cost more than they need to. That means picking and configuring compute (EC2, Lambda), networking (VPC, subnets, security groups), storage (S3, EBS, EFS) and databases (RDS, DynamoDB) along the lines of the AWS Well-Architected Framework.</p>
+        </details>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Graduate Intern</h3>
-      <span class="exp-date">May - Aug 2023</span>
-    </div>
-    <span class="exp-org">AfriqAir, Kigali Collaborative Research Center</span>
-    <p class="exp-desc">Designed and built a wireless data-logger that automated air-quality data collection from the Thermo Fisher TEOM system, using Python and C++ on Raspberry Pi and Arduino. Built a real-time dashboard in React.js and TypeScript for visualizing air-quality data from live sensor feeds.</p>
-      <div class="exp-skills">
-        <span class="skill-pill">React.js</span>
-        <span class="skill-pill">TypeScript</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">C++</span>
-    </div>
-  </div>
-</div>
-
-<div class="about-section" id="education">
-  <h2 class="about-section-title">Education</h2>
-
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">MSc Electrical and Computer Engineering</h3>
-      <span class="exp-date">2022 - 2024</span>
-    </div>
-    <span class="exp-org">Carnegie Mellon University</span>
-    <p class="exp-desc">Specialized in Machine Learning and Software Engineering. Served as Club President for the Internet of Things (IoT) club.</p>
-    <div class="exp-sub-section">
-      <strong class="exp-label">Breadth Areas:</strong>
-      <div class="exp-skills">
-        <span class="skill-pill">Algorithms/Complexity/Programming Languages</span>
-        <span class="skill-pill">Artificial Intelligence, Robotics and Control</span>
-        <span class="skill-pill">Circuits</span>
-        <span class="skill-pill">Computer Hardware Engineering</span>
-        <span class="skill-pill">Signal Processing and Communications</span>
-        <span class="skill-pill">Software Systems and Computer Networking</span>
+<section class="cv-section" id="projects">
+  <h2 class="cv-section__label">Projects</h2>
+  <div class="cv-section__body">
+    <ol class="cv-projects">
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/project_air_quality_dashboard.jpg" alt="Air quality dashboard for Kigali" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title"><a href="https://airanalysis.netlify.app" rel="noreferrer">Kigali air quality analysis dashboard</a> <span class="cv-tag">Data analysis</span></h3>
+        <p>PM2.5 in Kigali, analysed from US Embassy reference monitor data. The mean was 43.31 µg/m³, and 57% of readings were in the "Unhealthy" range or worse.</p>
       </div>
-    </div>
-    <details class="exp-tech-details" open>
-      <summary>Selected graduate coursework</summary>
-      <ul>
-        <li><strong>Cognitive Robotics</strong> (18-799): developed robot software with ROS in C++ (packages, topics, publishers, subscribers), wrote CRAM cognitive-architecture plans in Lisp, and programmed pick-and-place tasks for the PR2 and Lynxmotion AL5D manipulators in Gazebo and Bullet simulators</li>
-        <li><strong>Computer Vision</strong> (16-720): image filtering and edge detection, HOG descriptors, Lucas-Kanade optical flow tracking, homographies and image warping, camera models, two-view geometry, structure from motion, CNNs, and photometric stereo</li>
-        <li><strong>Autonomous Driving</strong> (18-744): sensing, perception, localization, driving behaviors, planning, control, and fault management across a full autonomous vehicle stack. Understanding the tradeoffs in the different levels of autonomy (SAE), the internal workings of an autonomous vehicle and differences in combustion vehicles vs Electric vehicles such as the drivetrain components and control systems </li>
-        <li><strong>Introduction to Deep Learning</strong> (11-785): RNNs/LSTMs, sequence-to-sequence, attention and Transformers, vision architectures (e.g., Vision Transformers)</li>
-        <li><strong>Internet of Things</strong>: wireless embedded sensing systems and communication protocols (HTTP, LoRaWAN, GSM, GPRS, 3G,4G, GPS, MQTT) </li>
-      </ul>
-    </details>
-  </div>
-
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">BSc Computer Engineering</h3>
-      <span class="exp-date">2017 - 2021</span>
-    </div>
-    <span class="exp-org">University of Ghana</span>
-    <p class="exp-desc"> Gained a solid foundation in computer engineering principles and practices.</p>
-    <details class="exp-tech-details" open>
-      <summary>Electives</summary>
-      <ul>
-        <li>Computer Graphics, with hands-on projects in Unity3D</li>
-        <li>Software Engineering, with projects in PHP, JavaScript, Java, and JavaFX across Postgres, OracleDB, and SQLite</li>
-        <li>Computer Aided Design, with 3D modeling in Solid Edge (Siemens)</li>
-      </ul>
-    </details>
-  </div>
-</div>
-
-<div class="about-section" id="learning">
-  <h2 class="about-section-title">Ongoing Learning</h2>
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title">Deep Learning &amp; Computer Vision</h3>
-    </div>
-<span class="exp-org">Self-directed study</span>
-    <p class="exp-desc">Independent study focused on deep learning and computer vision, building models and writing up the process on the blog as I go.</p>
-    <details class="exp-tech-details" open>
-      <summary>Technical areas I've been studying</summary>
-      <ul>
-        <li>CNNs and transfer learning, using PyTorch and FastAI</li>
-        <li>Object detection, semantic segmentation, and video understanding</li>
-        <li>Supervised learning and classification, plus time-series analysis</li>
-        <li>Reinforcement learning</li>
-        <li>Computational linear algebra</li>
-      </ul>
-    </details>
-    <div class="exp-skills">
-      <span class="skill-pill">PyTorch</span>
-      <span class="skill-pill">FastAI</span>
-      <span class="skill-pill">Computer Vision</span>
-    </div>
-  </div>
-</div>
-
-<div class="about-section" id="projects">
-  <h2 class="about-section-title">Projects</h2>
-  <p class="about-section-subtitle">Featured works in Software Engineering and Research</p>
-  <p class="project-disclaimer"><em>\* Note: Some images are illustrative representations and may not be direct screenshots of the project.</em></p>
-
-  <div class="filter-container">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="web">Web Dev</button>
-      <button class="filter-btn" data-filter="ml">ML & AI</button>
-      <button class="filter-btn" data-filter="iot">IoT & Research</button>
-      <button class="filter-btn" data-filter="data">Data Science</button>
-  </div>
-
-  <div class="cards-grid" id="projects-grid">
-    <!-- Project 1: Air Quality -->
-    <div class="project-card-about" data-category="web iot web research">
-      <div class="project-image-container">
-        <img src="/assets/images/project_air_quality_dashboard.jpg" alt="Air Quality Dashboard" onerror="this.src='https://images.unsplash.com/photo-1623851724495-9d332d7c57eb?auto=format&fit=crop&w=600&q=80'">
-        <span class="project-type-badge">Research Trend</span>
+      </li>
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/comp_vision_roboflow.jpeg" alt="Particulate filter images used for PM prediction" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title"><a href="https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html" rel="noreferrer">Mapping filter imagery to PM values</a> <span class="cv-tag">Machine learning</span></h3>
+        <p>Models that predict PM values from photos of particulate filters taken at several wavelengths. It is a cheap stand-in for lab analysis of black carbon.</p>
       </div>
-      <div class="project-content">
-        <h3 class="project-title">Air Quality Analysis Dashboard</h3>
-        <p class="project-desc">Developed an interactive dashboard to analyze PM2.5 air quality trends in Kigali, Rwanda, using data from US Embassy reference monitors. Found 57% of readings above the WHO "Unhealthy" threshold, with an average of 43.31 ug/m3.</p>
-        <div class="project-links">
-           <a href="https://airanalysis.netlify.app" target="_blank">View Dashboard <span>&rarr;</span></a>
-        </div>
+      </li>
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/satellite_orbiting_earth_color_codes.jpg" alt="Illustration of satellite imaging" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title">Transmission corridor monitoring <span class="cv-tag">Remote sensing</span></h3>
+        <p>Used Google Earth Engine and CNNs to spot encroachment on power transmission corridors in Ghana, for GRIDCo.</p>
       </div>
-    </div>
-    <!-- Project 2: Countdown -->
-    <div class="project-card-about" data-category="web">
-      <div class="project-image-container">
-        <img src="/assets/images/countdown_mobile.png" alt="Countdown App" class="countdown-img">
-        <span class="project-type-badge">Web App</span>
+      </li>
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/richard_picture_comparison_background_remover.png" alt="Before and after background removal" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title"><a href="/free-hd-background-remover-effortless-image-editing-tool/">Free background remover</a> <span class="cv-tag">Deep learning</span></h3>
+        <p>A segmentation model (rembg with U2Net) running on Hugging Face Spaces.</p>
       </div>
-      <div class="project-content">
-        <h3 class="project-title">Countdown PWA</h3>
-        <p class="project-desc">A feature-rich Countdown timer Progressive Web App (PWA) with customizable themes and offline support. Achieved significant user engagement through user-centered design iterations.</p>
-        <div class="project-links">
-           <a href="https://github.com/RDjarbeng/countdown" target="_blank">View Code <span>&rarr;</span></a>
-        </div>
+      </li>
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/gsm_module.jpg" alt="GSM module" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/HTTP-GET-POST-Request-with-GSM" rel="noreferrer">HTTP over GSM</a> <span class="cv-tag">Embedded C++</span></h3>
+        <p>HTTP GET and POST requests from GSM modules in C++, for sending IoT data from places without Wi-Fi.</p>
       </div>
-    </div>
-    <!-- Project 3: Pollution Classification -->
-    <div class="project-card-about" data-category="ml iot research">
-      <div class="project-image-container">
-        <img src="/assets/images/comp_vision_roboflow.jpeg" alt="Filter Imagery to PM Values">
-        <span class="project-type-badge">Machine Learning</span>
+      </li>
+      <li class="has-thumb">
+        <img class="cv-thumb" src="/assets/images/countdown_mobile.png" alt="Countdown app on a phone" width="88" height="88" loading="lazy">
+        <div>
+        <h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/countdown" rel="noreferrer">Countdown PWA</a> <span class="cv-tag">Web</span></h3>
+        <p>A countdown timer web app with themes that works offline.</p>
       </div>
-      <div class="project-content">
-        <h3 class="project-title">Mapping Filter Imagery to PM Values</h3>
-        <p class="project-desc">Built models to map image data of particulate matter filters, captured across wavelengths, to PM values, providing a low-cost alternative to laboratory analysis for black carbon estimation.</p>
-        <div class="project-links">
-          <a href="https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html" target="_blank">Read Article <span>&rarr;</span></a>
-        </div>
-      </div>
-    </div>
-    <!-- Project 4: Taxi Fleet -->
-    <div class="project-card-about" data-category="data cloud">
-      <div class="project-image-container">
-        <img src="/assets/images/kigali_bustop_motor.jpg" alt="Taxi Fleet">
-        <span class="project-type-badge">GCP Dataflow</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Real-Time Taxi Fleet Management</h3>
-        <p class="project-desc">Designed a streaming data pipeline using Google Cloud Dataflow and BigQuery to ingest and analyze real-time taxi data, displaying live metrics on Looker Studio.</p>
-      </div>
-    </div>
-    <!-- Project 5: Background Remover -->
-    <div class="project-card-about" data-category="ml web">
-      <div class="project-image-container">
-        <img src="/assets/images/richard_picture_comparison_background_remover.png" alt="Background Remover">
-        <span class="project-type-badge">Deep Learning</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Free Background Remover</h3>
-        <p class="project-desc">Deployed a semantic segmentation model on Hugging Face to remove image backgrounds automatically. Uses `rembg` and U2Net models for high-quality segmentation.</p>
-        <div class="project-links">
-          <a href="/free-hd-background-remover-effortless-image-editing-tool" target="_blank">View App <span>&rarr;</span></a>
-        </div>
-      </div>
-    </div>
-    <!-- Project 6: Loan Risk -->
-    <div class="project-card-about" data-category="ml data">
-      <div class="project-image-container">
-        <img src="/assets/images/loan_risk_prediction_dashboard.jpg" alt="Loan Risk">
-        <span class="project-type-badge">AutoML</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Predicting Loan Risk</h3>
-        <p class="project-desc">Built and deployed a loan default risk prediction model on Google Cloud Vertex AI AutoML. I evaluated it with precision/recall and ROC curves, and checked feature importance to understand the contribution of each predictor .</p>
-      </div>
-    </div>
-    <!-- Project 7: BigQuery -->
-    <div class="project-card-about projects-hidden" data-category="data">
-      <div class="project-image-container">
-        <img src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="BigQuery">
-        <span class="project-type-badge">Big Data</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">E-commerce Purchase Prediction</h3>
-        <p class="project-desc">Built a classification model on Google Analytics data to predict returning-customer purchase intent. Feature engineering around checkout progress, traffic source, and device moved ROC AUC from 0.72 to 0.94.</p>
-      </div>
-    </div>
-    <!-- Project 8: GSM IoT -->
-    <div class="project-card-about projects-hidden" data-category="iot research">
-      <div class="project-image-container">
-        <img src="/assets/images/gsm_module.jpg" alt="GSM IoT">
-        <span class="project-type-badge">Embedded C++</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">GSM HTTP Requests</h3>
-        <p class="project-desc">Implementation of HTTP GET and POST requests using GSM modules with C++. A core component for remote IoT data transmission.</p>
-        <div class="project-links">
-          <a href="https://github.com/RDjarbeng/HTTP-GET-POST-Request-with-GSM" target="_blank">View Code <span>&rarr;</span></a>
-        </div>
-      </div>
-    </div>
-    <!-- Project 9: University System -->
-    <div class="project-card-about projects-hidden" data-category="web">
-      <div class="project-image-container">
-        <img src="/assets/images/university_management_system_dashboard.jpg" alt="University System">
-        <span class="project-type-badge">Java/TSQL</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">University Admission System</h3>
-        <p class="project-desc">A comprehensive Admission Management System built with JavaFx and TSQL, designed to streamline the university enrollment process.</p>
-        <div class="project-links">
-          <a href="https://github.com/RDjarbeng/University-Admission-Management-System" target="_blank">View Code <span>&rarr;</span></a>
-        </div>
-      </div>
-    </div>
-    <!-- Project 10: Remote Sensing -->
-    <div class="project-card-about projects-hidden" data-category="ml research">
-      <div class="project-image-container">
-        <img src="/assets/images/satellite_orbiting_earth_color_codes.jpg" alt="Transmission">
-        <span class="project-type-badge">Remote Sensing</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Transmission Corridor Monitoring</h3>
-        <p class="project-desc">Used Google Earth Engine and CNNs to detect encroachment on power transmission corridors in Ghana, enhancing safety for GRIDCo.</p>
-      </div>
-    </div>
-    <!-- Project 11: Game -->
-    <div class="project-card-about projects-hidden" data-category="web game">
-      <div class="project-image-container">
-        <img src="/assets/images/escape_covid_maze_game.jpg" alt="Game">
-        <span class="project-type-badge">Unity / C#</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Escape the Covid Maze</h3>
-        <p class="project-desc">A 2D Unity3D game challenging players to navigate a maze while avoiding dynamic enemies using A\* search algorithms.</p>
-      </div>
-    </div>
-    <!-- Project 12: Open Source -->
-    <div class="project-card-about projects-hidden" data-category="ml web">
-      <div class="project-image-container">
-        <img src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="ML Package">
-        <span class="project-type-badge">Open Source</span>
-      </div>
-      <div class="project-content">
-        <h3 class="project-title">Machine Learning Complete</h3>
-        <p class="project-desc">Contributor to a comprehensive machine learning educational package to democratize AI education.</p>
-        <div class="project-links">
-          <a href="https://github.com/Nyandwi/machine_learning_complete/" target="_blank">View Code <span>&rarr;</span></a>
-        </div>
-      </div>
-    </div>
-  </div> <!-- End Grid -->
-
-  <div class="show-more-container">
-      <button id="show-more-btn" class="show-more-btn">Show More Projects</button>
-  </div>
-</div>
-
-<div class="about-section" id="open-source">
-  <h2 class="about-section-title">Notable Open-Source Contributions</h2>
-  <p class="about-section-subtitle">Selected contributions to open-source projects</p>
-
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title"><a href="https://github.com/Nyandwi/machine_learning_complete" target="_blank" rel="noreferrer">Machine Learning Complete</a></h3>
-      <span class="exp-date">PR merged September 2023</span>
-    </div>
-    <span class="exp-org">by Nyandwi &middot; \~5k stars &middot; 800+ forks</span>
-    <p class="exp-desc">Merged <a href="https://github.com/Nyandwi/machine_learning_complete/pull/9" target="_blank" rel="noreferrer">pull request #9</a>: added a curated collection of freely accessible Python learning resources (books, online courses, and videos) to the introductory chapter, verifying each resource was genuinely free before inclusion.</p>
-    <div class="exp-skills">
-        <span class="skill-pill">Open Source</span>
-        <span class="skill-pill">Curation</span>
-        <span class="skill-pill">Python</span>
-    </div>
-  </div>
-
-  <div class="experience-card">
-    <div class="exp-header">
-      <h3 class="exp-title"><a href="https://github.com/sveltia/sveltia-cms" target="_blank" rel="noreferrer">SveltiaCMS</a></h3>
-      <span class="exp-date">Contributor</span>
-    </div>
-    <span class="exp-org">Git-based headless CMS (Decap CMS alternative)</span>
-    <p class="exp-desc">Reported and followed through on <a href="https://github.com/sveltia/sveltia-cms/issues?q=is%3Aissue%20state%3Aclosed%20author%3ARDjarbeng" target="_blank" rel="noreferrer">several closed issues</a> during development. This website's content workflow also runs on SveltiaCMS.</p>
-    <div class="exp-skills">
-        <span class="skill-pill">Open Source</span>
-        <span class="skill-pill">Issue Triage</span>
-        <span class="skill-pill">Jamstack</span>
-    </div>
-  </div>
-</div>
-
-## Areas of interest:
-
-### Education:
-
-* What are the best ways to learn AI and machine learning, and what resources are recommended?
-* Who are the key people in the field of AI and machine learning, beyond the media hype?
-
-I cover this in posts like Complete Machine Learning Package: Learn by Doing and Machine Learning Specialization by Andrew Ng and DeepLearning.AI:
-
-<div class="cards-grid cards-grid-mini">
-  {% assign ml1 = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first %}
-  {% if ml1 %}{% include post-card.html post=ml1 %}{% endif %}
-
-  {% assign ml2 = site.posts | where: "slug", "machine-learning-specialization-by-andrew-ng-and-deeplearning-ai" | first %}
-  {% if ml2 %}{% include post-card.html post=ml2 %}{% endif %}
-
-  {% assign ml3 = site.posts | where: "slug", "machine-learning-experts-to-follow" | first %}
-  {% if ml3 %}{% include post-card.html post=ml3 %}{% endif %}
-</div>
-
-### AI / Machine Learning:
-
-* What are the latest advances in AI and machine learning and what are the best ways to apply them to real-world problems?
-* How do you leverage the latest advances in AI using available tools such as cloud (AWS, google) and companies such as Nvidia, Microsoft, Anthropic, OpenAI and AMD?
-* Computer vision: What are the latest advances in computer vision and in what areas can they be applied?
-
-### Remote Sensing & GIS:
-
-* **The Measurement Gap:** How do we bridge the "spatial gap" between high-accuracy ground stations (point measurements) and global satellite data (area-averaged)?
-* **Sensor Fusion:** How can low-cost IoT sensor networks (which are often "noisy") be calibrated/updated in real-time using data from high-grade reference instruments?
-* How do ground air quality measurements compare with remote/satellite derived measurements and how can they be improved especially in Africa?
-* How do the latest advances in computer vision advance remote sensing and what areas can they be applied to improve sensing?
-* What is the impact of advances in Internet of Things (IoT), AI and remote sensing and which initiatives are taking advantage of them especially on the african continent?
-
-### Finance:
-
-Why can I pay for Netflix instantly, but not send money to a friend abroad? Why are international payments slow, expensive, and opaque? I explored this phenomenon and potential solutions in this series:
-
-<div class="cards-grid cards-grid-mini">
-  {% assign p1 = site.posts | where: "slug", "visa-and-mastercard-payment-cards-not-transfer-tools" | first %}
-  {% if p1 %}{% include post-card.html post=p1 %}{% endif %}
-
-  {% assign p2 = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first %}
-  {% if p2 %}{% include post-card.html post=p2 %}{% endif %}
-
-  {% assign p3 = site.posts | where: "slug", "what-is-google-pay-and-apple-pay-how-they-work-where-they-work-why-they-re-safer" | first %}
-  {% if p3 %}{% include post-card.html post=p3 %}{% endif %}
-</div>
-
-<div class="about-section" id="skills">
-  <h2 class="about-section-title">Skills &amp; Resumes</h2>
-  <p class="about-section-subtitle">Core technical proficiencies, specialized toolsets, and curriculum vitae</p>
-
-  <div class="resume-section-container">
-    <h3 class="resume-heading">Download Resumes</h3>
-    <div class="resume-section">
-      <a href="/assets/documents/Richard_Resume_Software_engineering.pdf" target="_blank" class="resume-btn" title="Download Software Engineer Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Software Engineering CV
-      </a>
-      <a href="/assets/documents/Resume_ML.pdf" target="_blank" class="resume-btn" title="Download Machine Learning Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Machine Learning CV
-      </a>
-      <a href="/assets/documents/Richard_Resume_Research.pdf" target="_blank" class="resume-btn" title="Download Research Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Research CV
-      </a>
-      <a href="/assets/documents/robotics_cv_richard_main.pdf" target="_blank" class="resume-btn" title="Download Robotics Resume">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        Robotics CV
-      </a>
-    </div>
-  </div>
-
-  <div class="skills-block">
-    <p class="exp-desc">I work in Python, JavaScript/TypeScript, and C++. I use PyTorch, Keras, and FastAI for machine learning, React for the web, and I deploy models to Vertex AI, BigQuery ML, AWS, and Hugging Face Spaces.</p>
-    <details class="exp-tech-details skills-collapse-details">
-      <summary>View all technical skills and toolsets</summary>
-      <div class="skills-depth-summary">
-        <ul>
-          <li>Classification and supervised learning: from logistic regression to CNNs (ResNet) and transfer learning; ROC/PR evaluation; feature engineering.</li>
-          <li>Computer vision: object detection (YOLO-World), semantic segmentation (U-Net, ISNet), video analysis, satellite imagery in Google Earth Engine.</li>
-          <li>Real-time pipelines and dashboards: streaming ingestion through Dataflow into BigQuery, live dashboards in Looker Studio.</li>
-        </ul>
-      </div>
-      <div class="skills-container">
-        <div class="skill-category">
-          <div class="skill-category-title">Languages</div>
-          <div class="skill-list">
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JS"> JavaScript (ES6+)</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TS"> TypeScript</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python"> Python</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java"> Java</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/cplusplus-colored.svg" alt="C++"> C++</span>
-            <span class="skill-item">C</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" alt="C#"> C#</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dart-colored.svg" alt="Dart"> Dart (Flutter)</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
-            <span class="skill-item">SQL</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Frontend</div>
-          <div class="skill-list">
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React"> React.js</span>
-            <span class="skill-item">GatsbyJS</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5"> HTML5</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3"> CSS3</span>
-            <span class="skill-item">PWAs</span>
-            <span class="skill-item">Performance Optimisation</span>
-            <span class="skill-item">Responsive Design</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Backend &amp; APIs</div>
-          <div class="skill-list">
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="Node"> Node.js</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" alt="PHP"> PHP</span>
-            <span class="skill-item">Express.js</span>
-            <span class="skill-item">RESTful APIs</span>
-            <span class="skill-item">WebSockets</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ruby-colored.svg" alt="Ruby"> Ruby</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Machine Learning &amp; AI</div>
-          <div class="skill-list">
-            <span class="skill-item">PyTorch</span>
-            <span class="skill-item">Keras</span>
-            <span class="skill-item">FastAI</span>
-            <span class="skill-item">Computer Vision</span>
-            <span class="skill-item">Model Deployment</span>
-            <span class="skill-item">Hugging Face</span>
-            <span class="skill-item">Vertex AI</span>
-            <span class="skill-item">AWS ML</span>
-            <span class="skill-item">LLM Red-Teaming &amp; Evaluation</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Cloud &amp; DevOps</div>
-          <div class="skill-list">
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg" alt="AWS" onerror="this.style.display='none'"> AWS (Solutions Architect)</span>
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="GCP"> Google Cloud Platform</span>
-            <span class="skill-item">BigQuery</span>
-            <span class="skill-item">Dataflow</span>
-            <span class="skill-item">Netlify</span>
-            <span class="skill-item">Render</span>
-            <span class="skill-item">Hugging Face Spaces</span>
-            <span class="skill-item">CI/CD</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">CMS Platforms</div>
-          <div class="skill-list">
-            <span class="skill-item">DecapCMS (NetlifyCMS)</span>
-            <span class="skill-item">SveltiaCMS</span>
-            <span class="skill-item">Custom CMS Backends</span>
-            <span class="skill-item">Headless CMS</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Data &amp; Analytics</div>
-          <div class="skill-list">
-            <span class="skill-item">Satellite Image Processing</span>
-            <span class="skill-item">Google Earth Engine</span>
-            <span class="skill-item">BigQuery ML</span>
-            <span class="skill-item">Google Looker Studio</span>
-            <span class="skill-item">Data Visualisation</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Robotics</div>
-          <div class="skill-list">
-            <span class="skill-item">ROS (C++)</span>
-            <span class="skill-item">CRAM Cognitive Architecture</span>
-            <span class="skill-item">Robot Manipulation</span>
-            <span class="skill-item">Pick-and-Place</span>
-            <span class="skill-item">Gazebo &amp; Bullet Simulators</span>
-            <span class="skill-item">Homogeneous Transforms &amp; Quaternions</span>
-            <span class="skill-item">A\* Pathfinding</span>
-            <span class="skill-item">Unity3D</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Embedded &amp; IoT</div>
-          <div class="skill-list">
-            <span class="skill-item">C</span>
-            <span class="skill-item">C++</span>
-            <span class="skill-item">Raspberry Pi</span>
-            <span class="skill-item">Arduino</span>
-            <span class="skill-item">GSM Modules</span>
-            <span class="skill-item">Sensor Calibration</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">Tools &amp; Practices</div>
-          <div class="skill-list">
-            <span class="skill-item"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git"> Git</span>
-            <span class="skill-item">GitHub</span>
-            <span class="skill-item">Open-Source Maintenance</span>
-            <span class="skill-item">PR Review</span>
-            <span class="skill-item">Test-Driven Development (TDD)</span>
-            <span class="skill-item">Agile Methodologies</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <div class="skill-category-title">AI Tools &amp; Evaluation</div>
-          <div class="skill-list">
-            <span class="skill-item">Hugging Face Agents CLI</span>
-            <span class="skill-item">AI-Assisted Dev Workflows</span>
-            <span class="skill-item">LLM Code Evaluation</span>
-            <span class="skill-item">Red-Teaming LLMs</span>
-            <span class="skill-item">OpenClaw</span>
-            <span class="skill-item">Cursor</span>
-            <span class="skill-item">Gemini</span>
-            <span class="skill-item">Antigravity</span>
-          </div>
-        </div>
-      </div>
+      </li>
+    </ol>
+    <p class="cv-note">Some pictures are illustrations rather than screenshots.</p>
+    <details class="cv-more">
+      <summary>Six more projects</summary>
+      <ol class="cv-projects" start="7">
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/kigali_bustop_motor.jpg" alt="Taxis and motorbikes at a Kigali bus stop" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Real-time taxi fleet pipeline <span class="cv-tag">Data engineering</span></h3><p>Streamed taxi data through Google Cloud Dataflow into BigQuery, with live metrics in Looker Studio.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/loan_risk_prediction_dashboard.jpg" alt="Loan risk prediction dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Loan default risk prediction <span class="cv-tag">AutoML</span></h3><p>A Vertex AI AutoML model, evaluated with precision, recall and ROC curves, plus a look at which features mattered most.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="Illustration of a revenue leaderboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">E-commerce purchase prediction <span class="cv-tag">BigQuery ML</span></h3><p>Predicted repeat purchases from Google Analytics data. Features built from checkout progress, traffic source and device raised ROC AUC from 0.72 to 0.94.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/university_management_system_dashboard.jpg" alt="University admission system dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/University-Admission-Management-System" rel="noreferrer">University admission system</a> <span class="cv-tag">Java</span></h3><p>An admission management system in JavaFX and T-SQL.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/escape_covid_maze_game.jpg" alt="Escape the Covid Maze game screen" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Escape the Covid Maze <span class="cv-tag">Unity / C#</span></h3><p>A 2D Unity game where enemies chase you through a maze using A* search.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="Machine Learning Complete course cover" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/Nyandwi/machine_learning_complete/" rel="noreferrer">Machine Learning Complete</a> <span class="cv-tag">Open source</span></h3><p>I contributed to this open machine learning course (see below).</p></div></li>
+      </ol>
     </details>
   </div>
-</div>
+</section>
 
-<div class="about-section" id="certifications">
-  <h2 class="about-section-title">Certifications</h2>
-  <p class="about-section-subtitle">Professional credentials and verified achievements</p>
-
-  <div class="experience-card cert-experience-card">
-    <div class="cert-card-header">
-      <div class="certification-badge">
-        <img src="/assets/images/rd/aws-certified-solutions-architect-associate_richard_djarbeng_badge.png" alt="AWS Certified Solutions Architect Associate badge" width="110" height="110">
-      </div>
-      <div class="cert-card-title-group">
-        <div class="exp-header">
-          <h3 class="exp-title">AWS Certified Solutions Architect</h3>
-          <span class="exp-date">Associate</span>
-        </div>
-        <span class="exp-org">Amazon Web Services (AWS)</span>
-        <div class="cert-card-actions">
-          <a href="https://www.credly.com/badges/7572e2fe-f26c-4711-9e7d-d439b1fe20b2/public_url" target="_blank" rel="noreferrer" class="cert-action-btn" title="Verify AWS Certified Solutions Architect Associate on Credly">Verify on Credly &rarr;</a>
-          <a href="/personal/finally-aws-certified-solutions-architect-richard-djarbeng/" class="cert-action-btn cert-action-secondary" title="Read write-up on AWS Solutions Architect certification">Read Certification Article &rarr;</a>
-        </div>
+<section class="cv-section" id="open-source">
+  <h2 class="cv-section__label">Open source</h2>
+  <div class="cv-section__body">
+    <div class="cv-entry">
+      <p class="cv-entry__when">Sep 2023</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title"><a href="https://github.com/Nyandwi/machine_learning_complete" rel="noreferrer">Machine Learning Complete</a></h3>
+        <p class="cv-entry__org">by Nyandwi, about 5k stars</p>
+        <p>My <a href="https://github.com/Nyandwi/machine_learning_complete/pull/9" rel="noreferrer">pull request #9</a> was merged. It added a list of free Python learning resources (books, courses and videos) to the introductory chapter. I checked that each one really was free before adding it.</p>
       </div>
     </div>
-    <div class="cert-plain-explainer">
-      <strong class="cert-explainer-label">What this means in plain terms:</strong>
-      <p class="exp-desc cert-explainer-text">In simple terms, cloud computing means hosting and running software on secure remote data centers managed by companies like Amazon rather than on local physical computers. An AWS Certified Solutions Architect designs the blueprint for how applications run in this cloud environment. That involves selecting and configuring the right cloud services so software runs fast, stays online during server failures, protects sensitive user data, and operates without unnecessary hosting costs.</p>
+    <div class="cv-entry">
+      <p class="cv-entry__when">Ongoing</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title"><a href="https://github.com/sveltia/sveltia-cms" rel="noreferrer">Sveltia CMS</a></h3>
+        <p class="cv-entry__org">Git-based headless CMS</p>
+        <p>I've reported <a href="https://github.com/sveltia/sveltia-cms/issues?q=is%3Aissue%20state%3Aclosed%20author%3ARDjarbeng" rel="noreferrer">several issues</a> and followed them through to fixes. This site's content runs on it.</p>
+      </div>
     </div>
-    <details class="exp-tech-details" open>
-      <summary>Cloud architecture and AWS experience</summary>
-      <ul>
-        <li><strong>Hands-on system design:</strong> Over a year of direct experience designing, deploying, and operating distributed systems and cloud workloads on the AWS platform.</li>
-        <li><strong>Core cloud infrastructure:</strong> Practical engineering across foundational AWS services: compute (EC2, Lambda), networking (VPC, subnets, route tables, security groups), storage (S3, EBS, EFS), and databases (RDS, DynamoDB).</li>
-        <li><strong>Requirement-driven architecture:</strong> Translating business and customer requirements into reliable, production-ready cloud architectures based on proven design principles.</li>
-        <li><strong>Implementation guidance:</strong> Providing architectural roadmaps, technical documentation, and best practices for teams building or migrating applications to the cloud.</li>
-        <li><strong>Service evaluation and selection:</strong> Evaluating workload demands and selecting the right AWS services to balance latency, resilience, and cost efficiency.</li>
-        <li><strong>Well-Architected Framework:</strong> Applying core architectural pillars (security, reliability, performance efficiency, and cost optimization) to build resilient systems without single points of failure.</li>
-        <li><strong>Global infrastructure and networking:</strong> Deep understanding of AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the network technologies that connect distributed environments worldwide.</li>
-      </ul>
-    </details>
-
   </div>
-</div>
+</section>
 
-<div class="about-section" style="text-align: center;">
-    <h3>Connect With Me</h3>
-    <p>Feel free to reach out for collaborations or just a chat about technology!</p>
+<section class="cv-section" id="writing">
+  <h2 class="cv-section__label">Selected writing</h2>
+  <div class="cv-section__body">
+    <p>I write about what I'm building and learning. Some places to start:</p>
+    <ul class="cv-list cv-list--plain">
+      <li><a href="/air-quality/">Air quality and environmental sensing in Africa</a>, a reading list that goes from the basics to field work</li>
+      {%- assign w = site.posts | where: "slug", "understanding-the-air-quality-index-aqi" | first -%}{%- if w %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a></li>{% endif -%}
+      {%- assign w = site.posts | where: "slug", "ambient-air-quality-standards-in-west-africa-the-current-state-2025" | first -%}{%- if w %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a></li>{% endif -%}
+      {%- assign w = site.posts | where: "slug", "complete-machine-learning-package-learn-by-doing" | first -%}{%- if w %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a></li>{% endif -%}
+      {%- assign w = site.posts | where: "slug", "machine-learning-experts-to-follow" | first -%}{%- if w %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a></li>{% endif -%}
+      {%- assign w = site.posts | where: "slug", "why-can-i-pay-for-netflix-instantly-but-not-send-money-abroad" | first -%}{%- if w %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a>, from a series on why sending money abroad is slow and expensive</li>{% endif %}
+    </ul>
+    <p><a href="/posts/">All technical posts</a>. <a href="/editorial-policy/">How I source and correct posts</a>.</p>
+  </div>
+</section>
 
-    <p align="center">
-        <a href="https://www.github.com/RDjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
-        <a href="https://www.linkedin.com/in/richarddjarbeng" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
-        <a href="https://www.twitter.com/DjarbengRichard" target="_blank" rel="noreferrer"><img class="about-image" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" style="display:inline; margin:10px;" /></a>
-    </p>
-</div>
+<section class="cv-section" id="skills">
+  <h2 class="cv-section__label">Skills</h2>
+  <div class="cv-section__body">
+    <dl class="cv-skills">
+      <dt>Languages</dt><dd>Python, JavaScript/TypeScript, C++, C, Java, C#, SQL. Some Dart, PHP and Ruby.</dd>
+      <dt>Machine learning</dt><dd>PyTorch, Keras, FastAI. CNNs and transfer learning, object detection (YOLO-World), segmentation (U-Net, ISNet), evaluating and red-teaming LLMs.</dd>
+      <dt>Data and cloud</dt><dd>AWS, Google Cloud (BigQuery, BigQuery ML, Dataflow, Vertex AI), Google Earth Engine, Looker Studio, Hugging Face Spaces.</dd>
+      <dt>Embedded and IoT</dt><dd>Raspberry Pi, Arduino, GSM modules, sensor calibration, enclosure design in Fusion 360.</dd>
+      <dt>Robotics</dt><dd>ROS (C++), CRAM, manipulation and pick-and-place, Gazebo and Bullet, homogeneous transforms, A* path planning.</dd>
+      <dt>Web</dt><dd>React, Node.js and Express, REST and WebSockets, PWAs, Eleventy, Sveltia and Decap CMS.</dd>
+    </dl>
+    <p class="cv-cvs">CVs for different roles: <a href="/assets/documents/Richard_Resume_Research.pdf">research</a>, <a href="/assets/documents/Resume_ML.pdf">machine learning</a>, <a href="/assets/documents/Richard_Resume_Software_engineering.pdf">software engineering</a> and <a href="/assets/documents/robotics_cv_richard_main.pdf">robotics</a>.</p>
+  </div>
+</section>
 
-<div class="donation-section" align="center">
-  <p>Love my work? Support me with a small donation!</p>
-  <a href="https://buymeacoffee.com/rdjarbeng" target="_blank">
-    <button class="donate-btn">Support Me</button>
-  </a>
-</div>
+<section class="cv-section cv-section--contact">
+  <h2 class="cv-section__label">Contact</h2>
+  <div class="cv-section__body">
+    <p>If you want to work together on research, or have a question about something I wrote, email <a href="mailto:rdjarbeng@rdjarbeng.com">rdjarbeng@rdjarbeng.com</a> or use the form below. And if a post helped you, you can <a href="https://buymeacoffee.com/rdjarbeng" rel="noreferrer">buy me a coffee</a>.</p>
+  </div>
+</section>
 
-<script>
-    // Filter Functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card-about'); // Update selector
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-             // Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            projectCards.forEach(card => {
-                const cardCategories = card.getAttribute('data-category');
-                // Check if card matches filter (or if filter is 'all')
-                if (filterValue === 'all' || (cardCategories && cardCategories.includes(filterValue))) {
-                    card.style.display = 'flex'; // Or appropriate display type
-                     // If it was hidden by 'Show More', we might need to respect that logic,
-                     // OR simply show all matching items and potentially hide the 'Show More' button if we filter.
-                     // A simple approach: When filtering, show all matches immediately, ignoring 'Show More' limit.
-                     card.classList.remove('projects-hidden'); // Ensure it's not hidden by class
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-             // Hide "Show More" button when filtering (optional, but cleaner)
-            const showMoreBtn = document.getElementById('show-more-btn');
-            if(showMoreBtn) {
-                 if (filterValue === 'all') {
-                     // Maybe restore original state if 'all' is clicked?
-                     // For simplicity, let's just keep everything visible if user filters back to all
-                      showMoreBtn.style.display = 'none';
-                 } else {
-                     showMoreBtn.style.display = 'none';
-                 }
-            }
-        });
-    });
-
-    // Show More Functionality (only relevant on initial load or 'all' view)
-    const showMoreBtn = document.getElementById('show-more-btn');
-    if (showMoreBtn) {
-        showMoreBtn.addEventListener('click', function() {
-            var hiddenProjects = document.querySelectorAll('.projects-hidden');
-            hiddenProjects.forEach(function(project) {
-                project.style.display = 'flex';
-                project.style.opacity = 0;
-                 project.classList.remove('projects-hidden'); // Remove the class so filtering works correctly later
-                setTimeout(() => {
-                     project.style.transition = 'opacity 0.5s ease';
-                     project.style.opacity = 1;
-                }, 50);
-            });
-            this.style.display = 'none';
-        });
-    }
-</script>
