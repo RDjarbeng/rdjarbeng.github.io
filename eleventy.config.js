@@ -76,6 +76,7 @@ module.exports = function(eleventyConfig) {
   const liquidTemplateCache = new Map();
   eleventyConfig.on("eleventy.before", () => liquidTemplateCache.clear());
 
+
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,
     strictFilters: false,
@@ -161,7 +162,8 @@ module.exports = function(eleventyConfig) {
           name: (siteData.author && siteData.author.name) || "Richard Djarbeng",
           url: `${SITE}/about/`,
           image: `${SITE}/assets/images/richard/richard-djarbeng-headshot.jpg`,
-          jobTitle: "Software and Machine Learning Engineer",
+          jobTitle: "Research Associate",
+          worksFor: { "@type": "Organization", name: "Kigali Collaborative Research Center", address: "Kigali, Rwanda" },
           alumniOf: { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
           knowsAbout: ["Machine learning", "Computer vision", "Internet of Things", "Environmental sensing", "Satellite and climate data"],
           sameAs: (siteData.social && siteData.social.links) || [],
@@ -246,7 +248,31 @@ module.exports = function(eleventyConfig) {
             itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
           });
         } else if (url === "/about/") {
-          graph.push({ ...authorPerson, url: canonical });
+          // Dated role history, so search engines and AI agents get the order of positions right.
+          // Keep in sync with the Experience section of about.md.
+          const org = (name, address) => ({ "@type": "Organization", name, address });
+          graph.push({
+            "@type": "ProfilePage",
+            "@id": `${canonical}#page`,
+            url: canonical,
+            dateModified: new Date().toISOString().slice(0, 10),
+            mainEntity: {
+              ...authorPerson,
+              url: canonical,
+              worksFor: [
+                { "@type": "EmployeeRole", roleName: "Research Associate", startDate: "2026-10",
+                  worksFor: org("Kigali Collaborative Research Center", "Kigali, Rwanda") },
+                { "@type": "EmployeeRole", roleName: "Research Associate", startDate: "2024-07", endDate: "2025-10",
+                  worksFor: org("Carnegie Mellon University Africa", "Kigali, Rwanda") },
+                { "@type": "EmployeeRole", roleName: "Research Assistant", startDate: "2024-01", endDate: "2024-05",
+                  worksFor: org("Center for Atmospheric Particle Studies, Carnegie Mellon University", "Pittsburgh, PA, USA") },
+              ],
+              alumniOf: [
+                { "@type": "CollegeOrUniversity", name: "Carnegie Mellon University" },
+                { "@type": "CollegeOrUniversity", name: "University of Ghana" },
+              ],
+            },
+          });
         } else if (url === "/" || url === "") {
           graph.push({
             "@type": "WebSite",
