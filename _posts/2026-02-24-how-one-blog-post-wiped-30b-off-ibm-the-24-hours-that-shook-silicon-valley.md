@@ -11,7 +11,7 @@ tags:
   - COBOL
   - Mainframe
 key_points:
-  - "The post from Anthropic demonstrates that its Claude Code agent can map, document, and translate legacy COBOL code with 98% accuracy."
+  - "The post from Anthropic says its Claude Code agent can help map, document and translate legacy COBOL code, letting teams modernize in quarters instead of years."
   - "IBM's market cap was shattered by $30 billion in a single afternoon, marking the worst single-day drop since October 2000."
   - "The event highlights the broader trend of AI agents automating complex tasks across various tech sectors, including cybersecurity."
   - "The implications of this event extend beyond Wall Street, drawing attention from state actors and the Pentagon, indicating significant geopolitical stakes."
@@ -36,12 +36,19 @@ card_items:
   - name: Claude Code
     badge_1: AI Agent
     badge_2: Code Translator
-    description: Anthropic's latest developer agent capable of mapping massive dependencies, documenting intricate legacy workflows, and translating archaic COBOL logic into modern languages like Java and Python with 98% accuracy.
+    description: Anthropic's latest developer agent capable of mapping massive dependencies, documenting intricate legacy workflows, and helping translate archaic COBOL logic into modern languages like Java and Python.
     url: https://claude.com/
     link_text: Learn about Claude
 description: How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap.
 category: "AI"
 ---
+
+> **Update, 21 November 2026: what happened next, and a correction.**
+>
+> - **The stock:** IBM closed at $257.16 on Friday 20 February and $223.35 on Monday 23 February, a 13.1% fall and its worst day since October 2000 ([The Register](https://www.theregister.com/2026/02/23/ibm_share_dive_anthropic_cobol/)). It bounced about 2.7% the next day, rallied to around $298 by the end of May, then fell back. It closed at $224.44 on 20 November 2026, roughly where it was the day after the drop. Many things moved the price over those nine months, so not all of it traces back to one blog post.
+> - **Correction:** the original post said Claude Code translates COBOL "with 98% accuracy" and does so "flawlessly". [Anthropic's post](https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization) makes neither claim. Its message is that AI can help teams modernize COBOL "in quarters instead of years". I have corrected the summary boxes and left the article text below as it was, so the record is clear. Treat the 98% figure in it as wrong.
+>
+> Prices are daily and monthly closes from Yahoo Finance.
 
 The tech world is more than accustomed to disruption, but the events of Monday, February 23, 2026, were something else entirely. In a single afternoon, a concise blog post from **Anthropic** accomplished what decades of fierce competition couldn't: it shattered IBM’s legendary "COBOL moat," wiping a staggering **$30 billion** off its market cap in mere hours.
 
