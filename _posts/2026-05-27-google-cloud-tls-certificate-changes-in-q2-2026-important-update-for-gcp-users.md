@@ -31,6 +31,13 @@ series_part: 4
 category: "Security"
 ---
 
+> **Update, 21 November 2026: the change has happened.** I checked the certificates served by `www.googleapis.com`, `storage.googleapis.com` and `bigquery.googleapis.com` today. All three present an **ECDSA** leaf certificate, so the switch from RSA described below is in place. Two corrections to the original post:
+>
+> - The certificates I checked are issued by the Google Trust Services intermediate **WE2**, not WE1 as stated below. Intermediates rotate, which is exactly why pinning them breaks things. Trust the [Google Trust Services roots](https://pki.goog/repository/) instead.
+> - The June 15, 2026 deadline came from secondary reports. Google's own [notice](https://developers.google.com/public-key-infrastructure/updates/august2025-intermediate-update) only says the shift happens "during Q2 2026".
+>
+> If your clients still connect to Google APIs today, you are not affected. If something broke around mid-2026 with certificate or handshake errors, check for pinned certificates or a custom trust store first. The rest of this post is the original notice from 27 May 2026.
+
 If you manage client applications that interact with Google Cloud services, please take note of an upcoming infrastructure change. In **Q2 2026**, Google is updating the Transport Layer Security (TLS) certificates for many of its endpoints to improve overall efficiency and security.
 
 This update represents a critical shift in how Google secures data in transit. Here is a comprehensive breakdown of what to expect, who might be impacted, and the exact steps you need to take to ensure your services remain operational.
