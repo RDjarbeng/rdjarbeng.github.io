@@ -44,7 +44,7 @@ Direct Link: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2005GL023597
 
   [https://doi.org/10.1021/acsestair.6c00140\](https://doi.org/10.1021/acsestair.6c00140)  
 
-  \*Shlipak, K. K., Mamo, T., Hill, L. D., Abera, A., Blair, J., Asfaw, A., Diner, D. J., & Hasheminassab, S. (2026). Spatial and Temporal Trends of Ambient $\text{PM}\_{2.5}$ and Source-Apportioned Black Carbon in Addis Ababa, Ethiopia. ACS ES&T Air, 3(8), 2128–2142.\*
+  \*Shlipak, K. K., Mamo, T., Hill, L. D., Abera, A., Blair, J., Asfaw, A., Diner, D. J., & Hasheminassab, S. (2026). Spatial and Temporal Trends of Ambient $\text{PM}_{2.5}$ and Source-Apportioned Black Carbon in Addis Ababa, Ethiopia. ACS ES&T Air, 3(8), 2128–2142.\*
 
 https://pubs.acs.org/aeacd5/article/3/8/2128/5207714/Spatial-and-Temporal-Trends-of-Ambient-PM2-5-and
 
@@ -56,6 +56,6 @@ https://pubs.acs.org/aeacd5/article/3/8/2128/5207714/Spatial-and-Temporal-Trends
 
   [https://doi.org/10.3390/atmos13101593\](https://doi.org/10.3390/atmos13101593)  
 
-  \*Awokola, B., Okello, G., Johnson, O., Dobson, R., Ouédraogo, A., Dibba, B., et al. (2022). Longitudinal Ambient $\text{PM}\_{2.5}$ Measurement at Fifteen Locations in Eight Sub-Saharan African Countries Using Low-Cost Sensors. Atmosphere, 13(10), 1593.\*
+  \*Awokola, B., Okello, G., Johnson, O., Dobson, R., Ouédraogo, A., Dibba, B., et al. (2022). Longitudinal Ambient $\text{PM}_{2.5}$ Measurement at Fifteen Locations in Eight Sub-Saharan African Countries Using Low-Cost Sensors. Atmosphere, 13(10), 1593.\*
 
   Link: https://www.mdpi.com/2073-4433/13/10/1593
