@@ -43,10 +43,10 @@
     "sass": "^1.105.0"
   },
   "scripts": {
-    "build:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps",
+    "build:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --silence-deprecation=import",
     "build:11ty": "eleventy",
     "build": "run-s build:sass build:11ty",
-    "serve:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --watch",
+    "serve:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --silence-deprecation=import --watch",
     "serve:11ty": "node --max-old-space-size=2048 --expose-gc -r ./scripts/dev-memory-guard.cjs ./node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
     "serve:11ty:full": "node --max-old-space-size=2048 --expose-gc -r ./scripts/dev-memory-guard.cjs ./node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",
     "serve:11ty:journey": "node --max-old-space-size=2048 --expose-gc -r ./scripts/dev-memory-guard.cjs ./node_modules/@11ty/eleventy/cmd.cjs --serve --incremental",

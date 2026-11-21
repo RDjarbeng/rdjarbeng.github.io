@@ -76,6 +76,28 @@ module.exports = function(eleventyConfig) {
   const liquidTemplateCache = new Map();
   eleventyConfig.on("eleventy.before", () => liquidTemplateCache.clear());
 
+  // Build log: a full build writes ~2,400 pages, and one "Writing ..." line per page buried
+  // warnings and broke terminal scrollback. Quiet mode drops those lines; this prints a short
+  // summary instead. Small rebuilds (e.g. saving one post under --serve) still list each file.
+  // Warnings ([katex], Sass, errors) are printed separately and stay visible.
+  eleventyConfig.setQuietMode(true);
+  eleventyConfig.on("eleventy.after", ({ results }) => {
+    if (!Array.isArray(results) || results.length === 0) return;
+    if (results.length <= 15) {
+      for (const r of results) console.log(`[11ty] wrote ${r.url || r.outputPath} (from ${String(r.inputPath).replace(/^\.\//, "")})`);
+      return;
+    }
+    const groups = {};
+    for (const r of results) {
+      const seg = String(r.url || "").split("/").filter(Boolean)[0] || "(home)";
+      const key = /^\d|\.|^page$/.test(seg) ? "other" : seg;
+      groups[key] = (groups[key] || 0) + 1;
+    }
+    const top = Object.entries(groups).sort((a, b) => b[1] - a[1]);
+    const shown = top.slice(0, 6).map(([k, n]) => `${k} ${n}`);
+    const rest = top.slice(6).reduce((sum, [, n]) => sum + n, 0);
+    console.log(`[11ty] ${results.length} pages: ${shown.join(", ")}${rest ? `, posts and other pages ${rest}` : ""}`);
+  });
 
   eleventyConfig.setLiquidOptions({
     dynamicPartials: false,

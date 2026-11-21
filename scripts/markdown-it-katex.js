@@ -122,18 +122,28 @@ module.exports = function(md, options = {}) {
     alt: ["paragraph", "reference", "blockquote", "list"],
   });
 
-  md.renderer.rules.math_inline = (tokens, idx) => {
+  // KaTeX's default strict warnings print a long message with no file name. Report one short
+  // line per problem instead: which file, which rule, and the start of the formula.
+  const strictFor = (env, tex) => (code) => {
+    const file = (env && env.page && env.page.inputPath) || "unknown file";
+    console.warn(`[katex] ${file.replace(/^\.\//, "")}: ${code} in "${tex.slice(0, 60)}"`);
+    return false;
+  };
+
+  md.renderer.rules.math_inline = (tokens, idx, _o, env) => {
+    const tex = tokens[idx].content;
     try {
-      return katex.renderToString(tokens[idx].content, { ...opts, displayMode: false });
+      return katex.renderToString(tex, { ...opts, displayMode: false, strict: strictFor(env, tex) });
     } catch (e) {
-      return tokens[idx].content;
+      return tex;
     }
   };
-  md.renderer.rules.math_block = (tokens, idx) => {
+  md.renderer.rules.math_block = (tokens, idx, _o, env) => {
+    const tex = tokens[idx].content;
     try {
-      return `<div class="katex-block">${katex.renderToString(tokens[idx].content, { ...opts, displayMode: true })}</div>\n`;
+      return `<div class="katex-block">${katex.renderToString(tex, { ...opts, displayMode: true, strict: strictFor(env, tex) })}</div>\n`;
     } catch (e) {
-      return `<div class="katex-block">${tokens[idx].content}</div>\n`;
+      return `<div class="katex-block">${tex}</div>\n`;
     }
   };
 };
