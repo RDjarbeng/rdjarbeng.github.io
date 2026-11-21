@@ -58,26 +58,23 @@
 
 <section class="contact-section" id="contact-form">
     <div class="contact-container">
-        <h2>Send a Message</h2>
-        <p>Have a question or want to connect? Please add a way to contact you.</p>
+        <h2>Send a message</h2>
+        <p>Messages come straight to my inbox. Please include a way to reach you.</p>
         <form id="rdjarbeng-website-contact-form">
             <!-- Honeypot field (hidden from users) -->
             <div class="form-group form-honeypot">
                 <label for="website-url">Website</label>
                 <input type="text" id="website-url" name="website_url" tabindex="-1" autocomplete="off">
             </div>
-
-            <div class="form-group">
+            <div class="form-group form-group--half">
                 <label for="name">Name* <small>(Required)</small></label>
                 <input type="text" id="name" name="user_name" required placeholder="Enter your name">
             </div>
-
-            <div class="form-group">
+            <div class="form-group form-group--half">
                 <label for="email">Email* <small>(Responses will be sent here)</small></label>
                 <input type="email" id="email" name="user_email" required placeholder="Enter your email">
             </div>
-
-            <div class="form-group">
+            <div class="form-group form-group--half">
                 <label for="inquiry-reason">Reason for Inquiry</label>
                 <select id="inquiry-reason" name="inquiry_reason">
                     <option value="General Inquiry">General Inquiry</option>
@@ -88,19 +85,15 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-
-            <div class="form-group">
+            <div class="form-group form-group--half">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
             </div>
-
             <div class="form-group">
                 <label for="message">Message* <small>(Required)</small></label>
                 <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
             </div>
-
             <input type="submit" value="Send" class="submit-btn">
-
             <!-- Success and error message containers -->
             <p id="form-message"></p>
             <div id="loading-indicator">
