@@ -109,9 +109,33 @@
   .site-footer {
     padding: 40px 0 20px;
   }
+  // Two columns instead of one long stack: brand on top, link groups side by side.
   .footer-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 20px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+    .footer-bio {
+      margin-bottom: 12px;
+    }
+  }
+  .footer-nav-col {
+    .footer-heading {
+      margin-bottom: 10px;
+    }
+    .footer-links {
+      gap: 8px;
+    }
+  }
+  // The first link group (Pages) is the longest: give it the full width, in two columns.
+  .footer-nav-col:nth-child(2) {
+    grid-column: 1 / -1;
+    .footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 20px;
+    }
   }
   .footer-bottom {
     flex-direction: column;
