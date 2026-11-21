@@ -1,11 +1,11 @@
 ---
 layout: post
 key_points:
-  - "A critical, active supply chain attack is currently targeting the popular npm package Axios, which has over 100 million weekly downloads."
+  - "On 31 March 2026 a supply chain attack hit the popular npm package Axios, which has over 100 million weekly downloads. The malicious versions were live for about 3 hours before removal."
   - "The malicious payload involves a new, obfuscated dependency called `plain-crypto-js@4.2.1`, designed to compromise the host machine immediately upon installation."
   - "The attack was discovered and publicly reported by X/Twitter user @feross, who is the Founder and CEO of Socket Security and a Visiting lecturer at Stanford."
   - "Immediate action is required for JavaScript and Node.js developers using Axios, including not upgrading to the latest version, pinning the exact version in `package.json`, auditing lockfiles, and scanning CI/CD pipelines for the presence of the malicious package."
-title: "CRITICAL: Active Supply Chain Attack on Axios NPM Package Update (Resolved?)"
+title: "CRITICAL: Supply Chain Attack on Axios NPM Package (Resolved)"
 date: 2026-03-31T23:08:34+02:00
 author: Richard
 tags:
@@ -37,6 +37,15 @@ series_part: 1
 category: "Security"
 ---
 **TLDR:** A popular npm package has been attacked and it's used by many web developers.
+
+> **Update, 21 November 2026: how it ended.** The attack is over. The axios lead maintainer, Jason Saayman, published a [post mortem](https://github.com/axios/axios/issues/10636) on 2 April 2026:
+>
+> - **How they got in:** about two weeks before the attack, a targeted social engineering campaign put remote access malware on the maintainer's PC. That exposed his npm credentials, which were used to publish `axios@1.14.1` and `axios@0.30.4`. The malicious dependency `plain-crypto-js@4.2.0` had been staged on npm the day before.
+> - **Clean-up:** the bad versions were removed at 03:15 UTC on 31 March, after about 3 hours live. All of the maintainer's devices were wiped and every credential reset.
+> - **What changed:** immutable releases, publishing through OIDC trusted publishing instead of a long-lived token, and hardened GitHub Actions.
+> - **Who did it:** Google's Threat Intelligence Group attributes the attack to a North Korea-nexus threat actor, tracked as UNC1069 ([Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)). This attribution comes from Google; the axios post mortem itself does not name an attacker.
+>
+> If you did a fresh install between 00:21 and 03:15 UTC on 31 March 2026, the checks below still apply: treat that machine as compromised and rotate its secrets. Otherwise you are fine. The rest of this post is the original alert, written while the attack was live.
 
 If you are a JavaScript or Node.js developer, **stop what you are doing and audit your dependencies.** 
 
