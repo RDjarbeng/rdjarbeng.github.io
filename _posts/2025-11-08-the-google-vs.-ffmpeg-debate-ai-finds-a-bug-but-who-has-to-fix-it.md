@@ -32,6 +32,14 @@ image_alt: A vertical poster illustrating the Google vs. FFmpeg debate using a "
 layout: post
 category: "Security"
 ---
+> **Update, 21 November 2026: one year on.** The bugs were fixed, but the argument was never settled.
+>
+> - **The fixes are on record.** FFmpeg's [security page](https://ffmpeg.org/security.html) lists the Big Sleep findings, CVE-2025-59728 to CVE-2025-59734, each tagged with its BIGSLEEP report number. The fixes were backported to several FFmpeg release branches, so updating to any current release covers them.
+> - **No funding deal I could find.** FFmpeg's message to Google was roughly "fund us or stop sending bugs". As of this update I found no public announcement of Google funding FFmpeg as a result. If that changes, I will add it here.
+> - **The bigger question is still open.** AI tools now find bugs much faster than volunteer maintainers can fix them, and the debate below over who carries that cost applies more in late 2026 than when this was written.
+>
+> The rest of this post is the original from November 2025.
+
 In the vast world of software, a recent conflict has flared up between Google's elite security team and the volunteer maintainers of FFmpeg, a project that powers countless apps you use every day. This isn't just a technical squabble; it's a story about AI, corporate responsibility, and the foundations of the open-source world.
 
 What happens when a trillion-dollar company uses advanced AI to find flaws in software run by volunteers? And who is responsible for fixing the mess? Let's break down what happened.
