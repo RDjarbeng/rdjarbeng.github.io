@@ -180,7 +180,9 @@
         padding: 20px 0 60px 0; // extra padding at bottom for scrolling
         overflow-y: auto; // Ensure scrolling inside if form is too long
 
-        @media (min-width: 768px) {
+        // Side by side only when both columns fit; below 1024px the email address ran
+        // into the links column, so they stack instead.
+        @media (min-width: 1024px) {
             flex-direction: row;
             justify-content: center;
             align-items: center; // Vertically center both columns, no dead middle
@@ -190,7 +192,7 @@
 
         // Medium screens: the email + details row is wider than the viewport,
         // so tighten the gap and cap the email size before columns touch.
-        @media (min-width: 768px) and (max-width: 1150px) {
+        @media (min-width: 1024px) and (max-width: 1150px) {
             gap: 32px;
 
             .contact-main .email-link {
@@ -204,7 +206,7 @@
         min-width: 0; // Let the column shrink instead of overflowing the row
         margin-bottom: 20px;
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             margin-bottom: 0;
             padding-right: 40px;
         }
