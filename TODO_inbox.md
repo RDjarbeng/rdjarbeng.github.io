@@ -157,3 +157,4 @@ https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/1JDTJ5D1fR_MbD
 
 https://www.youtube.com/watch?v=-IPOgf5tBZw&t=11s
 - [ ] 2026-11-22 08:28 CAT | Africa AI report let's compile it
+- [ ] 2026-11-22 15:47 CAT | Homepage fonts aren't consistent
