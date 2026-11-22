@@ -156,3 +156,4 @@ https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/1JDTJ5D1fR_MbD
 - [ ] 2026-11-20 18:28 CAT | This is the video on why  why should publish on arxiv
 
 https://www.youtube.com/watch?v=-IPOgf5tBZw&t=11s
+- [ ] 2026-11-22 08:28 CAT | Africa AI report let's compile it
