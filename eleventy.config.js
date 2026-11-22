@@ -139,6 +139,20 @@ module.exports = function(eleventyConfig) {
   // summary instead. Small rebuilds (e.g. saving one post under --serve) still list each file.
   // Warnings ([katex], Sass, errors) are printed separately and stay visible.
   eleventyConfig.setQuietMode(true);
+
+  // Dev server only: one line per rebuild with heap after a forced GC (needs --expose-gc,
+  // which `npm start` passes) and total process memory. If "heap after GC" keeps climbing
+  // across ordinary edits, something is holding on to old builds.
+  if (process.env.ELEVENTY_RUN_MODE === "serve") {
+    let buildNo = 0;
+    eleventyConfig.on("eleventy.after", () => {
+      buildNo++;
+      if (typeof global.gc === "function") global.gc();
+      const m = process.memoryUsage();
+      const mb = (n) => Math.round(n / 1048576);
+      console.log(`[mem] build ${buildNo}: heap after GC ${mb(m.heapUsed)} MB, RSS ${mb(m.rss)} MB`);
+    });
+  }
   eleventyConfig.on("eleventy.after", ({ results }) => {
     if (!Array.isArray(results) || results.length === 0) return;
     if (results.length <= 15) {
