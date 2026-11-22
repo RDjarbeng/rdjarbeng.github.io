@@ -5,7 +5,7 @@
 {%- assign ac = site.authors | where: 'short_name', include.author | first -%}
 {%- if ac and ac.short_name != 'anon' -%}
 <aside class="author-card" aria-label="About the author">
-  {%- if ac.avatar %}<img class="author-card__avatar" src="{{ ac.avatar | relative_url }}" alt="{{ ac.display_name | escape }}" width="64" height="64" loading="lazy">{% endif %}
+  {%- if ac.avatar %}<img class="author-card__avatar" src="{{ ac.avatar | thumb: 160 }}" alt="{{ ac.display_name | escape }}" width="64" height="64" loading="lazy">{% endif %}
   <div class="author-card__body">
     <p class="author-card__name">Written by <a href="{{ ac.url | relative_url }}">{{ ac.display_name }}</a>{% if ac.position %} <span class="author-card__role">{{ ac.position }}</span>{% endif %}</p>
     {%- if ac.bio and ac.bio != '' %}
