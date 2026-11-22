@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for "Redesigning This Site to Be Worth Citing".
+       Palette: Muted Primaries (terracotta #b84d43, slate ink #2d4763, ochre gold #cfa14a) plus black and cream.
+       Left: the old look, a jumble of rounded cards and pills. Right: the new calm editorial page.
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/site_redesign_worth_citing.svg assets/images/posts/covers/site_redesign_worth_citing_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <!-- headline: the only text colour is black -->
+  <text x="640" y="112" fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" font-size="84" font-weight="900" text-anchor="middle" letter-spacing="1">A SITE WORTH CITING</text>
+
+  <!-- browser window -->
+  <rect x="110" y="168" width="1060" height="476" fill="#ffffff" stroke="#141414" stroke-width="6"/>
+  <rect x="110" y="168" width="1060" height="52" fill="#2d4763"/>
+  <circle cx="148" cy="194" r="10" fill="#f4f1e6"/>
+  <circle cx="180" cy="194" r="10" fill="#f4f1e6"/>
+  <circle cx="212" cy="194" r="10" fill="#f4f1e6"/>
+  <rect x="270" y="182" width="860" height="24" fill="#f4f1e6"/>
+
+  <!-- left half: the old look, a jumble of rounded cards and pills -->
+  <g stroke="#141414" stroke-width="4">
+    <rect x="160" y="262" width="190" height="130" rx="26" fill="#cfa14a" transform="rotate(-9 255 327)"/>
+    <rect x="300" y="300" width="180" height="120" rx="26" fill="#b84d43" transform="rotate(8 390 360)"/>
+    <rect x="170" y="430" width="200" height="140" rx="26" fill="#b84d43" transform="rotate(6 270 500)"/>
+    <rect x="360" y="460" width="150" height="110" rx="26" fill="#cfa14a" transform="rotate(-12 435 515)"/>
+    <rect x="230" y="398" width="150" height="40" rx="20" fill="#2d4763" transform="rotate(-5 305 418)"/>
+    <rect x="400" y="262" width="110" height="36" rx="18" fill="#2d4763" transform="rotate(10 455 280)"/>
+  </g>
+
+  <!-- the change: a single arrow from clutter to calm -->
+  <g fill="#141414">
+    <rect x="548" y="396" width="92" height="24"/>
+    <polygon points="636,372 694,408 636,444"/>
+  </g>
+
+  <!-- right half: the new look, square and aligned like a front page -->
+  <rect x="736" y="252" width="384" height="150" fill="#2d4763"/>
+  <rect x="736" y="252" width="384" height="150" fill="none" stroke="#141414" stroke-width="4"/>
+  <polygon points="760,388 850,312 920,372 980,330 1096,388" fill="#cfa14a"/>
+  <circle cx="1052" cy="292" r="20" fill="#b84d43"/>
+  <g fill="#141414">
+    <rect x="736" y="428" width="384" height="22"/>
+    <rect x="736" y="468" width="330" height="12"/>
+    <rect x="736" y="494" width="370" height="12"/>
+    <rect x="736" y="520" width="300" height="12"/>
+    <rect x="736" y="562" width="384" height="3"/>
+    <rect x="736" y="584" width="250" height="12"/>
+  </g>
+
+  <!-- watermark -->
+  <text x="1170" y="690" fill="#141414" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="end">rdjarbeng.com</text>
+</svg>
