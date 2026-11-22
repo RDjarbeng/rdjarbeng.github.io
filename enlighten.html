@@ -64,8 +64,11 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     {% endif %}
     <div class="enlighten-grid">
       {% for book in cat_books %}
-      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card"
+      {% assign b_cover = book_covers[book.slug] %}
+      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card{% if b_cover %} book-card--cover{% endif %}"
          data-tags="{% for tag in book.tags %}{{ tag | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+        {% if b_cover %}<img class="book-card__cover" src="{{ b_cover }}" alt="Cover of {{ book.title | escape }}" width="90" height="120" loading="lazy">{% endif %}
+        <div class="book-card__text">
         <div class="book-card-top">
           {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
         </div>
@@ -85,6 +88,7 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
         {% endif %}
         <div class="book-footer">
           <span class="book-cta">Read online →</span>
+        </div>
         </div>
       </a>
       {% endfor %}
