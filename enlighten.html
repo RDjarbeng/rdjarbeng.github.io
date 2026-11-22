@@ -65,15 +65,20 @@ description: "Project Enlighten: a curated collection of genuinely good tech boo
     <div class="enlighten-grid">
       {% for book in cat_books %}
       {% assign b_cover = book_covers[book.slug] %}
-      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card{% if b_cover %} book-card--cover{% endif %}"
+      <a href="{{ book.link }}" target="_blank" rel="noopener" class="book-card book-card--enlighten"
          data-tags="{% for tag in book.tags %}{{ tag | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}">
-        {% if b_cover %}<img class="book-card__cover" src="{{ b_cover }}" alt="Cover of {{ book.title | escape }}" width="90" height="120" loading="lazy">{% endif %}
-        <div class="book-card__text">
-        <div class="book-card-top">
-          {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
+        {%- comment -%} Top row: cover beside format, title and author; the rest runs full width below {%- endcomment -%}
+        <div class="book-card__head">
+          {% if b_cover %}<img class="book-card__cover" src="{{ b_cover }}" alt="Cover of {{ book.title | escape }}" width="90" height="120" loading="lazy">{% endif %}
+          <div class="book-card__headtext">
+            <div class="book-card-top">
+              {% if book.format %}<span class="book-format">{{ book.format }}</span>{% endif %}
+            </div>
+            <h3>{{ book.title }}</h3>
+            <p class="book-author">{{ book.author }}</p>
+          </div>
         </div>
-        <h3>{{ book.title }}</h3>
-        <p class="book-author">{{ book.author }}</p>
+        <div class="book-card__text">
         {% if book.known_for %}
         <p class="book-known">{{ book.known_for }}</p>
         {% endif %}
