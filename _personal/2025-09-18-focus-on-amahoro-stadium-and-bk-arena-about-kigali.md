@@ -14,16 +14,6 @@ tags:
   - VisitRwanda
   - StadiumRenovations
   - BasketArchitecture
-  - FootballRwanda
-  - APRFC
-  - RayonSports
-  - BKArena
-  - BasketballRwanda
-  - AfricanLandmarks
-  - TravelKigali
-  - YouTubeTour
-  - RwandaCulture
-  - SportsInfrastructure
 
 
 image: /assets/images/amahoro_stadium_outside_cover_rdjarbeng.webp
@@ -31,30 +21,30 @@ layout: personal
 image_alt: "Cover image for Amahoro Stadium: Landmark in Kigali, Rwanda An Outside View"
 category: "Travel & Places"
 ---
-The long-awaited renovations of Amahoro Stadium are finally complete! To celebrate, I put together this quick video showcasing the revamped venue in all its glory. It's a must-see for anyone who's ever wondered about that massive, basket-shaped landmark dominating Kigali's skyline.
+The renovations on Amahoro Stadium are finally done, so I put together a quick video showing what the building looks like from the outside. If you have spent any time in Kigali, you have probably noticed the massive, basket-shaped roofline in the distance.
 
 ![Amahoro Stadium exterior resembling a woven basket](/assets/images/1000257968.jpg "Amahoro Stadium exterior resembling a woven basket")
 
 ![Amahoro stadium entrance with security checkpoint with the stadium name shown](/assets/images/amahoro_stadium_outside.jpg "Amahoro stadium entrance with security checkpoint with the stadium name shown in bold white letters")
 
-_(If you haven't seen it in person, trust me—it's even more impressive up close.)_
+_(It looks even larger in person when you are standing right outside the gates.)_
 
-## A Quick Rundown
+## A quick rundown
 
-- **Location**: Nestled in Remera, Kigali, this 45,000-seat powerhouse is Rwanda's premier sports and events hub.
-- **What Goes Down Here**: Home to thrilling football matches for local teams like APR FC and Rayon Sports, plus high-profile events like the presidential inauguration. It's not just a stadium; it's a symbol of national pride.
-- **Design Vibes**: That unique basket-inspired architecture? It's a nod to Rwanda's rich weaving traditions. If you're into that, check out my earlier [post on baskets in Gasabo District](https://rdjarbeng.com/personal/gasabo_basket/)—it ties in perfectly.
+The 45,000-seat stadium is located in Remera. It hosts matches for local football clubs like APR FC and Rayon Sports, as well as major national events like the presidential inauguration.
 
-Also in the video, I squeezed in a nod to the neighboring **BK Arena**, Rwanda's go-to spot for basketball showdowns and concerts. It's smaller but packs a punch for indoor events.
+The woven basket exterior draws directly from Rwandan basket-weaving traditions. If you want to know more about the background behind the design, I wrote earlier about the [baskets in Gasabo District](https://rdjarbeng.com/personal/gasabo_basket/) and how common that motif is across the country.
 
-## Watch the Video
+Right next door is BK Arena, which hosts indoor basketball games and concerts.
 
-Dive into the details with my video of the Amahoro stadium from the outside.
+## Watch the video
+
+Here is the video of the stadium from the outside:
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe
     src="https://www.youtube.com/embed/jiec7XXD6EY"
-    title="Why is there a giant basket on this building? – Amahoro Stadium Tour"
+    title="Why is there a giant basket on this building? Amahoro Stadium Tour"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
@@ -63,6 +53,6 @@ Dive into the details with my video of the Amahoro stadium from the outside.
   </iframe>
 </div>
 
-Unfortunately I don't have a video of the inside of the stadium but I hope to create a post for that soon.
+I do not have footage of the interior yet, but I hope to put together a post on the inside later.
 
-**Soundtrack Shoutout**: Bumping in the background is [3Kota - Si Yab Tumpa (Official Audio)](https://www.youtube.com/watch?v=7qL4BmTQkrc). Pure energy—fits the stadium's electric atmosphere!
+Music in the video: [3Kota: Si Yab Tumpa (Official Audio)](https://www.youtube.com/watch?v=7qL4BmTQkrc).
