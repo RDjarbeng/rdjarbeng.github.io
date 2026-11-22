@@ -791,23 +791,14 @@ ${jsonLd}
   });
 
   eleventyConfig.addCollection("books", (collectionApi) => {
-    const books = collectionApi.getFilteredByGlob("_books/**/*.md");
-    siteData.books = books.map((b) => ({
-      ...ownData(b),
-      slug: b.fileSlug,
-      url: b.url
-    }));
-    return books;
+    // site.books comes from _data/site.js, which reads every _books file at load. Overwriting it
+    // here from the collection left it empty on incremental dev rebuilds (Enlighten showed no books).
+    return collectionApi.getFilteredByGlob("_books/**/*.md");
   });
 
   eleventyConfig.addCollection("book_categories", (collectionApi) => {
-    const cats = collectionApi.getFilteredByGlob("_book_categories/**/*.md");
-    siteData.book_categories = cats.map((c) => ({
-      ...ownData(c),
-      slug: c.fileSlug,
-      url: c.url
-    })).sort((a, b) => (a.weight || 0) - (b.weight || 0));
-    return cats;
+    // site.book_categories comes from _data/site.js (see the books collection above)
+    return collectionApi.getFilteredByGlob("_book_categories/**/*.md");
   });
 
   eleventyConfig.addCollection("gallery_categories", (collectionApi) => {
