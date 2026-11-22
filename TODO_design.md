@@ -37,21 +37,31 @@ Possible future implementation:
 
 ## High Priority - Immediate Fixes & Critical Enhancements
 
-### Credibility & citability (audit 2026-11-13): the changes that move the needle
-Goal: the site should look and behave like a source a professor would link to. Technical SEO is already solid (BlogPosting/Person JSON-LD, canonical URLs, breadcrumbs, Markdown alternates, legacy redirects). What's missing is the trust layer.
+### Credibility & citability (audit 2026-11-13, revised 2026-11-20): the changes that move the needle
+Goal: the site should look and behave like a source a professor would link to. Technical SEO is solid. What's left is the trust layer.
 
-- [x] **Real "Last updated" dates.** No post sets `last_modified_at`, so JSON-LD `dateModified` always equals the publish date and readers never see an update. Derive it from git history at build time (or a front-matter `updated:` field for substantive edits only). Show "Updated <date>" in the post header. (Highest impact, Low–Medium complexity: `eleventy.config.js` seo tag + `_layouts/post.html`)
-- [ ] **Editorial standards page** (`/editorial-policy/`): how posts are researched and sourced, the AI-assistance policy, the corrections policy (with a public corrections log), affiliations/conflicts (CMU-Africa), and how to report an error. Link it from the footer and from every post's author card. (Highest impact, Low complexity)
-- [x] **"Cite this page" box on posts**: a ready-to-copy citation (Author. (Year). *Title*. rdjarbeng.com. URL, accessed date) plus BibTeX. Also add Highwire `citation_title` / `citation_author` / `citation_publication_date` meta tags so Google Scholar and Zotero pick posts up correctly. (High impact, Low complexity: `_layouts/post.html`, seo tag) - Completed for posts >= 10 min read.
-- [ ] **Standard sources/footnotes rendering**: enable markdown-it-footnote (or a `references:` front-matter list) so citations render consistently as numbered references with a "Sources" section, not ad hoc links. (High impact, Medium complexity)
-- [ ] **Standard AI-assistance disclosure**: add front matter like `ai_assistance: drafting | editing | images | none`, rendered as a short consistent note linking to the editorial policy. Replaces the 11 ad hoc paragraphs, and the Gemini "additional comments" should either meet that bar or be removed. (High impact, Low complexity)
-- [ ] **Content-type labels**: front matter `content_type: analysis | guide | explainer | paper-review | news | opinion | personal`, shown as a badge, so a visitor (or professor) can tell a researched analysis from a quick note at a glance. Let the posts listing filter on it. (Medium–High impact, Low complexity)
-- [ ] **Author identity that verifies itself**: use a real photo on `/about/` and the author card instead of the logo in Person schema. Add `sameAs` for ORCID, Google Scholar, LinkedIn, GitHub and CMU-Africa profiles, plus `affiliation`. Align job titles: `/about/` says "Software Engineer | ML Engineer | Solutions Architect & Embedded Systems" while the schema says "Software and Machine Learning Engineer". Add a short "Research & publications" section. (High impact, Low complexity: `about.md`, `_authors/richard.md`, seo tag)
-- [ ] **Topic hub pages** for the expertise clusters (start with *Air Quality & Sensing in Africa*): a curated, maintained landing page that orders the posts from fundamentals → data sources → standards → original work. Hubs are the pages institutions link to. (High impact, Medium complexity)
-- [ ] **Datasets/projects with DOIs**: publish original data and code (Kigali dashboard, sensor data) to Zenodo/GitHub releases and render a "Data & code" box with the DOI on the related posts. (High long-term impact, Medium complexity)
-- [x] **Remove trust-eroding third-party bits from posts**: the applause button loads unversioned `unpkg.com/applause-button` (pin the version or self-host), and Mermaid loads as `mermaid@10` (pin the exact version). (Medium impact, Trivial complexity: `_includes/head.html`, `_layouts/post.html`) - Completed: pinned Mermaid to 10.9.1, pinned applause button to 3.2.3, and retained applause button on all posts as reader engagement metric.
-- [x] **Homepage rich results failing** (noted in inbox): fix it so the homepage emits valid `WebSite` + `Person`/`Organization` JSON-LD. (Medium impact, Low complexity) - Completed in eleventy.config.js.
+**Done (verified)**
+- [x] "Cite this page" box + BibTeX on posts of 10+ min read, and Highwire `citation_*` meta tags (commit 149a543b).
+- [x] Homepage `WebSite` JSON-LD for rich results.
+- [x] Wikipedia-style hover previews for post and series links (8918b129).
 
+**Ticked earlier but not actually live. Re-opened.**
+- [x] **Real "Last updated" dates**: derived from git in `scripts/git-dates.cjs` via `_posts/_posts.11tydata.js` (b7b83334). Verified 2026-11-20: 157 built pages show "Last edited" plus a matching `dateModified`. Caveat: bulk commits (e.g. mass cover-image or front-matter changes) count as edits. Set `last_modified_at: false` or an explicit `updated:` date on a post when that's misleading.
+- [ ] **Pin third-party scripts.** `_includes/head.html` still loads unversioned `unpkg.com/applause-button` (lines 33–35) and `mermaid@10` (line 131). The 10.9.1 / 3.2.3 pins described earlier aren't in the committed file. Maybe they're on another branch or were never saved. (Trivial)
+
+**Bugs that hurt credibility right now**
+- [x] **GitHub issue #7 (reader report)**: nested code fence in the Eleventy 3.x post fixed with a four-backtick outer fence (2026-11-20). It was the only nested case. Still to do: reply on the issue and close it.
+- [x] **Inline math** (2026-11-20): the build plugin renders single-dollar inline math correctly; the Sveltia-escaping theory was wrong (no escaped dollars around math anywhere in the history). Converted 335 inline double-dollar spans to single-dollar across 41 posts; display lines and blockquote display lines kept. Use single dollars for inline math and double dollars only on their own line from now on.
+
+**Still to do, in order**
+1. [x] **Author identity** (2026-11-20): 400px headshot `assets/images/richard/richard-djarbeng-headshot.jpg` in the author card, at the top of /about/ and as the Person schema image. About subtitle now leads with "Software and Machine Learning Engineer", matching the schema. Still open: add ORCID and Google Scholar to `site.social.links` once the profiles exist.
+2. [x] **Editorial policy page** (2026-11-20): `/editorial-policy/`, linked from the footer and the author card (with a "Report an error" link). Review the Independence section: it says no paid posts and no affiliate links. Confirm that's true.
+3. [x] **AI-assistance note** (2026-11-20): `ai_assistance:` front matter (drafting, editing, images, research, code), shown under the byline and editable in Sveltia. Set on 4 posts that disclosed AI use. Still open: decide whether AI cover images on most posts need the `images` tag, and trim the old ad hoc paragraphs if the note makes them redundant.
+4. [ ] **Sources**: decision 2026-11-20: inline links stay the default. Add a short Sources list only on research-heavy posts (analysis, paper-review, project), e.g. the Kigali draft. No footnote plugin needed.
+5. [x] **Content-type labels** (2026-11-20): `content_type:` front matter (analysis, guide, explainer, paper-review, review, project, news, opinion), shown as an outlined badge above the title, editable in Sveltia, and emitted as JSON-LD `genre`. Tagged on 18 posts so far (the air quality cluster plus the Eleventy guide). Still open: tag the rest, and add a filter on /posts/.
+6. [x] **Topic hub** (2026-11-20): `/air-quality/` in four sections (basics, standards and health, data, sensors and field work), linked from the footer. Drafts listed there appear automatically when published. Review it whenever you publish an air quality post, and update "Last reviewed".
+7. [ ] **Datasets/code with DOIs** (Zenodo) for the Kigali dashboard and sensor data, plus a "Data & code" box on the related posts. (High long-term, Medium)
+8. [ ] Consider showing the cite box on all reference-type posts (once content_type exists), not only 10+ min reads.
 
 - [ ] Add a section for AI tools and AI projects. (High Importance, Medium Complexity: Requires new collection/layout)
 

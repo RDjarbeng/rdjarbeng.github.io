@@ -8,21 +8,37 @@ Goal: posts a professor or university page would happily link to. The site's str
 Reference-grade checklist for every post below: every number has a linked primary source (paper DOI, WHO/EPA/agency page); a Sources section at the end; a visible "Last updated" date; a methods/limitations note where data is involved; first-hand experience stated plainly; AI assistance disclosed in the standard format (see TODO_design.md).
 
 ### Tier 1: finish and publish the flagship drafts (first-hand expertise, currently `published: false`)
-- [ ] `/building-the-air-quality-dashboard-for-kigali/`: the most citable thing on the site. Currently 1,518 words and **0 links**. Add data sources, sensor/calibration method, architecture diagram, screenshots, known limitations, and a downloadable sample dataset (ideally on Zenodo with a DOI).
+- [ ] `/building-the-air-quality-dashboard-for-kigali/`: sources and a Sources section added 2026-11-20. A SOURCE CHECKLIST comment in the post lists what only you can confirm (category shares, hourly table, date range, pre-2024 AQI bands, stadium photos, reviewers, dashboard link, dataset DOI).
 - [ ] `/the-air-quality-paradigm-shift-...-2021-who-guidelines.../`: 3,040 words but only 4 links. Every key point (e.g. the "up to 17%" crop-yield figure, the translocation claims) needs a primary citation. Tone down "exhaustive" in the description. Reads AI-generated in places, so rewrite those parts in your own voice.
 - [ ] `/paper-reading-...-east-palestine-train-derailment/`: a paper review with **no link to the paper**. Add the full citation + DOI at the top, then link the figures and data you discuss.
-- [ ] `/what-is-temperature-inversion/`: 1,649 words, 0 links. Add Kigali/Nairobi examples from your own sensor data plus cited sources. Good evergreen explainer for students.
+- [ ] `/what-is-temperature-inversion/`: in progress as of 2026-11-20 (now 3 links). Add Kigali/Nairobi examples from your own sensor data plus cited sources. Good evergreen explainer for students.
 - [ ] `/the-hidden-cost-of-bad-air-fact-checking-the-impact-on-our-children/`: the fact-check format suits citation. Show each claim → verdict → source.
 
 ### Tier 2: upgrade published posts that already rank into reference pages
 - [ ] `/ambient-air-quality-standards-in-west-africa-the-current-state-2025/`: turn it into a maintained table (country, pollutant, limit, legal instrument and link, year). Re-verify yearly and show "Last reviewed". This is the kind of page universities link to.
 - [ ] `/understanding-the-air-quality-index-aqi/`: make it the canonical AQI explainer. Add breakpoint tables (US EPA vs others) with sources and an update date.
 - [ ] `/what-is-particulate-matter-pm2.5-...`: link it to the AQI and WHO posts as one cluster. Cite WHO 2021 and EPA directly.
-- [ ] `/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/` (2 links): add step-by-step instructions with official links, a code snippet, and a last-verified date.
+- [x] `/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/`: update note corrected (2026-11-20). It said March 2024; the feed was suspended in March 2025. Publish the draft `airnow-air-quality-website-data-update` post and link it from the note.
 - [ ] `/top-websites-for-african-climate-data/`: a resource list. Check every link, add what each dataset covers, its licence and resolution, and a last-checked date. Repeat yearly.
 - [ ] `/is-the-davis-solar-radiation-sensor-overpriced/` (1 link): first-hand hardware expertise. Expand with your own comparison measurements.
 - [ ] `/why-are-flight-tickets-in-africa-so-expensive-.../`: already strong (4.7k words, 35 links). Add a data table with "as of" dates and a methods note.
 - [ ] `/earth-observations-promise-and-barriers-.../`: AI-drafted (disclosed). Review it and rewrite in your own voice, or relabel it per the AI policy.
+
+### Tier 2b: ML posts (inline math fixed 2026-11-20)
+- [ ] Batch-normalization draft (2026-02-15-the-14x-breakthrough-...): inline math converted; still cite Ioffe & Szegedy (2015, arXiv:1502.03167) properly before publishing.
+- [x] Inline math converted across all 41 math posts.
+- [x] Eleventy 3.x post: nested code fence fixed (GitHub issue #7). Reply on the issue.
+
+### Refresh queue: time-sensitive posts that now read as outdated (2026-11-20)
+Pattern for each one: a dated "Update, <date>: how it ended" blockquote at the top, linked to the primary source, then reword any "is ongoing / still investigating" lines as "at the time of writing". Leave the original text otherwise intact.
+- [x] Vercel security incident (April 2026): closed by Vercel on 16 Oct 2026. Update added.
+- [x] Axios npm supply chain attack (Mar 2026): post mortem and Google attribution added, title fixed.
+- [x] Google Cloud TLS changes: rollout confirmed live (ECDSA, issued by WE2 not WE1); June 15 date corrected.
+- [x] IBM $30B post: price path to Nov 2026 added; unsupported 98% accuracy claim corrected.
+- [x] Google vs FFmpeg: CVEs fixed and backported; no funding outcome found.
+- [x] GitHub Models: retired 30 July 2026; post marked retired.
+- [x] Answer.AI: launch date corrected, shipped work listed.
+- [ ] Ongoing habit: any post tagged Security, News or a dated event gets a 3-month and a 12-month check.
 
 ### Tier 3: clean up what weakens the whole site
 - [ ] 29 published posts are under 300 words (e.g. `hello_World` at 42 words, `comp_vison_roboflow` at 70). For each, expand, merge into a related post with a redirect, or mark `noindex`. Thin pages lower the site's overall quality signal.
