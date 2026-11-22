@@ -670,3 +670,35 @@ $front-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, seri
     gap: 12px;
   }
 }
+
+// Topic entries use the same title and meta style as "Also new"
+.front-topic__list .front-topic__link {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+// Enlighten page cards: cover beside the title block, description and tags full width below,
+// so a narrow card doesn't leave an empty block next to the cover
+.book-card--enlighten .book-card__head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+
+  .book-card__cover {
+    width: 84px;
+  }
+
+  h3 {
+    margin-top: 6px;
+  }
+}
+
+.book-card--enlighten .book-card__headtext {
+  min-width: 0;
+}
