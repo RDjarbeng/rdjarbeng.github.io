@@ -107,7 +107,8 @@ module.exports = function(eleventyConfig) {
       const meta = await EleventyImage(file, {
         widths: [Number(width) || 300],
         formats: ["webp"],
-        outputDir: path.join(__dirname, "_site", "img", "thumbs"),
+        // Write next to the rest of the build, whatever --output is (not always _site)
+        outputDir: path.join(eleventyConfig.directories?.output || path.join(__dirname, "_site"), "img", "thumbs"),
         urlPath: "/img/thumbs/",
         sharpWebpOptions: { quality: 82 },
       });
