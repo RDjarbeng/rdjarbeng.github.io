@@ -4,12 +4,11 @@ title: Editorial Policy
 permalink: /editorial-policy/
 description: How posts on rdjarbeng.com are researched, sourced, updated and corrected, how AI tools are used, and how to report an error.
 ---
-
 This page explains how I write and maintain the posts on this site, so you can judge how far to rely on them.
 
 ## Who writes here
 
-Most posts are written by me, [Richard Djarbeng](/about/), a software and machine learning engineer with an MSc in Electrical and Computer Engineering from Carnegie Mellon University. I am a Research Associate at the Kigali Collaborative Research Center (since October 2026). Before that, as a Research Associate at Carnegie Mellon University Africa, I worked on the design of low-cost weather and air quality sensors deployed in East Africa, which is where most of the environmental posts come from. A few posts are written by guest authors, and each one is credited on the post and listed on the [authors page](/authors/).
+Most posts are written by me, [Richard Djarbeng](/about/), a software and machine learning engineer. A few posts are written by guest authors, and each one is credited on the post and listed on the [authors page](/authors/).
 
 ## Sources
 
