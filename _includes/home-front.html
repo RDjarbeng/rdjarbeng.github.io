@@ -1,0 +1,78 @@
+{%- comment -%}
+  Homepage front: the newest post as the lead story, the next 4 as "Also new", then topic
+  columns from _data/home_topics.js (passed in as include.topics). Topic columns skip any
+  post already shown above them, so nothing repeats on the first screen.
+{%- endcomment -%}
+{%- assign front_urls = "" | split: "" -%}
+{%- for p in site.posts limit:5 -%}{%- assign front_urls = front_urls | push: p.url -%}{%- endfor -%}
+{%- assign lead = site.posts | first -%}
+
+<section class="front" id="latest-posts" aria-label="Latest posts">
+  {%- comment -%} Wide covers sit on top of the text; square or tall covers sit beside it. {%- endcomment -%}
+  {%- assign lead_shape = lead.image | img_shape -%}
+  <article class="front-lead front-lead--{{ lead_shape }}">
+    <a class="front-lead__img" href="{{ lead.url | relative_url }}" tabindex="-1" aria-hidden="true" style="aspect-ratio: {{ lead.image | img_ratio }};">
+      {%- if lead.image %}<img src="{{ lead.image | thumb: 1100 }}" alt="">{% endif -%}
+    </a>
+    <div class="front-lead__text">
+    <p class="front-kicker">Latest{% assign lead_type = lead.content_type | default: lead.data.content_type %}{% if lead_type %} · {{ lead_type | replace: "-", " " }}{% elsif lead.categories.size > 0 %} · {{ lead.categories.first }}{% endif %}</p>
+    <h2 class="front-lead__title"><a href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h2>
+    <p class="front-lead__desc">{{ lead.description | default: lead.clean_excerpt | strip_html | strip_newlines | truncate: 240 }}</p>
+    <p class="front-meta"><time datetime="{{ lead.date | date_to_xmlschema }}">{{ lead.date | date: "%-d %B %Y" }}</time>{% if lead.read_time %} · {{ lead.read_time }} min read{% endif %}</p>
+    </div>
+  </article>
+
+  <aside class="front-also" aria-label="Also new">
+    <p class="front-kicker">Also new</p>
+    <ol class="front-also__list">
+      {%- for p in site.posts offset:1 limit:4 %}
+      <li class="front-also__item">
+        {%- comment -%} Thumbnail keeps the cover's own shape, clamped between 3:4 and 16:9 {%- endcomment -%}
+        {%- assign t_ratio = p.image | img_ratio -%}
+        {%- if t_ratio < 0.75 -%}{%- assign t_ratio = 0.75 -%}{%- elsif t_ratio > 1.78 -%}{%- assign t_ratio = 1.78 -%}{%- endif %}
+        <a class="front-also__thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true" style="aspect-ratio: {{ t_ratio }};">{% if p.image %}<img src="{{ p.image | thumb: 300 }}" alt="" loading="lazy">{% endif %}</a>
+        <div>
+          <a class="front-also__title" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+          <p class="front-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%-d %b %Y" }}</time>{% if p.read_time %} · {{ p.read_time }} min{% endif %}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    <div class="front-also__more">
+      <a class="front-also__all" href="{{ '/posts/' | relative_url }}">All posts &rarr;</a>
+      <span class="front-also__browse">Browse by <a href="{{ '/tags/' | relative_url }}">tag</a> or <a href="{{ '/categories/' | relative_url }}">category</a></span>
+    </div>
+  </aside>
+</section>
+
+{%- if include.topics %}
+<div class="front-topics__head">
+  <h2 class="front-topics__title" id="topics">Browse by topic</h2>
+  <p class="front-topics__sub">Three good places to start in each area I write about</p>
+</div>
+<section class="front-topics" aria-labelledby="topics">
+  {%- for t in include.topics %}
+  <div class="front-topic">
+    <h2 class="front-topic__name"><a href="{{ t.more | relative_url }}">{{ t.name }}</a></h2>
+    <ul class="front-topic__list">
+      {%- assign shown = 0 -%}
+      {%- for s in t.slugs -%}
+        {%- if shown >= 3 -%}{%- break -%}{%- endif -%}
+        {%- assign p = site.posts | where: "slug", s | first -%}
+        {%- if p and front_urls contains p.url -%}{%- continue -%}{%- endif -%}
+        {%- if p %}
+        {%- assign tp_ratio = p.image | img_ratio -%}
+        {%- if tp_ratio < 0.75 -%}{%- assign tp_ratio = 0.75 -%}{%- elsif tp_ratio > 1.78 -%}{%- assign tp_ratio = 1.78 -%}{%- endif %}
+      <li class="front-topic__item">
+        <a class="front-topic__thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true" style="aspect-ratio: {{ tp_ratio }};">{% if p.image %}<img src="{{ p.image | thumb: 300 }}" alt="" loading="lazy">{% endif %}</a>
+        <a class="front-topic__link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      </li>
+        {%- assign shown = shown | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor %}
+    </ul>
+    <a class="front-topic__more" href="{{ t.more | relative_url }}">{{ t.moreLabel | default: "More" }} &rarr;</a>
+  </div>
+  {%- endfor %}
+</section>
+{%- endif %}

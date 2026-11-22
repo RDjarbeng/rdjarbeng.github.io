@@ -182,7 +182,51 @@
 .carousel-prev { left: 12px; }
 .carousel-next { right: 12px; }
 
-// About Snippet Section
+// Homepage intro: one line with a small photo, replacing the boxed "About Me" card
+.home-intro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0 22px;
+  scroll-margin-top: 80px;
+
+  .home-intro__photo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .home-intro__text {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-color);
+
+    a {
+      color: var(--link-color);
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 600px) {
+    align-items: flex-start;
+
+    .home-intro__photo {
+      width: 52px;
+      height: 52px;
+      margin-top: 4px;
+    }
+
+    .home-intro__text {
+      font-size: 1rem;
+    }
+  }
+}
+
+// About Snippet Section (no longer used on the homepage; kept for any other page using it)
 .about-snippet {
   background: var(--card-bg, #f9f9f9);
   border: 1px solid var(--card-border, #eaeaea);

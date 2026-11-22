@@ -1,0 +1,672 @@
+// Homepage first screen: masthead, lead story with "Also new", topic columns.
+// Same vocabulary as the about page and hub: serif for names and headings, hairline rules,
+// square corners, no shadows or pills, site colour tokens. Nothing is laid over images.
+
+$front-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+
+// ---------- Masthead ----------
+.masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  padding: 8px 0 12px;
+  margin: 0 0 4px;
+  border-bottom: 1px solid var(--text-color);
+  scroll-margin-top: 80px;
+}
+
+.masthead__name {
+  font-family: $front-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+  border: 0;
+  color: var(--text-color);
+}
+
+.masthead__tagline {
+  margin: 6px 0 0;
+  font-size: 1.05rem;
+  color: var(--grey-text);
+}
+
+.masthead__byline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: right;
+
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--grey-text);
+  }
+
+  a {
+    color: var(--link-color);
+  }
+}
+
+.masthead__photo {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+.masthead__now {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: var(--grey-text);
+
+  span {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-right: 6px;
+  }
+}
+
+// ---------- Shared small text ----------
+.front-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  margin: 0 0 6px;
+}
+
+.front-meta {
+  font-size: 0.8rem;
+  color: var(--grey-text);
+  margin: 4px 0 0;
+}
+
+// ---------- Lead + Also new ----------
+// The main column is a size container, so the front section lays out by the width it
+// actually has (which already accounts for the "On this page" sidebar), not the window width.
+.home-main {
+  container-type: inline-size;
+  container-name: home-main;
+}
+
+.front {
+  display: grid;
+  // 3:2 gives "Also new" enough width for a 16:9 thumbnail beside a three-line headline,
+  // so each row's thumbnail and text end at about the same height.
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 0 28px;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid var(--border-color);
+  scroll-margin-top: 80px;
+}
+
+// The image frame takes the cover's own ratio (set inline from img_ratio), so nothing is
+// cropped. Wide covers go on top; square and tall covers go beside the text so the text
+// uses the height next to them instead of leaving empty space below.
+.front-lead--square,
+.front-lead--tall {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 20px;
+  align-items: start;
+
+  .front-lead__img {
+    margin-bottom: 0;
+  }
+}
+
+.front-lead--tall {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.front-lead__img {
+  display: block;
+  overflow: hidden;
+  background: var(--category-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.front-lead__title {
+  font-family: $front-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  border: 0;
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.front-lead__desc {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.front-also {
+  border-left: 1px solid var(--border-color);
+  padding-left: 22px;
+}
+
+.front-also__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.front-also__item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+
+  &:first-child {
+    padding-top: 4px;
+  }
+}
+
+// Width is fixed; height follows the cover's shape (aspect-ratio set inline, clamped 3:4 to 16:9)
+.front-also__thumb {
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  background: var(--category-bg);
+  border: 1px solid var(--border-color);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.front-also__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--text-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+// Bottom row of "Also new": one clear primary link, secondary browsing options muted
+.front-also__more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 16px;
+  margin: 0;
+  padding-top: 12px;
+  font-size: 0.9rem;
+}
+
+.front-also__all {
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 1px;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color);
+  }
+}
+
+.front-also__browse {
+  color: var(--grey-text);
+
+  a {
+    color: var(--grey-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--text-color);
+    }
+  }
+}
+
+
+// ---------- Topic columns ----------
+.front-topics__head {
+  padding: 22px 0 0;
+  scroll-margin-top: 80px;
+}
+
+.front-topics__title {
+  font-family: $front-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+  border: 0;
+  color: var(--text-color);
+}
+
+.front-topics__sub {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: var(--grey-text);
+}
+
+.front-topics {
+  display: grid;
+  // Two wide columns so each topic gets the same 150px thumbnails as "Also new"
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 16px 0 28px;
+  margin-bottom: 12px;
+}
+
+// Topic entries: small thumbnail (cover's own shape) beside the title, like "Also new"
+.front-topic__item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 14px;
+  padding: 4px 0;
+  align-items: start;
+}
+
+.front-topic__thumb {
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  background: var(--category-bg);
+  border: 1px solid var(--border-color);
+  margin-top: 2px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.front-topic__name {
+  font-family: $front-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border: 0;
+  border-bottom: 1px solid var(--text-color);
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.front-topic__list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 6px 0;
+    line-height: 1.4;
+    font-size: 0.93rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.front-topic__more {
+  font-size: 0.85rem;
+  color: var(--link-color);
+}
+
+// ---------- Narrower main column (sidebar open or smaller window) ----------
+// Stack the lead above "Also new" before the side column gets too thin for its headlines.
+@container home-main (max-width: 860px) {
+  .front {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .front-also {
+    border-left: 0;
+    padding-left: 0;
+    margin-top: 18px;
+  }
+
+  // Stacked, "Also new" has the full width: two items per row keeps it compact
+  .front-also__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  .front-also__item:nth-child(2) {
+    padding-top: 4px;
+  }
+
+  .front-topics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container home-main (max-width: 520px) {
+  .front-also__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .front-also__item:nth-child(2) {
+    padding-top: 12px;
+  }
+
+  .front-topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .front-lead--square,
+  .front-lead--tall {
+    grid-template-columns: minmax(0, 1fr);
+
+    .front-lead__img {
+      margin-bottom: 12px;
+    }
+  }
+
+  .front-lead--tall .front-lead__img {
+    max-width: 65%;
+  }
+
+  // Phones: one thumbnail size for both "Also new" and the topic lists
+  .front-also__item,
+  .front-topic__item {
+    grid-template-columns: 112px minmax(0, 1fr);
+  }
+
+  .front-also__thumb,
+  .front-topic__thumb {
+    width: 112px;
+  }
+
+  .masthead {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .masthead__name {
+    font-size: 1.8rem;
+  }
+
+  .masthead__byline {
+    text-align: left;
+  }
+
+  .front-lead__title {
+    font-size: 1.35rem;
+  }
+
+  .front-topics {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+
+// The site-wide `img { padding: 10px 0 }` rule shrinks pictures inside fixed frames and lets
+// the frame background show as strips above and below. Framed images here need no padding.
+.front-lead__img img,
+.front-also__thumb img,
+.masthead__photo {
+  padding: 0;
+}
+
+// ---------- Homepage card sections (Featured, Guest Authors, Personal) when narrow ----------
+// In a single column, full-width covers make each card very tall. Switch to the horizontal
+// card (thumbnail left, text right), the same pattern as "Also new" and the topic lists.
+// Triggers at the same width where the front section stacks.
+@container home-main (max-width: 860px) {
+  // One column of horizontal cards, for lists of post cards only (series cards keep their own design)
+  .post-list:has(> .post-card:not(.series-card)) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px;
+  }
+
+  .post-list .post-card:not(.series-card) {
+    flex-direction: row;
+    height: auto;
+
+    .post-link {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .post-card-image {
+      flex: 0 0 auto;
+      width: clamp(104px, 34%, 180px);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 0;
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+      }
+    }
+
+    .post-card-content {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0;
+    }
+
+    h4 {
+      font-size: 1rem;
+      line-height: 1.35;
+      margin: 0 0 4px;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+
+    .post-card-excerpt {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+// ---------- Homepage post lists: flat, no cards inside cards ----------
+// Topic groups are a plain heading over their posts, and post cards on the homepage have no
+// background, border, rounding or shadow; spacing and hairlines carry the structure instead.
+.featured-topic-container {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.featured-topic__name {
+  font-family: $front-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 8px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--text-color);
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.featured-topic__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.home-main .post-list .post-card:not(.series-card) {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .post-link {
+    padding: 0;
+  }
+
+  .post-card-image {
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+  }
+
+  .post-card-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@container home-main (max-width: 860px) {
+  .home-main .post-list .post-card:not(.series-card) {
+    border-bottom: 1px solid var(--border-color);
+
+    .post-link {
+      padding: 12px 0;
+    }
+  }
+
+  .post-list:has(> .post-card:not(.series-card)) {
+    gap: 0;
+  }
+}
+
+// ---------- Enlighten books on the homepage: flat, cover beside the text ----------
+.home-main .book-card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+// Any book card with a cover (homepage and the Enlighten page): cover on the left
+.book-card--cover {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.book-card__cover {
+  flex: 0 0 auto;
+  width: 90px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+}
+
+.book-card__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// ---------- Series cards: smaller covers without changing the card ----------
+// Narrower columns (about 240px) so the stacked covers render smaller; two per row on
+// phones instead of one full-width card. The card design itself is unchanged.
+.home-main .post-list.home-series {
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) !important;
+  justify-content: start;
+  gap: 20px;
+}
+
+@container home-main (max-width: 520px) {
+  .home-main .post-list.home-series {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px;
+  }
+}
