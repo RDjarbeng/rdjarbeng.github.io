@@ -1,0 +1,26 @@
+// Site-wide page scrollbar: thin, low-contrast, matches light and dark themes.
+// Modern Chrome, Edge and Firefox use the standard properties; older WebKit uses the
+// ::-webkit-scrollbar rules (ignored when scrollbar-width is supported).
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-dark, #888) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--border-dark, #888);
+  border-radius: 0;
+  border: 2px solid var(--bg-color, #fff);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--grey-text, #666);
+}
