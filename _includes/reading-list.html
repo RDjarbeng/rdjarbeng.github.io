@@ -11,7 +11,7 @@
   {%- assign rl_desc = p.description | default: p.clean_excerpt | strip_html | strip_newlines | truncate: 170 -%}
   <li class="reading-list__item">
     <a class="reading-list__thumb" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
-      {%- if p.image -%}<img src="{{ p.image }}" alt="" width="160" height="100" loading="lazy">{%- endif -%}
+      {%- if p.image -%}<img src="{{ p.image | thumb: 320 }}" alt="" width="160" height="100" loading="lazy">{%- endif -%}
     </a>
     <div class="reading-list__body">
       <h3 class="reading-list__title"><a href="{{ p.url }}">{{ p.title }}</a></h3>

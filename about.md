@@ -170,42 +170,42 @@ description: Richard Djarbeng is a software and machine learning engineer and re
   <div class="cv-section__body">
     <ol class="cv-projects">
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/project_air_quality_dashboard.jpg" alt="Air quality dashboard for Kigali" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/project_air_quality_dashboard.jpg' | thumb: 180 }}" alt="Air quality dashboard for Kigali" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title"><a href="https://airanalysis.netlify.app" rel="noreferrer">Kigali air quality analysis dashboard</a> <span class="cv-tag">Data analysis</span></h3>
         <p>PM2.5 in Kigali, analysed from US Embassy reference monitor data. The mean was 43.31 µg/m³, and 57% of readings were in the "Unhealthy" range or worse.</p>
       </div>
       </li>
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/comp_vision_roboflow.jpeg" alt="Particulate filter images used for PM prediction" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/comp_vision_roboflow.jpeg' | thumb: 180 }}" alt="Particulate filter images used for PM prediction" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title"><a href="https://www.africa.engineering.cmu.edu/news/2024/08/20-richard-djarbeng.html" rel="noreferrer">Mapping filter imagery to PM values</a> <span class="cv-tag">Machine learning</span></h3>
         <p>Models that predict PM values from photos of particulate filters taken at several wavelengths. It is a cheap stand-in for lab analysis of black carbon.</p>
       </div>
       </li>
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/satellite_orbiting_earth_color_codes.jpg" alt="Illustration of satellite imaging" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/satellite_orbiting_earth_color_codes.jpg' | thumb: 180 }}" alt="Illustration of satellite imaging" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title">Transmission corridor monitoring <span class="cv-tag">Remote sensing</span></h3>
         <p>Used Google Earth Engine and CNNs to spot encroachment on power transmission corridors in Ghana, for GRIDCo.</p>
       </div>
       </li>
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/richard_picture_comparison_background_remover.png" alt="Before and after background removal" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/richard_picture_comparison_background_remover.png' | thumb: 180 }}" alt="Before and after background removal" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title"><a href="/free-hd-background-remover-effortless-image-editing-tool/">Free background remover</a> <span class="cv-tag">Deep learning</span></h3>
         <p>A segmentation model (rembg with U2Net) running on Hugging Face Spaces.</p>
       </div>
       </li>
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/gsm_module.jpg" alt="GSM module" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/gsm_module.jpg' | thumb: 180 }}" alt="GSM module" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/HTTP-GET-POST-Request-with-GSM" rel="noreferrer">HTTP over GSM</a> <span class="cv-tag">Embedded C++</span></h3>
         <p>HTTP GET and POST requests from GSM modules in C++, for sending IoT data from places without Wi-Fi.</p>
       </div>
       </li>
       <li class="has-thumb">
-        <img class="cv-thumb" src="/assets/images/countdown_mobile.png" alt="Countdown app on a phone" width="88" height="88" loading="lazy">
+        <img class="cv-thumb" src="{{ '/assets/images/countdown_mobile.png' | thumb: 180 }}" alt="Countdown app on a phone" width="88" height="88" loading="lazy">
         <div>
         <h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/countdown" rel="noreferrer">Countdown PWA</a> <span class="cv-tag">Web</span></h3>
         <p>A countdown timer web app with themes that works offline.</p>
@@ -216,12 +216,12 @@ description: Richard Djarbeng is a software and machine learning engineer and re
     <details class="cv-more">
       <summary>Six more projects</summary>
       <ol class="cv-projects" start="7">
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/kigali_bustop_motor.jpg" alt="Taxis and motorbikes at a Kigali bus stop" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Real-time taxi fleet pipeline <span class="cv-tag">Data engineering</span></h3><p>Streamed taxi data through Google Cloud Dataflow into BigQuery, with live metrics in Looker Studio.</p></div></li>
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/loan_risk_prediction_dashboard.jpg" alt="Loan risk prediction dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Loan default risk prediction <span class="cv-tag">AutoML</span></h3><p>A Vertex AI AutoML model, evaluated with precision, recall and ROC curves, plus a look at which features mattered most.</p></div></li>
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/trustmrr_revenue_leaderboard_cover.jpg" alt="Illustration of a revenue leaderboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">E-commerce purchase prediction <span class="cv-tag">BigQuery ML</span></h3><p>Predicted repeat purchases from Google Analytics data. Features built from checkout progress, traffic source and device raised ROC AUC from 0.72 to 0.94.</p></div></li>
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/university_management_system_dashboard.jpg" alt="University admission system dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/University-Admission-Management-System" rel="noreferrer">University admission system</a> <span class="cv-tag">Java</span></h3><p>An admission management system in JavaFX and T-SQL.</p></div></li>
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/escape_covid_maze_game.jpg" alt="Escape the Covid Maze game screen" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Escape the Covid Maze <span class="cv-tag">Unity / C#</span></h3><p>A 2D Unity game where enemies chase you through a maze using A* search.</p></div></li>
-        <li class="has-thumb"><img class="cv-thumb" src="/assets/images/git_complete_ml_package_cover_rd.webp" alt="Machine Learning Complete course cover" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/Nyandwi/machine_learning_complete/" rel="noreferrer">Machine Learning Complete</a> <span class="cv-tag">Open source</span></h3><p>I contributed to this open machine learning course (see below).</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/kigali_bustop_motor.jpg' | thumb: 180 }}" alt="Taxis and motorbikes at a Kigali bus stop" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Real-time taxi fleet pipeline <span class="cv-tag">Data engineering</span></h3><p>Streamed taxi data through Google Cloud Dataflow into BigQuery, with live metrics in Looker Studio.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/loan_risk_prediction_dashboard.jpg' | thumb: 180 }}" alt="Loan risk prediction dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Loan default risk prediction <span class="cv-tag">AutoML</span></h3><p>A Vertex AI AutoML model, evaluated with precision, recall and ROC curves, plus a look at which features mattered most.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/trustmrr_revenue_leaderboard_cover.jpg' | thumb: 180 }}" alt="Illustration of a revenue leaderboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">E-commerce purchase prediction <span class="cv-tag">BigQuery ML</span></h3><p>Predicted repeat purchases from Google Analytics data. Features built from checkout progress, traffic source and device raised ROC AUC from 0.72 to 0.94.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/university_management_system_dashboard.jpg' | thumb: 180 }}" alt="University admission system dashboard" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/RDjarbeng/University-Admission-Management-System" rel="noreferrer">University admission system</a> <span class="cv-tag">Java</span></h3><p>An admission management system in JavaFX and T-SQL.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/escape_covid_maze_game.jpg' | thumb: 180 }}" alt="Escape the Covid Maze game screen" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title">Escape the Covid Maze <span class="cv-tag">Unity / C#</span></h3><p>A 2D Unity game where enemies chase you through a maze using A* search.</p></div></li>
+        <li class="has-thumb"><img class="cv-thumb" src="{{ '/assets/images/git_complete_ml_package_cover_rd.webp' | thumb: 180 }}" alt="Machine Learning Complete course cover" width="88" height="88" loading="lazy"><div><h3 class="cv-entry__title"><a href="https://github.com/Nyandwi/machine_learning_complete/" rel="noreferrer">Machine Learning Complete</a> <span class="cv-tag">Open source</span></h3><p>I contributed to this open machine learning course (see below).</p></div></li>
       </ol>
     </details>
   </div>

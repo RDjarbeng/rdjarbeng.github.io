@@ -411,3 +411,10 @@ $cv-break: 760px;
     }
   }
 }
+
+// Cancel the site-wide `img { padding: 10px 0 }` on framed images (thumbnails, headshot)
+.cv .cv-thumb,
+.cv .cv-head__photo,
+.about-headshot {
+  padding: 0;
+}

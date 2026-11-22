@@ -81,3 +81,8 @@
     overflow: hidden;
   }
 }
+
+// Cancel the site-wide `img { padding: 10px 0 }` inside the fixed thumbnail frame
+.reading-list__thumb img {
+  padding: 0;
+}
