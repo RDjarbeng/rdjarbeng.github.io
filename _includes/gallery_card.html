@@ -97,7 +97,7 @@
          data-caption="{% if include.item.clean_caption %}{{ include.item.clean_caption | escape }}{% else %}{{ include.item.content | strip_html | truncatewords: 50 | escape }}{% endif %}" 
          data-date="{{ include.item.date | date_to_xmlschema }}">
         
-        <img src="{% if is_external %}{{ img_src }}{% else %}{{ img_src | relative_url }}{% endif %}" 
+        <img src="{% if is_external %}{{ img_src | thumb_url }}{% else %}{{ img_src | relative_url }}{% endif %}" 
              alt="{{ include.item.title | escape }}" 
              loading="lazy" 
              decoding="async"

@@ -76,6 +76,64 @@ module.exports = function(eleventyConfig) {
   const liquidTemplateCache = new Map();
   eleventyConfig.on("eleventy.before", () => liquidTemplateCache.clear());
 
+  // {{ image | img_shape }}: "wide", "square" or "tall", read from the image file itself, so
+  // layouts can place a cover by its real shape instead of cropping it into a fixed frame.
+  // {{ image | img_ratio }}: the width/height ratio (falls back to 16:9 for remote images).
+  const { imageRatio } = require("./lib/image-ratio.js");
+  eleventyConfig.addFilter("img_ratio", (src) => {
+    const r = imageRatio(src);
+    return r ? Math.round(r * 1000) / 1000 : 1.778;
+  });
+  eleventyConfig.addFilter("img_shape", (src) => {
+    const r = imageRatio(src) || 1.778;
+    return r >= 1.25 ? "wide" : r <= 0.8 ? "tall" : "square";
+  });
+
+  // {{ image | thumb: 300 }}: a sharp, pre-sized WebP thumbnail of a local image, made with
+  // @11ty/eleventy-img. Browsers blur detailed covers when they shrink a 1300px image into a
+  // 150px slot; resizing at build time (Lanczos) keeps them crisp and cuts the download size.
+  // Pass about 2x the displayed CSS width for sharp results on high-density screens.
+  // Generated files are written once and reused (eleventy-img skips existing outputs).
+  // Remote URLs and missing files are returned unchanged.
+  // eleventy-img v6 is an ES module; require() returns its namespace with the function on .default
+  const eleventyImgModule = require("@11ty/eleventy-img");
+  const EleventyImage = eleventyImgModule.default || eleventyImgModule.Image || eleventyImgModule;
+  eleventyConfig.addAsyncFilter("thumb", async (src, width = 300) => {
+    if (process.env.NO_THUMBS) return src; // NO_THUMBS=1 skips resizing for quick local builds
+    if (typeof src !== "string" || !src.startsWith("/") || src.startsWith("//")) return src;
+    const file = path.join(__dirname, decodeURIComponent(src.split("?")[0]));
+    if (!fs.existsSync(file)) return src;
+    try {
+      const meta = await EleventyImage(file, {
+        widths: [Number(width) || 300],
+        formats: ["webp"],
+        outputDir: path.join(__dirname, "_site", "img", "thumbs"),
+        urlPath: "/img/thumbs/",
+        sharpWebpOptions: { quality: 82 },
+      });
+      return meta.webp[0].url;
+    } catch (e) {
+      console.warn(`[thumb] ${src}: ${e.message}`);
+      return src;
+    }
+  });
+
+  // {{ url | thumb_url }}: smaller image for thumbnails. NASA's image server resizes on request,
+  // so gallery cards no longer download 6000px APOD originals just to show a small card.
+  // Other URLs are returned unchanged.
+  eleventyConfig.addFilter("thumb_url", (url, width = 800) => {
+    if (typeof url !== "string" || !url.includes("assets.science.nasa.gov/dynamicimage/")) return url;
+    try {
+      const u = new URL(url);
+      u.searchParams.set("w", String(width));
+      u.searchParams.delete("h");
+      u.searchParams.set("fit", "clip");
+      return u.toString();
+    } catch (e) {
+      return url;
+    }
+  });
+
   // Build log: a full build writes ~2,400 pages, and one "Writing ..." line per page buried
   // warnings and broke terminal scrollback. Quiet mode drops those lines; this prints a short
   // summary instead. Small rebuilds (e.g. saving one post under --serve) still list each file.
