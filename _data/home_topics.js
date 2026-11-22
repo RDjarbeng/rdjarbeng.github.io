@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     name: "Aerospace",
-    more: "/categories/aviation-and-aerospace/",
+    more: "/categories/space-satellites/",
     moreLabel: "More",
     slugs: [
       "how-carnegie-mellon-sent-missions-to-the-moon-without-an-aerospace-department",
