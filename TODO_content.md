@@ -988,3 +988,4 @@ Wonder how that works?
 - [ ] A thesis on urban air quality monitoring and what the challenges are and how it is attempted to be solved in Switzerland:
 
 https://infoscience.epfl.ch/entities/publication/af829a94-1ad7-4101-9eb2-7f1d110f3cd2
+- [ ] How old are the current encryption methods being used, is SHA-256 still the golden standard?
