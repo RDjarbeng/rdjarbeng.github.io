@@ -164,3 +164,7 @@ https://github.com/anthropics/claude-code/issues
 - [ ] 2026-11-23 10:57 CAT | Idea for a skill, agent writes the vode agent verifies it, corrects the issues before you even see it.
 
 Compared to other approach where agent has to produce code and user verifies the issues
+- [ ] 2026-11-23 10:59 CAT | This could be a good resource on the post, the rise of Nvidia:
+
+
+https://www.acquired.fm/episodes/nvidia-the-gpu-company-1993-2006
