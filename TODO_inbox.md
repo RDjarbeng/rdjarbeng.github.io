@@ -158,3 +158,6 @@ https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/1JDTJ5D1fR_MbD
 https://www.youtube.com/watch?v=-IPOgf5tBZw&t=11s
 - [ ] 2026-11-22 08:28 CAT | Africa AI report let's compile it
 - [ ] 2026-11-22 15:47 CAT | Homepage fonts aren't consistent
+- [ ] 2026-11-23 10:37 CAT | Potential project: Map the issues in the claude repo to figure out the most pressing/popular, the ones that can easily be fixed, the ones that would be good to launch as a claude skill that other users can see, any other interesting thing, would be nice to treat issues as a source of info on how claude does, since it's a data signal, most people won't create an issue unless it has bugged them for a while.
+
+https://github.com/anthropics/claude-code/issues
