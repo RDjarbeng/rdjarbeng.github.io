@@ -990,3 +990,4 @@ Wonder how that works?
 https://infoscience.epfl.ch/entities/publication/af829a94-1ad7-4101-9eb2-7f1d110f3cd2
 - [ ] How old are the current encryption methods being used, is SHA-256 still the golden standard?
 - [ ] What can be seen from space, and how has that changed from way back in the 80s till now, buildings, elevation, that's in physical, what if we switch ti thermals and instruments what do you see,  ocean currents, gulf stream,. Wind currents, animal migrations,. How small can we see. What invisible thing is now clearly visible?
+- [ ] Do radar systems still behave like the way we were taught, a beam bouncing back? In my experiments with ultra sonic sensors I've found that certain materials behave differently and nets, foam for instance may not even appear to be physically present although it is right on front of the sensor, is radar also susceptible to this?
