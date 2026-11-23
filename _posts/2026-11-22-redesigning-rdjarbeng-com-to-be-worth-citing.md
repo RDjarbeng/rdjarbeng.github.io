@@ -8,21 +8,29 @@ tags:
   - Eleventy
   - Web Design
   - Building This Blog
-title: "Redesigning This Site to Be Worth Citing: The About Page, the Homepage, and a Lot of Small Fixes"
-description: What I changed on rdjarbeng.com over a weekend so a professor or a university page would be comfortable linking to it, and what I learned about cards, carousels, images and trust along the way.
-image: /assets/images/posts/covers/site_redesign_worth_citing_cover.jpg
-image_alt: "Flat illustration of a browser window: on the left a jumble of rounded cards and pill buttons, an arrow, and on the right a calm page with one picture and aligned text lines, under the headline A Site Worth Citing"
-layout: post
-content_type: project
-series: "Building This Blog"
+series: Building This Blog
+series_part: null
 key_points:
   - A site people cite needs a trust layer, not just good SEO. I added an editorial policy, a corrections note, dated updates and clear author details.
   - The about page went from a stack of cards and icon pills to a plain CV layout with dated roles, and AI agents now read the right job history.
   - The homepage carousel repeated the latest posts, so I replaced it with a lead story, an Also new list and topic columns.
   - Most of the visual noise came from cards inside cards, rounded pills and images squeezed into frames of the wrong shape.
+title: 'Redesigning This Site to Be Worth Citing: The About Page, the Homepage, and a Lot of Small Fixes'
+image: /assets/images/posts/covers/site_redesign_worth_citing_cover.jpg
+image_alt: 'Flat illustration of a browser window: on the left a jumble of rounded cards and pill buttons, an arrow, and on the right a calm page with one picture and aligned text lines, under the headline A Site Worth Citing'
+layout: post
+content_type: project
+ai_assistance: []
+card_items: []
+description: What I changed on rdjarbeng.com over a weekend so a professor or a university page would be comfortable linking to it, and what I learned about cards, carousels, images and trust along the way.
 ---
 
-I want this site to be something a professor, a university page or a careful journalist would be comfortable linking to. Search engines already found it. The question was whether a person who landed here would trust it. Over one long weekend I went through the site with that question in mind and changed more than I expected to.
+
+I took a  look at my site homepage and decided I wanted a remodel. Before there were 2 main items on first load. A card with about me, giving 4 sentences about me and a carousel with 6 of my most recent posts. Then directly underneath those were 6 of my most recent posts the same ones you had just seen in the carousel. [insert other design problems here that needed to be fixed]
+
+## What I wanted the homepage to be
+
+ I want this site to be something a professor, a university page or a careful journalist would be comfortable linking to. Search engines already found it. The question was whether a person who landed here would trust it. Over one long weekend I went through the site with that question in mind and changed more than I expected to.
 
 ![A browser window with a jumble of rounded cards and pills on the left and a calm, aligned page on the right](/assets/images/posts/covers/site_redesign_worth_citing_cover.jpg "From cards and carousels to a page worth citing")
 
@@ -64,7 +72,7 @@ Nothing repeats on that screen. The topic lists skip any post already shown abov
 
 ## Cards inside cards
 
-The biggest source of visual noise wasn't any single element. It was cards inside cards. A topic group was a rounded box with a pill-shaped label, holding more rounded boxes, each with a border and a shadow.
+The biggest source of visual noise wasn't any single element. It was cards inside cards.[RD: bad sentence structure] A topic group was a rounded box with a pill-shaped label, holding more rounded boxes, each with a border and a shadow.
 
 I removed almost all of it. Topic groups are now a heading with a thin rule, and posts sit directly on the page as an image, a title and a line of text, separated by space and hairlines. The site reads calmer, and it turns out the boxes weren't doing any work the spacing couldn't do.
 
@@ -74,7 +82,11 @@ Two image problems kept coming back.
 
 First, shape. My covers come in two shapes, wide 16:9 and square, and the layout was forcing both into one frame, so either the picture got cropped or space was wasted. The site now reads each cover's real size when it builds. A wide cover goes across the top of the lead story; a square one sits beside the headline so the text fills the space next to it.
 
+[RD: needs screenshots]
+
 Second, sharpness. The small thumbnails looked blurry, because the browser was shrinking a 1,300-pixel cover into a 150-pixel box. The site now makes proper thumbnails at build time with [eleventy-img](https://www.11ty.dev/docs/plugins/image/), sized for where they're shown. They're sharper and much smaller to download. The homepage gallery had a worse version of the same problem: it was loading NASA's full-size space photos, some 6,000 pixels wide and over 2 MB each, to show small cards. It now asks NASA for an 800-pixel version.
+
+[RD: needs screenshots]
 
 ## Small fixes that added up
 
@@ -86,8 +98,10 @@ A lot of the work was small, and most of it came from looking at the site at dif
 - The Enlighten book list said "0 books" on my dev server and had no covers. It now shows all 13, each with its cover.
 - The page scrollbar is thinner and follows the light or dark theme.
 
+[RD: needs screenshots]
+
 ## What I'd tell myself at the start
 
-Decide who you want to trust the site before you change how it looks. Most of what made this site feel unofficial wasn't the colours. It was missing dates, missing sources, repeated content and decoration standing in for structure.
+Decide who you want to trust the site before you change how it looks. Most of what made this site feel unofficial wasn't the colours. It was missing dates, missing sources, repeated content and decoration standing in for structure. [RD: bad sentence structure]
 
 And look at the page at more than one width. Nearly every problem I fixed this weekend was invisible on my laptop and obvious on a phone or a half-width window.
