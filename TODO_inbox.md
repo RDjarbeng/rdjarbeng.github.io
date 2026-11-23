@@ -161,3 +161,6 @@ https://www.youtube.com/watch?v=-IPOgf5tBZw&t=11s
 - [ ] 2026-11-23 10:37 CAT | Potential project: Map the issues in the claude repo to figure out the most pressing/popular, the ones that can easily be fixed, the ones that would be good to launch as a claude skill that other users can see, any other interesting thing, would be nice to treat issues as a source of info on how claude does, since it's a data signal, most people won't create an issue unless it has bugged them for a while.
 
 https://github.com/anthropics/claude-code/issues
+- [ ] 2026-11-23 10:57 CAT | Idea for a skill, agent writes the vode agent verifies it, corrects the issues before you even see it.
+
+Compared to other approach where agent has to produce code and user verifies the issues
