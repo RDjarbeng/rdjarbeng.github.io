@@ -985,3 +985,6 @@ ANd what is "Attention is all you need?"
 
 Wonder how that works?
 - [ ] The concept of a software factory, now in the age of AI and agents. Are agents your friend?
+- [ ] A thesis on urban air quality monitoring and what the challenges are and how it is attempted to be solved in Switzerland:
+
+https://infoscience.epfl.ch/entities/publication/af829a94-1ad7-4101-9eb2-7f1d110f3cd2
