@@ -168,3 +168,6 @@ Compared to other approach where agent has to produce code and user verifies the
 
 
 https://www.acquired.fm/episodes/nvidia-the-gpu-company-1993-2006
+- [ ] 2026-11-23 11:44 CAT | May be a good paper out of my space to review: https://www.sfu.ca/~schmitt/geog.pdf
+
+Increasing Returns and Economic Geography Author(s): Paul Krugman Source: The Journal of Political Economy, Vol. 99, No. 3 (Jun., 1991), pp. 483-499
