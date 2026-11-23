@@ -984,3 +984,4 @@ ANd what is "Attention is all you need?"
 - [ ] Strange thing is that going to the hubs would be expected to be cheaper, for example Kigali to Addis-Ababa(854)can be more expensive than Kigali to Lagos transit through Addis $567
 
 Wonder how that works?
+- [ ] The concept of a software factory, now in the age of AI and agents. Are agents your friend?
