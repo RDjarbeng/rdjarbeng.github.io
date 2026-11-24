@@ -9,37 +9,37 @@
   <!-- Lever 1: SAATM Open Skies (Top Left) -->
   <g transform="translate(40, 60)">
     <rect x="0" y="0" width="345" height="110" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-    <rect x="0" y="0" width="345" height="34" rx="8" fill="#1d4f9c"/>
+    <rect x="0" y="0" width="345" height="34" rx="8" fill="#2d4763"/>
     <text x="172" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">1. SAATM Open Skies</text>
     <text x="20" y="64" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Replaces bilateral route caps</text>
-    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#555555">Enables direct 5th-freedom flying</text>
+    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Enables direct 5th-freedom flying</text>
   </g>
 
   <!-- Lever 2: ECOWAS Tax Cuts (Top Right) -->
   <g transform="translate(415, 60)">
     <rect x="0" y="0" width="345" height="110" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-    <rect x="0" y="0" width="345" height="34" rx="8" fill="#2d6a4f"/>
+    <rect x="0" y="0" width="345" height="34" rx="8" fill="#141414"/>
     <text x="172" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">2. Regional Fee Cuts</text>
     <text x="20" y="64" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">ECOWAS 2026 reform model</text>
-    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#555555">Abolishes air tax, cuts charges 25%</text>
+    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Abolishes air tax, cuts charges 25%</text>
   </g>
 
   <!-- Lever 3: Local MRO (Bottom Left) -->
   <g transform="translate(40, 185)">
     <rect x="0" y="0" width="345" height="110" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-    <rect x="0" y="0" width="345" height="34" rx="8" fill="#d7263d"/>
+    <rect x="0" y="0" width="345" height="34" rx="8" fill="#b84d43"/>
     <text x="172" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">3. Continental MRO Bases</text>
     <text x="20" y="64" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Joint airline maintenance</text>
-    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#555555">Stops exporting 85% of repair spend</text>
+    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Stops exporting 85% of repair spend</text>
   </g>
 
   <!-- Lever 4: Unblocking Funds (Bottom Right) -->
   <g transform="translate(415, 185)">
     <rect x="0" y="0" width="345" height="110" rx="8" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-    <rect x="0" y="0" width="345" height="34" rx="8" fill="#f2c12e"/>
+    <rect x="0" y="0" width="345" height="34" rx="8" fill="#cfa14a"/>
     <text x="172" y="24" font-family="'Arial Black', sans-serif" font-size="18" fill="#141414" text-anchor="middle">4. Release Blocked Funds</text>
     <text x="20" y="64" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Unfreeze trapped revenues</text>
-    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#555555">Removes currency devaluation risk</text>
+    <text x="20" y="92" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Removes currency devaluation risk</text>
   </g>
 </svg>
 
