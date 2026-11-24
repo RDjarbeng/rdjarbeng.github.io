@@ -94,12 +94,13 @@ You can easily access AQI information for your area through various channels:
 
 ## Calculate the AQI from PM readings
 
-The Air Quality Index (AQI) used by the US EPA measures both **PM2.5** and **PM10**. PM2.5 refers to particulate matter with a diameter of 2.5 micrometers or smaller, while PM10 includes particles up to 10 micrometers in diameter2.
+The Air Quality Index (AQI) used by the US EPA measures both **PM2.5** and **PM10**. PM2.5 refers to particulate matter with a diameter of 2.5 micrometers or smaller, while PM10 includes particles up to 10 micrometers in diameter. [What PM2.5 is](/what-is-particulate-matter-pm2.5-and-the-environmental-significance/) covers where these particles come from.
 
 To calculate the AQI from PM readings, the process involves several steps:
 
 1. **Measure the concentration** of PM2.5 or PM10 in the air (in micrograms per cubic meter, µg/m³).
-2. **Compare the measured concentration** to the EPA's AQI breakpoints, which define ranges of concentrations and corresponding AQI values.
+2. **Compare the measured concentration** to the EPA's AQI breakpoints, which define ranges of concentrations and corresponding AQI values. The PM2.5 breakpoints are in the table below.
+
 3. **Use the formula** to calculate the AQI for the specific pollutant: 
 
    $$ \text{AQI} = \left( \frac{\text{IHI} - \text{ILO}}{\text{BPHI} - \text{BPLO}} \right) \times (\text{Cp} - \text{BPLO}) + \text{ILO} $$
@@ -114,13 +115,30 @@ To calculate the AQI from PM readings, the process involves several steps:
 
 4. **Select the highest AQI value** among all pollutants to represent the overall AQI for the area.
 
+### PM2.5 breakpoints
+
+These are the breakpoints for a 24-hour PM2.5 average. The EPA updated them on 7 February 2024, and the new values have applied since 6 May 2024 ([EPA fact sheet](https://www.epa.gov/system/files/documents/2024-02/pm-naaqs-air-quality-index-fact-sheet.pdf)).
+
+| AQI category | AQI values | PM2.5 since May 2024 (µg/m³) | PM2.5 before May 2024 (µg/m³) |
+| --- | --- | --- | --- |
+| Good | 0 to 50 | 0.0 to 9.0 | 0.0 to 12.0 |
+| Moderate | 51 to 100 | 9.1 to 35.4 | 12.1 to 35.4 |
+| Unhealthy for Sensitive Groups | 101 to 150 | 35.5 to 55.4 | 35.5 to 55.4 |
+| Unhealthy | 151 to 200 | 55.5 to 125.4 | 55.5 to 150.4 |
+| Very Unhealthy | 201 to 300 | 125.5 to 225.4 | 150.5 to 250.4 |
+| Hazardous | 301 and above | 225.5 and above | 250.5 and above |
+
+The "Good" ceiling dropped to 9.0 to match the EPA's new annual PM2.5 standard of 9.0 µg/m³. The 24-hour standard stayed at 35 µg/m³, which is why the Moderate band still ends at 35.4. A calculator or paper dated before May 2024 used the old column.
+
+The [WHO's 2021 guidelines](https://www.who.int/publications/i/item/9789240034228) are stricter on both counts: 15 µg/m³ for a 24-hour average against the US 35, and 5 µg/m³ for a yearly average against the US 9.0. A day at the WHO's 24-hour limit of 15 µg/m³ already counts as Moderate on the US scale.
+
 The website shows data for the USA AQI only.
 
 ### Why Use a Formula Instead of Simple Categories?
 
 The AQI calculation uses a [piecewise linear function](https://en.wikipedia.org/wiki/Piecewise_linear_function) rather than simple categorical assignments for several important reasons:
 
-1. **Precise Measurements**: The formula provides exact AQI values within each category through linear interpolation between breakpoints. For example, if PM2.5 = 20 µg/m³, the formula calculates the precise AQI (around 68) rather than just assigning it to the "Moderate" category.
+1. **Precise Measurements**: The formula provides exact AQI values within each category through linear interpolation between breakpoints. For example, if PM2.5 = 20 µg/m³, the formula gives an AQI of about 71 with the current breakpoints (about 68 with the pre-2024 ones), rather than just assigning it to the "Moderate" category.
 2. **Non-Linear Relationship**: The AQI is intentionally designed as a non-linear index, meaning:
 
     - An AQI of 300 does not indicate twice the pollution or twice the health risk of an AQI of 150
