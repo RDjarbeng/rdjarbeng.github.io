@@ -86,7 +86,7 @@ What each step does:
 4. The colour range and palette match the example on the dataset page. Values are in moles of NO₂ per square metre of ground, so they look tiny.
 5. `reduceRegion` with `ee.Reducer.mean()` gives one number for the whole circle. `scale` is set to the dataset's pixel size of 1113.2 m. The result appears in the Console tab.
 
-To try another city or month, change the coordinates and the two dates. Satellite NO₂ is a column through the air, not the concentration you breathe at street level. It is useful for comparing places and months, but it does not replace ground monitors. The [air quality hub](/air-quality/) on this site collects my posts on ground data, standards and the AQI.
+To try another city or month, change the coordinates and the two dates. Satellite NO₂ is a column through the air, not the concentration you breathe at street level. It is useful for comparing places and months, but it does not replace ground monitors. The [Climate & Environment category](/categories/climate-environment/) on this site collects my posts on ground data, standards and the AQI.
 
 This tool significantly helped my project work, and I hope it might be useful for others too.
 

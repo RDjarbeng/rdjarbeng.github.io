@@ -15,6 +15,7 @@ layout: default
 {% if current_category.description %}
 <div class="category-description">
   {{ current_category.description | markdownify }}
+  {%- if current_category.intro %}{{ current_category.intro | markdownify }}{% endif %}
 </div>
 {% endif %}
 

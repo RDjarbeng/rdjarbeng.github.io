@@ -263,7 +263,7 @@ description: Richard Djarbeng is a software and machine learning engineer and re
   <div class="cv-section__body">
     <p>I write about what I'm building and learning. Some places to start:</p>
     <ul class="cv-list cv-list--plain">
-      <li><a href="/air-quality/">Air quality and environmental sensing in Africa</a>, a reading list that goes from the basics to field work</li>
+      <li><a href="/categories/climate-environment/">Climate and environment</a>, all my posts on air quality, sensors and environmental data</li>
       {%- assign w = site.posts | where: "slug", "understanding-the-air-quality-index-aqi" | first -%}{%- if w %}
       <li><a href="{{ w.url }}">{{ w.title }}</a></li>{% endif -%}
       {%- assign w = site.posts | where: "slug", "ambient-air-quality-standards-in-west-africa-the-current-state-2025" | first -%}{%- if w %}

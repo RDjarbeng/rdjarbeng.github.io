@@ -58,6 +58,9 @@ module.exports = function () {
   }
   // Posts whose files were renamed to give them clean URLs.
   for (const [from, to] of Object.entries(renamed)) add(`${from}index.html`, to);
+  // Retired pages. The air quality hub (Nov 2026) was a hand-kept reading list; the category page
+  // lists the same posts and updates itself.
+  add("/air-quality/index.html", "/categories/climate-environment/");
 
   return [...out.values()];
 };

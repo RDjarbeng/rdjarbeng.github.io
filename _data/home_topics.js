@@ -7,7 +7,7 @@
 module.exports = [
   {
     name: "Air quality and sensing",
-    more: "/air-quality/",
+    more: "/categories/climate-environment/",
     moreLabel: "Reading list",
     slugs: [
       "understanding-the-air-quality-index-aqi",

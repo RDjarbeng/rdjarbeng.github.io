@@ -143,7 +143,7 @@ The list below is grouped by the topics I write about most: air quality, Earth o
 
 **[AirQo](https://www.airqo.net/)** is an air quality monitoring network for African cities, run by Makerere University in Uganda. It publishes real-time, hyperlocal readings, and its Air Quality API gives both raw and calibrated data.
 
-US embassy monitors are another source in many African capitals. I covered how to get that data in [this guide to US embassy air quality data](/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/). The [air quality hub](/air-quality/) collects my other posts on the topic.
+US embassy monitors are another source in many African capitals. I covered how to get that data in [this guide to US embassy air quality data](/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/). The [Climate & Environment category](/categories/climate-environment/) collects my other posts on the topic.
 
 ## Earth observation
 
