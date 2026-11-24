@@ -171,3 +171,4 @@ https://www.acquired.fm/episodes/nvidia-the-gpu-company-1993-2006
 - [ ] 2026-11-23 11:44 CAT | May be a good paper out of my space to review: https://www.sfu.ca/~schmitt/geog.pdf
 
 Increasing Returns and Economic Geography Author(s): Paul Krugman Source: The Journal of Political Economy, Vol. 99, No. 3 (Jun., 1991), pp. 483-499
+- [ ] 2026-11-24 09:57 CAT | Would be nice to have the notebooks all listed in my kaggle account and tested for the different yolo models- todo for claude- _posts\2025-08-10-comp_vison_roboflow.md
