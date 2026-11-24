@@ -77,10 +77,28 @@ card_items:
 series: "Getting Started with Machine Learning"
 series_part: 10
 category: "AI"
+ai_assistance:
+  - drafting
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI.
 
 I’m a huge fan of Andrew Ng and Lex Fridman (okay, maybe a bit biased 😅), but their ability to make complex AI topics accessible and engaging is unmatched. Whether you're new to machine learning or a seasoned pro, their content—along with the work of Andreas, Emmanuel, Jean, Jeremy, Andrej, Yann, and Ian—offers something valuable for everyone.
+
+## The list
+
+Each line says who the person is and why their work is useful to follow. Links go to their own site or main project page.
+
+- **Andrew Ng**: founder of DeepLearning.AI, co-founder of Coursera and founding lead of Google Brain ([andrewng.org](https://www.andrewng.org/)). Follow him for clear, beginner-friendly courses.
+- **Lex Fridman**: host of the Lex Fridman Podcast, with research interests in human-AI interaction and robotics ([lexfridman.com](https://lexfridman.com/)). Follow him for long interviews with researchers.
+- **Andreas Müller**: core developer of scikit-learn and author of _Introduction to Machine Learning with Python_ ([amueller.github.io](https://amueller.github.io/)). Follow him for practical machine learning in Python.
+- **Emmanuel Ameisen**: author of _Building Machine Learning Powered Applications_ and former Head of AI at Insight ([mlpowered.com](https://mlpowered.com/book/)). Follow him for advice on taking models into products.
+- **Jean de Dieu Nyandwi**: author of the [Complete Machine Learning Package](https://github.com/Nyandwi/machine_learning_complete), a repository of 35 notebooks ([nyandwi.com](https://nyandwi.com/)). Follow him for beginner-friendly notebooks.
+- **Jeremy Howard**: founding researcher at fast.ai, creator of the fastai library and course, and author of the ULMFiT training method ([jeremy.fast.ai](https://jeremy.fast.ai/)). Follow him for hands-on deep learning teaching.
+- **Andrej Karpathy**: founding member of OpenAI, Tesla's Director of AI from 2017 to 2022, and designer of Stanford's CS231n ([karpathy.ai](https://karpathy.ai/)). Follow him for his Neural Networks: Zero to Hero videos.
+- **Yann LeCun**: professor at NYU, Meta's chief AI scientist, and a 2018 Turing Award winner for deep learning ([Wikipedia](https://en.wikipedia.org/wiki/Yann_LeCun)). Follow him for views on where AI research should go.
+- **Ian Goodfellow**: inventor of generative adversarial networks and first author of the _Deep Learning_ textbook ([iangoodfellow.com](https://www.iangoodfellow.com/)). Follow him for generative models and deep learning theory.
+
+**Update (November 2026):** [Wikipedia](https://en.wikipedia.org/wiki/Yann_LeCun) reports that LeCun confirmed in November 2025 that he would leave Meta. He co-founded Advanced Machine Intelligence Labs (AMI Labs) in December 2025. Nyandwi's site now describes him as a computer science PhD student at Carnegie Mellon University.
 
 ## Paying It Forward
 
