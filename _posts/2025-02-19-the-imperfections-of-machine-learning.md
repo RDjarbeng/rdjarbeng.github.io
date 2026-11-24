@@ -23,34 +23,34 @@ category: "AI"
 ai_assistance:
   - drafting
 ---
-While machine learning is a powerful tool, it's important to remember that models are not infallible. In fact, they can sometimes be overconfident in their predictions, as shown in this image where a charger is misclassified as a cell phone with 94% confidence.
+While machine learning is a practical tool, models are not infallible. They can be overconfident in their predictions. In the example below, a charger is misclassified as a cell phone with 94% confidence.
 
 ![Charger misclassified as phone](/assets/images/ml_false positive_cropped_charger_rd.jpg "Charger misclassified as phone by machine learning model")
 
-This example was captured using the **ml5.js** library, specifically the MobileNet model, which is trained on the ImageNet dataset. This dataset includes around 1,000 different classes of objects, ranging from animals and vehicles to household items and electronics. However, the model's performance largely depends on the representation of these classes in the training data. In this case, the misclassification might have occurred because there weren't enough examples of chargers in the dataset for the model to accurately distinguish them from similar objects like cell phones.
+This example was captured using ml5.js and MobileNet, trained on ImageNet. The ImageNet dataset includes around 1,000 object categories. Performance depends on how well a category is represented in the training data. Here, the error likely happened because the dataset lacked sufficient examples of chargers to distinguish them from visually similar objects like phones.
 
 ## Why a model can be confidently wrong
 
-The 94% figure does not mean the model is 94% sure in a human sense. It comes from the last step of the network, the softmax function. Softmax takes one raw score per class and turns the scores into numbers between 0 and 1 that add up to 1.
+The 94% figure does not mean the model is 94% sure in a human sense. It comes from the final classification step, the softmax function. Softmax converts raw output scores into numbers between 0 and 1 that sum to 1.
 
-For class $i$ with raw score $z_i$, softmax gives $p_i = e^{z_i} / \sum_j e^{z_j}$. The model has to share all of its probability among the classes it knows. There is no slot for "none of these". If a charger is not one of the classes, or is poorly covered, the probability still has to go somewhere. A phone is the nearest match, so the phone gets most of it.
+For class $i$ with raw score $z_i$, softmax computes $p_i = e^{z_i} / \sum_j e^{z_j}$. The model must distribute all probability mass among its pre-defined classes. There is no category for "unknown" or "none of the above". If a charger is not in the training taxonomy, the probability mass still has to go somewhere. Because a phone is the closest visual match in the list, it receives most of the score.
 
-This is the closed-set problem. An input that looks unlike the training data is called out-of-distribution (OOD). A classifier trained on a fixed list of classes will still pick one of them for an OOD input, often with a high score.
+This is the closed-set assumption. Inputs that differ substantially from the training distribution are known as out-of-distribution (OOD) data. When evaluated on OOD inputs, a classifier still forces a choice from its fixed list, often with an arbitrarily high score.
 
-A second problem is calibration. A model is well calibrated if, across all the times it says 90%, it is right about 90% of the time. In [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599) (ICML 2017), Guo, Pleiss, Sun and Weinberger found that modern neural networks are poorly calibrated. Networks from about a decade earlier were better. They linked this to depth, width, weight decay and batch normalization.
+The second issue is calibration. A model is well calibrated if, among all predictions made with 90% confidence, roughly 90% turn out to be correct. In [On Calibration of Modern Neural Networks](https://arxiv.org/abs/1706.04599) (ICML 2017), Guo, Pleiss, Sun, and Weinberger showed that modern neural networks tend to be poorly calibrated compared to older, shallower architectures. They traced this drop in calibration to increases in network depth, width, weight decay settings, and batch normalization.
 
-## What practitioners do about it
+## How practitioners address overconfidence
 
-To create useful machine learning models, we need to train them to minimize errors and false positives. This is where fine-tuning comes in: tweaking the model to better match the specific data it may encounter in your application. Fine-tuning helps, but it is not the only tool.
+To deploy machine learning models safely, systems need ways to catch errors and filter out false positives. Fine-tuning models on domain-specific data helps, but post-processing and architecture adjustments are also necessary.
 
-**Calibrate the scores.** Guo et al. tested several fixes applied after training. The simplest, temperature scaling, worked well on most of their datasets. It divides the raw scores by one learned number $T$ before the softmax. With $T > 1$ the probabilities become less extreme, and the model's ranking of classes does not change.
+**Score calibration.** Guo et al. evaluated post-processing techniques applied after training. The simplest method, temperature scaling, proved effective across most benchmark datasets. Temperature scaling divides raw logits by a learned parameter $T$ before applying softmax. When $T > 1$, extreme probabilities soften toward uniform values without altering class rankings.
 
-**Add a confidence threshold or an "unknown" answer.** Instead of always showing the top class, the app can say "not sure" when the top probability is below a chosen cut-off. Another option is to train with an explicit "other" class that holds examples of things the app should ignore.
+**Confidence thresholds and reject classes.** Instead of returning the highest-scoring class unconditionally, an application can reject predictions when the maximum probability falls below a set threshold. Alternatively, models can be trained with an explicit background or "unknown" class containing objects the system should ignore.
 
-**Detect out-of-distribution inputs.** Hendrycks and Gimpel's [A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks](https://arxiv.org/abs/1610.02136) (ICLR 2017) uses the maximum softmax probability as a simple signal. Correctly classified examples tend to have a higher maximum probability than wrong or OOD ones. They found this baseline worked across vision, language and speech tasks, though other methods can beat it.
+**Out-of-distribution detection.** In [A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks](https://arxiv.org/abs/1610.02136) (ICLR 2017), Hendrycks and Gimpel showed that maximum softmax probability functions as a straightforward baseline signal. Correct classifications typically generate higher peak probabilities than misclassifications or OOD inputs. While specialized OOD detectors outperform this baseline, it offers a zero-overhead initial filter.
 
-**Collect more varied training data.** If chargers matter to your app, add labelled chargers, with different angles, lighting and backgrounds. Add the look-alike objects too, so the model learns what separates them.
+**Targeted data collection.** If chargers matter to an application, training sets must include labeled chargers photographed across varied angles, lighting conditions, and backgrounds, alongside common look-alike items.
 
-These steps work best together. Calibration makes the scores honest, and a threshold or OOD check then decides what to do with low scores.
+These techniques work best in combination. Calibration aligns predicted probabilities with true likelihoods, allowing thresholds and OOD detectors to reliably flag uncertain outputs.
 
-As an engineer, my role is to help communicate the possibilities and limitations of these models to users. While no model is perfect, with careful training and fine-tuning, we can create highly effective solutions that bring real value to our users.
+Building reliable applications requires understanding these boundaries. Communicating model limitations clearly helps ensure systems are deployed where they add genuine value without misleading users.
