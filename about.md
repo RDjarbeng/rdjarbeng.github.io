@@ -70,6 +70,15 @@ description: Richard Djarbeng is a software and machine learning engineer and re
     </div>
 
     <div class="cv-entry">
+      <p class="cv-entry__when">Jan to Dec 2025</p>
+      <div class="cv-entry__what">
+        <h3 class="cv-entry__title">Information Technology Consultant</h3>
+        <p class="cv-entry__org">Humanitarian OpenStreetMap Team (Contract)</p>
+        <p>Worked on the Eco-Smart Cities project with the West and North Africa Hub team, analyzing and managing air quality data across multiple cities in West Africa.</p>
+      </div>
+    </div>
+
+    <div class="cv-entry">
       <p class="cv-entry__when">Jul 2024 to Oct 2025</p>
       <div class="cv-entry__what">
         <h3 class="cv-entry__title">Research Associate</h3>
