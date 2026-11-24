@@ -39,6 +39,12 @@ body.has-side-toc {
     // TOC stops above them (side-toc.js)
     .page-content { padding-left: var(--side-toc-w); transition: padding-left 0.25s ease; }
   }
+
+  // Posts on wide screens: the ~840px reading column clears a pinned 250px panel from
+  // about 1300px, so pinning or collapsing the panel no longer moves the post.
+  @media (min-width: 1300px) {
+    &.post-page { --side-toc-w: #{$_side-toc-collapsed}; }
+  }
 }
 
 .side-toc {
