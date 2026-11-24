@@ -12,6 +12,7 @@ key_points:
   - "The 100th launch was achieved on January 15, 2025, at Pad 39A in Florida."
   - "This milestone highlights SpaceX's continued success and reliability in launching satellites and other payloads."
 title: SpaceX Falcon 9 rocket  successfully reaches a hundred launches.
+noindex: true
 image: /assets/images/falcon9_launch.jpeg
 layout: post
 video: ''
