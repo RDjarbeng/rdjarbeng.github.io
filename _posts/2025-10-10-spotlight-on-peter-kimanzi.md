@@ -9,11 +9,13 @@ tags:
   - html
   - css
   - js
+  - Stranger Things
+  - Animation
 key_points:
   - "Peter Kimanzi is a web developer from Nairobi, Kenya, who has created a repository of web development projects on GitHub."
   - "One of his projects is an animation that follows the mouse cursor as it moves on the screen, inspired by the TV series Stranger Things."
   - "Kimanzi built some of his websites, including his portfolio website, with just HTML, CSS, and JavaScript."
-  - "His portfolio website and GitHub repository are available for exploration, and he is also active on LinkedIn."
+  - "The post includes a screen recording of the Stranger Things animation, plus links to his portfolio, GitHub and LinkedIn."
 title: Spotlight on Peter Kimanzi- Developer from Nairobi
 image: /assets/images/peterKimanziPortfolio.png
 image_alt: Screenshot of Peter Kimanzi's portfolio website featuring a dark theme, his name, and title as Software Engineer.
@@ -31,7 +33,14 @@ I admire his work and I am also surprised to see he built some of his websites, 
 
 Beautiful! In my opinion, for one man’s work.
 
-I’ve posted screenshots of his work with this post. (Sorry, I couldn’t include both images and video of the Stranger Things site in this post).
+Here is a screen recording of the [Stranger Things site](https://peter-kimanzi.github.io/Stranger-things-animation/). Notice the mouse pointer and how the "creatures" follow it.
+
+<video width="100%" preload="metadata" controls muted playsinline>
+  <source src="{{ '/assets/videos/kimanzi_stranger_things.mp4' | relative_url }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+The animation follows a mouse, so it doesn't respond as well to touch on a phone.
 
 Find his portfolio site here:
 
@@ -47,4 +56,3 @@ Interesting developer, interesting repository.
 
 _Disclaimer: I have not met nor know Peter personally._
 
-#developer #github #webdeveloper #webdevelopment #animation

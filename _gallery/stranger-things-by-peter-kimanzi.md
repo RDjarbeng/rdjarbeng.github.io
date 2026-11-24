@@ -3,7 +3,7 @@ title: Cover image for post - Stranger Things by Peter Kimanzi
 date: 2025-06-21 12:00:00
 image: /assets/images/stranger_things.png
 type: cover
-link: /Stranger Things by Peter Kimanzi
+link: /spotlight-on-peter-kimanzi/
 image_alt: Minimalist digital art featuring two symmetrical white, root-like structures floating against a black background filled with scattered white dots.
 enhanced_by_bot: true
 ---

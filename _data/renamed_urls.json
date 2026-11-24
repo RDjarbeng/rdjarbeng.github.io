@@ -1,7 +1,7 @@
 {
  "note": "Old URL -> new URL for posts that were renamed or merged into the gallery. Each old URL gets a redirect page via _data/legacyRedirects.js.",
  "renamed": {
-  "/Stranger Things by Peter Kimanzi/": "/stranger-things-by-peter-kimanzi/",
+  "/Stranger Things by Peter Kimanzi/": "/spotlight-on-peter-kimanzi/",
   "/Spotlight on Peter Kimanzi/": "/spotlight-on-peter-kimanzi/",
   "/Application Development Process/": "/application-development-process/",
   "/Python for Algorithms and Efficiency/": "/python-for-algorithms-and-efficiency/",
@@ -45,6 +45,9 @@
   "/categories/help/": "/categories/how-to-guides/",
   "/categories/it/": "/categories/how-to-guides/",
   "/categories/entertainment/": "/categories/music-film-books/",
-  "/gallery/advice-to-developers-who-feel-like-they-are-behind/": "/gallery/videos/advice-to-developers-who-feel-like-they-are-behind/"
+  "/gallery/advice-to-developers-who-feel-like-they-are-behind/": "/gallery/videos/advice-to-developers-who-feel-like-they-are-behind/",
+  "/stranger-things-by-peter-kimanzi/": "/spotlight-on-peter-kimanzi/",
+  "/Installing_NodeJs_16/": "/Install_NodeJs_on_Raspberry_Pi/",
+  "/is-there-a-process-to-build-an-application/": "/application-development-process/"
  }
 }
