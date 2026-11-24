@@ -1,65 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200" role="img" aria-labelledby="plane-title plane-desc">
-  <title id="plane-title">Single 150-seat narrowbody commercial airliner</title>
-  <desc id="plane-desc">Side elevation illustration of a 150-seat narrowbody commercial jetliner with swept wing, underslung turbofan engine, and vertical stabilizer.</desc>
-  
-  <!-- Warm paper background matching site theme -->
-  <rect width="800" height="200" fill="#f4f1e6"/>
-
-  <!-- Subtle ground baseline -->
-  <line x1="80" y1="180" x2="720" y2="180" stroke="#cfc6b6" stroke-width="1.5" stroke-dasharray="12 8"/>
-
-  <!-- Horizontal Commercial Airliner (Centered, 150-seat narrowbody profile) -->
-  <g transform="translate(400, 115) scale(1.15)">
-    <!-- 1. Tail Fin / Vertical Stabilizer (rises from upper rear fuselage) -->
-    <path d="M -110 -18 L -170 -92 L -194 -89 L -185 -4 Z" fill="#f2c12e" stroke="#141414" stroke-width="3"/>
-    <!-- Tail Fin Accent Stripe -->
-    <path d="M -138 -55 L -170 -92 L -194 -89 L -180 -55 Z" fill="#1d4f9c"/>
-
-    <!-- 2. Horizontal Stabilizer at tail cone -->
-    <path d="M -145 2 L -190 12 L -200 9 L -175 -2 Z" fill="#1d4f9c" stroke="#141414" stroke-width="2.5"/>
-
-    <!-- 3. Fuselage (White Upper Cabin, Dark Navy Blue Lower Belly) -->
-    <path d="M 235 2 C 215 -16, 160 -18, -110 -18 C -150 -18, -185 -10, -205 -2 C -208 2, -207 7, -198 10 C -150 18, 100 20, 205 11 C 225 8, 235 5, 235 2 Z" fill="#ffffff" stroke="#141414" stroke-width="3"/>
-
-    <!-- Navy Blue Lower Belly Stripe -->
-    <path d="M -180 8 C -120 17, 90 18, 205 11 C 220 8, 232 5, 235 2 C 215 13, 110 14, -100 13 C -140 13, -165 10, -180 8 Z" fill="#1d4f9c"/>
-
-    <!-- Cockpit Windshield (on TOP of the nose) -->
-    <path d="M 188 -13 L 214 -6 L 212 0 L 186 -6 Z" fill="#141414"/>
-
-    <!-- Passenger Cabin Windows (neat row along upper fuselage) -->
-    <g fill="#141414">
-      <rect x="155" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="141" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="127" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="113" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="99" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="85" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="71" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="57" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="43" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="29" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="15" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="1" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="-13" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="-27" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="-41" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="-55" y="-6" width="6" height="9" rx="2.5"/>
-      <rect x="-69" y="-6" width="6" height="9" rx="2.5"/>
-    </g>
-
-    <!-- 4. Turbofan Jet Engine (Mounted under the wing leading edge) -->
-    <!-- Pylon connecting wing to engine -->
-    <path d="M 45 14 L 56 14 L 50 24 L 38 24 Z" fill="#141414"/>
-    <!-- Engine Nacelle (Matte Red) -->
-    <rect x="20" y="24" width="56" height="22" rx="11" fill="#d7263d" stroke="#141414" stroke-width="2.5"/>
-    <!-- Front Air Intake (Faces right/forward) -->
-    <ellipse cx="76" cy="35" rx="4" ry="9" fill="#141414"/>
-    <!-- Exhaust Nozzle (Faces left/rear) -->
-    <path d="M 20 30 L 12 32 L 12 38 L 20 40 Z" fill="#57514a"/>
-
-    <!-- 5. Main Wing (Low-wing profile: stays cleanly beneath the window line) -->
-    <!-- Root: (80, 14) -> Sweeps back to (-35, 10) -> Winglet at (-42, 4) -> Trailing: (12, 18) -->
-    <path d="M 80 14 L -35 10 L -44 4 L -50 6 L -42 13 L 12 18 Z" fill="#f2c12e" stroke="#141414" stroke-width="3"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 314" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Single-aisle airliner</title>
+<desc id="d">Side view of a 150-seat single-aisle airliner in the style of an Airbus A320, with a white fuselage, a dark blue belly, a swept red tail fin, an engine under the wing and its landing gear down.</desc>
+<defs><clipPath id="hull"><path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z"/></clipPath></defs>
+<rect width="800" height="314" fill="#f4f1e6"/>
+<g transform="translate(0 0)">
+<line x1="40" y1="238" x2="760" y2="238" stroke="#cfc6b6" stroke-width="2" stroke-dasharray="12 8"/>
+<line x1="672" y1="184" x2="672" y2="226" stroke="#141414" stroke-width="4"/>
+<circle cx="672" cy="228" r="10" fill="#141414"/><circle cx="672" cy="228" r="4" fill="#e4ddd0"/>
+<line x1="432" y1="192" x2="432" y2="226" stroke="#141414" stroke-width="4"/>
+<circle cx="432" cy="228" r="10" fill="#141414"/><circle cx="432" cy="228" r="4" fill="#e4ddd0"/>
+<path d="M214 117 L112 28 L74 28 L84 130 Z" fill="#b84d43" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z" fill="#ffffff"/>
+<g clip-path="url(#hull)">
+<rect x="60" y="163" width="680" height="30" fill="#2d4763"/>
+<rect x="60" y="157" width="680" height="5" fill="#cfa14a"/>
+</g>
+<path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z" fill="none" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="214" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="228" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="242" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="256" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="270" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="284" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="298" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="312" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="326" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="340" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="354" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="368" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="382" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="438" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="452" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="466" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="480" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="494" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="508" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="522" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="536" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="550" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="564" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="578" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="592" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="606" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="620" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="634" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="652" y="124" width="14" height="34" rx="3" fill="none" stroke="#141414" stroke-width="1.6"/>
+<rect x="190" y="124" width="14" height="34" rx="3" fill="none" stroke="#141414" stroke-width="1.6"/>
+<rect x="396" y="131" width="12" height="20" rx="2" fill="none" stroke="#141414" stroke-width="1.4"/>
+<rect x="416" y="131" width="12" height="20" rx="2" fill="none" stroke="#141414" stroke-width="1.4"/>
+<path d="M689 127 L703 131 L714 142 L697 142 Z" fill="#141414"/>
+<path d="M697 131 L701 142 M706 134 L708 142" stroke="#ffffff" stroke-width="1.6"/>
+<path d="M156 146 L100 131 L84 133 L122 152 Z" fill="#2d4763" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M548 183 C532 196 402 196 378 183 Z" fill="#2d4763" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M522 180 L346 206 L322 207 L404 182 Z" fill="#e4ddd0" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M346 206 L333 185 L324 186 L322 207 Z" fill="#b84d43" stroke="#141414" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M546 189 L512 183 L486 193 L532 196 Z" fill="#e4ddd0" stroke="#141414" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M570 190 C575 190 577 218 570 222 L503 218 L480 211 L480 199 L503 193 Z" fill="#ffffff" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<ellipse cx="571" cy="206" rx="5" ry="15" fill="#2d4763" stroke="#141414" stroke-width="2"/>
+<path d="M480 201 L470 203 L470 209 L480 210 Z" fill="#141414"/>
+</g>
+<line x1="32" y1="262" x2="768" y2="262" stroke="#cfc6b6"/>
+<text x="768.0" y="292.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
 </svg>

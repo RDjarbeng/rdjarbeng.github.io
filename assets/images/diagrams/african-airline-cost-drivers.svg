@@ -12,7 +12,7 @@
     <g transform="translate(0, 75)">
       <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Jet fuel</text>
       <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
-      <rect x="230" y="2" width="380" height="26" rx="4" fill="#d7263d"/>
+      <rect x="230" y="2" width="380" height="26" rx="4" fill="#b84d43"/>
       <text x="625" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+17%</text>
     </g>
 
@@ -20,7 +20,7 @@
     <g transform="translate(0, 115)">
       <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Taxes and charges</text>
       <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
-      <rect x="230" y="2" width="335" height="26" rx="4" fill="#d7263d"/>
+      <rect x="230" y="2" width="335" height="26" rx="4" fill="#b84d43"/>
       <text x="580" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+15%</text>
     </g>
 
@@ -28,7 +28,7 @@
     <g transform="translate(0, 155)">
       <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Navigation charges</text>
       <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
-      <rect x="230" y="2" width="225" height="26" rx="4" fill="#1d4f9c"/>
+      <rect x="230" y="2" width="225" height="26" rx="4" fill="#2d4763"/>
       <text x="470" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+10%</text>
     </g>
 
@@ -36,7 +36,7 @@
     <g transform="translate(0, 195)">
       <text x="0" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Maintenance (MRO)</text>
       <rect x="230" y="2" width="450" height="26" rx="4" fill="#ffffff" stroke="#cfc6b6" stroke-width="1.5"/>
-      <rect x="230" y="2" width="225" height="26" rx="4" fill="#1d4f9c"/>
+      <rect x="230" y="2" width="225" height="26" rx="4" fill="#2d4763"/>
       <text x="470" y="21" font-family="'Arial Black', sans-serif" font-size="18" font-weight="900" fill="#141414">+10%</text>
     </g>
   </g>

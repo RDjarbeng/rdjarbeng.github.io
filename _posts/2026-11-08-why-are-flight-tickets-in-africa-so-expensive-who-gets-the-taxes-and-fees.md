@@ -11,7 +11,7 @@ tags:
   - Airlines
 title: "Why Flight Tickets in Africa Are So Expensive, From First Principles"
 image: /assets/images/posts/covers/african_airfare_taxes_cover.jpg
-image_alt: "Visual breakdown of an African flight ticket receipt comparing a 26 percent base fare against 74 percent taxes, surcharges, and fees"
+image_alt: "A boarding pass and a single-aisle airliner on a runway, under the headline Airfares in Africa: why taxes outweigh the fare"
 layout: post
 description: "How an African airline's costs, schedule, and regulations meet a passenger's budget, dates, and tolerance for risk, and who gets the money in the taxes and fees line."
 key_points:
@@ -31,9 +31,9 @@ card_items:
     description: "Under ICAO's definitions, a charge recovers the cost of an aviation service, while a tax raises government revenue and generally does not go back into aviation in full."
 ---
 
-When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to RWF 832,490 (about USD 570), of which RWF 215,610 was the base fare and RWF 616,880 was "taxes and fees."
+When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to about USD 570, of which about USD 148 was the base fare and USD 422 was "taxes and fees."
 
-![Visual breakdown of an African flight ticket receipt comparing a 26 percent base fare against 74 percent taxes, surcharges, and fees](/assets/images/posts/covers/african_airfare_taxes_cover.jpg "Airfares in Africa: The Breakdown of Taxes, Fees, and Base Fares")
+![A boarding pass and a single-aisle airliner on a runway, under the headline Airfares in Africa: why taxes outweigh the fare](/assets/images/posts/covers/african_airfare_taxes_cover.jpg "Airfares in Africa: The Breakdown of Taxes, Fees, and Base Fares")
 
 That is 74% in fees, and it makes a good screenshot. It is also the far end of the range. In the worked ticket examples published in the [AFRAA 2024 study on taxes and charges](https://afraa.org/wp-content/uploads/2025/06/Taxes-Fees-and-Charges-Study-2024.pdf), taxes made up anywhere from 10% to 74% of the total price, and AFRAA's summary is that they generally exceed 35% of the total on an airline's most affordable fares. Those are still heavy numbers, but one receipt cannot explain them, and neither can blaming one airline or one government.
 
@@ -109,15 +109,7 @@ The profit figure in that example is the part most people find hardest to believ
 
 That line looks like a government bill, but it is a pool with several owners:
 
-```mermaid
-flowchart LR
-    A["Total ticket price"] --> B["Base fare<br/>Airline"]
-    A --> C["Taxes, surcharges and fees"]
-    C --> D["Surcharges (YQ/YR)<br/>Airline"]
-    C --> E["Passenger service and terminal charges<br/>Airport operators"]
-    C --> F["Safety and security charges<br/>Regulators and security agencies"]
-    C --> G["Departure taxes, tourism levies, VAT<br/>National governments"]
-```
+![A tree that splits the total ticket price into the base fare, which goes to the airline, and taxes, surcharges and fees. Those split four ways: surcharges, which go to the airline; passenger service and terminal charges, which go to airport operators; safety and security charges, which go to regulators and security agencies; and departure taxes, tourism levies and VAT, which go to national governments.](/assets/images/diagrams/ticket-price-breakdown.svg)
 
 Ticketing systems identify each item with a code, and those codes are usually printed on the e-ticket or fare breakdown:
 

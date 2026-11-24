@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 627" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Testing a page with the Rich Results Test</title>
+<desc id="d">Four steps. Open the Rich Results Test. Choose an input: paste the URL of a live page, or paste raw HTML or JSON-LD code. Click Test URL or Test Code. Choose Smartphone, which is recommended, or Desktop.</desc>
+<rect width="800" height="627" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">Testing a page with the Rich Results Test</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M380.0 148.0 L380.0 157.0 Q380.0 166.0 371.0 166.0 L214.7 166.0 Q210.0 166.0 210.0 170.7 L210.0 175.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M210.0 184.0 L205.5 173.2 L214.5 173.2 Z" fill="#141414"/>
+<path d="M380.0 148.0 L380.0 157.0 Q380.0 166.0 389.0 166.0 L545.3 166.0 Q550.0 166.0 550.0 170.7 L550.0 175.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M550.0 184.0 L545.5 173.2 L554.5 173.2 Z" fill="#141414"/>
+<path d="M210.0 267.6 L210.0 282.5 Q210.0 292.5 220.0 292.5 L371.9 292.5 Q380.0 292.5 380.0 300.6 L380.0 308.8" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M380.0 317.4 L375.5 306.6 L384.5 306.6 Z" fill="#141414"/>
+<path d="M550.0 267.6 L550.0 282.5 Q550.0 292.5 540.0 292.5 L388.1 292.5 Q380.0 292.5 380.0 300.6 L380.0 308.8" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M380.0 317.4 L375.5 306.6 L384.5 306.6 Z" fill="#141414"/>
+<path d="M380.0 373.4 L380.0 400.8" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M380.0 409.4 L375.5 398.6 L384.5 398.6 Z" fill="#141414"/>
+<rect x="230.0" y="92.0" width="300.0" height="56.0" rx="0" fill="#1a73e8" stroke="#141414" stroke-width="1.5"/>
+<text x="380.0" y="126.5" font-size="18" fill="#ffffff" text-anchor="middle">Open the Rich Results Test</text>
+<rect x="60.0" y="184.0" width="300.0" height="83.6" rx="0" fill="#f59e0b" stroke="#141414" stroke-width="1.5"/>
+<text x="210.0" y="221.0" font-size="18" fill="#141414" text-anchor="middle">Paste a URL</text>
+<text x="210.0" y="243.5" font-size="18" fill="#141414" text-anchor="middle">(live page)</text>
+<rect x="400.0" y="184.0" width="300.0" height="83.6" rx="0" fill="#f59e0b" stroke="#141414" stroke-width="1.5"/>
+<text x="550.0" y="221.0" font-size="18" fill="#141414" text-anchor="middle">Paste code</text>
+<text x="550.0" y="243.5" font-size="18" fill="#141414" text-anchor="middle">(HTML or JSON-LD)</text>
+<rect x="230.0" y="317.4" width="300.0" height="56.0" rx="0" fill="#1a73e8" stroke="#141414" stroke-width="1.5"/>
+<text x="380.0" y="351.9" font-size="18" fill="#ffffff" text-anchor="middle">Click Test URL or Test Code</text>
+<rect x="145.0" y="409.4" width="470.0" height="83.6" rx="0" fill="#1a73e8" stroke="#141414" stroke-width="1.5"/>
+<text x="380.0" y="446.4" font-size="18" fill="#ffffff" text-anchor="middle">Choose Smartphone (recommended)</text>
+<text x="380.0" y="468.9" font-size="18" fill="#ffffff" text-anchor="middle">or Desktop</text>
+<rect x="32" y="518.0" width="24" height="18" rx="0" fill="#1a73e8" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="533.0" font-size="18" fill="#141414">Step</text>
+<rect x="412" y="518.0" width="24" height="18" rx="0" fill="#f59e0b" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="533.0" font-size="18" fill="#141414">Your choice</text>
+<line x1="32" y1="575.0" x2="768" y2="575.0" stroke="#cfc6b6"/>
+<text x="768.0" y="605.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

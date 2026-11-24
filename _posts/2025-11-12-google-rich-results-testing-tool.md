@@ -53,7 +53,7 @@ Using the tool is straightforward:
 3.  **Test**: Click "Test URL" or "Test Code".
 4.  **Select Device**: You can choose between "Smartphone" (recommended, as Google is mobile-first) or "Desktop".
 
-![Rich Results Process Diagram](https://kroki.io/mermaid/svg/eJxNz01qwzAQBeB9T_EuELLPopDYciiO8h4j_G9esqqzTxxBsQT1TLOTJG15W0FVw1MqbHZSfyI_lsYukmRyeJeVyzfA)
+![Four steps. Open the Rich Results Test. Choose an input: paste the URL of a live page, or paste raw HTML or JSON-LD code. Click Test URL or Test Code. Choose Smartphone, which is recommended, or Desktop.](/assets/images/diagrams/rich-results-test-steps.svg)
 
 ## Interpreting the Results
 

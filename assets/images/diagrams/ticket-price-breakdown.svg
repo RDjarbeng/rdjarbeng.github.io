@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 585" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Who gets the money from a plane ticket</title>
+<desc id="d">A tree that splits the total ticket price into the base fare, which goes to the airline, and taxes, surcharges and fees. Those split four ways: surcharges, which go to the airline; passenger service and terminal charges, which go to airport operators; safety and security charges, which go to regulators and security agencies; and departure taxes, tourism levies and VAT, which go to national governments.</desc>
+<rect width="800" height="585" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">Who gets the money from a plane ticket</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M400.0 142.0 L400.0 152.0 Q400.0 162.0 390.0 162.0 L126.7 162.0 Q121.0 162.0 121.0 167.7 L121.0 173.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M121.0 182.0 L116.5 171.2 L125.5 171.2 Z" fill="#141414"/>
+<path d="M400.0 142.0 L400.0 152.0 Q400.0 162.0 410.0 162.0 L580.3 162.0 Q586.0 162.0 586.0 167.7 L586.0 173.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M586.0 182.0 L581.5 171.2 L590.5 171.2 Z" fill="#141414"/>
+<path d="M586.0 250.0 L586.0 260.0 Q586.0 270.0 576.0 270.0 L131.0 270.0 Q121.0 270.0 121.0 280.0 L121.0 308.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M121.0 317.0 L116.5 306.2 L125.5 306.2 Z" fill="#141414"/>
+<path d="M586.0 250.0 L586.0 260.0 Q586.0 270.0 576.0 270.0 L317.0 270.0 Q307.0 270.0 307.0 280.0 L307.0 308.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M307.0 317.0 L302.5 306.2 L311.5 306.2 Z" fill="#141414"/>
+<path d="M586.0 250.0 L586.0 260.0 Q586.0 270.0 576.0 270.0 L503.0 270.0 Q493.0 270.0 493.0 280.0 L493.0 308.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M493.0 317.0 L488.5 306.2 L497.5 306.2 Z" fill="#141414"/>
+<path d="M586.0 250.0 L586.0 260.0 Q586.0 270.0 596.0 270.0 L669.0 270.0 Q679.0 270.0 679.0 280.0 L679.0 308.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M679.0 317.0 L674.5 306.2 L683.5 306.2 Z" fill="#141414"/>
+<rect x="222.0" y="92.0" width="356.0" height="50.0" rx="0" fill="#ffffff" stroke="#141414" stroke-width="1.5"/>
+<text x="400.0" y="123.5" font-size="18" fill="#141414" text-anchor="middle">Total ticket price</text>
+<rect x="36.0" y="182.0" width="170.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="121.0" y="213.5" font-size="18" fill="#ffffff" text-anchor="middle">Base fare</text>
+<rect x="408.0" y="182.0" width="356.0" height="68.0" rx="0" fill="#ffffff" stroke="#141414" stroke-width="1.5"/>
+<text x="586.0" y="211.2" font-size="18" fill="#141414" text-anchor="middle">Taxes, surcharges</text>
+<text x="586.0" y="233.7" font-size="18" fill="#141414" text-anchor="middle">and fees</text>
+<rect x="36.0" y="317.0" width="170.0" height="104.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="121.0" y="364.2" font-size="18" fill="#ffffff" text-anchor="middle">Surcharges</text>
+<text x="121.0" y="386.7" font-size="18" fill="#ffffff" text-anchor="middle">(YQ/YR)</text>
+<rect x="222.0" y="317.0" width="170.0" height="104.0" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="307.0" y="353.0" font-size="18" fill="#141414" text-anchor="middle">Passenger</text>
+<text x="307.0" y="375.5" font-size="18" fill="#141414" text-anchor="middle">service and</text>
+<text x="307.0" y="398.0" font-size="18" fill="#141414" text-anchor="middle">terminal</text>
+<rect x="408.0" y="317.0" width="170.0" height="104.0" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="493.0" y="364.2" font-size="18" fill="#ffffff" text-anchor="middle">Safety and</text>
+<text x="493.0" y="386.7" font-size="18" fill="#ffffff" text-anchor="middle">security</text>
+<rect x="594.0" y="317.0" width="170.0" height="104.0" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="679.0" y="353.0" font-size="18" fill="#ffffff" text-anchor="middle">Departure tax,</text>
+<text x="679.0" y="375.5" font-size="18" fill="#ffffff" text-anchor="middle">tourism levy,</text>
+<text x="679.0" y="398.0" font-size="18" fill="#ffffff" text-anchor="middle">VAT</text>
+<rect x="32" y="446.0" width="24" height="18" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="461.0" font-size="18" fill="#141414">Airline</text>
+<rect x="412" y="446.0" width="24" height="18" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="461.0" font-size="18" fill="#141414">Airport operators</text>
+<rect x="32" y="476.0" width="24" height="18" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="491.0" font-size="18" fill="#141414">Governments and regulators</text>
+<line x1="32" y1="533.0" x2="768" y2="533.0" stroke="#cfc6b6"/>
+<text x="768.0" y="563.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

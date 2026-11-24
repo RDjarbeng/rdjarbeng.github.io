@@ -11,28 +11,28 @@
     <!-- 1. Total Cost -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#1d4f9c"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#2d4763"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">1</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Total Cost of Trip</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Include food, hotel, and lost time</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Include food, hotel, and lost time</text>
     </g>
 
     <!-- 2. Border Airports -->
     <g transform="translate(0, 105)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#2d6a4f"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#141414"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">2</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Check Neighboring Airports</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Compare border departure taxes</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Compare border departure taxes</text>
     </g>
 
     <!-- 3. Surcharges -->
     <g transform="translate(0, 210)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#d7263d"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#b84d43"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">3</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Inspect YQ / YR Surcharges</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Check cash fees on award miles</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Check cash fees on award miles</text>
     </g>
   </g>
 
@@ -41,28 +41,28 @@
     <!-- 4. Transit Visas -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#f2c12e"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#cfa14a"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#141414" text-anchor="middle">4</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Verify Transit Visas</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Check hub immigration rules early</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Check hub immigration rules early</text>
     </g>
 
     <!-- 5. Fixed Dates -->
     <g transform="translate(0, 105)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#1d4f9c"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#2d4763"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">5</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Lock In Fixed Dates Early</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Cheaper fare buckets sell first</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Cheaper fare buckets sell first</text>
     </g>
 
     <!-- 6. Buffer Margins -->
     <g transform="translate(0, 210)">
       <rect x="0" y="0" width="345" height="92" rx="6" fill="#ffffff" stroke="#141414" stroke-width="2"/>
-      <rect x="0" y="0" width="36" height="92" rx="6" fill="#2d6a4f"/>
+      <rect x="0" y="0" width="36" height="92" rx="6" fill="#141414"/>
       <text x="18" y="52" font-family="'Arial Black', sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">6</text>
       <text x="50" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#141414">Buffer Connection Times</text>
-      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#555555">Protect against delay on first leg</text>
+      <text x="50" y="62" font-family="Arial, sans-serif" font-size="18" fill="#57514a">Protect against delay on first leg</text>
     </g>
   </g>
 </svg>
