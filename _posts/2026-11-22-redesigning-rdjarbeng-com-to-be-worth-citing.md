@@ -26,13 +26,13 @@ description: What I changed on rdjarbeng.com over a weekend so a professor or a 
 ---
 
 
-I took a  look at my site homepage and decided I wanted a remodel. Before there were 2 main items on first load. A card with about me, giving 4 sentences about me and a carousel with 6 of my most recent posts. Then directly underneath those were 6 of my most recent posts the same ones you had just seen in the carousel. [insert other design problems here that needed to be fixed]
+I took a look at my site's homepage and decided I wanted a remodel. Before, there were two main items on first load: a card with four sentences about me, and a carousel with six of my most recent posts. Directly underneath those were six of my most recent posts again, the same ones you had just seen in the carousel. The rest of the site had its own problems. Cards sat inside other cards, labels were rounded blue pills, and small cover images were either cropped or blurry. Text sat on top of busy pictures, scrollbars appeared under rows of links, and some sections left large empty blocks at tablet widths. The about page had my job dates wrong.
+
+![A browser window with a jumble of rounded cards and pills on the left and a calm, aligned page on the right](/assets/images/posts/covers/site_redesign_worth_citing_cover.jpg "From cards and carousels to a page worth citing")
 
 ## What I wanted the homepage to be
 
- I want this site to be something a professor, a university page or a careful journalist would be comfortable linking to. Search engines already found it. The question was whether a person who landed here would trust it. Over one long weekend I went through the site with that question in mind and changed more than I expected to.
-
-![A browser window with a jumble of rounded cards and pills on the left and a calm, aligned page on the right](/assets/images/posts/covers/site_redesign_worth_citing_cover.jpg "From cards and carousels to a page worth citing")
+I want this site to be something a professor, a university page or a careful journalist would be comfortable linking to. Search engines already found it. The question was whether a person who landed here would trust it. Over one long weekend I went through the site with that question in mind and changed more than I expected to.
 
 ## Start with trust, not looks
 
@@ -72,7 +72,7 @@ Nothing repeats on that screen. The topic lists skip any post already shown abov
 
 ## Cards inside cards
 
-The biggest source of visual noise wasn't any single element. It was cards inside cards.[RD: bad sentence structure] A topic group was a rounded box with a pill-shaped label, holding more rounded boxes, each with a border and a shadow.
+Most of the visual noise came from one habit: putting cards inside other cards. A topic group was a rounded box with a pill-shaped label, and inside it sat more rounded boxes, each with its own border and shadow.
 
 I removed almost all of it. Topic groups are now a heading with a thin rule, and posts sit directly on the page as an image, a title and a line of text, separated by space and hairlines. The site reads calmer, and it turns out the boxes weren't doing any work the spacing couldn't do.
 
@@ -82,11 +82,11 @@ Two image problems kept coming back.
 
 First, shape. My covers come in two shapes, wide 16:9 and square, and the layout was forcing both into one frame, so either the picture got cropped or space was wasted. The site now reads each cover's real size when it builds. A wide cover goes across the top of the lead story; a square one sits beside the headline so the text fills the space next to it.
 
-[RD: needs screenshots]
+![The homepage lead story twice: on the left a wide cover runs across the top with the headline underneath; on the right a square cover sits to the left of the headline and summary](/assets/images/posts/site-redesign/cover-shapes.jpg "The same lead story layout with a wide cover and with a square cover")
 
 Second, sharpness. The small thumbnails looked blurry, because the browser was shrinking a 1,300-pixel cover into a 150-pixel box. The site now makes proper thumbnails at build time with [eleventy-img](https://www.11ty.dev/docs/plugins/image/), sized for where they're shown. They're sharper and much smaller to download. The homepage gallery had a worse version of the same problem: it was loading NASA's full-size space photos, some 6,000 pixels wide and over 2 MB each, to show small cards. It now asks NASA for an 800-pixel version.
 
-[RD: needs screenshots]
+![The same cover shown as a small thumbnail twice, enlarged: on the left, shrunk by the browser, the lettering and lines are soft; on the right, resized at build time, they are crisp](/assets/images/posts/site-redesign/thumbnail-sharpness.jpg "Left: the browser shrinking the full cover. Right: a thumbnail made at build time. Both enlarged to show the difference")
 
 ## Small fixes that added up
 
@@ -98,10 +98,10 @@ A lot of the work was small, and most of it came from looking at the site at dif
 - The Enlighten book list said "0 books" on my dev server and had no covers. It now shows all 13, each with its cover.
 - The page scrollbar is thinner and follows the light or dark theme.
 
-[RD: needs screenshots]
+![An Enlighten book card before and after: before, the cover sits alone at the top with empty space beside it; after, the cover sits beside the format, title and author](/assets/images/posts/site-redesign/enlighten-cards.jpg "An Enlighten book card before and after the change")
 
 ## What I'd tell myself at the start
 
-Decide who you want to trust the site before you change how it looks. Most of what made this site feel unofficial wasn't the colours. It was missing dates, missing sources, repeated content and decoration standing in for structure. [RD: bad sentence structure]
+Decide who you want to trust the site before you change how it looks. What made this site feel unofficial wasn't the colours. It was the missing dates and sources, the posts shown twice, and boxes and pills where plain spacing would have done the job.
 
 And look at the page at more than one width. Nearly every problem I fixed this weekend was invisible on my laptop and obvious on a phone or a half-width window.
