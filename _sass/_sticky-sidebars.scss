@@ -182,13 +182,18 @@ body.has-side-toc {
         transition: width 0.2s ease, background-color 0.2s ease;
       }
       &:hover::before { background: var(--grey-text); }
-      &.active::before { width: 24px; height: 3px; top: 5px; background: var(--text-color); }
+      // sections already read fill in up to the current one (side-toc.js sets the classes)
+      &.toc-passed::before { background: var(--grey-text); }
+      &.active::before,
+      &.toc-current::before { width: 24px; height: 3px; top: 5px; background: var(--text-color); }
     }
   }
 
   // Peek: the full list over the article
-  body.side-toc-collapsed .side-toc:hover,
-  body.side-toc-collapsed .side-toc:focus-within {
+  // :focus-visible, not :focus-within, so a mouse click on the menu button doesn't hold the
+  // peek open; side-toc-nopeek closes it right after collapsing until the pointer leaves.
+  body.side-toc-collapsed:not(.side-toc-nopeek) .side-toc:hover,
+  body.side-toc-collapsed .side-toc:has(:focus-visible) {
     width: $_side-toc-width;
     overflow-y: auto;
     box-shadow: 6px 0 24px rgba(0, 0, 0, 0.18);
@@ -214,7 +219,8 @@ body.has-side-toc {
 
   // Homepage: its list has no h2 section marks, so the collapsed strip shows only the
   // menu button; hovering or tabbing in still opens the full list.
-  body.home-page.side-toc-collapsed .side-toc:not(:hover):not(:focus-within) .side-toc__body { display: none; }
+  body.home-page.side-toc-collapsed .side-toc:not(:hover):not(:has(:focus-visible)) .side-toc__body,
+  body.home-page.side-toc-collapsed.side-toc-nopeek .side-toc:not(:has(:focus-visible)) .side-toc__body { display: none; }
 
   .side-toc-open,
   .side-toc-backdrop { display: none !important; }

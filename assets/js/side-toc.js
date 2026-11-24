@@ -38,8 +38,13 @@
   if (collapseBtn) {
     collapseBtn.setAttribute("aria-expanded", String(!body.classList.contains("side-toc-collapsed")));
     collapseBtn.addEventListener("click", function () {
-      setCollapsed(!body.classList.contains("side-toc-collapsed"));
+      var collapsing = !body.classList.contains("side-toc-collapsed");
+      setCollapsed(collapsing);
+      // Collapsing with the pointer over the panel: close it now instead of leaving the
+      // hover peek open, and let hover open it again once the pointer has left.
+      if (collapsing) body.classList.add("side-toc-nopeek");
     });
+    toc.addEventListener("mouseleave", function () { body.classList.remove("side-toc-nopeek"); });
   }
   if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
   if (openBtn) openBtn.addEventListener("click", openDrawer);
@@ -67,6 +72,26 @@
   desktop.addEventListener("change", queueFit);
   stopAboveFooter();
 
+  // Collapsed rail: marks for sections before the current one fill in, and when a
+  // subsection is active its parent section's mark shows as current. Only changed
+  // classes are written, so the observer below settles after one pass.
+  function markProgress(active) {
+    var links = toc.querySelectorAll("li.toc-h2 > a, li.toc-h3 > a, li.toc-h4 > a");
+    var idx = Array.prototype.indexOf.call(links, active);
+    var current = null;
+    for (var i = 0; i <= idx; i++) {
+      if (links[i].parentNode.classList.contains("toc-h2")) current = links[i];
+    }
+    for (var j = 0; j < links.length; j++) {
+      var a = links[j];
+      if (!a.parentNode.classList.contains("toc-h2")) continue;
+      var passed = idx >= 0 && j < idx && a !== current;
+      if (a.classList.contains("toc-passed") !== passed) a.classList.toggle("toc-passed", passed);
+      var isCurrent = a === current && a !== active;
+      if (a.classList.contains("toc-current") !== isCurrent) a.classList.toggle("toc-current", isCurrent);
+    }
+  }
+
   // Keep the active entry visible in long TOCs. The highlight itself is set by
   // toc.js (posts) or the homepage script; this only scrolls the TOC panel.
   var pending = 0;
@@ -74,6 +99,7 @@
     cancelAnimationFrame(pending);
     pending = requestAnimationFrame(function () {
       var active = toc.querySelector("a.active");
+      markProgress(active);
       // Phone: show the current section on the floating Contents button
       var current = openBtn && openBtn.querySelector(".side-toc-open__current");
       if (current) current.textContent = active ? active.textContent.trim() : "";
