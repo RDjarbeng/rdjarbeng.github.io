@@ -15,7 +15,7 @@ if (isMainThread && !process.env.DEV_MEMORY_GUARD_DISABLED) {
        const rssMb = Math.round(process.memoryUsage.rss() / 1048576);
        if (rssMb <= limitMb) return;
        fs.writeSync(2, "\\n[memory guard] STOPPING the dev server: RSS is " + rssMb + " MB, over the " + limitMb + " MB limit.\\n" +
-         "[memory guard] This suggests a memory leak. Run npm start again to continue, or set DEV_MEMORY_LIMIT_MB to change the limit.\\n");
+         "[memory guard] This suggests a memory leak. The launcher (npm start) starts a fresh server by itself. Set DEV_MEMORY_LIMIT_MB to change the limit.\\n");
        process.kill(process.pid, "SIGKILL");
      }, 1000);`,
     { eval: true, workerData: { limitMb } }
