@@ -67,7 +67,9 @@ These reactions are often catalyzed by sunlight or humidity, leading to elevated
 
 PM2.5 poses significant risks to human health due to its ability to penetrate deep into the lungs and bloodstream. Epidemiological studies associate PM2.5 exposure with respiratory conditions (e.g., asthma, bronchitis), cardiovascular diseases, and premature mortality (Pope et al., 2002; WHO, 2021). The WHO estimates that ambient air pollution, including PM2.5, contributes to approximately 4.2 million premature deaths annually (WHO, 2021).
 
-Environmentally, PM2.5 affects climate by altering radiative forcing and cloud formation. Black carbon absorbs solar radiation, contributing to warming, while sulphates and nitrates scatter light, exerting a cooling effect (Bond et al., 2013; Intergovernmental Panel on Climate Change [IPCC], 2021). Additionally, PM2.5 reduces visibility, causing haze in urban environments (EPA, 2023).
+The [WHO's 2021 guidelines](https://www.who.int/publications/i/item/9789240034228) set guideline levels for PM2.5 of 15 µg/m³ averaged over 24 hours and 5 µg/m³ over a year. The WHO is clear that no level is completely safe. Apps usually report PM2.5 as an AQI number instead, which [this AQI explainer](/understanding-the-air-quality-index-aqi/) shows how to calculate.
+
+Environmentally, PM2.5 affects climate by altering radiative forcing and cloud formation. Black carbon absorbs solar radiation, contributing to warming, while sulphates and nitrates scatter light, exerting a cooling effect (Bond et al., 2013; Intergovernmental Panel on Climate Change [IPCC], 2021). Additionally, PM2.5 reduces visibility, causing haze in urban environments (EPA, 2023), as on [a hazy day in Kigali in January 2026](/weather-report-kigali-29th-january-2026/), when model estimates put PM2.5 at about 37 µg/m³ and the airport, normally visible across the valley, all but disappeared.
 
 ## Conclusion
 
