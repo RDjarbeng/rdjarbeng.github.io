@@ -109,15 +109,7 @@ The profit figure in that example is the part most people find hardest to believ
 
 That line looks like a government bill, but it is a pool with several owners:
 
-```mermaid
-flowchart LR
-    A["Total ticket price"] --> B["Base fare<br/>Airline"]
-    A --> C["Taxes, surcharges and fees"]
-    C --> D["Surcharges (YQ/YR)<br/>Airline"]
-    C --> E["Passenger service and terminal charges<br/>Airport operators"]
-    C --> F["Safety and security charges<br/>Regulators and security agencies"]
-    C --> G["Departure taxes, tourism levies, VAT<br/>National governments"]
-```
+![A tree that splits the total ticket price into the base fare, which goes to the airline, and taxes, surcharges and fees. Those split four ways: surcharges, which go to the airline; passenger service and terminal charges, which go to airport operators; safety and security charges, which go to regulators and security agencies; and departure taxes, tourism levies and VAT, which go to national governments.](/assets/images/diagrams/ticket-price-breakdown.svg)
 
 Ticketing systems identify each item with a code, and those codes are usually printed on the e-ticket or fare breakdown:
 
