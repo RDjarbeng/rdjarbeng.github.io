@@ -217,7 +217,7 @@ body_class: home-page has-side-toc
                 {% assign valid_sampled = t_posts | sample: 6 %}
                 {% for p in valid_sampled %}
                   {% unless latest_urls contains p.url %}
-                    {% include_cached post-card.html post=p horizontal=true show_excerpt=false %}
+                    {% include_cached post-card.html post=p %}
                     {% assign valid_count = valid_count | plus: 1 %}
                     {% if valid_count == 2 %}{% break %}{% endif %}
                   {% endunless %}

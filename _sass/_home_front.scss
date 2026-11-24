@@ -571,18 +571,19 @@ $front-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, seri
   }
 }
 
-// Featured topics sit in two columns like "Browse by topic"; each topic's posts are
-// compact rows (thumbnail beside the title), so no column is left half empty.
+// Featured topics sit in two columns like "Browse by topic"; each topic shows its two
+// posts side by side, so no column is left empty.
 .featured-topics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px 24px;
 }
 
-.featured-topic__list {
+// Scoped to .featured-topics so the general .post-list grid (260px minimum) doesn't win.
+.featured-topics .featured-topic__list {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 @container home-main (max-width: 520px) {
