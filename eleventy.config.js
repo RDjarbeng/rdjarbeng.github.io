@@ -211,6 +211,27 @@ module.exports = function(eleventyConfig) {
     };
   });
 
+  // Self-hosted videos in a post body (<video><source src="/assets/videos/x.mp4">). Google only lists a
+  // page as having a video when it finds VideoObject data for it, so the seo tag below adds one per file.
+  const videoSrcCache = new Map();
+  const selfHostedVideos = (inputPath) => {
+    if (!inputPath) return [];
+    const file = path.resolve(inputPath);
+    let mtime = 0;
+    try { mtime = fs.statSync(file).mtimeMs; } catch (e) { return []; }
+    const hit = videoSrcCache.get(file);
+    if (hit && hit.mtime === mtime) return hit.videos;
+    const raw = fs.readFileSync(file, "utf8").replace(/```[\s\S]*?```/g, "");
+    const videos = [];
+    for (const m of raw.matchAll(/<video\b([^>]*)>([\s\S]*?)<\/video>/gi)) {
+      const poster = (m[1].match(/\bposter=["']([^"']+)["']/i) || [])[1];
+      const src = (m[2].match(/<source[^>]*\bsrc=["']\s*(?:\{\{\s*['"])?([^'"}\s]+)/i) || m[1].match(/\bsrc=["']([^"']+)["']/i) || [])[1];
+      if (src && /\.(mp4|webm|mov|m4v)(\?|$)/i.test(src) && !videos.some((v) => v.src === src)) videos.push({ src, poster });
+    }
+    videoSrcCache.set(file, { mtime, videos });
+    return videos;
+  };
+
   eleventyConfig.addLiquidTag("seo", function() {
     return {
       parse() {},
@@ -292,7 +313,20 @@ module.exports = function(eleventyConfig) {
             posting.position = series.parts.findIndex((part) => part.url === url) + 1;
             posting.isPartOf = { "@type": "CreativeWorkSeries", name: series.name, url: SITE + series.url };
           }
-          graph.push(posting, {
+          const abs = (u) => (u.startsWith("http") ? u : `${SITE}${u.startsWith("/") ? "" : "/"}${encodeURI(u)}`);
+          const vids = selfHostedVideos(page.inputPath);
+          const videoObjects = vids.map((v, i) => ({
+            "@type": "VideoObject",
+            "@id": `${canonical}#video${vids.length > 1 ? `-${i + 1}` : ""}`,
+            name: vids.length > 1 ? `${rawTitle} (video ${i + 1})` : rawTitle,
+            description: pageDesc || rawTitle,
+            thumbnailUrl: [v.poster ? abs(v.poster) : imgUrl].filter(Boolean),
+            uploadDate: siteDoc.iso_date,
+            contentUrl: abs(v.src),
+            url: canonical,
+          })).filter((v) => v.thumbnailUrl.length);
+          if (videoObjects.length) posting.video = videoObjects.map((v) => ({ "@id": v["@id"] }));
+          graph.push(posting, ...videoObjects, {
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
