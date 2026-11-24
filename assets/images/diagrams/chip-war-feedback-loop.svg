@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 634" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">The chip war feedback loop</title>
+<desc id="d">A loop. US sanctions on AI chips restrict H100s, which opens an innovation gap in China. That gap forces innovation at DeepSeek and Huawei: mixture-of-experts architectures lead to DeepSeek-R1, and domestic chip making leads to the Ascend 910C. Matching performance causes alarm in the US, lost revenue drives US chipmakers to lobby, the policy shifts, sanctions are loosened, and exports are authorised again, which brings the loop back to US sanctions.</desc>
+<rect width="800" height="634" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">The chip war feedback loop</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M225.0 122.0 L526.4 122.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M535.0 122.0 L524.2 126.5 L524.2 117.5 Z" fill="#141414"/>
+<path d="M640.0 152.0 L640.0 199.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M640.0 208.0 L635.5 197.2 L644.5 197.2 Z" fill="#141414"/>
+<path d="M535.0 238.0 L390.0 238.0 Q380.0 238.0 380.0 248.0 L380.0 315.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M380.0 324.0 L375.5 313.2 L384.5 313.2 Z" fill="#141414"/>
+<path d="M640.0 268.0 L640.0 315.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M640.0 324.0 L635.5 313.2 L644.5 313.2 Z" fill="#141414"/>
+<path d="M380.0 384.0 L380.0 402.0 Q380.0 412.0 390.0 412.0 L458.3 412.0 Q468.0 412.0 468.0 421.7 L468.0 431.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M468.0 440.0 L463.5 429.2 L472.5 429.2 Z" fill="#141414"/>
+<path d="M640.0 384.0 L640.0 402.0 Q640.0 412.0 630.0 412.0 L561.7 412.0 Q552.0 412.0 552.0 421.7 L552.0 431.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M552.0 440.0 L547.5 429.2 L556.5 429.2 Z" fill="#141414"/>
+<path d="M405.0 470.0 L233.6 470.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M225.0 470.0 L235.8 465.5 L235.8 474.5 Z" fill="#141414"/>
+<path d="M120.0 440.0 L120.0 334.6" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M120.0 326.0 L124.5 336.8 L115.5 336.8 Z" fill="#141414"/>
+<path d="M120.0 266.0 L120.0 160.6" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M120.0 152.0 L124.5 162.8 L115.5 162.8 Z" fill="#141414"/>
+<rect x="15.0" y="92.0" width="210.0" height="60.0" rx="0" fill="#0f62fe" stroke="#141414" stroke-width="1.5"/>
+<text x="120.0" y="117.2" font-size="18" fill="#ffffff" text-anchor="middle">US sanctions</text>
+<text x="120.0" y="139.7" font-size="18" fill="#ffffff" text-anchor="middle">on AI chips</text>
+<rect x="535.0" y="92.0" width="210.0" height="60.0" rx="0" fill="#009d9a" stroke="#141414" stroke-width="1.5"/>
+<text x="640.0" y="117.2" font-size="18" fill="#141414" text-anchor="middle">Innovation gap</text>
+<text x="640.0" y="139.7" font-size="18" fill="#141414" text-anchor="middle">in China</text>
+<rect x="535.0" y="208.0" width="210.0" height="60.0" rx="0" fill="#009d9a" stroke="#141414" stroke-width="1.5"/>
+<text x="640.0" y="233.2" font-size="18" fill="#141414" text-anchor="middle">DeepSeek and</text>
+<text x="640.0" y="255.7" font-size="18" fill="#141414" text-anchor="middle">Huawei</text>
+<rect x="275.0" y="324.0" width="210.0" height="60.0" rx="0" fill="#009d9a" stroke="#141414" stroke-width="1.5"/>
+<text x="380.0" y="360.5" font-size="18" fill="#141414" text-anchor="middle">DeepSeek-R1</text>
+<rect x="535.0" y="324.0" width="210.0" height="60.0" rx="0" fill="#009d9a" stroke="#141414" stroke-width="1.5"/>
+<text x="640.0" y="360.5" font-size="18" fill="#141414" text-anchor="middle">Ascend 910C</text>
+<rect x="405.0" y="440.0" width="210.0" height="60.0" rx="0" fill="#0f62fe" stroke="#141414" stroke-width="1.5"/>
+<text x="510.0" y="476.5" font-size="18" fill="#ffffff" text-anchor="middle">Alarm in the US</text>
+<rect x="15.0" y="440.0" width="210.0" height="60.0" rx="0" fill="#0f62fe" stroke="#141414" stroke-width="1.5"/>
+<text x="120.0" y="465.2" font-size="18" fill="#ffffff" text-anchor="middle">US chipmakers</text>
+<text x="120.0" y="487.7" font-size="18" fill="#ffffff" text-anchor="middle">lobby</text>
+<rect x="15.0" y="266.0" width="210.0" height="60.0" rx="0" fill="#0f62fe" stroke="#141414" stroke-width="1.5"/>
+<text x="120.0" y="291.2" font-size="18" fill="#ffffff" text-anchor="middle">Sanctions</text>
+<text x="120.0" y="313.7" font-size="18" fill="#ffffff" text-anchor="middle">loosened</text>
+<rect x="294.1" y="108.5" width="163.2" height="24.3" fill="#f4f1e6"/>
+<text x="375.7" y="128.5" font-size="18" fill="#141414" text-anchor="middle">Restricts H100s</text>
+<rect x="543.3" y="162.2" width="193.4" height="24.3" fill="#f4f1e6"/>
+<text x="640.0" y="182.2" font-size="18" fill="#141414" text-anchor="middle">Forced to innovate</text>
+<rect x="401.1" y="224.5" width="112.8" height="24.3" fill="#f4f1e6"/>
+<text x="457.5" y="244.5" font-size="18" fill="#141414" text-anchor="middle">MoE models</text>
+<rect x="588.6" y="278.2" width="102.7" height="24.3" fill="#f4f1e6"/>
+<text x="640.0" y="298.2" font-size="18" fill="#141414" text-anchor="middle">Own chips</text>
+<rect x="252.8" y="456.5" width="133.0" height="24.3" fill="#f4f1e6"/>
+<text x="319.3" y="476.5" font-size="18" fill="#141414" text-anchor="middle">Lost revenue</text>
+<rect x="53.5" y="373.8" width="133.0" height="24.3" fill="#f4f1e6"/>
+<text x="120.0" y="393.8" font-size="18" fill="#141414" text-anchor="middle">Policy shift</text>
+<rect x="38.4" y="199.8" width="163.2" height="24.3" fill="#f4f1e6"/>
+<text x="120.0" y="219.8" font-size="18" fill="#141414" text-anchor="middle">Exports allowed</text>
+<rect x="32" y="525.0" width="24" height="18" rx="0" fill="#0f62fe" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="540.0" font-size="18" fill="#141414">United States</text>
+<rect x="412" y="525.0" width="24" height="18" rx="0" fill="#009d9a" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="540.0" font-size="18" fill="#141414">China</text>
+<line x1="32" y1="582.0" x2="768" y2="582.0" stroke="#cfc6b6"/>
+<text x="768.0" y="612.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>
