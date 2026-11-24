@@ -71,7 +71,8 @@ function checkPost(file) {
     return { file, error: `File not found: ${file}`, pass: false, score: 0 };
   }
 
-  const content = fs.readFileSync(file, "utf8");
+  // git on Windows checks files out with CRLF; normalise so the front matter regex matches
+  const content = fs.readFileSync(file, "utf8").replace(/\r\n/g, "\n");
   const issues = [];
   const warnings = [];
   let score = 100;
