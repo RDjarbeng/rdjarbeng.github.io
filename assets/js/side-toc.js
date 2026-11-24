@@ -74,6 +74,9 @@
     cancelAnimationFrame(pending);
     pending = requestAnimationFrame(function () {
       var active = toc.querySelector("a.active");
+      // Phone: show the current section on the floating Contents button
+      var current = openBtn && openBtn.querySelector(".side-toc-open__current");
+      if (current) current.textContent = active ? active.textContent.trim() : "";
       if (!active || body.classList.contains("side-toc-collapsed")) return;
       var a = active.getBoundingClientRect();
       var c = toc.getBoundingClientRect();

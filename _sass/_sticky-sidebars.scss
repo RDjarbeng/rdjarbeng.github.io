@@ -144,13 +144,72 @@ body.has-side-toc {
     }
   }
 
+  // Collapsed: a narrow rail of section marks (one per h2) that follows the page and
+  // marks the current section. Hovering it, or tabbing into it, opens the full list as
+  // an overlay without moving the article.
   body.side-toc-collapsed .side-toc {
     width: $_side-toc-collapsed;
-    overflow: hidden;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
 
-    .side-toc__head { flex-direction: column; border-bottom: none; padding: 10px 0; }
-    .side-toc__title { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 0.9rem; opacity: 0.7; }
-    .side-toc__body { display: none; }
+    .side-toc__head { justify-content: center; border-bottom: none; padding: 10px 0; }
+    .side-toc__title { display: none; }
+
+    .side-toc__body { padding: 6px 0 24px; }
+    .toc-content li.toc-h3,
+    .toc-content li.toc-h4 { display: none; }
+    .toc-content li.toc-h2 { margin: 0; }
+    .toc-content li.toc-h2 > a {
+      display: block;
+      position: relative;
+      height: 14px;
+      padding: 0;
+      font-size: 0;
+      color: transparent;
+      background: none;
+      border: none;
+      // the visible mark
+      &::before {
+        content: "";
+        position: absolute;
+        left: 16px;
+        top: 6px;
+        width: 14px;
+        height: 2px;
+        border-radius: 1px;
+        background: var(--card-border);
+        transition: width 0.2s ease, background-color 0.2s ease;
+      }
+      &:hover::before { background: var(--grey-text); }
+      &.active::before { width: 24px; height: 3px; top: 5px; background: var(--text-color); }
+    }
+  }
+
+  // Peek: the full list over the article
+  body.side-toc-collapsed .side-toc:hover,
+  body.side-toc-collapsed .side-toc:focus-within {
+    width: $_side-toc-width;
+    overflow-y: auto;
+    box-shadow: 6px 0 24px rgba(0, 0, 0, 0.18);
+
+    .side-toc__head { justify-content: flex-start; padding: 10px 10px 8px 8px; border-bottom: 1px solid var(--card-border); }
+    .side-toc__title { display: block; }
+    .side-toc__body { padding: 8px 10px 24px; }
+    .toc-content li.toc-h3,
+    .toc-content li.toc-h4 { display: list-item; }
+    .toc-content li.toc-h2 { margin-top: 10px; }
+    .toc-content li.toc-h2:first-child { margin-top: 0; }
+    .toc-content li.toc-h2 > a {
+      height: auto;
+      padding: 4px 1px 4px 12px;
+      font-size: 0.875rem;
+      border-left: 2px solid transparent;
+      color: var(--grey-text);
+      &::before { display: none; }
+      &:hover, &.active { color: var(--text-color); }
+      &.active { background: rgba(127, 127, 127, 0.16); border-left-color: var(--text-color); }
+    }
   }
 
   // Homepage: the collapsed strip shows only the menu button
@@ -684,4 +743,22 @@ body.has-side-toc {
       gap: 20px;
     }
   }
+}
+
+// Current section on the phone "Contents" button
+.side-toc-open__current {
+  max-width: 55vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  opacity: 0.8;
+  &:empty { display: none; }
+  &::before { content: "· "; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .side-toc,
+  .side-toc .toc-content a::before,
+  body.has-side-toc .page-content { transition: none !important; }
 }
