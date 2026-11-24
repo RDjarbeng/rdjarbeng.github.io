@@ -28,7 +28,7 @@ card_items:
     description: Continuous driving routes identified persistent volatilization hot spots near contaminated creekbeds and trench excavation sites.
 content_type: paper-review
 ---
-For agent: Needs link to the paper by Oladayo 
+> **The paper:** Oladayo Oladeji, Mariana Saitas, Toriq Mustapha, Natalie M. Johnson, Weihsueh A. Chiu, Ivan Rusyn, Allen L. Robinson and Albert A. Presto. "Air Pollutant Patterns and Human Health Risk following the East Palestine, Ohio, Train Derailment." *Environmental Science & Technology Letters* 10, no. 8 (2023): 680–685. [doi:10.1021/acs.estlett.3c00324](https://doi.org/10.1021/acs.estlett.3c00324)
 
 On February 3, 2023, thirty-eight cars of a Norfolk Southern freight train derailed in East Palestine, Ohio. Eleven of the derailed tank cars carried hazardous petrochemicals, including five containing vinyl chloride monomer. 
 
