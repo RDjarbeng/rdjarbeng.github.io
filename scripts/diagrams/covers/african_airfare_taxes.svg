@@ -1,120 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
-  <!-- Cover for African Airfare Taxes Post
-       Strict thumbnail rules:
-       - At most three text elements: Headline (>=64px), short hook, rdjarbeng.com watermark
-       - Exactly ONE solid text color (#141414)
-       - No panels, cards, dashboards, code, tables, charts with values or small labels
-       - Clean, aeronautically accurate side-profile commercial airliner climbing:
-         * Authentic Boeing/Airbus side elevation geometry
-         * Low-wing swept back with dihedral winglet
-         * Underslung turbofan engine mounted under wing leading edge
-         * Tail fin rising on top of rear fuselage
+  <!-- Cover for "Why flight tickets in Africa are so expensive".
+       Thumbnail rules (.agent/workflows/generate-cover-image.md): three text elements in #141414,
+       cream background, one palette (Muted Primaries: terracotta, slate ink, ochre gold).
+       The airliner is figkit's airliner component (A320-family side view), gear down on the runway.
        Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/african_airfare_taxes.svg assets/images/posts/covers/african_airfare_taxes_cover.jpg -->
+  <defs><clipPath id="hull"><path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z"/></clipPath></defs>
   <rect width="1280" height="720" fill="#f4f1e6"/>
-
-  <!-- Text Element 1 (Headline, >= 64px) & Text Element 2 (Short hook) -->
-  <!-- Exactly ONE solid text color: #141414 -->
   <g fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
     <text x="640" y="112" font-size="72" font-weight="900" letter-spacing="1">AIRFARES IN AFRICA</text>
     <text x="640" y="162" font-size="24" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">WHY TAXES OUTWEIGH THE FARE</text>
   </g>
 
-  <!-- Illustration: Boarding Pass Graphic + Sleek Climbing Airliner Profile -->
-  <g transform="translate(640, 430)">
-    <!-- Runway / Flight path base line -->
-    <rect x="-480" y="150" width="960" height="8" fill="#141414" rx="4"/>
-    <line x1="-420" y1="190" x2="420" y2="190" stroke="#f2c12e" stroke-width="6" stroke-dasharray="32 20"/>
-
-    <!-- Stylized boarding pass silhouette (matte blue and red) -->
-    <g transform="translate(-400, -90)">
-      <!-- Left ticket stub: Blue -->
-      <path d="M 0 0 L 140 0 L 140 220 L 0 220 Z" fill="#1d4f9c"/>
-      <!-- Perforation notches -->
-      <circle cx="140" cy="40" r="12" fill="#f4f1e6"/>
-      <circle cx="140" cy="110" r="12" fill="#f4f1e6"/>
-      <circle cx="140" cy="180" r="12" fill="#f4f1e6"/>
-      <!-- Right ticket body: Red -->
-      <path d="M 140 0 L 480 0 L 480 220 L 140 220 Z" fill="#d7263d"/>
-      <!-- Ticket barcode graphic (pure geometric shapes, no text) -->
-      <g fill="#ffffff" opacity="0.85">
-        <rect x="170" y="140" width="8" height="60"/>
-        <rect x="190" y="140" width="16" height="60"/>
-        <rect x="216" y="140" width="6" height="60"/>
-        <rect x="232" y="140" width="22" height="60"/>
-        <rect x="264" y="140" width="10" height="60"/>
-        <rect x="284" y="140" width="18" height="60"/>
-        <rect x="312" y="140" width="8" height="60"/>
-        <rect x="330" y="140" width="26" height="60"/>
-        <rect x="366" y="140" width="14" height="60"/>
-        <rect x="390" y="140" width="10" height="60"/>
-        <rect x="410" y="140" width="24" height="60"/>
-        <rect x="444" y="140" width="14" height="60"/>
-      </g>
-      <!-- Circular official stamp icon on ticket -->
-      <circle cx="230" cy="70" r="38" fill="none" stroke="#f2c12e" stroke-width="7"/>
-      <circle cx="230" cy="70" r="28" fill="none" stroke="#f2c12e" stroke-width="2" stroke-dasharray="6 4"/>
-      <!-- Ticket header stripe -->
-      <rect x="0" y="0" width="480" height="18" fill="#141414"/>
-    </g>
-
-    <!-- Sleek Commercial Jetliner Climbing (Authentic Airliner Profile) -->
-    <!-- Nose points to top-right (+X), climbing smoothly at -18 degrees -->
-    <g transform="translate(130, -50) rotate(-18)">
-
-      <!-- 1. Tail Fin / Vertical Stabilizer (rises naturally from upper rear fuselage) -->
-      <path d="M -110 -18 L -170 -95 L -194 -92 L -185 -4 Z" fill="#f2c12e" stroke="#141414" stroke-width="3.5"/>
-      <!-- Tail Fin Livery Accent (Navy Blue Stripe) -->
-      <path d="M -138 -55 L -170 -95 L -194 -92 L -180 -55 Z" fill="#1d4f9c"/>
-
-      <!-- 2. Horizontal Stabilizer at tail cone -->
-      <path d="M -145 2 L -190 10 L -200 7 L -175 -2 Z" fill="#1d4f9c" stroke="#141414" stroke-width="2.5"/>
-
-      <!-- 3. Fuselage (White Upper Cabin, Dark Navy Blue Belly) -->
-      <path d="M 235 2 C 215 -16, 160 -18, -110 -18 C -150 -18, -185 -10, -205 -2 C -208 2, -207 7, -198 10 C -150 18, 100 20, 205 11 C 225 8, 235 5, 235 2 Z" fill="#ffffff" stroke="#141414" stroke-width="3.5"/>
-
-      <!-- Navy Blue Lower Belly Stripe -->
-      <path d="M -180 8 C -120 17, 90 18, 205 11 C 220 8, 232 5, 235 2 C 215 13, 110 14, -100 13 C -140 13, -165 10, -180 8 Z" fill="#1d4f9c"/>
-
-      <!-- Cockpit Windshield (on TOP of the nose) -->
-      <path d="M 188 -13 L 214 -6 L 212 0 L 186 -6 Z" fill="#141414"/>
-
-      <!-- Passenger Cabin Windows (neat row along upper fuselage) -->
-      <g fill="#141414">
-        <rect x="155" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="141" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="127" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="113" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="99" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="85" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="71" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="57" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="43" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="29" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="15" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="1" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="-13" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="-27" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="-41" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="-55" y="-6" width="6" height="9" rx="2.5"/>
-        <rect x="-69" y="-6" width="6" height="9" rx="2.5"/>
-      </g>
-
-      <!-- 4. Turbofan Jet Engine (Mounted under the wing leading edge) -->
-      <!-- Pylon -->
-      <path d="M 40 12 L 48 12 L 42 22 L 32 22 Z" fill="#141414"/>
-      <!-- Engine Nacelle (Matte Red) -->
-      <rect x="12" y="20" width="60" height="22" rx="11" fill="#d7263d" stroke="#141414" stroke-width="3"/>
-      <!-- Front Air Intake (Faces right/forward) -->
-      <ellipse cx="70" cy="31" rx="4" ry="9" fill="#141414"/>
-      <!-- Exhaust Nozzle (Faces left/rear) -->
-      <path d="M 12 26 L 4 28 L 4 34 L 12 36 Z" fill="#57514a"/>
-
-      <!-- 5. Main Wing (Side Elevation Profile: Low-wing attached to belly, swept back gracefully) -->
-      <!-- Root: (65, 12) -> Sweeps back to (-42, 2) -> Winglet curves up to (-52, -22) -> Trailing: (12, 18) -->
-      <path d="M 65 12 L -42 2 L -52 -22 L -60 -19 L -50 6 L 12 18 Z" fill="#f2c12e" stroke="#141414" stroke-width="3.5"/>
-    </g>
+  <!-- Boarding pass: white card, slate header band with a plane symbol, tear-off stub on the left
+       behind a dotted perforation with notches, route dots, printed fields as bars, barcode -->
+  <g transform="translate(150 262) rotate(-4)">
+    <rect x="0" y="0" width="540" height="260" rx="20" fill="#ffffff" stroke="#141414" stroke-width="4"/>
+    <path d="M20 0 H520 A20 20 0 0 1 540 20 V62 H0 V20 A20 20 0 0 1 20 0 Z" fill="#2d4763" stroke="#141414" stroke-width="4"/>
+    <path d="M196 31 l26 -4 l14 -15 h8 l-7 15 l18 -2 l6 -6 h5 l-3 8 l3 8 h-5 l-6 -6 l-18 -2 l7 15 h-8 l-14 -15 l-26 -4 z" fill="#ffffff"/>
+    <rect x="22" y="96" width="6" height="128" fill="#141414"/><rect x="34" y="96" width="3" height="128" fill="#141414"/><rect x="43" y="96" width="8" height="128" fill="#141414"/><rect x="57" y="96" width="3" height="128" fill="#141414"/><rect x="66" y="96" width="5" height="128" fill="#141414"/><rect x="77" y="96" width="9" height="128" fill="#141414"/><rect x="92" y="96" width="3" height="128" fill="#141414"/><rect x="101" y="96" width="6" height="128" fill="#141414"/>
+    <line x1="132" y1="62" x2="132" y2="244" stroke="#141414" stroke-width="3" stroke-dasharray="9 7"/>
+    <!-- Notches: half-circle bites at each end of the perforation -->
+    <rect x="117" y="-4" width="30" height="5" fill="#f4f1e6"/>
+    <path d="M118 0 A14 14 0 0 0 146 0 Z" fill="#f4f1e6"/>
+    <path d="M118 0 A14 14 0 0 0 146 0" fill="none" stroke="#141414" stroke-width="4"/>
+    <rect x="117" y="259" width="30" height="5" fill="#f4f1e6"/>
+    <path d="M118 260 A14 14 0 0 1 146 260 Z" fill="#f4f1e6"/>
+    <path d="M118 260 A14 14 0 0 1 146 260" fill="none" stroke="#141414" stroke-width="4"/>
+    <circle cx="180" cy="112" r="12" fill="#b84d43"/>
+    <circle cx="490" cy="112" r="12" fill="#b84d43"/>
+    <path d="M196 112 Q335 72 474 112" fill="none" stroke="#141414" stroke-width="4" stroke-dasharray="12 9"/>
+    <rect x="164" y="152" width="120" height="12" rx="6" fill="#141414"/>
+    <rect x="164" y="176" width="86" height="12" rx="6" fill="#141414"/>
+    <rect x="320" y="152" width="96" height="12" rx="6" fill="#141414"/>
+    <rect x="320" y="176" width="64" height="12" rx="6" fill="#141414"/>
+    <rect x="164" y="208" width="300" height="12" rx="6" fill="#cfa14a"/>
   </g>
+  <!-- Runway -->
+  <rect x="160" y="586" width="960" height="8" rx="4" fill="#141414"/>
+  <line x1="220" y1="626" x2="1060" y2="626" stroke="#cfa14a" stroke-width="6" stroke-dasharray="32 20"/>
+  <!-- Airliner -->
+  <g transform="translate(507 380) scale(0.86)">
 
-  <!-- Text Element 3: Watermark (rdjarbeng.com, bottom center, solid black) -->
+<line x1="672" y1="184" x2="672" y2="226" stroke="#141414" stroke-width="4"/>
+<circle cx="672" cy="228" r="10" fill="#141414"/><circle cx="672" cy="228" r="4" fill="#e4ddd0"/>
+<line x1="432" y1="192" x2="432" y2="226" stroke="#141414" stroke-width="4"/>
+<circle cx="432" cy="228" r="10" fill="#141414"/><circle cx="432" cy="228" r="4" fill="#e4ddd0"/>
+<path d="M214 117 L112 28 L74 28 L84 130 Z" fill="#b84d43" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z" fill="#ffffff"/>
+<g clip-path="url(#hull)">
+<rect x="60" y="163" width="680" height="30" fill="#2d4763"/>
+<rect x="60" y="157" width="680" height="5" fill="#cfa14a"/>
+</g>
+<path d="M640 116 C686 116 716 132 723 152 C727 166 712 181 680 184 L204 184 C150 182 102 162 78 142 L74 136 C90 124 120 117 160 116 Z" fill="none" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="214" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="228" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="242" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="256" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="270" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="284" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="298" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="312" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="326" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="340" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="354" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="368" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="382" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="438" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="452" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="466" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="480" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="494" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="508" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="522" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="536" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="550" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="564" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="578" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="592" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="606" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="620" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="634" y="134" width="6" height="9" rx="3" fill="#141414"/>
+<rect x="652" y="124" width="14" height="34" rx="3" fill="none" stroke="#141414" stroke-width="1.6"/>
+<rect x="190" y="124" width="14" height="34" rx="3" fill="none" stroke="#141414" stroke-width="1.6"/>
+<rect x="396" y="131" width="12" height="20" rx="2" fill="none" stroke="#141414" stroke-width="1.4"/>
+<rect x="416" y="131" width="12" height="20" rx="2" fill="none" stroke="#141414" stroke-width="1.4"/>
+<path d="M689 127 L703 131 L714 142 L697 142 Z" fill="#141414"/>
+<path d="M697 131 L701 142 M706 134 L708 142" stroke="#ffffff" stroke-width="1.6"/>
+<path d="M156 146 L100 131 L84 133 L122 152 Z" fill="#2d4763" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M548 183 C532 196 402 196 378 183 Z" fill="#2d4763" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M522 180 L346 206 L322 207 L404 182 Z" fill="#e4ddd0" stroke="#141414" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M346 206 L333 185 L324 186 L322 207 Z" fill="#b84d43" stroke="#141414" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M546 189 L512 183 L486 193 L532 196 Z" fill="#e4ddd0" stroke="#141414" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M570 190 C575 190 577 218 570 222 L503 218 L480 211 L480 199 L503 193 Z" fill="#ffffff" stroke="#141414" stroke-width="2.5" stroke-linejoin="round"/>
+<ellipse cx="571" cy="206" rx="5" ry="15" fill="#2d4763" stroke="#141414" stroke-width="2"/>
+<path d="M480 201 L470 203 L470 209 L480 210 Z" fill="#141414"/>
+</g>
   <text x="640" y="690" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#141414" text-anchor="middle">rdjarbeng.com</text>
 </svg>
