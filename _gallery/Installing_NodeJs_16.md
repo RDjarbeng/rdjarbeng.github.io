@@ -3,7 +3,7 @@ title: 'Cover image for post - Installing and removing Node.js on linux-based Sy
 date: 2025-07-26T12:00:00
 image: /assets/images/nodejs_2024.png
 type: cover
-link: /Installing_NodeJs_16
+link: /Install_NodeJs_on_Raspberry_Pi/
 image_alt: The official Node.js website landing page featuring the slogan Run JavaScript Everywhere and a code snippet for creating a basic HTTP server.
 enhanced_by_bot: true
 ---
