@@ -1311,37 +1311,58 @@ a:hover {
   /* Ensure content has some padding */
 }
 
+/* Post tables: cells wrap so a table fits the text column; the table only scrolls
+   sideways when its columns cannot shrink any further (narrow phones). */
 .post-content table {
   display: block;
+  /* the rows sit in an anonymous table box that shrinks to fit and wraps cell text */
+  width: fit-content;
+  max-width: 100%;
   overflow-x: auto;
-  /* Enables horizontal scroll when content overflows */
-  white-space: nowrap;
-  /* Prevents text wrapping inside cells, keeping columns intact */
-  width: 100%;
-  /* Ensures it fits the parent width */
-  border-collapse: collapse;
-  /* Optional: Maintains table styling */
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--card-bg);
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .post-content th,
 .post-content td {
-  min-width: 100px;
+  min-width: 7rem;
+  max-width: 32rem;
+  padding: 10px 14px;
   color: var(--text-color);
-  border: 1px solid var(--card-border);
-  padding: 8px 12px;
-  background-color: var(--card-bg);
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: break-word;
+  border: none;
+  border-bottom: 1px solid var(--card-border);
+  background-color: transparent;
 }
 
 .post-content th {
-  font-weight: 700;
-  background-color: color-mix(in srgb, var(--card-bg) 85%, var(--text-color) 15%);
-  color: var(--text-color);
-  border: 1px solid var(--card-border);
-  padding: 10px 12px;
+  font-weight: 600;
+  background-color: color-mix(in srgb, var(--card-bg) 92%, var(--text-color) 8%);
 }
 
-.post-content tr:nth-child(even) td {
-  background-color: color-mix(in srgb, var(--card-bg) 95%, var(--text-color) 5%);
+.post-content tr,
+.post-content tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.post-content tr:last-child td {
+  border-bottom: none;
+}
+
+.post-content td code,
+.post-content th code {
+  font-size: 0.88em;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .post-content .mermaid {
@@ -1556,10 +1577,7 @@ a:hover {
 
   /* Fix tables */
   .post-content table {
-    max-width: 99vw;
-    display: block;
-    overflow-x: auto;
-    white-space: normal;
+    font-size: 0.9rem;
   }
 }
 
