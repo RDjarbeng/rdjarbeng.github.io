@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 726" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">How compaction squeezes a full context window</title>
+<desc id="d">A tall container stands for the context window. Three blocks load first at the bottom: the system prompt, CLAUDE.md and memory. Blocks of messages and tool output stack on top, including one message with an instruction from an hour ago, until they reach a dashed line marked compaction point. The messages and tool output are then squeezed into one small block labelled summary, and fragments of text spill out of the window. The instruction from an hour ago does not make it into the summary and is left as a dashed outline. The system prompt, CLAUDE.md and memory stay at full size, re-read from disk.</desc>
+<style>.static { display: none; }
+@keyframes k1 { 0%, 8.0% { opacity: 0; transform: translateY(-12px); } 12.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f0 { animation: k1 14s ease-out infinite; }
+@keyframes k2 { 0%, 15.0% { opacity: 0; transform: translateY(-12px); } 19.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f1 { animation: k2 14s ease-out infinite; }
+@keyframes k3 { 0%, 22.0% { opacity: 0; transform: translateY(-12px); } 26.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f2 { animation: k3 14s ease-out infinite; }
+@keyframes k4 { 0%, 29.0% { opacity: 0; transform: translateY(-12px); } 33.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f3 { animation: k4 14s ease-out infinite; }
+@keyframes k5 { 0%, 36.0% { opacity: 0; transform: translateY(-12px); } 40.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f4 { animation: k5 14s ease-out infinite; }
+@keyframes k6 { 0%, 43.0% { opacity: 0; transform: translateY(-12px); } 47.9%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.anim .f5 { animation: k6 14s ease-out infinite; }
+@keyframes k7 { 0%, 48.0% { stroke-width: 2.5; } 50.0%, 62.0% { stroke-width: 5; } 64.0%, 100% { stroke-width: 2.5; } }
+.anim .limit { animation: k7 14s ease-in-out infinite; }
+.anim .fill { transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes k8 { 0%, 62.0% { transform: scaleY(1); opacity: 1; } 70.0% { transform: scaleY(0.148); opacity: 1; } 72.0%, 96.0% { transform: scaleY(0.148); opacity: 0; } 97.0%, 100% { transform: scaleY(1); opacity: 0; } }
+.anim .fill { animation: k8 14s ease-in-out infinite; }
+@keyframes k9 { 0%, 71.5% { opacity: 0; } 76.0%, 92.0% { opacity: 1; } 97.0%, 100% { opacity: 0; } }
+.anim .squeezed { animation: k9 14s ease-in-out infinite; }
+@keyframes k10 { 0%, 68.0% { stroke-width: 1.5; } 74.0%, 92.0% { stroke-width: 4; } 97.0%, 100% { stroke-width: 1.5; } }
+.anim .fixed .blk { animation: k10 14s ease-in-out infinite; }
+@keyframes k11 { 0%, 70.0% { opacity: 0; } 76.0%, 92.0% { opacity: 1; } 97.0%, 100% { opacity: 0; } }
+.anim .note { animation: k11 14s ease-in-out infinite; }
+@keyframes k12 { 0%, 68% { opacity: 1; } 74%, 100% { opacity: 0; } }
+.anim .lost-solid { animation: k12 14s ease-in-out infinite; }
+@keyframes k13 { 0%, 68% { opacity: 0; } 74%, 100% { opacity: 1; } }
+.anim .lost-ghost { animation: k13 14s ease-in-out infinite; }
+@keyframes k14 { 0%, 62.0% { opacity: 0; transform: none; } 63.0% { opacity: 1; transform: none; } 72.0%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp0 { animation: k14 14s ease-out infinite; }
+@keyframes k15 { 0%, 63.2% { opacity: 0; transform: none; } 64.2% { opacity: 1; transform: none; } 73.2%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp1 { animation: k15 14s ease-out infinite; }
+@keyframes k16 { 0%, 64.4% { opacity: 0; transform: none; } 65.4% { opacity: 1; transform: none; } 74.4%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp2 { animation: k16 14s ease-out infinite; }
+@keyframes k17 { 0%, 65.6% { opacity: 0; transform: none; } 66.6% { opacity: 1; transform: none; } 75.6%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp3 { animation: k17 14s ease-out infinite; }
+@keyframes k18 { 0%, 66.8% { opacity: 0; transform: none; } 67.8% { opacity: 1; transform: none; } 76.8%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp4 { animation: k18 14s ease-out infinite; }
+@keyframes k19 { 0%, 68.0% { opacity: 0; transform: none; } 69.0% { opacity: 1; transform: none; } 78.0%, 100% { opacity: 0; transform: translate(40px, -10px); } }
+.anim .sp5 { animation: k19 14s ease-out infinite; }
+@keyframes k20 { 0% { fill: #141414; font-weight: 700; } 50.0% { fill: #57514a; font-weight: 400; } }
+.s1 { animation: k20 14s step-end infinite; }
+@keyframes k21 { 0% { fill: #57514a; font-weight: 400; } 50.0% { fill: #141414; font-weight: 700; } 62.0% { fill: #57514a; font-weight: 400; } }
+.s2 { animation: k21 14s step-end infinite; }
+@keyframes k22 { 0% { fill: #57514a; font-weight: 400; } 62.0% { fill: #141414; font-weight: 700; } 95.0% { fill: #57514a; font-weight: 400; } }
+.s3 { animation: k22 14s step-end infinite; }
+@media (prefers-reduced-motion: reduce) { .anim { display: none; } .static { display: inline; } }
+</style>
+<defs><pattern id="hatch-cfa14a" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#f4f1e6"/><line x1="0" y1="0" x2="0" y2="9" stroke="#cfa14a" stroke-width="5"/></pattern></defs>
+<rect width="800" height="726" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">How compaction squeezes a full context window</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<g class="anim">
+<rect x="32" y="92" width="330" height="440" rx="0" fill="#ffffff"/>
+<path d="M32 92 V532 Q32 532 32 532 H362 Q362 532 362 532 V92" fill="none" stroke="#141414" stroke-width="2"/>
+<line x1="32" y1="92" x2="362" y2="92" stroke="#57514a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="354.0" y="116.0" font-size="18" fill="#57514a" text-anchor="end">Window limit</text>
+<g class="fixed">
+<rect x="40.0" y="496.8" width="314.0" height="31.2" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="518.9" font-size="18" fill="#ffffff">System prompt</text>
+<text x="344.0" y="518.9" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g class="fixed">
+<rect x="40.0" y="461.6" width="314.0" height="31.2" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="483.7" font-size="18" fill="#ffffff">CLAUDE.md</text>
+<text x="344.0" y="483.7" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g class="fixed">
+<rect x="40.0" y="426.4" width="314.0" height="31.2" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="448.5" font-size="18" fill="#ffffff">Memory</text>
+<text x="344.0" y="448.5" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g class="fill">
+<g class="f0">
+<rect x="40.0" y="386.8" width="314.0" height="35.6" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="411.1" font-size="18" fill="#141414">Messages</text>
+</g>
+<g class="f1">
+<rect x="40.0" y="320.8" width="314.0" height="62.0" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="340.3" width="312.0" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="358.3" font-size="18" fill="#141414">Tool output</text>
+</g>
+<g class="f2">
+<rect x="40.0" y="285.6" width="314.0" height="31.2" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="307.7" font-size="18" fill="#141414">Messages</text>
+</g>
+<g class="f3">
+<rect x="40.0" y="224.0" width="314.0" height="57.6" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="241.3" width="312.0" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="259.3" font-size="18" fill="#141414">Tool output</text>
+</g>
+<g class="f5">
+<rect x="40.0" y="153.6" width="314.0" height="31.2" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="175.7" font-size="18" fill="#141414">Messages</text>
+</g>
+</g>
+<g class="f4">
+<g class="lost-solid">
+<g>
+<rect x="40.0" y="188.8" width="314.0" height="31.2" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="210.9" font-size="18" fill="#141414">Instruction from an hour ago</text>
+</g>
+</g>
+<g class="lost-ghost">
+<rect x="40.0" y="188.8" width="314.0" height="31.2" rx="0" fill="none" stroke="#57514a" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="50.0" y="210.9" font-size="18" fill="#57514a" font-style="italic">Instruction from an hour ago</text>
+</g>
+</g>
+<text x="338.0" y="243.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp0">ls -la</text>
+<text x="268.0" y="271.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp1">{ }</text>
+<text x="338.0" y="299.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp2">ok</text>
+<text x="268.0" y="327.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp3">the</text>
+<text x="338.0" y="355.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp4">200 lines</text>
+<text x="268.0" y="383.0" font-size="18" fill="#57514a" text-anchor="end" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" class="spill sp5">...</text>
+<g class="squeezed">
+<rect x="40.0" y="391.2" width="314.0" height="31.2" fill="#b84d43" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="413.3" font-size="18" fill="#ffffff" font-weight="bold">Summary</text>
+</g>
+<line x1="32" y1="153.6" x2="362" y2="153.6" stroke="#141414" stroke-width="2.5" stroke-dasharray="8 5" class="limit"/>
+<rect x="38" y="128.6" width="166.8" height="21" fill="#ffffff"/>
+<text x="42.0" y="145.6" font-size="18" fill="#141414" font-weight="bold">Compaction point</text>
+<g class="s1" fill="#57514a">
+<text x="410" y="242" font-size="18">1. The window fills as you work</text>
+</g>
+<g class="s2" fill="#57514a">
+<text x="410" y="290" font-size="18">2. It reaches the compaction point</text>
+</g>
+<g class="s3" fill="#57514a">
+<text x="410" y="338" font-size="18">3. The chat becomes a summary, and</text>
+<text x="432" y="364" font-size="18">CLAUDE.md and memory come back in</text>
+<text x="432" y="390" font-size="18">full</text>
+</g>
+</g>
+<g class="static">
+<text x="32.0" y="106.0" font-size="18" fill="#141414" font-weight="bold">Before: at the compaction point</text>
+<rect x="32" y="122" width="300" height="410" rx="0" fill="#ffffff"/>
+<path d="M32 122 V532 Q32 532 32 532 H332 Q332 532 332 532 V122" fill="none" stroke="#141414" stroke-width="2"/>
+<line x1="32" y1="122" x2="332" y2="122" stroke="#57514a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="324.0" y="146.0" font-size="18" fill="#57514a" text-anchor="end">Window limit</text>
+<g>
+<rect x="40.0" y="499.2" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="520.1" font-size="18" fill="#ffffff">System prompt</text>
+</g>
+<g>
+<rect x="40.0" y="466.4" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="487.3" font-size="18" fill="#ffffff">CLAUDE.md</text>
+</g>
+<g>
+<rect x="40.0" y="433.6" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="454.5" font-size="18" fill="#ffffff">Memory</text>
+</g>
+<g>
+<g>
+<rect x="40.0" y="396.7" width="284.0" height="32.9" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="419.6" font-size="18" fill="#141414">Messages</text>
+</g>
+<g>
+<rect x="40.0" y="335.2" width="284.0" height="57.5" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="352.4" width="282.0" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="370.4" font-size="18" fill="#141414">Tool output</text>
+</g>
+<g>
+<rect x="40.0" y="302.4" width="284.0" height="28.8" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="323.3" font-size="18" fill="#141414">Messages</text>
+</g>
+<g>
+<rect x="40.0" y="245.0" width="284.0" height="53.4" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="260.2" width="282.0" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="278.2" font-size="18" fill="#141414">Tool output</text>
+</g>
+<g>
+<rect x="40.0" y="179.4" width="284.0" height="28.8" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="200.3" font-size="18" fill="#141414">Messages</text>
+</g>
+</g>
+<g>
+<rect x="40.0" y="212.2" width="284.0" height="28.8" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="233.1" font-size="18" fill="#141414">Instruction from an hour ago</text>
+</g>
+<line x1="32" y1="179.4" x2="332" y2="179.4" stroke="#141414" stroke-width="2.5" stroke-dasharray="8 5" class="limit"/>
+<rect x="38" y="154.4" width="166.8" height="21" fill="#ffffff"/>
+<text x="42.0" y="171.4" font-size="18" fill="#141414" font-weight="bold">Compaction point</text>
+<text x="468.0" y="106.0" font-size="18" fill="#141414" font-weight="bold">After compaction</text>
+<rect x="468" y="122" width="300" height="410" rx="0" fill="#ffffff"/>
+<path d="M468 122 V532 Q468 532 468 532 H768 Q768 532 768 532 V122" fill="none" stroke="#141414" stroke-width="2"/>
+<line x1="468" y1="122" x2="768" y2="122" stroke="#57514a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="760.0" y="146.0" font-size="18" fill="#57514a" text-anchor="end">Window limit</text>
+<g>
+<rect x="476.0" y="499.2" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="486.0" y="520.1" font-size="18" fill="#ffffff">System prompt</text>
+<text x="750.0" y="520.1" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g>
+<rect x="476.0" y="466.4" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="486.0" y="487.3" font-size="18" fill="#ffffff">CLAUDE.md</text>
+<text x="750.0" y="487.3" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g>
+<rect x="476.0" y="433.6" width="284.0" height="28.8" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="486.0" y="454.5" font-size="18" fill="#ffffff">Memory</text>
+<text x="750.0" y="454.5" font-size="18" fill="#ffffff" text-anchor="end" font-style="italic" class="note">re-read from disk</text>
+</g>
+<g>
+</g>
+<g>
+<rect x="476.0" y="212.2" width="284.0" height="28.8" rx="0" fill="none" stroke="#57514a" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="486.0" y="233.1" font-size="18" fill="#57514a" font-style="italic">Instruction from an hour ago</text>
+</g>
+<g>
+<rect x="476.0" y="400.8" width="284.0" height="28.8" fill="#b84d43" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="486.0" y="421.7" font-size="18" fill="#ffffff" font-weight="bold">Summary</text>
+</g>
+<line x1="468" y1="179.4" x2="768" y2="179.4" stroke="#141414" stroke-width="2.5" stroke-dasharray="8 5" class="limit"/>
+<rect x="474" y="154.4" width="166.8" height="21" fill="#ffffff"/>
+<text x="478.0" y="171.4" font-size="18" fill="#141414" font-weight="bold">Compaction point</text>
+<line x1="354" y1="327.0" x2="434" y2="327.0" stroke="#141414" stroke-width="2"/>
+<path d="M446 327.0 l-14 -7 v14 z" fill="#141414"/>
+</g>
+<rect x="32" y="557" width="24" height="18" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="572.0" font-size="18" fill="#141414">Loaded at the start, kept in full</text>
+<rect x="412" y="557" width="24" height="18" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="572.0" font-size="18" fill="#141414">Messages and replies</text>
+<rect x="32" y="587" width="24" height="18" rx="0" fill="url(#hatch-cfa14a)" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="602.0" font-size="18" fill="#141414">Tool output</text>
+<rect x="412" y="587" width="24" height="18" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="602.0" font-size="18" fill="#141414">Summary written at compaction</text>
+<rect x="32" y="617" width="24" height="18" fill="none" stroke="#57514a" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="66.0" y="632.0" font-size="18" fill="#141414">Not kept in the summary</text>
+<line x1="32" y1="674" x2="768" y2="674" stroke="#cfc6b6"/>
+<text x="768.0" y="704.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

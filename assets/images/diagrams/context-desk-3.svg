@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 652" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Then one noisy test run</title>
+<desc id="d">The same desk after the agent reads a test run that printed 1 MB of output. That output is one wide block covering three full rows, bigger than everything else on the desk put together.</desc>
+<style>@keyframes k1 { 0%, 6.0% { opacity: 0; transform: translateY(-16px); } 13.0%, 92.0% { opacity: 1; transform: none; } 97.0%, 100% { opacity: 0; transform: none; } }
+.n0 { animation: k1 8s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .new { animation: none !important; opacity: 1 !important; transform: none !important; } }
+</style>
+<defs><pattern id="hatch-cfa14a" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#f4f1e6"/><line x1="0" y1="0" x2="0" y2="9" stroke="#cfa14a" stroke-width="5"/></pattern></defs>
+<rect width="800" height="652" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">Then one noisy test run</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<rect x="32" y="92" width="736" height="396" rx="0" fill="#e4ddd0" stroke="#141414" stroke-width="2"/>
+<g>
+<rect x="40.0" y="100.0" width="177.0" height="44.0" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="128.5" font-size="18" fill="#ffffff">System prompt</text>
+</g>
+<g>
+<rect x="221.0" y="100.0" width="177.0" height="44.0" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="231.0" y="128.5" font-size="18" fill="#ffffff">CLAUDE.md</text>
+</g>
+<g>
+<rect x="402.0" y="100.0" width="177.0" height="44.0" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="412.0" y="128.5" font-size="18" fill="#ffffff">Memory</text>
+</g>
+<g>
+<rect x="583.0" y="100.0" width="177.0" height="44.0" fill="#2d4763" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="593.0" y="128.5" font-size="18" fill="#ffffff">Skills, tools</text>
+</g>
+<g>
+<rect x="40.0" y="148.0" width="237.3" height="44.0" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="50.0" y="176.5" font-size="18" fill="#141414">My messages</text>
+</g>
+<g>
+<rect x="281.3" y="148.0" width="237.3" height="44.0" fill="#cfa14a" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<text x="291.3" y="176.5" font-size="18" fill="#141414">Agent replies</text>
+</g>
+<g>
+<rect x="522.7" y="148.0" width="237.3" height="92.0" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="523.7" y="182.5" width="235.3" height="25" fill="#f4f1e6"/>
+<text x="532.7" y="200.5" font-size="18" fill="#141414">Files read</text>
+</g>
+<g>
+<rect x="40.0" y="196.0" width="237.3" height="44.0" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="206.5" width="235.3" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="224.5" font-size="18" fill="#141414">Command output</text>
+</g>
+<g>
+<rect x="281.3" y="196.0" width="237.3" height="44.0" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="282.3" y="206.5" width="235.3" height="25" fill="#f4f1e6"/>
+<text x="291.3" y="224.5" font-size="18" fill="#141414">Search results</text>
+</g>
+<g class="new n0">
+<rect x="40.0" y="244.0" width="720.0" height="140.0" fill="url(#hatch-cfa14a)" rx="0" stroke="#141414" stroke-width="1.5" class="blk"/>
+<rect x="41.0" y="302.5" width="718.0" height="25" fill="#f4f1e6"/>
+<text x="50.0" y="320.5" font-size="18" fill="#141414">1 MB of test output, read in full</text>
+</g>
+<rect x="32" y="513" width="24" height="18" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="528.0" font-size="18" fill="#141414">Loaded at the start of every session</text>
+<rect x="412" y="513" width="24" height="18" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="528.0" font-size="18" fill="#141414">Messages and replies</text>
+<rect x="32" y="543" width="24" height="18" rx="0" fill="url(#hatch-cfa14a)" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="558.0" font-size="18" fill="#141414">Tool output</text>
+<line x1="32" y1="600" x2="768" y2="600" stroke="#cfc6b6"/>
+<text x="768.0" y="630.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>
