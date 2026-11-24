@@ -172,3 +172,12 @@ https://www.acquired.fm/episodes/nvidia-the-gpu-company-1993-2006
 
 Increasing Returns and Economic Geography Author(s): Paul Krugman Source: The Journal of Political Economy, Vol. 99, No. 3 (Jun., 1991), pp. 483-499
 - [ ] 2026-11-24 09:57 CAT | Would be nice to have the notebooks all listed in my kaggle account and tested for the different yolo models- todo for claude- _posts\2025-08-10-comp_vison_roboflow.md
+- [ ] 2026-11-24 13:11 CAT | Nvidia's big bet on deep learning, circa 2015
+Nvidia shifted from a gaming graphics company to a provider of full-stack hardware, software, and data center infrastructure built to train and run deep learning workloads. That pivot—anchored by CUDA, parallel GPU computing, and specialized systems—enabled large-scale neural network training and inference across cloud and edge deployments. [1, 2, 3, 4, 5]
+How the Shift Took Shape
+- CUDA & General-Purpose GPU Compute: Nvidia opened GPUs to parallel workloads beyond graphics, letting researchers run neural networks and scientific code on parallel cores. [1]
+- Training & Inference Adoption: Hyperscalers and enterprises adopted GPUs for both training models and serving live AI features such as speech recognition, translation, vision, and search. [1, 2, 3]
+- Full-Stack & Data Center Expansion: Nvidia paired chips with SDKs, networking, and data center architectures—including DGX systems, DSX power/cooling platforms, and platforms like Vera Rubin (such as Rubin HPC for scientific computing)—to scale AI and HPC workloads. [1, 2, 3, 4]
+For more background, see NVIDIA to Benefit from Shift to GPU and coverage of recent infrastructure updates in Nvidia expands AI infrastructure push into high-performance computing. [1, 2]
+
+https://developer.nvidia.com/blog/nvidia-to-benefit-from-shift-to-gpu-powered-deep-learning/
