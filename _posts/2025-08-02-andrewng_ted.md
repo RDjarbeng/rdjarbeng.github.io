@@ -15,6 +15,7 @@ key_points:
   - "He questions whether AI could assist small businesses like local pizza shops, supermarkets, or clothing retailers in improving their operations with limited data available to them."
   - "The TED talk by Andrew Ng discusses the potential of AI to empower small businesses with data-driven decision-making and improved profitability and productivity."
 title: How AI Could Empower Any Business - Andrew Ng
+noindex: true
 image: /assets/images/andrew_ng_ai_talk.png
 image_alt: "Cover image for How AI Could Empower Any Business - Andrew Ng"
 category: "AI"

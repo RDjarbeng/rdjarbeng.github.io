@@ -4,6 +4,7 @@ key_points:
   - "Mastering one language is admirable, but learning others can lead to more efficient solutions."
   - "Lex Fridman's transition from C and C++ to Python is an example of a"
 title: "Why Not Stick to One Programming Language for Everything?"
+noindex: true
 author: Richard
 date: 2025-08-26
 image: /assets/images/programming_language.png
