@@ -212,8 +212,9 @@ body.has-side-toc {
     }
   }
 
-  // Homepage: the collapsed strip shows only the menu button
-  body.home-page.side-toc-collapsed .side-toc__title { display: none; }
+  // Homepage: its list has no h2 section marks, so the collapsed strip shows only the
+  // menu button; hovering or tabbing in still opens the full list.
+  body.home-page.side-toc-collapsed .side-toc:not(:hover):not(:focus-within) .side-toc__body { display: none; }
 
   .side-toc-open,
   .side-toc-backdrop { display: none !important; }
