@@ -31,7 +31,7 @@ card_items:
     description: "Under ICAO's definitions, a charge recovers the cost of an aviation service, while a tax raises government revenue and generally does not go back into aviation in full."
 ---
 
-When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to RWF 832,490 (about USD 570), of which RWF 215,610 was the base fare and RWF 616,880 was "taxes and fees."
+When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through a third country, and the base fare is smaller than the fees stacked on top of it. One intra-African booking used as the example for this post came to about USD 570, of which about USD 148 was the base fare and USD 422 was "taxes and fees."
 
 ![A boarding pass and a single-aisle airliner on a runway, under the headline Airfares in Africa: why taxes outweigh the fare](/assets/images/posts/covers/african_airfare_taxes_cover.jpg "Airfares in Africa: The Breakdown of Taxes, Fees, and Base Fares")
 
