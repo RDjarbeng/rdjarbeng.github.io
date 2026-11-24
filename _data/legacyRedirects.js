@@ -43,7 +43,8 @@ module.exports = function () {
     if (!to) {
       const key = rest.split("/").pop().replace(/\.html$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
       const a = bySlug.get(norm(key));
-      to = a ? a.url : "/";
+      // A post that was merged away: follow its entry in renamed_urls.json
+      to = a ? a.url : renamed[`/${key}/`] || "/";
     }
     add(outPath(path), to);
   }
