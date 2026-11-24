@@ -45,9 +45,10 @@ When writing or editing posts for this website, follow these rules:
 
 ## Math & KaTeX Formatting (STRICT)
 
-1. **Inline Math MUST use double dollars `$$...$$`**:
-   - ❌ `$O(N)$` or `$n$` (Kramdown/Jekyll does NOT parse single `$`, rendering raw text like `$O(N)$` on the page).
-   - ✅ `$$O(N)$$` or `$$n$$` or `$$2 \times O(N)$$`
+1. **Inline math uses single dollars `$...$`**:
+   - ✅ `$O(N)$`, `$n$`, `$2 \times O(N)$`
+   - ❌ `$$O(N)$$` in the middle of a sentence: double dollars only render as display maths on their own line, so inline they show as raw text.
+   - Plain currency like `$1,000` is normal text, never maths.
 
 2. **Display Math MUST use `$$` on separate lines**:
    - ✅
@@ -63,5 +64,5 @@ When writing or editing posts for this website, follow these rules:
 - [ ] No spaced hyphens used as dash substitutes (` - `)
 - [ ] No unnecessary questions directed at the reader
 - [ ] Tone matches the post type
-- [ ] All inline math uses double dollar signs (`$$math$$`) - NEVER single `$`
+- [ ] Inline math uses single dollars (`$math$`); `$$` only for display maths on its own line
 - [ ] All embedded YouTube videos and playlist URLs verified live via oEmbed or the `watch` skill

@@ -47,7 +47,7 @@ node scripts/lint-post.mjs <path-to-post.md>
    * **No Copula Avoidance or Buzzwords:** Avoid words like `testament`, `pivotal`, `delve`, `landscape`, `underscores`, `stands as`, `serves as`. Write plain copulas (`is`, `are`) and direct verbs.
    * **No Reader Interrogation:** Do not ask rhetorical questions to the reader (`What do you think?`, `Can you imagine?`). Make confident, declarative statements.
 5. **Math Formatting (KaTeX):**
-   * Inline math MUST use double dollars (`$$math$$`). Never use single `$` for math (Kramdown/Eleventy will not render single `$`).
+   * Inline math uses single dollars (`$math$`). Use `$$` only for display maths on its own line; `$$math$$` inside a sentence renders as raw text.
    * Plain currency amounts like `$1,000` must be written as normal text without math delimiters.
 6. **SVG Diagrams, Charts & Watermark:**
    * Every SVG diagram created in `assets/images/diagrams/` MUST include the `rdjarbeng.com` watermark at the bottom right (`text-anchor="end"`, `fill="#57514a"`, font-size `18px`, bold).

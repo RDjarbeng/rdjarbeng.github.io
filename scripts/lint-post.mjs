@@ -268,19 +268,19 @@ function checkPost(file) {
       });
     }
 
-    // Single dollar math check: Kramdown does not parse single $ for math
-    const singleDollarMatch = line.match(/(^|[^\$])\$([a-zA-Z0-9_\(\)\{\}\+\-\*\/\\]+)\$([^\$]|$)/);
-    if (singleDollarMatch) {
-      // Exclude simple currency like $1,000 or $50
-      if (!/^\$\d+([,\.]\d+)?$/.test(singleDollarMatch[2])) {
-        issues.push({
-          line: lineNum,
-          rule: "KaTeX Math",
-          message: `Single dollar math '$${singleDollarMatch[2]}$' detected. Use double dollars '$$math$$'.`,
-          severity: "HIGH",
-          penalty: 10,
-        });
-      }
+    // Inline math uses single dollars: $x$. Double dollars render only as display maths on
+    // their own line, so $$x$$ in the middle of a sentence shows as raw text.
+    const trimmed = line.trim();
+    const displayLine = /^(>\s*)?\$\$[\s\S]*\$\$$/.test(trimmed) || /^(>\s*)?\$\$$/.test(trimmed);
+    const inlineDouble = !displayLine && line.match(/\$\$([^$]+)\$\$/);
+    if (inlineDouble) {
+      issues.push({
+        line: lineNum,
+        rule: "KaTeX Math",
+        message: `Inline double-dollar math '$$${inlineDouble[1]}$$' detected. Use single dollars '$math$' inside a sentence; keep '$$' for display maths on its own line.`,
+        severity: "HIGH",
+        penalty: 10,
+      });
     }
 
     // Direct questions aimed at the reader
