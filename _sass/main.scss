@@ -2368,10 +2368,11 @@ body {
 }
 
 blockquote {
-  border-left: 3px solid var(--link-color, #888);
+  // Plain grey bar and upright text: a coloured bar plus italics read as a callout widget
+  border-left: 2px solid var(--grey-text, #888);
   margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  font-style: italic;
+  padding: 0.25rem 1rem;
+  font-style: normal; // the base theme's blockquote is italic
 
   p {
     margin: 0;
