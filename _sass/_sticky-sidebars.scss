@@ -222,7 +222,9 @@ body.has-side-toc {
   body.home-page.side-toc-collapsed .side-toc:not(:hover):not(:has(:focus-visible)) .side-toc__body,
   body.home-page.side-toc-collapsed.side-toc-nopeek .side-toc:not(:has(:focus-visible)) .side-toc__body { display: none; }
 
-  .side-toc-open,
+  // button.side-toc-open, not .side-toc-open: the body also gets that class while the
+  // drawer is open, and these rules must never apply to the body.
+  button.side-toc-open,
   .side-toc-backdrop { display: none !important; }
 }
 
@@ -254,7 +256,7 @@ body.has-side-toc {
     z-index: 2000;
   }
 
-  .side-toc-open {
+  button.side-toc-open {
     position: fixed;
     left: 14px;
     bottom: 14px;
