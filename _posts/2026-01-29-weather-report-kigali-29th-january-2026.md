@@ -46,7 +46,7 @@ The indoor sensors can't say what the haze was made of. For the outdoor picture 
 | PM10, daily mean | 39 µg/m³ |
 | Dust (part of PM10), daily mean | 3 µg/m³ |
 
-The estimated PM2.5 was about 2.5 times the WHO's 24-hour guideline of 15 µg/m³ (see my post on the [2021 WHO guidelines](/the-air-quality-paradigm-shift-a-comprehensive-analysis-of-the-2021-who-guidelines-and-their-implications-for-african-research-and-policy-executive-overview-the-global-health-imperative/)). On the US [AQI](/understanding-the-air-quality-index-aqi/) scale, 37 µg/m³ over 24 hours is about 105, "Unhealthy for Sensitive Groups". On a day like that, people with asthma or heart conditions, children and older people are advised to cut down on long or hard exercise outdoors.
+The estimated PM2.5 was about 2.5 times the WHO's 24-hour guideline of 15 µg/m³ (see the [WHO's 2021 air quality guidelines](https://www.who.int/publications/i/item/9789240034228)). On the US [AQI](/understanding-the-air-quality-index-aqi/) scale, 37 µg/m³ over 24 hours is about 105, "Unhealthy for Sensitive Groups". On a day like that, people with asthma or heart conditions, children and older people are advised to cut down on long or hard exercise outdoors.
 
 Almost all of the PM10 was PM2.5, and dust made up only about 3 µg/m³ of it. PM10 covers particles up to 10 micrometres, about a seventh of the width of a hair, and desert dust is mostly the larger ones. A dust haze would show PM10 well above PM2.5. Fog is water droplets, which the model does not count as PM2.5 at all.
 
