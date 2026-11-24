@@ -243,7 +243,7 @@ description: Richard Djarbeng is a software and machine learning engineer and re
       <div class="cv-entry__what">
         <h3 class="cv-entry__title"><a href="https://github.com/sveltia/sveltia-cms" rel="noreferrer">Sveltia CMS</a></h3>
         <p class="cv-entry__org">Git-based headless CMS</p>
-        <p>I've reported <a href="https://github.com/sveltia/sveltia-cms/issues?q=is%3Aissue%20state%3Aclosed%20author%3ARDjarbeng" rel="noreferrer">several issues</a> and followed them through to fixes. This site's content runs on it.</p>
+        <p> One of the early contributors to SveltiaCMS. I've reported <a href="https://github.com/sveltia/sveltia-cms/issues?q=is%3Aissue%20state%3Aclosed%20author%3ARDjarbeng" rel="noreferrer">several issues</a> and followed them through to fixes. This site's editing content workflow runs on SveltiaCMS it.</p>
       </div>
     </div>
   </div>
