@@ -18,17 +18,15 @@ body_class: post-page has-side-toc
   </div>
   <div class="post-header">
     {% assign post_type = content_type | default: page.content_type %}
-    {% if post_categories.size > 0 or post_type %}
-    <div class="post-header-categories">
-      {% if post_type %}<span class="post-header-category-tag post-type-badge post-type-badge--{{ post_type }}" title="Type of post">{% case post_type %}{% when 'analysis' %}Analysis{% when 'guide' %}Guide{% when 'explainer' %}Explainer{% when 'paper-review' %}Paper review{% when 'news' %}News{% when 'opinion' %}Opinion{% when 'review' %}Review{% when 'project' %}Project write-up{% else %}{{ post_type }}{% endcase %}</span>{% endif %}
-      {% for category in post_categories %}
-      {% assign cat_href = category | category_url %}
-      {% if cat_href != "" %}<a href="{{ cat_href | relative_url }}" class="post-header-category-tag">{{ category }}</a>{% else %}<span class="post-header-category-tag">{{ category }}</span>{% endif %}
-      {% endfor %}
-    </div>
-    {% endif %}
     <h1>{{ post_title }}</h1>
     <div class="author_date">
+      {%- comment -%} Type and category sit in the byline as one line of text, not as labels above the title {%- endcomment -%}
+      {% if post_categories.size > 0 or post_type %}
+      <div class="post-filed">
+        {%- if post_type -%}<span class="post-filed__type" title="Type of post">{% case post_type %}{% when 'analysis' %}Analysis{% when 'guide' %}Guide{% when 'explainer' %}Explainer{% when 'paper-review' %}Paper review{% when 'news' %}News{% when 'opinion' %}Opinion{% when 'review' %}Review{% when 'project' %}Project write-up{% else %}{{ post_type | capitalize }}{% endcase %}</span>{% endif -%}
+        {%- if post_categories.size > 0 %}{% if post_type %} in {% else %}Filed under {% endif %}{% for category in post_categories %}{% assign cat_href = category | category_url %}{% if cat_href != "" %}<a href="{{ cat_href | relative_url }}">{{ category }}</a>{% else %}{{ category }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif -%}
+      </div>
+      {% endif %}
       <div class="published_date">
         Published: <time datetime="{{ page.date | date_to_xmlschema }}" data-local="time">{{ page.date | date: "%B %-d,
           %Y at %-I:%M %p" }}</time>

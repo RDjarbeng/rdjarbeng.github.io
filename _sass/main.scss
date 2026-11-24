@@ -634,6 +634,29 @@ a:hover {
   font-size: $small-font-size;
 }
 
+// "Explainer in AI": type and category as the first line of the byline, not labels above the title
+.post-filed {
+  font-size: $small-font-size;
+  margin-bottom: 2px;
+
+  .post-filed__type {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--card-border, currentColor);
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--text-color);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
 .last_edited {
   font-size: $small-font-size;
 }
