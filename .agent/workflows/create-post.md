@@ -36,7 +36,15 @@ Every post should have a cover image. You must choose one of the following two a
 **Image Placement Rule**
 - ALWAYS embed the cover image in the post body right after the first paragraph, even when the post has other images. Use the same descriptive alt text as `image_alt` plus a short title: `![Alt text](/assets/images/posts/covers/<name>.jpg "Short title")`.
 
-## 4. Create the File
+## 4. Have the Draft Judged Before Showing It
+Before presenting a new or rewritten draft to Richard, get a review from a reader who did not write it:
+- Run `node scripts/lint-post.mjs <post>` and fix what it reports (a missing cover on an unpublished draft is fine).
+- Claude Code: run the `draft-judge` subagent (`~/.claude/agents/draft-judge.md`) with only the post path and one line on the intended reader. Do not give it the conversation. Other agents: use that file as a checklist and judge the draft from a fresh session.
+- Fix every `must` finding, and the `should` findings you agree with. Re-run the judge once if the opener or structure changed.
+- When presenting the draft, list in a few lines what the judge flagged, what you fixed, and anything you left and why.
+- When Richard catches something the judge missed, add it with his example to the "Lessons from Richard's reviews" section of that file.
+
+## 5. Create the File
 - Create the markdown file in the `_posts/` directory.
 - Use the naming convention `YYYY-MM-DD-slug.md`.
 - Populate the file with the verified frontmatter (including the `image` path) and the post body.
