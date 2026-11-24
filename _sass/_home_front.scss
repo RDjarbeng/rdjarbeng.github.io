@@ -571,10 +571,24 @@ $front-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, seri
   }
 }
 
+// Featured topics sit in two columns like "Browse by topic"; each topic's posts are
+// compact rows (thumbnail beside the title), so no column is left half empty.
+.featured-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
 .featured-topic__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+@container home-main (max-width: 520px) {
+  .featured-topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .home-main .post-list .post-card:not(.series-card) {

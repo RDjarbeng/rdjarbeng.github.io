@@ -195,7 +195,7 @@ body_class: home-page has-side-toc
       <h2 class="section-title" id="featured-posts" style="scroll-margin-top: 80px;">Featured Posts</h2>
       
       <div id="featured-posts-unified-container">
-        <div id="featured-tags-categories" style="display: flex; flex-direction: column; gap: 20px;">
+        <div id="featured-tags-categories" class="featured-topics">
           {% for topic in featured_topics %}
             {% assign parts = topic | split: ":::" %}
             {% assign t_type = parts[1] %}
@@ -217,7 +217,7 @@ body_class: home-page has-side-toc
                 {% assign valid_sampled = t_posts | sample: 6 %}
                 {% for p in valid_sampled %}
                   {% unless latest_urls contains p.url %}
-                    {% include_cached post-card.html post=p %}
+                    {% include_cached post-card.html post=p horizontal=true show_excerpt=false %}
                     {% assign valid_count = valid_count | plus: 1 %}
                     {% if valid_count == 2 %}{% break %}{% endif %}
                   {% endunless %}
