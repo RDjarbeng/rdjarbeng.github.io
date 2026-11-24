@@ -3,7 +3,7 @@ title: Cover image for post - Is There a Process to Build an Application?
 date: 2025-11-20T12:00:00
 image: /assets/images/light bulb.jpg
 type: cover
-link: /is-there-a-process-to-build-an-application
+link: /application-development-process/
 image_alt: A clear glass light bulb placed inside a white chalk-drawn thought bubble on a black chalkboard background, representing a bright idea.
 enhanced_by_bot: true
 ---
