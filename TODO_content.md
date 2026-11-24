@@ -11,7 +11,7 @@ Reference-grade checklist for every post below: every number has a linked primar
 - [ ] `/building-the-air-quality-dashboard-for-kigali/`: sources and a Sources section added 2026-11-20. A SOURCE CHECKLIST comment in the post lists what only you can confirm (category shares, hourly table, date range, pre-2024 AQI bands, stadium photos, reviewers, dashboard link, dataset DOI).
 - [ ] `/the-air-quality-paradigm-shift-...-2021-who-guidelines.../`: 3,040 words but only 4 links. Every key point (e.g. the "up to 17%" crop-yield figure, the translocation claims) needs a primary citation. Tone down "exhaustive" in the description. Reads AI-generated in places, so rewrite those parts in your own voice.
 - [ ] `/paper-reading-...-east-palestine-train-derailment/`: a paper review with **no link to the paper**. Add the full citation + DOI at the top, then link the figures and data you discuss.
-- [ ] `/what-is-temperature-inversion/`: in progress as of 2026-11-20 (now 3 links). Add Kigali/Nairobi examples from your own sensor data plus cited sources. Good evergreen explainer for students.
+- [ ] `/what-is-temperature-inversion/`: in progress as of 2026-11-20 (now 3 links). Add a Kigali or Nairobi example from public data (published studies, or Open-Meteo/CAMS model data), with sources. Good evergreen explainer for students.
 - [ ] `/the-hidden-cost-of-bad-air-fact-checking-the-impact-on-our-children/`: the fact-check format suits citation. Show each claim → verdict → source.
 
 ### Tier 2: upgrade published posts that already rank into reference pages
@@ -20,7 +20,7 @@ Reference-grade checklist for every post below: every number has a linked primar
 - [ ] `/what-is-particulate-matter-pm2.5-...`: link it to the AQI and WHO posts as one cluster. Cite WHO 2021 and EPA directly.
 - [x] `/guide-to-accessing-air-quality-data-from-us-embassies-worldwide/`: update note corrected (2026-11-20). It said March 2024; the feed was suspended in March 2025. Publish the draft `airnow-air-quality-website-data-update` post and link it from the note.
 - [ ] `/top-websites-for-african-climate-data/`: a resource list. Check every link, add what each dataset covers, its licence and resolution, and a last-checked date. Repeat yearly.
-- [ ] `/is-the-davis-solar-radiation-sensor-overpriced/` (1 link): first-hand hardware expertise. Expand with your own comparison measurements.
+- [ ] `/is-the-davis-solar-radiation-sensor-overpriced/` (1 link): Expand with published specs and prices (accuracy, response, cost) for the Davis sensor against cheaper pyranometers, with sources.
 - [ ] `/why-are-flight-tickets-in-africa-so-expensive-.../`: already strong (4.7k words, 35 links). Add a data table with "as of" dates and a methods note.
 - [ ] `/earth-observations-promise-and-barriers-.../`: AI-drafted (disclosed). Review it and rewrite in your own voice, or relabel it per the AI policy.
 
