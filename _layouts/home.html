@@ -266,7 +266,7 @@ body_class: home-page has-side-toc
         {% assign personal_recent = all_personal | slice: 0, 10 %}
         {% assign personal_older = all_personal | slice: 10, 50 %}
         {% assign rand_recent = personal_recent | sample: 3 %}
-        {% assign rand_older = personal_older | sample: 3 %}
+        {% assign rand_older = personal_older | sample: 2 %}
         {% assign personal_mixed = rand_recent | concat: rand_older | sample: 6 %}
         {% for personal in personal_mixed %}
           {% include_cached post-card.html post=personal %}
@@ -295,7 +295,7 @@ body_class: home-page has-side-toc
         {% assign featured_books = all_books | where_exp: "b", "b.data.known_for != nil and b.data.known_for != ''" | slice: 0, 3 %}
         {% assign f_size = featured_books | size %}
         {% if f_size == 0 %}
-          {% assign featured_books = all_books | slice: 0, 3 %}
+          {% assign featured_books = all_books | slice: 0, 4 %}
         {% endif %}
         {% for book in featured_books %}
         {% assign b_cover = book_covers[book.fileSlug] %}
