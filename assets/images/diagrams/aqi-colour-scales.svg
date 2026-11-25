@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 497" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">The same air, different colour scales</title>
+<desc id="d">Two air quality colour scales as strips. The US AQI has six bands: Good, 0 to 50, green; Moderate, 51 to 100, yellow; Unhealthy for Sensitive Groups, 101 to 150, orange; Unhealthy, 151 to 200, red; Very Unhealthy, 201 to 300, purple; Hazardous, 301 and above, maroon. China's AQI also has six bands: Excellent, 0 to 50, green; Good, 51 to 100, yellow; Lightly polluted, 101 to 150, orange; Moderately polluted, 151 to 200, red; Heavily polluted, 201 to 300, a darker purple than the US one; Severely polluted, above 300, maroon.</desc>
+<rect width="800" height="497" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">The same air, different colour scales</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<text x="32.0" y="110.0" font-size="18" fill="#141414" font-weight="bold">United States (AQI)</text>
+<rect x="32.0" y="122.0" width="122.7" height="133.2" fill="#00E400" stroke="#141414" stroke-width="1.5"/>
+<text x="40.0" y="146.0" font-size="18" fill="#141414">Good</text>
+<text x="40.0" y="245.2" font-size="18" fill="#141414" font-weight="bold">0-50</text>
+<rect x="154.7" y="122.0" width="122.7" height="133.2" fill="#FFFF00" stroke="#141414" stroke-width="1.5"/>
+<text x="162.7" y="146.0" font-size="18" fill="#141414">Moderate</text>
+<text x="162.7" y="245.2" font-size="18" fill="#141414" font-weight="bold">51-100</text>
+<rect x="277.3" y="122.0" width="122.7" height="133.2" fill="#FF7E00" stroke="#141414" stroke-width="1.5"/>
+<text x="285.3" y="146.0" font-size="18" fill="#141414">Unhealthy</text>
+<text x="285.3" y="167.6" font-size="18" fill="#141414">for</text>
+<text x="285.3" y="189.2" font-size="18" fill="#141414">Sensitive</text>
+<text x="285.3" y="210.8" font-size="18" fill="#141414">Groups</text>
+<text x="285.3" y="245.2" font-size="18" fill="#141414" font-weight="bold">101-150</text>
+<rect x="400.0" y="122.0" width="122.7" height="133.2" fill="#FF0000" stroke="#141414" stroke-width="1.5"/>
+<text x="408.0" y="146.0" font-size="18" fill="#ffffff">Unhealthy</text>
+<text x="408.0" y="245.2" font-size="18" fill="#ffffff" font-weight="bold">151-200</text>
+<rect x="522.7" y="122.0" width="122.7" height="133.2" fill="#8F3F97" stroke="#141414" stroke-width="1.5"/>
+<text x="530.7" y="146.0" font-size="18" fill="#ffffff">Very</text>
+<text x="530.7" y="167.6" font-size="18" fill="#ffffff">Unhealthy</text>
+<text x="530.7" y="245.2" font-size="18" fill="#ffffff" font-weight="bold">201-300</text>
+<rect x="645.3" y="122.0" width="122.7" height="133.2" fill="#7E0023" stroke="#141414" stroke-width="1.5"/>
+<text x="653.3" y="146.0" font-size="18" fill="#ffffff">Hazardous</text>
+<text x="653.3" y="245.2" font-size="18" fill="#ffffff" font-weight="bold">301+</text>
+<text x="32.0" y="307.2" font-size="18" fill="#141414" font-weight="bold">China (AQI, HJ 633-2026)</text>
+<rect x="32.0" y="319.2" width="122.7" height="90.0" fill="#00E400" stroke="#141414" stroke-width="1.5"/>
+<text x="40.0" y="343.2" font-size="18" fill="#141414">Excellent</text>
+<text x="40.0" y="399.2" font-size="18" fill="#141414" font-weight="bold">0-50</text>
+<rect x="154.7" y="319.2" width="122.7" height="90.0" fill="#FFFF00" stroke="#141414" stroke-width="1.5"/>
+<text x="162.7" y="343.2" font-size="18" fill="#141414">Good</text>
+<text x="162.7" y="399.2" font-size="18" fill="#141414" font-weight="bold">51-100</text>
+<rect x="277.3" y="319.2" width="122.7" height="90.0" fill="#FF7E00" stroke="#141414" stroke-width="1.5"/>
+<text x="285.3" y="343.2" font-size="18" fill="#141414">Lightly</text>
+<text x="285.3" y="364.8" font-size="18" fill="#141414">polluted</text>
+<text x="285.3" y="399.2" font-size="18" fill="#141414" font-weight="bold">101-150</text>
+<rect x="400.0" y="319.2" width="122.7" height="90.0" fill="#FF0000" stroke="#141414" stroke-width="1.5"/>
+<text x="408.0" y="343.2" font-size="18" fill="#ffffff">Moderately</text>
+<text x="408.0" y="364.8" font-size="18" fill="#ffffff">polluted</text>
+<text x="408.0" y="399.2" font-size="18" fill="#ffffff" font-weight="bold">151-200</text>
+<rect x="522.7" y="319.2" width="122.7" height="90.0" fill="#99004C" stroke="#141414" stroke-width="1.5"/>
+<text x="530.7" y="343.2" font-size="18" fill="#ffffff">Heavily</text>
+<text x="530.7" y="364.8" font-size="18" fill="#ffffff">polluted</text>
+<text x="530.7" y="399.2" font-size="18" fill="#ffffff" font-weight="bold">201-300</text>
+<rect x="645.3" y="319.2" width="122.7" height="90.0" fill="#7E0023" stroke="#141414" stroke-width="1.5"/>
+<text x="653.3" y="343.2" font-size="18" fill="#ffffff">Severely</text>
+<text x="653.3" y="364.8" font-size="18" fill="#ffffff">polluted</text>
+<text x="653.3" y="399.2" font-size="18" fill="#ffffff" font-weight="bold">300+</text>
+<line x1="32" y1="445.2" x2="768" y2="445.2" stroke="#cfc6b6"/>
+<text x="768.0" y="475.2" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

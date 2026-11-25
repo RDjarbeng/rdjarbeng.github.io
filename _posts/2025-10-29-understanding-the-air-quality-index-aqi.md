@@ -23,13 +23,9 @@ series_part: 2
 category: "Climate & Environment"
 content_type: explainer
 ---
-The Air Quality Index (AQI) is a vital tool developed by the U.S. Environmental Protection Agency (EPA) to communicate outdoor air quality and its potential health impacts. This index provides an easy-to-understand system that helps individuals make informed decisions about their outdoor activities and health protection measures.
+There is no single Air Quality Index. Most countries run their own, with different scales, colours and cut-offs (see [international AQI standards](#international-aqi-standards) below). This post explains the most widely quoted one: the US Air Quality Index, run by the U.S. Environmental Protection Agency (EPA). It is the scale behind [AirNow](https://www.airnow.gov/) and the US Embassy monitors in many African cities, and many air quality apps use it too. Unless stated otherwise, "AQI" below means the US AQI.
 
 ## How the AQI Works
-
-The AQI uses a color-coded system with six categories, each representing a different level of health concern. These categories are based on index values that range from 0 to 500+. As the AQI value increases, so does the level of air pollution and the associated health risks.
-
-Here's a breakdown of the AQI categories:
 
 The AQI uses a color-coded system with six categories, each representing a different level of health concern. These categories are based on index values that range from 0 to 500+. As the AQI value increases, so does the level of air pollution and the associated health risks.
 
@@ -62,7 +58,11 @@ Each of these pollutants has a national air quality standard set by the EPA to p
 
 ## Using the AQI
 
-The [time frame](https://www.airnow.gov/aqi/aqi-basics/using-air-quality-index/) covered by the AQI for particle pollution measurements is 24 hours.
+### Where the PM2.5 AQI comes from
+
+The official daily AQI for PM2.5 uses the [24-hour](https://www.airnow.gov/aqi/aqi-basics/using-air-quality-index/) average concentration measured at a monitoring station, in micrograms per cubic metre (µg/m³). In the US these are regulatory monitors run by state and local agencies. Outside the US, AirNow also shows readings from monitors at US embassies and consulates.
+
+The AQI you see on AirNow during the day is different. It is a "current" AQI worked out from the NowCast, an average of the concentrations over the previous 12 hours that gives more weight to recent hours when air quality is changing fast, for example during a fire ([EPA technical assistance document, May 2026](https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf)). Apps that use low-cost sensors or satellite and model estimates may convert those to an AQI too, but those numbers are less accurate than a reference monitor.
 
 Understanding the AQI can help take necessary precautions:
 
@@ -80,7 +80,7 @@ The AQI plays a crucial role in protecting public health by providing easily acc
 1. **Health Protection**: The AQI helps individuals, especially those in sensitive groups, make informed decisions about outdoor activities and potential exposure to air pollution.
 2. **Awareness**: By providing daily air quality reports, the AQI raises public awareness about air pollution and its health impacts.
 3. **Policy Making**: Government agencies and policymakers use AQI data to develop and implement strategies for improving air quality.
-4. **Environmental Education**: The AQI serves as an educational tool, helping people understand the relationship between air quality and health.
+4. **Environmental Education**: The AQI is an educational tool that helps people understand the relationship between air quality and health.
 5. **Emergency Preparedness**: During severe air pollution events, the AQI helps local authorities issue timely warnings and take necessary actions to protect public health.
 
 ## How to Access AQI Information
@@ -98,7 +98,7 @@ The Air Quality Index (AQI) used by the US EPA measures both **PM2.5** and **PM1
 
 To calculate the AQI from PM readings, the process involves several steps:
 
-1. **Measure the concentration** of PM2.5 or PM10 in the air (in micrograms per cubic meter, µg/m³).
+1. **Take the 24-hour average concentration** of PM2.5 or PM10 (in micrograms per cubic meter, µg/m³). A single reading from a sensor app is not enough, because the breakpoints are set for 24-hour averages.
 2. **Compare the measured concentration** to the EPA's AQI breakpoints, which define ranges of concentrations and corresponding AQI values. The PM2.5 breakpoints are in the table below.
 
 3. **Use the formula** to calculate the AQI for the specific pollutant: 
@@ -132,13 +132,11 @@ The "Good" ceiling dropped to 9.0 to match the EPA's new annual PM2.5 standard o
 
 The [WHO's 2021 guidelines](https://www.who.int/publications/i/item/9789240034228) are stricter on both counts: 15 µg/m³ for a 24-hour average against the US 35, and 5 µg/m³ for a yearly average against the US 9.0. A day at the WHO's 24-hour limit of 15 µg/m³ already counts as Moderate on the US scale.
 
-The website shows data for the USA AQI only.
-
 ### Why Use a Formula Instead of Simple Categories?
 
 The AQI calculation uses a [piecewise linear function](https://en.wikipedia.org/wiki/Piecewise_linear_function) rather than simple categorical assignments for several important reasons:
 
-1. **Precise Measurements**: The formula provides exact AQI values within each category through linear interpolation between breakpoints. For example, if PM2.5 = 20 µg/m³, the formula gives an AQI of about 71 with the current breakpoints (about 68 with the pre-2024 ones), rather than just assigning it to the "Moderate" category.
+1. **Precise Measurements**: The formula provides exact AQI values within each category through linear interpolation between breakpoints. For example, for a 24-hour average PM2.5 of 20 µg/m³, the formula gives an AQI of about 71 with the current breakpoints (about 68 with the pre-2024 ones), rather than just assigning it to the "Moderate" category.
 2. **Non-Linear Relationship**: The AQI is intentionally designed as a non-linear index, meaning:
 
     - An AQI of 300 does not indicate twice the pollution or twice the health risk of an AQI of 150
@@ -153,14 +151,14 @@ The AQI calculation uses a [piecewise linear function](https://en.wikipedia.org/
 
 ## International AQI Standards
 
-While the concept of an Air Quality Index (AQI) is widely used around the world, it's important to note that there is no universal standard. Different countries and regions have developed their own air quality indices, which can vary in several key aspects:
+As the introduction says, there is no universal AQI. National indices differ in several ways:
 
 ### Scale Ranges
 
 The scale used to represent air quality can differ significantly between countries:
 
 - **United States**: Uses a 0-500+ scale
-- **European Union**: Employs a 0-100 scale
+- **European Union**: No number at all, just six bands from Good to Extremely poor
 - **China**: Utilizes a 0-500 scale, similar to the US but with different breakpoints
 - **India**: Adopts a 0-500+ scale, but with different category thresholds'
 - **Canada**: Uses the Air Quality Health Index (AQHI) with a scale of 1-10+
@@ -182,22 +180,23 @@ The concentration levels that trigger different AQI categories vary by country:
 
 ### Category Names and Colors
 
-The warning levels and associated colors can differ between countries:
+The warning levels and their colours differ between countries. The US and Chinese scales both have six bands with the same AQI ranges, but different names, and China's fifth band is a darker purple.
 
-| Country | Good | Moderate | Unhealthy | Very Unhealthy | Hazardous |
-| --- | --- | --- | --- | --- | --- |
-| US | Green | Yellow | Orange/Red | Purple | Maroon |
-| EU | Good (Green) | Fair (Yellow) | Moderate (Orange) | Poor (Red) | Very Poor (Dark Red) |
-| China | Excellent (Green) | Good (Yellow) | Lightly Polluted (Orange) | Moderately Polluted (Red) | Heavily Polluted (Purple) |
-| Canada | Low Risk (Green) | Moderate (Yellow) | High Risk (Orange) | Very High Risk (Red) | N/A |
+![Two air quality colour scales as strips. The US AQI has six bands: Good, 0 to 50, green; Moderate, 51 to 100, yellow; Unhealthy for Sensitive Groups, 101 to 150, orange; Unhealthy, 151 to 200, red; Very Unhealthy, 201 to 300, purple; Hazardous, 301 and above, maroon. China's AQI also has six bands: Excellent, 0 to 50, green; Good, 51 to 100, yellow; Lightly polluted, 101 to 150, orange; Moderately polluted, 151 to 200, red; Heavily polluted, 201 to 300, a darker purple than the US one; Severely polluted, above 300, maroon.](/assets/images/diagrams/aqi-colour-scales.svg)
 
-### Calculation Methods
+Sources: the [EPA technical assistance document](https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf) for the US, and China's standard [HJ 633-2026](https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/jcffbz/202602/t20260225_1144441.shtml), in force since 1 March 2026 (in Chinese; the English band names are common translations).
 
-Countries may use different formulas or averaging periods to calculate their AQI:
+Other scales split the range differently. The European Air Quality Index has six bands, from Good to Extremely poor. Canada's [AQHI](https://www.canada.ca/en/environment-climate-change/services/air-quality-health-index/about.html) has four risk levels: Low (1 to 3), Moderate (4 to 6), High (7 to 10) and Very high (above 10).
 
-- Some use a linear scale, while others may use non-linear or stepwise functions
-- Averaging periods can range from 1-hour to 24-hour measurements, depending on the pollutant and country
-- Some indices are based on a single pollutant, while others use a multi-pollutant approach
+### Calculation methods
+
+Countries turn concentrations into an index in different ways:
+
+- **Straight lines between breakpoints**: the US AQI, China's AQI and India's National AQI all work out a sub-index for each pollutant by drawing a straight line between two breakpoints, the formula above. The overall index is the highest sub-index ([Wikipedia overview](https://en.wikipedia.org/wiki/Air_quality_index)).
+- **Bands only**: the [European Air Quality Index](https://airindex.eea.europa.eu/AQI/index.html) does not give a number. Each pollutant is placed in one of six bands, from Good to Extremely poor, and the overall band is that of the worst pollutant.
+- **A health-risk formula**: Canada's [Air Quality Health Index](https://www.canada.ca/en/environment-climate-change/services/air-quality-health-index/about.html) combines ozone, particulate matter and nitrogen dioxide, weighted by the health risk each carries, into a single 1 to 10+ score. A bad level of one pollutant counts for less than in the US AQI, and several moderate ones add up.
+
+Averaging periods differ too, from one hour to 24 hours, depending on the pollutant and the country.
 
 ### Implications of Varying Standards
 
