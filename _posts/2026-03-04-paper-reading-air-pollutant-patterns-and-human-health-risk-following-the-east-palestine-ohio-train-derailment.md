@@ -36,12 +36,7 @@ To avert an uncontrolled tank explosion, emergency responders conducted a contro
 
 Residents returning to the evacuation zone reported immediate physical symptoms: acute respiratory burning, ocular irritation, and severe headaches. To characterize the spatial distribution of volatile organic compounds (VOCs) and evaluate human health risks, researchers from Carnegie Mellon University's Center for Atmospheric Particle Studies (CAPS) deployed a mobile air quality laboratory equipped with high-resolution mass spectrometry.
 
-| Date | Milestone / Deployment | Operational Detail | Analytical Finding |
-| :--- | :--- | :--- | :--- |
-| February 3, 2023 | Freight Train Derailment | 38 freight cars derail, including 11 hazardous chemical tank cars | Initial site contamination and containment response |
-| February 6, 2023 | Controlled Vent and Burn | 115,000 gallons of vinyl chloride ignited to prevent uncontrolled detonation | Massive combustion and pyrolysis plume dispersed over the region |
-| February 20 to 21, 2023 | CMU Mobile Lab Deployment | Mobile PTR-TOF-MS van acquiring data at 1 Hz (1-second spatial points) | Measured chemical transects across derailment perimeter versus rural background |
-| Synthesis Phase | Toxicological Risk Modeling | Non-cancer Hazard Quotient (HQ) calculation | Vinyl chloride dissipated below chronic risk levels; acrolein remained 6x above baseline |
+![A timeline. On 3 February 2023 a train derailed in East Palestine, Ohio. On 6 February 2023 vinyl chloride was vented and burned in a controlled release. On 20 and 21 February 2023, about two weeks after the burn, a Carnegie Mellon University mobile lab sampled the air with a PTR-MS instrument every second. The results were published in Environmental Science and Technology Letters in August 2023, volume 10, issue 8, after appearing online on 12 July 2023.](/assets/images/diagrams/east-palestine-timeline.svg)
 
 ## The Monitoring Challenge: Stationary Versus Mobile Sampling
 
@@ -59,12 +54,7 @@ The mobile laboratory utilized Proton-Transfer-Reaction Time-of-Flight Mass Spec
 
 Unlike conventional gas chromatography-mass spectrometry (GC-MS), which requires collecting air in canisters or sorbent tubes followed by multi-minute chromatographic separation, PTR-TOF-MS performs continuous, online real-time chemical ionization.
 
-| Stage | Analytical Component | Reaction / Physics Mechanism | Operational Output |
-| :--- | :--- | :--- | :--- |
-| 1. **Sample Ingestion** | Inlet Tube | Direct intake of ambient air without pre-concentration canisters | Continuous VOC sample stream |
-| 2. **Drift Tube Ionization** | Reaction Chamber | Hydronium ion source: $\text{H}_3\text{O}^+ + \text{VOC} \longrightarrow \text{VOC}\cdot\text{H}^+ + \text{H}_2\text{O}$ | Soft chemical ionization with zero molecular fragmentation |
-| 3. **Mass Separation** | Time-of-Flight Analyzer | High mass resolution analyzer ($m / \Delta m > 4{,}000$) | Separates ions by mass-to-charge ratio ($m/z$) |
-| 4. **Spectral Output** | Detector System | 1 Hz acquisition frequency at parts-per-trillion (ppt) sensitivity | Real-time quantification of trace atmospheric VOCs |
+![Four stages from top to bottom. First, ambient air is drawn in continuously, with no canister. Second, in the drift tube, H3O+ ions pass a proton to volatile organic compounds whose proton affinity is higher than water's: H3O+ plus VOC gives VOC-H+ plus water. This is soft ionisation, so molecules barely break apart. Third, a time-of-flight analyser separates the ions by mass-to-charge ratio. Fourth, a detector records a full spectrum every second.](/assets/images/diagrams/ptr-ms-mechanism.svg)
 
 The instrument generates hydronium ions ($\text{H}_3\text{O}^+$) inside a discharge chamber. In the drift tube, these hydronium ions collide with incoming volatile organic molecules. A proton transfers efficiently from hydronium to any trace compound whose proton affinity exceeds that of water ($691 \text{ kJ/mol}$):
 

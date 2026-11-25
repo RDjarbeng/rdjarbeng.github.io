@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 494" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">From derailment to published results</title>
+<desc id="d">A timeline. On 3 February 2023 a train derailed in East Palestine, Ohio. On 6 February 2023 vinyl chloride was vented and burned in a controlled release. On 20 and 21 February 2023, about two weeks after the burn, a Carnegie Mellon University mobile lab sampled the air with a PTR-MS instrument every second. The results were published in Environmental Science and Technology Letters in August 2023, volume 10, issue 8, after appearing online on 12 July 2023.</desc>
+<rect width="800" height="494" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">From derailment to published results</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<line x1="246" y1="100" x2="246" y2="363.8" stroke="#141414" stroke-width="2"/>
+<circle cx="246" cy="110.0" r="9" fill="#1b3b2b" stroke="#141414" stroke-width="2"/>
+<text x="222.0" y="116.5" font-size="18" fill="#141414" text-anchor="end" font-weight="bold">3 Feb 2023</text>
+<text x="276.0" y="116.5" font-size="18" fill="#141414">A freight train derails in East Palestine, Ohio</text>
+<circle cx="246" cy="163.4" r="9" fill="#1b3b2b" stroke="#141414" stroke-width="2"/>
+<text x="222.0" y="169.9" font-size="18" fill="#141414" text-anchor="end" font-weight="bold">6 Feb 2023</text>
+<text x="276.0" y="169.9" font-size="18" fill="#141414">Controlled vent and burn of vinyl chloride</text>
+<circle cx="246" cy="216.8" r="9" fill="#cbb87b" stroke="#141414" stroke-width="2"/>
+<text x="222.0" y="223.3" font-size="18" fill="#141414" text-anchor="end" font-weight="bold">20 to 21 Feb 2023</text>
+<text x="276.0" y="223.3" font-size="18" fill="#141414">About two weeks after the burn, the CMU mobile lab</text>
+<text x="276.0" y="246.7" font-size="18" fill="#141414">samples the air with PTR-MS, once every second</text>
+<circle cx="246" cy="293.6" r="9" fill="#cbb87b" stroke="#141414" stroke-width="2"/>
+<text x="222.0" y="300.1" font-size="18" fill="#141414" text-anchor="end" font-weight="bold">Aug 2023</text>
+<text x="276.0" y="300.1" font-size="18" fill="#141414">Results published in Environmental Science &amp;</text>
+<text x="276.0" y="323.5" font-size="18" fill="#141414">Technology Letters, vol. 10, issue 8 (online 12 July</text>
+<text x="276.0" y="346.9" font-size="18" fill="#141414">2023)</text>
+<rect x="32" y="384.8" width="24" height="18" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="399.8" font-size="18" fill="#141414">What happened</text>
+<rect x="412" y="384.8" width="24" height="18" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="399.8" font-size="18" fill="#141414">The study</text>
+<line x1="32" y1="441.8" x2="768" y2="441.8" stroke="#cfc6b6"/>
+<text x="768.0" y="471.8" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

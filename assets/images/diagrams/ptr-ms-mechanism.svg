@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 719" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">How PTR-MS measures the air</title>
+<desc id="d">Four stages from top to bottom. First, ambient air is drawn in continuously, with no canister. Second, in the drift tube, H3O+ ions pass a proton to volatile organic compounds whose proton affinity is higher than water's: H3O+ plus VOC gives VOC-H+ plus water. This is soft ionisation, so molecules barely break apart. Third, a time-of-flight analyser separates the ions by mass-to-charge ratio. Fourth, a detector records a full spectrum every second.</desc>
+<rect width="800" height="719" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">How PTR-MS measures the air</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M400.0 167.2 L400.0 205.2" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M400.0 213.8 L395.5 203.0 L404.5 203.0 Z" fill="#141414"/>
+<path d="M400.0 381.4 L400.0 419.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M400.0 428.0 L395.5 417.2 L404.5 417.2 Z" fill="#141414"/>
+<path d="M400.0 503.2 L400.0 541.2" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M400.0 549.8 L395.5 539.0 L404.5 539.0 Z" fill="#141414"/>
+<rect x="140.0" y="92.0" width="520.0" height="75.2" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="400.0" y="124.8" font-size="18" fill="#141414" text-anchor="middle">1. Ambient air drawn in continuously</text>
+<text x="400.0" y="147.3" font-size="18" fill="#141414" text-anchor="middle">(no canister)</text>
+<rect x="140.0" y="213.8" width="520.0" height="167.6" rx="0" fill="#3d634e" stroke="#141414" stroke-width="1.5"/>
+<text x="400.0" y="270.3" font-size="18" fill="#ffffff" text-anchor="middle">2. Drift tube: H₃O⁺ passes a proton to VOCs</text>
+<text x="400.0" y="292.8" font-size="18" fill="#ffffff" text-anchor="middle">with a higher proton affinity than water</text>
+<text x="400.0" y="315.3" font-size="18" fill="#ffffff" text-anchor="middle">H₃O⁺ + VOC → VOC·H⁺ + H₂O</text>
+<text x="400.0" y="337.8" font-size="18" fill="#ffffff" text-anchor="middle">Soft ionisation: molecules barely break apart</text>
+<rect x="140.0" y="428.0" width="520.0" height="75.2" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="400.0" y="460.8" font-size="18" fill="#ffffff" text-anchor="middle">3. Time-of-flight analyser</text>
+<text x="400.0" y="483.3" font-size="18" fill="#ffffff" text-anchor="middle">separates ions by m/z</text>
+<rect x="140.0" y="549.8" width="520.0" height="75.2" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="400.0" y="582.6" font-size="18" fill="#ffffff" text-anchor="middle">4. Detector: a full spectrum</text>
+<text x="400.0" y="605.1" font-size="18" fill="#ffffff" text-anchor="middle">every second</text>
+<line x1="32" y1="667.0" x2="768" y2="667.0" stroke="#cfc6b6"/>
+<text x="768.0" y="697.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>
