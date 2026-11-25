@@ -36,7 +36,7 @@ Across our functional sensor sets, the indoor temperature held steady at an aver
 
 ## Fine particles, not coarse dust or fog: what was in the air outside
 
-The indoor sensors can't say what the haze was made of. For the outdoor picture I used the [Open-Meteo air quality API](https://open-meteo.com/en/docs/air-quality-api), which serves estimates from the Copernicus Atmosphere Monitoring Service (CAMS) model. These are model values (retrieved on 24 November 2026) for a grid cell about 40 km across. That is larger than the whole city, so a smoky neighbourhood and a clean hilltop get the same value. They are not readings from a monitor in Kigali.
+The indoor sensors can't say what the haze was made of. For the outdoor picture I used the [Open-Meteo air quality API](https://open-meteo.com/en/docs/air-quality-api), which serves estimates from the Copernicus Atmosphere Monitoring Service (CAMS) model. These are model values (retrieved on 24 November 2026) for a grid cell about 45 km across. That is larger than the whole city, so a smoky neighbourhood and a clean hilltop get the same value. They are not readings from a monitor in Kigali.
 
 | 29 January 2026, Kigali time | Model estimate |
 | --- | --- |
