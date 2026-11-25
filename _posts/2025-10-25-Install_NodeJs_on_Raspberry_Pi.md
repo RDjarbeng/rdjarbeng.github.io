@@ -1,11 +1,10 @@
 ---
 layout: post
 key_points:
-  - "The post provides step-by-step instructions for installing Node.js on a Raspberry Pi 4 using the terminal."
-  - "It assumes the Raspberry Pi is already set up and provides optional resources for setting up the Raspberry Pi."
-  - "The installation process involves downloading Node.js version 18.18.0 (LTS) from the official Node.js website and extracting the tarball file."
-  - "After installation, the post demonstrates how to verify the successful installation by running the 'node --version' command, which should display the installed Node.js version (18.18.0 in this case)."
-  - "It also covers removing an existing Node.js and installing a specific older version, such as Node.js 16, from the NodeSource repository."
+  - "The simplest way to install and switch Node.js versions on a Raspberry Pi 4 is nvm, the Node Version Manager, which needs no sudo."
+  - "Check whether your Raspberry Pi OS is 32-bit or 64-bit first: official 32-bit (armv7l) Node.js builds stop at Node.js 22, while Node.js 24 and later are 64-bit (arm64) only."
+  - "With nvm, `nvm install --lts` installs the current long-term support release and `nvm install 16` installs an older version for a legacy project."
+  - "The post also keeps the manual method: download the official tarball and copy it into /usr/local."
 title: "How to Install Node.js on a Raspberry Pi 4"
 date: 2025-10-25
 author: Richard
@@ -15,66 +14,92 @@ image_alt: "Cover image for How to Install Node.js on a Raspberry Pi 4"
 series: "Raspberry Pi Setup"
 series_part: 1
 category: "Web & Software"
+ai_assistance:
+  - drafting
 ---
-# How to install NodeJs on the Raspberry Pi 4
-Tested on Raspberry Pi 4B using the terminal
+The easiest way to install Node.js on a Raspberry Pi 4 is nvm, the [Node Version Manager](https://github.com/nvm-sh/nvm). It needs no `sudo`, and you can switch between Node.js versions with one command. Before you start, check whether your Raspberry Pi OS is 32-bit or 64-bit, because that limits which versions you can install.
 
-Steps:
-Assuming you have a Raspberry Pi already setup. If you need help setting up find resources [here](https://www.raspberrypi.com/documentation/computers/getting-started.html)
-1. Turn on the raspberry Pi. <br> _Optional: If you are not using a monitor you can ssh into the Raspberry Pi and run the commands from there._
-2. Open a terminal window
-3. Run these commands to download node version 18.18.0 (LTS) from the terminal on the Raspberry Pi. You need to copy and paste these into the terminal or use a bash script.
+This guide was tested on a Raspberry Pi 4B and assumes your Pi is already set up; if not, start with the [official getting started guide](https://www.raspberrypi.com/documentation/computers/getting-started.html). Every command works over SSH. When I first wrote this post I installed Node.js from a tarball by hand; that method is still at the end.
 
-### Commands
-```
-wget https://nodejs.org/dist/v18.18.0/node-v18.18.0-linux-armv7l.tar.xz
+## Check whether your OS is 32-bit or 64-bit
 
-tar -xvf node-v18.18.0-linux-armv7l.tar.xz
-cd node-v18.18.0-linux-armv7l
-sudo cp -R * /usr/local/
+This decides which Node.js versions you can install. Run:
+
 ```
-### Check installation
-4. To check if the NodeJs installation worked run this:
-```
-node --version
+dpkg --print-architecture
 ```
 
-This should print out the current NodeJs version; The commands given installed version 18.18.0. For installing packages **npm** should come installed with your version of NodeJs if you installed a recent version of NodeJs.
+- `arm64` means a 64-bit Raspberry Pi OS. Any current Node.js version works.
+- `armhf` means a 32-bit OS.
 
-## Installing different Node versions
-_Optional_
-If you wish to change the node version to install, you can change the link in the command. Here we used version 18.18.0: `https://nodejs.org/dist/v18.18.0/node-v18.18.0-linux-armv7l.tar.xz`
+Don't rely on `uname -m` for this. A Pi 4 can run a 64-bit kernel on a 32-bit OS, so it may print `aarch64` even when your system can't run 64-bit Node.js. The Node.js project publishes official 32-bit ARM builds only up to Node.js 22. Node.js 24 and later are 64-bit (`arm64`) only, as the [Node.js download index](https://nodejs.org/dist/index.json) shows. If you need Node.js 24 or later, reinstall the 64-bit Raspberry Pi OS.
 
-but you can use any link from the [NodeJs download page](https://nodejs.org/en/download) . Use the ARM7 linux binaries link (`armv7l`) on a 32-bit Raspberry Pi OS. On the 64-bit version of Raspberry Pi OS, use the `arm64` link instead.
+## Install Node.js with nvm (recommended)
 
-![image](https://github.com/RDjarbeng/Install-NodeJs-on-Raspberry-Pi/assets/57795443/e01ff866-71f4-40ca-9767-88435c5b03e8)
+nvm installs Node.js in your home folder, so you don't need `sudo`, and you can keep several versions side by side.
 
-## Replacing Node.js 18 with Node.js 16
-
-Some older projects only run on Node.js 16. If Node.js was installed with `apt`, you can swap versions with the [NodeSource](https://github.com/nodesource/distributions) repository.
-
-![NodeJs site July 2024 screenshot](/assets/images/nodejs_2024.png)
-
-### Remove the existing Node.js version
+If you installed Node.js earlier with `apt` (for example from NodeSource), remove it first so the two don't clash:
 
 ```
 sudo apt remove nodejs
 ```
 
-If you installed Node.js from the tarball above instead, `apt` won't find it. Delete the copied files from `/usr/local/` (`bin/node`, `bin/npm`, `bin/npx`, `lib/node_modules`, `include/node`) before installing another version.
+1. Install nvm. This is the install command from the [nvm README](https://github.com/nvm-sh/nvm#installing-and-updating) for version 0.41.0, the latest release as of November 2026:
 
-### Add the NodeSource repository for Node.js 16
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash
+    ```
+
+2. Close and reopen the terminal (or run `source ~/.bashrc`) so the `nvm` command is available.
+
+3. Install the current long-term support (LTS) release:
+
+    ```
+    nvm install --lts
+    ```
+
+    On a 32-bit OS, ask for Node.js 22 instead, the last version with official 32-bit builds:
+
+    ```
+    nvm install 22
+    ```
+
+4. Check that it worked:
+
+    ```
+    node --version
+    npm --version
+    ```
+
+npm comes with Node.js, so there is nothing else to install.
+
+## Switch between Node.js versions
+
+This is where nvm saves time. Some older projects only run on an old version, such as Node.js 16:
 
 ```
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+nvm install 16
+nvm use 16
 ```
 
-### Install Node.js 16
+`nvm ls` lists the versions you have, and `nvm alias default 22` picks the one a new terminal starts with. Node.js 16 stopped getting security updates in September 2023, and Node.js 18 in April 2025 (see the [Node.js release schedule](https://github.com/nodejs/release#release-schedule)). Use them only for a project that needs them.
+
+## Manual install from the official tarball
+
+This is the method from the first version of this post. It still works, but you have to repeat it for every upgrade. The example uses Node.js 18.18.0, the 32-bit build. Swap in a current version from the [Node.js download page](https://nodejs.org/en/download), and use the `arm64` file on a 64-bit OS.
 
 ```
-sudo apt install -y nodejs
+wget https://nodejs.org/dist/v18.18.0/node-v18.18.0-linux-armv7l.tar.xz
+tar -xvf node-v18.18.0-linux-armv7l.tar.xz
+cd node-v18.18.0-linux-armv7l
+sudo cp -R * /usr/local/
+node --version
 ```
 
-Check the version with `node -v`. It should print `v16.x.x`.
+To remove a version installed this way, delete the copied files from `/usr/local/` (`bin/node`, `bin/npm`, `bin/npx`, `lib/node_modules` and `include/node`).
 
-Node.js 16 stopped receiving security updates in September 2023 (see the [Node.js release schedule](https://github.com/nodejs/release#end-of-life-releases)). Use it only for a project that needs it, and move to a supported version when you can.
+![Terminal output after installing Node.js on a Raspberry Pi](https://github.com/RDjarbeng/Install-NodeJs-on-Raspberry-Pi/assets/57795443/e01ff866-71f4-40ca-9767-88435c5b03e8)
+
+## In short
+
+Check the architecture with `dpkg --print-architecture`, install nvm, then run `nvm install --lts` on a 64-bit OS or `nvm install 22` on a 32-bit one. Use `nvm use <version>` whenever a project needs a different Node.js.
