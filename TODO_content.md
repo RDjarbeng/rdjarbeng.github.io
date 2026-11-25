@@ -993,3 +993,6 @@ https://infoscience.epfl.ch/entities/publication/af829a94-1ad7-4101-9eb2-7f1d110
 - [ ] Do radar systems still behave like the way we were taught, a beam bouncing back? In my experiments with ultra sonic sensors I've found that certain materials behave differently and nets, foam for instance may not even appear to be physically present although it is right on front of the sensor, is radar also susceptible to this?
 - [ ] What is the model and software version or type of bots that scrape ly site, which ones get blocked by cloudflare and which ones get through? Why block certain bots anyway if it's all public?
 - [ ] Move 37 moment : a time when a machine has been verified to have surpassed human understanding
+- [ ] A problem well defined, why can't we just increase context windows? 
+
+Standard attention compares every token with every other token, even when only a few of them matter, so the cost grows quadratically with context length. That's why really long context gets so slow and expensive.
