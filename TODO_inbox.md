@@ -181,3 +181,5 @@ How the Shift Took Shape
 For more background, see NVIDIA to Benefit from Shift to GPU and coverage of recent infrastructure updates in Nvidia expands AI infrastructure push into high-performance computing. [1, 2]
 
 https://developer.nvidia.com/blog/nvidia-to-benefit-from-shift-to-gpu-powered-deep-learning/
+- [ ] 2026-11-25 14:31 CAT | Testing the diagram maker yo see if it can make a news tabloid: 
+Historic win in an unprecedented move as Elephants finally win the mandate to be addressed. This comes after decades of not having the franchise to he addressed as is very well known by those who ise the phrase, the elephant in the room
