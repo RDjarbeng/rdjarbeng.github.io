@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 838" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">From a straight line to a loop</title>
+<desc id="d">Two ways to build an app, side by side. The initial plan is a straight line: idea, prototype, final application. The refined process has seven steps: develop the initial idea, test a prototype, discuss and review feedback, run a second test as a beta, a second discussion and review, a final test for errors, and deploy the final application. Each review loops back to the step before it, so feedback leads to another round of changes before moving on.</desc>
+<rect width="800" height="838" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">From a straight line to a loop</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M170.0 218.0 L170.0 387.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M170.0 396.0 L165.5 385.2 L174.5 385.2 Z" fill="#141414"/>
+<path d="M170.0 446.0 L170.0 615.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M170.0 624.0 L165.5 613.2 L174.5 613.2 Z" fill="#141414"/>
+<path d="M570.0 218.0 L570.0 235.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 244.0 L565.5 233.2 L574.5 233.2 Z" fill="#141414"/>
+<path d="M570.0 294.0 L570.0 311.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 320.0 L565.5 309.2 L574.5 309.2 Z" fill="#141414"/>
+<path d="M570.0 370.0 L570.0 387.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 396.0 L565.5 385.2 L574.5 385.2 Z" fill="#141414"/>
+<path d="M570.0 446.0 L570.0 463.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 472.0 L565.5 461.2 L574.5 461.2 Z" fill="#141414"/>
+<path d="M570.0 522.0 L570.0 539.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 548.0 L565.5 537.2 L574.5 537.2 Z" fill="#141414"/>
+<path d="M570.0 598.0 L570.0 615.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M570.0 624.0 L565.5 613.2 L574.5 613.2 Z" fill="#141414"/>
+<path d="M700.0 345.0 L718.0 345.0 Q728.0 345.0 728.0 335.0 L728.0 202.7 Q728.0 193.0 718.3 193.0 L708.6 193.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M700.0 193.0 L710.8 188.5 L710.8 197.5 Z" fill="#141414"/>
+<path d="M700.0 497.0 L718.0 497.0 Q728.0 497.0 728.0 487.0 L728.0 430.7 Q728.0 421.0 718.3 421.0 L708.6 421.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M700.0 421.0 L710.8 416.5 L710.8 425.5 Z" fill="#141414"/>
+<text x="170.0" y="123.5" font-size="18" fill="#141414" text-anchor="middle">Initial plan</text>
+<text x="570.0" y="123.5" font-size="18" fill="#141414" text-anchor="middle">Refined process</text>
+<rect x="40.0" y="168.0" width="260.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="170.0" y="199.5" font-size="18" fill="#ffffff" text-anchor="middle">Idea</text>
+<rect x="40.0" y="396.0" width="260.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="170.0" y="427.5" font-size="18" fill="#ffffff" text-anchor="middle">Prototype</text>
+<rect x="40.0" y="624.0" width="260.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="170.0" y="655.5" font-size="18" fill="#ffffff" text-anchor="middle">Final application</text>
+<rect x="440.0" y="168.0" width="260.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="199.5" font-size="18" fill="#ffffff" text-anchor="middle">Develop initial idea</text>
+<rect x="440.0" y="244.0" width="260.0" height="50.0" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="275.5" font-size="18" fill="#141414" text-anchor="middle">Test prototype</text>
+<rect x="440.0" y="320.0" width="260.0" height="50.0" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="351.5" font-size="18" fill="#ffffff" text-anchor="middle">Review feedback</text>
+<rect x="440.0" y="396.0" width="260.0" height="50.0" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="427.5" font-size="18" fill="#141414" text-anchor="middle">Second test (beta)</text>
+<rect x="440.0" y="472.0" width="260.0" height="50.0" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="503.5" font-size="18" fill="#ffffff" text-anchor="middle">Second review</text>
+<rect x="440.0" y="548.0" width="260.0" height="50.0" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="579.5" font-size="18" fill="#141414" text-anchor="middle">Final test for errors</text>
+<rect x="440.0" y="624.0" width="260.0" height="50.0" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="570.0" y="655.5" font-size="18" fill="#ffffff" text-anchor="middle">Deploy final application</text>
+<rect x="32" y="699.0" width="24" height="18" rx="0" fill="#2d4763" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="714.0" font-size="18" fill="#141414">Build</text>
+<rect x="412" y="699.0" width="24" height="18" rx="0" fill="#cfa14a" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="714.0" font-size="18" fill="#141414">Test</text>
+<rect x="32" y="729.0" width="24" height="18" rx="0" fill="#b84d43" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="744.0" font-size="18" fill="#141414">Review</text>
+<line x1="32" y1="786.0" x2="768" y2="786.0" stroke="#cfc6b6"/>
+<text x="768.0" y="816.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>
