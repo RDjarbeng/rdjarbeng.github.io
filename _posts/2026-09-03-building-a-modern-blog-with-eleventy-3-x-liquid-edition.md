@@ -6,7 +6,12 @@ tags:
   - Blog
   - Eleventy
   - JavaScript
-title: Building a Modern Blog with Eleventy 3.x (Liquid Edition)
+title: "Learn Eleventy 3.x: A Step-by-Step Guide to Building a Blog with Liquid"
+description: "A step-by-step guide to building a blog with Eleventy 3 and Liquid: layouts, navigation, posts, tags and images first, then optional RSS, sitemap, search, SEO and deployment."
+key_points:
+  - "Part 1 builds a complete, working blog: home and about pages, navigation, posts with clean URLs, images, and tag and category pages."
+  - "Part 2 is a menu of optional add-ons: an RSS feed, a sitemap, on-site search with Pagefind, SEO tags with JSON-LD, related posts and syntax highlighting."
+  - "Everything uses Eleventy 3.x with Liquid templates, and the complete eleventy.config.js is included at the end."
 image: /assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg
 image_alt: Building a Modern Blog with Eleventy 3.x Liquid Edition cover image
 layout: post
