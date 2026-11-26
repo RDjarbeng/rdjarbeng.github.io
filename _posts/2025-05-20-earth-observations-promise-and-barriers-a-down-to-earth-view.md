@@ -12,11 +12,9 @@ tags:
   - Planet
   - NASA
 key_points:
-  - "Satellite data has the potential to revolutionize climate and food security monitoring, agriculture, urban planning, and economic/social applications, but there is a large gap between the potential and current reality."
-  - "Environmental monitoring and climate science can benefit from satellite data, with examples including real-time tracking of deforestation, monitoring of polar ice and sea level changes, analysis of atmospheric composition, and early warning for natural disasters."
-  - "Agriculture and food security can also benefit from satellite data, with examples including field-level crop health assessments, data-driven yield predictions, regional soil moisture mapping, and irrigation efficiency analysis."
-  - "Urban planning and development can benefit from satellite data, with examples including detailed 3D city models, continuous monitoring of urban heat islands and air quality, tracking of informal settlements and population movements, and infrastructure assessment and planning based on spatial data."
-  - "Economic and social applications can benefit from satellite data, with examples including night lights as an indicator of economic activity, better supply chain visibility and logistics, digital inclusion mapping in developing regions, and monitoring of refugee movements and humanitarian crisis response."
+  - "Satellite data can help with climate, food security, cities, economics and health, but there is a large gap between what it could do and how it is used."
+  - "Examples include weekly forest loss alerts, sea ice records, CO2 measurements from orbit, and storm imagery for forecasters."
+  - "Free data from Landsat, Sentinel and MODIS is widely available, but cost, computing, skills and silos still limit who can use it."
 title: "What Satellite Data Could Do for Climate and Food Security, and What Stops It Today"
 image: /assets/images/satellite_orbiting_earth_color_codes.jpg
 video: ''
@@ -26,126 +24,130 @@ series: "Free Satellite and Climate Data"
 series_part: 1
 category: "Space & Satellites"
 ai_assistance:
+  - drafting
   - images
 content_type: analysis
 ---
-This post looks at what satellite data could do for problems like climate change, food security, and urban planning, and at what keeps it from doing that today. There is a large gap between what's possible and what's actually being done, so I cover both the potential and the current reality.
+> **Correction (November 2026):** I revised this post to fix factual errors and remove figures I could not trace to a source. Several programmes were credited to the wrong organisations, and some satellite capabilities were described wrongly. I also replaced broken links with primary sources. The [editorial policy](/editorial-policy/) explains how I handle corrections.
+
+Free [Sentinel](https://dataspace.copernicus.eu/) images of almost every farm, river and town in Africa arrive every few days. Turning them into decisions takes skills, tools and time that many teams lack. This post covers what satellite data can do for climate, food security and cities, and what stops it from being used. It ends with free places to start.
 
 ## The untapped potential
 
-Below are some use cases for satellite data, each with an example of it being used to solve a problem at scale.
+Below are some use cases for satellite data, each with an example of it in use.
 
 ![a satellite orbiting Earth, a view of Earth with data overlays, showing analysis of satellite data. Map of earth is color coded like you would normally see in geospatial data](/assets/images/satellite_orbiting_earth_color_codes.jpg "2 Satellites orbiting earth")
 
-### Environmental monitoring & climate science
+### Environmental monitoring and climate science
 
-Satellites can monitor the planet at scales that ground-based methods alone can't match. Some of what they make possible:
+Satellites can monitor the planet at scales that ground surveys alone can't match. Some of what they make possible:
 
-- Real-time tracking of deforestation, wildfires, and land use changes across entire ecosystems. For example, [NASA and the University of Maryland's Global Forest Watch](https://www.globalforestwatch.org/) uses Landsat imagery to track forest loss, and it shows that an area of tropical forest the size of Switzerland is lost every year.
-- Monitoring of polar ice and sea level changes down to millimeter accuracy. The [ESA's CryoSat-2](https://earth.esa.int/eogateway/missions/cryosat) has measured Arctic sea ice thickness and documented a 13% decline per decade.
-- Analysis of atmospheric composition, which helps us understand carbon cycles. Japan's [GOSAT](https://www.gosat.nies.go.jp/en/) and NASA's [OCO-2](https://ocov2.jpl.nasa.gov/) satellites measure atmospheric CO₂ concentrations at different altitudes, which helps validate climate models.
-- Early warning for natural disasters, which could save many lives. NOAA's [GOES satellites](https://www.goes.noaa.gov/) provide hurricane formation data up to 72 hours before landfall, which helps with evacuation planning.
+- Tracking forest loss almost as it happens. [Global Forest Watch](https://www.globalforestwatch.org/), run by the World Resources Institute (WRI), publishes weekly alerts and yearly tree cover loss maps from Landsat data. WRI reports that the tropics [lost 4.3 million hectares of primary forest in 2025](https://research.wri.org/gfr/latest-analysis-deforestation-trends).
+- Long records of polar ice. Microwave satellites show that [Arctic sea ice in September has shrunk sharply since 1979](https://climate.nasa.gov/vital-signs/arctic-sea-ice/). ESA's [CryoSat-2](https://earth.esa.int/eogateway/missions/cryosat) adds measurements of ice thickness, not just area.
+- Measuring greenhouse gases from orbit. Japan's [GOSAT](https://www.gosat.nies.go.jp/en/) and NASA's [OCO-2](https://science.nasa.gov/mission/oco-2/) measure the average CO₂ concentration in the column of air below them. Scientists use this to study where carbon is released and absorbed.
+- Early warning for storms. NOAA's [GOES satellites](https://www.goes.noaa.gov/) send continuous images of the Americas. Forecasters at the [National Hurricane Center](https://www.nhc.noaa.gov/) use them to track storms as they form.
 
-### Agriculture & food security
+### Agriculture and food security
 
-Agriculture has a lot to gain from satellite data:
+- Free continental maps. [Digital Earth Africa](https://www.digitalearthafrica.org/platform-resources/services) publishes a cropland extent map, a waterbodies map and vegetation anomaly layers for the whole continent.
+- Crop monitoring and harvest estimates. The [NASA Harvest](https://nasaharvest.org/) programme combines satellite data with ground data to map crops and estimate harvests, including in Ukraine and in Africa.
+- Soil moisture and drought. ESA's [SMOS satellite](https://earth.esa.int/eogateway/missions/smos) measures moisture in the top few centimetres of soil worldwide. Scientists have used SMOS data to build an index for monitoring long-term drought.
+- Irrigation and water use. [OpenET](https://openetdata.org/) uses Landsat thermal data to estimate how much water crops use, field by field, across the western United States.
 
-- Field-level crop health assessments, which make precision farming possible at scale. [Planet's](https://www.planet.com/markets/agriculture/) daily imagery helps farmers detect crop stress from pests or disease up to two weeks earlier than ground observation.
-- Data-driven yield predictions, which could reshape crop insurance and market stability. The [NASA Harvest program](https://nasaharvest.org/) combines satellite data with ground measurements to predict wheat yields in Ukraine within 15% accuracy months before harvest.
-- Regional soil moisture mapping and drought monitoring, to build resilience. The [ESA's SMOS satellite](https://earth.esa.int/eogateway/missions/smos) measures soil moisture to depths of 5cm, which helps predict drought conditions across Africa.
-- Irrigation efficiency analysis, for water that is getting scarcer. [Stanford researchers](https://news.stanford.edu/2017/08/25/satellites-measure-farm-water-use/) use Landsat thermal data to detect irrigation inefficiencies, reducing water usage by up to 20% in California's Central Valley.
+### Urban planning and development
 
-### Urban planning & development
+Cities are growing fast and need better planning tools. Satellites can supply some of them:
 
-Cities are urbanizing fast and need better planning tools. Satellites can supply some of them:
+- 3D elevation data. The German Aerospace Center (DLR) built a [global elevation model from TanDEM-X radar data](https://www.dlr.de/en/research-and-transfer/projects-and-missions/tandem-x). It covers cities as well as open terrain.
+- Mapping where people live. DLR's [Global Urban Footprint](https://www.dlr.de/en/eoc/research-transfer/projects-missions/global-urban-footprint) maps built-up areas worldwide at about 12 m resolution. DLR made it from 180,000 TerraSAR-X and TanDEM-X radar scenes.
+- Watching the ground and structures move. Radar satellites can detect movement of a few millimetres. The [European Ground Motion Service](https://egms.land.copernicus.eu/) publishes such measurements from Sentinel-1 for most of Europe.
 
-- Detailed 3D city models for urban design and development. The [German Aerospace Center (DLR)](https://www.dlr.de/en/research/projects/tandem-x-urban) used TanDEM-X satellite data to create precise 3D models of over 100 cities, supporting urban heat island studies.
-- Continuous monitoring of urban heat islands and air quality. NASA's [ECOSTRESS instrument](https://ecostress.jpl.nasa.gov/) on the ISS maps urban temperatures at 70m resolution, which informs cooling strategies in cities like Los Angeles.
-- Tracking of informal settlements and population movements, so services can be improved. The [World Bank's Global Urban Footprint](https://www.worldbank.org/en/topic/urbandevelopment/publication/analyzing-spatial-data-in-world-bank-operations) project uses TerraSAR-X data to map informal settlements in Mumbai, helping target infrastructure improvements.
-- Infrastructure assessment and planning based on spatial data. Researchers use [Sentinel-1 radar interferometry](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-1/applications/land-monitoring) to detect millimeter-scale deformation in aging bridges across Europe.
+### Economic and social applications
 
-### Economic & social applications
+Satellites also give socioeconomic insights, not just physical measurements:
 
-Satellites also give us socioeconomic insights, not just physical measurements:
+- Night lights as a signal of economic activity. A [World Bank study](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/658061583574075223/not-by-night-lights-alone-measuring-economic-growth-and-development-in-africa-using-satellite-imagery) tested night lights as a measure of growth in Africa. Its title, "Not by night lights alone", sums up the finding that lights need other data alongside them.
+- Population maps for planning services. Meta and Columbia University's CIESIN published [high-resolution population maps](https://dataforgood.facebook.com/dfg/tools/high-resolution-population-density-maps) built from satellite imagery. Aid groups and network planners use them to find where people live.
+- Humanitarian response. [UNOSAT](https://unosat.org/products/), the UN satellite centre, publishes damage and settlement maps after disasters and conflicts.
 
-- Night lights as an indicator of economic activity. [World Bank researchers](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/658061583574075223/not-by-night-lights-alone-measuring-economic-growth-and-development-in-africa-using-satellite-imagery) use VIIRS night light data as a proxy for GDP in regions with limited economic statistics, which reveals economic patterns that official data misses.
-- Better supply chain visibility and logistics. [Orbital Insight](https://orbitalinsight.com/applications/retail-intelligence) monitors car counts at 250,000+ retail locations using Planet imagery to predict quarterly earnings before official announcements.
-- Digital inclusion mapping in developing regions. [Meta's Connectivity Initiatives](https://about.meta.com/what-we-do/connectivity/) use satellite imagery to identify areas without internet infrastructure, which helps target their rural connectivity efforts.
-- Monitoring of refugee movements and humanitarian crisis response. [UNHCR partners with UNOSAT](https://www.unitar.org/sustainable-development-goals/satellite-imagery-and-analysis) to track refugee settlement growth in Bangladesh using Pléiades imagery, which makes aid distribution more effective.
-
-### Global health & disease surveillance
+### Global health
 
 Health researchers can use satellite data to:
 
-- Create risk maps for vector-borne diseases based on environmental conditions. [NASA's DEVELOP program](https://develop.larc.nasa.gov/) combines MODIS vegetation and temperature data with rainfall measurements to predict malaria outbreaks in Kenya with 70% accuracy.
-- Monitor air pollution and assess its health impacts across populations. [Harvard researchers](https://www.hsph.harvard.edu/news/hsph-in-the-news/air-pollution-linked-with-higher-covid-19-death-rates/) used Sentinel-5P atmospheric data to document COVID-19 mortality correlations with long-term PM2.5 exposure across 3,000 counties.
-- Analyze health facility accessibility in remote or underserved regions. [Médecins Sans Frontières](https://www.msf.org/how-mappers-are-helping-msf-understand-missing-maps) uses satellite imagery to optimize mobile clinic locations in conflict zones where ground surveys are impossible.
-- Track water quality indicators relevant to disease prevention. [University of Wisconsin researchers](https://news.wisc.edu/harmful-algal-blooms-predicted-for-lake-erie-and-west/) use Landsat to detect harmful algal blooms in drinking water sources days before conventional methods would.
+- Study air pollution and health. [Wu and colleagues (2020)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7673673/) linked long-term exposure to fine particles (PM2.5) with higher COVID-19 death rates in over 3,000 US counties. Their pollution estimates came from models that combine satellite and ground data.
+- Put unmapped places on the map. Volunteers in the [Missing Maps](https://www.missingmaps.org/) project, which Médecins Sans Frontières co-founded, trace buildings and roads from satellite images. Aid teams then use those maps to plan health work.
+- Track water quality. NOAA uses satellite data to [monitor and forecast harmful algal blooms in Lake Erie](https://coastalscience.noaa.gov/science-areas/habs/hab-forecasts/lake-erie/), a source of drinking water.
 
 ## The current reality
 
-In practice, satellite data runs into hurdles that keep it from reaching that potential. They affect who can use the data, how it gets applied, and whether it actually helps with global problems.
+The barriers below are common ones, not the results of a survey.
 
 ![a satellite orbiting Earth, a view of Earth with data overlays focusing on the Americas, showing analysis of satellite data.](/assets/images/satellite_orbiting_americas_color_codes.jpg "A satellite orbiting Earth over the Americas")
 
 ### Focus areas and funding imbalances
 
-Satellite data is used in many areas, but they don't all get the same attention or money. Climate change gets a lot of focus because of its global importance, yet researchers often work in isolation, studying ice melt or CO₂ levels without connecting their findings to fields like agriculture or urban planning. That makes it harder to see the full picture of how the planet is changing.
+Satellite data is used in many areas, but they don't all get the same attention or money. Climate change gets a lot of focus. Yet researchers often work in isolation, studying ice melt or CO₂ without linking their findings to farming or cities.
 
-Big companies are putting money into satellite data for farming, such as helping large farms predict crop yields, but small farmers in poorer regions are often left out because the tools are too expensive or too complex. Defense and security projects, like border monitoring, get huge government budgets, but the data is often kept secret, so the public doesn't benefit. Businesses are also using satellites more, for things like tracking store traffic to predict sales. That is growing fast because it makes money, but it doesn't always serve bigger needs like disaster preparedness or poverty reduction.
+Companies invest in satellite data for large farms, but small farmers in poorer regions are often left out. The tools are too expensive or too complex for them. Defence and security projects get large budgets, but their data is often kept secret. Commercial uses grow fast because they make money, but they don't always serve needs like disaster preparedness.
 
 ### Implementation challenges
 
-Turning satellite data into practical solutions is hard. Most of the technology and expertise sits in wealthier countries with large space programs, like the United States or European nations, so poorer countries have fewer resources to draw on. A small African nation might want to use satellite imagery to predict droughts, for example, but lack the computers or trained geospatial analysts to work with it. Even when data is available, making sense of it can take powerful computers, storage systems, and complex software, which is a big hurdle for smaller organizations and communities.
+Turning satellite data into practical solutions is hard. Most of the technology and expertise sits in countries with large space programmes. Processing the data can take powerful computers, storage and complex software. Cloud platforms such as Digital Earth Africa and Earth Engine now remove much of the computing cost. Trained analysts are still scarce.
 
-Governments and businesses also struggle to turn satellite insights into decisions, such as using flood risk maps to plan evacuations, because the information doesn't always reach the right people or isn't presented in a way they can act on. And a lot of funding goes toward building new satellites or fancy tech, with less for projects that directly help people, like teaching farmers in remote areas how to use satellite data to improve their crops.
+Governments and businesses also struggle to turn satellite insights into decisions. A flood risk map only helps if it reaches the people planning evacuations, in a form they can use. Much funding goes to new satellites, with less for training the people who would use the data.
 
-> **Sidenote**: You may have noticed that the examples above come from organizations in North America, Europe, and Southeast Asia. That reflects which regions showed up most in satellite data research while I was gathering links, not a lack of global efforts. I hope to follow up with a post on existing use cases in underrepresented regions such as Africa.
+> **Sidenote**: Most examples above come from organisations in North America, Europe and Asia. That reflects which sources I found while gathering links, not a lack of work elsewhere. I hope to follow up with a post on use cases in Africa.
 
 ### Systemic limitations
 
-Some of the problems are structural. The best data and tools are often controlled by rich organizations or countries, so only those with money or expertise can use high-quality satellite images. Poorer regions, which may need the data most for issues like floods or food shortages, often can't afford it or don't have the skills to use it. Checking satellite data against real-world conditions, such as verifying a forest loss map by visiting the area, is also tough in remote places, which makes the results harder to trust.
+Some of the problems are structural. The best data and tools are often controlled by rich organisations or countries. Poorer regions may need the data most, for floods or food shortages, but often can't afford it. Checking satellite maps against conditions on the ground is also hard in remote places, which makes results harder to trust.
 
-The people who understand satellites (engineers, for example) and the people who understand local problems (farmers or city planners) also don't always work together, so the data doesn't always solve the right problems. That disconnect keeps satellite data from having the impact it could.
+The people who understand satellites and the people who understand local problems also don't always work together. So the data doesn't always answer the right questions.
 
 ## Satellite data platforms and providers
 
-Satellite data comes from government, commercial, and open-source platforms.
+Satellite data comes from government, commercial and open platforms.
 
 ### Government platforms
 
-- [NASA Earth Data](https://earthdata.nasa.gov/) provides free access to large archives of Earth observation data, including from Landsat and MODIS satellites.
-- [European Space Agency's Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) offers free, full, and open access to Sentinel satellite data.
-- [NOAA's GOES Image Viewer](https://www.star.nesdis.noaa.gov/GOES/) provides real-time geostationary satellite imagery, mainly for weather monitoring.
-- [JAXA's G-Portal](https://gportal.jaxa.jp/gpr/) is Japan's platform for accessing data from ALOS and other Japanese Earth observation satellites.
+- [NASA Earthdata](https://earthdata.nasa.gov/) gives free access to large archives, including MODIS. Landsat data is also free from the USGS through [EarthExplorer](https://earthexplorer.usgs.gov/).
+- The EU's [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) offers free, full and open access to Sentinel data.
+- NOAA's [GOES Image Viewer](https://www.star.nesdis.noaa.gov/GOES/) shows near-real-time weather satellite imagery.
+- JAXA's [G-Portal](https://gportal.jaxa.jp/gpr/) gives access to data from Japanese Earth observation satellites.
 
 ### Commercial providers
 
-- [Planet](https://www.planet.com/) operates the largest constellation of Earth-imaging satellites and sells daily imagery at 3-5m resolution on a subscription basis.
-- [Maxar Technologies](https://www.maxar.com/) provides very high-resolution imagery (30cm) through its WorldView constellation, mainly for government and enterprise clients.
-- [Airbus Defence and Space](https://www.intelligence-airbusds.com/) offers optical and radar data from its Pléiades and TerraSAR-X satellites at premium prices.
-- [ICEYE](https://www.iceye.com/) specializes in SAR (Synthetic Aperture Radar) data, which can see through clouds and darkness, with usage-based pricing.
+- [Planet](https://www.planet.com/) runs a large fleet of small satellites that image Earth's land almost daily at about 3 m resolution.
+- [Maxar](https://www.maxar.com/) sells very high-resolution imagery, about 30 cm, from its WorldView satellites.
+- [Airbus](https://www.airbus.com/en/space/earth-observation) offers optical and radar imagery from satellites such as Pléiades.
+- [ICEYE](https://www.iceye.com/) sells radar (SAR) imagery, which can see through clouds and at night.
 
-### Open-source and hybrid initiatives
+### Open and hybrid initiatives
 
-- [Google Earth Engine](https://earthengine.google.com/) is a cloud-based platform that combines free public datasets with scalable computing, so users can analyze petabytes of satellite imagery for environmental and development work. It hosts datasets like Landsat, Sentinel, MODIS, and climate models, and you can reach them through JavaScript and Python APIs. It is free for research, education, and nonprofit use, but commercial applications need paid licenses. If you want more on Earth Engine specifically, I have a post on it: [Google Earth Engine: A Useful Tool for Satellite Imagery](https://rdjarbeng.github.io/gee_recommendation/)
-- [Microsoft's Planetary Computer](https://planetarycomputer.microsoft.com/) provides access to petabytes of environmental data, along with computing resources and AI tools for analysis. Its focus is biodiversity and conservation.
-- [Radiant Earth Foundation](https://www.radiant.earth/) creates open-source tools and training data for sustainability applications in developing nations.
-- [Open Data Cube](https://www.opendatacube.org/) is an open-source framework for accessing and analyzing satellite data, used by several national programs including Digital Earth Australia and Africa Regional Data Cube.
+- [Google Earth Engine](https://earthengine.google.com/) is a cloud platform that pairs public datasets such as Landsat, Sentinel and MODIS with computing power. It is free for noncommercial use and paid for commercial use. I have a separate post on it: [Google Earth Engine: A Useful Tool for Satellite Imagery](https://rdjarbeng.github.io/gee_recommendation/).
+- [Microsoft's Planetary Computer](https://planetarycomputer.microsoft.com/) is a large catalogue of environmental data for sustainability work.
+- [Radiant Earth](https://www.radiant.earth/) runs [Source Cooperative](https://source.coop/), a place to publish and share open geospatial data.
+- [Open Data Cube](https://www.opendatacube.org/) is open-source software for analysing satellite data. It powers national and regional programmes, including [Digital Earth Africa](https://www.digitalearthafrica.org/), which offers free analysis-ready data for the whole continent.
 
 ### Data access reality
 
 Data is more available than it used to be, but some barriers remain:
 
-- Commercial high-resolution imagery can cost thousands of dollars per image.
-- Free government data often has lower resolution or less frequent coverage.
-- Processing raw satellite data can require specialized expertise and computing resources.
-- Licensing restrictions can limit how data is used, especially commercially.
+- Very high-resolution commercial imagery costs money, often with minimum order sizes.
+- Free government data usually has coarser resolution than the best commercial imagery.
+- Processing raw satellite data can require specialist skills and computing resources.
+- Licences can limit how commercial data is used and shared.
 
-The result is a digital divide. The most advanced capabilities stay with wealthy institutions and countries that can afford premium data and the processing to go with it.
+The result is a digital divide. The most advanced capabilities stay with institutions that can pay for premium data and the processing that goes with it.
 
 ## The path forward
 
-Satellite data can help with problems as different as deforestation, crop yields, urban growth, and global health, and NASA's Landsat, ESA's Sentinel, and commercial platforms like Planet already support many of those uses. What stands in the way is unequal access to data, technical complexity, funding imbalances, and silos between disciplines. These problems are concentrated in wealthier nations and institutions, and they limit how far the data reaches, especially in underserved regions. Closing the gap will take better technology, but also global collaboration, capacity building, and decision-support systems that turn the insights into something people can act on.
+Satellite data can help with deforestation, crop yields, urban growth and health. Landsat, Sentinel and commercial fleets like Planet already support many of those uses. What stands in the way is unequal access, technical complexity, funding imbalances and silos between disciplines. Closing the gap will take training, collaboration and maps that people can act on.
 
-Disclaimer: Some of the images in this post are AI-generated by Grok (xAI).
+If you are in Africa and want to start, three free steps work well:
+
+1. Open the [Digital Earth Africa map](https://www.digitalearthafrica.org/platform-resources/services) and look at cropland or water layers for your own district.
+2. Take a free online course from NASA's [ARSET programme](https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset), which teaches remote sensing to beginners.
+3. Look at [SERVIR](https://servirglobal.net/), a NASA-led network with hubs in Africa, for projects and partners near you.
+
+Disclaimer: Some of the images in this post are AI-generated by Grok (xAI). The text was drafted with AI help, then checked and revised by me.
