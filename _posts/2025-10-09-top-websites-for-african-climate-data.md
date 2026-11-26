@@ -1,9 +1,9 @@
 ---
 key_points:
-  - "The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate climate data crucial for agriculture, infrastructure, and academic research."
-  - "TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa, offering a convenient API for easy data integration into custom applications."
-  - "Weather Underground is a globally recognized platform that aggregates data from local weather stations, providing extensive global coverage that includes many African countries, with data available for daily weather conditions, temperature, mean pressure, relative humidity, mean visibility, and wind direction and speed."
-  - "The IRI Data Library, maintained by Columbia University, is a detailed resource widely used in academic research, providing in-depth datasets for temperature and precipitation data across Africa, highly recommended for researchers needing rigorous data sets for African climate modeling."
+  - "TAHMO runs weather stations across sub-Saharan Africa. Its station data sits behind a login on its data portal, you request it under a data policy, and it also offers a cleaned daily rainfall dataset and a sample download."
+  - "For long station records, NOAA's GHCN-daily holds daily temperature and rainfall from more than 100,000 stations worldwide, including African ones, as free plain-text files. Climate Data Online is the search interface for the same archive."
+  - "The African Mountain Research Foundation shares free data from eleven high-elevation stations in Lesotho, Malawi, South Africa and Zimbabwe, with records from 2020."
+  - "Sites such as Tutiempo, Weather Underground, All Met Sat and Weatherbase are quick for looking up one town, but they show station summaries on web pages, so check the station and units before you use them in research."
 title: Top Websites for African Climate Data
 date: 2025-10-09 12:12:00
 author: Richard
@@ -16,137 +16,172 @@ card_items:
   - name: "TAHMO (Trans-African Hydro-Meteorological Observatory)"
     image: "/assets/images/weather_post/tahmo.png"
     url: "https://tahmo.org/climate-data/"
-    badge_1: "Real-time & Historical"
-    badge_2: "All Africa"
-    description: "TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa. The platform offers an API for easy data integration into applications. **Data Available:** Rainfall, temperature, humidity, wind speed, and solar radiation."
+    badge_1: "Station data"
+    badge_2: "Login and request"
+    description: "Station observations from TAHMO's network, through a data portal that needs a Google login and a request under its data policy. A cleaned daily rainfall dataset and sample data are linked from the same page."
     link_text: "Visit TAHMO"
 
   - name: "African Mountain Research Foundation"
     image: "/assets/images/weather_post/african_mr.png"
-    url: "https://www.africanmountainresearch.com/"
-    badge_1: "High Elevation Data"
-    badge_2: "Southern Africa"
-    description: "Data here is limited to Southern Africa as at the time of publication. You can find daily data by selecting the country, station, year, and month. **Data Available:** Temperature, mean pressure, relative humidity, mean visibility, and wind direction/speed."
-    link_text: "Visit Website"
+    url: "https://africanmountainresearch.com/the-solutions/our-data/"
+    badge_1: "High elevation"
+    badge_2: "4 countries"
+    description: "Eleven mountain weather stations in Lesotho, Malawi, South Africa and Zimbabwe, with an archive from 2020. Wind, temperature, humidity, pressure, rainfall and solar radiation, free for research and policy use."
+    link_text: "Visit the data page"
 
   - name: "Weather Underground"
     image: "/assets/images/weather_post/wunderground.webp"
-    url: "https://www.wunderground.com/"
-    badge_1: "Local Weather Stations"
-    badge_2: "Global Coverage"
-    description: "Access daily data for specific stations, countries, and time periods. **Data Available:** Temperature, mean pressure, relative humidity, mean visibility, average dew point, and wind direction/speed."
+    url: "https://www.wunderground.com/history"
+    badge_1: "Daily history"
+    badge_2: "Search by city or airport"
+    description: "Look up past daily weather for a city or airport code, mostly from airport reports, plus personal weather stations where people have installed them. Units default to Fahrenheit and can be switched."
     link_text: "Visit Weather Underground"
 
   - name: "Tutiempo"
     image: "/assets/images/weather_post/tutiempo.png"
     url: "https://en.tutiempo.net/climate/africa.html"
-    badge_1: "Historical Climate Data"
-    badge_2: "Long-term Records"
-    description: "Provides monthly data over an average year, and some stations offer daily data spanning fifty years. **Data Available:** Temperature, mean sea level pressure, relative humidity, rainfall, visibility, wind speed, and weather occurrences."
+    badge_1: "Station history"
+    badge_2: "Country lists"
+    description: "Monthly and daily station summaries for most African countries, browsed by country and station. Record length varies; for Ghana the year list starts in 1942 with gaps."
     link_text: "Visit Tutiempo"
 
   - name: "IRI Data Library"
     image: "/assets/images/weather_post/iri_data.png"
-    url: "http://iridl.ldeo.columbia.edu/"
-    badge_1: "Academic Research"
-    badge_2: "Detailed Datasets"
-    description: "A detailed resource for temperature and precipitation data across Africa. **Data Available:** Temperature, rainfall, wet days, and ground frost."
+    url: "https://iridl.ldeo.columbia.edu/"
+    badge_1: "Gridded datasets"
+    badge_2: "Free analysis tools"
+    description: "Columbia University's free repository of climate datasets, with in-browser analysis, maps and downloads in common formats, including GIS-ready files."
     link_text: "Visit IRI Data Library"
 
   - name: "All Met Sat"
     image: "/assets/images/weather_post/allmetsat.png"
-    url: "http://fr.allmetsat.com/climat/afrique.php"
-    badge_1: "Metar Updates"
-    badge_2: "Airport Data"
-    description: "Website is not very responsive and may have empty sections on large screens. Some stations may not provide complete data sets. **Data Available:** Temperature, rainfall, wet days, and ground frost."
+    url: "https://www.allmetsat.com/en/climate/africa.php"
+    badge_1: "Climate normals"
+    badge_2: "3,000+ stations"
+    description: "A clickable map of climate normals for more than 3,000 stations in Africa and nearby regions. The same site shows airport weather reports (METAR)."
     link_text: "Visit All Met Sat"
 
   - name: "Weatherbase"
     image: "/assets/images/weather_post/weatherbase.png"
-    url: "http://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa"
-    badge_1: "Travel & Averages"
-    badge_2: "City-level Data"
-    description: "Comprehensive data, but some stations may have incomplete records. **Data Available:** Temperature, rainfall, ground frost, relative humidity, average dew point, and wind speed."
+    url: "https://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa"
+    badge_1: "City averages"
+    badge_2: "Travel use"
+    description: "Monthly climate averages by city, aimed at travellers. Useful for a quick look, not for analysis."
     link_text: "Visit Weatherbase"
 
-  - name: "UN Data (WMO)"
+  - name: "UNdata: WMO climate normals"
     image: "/assets/images/weather_post/undata.png"
-    url: "http://data.un.org/Explorer.aspx?d=CLINO"
-    badge_1: "Official Statistics"
-    badge_2: "Educational"
-    description: "The World Meteorological Organization (WMO) provides a very complete data set for climate normals and official statistics."
-    link_text: "Visit UN Data"
+    url: "https://data.un.org/Explorer.aspx?d=CLINO"
+    badge_1: "1961 to 1990 normals"
+    badge_2: "CSV and XML"
+    description: "World Meteorological Organization standard normals, mostly for 1961 to 1990, by station and month. Free download as CSV or XML, up to 100,000 records at a time."
+    link_text: "Visit UNdata"
 
-  - name: "AQUASTAT Climate Information Tool"
+  - name: "FAO Climate Information Tool"
     image: "/assets/images/weather_post/aquastat.png"
-    url: "http://www.fao.org/aquastat/en/climate-info-tool/"
-    badge_1: "Water Resources"
-    badge_2: "FAO / Agriculture"
-    description: "Found more rainfall data on their website compared to the others. Datasets might not be frequently updated. Uses interpolation from nearby weather stations to provide data for any location in Africa. **Data Available:** Temperature, humidity, rainfall, sunlight hours, and more."
-    link_text: "Visit AQUASTAT"
+    url: "https://aquastat.fao.org/climate-information-tool"
+    badge_1: "Any location"
+    badge_2: "Interpolated"
+    description: "Click anywhere on the map for long-term monthly climate values estimated from nearby stations, including rainfall, temperature and reference evapotranspiration."
+    link_text: "Visit the tool"
 
-  - name: "NOAA (National Oceanic and Atmospheric Administration)"
+  - name: "NOAA GHCN-daily"
     image: "/assets/images/weather_post/noaa.png"
-    url: "https://www.noaa.gov/"
-    badge_1: "Global Standards"
-    badge_2: "US Govt Data"
-    description: "Offers global climate data, including for Africa. It's an official website of the United States government and a gold standard for climate research."
-    link_text: "Visit NOAA"
+    url: "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily"
+    badge_1: "Daily station records"
+    badge_2: "Free download"
+    description: "Daily maximum and minimum temperature and rainfall from more than 100,000 stations in 180 countries and territories, as free plain-text files, one per station."
+    link_text: "Visit GHCN-daily"
 series: "Free Satellite and Climate Data"
 series_part: 5
 category: "Climate & Environment"
 content_type: guide
 ---
-When working on climate research or environmental projects in Africa, having access to reliable weather and climate data is essential. The African continent features a diverse range of climates, from arid deserts to tropical rainforests, making accurate data crucial for agriculture, infrastructure, and academic research. Fortunately, there are several websites where you can find both historical and current climate data specifically tailored for African regions. Below is a comprehensive list of top resources to help you access this valuable information.
+If you need weather or climate data for an African town, the first question is what kind you need: readings from a real station, long-term averages, or an estimate for a place with no station at all. The sites below cover those three cases, and each entry says what is there, where it covers, and whether you need to log in or ask.
 
-## TAHMO (Trans-African Hydro-Meteorological Observatory)
+This list began from [TAHMO's climate data page](https://tahmo.org/climate-data/), which links to most of these sites. Each entry here is rewritten from the site's own pages, and all figures and links were checked on 26 November 2026.
+
+## Quick comparison
+
+| Site | Best for | What's there | Coverage | Access |
+|---|---|---|---|---|
+| [TAHMO](https://tahmo.org/climate-data/) | Station readings | Station observations; cleaned daily rainfall | TAHMO stations in sub-Saharan Africa | Google login on the portal, request under a data policy |
+| [African Mountain Research Foundation](https://africanmountainresearch.com/the-solutions/our-data/) | Station readings | Wind, temperature, humidity, pressure, rainfall, solar radiation | 11 mountain stations in Lesotho, Malawi, South Africa, Zimbabwe; from 2020 | Free, live and historical download |
+| [Weather Underground](https://www.wunderground.com/history) | Station readings | Past daily weather by city or airport | Worldwide, where a station reports | Free on the web |
+| [Tutiempo](https://en.tutiempo.net/climate/africa.html) | Station readings | Monthly and daily station summaries | Most African countries; some stations back to the 1940s | Free on the web |
+| [IRI Data Library](https://iridl.ldeo.columbia.edu/) | Gridded data | Gridded and station climate datasets with analysis tools | Global | Free, download in many formats |
+| [All Met Sat](https://www.allmetsat.com/en/climate/africa.php) | Long-term averages | Climate normals per station | More than 3,000 stations in Africa and nearby | Free on the web |
+| [Weatherbase](https://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa) | Long-term averages | Monthly city averages | Cities worldwide | Free on the web |
+| [UNdata (WMO normals)](https://data.un.org/Explorer.aspx?d=CLINO) | Long-term averages | Monthly normals, mostly 1961 to 1990 | 141 countries and territories | Free, CSV or XML |
+| [FAO Climate Information Tool](https://aquastat.fao.org/climate-information-tool) | Estimates anywhere | Long-term monthly values estimated from nearby stations | Any point on land | Free on the web |
+| [NOAA GHCN-daily](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily) | Station readings | Daily temperature and rainfall | More than 100,000 stations in 180 countries and territories | Free plain-text files |
+
+## TAHMO
+
 ![TAHMO](/assets/images/weather_post/tahmo.png)
 
-TAHMO operates a dense network of weather stations, particularly focused on improving data coverage in under-monitored regions of Africa. The platform aims to build a robust climate data infrastructure across the continent, which is vital for precise weather forecasting and agricultural planning. It offers a convenient API for easy data integration into custom applications. Data available includes rainfall, temperature, humidity, wind speed, and solar radiation. **[Visit TAHMO](https://tahmo.org/climate-data/)**
+TAHMO installs and runs automatic weather stations across sub-Saharan Africa. Its data is not an open download: you sign in to the [TAHMO data portal](https://portal.tahmo.org/) with a Google account and request data under TAHMO's data policy, which is linked as a PDF from the climate data page. The same page offers a cleaned daily precipitation dataset with quality flags, which TAHMO suggests for checking satellite rainfall products and forecasts, and a sample file you can download first. **[Visit TAHMO](https://tahmo.org/climate-data/)**
 
 ## African Mountain Research Foundation
+
 ![African Mountain Research Foundation](/assets/images/weather_post/african_mr.png)
 
-The African Mountain Research Foundation focuses on high-elevation environments. Data here is currently limited to Southern Africa, but it provides crucial insights into mountainous climates. You can find daily data by selecting the specific country, station, year, and month. Data available includes temperature, mean pressure, relative humidity, mean visibility, and wind direction and speed. **[Visit Website](https://www.africanmountainresearch.com/)**
+The foundation runs eleven weather stations on mountains in Lesotho, Malawi, South Africa and Zimbabwe. The highest is at 3,162 m in Lesotho, and the archive starts in 2020. The stations record wind speed and direction, air temperature, relative humidity, pressure, rainfall and solar radiation. Each station has its own live data link on the data page, and the historical data can be exported. The foundation says the data is free for research, academic study and policy work. **[Visit the data page](https://africanmountainresearch.com/the-solutions/our-data/)**
 
 ## Weather Underground
+
 ![Weather Underground](/assets/images/weather_post/wunderground.webp)
 
-Weather Underground is a globally recognized platform that aggregates data from local weather stations, providing extensive global coverage that includes many African countries. You can access daily weather data for specific stations, countries, and time periods. Data available includes temperature, mean pressure, relative humidity, mean visibility, average dew point, and wind direction and speed. **[Visit Weather Underground](https://www.wunderground.com/)**
+On the historical weather page you type a city, airport code or ZIP code and pick a date; the year list starts at 1920. In most African cities the readings come from the airport, so a "city" record is usually one airport station. Values show in Fahrenheit by default; switch to Celsius in settings. **[Visit Weather Underground](https://www.wunderground.com/history)**
 
 ## Tutiempo
+
 ![Tutiempo](/assets/images/weather_post/tutiempo.png)
 
-Tutiempo is an excellent resource for historical climate data and long-term records. The platform provides monthly data over an average year, and some African weather stations even offer daily data spanning fifty years. This long-term perspective is invaluable for studying climate trends in Africa. Data available includes temperature, mean sea level pressure, relative humidity, rainfall, visibility, wind speed, and various weather occurrences. **[Visit Tutiempo](https://en.tutiempo.net/climate/africa.html)**
+Tutiempo lists stations by country for most of Africa. You pick a station, then a year, to see monthly and daily summaries of temperature, rainfall, humidity, wind and visibility. Record length varies a lot: Ghana's list offers years from 1942, but with a jump from 1945 to 1973, and stations do not all report every year. **[Visit Tutiempo](https://en.tutiempo.net/climate/africa.html)**
 
 ## IRI Data Library
+
 ![IRI Data Library](/assets/images/weather_post/iri_data.png)
 
-The IRI Data Library, maintained by Columbia University, is a detailed resource widely used in academic research. It provides in-depth datasets for temperature and precipitation data across Africa. This platform is highly recommended for researchers needing rigorous data sets for African climate modeling. Data available includes temperature, rainfall, wet days, and ground frost. **[Visit IRI Data Library](http://iridl.ldeo.columbia.edu/)**
+The IRI Data Library at Columbia University hosts hundreds of terabytes of climate datasets, mostly gridded products such as rainfall and temperature analyses. You can average, map and animate data in the browser, then download it in common formats, including GIS-ready ones. Its Maproom has ready-made maps of current and recent climate conditions. It is free. **[Visit IRI Data Library](https://iridl.ldeo.columbia.edu/)**
 
 ## All Met Sat
+
 ![All Met Sat](/assets/images/weather_post/allmetsat.png)
 
-All Met Sat provides METAR updates and airport data, which are standard formats for reporting weather information. While the website interface is not always perfectly responsive and may have empty sections on large screens, it remains a useful tool for specific aviation and localized weather data. Note that some stations may not provide complete data sets. Data available includes temperature, rainfall, wet days, and ground frost. **[Visit All Met Sat](http://fr.allmetsat.com/climat/afrique.php)**
+All Met Sat shows climate normals for more than 3,000 stations on a clickable map of Africa and nearby regions; you click a station dot to see its monthly averages. The site also shows current airport weather reports (METAR), but its climate pages hold long-term averages, not daily records. **[Visit All Met Sat](https://www.allmetsat.com/en/climate/africa.php)**
 
 ## Weatherbase
+
 ![Weatherbase](/assets/images/weather_post/weatherbase.png)
 
-Weatherbase is a popular site for travel planning and reviewing city-level climate averages. It offers comprehensive data that can help you understand the general climate of different African cities, though some local stations may have incomplete records. Data available includes temperature, rainfall, ground frost, relative humidity, average dew point, and wind speed. **[Visit Weatherbase](http://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa)**
+Weatherbase gives monthly climate averages for cities and is written for travel planning. Use it for a quick sense of a city's seasons, not for analysis. **[Visit Weatherbase](https://www.weatherbase.com/weather/country.php3?r=AFR&refer=&regionname=Africa)**
 
-## UN Data (WMO)
-![UN Data (WMO)](/assets/images/weather_post/undata.png)
+## UNdata: WMO climate normals
 
-The World Meteorological Organization (WMO), accessible through UN Data, provides a very complete and authoritative data set for climate normals and official statistics. This is an educational and highly reliable source for baseline climate information across African nations, ensuring you are working with globally recognized standards. **[Visit UN Data](http://data.un.org/Explorer.aspx?d=CLINO)**
+![UNdata](/assets/images/weather_post/undata.png)
 
-## AQUASTAT Climate Information Tool
-![AQUASTAT Climate Information Tool](/assets/images/weather_post/aquastat.png)
+UNdata hosts the World Meteorological Organization's standard climate normals, mostly for 1961 to 1990, with some stations covering shorter periods. Values are monthly, per station, for variables such as temperature. You filter by country and download up to 100,000 records at a time as CSV or XML. These are averages, not daily data, and the period is old, so check whether a newer national normal exists for your country. **[Visit UNdata](https://data.un.org/Explorer.aspx?d=CLINO)**
 
-AQUASTAT, managed by the FAO, focuses heavily on water resources and agriculture. It often features more extensive rainfall data compared to other platforms. While datasets might not be frequently updated, the tool uses interpolation from nearby weather stations to provide data estimates for virtually any location in Africa. Data available includes temperature, humidity, rainfall, sunlight hours, and more. **[Visit AQUASTAT](http://www.fao.org/aquastat/en/climate-info-tool/)**
+## FAO Climate Information Tool
 
-## NOAA (National Oceanic and Atmospheric Administration)
-![NOAA (National Oceanic and Atmospheric Administration)](/assets/images/weather_post/noaa.png)
+![FAO Climate Information Tool](/assets/images/weather_post/aquastat.png)
 
-NOAA is an official website of the United States government and is considered a gold standard for climate research globally. It offers extensive global climate data, including robust datasets for Africa. Accessing NOAA ensures you are utilizing some of the most scientifically rigorous and well-maintained climate records available. **[Visit NOAA](https://www.noaa.gov/)**
+You click a point on the map and it estimates long-term monthly climate values from nearby stations, so you get numbers even where there is no station. Variables include rainfall, temperature, humidity, wind speed, sunshine and reference evapotranspiration. This is the tool's current address; the old AQUASTAT link now redirects. Because the values are interpolated, they will be rougher in places with few stations. **[Visit the tool](https://aquastat.fao.org/climate-information-tool)**
 
-These websites offer valuable insights for anyone needing detailed African climate data or weather records. Utilizing these resources will significantly enhance any environmental analysis or project focused on the African continent.
+## NOAA GHCN-daily
+
+![NOAA](/assets/images/weather_post/noaa.png)
+
+The Global Historical Climatology Network daily (GHCN-daily), run by NOAA's National Centers for Environmental Information, combines daily station records from national weather services and other archives and runs common quality checks on them. It has more than 100,000 stations in 180 countries and territories. The main variables are maximum and minimum temperature and daily rainfall, and about half the stations report rainfall only. Records range from under a year to more than 175 years. You can download one plain-text file per station, or search the same archive through [Climate Data Online](https://www.ncei.noaa.gov/cdo-web/). In November 2026 NOAA's page warned that some access portals were unavailable during a move to the cloud. **[Visit GHCN-daily](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily)**
+
+## Which one to use
+
+For a daily station time series, start with GHCN-daily and check whether your area has a station with the years you need. If it does not, see whether TAHMO has a station nearby and request its data, or, for mountain sites in southern Africa, use the African Mountain Research Foundation. Tutiempo and Weather Underground are fine for a quick look at one town but are summaries on web pages, mostly from airports. For long-term averages, use the WMO normals on UNdata or All Met Sat. For a place with no station, the FAO tool gives an estimate; for gridded rainfall and temperature, use the IRI Data Library or the posts below.
+
+## Related posts
+
+For gridded data and satellite products, see my [Google Earth Engine guide](/gee_recommendation/). For free hourly weather history at any coordinate through a simple API, see [Open-Meteo's historical weather archive](/open-meteo-archive-free-historical-weather-data/).
+
+**Update (November 2026):** Revised to credit TAHMO's list, correct the African Mountain Research Foundation and All Met Sat entries, update the FAO tool link, point NOAA to GHCN-daily, and describe each site from its own pages.
