@@ -2,6 +2,16 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
 const yaml = require("js-yaml");
+const crypto = require("crypto");
+
+// --changed: only regenerate PDFs for posts whose source file changed since the last run
+// (hashes kept in _data/pdf_sources.json). Without it, every PDF is rebuilt.
+const ONLY_CHANGED = process.argv.includes("--changed");
+const manifestPath = path.resolve(__dirname, "../_data/pdf_sources.json");
+const sourceHash = (rel) => {
+  try { return crypto.createHash("sha256").update(fs.readFileSync(path.resolve(__dirname, "..", rel))).digest("hex"); }
+  catch (e) { return null; }
+};
 
 const mimeTypes = {
   ".jpg": "image/jpeg",
@@ -74,6 +84,9 @@ async function generatePdfs() {
   });
 
   const generatedEntries = [];
+  const manifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, "utf8")) : {};
+  const newManifest = {};
+  let regenerated = 0;
 
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
@@ -87,7 +100,12 @@ async function generatePdfs() {
 
     const pdfFileName = `${slug}.pdf`;
     const pdfPath = path.join(documentsDir, pdfFileName);
+    const hash = sourceHash(post.relative_path);
+    newManifest[slug] = hash;
+    const unchanged = ONLY_CHANGED && hash && manifest[slug] === hash && fs.existsSync(pdfPath);
 
+    if (!unchanged) {
+    regenerated++;
     console.log(`[${i + 1}/${posts.length}] Generating PDF for: "${post.title}"...`);
 
     let html = fs.readFileSync(htmlPath, "utf8");
@@ -136,6 +154,8 @@ async function generatePdfs() {
         right: "1.4cm",
       },
     });
+    console.log(`  -> Saved: ${pdfFileName}`);
+    }
 
     const stat = fs.statSync(pdfPath);
     const sizeKb = Math.round(stat.size / 1024);
@@ -159,12 +179,13 @@ async function generatePdfs() {
       is_generated: true,
     });
 
-    console.log(`  -> Saved: ${pdfFileName} (${sizeKb} KB)`);
   }
 
   await browser.close();
 
   // Combine custom manual entries first, followed by generated whitepapers
+  fs.writeFileSync(manifestPath, JSON.stringify(newManifest, null, 1) + "\n");
+  console.log(`Regenerated ${regenerated} of ${posts.length} PDFs${ONLY_CHANGED ? " (only changed posts)" : ""}.`);
   const combinedEntries = [...customEntries, ...generatedEntries];
   fs.writeFileSync(yamlPath, yaml.dump(combinedEntries, { lineWidth: -1 }));
   console.log(`\nSuccessfully updated ${yamlPath} with ${combinedEntries.length} total PDF documents!`);
