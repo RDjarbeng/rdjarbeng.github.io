@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <!-- Cover for "Why My AI Agent Keeps Forgetting Things"
+       Palette: Stripe Modernist (Navy #0a2540, Blurple #635bff, Soft Coral #ff705a) + black/white/cream.
+       Text: headline + watermark only, solid #141414.
+       Scene: a desk piled to its limit with pages; one coral sticky note slides off the edge.
+       Render: node scripts/diagrams/svg_to_jpg.js scripts/diagrams/covers/ai_agent_forgets.svg assets/images/posts/covers/ai_agent_forgets_cover.jpg -->
+  <rect width="1280" height="720" fill="#f4f1e6"/>
+
+  <g fill="#141414" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
+    <text x="640" y="118" font-size="64" font-weight="900" letter-spacing="0">WHY YOUR AI AGENT FORGETS</text>
+  </g>
+
+  <!-- Desk -->
+  <rect x="190" y="560" width="900" height="34" rx="6" fill="#0a2540"/>
+  <rect x="230" y="594" width="28" height="96" fill="#0a2540"/>
+  <rect x="1022" y="594" width="28" height="96" fill="#0a2540"/>
+
+  <!-- Limit line above the pile -->
+  <line x1="220" y1="218" x2="1060" y2="218" stroke="#141414" stroke-width="5" stroke-dasharray="18 14"/>
+
+  <!-- Pile of pages, stacked to the limit -->
+  <g stroke="#141414" stroke-width="4">
+    <rect x="260" y="470" width="250" height="90" rx="6" fill="#ffffff"/>
+    <rect x="530" y="470" width="250" height="90" rx="6" fill="#ffffff"/>
+    <rect x="800" y="470" width="230" height="90" rx="6" fill="#635bff"/>
+    <rect x="280" y="380" width="300" height="90" rx="6" fill="#635bff"/>
+    <rect x="600" y="380" width="260" height="90" rx="6" fill="#ffffff"/>
+    <rect x="880" y="380" width="140" height="90" rx="6" fill="#ffffff"/>
+    <rect x="300" y="290" width="200" height="90" rx="6" fill="#ffffff"/>
+    <rect x="520" y="290" width="330" height="90" rx="6" fill="#ffffff"/>
+    <rect x="870" y="290" width="140" height="90" rx="6" fill="#635bff"/>
+    <rect x="340" y="226" width="600" height="64" rx="6" fill="#ffffff"/>
+  </g>
+  <!-- Text lines on white pages (no readable text) -->
+  <g stroke="#0a2540" stroke-width="6" stroke-linecap="round">
+    <line x1="290" y1="500" x2="470" y2="500"/><line x1="290" y1="528" x2="420" y2="528"/>
+    <line x1="560" y1="500" x2="740" y2="500"/><line x1="560" y1="528" x2="690" y2="528"/>
+    <line x1="630" y1="410" x2="820" y2="410"/><line x1="630" y1="438" x2="760" y2="438"/>
+    <line x1="905" y1="410" x2="990" y2="410"/>
+    <line x1="325" y1="320" x2="470" y2="320"/><line x1="325" y1="348" x2="430" y2="348"/>
+    <line x1="550" y1="320" x2="810" y2="320"/><line x1="550" y1="348" x2="720" y2="348"/>
+    <line x1="370" y1="258" x2="900" y2="258"/>
+  </g>
+
+  <!-- Sticky note sliding off the right edge -->
+  <g transform="translate(1135 470) rotate(28)">
+    <rect x="-55" y="-55" width="110" height="110" rx="4" fill="#ff705a" stroke="#141414" stroke-width="4"/>
+    <line x1="-32" y1="-18" x2="32" y2="-18" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-32" y1="8" x2="16" y2="8" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- Motion marks -->
+  <g stroke="#141414" stroke-width="5" stroke-linecap="round">
+    <line x1="1080" y1="380" x2="1100" y2="400"/>
+    <line x1="1060" y1="410" x2="1078" y2="428"/>
+  </g>
+
+  <text x="1240" y="700" fill="#141414" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="end">rdjarbeng.com</text>
+</svg>
