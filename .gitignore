@@ -36,6 +36,7 @@ scripts/diagrams/out/
 .env*.local
 
 SOUL.md
+ml_roadmap_series.md
 
 # Claude Code settings and app config
 .claude/
