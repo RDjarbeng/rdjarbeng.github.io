@@ -174,7 +174,7 @@ Adoption has accelerated beyond the upstream codebase. Weekly downloads on npm r
 
 ![Sveltia CMS weekly npm downloads surpassing Decap CMS](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/rmi0i9czu4xzvlm548kn.png)
 
-Developers running Astro, Hugo, Eleventy, Next.js, and Jekyll are replacing legacy CMS scripts with Sveltia to cut maintenance overhead and deliver faster editing experiences to their teams.
+Developers running Astro, Hugo, Eleventy, Next.js, and Jekyll are replacing legacy CMS scripts with Sveltia to cut maintenance overhead and deliver faster editing experiences to their teams. If you are starting an Eleventy site from scratch to pair with Sveltia, my [step-by-step guide to building a blog with Eleventy 3 and Liquid](/building-a-modern-blog-with-eleventy-3-x-liquid-edition/) walks through the whole setup.
 
 ## Tackling the upstream backlog
 
