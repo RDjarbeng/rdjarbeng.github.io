@@ -21,7 +21,7 @@ key_points:
   - "When the window fills, the conversation is summarised (compaction), and anything you only said in chat survives only if the summary kept it."
   - "Files survive word for word, so put rules in your agent's instruction file (CLAUDE.md, AGENTS.md or Cursor rules), keep a progress file, and start a fresh chat for each task."
 ---
-My coding agent kept forgetting instructions I had given it an hour earlier. It happened in long sessions, usually after a message saying the conversation was being "compacted". The agent was not being careless. As far as it could tell, I had never said anything of the sort. Why does this happen most of them say they have a 1 Million context window is that not enough?
+My coding agent kept forgetting instructions I had given it an hour earlier. It happened in long sessions, usually after a message saying the conversation was being "compacted". The agent was not being careless. As far as it could tell, I had never said anything of the sort. Why does this happen? Most of the current top models say they have a 1 Million context window is that not enough?
 
 Well, the reason is how these agents handle memory, and the fix is mostly a matter of where you write things down. My examples come from Claude Code, but the same thing happens in Cursor, GitHub Copilot, Codex and Gemini CLI, and there is [a comparison of how each one handles it](#the-same-desk-in-other-agents-and-ides) below.
 
