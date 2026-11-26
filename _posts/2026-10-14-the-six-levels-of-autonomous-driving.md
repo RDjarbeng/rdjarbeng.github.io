@@ -14,7 +14,7 @@ key_points:
   - "Levels 0 to 2 only assist. Whatever the marketing says, the person behind the wheel is the driver and is legally responsible."
   - "The real dividing line is between Level 2 and Level 3, where the carmaker takes legal responsibility while the system is on."
   - "Level 3 has a weak spot: when it reaches its limits it must hand control back, and drivers take between 2 and 26 seconds to respond."
-title: "The Six Levels of Autonomous Driving: From Driver Assist to the Level 3 Handover"
+title: "The Six Levels of Autonomous Driving: From Driver Assist to the Level 3 Handover (Part 1)"
 image: /assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg
 image_alt: "Flat vector editorial illustration of the SAE six levels of autonomous driving from L0 human control to L5 full autonomy"
 layout: post
