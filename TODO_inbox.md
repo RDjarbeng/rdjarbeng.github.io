@@ -184,3 +184,4 @@ https://developer.nvidia.com/blog/nvidia-to-benefit-from-shift-to-gpu-powered-de
 - [ ] 2026-11-25 14:31 CAT | Testing the diagram maker yo see if it can make a news tabloid: 
 Historic win in an unprecedented move as Elephants finally win the mandate to be addressed. This comes after decades of not having the franchise to he addressed as is very well known by those who ise the phrase, the elephant in the room
 - [ ] 2026-11-26 10:26 CAT | What are the companies acquired by apple, Google, Saudi Aramco, etc what do those companies want or are interested in
+- [ ] 2026-11-26 10:30 CAT | Please recalibrate your delusions and try again ~Quote from claude, from this reddit post https://www.reddit.com/r/ClaudeAI/s/HAkfBykNpq
