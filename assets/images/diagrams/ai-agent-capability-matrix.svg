@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720" width="100%" role="img" aria-labelledby="m-t m-d">
+<title id="m-t">AI Agent Capability Matrix</title>
+<desc id="m-d">Visual comparison grid showing verified capabilities for Gemini, Claude, Grok, and ChatGPT across six core operational tasks.</desc>
+<defs>
+<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } .fig-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 28px; font-weight: 700; fill: #1f1d1a; } .fig-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #57514a; letter-spacing: 1.5px; } .fig-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .col-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #1f1d1a; } .row-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1f1d1a; } .row-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .cell-main { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; } .cell-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; fill: #ffffff; text-anchor: middle; opacity: 0.92; } </style>
+</defs>
+<rect width="800" height="720" fill="#f3efe6"/>
+<text x="32" y="38" class="fig-label">FIG. 2: CAPABILITY SCORECARD</text>
+<text x="32" y="74" class="fig-title">Model Capabilities at a Glance</text>
+<text x="32" y="102" class="fig-sub">Comparing media, office files, live web access, and code execution</text>
+<line x1="32" y1="116" x2="768" y2="116" stroke="#1f1d1a" stroke-width="1.5"/>
+<rect x="32" y="126" width="736" height="56" fill="#dfd7c7"/>
+<text x="44" y="161" class="col-hdr">Core Capability</text>
+<g transform="translate(250,142)"><path d="M 11.0 0 C 11.0 6.16 6.16 11.0 0 11.0 C 6.16 11.0 11.0 15.84 11.0 22 C 11.0 15.84 15.84 11.0 22 11.0 C 15.84 11.0 11.0 6.16 11.0 0 Z" fill="#1a73e8"/></g>
+<text x="278" y="161" class="col-hdr">Gemini 4</text>
+<g transform="translate(381,142)"><rect x="8.36" y="0" width="5.279999999999999" height="22" rx="1.76" fill="#d97757"/><rect x="0" y="8.36" width="22" height="5.279999999999999" rx="1.76" fill="#d97757"/><rect x="8.36" y="0" width="5.279999999999999" height="22" rx="1.76" fill="#d97757" transform="rotate(45 11.0 11.0)"/><rect x="8.36" y="0" width="5.279999999999999" height="22" rx="1.76" fill="#d97757" transform="rotate(-45 11.0 11.0)"/></g>
+<text x="409" y="161" class="col-hdr">Claude 5.5</text>
+<g transform="translate(515,142)"><rect width="22" height="22" rx="3.3" fill="#111111"/><path d="M 5.5 17.16 L 13.64 4.84 H 17.16 L 9.02 17.16 Z" fill="#ffffff"/><circle cx="7.04" cy="7.699999999999999" r="2.2" fill="#ffffff"/></g>
+<text x="543" y="161" class="col-hdr">Grok 4.5</text>
+<g transform="translate(645,142)"><rect width="22" height="22" rx="3.3" fill="#10a37f"/><circle cx="11.0" cy="11.0" r="6.16" fill="none" stroke="#ffffff" stroke-width="2.6399999999999997"/><circle cx="11.0" cy="11.0" r="2.2" fill="#ffffff"/></g>
+<text x="673" y="161" class="col-hdr">ChatGPT</text>
+<rect x="32" y="186" width="736" height="66" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="214" class="row-hdr">Audio &amp; Video</text>
+<text x="44" y="236" class="row-sub">Ingestion</text>
+<rect x="246.5" y="193.0" width="122" height="52" fill="#1e7e34"/>
+<text x="307.5" y="216.0" class="cell-main">Native</text>
+<text x="307.5" y="237.0" class="cell-sub">1-Step Neural</text>
+<rect x="377.5" y="193.0" width="122" height="52" fill="#c92a2a"/>
+<text x="438.5" y="216.0" class="cell-main">Blocked</text>
+<text x="438.5" y="237.0" class="cell-sub">Text Only</text>
+<rect x="508.5" y="193.0" width="122" height="52" fill="#b87a12"/>
+<text x="569.5" y="216.0" class="cell-main">Via Tool</text>
+<text x="569.5" y="237.0" class="cell-sub">ffmpeg Bridge</text>
+<rect x="640.5" y="193.0" width="122" height="52" fill="#b87a12"/>
+<text x="701.5" y="216.0" class="cell-main">Voice Only</text>
+<text x="701.5" y="237.0" class="cell-sub">No Video</text>
+<rect x="32" y="254" width="736" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="282" class="row-hdr">Office Files</text>
+<text x="44" y="304" class="row-sub">Deliverables</text>
+<rect x="246.5" y="261.0" width="122" height="52" fill="#2f3d66"/>
+<text x="307.5" y="284.0" class="cell-main">Code Script</text>
+<text x="307.5" y="305.0" class="cell-sub">Run Locally</text>
+<rect x="377.5" y="261.0" width="122" height="52" fill="#1e7e34"/>
+<text x="438.5" y="284.0" class="cell-main">Native</text>
+<text x="438.5" y="305.0" class="cell-sub">.docx .xlsx</text>
+<rect x="508.5" y="261.0" width="122" height="52" fill="#1e7e34"/>
+<text x="569.5" y="284.0" class="cell-main">Native</text>
+<text x="569.5" y="305.0" class="cell-sub">Files &amp; Zip</text>
+<rect x="640.5" y="261.0" width="122" height="52" fill="#1e7e34"/>
+<text x="701.5" y="284.0" class="cell-main">Sandbox</text>
+<text x="701.5" y="305.0" class="cell-sub">Python Run</text>
+<rect x="32" y="322" width="736" height="66" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="350" class="row-hdr">Hosted Apps</text>
+<text x="44" y="372" class="row-sub">&amp; Web URLs</text>
+<rect x="246.5" y="329.0" width="122" height="52" fill="#2f3d66"/>
+<text x="307.5" y="352.0" class="cell-main">Code Script</text>
+<text x="307.5" y="373.0" class="cell-sub">HTML File</text>
+<rect x="377.5" y="329.0" width="122" height="52" fill="#1e7e34"/>
+<text x="438.5" y="352.0" class="cell-main">Hosted URL</text>
+<text x="438.5" y="373.0" class="cell-sub">Live Link</text>
+<rect x="508.5" y="329.0" width="122" height="52" fill="#b87a12"/>
+<text x="569.5" y="352.0" class="cell-main">Preview</text>
+<text x="569.5" y="373.0" class="cell-sub">In Sandbox</text>
+<rect x="640.5" y="329.0" width="122" height="52" fill="#b87a12"/>
+<text x="701.5" y="352.0" class="cell-main">Preview</text>
+<text x="701.5" y="373.0" class="cell-sub">Canvas Tab</text>
+<rect x="32" y="390" width="736" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="418" class="row-hdr">Live Web &amp;</text>
+<text x="44" y="440" class="row-sub">Search Data</text>
+<rect x="246.5" y="397.0" width="122" height="52" fill="#b87a12"/>
+<text x="307.5" y="420.0" class="cell-main">Search Index</text>
+<text x="307.5" y="441.0" class="cell-sub">Google Web</text>
+<rect x="377.5" y="397.0" width="122" height="52" fill="#b87a12"/>
+<text x="438.5" y="420.0" class="cell-main">Live Search</text>
+<text x="438.5" y="441.0" class="cell-sub">Web Fetch</text>
+<rect x="508.5" y="397.0" width="122" height="52" fill="#1e7e34"/>
+<text x="569.5" y="420.0" class="cell-main">Web + Live X</text>
+<text x="569.5" y="441.0" class="cell-sub">Real-Time</text>
+<rect x="640.5" y="397.0" width="122" height="52" fill="#b87a12"/>
+<text x="701.5" y="420.0" class="cell-main">Web Tool</text>
+<text x="701.5" y="441.0" class="cell-sub">Citations</text>
+<rect x="32" y="458" width="736" height="66" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="486" class="row-hdr">Code Execution</text>
+<text x="44" y="508" class="row-sub">Environment</text>
+<rect x="246.5" y="465.0" width="122" height="52" fill="#2f3d66"/>
+<text x="307.5" y="488.0" class="cell-main">Local Only</text>
+<text x="307.5" y="509.0" class="cell-sub">No Cloud</text>
+<rect x="377.5" y="465.0" width="122" height="52" fill="#1e7e34"/>
+<text x="438.5" y="488.0" class="cell-main">Sandbox</text>
+<text x="438.5" y="509.0" class="cell-sub">Package Net</text>
+<rect x="508.5" y="465.0" width="122" height="52" fill="#1e7e34"/>
+<text x="569.5" y="488.0" class="cell-main">Linux Shell</text>
+<text x="569.5" y="509.0" class="cell-sub">Bash Env</text>
+<rect x="640.5" y="465.0" width="122" height="52" fill="#1e7e34"/>
+<text x="701.5" y="488.0" class="cell-main">Sandbox</text>
+<text x="701.5" y="509.0" class="cell-sub">Python Env</text>
+<rect x="32" y="526" width="736" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="0.5"/>
+<text x="44" y="554" class="row-hdr">Visual &amp;</text>
+<text x="44" y="576" class="row-sub">Image Edits</text>
+<rect x="246.5" y="533.0" width="122" height="52" fill="#2f3d66"/>
+<text x="307.5" y="556.0" class="cell-main">Code Script</text>
+<text x="307.5" y="577.0" class="cell-sub">SVG/Canvas</text>
+<rect x="377.5" y="533.0" width="122" height="52" fill="#b87a12"/>
+<text x="438.5" y="556.0" class="cell-main">SVG Vectors</text>
+<text x="438.5" y="577.0" class="cell-sub">Code Charts</text>
+<rect x="508.5" y="533.0" width="122" height="52" fill="#1e7e34"/>
+<text x="569.5" y="556.0" class="cell-main">Imagine</text>
+<text x="569.5" y="577.0" class="cell-sub">+ ffmpeg</text>
+<rect x="640.5" y="533.0" width="122" height="52" fill="#1e7e34"/>
+<text x="701.5" y="556.0" class="cell-main">DALL-E 3</text>
+<text x="701.5" y="577.0" class="cell-sub">Generative</text>
+<line x1="32" y1="604" x2="768" y2="604" stroke="#cfc6b6" stroke-width="1"/>
+<text x="32" y="628" class="row-hdr">Legend:</text>
+<rect x="115" y="614" width="16" height="16" fill="#1e7e34"/>
+<text x="139" y="628" class="fig-sub">Native</text>
+<rect x="255" y="614" width="16" height="16" fill="#b87a12"/>
+<text x="279" y="628" class="fig-sub">Via Tool</text>
+<rect x="410" y="614" width="16" height="16" fill="#2f3d66"/>
+<text x="434" y="628" class="fig-sub">Code Script</text>
+<rect x="595" y="614" width="16" height="16" fill="#c92a2a"/>
+<text x="619" y="628" class="fig-sub">Blocked</text>
+<line x1="32" y1="642" x2="768" y2="642" stroke="#cfc6b6" stroke-width="0.75" stroke-dasharray="3,3"/>
+<text x="768" y="658" fill="#57514a" font-size="18" font-weight="700" letter-spacing="1" text-anchor="end">rdjarbeng.com</text>
+</svg>

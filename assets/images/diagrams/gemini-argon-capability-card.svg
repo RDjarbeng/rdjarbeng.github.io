@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" role="img" aria-labelledby="c-t c-d">
+<title id="c-t">Gemini 4 Argon Operational Profile</title>
+<desc id="c-d">Input, engine, deliverable, and boundary specifications for Gemini 4 Argon.</desc>
+<defs>
+<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #1f1d1a; } .card-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; } .col-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1f1d1a; } .col-item { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .boundary-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #b87a12; } .boundary-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } </style>
+</defs>
+<rect width="800" height="280" fill="#f3efe6"/>
+<rect x="32" y="16" width="736" height="248" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<rect x="32" y="16" width="6" height="248" fill="#1a73e8"/>
+<g transform="translate(48,28)"><path d="M 13.0 0 C 13.0 7.280000000000001 7.280000000000001 13.0 0 13.0 C 7.280000000000001 13.0 13.0 18.72 13.0 26 C 13.0 18.72 18.72 13.0 26 13.0 C 18.72 13.0 13.0 7.280000000000001 13.0 0 Z" fill="#1a73e8"/></g>
+<text x="84" y="44" class="card-title">Gemini 4 Argon</text>
+<text x="84" y="66" class="card-sub">Google DeepMind (Paid tier)</text>
+<rect x="556" y="26" width="200" height="34" fill="#1a73e8"/>
+<text x="656" y="49" class="badge-text">Code &amp; Architecture</text>
+<line x1="48" y1="76" x2="756" y2="76" stroke="#cfc6b6" stroke-width="1"/>
+<rect x="48" y="86" width="224" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="60" y="108" class="col-hdr">INPUTS ACCEPTED</text>
+<text x="60" y="132" class="col-item">* Native audio &amp; video</text>
+<text x="60" y="156" class="col-item">* Multi-file repositories</text>
+<text x="60" y="180" class="col-item">* PDFs, spreadsheets, images</text>
+<rect x="284" y="86" width="224" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="296" y="108" class="col-hdr">ENGINE &amp; TOOLS</text>
+<text x="296" y="132" class="col-item">* Google Search index</text>
+<text x="296" y="156" class="col-item">* Extended context window</text>
+<text x="296" y="180" class="col-item">* Static AST reasoning</text>
+<rect x="520" y="86" width="236" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="532" y="108" class="col-hdr">DELIVERABLE FORMAT</text>
+<text x="532" y="132" class="col-item">* Source code &amp; LaTeX</text>
+<text x="532" y="156" class="col-item">* Interactive Canvas HTML</text>
+<text x="532" y="180" class="col-item">* Python scripts to run locally</text>
+<line x1="48" y1="202" x2="756" y2="202" stroke="#cfc6b6" stroke-width="1"/>
+<text x="48" y="226" class="boundary-label">Hard boundary:</text>
+<text x="190" y="226" class="boundary-val">No direct binary files; expects local code execution.</text>
+<text x="756" y="252" fill="#57514a" font-size="18" font-weight="700" letter-spacing="1" text-anchor="end">rdjarbeng.com</text>
+</svg>

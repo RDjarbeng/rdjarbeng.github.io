@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" role="img" aria-labelledby="c-t c-d">
+<title id="c-t">Grok 4.5 Operational Profile</title>
+<desc id="c-d">Input, engine, deliverable, and boundary specifications for Grok 4.5.</desc>
+<defs>
+<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #1f1d1a; } .card-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; } .col-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1f1d1a; } .col-item { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .boundary-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #b87a12; } .boundary-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } </style>
+</defs>
+<rect width="800" height="280" fill="#f3efe6"/>
+<rect x="32" y="16" width="736" height="248" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<rect x="32" y="16" width="6" height="248" fill="#111111"/>
+<g transform="translate(48,28)"><rect width="26" height="26" rx="3.9" fill="#111111"/><path d="M 6.5 20.28 L 16.12 5.72 H 20.28 L 10.66 20.28 Z" fill="#ffffff"/><circle cx="8.32" cy="9.1" r="2.6" fill="#ffffff"/></g>
+<text x="84" y="44" class="card-title">Grok 4.5</text>
+<text x="84" y="66" class="card-sub">xAI (Web &amp; Sandbox)</text>
+<rect x="556" y="26" width="200" height="34" fill="#111111"/>
+<text x="656" y="49" class="badge-text">Real-Time X &amp; Tools</text>
+<line x1="48" y1="76" x2="756" y2="76" stroke="#cfc6b6" stroke-width="1"/>
+<rect x="48" y="86" width="224" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="60" y="108" class="col-hdr">INPUTS ACCEPTED</text>
+<text x="60" y="132" class="col-item">* Video &amp; audio via ffmpeg</text>
+<text x="60" y="156" class="col-item">* Uploaded documents</text>
+<text x="60" y="180" class="col-item">* Live URLs &amp; screenshots</text>
+<rect x="284" y="86" width="224" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="296" y="108" class="col-hdr">ENGINE &amp; TOOLS</text>
+<text x="296" y="132" class="col-item">* Real-time X platform posts</text>
+<text x="296" y="156" class="col-item">* Sandboxed Linux bash shell</text>
+<text x="296" y="180" class="col-item">* Headless browser tabs</text>
+<rect x="520" y="86" width="236" height="106" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="532" y="108" class="col-hdr">DELIVERABLE FORMAT</text>
+<text x="532" y="132" class="col-item">* Grok Imagine images</text>
+<text x="532" y="156" class="col-item">* Slices &amp; transcode files</text>
+<text x="532" y="180" class="col-item">* Office docs &amp; zip bundles</text>
+<line x1="48" y1="202" x2="756" y2="202" stroke="#cfc6b6" stroke-width="1"/>
+<text x="48" y="226" class="boundary-label">Hard boundary:</text>
+<text x="190" y="226" class="boundary-val">Processes media via tools rather than neural tokens.</text>
+<text x="756" y="252" fill="#57514a" font-size="18" font-weight="700" letter-spacing="1" text-anchor="end">rdjarbeng.com</text>
+</svg>

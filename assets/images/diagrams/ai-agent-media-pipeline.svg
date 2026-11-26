@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 670" width="100%" role="img" aria-labelledby="p-t p-d">
+<title id="p-t">Audio and Video Ingestion Pipelines</title>
+<desc id="p-d">Visual flowchart comparing how Gemini 4 Argon, Grok 4.5, ChatGPT, and Claude Sonnet 5.5 handle incoming video and audio files.</desc>
+<defs>
+<style>text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } .fig-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 28px; font-weight: 700; fill: #1f1d1a; } .fig-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #57514a; letter-spacing: 1.5px; } .fig-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .col-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #1f1d1a; } .row-hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1f1d1a; } .row-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; fill: #57514a; } .cell-main { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; text-anchor: middle; } .cell-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; fill: #ffffff; text-anchor: middle; opacity: 0.92; } </style>
+</defs>
+<rect width="800" height="670" fill="#f3efe6"/>
+<text x="32" y="38" class="fig-label">FIG. 1: INGESTION ARCHITECTURE</text>
+<text x="32" y="74" class="fig-title">What Happens When You Upload Audio or Video</text>
+<text x="32" y="102" class="fig-sub">Direct multi-modal neural tokens vs. ffmpeg tool bridges vs. format rejection</text>
+<line x1="32" y1="116" x2="768" y2="116" stroke="#1f1d1a" stroke-width="1.5"/>
+<rect x="32" y="130" width="736" height="92" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<g transform="translate(44,150)"><path d="M 12.0 0 C 12.0 6.720000000000001 6.720000000000001 12.0 0 12.0 C 6.720000000000001 12.0 12.0 17.28 12.0 24 C 12.0 17.28 17.28 12.0 24 12.0 C 17.28 12.0 12.0 6.720000000000001 12.0 0 Z" fill="#1a73e8"/></g>
+<text x="76" y="168" class="col-hdr">Gemini 4</text>
+<text x="76" y="192" class="fig-sub">Google</text>
+<rect x="195" y="143" width="110" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="250.0" y="170" class="row-hdr" text-anchor="middle">Input File</text>
+<text x="250.0" y="194" class="row-sub" text-anchor="middle">MP4 or WAV</text>
+<line x1="311" y1="176" x2="325" y2="176" stroke="#57514a" stroke-width="2"/>
+<polygon points="325,172 331,176 325,180" fill="#57514a"/>
+<rect x="335" y="143" width="210" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="440.0" y="170" class="row-hdr" text-anchor="middle">Direct Neural Stream</text>
+<text x="440.0" y="194" class="row-sub" text-anchor="middle">Tokenized video frames</text>
+<line x1="551" y1="176" x2="565" y2="176" stroke="#57514a" stroke-width="2"/>
+<polygon points="565,172 571,176 565,180" fill="#57514a"/>
+<rect x="575" y="143" width="170" height="66" fill="#1e7e34"/>
+<text x="660.0" y="170" class="cell-main">Native Ingestion</text>
+<text x="660.0" y="194" class="cell-sub">1-Step Neural</text>
+<rect x="32" y="232" width="736" height="92" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<g transform="translate(44,252)"><rect width="24" height="24" rx="3.5999999999999996" fill="#111111"/><path d="M 6.0 18.72 L 14.879999999999999 5.28 H 18.72 L 9.84 18.72 Z" fill="#ffffff"/><circle cx="7.68" cy="8.399999999999999" r="2.4000000000000004" fill="#ffffff"/></g>
+<text x="76" y="270" class="col-hdr">Grok 4.5</text>
+<text x="76" y="294" class="fig-sub">xAI</text>
+<rect x="195" y="245" width="110" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="250.0" y="272" class="row-hdr" text-anchor="middle">Input File</text>
+<text x="250.0" y="296" class="row-sub" text-anchor="middle">MP4 or WAV</text>
+<line x1="311" y1="278" x2="325" y2="278" stroke="#57514a" stroke-width="2"/>
+<polygon points="325,274 331,278 325,282" fill="#57514a"/>
+<rect x="335" y="245" width="210" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="440.0" y="272" class="row-hdr" text-anchor="middle">ffmpeg Tool Bridge</text>
+<text x="440.0" y="296" class="row-sub" text-anchor="middle">Slices audio and frames</text>
+<line x1="551" y1="278" x2="565" y2="278" stroke="#57514a" stroke-width="2"/>
+<polygon points="565,274 571,278 565,282" fill="#57514a"/>
+<rect x="575" y="245" width="170" height="66" fill="#b87a12"/>
+<text x="660.0" y="272" class="cell-main">Tool Execution</text>
+<text x="660.0" y="296" class="cell-sub">2-Step ffmpeg</text>
+<rect x="32" y="334" width="736" height="92" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<g transform="translate(44,354)"><rect width="24" height="24" rx="3.5999999999999996" fill="#10a37f"/><circle cx="12.0" cy="12.0" r="6.720000000000001" fill="none" stroke="#ffffff" stroke-width="2.88"/><circle cx="12.0" cy="12.0" r="2.4000000000000004" fill="#ffffff"/></g>
+<text x="76" y="372" class="col-hdr">ChatGPT</text>
+<text x="76" y="396" class="fig-sub">OpenAI</text>
+<rect x="195" y="347" width="110" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="250.0" y="374" class="row-hdr" text-anchor="middle">Input File</text>
+<text x="250.0" y="398" class="row-sub" text-anchor="middle">MP4 or WAV</text>
+<line x1="311" y1="380" x2="325" y2="380" stroke="#57514a" stroke-width="2"/>
+<polygon points="325,376 331,380 325,384" fill="#57514a"/>
+<rect x="335" y="347" width="210" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="440.0" y="374" class="row-hdr" text-anchor="middle">Voice Mode Only</text>
+<text x="440.0" y="398" class="row-sub" text-anchor="middle">Video upload blocked</text>
+<line x1="551" y1="380" x2="565" y2="380" stroke="#57514a" stroke-width="2"/>
+<polygon points="565,376 571,380 565,384" fill="#57514a"/>
+<rect x="575" y="347" width="170" height="66" fill="#b87a12"/>
+<text x="660.0" y="374" class="cell-main">Voice Only</text>
+<text x="660.0" y="398" class="cell-sub">No Video Files</text>
+<rect x="32" y="436" width="736" height="92" fill="#e8e2d5" stroke="#cfc6b6" stroke-width="1"/>
+<g transform="translate(44,456)"><rect x="9.120000000000001" y="0" width="5.76" height="24" rx="1.92" fill="#d97757"/><rect x="0" y="9.120000000000001" width="24" height="5.76" rx="1.92" fill="#d97757"/><rect x="9.120000000000001" y="0" width="5.76" height="24" rx="1.92" fill="#d97757" transform="rotate(45 12.0 12.0)"/><rect x="9.120000000000001" y="0" width="5.76" height="24" rx="1.92" fill="#d97757" transform="rotate(-45 12.0 12.0)"/></g>
+<text x="76" y="474" class="col-hdr">Claude 5.5</text>
+<text x="76" y="498" class="fig-sub">Anthropic</text>
+<rect x="195" y="449" width="110" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="250.0" y="476" class="row-hdr" text-anchor="middle">Input File</text>
+<text x="250.0" y="500" class="row-sub" text-anchor="middle">MP4 or WAV</text>
+<line x1="311" y1="482" x2="325" y2="482" stroke="#57514a" stroke-width="2"/>
+<polygon points="325,478 331,482 325,486" fill="#57514a"/>
+<rect x="335" y="449" width="210" height="66" fill="#f3efe6" stroke="#cfc6b6" stroke-width="1"/>
+<text x="440.0" y="476" class="row-hdr" text-anchor="middle">Format Blocked</text>
+<text x="440.0" y="500" class="row-sub" text-anchor="middle">Requires transcript</text>
+<line x1="551" y1="482" x2="565" y2="482" stroke="#57514a" stroke-width="2"/>
+<polygon points="565,478 571,482 565,486" fill="#57514a"/>
+<rect x="575" y="449" width="170" height="66" fill="#c92a2a"/>
+<text x="660.0" y="476" class="cell-main">Upload Blocked</text>
+<text x="660.0" y="500" class="cell-sub">Text Only</text>
+<line x1="32" y1="542" x2="768" y2="542" stroke="#cfc6b6" stroke-width="1"/>
+<text x="32" y="566" class="row-hdr">Takeaway:</text>
+<text x="122" y="566" class="fig-sub">Gemini is the only model with native end-to-end video reasoning.</text>
+<text x="32" y="590" class="fig-sub">Grok bridges media via ffmpeg; Claude and ChatGPT require text transcripts.</text>
+<line x1="32" y1="606" x2="768" y2="606" stroke="#cfc6b6" stroke-width="0.75" stroke-dasharray="3,3"/>
+<text x="768" y="622" fill="#57514a" font-size="18" font-weight="700" letter-spacing="1" text-anchor="end">rdjarbeng.com</text>
+</svg>
