@@ -996,3 +996,6 @@ https://infoscience.epfl.ch/entities/publication/af829a94-1ad7-4101-9eb2-7f1d110
 - [ ] A problem well defined, why can't we just increase context windows? 
 
 Standard attention compares every token with every other token, even when only a few of them matter, so the cost grows quadratically with context length. That's why really long context gets so slow and expensive.
+- [ ] Unsloth notebooks seem to be getting a lot of love nowadays, but I've really never heard of them. Would be good to do a series on them
+
+https://unsloth.ai/docs
