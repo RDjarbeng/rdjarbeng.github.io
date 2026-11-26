@@ -2,7 +2,7 @@
 layout: post
 key_points:
   - "The simplest way to install and switch Node.js versions on a Raspberry Pi 4 is nvm, the Node Version Manager, which needs no sudo."
-  - "Check whether your Raspberry Pi OS is 32-bit or 64-bit first: official 32-bit (armv7l) Node.js builds stop at Node.js 22, while Node.js 24 and later are 64-bit (arm64) only."
+  - "Check whether your Raspberry Pi OS is 32-bit or 64-bit first. Node.js 22 is the last major version with official 32-bit ARM builds, and it is supported until April 2027. Node.js 24 and later have official ARM builds for 64-bit systems only."
   - "With nvm, `nvm install --lts` installs the current long-term support release and `nvm install 16` installs an older version for a legacy project."
   - "The post also keeps the manual method: download the official tarball and copy it into /usr/local."
 title: "How to Install Node.js on a Raspberry Pi 4"
@@ -32,7 +32,9 @@ dpkg --print-architecture
 - `arm64` means a 64-bit Raspberry Pi OS. Any current Node.js version works.
 - `armhf` means a 32-bit OS.
 
-Don't rely on `uname -m` for this. A Pi 4 can run a 64-bit kernel on a 32-bit OS, so it may print `aarch64` even when your system can't run 64-bit Node.js. The Node.js project publishes official 32-bit ARM builds only up to Node.js 22. Node.js 24 and later are 64-bit (`arm64`) only, as the [Node.js download index](https://nodejs.org/dist/index.json) shows. If you need Node.js 24 or later, reinstall the 64-bit Raspberry Pi OS.
+Don't rely on `uname -m` for this. A Raspberry Pi 4 starts a 64-bit kernel by default, even under the 32-bit OS (the `arm_64bit` setting [defaults to 1 on the Pi 4](https://www.raspberrypi.com/documentation/computers/config_txt.html#arm_64bit)), so `uname -m` can print `aarch64` on a system that can't run 64-bit Node.js.
+
+Why it matters: Node.js 22 is the last major version with official 32-bit ARM (`armv7l`) builds. It still gets updates, with support until April 2027 according to the [Node.js release schedule](https://github.com/nodejs/release#release-schedule). Node.js 24 and later have official ARM builds for 64-bit systems (`arm64`) only, as the [Node.js download index](https://nodejs.org/dist/index.json) shows. On a 32-bit OS, stay on Node.js 22, or reinstall the 64-bit Raspberry Pi OS if you need Node.js 24 or later.
 
 ## Install Node.js with nvm (recommended)
 
@@ -58,7 +60,7 @@ sudo apt remove nodejs
     nvm install --lts
     ```
 
-    On a 32-bit OS, ask for Node.js 22 instead, the last version with official 32-bit builds:
+    On a 32-bit OS, ask for Node.js 22 instead, the last major version with official 32-bit ARM builds:
 
     ```
     nvm install 22
