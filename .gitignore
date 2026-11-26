@@ -40,3 +40,6 @@ ml_roadmap_series.md
 
 # Claude Code settings and app config
 .claude/
+
+# Compiled from assets/css/styles.scss by npm run build (deploy) and npm start (local)
+assets/css/styles.css
