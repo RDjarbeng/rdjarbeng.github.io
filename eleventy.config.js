@@ -231,6 +231,8 @@ module.exports = function(eleventyConfig) {
     videoSrcCache.set(file, { mtime, videos });
     return videos;
   };
+  // {{ post.relative_path | self_hosted_videos }}: the same list, for video-sitemap.xml
+  eleventyConfig.addFilter("self_hosted_videos", (p) => selfHostedVideos(p));
 
   eleventyConfig.addLiquidTag("seo", function() {
     return {

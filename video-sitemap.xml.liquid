@@ -1,0 +1,35 @@
+---
+permalink: /video-sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  Videos hosted on this site (files in /assets/videos/ inside a post's <video> tag).
+  Found by the same code that adds VideoObject data to those posts (eleventy.config.js).
+  YouTube and TikTok embeds are left out: Google finds those on the platforms themselves.
+{%- endcomment -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+{%- assign all_posts = site.posts | concat: site.personal %}
+{%- for post in all_posts %}
+  {%- if post.sitemap == false or post.noindex == true %}{% continue %}{% endif %}
+  {%- assign vids = post.relative_path | self_hosted_videos %}
+  {%- if vids.size > 0 %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {%- for v in vids %}
+    {%- assign thumb = v.poster | default: post.image %}
+    {%- if thumb and thumb != '' %}
+    <video:video>
+      <video:thumbnail_loc>{{ thumb | absolute_url | xml_escape }}</video:thumbnail_loc>
+      <video:title>{{ post.title | xml_escape }}{% if vids.size > 1 %} (video {{ forloop.index }}){% endif %}</video:title>
+      <video:description>{{ post.description | default: post.clean_excerpt | default: post.title | strip_html | truncate: 2000 | xml_escape }}</video:description>
+      <video:content_loc>{{ v.src | absolute_url | xml_escape }}</video:content_loc>
+      <video:publication_date>{{ post.iso_date }}</video:publication_date>
+    </video:video>
+    {%- endif %}
+    {%- endfor %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
