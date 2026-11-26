@@ -155,7 +155,7 @@ US embassy monitors are another source in many African capitals. I covered how t
 
 ## Africa-focused
 
-**[Zindi](https://zindi.world/)** hosts AI competitions, courses and a community of data scientists, and each competition comes with its own dataset. I wrote up two of them: the [Ghana crop disease detection challenge](/zindi-ghana-crop-disease-detection-challenge/) and the [urban heat island challenge](/zindi-urban-heat-island-prediction-challenge/).
+**[Zindi](https://zindi.world/)** hosts AI competitions, courses and a community of data scientists, and each competition comes with its own dataset. I wrote up the [Ghana crop disease detection challenge](/zindi-ghana-crop-disease-detection-challenge/), and a write-up of the urban heat island challenge is coming.
 
 **[Humanitarian Data Exchange (HDX)](https://data.humdata.org/)** is an open platform linked to the [Centre for Humanitarian Data](https://centre.humdata.org/), a service of the UN Office for the Coordination of Humanitarian Affairs (OCHA). It is the [main source](https://en.wikipedia.org/wiki/Humanitarian_Data_Exchange) of the Common Operational Datasets, the shared reference data that humanitarian responders use across sectors.
 
