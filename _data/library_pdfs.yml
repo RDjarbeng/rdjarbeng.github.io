@@ -16,19 +16,85 @@
     - Fintech
   categories:
     - Data & Technology
+- id: post-how-ai-agents-work-tokens-context-and-memory
+  title: 'Why My AI Agent Keeps Forgetting Things: Tokens, Context Windows and Compaction'
+  url: /documents/how-ai-agents-work-tokens-context-and-memory.pdf
+  file: /documents/how-ai-agents-work-tokens-context-and-memory.pdf
+  file_name: how-ai-agents-work-tokens-context-and-memory.pdf
+  file_size: 565 KB
+  read_time: 28
+  image: /assets/images/posts/covers/ai_agent_forgets_cover.jpg
+  image_alt: A desk piled to a dashed limit line with stacked pages, while a coral sticky note slides off the edge, under the headline Why your AI agent forgets
+  author: Richard Djarbeng
+  date: November 25
+  formatted_date: November 25
+  clean_excerpt: My coding agent kept forgetting instructions I had given it an hour earlier. It happened in long sessions, usually after a message saying the conversation was being "compacted". Th...
+  tags:
+    - Claude Code
+    - AI Agents
+    - Context Window
+    - Large Language Models
+    - Developer Tools
+  categories:
+    - AI
+  is_generated: true
+- id: post-why-are-flight-tickets-in-africa-so-expensive-who-gets-the-taxes-and-fees
+  title: Why Flight Tickets in Africa Are So Expensive, From First Principles
+  url: /documents/why-are-flight-tickets-in-africa-so-expensive-who-gets-the-taxes-and-fees.pdf
+  file: /documents/why-are-flight-tickets-in-africa-so-expensive-who-gets-the-taxes-and-fees.pdf
+  file_name: why-are-flight-tickets-in-africa-so-expensive-who-gets-the-taxes-and-fees.pdf
+  file_size: 433 KB
+  read_time: 27
+  image: /assets/images/posts/covers/african_airfare_taxes_cover.jpg
+  image_alt: 'A boarding pass and a single-aisle airliner on a runway, under the headline Airfares in Africa: why taxes outweigh the fare'
+  author: Richard Djarbeng
+  date: November 8
+  formatted_date: November 8
+  clean_excerpt: 'When you search for a flight between two African cities, the result can look wrong: a neighboring capital costs more than a trip to Europe, the cheapest option connects through...'
+  tags:
+    - Aviation
+    - Africa
+    - Travel
+    - Economics
+    - Airlines
+  categories:
+    - Money & Fintech
+  is_generated: true
+- id: post-php2shell-php-vulnerabilities-week-of-october-21
+  title: 'PHP2Shell: The Two PHP Bugs That Took Government Websites Offline, and What to Do'
+  url: /documents/php2shell-php-vulnerabilities-week-of-october-21.pdf
+  file: /documents/php2shell-php-vulnerabilities-week-of-october-21.pdf
+  file_name: php2shell-php-vulnerabilities-week-of-october-21.pdf
+  file_size: 406 KB
+  read_time: 17
+  image: /assets/images/posts/covers/php2shell_cover.jpg
+  image_alt: 'Flat illustration of the blue PHP elephant in front of three browser windows, two showing a pulled plug and the word OFFLINE and one a warning sign, under the headline PHP2Shell: patch or go offline'
+  author: Richard Djarbeng
+  date: October 22
+  formatted_date: October 22
+  clean_excerpt: On Wednesday 21 October 2026, PHP released emergency fixes for two bugs that let an attacker take over a web server without logging in. PHP runs a large part of...
+  tags:
+    - PHP
+    - php2shell
+    - Vulnerabilities
+    - CVE
+    - Web Security
+  categories:
+    - Security
+  is_generated: true
 - id: post-what-can-you-do-testing-ai-agents-gemini-argon-and-claude
   title: What can you do? Testing AI Agents, Gemini Argon and Claude
   url: /documents/what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
   file: /documents/what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
   file_name: what-can-you-do-testing-ai-agents-gemini-argon-and-claude.pdf
-  file_size: 749 KB
-  read_time: 14
+  file_size: 915 KB
+  read_time: 32
   image: /assets/images/posts/covers/ai_agents_benchmark_cover.jpg
-  image_alt: Flat vector illustration of two AI robots sitting at desks taking a written exam while a human grades their responses
+  image_alt: Flat vector illustration of two AI robots sitting at desks taking an exam while Richard grades their responses
   author: Richard Djarbeng
   date: October 14
   formatted_date: October 14
-  clean_excerpt: I have a benchmark prompt that I use to evaluate AI agent capabilities. The GitHub repository for the benchmark prompt is here. Every time a new model or agent drops,...
+  clean_excerpt: I have a benchmark prompt that I use to evaluate AI agent capabilities. The GitHub repository for the benchmark prompt is here. Every time a new model or agent arrives,...
   tags:
     - AI
     - gemini
@@ -36,14 +102,14 @@
     - agents
     - benchmarks
   categories:
-    - Technology
+    - AI
   is_generated: true
 - id: post-level-4-autonomous-driving-robotaxis-and-driverless-buses
-  title: 'Level 4 Autonomous Driving: How Robotaxis and Driverless Buses Work Today'
+  title: 'Level 4 Autonomous Driving: How Robotaxis and Driverless Buses Work Today (Part 2)'
   url: /documents/level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
   file: /documents/level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
   file_name: level-4-autonomous-driving-robotaxis-and-driverless-buses.pdf
-  file_size: 375 KB
+  file_size: 410 KB
   read_time: 14
   image: /assets/images/posts/covers/level_4_in_the_real_world_cover.jpg
   image_alt: Flat vector illustration of a red driverless robotaxi and a blue driverless bus on a city road inside a dashed geofence, titled Level 4 in the Real World
@@ -59,14 +125,14 @@
     - Smart Cities
     - Artificial Intelligence
   categories:
-    - Technology
+    - AI
   is_generated: true
 - id: post-the-six-levels-of-autonomous-driving
-  title: 'The Six Levels of Autonomous Driving: From Driver Assist to the Level 3 Handover'
+  title: 'The Six Levels of Autonomous Driving: From Driver Assist to the Level 3 Handover (Part 1)'
   url: /documents/the-six-levels-of-autonomous-driving.pdf
   file: /documents/the-six-levels-of-autonomous-driving.pdf
   file_name: the-six-levels-of-autonomous-driving.pdf
-  file_size: 747 KB
+  file_size: 779 KB
   read_time: 21
   image: /assets/images/posts/covers/six_levels_of_autonomous_driving_cover.jpg
   image_alt: Flat vector editorial illustration of the SAE six levels of autonomous driving from L0 human control to L5 full autonomy
@@ -81,14 +147,14 @@
     - Automotive Tech
     - Artificial Intelligence
   categories:
-    - Technology
+    - AI
   is_generated: true
 - id: post-when-llms-become-scientific-instruments-groundsource-flash-flood-research-report
   title: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report'
   url: /documents/when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
   file: /documents/when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
   file_name: when-llms-become-scientific-instruments-groundsource-flash-flood-research-report.pdf
-  file_size: 3557 KB
+  file_size: 3583 KB
   read_time: 18
   image: /assets/images/posts/covers/groundsource_research_report_cover.jpg
   image_alt: 'When LLMs Become Scientific Instruments: Groundsource Flash Flood Research Report cover'
@@ -105,14 +171,14 @@
     - Gemini
     - machine-learning
   categories:
-    - Research
+    - AI
   is_generated: true
 - id: post-nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do
   title: NASA APOD Has Migrated. Here Is What Is Changing and What Developers Must Do
   url: /documents/nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
   file: /documents/nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
   file_name: nasa-apod-has-migrated-here-is-whats-changing-and-what-developers-must-do.pdf
-  file_size: 866 KB
+  file_size: 897 KB
   read_time: 11
   image: /assets/images/posts/covers/nasa-apod-api-migration-wordpress.jpg
   image_alt: NASA APOD API migration illustration showing telescope data moving into a WordPress cloud architecture
@@ -127,14 +193,14 @@
     - NASA
     - Web Development
   categories:
-    - Technology
+    - Web & Software
   is_generated: true
 - id: post-geographic-concentration-machine-learning-models
   title: 'Geographic Concentration of Machine Learning Models: How Compute Economics Re-Engineered the AI Map'
   url: /documents/geographic-concentration-machine-learning-models.pdf
   file: /documents/geographic-concentration-machine-learning-models.pdf
   file_name: geographic-concentration-machine-learning-models.pdf
-  file_size: 562 KB
+  file_size: 620 KB
   read_time: 14
   image: /assets/images/posts/covers/geographic-concentration-ml-models-cover.jpg
   image_alt: Editorial illustration of a world globe where massive server monoliths and nuclear power towers in the US and China connect via heavy power lines, while the rest of the world has unplugged cords, under the title Why 2 Countries Control 90% of AI
@@ -150,15 +216,15 @@
     - Epoch AI
     - Stanford AI Index
   categories:
-    - Technology
+    - AI
   is_generated: true
 - id: post-building-a-modern-blog-with-eleventy-3-x-liquid-edition
-  title: Building a Modern Blog with Eleventy 3.x (Liquid Edition)
+  title: 'Learn Eleventy 3.x: A Step-by-Step Guide to Building a Blog with Liquid'
   url: /documents/building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
   file: /documents/building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
   file_name: building-a-modern-blog-with-eleventy-3-x-liquid-edition.pdf
-  file_size: 782 KB
-  read_time: 42
+  file_size: 924 KB
+  read_time: 44
   image: /assets/images/posts/covers/eleventy_3_liquid_blog_cover.jpg
   image_alt: Building a Modern Blog with Eleventy 3.x Liquid Edition cover image
   author: Richard Djarbeng
@@ -170,14 +236,14 @@
     - Eleventy
     - JavaScript
   categories:
-    - Web
+    - Web & Software
   is_generated: true
 - id: post-finding-the-mean-median-and-mode-tensortonic
   title: Coding the Mean, Median and Mode in Python - TensorTonic
   url: /documents/finding-the-mean-median-and-mode-tensortonic.pdf
   file: /documents/finding-the-mean-median-and-mode-tensortonic.pdf
   file_name: finding-the-mean-median-and-mode-tensortonic.pdf
-  file_size: 559 KB
+  file_size: 601 KB
   read_time: 12
   image: /assets/images/posts/covers/mean_median_mode_tensortonic_cover.jpg
   image_alt: Coding the Mean, Median and Mode in Python by rdjarbeng for rdjarbeng.com cover image
@@ -189,14 +255,37 @@
     - Algorithm
     - Python
   categories:
-    - Education
+    - AI
+  is_generated: true
+- id: post-understanding-the-air-quality-index-aqi
+  title: Understanding the Air Quality Index (AQI)
+  url: /documents/understanding-the-air-quality-index-aqi.pdf
+  file: /documents/understanding-the-air-quality-index-aqi.pdf
+  file_name: understanding-the-air-quality-index-aqi.pdf
+  file_size: 287 KB
+  read_time: 12
+  image: /assets/images/air_quality/aqi.png
+  image_alt: Cover image for Understanding the Air Quality Index (AQI)
+  author: Richard Djarbeng
+  date: October 29, 2025
+  formatted_date: October 29, 2025
+  clean_excerpt: There is no single Air Quality Index. Most countries run their own, with different scales, colours and cut-offs (see international AQI standards below). This post explains the most...
+  tags:
+    - Air Quality
+    - weather and air quality
+    - Air quality index
+    - Environmental Monitoring
+    - PM2.5
+    - AQI
+  categories:
+    - Climate & Environment
   is_generated: true
 - id: post-100-posts-later-lessons-learnt-from-building-this-blog
   title: '100 Posts Later: My Lessons Learnt From Building This Blog (rdjarbeng.com)'
   url: /documents/100-posts-later-lessons-learnt-from-building-this-blog.pdf
   file: /documents/100-posts-later-lessons-learnt-from-building-this-blog.pdf
   file_name: 100-posts-later-lessons-learnt-from-building-this-blog.pdf
-  file_size: 4155 KB
+  file_size: 4190 KB
   read_time: 16
   image: /assets/images/100_posts_cover.jpg
   image_alt: Cover image for 100 posts later - lessons learnt from building this blog, showing a journey of 100 posts with rdjarbeng.com watermark
@@ -207,14 +296,14 @@
   tags:
     - Review
   categories:
-    - Technology
+    - Web & Software
   is_generated: true
 - id: post-putting-google-s-gemini-pro-and-nano-banana-to-the-test
   title: I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
   url: /documents/putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
   file: /documents/putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
   file_name: putting-google-s-gemini-pro-and-nano-banana-to-the-test.pdf
-  file_size: 6827 KB
+  file_size: 6867 KB
   read_time: 10
   image: /assets/images/gemini_room_design_cover.webp
   image_alt: Cover image for I Tried to Replace an Interior Designer with Gemini. Here's What Happened.
@@ -233,14 +322,14 @@
     - Text-to-Image
     - Artificial Intelligence
   categories:
-    - Technology
+    - AI
   is_generated: true
 - id: post-a-chronological-look-at-ai-a-decade-by-decade-evolution
   title: 'A Chronological Look At AI: A Decade-by-Decade Evolution'
   url: /documents/a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
   file: /documents/a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
   file_name: a-chronological-look-at-ai-a-decade-by-decade-evolution.pdf
-  file_size: 3450 KB
+  file_size: 3499 KB
   read_time: 23
   image: /assets/images/ai_chronological_order_rdjarbeng_cover.webp
   image_alt: 'Cover image for A Chronological Look At AI: A Decade-by-Decade Evolution'
@@ -267,12 +356,34 @@
   categories:
     - AI
   is_generated: true
+- id: post-what-is-particulate-matter-pm2.5-and-the-environmental-significance
+  title: What is Particulate Matter (PM2.5) and the Environmental Significance
+  url: /documents/what-is-particulate-matter-pm2.5-and-the-environmental-significance.pdf
+  file: /documents/what-is-particulate-matter-pm2.5-and-the-environmental-significance.pdf
+  file_name: what-is-particulate-matter-pm2.5-and-the-environmental-significance.pdf
+  file_size: 378 KB
+  read_time: 11
+  image: /assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg
+  image_alt: Cover image for What is Particulate Matter (PM2.5) and the Environmental Significance
+  author: Richard Djarbeng
+  date: July 14, 2025
+  formatted_date: July 14, 2025
+  clean_excerpt: On 29 January 2026, a model put Kigali's PM2.5 at about 37 µg/m³ for the day. That is about two and a half times the WHO's 24-hour guideline. PM2.5 is...
+  tags:
+    - Air Quality
+    - Particulate matter
+    - PM
+    - PM2.5
+    - Black Carbon
+  categories:
+    - Climate & Environment
+  is_generated: true
 - id: post-http-get-post-sim900
   title: GSM module HTTP GET & POST request using arduino microcontroller and SIM900
   url: /documents/http-get-post-sim900.pdf
   file: /documents/http-get-post-sim900.pdf
   file_name: http-get-post-sim900.pdf
-  file_size: 193 KB
+  file_size: 230 KB
   read_time: 12
   image: /assets/images/gsm_module.jpg
   image_alt: Close-up of a SIM900 GSM/GPRS module with an antenna connector and pins.
@@ -289,14 +400,14 @@
     - 2G
     - request
   categories:
-    - IoT
+    - IoT & Hardware
   is_generated: true
 - id: post-list-of-banks-in-rwanda-and-their-services
   title: List of Banks in Rwanda and Their Services
   url: /documents/list-of-banks-in-rwanda-and-their-services.pdf
   file: /documents/list-of-banks-in-rwanda-and-their-services.pdf
   file_name: list-of-banks-in-rwanda-and-their-services.pdf
-  file_size: 828 KB
+  file_size: 867 KB
   read_time: 11
   image: /assets/images/1000189531.jpg
   image_alt: Cover image for List of Banks in Rwanda and Their Services
@@ -310,21 +421,21 @@
     - Rwanda
     - USD vs RWF
   categories:
-    - Finance
+    - Money & Fintech
   is_generated: true
-- id: post-earth-observation’s-promise-and-barriers-a-down-to-earth-view
-  title: 'Earth Observation’s Promise and Barriers: A Down to Earth View'
-  url: /documents/earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
-  file: /documents/earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
-  file_name: earth-observation’s-promise-and-barriers-a-down-to-earth-view.pdf
-  file_size: 636 KB
-  read_time: 12
+- id: post-earth-observations-promise-and-barriers-a-down-to-earth-view
+  title: What Satellite Data Could Do for Climate and Food Security, and What Stops It Today
+  url: /documents/earth-observations-promise-and-barriers-a-down-to-earth-view.pdf
+  file: /documents/earth-observations-promise-and-barriers-a-down-to-earth-view.pdf
+  file_name: earth-observations-promise-and-barriers-a-down-to-earth-view.pdf
+  file_size: 664 KB
+  read_time: 11
   image: /assets/images/satellite_orbiting_earth_color_codes.jpg
-  image_alt: 'Cover image for Earth Observation’s Promise and Barriers: A Down to Earth View'
+  image_alt: Cover image for What Satellite Data Could Do for Climate and Food Security, and What Stops It Today
   author: Richard Djarbeng
   date: May 20, 2025
   formatted_date: May 20, 2025
-  clean_excerpt: In this post I consider the transformative potential of satellite data for tackling global challenges like climate change, food security, and urban planning, while examining the re...
+  clean_excerpt: This post looks at what satellite data could do for problems like climate change, food security, and urban planning, and at what keeps it from doing that today. There is...
   tags:
     - Satellites
     - Earth Observation
@@ -336,14 +447,14 @@
     - Planet
     - NASA
   categories:
-    - Technology
+    - Space & Satellites
   is_generated: true
 - id: post-visa-and-mastercard-payment-cards-not-transfer-tools
   title: Why Can't I Just Send Money With My Visa Card?
   url: /documents/visa-and-mastercard-payment-cards-not-transfer-tools.pdf
   file: /documents/visa-and-mastercard-payment-cards-not-transfer-tools.pdf
   file_name: visa-and-mastercard-payment-cards-not-transfer-tools.pdf
-  file_size: 695 KB
+  file_size: 725 KB
   read_time: 11
   image: /assets/images/visa_locked_image.jpg
   image_alt: Cover image for Why Can't I Just Send Money With My Visa Card?
@@ -371,5 +482,5 @@
     - Visa
     - MasterCard
   categories:
-    - Finance
+    - Money & Fintech
   is_generated: true
