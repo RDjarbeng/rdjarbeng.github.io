@@ -134,6 +134,7 @@ const posts = postFiles.map((file) => {
 
   return {
     ...parsed.data,
+    slug,
     last_modified_at,
     title: parsed.data.title || "",
     categories,
@@ -209,6 +210,7 @@ const personal = personalFiles.map((file) => {
 
   return {
     ...parsed.data,
+    slug,
     last_modified_at,
     title: parsed.data.title || "",
     categories,
