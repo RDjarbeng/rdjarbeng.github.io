@@ -21,13 +21,15 @@ key_points:
   - "When the window fills, the conversation is summarised (compaction), and anything you only said in chat survives only if the summary kept it."
   - "Files survive word for word, so put rules in your agent's instruction file (CLAUDE.md, AGENTS.md or Cursor rules), keep a progress file, and start a fresh chat for each task."
 ---
-My coding agent kept forgetting instructions I had given it an hour earlier. It happened in long sessions, usually after a message saying the conversation was being "compacted". The agent was not being careless. As far as it could tell, I had never said anything of the sort. The reason is how these agents handle memory, and the fix is mostly a matter of where you write things down. My examples come from Claude Code, but the same thing happens in Cursor, GitHub Copilot, Codex and Gemini CLI, and there is [a comparison of how each one handles it](#the-same-desk-in-other-agents-and-ides) below.
+My coding agent kept forgetting instructions I had given it an hour earlier. It happened in long sessions, usually after a message saying the conversation was being "compacted". The agent was not being careless. As far as it could tell, I had never said anything of the sort. Why does this happen most of them say they have a 1 Million context window is that not enough?
+
+Well, the reason is how these agents handle memory, and the fix is mostly a matter of where you write things down. My examples come from Claude Code, but the same thing happens in Cursor, GitHub Copilot, Codex and Gemini CLI, and there is [a comparison of how each one handles it](#the-same-desk-in-other-agents-and-ides) below.
 
 ![A desk piled to a dashed limit line with stacked pages, while a coral sticky note slides off the edge, under the headline Why your AI agent forgets](/assets/images/posts/covers/ai_agent_forgets_cover.jpg "Why your AI agent forgets")
 
 ## The agent does not remember. It rereads.
 
-A language model has no memory between requests. When I send a message, Claude Code sends the model the full conversation so far, plus a set of instructions, and the model writes its next step. Then all of it is sent again for the step after that.
+It turns out that a language model has no memory between requests. When I send a message, Claude Code sends the model the full conversation so far, plus a set of instructions, and the model writes its next step. Then all of it is sent again for the step after that.
 
 So the model's "memory" is a big document it rereads every time. Anthropic calls that document the **context window** and describes it as the model's "working memory", separate from everything it learned in training ([context windows guide](https://platform.claude.com/docs/en/build-with-claude/context-windows)). Andrej Karpathy, an OpenAI co-founder and former head of AI at Tesla, describes the result well: LLMs have something like "anterograde amnesia", the condition from the film *Memento*, where you cannot form new long-term memories ([Software Is Changing (Again)](https://www.youtube.com/watch?v=LCEmiRjPEtQ), June 2025).
 
@@ -70,9 +72,19 @@ The last row is the one to notice. An hour of chatting with the agent might add 
 
 `/context` shows which of these is taking the room in your own session: instruction files, tools or the conversation. Developers calling the API can use Anthropic's free [token counting endpoint](https://platform.claude.com/docs/en/build-with-claude/token-counting) to check a message's size before sending it.
 
+The Claude Code desktop app shows the same breakdown in its interface, with a few extra details (screenshot below).
+
+![Claude Code /context command output showing token usage breakdown](/assets/images/posts/claude-code-context-command.png "Claude Code /context command output")
+
+Side note on Antigravity IDE: I can confirm, antigravity doesn't have any such feature and I have looked thoroughly through its preferences, there are no such settings available. You will have to ask the model if you are using the IDE (Integrated Development Environment). I have defaulted to asking the model being used in antigravity "How much of your context is being used in this chat?"
+
 ## When the desk is full: compaction
+From the anthropic [blog](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents): 
+> An agent running in a loop generates more and more data that could be relevant for the next turn of inference, and this information must be cyclically refined.
 
 Eventually a long session fills the desk. Claude Code then does what you would do with a desk covered in paper: it writes a summary of the important bits, clears the desk, and puts the summary back down. That is **compaction**. Anthropic's [context engineering post](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) (29 September 2025) describes it as summarising the conversation and starting a new context window with that summary.
+
+Here is a visual for you, so you can see how your previous instruction will 'disappear' from the context:
 
 <picture>
 <source srcset="/assets/images/diagrams/context-compaction.static.svg" media="(prefers-reduced-motion: reduce)">
