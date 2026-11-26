@@ -43,7 +43,7 @@ The second issue is calibration. A model is well calibrated if, among all predic
 
 To deploy machine learning models safely, systems need ways to catch errors and filter out false positives. Fine-tuning models on domain-specific data helps, but post-processing and architecture adjustments are also necessary.
 
-**Score calibration.** Guo et al. evaluated post-processing techniques applied after training. The simplest method, temperature scaling, proved effective across most benchmark datasets. Temperature scaling divides raw logits by a learned parameter $T$ before applying softmax. When $T > 1$, extreme probabilities soften toward uniform values without altering class rankings.
+**Score calibration.** [Guo et al.](https://arxiv.org/abs/1706.04599) evaluated post-processing techniques applied after training. The simplest method, temperature scaling, proved effective across most benchmark datasets. Temperature scaling divides raw logits by a learned parameter $T$ before applying softmax. When $T > 1$, extreme probabilities soften toward uniform values without altering class rankings.
 
 **Confidence thresholds and reject classes.** Instead of returning the highest-scoring class unconditionally, an application can reject predictions when the maximum probability falls below a set threshold. Alternatively, models can be trained with an explicit background or "unknown" class containing objects the system should ignore.
 
