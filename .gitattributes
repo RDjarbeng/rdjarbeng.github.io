@@ -1,2 +1,12 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
 assets/videos/gasabo_basket.mp4 filter=lfs diff=lfs merge=lfs -text
 TODO*.md merge=union
