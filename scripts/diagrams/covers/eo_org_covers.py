@@ -129,12 +129,38 @@ def art_smos():
     return beam(640, 300, 300, 980, 440) + layers + drops + sprouts + satellite(640, 270, 1.2)
 
 
+def photo_panel(path):
+    """A real NASA image as a framed panel (public domain; credited in the post), cropped to fill."""
+    import base64
+    from PIL import Image
+    import io
+    root = os.path.abspath(os.path.join(OUT, "..", "..", ".."))
+    im = Image.open(os.path.join(root, path)).convert("RGB")
+    W, H = 900, 330
+    r = max(W / im.width, H / im.height)
+    im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1))
+    left, top = (im.width - W) // 2, (im.height - H) // 2
+    im = im.crop((left, top, left + W, top + H))
+    buf = io.BytesIO(); im.save(buf, "JPEG", quality=85)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    return (f'<image x="190" y="280" width="{W}" height="{H}" href="data:image/jpeg;base64,{b64}"/>'
+            f'<rect x="190" y="280" width="{W}" height="{H}" fill="none" stroke="{INK}" stroke-width="4"/>')
+
+
+def art_black_marble_photo():
+    return photo_panel("assets/images/posts/earth-observation/africa-city-lights-night.jpg")
+
+
+def art_gfw_photo():
+    return photo_panel("assets/images/posts/earth-observation/kisangani-forest-loss-2001-2024.jpg")
+
+
 # name -> (headline, hook, illustration, alt text, post file stem)
 COVERS = {
     "digital_earth_africa": ("FREE SATELLITE DATA FOR AFRICA", "DIGITAL EARTH AFRICA: READY-TO-USE IMAGES OF THE WHOLE CONTINENT", art_dea,
                              "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline 'Free satellite data for africa' and the line 'Digital Earth Africa: ready-to-use images of the whole continent'",
                              "2026-11-27-digital-earth-africa-free-satellite-data-for-africa"),
-    "global_forest_watch": ("SPOTTING FOREST LOSS FROM SPACE", "GLOBAL FOREST WATCH SENDS ALERTS WHEN TREES DISAPPEAR", art_gfw,
+    "global_forest_watch": ("SPOTTING FOREST LOSS FROM SPACE", "GLOBAL FOREST WATCH SENDS ALERTS WHEN TREES DISAPPEAR", art_gfw_photo,
                             "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global Forest Watch sends alerts when trees disappear'",
                             "2026-11-27-global-forest-watch-tracking-tree-loss-from-space"),
     "global_urban_footprint": ("MAPPING EVERY CITY FROM ORBIT", "DLR'S RADAR MAP OF BUILT-UP AREAS ACROSS THE GLOBE", art_guf,
@@ -146,7 +172,7 @@ COVERS = {
     "nasa_arset": ("LEARN TO USE SATELLITE DATA, FREE", "NASA ARSET RUNS FREE COURSES ON USING SATELLITE DATA", art_arset,
                    "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline 'Learn to use satellite data, free' and the line 'NASA ARSET runs free courses on using satellite data'",
                    "2026-11-27-nasa-arset-free-remote-sensing-training"),
-    "nasa_black_marble": ("NIGHT LIGHTS REVEAL POWER CUTS", "NASA BLACK MARBLE TRACKS LIGHTS AFTER STORMS AND OUTAGES", art_black_marble,
+    "nasa_black_marble": ("NIGHT LIGHTS REVEAL POWER CUTS", "NASA BLACK MARBLE TRACKS LIGHTS AFTER STORMS AND OUTAGES", art_black_marble_photo,
                           "A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the line 'NASA Black Marble tracks lights after storms and outages'",
                           "2026-11-27-nasa-black-marble-night-lights-from-space"),
     "nasa_harvest": ("SATELLITES THAT WATCH CROPS GROW", "NASA HARVEST USES SATELLITES TO MONITOR CROPS AND FOOD SUPPLY", art_harvest,
@@ -178,7 +204,7 @@ def cover(headline, hook, art):
     <text x="640" y="{y1}" font-size="{size}" font-weight="900">{tspans}</text>
     <text x="640" y="{hook_y}" font-size="22" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">{hook}</text>
   </g>
-  <g transform="translate(115 95) scale(0.82)">{art()}</g>
+  {art() if art.__name__.endswith("_photo") else '<g transform="translate(115 95) scale(0.82)">' + art() + "</g>"}
   <text x="640" y="700" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="{INK}" text-anchor="middle">rdjarbeng.com</text>
 </svg>
 '''
