@@ -56,6 +56,9 @@ The pollutants in this post are PM2.5, PM10, nitrogen dioxide (NO2) and sulfur d
 
 Two tables follow: the first compares each country's legal limits for particles (PM2.5 and PM10) with the WHO 2021 guidelines, the second does the same for gases. All values are in µg/m³. The "How it compares" column shows how many times higher the national limit is than the WHO guideline for the same averaging period. A country appears only where a published source gives its values.
 
+![Dot chart of national PM2.5 and PM10 limits in five West African countries as multiples of the WHO 2021 guideline. PM2.5: Côte d'Ivoire and Senegal 5 times the annual guideline, Ghana 2.3 and Senegal 5 times the 24-hour guideline, Nigeria and Benin have no limit. PM10: Côte d'Ivoire 1.1 to 2.7, Nigeria 3.3 to 4, Senegal 2.7 to 3.3, Benin 3.3 to 5.1 times.](/assets/images/diagrams/west-africa-pm-limits-vs-who.svg)
+*Particle limits as times the WHO 2021 guideline, from the table below. Sources are listed under the table.*
+
 ### Particles
 
 | Country | Pollutant | Averaging period | National limit | WHO 2021 guideline | How it compares |
