@@ -103,6 +103,25 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
+  # Tells Bing (and other IndexNow engines) about posts changed in this push, once they are live.
+  indexnow:
+    needs: deploy
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Submit changed pages to IndexNow
+        continue-on-error: true
+        run: |
+          python -m pip install --quiet requests
+          python scripts/submit_indexnow.py --changed "${{ github.event.before }}..${{ github.sha }}"
+
   # Opens (or comments on) a GitHub issue that @-mentions the owner when a
   # deploy takes longer than 5 minutes, so slow builds get noticed by email.
   build-time-alert:
