@@ -1,5 +1,5 @@
 ---
-title: Cover image for post - Adapting The Danger of a Single Story:AI-Generated Video
+title: "Cover image for post - Adapting The Danger of a Single Story: AI-Generated Video"
 date: 2025-03-03T12:00:00
 image: /assets/images/danger_of_a_single_story_did.png
 type: cover
