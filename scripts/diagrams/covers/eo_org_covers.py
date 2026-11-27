@@ -131,47 +131,55 @@ def art_smos():
 
 # name -> (headline, hook, illustration, alt text, post file stem)
 COVERS = {
-    "digital_earth_africa": ("DIGITAL EARTH AFRICA", "FREE SATELLITE DATA FOR THE CONTINENT", art_dea,
-                             "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline Digital Earth Africa",
+    "digital_earth_africa": ("FREE SATELLITE DATA FOR AFRICA", "DIGITAL EARTH AFRICA", art_dea,
+                             "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline 'Free satellite data for africa' and the name Digital Earth Africa",
                              "2026-11-27-digital-earth-africa-free-satellite-data-for-africa"),
-    "global_forest_watch": ("GLOBAL FOREST WATCH", "TRACKING TREE LOSS FROM SPACE", art_gfw,
-                            "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline Global Forest Watch",
+    "global_forest_watch": ("SPOTTING FOREST LOSS FROM SPACE", "GLOBAL FOREST WATCH", art_gfw,
+                            "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the name Global Forest Watch",
                             "2026-11-27-global-forest-watch-tracking-tree-loss-from-space"),
-    "global_urban_footprint": ("GLOBAL URBAN FOOTPRINT", "MAPPING CITIES FROM SPACE", art_guf,
-                               "A satellite sending radar waves down to a skyline of city blocks, under the headline Global Urban Footprint",
+    "global_urban_footprint": ("MAPPING EVERY CITY FROM ORBIT", "DLR GLOBAL URBAN FOOTPRINT", art_guf,
+                               "A satellite sending radar waves down to a skyline of city blocks, under the headline 'Mapping every city from orbit' and the name Dlr Global Urban Footprint",
                                "2026-11-27-global-urban-footprint-mapping-cities-from-space"),
-    "missing_maps": ("MISSING MAPS", "PUTTING VILLAGES ON THE MAP", art_missing_maps,
-                     "A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline Missing Maps",
+    "missing_maps": ("VOLUNTEERS MAPPING UNMAPPED COMMUNITIES", "MISSING MAPS", art_missing_maps,
+                     "A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline 'Volunteers mapping unmapped communities' and the name Missing Maps",
                      "2026-11-27-missing-maps-volunteer-mapping-for-humanitarian-response"),
-    "nasa_arset": ("NASA ARSET", "FREE TRAINING IN SATELLITE DATA", art_arset,
-                   "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline NASA ARSET",
+    "nasa_arset": ("LEARN TO USE SATELLITE DATA, FREE", "NASA ARSET TRAINING", art_arset,
+                   "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline 'Learn to use satellite data, free' and the name Nasa Arset Training",
                    "2026-11-27-nasa-arset-free-remote-sensing-training"),
-    "nasa_black_marble": ("NASA BLACK MARBLE", "NIGHT LIGHTS FROM SPACE", art_black_marble,
-                          "A satellite above a dark landscape dotted with clusters of city lights, under the headline NASA Black Marble",
+    "nasa_black_marble": ("NIGHT LIGHTS REVEAL POWER CUTS", "NASA BLACK MARBLE", art_black_marble,
+                          "A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the name Nasa Black Marble",
                           "2026-11-27-nasa-black-marble-night-lights-from-space"),
-    "nasa_harvest": ("NASA HARVEST", "SATELLITES FOR FOOD SECURITY", art_harvest,
-                     "A satellite looking down on rows of crop fields, under the headline NASA Harvest",
+    "nasa_harvest": ("SATELLITES THAT WATCH CROPS GROW", "NASA HARVEST", art_harvest,
+                     "A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name Nasa Harvest",
                      "2026-11-27-nasa-harvest-satellite-data-for-food-security"),
-    "servir": ("SERVIR", "SATELLITE DATA FOR DEVELOPMENT", art_servir,
-               "A satellite linked to a rain cloud falling on a row of fields, under the headline SERVIR",
+    "servir": ("SATELLITE DATA FOR DROUGHTS AND FLOODS", "SERVIR", art_servir,
+               "A satellite linked to a rain cloud falling on a row of fields, under the headline 'Satellite data for droughts and floods' and the name Servir",
                "2026-11-27-servir-satellite-data-for-development"),
-    "smos": ("SMOS", "MEASURING SOIL MOISTURE FROM SPACE", art_smos,
-             "A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline SMOS",
+    "smos": ("MEASURING SOIL WATER FROM SPACE", "ESA SMOS MISSION", art_smos,
+             "A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline 'Measuring soil water from space' and the name Esa Smos Mission",
              "2026-11-27-smos-measuring-soil-moisture-from-space"),
 }
 
 
 def cover(headline, hook, art):
-    size = min(72, int(1180 / (0.74 * len(headline))))
+    # Headline in two balanced lines so it stays at least 64px (workflow rule); the hook is the
+    # organisation's name in smaller type below it.
+    words = headline.split()
+    best = min(range(1, len(words)), key=lambda i: abs(len(" ".join(words[:i])) - len(" ".join(words[i:])))) if len(words) > 1 else 1
+    lines = [" ".join(words[:best]), " ".join(words[best:])] if len(words) > 1 else [headline]
+    size = max(64, min(80, int(1180 / (0.72 * max(len(l) for l in lines)))))
+    y1 = 92 if len(lines) == 2 else 112
+    tspans = "".join(f'<tspan x="640" dy="{0 if i == 0 else size + 4}">{l}</tspan>' for i, l in enumerate(lines))
+    hook_y = y1 + (size + 4) * (len(lines) - 1) + 46
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
   <!-- Generated by scripts/diagrams/covers/eo_org_covers.py. Palette per cover (COVER_PALETTE); all text #141414. -->
   <rect width="1280" height="720" fill="{PAPER}"/>
   <g fill="{INK}" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
-    <text x="640" y="112" font-size="{size}" font-weight="900" letter-spacing="1">{headline}</text>
-    <text x="640" y="162" font-size="24" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">{hook}</text>
+    <text x="640" y="{y1}" font-size="{size}" font-weight="900">{tspans}</text>
+    <text x="640" y="{hook_y}" font-size="22" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">{hook}</text>
   </g>
-  {art()}
-  <text x="640" y="690" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="{INK}" text-anchor="middle">rdjarbeng.com</text>
+  <g transform="translate(115 95) scale(0.82)">{art()}</g>
+  <text x="640" y="700" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="{INK}" text-anchor="middle">rdjarbeng.com</text>
 </svg>
 '''
 

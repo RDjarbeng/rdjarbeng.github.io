@@ -12,7 +12,7 @@ key_points:
   - "The data are free under NASA's open science policy. Worldview and Earthdata Search are NASA's tools for viewing and downloading them."
   - "NASA documents uses such as population along the Nile, power outages after Hurricane Melissa in Jamaica, and gas flares and illegal fishing."
 image: /assets/images/posts/covers/nasa_black_marble_cover.jpg
-image_alt: "A satellite above a dark landscape dotted with clusters of city lights, under the headline NASA Black Marble"
+image_alt: "A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the name Nasa Black Marble"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -21,7 +21,7 @@ layout: post
 
 Satellites can see where lights are on at night. That tells you where people live and whether the power is working. [NASA's Black Marble](https://www.earthdata.nasa.gov/data/projects/black-marble) is a suite of related data products. It turns satellite images of artificial light into a daily, monthly and yearly record of human activity. Its lead scientist, or principal investigator, is Zhuosen Wang of the University of Maryland and NASA Goddard Space Flight Center. The Suomi NPP data are distributed through NASA's LAADS DAAC, an archive for these data, and the same project page lists the data access tools.
 
-![A satellite above a dark landscape dotted with clusters of city lights, under the headline NASA Black Marble](/assets/images/posts/covers/nasa_black_marble_cover.jpg)
+![A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the name Nasa Black Marble](/assets/images/posts/covers/nasa_black_marble_cover.jpg)
 
 ## What the products contain
 
