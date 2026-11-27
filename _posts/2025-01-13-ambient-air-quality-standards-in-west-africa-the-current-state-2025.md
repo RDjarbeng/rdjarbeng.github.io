@@ -54,7 +54,7 @@ The pollutants in this post are PM2.5, PM10, nitrogen dioxide (NO2) and sulfur d
 
 ## What exists today
 
-All values are in µg/m³. The "How it compares" column shows how many times higher the national limit is than the WHO 2021 guideline for the same averaging period. Only countries whose limits I could read on a page I opened appear in the tables.
+Two tables follow: the first compares each country's legal limits for particles (PM2.5 and PM10) with the WHO 2021 guidelines, the second does the same for gases. All values are in µg/m³. The "How it compares" column shows how many times higher the national limit is than the WHO guideline for the same averaging period. A country appears only where a published source gives its values.
 
 ### Particles
 
@@ -63,7 +63,7 @@ All values are in µg/m³. The "How it compares" column shows how many times hig
 | Côte d'Ivoire | PM2.5 | Annual | 25 | 5 | 5 times |
 | Côte d'Ivoire | PM2.5 | 24 hours | No limit listed | 15 | Not regulated |
 | Ghana | PM2.5 | 24 hours | 35 | 15 | 2.3 times |
-| Nigeria | PM2.5 | Any | No limit in the regulations I read | 5 (annual), 15 (24 hours) | Not regulated |
+| Nigeria | PM2.5 | Any | No limit in the 2020 regulations | 5 (annual), 15 (24 hours) | Not regulated |
 | Senegal | PM2.5 | Annual | 25 | 5 | 5 times |
 | Senegal | PM2.5 | 24 hours | 75 | 15 | 5 times |
 | Benin | PM2.5 | Any | No limit | 5 (annual), 15 (24 hours) | Not regulated |
@@ -95,7 +95,7 @@ Sources: [Yapo et al. (2025)](https://www.scirp.org/pdf/gep_2173457.pdf) for Cô
 
 ### What the tables show
 
-Côte d'Ivoire's 2017 decree is the most complete particle standard in the tables. It covers PM2.5 and PM10, and its daily PM10 limit of 50 is close to the WHO level of 45. Ghana's 35 µg/m³ PM2.5 limit is 2.3 times the WHO daily level, the smallest gap among the PM2.5 limits. Senegal's 2019 PM2.5 limits are 5 times the WHO levels. Nigeria and Benin set PM10 limits that are 3 to 6 times the WHO guideline, and neither has a PM2.5 limit in the sources I read.
+Côte d'Ivoire's 2017 decree is the most complete particle standard in the tables. It covers PM2.5 and PM10, and its daily PM10 limit of 50 is close to the WHO level of 45. Ghana's 35 µg/m³ PM2.5 limit is 2.3 times the WHO daily level, the smallest gap among the PM2.5 limits. Senegal's 2019 PM2.5 limits are 5 times the WHO levels. Nigeria and Benin set PM10 limits that are 3 to 6 times the WHO guideline, and neither has a PM2.5 limit in the published sources.
 
 ### Compliant is not the same as safe
 
@@ -129,9 +129,9 @@ Part of the gap comes from age. Benin's instrument dates from 2001, long before 
 
 ### Countries with no confirmed standard
 
-**Mali** has two decrees from 2000 and 2001 on pollution control, and fuel standards exist, according to the 2020 review. I found no ambient limit values. The review says **Guinea** has no official criteria for regulating air quality, citing an earlier study by Schwela. For **Cabo Verde, Guinea-Bissau, Mauritania, Niger and Sierra Leone**, I found no confirmed standard. Their status is unknown rather than confirmed absent. The Health Effects Institute's 2022 list does not include them, which fits that picture.
+**Mali** has two decrees from 2000 and 2001 on pollution control, and fuel standards exist, according to the 2020 review. The sources give no ambient limit values. The review says **Guinea** has no official criteria for regulating air quality, citing an earlier study by Schwela. For **Cabo Verde, Guinea-Bissau, Mauritania, Niger and Sierra Leone**, the sources confirm no standard. Their status is unknown rather than confirmed absent. The Health Effects Institute's 2022 list does not include them, which fits that picture.
 
-Status for Nigeria comes from the regulations I read directly. Status for Ghana and Côte d'Ivoire comes from the sources named above. The rest comes from the December 2020 review, the 2022 list and the news reports cited. I have not checked national gazettes for instruments published after those dates.
+Status for Nigeria comes from the regulation text itself. Status for Ghana and Côte d'Ivoire comes from the sources named above. The rest comes from the December 2020 review, the 2022 list and the news reports cited. I have not checked national gazettes for instruments published after those dates.
 
 ## What is in progress
 
@@ -159,7 +159,7 @@ Researchers have also run low-cost sensor stations in Niamey (2022), Labé in Gu
 
 At the regional level, the 2020 review reports an ECOWAS-wide pledge, as of January 2020, to harmonise fuel quality and standards. I did not confirm its later enforcement. In 2026, Ghana hosted a four-day regional workshop on air quality data and sensors for West Africa, according to the [30 June 2026 report](https://www.myjoyonline.com/air-pollution-exceeds-epas-own-standards-across-most-of-ghana-authority-reveals/).
 
-On the WHO 2021 guidelines, I found no West African country that has adopted them as national law. Standards are under review or in preparation in Ghana, Togo, Côte d'Ivoire and Liberia. Whether the new limits will follow the 2021 guideline values is not stated in the sources I read.
+On the WHO 2021 guidelines, none of the sources shows a West African country that has adopted them as national law. Standards are under review or in preparation in Ghana, Togo, Côte d'Ivoire and Liberia. Whether the new limits will follow the 2021 guideline values is not stated in the sources.
 
 ## Where to find the data
 
