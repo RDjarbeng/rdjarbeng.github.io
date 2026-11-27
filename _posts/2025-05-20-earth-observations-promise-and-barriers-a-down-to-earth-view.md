@@ -42,6 +42,8 @@ Most of the examples below run on free data from government satellites such as S
 
 Landsat satellites photograph the same patch of ground again and again. Software compares the images and flags places where trees have disappeared. [Global Forest Watch](https://www.globalforestwatch.org/), run by the World Resources Institute (WRI), turns this into weekly alerts and yearly maps of tree cover loss. WRI reports that the tropics [lost 4.3 million hectares of primary forest in 2025](https://research.wri.org/gfr/latest-analysis-deforestation-trends). That is about 43,000 square kilometres, close to the size of Denmark. Rangers and journalists can use the alerts to spot illegal clearing while it is still going on.
 
+![Map of forest loss around Kisangani in the Democratic Republic of the Congo from 2001 to 2024, with recent clearing in orange and yellow](/assets/images/posts/earth-observation/kisangani-forest-loss-2001-2024.jpg "Forest loss around Kisangani, DR Congo, 2001 to 2024. NASA Earth Observatory image by Wanmei Liang, forest change data from the University of Maryland")
+
 ### Free maps of Africa's farms and water
 
 [Digital Earth Africa](https://www.digitalearthafrica.org/platform-resources/services) publishes ready-made maps for the whole continent. One shows where cropland is. Another shows lakes, rivers and reservoirs. Vegetation anomaly layers show where plants are greener or browner than usual. An agriculture officer can use them to spot a poor growing season without visiting every farm.
@@ -50,9 +52,18 @@ Landsat satellites photograph the same patch of ground again and again. Software
 
 The [NASA Harvest](https://nasaharvest.org/) programme combines satellite images with reports from the ground. It maps which crops grow where and estimates harvests, including in Ukraine and in Africa. Governments and aid agencies can then plan food imports or relief before shortages hit.
 
+They are also interesting for professionals in the tech space because some of their key impact areas include "data systems, artificial intelligence and machine learning
+
+On their website they say
+
+> Some key challenges to the uptake of satellite-derived information include access restrictions, inconvenience, difficulty of use, and lackluster automation. Our consortium framework enables us to work collaboratively across the agricultural sector and with the private sector in order to build accessible tools, ensure secure data sharing, and integrate with existing systems.
+
+
 ### Soil moisture and drought
 
 ESA's [SMOS satellite](https://earth.esa.int/eogateway/missions/smos) measures how wet the top few centimetres of soil are, worldwide. Scientists have used its data to build an index for monitoring long-term drought. For farmers who depend on rain, dry soil is an early sign of crop trouble.
+
+![Map of the Horn of Africa showing drought in 2022, with dry areas across Somalia, Kenya and Ethiopia](/assets/images/posts/earth-observation/horn-of-africa-drought-2022.jpg "The Horn of Africa drought, March to September 2022. NASA Earth Observatory image by Joshua Stevens, data from the Climate Hazards Center, UC Santa Barbara")
 
 ### Mapping where people live
 
@@ -61,6 +72,8 @@ Some satellites carry radar, often called SAR (synthetic aperture radar). They s
 ### Night lights and the economy
 
 Brighter lights at night often go with more economic activity. A [World Bank study](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/658061583574075223/not-by-night-lights-alone-measuring-economic-growth-and-development-in-africa-using-satellite-imagery) tested night lights as a measure of growth in Africa. Its title, "Not by night lights alone", sums up the finding that lights need other data alongside them. Such measures matter most where official statistics are scarce or out of date.
+
+![Night-time satellite view of Africa, Europe and the Middle East, with bright city lights across North and West Africa and dark rural areas in central Africa](/assets/images/posts/earth-observation/africa-city-lights-night.jpg "City lights seen from space. NASA Earth Observatory image by Robert Simmon, using Suomi NPP VIIRS data from Chris Elvidge, NOAA")
 
 ### Putting unmapped places on the map
 
@@ -94,7 +107,7 @@ Companies sell sharper or more frequent images than most free sources. [Planet](
 
 ### Open platforms
 
-My post [Google Earth Engine: a useful tool for satellite imagery](/gee_recommendation/) shows what Earth Engine can do. [Microsoft's Planetary Computer](https://planetarycomputer.microsoft.com/) is a large catalogue of environmental data for sustainability work. [Radiant Earth](https://www.radiant.earth/) runs [Source Cooperative](https://source.coop/), a place to publish and share open geospatial data. [Open Data Cube](https://www.opendatacube.org/) is the open-source software behind Digital Earth Africa.
+My post [Google Earth Engine: a useful tool for satellite imagery](/gee_recommendation/) shows what Earth Engine can do. [Microsoft&#39;s Planetary Computer](https://planetarycomputer.microsoft.com/) is a large catalogue of environmental data for sustainability work. [Radiant Earth](https://www.radiant.earth/) runs [Source Cooperative](https://source.coop/), a place to publish and share open geospatial data. [Open Data Cube](https://www.opendatacube.org/) is the open-source software behind Digital Earth Africa.
 
 ## Where to start
 
