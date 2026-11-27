@@ -97,11 +97,11 @@ The review does not state the status of The Gambia, Liberia, Mali, Niger or Togo
 
 ## Air quality data platforms
 
-Earlier versions of this post pointed to the U.S. Embassy monitors on AirNow. That page now returns an error. The [Centre for Research on Energy and Clean Air](https://energyandcleanair.org/us-embassy-aq-data-halt/) reports that AirNow's embassy data went offline on 4 March 2025, and that the State Department then said it would stop sharing embassy data, citing funding constraints.
+Earlier versions of this post pointed to the U.S. Embassy monitors on AirNow. That page now returns an error. The [Centre for Research on Energy and Clean Air](https://energyandcleanair.org/us-embassy-aq-data-halt/) reports that AirNow's embassy data went offline on 4 March 2025, and that the State Department then said it would stop sharing embassy data, citing funding constraints. Here is a screenshot of the airnow map when it was operational.
+![Airnow page showing map of the world with AIr quality indicators](/assets/images/airnow_africa.png "Map of the world with air quality indicators across U.S. embassies, captured before the data feed stopped in 2025")
 
 [OpenAQ](https://openaq.org/) is a free alternative. It is a nonprofit that publishes air quality measurements from many countries through a map and an open API.
 
-![Airnow page showing map of the world with AIr quality indicators](/assets/images/airnow_africa.png "Map of the world with air quality indicators across U.S. embassies, captured before the data feed stopped in 2025")
 
 ### References
 
