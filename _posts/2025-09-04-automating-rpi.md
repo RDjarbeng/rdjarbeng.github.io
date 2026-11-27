@@ -33,7 +33,7 @@ category: "IoT & Hardware"
 ---
 There are several ways to automate a Raspberry Pi to run a program automatically without needing to start it manually from the terminal. Whether you're using Python, Node.js, or another language, the following methods can help you ensure that your script runs whenever your Raspberry Pi boots up.
 
-### Methods to Automate Script Execution
+### Methods to automate script execution
 
 1. **Using systemd:**
 
@@ -108,7 +108,7 @@ Start the service manually to test it:
 sudo systemctl start myscript.service
 ```
 
-### Monitoring and Managing Your Service
+### Monitoring and managing your service
 
 Now your script should start automatically when the Raspberry Pi boots up and will continue running in the background. You can use the following commands to manage your service:
 

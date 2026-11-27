@@ -20,7 +20,7 @@ series: "SpaceX and Starlink"
 series_part: 4
 category: "Space & Satellites"
 ---
-SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology with several groundbreaking innovations:
+SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology with several notable innovations:
 
 ![SpaceX rocket models -Credit: https://www.aliexpress.com/item/1005005544563210.html](/assets/images/space_x_gallery.avif "SpaceX rocket models -Credit:SpaceX")
 
@@ -38,9 +38,9 @@ SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology 
 
 - **Starship**: This is SpaceX's ambitious project aimed at interplanetary travel, particularly to Mars. Starship is designed to be fully reusable, both the spacecraft and its first-stage booster, Super Heavy. The goal is to make space travel as routine as air travel, drastically cutting costs and enabling human settlement on other planets.
 
-![Starship from spaceX - credit: https://www.spacex.com/vehicles/starship/](/assets/images/Starship_spacex_website.jpg "Starship from spaceX - credit: SpaceX")
+![Starship from spaceX, credit: https://www.spacex.com/vehicles/starship/](/assets/images/Starship_spacex_website.jpg "Starship from spaceX, credit: SpaceX")
 
-- **Super Heavy**: The Super Heavy booster, equipped with 33 Raptor engines, is the first stage of the Starship system. It's designed to return to the launch site after launching Starship into orbit, where it's caught by specialized mechanical arms known as "chopsticks." This technology not only reduces costs but also speeds up the turnaround time for launches, crucial for SpaceX's vision of frequent Mars missions.
+- **Super Heavy**: The Super Heavy booster, equipped with 33 Raptor engines, is the first stage of the Starship system. It's designed to return to the launch site after launching Starship into orbit, where it's caught by specialized mechanical arms known as "chopsticks." This technology reduces costs and speeds up the turnaround time for launches, which matters for SpaceX's vision of frequent Mars missions.
 
 ## **Raptor Engines**
 
@@ -54,7 +54,7 @@ SpaceX, under the leadership of Elon Musk, has revolutionized rocket technology 
 
 ![Space X website screenshot](/assets/images/space_x_website_screenshot.png "Space X website screenshot")
 
-- SpaceX's advancements in rocket technology have not only reduced the cost of access to space but have also spurred competition, pushing other companies and space agencies towards innovation. The reusable aspect of their rockets has set a new standard in the industry, making space more accessible for commercial, scientific, and exploratory purposes.
+- SpaceX's advancements in rocket technology have reduced the cost of access to space and have also spurred competition, pushing other companies and space agencies towards innovation. The reusable aspect of their rockets has set a new standard in the industry, making space more accessible for commercial, scientific, and exploratory purposes.
 
 SpaceX's continuous innovation in rocket technology is paving the way for a future where space travel could be as common as international flights, with Mars colonization becoming a realistic goal. Follow their journey and achievements for a glimpse into the future of space exploration.
 

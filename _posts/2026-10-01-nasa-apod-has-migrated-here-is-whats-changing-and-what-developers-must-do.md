@@ -154,7 +154,7 @@ When refactoring your code, watch out for these changes:
 3. **Embedded HTML in Explanations**: The `explanation` string in the new API contains raw HTML tags, such as `<p>`, `<strong>Explanation: </strong>`, and anchor links. If you display this text in terminal applications, native UI labels, or markdown documents, you must strip or sanitize the HTML tags first.
 4. **Header Requirements**: Ensure your client sends a standard descriptive `User-Agent` header. Requests without a valid user agent may receive HTTP 403 Forbidden responses from cloud edge caches.
 
-### The Image Path Redirect Gotcha
+### The image path redirect gotcha
 
 A critical breaking change that caught many developers off guard involves legacy image asset paths. Historically, APOD images were hosted directly under URLs like `https://apod.nasa.gov/apod/image/YYMM/filename.jpg`.
 

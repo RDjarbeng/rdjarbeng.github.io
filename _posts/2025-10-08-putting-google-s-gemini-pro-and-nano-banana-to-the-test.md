@@ -60,7 +60,7 @@ I then asked it about the technology, specifically mentioning "Nano Banana," the
 
 To move beyond simple prompts, I uploaded a hand-drawn floor plan of a room with specific dimensions for the room itself, a bed, a table, a cupboard, and two doors. The task was simple: generate a design.
 
-### Picture 1 - Design my room
+### Picture 1: Design my room
 
 ![Room layout sketch with dimensions of door, table, bed and entrances](/assets/images/room_design.png "Room layout sketch with dimensions of door, table, bed and entrances")
 
@@ -68,7 +68,7 @@ The first attempt came back. It was a nicely rendered photorealistic room, but i
 
 ![Room layout from sketch by google nano-banana](/assets/images/20251014-173944.png "Room layout from sketch by google nano-banana")
 
-### Picture 2 - Remove the TV
+### Picture 2: Remove the TV
 
 A couple of problems with this photo. It added a TV I never mentioned and had placed the doors on the same wall, this looks more like a hotel room. Not a great start. I corrected it.
 

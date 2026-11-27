@@ -14,11 +14,11 @@ I finally picked up a copy of _Half of a Yellow Sun_ by Chimamanda Ngozi Adichie
 ![First Look: Half of a Yellow Sun Book Cover](/assets/images/half_of_a_yellow_sun_first_look.jpg "First Look: Half of a Yellow Sun")
 
 > 'Here is a new writer endowed with the gift of ancient storytellers'  
-> — **CHINUA ACHEBE**
+> **CHINUA ACHEBE**
 
 ![Front cover of the book](/assets/images/1000358677.jpg "Front cover of Half of a Yellow Sun")
 
-## What It's About - From the Blurb behind the book
+## What it's about: from the blurb behind the book
 
 Set in 1960s Nigeria, the story promises to follow three intersecting lives during a tumultuous time:
 
@@ -37,10 +37,10 @@ I'm looking forward to diving into this masterpiece and seeing if it lives up to
 Here are some testimonials to motivate me to finish it:
 
 > 'Vividly written, thrumming with life'  
-> — **JOYCE CAROL OATES**
+> **JOYCE CAROL OATES**
 
 > 'A magnificent novel'  
-> — **INDEPENDENT**
+> **INDEPENDENT**
 
 **PS:** 
 

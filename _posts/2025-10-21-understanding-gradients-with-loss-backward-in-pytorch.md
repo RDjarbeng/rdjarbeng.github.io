@@ -74,7 +74,7 @@ This is a crucial question: How does calling `loss.backward()` on the variable `
 
 When I first saw this, I was thinking maybe they are connected some how. But that didn't satisfy me, I needed answers.
 
-When we compute the loss, we calculate how far off our model's predictions are from the target values. Calling `loss.backward()` triggers the backpropagation process, which computes the gradients of the loss **with respect to each parameter** involved in the calculation — in this case, the `params`.
+When we compute the loss, we calculate how far off our model's predictions are from the target values. Calling `loss.backward()` triggers the backpropagation process, which computes the gradients of the loss **with respect to each parameter** involved in the calculation: in this case, the `params`.
 
 PyTorch tracks the operations performed on `params` and uses the chain of derivatives to calculate how much each element of `params` should change to reduce the loss.
 
@@ -143,7 +143,7 @@ Even though `loss` and `coeffs` are separate variables, the **computation graph*
 
 In this example, after calling `loss.backward()`, `coeffs.grad` will contain the gradients of `loss` with respect to `coeffs`. Now we understand how these two variables are related when calculating our gradients.
 
-## Breaking Down Gradient Calculation
+## Breaking down gradient calculation
 
 Let's break it down into steps:
 

@@ -38,7 +38,7 @@ Here's a breakdown of how he did it, what went wrong, and the lesson every creat
 
 ---
 
-## The $2,200/Week AI Playbook - with Google Veo3
+## The $2,200/week AI playbook with Google Veo3
 
 Mikey's strategy wasn't random; it was a clever combination of new technology and a specific market opportunity.
 
@@ -82,7 +82,7 @@ He describes the feeling as "PTSD," saying he was "traumatized" to even check hi
 
 And then it was.
 
-He got hit with "unoriginal content" violations—even though he made the videos himself with AI—and his accounts were banned.
+He got hit with "unoriginal content" violations, even though he made the videos himself with AI, and his accounts were banned.
 
 The worst part? He was left with **$3,722 in his US account that is completely frozen**. He can't access it. It's just... gone.
 

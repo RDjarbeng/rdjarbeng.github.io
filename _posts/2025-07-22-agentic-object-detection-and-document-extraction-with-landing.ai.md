@@ -89,7 +89,7 @@ Here are some ways this technology can benefit you, regardless of your technical
 - **Travel and International Documents:** Travelers can use document extraction to quickly understand foreign invoices or translate important papers, making international trips smoother. For example, extracting key details from a hotel receipt in another language can save time and reduce stress.
 - **Family Photo Albums:** A parent might use object detection to organize years of family photos by identifying specific events or objects, like all pictures from a beach vacation or those featuring a particular family member.
 
-These use cases demonstrate how Landing.ai's technology can simplify tasks, save time, and open up new possibilities for personal and professional growth. Whether you're organizing your home, learning something new, or running a small business, these tools can make your life easier and more efficient. Imagine the time you'd save if this technology could handle your document clutter or help you find that perfect photo from years ago—it's not just for tech experts; it's for anyone looking to make their day-to-day easier.
+These use cases demonstrate how Landing.ai's technology can simplify tasks, save time, and open up new possibilities for personal and professional growth. Whether you're organizing your home, learning something new, or running a small business, these tools can make your life easier and more efficient. Imagine the time you'd save if this technology could handle your document clutter or help you find that perfect photo from years ago. It's for anyone looking to make their day-to-day easier, not just tech experts.
 
 ## Landing.ai Video Demo
 

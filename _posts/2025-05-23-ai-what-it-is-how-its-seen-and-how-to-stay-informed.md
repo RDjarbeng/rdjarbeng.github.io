@@ -34,7 +34,7 @@ AI refers to systems that process data to perform specific tasks like recognizin
 - **Natural Language Processing (NLP):** Powers chatbots or language translation such as in Google Translate.
 - **Computer Vision:** Enables machines to “see,” like in facial recognition. Here's a simple example of object detection, one field of computer vision.![Computer vision: Object  -Cat -detection](/assets/images/rtdetr/cat_prediction_rtdetr.jpg "Computer vision: Object  -Cat -detection")
 
-AI is \_narrow\_—designed for specific tasks, not general human-like intelligence—and depends on quality data. It’s not conscious or magical, just a tool with limits.
+AI is \_narrow\_, designed for specific tasks rather than general human-like intelligence, and it depends on quality data. It’s not conscious or magical, just a tool with limits.
 
 ## How People Perceive AI
 
@@ -51,8 +51,8 @@ Movies fuel futuristic fantasies, and startups overhype capabilities. Platforms 
 
 Want to understand AI without diving into technical courses or code? Think of this as learning enough “AI English” to follow news and have informed conversations:
 
-- **Grasp the Basics:** AI is like a super-smart recipe follower—it takes data (ingredients), applies rules (algorithms), and produces results (predictions, text, etc.). It’s not thinking; it’s calculating. It excels at tasks like recommending movies but can’t “feel” or solve every problem.
-- **Know What It Isn’t:** AI isn’t conscious, infallible, or a job-killer by default. It’s only as good as its data—garbage in, garbage out—and needs human oversight.
+- **Grasp the Basics:** AI is like a super-smart recipe follower. It takes data (ingredients), applies rules (algorithms), and produces results (predictions, text, etc.). It’s not thinking; it’s calculating. It excels at tasks like recommending movies but can’t “feel” or solve every problem.
+- **Know What It Isn’t:** AI isn’t conscious, infallible, or a job-killer by default. It’s only as good as its data (garbage in, garbage out), and it needs human oversight.
 - **Stay Updated Easily:**
 - Read accessible summaries in outlets like [MIT Technology Review](https://www.technologyreview.com/topic/artificial-intelligence/) or [The Verge](https://www.theverge.com/ai-artificial-intelligence).
 - Follow AI discussions on X, focusing on practical use cases (e.g., how AI helps doctors or marketers).

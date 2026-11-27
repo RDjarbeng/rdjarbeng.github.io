@@ -32,7 +32,7 @@ category: "Travel & Places"
 ---
 Got another update from my friend Robert on his Europe trip! Today, he's in **Prague, Czech Republic**, and sent me some really cool stuff.
 
-## This Crazy Spinning Kafka Statue
+## This crazy spinning Kafka statue
 
 First up, check out this incredible statue called the **Head of Franz Kafka**. It's huge; 11 meters tall, and made of 42 layers of steel that are constantly moving. The pieces spin around, and Kafka's face comes together and then breaks apart again. The different part of the face moves in horizontal slices, the eyes, nose and mouth giving it an outworldly almost alien vibe. It looks wild especially at night.
 
@@ -54,14 +54,14 @@ The statue really brings to life the mind of the author it represents. Franz Kaf
 Some of his most famous works include:
 
 - **The Metamorphosis:** This novella tells the bizarre story of salesman Gregor Samsa, who wakes up one morning to find himself inexplicably transformed into a giant insect. It's a powerful exploration of isolation and the dehumanizing aspects of modern life.
-- **The Trial:** An unfinished novel about Josef K., a man arrested and prosecuted by an inaccessible authority, with the nature of his crime never revealed to him or the reader. It delves into themes of guilt, justice, and oppressive systems.
+- **The Trial:** An unfinished novel about Josef K., a man arrested and prosecuted by an inaccessible authority, with the nature of his crime never revealed to him or the reader. It explores themes of guilt, justice, and oppressive systems.
 - **The Castle:** Another unfinished novel, where a land surveyor named K. arrives in a village dominated by a mysterious castle and struggles endlessly to gain access to its authorities. It's a parable about bureaucracy, detachment, and the elusive search for belonging.
 
-And yes, Kafka is absolutely related to the word **"Kafkaesque"**! This adjective is used to describe concepts, situations, or experiences that are reminiscent of his writings – typically complex, bizarre, illogical, or nightmarishly bureaucratic systems that are hard to escape.
+And yes, Kafka is absolutely related to the word **"Kafkaesque"**! This adjective is used to describe concepts, situations, or experiences that are reminiscent of his writings, typically complex, bizarre, illogical, or nightmarishly bureaucratic systems that are hard to escape.
 
 ## Prague's Ancient Astronomical Wonder: The Orloj
 
-Robert also shared a picture of another incredible Prague landmark – the **Astronomical Clock**, known locally as the Orloj, located on the Old Town Hall. This isn't just any clock; it's a masterpiece of medieval engineering and art!
+Robert also shared a picture of another incredible Prague landmark, the **Astronomical Clock**, known locally as the Orloj, located on the Old Town Hall. This isn't just any clock; it's a masterpiece of medieval engineering and art!
 
 ![Astronomical clock in Prague](/assets/images/1000272100.jpg "Astronomical clock in Prague")
 

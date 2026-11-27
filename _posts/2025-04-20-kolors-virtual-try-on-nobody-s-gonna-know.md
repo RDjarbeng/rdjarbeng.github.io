@@ -51,7 +51,7 @@ Here’s a visual guide to the process:
 
 If you’re curious to try it yourself, you can check out the tool on its [Huggingface space](https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On).
 
-_Note: This isn’t my app—I’m just sharing my experience with it._
+_Note: This isn’t my app. I’m just sharing my experience with it._
 
 Well here are some of my attempts below_:_
 

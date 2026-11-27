@@ -57,9 +57,9 @@ Working on this project has been a tremendous learning experience in JavaScript 
 - **Additional Features**: Include birthdays, confetti effects, repeat countdowns, and shareable countdowns for team deadlines, reminders, and notifications 🔊.
 - **Mobile App Version**: An alpha version built with Flutter for iOS and Android is underway. We’re also exploring using an AI model to classify and group countdowns.
 
-We’ve received many feature requests and comments from users and testers (notable testers are shown on the about page). This project is more than just a reminder app—it's a platform with growing capabilities. We welcome contributions, especially those who can design a time-themed logo ⏱⏳.
+We’ve received many feature requests and comments from users and testers (notable testers are shown on the about page). This project is more than just a reminder app. It's a platform with growing capabilities. We welcome contributions, especially those who can design a time-themed logo ⏱⏳.
 
-Currently, we’re on version 2.3.0 and aiming for version 2.5.0 before the end of the month. What started as a simple app during Christmas vacation has grown into a robust tool! 😊
+Currently, we’re on version 2.3.0 and aiming for version 2.5.0 before the end of the month. What started as a simple app during Christmas vacation has grown into a useful tool! 😊
 
 Explore the app here:
 

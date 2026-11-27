@@ -129,7 +129,7 @@ Added a personal page where I discuss non-technical stuff. It's basically anothe
 
 A lot of things were more difficult than expected. Pagination was, still is, a pain in Jekyll. Version 1 and 2 of the jekyll paginate plugin both fail. I even tried leaving the task to an agentic agent to try and figure it out. It tried and failed to get the posts to show up, but got the page navigation working. Then it realized it wasn't working, tried different workarounds, changed from v1 to v2, back to v1, then back to v2, and eventually gave up. I had to study the code to try and figure out what was wrong with the pagination plugin and ended up creating my own pagination plugin.
 
-### SEO - Google Search Console is weird
+### SEO: Google Search Console is weird
 
 At one point we had 500+ indexed pages on Google (mostly tags and categories pages)
 
@@ -146,7 +146,7 @@ You might be surprised to hear this, but creating 160 (or even 1,000) small mark
 
 ## AI Tools
 
-AI tools have been a game changer for me. AI - Gemini pro supercharged my content creation process, thumbnails and image creation for the covers. It also enabled me to create and edit cover images whilst editing posts when using copilot or the chat in the antigravity browser saving me time. The graph of posts over time shows a clear increase in the number of posts after I started using SveltiaCMS but also this increase is also due to the fact that I started using AI tools to create posts and edit them much faster.
+AI tools have been a game changer for me. Gemini pro supercharged my content creation process, thumbnails and image creation for the covers. It also enabled me to create and edit cover images whilst editing posts when using copilot or the chat in the antigravity browser saving me time. The graph of posts over time shows a clear increase in the number of posts after I started using SveltiaCMS but also this increase is also due to the fact that I started using AI tools to create posts and edit them much faster.
 
 ### Top AI Models Used
 

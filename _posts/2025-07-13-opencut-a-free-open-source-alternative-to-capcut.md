@@ -40,7 +40,7 @@ category: "Web & Software"
 
 > **Update (March 2026):** The OpenCut project has officially entered beta! You can now try the beta version for yourself directly in the browser.
 
-If you're a video editor frustrated with CapCut's recent changes, you're not alone. CapCut—once heavily marketed as the ultimate free app—has aggressively shifted to a restrictive freemium model. They've stealthily added watermarks to exported videos for free users and locked previously essential free features behind new paywalls. 
+If you're a video editor frustrated with CapCut's recent changes, you're not alone. CapCut, once heavily marketed as the ultimate free app, has aggressively shifted to a restrictive freemium model. They've stealthily added watermarks to exported videos for free users and locked previously essential free features behind new paywalls. 
 
 Many creators feel understandably betrayed by this bait-and-switch tactic. This growing discontent has sparked massive interest in open-source editing alternatives, and one highly promising project is stepping up to fill the gap: **OpenCut**.
 
@@ -67,7 +67,7 @@ If you encounter any issues during these initial beta phases, the developer comm
 
 The sudden shift in CapCut’s pricing model highlights the inherent risks of relying heavily on proprietary, closed-source software. The rug can be pulled out from under your entire workflow overnight. 
 
-Open-source projects like OpenCut empower users by offering absolute transparency, community-driven development, and freedom from unexpected software rent. By supporting OpenCut, you’re not just getting a free video editor—you’re contributing to a movement for fair, accessible creative tools that actually respect their users.
+Open-source projects like OpenCut empower users by offering absolute transparency, community-driven development, and freedom from unexpected software rent. By supporting OpenCut, you’re getting a free video editor and contributing to a movement for fair, accessible creative tools that actually respect their users.
 
 ## Conclusion
 
@@ -84,6 +84,6 @@ I tweeted about this:
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
-## Other Established Video Editing Alternatives
+## Other established video editing alternatives
 
 If OpenCut is too early in development for your specific professional needs, check out these other powerful desktop editors below:

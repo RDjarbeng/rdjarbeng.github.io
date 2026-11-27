@@ -32,7 +32,7 @@ ai_assistance:
 ---
 Are you interested in the future of space technology? Ever wonder how Elon Musk's Starlink satellites work? Get ready to be blown away by this interactive video by Branch Education that uses 3D animation to explain the technical details of satellite signal propagation, beamforming, 64-QAM modulation, and more.
 
-If you’re not a technical person—the video is designed to make the complex details of Starlink satellites easy to understand and engaging for everyone. With visual storytelling techniques, Branch Education breaks down the science behind Starlink and makes it accessible to all.
+If you’re not a technical person, the video is designed to make the complex details of Starlink satellites easy to understand and engaging for everyone. With visual storytelling techniques, Branch Education breaks down the science behind Starlink and makes it accessible to all.
 
 For those who are not familiar with Starlink, it is a satellite internet service designed to provide low-latency, high-speed internet to areas of the world where traditional broadband access is limited or non-existent. With thousands of satellites orbiting the Earth, Starlink aims to revolutionize the way we access the internet and connect with people around the world.
 

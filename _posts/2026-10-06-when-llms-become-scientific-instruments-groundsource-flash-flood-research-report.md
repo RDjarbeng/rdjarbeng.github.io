@@ -55,11 +55,11 @@ category: "AI"
 
 In February 2026, Google Research released **Groundsource**, an open-access global dataset of 2.6 million historical flood events extracted from news articles using Gemini models. Google published the dataset on [Zenodo](https://zenodo.org/records/18647054) alongside a preprint on [EarthArXiv](https://doi.org/10.31223/x5rr2k) (*Mayo, Zlydenko, Bootbool, Nearing, Cohen, et al.*).
 
-Google used Gemini to scan **5 million news articles across 80+ languages**, generating **2.6 million geo-tagged flood events** spanning 150+ countries. This archive serves as the ground-truth training data behind Google's operational flash flood forecasting system.
+Google used Gemini to scan **5 million news articles across 80+ languages**, generating **2.6 million geo-tagged flood events** spanning 150+ countries. This archive is the ground-truth training data behind Google's operational flash flood forecasting system.
 
 > The largest existing global disaster databases, such as GDACS, held roughly 10,000 flood events, mostly major disasters. Groundsource records 2.6 million localized events, showing that language models can turn unstructured news archives into structured scientific datasets.
 
-In [our initial March breakdown on Google's flash flood system](/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system/), we covered the broader operational announcement—how Google deployed AI to forecast urban flash floods 24 hours in advance. This follow-up report takes a different angle: rather than evaluating the forecasting system from press announcements, we independently downloaded the raw 667 MB Groundsource Parquet archive to stress-test the underlying data, evaluate geographic representation, and verify whether the published claims hold up under empirical inspection.
+In [our initial March breakdown on Google's flash flood system](/how-google-turned-5-million-news-articles-into-a-flash-flood-warning-system/), we covered the broader operational announcement: how Google deployed AI to forecast urban flash floods 24 hours in advance. This follow-up report takes a different angle: rather than evaluating the forecasting system from press announcements, we independently downloaded the raw 667 MB Groundsource Parquet archive to stress-test the underlying data, evaluate geographic representation, and verify whether the published claims hold up under empirical inspection.
 
 ---
 
@@ -120,11 +120,11 @@ Over 65% of all records come from the last six years. To see whether this reflec
 
 ## Data topology: entity polygons vs. regional disasters
 
-When looking at disaster data, most people expect each record to represent an entire storm system—like "Hurricane Helene" or "2024 European floods." In Groundsource, however, the **median event area is just 2.05 km²** (about the size of Monaco or New York's Central Park), while the mean is 142.0 km².
+When looking at disaster data, most people expect each record to represent an entire storm system, like "Hurricane Helene" or "2024 European floods." In Groundsource, however, the **median event area is just 2.05 km²** (about the size of Monaco or New York's Central Park), while the mean is 142.0 km².
 
-This sharp contrast happens because Groundsource is **entity-based rather than storm-based**. The pipeline does not aggregate rainstorms into broad regional events; instead, it extracts specific localized entities named in news stories—individual neighborhood boundaries, suburban street networks, or local municipal districts.
+This sharp contrast happens because Groundsource is **entity-based rather than storm-based**. The pipeline does not aggregate rainstorms into broad regional events; instead, it extracts specific localized entities named in news stories: individual neighborhood boundaries, suburban street networks, or local municipal districts.
 
-To illustrate how concentrated these footprints are, **Figure 3** shows the frequency distribution of event sizes on a logarithmic scale. The heavy skew toward the lower end reveals that most extracted records are hyper-local—meaning instead of marking an entire province or watershed as underwater, each record pinpoints a tiny, self-contained pocket like an underpass, a single residential block, or a small town square:
+To illustrate how concentrated these footprints are, **Figure 3** shows the frequency distribution of event sizes on a logarithmic scale. The heavy skew toward the lower end reveals that most extracted records are hyper-local, meaning instead of marking an entire province or watershed as underwater, each record pinpoints a tiny, self-contained pocket like an underpass, a single residential block, or a small town square:
 
 ![Event Area Footprint Distribution](/assets/images/groundsource/figure3.png "Distribution of event geographic areas in km² (logarithmic scale). Over 82% of all events have footprints smaller than 50 km².")
 
@@ -193,7 +193,7 @@ Google ran a manual audit of 400 randomly selected entries evaluated by human ra
 2. **Updated publication timestamps:** When an outlet updated an article days after an event, the system calculated relative dates ("last Tuesday") from the update time, shifting the event date by a week.
 3. **Temporal guessing:** Vague phrasing like "last September" sometimes led Gemini to guess a specific date (such as September 1) instead of dropping the record.
 
-> *"The actual errors in the dataset are likely not independent and identically distributed (i.i.d.). For instance, the geocoding system may exhibit variable accuracy with location names across different languages, potentially concentrating spatial errors in specific regions or countries."* — Mayo et al.
+> *"The actual errors in the dataset are likely not independent and identically distributed (i.i.d.). For instance, the geocoding system may exhibit variable accuracy with location names across different languages, potentially concentrating spatial errors in specific regions or countries."* (Mayo et al.)
 
 ---
 
@@ -316,16 +316,16 @@ print(monthly.tail(5))
 
 ## Resources
 
-- 📊 [Enriched Dataset on Hugging Face](https://huggingface.co/datasets/rdjarbeng/groundsource-enriched) — Decoded coordinates, geographic regions, durations
-- 🌐 [Full Interactive Space](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis) — Complete interactive exploration with maps
-- 💾 [Original Dataset on Zenodo](https://doi.org/10.5281/zenodo.18647053) — CC-BY 4.0
-- 📄 [EarthArXiv Preprint (Mayo et al., 2026)](https://doi.org/10.31223/x5rr2k) — *Groundsource: A Dataset of Flood Events from News*
+- 📊 [Enriched Dataset on Hugging Face](https://huggingface.co/datasets/rdjarbeng/groundsource-enriched): decoded coordinates, geographic regions, durations
+- 🌐 [Full Interactive Space](https://huggingface.co/spaces/rdjarbeng/groundsource-analysis): complete interactive exploration with maps
+- 💾 [Original Dataset on Zenodo](https://doi.org/10.5281/zenodo.18647053), licensed CC-BY 4.0
+- 📄 [EarthArXiv Preprint (Mayo et al., 2026)](https://doi.org/10.31223/x5rr2k): *Groundsource: A Dataset of Flood Events from News*
 - 📰 [Google Blog](https://blog.google/technology/ai/gemini-communities-predict-crises/)
 - 🔬 [Google Research Blog](https://research.google/blog/protecting-cities-with-ai-driven-flash-flood-forecasting/)
 
 ### Key Scientific References
 
-- **Riverine AI Benchmark:** Nearing et al. (2024). *Global prediction of extreme floods in ungauged watersheds.* [Nature 627, 559–563](https://doi.org/10.1038/s41586-024-07145-1).
+- **Riverine AI Benchmark:** Nearing et al. (2024). *Global prediction of extreme floods in ungauged watersheds.* [Nature 627, 559-563](https://doi.org/10.1038/s41586-024-07145-1).
 - **State-Space Hydrology:** Shams Eddin et al. (2025). *RiverMamba: A State Space Model for Global River Discharge and Flood Forecasting.* [arXiv:2505.22535](https://arxiv.org/abs/2505.22535).
 - **All-Weather SAR Flood Mapping:** Alberti et al. (2024). *Kuro Siwo: 33 billion m² under the water.* [DOI:10.52202/079017-1204](https://doi.org/10.52202/079017-1204).
 - **Epidemic Text Mining:** *Epidemic Information Extraction for Event-Based Surveillance Using Large Language Models.* [DOI:10.1007/978-981-97-4581-4_17](https://doi.org/10.1007/978-981-97-4581-4_17).

@@ -27,10 +27,10 @@ Glad to acquire my [Amazon Web Services (AWS)](https://www.linkedin.com/feed/upd
 
 ## Domains tested:
 
-1. Designing Secure Architectures - 30%
-2. Designing Resilient Architectures - 26%
-3. Designing High-Performing Architectures - 24%
-4. Designing Cost-Optimized Architectures - 20%
+1. Designing Secure Architectures: 30%
+2. Designing Resilient Architectures: 26%
+3. Designing High-Performing Architectures: 24%
+4. Designing Cost-Optimized Architectures: 20%
 
 ---
 

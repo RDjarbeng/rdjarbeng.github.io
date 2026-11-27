@@ -36,7 +36,7 @@ video: ''
 image_alt: "Cover image for Discover Graduate Programs at Carnegie Mellon University Africa"
 category: "Research & Learning"
 ---
-Carnegie Mellon University Africa (CMU-Africa), located in Rwanda, offers three master's programs designed to equip students with the skills needed to address global challenges in technology and engineering. These programs—Master of Science in Information Technology (MSIT), Master of Science in Electrical and Computer Engineering (MS ECE), and Master of Science in Engineering Artificial Intelligence (MS EAI)—are structured for aspiring professionals in Africa and beyond. Here’s an overview of each program:
+Carnegie Mellon University Africa (CMU-Africa), located in Rwanda, offers three master's programs designed to equip students with the skills needed to address global challenges in technology and engineering. These programs are the Master of Science in Information Technology (MSIT), Master of Science in Electrical and Computer Engineering (MS ECE), and Master of Science in Engineering Artificial Intelligence (MS EAI). They are structured for aspiring professionals in Africa and beyond. Here’s an overview of each program:
 
 ## **Master of Science in Information Technology (MSIT)**
 
@@ -57,7 +57,7 @@ A key feature of the program is its focus on practical experience, with students
 
 ## **Master of Science in Electrical and Computer Engineering (MS ECE)**
 
-The MS ECE program is a **10-16 month intensive degree** covering a broad range of fields, from nanotechnology to large-scale systems. Students delve into applications such as:
+The MS ECE program is a **10-16 month intensive degree** covering a broad range of fields, from nanotechnology to large-scale systems. Students explore applications such as:
 
 - Communications and networking
 - Robotics and computer vision

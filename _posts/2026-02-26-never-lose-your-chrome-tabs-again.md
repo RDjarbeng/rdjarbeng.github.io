@@ -22,7 +22,7 @@ category: "How-to Guides"
 
 When a Windows update unexpectedly interrupts your work and forces a restart, you don't have to worry about losing all your carefully organized Chrome windows and tabs.
 
-You also don't have to go through the tedious process of restoring the tabs manually using keyboard commands like `Ctrl+Shift+T` on Windows or `Cmd+Shift+T` on Mac—which I used to do all the time.
+You also don't have to go through the tedious process of restoring the tabs manually using keyboard commands like `Ctrl+Shift+T` on Windows or `Cmd+Shift+T` on Mac, which I used to do all the time.
 
 Instead, you can enable a simple setting in Google Chrome that tells the browser to automatically pick up right where you left off.
 

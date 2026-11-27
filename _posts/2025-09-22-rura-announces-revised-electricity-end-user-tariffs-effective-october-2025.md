@@ -67,7 +67,7 @@ For a detailed breakdown of the new rates, see the tables below (VAT exclusive; 
 
 The last three columns are the maximum demand charge in RWF per kVA per month.
 
-| Industry Category | Energy Charge (RWF/kWh) | Peak Hours (6:00 PM - 10:59 PM) | Off-Peak Hours (11:00 PM - 7:59 AM) | Shoulder Hours (8:00 AM - 5:59 PM) |
+| Industry Category | Energy Charge (RWF/kWh) | Peak Hours (6:00 PM to 10:59 PM) | Off-Peak Hours (11:00 PM to 7:59 AM) | Shoulder Hours (8:00 AM to 5:59 PM) |
 | --- | --- | --- | --- | --- |
 | **Small** | 175 | 11,017 | 0 | 4,008 |
 | **Medium** | 133 | 10,514 | 0 | 3,588 |

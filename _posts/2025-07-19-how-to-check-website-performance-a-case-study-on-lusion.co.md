@@ -47,7 +47,7 @@ Browser developer tools (available in Chrome, Firefox, Edge, etc.) let you inspe
 3. **Check Load Times**:
 
 - The **Timeline** or **Waterfall** view shows how long each resource takes to load.
-- On my high-speed connection, Lusion.co took **10 seconds** to fully load. Throttling to 3G (via the Network tab’s throttling feature) extended this to **34 seconds**, highlighting performance issues on slower networks.
+- On my high-speed connection, Lusion.co took **10 seconds** to fully load. Throttling to 3G (via the Network tab’s throttling feature) extended this to **34 seconds**. That exposes performance issues on slower networks.
 
 4. **Tips**:
 
@@ -55,7 +55,7 @@ Browser developer tools (available in Chrome, Firefox, Edge, etc.) let you inspe
 - Filter by file type (e.g., “Img” or “Media”) to pinpoint heavy assets.
 - Check for lazy-loading, which Lusion.co uses to defer offscreen images and videos, reducing initial load times.
 
-### Method 2: Using Online Tools
+### Method 2: Using online tools
 
 Online tools provide a user-friendly, automated way to analyze performance and offer optimization suggestions. Here are three popular options, with results from Lusion.co using **Google PageSpeed Insights**:
 

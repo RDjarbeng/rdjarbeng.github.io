@@ -36,7 +36,7 @@ When it comes to measuring solar radiation for agricultural, meteorological, or 
 
 ### Quality and Accuracy
 
-The Davis sensor is designed with high-quality materials and technology to ensure accurate readings, which is crucial for applications where solar radiation data directly affects decision-making, like in farming or weather stations. The precision of this sensor might justify its cost for those in need of dependable data.
+The Davis sensor is designed with high-quality materials and technology to ensure accurate readings, which matters for applications where solar radiation data directly affects decision-making, like in farming or weather stations. The precision of this sensor might justify its cost for those in need of dependable data.
 
 ![Solar radiation sensor from Davis](/assets/images/Solar Radiation Sensor - SKU 6450.webp "Solar radiation sensor from Davis")
 

@@ -20,7 +20,7 @@ Here's Uganda on a map of africa taken from Wikipedia
 
 ![Uganda in Africa (-mini map -rivers) from Wikipedia showing Uganda in maroon color on a border map of Africa](/assets/images/Uganda_in_Africa_%28-mini_map_-rivers%29.png "Uganda in Africa ")
 
-## The beginning - Kigali
+## The beginning: Kigali
 
 The journey was done by coach bus from Nyabugogo bus park and took approximately 11 hours.
 
@@ -40,7 +40,7 @@ Departing from Kigali, it only took us about two hours to hit the Rwanda-Uganda 
 
 Waiting in the cool night air, the border process was fairly quick since there were only a few other buses ahead of us. Here is how it went: First, a health screening where they checked our temperatures and verified yellow fever vaccination cards for West Africans like myself (picture below). Second, a luggage scan and checkout at Rwandan immigration. Finally, we crossed to Ugandan immigration. As a Ghanaian, I didn't need a visa, so answering a few routine questions and showing them our Toastmasters event poster was enough to get us cleared.
 
-_Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops—drivers may not wait!_
+_Travel Tip: Always keep your passport and vaccination card handy at East African borders, and stay close to your bus during rest stops, as drivers may not wait!_
 
 Here is an example of the passport sized vaccination card for illustration
 

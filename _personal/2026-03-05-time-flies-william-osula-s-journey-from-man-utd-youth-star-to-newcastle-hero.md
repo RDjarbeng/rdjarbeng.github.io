@@ -53,7 +53,7 @@ Newcastle's official account posted the moment soon after:
 
 Watch the full brilliant sequence: the skill to retain possession, the drive, and that rocket finish.
 
-### From Academy Promise to Cult Hero
+### From academy promise to cult hero
 
 Osula, who moved from Man Utd's youth setup to Sheffield United before joining Newcastle in 2024 for around £10-15m, has quickly become a fan favorite on Tyneside. Eddie Howe revealed post-match that Osula had stayed late after training the previous day specifically practicing that type of curling finish, and nailed most of them. Written in the stars.
 

@@ -60,7 +60,7 @@ It's important to understand the tax implications of your investments:
 - **Dividends**: Subject to an **8% withholding tax**, which is deducted at the source.
 - **Capital Gains**: Currently, capital gains on listed securities are **exempt from tax** to encourage investment on the exchange.
 
-## Opening Your First Brokerage Account
+## Opening your first brokerage account
 
 Before you can invest on the GSE, you'll need to open a brokerage account with a licensed stockbroker. The Securities & Exchange Commission (SEC) regulates all stockbrokers in Ghana to ensure investor protection.
 
@@ -105,7 +105,7 @@ You can fund your brokerage account through:
 
 Funds are usually available for trading within 24 hours.
 
-## Understanding Stock Trading Basics
+## Understanding stock trading basics
 
 ### Trading Hours
 
@@ -128,7 +128,7 @@ When researching stocks, pay attention to:
 > [!TIP]
 > **GSE Composite Index (GSE-CI)**: Keep an eye on this index. It tracks the general performance of the entire market, helping you gauge if the overall market is trending up or down.
 
-## Placing Your First Trade
+## Placing your first trade
 
 Once your account is funded, you're ready to make your first investment. You don't need millions to start; you can begin with as little as **GHS 50 or GHS 100**, as many stocks trade for just a few cedis per share. Start small and focus on learning the process.
 

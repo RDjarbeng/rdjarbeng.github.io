@@ -26,7 +26,7 @@ series: "Getting Started with Machine Learning"
 series_part: 4
 category: "AI"
 ---
-Are you fascinated by machine learning but have no idea where to start? Do you find yourself jumping between YouTube tutorials, blog posts, and dense textbooks, only to end up more confused than when you began? This is a common struggle, but what you need is a structured path—a single roadmap that takes you from zero to capable.
+Are you fascinated by machine learning but have no idea where to start? Do you find yourself jumping between YouTube tutorials, blog posts, and dense textbooks, only to end up more confused than when you began? This is a common struggle, but what you need is a structured path, a single roadmap that takes you from zero to capable.
 
 This is that roadmap.
 
@@ -90,9 +90,9 @@ A model isn't useful if it just sits on your laptop. This newly added section pr
 
 ---
 
-## Start Your Journey Today
+## Start your journey today
 
-If you're serious about learning machine learning, you need a resource that is built for you—the beginner who is motivated but needs direction. This package provides the structure, the practical exercises, and the comprehensive coverage you need to succeed.
+If you're serious about learning machine learning, you need a resource that is built for you: the beginner who is motivated but needs direction. This package provides the structure, the practical exercises, and the comprehensive coverage you need to succeed.
 
 The project is completely free, open-source, and even welcomes contributions if you want to become part of its development later on.
 

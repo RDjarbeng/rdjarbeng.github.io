@@ -34,7 +34,7 @@ Alright, let's get DecapCMS up and running. Hold on, I can't complete some of th
 
 Or so I thought.
 
-### DecapCMS - the pain 
+### DecapCMS: the pain 
 
 ![DecapCMS admin page failure ](/assets/images/cms_post/decap_failure_white.png)
 
@@ -66,7 +66,7 @@ Eventually I gave in and hosted the site on Netlify and managed to get the CMS r
 
 ### DecapCMS-the exit
 
-After a long time- *a couple of days*- I got tired of waiting for updates to this issue and began looking for alternatives. Then I found SveltiaCMS. It claimed to be a CMS like Netlify CMS but built from the ground up with Svelte, unlike DecapCMS. At this point I was pretty skeptical about any CMS for good reason. However, I couldn't just let this end like this. Sunk cost fallacy - remember!
+After a long time (*a couple of days*) I got tired of waiting for updates to this issue and began looking for alternatives. Then I found SveltiaCMS. It claimed to be a CMS like Netlify CMS but built from the ground up with Svelte, unlike DecapCMS. At this point I was pretty skeptical about any CMS for good reason. However, I couldn't just let this end like this. Sunk cost fallacy, remember!
 
 ## Hello Sveltia CMS
 

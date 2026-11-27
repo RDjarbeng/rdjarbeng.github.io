@@ -34,4 +34,4 @@ Usually I delete spam/phishing emails, but this one was so blatantly fake and hi
 
 My favorite part is this completely disjointed paragraph: *"If you are yet to own or be an active stake holder in Tesla Stakehold Club, this is a great opportunity to join us... knowing that you are joining a mission that has evolved in 2026 from accelerating sustainable energy to a broader goal."* What? It starts off talking about a 'stakehold club' (whatever that means) and ends up vaguely rambling about a broader goal.
 
-And the best part? They really expect someone to believe that the second richest man in the world—after me, of course 😅—is out here sending personal emails to ensure random people "earn profits as little as $10k-$20k weekly." 😆
+And the best part? They really expect someone to believe that the second richest man in the world (after me, of course 😅) is out here sending personal emails to ensure random people "earn profits as little as $10k-$20k weekly." 😆

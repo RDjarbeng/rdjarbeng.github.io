@@ -28,7 +28,7 @@ While much of the world is deep into 2026 on the Gregorian calendar, Ethiopia (a
 
 ### Why September?
 
-Ethiopia follows its own ancient calendar, closely related to the Coptic and Julian systems, with 12 months of 30 days plus a short 13th month called _Pagume_. As a result, the Ethiopian year runs roughly 7–8 years behind the Western one. New Year’s Day falls on 11 September (or 12 September in the year after an Ethiopian leap year).
+Ethiopia follows its own ancient calendar, closely related to the Coptic and Julian systems, with 12 months of 30 days plus a short 13th month called _Pagume_. As a result, the Ethiopian year runs roughly 7 to 8 years behind the Western one. New Year’s Day falls on 11 September (or 12 September in the year after an Ethiopian leap year).
 
 The timing is beautifully intentional. It marks the end of the long _kiremt_ rainy season. The skies clear, the highlands turn lush green, and bright yellow daisies known as **Adey Abeba** (the Meskel daisy) blanket the countryside. These flowers have become the living symbol of renewal, hope, and the arrival of spring.
 
@@ -40,11 +40,11 @@ The name _Enkutatash_ (እንቁጣጣሽ) is usually translated as “gift of j
 
 - Families attend church services in the morning.
 - Homes are cleaned and decorated with fresh grass and Adey Abeba flowers.
-- A special meal — often featuring _doro wat_ (spicy chicken stew) with _injera_ — is shared.
+- A special meal, often featuring _doro wat_ (spicy chicken stew) with _injera_, is shared.
 - Children (especially young girls in new clothes) go door to door carrying bouquets of yellow daisies, singing traditional New Year songs such as “Abebayehoy,” and exchanging greetings and small gifts.
 - Coffee ceremonies, visits to relatives and friends, and a general atmosphere of gratitude and fresh beginnings fill the day.
 
-Enkutatash is both a religious and a cultural celebration — a moment of reflection, forgiveness, and looking forward with optimism.
+Enkutatash is both a religious and a cultural celebration: a moment of reflection, forgiveness, and looking forward with optimism.
 
 Wishing everyone a joyful, peaceful, and prosperous Ethiopian New Year. May 2019 bring health, abundance, and happiness to all across Ethiopia and the diaspora.
 

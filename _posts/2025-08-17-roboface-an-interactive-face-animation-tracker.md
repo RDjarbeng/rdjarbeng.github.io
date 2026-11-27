@@ -30,7 +30,7 @@ I want you to imagine a character that tracks your mouse and expresses emotions 
 
 ## 😄 What It Does
 
-The face shifts between emotional states—happy, surprised, bored, or neutral—based on mouse position and activity, acting like a **finite state machine**:
+The face shifts between emotional states (happy, surprised, bored, or neutral) based on mouse position and activity, acting like a **finite state machine**:
 
 - Eyes track the cursor for a lively effect.
 - Gets happier (smiling, blushing) when the mouse is closer.

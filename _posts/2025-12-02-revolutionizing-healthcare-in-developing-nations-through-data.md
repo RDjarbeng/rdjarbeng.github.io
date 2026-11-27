@@ -25,7 +25,7 @@ Jeremy Howard, a prominent figure in artificial intelligence and healthcare inno
 
 ## The Scale of the Problem
 
-In many developing countries, the healthcare situation is dire. Take Nigeria as an example - the country would need to multiply its current physician workforce by 12 just to reach standard healthcare coverage levels. This would require an investment of US$51 billion, which is ten times their current annual healthcare budget [World Economic Forum Report, 2014].
+In many developing countries, the healthcare situation is dire. Take Nigeria as an example: the country would need to multiply its current physician workforce by 12 just to reach standard healthcare coverage levels. This would require an investment of US$51 billion, which is ten times their current annual healthcare budget [World Economic Forum Report, 2014].
 
 ## A Data-Driven Solution
 
@@ -50,7 +50,7 @@ This approach is already showing results in various implementations:
 
 By embracing these technological solutions, developing nations can potentially bypass traditional healthcare development stages. This leapfrogging effect could help establish more efficient, accessible, and affordable healthcare systems where they're needed most.
 
-The future of healthcare in developing nations doesn't just lie in adding more doctors - it's about smartly using technology to maximize the impact of existing medical expertise.
+The future of healthcare in developing nations doesn't just lie in adding more doctors. It's about smartly using technology to maximize the impact of existing medical expertise.
 
 Reference:
 

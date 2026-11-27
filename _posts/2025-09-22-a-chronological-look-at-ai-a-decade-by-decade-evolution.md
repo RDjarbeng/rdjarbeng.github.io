@@ -116,7 +116,7 @@ Shakey carried an onboard television camera, an optical rangefinder, and bump se
 
 - **Why it is included**: These projects demonstrated the real-world limits of early AI. ELIZA exposed the human tendency to mistake pattern matching for genuine intelligence. Shakey showed that trying to navigate the messy physical world using pure deductive logic creates a massive computing bottleneck.
 - **The significance**: They proved that solving clean academic puzzles does not translate cleanly to messy real-world environments.
-- **What it influences later**: ELIZA serves as the earliest case study in chatbot psychology and user trust, issues that dominate conversations around modern AI companions. Shakey produced the A* pathfinding algorithm, which is still used today in GPS mapping software, robotics, and video game navigation.
+- **What it influences later**: ELIZA is the earliest case study in chatbot psychology and user trust, issues that dominate conversations around modern AI companions. Shakey produced the A* pathfinding algorithm, which is still used today in GPS mapping software, robotics, and video game navigation.
 
 Despite these engineering milestones, the entire field was about to hit a theoretical wall.
 

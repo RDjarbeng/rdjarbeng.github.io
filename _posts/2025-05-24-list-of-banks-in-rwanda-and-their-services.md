@@ -71,7 +71,7 @@ Main Headquarters: [Nairobi, Kenya](https://en.wikipedia.org/wiki/I%26M_Bank_Lim
     - Foreign exchange services for multiple currencies, including spot and forward transactions, and currency swaps for qualifying customers.
     - BRISTK transfer service for near real-time transfers within I&M Bank’s network (Rwanda, Kenya, Tanzania) in USD, RWF, KES, and TZS.
     - Diaspora banking services, including remittance management, mortgages, and personal transaction accounts.
-    - Loans (personal, business, mortgage) with interest rates ranging from 16–19.5% (negotiable after 1–3 months of banking).
+    - Loans (personal, business, mortgage) with interest rates ranging from 16 to 19.5% (negotiable after 1 to 3 months of banking).
 - **Other Countries of Operation**: I&M Bank operates in Kenya, Tanzania, Uganda, and Mauritius (via a joint venture).
 - **Notes for Foreigners**: A strong choice for those with regional ties in East Africa or needing diaspora services. The BRISK transfer system is a standout for fast cross-border transactions within the I&M network.
 
@@ -89,7 +89,7 @@ Main Headquarters: [Nairobi, Kenya](https://en.wikipedia.org/wiki/I%26M_Bank_Lim
 - **Interest Rates**: Interest offered on fixed deposit accounts, but specific rates for RWF or USD accounts are not publicly available; inquire directly.
 - **Services**:
     - Foreign exchange products for international trade and remittances.
-    - Consumer loans, micro-business loans, and trade finance, with loan interest rates ranging from 14–25% (eligible after 6 months of banking).
+    - Consumer loans, micro-business loans, and trade finance, with loan interest rates ranging from 14 to 25% (eligible after 6 months of banking).
     - Call deposit accounts, fixed deposit accounts, and current accounts tailored for individuals and businesses.
 - **Other Countries of Operation**: Equity Bank Group operates in Kenya, Uganda, Tanzania, South Sudan, and the Democratic Republic of Congo.
 - **Notes for Foreigners**: Suitable for those seeking loan products or multi-currency accounts. The bank’s regional presence is beneficial for businesses or individuals with operations across East Africa.
@@ -119,14 +119,14 @@ Headquarters: [Kigali, Rwanda](https://en.wikipedia.org/wiki/BPR_Bank_Rwanda)
 
 - **Account Types**: Offers RWF and USD accounts, with multi-currency support for select international currencies.
 
-![BPR bank buildingin downtown Kigali](/assets/images/1000189531.jpg "BPR bank buildingin downtown Kigali - Photo credit Richard Djarbeng")
+![BPR bank buildingin downtown Kigali](/assets/images/1000189531.jpg "BPR bank building in downtown Kigali. Photo credit Richard Djarbeng")
 
 - **Fees**:
     - USD accounts: $15 initial deposit for non-RWF accounts. Monthly fees for USD accounts not disclosed; contact the bank for details.
 - **Interest Rates**: Fixed deposit accounts offer interest, but rates are not publicly available; inquire directly.
 - **Services**:
     - Foreign exchange services and international transfers via partnerships with Western Union and MoneyGram.
-    - Personal, business, and microfinance loans with interest rates ranging from 19–21%.
+    - Personal, business, and microfinance loans with interest rates ranging from 19 to 21%.
     - Mobile banking and digital platforms for convenient account access.
 - **Other Countries of Operation**: BPR is part of Atlas Mara, which operates in several African countries, including Zambia and Mozambique, but BPR itself is Rwanda-focused.
 - **Notes for Foreigners**: A good option for those seeking microfinance or digital banking solutions, with a strong local presence.
@@ -134,7 +134,7 @@ Headquarters: [Kigali, Rwanda](https://en.wikipedia.org/wiki/BPR_Bank_Rwanda)
 ## Key Considerations for Foreigners
 
 - **Account Opening Requirements**:
-    - Most banks require a passport, 1–2 passport photos, and an initial deposit (typically $3–$20 for non-RWF accounts). Some may request a work permit or 3-month bank statement from a previous bank, but this varies (e.g., Equity Bank requires 6 months of banking for loans, while I&M may require only 1 month).
+    - Most banks require a passport, 1 to 2 passport photos, and an initial deposit (typically $3 to $20 for non-RWF accounts). Some may request a work permit or 3-month bank statement from a previous bank, but this varies (e.g., Equity Bank requires 6 months of banking for loans, while I&M may require only 1 month).
 - **Foreign Exchange**:
     - Rwanda’s foreign exchange market is liberalized, allowing banks to offer multi-currency accounts and international transfers with minimal restrictions. However, exporters must repatriate earnings within three months.
 - **Cash vs. Digital**:
@@ -156,10 +156,10 @@ Headquarters: [Kigali, Rwanda](https://en.wikipedia.org/wiki/BPR_Bank_Rwanda)
 | Bank | Headquarters | Account Types | USD Initial Deposit | USD Monthly Fee | Interest on USD Accounts | Key Services | Regional Presence | Notes for Foreigners |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Ecobank Rwanda | Lomé, Togo | RWF, USD | $20 | $4 | None | FX (multi-currency), SWIFT/Western Union, loans, mobile app for transfers (free intra-network USD) | 33 African countries (e.g., Nigeria, Ghana, Kenya) | Ideal for multi-currency/regional transfers; watch 1% USD withdrawal fee; app FX rates unfavorable. |
-| I&M Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-FC (EUR, GBP, etc.) | None (as of May 2025) | $2 | None | FX (spot/forward/swaps), BRISK transfers (East Africa), diaspora services, loans (16–19.5%) | Kenya, Tanzania, Uganda, Mauritius | Strong for East Africa ties/diaspora; BRISK for fast cross-border. |
-| Equity Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-currency (GBP, EUR, etc.) | $15 | Not disclosed | None | FX for trade/remittances, loans (14–25%), micro-business finance, deposits | Kenya, Uganda, Tanzania, South Sudan, DRC | Good for loans/multi-currency; regional ops beneficial for East Africa businesses. |
+| I&M Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-FC (EUR, GBP, etc.) | None (as of May 2025) | $2 | None | FX (spot/forward/swaps), BRISK transfers (East Africa), diaspora services, loans (16 to 19.5%) | Kenya, Tanzania, Uganda, Mauritius | Strong for East Africa ties/diaspora; BRISK for fast cross-border. |
+| Equity Bank Rwanda | Nairobi, Kenya | RWF, USD, multi-currency (GBP, EUR, etc.) | $15 | Not disclosed | None | FX for trade/remittances, loans (14 to 25%), micro-business finance, deposits | Kenya, Uganda, Tanzania, South Sudan, DRC | Good for loans/multi-currency; regional ops beneficial for East Africa businesses. |
 | Bank of Kigali | Kigali, Rwanda | RWF, USD, FX support for majors | $20 | Not disclosed | None | FX/SWIFT/Western Union, savings/current/fixed deposits, loans (competitive) | Primarily Rwanda; global correspondents | Reliable for stability/local focus; largest market share (>30%). |
-| BPR Bank Rwanda | Kigali, Rwanda | RWF, USD, select multi-currency | $15 | Not disclosed | None | FX/Western Union, microfinance loans (19–21%), mobile/digital banking | Rwanda-focused; Atlas Mara in Zambia, Mozambique | Suited for microfinance/digital solutions; strong local presence. |
+| BPR Bank Rwanda | Kigali, Rwanda | RWF, USD, select multi-currency | $15 | Not disclosed | None | FX/Western Union, microfinance loans (19 to 21%), mobile/digital banking | Rwanda-focused; Atlas Mara in Zambia, Mozambique | Suited for microfinance/digital solutions; strong local presence. |
 
 For the latest details on fees, interest rates, or specific services, visit bank branches in Kigali or check their official websites:
 

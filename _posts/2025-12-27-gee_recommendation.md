@@ -90,7 +90,7 @@ To try another city or month, change the coordinates and the two dates. Satellit
 
 This tool significantly helped my project work, and I hope it might be useful for others too.
 
-GEE web interface - [Image source](https://www.researchgate.net/figure/The-Earth-Engine-interactive-development-environment_fig3_318246365)
+GEE web interface: [Image source](https://www.researchgate.net/figure/The-Earth-Engine-interactive-development-environment_fig3_318246365)
 ![image](https://github.com/user-attachments/assets/213b0937-d8b0-4b12-82fc-9220c977fd39)
 
 

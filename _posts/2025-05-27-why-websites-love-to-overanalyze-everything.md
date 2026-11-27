@@ -25,7 +25,7 @@ So, I was scrolling through Twitter the other day, and I came across this gem: a
  For example, if you're looking for "how to bake a chocolate cake," you might first get a history lesson on chocolate, a rundown of different cake types, and a dissertation on baking techniques before they even mention the recipe. Why? Because search engines like Google reward comprehensive content. They think, "Hey, this article covers everything about chocolate cakes, so it must be authoritative!" 
 
 > "Content that provides a complete answer to a user's query is more likely to rank higher in search results."  
-> — [Google's SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+> From [Google's SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
 
 ## Keeping You Hooked
 
@@ -47,7 +47,7 @@ Lastly, there's the competitive aspect. In a world where everyone's fighting for
 
 ## Wrapping It Up
 
-So, next time you're frustrated by a website that seems to overanalyze everything before getting to the point, remember: it's not just you. It's SEO, user engagement, backlinks, SEO tools, and competition all working together to create these text-heavy monsters. But hey, at least now you know why. And maybe, just maybe, you'll find a shortcut to skip to the good stuff.
+So, next time you're frustrated by a website that seems to overanalyze everything before getting to the point, remember that you are not the only one. SEO, user engagement, backlinks, SEO tools, and competition all working together to create these text-heavy monsters. But hey, at least now you know why. And maybe, just maybe, you'll find a shortcut to skip to the good stuff.
 
 ---
 

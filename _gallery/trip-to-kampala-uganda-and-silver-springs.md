@@ -12,4 +12,4 @@ Cover image for Trip to Uganda- Kampala & silver springs
 
 **Additional comments:**
 
-The journey from Kigali to Kampala marks a significant chapter in this road trip adventure. Arriving at the Silver Springs Hotel provided a perfect base for exploration in the heart of Uganda. The lobby architecture sets a welcoming tone with its expansive layout and classic decor. This hotel serves as an ideal sanctuary for weary travelers looking to recharge before diving into the vibrant energy of the city. Every corner of Kampala holds a new discovery for those willing to embrace the local atmosphere and rich cultural heritage.
+The journey from Kigali to Kampala marks a significant chapter in this road trip adventure. Arriving at the Silver Springs Hotel provided a perfect base for exploration in the heart of Uganda. The lobby architecture sets a welcoming tone with its expansive layout and classic decor. This hotel is an ideal sanctuary for weary travelers looking to recharge before diving into the vibrant energy of the city. Every corner of Kampala holds a new discovery for those willing to embrace the local atmosphere and rich cultural heritage.

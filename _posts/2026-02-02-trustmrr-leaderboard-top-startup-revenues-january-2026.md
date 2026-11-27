@@ -55,7 +55,7 @@ Enter **TrustMRR**.
 
 TrustMRR is a database of *verified* startup revenues. It was built by prolific indie maker **Marc Lou** (famously in just 24 hours) to solve the crisis of credibility in the ecosystem. 
 
-Unlike other directories where founders simply type in their revenue, TrustMRR requires a direct, cryptographic proof of income. It is the "blue checkmark" for startup financials—but instead of paying Elon Musk $8 on Twitter, you pay with transparency.
+Unlike other directories where founders simply type in their revenue, TrustMRR requires a direct, cryptographic proof of income. It is the "blue checkmark" for startup financials, but instead of paying Elon Musk $8 on Twitter, you pay with transparency.
 
 ### How does verification work?
 The "secret sauce" of TrustMRR is its reliance on API integrations rather than human honesty.
@@ -79,4 +79,4 @@ Now that we know these numbers are real, looking at them is much more interestin
 2.  **AI is for Niches**: The successful AI companies here aren't building "General AI"; they are building "AI for Resumes" (**Rezi**), "AI for Social Posts" (**Followr**), or "AI for DMs" (**DM Champ**). Specialization is winning.
 3.  **B2B Infrastructure is Sticky**: Tools like **Cometly** (ad tracking) and **1Capture** (payments) solve painful, expensive problems for other businesses, leading to solid recurring revenue.
 
-TrustMRR's leaderboard is a great reminder that while hype cycles come and go, the companies building real utility—whether it's helping someone get a job, lose weight, or sell a product—are the ones ringing the register.
+TrustMRR's leaderboard is a great reminder that while hype cycles come and go, the companies building real utility (whether it's helping someone get a job, lose weight, or sell a product) are the ones ringing the register.

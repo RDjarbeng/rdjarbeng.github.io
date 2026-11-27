@@ -24,17 +24,17 @@ series_part: 1
 category: "Web & Software"
 ---
 
-Tired of using a plain `@gmail.com` for business, newsletters, portfolios, or professional emails? You can set up unlimited custom email addresses (like `hello@yourname.com` or `rdjarbeng@yourbrand.com`) **completely free** — no monthly fees for Google Workspace or similar services.
+Tired of using a plain `@gmail.com` for business, newsletters, portfolios, or professional emails? You can set up unlimited custom email addresses (like `hello@yourname.com` or `rdjarbeng@yourbrand.com`) **completely free**, with no monthly fees for Google Workspace or similar services.
 
 This guide became super popular after a viral X (Twitter) thread, but many people get stuck because they don't have a domain yet, or they try the wrong SMTP settings for sending emails.
 
-This complete beginner-friendly tutorial covers **everything** from getting your first domain (free or very cheap) → setting up incoming mail with Cloudflare → sending from Gmail. No tech experience needed — follow along step by step.
+This complete beginner-friendly tutorial covers **everything** from getting your first domain (free or very cheap) → setting up incoming mail with Cloudflare → sending from Gmail. No tech experience needed. Follow along step by step.
 
 ## Why This Setup Is Awesome (and What to Know)
 
 **Pros**
 
-- Totally free after you get the domain (domain can cost $0–$12/year)
+- Totally free after you get the domain (domain can cost $0 to $12/year)
 - Unlimited email addresses/aliases (e.g., info@, support@, yourname@)
 - Emails arrive in your regular Gmail inbox
 - Send emails from your custom address directly in Gmail (web, mobile app, etc.)
@@ -42,12 +42,12 @@ This complete beginner-friendly tutorial covers **everything** from getting your
 
 **Limitations**
 
-- Cloudflare handles **receiving** only — we use Gmail to **send**
+- Cloudflare handles **receiving** only, and we use Gmail to **send**
 - Outgoing emails use Gmail's servers → good deliverability, but not perfect for massive cold emailing (may hit spam folders sometimes)
 - Gmail free account limit: \~500 emails/day
 - For super high volume or perfect branding, you could add a cheap SMTP service later
 
-If you're just starting — this is one of the best zero-cost setups in 2026.
+If you're just starting, this is one of the best zero-cost setups in 2026.
 
 ## Step 0: Get Your Domain Name (Free or Super Cheap Options)
 
@@ -59,7 +59,7 @@ If you're a student (university, college, bootcamp, etc.):
 
 1. Go to [education.github.com/pack](https://education.github.com/pack)
 2. Sign up or log in with your GitHub account → verify student status (usually with school email or ID)
-3. Once approved (usually instant or 1–2 days), scroll to the "Domains" section
+3. Once approved (usually instant or 1 to 2 days), scroll to the "Domains" section
 4. Choose an offer:
 
 - Namecheap: Free 1-year `.me` domain (great for personal sites/emails)
@@ -68,14 +68,14 @@ If you're a student (university, college, bootcamp, etc.):
 5. Redeem the offer → follow their instructions to register the domain
 6. Done! You get a real domain for free for 1 year (renewal is usually cheap afterward).
 
-### Option 2: Very Cheap for Anyone (\~$1–$10 First Year)
+### Option 2: Very Cheap for Anyone (\~$1 to $10 First Year)
 
 Popular beginner-friendly registrars with promos (as of February 2026):
 
-- **Namecheap** (recommended for simplicity): Often $0.99–$6.49 for first-year `.com`, `.site`, `.online`, etc. Use promo codes like `99SPECIAL` for 99¢ domains or check current deals at namecheap.com/promos. Free WHOIS privacy included.
-- **Porkbun**: At-cost pricing, beginner dashboard, often $5–$10 for `.com`.
-- **Cloudflare Registrar** (if you plan to use Cloudflare anyway): At-cost renewals, no markup (\~$10–$11/year for `.com`).
-- **Hostinger** or **Wix**: Sometimes bundle a free domain for 1 year with cheap hosting (but you don't need hosting here — just the domain).
+- **Namecheap** (recommended for simplicity): Often $0.99 to $6.49 for first-year `.com`, `.site`, `.online`, etc. Use promo codes like `99SPECIAL` for 99¢ domains or check current deals at namecheap.com/promos. Free WHOIS privacy included.
+- **Porkbun**: At-cost pricing, beginner dashboard, often $5 to $10 for `.com`.
+- **Cloudflare Registrar** (if you plan to use Cloudflare anyway): At-cost renewals, no markup (\~$10 to $11/year for `.com`).
+- **Hostinger** or **Wix**: Sometimes bundle a free domain for 1 year with cheap hosting (but you don't need hosting here, just the domain).
 
 Steps to register (example with Namecheap):
 
@@ -85,11 +85,11 @@ Steps to register (example with Namecheap):
 4. Create account → pay (credit card, PayPal, etc.)
 5. After purchase, you'll get login access to manage the domain
 
-> **Tip:** Choose `.com`, `.me`, `.dev`, or `.app` — they look professional and are widely accepted.
+> **Tip:** Choose `.com`, `.me`, `.dev`, or `.app`. They look professional and are widely accepted.
 
 ## Step 1: Add Your Domain to Cloudflare & Enable Email Routing (Incoming Mail)
 
-Cloudflare is free and secure — it will handle receiving emails and forward them to your Gmail.
+Cloudflare is free and secure. It will handle receiving emails and forward them to your Gmail.
 
 1. Go to [dash.cloudflare.com](https://dash.cloudflare.com) and sign up for a free account (email + password).
 2. After logging in, click **Add a site** (or **Onboard a domain**).
@@ -102,7 +102,7 @@ Cloudflare is free and secure — it will handle receiving emails and forward th
 - Change from default to **Custom** → paste the two Cloudflare nameservers
 - Save
 
-7. Wait 5–60 minutes (sometimes up to 24 hours) for changes to propagate → refresh Cloudflare dashboard until it says "Active".
+7. Wait 5 to 60 minutes (sometimes up to 24 hours) for changes to propagate → refresh Cloudflare dashboard until it says "Active".
 8. In Cloudflare dashboard → select your domain → go to **Email** → **Email Routing**.
 9. Click **Get started** or **Enable** → Cloudflare adds the needed MX records automatically.
 10. Go to **Email** → **Routes** or **Custom addresses** → **Create address**.
@@ -113,7 +113,7 @@ Cloudflare is free and secure — it will handle receiving emails and forward th
 
 11. Test: Send an email to your new custom address → it should appear in Gmail within seconds!
 
-> **Note:** You can create unlimited addresses — all forward to the same Gmail (or different ones).
+> **Note:** You can create unlimited addresses. They all forward to the same Gmail (or to different ones).
 
 ## Step 2: Prepare Gmail to Send (Must-Do: App Password)
 
@@ -124,11 +124,11 @@ Gmail needs extra security for sending from custom addresses.
 3. Search for **App passwords** → click it.
 4. Select app: **Mail**
    Select device: **Other** (name it e.g., "Custom Email")
-5. Generate → copy the 16-character password (save it somewhere safe — no spaces).
+5. Generate → copy the 16-character password (save it somewhere safe, with no spaces).
 
 ## Step 3: Add Your Custom Email to Gmail (Send From It!)
 
-> **Important:** Do **not** use Cloudflare's server for sending — use Gmail's.
+> **Important:** Do **not** use Cloudflare's server for sending. Use Gmail's.
 
 1. Open Gmail → click the gear icon → **See all settings** → **Accounts and Import** tab.
 2. Under **Send mail as** → click **Add another email address**.
@@ -172,7 +172,7 @@ In Cloudflare DNS → add/update these TXT records:
 
   (Name/Host: `_dmarc`)
 
-No DKIM from this free setup — that's normal.
+No DKIM from this free setup. That's normal.
 
 ## Testing & Tips
 
@@ -180,7 +180,7 @@ No DKIM from this free setup — that's normal.
 - Set your custom address as default in Gmail if you want.
 - Mobile: Works perfectly in Gmail app.
 - Stuck on verification? Regenerate App Password (common issue).
-- Propagation slow? Wait and refresh — normal for new domains.
+- Propagation slow? Wait and refresh. That's normal for new domains.
 
 ## Alternatives If You Need More
 

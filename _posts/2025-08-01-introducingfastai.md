@@ -32,7 +32,7 @@ What you'll learn:
 
 <img src="/assets/images/fastaibook.webp" alt="drawing" height ="400px" />
 
-This is the book that forms the basis for the course. It is recommended to read this as you complete the course. There’s a few ways to read the book – you can buy it as a paper book or Kindle ebook, or you can read it for free [online](https://github.com/fastai/fastbook). The whole book is written as Jupyter notebooks, so you can also execute all the code in the book yourself.
+This is the book that forms the basis for the course. It is recommended to read this as you complete the course. There’s a few ways to read the book: you can buy it as a paper book or Kindle ebook, or you can read it for free [online](https://github.com/fastai/fastbook). The whole book is written as Jupyter notebooks, so you can also execute all the code in the book yourself.
 
 Google’s Director of Research, Peter Norvig, says “_The book does an impressive job of covering the key applications of deep learning in computer vision, natural language processing, and tabular data processing, but also covers key topics like data ethics that some other books miss. Altogether, this is one of the best sources for a programmer to become proficient in deep learning._”
 

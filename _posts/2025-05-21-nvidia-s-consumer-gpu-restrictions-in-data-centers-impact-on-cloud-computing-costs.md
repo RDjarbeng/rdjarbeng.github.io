@@ -27,7 +27,7 @@ NVIDIA, a leading manufacturer of graphics processing units (GPUs), has restrict
 
 In 2017, NVIDIA updated the EULA for its GeForce and TITAN drivers to prohibit their use in data centers, except for blockchain-related processing. The [EULA](https://www.nvidia.com/en-us/drivers/geforce-license/) states that consumer GPUs, like the RTX 3090 or 4090, are not licensed for data center workloads such as artificial intelligence (AI), machine learning, or high-performance computing (HPC). Without NVIDIA's proprietary drivers, these GPUs cannot achieve their full computational potential, effectively barring their use in professional data center settings.
 
-This restriction forces data center operators to use NVIDIA's enterprise-grade GPUs, such as the Tesla, Quadro, or A100 series. For example, a consumer-grade RTX 4090, with substantial VRAM and compute power, retails for around $1,500–$2,000, while an [NVIDIA A100 can cost $10,000 or more](https://www.anandtech.com/show/16294/nvidia-announces-a100-80gb-gpu-for-ai). This price gap significantly increases costs for cloud providers, which are often passed on to customers.
+This restriction forces data center operators to use NVIDIA's enterprise-grade GPUs, such as the Tesla, Quadro, or A100 series. For example, a consumer-grade RTX 4090, with substantial VRAM and compute power, retails for around $1,500 to $2,000, while an [NVIDIA A100 can cost $10,000 or more](https://www.anandtech.com/show/16294/nvidia-announces-a100-80gb-gpu-for-ai). This price gap significantly increases costs for cloud providers, which are often passed on to customers.
 
 ## Why Does NVIDIA Enforce This Policy?
 
@@ -50,7 +50,7 @@ The restriction has drawn criticism from various groups, who argue it limits acc
 
 These critics argue that NVIDIA’s policy prioritizes profit over accessibility, as consumer GPUs can handle many data center tasks effectively, especially for single-precision workloads common in AI training.
 
-## Impact on Cloud Computing Costs
+## Impact on cloud computing costs
 
 NVIDIA’s restriction directly increases cloud computing costs. Data center providers must purchase enterprise GPUs to comply with the EULA, raising their capital expenditure. These costs are often passed on to customers, making GPU-based cloud services more expensive. For example, startups and researchers using cloud platforms for AI training face higher fees, while smaller providers struggle to offer competitive pricing. The 2017 crackdown on Japanese providers, as noted by [AnandTech](https://www.anandtech.com/show/12170/nvidia-updates-geforce-titan-driver-eula-banning-datacenter-usage), forced some to raise prices or exit the market, reducing options for affordable GPU computing.
 
@@ -58,6 +58,6 @@ While NVIDIA has stated it does not intend to pursue legal action against non-co
 
 ## Conclusion
 
-NVIDIA’s restriction on consumer GPUs in data centers, enforced through its EULA, ensures that providers use hardware designed for professional workloads but comes at a steep cost. While NVIDIA justifies the policy with technical and support considerations, critics—including academic researchers, small cloud providers, and tech commentators—argue it restricts innovation and accessibility. As demand for GPU computing in AI and HPC grows, this policy continues to drive up cloud computing costs, creating challenges for budget-conscious users and smaller providers. The debate underscores the tension between market control and democratizing access to powerful computing resources.
+NVIDIA’s restriction on consumer GPUs in data centers, enforced through its EULA, ensures that providers use hardware designed for professional workloads but comes at a steep cost. While NVIDIA justifies the policy with technical and support considerations, critics, including academic researchers, small cloud providers, and tech commentators, argue it restricts innovation and accessibility. As demand for GPU computing in AI and HPC grows, this policy continues to drive up cloud computing costs, creating challenges for budget-conscious users and smaller providers. The debate is about the tension between market control and democratizing access to powerful computing resources.
 
 _The cover image is a picture of Douglas County servers from Google_

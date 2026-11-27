@@ -85,5 +85,5 @@ Check out the incredible moment captured during the recovery test:
 
 <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/yQal3BxWFt">pic.twitter.com/yQal3BxWFt</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1880025359636394458?ref_src=twsrc%5Etfw">January 16, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-![Space X super heavy booster catch - Credits: Elon Musk on Twitter/X](/assets/images/booster_catch.png "Space X super heavy booster catch - Credits: Elon Musk on Twitter/X")
+![Space X super heavy booster catch. Credit: Elon Musk on Twitter/X](/assets/images/booster_catch.png "Space X super heavy booster catch. Credit: Elon Musk on Twitter/X")
 

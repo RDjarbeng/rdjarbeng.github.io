@@ -31,7 +31,7 @@ Google’s new Antigravity code editor promises a revolution where AI agents wri
 
 Furthermore, **Google Antigravity**, the new "Agent-First" Integrated Development Environment (IDE) located at [antigravity.google](https://antigravity.google/) appears to be a modification of Microsoft's _VS Code IDE_ designed to allow AI agents to write, test, and execute code autonomously. However, before integrating this tool into a workflow, it is crucial to examine the License Agreement.
 
-![A dark, futuristic image for a tech review. A curved computer monitor displays the Google Antigravity IDE interface with lines of code. Above the screen, a glowing circuit pattern connects to a large Google 'G' logo, symbolizing the flow of AI data. In the foreground, a transparent tablet features the words "TERMS OF SERVICE" next to a magnifying glass and a tag reading "REVIEW," emphasizing the post's focus on the license agreement.](/assets/images/antigravity_cover_image.webp "Google Antigravity IDE: Review of the Terms of Service and AI Security Implications")
+![A dark, futuristic image for a tech review. A curved computer monitor displays the Google Antigravity IDE interface with lines of code. Above the screen, a glowing circuit pattern connects to a large Google 'G' logo, showing the flow of AI data. In the foreground, a transparent tablet features the words "TERMS OF SERVICE" next to a magnifying glass and a tag reading "REVIEW." The post focuses on the license agreement.](/assets/images/antigravity_cover_image.webp "Google Antigravity IDE: Review of the Terms of Service and AI Security Implications")
 
 Below is an analysis of the terms of service and an overview of what developers should know before clicking "Accept."
 
@@ -89,10 +89,10 @@ For transparency, the full text of the agreement follows below. You can also vie
 > BY CLICKING “I ACCEPT,” SIGNING AN ORDER FORM THAT REFERENCES THESE TERMS OF SERVICE, OR BY DOWNLOADING, INSTALLING, OR OTHERWISE ACCESSING OR USING THE GOOGLE ANTIGRAVITY SERVICES (HEREIN REFERRED TO AS THE “SERVICE”), YOU AGREE THAT YOU HAVE READ AND UNDERSTOOD, AND, AS A CONDITION TO YOUR USE OF THE SERVICE, YOU AGREE TO BE BOUND BY, THE FOLLOWING TERMS AND CONDITIONS:
 > >
 > 1.  All of the following documents govern your use of the Service:
->     a. the Google Terms of Service (the “Universal Terms”) - [https://policies.google.com/terms](https://policies.google.com/terms);
+>     a. the Google Terms of Service (the “Universal Terms”): [https://policies.google.com/terms](https://policies.google.com/terms);
 >     b. these Google Antigravity Additional Terms of Service (the “Google Antigravity Terms”);
->     c. the Google Privacy Policy (the “Privacy Policy”) - [https://policies.google.com/privacy](https://policies.google.com/privacy); and
->     d. the Generative AI Additional Terms of Service - [https://policies.google.com/terms/generative-ai](https://policies.google.com/terms/generative-ai).
+>     c. the Google Privacy Policy (the “Privacy Policy”): [https://policies.google.com/privacy](https://policies.google.com/privacy); and
+>     d. the Generative AI Additional Terms of Service: [https://policies.google.com/terms/generative-ai](https://policies.google.com/terms/generative-ai).
 > >
 > 2.  Please read each of the above documents carefully, starting with the Universal Terms. Collectively, we refer to the Universal Terms, these Google Antigravity Terms, the Privacy Policy, and the Generative AI Terms of Service as the “Agreement.” This Agreement is a binding contract between you and Google regarding your use of the Service. If you do not agree to all Agreement terms, do not use the Service.
 > >

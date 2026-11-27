@@ -22,10 +22,10 @@ In **Kenya**, the Central Bank of Kenya (CBK) has explicitly prohibited the use 
 
 **Uganda** has joined the regional crackdown, with the Bank of Uganda (BoU) cautioning the public against defacing currency. The BoU warned that using glue, tape, or pins on banknotes for gifts like money cakes or bouquets compromises the currency's integrity. While gifting cash is acceptable, the willful destruction of banknotes is punishable under the Bank of Uganda Act.
 
-**Nigeria** has also taken a strong stance against this trend. The Central Bank of Nigeria (CBN) has listed money bouquets as a form of naira abuse, emphasizing that such practices deface the legal tender. Offenders risk imprisonment or fines for treating the national currency with disrespect. [Source: Daily Post Nigeria](https://dailypost.ng/2023/02/10/cbn-lists-money-bouquet-as-naira-abuse/)
+**Nigeria** has also taken a strong stance against this trend. The Central Bank of Nigeria (CBN) has listed money bouquets as a form of naira abuse. Such practices deface the legal tender. Offenders risk imprisonment or fines for treating the national currency with disrespect. [Source: Daily Post Nigeria](https://dailypost.ng/2023/02/10/cbn-lists-money-bouquet-as-naira-abuse/)
 
-The consensus among these central banks is clear: money is for circulation, not decoration. The practice of creating cash bouquets not only disrespects the currency but also imposes significant costs on taxpayers due to the need for early replacement of damaged notes.
+The consensus among these central banks is clear: money is for circulation, not decoration. The practice of creating cash bouquets disrespects the currency and imposes significant costs on taxpayers due to the need for early replacement of damaged notes.
 
-For this Valentine's season, traditional flowers or digital money transfers might be the safer—and legal—choice.
+For this Valentine's season, traditional flowers or digital money transfers might be the safer and legal choice.
 
 ![](/assets/images/1000358696.jpg)

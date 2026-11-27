@@ -143,11 +143,11 @@ This clash between Google and FFmpeg reveals the fragile heart of our modern dig
 
 It leaves us with critical questions for the future of software:
 
-* Is finding a bug a "gift" to a project, or is it an unfunded mandate?
-* Do corporations that profit from open-source owe volunteers their time, their money, or just a "thank you"?
-* As AI tools get even more powerful, will they "shift-left" security and make us all safer, or will they simply burn out the human volunteers who keep the internet running?
+* Finding a bug is either a "gift" to a project or an unfunded mandate.
+* Corporations that profit from open source may owe volunteers their time, their money, or just a "thank you".
+* As AI tools get more powerful, they may "shift-left" security and make us all safer, or they may simply burn out the human volunteers who keep the internet running.
 
-What do you think?
+Where you land on this is your call.
 
 Ending this post with a message from FFmpeg on X/Twitter:
 

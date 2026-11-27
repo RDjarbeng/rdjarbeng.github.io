@@ -29,10 +29,10 @@ For raspberry Pi users see the raspberry Pi section below.
 
 ## Components:
 
-- [Arduino Uno microcontroller](https://store.arduino.cc/products/arduino-uno-rev3) - for running the commands
-- Serial cable for arduino Uno - for connecting the arduino to your pc
+- [Arduino Uno microcontroller](https://store.arduino.cc/products/arduino-uno-rev3): for running the commands
+- Serial cable for arduino Uno: for connecting the arduino to your pc
 - Power supply for SIM900. Recommended is a 5V power supply that can provide 2A, but 9V 1A, or 12V 1A also works.
-- Registered SIM card with a data plan - for accessing the internet
+- Registered SIM card with a data plan: for accessing the internet
 
 ![Picture of a SIM card for illustration purposes](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/ca85a718-33f3-4004-9a33-f0abff9242e7)
 
@@ -92,7 +92,7 @@ The ShowSerialData function reads the response from the SIM900 module using SIM9
 
 Please note that these utility functions are provided to assist in displaying the results of commands in a structured manner. If you prefer, you can directly send commands to the SIM900 module using SIM900.println("command");. The choice between using the utility functions or direct command sending depends on your preference and the level of detail you want in displaying the response.
 
-## Working with the SIM900 - Attention is all you need 🙂
+## Working with the SIM900: Attention is all you need 🙂
 
 The SIM900 GSM module communicates with AT commands, where **AT** stands for attention. To perform any action with the GSM module such as sending the GET and POST request you will send a series of AT-commands that look like this mostly:
 
@@ -109,7 +109,7 @@ The simplest AT-command is simply 'AT' which is used to check if the module is c
 
 ![wifi signal gif loading in purple](https://github.com/RDjarbeng/SIM900-GET-POST-Request/assets/57795443/ba2e8c01-9aa1-41e4-b8a6-9dc96cad629c "wifi signal gif ")
 
-## GET request - Retrieving data from the internet
+## GET request: retrieving data from the internet
 
 This code snippet demonstrates how to perform a GET request using the GPRS connection of the SIM900 GSM module. It utilizes various AT commands to establish the connection and send the request.
 
@@ -177,7 +177,7 @@ It is worth mentioning that the get request is not only used for retrieving data
 `http://example.com?value1=2?value2=13`
 Where value1 and value2 are the parameters being sent as 2 and 13.
 
-## POST request - Sending data to the internet
+## POST request: sending data to the internet
 
 ```plain
 void testPostRequest(String jsonToSend){
@@ -272,7 +272,7 @@ The SIM7000e e-paper NB-IOT/GPRS HAT for the rasperry pi looks like a good alter
 
 ## Other projects related to GSM GET and POST
 
-- [TinyGSM](https://github.com/vshymanskyy/TinyGSM) - arduino library for working with GSM modules
+- [TinyGSM](https://github.com/vshymanskyy/TinyGSM): arduino library for working with GSM modules
 - [SIM900 Basic request library](https://github.com/mvento/SIM900-lib)
 
 ## Appendix- About

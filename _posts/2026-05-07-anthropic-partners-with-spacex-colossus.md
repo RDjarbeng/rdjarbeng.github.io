@@ -36,8 +36,8 @@ On 6th of May, 2026 Anthropic, the company behind Claude AI, announced a major d
 
 <blockquote class="twitter-tweet"><a href="https://x.com/claudeai/status/2052060691893227611?s=20"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## Immediate Benefits for Claude Users
-The influx of new capacity is translating into immediate and tangible benefits for Claude users across various tiers. Effective today, Anthropic is doubling the 5-hour rate limits for Claude Code on Pro, Max, and Team plans. Furthermore, the company is removing the peak-hour limit reductions that previously impacted Pro and Max users, ensuring more consistent access during high-demand periods. 
+## Immediate benefits for Claude users
+The influx of new capacity is translating into immediate and tangible benefits for Claude users across various tiers. Effective today, Anthropic is doubling the 5-hour rate limits for Claude Code on Pro, Max, and Team plans. The company is also removing the peak-hour limit reductions that previously impacted Pro and Max users, ensuring more consistent access during high-demand periods. 
 
 Developers and enterprise clients will also see significant improvements. Anthropic has boosted rate limits for its most capable model, Claude 3 Opus, across its API services. These changes reflect the massive scale of the Colossus 1 infrastructure and its ability to handle intensive AI workloads.
 

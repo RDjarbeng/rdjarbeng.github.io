@@ -7,7 +7,7 @@ tags:
   - Inspiration
   - Mindset
 image: /assets/images/posts/covers/the_man_who_can_cover.jpg
-image_alt: Cover image for The Man Who Can - Editorial illustration on determination and mindset
+image_alt: "Cover image for The Man Who Can: Editorial illustration on determination and mindset"
 layout: personal
 category: "Career & Growth"
 ---
@@ -37,7 +37,7 @@ category: "Career & Growth"
 > Is the man **WHO THINKS HE CAN**.
 
 ---
-![Cover image for The Man Who Can - Editorial illustration on determination and mindset](/assets/images/posts/covers/the_man_who_can_cover.jpg "The Man Who Can")
+![Cover image for The Man Who Can: Editorial illustration on determination and mindset](/assets/images/posts/covers/the_man_who_can_cover.jpg "The Man Who Can")
 
 For readers who prefer to listen:
 

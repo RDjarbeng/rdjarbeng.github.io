@@ -204,7 +204,7 @@ All three versions spit out the same mean, median, and mode and the output never
 
 The tuple trick that makes this possible, where Python checks the first value and only falls back to the second if there's a tie, isn't specific to finding a mode. It shows up anywhere you're sorting or picking "by this, then by that": ranking search results, or breaking a tie between two players. The mode calculation is just a small, contained place to notice it and practice it.
 
-## Extra information for the reader - Measures of central Tendency
+## Extra information for the reader: measures of central tendency
 The rest of this post is optional but helpful for those who want to learn more about the concepts used in the solution from a theory perspective.
 
 Central tendency describes where the "center" of a dataset lies. The three most common measures are:

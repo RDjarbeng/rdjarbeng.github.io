@@ -44,7 +44,7 @@ One of the major draws of arXiv is its commitment to **free and open access** fo
 Because arXiv does not conduct a traditional **peer-review process**, the platform is aware of the potential for false or plagiarized papers. However, arXiv has safeguards in place:
 
 1. **Moderation Process**: Although papers aren’t peer-reviewed, they do undergo a basic moderation process by **subject-specific moderators**. These moderators check submissions for relevance, minimal scientific standards, and potential ethical issues. If a submission is suspected of plagiarism or falsification, it can be flagged and removed.
-2. **Community Feedback**: arXiv papers are accessible to the global research community, which serves as an additional layer of scrutiny. Researchers can read and comment on preprints, offering feedback or pointing out issues such as plagiarism.
+2. **Community Feedback**: arXiv papers are accessible to the global research community, which adds another layer of scrutiny. Researchers can read and comment on preprints, offering feedback or pointing out issues such as plagiarism.
 3. **Replacements and Withdrawals**: If an author finds an error in their submission, they can upload a revised version. In cases where a paper is found to be falsified or plagiarized, it can be withdrawn by the author or moderators, and a note will indicate its retraction.
 
 Although arXiv’s moderation system is less rigorous than formal peer review, the platform has been effective in maintaining a relatively high standard of scientific integrity, largely due to its community-driven nature.
@@ -77,7 +77,7 @@ This organization and ease of access are particularly useful for researchers loo
 
 In 2024, arXiv continues to play a vital role in shaping the global research landscape. Hosting over **2 million papers**, it remains a crucial repository for researchers across disciplines. The platform has been particularly impactful in **artificial intelligence** and **machine learning**, where researchers often post their preprints first on arXiv before submitting to formal journals or presenting at conferences.
 
-arXiv’s influence has extended beyond academic circles—**policymakers, industry professionals, and educators** increasingly turn to arXiv to stay informed about scientific trends. The platform’s integration with **citation tools** and **metrics tracking** has further increased its usability, helping researchers monitor the impact of their preprints.
+arXiv’s influence has extended beyond academic circles: **policymakers, industry professionals, and educators** increasingly turn to arXiv to stay informed about scientific trends. The platform’s integration with **citation tools** and **metrics tracking** has further increased its usability, helping researchers monitor the impact of their preprints.
 
 ### **Conclusion**
 

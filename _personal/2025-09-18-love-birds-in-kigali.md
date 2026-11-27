@@ -27,7 +27,7 @@ category: "Travel & Places"
 ---
 
 I stumbled upon this serene moment the other evening, right around sunset in Kigali; two little birds sitting on a ledge. At first glance it looks like they were on a date of some sort just chilling at the end of the day. There they were,  on a ledge overlooking the Special Economic Zone, gazing into the reddish horizon as if they were lost in some avian rom-com.
-Then I show up with my camera ready to capture this romantic scene.📸 Click. They didn't look happy to see me ,the ultimate paparazzo. They shot me the side-eye—clearly not thrilled about the intrusion.  See my shot below.
+Then I show up with my camera ready to capture this romantic scene.📸 Click. They didn't look happy to see me ,the ultimate paparazzo. They shot me the side-eye, clearly not thrilled about the intrusion.  See my shot below.
 
 ![Two little birds on a ledge at sunset over looking the special economic zone in Kigali](/assets/images/1000249706.jpg "Two little birds on a ledge at sunset over looking the special economic zone in Kigali. Photo by Richard Djarbeng")
 

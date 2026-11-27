@@ -39,7 +39,7 @@ The Google Antigravity OpenClaw controversy erupted in mid-February 2026, when n
 ![The OpenClaw Ban Wave](/assets/images/google_bans_antigravity_v2.png)
 
 ### What Happened: The Ban Wave
-Around February 12–14, 2026, reports flooded forums like the Google AI Developers Forum, Reddit, and X. Paid subscribers, including those on the pricey **AI Ultra** plan ($250/month), lost access without warning, no prior notice, and initially no clear appeals process. Google cited "malicious usage" and backend overload from automated/agentic patterns routed through third-party tools via OAuth credentials.
+Around February 12 to 14, 2026, reports flooded forums like the Google AI Developers Forum, Reddit, and X. Paid subscribers, including those on the pricey **AI Ultra** plan ($250/month), lost access without warning, no prior notice, and initially no clear appeals process. Google cited "malicious usage" and backend overload from automated/agentic patterns routed through third-party tools via OAuth credentials.
 
 Many affected users weren't intentionally abusing quotas; they used OpenClaw to power advanced workflows (e.g., agent chains, automated coding tasks) that leveraged Antigravity's flat-rate access instead of metered APIs. This created massive token consumption spikes, degrading service for standard users and straining Google's infrastructure.
 
@@ -61,25 +61,25 @@ OpenClaw's creator, **Peter Steinberger** (@steipete), was vocal and critical. H
 
 He followed through: **OpenClaw removed Antigravity support** in updates around late February 2026. Community reports and coverage confirm the OAuth bridge was moved to a bundled (disabled-by-default) plugin, and official docs no longer list Google Antigravity as a supported provider. Users updating to versions like 2026.2.23 found the integration gone or requiring manual re-enablement that was discouraged.
 
-This move came amid irony - Steinberger had recently joined **OpenAI** (announced mid-February 2026) to lead next-gen personal agents, with OpenClaw continuing as an open-source project under OpenAI support.
+This move came amid irony. Steinberger had recently joined **OpenAI** (announced mid-February 2026) to lead next-gen personal agents, with OpenClaw continuing as an open-source project under OpenAI support.
 
 ### Timeline Summary
-- **Early–mid February 2026**: Surge in OpenClaw + Antigravity usage → backend strain.
-- **Feb 12–14**: Mass restrictions begin; complaints spike on forums/Reddit/X.
+- **Early to mid February 2026**: Surge in OpenClaw + Antigravity usage → backend strain.
+- **Feb 12 to 14**: Mass restrictions begin; complaints spike on forums/Reddit/X.
 - **Feb 15**: OpenAI hires Steinberger.
 - **Feb 23**: Steinberger publicly criticizes Google as "draconian" and announces intent to drop support.
 - **Late Feb**: OpenClaw updates remove/disable Antigravity integration.
 - **Feb 27**: Google @antigravity announces restorations and reaffirms policy.
 
 ### The Way Forward for Antigravity Users
-1. **Stick to official channels** - Use the native Antigravity IDE, Gemini CLI (where permitted), and avoid third-party OAuth routing to prevent restrictions.
-2. **If restricted** - Follow the upcoming restoration steps outlined by Google (check @antigravity or discuss.ai.google.dev for updates).
+1. **Stick to official channels**: use the native Antigravity IDE, Gemini CLI (where permitted), and avoid third-party OAuth routing to prevent restrictions.
+2. **If restricted**: follow the upcoming restoration steps outlined by Google (check @antigravity or discuss.ai.google.dev for updates).
 3. **Alternatives for agentic/power users**:
    - Local/open models (e.g., Gemma, Qwen on hardware).
    - Providers with clearer agent-friendly rules (MiniMax, Anthropic with direct APIs).
    - Self-hosted agents or metered API usage to avoid flat-rate credential risks.
-4. **Broader lesson** - Flat-rate AI access + open agent tools create inevitable tension. Expect more providers to tighten ToS, add explicit prohibitions, or launch dedicated agent APIs.
+4. **Broader lesson**: flat-rate AI access + open agent tools create inevitable tension. Expect more providers to tighten ToS, add explicit prohibitions, or launch dedicated agent APIs.
 
-The incident highlights growing pains in agentic AI: innovation thrives on openness, but scale demands guardrails. Google's reversal shows they listen to backlash - but the firm line on third-party tools signals the "wild west" era may be closing.
+The incident highlights growing pains in agentic AI: innovation thrives on openness, but scale demands guardrails. Google's reversal shows they listen to backlash, but the firm line on third-party tools signals the "wild west" era may be closing.
 
 Sources: Official [@antigravity announcement](https://x.com/antigravity/status/2027435365275967591), coverage from [The Register](https://www.theregister.com/), [MLQ.ai](https://www.mlq.ai/), [PCWorld](https://www.pcworld.com/article/3068842/whats-behind-the-openclaw-ban-wave.html), Google AI forum threads, and OpenClaw GitHub/community updates.

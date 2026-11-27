@@ -14,9 +14,9 @@ category: "Travel & Places"
 
 Have you ever had a bad haircut abroad? For my haircuts in Kigali I've kept the same barber for more than 3 years. Before I get into the story of how that happened. Here are pictures of my favorite cuts he made.
 
-![Closeup of a Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000060757.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
+![Closeup of a Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000060757.jpg "This photo captures my favorite haircut by Danny. It shows his attention to detail")
 
-![Closeup of  Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000047937.jpg "This photo captures my favorite haircut by Danny, showcasing his attention to detail")
+![Closeup of  Haircut by Danny, modeled by Richard Djarbeng](/assets/images/1000047937.jpg "This photo captures my favorite haircut by Danny. It shows his attention to detail")
 
 ## Challenges of Getting a Haircut in Kigali
 

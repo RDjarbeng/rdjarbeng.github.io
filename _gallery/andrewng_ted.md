@@ -8,7 +8,7 @@ image_alt: Andrew Ng stands on a stage speaking at a technology conference with 
 enhanced_by_bot: true
 ---
 
-Cover image for How AI Could Empower Any Business - Andrew Ng
+Cover image for How AI Could Empower Any Business: Andrew Ng
 
 **Additional comments:**
 

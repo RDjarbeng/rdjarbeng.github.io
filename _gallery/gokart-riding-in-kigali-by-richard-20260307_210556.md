@@ -16,6 +16,6 @@ Richard in blue long sleeves behind the steering wheel of a go-kart taking a tur
 
 **Additional comments:**
 
-There is a unique thrill that comes with the pursuit of speed. Racing around the Kigali track, Richard masters every turn with precision and focus. The blurred background serves as a testament to the velocity and energy captured in this moment of high-octane fun. This experience proves that true excitement is found when one fully commits to the journey ahead.
+There is a unique thrill that comes with the pursuit of speed. Racing around the Kigali track, Richard masters every turn with precision and focus. The blurred background shows the velocity and energy captured in this moment of high-octane fun. This experience proves that true excitement is found when one fully commits to the journey ahead.
 
 The scripture reminds us that those who wait upon the Lord find their strength renewed. Just as a driver stays composed under pressure on the racecourse, we find endurance in our daily walk. We shall mount up with wings as eagles, run without becoming faint, and continue forward without growing weak. This go-kart adventure reflects that persistent spirit of moving forward with confidence and grace.

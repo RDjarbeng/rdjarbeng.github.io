@@ -22,7 +22,7 @@ series: "SpaceX and Starlink"
 series_part: 2
 category: "Space & Satellites"
 ---
-In a groundbreaking move, SpaceX’s Starlink has introduced its **Direct to Cell** service, a satellite-based mobile connectivity solution that eliminates the need for traditional cell towers. This innovative technology enables standard LTE-compatible smartphones to connect directly to Starlink satellites, ensuring seamless communication even in the most remote areas of the world.
+In a notable move, SpaceX’s Starlink has introduced its **Direct to Cell** service, a satellite-based mobile connectivity solution that eliminates the need for traditional cell towers. This innovative technology enables standard LTE-compatible smartphones to connect directly to Starlink satellites, ensuring seamless communication even in the most remote areas of the world.
 
 ![Screenshot of starlink direct to cell](/assets/images/starlink_direct_to_cell.png "Starlink direct to cell website")
 
@@ -40,7 +40,7 @@ Starlink Direct to Cell leverages SpaceX’s advanced satellite network to provi
 
 - **Universal Compatibility**: Works with existing LTE smartphones and IoT devices using standard LTE protocols.
 - **Global Coverage**: Provides connectivity in remote regions, including mountains, oceans, and rural areas where traditional networks fail.
-- **No Extra Equipment**: No need for additional devices or apps—just your phone.
+- **No Extra Equipment**: No need for additional devices or apps, just your phone.
 - **Future Expansion**: Initially focused on text messaging, the service will expand to include voice and data capabilities by 2025.
 
 ## **How Does It Work?**

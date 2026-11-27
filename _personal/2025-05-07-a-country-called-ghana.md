@@ -89,11 +89,11 @@ The people,  hospitable and most welcoming you can find. With diverse ethnic gro
 
 Major ethnic groups:
 
-1. **Akan** - Mostly located in the southern parts of Ghana down to the coast;  strong presence in the Ashanti, Eastern, Western, Central regions. They have many different subgroupings such as Fante and Akuapem and also have a strong chieftaincy institution. Some say they are the most populous ethnic group. They are said to have migrated from the old Ghana empire, part of which is in present day Mali,and settled southwards where Ghana is located today.
-2. **Ewe** - Strong presence in  Eastern Ghana; volta region. Said to have migrated from Notsie in present day Benin, heading Westward to present day Ghana. \*\*Fun fact: \*\* the Volta region was once part of Togo, Ghana's eastern neighbour.  "The Volta region was formed by the state union of the former British Togoland which had been part of the German protectorate of Togoland." Link to [Wikipedia](https://en.wikipedia.org/wiki/Volta_Region) if interested in the history.
-3. **Ga-Adangbe** - Concentrated in the southern parts of Ghana and also the capital city Accra.
-4. **Guan** - Found across many regions of Ghana and believed to be the first [settlers](https://en.wikipedia.org/wiki/Guang_people) to arrive in Ghana.
-5. **Mole-Dagbani** - This ethnic grouping involves many different and diverse subgroups in the North of Ghana and are also said to have migrated Southwards at different times before the formation of Ghana as a country.
+1. **Akan**: Mostly located in the southern parts of Ghana down to the coast;  strong presence in the Ashanti, Eastern, Western, Central regions. They have many different subgroupings such as Fante and Akuapem and also have a strong chieftaincy institution. Some say they are the most populous ethnic group. They are said to have migrated from the old Ghana empire, part of which is in present day Mali,and settled southwards where Ghana is located today.
+2. **Ewe**: Strong presence in  Eastern Ghana; volta region. Said to have migrated from Notsie in present day Benin, heading Westward to present day Ghana. \*\*Fun fact: \*\* the Volta region was once part of Togo, Ghana's eastern neighbour.  "The Volta region was formed by the state union of the former British Togoland which had been part of the German protectorate of Togoland." Link to [Wikipedia](https://en.wikipedia.org/wiki/Volta_Region) if interested in the history.
+3. **Ga-Adangbe**: Concentrated in the southern parts of Ghana and also the capital city Accra.
+4. **Guan**: Found across many regions of Ghana and believed to be the first [settlers](https://en.wikipedia.org/wiki/Guang_people) to arrive in Ghana.
+5. **Mole-Dagbani**: This ethnic grouping involves many different and diverse subgroups in the North of Ghana and are also said to have migrated Southwards at different times before the formation of Ghana as a country.
 
 ![3 pictures showing people from Ghana with text that they are very hospitable and it has a young population](/assets/images/people_ghana.png "People from Ghana are very hospitable and it has a young population")
 
@@ -107,7 +107,7 @@ Instead, let us start from the recent beginning as the first sub-Saharan nation 
 
 ## Geography
 
-![Ghana - Wikipedia](/assets/images/250px-Ghana_orthographic_projection.svg.png "Ghana on a map, image credit wikipedia")
+![Ghana, Wikipedia](/assets/images/250px-Ghana_orthographic_projection.svg.png "Ghana on a map, image credit wikipedia")
 
 Located in West Africa Ghana boasts a tropical climate with warm temperatures year-round. From coastal plains to lush rainforests and savannas, it features diverse landscapes such as the Akwapim-Togo range and lakes that include the Volta Lake and Lake Bosomtwe.
 

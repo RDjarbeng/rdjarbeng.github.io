@@ -141,11 +141,11 @@ These models have been trained on diverse global datasets, allowing them to unde
 **The Models:**
 * **Llama 3.3 70B & Llama 4 Scout (Meta):** Meta's models are renowned for their broad language support, making them excellent for international products.
 * **GPT OSS 120B & 20B (OpenAI):** Both handle a wide range of global languages with high fluency.
-* **Whisper Large v3 (OpenAI):** Not only can it transcribe audio in dozens of languages, but it can also translate spoken foreign audio directly into English text.
+* **Whisper Large v3 (OpenAI):** It can transcribe audio in dozens of languages, and it can also translate spoken foreign audio directly into English text.
 
 **Real-World Use Cases:**
 * **Real-Time Translation:** Translating user chat messages dynamically in a global gaming lobby.
-* **Global Customer Support:** Allowing a bot to seamlessly switch from English to Spanish to Japanese depending on the user's input.
+* **Global Customer Support:** Allowing a bot to switch from English to Spanish to Japanese depending on the user's input.
 
 ---
 

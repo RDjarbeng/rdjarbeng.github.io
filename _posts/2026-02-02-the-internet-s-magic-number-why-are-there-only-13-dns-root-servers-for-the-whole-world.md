@@ -26,7 +26,7 @@ If you are studying for a networking or cloud certification (like AWS Solutions 
 
 At first glance, this sounds terrifying. We have billions of devices, trillions of websites, and the entire global economy running on the internet. How can the whole thing rely on just **13 computers**?
 
-The answer lies in a fascinating mix of 1980s history, hard math, and a clever routing trick called "Anycast." Here is everything you need to know about the 13 Root Servers—and why the internet is stronger than it looks.
+The answer lies in a fascinating mix of 1980s history, hard math, and a clever routing trick called "Anycast." Here is everything you need to know about the 13 Root Servers, and why the internet is stronger than it looks.
 
 ![Map of the world with red markers to signify DNS servers with number 13](/assets/images/dns_root_servers_cover.jpg "Mock DNS Map of the world with red markers ")
 
@@ -64,7 +64,7 @@ The 13 IP addresses (`A` through `M`) are managed by [12 different organizations
 
 It looks incredibly US-centric. This leads to the "Doomsday Scenario": _What if the US Government decides to shut off the internet? Or what if a disaster takes the US offline?_
 
-This is where the distinction between **Logical** and **Physical** becomes crucial.
+This is where the distinction between **Logical** and **Physical** matters.
 
 ## 3. The "Cheat Code": Anycast
 

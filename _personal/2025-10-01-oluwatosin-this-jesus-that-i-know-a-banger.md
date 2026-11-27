@@ -25,13 +25,13 @@ layout: personal
 image_alt: "Cover image for Now On Repeat: \"Oluwatosin\" by Tkeyz ft. SteveHills"
 category: "Faith"
 ---
-I have to share this track that's been on repeat for me lately. It's "Oluwatosin (Jesus Is Enough)" by Tkeyz and SteveHills. The song dropped in July 2025, and it's clear I'm not the only one who loves it – the visualizer has exploded with over **4.5 million views** already!
+I have to share this track that's been on repeat for me lately. It's "Oluwatosin (Jesus Is Enough)" by Tkeyz and SteveHills. The song dropped in July 2025, and it's clear I'm not the only one who loves it: the visualizer has exploded with over **4.5 million views** already!
 
 Give it a listen:
 
 <iframe width="560" height="415" src="https://www.youtube.com/embed/2u08HbxWnuc?si=K5nwCAnXTaRZCT3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-"Oluwatosin" by TKeyz, with special guest SteveHills, a powerful tune on finding true peace and unwavering faith in Jesus Christ. Infused with lyrics in English, Yoruba, and Igbo, this song combines modern gospel vibes with authentic African praise traditions. Crafted with a captivating tune "Oluwatosin" celebrates Jesus as our ultimate joy—the source that quenches every longing. From its gentle opening harmonies to the fervent chorus echoing "You are Enough for me," this piece transforms into a personal altar of adoration through music.
+"Oluwatosin" by TKeyz, with special guest SteveHills, a powerful tune on finding true peace and unwavering faith in Jesus Christ. Infused with lyrics in English, Yoruba, and Igbo, this song combines modern gospel vibes with authentic African praise traditions. Crafted with a captivating tune "Oluwatosin" celebrates Jesus as our ultimate joy: the source that quenches every longing. From its gentle opening harmonies to the fervent chorus echoing "You are Enough for me," this piece transforms into a personal altar of adoration through music.
 
 According to [muslyrics](https://muslyrics.com/oluwatosin-lyrics-tkeys-ft-stevehills-jesus-is-enoug/), _Oluwatosin_ means _“The Lord is Worthy to be Worshipped”_ in Yoruba
 

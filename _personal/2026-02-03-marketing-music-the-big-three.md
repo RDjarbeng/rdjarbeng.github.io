@@ -9,7 +9,7 @@ image_alt: "The Big 3 Music Labels: Universal, Sony, and Warner"
 category: "Music, Film & Books"
 ---
 
-The global music industry is effectively an oligopoly. While it may seem like there are thousands of record labels out there, the vast majority of commercial music—estimates often cite over 65-70% of the market—is owned or distributed by just three companies: **Universal Music Group (UMG)**, **Sony Music Entertainment (SME)**, and **Warner Music Group (WMG)**.
+The global music industry is effectively an oligopoly. While it may seem like there are thousands of record labels out there, the vast majority of commercial music (estimates often cite over 65-70% of the market) is owned or distributed by just three companies: **Universal Music Group (UMG)**, **Sony Music Entertainment (SME)**, and **Warner Music Group (WMG)**.
 
 These are the "Big Three." They control the back catalogs of music legends and the contracts of today's biggest pop stars. But how do these giants actually operate in 2026?
 
@@ -66,7 +66,7 @@ These companies are money-printing machines with diversified revenue streams:
 While the Big Three are dominant, the walls are being besieged:
 *   **HYBE:** The South Korean giant behind **BTS** has grown into a global powerhouse, acquiring US labels (like QC Music) and challenging the traditional western dominance.
 *   **Believe / TuneCore:** A massive French company focusing on independent artists. They prove you don't need a major label to get distribution.
-*   **The Independent Sector:** Collectively, "Indie" music accounts for over **35%** of the market—larger than Universal alone. Tools like DistroKid and UnitedMasters allow artists to upload directly to Spotify, bypassing the majors entirely.
+*   **The Independent Sector:** Collectively, "Indie" music accounts for over **35%** of the market, more than Universal alone. Tools like DistroKid and UnitedMasters allow artists to upload directly to Spotify, bypassing the majors entirely.
 
 ## Famous Productions (Copyright Note)
 *Is it safe to list their songs? Yes. Referencing titles and artists is "Fair Use" and factual reporting. We aren't hosting the audio files.*

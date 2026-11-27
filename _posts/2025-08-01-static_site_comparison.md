@@ -19,7 +19,7 @@ When it comes to hosting static sites, there are numerous options available, to 
 
 
 
-## Hosting Options Comparison - static sites
+## Hosting options comparison: static sites
 
 | Hosting Provider         | Free Tier | Custom Domain | SSL | Continuous Deployment | Global CDN |
 |--------------------------|-----------|---------------|-----|------------------------|------------|

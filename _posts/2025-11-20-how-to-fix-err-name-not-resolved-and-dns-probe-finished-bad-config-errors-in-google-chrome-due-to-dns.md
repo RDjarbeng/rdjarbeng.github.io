@@ -24,7 +24,7 @@ To check if this really is a DNS error and not another you can try these 2 steps
 
 1. **Ping IP address**
 
-What we will do is to ping an IP address which should work even if we have a DNS error. In this case we will use Google's IP address for their DNS servers. What a ping does is to send a relatively small amount of packets to the IP address and measures how long it takes to receive them. This serves as a tool we can use to check if we are able to access the internet by sending packets to another device on the internet.
+What we will do is to ping an IP address which should work even if we have a DNS error. In this case we will use Google's IP address for their DNS servers. What a ping does is to send a relatively small amount of packets to the IP address and measures how long it takes to receive them. This is a tool we can use to check if we are able to access the internet by sending packets to another device on the internet.
 
 In the terminal window type  this command and hit enter 
 

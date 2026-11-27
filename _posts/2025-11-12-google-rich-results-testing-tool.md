@@ -20,7 +20,7 @@ image_alt: "Google Rich Results Testing Tool Cover Image"
 category: "Web & Software"
 ---
 
-Have you ever searched for a recipe and seen the rating, cooking time, and a photo right there in the search results? Or searched for a product and seen its price and availability without clicking a link?
+Searching for a recipe often shows the rating, cooking time, and a photo right in the search results. Searching for a product can show its price and availability without clicking a link.
 
 These are **Rich Results**. They turn a standard, boring blue link into an interactive, eye-catching snippet that demands attention.
 
@@ -59,11 +59,11 @@ Using the tool is straightforward:
 
 Once the test finishes, you will see one of three statuses:
 
-*   **Eligible**: Green light! Your code is valid, and your page *can* appear as a rich result. (Note: "Can" doesn't mean "Will"—Google still decides relevance).
+*   **Eligible**: Green light! Your code is valid, and your page *can* appear as a rich result. (Note: "Can" doesn't mean "Will"; Google still decides relevance).
 *   **Eligible with Warnings**: Your code works, but you are missing some recommended fields. For example, a product might have a price but technically missing a "priceValidUntil" date. It’s best to fix these, but they won't break your result.
 *   **Not Eligible (Errors)**: Red light. You have critical syntax errors or missing required fields (like an "Author" for an Article). You must fix these to appear.
 
-## Common Rich Result Types
+## Common rich result types
 
 The tool supports dozens of types. Here are the most common ones you should be using:
 

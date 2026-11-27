@@ -82,7 +82,7 @@ ai_assistance:
 ---
 Looking for inspiration in the field of Machine Learning? Here are my top picks for experts whose work is shaping the future of AI.
 
-I’m a huge fan of Andrew Ng and Lex Fridman (okay, maybe a bit biased 😅), but their ability to make complex AI topics accessible and engaging is unmatched. Whether you're new to machine learning or a seasoned pro, their content—along with the work of Andreas, Emmanuel, Jean, Jeremy, Andrej, Yann, and Ian—offers something valuable for everyone.
+I’m a huge fan of Andrew Ng and Lex Fridman (okay, maybe a bit biased 😅), but their ability to make complex AI topics accessible and engaging is unmatched. Whether you're new to machine learning or a seasoned pro, their content (along with the work of Andreas, Emmanuel, Jean, Jeremy, Andrej, Yann, and Ian) offers something valuable for everyone.
 
 ## The list
 

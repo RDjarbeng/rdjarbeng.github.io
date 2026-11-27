@@ -39,7 +39,7 @@ I’m thrilled to report that these issues have been resolved! SveltiaCMS now in
 
 ### Extensible and full of new features
 
-SveltiaCMS consistently impresses with its flexibility and rapid feature integration. When I think of a new feature that could enhance my workflow, I either open a feature request on GitHub or ping Kohei on the Discord server. More often than not, within hours, I discover the feature already exists—someone else had the same idea!  For example, I used to manually set the date and time for each new post on my website, a tedious 5-second task. Turns out, SveltiaCMS already had an option to automate this. A single line of code later, and I never have to set a post date again. Problem solved, just like that!  
+SveltiaCMS consistently impresses with its flexibility and rapid feature integration. When I think of a new feature that could enhance my workflow, I either open a feature request on GitHub or ping Kohei on the Discord server. More often than not, within hours, I discover the feature already exists. Someone else had the same idea!  For example, I used to manually set the date and time for each new post on my website, a tedious 5-second task. Turns out, SveltiaCMS already had an option to automate this. A single line of code later, and I never have to set a post date again. Problem solved, just like that!  
 
 ### Stellar Support and Community
 
@@ -55,4 +55,4 @@ SveltiaCMS has transformed how I manage my website, making updates as simple as 
 
 If you’re looking for a CMS that’s lightweight, intuitive, and actively maintained, I highly recommend giving SveltiaCMS a try. It’s become an indispensable tool for my website, and I’m excited to see where Kohei takes it next!
 
-_P.S. I looked into OAuth—it stands for&#32;**Open Authorization**, a protocol for secure, token-based access to resources. Mystery solved!_
+_P.S. I looked into OAuth. It stands for&#32;**Open Authorization**, a protocol for secure, token-based access to resources. Mystery solved!_

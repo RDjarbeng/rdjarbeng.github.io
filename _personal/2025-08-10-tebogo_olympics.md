@@ -23,7 +23,7 @@ Imagine you come from Botswana and participate in the 2024 olympics in Paris, Fr
 
 ![Screenshot of abc news story on Tebogo](/assets/images/tebogo_twitter.jpeg)
 
-## The Race That Made History
+## The race that made history
 
 In a stunning upset, Botswana's Letsile Tebogo (r) pulled ahead to win the men's 200m race, finishing ahead of Kenny Bednarek and Noah Lyles.
 

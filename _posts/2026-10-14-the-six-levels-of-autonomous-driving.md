@@ -81,7 +81,7 @@ By the early 2010s, carmakers were shipping radar cruise control and lane-keepin
 
 In January 2014 SAE published a document designated [SAE J3016](https://www.sae.org/standards/content/j3016_202104/) (where "J" indicates an SAE surface-vehicle standard and "3016" is its unique reference number). It defined an agreed-upon scale from Level 0 to Level 5. The [National Highway Traffic Safety Administration (NHTSA)](https://www.nhtsa.gov/) in the United States adopted it in its 2016 federal automated vehicles policy, and the United Nations Economic Commission for Europe ([UNECE](https://unece.org/)) builds on the same vocabulary. SAE has revised J3016 several times since (2016, 2018 and 2021), and it is now also published as international standard [ISO/SAE PAS 22736](https://www.iso.org/standard/79585.html).
 
-## What the Levels Actually Measure
+## What the levels actually measure
 
 Instead of measuring vehicle intelligence with vague scores, the SAE standard evaluates two concrete engineering and legal questions:
 

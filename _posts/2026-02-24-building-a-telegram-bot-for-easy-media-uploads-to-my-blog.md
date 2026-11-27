@@ -27,7 +27,7 @@ In my [100 Posts Later](https://rdjarbeng.com/100-posts-later-lessons-learnt-fro
 
 ![A smartphone sending an image to a website folder via a paper airplane](/assets/images/posts/telegram-bot-cover.jpg)
 
-But even with the native image pickers and drag-and-drop improvements in SveltiaCMS, managing **minor media**—like saving a funny meme to my gallery, bookmarking a YouTube video I liked, or uploading an AI-generated portrait—still had a bit of friction. 
+But even with the native image pickers and drag-and-drop improvements in SveltiaCMS, managing **minor media**, like saving a funny meme to my gallery, bookmarking a YouTube video I liked, or uploading an AI-generated portrait, still had a bit of friction. 
 
 What's the absolute fastest, most frictionless way to save an image from your phone? Texting it.
 
@@ -60,7 +60,7 @@ Sometimes I want to upload several images at exactly the same time. If I select 
 
 ### 4. YouTube Video Summarizer
 It isn't just for images. I can paste a YouTube link, and the bot is smart enough to structure it into a video post. 
-If I type a message along with the YouTube link—for instance, placing a title on the first line and my thoughts on the lines below—the bot cleanly structures that into the Markdown frontmatter so it displays nicely on the Gallery.
+If I type a message along with the YouTube link (for instance, placing a title on the first line and my thoughts on the lines below), the bot cleanly structures that into the Markdown frontmatter so it displays nicely on the Gallery.
 
 ### 5. Instant Cloud Commits
 Instead of relying on a local script running on my laptop, the bot is hosted on the cloud via PythonAnywhere. It uses the `PyGithub` library to convert Telegram files straight into base64 streams and push them directly onto my `main` branch as live commits. The moment I get a green `✅ Auto-Committed to GitHub!` checkmark in Telegram, the GitHub action kicks off and my site builds automatically.

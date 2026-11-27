@@ -32,9 +32,9 @@ Game AI is often about creating _entertaining_ experiences, not just winning. As
 
 Defining a reward function for "fun" is tricky, and RL's emergent behaviors are hard to control, making it less ideal for crafting specific player experiences.
 
-## Players Prefer Human Opponents for True Challenges
+## Players prefer human opponents for true challenges
 
-For players seeking tough, adaptive opponents, multiplayer modes with human rivals are often preferred. Human opponents foster social connections—friends, rivals, or streaming audiences—that AI struggles to replicate. As DMGregory notes, RL could be useful for training modes to prepare players for competitive play, but the development cost is high compared to matchmaking systems that pair beginners together.
+For players seeking tough, adaptive opponents, multiplayer modes with human rivals are often preferred. Human opponents foster social connections (friends, rivals, or streaming audiences) that AI struggles to replicate. As DMGregory notes, RL could be useful for training modes to prepare players for competitive play, but the development cost is high compared to matchmaking systems that pair beginners together.
 
 Personally I find games where the AI takes the place of a human opponent or partner are not as entertaining as playing with another person. Also the satisfaction of seeing someone downcast and humbled, when you beat them in a just ended game is not something AI can easily emulate.
 
@@ -68,7 +68,7 @@ While RL for agents is uncommon, machine learning has found niches in games:
 
 ## Future Potential for RL in Games
 
-Emerging research, like the "[Forward-Forward Algorithm](https://arxiv.org/abs/2212.13345)" (2022), could make RL training faster and less resource-intensive, potentially enabling real-time learning for companion AI or dynamic difficulty systems. However, the core challenge of aligning RL with game design goals—entertaining, predictable, and tunable AI—remains.
+Emerging research, like the "[Forward-Forward Algorithm](https://arxiv.org/abs/2212.13345)" (2022), could make RL training faster and less resource-intensive, potentially enabling real-time learning for companion AI or dynamic difficulty systems. However, the core challenge of aligning RL with game design goals (entertaining, predictable, and tunable AI) remains.
 
 ## Conclusion
 

@@ -36,7 +36,7 @@ card_items:
   - name: Claude Code
     badge_1: AI Agent
     badge_2: Code Translator
-    description: Anthropic's latest developer agent capable of mapping massive dependencies, documenting intricate legacy workflows, and helping translate archaic COBOL logic into modern languages like Java and Python.
+    description: Anthropic's latest developer agent capable of mapping massive dependencies, documenting complex legacy workflows, and helping translate archaic COBOL logic into modern languages like Java and Python.
     url: https://claude.com/
     link_text: Learn about Claude
 description: How Anthropic's Claude Code shattered IBM's COBOL legacy in a single afternoon, wiping billions off its market cap.
@@ -45,8 +45,8 @@ category: "AI"
 
 > **Update, 21 November 2026: what happened next, and a correction.**
 >
-> - **The stock:** IBM closed at $257.16 on Friday 20 February and $223.35 on Monday 23 February, a 13.1% fall and its worst day since October 2000 ([The Register](https://www.theregister.com/2026/02/23/ibm_share_dive_anthropic_cobol/)). It bounced about 2.7% the next day, rallied to around $298 by the end of May, then fell back. It closed at $224.44 on 20 November 2026, roughly where it was the day after the drop. Many things moved the price over those nine months, so not all of it traces back to one blog post.
-> - **Correction:** the original post said Claude Code translates COBOL "with 98% accuracy" and does so "flawlessly". [Anthropic's post](https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization) makes neither claim. Its message is that AI can help teams modernize COBOL "in quarters instead of years". I have corrected the summary boxes and left the article text below as it was, so the record is clear. Treat the 98% figure in it as wrong.
+> * **The stock:** IBM closed at $257.16 on Friday 20 February and $223.35 on Monday 23 February, a 13.1% fall and its worst day since October 2000 ([The Register](https://www.theregister.com/2026/02/23/ibm_share_dive_anthropic_cobol/)). It bounced about 2.7% the next day, rallied to around $298 by the end of May, then fell back. It closed at $224.44 on 20 November 2026, roughly where it was the day after the drop. Many things moved the price over those nine months, so not all of it traces back to one blog post.
+> * **Correction:** the original post said Claude Code translates COBOL "with 98% accuracy" and does so "flawlessly". [Anthropic's post](https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization) makes neither claim. Its message is that AI can help teams modernize COBOL "in quarters instead of years". I have corrected the summary boxes and left the article text below as it was, so the record is clear. Treat the 98% figure in it as wrong.
 >
 > Prices are daily and monthly closes from Yahoo Finance.
 
@@ -57,7 +57,7 @@ The tech world is more than accustomed to disruption, but the events of Monday, 
 ### Key Takeaways
 
 *   **The Moat is Broken:** Anthropic's Claude Code successfully demonstrated the ability to map, document, and translate legacy COBOL code with 98% accuracy.
-*   **Immediate Market Reaction:** IBM shares saw their sharpest single-day drop since October 2000, plummeting 13.15% (erasing roughly $30–31 billion in market value).
+*   **Immediate Market Reaction:** IBM shares saw their sharpest single-day drop since October 2000, plummeting 13.15% (erasing roughly $30 to 31 billion in market value).
 *   **A Broader Trend:** Other established tech players, especially in cybersecurity, are also feeling the heat from AI agents automating complex tasks.
 *   **Geopolitical Stakes:** The implications extend beyond Wall Street, drawing attention from state actors and the Pentagon.
 
@@ -65,9 +65,9 @@ The tech world is more than accustomed to disruption, but the events of Monday, 
 
 ### The Day the "Priesthood" Lost Its Monopoly
 
-For over 50 years, IBM has comfortably sat atop a goldmine: **COBOL**. This venerable programming language quietly powers 95% of ATM transactions in America and serves as the silent backbone for almost every major bank, airline, and government agency.
+For over 50 years, IBM has comfortably sat atop a goldmine: **COBOL**. This venerable programming language quietly powers 95% of ATM transactions in America and is the silent backbone for almost every major bank, airline, and government agency.
 
-IBM’s dominance wasn't purely about the underlying technology; it relied heavily on a widening **knowledge gap**. The original architects of these COBOL systems retired decades ago, leaving behind billions of lines of intricate "spaghetti code" that no modern engineer could safely or confidently touch. Corporations gritted their teeth and paid IBM billions in consulting and maintenance fees because the alternative—a catastrophic, system-wide crash—was completely unthinkable.
+IBM’s dominance wasn't purely about the underlying technology; it relied heavily on a widening **knowledge gap**. The original architects of these COBOL systems retired decades ago, leaving behind billions of lines of complex "spaghetti code" that no modern engineer could safely or confidently touch. Corporations gritted their teeth and paid IBM billions in consulting and maintenance fees because the alternative, a catastrophic, system-wide crash, was completely unthinkable.
 
 Then came the [Anthropic blog post](https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization) that changed everything.
 
@@ -79,19 +79,19 @@ Anthropic demonstrated that its latest **Claude Code** agent can now flawlessly:
 
 > "The priesthood of COBOL maintenance had officially lost its monopoly."
 
-The market’s reaction was devastatingly instant. Before the Anthropic announcement, IBM had closed at **$257.16** on Friday, February 20, 2026. By the close of trading on Monday, February 23, the stock had plummeted to **$223.35**—a brutal decline of approximately **13.15%** (a 33.81 point drop). This represented IBM's worst single-day percentage drop in over 25 years (reminiscent of the dot-com bust in October 2000), erasing roughly **$30–$31 billion** in market value in a matter of hours. While the stock has partially rebounded since the February 23 low, the psychological damage to the enterprise tech sector is profound.
+The market’s reaction was devastatingly instant. Before the Anthropic announcement, IBM had closed at **$257.16** on Friday, February 20, 2026. By the close of trading on Monday, February 23, the stock had plummeted to **$223.35**. That was a brutal decline of approximately **13.15%** (a 33.81 point drop). This represented IBM's worst single-day percentage drop in over 25 years (reminiscent of the dot-com bust in October 2000), erasing roughly **$30 to $31 billion** in market value in a matter of hours. While the stock has partially rebounded since the February 23 low, the psychological damage to the enterprise tech sector is profound.
 
 ![IBM Common Stock Chart showing the sudden drop](/assets/images/posts/ibm-stock-chart.png "IBM Common Stock Chart on Google finance showing the sudden drop")
 
 ### Live Demos and Ebooks: A Guide to Escaping the Mainframe
 
-Anthropic isn't simply releasing another developer tool; they are actively showing the entire industry exactly how to wield it. The AI powerhouse has rapidly begun hosting [live demonstrations](https://www.anthropic.com/webinars/claude-code-financial-services) focused narrowly and deliberately on real-world financial applications. These public sessions visibly showcase how Claude can ingest massive trading datasets, synthesize hyper-accurate predictive forecasts, and—crucially—migrate heavily entrenched legacy COBOL systems directly onto the modern cloud infrastructure.
+Anthropic isn't simply releasing another developer tool; they are actively showing the entire industry exactly how to wield it. The AI powerhouse has rapidly begun hosting [live demonstrations](https://www.anthropic.com/webinars/claude-code-financial-services) focused narrowly and deliberately on real-world financial applications. These public sessions visibly show how Claude can ingest massive trading datasets, synthesize hyper-accurate predictive forecasts, and, crucially, migrate heavily entrenched legacy COBOL systems directly onto the modern cloud infrastructure.
 
-To solidify their offensive push, Anthropic released an extensively detailed [Code Modernization Playbook](https://resources.anthropic.com/code-modernization-playbook). This ebook effectively serves as the definitive step-by-step escape hatch for enterprises desperate to exit the "mainframe trap" that has kept them tightly tethered to IBM's ecosystem for half a century.
+To solidify their offensive push, Anthropic released an extensively detailed [Code Modernization Playbook](https://resources.anthropic.com/code-modernization-playbook). This ebook is effectively the definitive step-by-step escape hatch for enterprises desperate to exit the "mainframe trap" that has kept them tightly tethered to IBM's ecosystem for half a century.
 
 ### A Serial Destroyer of Moats
 
-IBM wasn't the sole tech giant to feel the sting this week. Just last Thursday, Anthropic's quiet rollout of **Claude Code Security**—an aggressively automated vulnerability scanning and rapid-patching tool—sent profound shockwaves ripping through the entire cybersecurity sector.
+IBM wasn't the sole tech giant to feel the sting this week. Just last Thursday, Anthropic's quiet rollout of **Claude Code Security**, an aggressively automated vulnerability scanning and rapid-patching tool, sent profound shockwaves ripping through the entire cybersecurity sector.
 
 Industry stalwarts like **CrowdStrike**, **Okta**, and **Cloudflare** all witnessed significant drops in their valuations as institutional investors rapidly came to a unified realization: AI agents can now actively hunt down and automatically remediate critical software bugs exponentially faster than the best human-led security operations centers.
 
@@ -103,7 +103,7 @@ Here is a post on Twitter/X that captures the mood of the moment:
 
 ### The Bottom Line
 
-Anthropic's valuation has skyrocketed to an eye-watering **$380 billion**, yet its own CEO candidly admits that the current pace of AI advancement is so brutal and unforgiving that a mere 12-month delay could easily spiral the company straight into bankruptcy. Today, we are witnessing a singular entity that simultaneously serves as the world's most feared disruptor, a prime target for elaborate global espionage, and a reluctant, highly-coveted pawn in a rapidly escalating new Cold War.
+Anthropic's valuation has skyrocketed to an eye-watering **$380 billion**, yet its own CEO candidly admits that the current pace of AI advancement is so brutal and unforgiving that a mere 12-month delay could easily spiral the company straight into bankruptcy. Today, we are witnessing a singular entity that is at once the world's most feared disruptor, a prime target for elaborate global espionage, and a reluctant, highly-coveted pawn in a rapidly escalating new Cold War.
 
 Whatever your personal stance on the trajectory of artificial general intelligence might be, IBM’s bleeding stock chart just abruptly settled the immediate debate: **The era of the legacy technological moat is definitively over.**
 

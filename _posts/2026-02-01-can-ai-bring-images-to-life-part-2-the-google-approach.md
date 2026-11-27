@@ -33,7 +33,7 @@ series_part: 2
 category: "AI"
 ---
 
-![Cover Image: Can AI bring images to life? - The Google Approach](/assets/images/posts/covers/dear_upstairs_neighbors_cover.png)
+![Cover image: Can AI bring images to life? The Google approach](/assets/images/posts/covers/dear_upstairs_neighbors_cover.png)
 
 In [Part 1 of this series](https://rdjarbeng.com/lumalabs_genai/), I tested Luma Labs' Dream Machine with a simple picture of bees. The result was... well, let's call it "biologically creative." While the AI recognized the insects, it had no understanding of physics. This led to some hilarious, sliding bees that didn't quite know how wings worked.
 
@@ -77,7 +77,7 @@ This was the biggest difference from my Luma experiment.
 
 ### Result & Conclusion
 
-The final film looks stunning. It is a seamless blend of 2D aesthetics and 3D consistency. But here is the catch. **It wasn't magic.**
+The final film looks great. It blends 2D aesthetics and 3D consistency. But here is the catch. **It wasn't magic.**
 
 Google openly admitted that *"none of our final shots were created in a single 'one-click' generation."* They had plenty of bloopers where the AI did strange, unpredictable things. The difference was they had the tools to intervene, correct, and guide the AI until it got it right.
 

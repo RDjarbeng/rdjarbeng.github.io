@@ -27,7 +27,7 @@ Let's start with the basics: we’re in Africa, in Rwanda, in Kigali, and finall
 
 Each district in Kigali has a symbol, and the district of Gasabo chose a basket. To celebrate this, they decided to place a giant basket on top of a building, making it a unique and memorable landmark in Kigali. It’s unlikely that you'll find a similar building with a basket on top anywhere else in the world.
 
-This distinctive feature not only represents the cultural heritage of the area but also adds a touch of charm and character to the district. If you've been in Rwanda for some time seeing baskets becomes an everyday occurence; a lot of the symbols and souvenirs in Rwanda use this. The best example of the everyday use of this symbolism is the 5000 Rwandan Franc note below which you'll see every time you have to pay with cash.
+This distinctive feature represents the cultural heritage of the area and adds a touch of charm and character to the district. If you've been in Rwanda for some time seeing baskets becomes an everyday occurence; a lot of the symbols and souvenirs in Rwanda use this. The best example of the everyday use of this symbolism is the 5000 Rwandan Franc note below which you'll see every time you have to pay with cash.
 
 ![Rwandan francs 5000 note](/assets/images/rwf_5k.jpeg "Rwandan francs 5000 note")
 

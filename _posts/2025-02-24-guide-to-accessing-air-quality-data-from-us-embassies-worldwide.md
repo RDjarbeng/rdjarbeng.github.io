@@ -23,7 +23,7 @@ series_part: 4
 category: "Climate & Environment"
 content_type: guide
 ---
-AirNow.gov is a collaborative platform involving the US Environmental Protection Agency (EPA), the National Oceanic and Atmospheric Administration (NOAA), and other agencies, dedicated to providing air quality information to the public. Among its offerings is air quality data from US embassies and consulates located around the world. This data serves as a critical resource for researchers, policymakers, and individuals concerned with environmental health and air pollution trends globally.
+AirNow.gov is a collaborative platform involving the US Environmental Protection Agency (EPA), the National Oceanic and Atmospheric Administration (NOAA), and other agencies, dedicated to providing air quality information to the public. Among its offerings is air quality data from US embassies and consulates located around the world. This data is a critical resource for researchers, policymakers, and individuals concerned with environmental health and air pollution trends globally.
 
 ![Screenshot or Air Now website showing map of air quality](/assets/images/airnow_africa.png "Air Now website showing map of air quality across different countries")
 
@@ -65,7 +65,7 @@ Higher AQI values signify greater pollution and increased health concerns.
 
 ## Additional Considerations
 
-The air quality data available on AirNow.gov is preliminary and may undergo revisions following quality assurance processes. For critical applications—such as research or policy development—users should verify the data’s status to ensure accuracy and reliability.
+The air quality data available on AirNow.gov is preliminary and may undergo revisions following quality assurance processes. For critical applications, such as research or policy development, users should verify the data’s status to ensure accuracy and reliability.
 
 ## Conclusion
 

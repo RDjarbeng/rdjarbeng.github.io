@@ -37,7 +37,7 @@ Accidentally clicked "Don't Save" on your PowerPoint presentation? Don't panic! 
 4. **Select and Save**
    A window will display a list of recently unsaved files. Find the presentation you want to recover, open it, and **immediately save** it to a secure location on your computer.
 
-## Tips to Prevent Future Losses
+## Tips to prevent future losses
 
 - **Enable AutoSave**: Ensure PowerPoint’s AutoSave feature is turned on to automatically save your work at regular intervals.
 - **Save Regularly**: Make it a habit to manually save your presentation (Ctrl+S or Cmd+S) frequently.

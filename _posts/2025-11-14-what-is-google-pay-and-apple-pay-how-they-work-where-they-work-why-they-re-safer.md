@@ -64,9 +64,9 @@ In a world where your phone is your wallet, **Google Pay** (also known as the [G
 * Send money to friends (in select countries)
 * Pay online with one click
 
-[**Apple Pay**](https://www.apple.com/apple-pay/) does the same — but for **iPhone, Apple Watch, iPad, and Mac** users. It’s built directly into the Wallet app and uses **Face ID or Touch ID** for security.
+[**Apple Pay**](https://www.apple.com/apple-pay/) does the same, but for **iPhone, Apple Watch, iPad, and Mac** users. It’s built directly into the Wallet app and uses **Face ID or Touch ID** for security.
 
-> **Important**: Neither is a bank account. They **link to your existing cards** — your money stays with your bank.
+> **Important**: Neither is a bank account. They **link to your existing cards**. Your money stays with your bank.
 
 ## How Are They Different from a Regular Bank Account?
 
@@ -83,7 +83,7 @@ In a world where your phone is your wallet, **Google Pay** (also known as the [G
 
 ## Why Not Just Use Your Bank Card?
 
-You absolutely _can_ — but here’s why digital wallets often win:
+You absolutely _can_, but here’s why digital wallets often win:
 
 * **Faster**: Tap and go. No fumbling for a card or entering a PIN for most transactions.
 * **Safer**: If you lose your phone, you can freeze it remotely. If your physical card is stolen, it's a much bigger risk.
@@ -107,7 +107,7 @@ You absolutely _can_ — but here’s why digital wallets often win:
 
 ### Global Availability (Excluding Sanctioned Countries)
 
-Both services are available in **80–90+ countries**, but with major gaps, especially in Africa.
+Both services are available in **80 to 90+ countries**, but with major gaps, especially in Africa.
 
 | Region | Apple Pay | Google Pay / Wallet |
 | --- | --- | --- |
@@ -147,21 +147,21 @@ Support is bank-by-bank. Here are a few examples:
 | --- | --- |
 | **Bank Must Participate** | Your card won't work just because it's a Visa. Your specific bank must have a deal with Apple/Google. |
 | **Merchant NFC Needed** | The store's terminal must accept tap-to-pay. This is common in cities but rare in rural areas. |
-| **Bank Fees Still Apply** | Using Apple/Google Pay abroad doesn't avoid your bank's [FX fees](https://www.google.com/search?q=https://www.investopedia.com/terms/f/foreign-exchange-fee.asp) (1–3%) or foreign transaction fees. |
+| **Bank Fees Still Apply** | Using Apple/Google Pay abroad doesn't avoid your bank's [FX fees](https://www.google.com/search?q=https://www.investopedia.com/terms/f/foreign-exchange-fee.asp) (1 to 3%) or foreign transaction fees. |
 | **Phone Must Have NFC** | This includes any iPhone 6 or newer, and most mid-to-high-end Androids from the last 5+ years. |
 | **Battery Dies = No Pay** | This is the biggest one. If your phone is dead, you can't pay. |
 | **Travel Tip** | Notify your bank of your travel plans, just as you would with a physical card, to avoid fraud blocks. |
 
 ## Should You Use Google Pay or Apple Pay?
 
-**Yes — if**:
+**Yes, if**:
 
 * You value speed, security, and the convenience of not carrying a wallet.
 * You travel frequently to supported countries.
 * You shop online and in apps often.
 * Your bank and country are on the supported list.
 
-**Stick to your card — if**:
+**Stick to your card if**:
 
 * You’re in an unsupported region (like most of Africa).
 * You don't trust phones for payments or are worried about battery life.
@@ -171,7 +171,7 @@ Support is bank-by-bank. Here are a few examples:
 
 ## Final Verdict
 
-**Google Pay and Apple Pay aren’t replacements for your bank** — they’re **upgrades to your physical wallet**. They make payments faster, safer, and more convenient... _if_ your bank and region play along.
+**Google Pay and Apple Pay aren’t replacements for your bank**. They’re **upgrades to your physical wallet**. They make payments faster, safer, and more convenient... _if_ your bank and region play along.
 
 > **Traveling soon?** Add your card to your phone's wallet _before_ you leave and test it with a small purchase at home. And **always** carry a physical backup card.
 

@@ -20,7 +20,7 @@ The flavor: Lao Tan Sauerkraut Beef Noodles (117g+toppings)
 
 ![Chinese noodles packet on display](/assets/images/personal/chinese-noodles-in-kigali-packet.jpg "Chinese noodles packet on display")
 
-Inside the packet were 3 smaller sachets. I probably should have translated the instructions first instead of just tossing everything into boiling water — but honestly, how else would you do it?
+Inside the packet were 3 smaller sachets. I probably should have translated the instructions first instead of just tossing everything into boiling water, but honestly, how else would you do it?
 
 ![Chinese noodles smaller pice packets in the big packet for chinese noodles](/assets/images/personal/chinese-noodles-spice-packets.jpg "Chinese noodles smaller pice packets in the big packet")
 
@@ -44,7 +44,7 @@ Here's a quick video of the end result: two bowls of rice and beef stew alongsid
 
 <iframe width="315" height="560" src="https://www.youtube.com/embed/a58tfaF4zt8" title="Chinese noodles in Kigali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-_Chinese noodles in Kigali — shot by rdjarbeng_
+_Chinese noodles in Kigali, shot by rdjarbeng_
 
 ## Review
 

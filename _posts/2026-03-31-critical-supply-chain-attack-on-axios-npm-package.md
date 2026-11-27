@@ -40,10 +40,10 @@ category: "Security"
 
 > **Update, 21 November 2026: how it ended.** The attack is over. The axios lead maintainer, Jason Saayman, published a [post mortem](https://github.com/axios/axios/issues/10636) on 2 April 2026:
 >
-> - **How they got in:** about two weeks before the attack, a targeted social engineering campaign put remote access malware on the maintainer's PC. That exposed his npm credentials, which were used to publish `axios@1.14.1` and `axios@0.30.4`. The malicious dependency `plain-crypto-js@4.2.0` had been staged on npm the day before.
-> - **Clean-up:** the bad versions were removed at 03:15 UTC on 31 March, after about 3 hours live. All of the maintainer's devices were wiped and every credential reset.
-> - **What changed:** immutable releases, publishing through OIDC trusted publishing instead of a long-lived token, and hardened GitHub Actions.
-> - **Who did it:** Google's Threat Intelligence Group attributes the attack to a North Korea-nexus threat actor, tracked as UNC1069 ([Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)). This attribution comes from Google; the axios post mortem itself does not name an attacker.
+> * **How they got in:** about two weeks before the attack, a targeted social engineering campaign put remote access malware on the maintainer's PC. That exposed his npm credentials, which were used to publish `axios@1.14.1` and `axios@0.30.4`. The malicious dependency `plain-crypto-js@4.2.0` had been staged on npm the day before.
+> * **Clean-up:** the bad versions were removed at 03:15 UTC on 31 March, after about 3 hours live. All of the maintainer's devices were wiped and every credential reset.
+> * **What changed:** immutable releases, publishing through OIDC trusted publishing instead of a long-lived token, and hardened GitHub Actions.
+> * **Who did it:** Google's Threat Intelligence Group attributes the attack to a North Korea-nexus threat actor, tracked as UNC1069 ([Google Cloud](https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package)). This attribution comes from Google; the axios post mortem itself does not name an attacker.
 >
 > If you did a fresh install between 00:21 and 03:15 UTC on 31 March 2026, the checks below still apply: treat that machine as compromised and rotate its secrets. Otherwise you are fine. The rest of this post is the original alert, written while the attack was live.
 
@@ -62,7 +62,7 @@ This terrifying live compromise was discovered and publicly reported by X/Twitte
 
 ## The Exploit: How the Axios Attack Works
 
-The malicious payload revolves around the latest package release, `axios@1.14.1`. This seemingly routine update silently pulls in a brand-new, malicious dependency called `plain-crypto-js@4.2.1`—a package that did not exist before today. 
+The malicious payload revolves around the latest package release, `axios@1.14.1`. This seemingly routine update silently pulls in a brand-new, malicious dependency called `plain-crypto-js@4.2.1`, a package that did not exist before today. 
 
 Security firm Socket AI has confirmed through analysis that `plain-crypto-js` is far from an innocent cryptographic utility. It is an obfuscated dropper/loader malware designed to compromise the host machine immediately upon installation.
 
@@ -87,7 +87,7 @@ Given Axios's ubiquitous presence in frontend, backend, and full-stack environme
 
 ## What You Need to Do Immediately
 
-If you use Axios in any of your projects—whether personal, enterprise, or experimental—you must take immediate action to protect your environments:
+If you use Axios in any of your projects, whether personal, enterprise, or experimental, you must take immediate action to protect your environments:
 
 1. **Do NOT Upgrade:** If you are on an older version of Axios (e.g., `1.7.x` or `1.13.x`), hold off on running any update commands.
 2. **Pin Your Versions:** Update your `package.json` to hard-pin the exact, known-safe version of Axios by removing the caret (`^`) or tilde (`~`) prefixes.
@@ -101,7 +101,7 @@ Continue tracking this situation as npm security teams address the compromised p
 
 **Yes, the supply chain attack has been resolved at the source.**  
 
-npm quickly unpublished the malicious versions (**axios@1.14.1**, **axios@0.30.4**, and the injected dependency **plain-crypto-js@4.2.1**) within roughly 3 hours of publication (they went live around 00:21–01:00 UTC on March 31, 2026, and were removed by ~03:29 UTC).  
+npm quickly unpublished the malicious versions (**axios@1.14.1**, **axios@0.30.4**, and the injected dependency **plain-crypto-js@4.2.1**) within roughly 3 hours of publication (they went live around 00:21 to 01:00 UTC on March 31, 2026, and were removed by ~03:29 UTC).  
 
 As of now (evening of March 31, 2026):  
 - The **latest** version on npm is **axios@1.14.0** (published a 4 days *before* the attack).  

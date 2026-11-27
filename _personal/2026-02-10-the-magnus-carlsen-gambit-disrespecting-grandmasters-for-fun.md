@@ -15,7 +15,7 @@ Magnus Carlsen is so good at chess that he often has to "nerf" himself just to m
 
 ![The Magnus Carlsen Gambit](/assets/images/magnus_carlsen_gambit_cover.jpg)
 
-In his recent video, GothamChess breaks down three games where Magnus deliberately plays "dumb" moves in the first few turns, effectively giving odds to titled players—and still finds a way to win.
+In his recent video, GothamChess breaks down three games where Magnus deliberately plays "dumb" moves in the first few turns, effectively giving odds to titled players, and still finds a way to win.
 
 ## What is the Magnus Carlsen Gambit?
 

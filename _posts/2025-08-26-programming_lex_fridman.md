@@ -13,7 +13,7 @@ image_alt: "Cover image for Why Not Stick to One Programming Language for Everyt
 category: "Web & Software"
 ---
 
-It might seem like a great idea to use your favorite programming language for every project. However, the reality is that the best programming language—whether it's C++, Python, JavaScript, or another—depends on the specific requirements and the problem you're trying to solve.
+It might seem like a great idea to use your favorite programming language for every project. However, the reality is that the best programming language (whether it's C++, Python, JavaScript, or another) depends on the specific requirements and the problem you're trying to solve.
 
 While mastering one language is admirable, sometimes the most efficient solution requires branching out and learning others. Solving the problem is essential, but doing so efficiently is just as important.
 

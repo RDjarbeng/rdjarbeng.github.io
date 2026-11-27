@@ -72,7 +72,7 @@ Unlike their standard role in point-of-sale purchases or online payments, these 
 
 ## How Banks Present Visa and Mastercard
 
-Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. As mentioned, these claims primarily apply to payments—purchasing goods or services—not to transferring funds directly to another bank account.
+Visa and Mastercard are widely promoted by financial institutions for their speed and ease of use. For example, Visa’s website highlights “fast, secure payments” accepted globally, while Mastercard emphasizes “convenient transactions” in its branding. Banks echo this, often advertising debit and credit cards as versatile tools for managing money. As mentioned, these claims primarily apply to payments (purchasing goods or services), not to transferring funds directly to another bank account.
 
 ![Visa card showing a lock merged with a lock mechanism](/assets/images/visa_locked_image.jpg "Visa card showing a lock merged with a lock mechanism")
 
@@ -98,27 +98,27 @@ The inability to easily transfer money from one person to another across banks h
 
 These solutions leverage direct bank connections or mobile networks, offering faster and often cheaper alternatives to traditional bank transfers, addressing a gap Visa and Mastercard have yet to fill.
 
-**Personal note:** I’ve used a mobile money wallet linked to my bank account, and it’s incredibly convenient. There’s usually no fee to move money between the bank and wallet, and sending cash to someone just requires their phone number—far easier than juggling Visa or Mastercard details, since most people know their phone number by heart. There is a fee to transfer between persons but it's usually lower than those of a regular bank transfer. Zelle, operated by US banks, seems to have borrowed this idea, using a phone number or email to send money instantly. End note.
+**Personal note:** I’ve used a mobile money wallet linked to my bank account, and it’s incredibly convenient. There’s usually no fee to move money between the bank and wallet, and sending cash to someone just requires their phone number, which is far easier than juggling Visa or Mastercard details, since most people know their phone number by heart. There is a fee to transfer between persons but it's usually lower than those of a regular bank transfer. Zelle, operated by US banks, seems to have borrowed this idea, using a phone number or email to send money instantly. End note.
 
 ### A money transfer example
 
 From the points above you see that these solutions shine for in-country payments but hit a wall internationally, where the gap persists.
 
-Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option, at least none that I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture—if only you had a $5 note to slip into his hand before he could protest.
+Consider this: you’re at a conference in Nairobi, Kenya, and meet your favorite Belgian author. As a Singaporean fan, you’d love to send him $5 (6.68 SGD)  as a small thank-you for inspiring you. Even though you both hold Visa cards, tools like Venmo, Zelle, or M-Pesa don’t offer a quick cross-border option, at least none that I’ve come across. Instead, you’d have to exchange bank details, log into your banking app, face fees starting at $15 or more, and wait 2-3 days for that modest $5 to arrive. It’s little wonder your author might politely wave off the gesture, if only you had a $5 note to slip into his hand before he could protest.
 
- The next section delves into third-party services that attempt to address this global hurdle.
+ The next section covers third-party services that attempt to address this global hurdle.
 
 ## Third-Party Services as an Alternative
 
 Services like Wise, PayPal, and Venmo enable card-funded transfers to bank accounts, bridging the gap. This applies to cards that are not on the payment platform being used to initiate a payment.  Wise, for example, charges 0.43%-1.0% plus a fixed fee (e.g., $4.14 for a $500 USD-to-USD transfer, per their March 2025 fee calculator). PayPal’s fee for card-funded transfers is 2.9% plus $0.30 per transaction domestically, with higher rates for international sends. However, banks may still apply cash advance fees, adding 3%-5% to the cost. These services process transfers via their own networks or SWIFT, not the Visa or Mastercard payment rails.
 
-I’ve used Wise (formerly TransferWise) myself, and the fees can surprise you depending on your card. When I sent money from my USD Visa card—issued in Rwanda—to a US bank account, the cost shot from $26 to nearly $100 once Wise clocked the card’s origin. Skipping the issuing bank (though Wise feels bank-like itself) meant a higher fee than the $40-$50 I’d have paid for a traditional bank transfer. Worse, these services often lean on systems like SWIFT or WIRE, piling on extra charges that can outstrip standard bank rates.
+I’ve used Wise (formerly TransferWise) myself, and the fees can surprise you depending on your card. When I sent money from my USD Visa card, issued in Rwanda, to a US bank account, the cost shot from $26 to nearly $100 once Wise clocked the card’s origin. Skipping the issuing bank (though Wise feels bank-like itself) meant a higher fee than the $40-$50 I’d have paid for a traditional bank transfer. Worse, these services often lean on systems like SWIFT or WIRE, piling on extra charges that can outstrip standard bank rates.
 
-Convenience? Not quite. Unlike mobile money or Zelle, where a phone number or email suffices, these platforms demand bank details—SWIFT codes, account numbers, addresses—that you have to exchange manually. You can’t just use the recipient’s Visa card number (ironic, since it’s their unique ID, but sharing it’s a security no-no). So you’re back to form-filling, waiting hours or days for the funds to land, and facing fees that sometimes dwarf traditional bank transfers.
+Convenience? Not quite. Unlike mobile money or Zelle, where a phone number or email suffices, these platforms demand bank details (SWIFT codes, account numbers, addresses) that you have to exchange manually. You can’t just use the recipient’s Visa card number (ironic, since it’s their unique ID, but sharing it’s a security no-no). So you’re back to form-filling, waiting hours or days for the funds to land, and facing fees that sometimes dwarf traditional bank transfers.
 
 ### One direction remittance transfer
 
-Then there’s the direction issue. Take [Remitly](https://www.remitly.com/), for example: I’ve seen it happily send money from the US or UK to Ghana or Brazil, but try reversing that—say, from Ghana to the US—and you’re out of luck. I naively assumed remittances flowed both ways, but not here. It’s a one-way street that leaves you stranded if you’re on the “wrong” side.
+Then there’s the direction issue. Take [Remitly](https://www.remitly.com/), for example: I’ve seen it happily send money from the US or UK to Ghana or Brazil, but try reversing that (say, from Ghana to the US), and you’re out of luck. I naively assumed remittances flowed both ways, but not here. It’s a one-way street that leaves you stranded if you’re on the “wrong” side.
 
 Even if the charges were better than using a regular bank, many people might prefer not to hand their financial details to a 3rd party.
 

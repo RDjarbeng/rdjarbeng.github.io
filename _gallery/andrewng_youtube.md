@@ -8,7 +8,7 @@ image_alt: A screenshot of a YouTube playlist titled Machine Learning Specializa
 enhanced_by_bot: true
 ---
 
-Cover image for Machine Learning Specialization on Youtube - Andrew Ng, DeepLearningAI
+Cover image for Machine Learning Specialization on Youtube: Andrew Ng, DeepLearningAI
 
 **Additional comments:**
 

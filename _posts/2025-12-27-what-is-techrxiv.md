@@ -48,7 +48,7 @@ While arXiv has a broader disciplinary scope, TechRxiv caters specifically to th
 
 ---
 
-## Other Similar Preprint Repositories
+## Other similar preprint repositories
 
 There are several other preprint repositories tailored to specific disciplines or general research. Here are some notable ones:
 
@@ -60,7 +60,7 @@ There are several other preprint repositories tailored to specific disciplines o
 - **[SSRN (Social Science Research Network)](https://www.ssrn.com)**: Multidisciplinary with a focus on social sciences.
 - **[ViXra](http://vixra.org)**: An alternative to arXiv with multidisciplinary coverage, including unconventional research.
 
-These repositories serve as platforms for researchers across various domains to share their work openly, fostering collaboration and early feedback from the academic community.
+These repositories are platforms for researchers across various domains to share their work openly. They also make collaboration and early feedback from the academic community easier.
 
 --- 
 

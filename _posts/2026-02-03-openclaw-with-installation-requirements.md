@@ -23,7 +23,7 @@ category: "AI"
 
 ![Star History Chart](/assets/images/20260204-111920.png "OpenClaw Star History Chart")
 
-It stands out from typical chatbots because it's designed to **actually perform actions** — things like clearing your inbox, sending emails, managing your calendar, checking you in for flights, summarizing info, running commands, and handling autonomous tasks across your apps. It integrates deeply with messaging platforms you already use (WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Microsoft Teams, Google Chat, and more) so you interact with it via chat rather than a separate interface. Being fully open-source and self-hosted, your data stays on your devices/infrastructure (laptop, home server, VPS, etc.), with no cloud dependency for the core runtime.
+It stands out from typical chatbots because it's designed to **actually perform actions**: things like clearing your inbox, sending emails, managing your calendar, checking you in for flights, summarizing info, running commands, and handling autonomous tasks across your apps. It integrates deeply with messaging platforms you already use (WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Microsoft Teams, Google Chat, and more) so you interact with it via chat rather than a separate interface. Being fully open-source and self-hosted, your data stays on your devices/infrastructure (laptop, home server, VPS, etc.), with no cloud dependency for the core runtime.
 
 It's often called "the AI that actually does things" and has a fun lobster/space-lobster mascot/theme ("the lobster way," "EXFOLIATE!").
 
@@ -57,7 +57,7 @@ Here is a reliable installation method that works for many users:
 - **Disk space**: No, the core OpenClaw software itself is not huge. The repo and installed files are relatively compact (typical Node project size, likely under a few hundred MB including dependencies). It doesn't ship with massive models or datasets.
 - **The space factor**: Comes from what you choose for the **LLM backend**:
     - If using **cloud APIs** (OpenAI, Anthropic Claude, Grok, etc.) → almost no extra local space needed.
-    - If running **local models** (e.g., via Ollama, LM Studio, or built-in support) → then yes, large language models can take 5–50+ GB depending on size (e.g., 7B–70B parameter models).
+    - If running **local models** (e.g., via Ollama, LM Studio, or built-in support) → then yes, large language models can take 5 to 50+ GB depending on size (e.g., 7B to 70B parameter models).
 
 Overall, the base install is lightweight; any "huge" aspect is optional and tied to local LLM usage.
 
@@ -79,6 +79,6 @@ If you plan to run **local LLMs** (e.g., Llama 3, Mistral) alongside the agent:
 
 ### Bottom line
 
-On a typical modern laptop with 16GB RAM, OpenClaw runs well using cloud LLM providers. For fully local/privacy-max mode, stick to smaller models or accept slower performance. Many guides recommend starting with cloud APIs anyway, then experimenting with local if desired. If you're concerned, Docker setups or a cheap VPS (4–8GB recommended for smooth 24/7 use) are popular alternatives.
+On a typical modern laptop with 16GB RAM, OpenClaw runs well using cloud LLM providers. For fully local/privacy-max mode, stick to smaller models or accept slower performance. Many guides recommend starting with cloud APIs anyway, then experimenting with local if desired. If you're concerned, Docker setups or a cheap VPS (4 to 8GB recommended for smooth 24/7 use) are popular alternatives.
 
-For the latest details, check the official site ([openclaw.ai](https://openclaw.ai)), GitHub ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)), or their docs ([docs.openclaw.ai](https://docs.openclaw.ai)). It's still a young project (only weeks/months old as of early 2026), so things evolve quickly. Be cautious with permissions/security — as an agent with tool access, it can do powerful (and risky) things if misconfigured.
+For the latest details, check the official site ([openclaw.ai](https://openclaw.ai)), GitHub ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)), or their docs ([docs.openclaw.ai](https://docs.openclaw.ai)). It's still a young project (only weeks/months old as of early 2026), so things evolve quickly. Be cautious with permissions and security. As an agent with tool access, it can do powerful (and risky) things if misconfigured.

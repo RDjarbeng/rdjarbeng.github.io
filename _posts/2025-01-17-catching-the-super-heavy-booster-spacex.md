@@ -32,13 +32,13 @@ On my X feed, I shared a moment that perfectly captures the revolutionary work b
 
 ### A Feat of Unprecedented Precision
 
-Imagine the challenge: catching a rocket booster with a landing weight of over **200 tons**—equivalent to a 23-story building—as it returns from the edge of space. After propelling the Starship upper stage towards orbit, the Super Heavy booster executes a series of complex maneuvers to fly back to its launch pad, slowing from hypersonic speeds for a controlled descent.
+Imagine the challenge: catching a rocket booster with a landing weight of over **200 tons** (equivalent to a 23-story building) as it returns from the edge of space. After propelling the Starship upper stage towards orbit, the Super Heavy booster executes a series of complex maneuvers to fly back to its launch pad, slowing from hypersonic speeds for a controlled descent.
 
 The final capture, executed by the giant "chopstick" arms of the launch tower, requires centimeter-level precision. This maneuver eliminates the need for landing legs, reduces weight, and dramatically shortens the time between launches.
 
 ### Why This Catch Matters for the Future of Space Travel
 
-This achievement is a monumental step towards the holy grail of rocketry: full and rapid reusability. By catching and reusing the most expensive part of the rocket, SpaceX is drastically cutting the cost of launching payloads—and eventually people—into orbit and beyond.
+This achievement is a monumental step towards the holy grail of rocketry: full and rapid reusability. By catching and reusing the most expensive part of the rocket, SpaceX is drastically cutting the cost of launching payloads (and eventually people) into orbit and beyond.
 
 This isn't just an engineering marvel; it's a critical milestone that breaks down the financial barriers to space exploration. It brings us one giant leap closer to a future where interplanetary travel between Earth, the Moon, and Mars could become routine.
 

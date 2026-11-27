@@ -30,7 +30,7 @@ On April 20, 2024, Nigerian chess master Tunde Onakoya made history by shatterin
 
 ![Tunde Onakoya seated with onlookers cheering at times square. Image credit: NY Post](/assets/images/nigerian-chess-master-tunde-onakoya-victory.webp "Tunde Onakoya seated with onlookers cheering at times square. Image credit: NY Post")
 
-Despite facing intense physical challenges—including vomiting, stomach pain, and extreme tiredness—Onakoya persevered, demonstrating remarkable resilience and determination
+Despite facing intense physical challenges, including vomiting, stomach pain, and extreme tiredness, Onakoya persevered, demonstrating remarkable resilience and determination
 
 ![Tunde Onakoya seated whilst wrapped in a blanket at times square. Image credit: NY Post](/assets/images/tunde-blanket-times-square.webp "Tunde Onakoya seated whilst wrapped in a blanket at times square. Image credit: NY Post")
 
@@ -38,9 +38,9 @@ Despite facing intense physical challenges—including vomiting, stomach pain, a
 
 ### A Mission to Educate Nigerian Children
 
-Tunde’s marathon wasn’t just about breaking a record; it was a powerful statement with a purpose. His goal was to raise $1 million to support chess education for children in Nigeria, particularly those in underserved communities. As the founder of Chess in Slums Africa, Onakoya has dedicated his life to using chess as a tool to empower underprivileged children, drawing inspiration from his own beginnings learning the game in a slum in Ikorodu, Lagos. This record-breaking effort underscores his belief in the transformative power of education and opportunity.
+Tunde’s marathon wasn’t just about breaking a record; it was a powerful statement with a purpose. His goal was to raise $1 million to support chess education for children in Nigeria, particularly those in underserved communities. As the founder of Chess in Slums Africa, Onakoya has dedicated his life to using chess as a tool to empower underprivileged children, drawing inspiration from his own beginnings learning the game in a slum in Ikorodu, Lagos. This record-breaking effort shows his belief in the transformative power of education and opportunity.
 
-![Tunde Onakoya staring at a chess board - King's gambit](/assets/images/tundeOnakoya.jpeg "Tunde Onakoya staring at a chess board - King's gambit")
+![Tunde Onakoya staring at a chess board: King's gambit](/assets/images/tundeOnakoya.jpeg "Tunde Onakoya staring at a chess board: King's gambit")
 
 ## "It Is Possible to Do Great Things from a Small Place"
 

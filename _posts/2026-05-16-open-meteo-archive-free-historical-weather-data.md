@@ -76,11 +76,11 @@ Here are the key features that make it stand out:
 
 You might assume they run thousands of weather stations, but Open-Meteo actually acts as an enormous data aggregator. Every single day, it pulls in over 2 terabytes of raw data files from the biggest national weather services across the globe. 
 
-Instead of you having to download massive, complex binary files, Open-Meteo processes and normalizes all of this raw data into a clean, unified format. As new model runs are published, the system continuously stitches them together, ensuring a seamless stream of historical weather data without any gaps. 
+Instead of you having to download massive, complex binary files, Open-Meteo processes and normalizes all of this raw data into a clean, unified format. As new model runs are published, the system continuously stitches them together, ensuring a continuous stream of historical weather data without any gaps. 
 
 ## What Kind of Weather Can You Track?
 
-You might be wondering if it only tracks temperature. The answer is no! Open-Meteo seamlessly integrates data from dozens of global weather models (like the European Centre for Medium-Range Weather Forecasts [ECMWF], the National Oceanic and Atmospheric Administration [NOAA], and the German Meteorological Service [DWD]) to ensure there are no frustrating gaps in the timeline. 
+You might be wondering if it only tracks temperature. The answer is no! Open-Meteo integrates data from dozens of global weather models (like the European Centre for Medium-Range Weather Forecasts [ECMWF], the National Oceanic and Atmospheric Administration [NOAA], and the German Meteorological Service [DWD]) to ensure there are no frustrating gaps in the timeline. 
 
 Here is a glimpse of the metrics you can get your hands on:
 
@@ -88,7 +88,7 @@ Here is a glimpse of the metrics you can get your hands on:
 - **Atmospheric Details:** Pressure, solar radiation, CAPE (Convective Available Potential Energy), and soil moisture.
 - **Aggregated Formats:** Data can be queried natively in JSON via HTTP requests or downloaded using Python and R integrations. [[1](https://github.com/AntoinePinto/weather-data)]
 
-## Free Tier & Commercial Options
+## Free tier & commercial options
 
 If you are a hobbyist or researcher, the API is available for non-commercial use at absolutely no cost. There is no API key, no sign-up, and no credit card required. You get up to 10,000 daily API calls for free (though attribution is required under the CC BY 4.0 data licence). Despite being free of charge, the forecast accuracy is top-notch, utilizing a vast array of local weather models with rapid updates to ensure precise forecasts for any location globally.
 

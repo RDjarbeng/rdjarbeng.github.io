@@ -27,7 +27,7 @@ All variations are rendered below directly as native, resolution-independent **S
 
 ---
 
-### Design Evolution & Version History
+### Design evolution and version history
 
 This series progressed through several deliberate design stages to reach its final balance:
 
