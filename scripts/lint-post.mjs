@@ -125,7 +125,10 @@ function checkPost(file) {
       (typeof val === "string" && val.trim() === "") ||
       (Array.isArray(val) && val.length === 0);
 
-    if (isMissing) {
+    if (isMissing && field === "published") {
+      // The site treats a post with no `published` field as published
+      warnings.push({ rule: "Frontmatter", message: "No 'published' field (treated as published)", penalty: 0 });
+    } else if (isMissing) {
       issues.push({
         rule: "Frontmatter",
         message: `Missing required field '${field}'`,
@@ -161,9 +164,13 @@ function checkPost(file) {
   }
 
   // 2. Cover image validation
+  // Posts dated before the cover rules (2026-11-20) keep their old cover paths and formats:
+  // those findings become warnings, so the linter only fails on what matters for them.
+  const legacyCover = fm.date && new Date(String(fm.date).replace(/["']/g, "")) < new Date("2026-11-20");
+  const coverIssue = (i) => (legacyCover ? warnings.push({ rule: i.rule, message: i.message + " (older post: warning only)", penalty: 0 }) : issues.push(i));
   if (fm.image) {
     if (!fm.image.startsWith("/assets/images/posts/covers/")) {
-      issues.push({
+      coverIssue({
         rule: "Cover Image",
         message: `Image path '${fm.image}' must start with '/assets/images/posts/covers/'`,
         severity: "CRITICAL",
@@ -171,7 +178,7 @@ function checkPost(file) {
       });
     }
     if (!fm.image.endsWith(".jpg")) {
-      issues.push({
+      coverIssue({
         rule: "Cover Image",
         message: `Cover image '${fm.image}' must have a '.jpg' extension to avoid preview bugs.`,
         severity: "CRITICAL",
@@ -209,7 +216,7 @@ function checkPost(file) {
     const bodyParagraphs = body.split(/\n\s*\n/).filter((p) => p.trim() && !p.trim().startsWith("#"));
     const imageEmbedPattern = new RegExp(`!\\[[^\\]]*\\]\\(${fm.image}(?:\\s+"[^"]*")?\\)`);
     if (!imageEmbedPattern.test(body)) {
-      issues.push({
+      coverIssue({
         rule: "Cover Image Embed",
         message: "Cover image is not embedded in the post body right after paragraph 1.",
         severity: "CRITICAL",
