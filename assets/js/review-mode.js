@@ -115,7 +115,8 @@
       btn.style.left = window.scrollX + rect.right + 4 + "px";
       btn.style.top = window.scrollY + rect.bottom + 4 + "px";
       btn.addEventListener("mousedown", function (e2) { e2.preventDefault(); });
-      btn.addEventListener("click", function () { openBox(data, rect); });
+      // stopPropagation: otherwise the document "click outside closes the box" handler closes it at once
+      btn.addEventListener("click", function (e3) { e3.stopPropagation(); openBox(data, rect); });
       document.body.appendChild(btn);
     }, 10);
   });
