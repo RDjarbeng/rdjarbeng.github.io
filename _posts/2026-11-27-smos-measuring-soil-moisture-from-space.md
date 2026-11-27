@@ -11,8 +11,8 @@ key_points:
   - "It produces global soil moisture maps every three days at a resolution of about 50 km."
   - "In 2011, SMOS maps of the Horn of Africa showed little or no moisture in surface soil in some key farming areas of Somalia."
   - "SMOS data are free and open, but an EO Sign In account is needed to download them."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/smos_cover.jpg
+image_alt: "A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline SMOS"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 Knowing how wet the soil is can warn of drought before crops suffer. Before SMOS was launched in 2009, there were [relatively few global datasets](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/smos/mapping-moisture) on soil moisture or ocean salinity. Soil moisture is the water held in the top layer of soil. Ocean salinity is the salt content of seawater. [SMOS](https://www.esa.int/missions/about-us/directorates/earth-observation-programmes/futureeo/smos) is the European Space Agency's Soil Moisture and Ocean Salinity mission. It is one of ESA's [Earth Explorer](https://www.esa.int/articles/about-us/directorates/earth-observation-programmes/futureeo/smos/introducing-smos) missions.
+
+![A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline SMOS](/assets/images/posts/covers/smos_cover.jpg)
 
 ## What SMOS provides
 

@@ -11,8 +11,8 @@ key_points:
   - "Its live, self-paced and in-person courses cover satellites, maps, data tools and case studies, in four levels from fundamentals to advanced."
   - "Online trainings have no fee, and past slides, Q&A transcripts and homework are posted for review."
   - "A 2024 Cape Town workshop and a Ghanaian student's planned water quality study show how the training is used in Africa."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/nasa_arset_cover.jpg
+image_alt: "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline NASA ARSET"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 Free satellite data only helps if you know how to read it. Turning images of a flood, a dry farm or a growing town into information takes training. [NASA's Applied Remote Sensing Training Program](https://www.earthdata.nasa.gov/data/projects/arset), known as ARSET, teaches these skills. Its online trainings have no course fee.
+
+![A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline NASA ARSET](/assets/images/posts/covers/nasa_arset_cover.jpg)
 
 [Remote sensing](https://www.earthdata.nasa.gov/learn/trainings/fundamentals-remote-sensing) is the science of measuring Earth from satellites and other sensors. A sensor is an instrument that measures light or other energy. ARSET says its trainings build skills for air quality, public health, agriculture, disasters, ecological conservation, water resource management, climate resilience and wildland fires. Its [training list](https://www.earthdata.nasa.gov/data/projects/arset/learn) can be filtered by topic, training level, training type and language.
 

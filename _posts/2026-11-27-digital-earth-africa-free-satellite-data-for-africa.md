@@ -11,8 +11,8 @@ key_points:
   - "Users can access maps and services for water, cropland and vegetation, including Water Observations from Space and the Cropland Extent Map."
   - "The programme is run by the International Centre of Insect Physiology and Ecology (icipe)."
   - "Free online training is available in both English and French, including weekly live sessions."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/digital_earth_africa_cover.jpg
+image_alt: "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline Digital Earth Africa"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 If you plan for floods, droughts or food supplies in Africa, you need reliable information about land and water. [Digital Earth Africa](https://digitalearthafrica.org/en_za/) (DE Africa) provides free and open satellite data for the whole continent. The programme is run by the [International Centre of Insect Physiology and Ecology](https://digitalearthafrica.org/en_za/about-digital-earth-africa/) (icipe).
+
+![A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline Digital Earth Africa](/assets/images/posts/covers/digital_earth_africa_cover.jpg)
 
 ## What the programme provides
 

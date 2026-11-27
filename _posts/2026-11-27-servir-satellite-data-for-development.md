@@ -11,8 +11,8 @@ key_points:
   - "The work now continues through the SERVIR Global Collaborative, which its pages describe as led by independent regional hubs."
   - "Official examples include rainfall outlooks used by Kenya Meteorological Service offices and charcoal production monitoring in Ghana."
   - "The ClimateSERV map and the SERVIR App Center are public pages."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/servir_cover.jpg
+image_alt: "A satellite linked to a rain cloud falling on a row of fields, under the headline SERVIR"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 In many regions that SERVIR works in, long-term ground rainfall records are limited. [ClimateSERV's about page](https://climateserv.servirglobal.net/about) says satellite and model rainfall data are then critical for predicting droughts and estimating crop conditions. [SERVIR](https://www.servirglobal.net/about/) turns Earth observation data into services for climate adaptation, disaster resilience, food security and water management. Earth observation data is information collected about the planet, often by satellites.
+
+![A satellite linked to a rain cloud falling on a row of fields, under the headline SERVIR](/assets/images/posts/covers/servir_cover.jpg)
 
 ## History and current status
 

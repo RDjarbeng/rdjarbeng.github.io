@@ -11,8 +11,8 @@ key_points:
   - "Volunteers trace satellite images, add local detail in the field and use tools such as the Sketch Map Tool."
   - "During the 2026 Ebola outbreak in Ituri Province, DR Congo, mappers updated village locations and buildings for the response."
   - "Anyone can start for free with MapSwipe or the HOT Tasking Manager, and mapathons provide training."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/missing_maps_cover.jpg
+image_alt: "A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline Missing Maps"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 Aid teams need to find villages, roads and buildings on a map before they can reach people in a crisis. [Missing Maps](https://www.missingmaps.org/) is an open, collaborative project in which volunteers map areas where humanitarian organisations work with people at risk of disasters and crises. It is a [collective of organisations](https://www.missingmaps.org/about/), and the Humanitarian OpenStreetMap Team (HOT) is one of its founders. Anyone can take part.
+
+![A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline Missing Maps](/assets/images/posts/covers/missing_maps_cover.jpg)
 
 ## What Missing Maps provides
 

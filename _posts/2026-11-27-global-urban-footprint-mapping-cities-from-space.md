@@ -11,8 +11,8 @@ key_points:
   - "It marks only built-up areas, so roads and open ground inside cities appear as white gaps."
   - "DLR later built the World Settlement Footprint from free Landsat and Sentinel data, at 10 metre resolution."
   - "The Global Urban Footprint data are free for scientific and non-commercial use through an email request to DLR."
-image: ""
-image_alt: ""
+image: /assets/images/posts/covers/global_urban_footprint_cover.jpg
+image_alt: "A satellite sending radar waves down to a skyline of city blocks, under the headline Global Urban Footprint"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -20,6 +20,8 @@ layout: post
 ---
 
 A free worldwide map can show where towns and cities sit and how much land they cover. The Global Urban Footprint (GUF) is one such map. [DLR](https://www.dlr.de/en/eoc), the German Aerospace Center, created it through its Earth Observation Center. The centre includes the [German Remote Sensing Data Center](https://www.dlr.de/en/eoc/about-us/german-remote-sensing-data-center).
+
+![A satellite sending radar waves down to a skyline of city blocks, under the headline Global Urban Footprint](/assets/images/posts/covers/global_urban_footprint_cover.jpg)
 
 ## What the Global Urban Footprint provides
 
