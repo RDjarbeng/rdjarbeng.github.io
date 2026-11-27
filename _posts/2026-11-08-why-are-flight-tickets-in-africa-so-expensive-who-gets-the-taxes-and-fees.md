@@ -47,7 +47,7 @@ A ticket price is what happens when two people with different problems meet. One
 
 Imagine you run an airline with a single 150-seat narrowbody. You lease it, so the payment is due every month whether it flies or not. Before a given flight departs, you have committed to the crew, the fuel plan, the maintenance that accumulates with every cycle, the landing and handling bills, and the navigation fees for the airspace you will cross. Once the doors close, an empty seat saves you almost nothing.
 
-Suppose a 2.5 hour flight costs USD 30,000 all in. These are invented round numbers, used only to show the mechanics, but the arithmetic holds at any scale:
+Suppose a 2.5 hour flight costs USD 30,000 all in. These are invented round numbers, used only to show the mechanics, but the arithmetic should hold when scaled:
 
 | Seats sold | Share of seats filled | Cost each passenger must cover |
 | :--- | :--- | :--- |
@@ -183,7 +183,7 @@ Safety is the concern where the data does back up the worry, although it is impr
 
 The airline cannot see inside each traveler's head, but it can see when they book, where they fly, and which fares they choose, and that is enough to price for the differences.
 
-## Where the two meet
+## Where the passengers and airlines meet
 
 ![Diagram illustrating airline revenue management stepping up fares across discount, economy, flex, and walk-up buckets](/assets/images/diagrams/airline-fare-bucket-ladder.svg "How revenue management fare buckets step up ticket prices")
 

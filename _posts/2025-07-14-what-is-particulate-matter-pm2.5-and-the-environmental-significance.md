@@ -23,7 +23,7 @@ content_type: explainer
 ai_assistance:
   - drafting
 ---
-On [29 January 2026](/weather-report-kigali-29th-january-2026/), the CAMS forecast model put Kigali's PM2.5 at about 37 µg/m³ for the day. That is about two and a half times the WHO's 24-hour guideline. PM2.5 is the fine smoke and dust in the air that you breathe without seeing. This post explains what a number like 37 means, how much to trust it and what to do about it.
+On 29 January 2026, a thick haze hid the hills around Kigali, and the CAMS forecast model put the city's PM2.5 at about 37 µg/m³ for the day ([the haze and the data are in this post](/weather-report-kigali-29th-january-2026/)). That is about two and a half times the WHO's 24-hour guideline. PM2.5 is the fine smoke and dust in the air that you breathe without seeing. This post explains what a number like 37 means, how much to trust it and what to do about it.
 
 ![urban city with trees and clouds with annotated text](/assets/images/air_quality_city_pm_rdjarbeng_trademark.jpg "Urban city with trees and clouds with annotated text")
 
