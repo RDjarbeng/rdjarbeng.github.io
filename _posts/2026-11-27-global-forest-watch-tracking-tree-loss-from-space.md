@@ -12,7 +12,7 @@ key_points:
   - "Community groups in Cameroon used near real time alerts to track clearing in the Mengamé Gorilla Sanctuary."
   - "In Kenya, the Mara Elephant Project uses GLAD deforestation alerts and fire alerts to watch forests around the Maasai Mara."
 image: /assets/images/posts/covers/global_forest_watch_cover.jpg
-image_alt: "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global forest watch sends alerts when trees disappear'"
+image_alt: "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global Forest Watch sends alerts when trees disappear'"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -21,7 +21,7 @@ layout: post
 
 If you want to know whether forest near you is being cleared, you need information that is up to date. [Global Forest Watch](https://www.globalforestwatch.org/) puts satellite images and forest alerts online, so anyone can see where clearing is happening. Alerts are warnings that appear when satellite images show a possible change, such as trees being removed.
 
-![A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global forest watch sends alerts when trees disappear'](/assets/images/posts/covers/global_forest_watch_cover.jpg)
+![A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global Forest Watch sends alerts when trees disappear'](/assets/images/posts/covers/global_forest_watch_cover.jpg)
 
 The [World Resources Institute](https://www.globalforestwatch.org/about/) established the service in 1997 and launched its interactive online platform in 2014. The service was [renamed Global Nature Watch in 2026](https://www.globalnaturewatch.org/blog/data-and-tools/gfw-now-global-nature-watch/). According to the renaming announcement, nothing changes for users except the name. Saved areas, subscriptions, alerts and saved links keep working.
 
