@@ -999,3 +999,4 @@ Standard attention compares every token with every other token, even when only a
 - [ ] Unsloth notebooks seem to be getting a lot of love nowadays, but I've really never heard of them. Would be good to do a series on them
 
 https://unsloth.ai/docs
+- [ ] Differences between Google research, deepmind, google brain. What's the difference
