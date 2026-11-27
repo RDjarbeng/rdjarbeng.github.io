@@ -43,3 +43,6 @@ ml_roadmap_series.md
 
 # Compiled from assets/css/styles.scss by npm run build (deploy) and npm start (local)
 assets/css/styles.css
+
+# Dev-only review comments (scripts/dev-serve.cjs, assets/js/review-mode.js)
+review/

@@ -16,6 +16,8 @@
 // near 450 MB, so the growth is native memory). The launcher now restarts the server with a fresh
 // process after every wake, and brings it back if it stops on its own after running a while.
 const { spawn } = require("child_process");
+const http = require("http");
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
@@ -104,6 +106,89 @@ for (const target of watched) {
     restart(`${path.relative(root, file)} changed`);
   });
 }
+
+// Review comments (dev only): a tiny server on 127.0.0.1:8095 that stores highlight-and-comment
+// notes from assets/js/review-mode.js in review/comments.json (git-ignored). Read them with
+// `npm run review:comments`. Lives in this launcher, so it survives Eleventy restarts.
+const REVIEW_PORT = 8095;
+const reviewDir = path.join(root, "review");
+const reviewFile = path.join(reviewDir, "comments.json");
+const readComments = () => { try { return JSON.parse(fs.readFileSync(reviewFile, "utf8")); } catch (e) { return []; } };
+const writeComments = (list) => {
+  fs.mkdirSync(reviewDir, { recursive: true });
+  fs.writeFileSync(reviewFile, JSON.stringify(list, null, 2) + "\n");
+};
+const normUrl = (u) => {
+  let p = String(u || "");
+  try { p = new URL(p, "http://localhost").pathname; } catch (e) {}
+  return p.endsWith("/") || /\.[a-z0-9]+$/i.test(p) ? p : p + "/";
+};
+const originOk = (o) => !o || /^http:\/\/localhost(:\d+)?$/.test(o);
+
+const reviewServer = http.createServer((req, res) => {
+  const origin = req.headers.origin;
+  const send = (code, body) => {
+    const headers = { "Content-Type": "application/json" };
+    if (origin && originOk(origin)) {
+      headers["Access-Control-Allow-Origin"] = origin;
+      headers["Vary"] = "Origin";
+      headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS";
+      headers["Access-Control-Allow-Headers"] = "Content-Type";
+    }
+    res.writeHead(code, headers);
+    res.end(JSON.stringify(body));
+  };
+  if (!originOk(origin)) return send(403, { error: "origin not allowed" });
+  if (req.method === "OPTIONS") return send(204, {});
+  const u = new URL(req.url, "http://127.0.0.1");
+  const resolve = u.pathname.match(/^\/comments\/([\w-]+)\/resolve$/);
+
+  if (req.method === "GET" && u.pathname === "/comments") {
+    let list = readComments();
+    const url = u.searchParams.get("url");
+    const status = u.searchParams.get("status");
+    if (url) list = list.filter((c) => c.url === normUrl(url));
+    if (status) list = list.filter((c) => c.status === status);
+    return send(200, list);
+  }
+  if (req.method === "POST" && (u.pathname === "/comments" || resolve)) {
+    let raw = "";
+    req.on("data", (d) => { raw += d; if (raw.length > 1e6) req.destroy(); });
+    req.on("end", () => {
+      let data = {};
+      try { data = raw ? JSON.parse(raw) : {}; } catch (e) { return send(400, { error: "bad JSON" }); }
+      const list = readComments();
+      if (resolve) {
+        const c = list.find((x) => x.id === resolve[1]);
+        if (!c) return send(404, { error: "not found" });
+        c.status = "resolved";
+        c.resolved = new Date().toISOString();
+        writeComments(list);
+        return send(200, c);
+      }
+      if (!data.url || !data.quote || !data.comment) return send(400, { error: "url, quote and comment are required" });
+      const str = (v, n) => String(v || "").slice(0, n);
+      const c = {
+        id: crypto.randomBytes(4).toString("hex"),
+        created: new Date().toISOString(),
+        status: "open",
+        url: normUrl(data.url),
+        title: str(data.title, 300),
+        quote: str(data.quote, 5000),
+        prefix: str(data.prefix, 200),
+        suffix: str(data.suffix, 200),
+        comment: str(data.comment, 5000),
+      };
+      list.push(c);
+      writeComments(list);
+      return send(201, c);
+    });
+    return;
+  }
+  send(404, { error: "not found" });
+});
+reviewServer.on("error", (e) => console.log(`[review] comment server not started: ${e.message}`));
+reviewServer.listen(REVIEW_PORT, "127.0.0.1", () => console.log(`[review] comments server on http://127.0.0.1:${REVIEW_PORT} (file: review/comments.json)`));
 
 const stop = () => { if (child) child.kill(); process.exit(0); };
 process.on("SIGINT", stop);

@@ -1,0 +1,33 @@
+---
+layout: default
+title: Review
+sitemap: false
+noindex: true
+---
+<style>
+  .review-page { max-width: 980px; margin: 0 auto; padding: 1rem; }
+  .review-table { border-collapse: collapse; width: 100%; margin: 0 0 1.5rem; }
+  .review-table th, .review-table td { text-align: left; vertical-align: top; padding: 6px 10px; border-bottom: 1px solid #ccc; font-size: 0.92rem; }
+  .review-table th { border-bottom: 2px solid #222; }
+</style>
+<div class="review-page">
+  <h1>Review</h1>
+  <h2>Open comments</h2>
+  <div id="review-comments">Loading...</div>
+
+  <h2>Edited in the last 14 days</h2>
+  {% if reviewRecent.size == 0 %}<p>Nothing changed in git in the last 14 days.</p>{% else %}
+  <table class="review-table">
+    <tr><th>Date</th><th>Post</th><th>Type</th><th>Last commit</th></tr>
+    {% for r in reviewRecent %}
+    <tr>
+      <td>{{ r.day }}</td>
+      <td>{% if r.url %}<a href="{{ r.url }}">{{ r.title }}</a>{% else %}{{ r.title }} (unpublished){% endif %}</td>
+      <td>{{ r.kind }}</td>
+      <td>{{ r.subject }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</div>
+<script src="/assets/js/review-mode.js" defer></script>

@@ -1120,6 +1120,63 @@ ${jsonLd}
     }
   });
 
+  // 10. Dev-only review mode (highlight-and-comment overlay and /review/ page).
+  // Everything here is switched on only by `eleventy --serve`; a normal build gets devReview=false,
+  // the layouts leave out the script tag, review.liquid has no permalink, and the script file is
+  // removed from the output after the build.
+  const devReview = process.env.ELEVENTY_RUN_MODE === "serve";
+  eleventyConfig.addGlobalData("devReview", devReview);
+  eleventyConfig.addGlobalData("reviewRecent", () => {
+    if (!devReview) return [];
+    try {
+      const { execFileSync } = require("child_process");
+      const out = execFileSync(
+        "git",
+        ["log", "--since=14.days", "--name-only", "--pretty=format:@@%cI|%s", "--", "_posts", "_personal"],
+        { cwd: __dirname, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }
+      );
+      const seen = new Map();
+      let cur = null;
+      for (const line of out.split(/\r?\n/)) {
+        if (line.startsWith("@@")) {
+          const i = line.indexOf("|");
+          cur = { date: line.slice(2, i), subject: line.slice(i + 1) };
+        } else if (line.trim() && cur && /\.md$/.test(line) && !seen.has(line)) {
+          seen.set(line, cur); // git lists newest commits first, so the first hit is the latest
+        }
+      }
+      const rows = [];
+      for (const [file, c] of seen) {
+        if (!fs.existsSync(path.join(__dirname, file))) continue;
+        const fm = matter(fs.readFileSync(path.join(__dirname, file), "utf8")).data;
+        const slug = path.basename(file, ".md").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+        const personal = file.startsWith("_personal/");
+        const published = fm.published !== false;
+        const url = published ? (fm.permalink || (personal ? `/personal/${slug}/` : `/${slug}/`)) : null;
+        rows.push({
+          file,
+          kind: personal ? "personal" : "post",
+          title: fm.title || slug,
+          url,
+          published,
+          date: c.date,
+          day: c.date.slice(0, 10),
+          subject: c.subject,
+        });
+      }
+      return rows.sort((a, b) => b.date.localeCompare(a.date));
+    } catch (e) {
+      console.warn(`[review] git log failed: ${e.message}`);
+      return [];
+    }
+  });
+  if (!devReview) {
+    eleventyConfig.on("eleventy.after", ({ dir }) => {
+      fs.rmSync(path.join(dir.output, "assets", "js", "review-mode.js"), { force: true });
+      fs.rmSync(path.join(dir.output, "review"), { recursive: true, force: true });
+    });
+  }
+
   return {
     dir: {
       input: ".",
