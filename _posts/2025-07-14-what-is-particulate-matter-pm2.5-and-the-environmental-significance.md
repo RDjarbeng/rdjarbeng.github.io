@@ -41,6 +41,10 @@ Size matters because of how far particles travel inside the body. Both PM10 and 
 
 The [WHO's 2021 guidelines](https://www.who.int/publications/i/item/9789240034228) set guideline levels for PM2.5 of 15 µg/m³ averaged over 24 hours and 5 µg/m³ over a year. These are not safe limits. The evidence has found no level below which PM2.5 does no harm across a population ([COMEAP](https://www.gov.uk/government/publications/comeap-statement-response-to-who-air-quality-guidelines-2021/comeap-statement-response-to-publication-of-the-world-health-organization-air-quality-guidelines-2021)).
 
+![Illustrated avatar of the author wearing a white N95-style face mask over his nose and mouth, next to circles showing a human hair, a PM10 particle and a PM2.5 particle drawn to scale](/assets/images/posts/pm25/pm25-avatar-mask-particle-sizes.jpg "An illustrated avatar of the author wearing a mask, beside a human hair, PM10 and PM2.5 particles drawn to scale")
+
+*Particle widths are drawn to scale: a hair is about 70 µm, PM10 up to 10 µm and PM2.5 up to 2.5 µm ([EPA](https://www.epa.gov/pm-pollution/particulate-matter-pm-basics)).*
+
 In 2019, 99% of the world's population lived where WHO guideline levels were not met ([WHO](https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health)). At an urban background site in Nairobi, PM2.5 averaged 21 µg/m³ in samples taken from 2008 to 2010 ([Gaita et al., 2014](https://doi.org/10.5194/acp-14-9977-2014)). That 2008 to 2010 average was four times the WHO yearly level.
 
 Both short-term and long-term exposure to particulate matter are linked to illness and death from heart and lung disease. Long-term exposure is also linked to lung cancer and to harm during pregnancy and birth. A US study of about 500,000 adults linked long-term exposure to deaths from lung cancer and from heart and lung disease ([Pope et al., 2002](https://doi.org/10.1001/jama.287.9.1132)). In 2013, the WHO's cancer agency classed particulate matter as a cause of lung cancer ([WHO](https://www.who.int/teams/environment-climate-change-and-health/air-quality-and-health/health-impacts/types-of-pollutants)).
