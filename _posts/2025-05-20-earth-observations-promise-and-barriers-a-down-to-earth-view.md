@@ -103,6 +103,8 @@ A flood risk map only helps if it reaches the people planning evacuations, in a 
 
 ## Where to get the data
 
+![Logos of NASA Earthdata, USGS, Copernicus Data Space Ecosystem and JAXA in the top row, and Planet, Airbus and ICEYE in the bottom row](/assets/images/posts/earth-observation/platform-logos.jpg "Logos of the government and commercial platforms described below; trademarks of their owners")
+
 ### Government platforms
 
 Governments fund many satellites and give much of the data away. [NASA Earthdata](https://earthdata.nasa.gov/) offers free access to large archives, including data from the MODIS sensor. Landsat data is free from the USGS through [EarthExplorer](https://earthexplorer.usgs.gov/). The EU's [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) offers free, full and open access to Sentinel data. I cover that programme in [Copernicus: powering Earth observation with Sentinel satellites](/copernicus-powering-earth-observation-with-sentinel-satellites/). JAXA's [G-Portal](https://gportal.jaxa.jp/gpr/) gives access to data from Japanese Earth observation satellites.
