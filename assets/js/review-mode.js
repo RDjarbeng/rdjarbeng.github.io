@@ -10,6 +10,8 @@
   var css = [
     ".rv-badge{position:fixed;right:0;bottom:0;z-index:99999;background:#222;color:#fff;font:13px/1 system-ui,sans-serif;padding:8px 12px;text-decoration:none;border:1px solid #000}",
     ".rv-badge:hover{background:#000;color:#fff}",
+    ".rv-badge.rv-cmp{bottom:31px;background:#fff;color:#222;border:1px solid #222}",
+    ".rv-badge.rv-cmp:hover{background:#222;color:#fff}",
     "mark.rv-hl{background:#ffe96b;color:inherit;cursor:pointer;padding:0}",
     ".rv-btn,.rv-box button{font:13px system-ui,sans-serif;border:1px solid #222;background:#fff;color:#222;padding:5px 10px;cursor:pointer;border-radius:0}",
     ".rv-btn{position:absolute;z-index:99998}",
@@ -48,6 +50,14 @@
     }).catch(function () { badge.textContent = "Review: server off"; });
   }
   refreshBadge();
+
+  // Post pages: a link to the compare view for this post's source file
+  var srcTag = document.querySelector("script[data-review-file]");
+  if (srcTag && srcTag.getAttribute("data-review-file")) {
+    var cmp = el("a", "rv-badge rv-cmp", "Compare versions");
+    cmp.href = "/review/compare/?file=" + encodeURIComponent(srcTag.getAttribute("data-review-file"));
+    document.body.appendChild(cmp);
+  }
 
   if (isReviewPage) { renderReviewPage(); return; }
   if (!scope) return;

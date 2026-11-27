@@ -1,0 +1,53 @@
+---
+layout: default
+title: Compare versions
+sitemap: false
+noindex: true
+---
+<style>
+  .cmp-page { max-width: 1400px; margin: 0 auto; padding: 1rem; }
+  .cmp-bar { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: flex-end; margin: 0 0 8px; }
+  .cmp-bar label { font-size: 0.85rem; flex: 1 1 260px; }
+  .cmp-bar select { display: block; width: 100%; margin-top: 2px; font: inherit; padding: 4px; border: 1px solid var(--card-border, #999); background: transparent; color: inherit; border-radius: 0; }
+  .cmp-bar select option { color: #222; }
+  .cmp-tabs { margin: 8px 0 12px; border-bottom: 1px solid var(--card-border, #ccc); }
+  .cmp-tabs button { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; color: inherit; padding: 6px 2px; margin-right: 22px; cursor: pointer; border-radius: 0; opacity: 0.7; }
+  .cmp-tabs button[aria-pressed="true"] { border-bottom-color: currentColor; opacity: 1; font-weight: 600; }
+  .cmp-note { color: var(--grey-text, #666); font-size: 0.88rem; }
+  .cmp-fm { font-size: 0.88rem; margin: 0 0 12px; padding: 6px 10px; border-left: 3px solid var(--card-border, #999); }
+  .cmp-fm code { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .cmp-fm .old { background: rgba(220, 50, 50, 0.18); }
+  .cmp-fm .new { background: rgba(40, 160, 70, 0.2); }
+  .cmp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+  .cmp-single .cmp-row { grid-template-columns: 1fr; }
+  .cmp-cell { min-width: 0; overflow-wrap: anywhere; padding: 0 8px; }
+  .cmp-cell img { max-width: 100%; }
+  .cmp-cell pre { overflow-x: auto; }
+  .cmp-same { opacity: 0.45; }
+  .cmp-del { background: rgba(220, 50, 50, 0.14); box-shadow: -3px 0 0 rgba(220, 50, 50, 0.7); }
+  .cmp-add { background: rgba(40, 160, 70, 0.16); box-shadow: -3px 0 0 rgba(40, 160, 70, 0.7); }
+  .cmp-page ins { background: rgba(40, 160, 70, 0.3); text-decoration: none; }
+  .cmp-page del { background: rgba(220, 50, 50, 0.3); text-decoration: line-through; }
+  .cmp-heads { font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; }
+  .cmp-frame { width: 100%; height: calc(100vh - 220px); min-height: 500px; border: 1px solid var(--card-border, #999); background: #fff; }
+  @media (max-width: 800px) { .cmp-row { grid-template-columns: 1fr; } }
+</style>
+<div class="cmp-page">
+  <p><a href="/review/">&larr; Review</a> <span class="cmp-note" id="cmp-file"></span></p>
+  <div class="cmp-bar">
+    <label>Left (older)<select id="cmp-left"></select></label>
+    <label>Right (newer)<select id="cmp-right"></select></label>
+  </div>
+  <div class="cmp-tabs" role="tablist">
+    <button type="button" data-mode="side" aria-pressed="false">Side by side</button>
+    <button type="button" data-mode="changes" aria-pressed="false">Changes</button>
+    <button type="button" data-mode="full" aria-pressed="false">Full post</button>
+  </div>
+  <div id="cmp-status" class="cmp-note">Loading...</div>
+  <div id="cmp-fm"></div>
+  <div id="cmp-out"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/diff@5.2.0/dist/diff.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="/assets/js/review-compare.js" defer></script>
+<script src="/assets/js/review-mode.js" defer></script>

@@ -31,7 +31,7 @@ noindex: true
       <td>{{ d.day }}</td>
       <td><a href="{{ d.url }}">{{ d.title }}</a></td>
       <td>{{ d.kind }}</td>
-      <td>{% if journeyOn %}<a href="/journey/{{ d.slug }}/">Compare versions</a>{% else %}<span class="review-note">run start:journey</span>{% endif %}</td>
+      <td><a href="/review/compare/?file={{ d.file | url_encode }}">Compare</a>{% if journeyOn %} · <a href="/journey/{{ d.slug }}/">Journey</a>{% endif %}</td>
     </tr>
     {% endfor %}
   </table>
@@ -46,12 +46,12 @@ noindex: true
       <td><a href="{{ r.url }}">{{ r.title }}</a>{% unless r.published %} <span class="review-draft">(draft)</span>{% endunless %}</td>
       <td>{{ r.kind }}</td>
       <td>{{ r.subject }}</td>
-      <td>{% if journeyOn %}<a href="/journey/{{ r.slug }}/">Compare versions</a>{% else %}<span class="review-note">run start:journey</span>{% endif %}</td>
+      <td><a href="/review/compare/?file={{ r.file | url_encode }}">Compare</a>{% if journeyOn %} · <a href="/journey/{{ r.slug }}/">Journey</a>{% endif %}</td>
     </tr>
     {% endfor %}
   </table>
   {% endif %}
-  {% unless journeyOn %}<p class="review-note">To compare a post's versions side by side, start the server with <code>npm run start:journey</code> instead of <code>npm start</code>.</p>{% endunless %}
+  {% unless journeyOn %}<p class="review-note">Compare opens side-by-side, changes and full-post views of a post's saved versions. The older Journey view (a link next to Compare) needs <code>npm run start:journey</code>.</p>{% endunless %}
 </div>
 <script>
   document.getElementById("review-filter").addEventListener("input", function (e) {

@@ -1138,7 +1138,7 @@ ${jsonLd}
         if (fm.published !== false) continue;
         const slug = f.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
         const mt = fs.statSync(path.join(__dirname, dir, f)).mtime;
-        out.push({ title: fm.title || slug, url: pre + slug + "/", slug, kind: dir === "_posts" ? "post" : "personal", day: mt.toISOString().slice(0, 10) });
+        out.push({ file: `${dir}/${f}`, title: fm.title || slug, url: pre + slug + "/", slug, kind: dir === "_posts" ? "post" : "personal", day: mt.toISOString().slice(0, 10) });
       }
     }
     return out.sort((a, b) => b.day.localeCompare(a.day));
@@ -1191,6 +1191,7 @@ ${jsonLd}
   if (!devReview) {
     eleventyConfig.on("eleventy.after", ({ dir }) => {
       fs.rmSync(path.join(dir.output, "assets", "js", "review-mode.js"), { force: true });
+      fs.rmSync(path.join(dir.output, "assets", "js", "review-compare.js"), { force: true });
       fs.rmSync(path.join(dir.output, "review"), { recursive: true, force: true });
     });
   }

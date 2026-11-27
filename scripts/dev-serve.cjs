@@ -110,7 +110,7 @@ for (const target of watched) {
 // Review comments (dev only): a tiny server on 127.0.0.1:8095 that stores highlight-and-comment
 // notes from assets/js/review-mode.js in review/comments.json (git-ignored). Read them with
 // `npm run review:comments`. Lives in this launcher, so it survives Eleventy restarts.
-const REVIEW_PORT = 8095;
+const REVIEW_PORT = Number(process.env.REVIEW_PORT) || 8095; // REVIEW_PORT only for testing beside a running server
 const reviewDir = path.join(root, "review");
 const reviewFile = path.join(reviewDir, "comments.json");
 const readComments = () => { try { return JSON.parse(fs.readFileSync(reviewFile, "utf8")); } catch (e) { return []; } };
@@ -127,8 +127,8 @@ const originOk = (o) => !o || /^http:\/\/localhost(:\d+)?$/.test(o);
 
 const reviewServer = http.createServer((req, res) => {
   const origin = req.headers.origin;
-  const send = (code, body) => {
-    const headers = { "Content-Type": "application/json" };
+  const send = (code, body, type) => {
+    const headers = { "Content-Type": type || "application/json" };
     if (origin && originOk(origin)) {
       headers["Access-Control-Allow-Origin"] = origin;
       headers["Vary"] = "Origin";
@@ -136,7 +136,7 @@ const reviewServer = http.createServer((req, res) => {
       headers["Access-Control-Allow-Headers"] = "Content-Type";
     }
     res.writeHead(code, headers);
-    res.end(JSON.stringify(body));
+    res.end(type ? body : JSON.stringify(body));
   };
   if (!originOk(origin)) return send(403, { error: "origin not allowed" });
   if (req.method === "OPTIONS") return send(204, {});
@@ -184,6 +184,37 @@ const reviewServer = http.createServer((req, res) => {
       return send(201, c);
     });
     return;
+  }
+  // Version history for the compare page (/review/compare/): read-only, localhost only.
+  if (req.method === "GET" && (u.pathname === "/git/log" || u.pathname === "/git/show")) {
+    const file = u.searchParams.get("file") || "";
+    if (!/^(_posts|_personal)\/[\w.\-]+\.md$/.test(file) || file.includes("..")) return send(400, { error: "file must be a .md under _posts/ or _personal/" });
+    const { execFile } = require("child_process");
+    const git = (args, cb) => execFile("git", args, { cwd: root, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }, cb);
+    if (u.pathname === "/git/log") {
+      return git(["log", "--follow", "-n", "50", "--pretty=format:%h|%cI|%s", "--", file], (err, out) => {
+        if (err) return send(500, { error: "git log failed" });
+        const rows = out.split(/\r?\n/).filter(Boolean).map((l) => {
+          const a = l.indexOf("|"), b = l.indexOf("|", a + 1);
+          return { hash: l.slice(0, a), date: l.slice(a + 1, b), subject: l.slice(b + 1) };
+        });
+        send(200, rows);
+      });
+    }
+    const rev = u.searchParams.get("rev") || "";
+    if (rev === "WORKING") {
+      return fs.readFile(path.join(root, file), "utf8", (err, txt) => (err ? send(404, { error: "file not found" }) : send(200, txt, "text/plain; charset=utf-8")));
+    }
+    if (!/^[0-9a-f]{7,40}$/.test(rev)) return send(400, { error: "rev must be a commit hash or WORKING" });
+    // A commit that predates a rename holds the file under its old name, so look the path up in that commit.
+    return git(["log", "--follow", "--name-only", "--pretty=format:@@%h", "-n", "50", "--", file], (e1, names) => {
+      let p = file, cur = null;
+      if (!e1) for (const line of names.split(/\r?\n/)) {
+        if (line.startsWith("@@")) cur = line.slice(2);
+        else if (line.trim() && cur && rev.startsWith(cur.slice(0, 7))) { p = line.trim(); break; }
+      }
+      git(["show", `${rev}:${p}`], (err, out) => (err ? send(404, { error: "no such revision for this file" }) : send(200, out, "text/plain; charset=utf-8")));
+    });
   }
   send(404, { error: "not found" });
 });
