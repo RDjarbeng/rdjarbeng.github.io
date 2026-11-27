@@ -2091,9 +2091,9 @@ pre.highlight span,
     font-size: 14px;
     color: var(--text-color);
     outline: none;
-    border-radius: 20px;
-    /* Rounded ends as requested */
-    transition: width 0.4s ease, padding 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+    border-radius: 3px;
+    /* Short so typing right after a click isn't caught mid-animation */
+    transition: width 0.15s ease, padding 0.15s ease, border 0.15s ease, background-color 0.15s ease;
     opacity: 0;
     /* Fully hide text/placeholder when collapsed */
     cursor: pointer;

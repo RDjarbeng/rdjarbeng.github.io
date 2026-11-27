@@ -534,7 +534,9 @@ body.dark-mode .ais-Highlight-highlighted {
         }
         
         // Sync input value if changed from elsewhere (e.g. main search box)
-        if (widgetParams.input.value !== query) {
+        // Never while the user is typing in it: renders arrive with the previous (debounced)
+        // query and would overwrite the characters typed since.
+        if (widgetParams.input.value !== query && document.activeElement !== widgetParams.input) {
           widgetParams.input.value = query;
         }
       }
