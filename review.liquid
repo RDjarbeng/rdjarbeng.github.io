@@ -5,29 +5,60 @@ sitemap: false
 noindex: true
 ---
 <style>
-  .review-page { max-width: 980px; margin: 0 auto; padding: 1rem; }
-  .review-table { border-collapse: collapse; width: 100%; margin: 0 0 1.5rem; }
-  .review-table th, .review-table td { text-align: left; vertical-align: top; padding: 6px 10px; border-bottom: 1px solid #ccc; font-size: 0.92rem; }
-  .review-table th { border-bottom: 2px solid #222; }
+  .review-page { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+  .review-page h2 { margin-top: 2rem; }
+  .review-table { border-collapse: collapse; width: 100%; margin: 0 0 1rem; }
+  .review-table th, .review-table td { text-align: left; vertical-align: top; padding: 6px 10px; border-bottom: 1px solid var(--card-border, #ccc); font-size: 0.92rem; }
+  .review-table th { border-bottom: 2px solid currentColor; }
+  .review-table a { text-decoration: underline; }
+  .review-filter { width: 100%; max-width: 420px; padding: 6px 8px; font-size: 0.95rem; border: 1px solid var(--card-border, #999); background: transparent; color: inherit; border-radius: 0; }
+  .review-note { color: var(--grey-text, #666); font-size: 0.88rem; }
+  .review-draft { font-size: 0.8rem; font-weight: 600; }
 </style>
 <div class="review-page">
   <h1>Review</h1>
+  <p class="review-note">Open a post, select any text and click <b>Comment</b>. Comments are saved on this PC; ask Claude to "check comments" and they get fixed and resolved. Drafts open here even though they are unpublished.</p>
+  <input class="review-filter" id="review-filter" type="search" placeholder="Filter by title">
+
   <h2>Open comments</h2>
   <div id="review-comments">Loading...</div>
 
+  <h2>Drafts ({{ reviewDrafts.size }})</h2>
+  <table class="review-table review-filterable">
+    <tr><th>Last edited</th><th>Draft</th><th>Type</th><th>Changes</th></tr>
+    {% for d in reviewDrafts %}
+    <tr data-title="{{ d.title | downcase | escape }}">
+      <td>{{ d.day }}</td>
+      <td><a href="{{ d.url }}">{{ d.title }}</a></td>
+      <td>{{ d.kind }}</td>
+      <td>{% if journeyOn %}<a href="/journey/{{ d.slug }}/">Compare versions</a>{% else %}<span class="review-note">run start:journey</span>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
   <h2>Edited in the last 14 days</h2>
   {% if reviewRecent.size == 0 %}<p>Nothing changed in git in the last 14 days.</p>{% else %}
-  <table class="review-table">
-    <tr><th>Date</th><th>Post</th><th>Type</th><th>Last commit</th></tr>
+  <table class="review-table review-filterable">
+    <tr><th>Date</th><th>Post</th><th>Type</th><th>Last change</th><th>Changes</th></tr>
     {% for r in reviewRecent %}
-    <tr>
+    <tr data-title="{{ r.title | downcase | escape }}">
       <td>{{ r.day }}</td>
-      <td>{% if r.url %}<a href="{{ r.url }}">{{ r.title }}</a>{% else %}{{ r.title }} (unpublished){% endif %}</td>
+      <td><a href="{{ r.url }}">{{ r.title }}</a>{% unless r.published %} <span class="review-draft">(draft)</span>{% endunless %}</td>
       <td>{{ r.kind }}</td>
       <td>{{ r.subject }}</td>
+      <td>{% if journeyOn %}<a href="/journey/{{ r.slug }}/">Compare versions</a>{% else %}<span class="review-note">run start:journey</span>{% endif %}</td>
     </tr>
     {% endfor %}
   </table>
   {% endif %}
+  {% unless journeyOn %}<p class="review-note">To compare a post's versions side by side, start the server with <code>npm run start:journey</code> instead of <code>npm start</code>.</p>{% endunless %}
 </div>
+<script>
+  document.getElementById("review-filter").addEventListener("input", function (e) {
+    var q = e.target.value.toLowerCase();
+    document.querySelectorAll(".review-filterable tr[data-title]").forEach(function (tr) {
+      tr.style.display = tr.dataset.title.indexOf(q) === -1 ? "none" : "";
+    });
+  });
+</script>
 <script src="/assets/js/review-mode.js" defer></script>

@@ -7,7 +7,8 @@ module.exports = {
   eleventyComputed: {
     eleventyExcludeFromCollections: (data) => data.published === false,
     permalink: (data) => {
-      if (data.published === false) return false;
+      // Drafts render only on the local dev server (for /review/), never in a real build
+      if (data.published === false) return data.devReview ? `/drafts/personal/${data.page.fileSlug}/` : false;
       if (data.permalink) return data.permalink;
       return `/personal/${data.page.fileSlug}/`;
     },

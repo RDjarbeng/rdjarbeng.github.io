@@ -1126,6 +1126,23 @@ ${jsonLd}
   // removed from the output after the build.
   const devReview = process.env.ELEVENTY_RUN_MODE === "serve";
   eleventyConfig.addGlobalData("devReview", devReview);
+  eleventyConfig.addGlobalData("journeyOn", process.env.npm_lifecycle_event === "serve:11ty:journey");
+  // Every unpublished post and personal post, for the Drafts list on /review/ (serve mode only)
+  eleventyConfig.addGlobalData("reviewDrafts", () => {
+    if (!devReview) return [];
+    const out = [];
+    for (const [dir, pre] of [["_posts", "/drafts/"], ["_personal", "/drafts/personal/"]]) {
+      for (const f of fs.readdirSync(path.join(__dirname, dir))) {
+        if (!f.endsWith(".md")) continue;
+        const fm = matter(fs.readFileSync(path.join(__dirname, dir, f), "utf8")).data;
+        if (fm.published !== false) continue;
+        const slug = f.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+        const mt = fs.statSync(path.join(__dirname, dir, f)).mtime;
+        out.push({ title: fm.title || slug, url: pre + slug + "/", slug, kind: dir === "_posts" ? "post" : "personal", day: mt.toISOString().slice(0, 10) });
+      }
+    }
+    return out.sort((a, b) => b.day.localeCompare(a.day));
+  });
   eleventyConfig.addGlobalData("reviewRecent", () => {
     if (!devReview) return [];
     try {
@@ -1152,11 +1169,12 @@ ${jsonLd}
         const slug = path.basename(file, ".md").replace(/^\d{4}-\d{2}-\d{2}-/, "");
         const personal = file.startsWith("_personal/");
         const published = fm.published !== false;
-        const url = published ? (fm.permalink || (personal ? `/personal/${slug}/` : `/${slug}/`)) : null;
+        const url = published ? (fm.permalink || (personal ? `/personal/${slug}/` : `/${slug}/`)) : (personal ? `/drafts/personal/${slug}/` : `/drafts/${slug}/`);
         rows.push({
           file,
           kind: personal ? "personal" : "post",
           title: fm.title || slug,
+          slug,
           url,
           published,
           date: c.date,
