@@ -142,6 +142,7 @@ const reviewServer = http.createServer((req, res) => {
   if (req.method === "OPTIONS") return send(204, {});
   const u = new URL(req.url, "http://127.0.0.1");
   const resolve = u.pathname.match(/^\/comments\/([\w-]+)\/resolve$/);
+  const edit = u.pathname.match(/^\/comments\/([\w-]+)\/edit$/);
 
   if (req.method === "GET" && u.pathname === "/comments") {
     let list = readComments();
@@ -151,13 +152,21 @@ const reviewServer = http.createServer((req, res) => {
     if (status) list = list.filter((c) => c.status === status);
     return send(200, list);
   }
-  if (req.method === "POST" && (u.pathname === "/comments" || resolve)) {
+  if (req.method === "POST" && (u.pathname === "/comments" || resolve || edit)) {
     let raw = "";
     req.on("data", (d) => { raw += d; if (raw.length > 1e6) req.destroy(); });
     req.on("end", () => {
       let data = {};
       try { data = raw ? JSON.parse(raw) : {}; } catch (e) { return send(400, { error: "bad JSON" }); }
       const list = readComments();
+      if (edit) {
+        const c = list.find((x) => x.id === edit[1]);
+        if (!c) return send(404, { error: "not found" });
+        c.comment = String(data.comment || "").slice(0, 5000);
+        c.updated = new Date().toISOString();
+        writeComments(list);
+        return send(200, c);
+      }
       if (resolve) {
         const c = list.find((x) => x.id === resolve[1]);
         if (!c) return send(404, { error: "not found" });

@@ -137,21 +137,31 @@
     b.style.top = window.scrollY + rect.bottom + 8 + "px";
   }
 
+  // Enter or clicking away saves; Shift+Enter adds a new line; Cancel (or Escape) discards.
+  function wireBox(ta, doSave) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); doSave(); }
+      if (e.key === "Escape") { e.preventDefault(); closeUi(); }
+    });
+    box.onAway = function () { if (ta.value.trim()) doSave(); else closeUi(); };
+  }
+
   function openBox(data, rect) {
     closeUi();
     box = el("div", "rv-box");
     box.appendChild(el("p", "rv-quote", data.quote.length > 140 ? data.quote.slice(0, 140) + "..." : data.quote));
     var ta = el("textarea");
-    ta.placeholder = "Comment";
+    ta.placeholder = "Comment (Enter to save, Shift+Enter for a new line)";
     box.appendChild(ta);
     var save = el("button", null, "Save"); save.type = "button";
     var cancel = el("button", null, "Cancel"); cancel.type = "button";
     var msg = el("span"); msg.style.cssText = "color:#a00;margin-left:8px";
     box.appendChild(save); box.appendChild(cancel); box.appendChild(msg);
-    cancel.addEventListener("click", closeUi);
-    save.addEventListener("click", function () {
+    var saving = false;
+    function doSave() {
       var text = ta.value.trim();
-      if (!text) return;
+      if (!text || saving) return;
+      saving = true;
       call("POST", "/comments", {
         url: path, title: document.title, quote: data.quote,
         prefix: data.prefix, suffix: data.suffix, comment: text
@@ -161,8 +171,11 @@
         window.getSelection().removeAllRanges();
         highlight(c);
         refreshBadge();
-      }).catch(function (err) { msg.textContent = "Not saved: " + err.message; });
-    });
+      }).catch(function (err) { saving = false; msg.textContent = "Not saved: " + err.message; });
+    }
+    cancel.addEventListener("click", closeUi);
+    save.addEventListener("click", doSave);
+    wireBox(ta, doSave);
     placeBox(box, rect);
     document.body.appendChild(box);
     ta.focus();
@@ -212,17 +225,32 @@
     return true;
   }
 
+
+
+  // Clicking a highlight reopens its comment, ready to edit.
   function showComment(c, mk) {
     closeUi();
     box = el("div", "rv-box");
-    box.appendChild(el("p", "rv-time", new Date(c.created).toLocaleString()));
-    var body = el("p", null, c.comment);
-    body.style.whiteSpace = "pre-wrap";
-    box.appendChild(body);
+    box.appendChild(el("p", "rv-time", new Date(c.updated || c.created).toLocaleString()));
+    var ta = el("textarea");
+    ta.value = c.comment;
+    box.appendChild(ta);
+    var save = el("button", null, "Save"); save.type = "button";
     var res = el("button", null, "Resolve"); res.type = "button";
-    var close = el("button", null, "Close"); close.type = "button";
-    box.appendChild(res); box.appendChild(close);
-    close.addEventListener("click", closeUi);
+    var cancel = el("button", null, "Cancel"); cancel.type = "button";
+    var msg = el("span"); msg.style.cssText = "color:#a00;margin-left:8px";
+    box.appendChild(save); box.appendChild(res); box.appendChild(cancel); box.appendChild(msg);
+    function doSave() {
+      var text = ta.value.trim();
+      if (!text || text === c.comment) { closeUi(); return; }
+      call("POST", "/comments/" + c.id + "/edit", { comment: text }).then(function (u) {
+        if (u.error) throw new Error(u.error);
+        c.comment = u.comment; c.updated = u.updated;
+        closeUi();
+      }).catch(function (err) { msg.textContent = "Not saved: " + err.message; });
+    }
+    save.addEventListener("click", doSave);
+    cancel.addEventListener("click", closeUi);
     res.addEventListener("click", function () {
       call("POST", "/comments/" + c.id + "/resolve").then(function () {
         document.querySelectorAll('mark[data-rv-id="' + c.id + '"]').forEach(function (m) {
@@ -235,11 +263,15 @@
         refreshBadge();
       });
     });
+    wireBox(ta, doSave);
     placeBox(box, mk.getBoundingClientRect());
     document.body.appendChild(box);
+    ta.focus();
   }
   document.addEventListener("click", function (e) {
-    if (box && !(e.target.closest && e.target.closest(".rv-box"))) { box.remove(); box = null; }
+    if (box && !(e.target.closest && e.target.closest(".rv-box"))) {
+      if (box.onAway) box.onAway(); else { box.remove(); box = null; }
+    }
   });
 
   call("GET", "/comments?status=open&url=" + encodeURIComponent(path)).then(function (list) {

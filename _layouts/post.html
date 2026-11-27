@@ -230,4 +230,4 @@ body_class: post-page has-side-toc
 <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/side-toc.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/post-preview.js' | relative_url }}" defer></script>
-{% if devReview %}<script src="{{ '/assets/js/review-mode.js' | relative_url }}" data-review-file="{{ page.inputPath | remove_first: './' }}" defer></script>{% endif %}
+{% if devReview %}<script src="{{ '/assets/js/review-mode.js' | relative_url }}?v={{ site.time | date: '%s' }}" data-review-file="{{ page.inputPath | remove_first: './' }}" defer></script>{% endif %}
