@@ -131,32 +131,32 @@ def art_smos():
 
 # name -> (headline, hook, illustration, alt text, post file stem)
 COVERS = {
-    "digital_earth_africa": ("FREE SATELLITE DATA FOR AFRICA", "DIGITAL EARTH AFRICA", art_dea,
-                             "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline 'Free satellite data for africa' and the name Digital Earth Africa",
+    "digital_earth_africa": ("FREE SATELLITE DATA FOR AFRICA", "DIGITAL EARTH AFRICA: READY-TO-USE IMAGES OF THE WHOLE CONTINENT", art_dea,
+                             "A satellite above a grid of map tiles in green and sand with a dark band of water, under the headline 'Free satellite data for africa' and the line 'Digital earth africa: ready-to-use images of the whole continent'",
                              "2026-11-27-digital-earth-africa-free-satellite-data-for-africa"),
-    "global_forest_watch": ("SPOTTING FOREST LOSS FROM SPACE", "GLOBAL FOREST WATCH", art_gfw,
-                            "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the name Global Forest Watch",
+    "global_forest_watch": ("SPOTTING FOREST LOSS FROM SPACE", "GLOBAL FOREST WATCH SENDS ALERTS WHEN TREES DISAPPEAR", art_gfw,
+                            "A satellite above a row of trees with a cleared gap of stumps marked by alert pins, under the headline 'Spotting forest loss from space' and the line 'Global forest watch sends alerts when trees disappear'",
                             "2026-11-27-global-forest-watch-tracking-tree-loss-from-space"),
-    "global_urban_footprint": ("MAPPING EVERY CITY FROM ORBIT", "DLR GLOBAL URBAN FOOTPRINT", art_guf,
-                               "A satellite sending radar waves down to a skyline of city blocks, under the headline 'Mapping every city from orbit' and the name DLR Global Urban Footprint",
+    "global_urban_footprint": ("MAPPING EVERY CITY FROM ORBIT", "DLR'S RADAR MAP OF BUILT-UP AREAS ACROSS THE GLOBE", art_guf,
+                               "A satellite sending radar waves down to a skyline of city blocks, under the headline 'Mapping every city from orbit' and the line 'Dlr's radar map of built-up areas across the globe'",
                                "2026-11-27-global-urban-footprint-mapping-cities-from-space"),
-    "missing_maps": ("VOLUNTEERS MAPPING UNMAPPED COMMUNITIES", "MISSING MAPS", art_missing_maps,
-                     "A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline 'Volunteers mapping unmapped communities' and the name Missing Maps",
+    "missing_maps": ("VOLUNTEERS MAPPING UNMAPPED COMMUNITIES", "MISSING MAPS: VOLUNTEERS TRACE BUILDINGS SO AID CAN REACH PEOPLE", art_missing_maps,
+                     "A map with roads and dashed outlines of buildings being traced, a location pin and a satellite above, under the headline 'Volunteers mapping unmapped communities' and the line 'Missing maps: volunteers trace buildings so aid can reach people'",
                      "2026-11-27-missing-maps-volunteer-mapping-for-humanitarian-response"),
-    "nasa_arset": ("LEARN TO USE SATELLITE DATA, FREE", "NASA ARSET TRAINING", art_arset,
-                   "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline 'Learn to use satellite data, free' and the name NASA ARSET training",
+    "nasa_arset": ("LEARN TO USE SATELLITE DATA, FREE", "NASA ARSET RUNS FREE COURSES ON USING SATELLITE DATA", art_arset,
+                   "A laptop showing a satellite map, a satellite beside it and a graduation cap, under the headline 'Learn to use satellite data, free' and the line 'Nasa arset runs free courses on using satellite data'",
                    "2026-11-27-nasa-arset-free-remote-sensing-training"),
-    "nasa_black_marble": ("NIGHT LIGHTS REVEAL POWER CUTS", "NASA BLACK MARBLE", art_black_marble,
-                          "A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the name NASA Black Marble",
+    "nasa_black_marble": ("NIGHT LIGHTS REVEAL POWER CUTS", "NASA BLACK MARBLE TRACKS LIGHTS AFTER STORMS AND OUTAGES", art_black_marble,
+                          "A satellite above a dark landscape dotted with clusters of city lights, under the headline 'Night lights reveal power cuts' and the line 'Nasa black marble tracks lights after storms and outages'",
                           "2026-11-27-nasa-black-marble-night-lights-from-space"),
-    "nasa_harvest": ("SATELLITES THAT WATCH CROPS GROW", "NASA HARVEST", art_harvest,
-                     "A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name NASA Harvest",
+    "nasa_harvest": ("SATELLITES THAT WATCH CROPS GROW", "NASA HARVEST USES SATELLITES TO MONITOR CROPS AND FOOD SUPPLY", art_harvest,
+                     "A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the line 'Nasa harvest uses satellites to monitor crops and food supply'",
                      "2026-11-27-nasa-harvest-satellite-data-for-food-security"),
-    "servir": ("SATELLITE DATA FOR DROUGHTS AND FLOODS", "SERVIR", art_servir,
-               "A satellite linked to a rain cloud falling on a row of fields, under the headline 'Satellite data for droughts and floods' and the name SERVIR",
+    "servir": ("SATELLITE DATA FOR DROUGHTS AND FLOODS", "SERVIR HUBS TURN SATELLITE DATA INTO DROUGHT AND FLOOD TOOLS", art_servir,
+               "A satellite linked to a rain cloud falling on a row of fields, under the headline 'Satellite data for droughts and floods' and the line 'Servir hubs turn satellite data into drought and flood tools'",
                "2026-11-27-servir-satellite-data-for-development"),
-    "smos": ("MEASURING SOIL WATER FROM SPACE", "ESA SMOS MISSION", art_smos,
-             "A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline 'Measuring soil water from space' and the name ESA SMOS mission",
+    "smos": ("MEASURING SOIL WATER FROM SPACE", "ESA'S SMOS SATELLITE MEASURES MOISTURE IN THE TOP LAYER OF SOIL", art_smos,
+             "A satellite above a cross-section of soil layers holding water drops, with seedlings on top, under the headline 'Measuring soil water from space' and the line 'Esa's smos satellite measures moisture in the top layer of soil'",
              "2026-11-27-smos-measuring-soil-moisture-from-space"),
 }
 
@@ -176,7 +176,7 @@ def cover(headline, hook, art):
   <rect width="1280" height="720" fill="{PAPER}"/>
   <g fill="{INK}" font-family="'Arial Black', 'Helvetica Neue', Impact, sans-serif" text-anchor="middle">
     <text x="640" y="{y1}" font-size="{size}" font-weight="900">{tspans}</text>
-    <text x="640" y="{hook_y}" font-size="22" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">{hook}</text>
+    <text x="640" y="{hook_y}" font-size="22" font-weight="700" letter-spacing="1.5" font-family="Arial, Helvetica, sans-serif">{hook}</text>
   </g>
   <g transform="translate(115 95) scale(0.82)">{art()}</g>
   <text x="640" y="700" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="{INK}" text-anchor="middle">rdjarbeng.com</text>
