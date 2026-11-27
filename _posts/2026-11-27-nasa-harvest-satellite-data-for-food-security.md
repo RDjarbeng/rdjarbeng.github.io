@@ -12,7 +12,7 @@ key_points:
   - "In Kenya, the ADAPT-Kenya project is building a government data system that produces in-season agricultural data products."
   - "ADAPT-Kenya plans early warning systems for droughts, floods and other natural disasters."
 image: /assets/images/posts/covers/nasa_harvest_cover.jpg
-image_alt: "A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name Nasa Harvest"
+image_alt: "A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name NASA Harvest"
 content_type: explainer
 ai_assistance:
   - drafting
@@ -21,7 +21,7 @@ layout: post
 
 When crops fail, governments and aid groups need to know quickly, while there is still time to act. [NASA Harvest](https://www.nasaharvest.org/) is NASA's global food supply and agriculture consortium, meaning a group of organisations working together. It was [commissioned by NASA in 2017](https://www.nasaharvest.org/about-us). It brings together agriculture experts and remote sensing experts, meaning people who measure the land from satellites. They work with farmers, agribusinesses, economists, humanitarian organisations, governments and technology developers. Its management hub is at the University of Maryland's [Department of Geographical Sciences](https://www.nasaharvest.org/about-us).
 
-![A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name Nasa Harvest](/assets/images/posts/covers/nasa_harvest_cover.jpg)
+![A satellite looking down on rows of crop fields, under the headline 'Satellites that watch crops grow' and the name NASA Harvest](/assets/images/posts/covers/nasa_harvest_cover.jpg)
 
 Its [stated mission](https://www.nasaharvest.org/about-us) is to advance the adoption of satellite Earth observations by public and private organisations. The aim is to benefit food supply, agricultural production, market stability and human resilience.
 
