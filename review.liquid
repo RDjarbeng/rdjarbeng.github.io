@@ -14,12 +14,33 @@ noindex: true
   .review-filter { width: 100%; max-width: 420px; padding: 6px 8px; font-size: 0.95rem; border: 1px solid var(--card-border, #999); background: transparent; color: inherit; border-radius: 0; }
   .review-note { color: var(--grey-text, #666); font-size: 0.88rem; }
   .review-draft { font-size: 0.8rem; font-weight: 600; }
+  .review-sets-tabs { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 12px; border-bottom: 1px solid var(--card-border, #ccc); }
+  .review-set-tab { padding: 6px 0; text-decoration: none; color: inherit; border-bottom: 2px solid transparent; }
+  .review-set-tab.is-active { border-bottom-color: currentColor; font-weight: 600; }
+  .review-set.is-hidden { display: none; }
+  .review-more { margin-top: 2rem; }
+  .review-more summary { cursor: pointer; font-weight: 600; }
 </style>
 <div class="review-page">
   <h1>Review</h1>
   <p class="review-note">Open a post, select any text and click <b>Comment</b>. Comments are saved on this PC; ask Claude to "check comments" and they get fixed and resolved. Drafts open here even though they are unpublished.</p>
   <input class="review-filter" id="review-filter" type="search" placeholder="Filter by title">
 
+  {% if reviewSets.size > 0 %}
+  <h2>Being worked on</h2>
+  <div class="review-sets-tabs">
+    {% for set in reviewSets %}<a href="#set-{{ set.id }}" data-set="{{ set.id }}" class="review-set-tab{% if forloop.first %} is-active{% endif %}">{{ set.title }} ({{ set.cards.size }})</a>{% endfor %}
+  </div>
+  {% for set in reviewSets %}
+  <section class="review-set{% unless forloop.first %} is-hidden{% endunless %}" id="set-{{ set.id }}">
+    <p class="review-note">{% if set.session %}{{ set.session }} · {% endif %}updated {{ set.updated | slice: 0, 16 | replace: "T", " " }}</p>
+    <div class="post-list">
+      {% for c in set.cards %}{% if c.draft %}{% include post-card.html post=c badge="Draft" %}{% else %}{% include post-card.html post=c %}{% endif %}{% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <details class="review-more"><summary>All drafts, recent edits and comments</summary>
+  {% endif %}
   <h2>Open comments</h2>
   <div id="review-comments">Loading...</div>
 
@@ -51,9 +72,17 @@ noindex: true
     {% endfor %}
   </table>
   {% endif %}
+  {% if reviewSets.size > 0 %}</details>{% endif %}
   {% unless journeyOn %}<p class="review-note">Compare opens side-by-side, changes and full-post views of a post's saved versions. The older Journey view (a link next to Compare) needs <code>npm run start:journey</code>.</p>{% endunless %}
 </div>
 <script>
+  document.querySelectorAll(".review-set-tab").forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelectorAll(".review-set-tab").forEach(function (x) { x.classList.toggle("is-active", x === t); });
+      document.querySelectorAll(".review-set").forEach(function (sec) { sec.classList.toggle("is-hidden", sec.id !== "set-" + t.dataset.set); });
+    });
+  });
   document.getElementById("review-filter").addEventListener("input", function (e) {
     var q = e.target.value.toLowerCase();
     document.querySelectorAll(".review-filterable tr[data-title]").forEach(function (tr) {

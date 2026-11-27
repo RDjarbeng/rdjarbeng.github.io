@@ -1126,6 +1126,38 @@ ${jsonLd}
   // removed from the output after the build.
   const devReview = process.env.ELEVENTY_RUN_MODE === "serve";
   eleventyConfig.addGlobalData("devReview", devReview);
+  // Review sets: each Claude session lists the files it is working on in review/sets/<id>.json
+  // ({title, session, updated, files[]}, written by scripts/review-set.mjs). /review/ shows each set
+  // as post cards, so Richard sees only what one session touched. Serve mode only; review/ is git-ignored.
+  if (devReview) eleventyConfig.addWatchTarget("./review/sets/");
+  eleventyConfig.addGlobalData("reviewSets", () => {
+    if (!devReview) return [];
+    const dir = path.join(__dirname, "review", "sets");
+    if (!fs.existsSync(dir)) return [];
+    const card = (file) => {
+      const full = path.join(__dirname, file);
+      if (!fs.existsSync(full)) return null;
+      const { data: fm, content } = matter(fs.readFileSync(full, "utf8"));
+      const personal = file.startsWith("_personal/");
+      const slug = path.basename(file, ".md").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+      const draft = fm.published === false;
+      const url = draft ? (personal ? `/drafts/personal/${slug}/` : `/drafts/${slug}/`) : (fm.permalink || (personal ? `/personal/${slug}/` : `/${slug}/`));
+      const date = new Date(fm.date || fs.statSync(full).mtime);
+      const words = content.replace(/[#>*_`\[\]()!-]/g, " ").split(/\s+/).filter(Boolean);
+      return {
+        file, url, draft, title: fm.title || slug, image: fm.image || "", image_alt: fm.image_alt || "",
+        date, iso_date: date.toISOString(), formatted_date: date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }),
+        categories: fm.category ? [fm.category] : [], category: fm.category,
+        clean_excerpt: fm.description || words.slice(0, 30).join(" "), read_time: Math.max(1, Math.round(words.length / 180)),
+      };
+    };
+    return fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => {
+      try {
+        const set = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+        return { id: f.replace(/\.json$/, ""), ...set, cards: (set.files || []).map(card).filter(Boolean) };
+      } catch (e) { return null; }
+    }).filter(Boolean).sort((a, b) => String(b.updated).localeCompare(String(a.updated)));
+  });
   eleventyConfig.addGlobalData("journeyOn", process.env.npm_lifecycle_event === "serve:11ty:journey");
   // Every unpublished post and personal post, for the Drafts list on /review/ (serve mode only)
   eleventyConfig.addGlobalData("reviewDrafts", () => {
