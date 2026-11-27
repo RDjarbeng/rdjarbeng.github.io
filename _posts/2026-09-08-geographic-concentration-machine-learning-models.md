@@ -1,14 +1,8 @@
 ---
-layout: post
-key_points:
-  - "The United States leads in notable machine learning models, with 61 out of 149 models built in 2024, followed by China with 15."
-  - "The global distribution of AI models is heavily influenced by the cost of hardware, with frontier models requiring massive computational resources."
-  - "The shift from university labs to corporate data centers has been driven by the need for specialized hardware, electrical substations, and significant capital investments."
-  - "The geographic concentration of AI models is a result of the economic and technological barriers to entry, with frontier model creation remaining tied to organizations with the necessary infrastructure and resources."
-title: "Geographic Concentration of Machine Learning Models: How Compute Economics Re-Engineered the AI Map"
 date: 2026-09-08T16:00:00Z
 published: true
 author: Richard
+category: AI
 tags:
   - Artificial Intelligence
   - Machine Learning
@@ -16,30 +10,44 @@ tags:
   - Geopolitics
   - Epoch AI
   - Stanford AI Index
-image: /assets/images/posts/covers/geographic-concentration-ml-models-cover.jpg
-image_alt: "Editorial illustration of a world globe where massive server monoliths and nuclear power towers in the US and China connect via heavy power lines, while the rest of the world has unplugged cords, under the title Why 2 Countries Control 90% of AI"
-card_items:
-  - name: "Training Compute FLOPs"
-    badge_1: "Hardware Scale"
-    badge_2: "Exponential Growth"
-    url: "https://epochai.org/data/notable-ai-models"
-    link_text: "Explore Dataset"
-    description: "Cumulative floating point operations expended during model training, growing from 10^18 FLOPs in 2012 to over 10^26 FLOPs in modern frontier systems."
-  - name: "Chinchilla Optimal Scaling"
-    badge_1: "Parametric Math"
-    badge_2: "C ≈ 6ND"
-    url: "https://arxiv.org/abs/2203.15556"
-    link_text: "Read Scaling Paper"
-    description: "Hoffmann et al. formulation demonstrating that compute-optimal training requires scaling model parameters and training dataset tokens in equal proportion."
-  - name: "Sovereign Compute Infrastructure"
-    badge_1: "Geopolitics"
-    badge_2: "Capital Concentration"
-    url: "https://aiindex.stanford.edu/report/"
-    link_text: "View 2024 AI Index"
-    description: "National and regional investments in high-bandwidth GPU clusters to counter bilateral dominance and secure autonomous foundational AI capability."
-series: "The Cost of AI Compute"
+series: The Cost of AI Compute
 series_part: 3
-category: "AI"
+key_points:
+  - The United States leads in notable machine learning models, with 61 out of 149 models built in 2024, followed by China with 15.
+  - The global distribution of AI models is heavily influenced by the cost of hardware, with frontier models requiring massive computational resources.
+  - The shift from university labs to corporate data centers has been driven by the need for specialized hardware, electrical substations, and significant capital investments.
+  - The geographic concentration of AI models is a result of the economic and technological barriers to entry, with frontier model creation remaining tied to organizations with the necessary infrastructure and resources.
+title: 'Geographic Concentration of Machine Learning Models: How Compute Economics Re-Engineered the AI Map'
+image: /assets/images/posts/covers/geographic-concentration-ml-models-cover.jpg
+image_alt: Editorial illustration of a world globe where massive server monoliths and nuclear power towers in the US and China connect via heavy power lines, while the rest of the world has unplugged cords, under the title Why 2 Countries Control 90% of AI
+layout: post
+content_type: ''
+ai_assistance: []
+card_items:
+  - name: Training Compute FLOPs
+    image: ''
+    alt: ''
+    badge_1: Hardware Scale
+    badge_2: Exponential Growth
+    description: Cumulative floating point operations expended during model training, growing from 10^18 FLOPs in 2012 to over 10^26 FLOPs in modern frontier systems.
+    url: https://epochai.org/data/notable-ai-models
+    link_text: Explore Dataset
+  - name: Chinchilla Optimal Scaling
+    image: ''
+    alt: ''
+    badge_1: Parametric Math
+    badge_2: C ≈ 6ND
+    description: Hoffmann et al. formulation demonstrating that compute-optimal training requires scaling model parameters and training dataset tokens in equal proportion.
+    url: https://arxiv.org/abs/2203.15556
+    link_text: Read Scaling Paper
+  - name: Sovereign Compute Infrastructure
+    image: ''
+    alt: ''
+    badge_1: Geopolitics
+    badge_2: Capital Concentration
+    description: National and regional investments in high-bandwidth GPU clusters to counter bilateral dominance and secure autonomous foundational AI capability.
+    url: https://aiindex.stanford.edu/report/
+    link_text: View 2024 AI Index
 ---
 
 When you look at where notable artificial intelligence models come from, the global map looks empty.
@@ -49,9 +57,17 @@ In the [2024 Stanford AI Index Report](https://aiindex.stanford.edu/report/), re
 Figure 2 shows the historical data behind this split.
 
 ![Figure 2: Number of notable machine learning models by geographic area, 2003 to 2023](/assets/images/posts/notable-ml-models-by-geographic-area-2003-2023.png)
-*Figure 2: Number of notable machine learning models by geographic area, 2003 to 2023. Data source: Epoch AI and the Stanford Institute for Human-Centered Artificial Intelligence 2024 AI Index Report.*
+
+_Figure 2: Number of notable machine learning models by geographic area, 2003 to 2023. Data source: Epoch AI and the Stanford Institute for Human-Centered Artificial Intelligence 2024 AI Index Report._
 
 The chart, compiled by [Epoch AI](https://epochai.org/data/notable-ai-models) and published in the Stanford report, shows that between 2003 and 2023 the United States produced around 430 notable models. China forms the second line with 85. The rest of the world sits near the bottom axis. 
+
+
+![](/assets/images/epoch-ml-model-trends_us%2Bchina.svg "Traning compute by county per year")
+
+![](/assets/images/epoch-ml-model-trends_us.svg "ML models from US from 1950 with training compute on the vertical")
+
+![](/assets/images/epoch-ml-model-trends_china.svg "ML models from china with training compute on the vertical")
 
 This is not a story about where talented computer scientists live. Skilled researchers work all over the world. The difference is that modern AI research requires electrical substations, specialized microchips, and hundreds of millions of dollars. The map in Figure 2 reflects who can pay for that hardware.
 
@@ -63,7 +79,7 @@ Before 2012, machine learning research happened mostly in public universities. U
 
 Most experiments ran on desktop computers with standard Intel processors or small departmental servers. A training run consumed under $10^{15}$ floating point operations (FLOPs), cost a few hundred dollars in power, and was funded by standard government grants. More than 80 percent of notable models built before 2012 came from university labs.
 
-```
+```plain
 Pre-2012: University networks
   [Montreal] <---> [Toronto] <---> [Lugano] <---> [Paris] <---> [Tokyo]
   Hardware: Standard desktop computers, small server racks
@@ -82,7 +98,8 @@ University labs lost their lead when researchers showed that models got better a
 A standard university research grant of $500,000 cannot pay for a $50 million training run. Researchers who wanted to work on the largest systems moved to the companies that owned the computers, and the numbers in Figure 2 shifted into the private sector.
 
 ![The Shift in Frontier AI Research: Academia vs. Industry (2003 to 2023)](/assets/images/posts/academic-vs-industry-ml-models-2003-2023.png)
-*Figure 3: The shifting institutional balance in notable AI systems from 2003 to 2023. Industry output overtook universities in 2014, and by 2023 accounts for over 75 percent of notable models.*
+
+_Figure 3: The shifting institutional balance in notable AI systems from 2003 to 2023. Industry output overtook universities in 2014, and by 2023 accounts for over 75 percent of notable models._
 
 **So what does this mean?**
 The early period of machine learning was an exception. When research depended on algorithmic ideas, any university lab could lead the field. Once performance depended on hardware scale, control moved to corporate balance sheets.
@@ -101,8 +118,8 @@ The factor of 6 comes from the arithmetic of neural network training:
 
 1. **Forward pass ($2N$ operations per token):**
    The model processes an input vector through its weights. Each weight requires one multiplication and one addition, so each parameter performs two operations per token.
-
 2. **Backward pass ($4N$ operations per token):**
+
    The computer calculates two sets of numbers: the errors passed back through the layers ($2N$) and the adjustments made to each weight ($2N$). That makes the backward pass twice as large as the forward pass.
 
 Combining the forward and backward passes gives $6N$ operations per token. For an entire dataset of $D$ tokens, training costs $6ND$ operations.
@@ -115,7 +132,7 @@ $$
 
 That is 364 septillion arithmetic operations. 
 
-```
+```plain
 Training compute across model generations:
   GPT-2 (2019):    1.5B params  ×   40B tokens   -->   ~3.6 × 10^20 FLOPs
   GPT-3 (2020):    175B params  ×  300B tokens   -->   ~3.1 × 10^23 FLOPs
@@ -142,7 +159,7 @@ The hardware bill for one 24,000-chip cluster looks like this:
 | :--- | :--- | :--- | :--- |
 | Nvidia H100/H200 GPUs | 24,576 units | $30,000 to $40,000 | $737M to $983M |
 | High-Bandwidth Memory (HBM3e) | 80 to 141 GB per GPU | $15 to $25 per GB | Included on board |
-| Intra-node switches (NVLink 4.0) | 900 GB/s per GPU | Custom silicon | ~$50M |
+| Intra-node switches (NVLink 4.0) | 900 GB/s per GPU | Custom silicon | \~$50M |
 | Network fabric (InfiniBand/Spectrum-X) | 400G/800G switches, optics | $1,500 to $2,500 per port | $80M to $150M |
 | Electrical gear and liquid cooling | Chillers, pumps, cold plates | Utility grade | $100M to $200M |
 | Complete facility investment | Single campus | Turnkey build | **$1.0B to $1.5B** |
@@ -196,14 +213,14 @@ Researchers without massive budgets have focused on making architectures more ef
 
 1. **Sparse Mixture of Experts (MoE):**
    In a dense model, every parameter runs for every token. Mixture of Experts models route each token to a small subset of specialized sub-networks. Mistral's [Mixtral 8x7B (Jiang et al.)](https://arxiv.org/abs/2401.04088) has 46.7 billion total parameters, but activates only 12.9 billion per token, reducing the compute needed during inference.
-
 2. **Memory optimizations (FlashAttention):**
+
    Graphics processors are often held up by the time it takes to move data between off-chip memory and on-chip cache. Tri Dao's [FlashAttention](https://arxiv.org/abs/2205.14135) calculates attention directly in on-chip SRAM, cutting memory read/write cycles and speeding up attention layers by two to four times.
 
 3. **Lower precision formats:**
    Using 8-bit (FP8) and 4-bit (FP4) formats instead of 16-bit floats reduces memory requirements and increases throughput on modern tensor cores. Methods like [AWQ (Lin et al.)](https://arxiv.org/abs/2306.00978) and [bitsandbytes](https://github.com/bitsandbytes-foundation/bitsandbytes) let researchers run models on smaller hardware.
-
 4. **Open-weights releases:**
+
    When Meta released weights for [Llama 3](https://ai.meta.com/blog/meta-llama-3/), and teams like Mistral, Qwen, and DeepSeek published theirs, they separated model training from model use. A developer in Nairobi, Warsaw, or Tokyo does not need $100 million to train a base model. They can download existing weights and fine-tune them on a single machine using parameter-efficient methods like [LoRA (Hu et al.)](https://arxiv.org/abs/2106.09685).
 
 Some have suggested training frontier models by connecting consumer PCs across the internet, similar to [Folding@home](https://foldingathome.org/). Network speeds prevent this for initial pre-training:
@@ -231,4 +248,3 @@ Today the field has settled into three groups:
 3. **The regional and open-source perimeter:** Governments funding domestic clusters to keep strategic independence, and developers using open weights to build software without paying for pre-training.
 
 Until someone develops an architecture that learns without massive matrix arithmetic, the distribution in Figure 2 will persist. The map of artificial intelligence is drawn by electrical grids, chip manufacturing, and corporate capital.
-
