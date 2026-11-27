@@ -247,7 +247,7 @@ function checkPost(file) {
     // Spaced hyphen as dash substitute: " word - word "
     if (/[^\s-]\s+-\s+[^\s-]/.test(line)) {
       // Ignore markdown math or table lines
-      if (!line.trim().startsWith("|") && !line.includes("$$")) {
+      if (!line.trim().startsWith("|") && !line.includes("$$") && !/^(>s*)+[-*]s/.test(line.trim())) {
         issues.push({
           line: lineNum,
           rule: "Banned Punctuation",
