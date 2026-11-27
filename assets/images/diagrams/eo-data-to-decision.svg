@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 780" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">From satellite image to a decision</title>
+<desc id="d">Five steps from top to bottom: a raw satellite image; analysis-ready data, corrected for haze, sensor angle and cloud, such as Digital Earth Africa publishes; analysis, for example in Google Earth Engine; a map or alert; and a person who acts on it, such as a ministry or a farmer. Three barriers sit along the way: sharp images cost money, at the raw image; raw data needs processing, between the raw image and analysis-ready data; and maps must reach the people who decide, between the map and the person.</desc>
+<rect width="800" height="780" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">From satellite image to a decision</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M197.0 142.0 L197.0 179.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M197.0 188.0 L192.5 177.2 L201.5 177.2 Z" fill="#141414"/>
+<path d="M197.0 302.0 L197.0 343.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M197.0 352.0 L192.5 341.2 L201.5 341.2 Z" fill="#141414"/>
+<path d="M197.0 426.0 L197.0 467.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M197.0 476.0 L192.5 465.2 L201.5 465.2 Z" fill="#141414"/>
+<path d="M197.0 526.0 L197.0 563.4" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M197.0 572.0 L192.5 561.2 L201.5 561.2 Z" fill="#141414"/>
+<path d="M422.0 117.0 L370.6 117.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M362.0 117.0 L372.8 112.5 L372.8 121.5 Z" fill="#141414"/>
+<path d="M422.0 245.0 L370.6 245.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M362.0 245.0 L372.8 240.5 L372.8 249.5 Z" fill="#141414"/>
+<path d="M422.0 541.0 L402.0 541.0 Q392.0 541.0 392.0 531.0 L392.0 511.0 Q392.0 501.0 382.0 501.0 L370.6 501.0" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M362.0 501.0 L372.8 496.5 L372.8 505.5 Z" fill="#141414"/>
+<rect x="32.0" y="92.0" width="330.0" height="50.0" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="197.0" y="123.5" font-size="18" fill="#ffffff" text-anchor="middle">Raw satellite image</text>
+<rect x="32.0" y="188.0" width="330.0" height="114.0" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="197.0" y="229.0" font-size="18" fill="#ffffff" text-anchor="middle">Analysis-ready data</text>
+<text x="197.0" y="251.5" font-size="18" fill="#ffffff" text-anchor="middle">(corrected, cloud-masked:</text>
+<text x="197.0" y="274.0" font-size="18" fill="#ffffff" text-anchor="middle">Digital Earth Africa)</text>
+<rect x="32.0" y="352.0" width="330.0" height="74.0" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="197.0" y="384.2" font-size="18" fill="#ffffff" text-anchor="middle">Analysis</text>
+<text x="197.0" y="406.7" font-size="18" fill="#ffffff" text-anchor="middle">(e.g. Google Earth Engine)</text>
+<rect x="32.0" y="476.0" width="330.0" height="50.0" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="197.0" y="507.5" font-size="18" fill="#ffffff" text-anchor="middle">A map or an alert</text>
+<rect x="32.0" y="572.0" width="330.0" height="74.0" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="197.0" y="604.2" font-size="18" fill="#ffffff" text-anchor="middle">A person who acts</text>
+<text x="197.0" y="626.7" font-size="18" fill="#ffffff" text-anchor="middle">(a ministry, a farmer)</text>
+<rect x="422.0" y="80.0" width="330.0" height="74.0" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="587.0" y="112.2" font-size="18" fill="#141414" text-anchor="middle">Sharp images</text>
+<text x="587.0" y="134.7" font-size="18" fill="#141414" text-anchor="middle">cost money</text>
+<rect x="422.0" y="208.0" width="330.0" height="74.0" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="587.0" y="240.2" font-size="18" fill="#141414" text-anchor="middle">Raw data needs</text>
+<text x="587.0" y="262.7" font-size="18" fill="#141414" text-anchor="middle">processing</text>
+<rect x="422.0" y="504.0" width="330.0" height="74.0" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="587.0" y="536.2" font-size="18" fill="#141414" text-anchor="middle">Maps must reach the</text>
+<text x="587.0" y="558.7" font-size="18" fill="#141414" text-anchor="middle">people who decide</text>
+<rect x="32" y="671.0" width="24" height="18" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="66.0" y="686.0" font-size="18" fill="#141414">Step</text>
+<rect x="412" y="671.0" width="24" height="18" rx="0" fill="#cbb87b" stroke="#141414" stroke-width="1.5"/>
+<text x="446.0" y="686.0" font-size="18" fill="#141414">Barrier</text>
+<line x1="32" y1="728.0" x2="768" y2="728.0" stroke="#cfc6b6"/>
+<text x="768.0" y="758.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>

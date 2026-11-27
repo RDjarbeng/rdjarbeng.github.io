@@ -42,6 +42,8 @@ Most of the examples below run on free data from government satellites such as S
 
 Landsat satellites photograph the same patch of ground again and again. Software compares the images and flags places where trees have disappeared. [Global Forest Watch](https://www.globalforestwatch.org/), run by the World Resources Institute (WRI), turns this into weekly alerts and yearly maps of tree cover loss. WRI reports that the tropics [lost 4.3 million hectares of primary forest in 2025](https://research.wri.org/gfr/latest-analysis-deforestation-trends). That is about 43,000 square kilometres, close to the size of Denmark. Rangers and journalists can use the alerts to spot illegal clearing while it is still going on.
 
+![A satellite photographs the same patch of ground on pass after pass, building a series of images; free Sentinel images arrive every few days. Software compares an earlier image showing forest with a later one showing cleared ground and flags the place where trees have disappeared, which becomes a forest loss alert.](/assets/images/diagrams/eo-revisit.svg)
+
 ![Map of forest loss around Kisangani in the Democratic Republic of the Congo from 2001 to 2024, with recent clearing in orange and yellow](/assets/images/posts/earth-observation/kisangani-forest-loss-2001-2024.jpg "Forest loss around Kisangani, DR Congo, 2001 to 2024. NASA Earth Observatory image by Wanmei Liang, forest change data from the University of Maryland")
 
 ### Free maps of Africa's farms and water
@@ -69,6 +71,8 @@ ESA's [SMOS satellite](https://earth.esa.int/eogateway/missions/smos) measures h
 
 Some satellites carry radar, often called SAR (synthetic aperture radar). They send out their own radio pulses and record the echoes, so they see through clouds and at night. The German Aerospace Center (DLR) built its [Global Urban Footprint](https://www.dlr.de/en/eoc/research-transfer/projects-missions/global-urban-footprint) from 180,000 TerraSAR-X and TanDEM-X radar scenes. It maps built-up areas worldwide at about 12 m resolution. Resolution is the size of the smallest detail an image shows, here a square about 12 m wide. Maps like this show how far towns have spread, which helps plan roads, water and schools.
 
+![Two columns. Optical satellites such as Sentinel-2 and Landsat take pictures, like a camera, so clouds and darkness hide the ground. Radar satellites, often called SAR (synthetic aperture radar), send out their own radio pulses and record the echoes, so they see through clouds and at night.](/assets/images/diagrams/eo-optical-vs-radar.svg)
+
 ### Night lights and the economy
 
 Brighter lights at night often go with more economic activity. A [World Bank study](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/658061583574075223/not-by-night-lights-alone-measuring-economic-growth-and-development-in-africa-using-satellite-imagery) tested night lights as a measure of growth in Africa. Its title, "Not by night lights alone", sums up the finding that lights need other data alongside them. Such measures matter most where official statistics are scarce or out of date.
@@ -82,6 +86,8 @@ Many villages and neighbourhoods do not appear on any map. Volunteers in the [Mi
 ## What stops it today
 
 ![a satellite orbiting Earth, a view of Earth with data overlays focusing on the Americas, showing analysis of satellite data.](/assets/images/satellite_orbiting_americas_color_codes.jpg "A satellite orbiting Earth over the Americas")
+
+![Five steps from top to bottom: a raw satellite image; analysis-ready data, corrected for haze, sensor angle and cloud, such as Digital Earth Africa publishes; analysis, for example in Google Earth Engine; a map or alert; and a person who acts on it, such as a ministry or a farmer. Three barriers sit along the way: sharp images cost money, at the raw image; raw data needs processing, between the raw image and analysis-ready data; and maps must reach the people who decide, between the map and the person.](/assets/images/diagrams/eo-data-to-decision.svg)
 
 ### Sharp images cost money
 

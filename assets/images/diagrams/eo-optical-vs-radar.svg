@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 494" width="100%" role="img" aria-labelledby="t d" style="font-family:-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<title id="t">Two ways to look at the ground</title>
+<desc id="d">Two columns. Optical satellites such as Sentinel-2 and Landsat take pictures, like a camera, so clouds and darkness hide the ground. Radar satellites, often called SAR (synthetic aperture radar), send out their own radio pulses and record the echoes, so they see through clouds and at night.</desc>
+<rect width="800" height="494" fill="#f4f1e6"/>
+<text x="32.0" y="46.0" font-size="28" fill="#141414" font-family="Georgia, 'Times New Roman', serif">Two ways to look at the ground</text>
+<line x1="32" y1="64" x2="768" y2="64" stroke="#141414" stroke-width="1.5"/>
+<path d="M204.0 253.8 L204.0 315.6" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M204.0 324.2 L199.5 313.4 L208.5 313.4 Z" fill="#141414"/>
+<path d="M596.0 253.8 L596.0 315.6" fill="none" stroke="#141414" stroke-width="2" stroke-linejoin="round"/>
+<path d="M596.0 324.2 L591.5 313.4 L600.5 313.4 Z" fill="#141414"/>
+<text x="204.0" y="123.5" font-size="18" fill="#141414" text-anchor="middle">Optical (Sentinel-2, Landsat)</text>
+<text x="596.0" y="123.5" font-size="18" fill="#141414" text-anchor="middle">Radar (SAR)</text>
+<rect x="44.0" y="178.0" width="320.0" height="75.8" rx="0" fill="#3d634e" stroke="#141414" stroke-width="1.5"/>
+<text x="204.0" y="211.1" font-size="18" fill="#ffffff" text-anchor="middle">Takes pictures,</text>
+<text x="204.0" y="233.6" font-size="18" fill="#ffffff" text-anchor="middle">like a camera</text>
+<rect x="436.0" y="178.0" width="320.0" height="75.8" rx="0" fill="#1b3b2b" stroke="#141414" stroke-width="1.5"/>
+<text x="596.0" y="211.1" font-size="18" fill="#ffffff" text-anchor="middle">Sends its own radio pulses</text>
+<text x="596.0" y="233.6" font-size="18" fill="#ffffff" text-anchor="middle">and records the echoes</text>
+<rect x="44.0" y="324.2" width="320.0" height="75.8" rx="0" fill="#ffffff" stroke="#141414" stroke-width="1.5"/>
+<text x="204.0" y="357.3" font-size="18" fill="#141414" text-anchor="middle">Clouds and darkness</text>
+<text x="204.0" y="379.8" font-size="18" fill="#141414" text-anchor="middle">hide the ground</text>
+<rect x="436.0" y="324.2" width="320.0" height="75.8" rx="0" fill="#ffffff" stroke="#141414" stroke-width="1.5"/>
+<text x="596.0" y="357.3" font-size="18" fill="#141414" text-anchor="middle">Sees through clouds</text>
+<text x="596.0" y="379.8" font-size="18" fill="#141414" text-anchor="middle">and at night</text>
+<line x1="32" y1="442.00000000000006" x2="768" y2="442.00000000000006" stroke="#cfc6b6"/>
+<text x="768.0" y="472.0" font-size="18" fill="#57514a" text-anchor="end" font-weight="bold">rdjarbeng.com</text>
+</svg>
