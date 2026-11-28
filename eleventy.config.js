@@ -719,6 +719,8 @@ ${jsonLd}
 
   // 6. Passthrough copies
   eleventyConfig.addPassthroughCopy("assets");
+  // Speedlify score web component (npm: speedlify2-score), shown on /review/ and /journey/
+  eleventyConfig.addPassthroughCopy({ "node_modules/speedlify2-score/speedlify2-score.js": "assets/js/speedlify2-score.js" });
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("favicon.ico");

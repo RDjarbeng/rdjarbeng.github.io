@@ -24,6 +24,7 @@ noindex: true
 <div class="review-page">
   <h1>Review</h1>
   <p class="review-note">Open a post, select any text and click <b>Comment</b>. Comments are saved on this PC; ask Claude to "check comments" and they get fixed and resolved. Drafts open here even though they are unpublished.</p>
+  {% include speedlify-score.html %}
   <input class="review-filter" id="review-filter" type="search" placeholder="Filter by title">
 
   {% if reviewSets.size > 0 %}
