@@ -1,0 +1,69 @@
+name: PR preview (Cloudflare Pages)
+
+# Builds every pull request from this repo and uploads it to Cloudflare Pages, so a PR can be
+# checked on a phone before merging. The link is a stable per-branch alias, posted once when the
+# PR opens and updated in place on every new push.
+# Bot fix branches get their preview from maintainer.yml instead (PRs and pushes made with
+# GITHUB_TOKEN don't start this workflow).
+# Needs repo secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: pr-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    # Forks don't get secrets; skip them.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        # Not ELEVENTY_ENV=production, so links stay on the preview site instead of rdjarbeng.com.
+        run: npm run build
+      - name: Upload to Cloudflare Pages
+        id: deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          npx --yes wrangler@4.160.1 pages deploy _site --project-name=rdjarbeng-preview \
+            --branch="$BRANCH" --commit-dirty=true
+          alias=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | cut -c1-28 | sed 's/-*$//')
+          echo "url=https://$alias.rdjarbeng-preview.pages.dev" >> "$GITHUB_OUTPUT"
+      - name: Post or update the preview comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          URL: ${{ steps.deploy.outputs.url }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          body="📱 **Preview:** $URL
+
+          Built from ${SHA:0:7}. Updates on every push to this PR."
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" \
+                 --jq '[.[] | select(.body | startswith("📱 **Preview:**"))][0].id // empty')
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -f body="$body" >/dev/null
+          else
+            gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --body "$body"
+          fi
