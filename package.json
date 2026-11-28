@@ -58,6 +58,7 @@
     "generate:pdfs": "node scripts/generate_post_pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check:links": "node scripts/check-links.mjs _site",
+    "check:pagination": "node scripts/check-pagination.mjs _site",
     "check:edits": "node scripts/check-edits.mjs",
     "review:comments": "node scripts/review-comments.mjs",
     "postinstall": "patch-package"
