@@ -9,6 +9,12 @@ name: Site maintainer (Claude)
 #
 # Needs the repo secret ANTHROPIC_API_KEY (Settings -> Secrets and variables -> Actions).
 # Spend is capped by --max-turns below and by the workspace spend limit on platform.claude.com.
+#
+# Phone preview: after Claude pushes its branch, the site is built from that branch and uploaded
+# to Cloudflare Pages (project "rdjarbeng-preview"), and the link is posted on the issue/PR.
+# Done here rather than on push, because pushes made with GITHUB_TOKEN don't start workflows.
+# Needs repo secrets CLOUDFLARE_API_TOKEN (permission: Cloudflare Pages - Edit) and
+# CLOUDFLARE_ACCOUNT_ID; without them the preview steps are skipped.
 
 on:
   issues:
@@ -32,7 +38,7 @@ jobs:
       (github.event_name == 'issues' && github.event.label.name == 'bug') ||
       (github.event_name != 'issues' && contains(github.event.comment.body, '@claude')))
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     permissions:
       contents: write
       pull-requests: write
@@ -52,6 +58,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run Claude
+        id: claude
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -69,3 +76,43 @@ jobs:
             --model claude-sonnet-5-5
             --max-turns 25
             --allowedTools "Bash(npm run build),Bash(npm run build:*),Bash(npm run check:links),Bash(npx @11ty/eleventy:*),Bash(git:*),Bash(gh pr create:*),Bash(gh issue view:*),Bash(gh pr view:*),Bash(ls:*),Bash(grep:*),Bash(find:*)"
+
+      - name: Build preview of Claude's branch
+        id: build
+        env:
+          BRANCH: ${{ steps.claude.outputs.branch_name || github.head_ref }}
+          HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+        run: |
+          if [ "$HAS_CF" != "true" ]; then echo "No Cloudflare secrets; skipping preview."; exit 0; fi
+          if [ -z "$BRANCH" ] || ! git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            echo "Claude pushed no branch; nothing to preview."; exit 0
+          fi
+          git fetch -q origin "$BRANCH" && git checkout -q FETCH_HEAD
+          # Not ELEVENTY_ENV=production, so links stay on the preview site instead of rdjarbeng.com.
+          npm run build
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+      - name: Upload preview to Cloudflare Pages
+        id: deploy
+        if: steps.build.outputs.branch != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          BRANCH: ${{ steps.build.outputs.branch }}
+        run: |
+          npx --yes wrangler@4.160.1 pages project create rdjarbeng-preview --production-branch=main >/dev/null 2>&1 || true
+          npx --yes wrangler@4.160.1 pages deploy _site --project-name=rdjarbeng-preview \
+            --branch="$BRANCH" --commit-dirty=true | tee deploy.log
+          # Stable per-branch alias (updates on every new commit to the branch).
+          alias=$(echo "$BRANCH" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | cut -c1-28 | sed 's/-*$//')
+          echo "url=https://$alias.rdjarbeng-preview.pages.dev" >> "$GITHUB_OUTPUT"
+      - name: Post preview link
+        if: steps.deploy.outputs.url != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+          URL: ${{ steps.deploy.outputs.url }}
+          BRANCH: ${{ steps.build.outputs.branch }}
+        run: |
+          gh issue comment "$NUMBER" -R "$GITHUB_REPOSITORY" --body "📱 **Preview of \`$BRANCH\`:** $URL
+
+          It can take a minute to go live. Check the fix there, then merge the PR (or reply with \`@claude\` and what's still wrong)."
