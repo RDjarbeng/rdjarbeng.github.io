@@ -50,7 +50,7 @@ Goal: the site should look and behave like a source a professor would link to. T
 
 **Ticked earlier but not actually live. Re-opened.**
 - [x] **Real "Last updated" dates**: derived from git in `scripts/git-dates.cjs` via `_posts/_posts.11tydata.js` (b7b83334). Verified 2026-11-20: 157 built pages show "Last edited" plus a matching `dateModified`. Caveat: bulk commits (e.g. mass cover-image or front-matter changes) count as edits. Set `last_modified_at: false` or an explicit `updated:` date on a post when that's misleading.
-- [ ] **Pin third-party scripts.** `_includes/head.html` still loads unversioned `unpkg.com/applause-button` (lines 33–35) and `mermaid@10` (line 131). The 10.9.1 / 3.2.3 pins described earlier aren't in the committed file. Maybe they're on another branch or were never saved. (Trivial)
+- [x] **Pin third-party scripts.** Done 2026-11-28: applause-button@4.0.7, mermaid@10.9.8. `_includes/head.html` still loads unversioned `unpkg.com/applause-button` (lines 33–35) and `mermaid@10` (line 131). The 10.9.1 / 3.2.3 pins described earlier aren't in the committed file. Maybe they're on another branch or were never saved. (Trivial)
 
 **Bugs that hurt credibility right now**
 - [x] **GitHub issue #7 (reader report)**: nested code fence in the Eleventy 3.x post fixed with a four-backtick outer fence (2026-11-20). It was the only nested case. Still to do: reply on the issue and close it.
