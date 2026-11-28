@@ -1133,6 +1133,30 @@ ${jsonLd}
   // BUILD_DRAFTS=1 builds unpublished posts at /drafts/<slug>/ for the private phone preview
   // (.github/workflows/drafts-preview.yml). The live deploy never sets it.
   eleventyConfig.addGlobalData("buildDrafts", process.env.BUILD_DRAFTS === "1");
+  // Card data for the /drafts/ list page (drafts.liquid), newest first. Empty in the live build.
+  eleventyConfig.addGlobalData("draftPosts", () => {
+    if (process.env.BUILD_DRAFTS !== "1" && !devReview) return [];
+    const out = [];
+    for (const [dir, pre, kind] of [["_posts", "/drafts/", "Post"], ["_personal", "/drafts/personal/", "Personal"]]) {
+      for (const f of fs.readdirSync(path.join(__dirname, dir))) {
+        if (!f.endsWith(".md")) continue;
+        const { data: fm, content } = matter(fs.readFileSync(path.join(__dirname, dir, f), "utf8"));
+        if (fm.published !== false) continue;
+        const slug = f.replace(/\.md$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+        const date = fm.date ? new Date(fm.date) : fs.statSync(path.join(__dirname, dir, f)).mtime;
+        const text = content.replace(/```[\s\S]*?```/g, " ").replace(/<[^>]+>|!\[[^\]]*\]\([^)]*\)|[#*_>`]|\{%[\s\S]*?%\}/g, " ")
+          .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\s+/g, " ").trim();
+        const words = text ? text.split(" ").length : 0;
+        out.push({
+          url: pre + slug + "/", title: fm.title || slug, image: fm.image || "", image_alt: fm.image_alt || "",
+          category: kind === "Personal" ? "Personal" : fm.category || "", date, iso_date: date.toISOString(),
+          formatted_date: date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }),
+          clean_excerpt: text.slice(0, 220) + (text.length > 220 ? "…" : ""), read_time: Math.max(1, Math.round(words / 200)),
+        });
+      }
+    }
+    return out.sort((a, b) => b.date - a.date);
+  });
   eleventyConfig.addGlobalData("devReview", devReview);
   // Review sets: each Claude session lists the files it is working on in review/sets/<id>.json
   // ({title, session, updated, files[]}, written by scripts/review-set.mjs). /review/ shows each set

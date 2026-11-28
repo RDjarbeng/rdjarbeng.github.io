@@ -1,0 +1,26 @@
+---
+layout: default
+title: Drafts
+eleventyExcludeFromCollections: true
+pagination:
+  data: draftPosts
+  size: 12
+  alias: paged_drafts
+# Built only in the private drafts preview (BUILD_DRAFTS=1) and on the local dev server.
+permalink: "{% if buildDrafts or devReview %}{% if pagination.pageNumber == 0 %}/drafts/{% else %}/drafts/page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}{% else %}false{% endif %}"
+---
+<h1>Drafts</h1>
+<div class="posts-page-intro">
+  Unpublished posts and personal posts, newest first. This page exists only in the private preview, never on rdjarbeng.com.
+</div>
+<h2 class="section-title">({{ draftPosts | size }}) Drafts</h2>
+
+<div class="post-list">
+  {% for post in paged_drafts %}
+  {% include post-card.html post=post %}
+  {% endfor %}
+</div>
+
+{% if pagination.pages.size > 1 %}
+{% include pagination_eleventy.html pagination=pagination base_url="/drafts/" %}
+{% endif %}

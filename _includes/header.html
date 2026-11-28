@@ -31,6 +31,7 @@
 
         <a class="page-link" href="{{ '/posts' | relative_url }}" title="Explore technical articles and tutorials" aria-label="Technical Posts">Posts</a>
         <a class="page-link" href="{{ '/personal' | relative_url }}" title="Read personal stories and reflections" aria-label="Personal Posts">Personal</a>
+        {% if buildDrafts %}<a class="page-link" href="{{ '/drafts/' | relative_url }}" title="Unpublished drafts (private preview only)" aria-label="Drafts">Drafts</a>{% endif %}
         <div class="nav-dropdown">
           <input type="checkbox" id="gallery-dropdown-toggle" class="gallery-dropdown-toggle" />
           <a class="page-link" href="{{ '/gallery' | relative_url }}" title="Explore photos, memes, and videos curated by RDjarbeng" aria-label="Gallery">
