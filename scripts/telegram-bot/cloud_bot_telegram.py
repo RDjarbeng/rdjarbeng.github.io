@@ -25,6 +25,24 @@ TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 ALLOWED_USER_ID = os.getenv("ALLOWED_USER_ID")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 REPO_NAME = os.getenv("GITHUB_REPO", "RDjarbeng/rdjarbeng.github.io")
+# Optional. When set, Telegram must send it in X-Telegram-Bot-Api-Secret-Token
+# (pass the same value as secret_token when calling setWebhook).
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
+
+# Screenshots attached to bug/idea issues. Eleventy ignores .github/**, and
+# deploy.yml ignores this folder, so these never reach the live site.
+ISSUE_IMAGE_DIR = ".github/issue-images"
+ISSUE_KINDS = {
+    "bug": {"label": "bug", "emoji": "🐞", "name": "Bug"},
+}
+# Ideas are not issues: references kept for later (a site you liked, a design to copy).
+# Images go here (not published: .eleventyignore + deploy paths-ignore) and a line
+# pointing at them goes into TODO_inbox.md.
+IDEA_IMAGE_DIR = "_inspiration"
+INBOX_FILE = "TODO_inbox.md"
+
+if not ALLOWED_USER_ID:
+    print("WARNING: ALLOWED_USER_ID is not set. The bot will ignore everyone until it is.")
 
 # Increase timeout and try to mitigate proxy issues
 apihelper.SESSION = requests.Session()
@@ -66,8 +84,9 @@ uploads = {}
 group_captions = {}
 
 def is_authorized(user_id):
+    # Fail closed: a missing ALLOWED_USER_ID must not open the bot (and the repo) to everyone.
     if not ALLOWED_USER_ID:
-        return True
+        return False
     return str(user_id) == str(ALLOWED_USER_ID)
 
 def get_page_title(url):
@@ -114,11 +133,119 @@ def commit_files_to_github(files_dict, message):
     commit = repo.create_git_commit(message, tree, [parent])
     master_ref.edit(commit.sha)
 
+def _path_exists(repo, path):
+    try:
+        repo.get_contents(path, ref="main")
+        return True
+    except Exception:
+        return False
+
+def unique_name(base, paths_for):
+    """Return `base`, or `base-YYYYMMDD-HHMMSS` if any path built from it already exists.
+
+    paths_for(name) returns the repo paths that name would write. Without this,
+    two uploads with the same first line (or every image in an album) silently
+    overwrite each other.
+    """
+    repo = Github(GITHUB_TOKEN).get_repo(REPO_NAME)
+    if not any(_path_exists(repo, p) for p in paths_for(base)):
+        return base
+    stamped = f"{base}-{datetime.now(CAT).strftime('%Y%m%d-%H%M%S')}"
+    n = 2
+    candidate = stamped
+    while any(_path_exists(repo, p) for p in paths_for(candidate)):
+        candidate = f"{stamped}-{n}"
+        n += 1
+    return candidate
+
+def slugify(text, fallback):
+    slug = "".join([c if c.isalnum() else "-" for c in text[:120].lower()]).strip("-")
+    slug = re.sub(r"-{2,}", "-", slug)
+    return slug or fallback
+
+def create_issue(kind, text, image_bytes=None, image_ext=".jpg"):
+    """Open a GitHub issue labelled for the maintainer agent. Returns the issue URL."""
+    meta = ISSUE_KINDS[kind]
+    text = (text or "").strip()
+    first_line = text.split("\n", 1)[0].strip() if text else ""
+    title = first_line[:90] if first_line else f"{meta['name']} from Telegram"
+
+    received_at = datetime.now(CAT).strftime("%Y-%m-%d %H:%M CAT")
+    body = (text or "_No description; see the screenshot._") + "\n"
+
+    if image_bytes:
+        stamp = datetime.now(CAT).strftime("%Y%m%d-%H%M%S")
+        image_path = f"{ISSUE_IMAGE_DIR}/{stamp}-{slugify(first_line, kind)[:60]}{image_ext}"
+        commit_files_to_github({image_path: image_bytes}, f"Add screenshot for {kind} issue via Cloud Bot")
+        raw_url = f"https://raw.githubusercontent.com/{REPO_NAME}/main/{image_path}"
+        body += f"\n![screenshot]({raw_url})\n"
+
+    body += f"\n---\nSent from Telegram, {received_at}."
+
+    repo = Github(GITHUB_TOKEN).get_repo(REPO_NAME)
+    try:
+        issue = repo.create_issue(title=title, body=body, labels=[meta["label"]])
+    except Exception:
+        # Label missing or not permitted: still capture the report.
+        issue = repo.create_issue(title=title, body=body)
+    return issue.html_url
+
+def _download_image(file_id):
+    file_info = bot.get_file(file_id)
+    image_bytes = bot.download_file(file_info.file_path)
+    _, ext = os.path.splitext(file_info.file_path.lower())
+    if ext not in {'.jpg', '.jpeg', '.png', '.webp', '.gif'}:
+        ext = ".jpg"
+    return image_bytes, ext
+
+def process_idea_action(chat_id, message_id, text, file_id=None):
+    """Save an idea/reference to the inbox, with its image (if any) kept off the site."""
+    bot.edit_message_text("⏳ Saving idea to the inbox...", chat_id, message_id)
+    try:
+        text = (text or "").strip()
+        one_line = " / ".join(l.strip() for l in text.split("\n") if l.strip()) or "(no note)"
+        files = {}
+        image_note = ""
+        if file_id:
+            image_bytes, ext = _download_image(file_id)
+            base = slugify(text.split("\n", 1)[0] if text else "", "idea")[:80]
+            name = unique_name(base, lambda n: [f"{IDEA_IMAGE_DIR}/{n}{ext}"])
+            image_path = f"{IDEA_IMAGE_DIR}/{name}{ext}"
+            files[image_path] = image_bytes
+            image_note = f" ([image]({image_path}))"
+
+        repo = Github(GITHUB_TOKEN).get_repo(REPO_NAME)
+        inbox = _get_file_text(repo, INBOX_FILE)
+        if inbox and not inbox.endswith('\n'):
+            inbox += '\n'
+        received_at = datetime.now(CAT).strftime("%Y-%m-%d %H:%M CAT")
+        files[INBOX_FILE] = inbox + f"- [ ] {received_at} | 💡 Idea: {one_line}{image_note}\n"
+
+        commit_files_to_github(files, "Add idea to TODO_inbox.md via Cloud Bot")
+        saved = f"\n🖼 {image_path}" if file_id else ""
+        bot.edit_message_text(f"💡 Idea saved to {INBOX_FILE}.{saved}", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to save idea: {e}", chat_id, message_id)
+
+def process_issue_action(chat_id, message_id, kind, text, file_id=None):
+    meta = ISSUE_KINDS[kind]
+    bot.edit_message_text(f"⏳ Opening a {meta['name'].lower()} issue on GitHub...", chat_id, message_id)
+    try:
+        image_bytes, ext = None, ".jpg"
+        if file_id:
+            image_bytes, ext = _download_image(file_id)
+        url = create_issue(kind, text, image_bytes, ext)
+        bot.edit_message_text(f"{meta['emoji']} {meta['name']} filed:\n{url}", chat_id, message_id)
+    except Exception as e:
+        bot.edit_message_text(f"❌ Failed to open issue: {e}", chat_id, message_id)
+
 # ===============================
 # WEBHOOK ROUTE FOR PYTHONANYWHERE
 # ===============================
 @app.route('/' + TOKEN, methods=['POST'])
 def webhook():
+    if WEBHOOK_SECRET and request.headers.get('X-Telegram-Bot-Api-Secret-Token') != WEBHOOK_SECRET:
+        abort(403)
     if request.headers.get('content-type') == 'application/json':
         json_string = request.get_data().decode('utf-8')
         update = telebot.types.Update.de_json(json_string)
@@ -181,7 +308,9 @@ def process_image_upload(chat_id, message_id, msg_id_key, target_type, ai_model=
         _, ext = os.path.splitext(file_info.file_path.lower())
         if ext not in valid_exts:
             ext = ".jpg"
-            
+
+        filename = unique_name(filename, lambda n: [f"{media_rel_dir}/{n}{ext}"] +
+                               ([f"{collection_rel_dir}/{n}.md"] if collection_rel_dir else []))
         image_filename = f"{filename}{ext}"
         image_path = f"{media_rel_dir}/{image_filename}"
         
@@ -281,8 +410,12 @@ def process_video_upload(chat_id, message_id, msg_id_key, genre):
     safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
     if not safe_title:
         safe_title = f"video-{timestamp}"
-    filename = safe_title
-    
+    try:
+        filename = unique_name(safe_title, lambda n: [f"_gallery/videos/{n}.md"])
+    except Exception as e:
+        bot.edit_message_text(f"❌ Could not reach GitHub: {e}", chat_id, message_id)
+        return
+
     frontmatter = {
         "title": title,
         "platform": platform,
@@ -330,7 +463,11 @@ def process_playlist_upload(chat_id, message_id, msg_id_key, genre):
     safe_title = "".join([c if c.isalnum() else "-" for c in title[:120].lower()]).strip("-")
     if not safe_title:
         safe_title = f"playlist-{timestamp}"
-    filename = safe_title
+    try:
+        filename = unique_name(safe_title, lambda n: [f"_video_collections/{n}.md"])
+    except Exception as e:
+        bot.edit_message_text(f"❌ Could not reach GitHub: {e}", chat_id, message_id)
+        return
 
     frontmatter = {
         "title": title,
@@ -418,10 +555,11 @@ def handle_media(message):
     keyboard = [
         [InlineKeyboardButton("Meme", callback_data="main_meme"), InlineKeyboardButton("Gallery", callback_data="main_gallery")],
         [InlineKeyboardButton("AI Gen", callback_data="main_ai"), InlineKeyboardButton("Asset Only", callback_data="main_asset")],
+        [InlineKeyboardButton("🐞 Bug report", callback_data="main_bug"), InlineKeyboardButton("💡 Idea / feature", callback_data="main_idea")],
         [InlineKeyboardButton("Screenshot", callback_data="main_screenshot"), InlineKeyboardButton("Cancel", callback_data="main_cancel")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    msg = bot.reply_to(message, "Where would you like this on GitHub? (Note: Cloud version has no timeouts)", reply_markup=reply_markup)
+    msg = bot.reply_to(message, "Where would you like this on GitHub? (Bug opens an issue; Idea goes to the inbox. Both keep the image off the site)", reply_markup=reply_markup)
     
     uploads[str(msg.message_id)] = {
         'file_id': file_id,
@@ -450,7 +588,19 @@ def handle_callback(call):
             uploads.pop(msg_id_key)
             bot.edit_message_text("❌ Upload cancelled.", call.message.chat.id, call.message.message_id)
             return
-        
+
+        if target_type in ISSUE_KINDS:
+            uploads.pop(msg_id_key, None)
+            process_issue_action(call.message.chat.id, call.message.message_id, target_type,
+                                 payload.get('caption', ''), file_id=payload.get('file_id'))
+            return
+
+        if target_type == "idea":
+            uploads.pop(msg_id_key, None)
+            process_idea_action(call.message.chat.id, call.message.message_id,
+                                payload.get('caption', ''), file_id=payload.get('file_id'))
+            return
+
         if target_type == "ai":
             payload['state'] = 'ai'
             keyboard = [
@@ -537,12 +687,7 @@ def handle_callback(call):
     elif data == "vid_to_todo":
         # Switch from video upload to TODO choice
         payload['state'] = 'todo'
-        keyboard = [
-            [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
-            [InlineKeyboardButton("Notes Inbox", callback_data="todo_inbox")],
-            [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
-        ]
-        bot.edit_message_text("Where should this TODO go?", call.message.chat.id, call.message.message_id, reply_markup=InlineKeyboardMarkup(keyboard))
+        bot.edit_message_text("Where should this TODO go?", call.message.chat.id, call.message.message_id, reply_markup=todo_keyboard())
         return
 
     elif data == "pl_as_video":
@@ -584,6 +729,10 @@ def handle_callback(call):
         
         if action == "cancel":
             bot.edit_message_text("❌ TODO cancelled.", call.message.chat.id, call.message.message_id)
+        elif action in ISSUE_KINDS:
+            process_issue_action(call.message.chat.id, call.message.message_id, action, text)
+        elif action == "idea":
+            process_idea_action(call.message.chat.id, call.message.message_id, text)
         elif action == "content":
             process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_content.md")
         elif action == "design":
@@ -591,6 +740,43 @@ def handle_callback(call):
         elif action == "inbox":
             process_todo_action(call.message.chat.id, call.message.message_id, text, "TODO_inbox.md")
         return
+
+def todo_keyboard():
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🐞 Bug", callback_data="todo_bug"), InlineKeyboardButton("💡 Idea / feature", callback_data="todo_idea")],
+        [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
+        [InlineKeyboardButton("Notes Inbox", callback_data="todo_inbox")],
+        [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
+    ])
+
+@bot.message_handler(commands=['bug', 'idea'])
+def handle_issue_command(message):
+    """/bug <text> opens an issue; /idea <text> saves to the inbox. No menu."""
+    if not is_authorized(message.from_user.id):
+        return
+    parts = message.text.split(maxsplit=1)
+    kind = parts[0].lstrip('/').split('@')[0].lower()
+    text = parts[1].strip() if len(parts) > 1 else ""
+    if not text:
+        emoji = "🐞" if kind == "bug" else "💡"
+        bot.reply_to(message, f"Usage: /{kind} followed by your note (first line becomes the title). "
+                              f"For a screenshot, send the image and tap {emoji}.")
+        return
+    status_msg = bot.reply_to(message, "⏳ Working...")
+    if kind == "idea":
+        process_idea_action(message.chat.id, status_msg.message_id, text)
+    else:
+        process_issue_action(message.chat.id, status_msg.message_id, kind, text)
+
+# Show /bug and /idea in Telegram's "/" menu. Best effort: never block startup.
+try:
+    from telebot.types import BotCommand
+    bot.set_my_commands([
+        BotCommand("bug", "Report a site bug (opens a GitHub issue)"),
+        BotCommand("idea", "Save an idea or reference to the inbox"),
+    ])
+except Exception as e:
+    print(f"set_my_commands failed: {e}")
 
 @bot.message_handler(func=lambda message: True)
 def handle_text(message):
@@ -658,14 +844,8 @@ def handle_text(message):
                 }
                 return # Only handle the first supported URL
     # Treat pure text as TODO by default
-    keyboard = [
-        [InlineKeyboardButton("📝 TODO Content", callback_data="todo_content"), InlineKeyboardButton("💻 TODO Design", callback_data="todo_design")],
-        [InlineKeyboardButton("Notes Inbox", callback_data="todo_inbox")],
-        [InlineKeyboardButton("Cancel", callback_data="todo_cancel")]
-    ]
-    
     try:
-        status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=InlineKeyboardMarkup(keyboard))
+        status_msg = bot.reply_to(message, "Where should this TODO go?", reply_markup=todo_keyboard())
         if status_msg:
             uploads[str(status_msg.message_id)] = {
                 'text': text,
