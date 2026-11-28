@@ -23,7 +23,12 @@ AI is already accelerating innovation, and may soon become as capable as human s
 
 ![screenshot of forethought.org website on 28th November,2026 taken by Richard Djarbeng for rdjarbeng.com](/assets/images/screenshot_of_forethought_website.png "screenshot of forethought.org website on 28th November,2026 taken by Richard Djarbeng")
 
-
 Interesting website where they believe:
 
 AI systems might soon be much more capable than humans, [quickly leading](https://www.forethought.org/preparing-for-the-intelligence-explosion) to rapid technological progress. Even if AI systems were aligned, we might face AI-enabled autocracies, races to grab offworld resources, and conundrums about how to treat digital minds, as well as opportunities to dramatically improve quality of life and collective decision-making.
+
+In other news: Future of Humanity Institute (FHI) at the University of Oxford closed on 16 April 2024. Not looking good when the people concerned with our future as a species is already shut down. Is this a sign?
+
+While researching for this post I found out there's actually something called Futurology, devoted to the field of Future(s) Studies and evidence-based speculation about the development of humanity, technology, and civilization.
+
+They even have a subreddit: [https://www.reddit.com/r/Futurology/](https://www.reddit.com/r/Futurology/)
