@@ -14,8 +14,19 @@
 ## Maintainer agent (GitHub Actions)
 These rules apply when you run from `.github/workflows/maintainer.yml` on a `bug` issue or an
 `@claude` comment, not in a local session.
-- Fix only what the issue or comment asks. If it is unclear, or would need a design or content
-  decision, comment with what you found and a suggested fix, and stop.
+- You are for quick fixes only: a wrong path, a broken link, a typo, a missing front-matter
+  field, a one-rule CSS fix. Roughly: at most 3 files and about 20 changed lines. If the fix is
+  bigger than that, unclear, or needs a design or content decision, don't attempt it. Comment with
+  what you found, the likely cause (file and line) and a suggested fix, then stop. Richard does
+  those himself.
+- Broken internal links (from `npm run check:links` or a deploy failure):
+  1. Find the page(s) that link to the missing URL.
+  2. Look for where the target went: a renamed file (`git log --diff-filter=R --summary`, `git log
+     --all -- <path>`), a similar file name, a `redirect_from`, or a post with a matching title.
+  3. Exactly one clear match: update the link (or the image path) to it.
+  4. A missing image with no match: don't invent one; point the reference at nothing only if the
+     template has a fallback, otherwise report it.
+  5. No clear match, or more than one: don't guess. Comment with the candidates and stop.
 - Never push to `main`. Work on your branch, then open a PR with `gh pr create` whose body starts
   with `Fixes #<issue>` and says in 2-4 lines what changed and how to check it on the live site.
 - Before opening the PR, run `npm run build` and `npm run check:links`; both must pass. Say so in
