@@ -30,9 +30,9 @@
   <link rel="preconnect" href="https://img.youtube.com">
   
   {% if layout == 'post' or layout == 'personal' or page.layout == 'post' or page.layout == 'personal' %}
-  <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css"></noscript>
-  <script defer src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/applause-button@4.0.7/dist/applause-button.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/applause-button@4.0.7/dist/applause-button.css"></noscript>
+  <script defer src="https://unpkg.com/applause-button@4.0.7/dist/applause-button.js"></script>
   {% endif %}
 
   {% assign is_noindex = noindex | default: page.noindex %}
@@ -128,7 +128,7 @@
   {%- if content contains 'language-mermaid' or content contains 'class="mermaid"' or page.mermaid -%}
   <!-- Mermaid diagram support (loaded on demand, theme-reactive) -->
   <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs';
 
     function getActiveTheme() {
       return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
