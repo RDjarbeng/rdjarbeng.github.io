@@ -25,9 +25,12 @@ concurrency:
 
 jobs:
   maintain:
+    # Only Richard can start it: the repo is public, so anyone can open an issue or comment.
+    # (Telegram bot issues are created with Richard's token, so they count as him.)
     if: >-
+      github.actor == 'RDjarbeng' && (
       (github.event_name == 'issues' && github.event.label.name == 'bug') ||
-      (github.event_name != 'issues' && contains(github.event.comment.body, '@claude'))
+      (github.event_name != 'issues' && contains(github.event.comment.body, '@claude')))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
@@ -57,6 +60,11 @@ jobs:
           trigger_phrase: "@claude"
           track_progress: true
           branch_prefix: "fix/"
+          # Commits show this name instead of claude[bot].
+          bot_name: "RDjarbeng site maintainer bot"
+          bot_id: "41898282"
+          # Don't feed other people's comments to the model (prompt-injection guard).
+          include_comments_by_actor: "RDjarbeng"
           claude_args: >-
             --model claude-sonnet-5-5
             --max-turns 25
