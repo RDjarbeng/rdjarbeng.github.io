@@ -1,0 +1,53 @@
+name: Drafts preview (Cloudflare Pages)
+
+# Builds the site WITH unpublished posts and uploads it to the private Cloudflare preview project,
+# so drafts can be read on a phone at https://rdjarbeng-preview.pages.dev/drafts/ (list) and /drafts/<slug>/.
+# The live site (deploy to GitHub Pages) is untouched and never includes drafts.
+# The copy is blocked from search engines (robots.txt + X-Robots-Tag on every response).
+# Needs repo secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["_posts/**", "_personal/**", "assets/**", "_includes/**", "_layouts/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: drafts-preview
+  cancel-in-progress: true
+
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with drafts
+        env:
+          BUILD_DRAFTS: "1"
+        run: npm run build
+      - name: Block search engines and crawlers
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          printf '/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n' > _site/_headers
+          rm -f _site/sitemap*.xml
+      - name: Upload to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        # main is the project's production branch, so this build is what
+        # https://rdjarbeng-preview.pages.dev serves. PR previews stay on their own branch aliases.
+        run: |
+          npx --yes wrangler@4.160.1 pages deploy _site --project-name=rdjarbeng-preview \
+            --branch=main --commit-dirty=true
+          echo "Drafts: https://rdjarbeng-preview.pages.dev/drafts/" >> "$GITHUB_STEP_SUMMARY"
