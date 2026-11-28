@@ -72,7 +72,7 @@ Index icon
 - [ ] 2026-07-28 17:16 CAT | AI data center capex-625B, verify these numbers
 - [ ] 2026-07-28 17:29 CAT | Agent tool calls are endogenous, what does it mean. Forecasting a method or tool that rewrites as you forecast it?
 - [ ] 2026-07-28 17:42 CAT | Should have a section for longer posts that are more than a 5 minute read
-- [ ] 2026-09-03 10:00 CAT | The carousel title text blocks the image on mobile needs a better way to improve this
+- [ ] 2026-09-03 10:00 CAT | The carousel title text blocks the image on mobile needs a better way to improve this ([screenshot](.github/issue-images/2026-06-14-carousel-text-over-image-mobile.jpg))
 - [ ] 2026-10-03 11:31 CAT | Motion designer as a skill, try faith over fear
 - [ ] 2026-10-03 11:52 CAT | Here's a cool animation, a post card on the home page, gets up and runs off the screen. It makes sure to disturb the cards around it. Later it sneaks back, turns the site to dark mode and tries to pretend as if nothing happened
 - [ ] 2026-10-03 15:41 CAT | Osint, is it a proper tool, does it show what governments are doing?
@@ -203,3 +203,6 @@ Interesting website where they believe:
 AI systems might soon be much more capable than humans, quickly leading to rapid technological progress. Even if AI systems were aligned, we might face AI-enabled autocracies, races to grab offworld resources, and conundrums about how to treat digital minds, as well as opportunities to dramatically improve quality of life and collective decision-making.
 - [ ] 2026-11-28 12:41 CAT | Why aren't space vehicles solar powered or electric, pulling energy from the sun where it is abundant in space. There has to be a reason right, it can't be just because nobody has tried to produce thrust from solar power. Take the ISS for instance it needs rockets to boost it every once or so. Interesting
 - [ ] 2026-11-28 15:37 CAT | 💡 Idea: Other way to screw the gallery Pages sideways for instance for the NASA was you want to be able to explore all the images in a category sideways without having to click if necessary just with the keyboard
+- [ ] 2026-11-25 (moved from assets/images) | 💡 Idea: Can the diagram maker make diagrams like these (AWS-style architecture: nested boxes, service icons, labelled arrows)? ([image](_inspiration/wonder-if-the-diagram-maker-can-make-diagrams-like-these.jpg))
+- [ ] 2026-11-21 (moved from assets/images) | 💡 Idea: A design like this for posts in the gallery wouldn't be bad: big bold statement, short supporting line, small source footer, on a plain dark card. ([image](_inspiration/a-design-like-this-for-posts-in-gallery-wont-be-bad.jpg))
+- [ ] 2026-09-21 (moved from assets/images) | 💡 Idea: Reason why the site moved to 11ty: the Jekyll build took 756 seconds. Use as evidence in a migration post. ([image](_inspiration/reason-why-my-website-is-moving-to-11ty.jpg))
