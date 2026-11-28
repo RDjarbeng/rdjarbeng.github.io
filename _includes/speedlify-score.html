@@ -1,0 +1,10 @@
+{%- comment -%}
+  Lighthouse scores for the live site from speedlify.dev (re-measured weekly).
+  Used on the dev-only /review/ and /journey/ pages. The component comes from the
+  speedlify2-score npm package and is copied to /assets/js/ by eleventy.config.js.
+{%- endcomment -%}
+<div class="speedlify-score" style="margin: 0 0 1rem;">
+  <script type="module" src="/assets/js/speedlify2-score.js"></script>
+  <p class="review-note" style="margin: 0 0 4px;">Live site on <a href="https://www.speedlify.dev/site/rdjarbeng-com/">speedlify.dev</a> (measured weekly)</p>
+  <speedlify2-score speedlify-url="https://www.speedlify.dev/" url="https://rdjarbeng.com/"></speedlify2-score>
+</div>

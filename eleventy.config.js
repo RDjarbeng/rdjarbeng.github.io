@@ -719,6 +719,11 @@ ${jsonLd}
 
   // 6. Passthrough copies
   eleventyConfig.addPassthroughCopy("assets");
+  // Speedlify score web component (npm: speedlify2-score) for the dev-only /review/ and /journey/
+  // pages. Copied only under the dev server, so production builds don't ship it.
+  if ((process.env.npm_lifecycle_event || "").startsWith("serve:")) {
+    eleventyConfig.addPassthroughCopy({ "node_modules/speedlify2-score/speedlify2-score.js": "assets/js/speedlify2-score.js" });
+  }
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("documents");
   eleventyConfig.addPassthroughCopy("favicon.ico");
@@ -1125,6 +1130,9 @@ ${jsonLd}
   // the layouts leave out the script tag, review.liquid has no permalink, and the script file is
   // removed from the output after the build.
   const devReview = process.env.ELEVENTY_RUN_MODE === "serve";
+  // BUILD_DRAFTS=1 builds unpublished posts at /drafts/<slug>/ for the private phone preview
+  // (.github/workflows/drafts-preview.yml). The live deploy never sets it.
+  eleventyConfig.addGlobalData("buildDrafts", process.env.BUILD_DRAFTS === "1");
   eleventyConfig.addGlobalData("devReview", devReview);
   // Review sets: each Claude session lists the files it is working on in review/sets/<id>.json
   // ({title, session, updated, files[]}, written by scripts/review-set.mjs). /review/ shows each set
