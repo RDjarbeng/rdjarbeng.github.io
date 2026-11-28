@@ -40,17 +40,17 @@
       {% endunless %}
 
       {% if include.is_js_template %}
-      <h4 title="${hit.title}">
+      <h3 title="${hit.title}">
         <a href="${hit.url}" class="post-card-title-link">
           ${components.Highlight({ hit, attribute: 'title' })}
         </a>
-      </h4>
+      </h3>
       {% else %}
-      <h4 title="{{ include.post.title | escape }}">
+      <h3 title="{{ include.post.title | escape }}">
         <a href="{{ include.post.url | relative_url }}" class="post-card-title-link">
           {{ include.post.title | escape }}
         </a>
-      </h4>
+      </h3>
       {% endif %}
 
       {% assign words_per_minute = 180 %}

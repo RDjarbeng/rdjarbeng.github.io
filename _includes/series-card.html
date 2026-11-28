@@ -13,9 +13,9 @@
     </div>
     {% endif %}
     <div class="post-card-content">
-      <h4 title="{{ s.name | escape }}">
+      <h3 title="{{ s.name | escape }}">
         <a href="{{ s.url }}" class="post-card-title-link">{{ s.name | escape }}</a>
-      </h4>
+      </h3>
       {% if s.description %}<p class="post-card-excerpt">{{ s.description | escape }}</p>{% endif %}
       <div class="post-card-meta">
         <span class="post-card-meta__label">Series</span>

@@ -432,14 +432,13 @@ iframe {
   }
 }
 
-.post-card h4,
 .post-card h3 {
   line-height: 1.5em;
   /* Adjust line-height if necessary */
   /* All truncation properties have been removed */
 }
 
-.post-card h4 {
+.post-card h3 {
   margin-bottom: 6px;
 }
 
@@ -489,7 +488,7 @@ iframe {
   margin: 0 5px;
 }
 
-.post-card h4 {
+.post-card h3 {
   margin-bottom: 8px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -3525,7 +3524,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-.post-card--no-excerpt h4 { margin-bottom: 2px; }
+.post-card--no-excerpt h3 { margin-bottom: 2px; }
 
 /* ── Reusable Component: Recommended Reading ──────────────────────────────── */
 .recommended-reading {
