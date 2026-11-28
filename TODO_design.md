@@ -237,3 +237,4 @@ https://sveltiacms.app/en/docs/deployments/previews#specifying-a-status-context
 - [ ] Post thumbnail here looks jagged/unclear on the home page, not sure why
 https://rdjarbeng.com/what-can-you-do-testing-ai-agents-gemini-argon-and-claude/
 - [ ] A lot of my emails to this website domain email end up in spam, setup the SPF, DKIM, DMARC
+- [ ] Add a quick way for readers to report a post that's broken or not working without having to create an issue or send me an email directly.
