@@ -22,7 +22,7 @@
     </div>
   </article>
 
-  <aside class="front-also" aria-label="Also new">
+  <section class="front-also" aria-label="Also new">
     <p class="front-kicker">Also new</p>
     <ol class="front-also__list">
       {%- for p in site.posts offset:1 limit:4 %}
@@ -42,7 +42,7 @@
       <a class="front-also__all" href="{{ '/posts/' | relative_url }}">All posts &rarr;</a>
       <span class="front-also__browse">Browse by <a href="{{ '/tags/' | relative_url }}">tag</a> or <a href="{{ '/categories/' | relative_url }}">category</a></span>
     </div>
-  </aside>
+  </section>
 </section>
 
 {%- if include.topics %}

@@ -6,7 +6,7 @@
         {% break %}
     {% endif %}
 {% endfor %}
-<div class="dynamic-footer" data-footer-bg="{{ latest_apod.image | strip }}" data-footer-bg-alt="{{ latest_apod.image_alt | default: latest_apod.title | strip | escape }}">
+<section class="dynamic-footer" aria-label="Get in touch" data-footer-bg="{{ latest_apod.image | strip }}" data-footer-bg-alt="{{ latest_apod.image_alt | default: latest_apod.title | strip | escape }}">
     <div class="progress-bar-container">
         <div class="progress-bar"></div>
     </div>
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
