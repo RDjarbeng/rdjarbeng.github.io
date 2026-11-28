@@ -5,6 +5,8 @@ on:
     branches: ["main"]
     paths-ignore:
       - 'TODO*.md'
+      - '.github/issue-images/**'
+      - '_inspiration/**'
   workflow_dispatch:
 
 permissions:
