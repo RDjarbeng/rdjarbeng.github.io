@@ -33,6 +33,9 @@ Possible future implementation:
 - Comments on blog posts - todo
 - Any photo uploaded to the blog should have a thumbnail generated- todo
 
+## Regressions and their guards
+- [x] **Video hubs lost pagination** (fixed 2026-11-28): `/gallery/videos/` showed all 330 videos on one page, and the YouTube and TikTok hubs had the same fault. The Jekyll `custom-pagination.rb` plugin used to give these hand-written pages their `custom_pager`; it was deleted in the Eleventy move (862a3d90) and `_data/galleryPages.js` skips those URLs, so the templates fell back to "all videos" without any error. Fix: `_data/videoHubPages.js`, which each hub paginates over. Guard: `npm run check:pagination` (run on deploy) fails when a listing page under /posts/, /personal/ or /gallery/ renders more than 48 cards, or has a page-2/ without a pager.
+
 # To-Do List for rdjarbeng.com
 
 ## High Priority - Immediate Fixes & Critical Enhancements

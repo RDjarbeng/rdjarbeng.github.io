@@ -1,7 +1,12 @@
 ---
 layout: default
 title: TikTok Videos
-permalink: /gallery/videos/tiktok/
+pagination:
+  data: videoHubPages.tiktok
+  size: 1
+  alias: custom_pager
+  addAllPagesToCollections: false
+permalink: "{{ custom_pager.url }}"
 body_class: videos-page
 description: "Curated TikTok videos covering music, entertainment, lifestyle, and viral trends from Richard Djarbeng's collection."
 ---
