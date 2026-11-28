@@ -55,6 +55,10 @@ jobs:
       - name: Check internal links
         # Fails the deploy if any page links to a URL the build did not produce.
         run: npm run check:links
+      - name: Check old Jekyll URLs still resolve
+        # Every URL from the last Jekyll sitemap must be a page, a file or a redirect
+        # (written by the build), or be listed in scripts/data/legacy-urls-allow.json.
+        run: npm run check:legacy-urls
       - name: Regenerate PDFs for changed long posts
         # Only posts of 10+ minutes have a stored PDF. A post's PDF is rebuilt only when its source
         # file changed (hashes in _data/pdf_sources.json), then copied into this deploy and committed

@@ -46,7 +46,8 @@
   "scripts": {
     "build:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --silence-deprecation=import",
     "build:11ty": "eleventy",
-    "build": "run-s build:sass build:11ty",
+    "build": "run-s build:sass build:11ty build:legacy-urls",
+    "build:legacy-urls": "node scripts/legacy-urls.mjs _site",
     "serve:sass": "sass assets/css/styles.scss assets/css/styles.css --style=compressed --load-path=_sass --quiet-deps --silence-deprecation=import --watch",
     "serve:11ty": "node scripts/dev-serve.cjs",
     "serve:11ty:full": "node scripts/dev-serve.cjs",
@@ -60,6 +61,7 @@
     "check:links": "node scripts/check-links.mjs _site",
     "check:edits": "node scripts/check-edits.mjs",
     "review:comments": "node scripts/review-comments.mjs",
+    "check:legacy-urls": "node scripts/legacy-urls.mjs _site --check",
     "postinstall": "patch-package"
   },
   "repository": {
