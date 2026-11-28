@@ -1000,3 +1000,4 @@ Standard attention compares every token with every other token, even when only a
 
 https://unsloth.ai/docs
 - [ ] Differences between Google research, deepmind, google brain. What's the difference
+- [ ] This site might prove a good reference on the agent economy post: https://near.org/
