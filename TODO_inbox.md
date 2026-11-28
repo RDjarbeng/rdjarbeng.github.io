@@ -201,3 +201,4 @@ The book was released under a Creative Commons license, so anyone can create and
 Interesting website where they believe:
 
 AI systems might soon be much more capable than humans, quickly leading to rapid technological progress. Even if AI systems were aligned, we might face AI-enabled autocracies, races to grab offworld resources, and conundrums about how to treat digital minds, as well as opportunities to dramatically improve quality of life and collective decision-making.
+- [ ] 2026-11-28 12:41 CAT | Why aren't space vehicles solar powered or electric, pulling energy from the sun where it is abundant in space. There has to be a reason right, it can't be just because nobody has tried to produce thrust from solar power. Take the ISS for instance it needs rockets to boost it every once or so. Interesting
