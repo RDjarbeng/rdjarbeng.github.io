@@ -1,0 +1,11 @@
+{
+  "_comment": "Exceptions for scripts/legacy-urls.mjs. 'redirect': old URL -> new URL, used when the automatic rules can't find the target. 'gone': old URLs that are meant to 404, each with a reason.",
+  "redirect": {
+    "/projects/project1/": "/projects/"
+  },
+  "gone": {
+    "/hello_World/": "Jekyll starter post, deleted on purpose",
+    "/index_old/": "old homepage backup, never meant to be public",
+    "/cybersecurity-datasets-and-deep-learning-from-kdd99-to-foundation-models/": "post is a draft (published: false)"
+  }
+}
