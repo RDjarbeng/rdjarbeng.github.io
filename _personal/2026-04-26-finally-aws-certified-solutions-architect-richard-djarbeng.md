@@ -3,7 +3,7 @@ title: Finally AWS Certified Solutions Architect- Richard Djarbeng
 date: 2026-04-26T17:34:00+02:00
 published: true
 tags: [AWS, Cloud, Certification]
-image: /assets/images/rd/richard_aws_solutions_architect_with_badge_cmmrs.png
+image: /assets/images/rd/richard_aws_solutions_architect_with_badge_cmmrs.jpg
 image_alt: Richard Djarbeng looking up at a building with an AWS Certified Solutions Architect Associate badge overlaid
 layout: personal
 card_items:
