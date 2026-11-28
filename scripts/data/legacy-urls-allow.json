@@ -1,7 +1,8 @@
 {
   "_comment": "Exceptions for scripts/legacy-urls.mjs. 'redirect': old URL -> new URL, used when the automatic rules can't find the target. 'gone': old URLs that are meant to 404, each with a reason.",
   "redirect": {
-    "/projects/project1/": "/projects/"
+    "/projects/project1/": "/projects/",
+    "/Stranger-Things-by-Peter-Kimanzi/": "/spotlight-on-peter-kimanzi/"
   },
   "gone": {
     "/hello_World/": "Jekyll starter post, deleted on purpose",
