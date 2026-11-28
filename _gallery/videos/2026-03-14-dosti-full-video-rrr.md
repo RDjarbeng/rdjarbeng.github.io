@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/k157GjJHvK4/maxresdefault.jpg"
 type: video
 genre: "Music of RRR"
 category: videos
+playlists: ["PLY31piK6vwEpIvCbnSpOA5EXV8bfQbmiV"]
 ---
 
 Check out #Dosti Hindi Full Music Video ft. NTR, Ram Charan, M M Kreem, Amit Trivedi

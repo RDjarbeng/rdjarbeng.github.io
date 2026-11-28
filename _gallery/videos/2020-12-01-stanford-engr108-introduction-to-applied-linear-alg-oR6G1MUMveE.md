@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/oR6G1MUMveE/maxresdefault.jpg"
 type: video
 genre: "Education"
 category: videos
+playlists: ["PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9"]
 ---
 
 Professor Stephen Boyd

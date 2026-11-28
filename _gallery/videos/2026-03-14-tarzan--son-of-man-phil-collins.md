@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/-WcHPFUwd6U/hqdefault.jpg"
 type: video
 genre: "Songs from tarzan soundtrack -Phil colins"
 category: videos
+playlists: ["PLY31piK6vwEpGRl_nZNv-Y3f5x-fCE1em"]
 ---
 
 ## Growing Up in the Jungle: The Upbeat Anthem of "Son of Man"

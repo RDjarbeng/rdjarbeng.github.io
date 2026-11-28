@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/3tI2MH2Ozv4/maxresdefault.jpg"
 type: video
 genre: "Music of RRR"
 category: videos
+playlists: ["PLY31piK6vwEpIvCbnSpOA5EXV8bfQbmiV"]
 ---
 
 Presenting song 'Ambar Se Toda' from movie RRR. This song shows the movie and the life of the young girl in the RRR movie. At the beginning it shows the scene of the young girl painting an intricate design on the hand of the governor's wife and then leads to her capture in the palace.

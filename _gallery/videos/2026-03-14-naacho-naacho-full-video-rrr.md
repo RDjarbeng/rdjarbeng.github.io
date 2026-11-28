@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/sAzlWScHTc4/maxresdefault.jpg"
 type: video
 genre: "Music of RRR"
 category: videos
+playlists: ["PLY31piK6vwEpIvCbnSpOA5EXV8bfQbmiV"]
 ---
 
 Naacho Naacho - Full Video from #RRRMovie.  An  M. M. Kreem  Musical. Sung  by  Vishal Mishra & Rahul Sipligunj.

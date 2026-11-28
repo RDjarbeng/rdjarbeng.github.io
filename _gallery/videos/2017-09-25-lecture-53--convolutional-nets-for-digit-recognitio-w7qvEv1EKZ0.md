@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/w7qvEv1EKZ0/hqdefault.jpg"
 type: video
 genre: "Education"
 category: videos
+playlists: ["PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv"]
 ---
 
 🔔 Stay Connected! Get the latest insights on Artificial Intelligence (AI) 🧠, Natural Language Processing (NLP) 📝, and Large Language Models (LLMs) 🤖. Follow (https://twitter.com/mtnayeem) on Twitter 🐦 for real-time updates, news, and discussions in the field. 

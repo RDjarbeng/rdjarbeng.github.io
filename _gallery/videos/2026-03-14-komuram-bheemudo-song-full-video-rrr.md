@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/ouKbrNiaPxo/maxresdefault.jpg"
 type: video
 genre: "Music of RRR"
 category: videos
+playlists: ["PLY31piK6vwEpIvCbnSpOA5EXV8bfQbmiV"]
 ---
 
 This has got to be one of the most impactful scenes in the entire RRR movie.

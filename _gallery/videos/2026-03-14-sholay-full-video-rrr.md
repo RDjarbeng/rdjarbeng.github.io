@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/2cyzCReoNgU/maxresdefault.jpg"
 type: video
 genre: "Music of RRR"
 category: videos
+playlists: ["PLY31piK6vwEpIvCbnSpOA5EXV8bfQbmiV"]
 ---
 
 From the movie RRR the Celebration Anthem for the movide- SHOLAY.

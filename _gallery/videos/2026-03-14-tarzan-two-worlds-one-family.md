@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/mAh0Y9UdQZI/hqdefault.jpg"
 type: video
 genre: "Songs from tarzan soundtrack -Phil colins"
 category: videos
+playlists: ["PLY31piK6vwEpGRl_nZNv-Y3f5x-fCE1em"]
 ---
 
 # Two Worlds, One Family: The Epic Opening of Tarzan

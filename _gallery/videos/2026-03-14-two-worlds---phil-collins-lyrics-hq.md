@@ -8,6 +8,7 @@ thumbnail: "https://i.ytimg.com/vi/cJlyoDbm5YA/hqdefault.jpg"
 type: video
 genre: "Songs from tarzan soundtrack -Phil colins"
 category: videos
+playlists: ["PLY31piK6vwEpGRl_nZNv-Y3f5x-fCE1em"]
 ---
 
 ## Lyrics for Two worlds One Family
