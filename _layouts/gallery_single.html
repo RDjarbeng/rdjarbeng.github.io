@@ -111,8 +111,10 @@ layout: default
             <!-- Media Display -->
             <div class="gallery-item-media" style="margin-bottom: 2rem;">
                 {% if item_type == 'video' %}
+                {% assign is_yt_short = false %}
+                {% if item_platform == 'youtube' and item_youtube_id contains 'shorts/' %}{% assign is_yt_short = true %}{% endif %}
                 <div class="video-container"
-                    style="{% if item_platform == 'youtube' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%; min-height: 550px;{% endif %} overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    style="{% if is_yt_short %}position: relative; aspect-ratio: 9/16; width: 100%; max-width: 360px; margin: 0 auto;{% elsif item_platform == 'youtube' %}position: relative; padding-bottom: 56.25%; height: 0;{% else %}display: flex; justify-content: center; width: 100%; min-height: 550px;{% endif %} overflow: hidden;{% unless is_yt_short %} max-width: 100%;{% endunless %} border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     {% if item_platform == 'youtube' and item_youtube_id %}
                     {% assign video_id = item_youtube_id %}
                     {% if item_youtube_id contains 'youtube.com/watch' %}

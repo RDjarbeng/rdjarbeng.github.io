@@ -6,7 +6,7 @@
         <div class="video-thumbnail inline-play-container" data-platform="${hit.platform}"
         data-vid="${ytVidId}" data-list="${ytListId}" data-tk="${computedTkId}"
         data-ig="${computedIgId}" data-tt="${hit.youtube_id || hit.link}"
-        style="width: 100%; position: relative; background: #000; display: flex; align-items: center; justify-content: center; aspect-ratio: ${hit.platform === 'tiktok' ? '9/16' : '16/9'}; overflow: hidden;">
+        style="width: 100%; position: relative; background: #000; display: flex; align-items: center; justify-content: center; aspect-ratio: ${(hit.platform === 'tiktok' || (hit.youtube_id || '').includes('shorts/')) ? '9/16' : '16/9'}; overflow: hidden;">
 
         ${hit.platform === 'youtube' || hit.platform === 'tiktok' ? html`
         <a href="javascript:void(0);" class="inline-play-btn"
@@ -139,7 +139,7 @@
                 <div class="video-thumbnail inline-play-container" data-platform="{{ include.item.platform }}"
                 data-vid="{{ yt_vid_id }}" data-list="{{ yt_list_id }}" data-tk="{{ computed_tk_id }}"
                 data-ig="{{ computed_ig_id }}" data-tt="{{ include.item.youtube_id | default: include.item.link }}"
-                style="width: 100%; position: relative; background: #000; display: flex; align-items: center; justify-content: center; aspect-ratio: {% if include.item.platform == 'tiktok' %}9/16{% else %}16/9{% endif %}; overflow: hidden;">
+                style="width: 100%; position: relative; background: #000; display: flex; align-items: center; justify-content: center; aspect-ratio: {% if include.item.platform == 'tiktok' or include.item.youtube_id contains 'shorts/' %}9/16{% else %}16/9{% endif %}; overflow: hidden;">
 
                 {% if include.item.platform == 'youtube' or include.item.platform == 'tiktok' %}
                 <a href="javascript:void(0);" class="inline-play-btn"
