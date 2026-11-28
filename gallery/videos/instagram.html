@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Instagram Videos
-permalink: /gallery/videos/instagram/
+pagination:
+  data: videoHubPages.instagram
+  size: 1
+  alias: custom_pager
+  addAllPagesToCollections: false
+permalink: "{{ custom_pager.url }}"
 body_class: videos-page
 description: "Curated Instagram videos covering technology, space, travel, and lifestyle from Richard Djarbeng's collection."
 ---

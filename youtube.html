@@ -1,7 +1,12 @@
 ---
 layout: default
 title: YouTube Hub
-permalink: /gallery/videos/youtube/
+pagination:
+  data: videoHubPages.youtube
+  size: 1
+  alias: custom_pager
+  addAllPagesToCollections: false
+permalink: "{{ custom_pager.url }}"
 description: "Explore curated YouTube content featuring technology, AI, space, education, and entertainment videos from content creators worldwide. Handpicked videos by Richard Djarbeng."
 body_class: youtube-page
 ---

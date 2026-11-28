@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Twitter Videos
-permalink: /gallery/videos/twitter/
+pagination:
+  data: videoHubPages.twitter
+  size: 1
+  alias: custom_pager
+  addAllPagesToCollections: false
+permalink: "{{ custom_pager.url }}"
 body_class: videos-page
 description: "Curated Twitter videos covering space, news, technology, and sports from Richard Djarbeng's collection."
 ---
