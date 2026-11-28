@@ -15,7 +15,7 @@
       
       {% if include.post.image and include.post.image.size > 0 %}
       <div class="post-card-image">
-        <img src="{{ include.post.image }}"
+        <img src="{{ include.post.image | thumb: 800 }}"
           alt="{% if include.post.image_alt %}{{ include.post.image_alt | escape }}{% else %}Cover image of post: {{ include.post.title | escape }}{% endif %}"
           title="{{ include.post.title | escape }}" class="post-image" width="800" height="450" loading="lazy">
       </div>

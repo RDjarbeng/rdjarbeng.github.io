@@ -9,7 +9,7 @@
   <div class="post-link">
     {% if s.image and s.image.size > 0 %}
     <div class="post-card-image">
-      <img src="{{ s.image }}" alt="Covers of the posts in the series {{ s.name | escape }}" class="post-image" width="800" height="450" loading="lazy">
+      <img src="{{ s.image | thumb: 800 }}" alt="Covers of the posts in the series {{ s.name | escape }}" class="post-image" width="800" height="450" loading="lazy">
     </div>
     {% endif %}
     <div class="post-card-content">
