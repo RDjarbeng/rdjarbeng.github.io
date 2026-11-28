@@ -31,6 +31,21 @@ body_class: videos-page
         {% assign all_vids = site.gallery | where: "type", "video" | sort: "date" | reverse %}
         {% assign collection_vids = "" | split: "" %}
 
+        {% comment %} match_by: playlist lists only videos the sync script tagged with this
+           collection's playlist id (front matter `playlists:`). Until a sync has tagged them,
+           it falls back to genre so the page is never empty. {% endcomment %}
+        {% if col_match_by == "playlist" and col_playlist_url %}
+          {% assign col_playlist_id = col_playlist_url | split: "list=" | last | split: "&" | first %}
+          {% for vid in all_vids %}
+            {% if vid.playlists contains col_playlist_id %}
+              {% assign collection_vids = collection_vids | push: vid %}
+            {% endif %}
+          {% endfor %}
+          {% if collection_vids.size == 0 %}
+            {% assign collection_vids = all_vids | where: "genre", col_genre %}
+          {% endif %}
+        {% endif %}
+
         {% if col_match_by == "genre" or col_match_by == "genre_and_keywords" %}
           {% assign genre_matches = all_vids | where: "genre", col_genre %}
           {% assign collection_vids = collection_vids | concat: genre_matches %}

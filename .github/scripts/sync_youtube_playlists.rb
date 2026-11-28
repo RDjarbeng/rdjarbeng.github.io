@@ -70,12 +70,33 @@ end
 
 # Read all existing video files to avoid duplicates based on youtube_id
 existing_videos = []
+video_files = {} # youtube_id -> file, so existing videos can be tagged with their playlist
 Dir.glob("#{VIDEOS_DIR}/*.md").each do |file|
   content = File.read(file)
   if content =~ /^youtube_id:\s*"?([^"\n]+)"?/
     existing_videos << $1
+    video_files[$1] = file
   end
 end
+
+# Record which playlist(s) a video belongs to as `playlists: ["<id>", ...]` in its front matter.
+# Collections with `match_by: playlist` list exactly these videos (genre alone is too broad:
+# every imported video gets its collection's genre, e.g. all of "Education").
+def tag_playlist(file, playlist_id)
+  content = File.read(file)
+  return false unless content =~ /\A---\s*\n(.*?)\n---\s*\n/m
+  fm = $1
+  if fm =~ /^playlists:\s*\[(.*)\]\s*$/
+    ids = $1.scan(/"([^"]+)"/).flatten
+    return false if ids.include?(playlist_id)
+    new_fm = fm.sub(/^playlists:.*$/, "playlists: [#{(ids + [playlist_id]).map { |i| "\"#{i}\"" }.join(', ')}]")
+  else
+    new_fm = "#{fm}\nplaylists: [\"#{playlist_id}\"]"
+  end
+  File.write(file, content.sub(fm) { new_fm })
+  true
+end
+tagged_count = 0
 
 new_videos_count = 0
 
@@ -107,6 +128,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
         
         # Skip if already exists
         if existing_videos.include?(video_id)
+          tagged_count += 1 if video_files[video_id] && tag_playlist(video_files[video_id], playlist_id)
           playlist_synced += 1
           next
         end
@@ -137,6 +159,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
         type: video
         genre: "#{genre}"
         category: videos
+        playlists: ["#{playlist_id}"]
         ---
         
         #{description}
@@ -144,6 +167,7 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
         
         File.write(filename, file_content)
         existing_videos << video_id
+        video_files[video_id] = filename
         new_videos_count += 1
         playlist_synced += 1
         puts "Created: #{filename}"
@@ -152,4 +176,4 @@ Dir.glob("#{COLLECTIONS_DIR}/*.md").each do |file|
   end
 end
 
-puts "Sync complete. #{new_videos_count} new videos added."
+puts "Sync complete. #{new_videos_count} new videos added, #{tagged_count} existing videos tagged with their playlist."
