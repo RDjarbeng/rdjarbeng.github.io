@@ -231,7 +231,7 @@ Which books have interconnected chapters, maybe one book has a theory section on
 
 Or a chapter collection for people who want to learn Laplace or codecs, so it's quick to learn what you need
 - [ ] Increase font size across the site so most text uses the same size as email font large by default
-- [ ] Bug: Something is wrong on the youtube page the playlist: Neural Networks for Machine Learning —Geoffrey Hinton includes some other videos from somewhere else
+- [x] Bug (fixed 2026-11-28: collection now uses `match_by: playlist`; the sync tags each video with its playlist id): Something is wrong on the youtube page the playlist: Neural Networks for Machine Learning —Geoffrey Hinton includes some other videos from somewhere else
 - [ ] The mermaid diagrams don't look interesting to look at, some colour,some bigger font, more contrast in night mode instead of grey on black would help
 - [ ] Remove the Mermaid loader from `_includes/head.html` (the `language-mermaid` block, ~line 128). Checked 2026-11-28: no published post renders Mermaid. The only mentions are a kroki.io image URL (rendered by kroki, doesn't need the plugin) in the 2026-02-01 AI stories post and an escaped code sample in the 2026-11-17 agents-standards post. Flowcharts now come from the diagram designer. Before removing, re-run `grep -rlE '```mermaid|class="mermaid"|^mermaid:' _posts _personal _gallery _projects` to confirm it's still unused; this also closes the "mermaid diagrams don't look interesting" item above.
 - [ ] CMS Status context: Let's see if we can add this to the cms:  preview_context: Cloudflare Pages
