@@ -76,6 +76,12 @@ body_class: videos-page
         {% endif %}
 
         {% if collection_vids.size > 0 %}
+            {% comment %} sort_by: title puts course playlists in lecture order (Lecture 1.1, 1.2, ...)
+               instead of newest first, so video_limit keeps the first lectures. {% endcomment %}
+            {% assign col_sort_by = sort_by | default: page.sort_by %}
+            {% if col_sort_by == "title" %}
+              {% assign collection_vids = collection_vids | sort: "title" %}
+            {% endif %}
             {% assign display_collection_vids = collection_vids %}
             {% if col_video_limit and col_video_limit > 0 %}
               {% assign display_collection_vids = collection_vids | slice: 0, col_video_limit %}

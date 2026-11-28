@@ -8,6 +8,8 @@ icon: <svg width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.
   12.816v-8l8 3.993-8 4.007z" fill="currentColor"/></svg>
 youtube_playlist_url: https://www.youtube.com/playlist?list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv
 match_by: playlist
+sort_by: title
+video_limit: 5
 genre: Education
 layout: video_collection
 ---
