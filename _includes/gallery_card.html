@@ -140,7 +140,7 @@
                       {% assign extracted_list = include.item.youtube_id | split: "list=" | last | split: "&" | first %}
                       {% assign yt_list_param = "?list=" | append: extracted_list %}
                     {% endif %}
-                    <iframe src="https://www.youtube.com/embed/{{ video_id }}{{ yt_list_param }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+                    <iframe src="https://www.youtube.com/embed/{{ video_id }}{{ yt_list_param }}" title="{{ include.item.title | escape }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="{% if include.item.youtube_id contains 'shorts/' %}width: 100%; max-width: 360px; margin: 0 auto; display: block; aspect-ratio: 9/16;{% else %}width: 100%; aspect-ratio: 16/9;{% endif %}"></iframe>
                 {% elsif include.item.platform == 'instagram' %}
                     {% assign computed_ig = include.item.youtube_id | default: include.item.link %}
                     {% if computed_ig contains 'instagram.com/p/' %}
