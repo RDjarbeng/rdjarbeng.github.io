@@ -77,6 +77,24 @@ jobs:
             --max-turns 25
             --allowedTools "Bash(npm run build),Bash(npm run build:*),Bash(npm run check:links),Bash(npx @11ty/eleventy:*),Bash(git:*),Bash(gh pr create:*),Bash(gh issue view:*),Bash(gh pr view:*),Bash(ls:*),Bash(grep:*),Bash(find:*)"
 
+      - name: Open a PR for Claude's branch
+        # The action tells the model it can't open PRs (it leaves a "Create PR" link), so do it
+        # here. Then @claude comments on that PR continue the same branch.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.claude.outputs.branch_name }}
+          ISSUE: ${{ github.event.issue.number }}
+          TITLE: ${{ github.event.issue.title }}
+          IS_PR: ${{ github.event.issue.pull_request != null || github.event.pull_request != null }}
+        run: |
+          if [ "$IS_PR" = "true" ] || [ -z "$BRANCH" ] || [ -z "$ISSUE" ]; then exit 0; fi
+          git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null || exit 0
+          if [ -n "$(gh pr list -R "$GITHUB_REPOSITORY" --head "$BRANCH" --json number --jq '.[0].number')" ]; then exit 0; fi
+          gh pr create -R "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+            --title "Fix: $TITLE" \
+            --body "Fixes #$ISSUE
+
+          What changed and how to check it: see the maintainer's comment on #$ISSUE. A preview link follows there once the build is uploaded. To ask for changes, comment on this PR starting with \`@claude\`."
       - name: Build preview of Claude's branch
         id: build
         env:
