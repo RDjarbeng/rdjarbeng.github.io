@@ -197,3 +197,7 @@ This is the new website with the book: https://nielsensdeeplearningbook.com
 It has links to a PDF, ePUB, and HTML versions as well as the full LaTeX source.
 
 The book was released under a Creative Commons license, so anyone can create and host a copy of it.
+- [ ] 2026-11-28 12:17 CAT | https://www.forethought.org/
+Interesting website where they believe:
+
+AI systems might soon be much more capable than humans, quickly leading to rapid technological progress. Even if AI systems were aligned, we might face AI-enabled autocracies, races to grab offworld resources, and conundrums about how to treat digital minds, as well as opportunities to dramatically improve quality of life and collective decision-making.
