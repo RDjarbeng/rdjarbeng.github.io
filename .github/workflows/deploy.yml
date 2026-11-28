@@ -55,6 +55,9 @@ jobs:
       - name: Check internal links
         # Fails the deploy if any page links to a URL the build did not produce.
         run: npm run check:links
+      - name: Check listing pagination
+        # Fails the deploy if a paginated listing renders everything on one page or lost its pager.
+        run: npm run check:pagination
       - name: Regenerate PDFs for changed long posts
         # Only posts of 10+ minutes have a stored PDF. A post's PDF is rebuilt only when its source
         # file changed (hashes in _data/pdf_sources.json), then copied into this deploy and committed
