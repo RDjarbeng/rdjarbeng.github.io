@@ -186,3 +186,14 @@ Historic win in an unprecedented move as Elephants finally win the mandate to be
 - [ ] 2026-11-26 10:26 CAT | What are the companies acquired by apple, Google, Saudi Aramco, etc what do those companies want or are interested in
 - [ ] 2026-11-26 10:30 CAT | Please recalibrate your delusions and try again ~Quote from claude, from this reddit post https://www.reddit.com/r/ClaudeAI/s/HAkfBykNpq
 - [ ] 2026-11-27 15:14 CAT | The big three of AI/ML progress:AIgorithms, data and compute
+- [ ] 2026-11-28 03:45 CAT | Add book:
+
+
+BURKOV
+@burkov on X  
+
+This is the new website with the book: https://nielsensdeeplearningbook.com
+
+It has links to a PDF, ePUB, and HTML versions as well as the full LaTeX source.
+
+The book was released under a Creative Commons license, so anyone can create and host a copy of it.
